@@ -1,0 +1,167 @@
+{
+ "author": null,
+ "author_email": null,
+ "creator_user_id": "f512f73d-bed2-439d-8f6f-3fbc6048b24e",
+ "id": "a3f3fe5d-e3ad-4fe8-a64e-e545160df2f0",
+ "isopen": false,
+ "license_id": "",
+ "license_title": "",
+ "maintainer": null,
+ "maintainer_email": null,
+ "metadata_created": "2025-09-19T12:04:52.442904",
+ "metadata_modified": "2026-11-07T11:55:58.191473",
+ "name": "verkehrszahlung-osnabruckd277a",
+ "notes": "Mittels eines KI- basierten Sensors werden am August-Bebel-Platz Verkehrsdaten erfasst und über LoRaWAN datenschutzkonform übertragen. Bei der Verkehrserfassung wird in die Objektklassen PKW, LKW, Motorrad, Fahrrad und Fußgänger unterschieden. Anhand der gewonnenen Erkenntnisse soll eine Neuplanung der Kreuzung inkl. Optimierung des Fahrradverkehrs vorgenommen werden.\n\nDas Datenmodell kann unter dem folgenden Link abgerufen werden:\nhttps://datenplattform.osnabrueck.de/wp-content/uploads/2022/12/Verkehr_Modell.pdf",
+ "num_resources": 1,
+ "num_tags": 3,
+ "organization": {
+  "id": "8196e75f-c45e-4281-ac8f-1803c4e1f3be",
+  "name": "mcloud",
+  "title": "Mobilithek",
+  "type": "organization",
+  "description": "Die Mobilithek hat 2024 die mCLOUD abgelöst.",
+  "image_url": "",
+  "created": "2019-07-09T17:54:39.561247",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "8196e75f-c45e-4281-ac8f-1803c4e1f3be",
+ "private": false,
+ "state": "active",
+ "title": "Verkehrszählung Osnabrück",
+ "type": "dataset",
+ "url": "https://datenplattform.osnabrueck.de/verkehrszaehlung/",
+ "version": null,
+ "extras": [
+  {
+   "key": "contributorID",
+   "value": "[\"http://dcat-ap.de/def/contributors/SWONetzGmbH\", \"http://dcat-ap.de/def/contributors/mobilithek\"]"
+  },
+  {
+   "key": "guid",
+   "value": "https://ckan.govdata.de/dataset/867c6b92-02be-46a8-bdcb-04357efd967c"
+  },
+  {
+   "key": "identifier",
+   "value": "867c6b92-02be-46a8-bdcb-04357efd967c"
+  },
+  {
+   "key": "issued",
+   "value": "2022-11-17T00:00:00"
+  },
+  {
+   "key": "metadata_harvested_portal",
+   "value": "http://mcloud.de/"
+  },
+  {
+   "key": "metadata_original_html",
+   "value": "https://datenplattform.osnabrueck.de/verkehrszaehlung/"
+  },
+  {
+   "key": "modified",
+   "value": "2023-11-22T00:00:00"
+  },
+  {
+   "key": "politicalGeocodingLevelURI",
+   "value": "http://dcat-ap.de/def/politicalGeocoding/Level/municipality"
+  },
+  {
+   "key": "politicalGeocodingURI",
+   "value": "[\"http://dcat-ap.de/def/politicalGeocoding/regionalKey/034040000000\"]"
+  },
+  {
+   "key": "publisher_email",
+   "value": "iot@swo-netz.de"
+  },
+  {
+   "key": "publisher_name",
+   "value": "SWO Netz GmbH"
+  },
+  {
+   "key": "publisher_url",
+   "value": "https://www.swo.de/iot"
+  },
+  {
+   "key": "spatial",
+   "value": "{\"type\": \"Polygon\", \"coordinates\": [[[8.0344, 52.2665], [8.0599, 52.2665], [8.0599, 52.2828], [8.0344, 52.2828], [8.0344, 52.2665]]]}"
+  },
+  {
+   "key": "temporal_start",
+   "value": "2022-11-17T00:00:00"
+  },
+  {
+   "key": "theme",
+   "value": "[\"http://publications.europa.eu/resource/authority/data-theme/TRAN\"]"
+  },
+  {
+   "key": "uri",
+   "value": "https://ckan.govdata.de/dataset/867c6b92-02be-46a8-bdcb-04357efd967c"
+  }
+ ],
+ "groups": [
+  {
+   "description": "",
+   "display_name": "Verkehr",
+   "id": "tran",
+   "image_display_url": "",
+   "name": "tran",
+   "title": "Verkehr"
+  }
+ ],
+ "resources": [
+  {
+   "access_url": "https://daten-api.osnabrueck.de",
+   "availability": "http://publications.europa.eu/resource/authority/planned-availability/STABLE",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2025-09-19T12:04:52.444193",
+   "description": "Über die API des FROST-Servers kann auf die Daten zugegriffen werden.",
+   "distribution_ref": "https://ckan.govdata.de/dataset/867c6b92-02be-46a8-bdcb-04357efd967c/resource/6d1e0c9d-273c-4939-8bc7-0be265831901",
+   "format": "JSON",
+   "hash": "",
+   "id": "cfc6f2d6-609b-4a36-9ea2-fa9a4dc42277",
+   "issued": "2023-11-22T10:59:26.946044",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+   "metadata_modified": "2025-09-19T12:04:52.435438",
+   "mimetype": null,
+   "mimetype_inner": null,
+   "modified": "2023-11-22T00:00:00",
+   "name": "Urbane Datenplattform Osnabrück",
+   "package_id": "a3f3fe5d-e3ad-4fe8-a64e-e545160df2f0",
+   "position": 0,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://ckan.govdata.de/dataset/867c6b92-02be-46a8-bdcb-04357efd967c/resource/6d1e0c9d-273c-4939-8bc7-0be265831901",
+   "url": "https://daten-api.osnabrueck.de",
+   "url_type": null
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "messung",
+   "id": "10c26917-6cef-4143-ba14-90466d811479",
+   "name": "messung",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "straße",
+   "id": "bf8a797d-5d97-4ba2-be72-9522d2147bd5",
+   "name": "straße",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "verkehr",
+   "id": "fd4003b9-d020-469c-9977-0392964e83a5",
+   "name": "verkehr",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}

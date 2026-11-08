@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:de.hh.up="https://registry.gdi-de.org/id/de.hh.up" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="https://registry.gdi-de.org/id/de.hh.up" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+  <element name="verkehrsstaerken_bedarfszaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="integer"/>
+            <element name="richtung" minOccurs="0" type="string"/>
+            <element name="jahr" minOccurs="0" type="integer"/>
+            <element name="dtv_kfz" minOccurs="0" type="integer"/>
+            <element name="dtvw_kfz" minOccurs="0" type="integer"/>
+            <element name="sv_anteil_dtvw" minOccurs="0" type="integer"/>
+            <element name="sv_anteil_dtv" minOccurs="0" type="integer"/>
+            <element name="geom" minOccurs="0" type="gml:PointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+</schema>

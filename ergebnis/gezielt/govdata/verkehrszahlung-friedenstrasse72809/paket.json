@@ -1,0 +1,166 @@
+{
+ "author": "Stadt Moers",
+ "author_email": null,
+ "creator_user_id": "f512f73d-bed2-439d-8f6f-3fbc6048b24e",
+ "id": "88454316-fdd0-4c7b-8b0c-041f9718de7e",
+ "isopen": false,
+ "license_id": "",
+ "license_title": "",
+ "maintainer": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung",
+ "maintainer_email": "verkehrsplanung@moers.de",
+ "metadata_created": "2026-09-23T17:02:43.959298",
+ "metadata_modified": "2026-10-29T11:26:26.891419",
+ "name": "verkehrszahlung-friedenstrasse72809",
+ "notes": "Der Fachdienst 8.2 - Verkehr/ Straße führt regelmäßig Geschwindigkeitsmessungen auf öffentlichen Straßen im Stadtgebiet Moers durch. Für die Verkehrsmessungen wird ein Messgerät (Impactor der Firma Impact systems GmbH) verwendet, das sich in einem kleinen grauen Kasten befindet und unauffällig für die Verkehrsteilnehmer an Schilder- oder Laternenmasten befestigt wird. Das Messgerät kann durchgängig mehrtägige Zählungen und Geschwindigkeitsmessungen vornehmen, so dass sich die Verkehrssituation bewerten lässt.\r\n\r\nDas Messgerät führt die Messungen mittels Radar durch. Die Daten die aufgezeichnet werden sind:\r\n\r\nDatum, Uhrzeit, Platzhalter (00), Geschwindigkeit, Fahrzeuglänge und Fahrtrichtung\r\n\r\n17.12.14 07:19:30;00;024;01;0\r\n17.12.14 07:19:49;00;025;01;0\r\n17.12.14 07:20:42;00;024;01;1\r\n17.12.14 07:21:14;00;031;01;1\r\n17.12.14 07:22:19;00;025;01;0\r\n17.12.14 07:22:22;00;023;01;0\r\n17.12.14 07:23:16;00;028;01;0\r\n\r\nHier gibt es 2 Besonderheiten:\r\n\r\nÜber die Fahrzeuglänge im Messstrahl wird über ein gesondertes Programm die Unterscheidung zwischen Pkw und Lkw getroffen.\r\n\r\nMindestlänge Pkw 1 m\r\nMindestlänge Lkw 8 m\r\nMindestlänge Lastzüge 12 m\r\n\r\nBei der Fahrtrichtung wird die dem Messgerät am nächsten liegende Fahrspur zuerst genannt, die im Ascii-Format mit 0 und die gerätfernere Fahrspur mit 1 bezeichnet werden.\r\n\r\nDem jeweiligen Dateinamen (z.B. Landwehrstraße57_T30_15122014) sind der Straßenname, Haus-Nr., die dort zulässige Höchstgeschwindigkeit (T 30-30 km/h; T50-50 km/h usw.) und das Anfangsdatum der Messung zu entnehmen.",
+ "num_resources": 1,
+ "num_tags": 2,
+ "organization": {
+  "id": "ec74990f-c51f-4378-845d-132b1f75a550",
+  "name": "open-nrw",
+  "title": "Open.NRW",
+  "type": "organization",
+  "description": "Open.NRW",
+  "image_url": "",
+  "created": "2016-01-11T09:33:27.353055",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "ec74990f-c51f-4378-845d-132b1f75a550",
+ "private": false,
+ "state": "active",
+ "title": "Verkehrszählungen 2013 (Stadt Moers)",
+ "type": "dataset",
+ "url": "http://www.offenedaten.moers.de",
+ "version": "v2015.01",
+ "extras": [
+  {
+   "key": "author_contacttype",
+   "value": "Organization"
+  },
+  {
+   "key": "contact_email",
+   "value": "verkehrsplanung@moers.de"
+  },
+  {
+   "key": "contact_name",
+   "value": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung"
+  },
+  {
+   "key": "contributorID",
+   "value": "[\"http://dcat-ap.de/def/contributors/openNRW\"]"
+  },
+  {
+   "key": "creator_email",
+   "value": "offenedaten@moers.de"
+  },
+  {
+   "key": "creator_name",
+   "value": "Stadt Moers"
+  },
+  {
+   "key": "guid",
+   "value": "https://opendata.ruhr/dataset/8b366b4c-8877-4ce6-a82b-cbf0b816aa36"
+  },
+  {
+   "key": "identifier",
+   "value": "8b366b4c-8877-4ce6-a82b-cbf0b816aa36"
+  },
+  {
+   "key": "issued",
+   "value": "2025-11-06T12:03:41.308916"
+  },
+  {
+   "key": "maintainer_contacttype",
+   "value": "Organization"
+  },
+  {
+   "key": "metadata_harvested_portal",
+   "value": "http://open.nrw/"
+  },
+  {
+   "key": "metadata_original_html",
+   "value": "http://www.offenedaten.moers.de"
+  },
+  {
+   "key": "modified",
+   "value": "2026-10-20T23:59:36.441107"
+  },
+  {
+   "key": "publisher_name",
+   "value": "Moers"
+  },
+  {
+   "key": "publisher_uri",
+   "value": "https://opendata.ruhr/organization/aa98d7be-6412-4eb6-bf4d-fcc1bdbed886"
+  },
+  {
+   "key": "theme",
+   "value": "[\"http://publications.europa.eu/resource/authority/data-theme/TRANSPORT-VERKEHR\"]"
+  },
+  {
+   "key": "uri",
+   "value": "https://opendata.ruhr/dataset/8b366b4c-8877-4ce6-a82b-cbf0b816aa36"
+  },
+  {
+   "key": "harvest_object_id",
+   "value": "24d15c11-bc52-43c4-8881-7f2316b0890b"
+  },
+  {
+   "key": "harvest_source_id",
+   "value": "f8e0d3e2-91d6-462e-8218-00ffeb325028"
+  },
+  {
+   "key": "harvest_source_title",
+   "value": "OpenNRW-Harvester"
+  }
+ ],
+ "resources": [
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/8b366b4c-8877-4ce6-a82b-cbf0b816aa36/resource/a09362a8-2c5e-4150-900d-6f682a55adc8/download/friedenstrasse5t3014052014.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:02:43.960139",
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Friedenstraße vom 14. bis 16.05.2013",
+   "distribution_ref": "https://opendata.ruhr/dataset/8b366b4c-8877-4ce6-a82b-cbf0b816aa36/resource/a09362a8-2c5e-4150-900d-6f682a55adc8",
+   "format": "TXT",
+   "hash": "",
+   "id": "91a61d6a-dcd7-4f7a-954b-a651263184cc",
+   "issued": "2015-10-08T15:08:03.230076",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-10-29T11:26:26.895361",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2026-10-20T23:59:36.446075",
+   "name": "Verkehrszählung Friedenstraße",
+   "package_id": "88454316-fdd0-4c7b-8b0c-041f9718de7e",
+   "position": 0,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/8b366b4c-8877-4ce6-a82b-cbf0b816aa36/resource/a09362a8-2c5e-4150-900d-6f682a55adc8",
+   "url": "https://www.offenesdatenportal.de/dataset/8b366b4c-8877-4ce6-a82b-cbf0b816aa36/resource/a09362a8-2c5e-4150-900d-6f682a55adc8/download/friedenstrasse5t3014052014.txt",
+   "url_type": null
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "friedenstraße",
+   "id": "e5e664dd-e3c3-4c64-94f1-07cdb4ebef07",
+   "name": "friedenstraße",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "verkehrszählung",
+   "id": "8da1dad0-ee4f-437a-b8f3-6274d83d4f5d",
+   "name": "verkehrszählung",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "groups": [],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}

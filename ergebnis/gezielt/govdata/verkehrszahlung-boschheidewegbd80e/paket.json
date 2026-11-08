@@ -1,0 +1,154 @@
+{
+ "author": "Stadt Moers",
+ "author_email": null,
+ "creator_user_id": "f512f73d-bed2-439d-8f6f-3fbc6048b24e",
+ "id": "cc06e919-381d-4c33-8c53-096b9a15f083",
+ "isopen": false,
+ "license_id": "",
+ "license_title": "",
+ "maintainer": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung",
+ "maintainer_email": "verkehrsplanung@moers.de",
+ "metadata_created": "2026-09-23T17:03:47.874001",
+ "metadata_modified": "2026-11-07T23:40:21.389848",
+ "name": "verkehrszahlung-boschheidewegbd80e",
+ "notes": "Der Datensatz enthält die Daten zur Verkehrszählung Boschheideweg vom 24. bis 26.11.2014",
+ "num_resources": 1,
+ "num_tags": 2,
+ "organization": {
+  "id": "ec74990f-c51f-4378-845d-132b1f75a550",
+  "name": "open-nrw",
+  "title": "Open.NRW",
+  "type": "organization",
+  "description": "Open.NRW",
+  "image_url": "",
+  "created": "2016-01-11T09:33:27.353055",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "ec74990f-c51f-4378-845d-132b1f75a550",
+ "private": false,
+ "state": "active",
+ "title": "Verkehrszählung Boschheideweg",
+ "type": "dataset",
+ "url": "http://www.offenedaten.moers.de",
+ "version": "v2015.01",
+ "extras": [
+  {
+   "key": "author_contacttype",
+   "value": "Organization"
+  },
+  {
+   "key": "contact_email",
+   "value": "verkehrsplanung@moers.de"
+  },
+  {
+   "key": "contact_name",
+   "value": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung"
+  },
+  {
+   "key": "contributorID",
+   "value": "[\"http://dcat-ap.de/def/contributors/openNRW\"]"
+  },
+  {
+   "key": "creator_email",
+   "value": "offenedaten@moers.de"
+  },
+  {
+   "key": "creator_name",
+   "value": "Stadt Moers"
+  },
+  {
+   "key": "guid",
+   "value": "https://opendata.ruhr/dataset/d91264cc-d216-4213-983d-b5f0a1ce1b78"
+  },
+  {
+   "key": "identifier",
+   "value": "d91264cc-d216-4213-983d-b5f0a1ce1b78"
+  },
+  {
+   "key": "issued",
+   "value": "2025-11-06T12:05:28.711196"
+  },
+  {
+   "key": "maintainer_contacttype",
+   "value": "Organization"
+  },
+  {
+   "key": "metadata_harvested_portal",
+   "value": "http://open.nrw/"
+  },
+  {
+   "key": "metadata_original_html",
+   "value": "http://www.offenedaten.moers.de"
+  },
+  {
+   "key": "modified",
+   "value": "2026-08-26T21:29:42.019300"
+  },
+  {
+   "key": "publisher_name",
+   "value": "Moers"
+  },
+  {
+   "key": "publisher_uri",
+   "value": "https://opendata.ruhr/organization/aa98d7be-6412-4eb6-bf4d-fcc1bdbed886"
+  },
+  {
+   "key": "theme",
+   "value": "[\"http://publications.europa.eu/resource/authority/data-theme/TRANSPORT-VERKEHR\"]"
+  },
+  {
+   "key": "uri",
+   "value": "https://opendata.ruhr/dataset/d91264cc-d216-4213-983d-b5f0a1ce1b78"
+  }
+ ],
+ "resources": [
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/d91264cc-d216-4213-983d-b5f0a1ce1b78/resource/85d1b4ad-60bc-49a2-ae0a-8c8c954cc353/download/boschheideweg36t3024112014.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:03:47.874805",
+   "description": "Der Fachdienst 8.2 - Verkehr/ Straße führt regelmäßig Geschwindigkeitsmessungen auf öffentlichen Straßen im Stadtgebiet Moers durch. Für die Verkehrsmessungen wird ein Messgerät (Impactor der Firma Impact systems GmbH) verwendet, das sich in einem kleinen grauen Kasten befindet und unauffällig für die Verkehrsteilnehmer an Schilder- oder Laternenmasten befestigt wird. Das Messgerät kann durchgängig mehrtägige Zählungen und Geschwindigkeitsmessungen vornehmen, so dass sich die Verkehrssituation bewerten lässt.\r\n\r\nDas Messgerät führt die Messungen mittels Radar durch. Die Daten die aufgezeichnet werden sind:\r\n\r\nDatum, Uhrzeit, Platzhalter (00), Geschwindigkeit, Fahrzeuglänge und Fahrtrichtung\r\n\r\n17.12.14 07:19:30;00;024;01;0  \r\n17.12.14 07:19:49;00;025;01;0  \r\n17.12.14 07:20:42;00;024;01;1  \r\n17.12.14 07:21:14;00;031;01;1  \r\n17.12.14 07:22:19;00;025;01;0  \r\n17.12.14 07:22:22;00;023;01;0  \r\n17.12.14 07:23:16;00;028;01;0  \r\n\r\nHier gibt es 2 Besonderheiten:\r\n\r\nÜber die Fahrzeuglänge im Messstrahl wird über ein gesondertes Programm die Unterscheidung zwischen Pkw und Lkw getroffen.\r\n\r\nMindestlänge Pkw 1 m  \r\nMindestlänge Lkw 8 m  \r\nMindestlänge Lastzüge 12 m  \r\n\r\nBei der Fahrtrichtung wird die dem Messgerät am nächsten liegende Fahrspur zuerst genannt, die im Ascii-Format mit 0 und die gerätfernere Fahrspur mit 1 bezeichnet werden.\r\n\r\nDem jeweiligen Dateinamen (z.B. Landwehrstraße57_T30_15122014) sind der Straßenname, Haus-Nr., die dort zulässige Höchstgeschwindigkeit (T 30-30 km/h; T50-50 km/h usw.) und das Anfangsdatum der Messung zu entnehmen.",
+   "distribution_ref": "https://opendata.ruhr/dataset/d91264cc-d216-4213-983d-b5f0a1ce1b78/resource/85d1b4ad-60bc-49a2-ae0a-8c8c954cc353",
+   "format": "TXT",
+   "hash": "",
+   "id": "cbb14139-ed7f-4542-a17c-e475d2f4a066",
+   "issued": "2015-10-08T15:22:31.000147",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-09-23T17:03:47.870588",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2026-08-26T21:29:42.024218",
+   "name": "Verkehrszählung Boschheideweg",
+   "package_id": "cc06e919-381d-4c33-8c53-096b9a15f083",
+   "position": 0,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/d91264cc-d216-4213-983d-b5f0a1ce1b78/resource/85d1b4ad-60bc-49a2-ae0a-8c8c954cc353",
+   "url": "https://www.offenesdatenportal.de/dataset/d91264cc-d216-4213-983d-b5f0a1ce1b78/resource/85d1b4ad-60bc-49a2-ae0a-8c8c954cc353/download/boschheideweg36t3024112014.txt",
+   "url_type": null
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "boschheideweg",
+   "id": "c163e2ab-0532-4f9e-a6d0-30359501cef1",
+   "name": "boschheideweg",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "verkehrszählung",
+   "id": "8da1dad0-ee4f-437a-b8f3-6274d83d4f5d",
+   "name": "verkehrszählung",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "groups": [],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}

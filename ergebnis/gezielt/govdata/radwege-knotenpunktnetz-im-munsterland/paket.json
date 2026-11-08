@@ -1,0 +1,249 @@
+{
+ "author": null,
+ "author_email": null,
+ "creator_user_id": "f512f73d-bed2-439d-8f6f-3fbc6048b24e",
+ "id": "66c6d682-ad2d-42af-9850-812e472c65db",
+ "isopen": false,
+ "license_id": "",
+ "license_title": "",
+ "maintainer": null,
+ "maintainer_email": null,
+ "metadata_created": "2025-06-17T02:14:50.236706",
+ "metadata_modified": "2026-11-08T00:18:00.438866",
+ "name": "radwege-knotenpunktnetz-im-munsterland",
+ "notes": "<p>Im Rahmen der Open-Data-Initiative der Stadt Münster werden auf dieser Internetseite das Radwege-Knotenpunktnetz sowie die nummerierten Knotenpunkte der Radwege für das gesamte Münsterland als Open-Data zum Download bereitgestellt.</p>\n<p>Diese Daten stammen aus dem Radroutenplaner NRW und werden laut Ministerium für Umwelt, Naturschutz und Verkehr NRW unter der Lizenz <a class=\"rrplink\" href=\"https://www.govdata.de/dl-de/zero-2-0\" tabindex=\"24\" target=\"_blank\">Datenlizenz Deutschland – Zero – Version 2.0</a> veröffentlicht.</p>\n<p>Nutzen Sie zum Daten-Download bitte die Links unter \"Dateien und Quellen\" weiter unten auf dieser Seite.</p>\n<p>Weiterführende Links zu diesem Thema:</p>\n<ul>\n<li>Interaktive Routenplanung mit dem Routenplaner vom Ministerium für Umwelt, Naturschutz und Verkehr NRW: <a href=\"https://www.radroutenplaner.nrw.de/rrp_kprouting.asp\">https://www.radroutenplaner.nrw.de/rrp_kprouting.asp</a></li>\n<li>Interaktive Karte vom Katasteramt der Stadt Münster (Nur Stadtgebiet Münster): <a href=\"https://geo.stadt-muenster.de/webgis/knotenpunktnetz/\">https://geo.stadt-muenster.de/webgis/knotenpunktnetz/</a></li>\n<li>Interaktive Karte des belgischen Unternehmens \"Nodemapp\" inklusive Darstellung von Streckensperrungen: <a href=\"https://www.nodemapp.com/de/radfahren/knotenpunkte/routenplaner/fahrradkarte/munsterland-101\">https://www.nodemapp.com/de/radfahren/knotenpunkte/routenplaner/fahrradk...</a></li>\n<li>Weitere Datendownloads zu diesem Thema (Infobriefe, Themenrouten, Baustellen) für ganz NRW: <a href=\"https://www.radverkehrsnetz.nrw.de/rvn_link.asp\">https://www.radverkehrsnetz.nrw.de/rvn_link.asp</a></li>\n</ul>\n<p>Stichworte: Fahrrad, Leeze, Routen, Fahrradwege, POIs</p>\n",
+ "num_resources": 3,
+ "num_tags": 3,
+ "organization": {
+  "id": "ec74990f-c51f-4378-845d-132b1f75a550",
+  "name": "open-nrw",
+  "title": "Open.NRW",
+  "type": "organization",
+  "description": "Open.NRW",
+  "image_url": "",
+  "created": "2016-01-11T09:33:27.353055",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "ec74990f-c51f-4378-845d-132b1f75a550",
+ "private": false,
+ "state": "active",
+ "title": "Radwege-Knotenpunktnetz im Münsterland",
+ "type": "dataset",
+ "url": "https://github.com/od-ms/radweg-knotenpunkte-muensterland",
+ "version": null,
+ "extras": [
+  {
+   "key": "access_rights",
+   "value": "Public "
+  },
+  {
+   "key": "contact_email",
+   "value": "opendata@citeq.de"
+  },
+  {
+   "key": "contact_name",
+   "value": "Open Data Koordination Münster"
+  },
+  {
+   "key": "contributorID",
+   "value": "[\"https://opendata.stadt-muenster.de/\", \"http://dcat-ap.de/def/contributors/openNRW\"]"
+  },
+  {
+   "key": "documentation",
+   "value": "[\"https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland\"]"
+  },
+  {
+   "key": "guid",
+   "value": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland"
+  },
+  {
+   "key": "identifier",
+   "value": "ba3c98eb-4e11-44be-aee8-f92bcb99d90d"
+  },
+  {
+   "key": "issued",
+   "value": "2026-11-06T01:15:05+01:00"
+  },
+  {
+   "key": "language",
+   "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+  },
+  {
+   "key": "metadata_harvested_portal",
+   "value": "http://open.nrw/"
+  },
+  {
+   "key": "metadata_original_html",
+   "value": "https://github.com/od-ms/radweg-knotenpunkte-muensterland"
+  },
+  {
+   "key": "modified",
+   "value": "2026-10-26T10:33:37+01:00"
+  },
+  {
+   "key": "politicalGeocodingLevelURI",
+   "value": "http://dcat-ap.de/def/politicalGeocoding/Level/municipality"
+  },
+  {
+   "key": "politicalGeocodingURI",
+   "value": "[\"http://dcat-ap.de/def/politicalGeocoding/districtKey/05515\"]"
+  },
+  {
+   "key": "publisher_name",
+   "value": "Münster"
+  },
+  {
+   "key": "publisher_uri",
+   "value": "https://ckan.open.nrw.de/organization/74914aad-dcf1-4df9-9e70-c3319902651c"
+  },
+  {
+   "key": "theme",
+   "value": "[\"http://publications.europa.eu/resource/authority/data-theme/TRAN\"]"
+  },
+  {
+   "key": "uri",
+   "value": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland"
+  },
+  {
+   "key": "harvest_object_id",
+   "value": "cd2f8e42-9f74-4b1f-9ad6-5ef288d7c0dc"
+  },
+  {
+   "key": "harvest_source_id",
+   "value": "f8e0d3e2-91d6-462e-8218-00ffeb325028"
+  },
+  {
+   "key": "harvest_source_title",
+   "value": "OpenNRW-Harvester"
+  }
+ ],
+ "groups": [
+  {
+   "description": "",
+   "display_name": "Verkehr",
+   "id": "tran",
+   "image_display_url": "",
+   "name": "tran",
+   "title": "Verkehr"
+  }
+ ],
+ "resources": [
+  {
+   "access_url": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/c560f689-8129-46f1-bf83-d6d6c8faab51",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2025-06-17T02:14:50.239465",
+   "description": "<p>Diese Geopackage-Datei enthält die beiden Layer \"knotenpunkte_muensterland\" und \"knotenpunktnetz_muensterland\".</p>\n",
+   "distribution_ref": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/c560f689-8129-46f1-bf83-d6d6c8faab51",
+   "documentation": "[\"https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/c560f689-8129-46f1-bf83-d6d6c8faab51\"]",
+   "format": "data",
+   "hash": "",
+   "id": "306d886c-1a98-4488-9833-446e9217673b",
+   "issued": "2025-06-13T23:50:22+02:00",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+   "metadata_modified": "2025-06-17T02:14:50.227841",
+   "mimetype": null,
+   "mimetype_inner": null,
+   "modified": "2025-06-13T23:56:41+02:00",
+   "name": "Knotenpunkte & Knotenpunktenetz (Geopackage)",
+   "package_id": "66c6d682-ad2d-42af-9850-812e472c65db",
+   "plannedAvailability": "http://dcat-ap.de/def/plannedAvailability/stable",
+   "position": 0,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "status": "http://purl.org/adms/status/Completed",
+   "uri": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/c560f689-8129-46f1-bf83-d6d6c8faab51",
+   "url": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/c560f689-8129-46f1-bf83-d6d6c8faab51",
+   "url_type": null
+  },
+  {
+   "access_url": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/22959fb6-b435-485c-8a18-042c672be9c1",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2025-06-17T02:14:50.239457",
+   "description": "<p>Die GeoJSON Datei beinhaltet die Radweg-Knotenpunkte.</p>\n",
+   "distribution_ref": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/22959fb6-b435-485c-8a18-042c672be9c1",
+   "documentation": "[\"https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/22959fb6-b435-485c-8a18-042c672be9c1\"]",
+   "format": "http://publications.europa.eu/resource/authority/file-type/GEOJSON",
+   "hash": "",
+   "id": "9bd41110-bfae-4bee-8129-9befeb096c3e",
+   "issued": "2025-06-13T23:58:11+02:00",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+   "metadata_modified": "2025-06-17T02:14:50.227468",
+   "mimetype": null,
+   "mimetype_inner": null,
+   "modified": "2025-06-13T23:58:11+02:00",
+   "name": "Knotenpunkte (GeoJSON)",
+   "package_id": "66c6d682-ad2d-42af-9850-812e472c65db",
+   "plannedAvailability": "http://dcat-ap.de/def/plannedAvailability/stable",
+   "position": 1,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "status": "http://purl.org/adms/status/Completed",
+   "uri": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/22959fb6-b435-485c-8a18-042c672be9c1",
+   "url": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/22959fb6-b435-485c-8a18-042c672be9c1",
+   "url_type": null
+  },
+  {
+   "access_url": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/de02c88a-7523-4bc4-bea1-42327c59f443",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2025-06-17T02:14:50.239462",
+   "description": "<p>Diese GeoJSON Datei enthält das Radwegenetz, das die Knotenpunkte verbindet.</p>\n",
+   "distribution_ref": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/de02c88a-7523-4bc4-bea1-42327c59f443",
+   "documentation": "[\"https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/de02c88a-7523-4bc4-bea1-42327c59f443\"]",
+   "format": "http://publications.europa.eu/resource/authority/file-type/GEOJSON",
+   "hash": "",
+   "id": "7202989e-d881-4da5-8133-45eceb0d7c89",
+   "issued": "2025-06-13T23:59:28+02:00",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+   "metadata_modified": "2025-06-17T02:14:50.227676",
+   "mimetype": null,
+   "mimetype_inner": null,
+   "modified": "2025-06-13T23:59:28+02:00",
+   "name": "Knotenpunktnetz (GeoJSON)",
+   "package_id": "66c6d682-ad2d-42af-9850-812e472c65db",
+   "plannedAvailability": "http://dcat-ap.de/def/plannedAvailability/stable",
+   "position": 2,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "status": "http://purl.org/adms/status/Completed",
+   "uri": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/de02c88a-7523-4bc4-bea1-42327c59f443",
+   "url": "https://opendata.stadt-muenster.de/dataset/radwege-knotenpunktnetz-im-m%C3%BCnsterland/resource/de02c88a-7523-4bc4-bea1-42327c59f443",
+   "url_type": null
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "freizeit",
+   "id": "73a5f345-5ae0-444b-865a-8db1dbb3510f",
+   "name": "freizeit",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "kultur",
+   "id": "e514f114-d613-43d1-af2e-2719de28ceb6",
+   "name": "kultur",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "sport-und-tourismus",
+   "id": "7988e79b-9776-4400-ae9b-f108d263d9be",
+   "name": "sport-und-tourismus",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}

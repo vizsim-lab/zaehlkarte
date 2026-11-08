@@ -1,0 +1,294 @@
+{
+ "author": "Stadt Moers",
+ "author_email": null,
+ "creator_user_id": "f512f73d-bed2-439d-8f6f-3fbc6048b24e",
+ "id": "610d534a-9781-415c-b5b0-4c810afde64a",
+ "isopen": false,
+ "license_id": "",
+ "license_title": "",
+ "maintainer": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung",
+ "maintainer_email": "verkehrsplanung@moers.de",
+ "metadata_created": "2026-09-23T17:03:44.120457",
+ "metadata_modified": "2026-10-29T11:26:53.353131",
+ "name": "verkehrszahlungen-2016",
+ "notes": "Der Fachdienst 8.2 - Verkehr/ Straße führt regelmäßig Geschwindigkeitsmessungen auf öffentlichen Straßen im Stadtgebiet Moers durch. Für die Verkehrsmessungen wird ein Messgerät (Impactor der Firma Impact systems GmbH) verwendet, das sich in einem kleinen grauen Kasten befindet und unauffällig für die Verkehrsteilnehmer an Schilder- oder Laternenmasten befestigt wird. Das Messgerät kann durchgängig mehrtägige Zählungen und Geschwindigkeitsmessungen vornehmen, so dass sich die Verkehrssituation bewerten lässt.\r\n\r\nDas Messgerät führt die Messungen mittels Radar durch. Die Daten die aufgezeichnet werden sind:\r\n\r\nDatum, Uhrzeit, Platzhalter (00), Geschwindigkeit, Fahrzeuglänge und Fahrtrichtung\r\nBeispiel:\r\n26.02.16 10:05:46;00;034;02;1 \r\n26.02.16 10:07:06;00;043;01;0 \r\n26.02.16 10:07:22;00;018;01;1 \r\n26.02.16 10:07:27;00;047;01;0 \r\n\r\nHier gibt es 2 Besonderheiten:\r\n\r\nÜber die Fahrzeuglänge im Messstrahl wird über ein gesondertes Programm die Unterscheidung zwischen Pkw und Lkw getroffen.\r\n\r\nMindestlänge Pkw 1 m\r\nMindestlänge Lkw 8 m\r\nMindestlänge Lastzüge 12 m\r\n\r\nBei der Fahrtrichtung wird die dem Messgerät am nächsten liegende Fahrspur zuerst genannt, die im Ascii-Format mit 0 und die gerätfernere Fahrspur mit 1 bezeichnet werden.\r\n\r\nDem jeweiligen Dateinamen (z.B. Landwehrstraße57_T30_15122014) sind der Straßenname, Haus-Nr., die dort zulässige Höchstgeschwindigkeit (T 30-30 km/h; T50-50 km/h usw.) und das Anfangsdatum der Messung zu entnehmen.\r\n",
+ "num_resources": 6,
+ "num_tags": 1,
+ "organization": {
+  "id": "ec74990f-c51f-4378-845d-132b1f75a550",
+  "name": "open-nrw",
+  "title": "Open.NRW",
+  "type": "organization",
+  "description": "Open.NRW",
+  "image_url": "",
+  "created": "2016-01-11T09:33:27.353055",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "ec74990f-c51f-4378-845d-132b1f75a550",
+ "private": false,
+ "state": "active",
+ "title": "Verkehrszählungen 2016 (Stadt Moers)",
+ "type": "dataset",
+ "url": "http://www.offenedaten.moers.de",
+ "version": "v2016.1",
+ "extras": [
+  {
+   "key": "author_contacttype",
+   "value": "Organization"
+  },
+  {
+   "key": "contact_email",
+   "value": "verkehrsplanung@moers.de"
+  },
+  {
+   "key": "contact_name",
+   "value": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung"
+  },
+  {
+   "key": "contributorID",
+   "value": "[\"http://dcat-ap.de/def/contributors/openNRW\"]"
+  },
+  {
+   "key": "creator_email",
+   "value": "offenedaten@moers.de"
+  },
+  {
+   "key": "creator_name",
+   "value": "Stadt Moers"
+  },
+  {
+   "key": "guid",
+   "value": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df"
+  },
+  {
+   "key": "identifier",
+   "value": "d50a28fa-91ae-48d5-a7f8-69771f72e4df"
+  },
+  {
+   "key": "issued",
+   "value": "2025-11-06T12:05:26.263247"
+  },
+  {
+   "key": "maintainer_contacttype",
+   "value": "Organization"
+  },
+  {
+   "key": "metadata_harvested_portal",
+   "value": "http://open.nrw/"
+  },
+  {
+   "key": "metadata_original_html",
+   "value": "http://www.offenedaten.moers.de"
+  },
+  {
+   "key": "modified",
+   "value": "2026-10-21T00:03:39.503674"
+  },
+  {
+   "key": "publisher_name",
+   "value": "Moers"
+  },
+  {
+   "key": "publisher_uri",
+   "value": "https://opendata.ruhr/organization/aa98d7be-6412-4eb6-bf4d-fcc1bdbed886"
+  },
+  {
+   "key": "theme",
+   "value": "[\"http://publications.europa.eu/resource/authority/data-theme/TRANSPORT-VERKEHR\"]"
+  },
+  {
+   "key": "uri",
+   "value": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df"
+  },
+  {
+   "key": "harvest_object_id",
+   "value": "b76c0d87-6492-4893-a702-3265cd8ba0de"
+  },
+  {
+   "key": "harvest_source_id",
+   "value": "f8e0d3e2-91d6-462e-8218-00ffeb325028"
+  },
+  {
+   "key": "harvest_source_title",
+   "value": "OpenNRW-Harvester"
+  }
+ ],
+ "resources": [
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/2a60141c-cdd0-4c34-b34a-8559a0ba4591/download/gleiwitzer-strasse-23t3026022016.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:03:44.121460",
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Gleiwitzer Straße vom 26.02.2016 bis 04.03.2016",
+   "distribution_ref": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/2a60141c-cdd0-4c34-b34a-8559a0ba4591",
+   "format": "TXT",
+   "hash": "",
+   "id": "7b5a630e-70e4-44d9-826d-0f562a8549c8",
+   "issued": "2016-12-20T15:06:40.017280",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-09-23T17:03:44.117102",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2016-12-20T14:13:48.477786",
+   "name": "Verkehrszählung Gleiwitzer Straße 23",
+   "package_id": "610d534a-9781-415c-b5b0-4c810afde64a",
+   "position": 0,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/2a60141c-cdd0-4c34-b34a-8559a0ba4591",
+   "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/2a60141c-cdd0-4c34-b34a-8559a0ba4591/download/gleiwitzer-strasse-23t3026022016.txt",
+   "url_type": null
+  },
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/8ee76fbf-c09f-475c-8599-74c4fee298c5/download/hattropstrasse-ggu-26t3015022016.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:03:44.121462",
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Gleiwitzer Straße vom 26.02.2016 bis 22.02.2016.",
+   "distribution_ref": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/8ee76fbf-c09f-475c-8599-74c4fee298c5",
+   "format": "TXT",
+   "hash": "",
+   "id": "fbeb457d-6566-47a1-8f40-1a228dad1a47",
+   "issued": "2016-12-20T15:07:38.790978",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-09-23T17:03:44.117208",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2016-12-20T14:07:38.731611",
+   "name": "Verkehrszählung Hattropstraße gegenüber 26",
+   "package_id": "610d534a-9781-415c-b5b0-4c810afde64a",
+   "position": 1,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/8ee76fbf-c09f-475c-8599-74c4fee298c5",
+   "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/8ee76fbf-c09f-475c-8599-74c4fee298c5/download/hattropstrasse-ggu-26t3015022016.txt",
+   "url_type": null
+  },
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/485cd1a1-628a-479a-bdb0-fd873a0dd4c8/download/kronprinzenstrasse-6b-8t3014092016.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:03:44.121464",
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Kronprinzenstraße vom 14.09.2016 bis 16.09.2016.",
+   "distribution_ref": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/485cd1a1-628a-479a-bdb0-fd873a0dd4c8",
+   "format": "TXT",
+   "hash": "",
+   "id": "b0711078-bdca-4931-b0a1-6b429449daf8",
+   "issued": "2016-12-20T15:09:10.390189",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-09-23T17:03:44.117294",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2016-12-20T14:09:10.329087",
+   "name": "Verkehrszählung Kronprinzenstraße 6b - 8",
+   "package_id": "610d534a-9781-415c-b5b0-4c810afde64a",
+   "position": 2,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/485cd1a1-628a-479a-bdb0-fd873a0dd4c8",
+   "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/485cd1a1-628a-479a-bdb0-fd873a0dd4c8/download/kronprinzenstrasse-6b-8t3014092016.txt",
+   "url_type": null
+  },
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/14b41391-a232-4553-abae-d0f25023fbcc/download/niederfeldweg-3bt3028112016.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:03:44.121465",
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Niederfeldweg vom 28.11.2016 bis 30.11.2016.",
+   "distribution_ref": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/14b41391-a232-4553-abae-d0f25023fbcc",
+   "format": "TXT",
+   "hash": "",
+   "id": "523e2a30-4293-40cf-bbcb-919225355fd1",
+   "issued": "2016-12-20T15:10:10.399867",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-09-23T17:03:44.117374",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2016-12-20T14:10:10.347296",
+   "name": "Verkehrszählung Niederfeldweg 3 b",
+   "package_id": "610d534a-9781-415c-b5b0-4c810afde64a",
+   "position": 3,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/14b41391-a232-4553-abae-d0f25023fbcc",
+   "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/14b41391-a232-4553-abae-d0f25023fbcc/download/niederfeldweg-3bt3028112016.txt",
+   "url_type": null
+  },
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/133e7d74-e521-4c55-9036-218ec91754eb/download/romerstrasse-415t3024102016.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:03:44.121466",
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Römerstraße vom 24.10.2016 bis 26.10.2016.",
+   "distribution_ref": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/133e7d74-e521-4c55-9036-218ec91754eb",
+   "format": "TXT",
+   "hash": "",
+   "id": "5c8b5466-b493-4591-94a7-a201af47c7fb",
+   "issued": "2016-12-20T15:11:11.190728",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-09-23T17:03:44.117452",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2016-12-20T14:11:11.141025",
+   "name": "Verkehrszählung Römerstraße 415",
+   "package_id": "610d534a-9781-415c-b5b0-4c810afde64a",
+   "position": 4,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/133e7d74-e521-4c55-9036-218ec91754eb",
+   "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/133e7d74-e521-4c55-9036-218ec91754eb/download/romerstrasse-415t3024102016.txt",
+   "url_type": null
+  },
+  {
+   "access_url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/39a2de27-64a8-447a-9414-32cde29f07b8/download/stormstrasse-hohe-schulet3009112016.txt",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-23T17:03:44.121468",
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Stormstraße vom 09.11.2016 bis 11.11.2016.",
+   "distribution_ref": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/39a2de27-64a8-447a-9414-32cde29f07b8",
+   "format": "TXT",
+   "hash": "",
+   "id": "f08438ee-4581-4526-ba5c-a548f5f9d531",
+   "issued": "2016-12-20T15:12:12.797491",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/other-closed",
+   "metadata_modified": "2026-09-23T17:03:44.117528",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "modified": "2016-12-20T14:12:12.739153",
+   "name": "Verkehrszählung Stormstraße Höhe Schule",
+   "package_id": "610d534a-9781-415c-b5b0-4c810afde64a",
+   "position": 5,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "uri": "https://opendata.ruhr/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/39a2de27-64a8-447a-9414-32cde29f07b8",
+   "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/39a2de27-64a8-447a-9414-32cde29f07b8/download/stormstrasse-hohe-schulet3009112016.txt",
+   "url_type": null
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "verkehrszählung",
+   "id": "8da1dad0-ee4f-437a-b8f3-6274d83d4f5d",
+   "name": "verkehrszählung",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "groups": [],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}

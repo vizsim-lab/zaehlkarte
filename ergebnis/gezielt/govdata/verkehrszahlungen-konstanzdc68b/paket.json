@@ -1,0 +1,294 @@
+{
+ "author": null,
+ "author_email": null,
+ "creator_user_id": "f512f73d-bed2-439d-8f6f-3fbc6048b24e",
+ "id": "4efa818b-2f0f-4197-adad-0aa6bdd55692",
+ "isopen": false,
+ "license_id": "",
+ "license_title": "",
+ "maintainer": null,
+ "maintainer_email": null,
+ "metadata_created": "2026-09-25T16:38:42.594798",
+ "metadata_modified": "2026-11-07T11:56:00.894888",
+ "name": "verkehrszahlungen-konstanzdc68b",
+ "notes": "<p>Dieser Datensatz beinhaltet Zähldaten von mobilen Zählstellen des MIV sowie Rad- und Fußverkehrs in der Stadt Konstanz. </p><p>Das Handlungsfeld Mobilität ist ein zentrales Thema auf dem Weg zur Klimaneutralität. Mit einer Mobilitätswende soll die Senkung des Energieverbrauchs ohne Einschränkung der Mobilität erreicht werden. Dabei geht es nicht nur um die Klärung, wie und mit welchen Verkehrsmitteln sich die Bürgerinnen und Bürger zukünftig bewegen. Es geht auch darum, wie der knappe öffentliche Raum genutzt wird.</p><p>Für einen besseren Überblick über die Anzahl der Radfahrer, Autos und Fußgänger an einzelnen Stellen, hat die Stadt Konstanz zwei neue, mobile Zählgeräte beschafft.</p><p>Unter diesem Datensatz finden Sie verschiedene Ressourcen zu den mobilen Verkehrszählungen. </p><p>(Quelle, Stadt Konstanz, Amt für Stadtplanung und Umwelt)</p><h3 id=\"datenquelle-\">Datenquelle:</h3><p><a href=\"https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr\">Offene Daten Konstanz</a> unter CC-BY 4.0</p>",
+ "num_resources": 5,
+ "num_tags": 5,
+ "organization": {
+  "id": "8196e75f-c45e-4281-ac8f-1803c4e1f3be",
+  "name": "mcloud",
+  "title": "Mobilithek",
+  "type": "organization",
+  "description": "Die Mobilithek hat 2024 die mCLOUD abgelöst.",
+  "image_url": "",
+  "created": "2019-07-09T17:54:39.561247",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "8196e75f-c45e-4281-ac8f-1803c4e1f3be",
+ "private": false,
+ "state": "active",
+ "title": "Verkehrszählungen Konstanz",
+ "type": "dataset",
+ "url": null,
+ "version": null,
+ "extras": [
+  {
+   "key": "alternate_identifier",
+   "value": "[\"N8ddf5494f13b4027b4b87bc789ad5c2d\"]"
+  },
+  {
+   "key": "contributorID",
+   "value": "[\"http://dcat-ap.de/def/contributors/mobilithek\"]"
+  },
+  {
+   "key": "frequency",
+   "value": "http://publications.europa.eu/resource/authority/frequency/OTHER"
+  },
+  {
+   "key": "guid",
+   "value": "https://mobilithek.info//offers/-4485514588181895023"
+  },
+  {
+   "key": "identifier",
+   "value": "22c08d05-c9cb-4af2-ae0d-bed37503ab39"
+  },
+  {
+   "key": "issued",
+   "value": "2022-11-03T16:29:53.997000"
+  },
+  {
+   "key": "metadata_harvested_portal",
+   "value": "http://mcloud.de/"
+  },
+  {
+   "key": "modified",
+   "value": "2026-11-05T02:26:36.121000"
+  },
+  {
+   "key": "publisher_name",
+   "value": "Offene Daten Konstanz"
+  },
+  {
+   "key": "spatial",
+   "value": "{\"type\": \"Polygon\", \"coordinates\": [[[9.64874, 49.79148], [9.63811, 49.70177], [9.81397, 49.70894], [9.86067, 49.6147], [9.83953, 49.56227], [9.90825, 49.56429], [9.92211, 49.50029], [9.95493, 49.48229], [10.0188, 49.4908], [10.08372, 49.54356], [10.11833, 49.47317], [10.13416, 49.41223], [10.11197, 49.38491], [10.14612, 49.28266], [10.13509, 49.216], [10.24365, 49.14465], [10.2307, 49.09679], [10.25676, 49.05949], [10.41015, 48.97746], [10.45376, 48.90438], [10.42369, 48.7445], [10.48726, 48.69666], [10.36297, 48.66722], [10.27235, 48.69198], [10.31085, 48.54907], [10.27825, 48.5161], [10.23078, 48.51051], [10.1339, 48.45487], [10.03269, 48.4572], [9.99761, 48.35012], [10.05785, 48.27958], [10.09536, 48.16401], [10.13646, 48.10846], [10.11495, 47.97626], [10.10421, 47.97436], [10.09191, 47.95527], [10.11014, 47.93715], [10.1065, 47.85503], [10.13193, 47.82009], [10.09185, 47.78568], [10.12996, 47.68973], [10.07729, 47.63927], [10.03718, 47.67869], [9.95493, 47.65387], [9.85083, 47.67162], [9.69215, 47.61042], [9.55872, 47.54189], [9.4956, 47.55145], [9.37943, 47.62392], [9.18219, 47.65589], [9.03586, 47.68395], [8.87489, 47.65467], [8.81439, 47.72001], [8.78152, 47.71253], [8.79571, 47.6756], [8.67046, 47.68486], [8.66335, 47.68589], [8.70673, 47.71025], [8.70534, 47.73718], [8.61383, 47.80108], [8.51012, 47.77619], [8.41842, 47.70026], [8.42477, 47.67726], [8.50282, 47.64896], [8.60637, 47.66901], [8.5956, 47.60554], [8.56284, 47.59943], [8.51855, 47.62564], [8.42643, 47.56755], [8.22046, 47.61682], [8.03864, 47.55345], [7.92276, 47.55494], [7.89411, 47.58637], [7.71378, 47.5394], [7.6341, 47.56111], [7.58904, 47.58988], [7.5205, 47.6782], [7.54599, 47.74357], [7.53824, 47.79282], [7.61439, 47.97575], [7.57408, 48.04033], [7.57729, 48.11565], [7.57792, 48.12139], [7.68071, 48.25727], [7.73613, 48.3358], [7.81259, 48.599], [7.94368, 48.70581], [7.95963, 48.71858], [8.08964, 48.80897], [8.16889, 48.92663], [8.23263, 48.96657], [8.26128, 48.98092], [8.27735, 48.98994], [8.33997, 49.08015], [8.41307, 49.24982], [8.46699, 49.28298], [8.48727, 49.29003], [8.47092, 49.34071], [8.49732, 49.41135], [8.50153, 49.43486], [8.47251, 49.44351], [8.42307, 49.54182], [8.4227, 49.57419], [8.42244, 49.58339], [8.58138, 49.51978], [8.61203, 49.54906], [8.60449, 49.60679], [8.65499, 49.61775], [8.724, 49.53045], [8.89957, 49.50366], [8.89936, 49.48455], [8.83863, 49.47066], [8.81904, 49.40438], [8.88338, 49.41548], [8.93188, 49.47064], [9.08328, 49.52583], [9.12235, 49.51849], [9.10301, 49.57746], [9.2241, 49.58015], [9.29593, 49.64494], [9.41092, 49.66351], [9.40409, 49.71459], [9.35012, 49.71554], [9.32498, 49.76062], [9.4715, 49.77973], [9.64874, 49.79148]]]}"
+  },
+  {
+   "key": "theme",
+   "value": "[\"http://publications.europa.eu/resource/authority/data-theme/TRAN\"]"
+  },
+  {
+   "key": "uri",
+   "value": "https://mobilithek.info//offers/-4485514588181895023"
+  },
+  {
+   "key": "harvest_object_id",
+   "value": "502641c0-5790-4c09-ae62-372e5f66c192"
+  },
+  {
+   "key": "harvest_source_id",
+   "value": "b1e86720-f022-41f2-9cbc-914ae510371e"
+  },
+  {
+   "key": "harvest_source_title",
+   "value": "Mobilithek Harvester"
+  }
+ ],
+ "groups": [
+  {
+   "description": "",
+   "display_name": "Verkehr",
+   "id": "tran",
+   "image_display_url": "",
+   "name": "tran",
+   "title": "Verkehr"
+  }
+ ],
+ "resources": [
+  {
+   "access_url": "https://offenedaten-konstanz.de/sites/default/files/Theodor_Heuss_Stra%25C3%259Fe.csv",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-25T16:38:42.596460",
+   "description": null,
+   "distribution_ref": "https://mobilithek.info//offers/-4485514588181895023#distribution5",
+   "documentation": "[\"https://offenedaten-konstanz.de/sites/default/files/Theodor_Heuss_Stra%25C3%259Fe.csv\"]",
+   "download_url": "https://offenedaten-konstanz.de/sites/default/files/Theodor_Heuss_Stra%25C3%259Fe.csv",
+   "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+   "hash": "",
+   "id": "ca0466f9-005b-47b7-8308-4fb0003fd20e",
+   "issued": "2022-10-26T13:21:48",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+   "metadata_modified": "2026-11-07T11:56:00.901601",
+   "mimetype": "text/csv",
+   "mimetype_inner": null,
+   "name": null,
+   "package_id": "4efa818b-2f0f-4197-adad-0aa6bdd55692",
+   "position": 0,
+   "resource_type": null,
+   "rights": "N3a10d339d779483caf870c7339c3d4a2",
+   "size": null,
+   "state": "active",
+   "uri": "https://mobilithek.info//offers/-4485514588181895023#distribution5",
+   "url": "https://offenedaten-konstanz.de/sites/default/files/Theodor_Heuss_Stra%25C3%259Fe.csv",
+   "url_type": null
+  },
+  {
+   "access_url": "https://offenedaten-konstanz.de/sites/default/files/Schottenstra%25C3%259Fe.csv",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-25T16:38:42.596465",
+   "description": null,
+   "distribution_ref": "https://mobilithek.info//offers/-4485514588181895023#distribution1",
+   "documentation": "[\"https://offenedaten-konstanz.de/sites/default/files/Schottenstra%25C3%259Fe.csv\"]",
+   "download_url": "https://offenedaten-konstanz.de/sites/default/files/Schottenstra%25C3%259Fe.csv",
+   "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+   "hash": "",
+   "id": "be5aea83-27bf-4642-8c88-778f423e934b",
+   "issued": "2022-10-26T13:29:40",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+   "metadata_modified": "2026-11-07T11:56:00.901791",
+   "mimetype": "text/csv",
+   "mimetype_inner": null,
+   "name": null,
+   "package_id": "4efa818b-2f0f-4197-adad-0aa6bdd55692",
+   "position": 1,
+   "resource_type": null,
+   "rights": "N576018552b3b45538d6770b9d814f9d8",
+   "size": null,
+   "state": "active",
+   "uri": "https://mobilithek.info//offers/-4485514588181895023#distribution1",
+   "url": "https://offenedaten-konstanz.de/sites/default/files/Schottenstra%25C3%259Fe.csv",
+   "url_type": null
+  },
+  {
+   "access_url": "https://offenedaten-konstanz.de/sites/default/files/Jakobstra%25C3%259Fe_suedlich_vom_Kreisverkehr.csv",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-25T16:38:42.596468",
+   "description": null,
+   "distribution_ref": "https://mobilithek.info//offers/-4485514588181895023#distribution4",
+   "documentation": "[\"https://offenedaten-konstanz.de/sites/default/files/Jakobstra%25C3%259Fe_suedlich_vom_Kreisverkehr.csv\"]",
+   "download_url": "https://offenedaten-konstanz.de/sites/default/files/Jakobstra%25C3%259Fe_suedlich_vom_Kreisverkehr.csv",
+   "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+   "hash": "",
+   "id": "82dfc951-6856-4372-b1c4-b86e078b2a44",
+   "issued": "2022-10-26T16:03:00",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+   "metadata_modified": "2026-11-07T11:56:00.901897",
+   "mimetype": "text/csv",
+   "mimetype_inner": null,
+   "name": null,
+   "package_id": "4efa818b-2f0f-4197-adad-0aa6bdd55692",
+   "position": 2,
+   "resource_type": null,
+   "rights": "Nd1cc29809c8b43068ce90da67cae047a",
+   "size": null,
+   "state": "active",
+   "uri": "https://mobilithek.info//offers/-4485514588181895023#distribution4",
+   "url": "https://offenedaten-konstanz.de/sites/default/files/Jakobstra%25C3%259Fe_suedlich_vom_Kreisverkehr.csv",
+   "url_type": null
+  },
+  {
+   "access_url": "https://offenedaten-konstanz.de/sites/default/files/Gartenstra%25C3%259Fe_Schottenstra%25C3%259Fe.csv",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-25T16:38:42.596470",
+   "description": null,
+   "distribution_ref": "https://mobilithek.info//offers/-4485514588181895023#distribution3",
+   "documentation": "[\"https://offenedaten-konstanz.de/sites/default/files/Gartenstra%25C3%259Fe_Schottenstra%25C3%259Fe.csv\"]",
+   "download_url": "https://offenedaten-konstanz.de/sites/default/files/Gartenstra%25C3%259Fe_Schottenstra%25C3%259Fe.csv",
+   "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+   "hash": "",
+   "id": "84578e92-a17b-4da4-8d5d-ab38565b79fc",
+   "issued": "2022-10-26T13:27:26",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+   "metadata_modified": "2026-11-07T11:56:00.901992",
+   "mimetype": "text/csv",
+   "mimetype_inner": null,
+   "name": null,
+   "package_id": "4efa818b-2f0f-4197-adad-0aa6bdd55692",
+   "position": 3,
+   "resource_type": null,
+   "rights": "N71762191e2ed40fc85013037a1bc9a05",
+   "size": null,
+   "state": "active",
+   "uri": "https://mobilithek.info//offers/-4485514588181895023#distribution3",
+   "url": "https://offenedaten-konstanz.de/sites/default/files/Gartenstra%25C3%259Fe_Schottenstra%25C3%259Fe.csv",
+   "url_type": null
+  },
+  {
+   "access_url": "https://offenedaten-konstanz.de/sites/default/files/Alte_Rheinbruecke.csv",
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-09-25T16:38:42.596472",
+   "description": null,
+   "distribution_ref": "https://mobilithek.info//offers/-4485514588181895023#distribution2",
+   "documentation": "[\"https://offenedaten-konstanz.de/sites/default/files/Alte_Rheinbruecke.csv\"]",
+   "download_url": "https://offenedaten-konstanz.de/sites/default/files/Alte_Rheinbruecke.csv",
+   "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+   "hash": "",
+   "id": "25937a04-f239-4ccd-8558-168112a8e95b",
+   "issued": "2022-10-26T16:02:36",
+   "last_modified": null,
+   "license": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+   "metadata_modified": "2026-11-07T11:56:00.902100",
+   "mimetype": "text/csv",
+   "mimetype_inner": null,
+   "name": null,
+   "package_id": "4efa818b-2f0f-4197-adad-0aa6bdd55692",
+   "position": 4,
+   "resource_type": null,
+   "rights": "N2eedf09ff4dc43a5984186750e485fbf",
+   "size": null,
+   "state": "active",
+   "uri": "https://mobilithek.info//offers/-4485514588181895023#distribution2",
+   "url": "https://offenedaten-konstanz.de/sites/default/files/Alte_Rheinbruecke.csv",
+   "url_type": null
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "fahrradzähldaten",
+   "id": "8cea1162-717c-4577-bc60-a5b137407888",
+   "name": "fahrradzähldaten",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "historisch",
+   "id": "db062589-b94c-4f97-bd01-7d6b1e0e7c34",
+   "name": "historisch",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "konstanz",
+   "id": "793993d2-6788-4962-89fa-f83d5fefe5d8",
+   "name": "konstanz",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "mobidata-bw",
+   "id": "df5dc4e1-0dfc-4fff-8a6b-31fbf9339dda",
+   "name": "mobidata-bw",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "zählstelle",
+   "id": "dd841437-8615-4fdb-9e22-6f288449fb16",
+   "name": "zählstelle",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}
