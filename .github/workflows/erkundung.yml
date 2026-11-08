@@ -14,10 +14,8 @@ jobs:
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v7
-      - run: |
-          python3 -m venv /tmp/v && /tmp/v/bin/pip install --quiet playwright
-          /tmp/v/bin/python -m playwright install --with-deps chromium > /dev/null
-      - run: timeout 20m /tmp/v/bin/python tools/potsdam_holen.py ergebnis/potsdam || true
+      - run: sudo apt-get install -y -qq poppler-utils > /dev/null
+      - run: timeout 10m python3 tools/ferien_rostock.py ergebnis || true
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
