@@ -1,0 +1,20 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.vite/
+
+# Pipeline: Rohdaten und Zwischenstände (abrufbar über `zaehlkarte fetch`)
+pipeline/data/
+pipeline/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Secrets (keine im Projekt nötig – nur für den Fall)
+.env
+.env.*
+!.env.example
+
+.DS_Store
