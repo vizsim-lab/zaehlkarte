@@ -5,7 +5,7 @@ Commit gepinnt (sha256 in sources.yaml); eine abweichende Prüfsumme bricht ab. 
 liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt, aus dem ZIP nur
 die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
 Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz die Metadaten
-(CKAN-API) und alle Messdateien, jedes Mal neu.
+(CKAN-API) und alle Messdateien, jedes Mal neu. Konstanz: je Standort eine CSV mit Prüfsumme.
 """
 
 from __future__ import annotations
@@ -114,4 +114,8 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 lade_geprueft(q["url_zip"], zip_pfad, q.get("sha256_zip"))
                 n = entpacke_excel(zip_pfad, ordner / "zip", (".xls", ".pdf"))
             log.append(f"{code}: Positionen + {n} XLS- und PDF-Dateien")
+        elif q["adapter"] == "konstanz_mobil":
+            ordner = pfade.roh / "konstanz"
+            for st in q["standorte"]:
+                log.append(lade_geprueft(st["url"], ordner / st["datei"], st.get("sha256")))
     return log

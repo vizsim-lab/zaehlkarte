@@ -85,6 +85,18 @@ test("Stelle aus Münster: zwei Spitzenstunden, nur stärkste Stunde, Rad-Spalte
   expect(z.every((x) => x.w == null && x.w24 == null && x.sp)).toBe(true);
 });
 
+test("Stelle aus Konstanz: Fußzählung aus dem Geräteprotokoll, Lizenz CC0", async ({ page }) => {
+  await oeffne(page, "#t=fuss.menge");
+  await klickeStelle(page, (x) => x.quelle === "konstanz" && x.name === "Gartenstraße/Schottenstraße");
+  const detail = page.locator("#detail");
+  await expect(detail).toContainText("Gartenstraße/Schottenstraße");
+  await expect(detail).toContainText("CC0 1.0");
+  await expect(detail.locator(".detail-hinweise")).toContainText("Ende des 5-Minuten-Intervalls");
+  const kennwerte = detail.locator(".detail-kennwerte");
+  await expect(kennwerte).toContainText("Fuß");
+  await expect(kennwerte).not.toContainText("Kfz"); // nicht gezählt: keine Zeile, keine 0
+});
+
 test("CSV-Export der Zählungen im Filter", async ({ page }) => {
   await oeffne(page, "#t=rad.menge&q=ravensburg");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);

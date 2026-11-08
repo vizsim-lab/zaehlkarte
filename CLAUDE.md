@@ -37,7 +37,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `-1`/fehlend heißt „nicht gezählt“, nie 0. Werte aus verschiedenen Zählfenstern nie
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.
 - **Rohdaten bleiben unverändert**; Berlin-Archive und Geokodierung sind auf Commits gepinnt,
-  Münster-ZIP und -Positionen über ihre Prüfsumme (sha256 in sources.yaml).
+  Münster-ZIP und -Positionen sowie die Konstanzer CSVs über ihre Prüfsumme (sha256 in
+  sources.yaml).
 - **Keyless:** Hintergrund OpenFreeMap (Positron, lokale `public/style.json` ohne Sprite),
   Relief Mapterhorn, Suche Photon. Keine API-Keys, keine Secrets im Repo.
 - **MapLibre (ESM, v6):** nur über `js/lib/maplibre.js` importieren; wird NICHT gebündelt
@@ -63,7 +64,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   (Playwright sperrt das Netz außer dem Testserver – die Karte muss ohne Hintergrund laufen).
   Neues Verhalten = neuer Test in `tests/web/`.
 - **Daten neu bauen:** Workflow „Kartendaten neu bauen“ (`.github/workflows/daten.yml`) oder
-  lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW und das Münster-Portal sind
-  aus manchen Entwicklungsumgebungen nicht erreichbar – dann den Workflow nutzen.
+  lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW, das Münster- und das
+  Konstanz-Portal sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den Workflow
+  nutzen.
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

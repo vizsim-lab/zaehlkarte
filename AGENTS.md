@@ -39,6 +39,15 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   („Eupener Straße gegenüber 26“, „Bruchstraße Ecke …“, „Orsoyer Allee an VZ 274“) ->
   `werkzeuge/geokodiere_moers.py` (Nominatim, Overpass für Kreuzungen, Photon bei Tippfehlern).
   Ein Gerät stand auf 2007 statt 2017.
+- **Konstanz** (`konstanz_mobil`): je Standort eine CSV (`;`, BOM), Spaltennamen je Datei anders
+  („Fahrradfahrer inkl. Lastenraeder (stadteinwaerts)“, „Stadteinwaerts_PKW“,
+  „Fussgaenger-Ri-Schweiz“) – Verkehrsart aus dem Namen, Summen und „Andere“ weg. Zwei
+  Gerätearten: 15 Minuten auf vollen Viertelstunden (Beginn des Intervalls) und 5-Minuten-
+  Protokolle mit Sekunden. Die Protokolle schreiben jede Zeile 2–25 s nach dem Ende ihres
+  Intervalls (kein Weglaufen der Uhr über Wochen), die erste Zeile nach dem Einschalten ist
+  leer (Gartenstraße 16:35: 0 statt sonst 8–16) -> runden, als Ende nehmen. Doppelte Zeilen mit
+  gleichen Werten oder einer leeren Hälfte; Mitternachtszeilen fehlen in der Jakobstraße ab dem
+  dritten Tag. Die URLs tragen den Upload-Zähler des Portals (`_2.csv`) – Kennungen ohne ihn.
 - **Münster PDF** (`muenster_pdf`): Ausdrucke derselben Excel-Vorlagen. Senkrechte Tabellen
   stehen gedreht im PDF – pdfplumber liest sie rückwärts („zfK“, „0301“), solange man die
   Zeichen nicht je Drehrichtung mit `char_dir_rotated="btt"` bzw. `"ttb"` zusammensetzt.
@@ -76,11 +85,16 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   31.04., Sonntagszählungen unter dem Datum des Mittwochs davor) – Regel im Adapter-Kopf.
 - **Lizenzangaben bei GovData können falsch sein:** Münster steht dort mit
   „other-closed“, das Portal der Stadt (Datensatzseite, API, Nutzungsbedingungen) nennt
-  dl-de/by-2-0. Immer beim Portal der Kommune nachsehen.
+  dl-de/by-2-0. Konstanz: Portal der Stadt CC0 1.0, MobiData BW CC BY 4.0. Immer beim Portal
+  der Kommune nachsehen.
+- **Ein Gerät kann wochenlang zu wenig zählen, ohne dass die Datei es sagt:** Z-Brücke Konstanz
+  ab 3. Oktober 2020 unter einem Zehntel der Tage davor. Die Karte zeigt die Werte und einen
+  Hinweis (`hinweise_zeitraum` in sources.yaml), sortiert nichts aus.
 
 ## Sackgassen
-- mobidata-bw.de, GovData, opendata.potsdam.de, opendata.stadt-muenster.de und kmk.org sind
-  aus manchen Entwicklungsumgebungen nicht erreichbar (Proxy). Abruf dann über GitHub Actions (`zaehlkarte fetch` im Workflow
+- mobidata-bw.de, GovData, opendata.potsdam.de, opendata.stadt-muenster.de,
+  offenedaten-konstanz.de und kmk.org sind aus manchen Entwicklungsumgebungen nicht
+  erreichbar (Proxy). Abruf dann über GitHub Actions (`zaehlkarte fetch` im Workflow
   „Kartendaten neu bauen“). Braucht man die Rohdateien selbst in der Sandbox: der Workflow aus
   Commit e6f7280 (`tools/mobidata_holen.py`, früher Branch `werkzeug/mobidata`) legt sie auf
   einen Branch, den man dann per `git fetch` holt.

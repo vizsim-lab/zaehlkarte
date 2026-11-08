@@ -28,6 +28,7 @@ FragDenStaat.
 | Baindt | BW | in der Karte | in der Karte |
 | Berg | BW | in der Karte | in der Karte |
 | Berlin | BE | in der Karte | in der Karte |
+| Konstanz | BW | in der Karte | Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg. |
 | Moers | NW | in der Karte | Keine Anfrage nötig |
 | Münster | NW | in der Karte | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
 | Ravensburg | BW | in der Karte | in der Karte |

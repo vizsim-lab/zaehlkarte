@@ -337,23 +337,65 @@
    "lage": {
     "quelle": 1158
    }
+  },
+  {
+   "code": "konstanz",
+   "name": "Konstanz",
+   "land": "BW",
+   "traeger": "Stadt Konstanz, Amt für Stadtplanung und Umwelt",
+   "art": "mobile Querschnittszählungen 2020 an sechs Stellen über ein bis sechs Wochen, je Richtung Rad, zu Fuß und an zwei Stellen Kfz, 5- oder 15-Minuten-Werte",
+   "weg": "offen auf dem Open-Data-Portal der Stadt (2020)",
+   "portal": "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr",
+   "lizenzen": [
+    {
+     "code": "konstanz",
+     "titel": "Mobile Verkehrszählungen Rad- und Fußverkehr",
+     "herausgeber": "Stadt Konstanz, Amt für Stadtplanung und Umwelt",
+     "lizenz": "CC0 1.0",
+     "lizenz_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.de",
+     "herkunft_url": "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr"
+    },
+    {
+     "code": "lage",
+     "titel": "Lage der Zählstellen (Nominatim und Overpass, OpenStreetMap)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 6,
+   "zaehlungen": 83,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 28,
+    "sv": 0,
+    "rad": 76,
+    "fuss": 40,
+    "kind": 0
+   },
+   "von": 2020,
+   "bis": 2020,
+   "lage": {
+    "geokodiert": 83
+   }
   }
  ],
  "statistik": {
-  "stellen": 11871,
-  "zaehlungen": 28473,
+  "stellen": 11877,
+  "zaehlungen": 28556,
   "ohne_lage": 1509,
   "gruppen": {
-   "kfz": 18276,
+   "kfz": 18304,
    "sv": 17624,
-   "rad": 17342,
-   "fuss": 5976,
+   "rad": 17418,
+   "fuss": 6016,
    "kind": 5618
   },
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "geokodiert": 20926,
+   "geokodiert": 21009,
    "gps": 4798,
    "uebertragen": 1412,
    "quelle": 1337

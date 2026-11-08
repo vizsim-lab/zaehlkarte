@@ -29,6 +29,7 @@ der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
 | Ravensburg, Weingarten, Berg, Baienfurt, Baindt | 24-Stunden-Videozählungen an Kreuzungen, 15-Minuten-Werte, Pkw, Lkw, Rad, Fuß | 2023–2026 | offen auf [MobiData BW](https://mobidata-bw.de/dataset/zaehldaten-ravensburg) | dl-de/by-2-0 |
 | Moers (Stadt Moers) | rund 540 Tageszählungen an 140 Stellen mit Seitenradar-Messgeräten (meist zwei Tage am Stück), Kfz je Stunde, Schwerverkehr über die Länge | 2010–2022 | offen auf [offenesdatenportal.de](https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021) | dl-de/zero-2-0 |
 | Münster (Stadt Münster) | rund 1.160 Kfz-Knotenpunktzählungen von Hand, je meist zwei Stunden (7–8 und 16–17 Uhr), nach Fahrzeugart | 2000–2020 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung) (XLS und PDF) | dl-de/by-2-0, „Datenquelle: Stadt Münster“ |
+| Konstanz (Amt für Stadtplanung und Umwelt) | 83 Tageszählungen an sechs Stellen mit mobilen Zählgeräten (ein bis sechs Wochen am Stück), 5- oder 15-Minuten-Werte, Rad, Fuß, an zwei Stellen Kfz | 2020 | offen auf [Offene Daten Konstanz](https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr) | CC0 1.0 |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`. Rund 1.500 Berliner Zählungen haben noch keine
@@ -67,13 +68,19 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   lassen, der größere Wert (mit Hinweis). Schwerverkehr = Bus + Lkw + Lastzug. Die Spalte „Rad“ der Kfz-Zählung ist keine vollständige Radzählung
   (wo es eine eigene Radzählung gibt, liegt sie deutlich darunter oder steht auf 0); sie
   fehlt in der Karte und steht im Hinweis der Zählung.
+- Konstanz: Je Kalendertag eine Zählung; eine Stunde zählt nur, wenn alle ihre 5- oder
+  15-Minuten-Werte da sind (die Geräte fielen öfter für Stunden oder Tage aus). Die
+  5-Minuten-Dateien sind Geräteprotokolle: Jede Zeile steht kurz nach dem Ende ihres
+  Intervalls und wird so zugeordnet. Die Lage nennt die Stadt nur als Straße, Brücke oder
+  Hausnummer; die Punkte stammen aus OpenStreetMap, die Genauigkeit steht im Hinweis.
 
 ## Aufbau
 
 ```
 pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> Kartendaten
   config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
-  src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar)
+  src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
+                            konstanz_mobil)
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
 tests/               unit/ (node --test), web/ (Playwright gegen den Build)

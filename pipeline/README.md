@@ -8,7 +8,8 @@ alle Zählungen in ein Schema (`src/zaehlkarte/modell.py`) und schreibt die Kart
 fetch  Rohdaten -> data/raw/           Berlin-Archive + Geokodierung (sha256 geprüft),
                                          MobiData BW: Übersicht + Excel aus den ZIPs,
                                          Münster: Positionen + XLS/PDF aus dem ZIP (sha256),
-                                         Moers: Datensätze 2010–2022 (CKAN-API)
+                                         Moers: Datensätze 2010–2022 (CKAN-API),
+                                         Konstanz: eine CSV je Standort (sha256)
 build  Adapter -> Zählungen             Zähltag (Ferienkalender je Land), Lage übertragen,
                                          Stellen bilden (je Kennung, 150 m)
 site   -> public/data/                  manifest.json, index.json, details/NN.json, datenlage.json
@@ -19,6 +20,7 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 | `adapters/berlin_zda.py`, `zda.py`, `kategorien.py`, `berlin_bezeichnung.py` | Berliner ZDA-Dateien (aus dem Schulwege-Projekt) |
 | `adapters/mobidata_bw.py` | MobiData BW (Ravensburg & Co.) |
 | `adapters/moers_radar.py` | Moers: Seitenradar-Messungen (eine Zeile je Fahrzeug) |
+| `adapters/konstanz_mobil.py` | Konstanz: mobile Zählgeräte, 5- und 15-Minuten-Werte je Richtung |
 | `adapters/muenster.py`, `muenster_xls.py`, `muenster_pdf.py` | Münster: Knotenstrompläne als XLS (2000–2012) und PDF (2010–2020) |
 | `koordinaten.py` | UTM -> Länge/Breite, örtliche Anpassung Gauß-Krüger -> UTM |
 | `kalender.py` | Schultag, Ferien, Feiertag, Wochenende je Land |

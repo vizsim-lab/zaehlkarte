@@ -305,6 +305,42 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     9.17814,
+     47.66906
+    ]
+   },
+   "properties": {
+    "kommune": "Konstanz",
+    "land": "BW",
+    "stand": "in_karte",
+    "was": "mobile Zählungen 2020 an sechs Stellen (Rad, zu Fuß, an zwei Stellen Kfz), 5- oder 15-Minuten-Werte über ein bis sechs Wochen",
+    "links": [
+     {
+      "titel": "Offene Daten Konstanz",
+      "url": "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr"
+     }
+    ],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": "konstanz",
+    "zaehlungen": 83,
+    "situation": "Die Stadt veröffentlicht ihre mobilen Zählungen von 2020 offen (CC0): je Standort eine CSV mit 5- oder 15-Minuten-Werten je Richtung – Rad, zu Fuß und an zwei Stellen Kfz. Die Lage steht nur als Straße, Brücke oder Hausnummer dabei; die Karte setzt sie aus OpenStreetMap. Zählungen nach 2020 enthält der Datensatz nicht; die Fahrrad-Dauerzählstellen der Stadt stehen in einem eigenen Datensatz (nicht in der Karte).",
+    "empfehlung": "Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg.",
+    "weg": "offen; ergänzend FragDenStaat, LIFG BW",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Konstanz",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Konstanz seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf Ihrem Open-Data-Portal stehen die mobilen Zählungen des Rad- und Fußverkehrs von 2020. Ich bitte zusätzlich um die mobilen Zählungen ab 2021, um die Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und um die genaue Lage der Zählgeräte (Koordinaten).\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      6.4536,
      51.6588
     ]

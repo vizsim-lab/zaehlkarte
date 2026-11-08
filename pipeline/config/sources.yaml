@@ -178,6 +178,129 @@ quellen:
       url: https://opendata.stadt-muenster.de/sites/default/files/Z%C3%A4hlstellen.csv
       sha256: 6de47c4d510b83f69824add9d9049c612fce7d3caafd3e898c5ee14860672ee0
 
+  konstanz:
+    status: live
+    adapter: konstanz_mobil
+    name: Konstanz
+    land: BW
+    traeger: Stadt Konstanz, Amt für Stadtplanung und Umwelt
+    titel: Mobile Verkehrszählungen Rad- und Fußverkehr
+    art: >-
+      mobile Querschnittszählungen 2020 an sechs Stellen über ein bis sechs Wochen, je Richtung
+      Rad, zu Fuß und an zwei Stellen Kfz, 5- oder 15-Minuten-Werte
+    weg: offen auf dem Open-Data-Portal der Stadt (2020)
+    ferien: schulferien_baden-wuerttemberg.csv
+    # Lizenz laut Datensatzseite des Portals der Stadt (CC0 1.0). MobiData BW führt denselben
+    # Datensatz als CC BY 4.0 – maßgeblich ist das Portal der Stadt (lizenz_beleg); die Karte
+    # nennt die Stadt ohnehin.
+    lizenz: CC0 1.0
+    lizenz_url: https://creativecommons.org/publicdomain/zero/1.0/deed.de
+    lizenz_beleg: https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr
+    portal: https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr
+    # Lage: Die Stadt nennt je Standort nur Straße, Brücke oder Hausnummer. Punkte aus
+    # OpenStreetMap (Nominatim, Overpass; Abfrage November 2026), Genauigkeit je Standort:
+    # hausnummer | kreuzung | bauwerk (Mitte der Brücke) | strasse (Punkt auf der Straße) |
+    # ungefaehr (Begründung im Hinweis).
+    geokodierung:
+      titel: Lage der Zählstellen (Nominatim und Overpass, OpenStreetMap)
+      lizenz: ODbL (abgeleitet aus OpenStreetMap)
+      lizenz_url: https://opendatacommons.org/licenses/odbl/
+      herkunft_url: https://www.openstreetmap.org/copyright
+    # je Standort eine CSV; Prüfsumme der Fassung vom 4. März 2025 (letzte Änderung im Portal).
+    # zeitstempel: beginn = volle Viertelstunde, Beginn des Intervalls; ende = Protokoll des
+    # Geräts, Zeile kurz nach dem Ende ihres Intervalls (siehe adapters/konstanz_mobil.py).
+    # art: Verkehrsart der Richtungsspalten, wenn keine Spalte eine nennt.
+    standorte:
+      - datei: Schottenstrasse_2.csv
+        url: https://offenedaten-konstanz.de/sites/default/files/Schottenstrasse_2.csv
+        sha256: afff5de2bbb586f51a9aa9b19a6368888236f285e64aff8c6817a9b2b3bd2d4f
+        name: Schottenstraße
+        intervall: 15
+        zeitstempel: beginn
+        kategorien: Fahrradfahrer inkl. Lastenräder; Auto (jegliche Kfz – Auto, Lkw usw.)
+        richtungen: stadteinwärts und stadtauswärts
+        lon: 9.1711434
+        lat: 47.6627916
+        genauigkeit: strasse
+        hinweise:
+          - "Lage: nur die Straße ist bekannt (Punkt in der Straßenmitte)."
+      - datei: Alte_Rheinbruecke_1.csv
+        url: https://offenedaten-konstanz.de/sites/default/files/Alte_Rheinbruecke_1.csv
+        sha256: 63e8096187c1bd5eb3e8e36c341541f84f1c399b161f113556b7fc8d661cdbb2
+        name: Alte Rheinbrücke
+        intervall: 15
+        zeitstempel: beginn
+        art: rad
+        kategorien: Fahrradfahrer inkl. Lastenräder (auch im Pulk und bei Begegnungen)
+        richtungen: stadteinwärts Richtung Laube, stadtauswärts Richtung Alte Rheinbrücke
+        lon: 9.17814
+        lat: 47.66575
+        genauigkeit: ungefaehr
+        hinweise:
+          - >-
+            Lage ungefähr: Die Stadt nennt nur die Brücke und die Richtungen „Ri Laube“ und
+            „Ri Alte Rheinbrücke“; der Punkt liegt am Altstadt-Ende der Brücke.
+      - datei: Gartenstrasse_Schottenstrasse_0.csv
+        url: https://offenedaten-konstanz.de/sites/default/files/Gartenstra%C3%9Fe_Schottenstrasse_0.csv
+        sha256: c6882664aab7badac3203100861e9f475af013615709297f46b0a713be8f6846
+        name: Gartenstraße/Schottenstraße
+        intervall: 5
+        zeitstempel: ende
+        kategorien: Fußgänger
+        richtungen: Richtung Fahrradbrücke und Richtung Schweiz
+        lon: 9.1724136
+        lat: 47.6652099
+        genauigkeit: kreuzung
+      - datei: Jakobstrasse_suedlich_vom_Kreisverkehr_0.csv
+        url: https://offenedaten-konstanz.de/sites/default/files/Jakobstrasse_suedlich_vom_Kreisverkehr_0.csv
+        sha256: 300172ccc42d8a0bc56be12759ed61826f61824cbdb3648460614aeb3158a6c7
+        name: Jakobstraße 62 (südlich vom Kreisverkehr)
+        intervall: 15
+        zeitstempel: beginn
+        kategorien: Fahrräder; Pkw
+        richtungen: Richtung Hörnle und Richtung Mainau
+        lon: 9.2059318
+        lat: 47.674633
+        genauigkeit: hausnummer
+        hinweise:
+          - >-
+            Kfz: laut Stadt „alle gezählten PKWs“ – ob Lkw und Busse darin sind, sagt die
+            Beschreibung nicht.
+      - datei: Theodor_Heuss_Strasse_0.csv
+        url: https://offenedaten-konstanz.de/sites/default/files/Theodor_Heuss_Strasse_0.csv
+        sha256: bc639aa88b1be64d3fd955ee923d90f6d48fc982fb6f7b49e2957d57f8b99968
+        name: Theodor-Heuss-Straße
+        intervall: 5
+        zeitstempel: ende
+        kategorien: Fußgänger; Fahrradfahrer
+        richtungen: Richtung Stadt und Richtung Zähringerplatz
+        lon: 9.1812159
+        lat: 47.6690575
+        genauigkeit: strasse
+        hinweise:
+          - "Lage: nur die Straße ist bekannt (Punkt in der Straßenmitte)."
+      - datei: Z-Bruecke_1.csv
+        url: https://offenedaten-konstanz.de/sites/default/files/Z-Bruecke_1.csv
+        sha256: 1a2c725ecf2c83ec432d13c507352725bee74e810508d44f1db560a9d2efdc94
+        name: Z-Brücke (Bahnhof Petershausen)
+        intervall: 5
+        zeitstempel: ende
+        kategorien: Fußgänger; Fahrradfahrer (ohne „andere Passanten“, unter 1 %)
+        richtungen: stadteinwärts und stadtauswärts
+        lon: 9.1752316
+        lat: 47.6736147
+        genauigkeit: bauwerk
+        hinweise:
+          - "Lage: Mitte der Brücke (die Stadt nennt „Z-Brücke am Bahnhof in Petershausen“)."
+        # Werte ab dem 3. Oktober weit unter denen davor (Tagessummen aus der Rohdatei)
+        hinweise_zeitraum:
+          - von: 2020-10-03
+            text: >-
+              Ab dem 3. Oktober liegen die Werte weit unter denen vom 22. September bis
+              2. Oktober: Rad und Fuß zusammen bis dahin rund 1.000 am Tag, vom 3. bis 12.
+              Oktober unter 100, an den vollen Tagen vom 17. bis 22. Oktober 130–230. Die Datei
+              nennt keinen Grund.
+
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
 recht:
@@ -324,6 +447,31 @@ datenlage:
     weg: "offen"
     links:
       - ["offenesdatenportal.de", "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021"]
+  - kommune: Konstanz
+    quelle: konstanz
+    stand: in_karte
+    was: >-
+      mobile Zählungen 2020 an sechs Stellen (Rad, zu Fuß, an zwei Stellen Kfz), 5- oder
+      15-Minuten-Werte über ein bis sechs Wochen
+    situation: >-
+      Die Stadt veröffentlicht ihre mobilen Zählungen von 2020 offen (CC0): je Standort eine CSV
+      mit 5- oder 15-Minuten-Werten je Richtung – Rad, zu Fuß und an zwei Stellen Kfz. Die Lage
+      steht nur als Straße, Brücke oder Hausnummer dabei; die Karte setzt sie aus OpenStreetMap.
+      Zählungen nach 2020 enthält der Datensatz nicht; die Fahrrad-Dauerzählstellen der Stadt
+      stehen in einem eigenen Datensatz (nicht in der Karte).
+    empfehlung: >-
+      Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und
+      die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz
+      Baden-Württemberg.
+    weg: "offen; ergänzend FragDenStaat, LIFG BW"
+    kontakt: {fds_suche: "Stadt Konstanz"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Auf Ihrem Open-Data-Portal stehen die mobilen Zählungen des Rad- und Fußverkehrs von 2020.
+      Ich bitte zusätzlich um die mobilen Zählungen ab 2021, um die Knotenpunkt- und
+      Querschnittszählungen des Kfz-Verkehrs und um die genaue Lage der Zählgeräte (Koordinaten).
+    links:
+      - ["Offene Daten Konstanz", "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr"]
   - kommune: Xanten
     land: NW
     lon: 6.4536
