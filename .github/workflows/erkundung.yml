@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v7
-      - run: timeout 25m python3 tools/geokodiere_moers.py ergebnis/staedte/moers ergebnis/moers_geo.csv || true
+      - run: timeout 10m python3 tools/konstanz_orte.py ergebnis/konstanz_orte.json || true
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
