@@ -64,8 +64,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   (Playwright sperrt das Netz außer dem Testserver – die Karte muss ohne Hintergrund laufen).
   Neues Verhalten = neuer Test in `tests/web/`.
 - **Daten neu bauen:** Workflow „Kartendaten neu bauen“ (`.github/workflows/daten.yml`) oder
-  lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW, das Münster- und das
-  Konstanz-Portal sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den Workflow
-  nutzen.
+  lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW und die Portale von Münster,
+  Konstanz und Potsdam sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
+  Workflow nutzen.
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

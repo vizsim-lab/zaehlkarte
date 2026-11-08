@@ -43,3 +43,14 @@ def test_nrw_feiertage_und_ferien():
     assert tagtyp(date(2003, 9, 11), "NW", k) == ("ferien", "Sommerferien")  # bis 13.09.
     assert tagtyp(date(2003, 9, 16), "NW", k) == ("schule", None)
     assert tagtyp(date(2010, 5, 25), "NW", k) == ("ferien", "Pfingstferien")  # ein Tag
+
+
+def test_brandenburg_feiertage_und_ferien():
+    assert date(2013, 10, 31) in feiertage("BB", 2013)  # Reformationstag
+    assert date(2013, 11, 1) not in feiertage("BB", 2013)
+    k = Ferienkalender.lade(Pfade().config / "schulferien_brandenburg.csv")
+    assert tagtyp(date(2019, 4, 11), "BB", k) == ("schule", None)
+    assert tagtyp(date(2013, 10, 10), "BB", k) == ("ferien", "Herbstferien")  # zweizeilige Zelle
+    assert tagtyp(date(2013, 11, 1), "BB", k) == ("ferien", "Herbstferien")
+    assert tagtyp(date(2023, 7, 6), "BB", k) == ("schule", None)  # Sommerferien ab 13.07.
+    assert tagtyp(date(2023, 7, 13), "BB", k) == ("ferien", "Sommerferien")

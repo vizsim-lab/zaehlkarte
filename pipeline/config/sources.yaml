@@ -146,12 +146,27 @@ quellen:
       datei: geokodierung/moers.csv
 
   potsdam:
-    status: research
+    status: live
+    adapter: potsdam_pdf
     name: Potsdam
     land: BB
-    art: manuelle Knotenpunktzählungen (April–Oktober, 7–10 und 15–18 Uhr), ein PDF je Knoten
+    traeger: Landeshauptstadt Potsdam, Bereich Verkehrsentwicklung
+    # Quellenangabe nach den Nutzungsbedingungen der LHP (NB-16-OGD, lizenz_url): „Name des
+    # Dateninhalts © LHP/NB-16-OGD/Datum der Entnahme“, dazu ein Hinweis auf die Veränderung und
+    # darauf, dass Dritte die Inhalte nur nach diesen Bedingungen nutzen dürfen. {abruf} = Datum,
+    # an dem `fetch` die Zählpläne geholt hat (data/raw/potsdam/abruf.txt).
+    titel: "Verkehrszählungen © LHP/NB-16-OGD/{abruf} (verändert: Werte aus den Zählplänen ausgelesen)"
+    art: >-
+      Knotenpunktzählungen von Hand an einem Werktag (April–Oktober), 7–10 und 15–18 Uhr; je
+      Zählung nur die beiden Spitzenstunden und die Summe der sechs Stunden, nach Kfz,
+      Schwerverkehr und Rad
+    weg: offen auf dem Open-Data-Portal der Stadt (ein PDF je Zählung, 2010–2023)
+    ferien: schulferien_brandenburg.csv
+    lizenz: Nutzungsbedingungen der LHP (NB-16-OGD) – Weiterverwendung nur nach diesen
+    lizenz_url: https://opendata.potsdam.de/terms/terms-of-use/
     portal: https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/
-    notiz: Adapter muss die PDF-Tabellen auslesen.
+    api: https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets/verkehrszahlungen/exports/json
+    abruf: potsdam/abruf.txt
   muenster:
     status: live
     adapter: muenster
@@ -381,28 +396,32 @@ datenlage:
     links:
       - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt"]
   - kommune: Potsdam
-    land: BB
-    lon: 13.0645
-    lat: 52.3906
-    stand: offen
+    quelle: potsdam
+    stand: in_karte
     was: >-
-      Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April–Oktober, 7–10 und 15–18
-      Uhr)
+      rund 470 Knotenpunktzählungen 2010–2023 von Hand (7–10 und 15–18 Uhr), je Zählung die
+      Spitzenstunden und die Summe der sechs Stunden
     situation: >-
-      Offen sind die Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April bis
-      Oktober, 7–10 und 15–18 Uhr).
+      Die Stadt veröffentlicht die Lage der gezählten Kreuzungen und je Zählung einen Zählplan als
+      PDF (Nutzungsbedingungen der LHP, NB-16-OGD: Weiterverwendung mit Quellenangabe erlaubt). Der
+      Plan nennt je Zufahrt und Verkehrsart nur die Früh- und die Nachmittagsspitzenstunde und die
+      Summe der sechs gezählten Stunden – keine Stunden- oder Viertelstundenwerte. Die Karte liest
+      die Pläne aus.
     empfehlung: >-
-      Zwei Wege: die PDFs auslesen (Adapter in Arbeit) oder dieselben Zählungen als Tabellen
-      (CSV/XLSX) anfragen. Grundlage: Akteneinsichts- und Informationszugangsgesetz Brandenburg.
-    weg: "FragDenStaat, AIG Brandenburg"
+      Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne
+      Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und
+      Informationszugangsgesetz Brandenburg.
+    weg: "offen; ergänzend FragDenStaat, AIG Brandenburg"
     kontakt: {name: "Stadtverwaltung Potsdam", email: "Poststelle@Rathaus.Potsdam.de", fds: "https://fragdenstaat.de/behoerde/4046/stadtverwaltung-potsdam/"}
     anfrage: true
     anfrage_zusatz: >-
-      Auf Ihrem Open-Data-Portal stehen die Ergebnisse der Knotenpunktzählungen als PDF je Kreuzung.
-      Ich bitte um dieselben Zählungen in maschinenlesbarer Form (CSV oder XLSX) und um die
-      Zählungen, die dort nicht veröffentlicht sind.
+      Auf Ihrem Open-Data-Portal stehen je Knotenpunktzählung ein Zählplan als PDF mit den
+      Spitzenstunden und der Summe der sechs Stunden. Ich bitte um dieselben Zählungen mit den Werten
+      je Viertelstunde (oder Stunde), Zufahrt und Verkehrsart in maschinenlesbarer Form (CSV oder
+      XLSX), auch für die Zählungen, die dort nicht veröffentlicht sind (etwa 2020–2022 und ab 2024).
     links:
       - ["Open Data Potsdam", "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/"]
+      - ["Nutzungsbedingungen (NB-16-OGD)", "https://opendata.potsdam.de/terms/terms-of-use/"]
       - ["potsdam.de", "https://www.potsdam.de/de/verkehrszaehlungen-der-landeshauptstadt-potsdam"]
   - kommune: Münster
     quelle: muenster

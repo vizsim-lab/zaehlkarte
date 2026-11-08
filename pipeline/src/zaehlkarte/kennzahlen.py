@@ -34,9 +34,18 @@ def tag24(z: Zaehlung, gruppe: str) -> int | None:
 
 
 def spitzenstunde(z: Zaehlung, gruppe: str) -> tuple[int, int] | None:
-    """(Stunde, Wert) der stärksten gezählten Stunde."""
+    """(Stunde, Wert) der stärksten gezählten Stunde.
+
+    Ohne Stundenreihe: die stärkste der Spitzenstunden der Quelle – aber nur für die Gruppe,
+    nach der sie bestimmt sind (Potsdam: Kfz). Rad in der Kfz-Spitzenstunde ist nicht die
+    stärkste Radstunde. Stunde = Stunde, in der die Spitzenstunde beginnt."""
     r = {h: v for h, v in reihe(z, gruppe).items() if v is not None}
     if not r:
-        return None
+        werte = [(s["werte"][gruppe], s["von"] // 60) for s in z.spitzen
+                 if s.get("nach") == gruppe and s.get("werte", {}).get(gruppe) is not None]
+        if not werte:
+            return None
+        wert, h = max(werte, key=lambda x: (x[0], -x[1]))
+        return h, wert
     h = max(r, key=lambda k: (r[k], -k))
     return h, r[h]

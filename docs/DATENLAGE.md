@@ -19,7 +19,6 @@ FragDenStaat.
 | München | BY | erhoben – Anfrage aussichtsreich | Anfrage nach einem DAVe-Export aller Zählungen |
 | Nürnberg | BY | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt |
 | Paderborn | NW | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 an die Stadt Paderborn |
-| Potsdam | BB | offen, noch nicht in der Karte | Zwei Wege: die PDFs auslesen (Adapter in Arbeit) oder dieselben Zählungen als Tabellen (CSV/XLSX) anfragen |
 | Rostock | MV | auf Anfrage herausgegeben | Die Excel-Originale und die Zählungen seit 2020 nachfordern, dazu eine Lizenz |
 | Stuttgart | BW | nur Summen oder Mittelwerte offen | Anfrage nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet |
 | Wolfsburg | NI | erhoben – Anfrage aussichtsreich | Anfrage nach einem DAVe-Export und den älteren Zählungen |
@@ -31,6 +30,7 @@ FragDenStaat.
 | Konstanz | BW | in der Karte | Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg. |
 | Moers | NW | in der Karte | Keine Anfrage nötig |
 | Münster | NW | in der Karte | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
+| Potsdam | BB | in der Karte | Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und Informationszugangsgesetz Brandenburg. |
 | Ravensburg | BW | in der Karte | in der Karte |
 | Weingarten | BW | in der Karte | in der Karte |
 
@@ -394,37 +394,6 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [FragDenStaat](https://fragdenstaat.de/anfrage/verkehrszahlungen-bahnhofstrae-neuhauser-strae-rathenaustrae-detmolder-strae/)
-
-
-## Potsdam (BB) – offen, noch nicht in der Karte
-
-**Lage:** Offen sind die Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April bis Oktober, 7–10 und 15–18 Uhr).
-
-**Empfehlung:** Zwei Wege: die PDFs auslesen (Adapter in Arbeit) oder dieselben Zählungen als Tabellen (CSV/XLSX) anfragen. Grundlage: Akteneinsichts- und Informationszugangsgesetz Brandenburg.
-
-**Weg:** FragDenStaat, AIG Brandenburg
-
-**Kontakt:** Stadtverwaltung Potsdam · <Poststelle@Rathaus.Potsdam.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/4046/stadtverwaltung-potsdam/)
-
-**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
-
-```text
-Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Potsdam seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
-
-1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
-2. Datum und gezählte Uhrzeiten,
-3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
-
-Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
-
-Auf Ihrem Open-Data-Portal stehen die Ergebnisse der Knotenpunktzählungen als PDF je Kreuzung. Ich bitte um dieselben Zählungen in maschinenlesbarer Form (CSV oder XLSX) und um die Zählungen, die dort nicht veröffentlicht sind.
-
-Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
-
-Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
-```
-
-**Belege:** [Open Data Potsdam](https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/) · [potsdam.de](https://www.potsdam.de/de/verkehrszaehlungen-der-landeshauptstadt-potsdam)
 
 
 ## Rostock (MV) – auf Anfrage herausgegeben

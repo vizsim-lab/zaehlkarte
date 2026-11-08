@@ -16,6 +16,20 @@ test("index.json und manifest.json haben die erwarteten Felder", async ({ reques
   for (let n = 0; n < manifest.details_anzahl; n += 1) {
     expect((await request.get(`/data/details/${n}.json`)).ok()).toBe(true);
   }
+  // Spitzenstunden ohne Stundenreihe (Potsdam): von/bis in Minuten, Werte je Gruppe
+  const potsdam = index.quellen.indexOf("potsdam");
+  const stelle = index.stellen.werte.find((s) => s[1] === potsdam);
+  if (stelle) {
+    const d = await (await request.get(`/data/${manifest.dateien.details.replace("{n}", stelle[7])}`)).json();
+    const mitSpitzen = Object.values(d.zaehlungen).find((z) => z.spitzen);
+    expect(mitSpitzen.stunden).toBeUndefined();
+    for (const s of mitSpitzen.spitzen) {
+      expect(typeof s.von).toBe("number");
+      expect(s.bis - s.von).toBe(60);
+      expect(Object.keys(s.werte).length).toBeGreaterThan(0);
+      expect(index.gruppen).toContain(s.nach);
+    }
+  }
   expect(manifest.kriterien).toBeUndefined();
   for (const q of manifest.quellen) expect(q.lizenzen.length).toBeGreaterThan(0);
 });

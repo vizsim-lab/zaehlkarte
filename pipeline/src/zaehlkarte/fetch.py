@@ -6,6 +6,8 @@ liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt,
 die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
 Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz die Metadaten
 (CKAN-API) und alle Messdateien, jedes Mal neu. Konstanz: je Standort eine CSV mit Prüfsumme.
+Potsdam: Knotenliste (Opendatasoft-API) und je Knoten das ZIP der Zählpläne, jedes Mal neu; das
+Datum des Abrufs steht in `potsdam/abruf.txt` – es gehört zur Quellenangabe (NB-16-OGD).
 """
 
 from __future__ import annotations
@@ -15,6 +17,7 @@ import json
 import shutil
 import tempfile
 import zipfile
+from datetime import date
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -72,6 +75,20 @@ def entpacke_excel(zip_pfad: Path, ziel: Path, endungen: tuple[str, ...] = (".xl
     return n
 
 
+def entpacke_flach(zip_pfad: Path, ziel: Path, endungen: tuple[str, ...]) -> int:
+    """Dateien mit diesen Endungen ohne Unterordner des ZIPs nach `ziel` (Potsdam: „2802/x.pdf“)."""
+    n = 0
+    with zipfile.ZipFile(zip_pfad) as zf:
+        for info in zf.infolist():
+            name = Path(info.filename).name
+            if info.is_dir() or not name.lower().endswith(endungen) or name.startswith("."):
+                continue
+            ziel.mkdir(parents=True, exist_ok=True)
+            (ziel / name).write_bytes(zf.read(info))
+            n += 1
+    return n
+
+
 def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
     pfade = pfade or Pfade()
     log = []
@@ -114,6 +131,25 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 lade_geprueft(q["url_zip"], zip_pfad, q.get("sha256_zip"))
                 n = entpacke_excel(zip_pfad, ordner / "zip", (".xls", ".pdf"))
             log.append(f"{code}: Positionen + {n} XLS- und PDF-Dateien")
+        elif q["adapter"] == "potsdam_pdf":
+            ordner = pfade.roh / "potsdam"
+            antwort = requests.get(q["api"], headers=UA, timeout=120)
+            antwort.raise_for_status()
+            knoten = antwort.json()
+            ordner.mkdir(parents=True, exist_ok=True)
+            (ordner / "export.json").write_text(json.dumps(knoten, ensure_ascii=False, indent=1))
+            n = 0
+            with tempfile.TemporaryDirectory() as tmp:
+                neu = Path(tmp) / "pdf"
+                for k in knoten:
+                    if k.get("zahlplan"):
+                        zip_pfad = lade(k["zahlplan"], Path(tmp) / "plan.zip")
+                        n += entpacke_flach(zip_pfad, neu / str(k["kpnr"]), (".pdf",))
+                if (ordner / "pdf").exists():
+                    shutil.rmtree(ordner / "pdf")
+                shutil.copytree(neu, ordner / "pdf")
+            (ordner / "abruf.txt").write_text(date.today().isoformat())
+            log.append(f"{code}: {len(knoten)} Knoten, {n} Zählpläne")
         elif q["adapter"] == "konstanz_mobil":
             ordner = pfade.roh / "konstanz"
             for st in q["standorte"]:

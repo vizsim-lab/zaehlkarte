@@ -190,19 +190,23 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     13.0645,
-     52.3906
+     13.06464,
+     52.3942
     ]
    },
    "properties": {
     "kommune": "Potsdam",
     "land": "BB",
-    "stand": "offen",
-    "was": "Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April–Oktober, 7–10 und 15–18 Uhr)",
+    "stand": "in_karte",
+    "was": "rund 470 Knotenpunktzählungen 2010–2023 von Hand (7–10 und 15–18 Uhr), je Zählung die Spitzenstunden und die Summe der sechs Stunden",
     "links": [
      {
       "titel": "Open Data Potsdam",
       "url": "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/"
+     },
+     {
+      "titel": "Nutzungsbedingungen (NB-16-OGD)",
+      "url": "https://opendata.potsdam.de/terms/terms-of-use/"
      },
      {
       "titel": "potsdam.de",
@@ -210,11 +214,11 @@
      }
     ],
     "recht": "Akteneinsichts- und Informationszugangsgesetz (AIG)",
-    "quelle": null,
-    "zaehlungen": null,
-    "situation": "Offen sind die Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April bis Oktober, 7–10 und 15–18 Uhr).",
-    "empfehlung": "Zwei Wege: die PDFs auslesen (Adapter in Arbeit) oder dieselben Zählungen als Tabellen (CSV/XLSX) anfragen. Grundlage: Akteneinsichts- und Informationszugangsgesetz Brandenburg.",
-    "weg": "FragDenStaat, AIG Brandenburg",
+    "quelle": "potsdam",
+    "zaehlungen": 472,
+    "situation": "Die Stadt veröffentlicht die Lage der gezählten Kreuzungen und je Zählung einen Zählplan als PDF (Nutzungsbedingungen der LHP, NB-16-OGD: Weiterverwendung mit Quellenangabe erlaubt). Der Plan nennt je Zufahrt und Verkehrsart nur die Früh- und die Nachmittagsspitzenstunde und die Summe der sechs gezählten Stunden – keine Stunden- oder Viertelstundenwerte. Die Karte liest die Pläne aus.",
+    "empfehlung": "Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und Informationszugangsgesetz Brandenburg.",
+    "weg": "offen; ergänzend FragDenStaat, AIG Brandenburg",
     "kontakt": {
      "name": "Stadtverwaltung Potsdam",
      "email": "Poststelle@Rathaus.Potsdam.de",
@@ -222,7 +226,7 @@
     },
     "anfrage": {
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
-     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Potsdam seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf Ihrem Open-Data-Portal stehen die Ergebnisse der Knotenpunktzählungen als PDF je Kreuzung. Ich bitte um dieselben Zählungen in maschinenlesbarer Form (CSV oder XLSX) und um die Zählungen, die dort nicht veröffentlicht sind.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Potsdam seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf Ihrem Open-Data-Portal stehen je Knotenpunktzählung ein Zählplan als PDF mit den Spitzenstunden und der Summe der sechs Stunden. Ich bitte um dieselben Zählungen mit den Werten je Viertelstunde (oder Stunde), Zufahrt und Verkehrsart in maschinenlesbarer Form (CSV oder XLSX), auch für die Zählungen, die dort nicht veröffentlicht sind (etwa 2020–2022 und ab 2024).\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     }
    }
   },

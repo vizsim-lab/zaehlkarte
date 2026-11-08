@@ -164,7 +164,12 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     const z = gibZustand();
     const verfuegbar = Object.keys(ANSICHTEN).filter((a) => hat(x, a));
     if (!verfuegbar.includes(ansicht)) ansicht = verfuegbar[0];
-    const chips = verfuegbar.map((a) => `<button type="button" class="legend-chip${a === ansicht ? " is-active" : ""}" data-ansicht="${a}" aria-pressed="${a === ansicht}">${ANSICHTEN[a].name}</button>`).join("");
+    const chips = d.stunden
+      ? verfuegbar.map((a) => `<button type="button" class="legend-chip${a === ansicht ? " is-active" : ""}" data-ansicht="${a}" aria-pressed="${a === ansicht}">${ANSICHTEN[a].name}</button>`).join("")
+      : "";
+    // Quellen ohne Stundenreihe (Potsdam): Spitzenstunden und Summe über das Zählfenster
+    const spitzen = d.spitzen ?? [];
+    const uhr = (m) => (m % 60 ? `${Math.floor(m / 60)}:${String(m % 60).padStart(2, "0")}` : `${m / 60}`);
 
     const reihen = ANSICHTEN[ansicht]?.reihen.filter((g) => d.stunden?.[g]).map((g, i) => ({
       id: g, name: GRUPPEN_NAMEN[g], farbe: i === 0 ? SERIE_1 : SERIE_2, stunden: proStunde(d.h0, d.stunden[g]),
@@ -181,24 +186,43 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
         let hm = -1;
         st.forEach((v, h) => { if (v != null && (hm < 0 || v > st[hm])) hm = h; });
         if (hm >= 0) spitze = `${zahl.format(st[hm])} <span class="pop-unit">${hm}–${hm + 1} Uhr</span>`;
+      } else {
+        // nur für die Gruppe, nach der die Spitzenstunden bestimmt sind (wie `sp` in index.json)
+        const s = spitzen.filter((p) => p.nach === g && p.werte?.[g] != null)
+          .reduce((a, p) => (a && a.werte[g] >= p.werte[g] ? a : p), null);
+        if (s) spitze = `${zahl.format(s.werte[g])} <span class="pop-unit">${uhr(s.von)}–${uhr(s.bis)} Uhr</span>`;
       }
       const f = (v) => (v == null ? "–" : zahl.format(v));
       return `<tr><td>${esc(GRUPPEN_NAMEN[g])}</td><td>${f(wert(x, g, "w"))}</td><td>${f(wert(x, g, "w24"))}</td><td>${spitze}</td></tr>`;
     });
 
+    const zpGruppen = GRUPPEN.filter((g) => spitzen.some((p) => p.werte?.[g] != null) || d.fenstersummen?.[g] != null);
+    const zpZeilen = [
+      ...spitzen.map((p) => ({ name: `${p.name} ${uhr(p.von)}–${uhr(p.bis)} Uhr`, werte: p.werte })),
+      ...(d.fenstersummen ? [{ name: `Summe ${x.fenster} Uhr`, werte: d.fenstersummen }] : []),
+    ];
+    const nach = spitzen[0]?.nach;
+    const zaehlplan = zpZeilen.length ? `
+      <div class="detail-abschnitt">Laut Zählplan</div>
+      <table class="pop-table detail-zaehlplan">
+        <thead><tr><td></td>${zpGruppen.map((g) => `<td>${esc(GRUPPEN_NAMEN[g])}</td>`).join("")}</tr></thead>
+        <tbody>${zpZeilen.map((r) => `<tr><td>${esc(r.name)}</td>${zpGruppen.map((g) => `<td>${r.werte?.[g] == null ? "–" : zahl.format(r.werte[g])}</td>`).join("")}</tr>`).join("")}</tbody>
+      </table>
+      ${nach && zpGruppen.length > 1 ? `<div class="pop-meta">Spitzenstunden nach ${esc(GRUPPEN_NAMEN[nach])} bestimmt – die übrigen Werte stehen in diesen Stunden, nicht in ihren eigenen.</div>` : ""}` : "";
     const lz = lizenz(x);
     const hinweise = (d.hinweise ?? []).map((h) => `<li>${esc(h)}</li>`).join("");
     const tagText = [TAGE[x.tag ?? "u"], d.tagname].filter(Boolean).join(": ");
     ziel.innerHTML = `
       <div class="detail-abschnitt">Zählung vom ${wochentag(x.datum)} ${datumText(x.datum)} · ${esc(tagText)}</div>
-      <div class="pop-chips">${chips}</div>
+      ${chips ? `<div class="pop-chips">${chips}</div>` : ""}
       ${tg ? `<div class="tg-wrap">${tg.svg}<div class="tg-tooltip" hidden></div></div>${legende}
       <div class="pop-meta">je Stunde, alle Richtungen · grau hinterlegt: gezählte Stunden (${esc(x.fenster)} Uhr)</div>`
-      : `<div class="pop-meta">${d.summen ? "Nur Tagessummen geliefert (keine Stundenwerte)." : "Für diese Gruppe keine Stundenwerte."}</div>`}
+      : `<div class="pop-meta">${d.summen ? "Nur Tagessummen geliefert (keine Stundenwerte)." : zpZeilen.length ? "Keine Stundenwerte – der Zählplan nennt nur Spitzenstunden und die Summe der gezählten Stunden." : "Für diese Gruppe keine Stundenwerte."}</div>`}
       <table class="pop-table detail-kennwerte">
         <thead><tr><td></td><td>7–19 Uhr</td><td>24 h</td><td>stärkste Stunde</td></tr></thead>
         <tbody>${kennzeilen.join("")}</tbody>
       </table>
+      ${zaehlplan}
       ${d.bemerkung ? `<div class="detail-abschnitt">Bemerkung</div><div class="pop-meta">${esc(d.bemerkung)}</div>` : ""}
       ${hinweise ? `<div class="detail-abschnitt">Hinweise</div><ul class="detail-hinweise">${hinweise}</ul>` : ""}
       <div class="detail-abschnitt">Herkunft</div>

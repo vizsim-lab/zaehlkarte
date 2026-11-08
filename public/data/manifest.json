@@ -6,7 +6,7 @@
   "details": "details/{n}.json",
   "datenlage": "datenlage.json"
  },
- "details_anzahl": 39,
+ "details_anzahl": 40,
  "gruppen": [
   {
    "id": "kfz",
@@ -305,6 +305,40 @@
    }
   },
   {
+   "code": "potsdam",
+   "name": "Potsdam",
+   "land": "BB",
+   "traeger": "Landeshauptstadt Potsdam, Bereich Verkehrsentwicklung",
+   "art": "Knotenpunktzählungen von Hand an einem Werktag (April–Oktober), 7–10 und 15–18 Uhr; je Zählung nur die beiden Spitzenstunden und die Summe der sechs Stunden, nach Kfz, Schwerverkehr und Rad",
+   "weg": "offen auf dem Open-Data-Portal der Stadt (ein PDF je Zählung, 2010–2023)",
+   "portal": "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/",
+   "lizenzen": [
+    {
+     "code": "potsdam",
+     "titel": "Verkehrszählungen © LHP/NB-16-OGD/08.11.2026 (verändert: Werte aus den Zählplänen ausgelesen)",
+     "herausgeber": "Landeshauptstadt Potsdam, Bereich Verkehrsentwicklung",
+     "lizenz": "Nutzungsbedingungen der LHP (NB-16-OGD) – Weiterverwendung nur nach diesen",
+     "lizenz_url": "https://opendata.potsdam.de/terms/terms-of-use/",
+     "herkunft_url": "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/"
+    }
+   ],
+   "stellen": 213,
+   "zaehlungen": 472,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 471,
+    "sv": 469,
+    "rad": 466,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2010,
+   "bis": 2023,
+   "lage": {
+    "quelle": 472
+   }
+  },
+  {
    "code": "muenster",
    "name": "Münster",
    "land": "NW",
@@ -382,13 +416,13 @@
   }
  ],
  "statistik": {
-  "stellen": 11877,
-  "zaehlungen": 28556,
+  "stellen": 12090,
+  "zaehlungen": 29028,
   "ohne_lage": 1509,
   "gruppen": {
-   "kfz": 18304,
-   "sv": 17624,
-   "rad": 17418,
+   "kfz": 18775,
+   "sv": 18093,
+   "rad": 17884,
    "fuss": 6016,
    "kind": 5618
   },
@@ -398,7 +432,7 @@
    "geokodiert": 21009,
    "gps": 4798,
    "uebertragen": 1412,
-   "quelle": 1337
+   "quelle": 1809
   }
  }
 }

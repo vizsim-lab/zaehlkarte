@@ -55,10 +55,20 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   stehen linksbündig, Zahlen rechtsbündig. 2017 gibt es eine Vorlage nur mit Kfz, Pkw, SV;
   Radar-Berichte („Class/Volume Report“, 48 h, ohne Knotennummer) und Scans liest der
   Adapter nicht.
-- **PDF je Knoten** (Potsdam, Rostock-Lieferung, Magdeburg-Angebot): braucht einen
-  PDF-Tabellen-Leser; noch kein Adapter (Ansatz wie `muenster_pdf`).
-
-## Fallstricke (gemessen)
+- **Potsdam** (`potsdam_pdf`): je Zählung ein Zählplan „FAHRZEUG-VERTEILUNG“ (PDF aus der
+  Excel-Vorlage „StromPlan“), Knotenliste mit Lage über die Opendatasoft-API. Tabelle je
+  Verkehrsart (RAD, NFZ, SV, KFZ, FZ) mit den Zeilen FSp, NSp, 6h und je Zufahrt einer Spalte plus
+  SUMME. Spalten über die Lage der Wörter: neben der Tabelle stehen Zahlen des Stromplans, in
+  manchen Plänen fehlt eine Zufahrtsspalte im Text, Zufahrten heißen auch „NG“, „SG“. Kontrolle:
+  die Kfz-Werte der Tabelle stimmen in allen Plänen mit „[FSp] : 1644 KFZ/h“ und „6h : 9544 KFZ“
+  im Text überein. Beginn der Spitzenstunde aus „Sph-Beginn: 7.30 Uhr und 15.30 Uhr“ – die Uhrzeit
+  hinter „KFZ/h“ ist meist die Mitte, in einigen Vorlagen der Beginn. Oben steht das Druckdatum,
+  das Zähldatum kommt nach „DATUM“. „6h“ ohne Zeitangabe = 7–10 und 15–18 Uhr (potsdam.de).
+  Werte mit Nachkommastellen sind errechnet (Plan nicht übernommen), „nurRad“-Pläne haben Kfz 0
+  (= nicht gezählt), „_Qw“/„_Qs“/„_Qbr“ sind Querschnitte am Knoten, „KordonZ“ ein 24-Stunden-
+  Tagesgang ohne Tagesdatum (nicht übernommen).
+- **PDF je Knoten** (Rostock-Lieferung, Magdeburg-Angebot): noch kein Adapter (Ansatz wie
+  `potsdam_pdf` bzw. `muenster_pdf`).
 - **MobiData BW `KFZ_n` = nur Pkw.** Nachgerechnet an allen 174 Zählungen mit Excel:
   `KFZ_n` = Klasse PKW, `SV_n` = Klasse LKW (Ravensburg 1000, 16.11.2023: 14.217 + 1.919 =
   16.136 Kfz). Wer die Übersicht allein nutzt (wie `vizsim/svz`), unterschätzt Kfz um den
@@ -87,14 +97,21 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   „other-closed“, das Portal der Stadt (Datensatzseite, API, Nutzungsbedingungen) nennt
   dl-de/by-2-0. Konstanz: Portal der Stadt CC0 1.0, MobiData BW CC BY 4.0. Immer beim Portal
   der Kommune nachsehen.
+- **Potsdam: eigene Nutzungsbedingungen (NB-16-OGD)** statt einer Standardlizenz – Weiterverwendung
+  samt Veränderung erlaubt, Pflicht: „Name © LHP/NB-16-OGD/Datum der Entnahme“, Hinweis auf
+  Veränderung und darauf, dass Dritte nur nach diesen Bedingungen weiterverwenden dürfen. Die
+  Karte setzt das in `titel`/`lizenz` der Quelle um; das Datum schreibt `fetch` (`abruf.txt`).
 - **Ein Gerät kann wochenlang zu wenig zählen, ohne dass die Datei es sagt:** Z-Brücke Konstanz
   ab 3. Oktober 2020 unter einem Zehntel der Tage davor. Die Karte zeigt die Werte und einen
   Hinweis (`hinweise_zeitraum` in sources.yaml), sortiert nichts aus.
 
 ## Sackgassen
-- mobidata-bw.de, GovData, opendata.potsdam.de, opendata.stadt-muenster.de,
-  offenedaten-konstanz.de und kmk.org sind aus manchen Entwicklungsumgebungen nicht
-  erreichbar (Proxy). Abruf dann über GitHub Actions (`zaehlkarte fetch` im Workflow
+- mobidata-bw.de, GovData, opendata.potsdam.de (auch de.ftp.opendatasoft.com),
+  opendata.stadt-muenster.de, offenedaten-konstanz.de, fragdenstaat.de und kmk.org sind aus
+  manchen Entwicklungsumgebungen nicht erreichbar (Proxy). Die Nutzungsbedingungen der LHP
+  (Potsdam) stehen erst nach JavaScript auf der Seite – lesen mit Playwright; die
+  Opendatasoft-API sperrt Crawler per robots.txt. FragDenStaat: die Links „/anhang/…“ liefern
+  eine HTML-Seite, die Datei liegt unter media.frag-den-staat.de/files/foi/<Nachricht>/<Name>. Abruf dann über GitHub Actions (`zaehlkarte fetch` im Workflow
   „Kartendaten neu bauen“). Braucht man die Rohdateien selbst in der Sandbox: der Workflow aus
   Commit e6f7280 (`tools/mobidata_holen.py`, früher Branch `werkzeug/mobidata`) legt sie auf
   einen Branch, den man dann per `git fetch` holt.

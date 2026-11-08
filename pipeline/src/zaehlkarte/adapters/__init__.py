@@ -3,7 +3,14 @@
 sources.yaml wählt den Adapter per `adapter:`; mehrere Quellen dürfen denselben nutzen
 (MobiData BW: fünf Kommunen, ein Format)."""
 
-from zaehlkarte.adapters import berlin_zda, konstanz_mobil, mobidata_bw, moers_radar, muenster
+from zaehlkarte.adapters import (
+    berlin_zda,
+    konstanz_mobil,
+    mobidata_bw,
+    moers_radar,
+    muenster,
+    potsdam_pdf,
+)
 
 ADAPTER = {
     "berlin_zda": berlin_zda,
@@ -11,4 +18,5 @@ ADAPTER = {
     "muenster": muenster,
     "moers_radar": moers_radar,
     "konstanz_mobil": konstanz_mobil,
+    "potsdam_pdf": potsdam_pdf,
 }

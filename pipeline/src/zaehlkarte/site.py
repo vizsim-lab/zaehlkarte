@@ -9,7 +9,9 @@ Vertrag mit dem Frontend (js/data/laden.js, js/data/modell.js): Feldnamen in `in
   wo jede Stunde gezählt ist), `w24` = Summe über 24 Stunden, `sp` = stärkste gezählte Stunde.
   `l` = Lieferung (Index in `lieferungen`), wo eine Quelle mehrere mit eigener Lizenz hat.
 - details/NN.json: Stundenreihen aller Gruppen und die Angaben zur Zählung; je Stelle in
-  einer Datei (`stellen.chunk`), geladen erst beim Klick.
+  einer Datei (`stellen.chunk`), geladen erst beim Klick. Ohne Stundenreihe gibt es dort
+  `spitzen` ([{von, bis, name, nach, werte}], Minuten ab Mitternacht) und `fenstersummen`
+  (Summe je Gruppe über das ganze Zählfenster).
 """
 
 from __future__ import annotations
@@ -86,6 +88,8 @@ def detail(z: Zaehlung) -> dict:
         "h0": z.h0,
         "stunden": {g: z.stunden[g] for g in GRUPPEN if g in z.stunden},
         "summen": {g: v for g, v in z.summen.items() if v is not None},
+        "spitzen": z.spitzen,
+        "fenstersummen": {g: v for g, v in z.fenstersummen.items() if v is not None},
         "intervall": z.intervall,
         "richtungen": z.richtungen,
         "kategorien": z.kategorien,
@@ -98,7 +102,16 @@ def detail(z: Zaehlung) -> dict:
     return {k: v for k, v in d.items() if v not in (None, "", [], {})}
 
 
-def _lizenzen(q: dict) -> list[dict]:
+def _abruf(q: dict, pfade: Pfade) -> str | None:
+    """Datum des Abrufs (TT.MM.JJJJ) aus der Datei, die `fetch` schreibt (Potsdam: Teil der
+    Quellenangabe nach NB-16-OGD); None ohne Rohdaten."""
+    pfad = pfade.roh / q["abruf"] if q.get("abruf") else None
+    if pfad is None or not pfad.exists():
+        return None
+    return date.fromisoformat(pfad.read_text(encoding="utf-8").strip()).strftime("%d.%m.%Y")
+
+
+def _lizenzen(q: dict, pfade: Pfade) -> list[dict]:
     if "lieferungen" in q:
         felder = ("code", "titel", "herausgeber", "lizenz", "lizenz_url", "herkunft_url")
         out = [{k: lf.get(k) for k in felder} for lf in q["lieferungen"]]
@@ -106,10 +119,14 @@ def _lizenzen(q: dict) -> list[dict]:
             g = q["geokodierung"]
             out.append({"code": "lage", **{k: g.get(k) for k in felder[1:]}})
         return out
+    titel = q.get("titel") or f"Straßenverkehrszählungen {q['name']}"
+    if "{abruf}" in titel:
+        datum = _abruf(q, pfade)
+        titel = titel.replace("{abruf}", datum) if datum else titel.replace("/{abruf}", "")
     out = [
         {
             "code": q["code"],
-            "titel": q.get("titel") or f"Straßenverkehrszählungen {q['name']}",
+            "titel": titel,
             "herausgeber": q.get("traeger"),
             "lizenz": q.get("lizenz"),
             "lizenz_url": q.get("lizenz_url"),
@@ -322,7 +339,7 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
                 "art": q.get("art"),
                 "weg": q.get("weg"),
                 "portal": q.get("portal"),
-                "lizenzen": _lizenzen(q),
+                "lizenzen": _lizenzen(q, pfade),
                 **_statistik(je_quelle[c], [z for z in gebaut.ohne_lage if z.quelle == c]),
             }
             for c, q in live.items()

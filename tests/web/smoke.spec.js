@@ -97,6 +97,28 @@ test("Stelle aus Konstanz: Fußzählung aus dem Geräteprotokoll, Lizenz CC0", a
   await expect(kennwerte).not.toContainText("Kfz"); // nicht gezählt: keine Zeile, keine 0
 });
 
+test("Stelle aus Potsdam: Spitzenstunden laut Zählplan, Quellenangabe nach NB-16-OGD", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=sp");
+  await klickeStelle(page, (x) => x.quelle === "potsdam" && x.zaehlungen.length >= 2
+    && x.zaehlungen.some((z) => z.fenster === "7–10, 15–18"));
+  const detail = page.locator("#detail");
+  const plan = detail.locator(".detail-zaehlplan");
+  await expect(plan).toContainText("Frühspitze");
+  await expect(plan).toContainText("Nachmittagsspitze");
+  await expect(plan).toContainText("Summe 7–10, 15–18 Uhr");
+  await expect(detail).toContainText("Spitzenstunden nach Kfz bestimmt");
+  await expect(detail).toContainText("© LHP/NB-16-OGD/");
+  await expect(detail).toContainText("Nutzungsbedingungen der LHP");
+  await expect(detail.locator(".detail-kennwerte")).toContainText(/\d Uhr/); // stärkste Stunde Kfz
+  await expect(detail.locator("svg.tg")).toHaveCount(0); // keine Stundenwerte, kein Tagesgang
+  // in der Karte nur „stärkste Stunde“ (Kfz), keine Summe 7–19 oder 24 h
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "potsdam").flatMap((s) => s.zaehlungen));
+  expect(z.length).toBeGreaterThan(400);
+  expect(z.every((x) => x.w == null && x.w24 == null)).toBe(true);
+  expect(z.filter((x) => x.sp).length).toBeGreaterThan(400);
+});
+
 test("CSV-Export der Zählungen im Filter", async ({ page }) => {
   await oeffne(page, "#t=rad.menge&q=ravensburg");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);
