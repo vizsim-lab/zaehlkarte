@@ -9,6 +9,7 @@ zwei Beispiel-PDFs.
 
 import io
 import json
+import time
 import pathlib
 import re
 import sys
@@ -27,19 +28,19 @@ CKAN = {
     "rostock": "https://www.opendata-hro.de/api/3/action/package_search",
     "bonn": "https://opendata.bonn.de/api/3/action/package_search",
 }
-SUCHE = ["Verkehrszählung", "Verkehrszählungen", "Knotenpunktzählung", "Knotenstromzählung",
-         "Verkehrserhebung", "Zähldaten", "Verkehrsmengen"]
+SUCHE = ["Verkehrszählung", "Knotenpunktzählung", "Zähldaten"]
+FRIST = time.monotonic() + 20 * 60  # danach keine Downloads mehr, Ergebnis wird trotzdem geschrieben
 ODS = {"potsdam": "https://opendata.potsdam.de", "mannheim": "https://mannheim.opendatasoft.com",
        "dortmund": "https://open-data.dortmund.de", "bonn_ods": "https://opendata.bonn.de"}
 TABELLE = (".xlsx", ".xls", ".xlsm", ".csv", ".json", ".geojson", ".ods")
-MAX_BYTES = 80_000_000
+MAX_BYTES = 30_000_000
 ziel = pathlib.Path(sys.argv[1])
 status: dict = {}
 
 
 def hole(url: str, limit: int = MAX_BYTES) -> bytes:
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=120) as r:
+    with urllib.request.urlopen(req, timeout=40) as r:
         daten = r.read(limit + 1)
     if len(daten) > limit:
         raise ValueError(f"größer als {limit} Bytes")
@@ -127,7 +128,8 @@ def lade(pakete: list[dict]) -> None:
         ordner = ziel / p["portal"] / sicher(p["name"])
         for r in p["ressourcen"]:
             url = r.get("url") or ""
-            if not url.startswith("http") or gesamt > 600_000_000:
+            if not url.startswith("http") or gesamt > 300_000_000 or time.monotonic() > FRIST:
+                r["uebersprungen"] = True
                 continue
             datei = sicher(urllib.parse.unquote(url.split("?")[0].rsplit("/", 1)[-1]) or r["name"] or "datei")
             fmt = (r.get("format") or "").lower()
@@ -168,6 +170,10 @@ def lade(pakete: list[dict]) -> None:
 def main() -> None:
     ziel.mkdir(parents=True, exist_ok=True)
     pakete = ckan_suche() + ods_suche()
+    (ziel / "index.json").write_text(json.dumps(pakete, ensure_ascii=False, indent=1))
+    (ziel / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=1))
+    # erst die Kandidaten mit Kommunen-Bezug, GovData zuletzt (viele Treffer, wenig Einzelzählungen)
+    pakete.sort(key=lambda p: (p["portal"] == "govdata", p["portal"]))
     lade(pakete)
     (ziel / "index.json").write_text(json.dumps(pakete, ensure_ascii=False, indent=1))
     (ziel / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=1))
