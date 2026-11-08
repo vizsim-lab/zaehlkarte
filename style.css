@@ -1107,3 +1107,12 @@ body.detail-offen .map-settings-panel { left: 400px; }
   body.detail-offen .map-settings-panel { left: 10px; }
   .legend-chip { padding: 6px 11px; }
 }
+
+/* Anfragetext in der Datenlage: lesbar, markierbar, nicht editierbar */
+.anfrage-text {
+  width: 100%; box-sizing: border-box; margin: 4px 0 2px; padding: 8px 10px;
+  border: 1px solid var(--ui-border); border-radius: 8px; background: #fafafa;
+  font: 11.5px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ui-text); resize: vertical;
+}
+.detail-panel--klein { width: 360px; }

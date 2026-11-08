@@ -95,6 +95,11 @@ async function start() {
     const p = f.properties;
     const el = document.getElementById("datenlage-detail");
     const links = p.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");
+    const k = p.kontakt;
+    const kontakt = k ? `<div class="detail-abschnitt">Kontakt</div><p class="detail-text">
+        ${k.name ? `${esc(k.name)}<br>` : ""}${k.email ? `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a><br>` : ""}
+        ${k.fds ? `<a href="${esc(k.fds)}" target="_blank" rel="noopener">${k.fds_suche ? "Behörde auf FragDenStaat suchen" : "Behörde auf FragDenStaat"} →</a>` : ""}</p>` : "";
+    const a = p.anfrage;
     el.innerHTML = `
       <header class="detail-kopf">
         <div><div class="pop-eyebrow">Datenlage · ${esc(p.land ?? "")}</div>
@@ -102,18 +107,41 @@ async function start() {
         <div class="pop-meta">${esc(manifest.stand[p.stand] ?? p.stand)}</div></div>
         <button class="detail-zu" type="button" data-schliessen aria-label="Schließen">×</button>
       </header>
-      <p class="detail-text">${esc(p.was ?? "")}</p>
-      ${p.zaehlungen ? `<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${p.zaehlungen.toLocaleString("de-DE")} Zählungen in der Karte – hinzoomen</button></p>` : ""}
-      ${p.recht ? `<div class="detail-abschnitt">Rechtsgrundlage für Anfragen</div><p class="detail-text">${esc(p.recht)}; das Umweltinformationsgesetz gilt überall (keine Rechtsberatung).</p>` : ""}
+      ${p.zaehlungen ? `<p class="detail-text">${esc(p.was ?? "")}</p><p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${p.zaehlungen.toLocaleString("de-DE")} Zählungen in der Karte – hinzoomen</button></p>` : ""}
+      ${p.situation ? `<div class="detail-abschnitt">Lage</div><p class="detail-text">${esc(p.situation)}</p>` : (p.zaehlungen ? "" : `<p class="detail-text">${esc(p.was ?? "")}</p>`)}
+      ${p.empfehlung ? `<div class="detail-abschnitt">Empfehlung</div><p class="detail-text">${esc(p.empfehlung)}</p>` : ""}
+      ${p.weg ? `<p class="detail-text"><span class="pop-chip">${esc(p.weg)}</span></p>` : ""}
+      ${kontakt}
+      ${a ? `<div class="detail-abschnitt">Anfragetext</div>
+        <p class="pop-meta">Für das Feld „Anfrage“ auf FragDenStaat – Anrede, Rechtsgrundlage und Gebührenhinweis ergänzt FragDenStaat. Betreff: ${esc(a.betreff)}</p>
+        <textarea class="anfrage-text" readonly rows="9" aria-label="Anfragetext">${esc(a.text)}</textarea>
+        <p class="detail-links"><button type="button" class="link-knopf" data-kopieren>Text kopieren</button>
+        ${k?.fds ? `<a href="${esc(k.fds)}" target="_blank" rel="noopener">Auf FragDenStaat stellen →</a>` : ""}</p>` : ""}
+      ${p.recht ? `<div class="detail-abschnitt">Rechtslage im Land</div><p class="detail-text">${esc(p.recht)}. Keine Rechtsberatung.</p>` : ""}
       ${links ? `<div class="detail-abschnitt">Belege</div><ul class="detail-hinweise">${links}</ul>` : ""}
       <div class="pop-foot"><a href="https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml" target="_blank" rel="noopener">Neues zu ${esc(p.kommune)} melden →</a></div>`;
     el.hidden = false;
-    el.querySelector("[data-schliessen]").onclick = () => { el.hidden = true; };
+    el.scrollTop = 0;
+    el.querySelector("[data-schliessen]").onclick = () => {
+      el.hidden = true;
+      document.body.classList.remove("detail-offen");
+    };
     el.querySelector("[data-hinzoomen]")?.addEventListener("click", () => {
       karte.flyTo({ center: f.geometry.coordinates, zoom: 11 });
       el.hidden = true;
     });
+    el.querySelector("[data-kopieren]")?.addEventListener("click", async (e) => {
+      const feld = el.querySelector(".anfrage-text");
+      try {
+        await navigator.clipboard.writeText(feld.value);
+      } catch {
+        feld.select();
+        document.execCommand("copy");
+      }
+      e.target.textContent = "Kopiert ✓";
+    });
     detail.schliesse();
+    document.body.classList.add("detail-offen"); // Bedienelemente unten links rücken daneben
   }
 
   bindeHover(karte, { daten, manifest, gibZustand: () => zustand, gibEintrag: (i) => jeStelle.get(i) });
@@ -125,6 +153,7 @@ async function start() {
     if (d) { zeigeDatenlage(d.properties.kommune); return; }
     detail.schliesse();
     document.getElementById("datenlage-detail").hidden = true;
+    document.body.classList.remove("detail-offen");
   });
 
   document.getElementById("export-csv").addEventListener("click", () => {

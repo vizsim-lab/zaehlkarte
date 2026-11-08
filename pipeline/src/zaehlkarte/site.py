@@ -118,8 +118,32 @@ def _lizenzen(q: dict) -> list[dict]:
     ]
 
 
+FDS_SUCHE = "https://fragdenstaat.de/behoerden/?q="
+
+
+def anfrage(vorlage: dict, kommune: str, zusatz: str | None) -> dict:
+    """Anfragetext aus der Vorlage in sources.yaml (Feld „Anfrage“ auf FragDenStaat)."""
+    zusatz = " ".join((zusatz or "").split())
+    text = vorlage["text"].format(kommune=kommune, zusatz=f"\n{zusatz}\n" if zusatz else "")
+    return {"betreff": vorlage["betreff"], "text": text.strip()}
+
+
+def kontakt(roh: dict | None) -> dict | None:
+    """Kontakt aus der FragDenStaat-Behördendatenbank; ohne Behörde ein Link zur Suche dort."""
+    if not roh:
+        return None
+    out = {k: roh[k] for k in ("name", "email", "fds") if roh.get(k)}
+    if roh.get("fds_suche"):
+        from urllib.parse import quote_plus
+
+        out["fds"] = FDS_SUCHE + quote_plus(roh["fds_suche"])
+        out["fds_suche"] = True
+    return out
+
+
 def datenlage(gebaut: Gebaut, pfade: Pfade) -> dict:
     cfg = lade_yaml("sources.yaml", pfade)
+    vorlage = cfg["anfrage_vorlage"]
     recht = cfg.get("recht", {})
     alle = quellen(pfade, nur_live=False)
     je_quelle: dict[str, list[Stelle]] = {}
@@ -151,10 +175,73 @@ def datenlage(gebaut: Gebaut, pfade: Pfade) -> dict:
                     "recht": recht.get(land),
                     "quelle": e.get("quelle"),
                     "zaehlungen": n,
+                    "situation": e.get("situation"),
+                    "empfehlung": e.get("empfehlung"),
+                    "weg": e.get("weg"),
+                    "kontakt": kontakt(e.get("kontakt")),
+                    "anfrage": anfrage(vorlage, e["kommune"], e.get("anfrage_zusatz"))
+                    if e.get("anfrage")
+                    else None,
                 },
             }
         )
     return {"type": "FeatureCollection", "features": features}
+
+
+def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
+    """Übersicht für GitHub (docs/DATENLAGE.md) aus denselben Daten wie die Karte."""
+    zeilen = [
+        "# Datenlage: kommunale Verkehrszählungen",
+        "",
+        f"Erzeugt von `zaehlkarte site` am {erzeugt} aus `pipeline/config/sources.yaml` –",
+        "nicht von Hand ändern. Dieselben Angaben zeigt die Karte unter „Datenlage je Kommune“.",
+        "Rechtliche Hinweise sind keine Rechtsberatung; Kontakte aus der Behördendatenbank von",
+        "FragDenStaat.",
+        "",
+        "| Kommune | Land | Stand | Empfehlung |",
+        "|---|---|---|---|",
+    ]
+    eintraege = sorted(
+        fc["features"],
+        key=lambda f: (f["properties"]["quelle"] is not None, f["properties"]["kommune"]),
+    )
+    for f in eintraege:
+        p = f["properties"]
+        emp = (p.get("empfehlung") or ("in der Karte" if p.get("quelle") else "")).split(". ")[0]
+        zeilen.append(f"| {p['kommune']} | {p['land'] or ''} | {stand[p['stand']]} | {emp} |")
+    for f in eintraege:
+        p = f["properties"]
+        if p.get("quelle"):
+            continue
+        zeilen += ["", f"## {p['kommune']} ({p['land']}) – {stand[p['stand']]}", ""]
+        zeilen += [f"**Lage:** {p.get('situation') or p.get('was')}", ""]
+        if p.get("empfehlung"):
+            zeilen += [f"**Empfehlung:** {p['empfehlung']}", ""]
+        if p.get("weg"):
+            zeilen += [f"**Weg:** {p['weg']}", ""]
+        k = p.get("kontakt") or {}
+        if k:
+            teile = [
+                k.get("name"),
+                f"<{k['email']}>" if k.get("email") else None,
+                f"[FragDenStaat]({k['fds']})" if k.get("fds") else None,
+            ]
+            zeilen += ["**Kontakt:** " + " · ".join(t for t in teile if t), ""]
+        if p.get("anfrage"):
+            zeilen += [
+                f"**Anfragetext** – Betreff: {p['anfrage']['betreff']}",
+                "",
+                "```text",
+                p["anfrage"]["text"],
+                "```",
+                "",
+            ]
+        if p.get("links"):
+            zeilen += [
+                "**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})" for x in p["links"]),
+                "",
+            ]
+    return "\n".join(zeilen).rstrip() + "\n"
 
 
 def _statistik(stellen: list[Stelle], ohne: list[Zaehlung]) -> dict:
@@ -185,9 +272,7 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
     groesse = sum(len(json.dumps(r, ensure_ascii=False, separators=(",", ":"))) for r in roh)
     n_chunks = max(1, math.ceil(groesse / CHUNK_BYTES))
 
-    lieferungen = [
-        f"{c}:{lf['code']}" for c, q in live.items() for lf in q.get("lieferungen", [])
-    ]
+    lieferungen = [f"{c}:{lf['code']}" for c, q in live.items() for lf in q.get("lieferungen", [])]
     stellen_werte, zaehlungen_werte = [], []
     chunks: list[dict[str, dict]] = [{} for _ in range(n_chunks)]
     for i, s in enumerate(stellen):
@@ -239,11 +324,15 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
         ],
         "statistik": _statistik(stellen, gebaut.ohne_lage),
     }
+    dl = datenlage(gebaut, pfade)
     dateien = {
         ziel / "index.json": index,
         ziel / "manifest.json": manifest,
-        ziel / "datenlage.json": datenlage(gebaut, pfade),
+        ziel / "datenlage.json": dl,
     }
+    doku = pfade.repo / "docs" / "DATENLAGE.md"
+    doku.parent.mkdir(exist_ok=True)
+    doku.write_text(datenlage_md(dl, STAND, manifest["erzeugt"]), encoding="utf-8")
     for n, inhalt in enumerate(chunks):
         dateien[ziel / "details" / f"{n}.json"] = {"zaehlungen": inhalt}
     for alt in (ziel / "details").glob("*.json"):

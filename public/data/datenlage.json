@@ -27,7 +27,12 @@
     ],
     "recht": "Berliner Informationsfreiheitsgesetz (IFG)",
     "quelle": "berlin",
-    "zaehlungen": 26595
+    "zaehlungen": 26595,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -52,7 +57,12 @@
     ],
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": "ravensburg",
-    "zaehlungen": 140
+    "zaehlungen": 140,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -77,7 +87,12 @@
     ],
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": "weingarten",
-    "zaehlungen": 25
+    "zaehlungen": 25,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -102,7 +117,12 @@
     ],
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": "berg",
-    "zaehlungen": 3
+    "zaehlungen": 3,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -127,7 +147,12 @@
     ],
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": "baienfurt",
-    "zaehlungen": 5
+    "zaehlungen": 5,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -152,7 +177,12 @@
     ],
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": "baindt",
-    "zaehlungen": 6
+    "zaehlungen": 6,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -181,7 +211,19 @@
     ],
     "recht": "Akteneinsichts- und Informationszugangsgesetz (AIG)",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen sind die Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April bis Oktober, 7–10 und 15–18 Uhr).",
+    "empfehlung": "Zwei Wege: die PDFs auslesen (Adapter in Arbeit) oder dieselben Zählungen als Tabellen (CSV/XLSX) anfragen. Grundlage: Akteneinsichts- und Informationszugangsgesetz Brandenburg.",
+    "weg": "FragDenStaat, AIG Brandenburg",
+    "kontakt": {
+     "name": "Stadtverwaltung Potsdam",
+     "email": "Poststelle@Rathaus.Potsdam.de",
+     "fds": "https://fragdenstaat.de/behoerde/4046/stadtverwaltung-potsdam/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Potsdam seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf Ihrem Open-Data-Portal stehen die Ergebnisse der Knotenpunktzählungen als PDF je Kreuzung. Ich bitte um dieselben Zählungen in maschinenlesbarer Form (CSV oder XLSX) und um die Zählungen, die dort nicht veröffentlicht sind.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -201,7 +243,12 @@
     "links": [],
     "recht": "Informationsfreiheitsgesetz NRW",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen ist ein ZIP mit PDF/XLS je Zählung (Spitzenstunden).",
+    "empfehlung": "Keine Anfrage nötig: Adapter für die XLS bauen. Für vollständige Tagesgänge später die Intervallwerte anfragen (IFG NRW).",
+    "weg": "offen – Adapter bauen",
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -226,7 +273,12 @@
     ],
     "recht": "Informationsfreiheitsgesetz NRW",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen ist eine Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept.",
+    "empfehlung": "Keine Anfrage nötig: Adapter für die Übersicht bauen.",
+    "weg": "offen – Adapter bauen",
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -255,7 +307,19 @@
     ],
     "recht": "Informationsfreiheitsgesetz NRW",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen sind Mittelwerte je Zählstelle. Einzelzählungen gibt die Stadt auf Anfrage heraus, 2024 etwa für die Kitschburger Straße.",
+    "empfehlung": "Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement. Grundlage: IFG NRW.",
+    "weg": "FragDenStaat, IFG NRW",
+    "kontakt": {
+     "name": "Amt für Verkehrsmanagement Köln",
+     "email": "verkehrsmanagement@stadt-koeln.de",
+     "fds": "https://fragdenstaat.de/behoerde/15906/amt-fur-straen-und-verkehrsentwicklung/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Köln seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind Mittelwerte je Zählstelle. Ich bitte um die zugrundeliegenden Einzelzählungen; 2024 haben Sie solche Zählungen für die Kitschburger Straße herausgegeben.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -275,7 +339,19 @@
     "links": [],
     "recht": "Informationsfreiheitsgesetz NRW",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen sind Jahresmittelwerte (DTV) je Abschnitt als WFS.",
+    "empfehlung": "Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement. Grundlage: IFG NRW.",
+    "weg": "FragDenStaat, IFG NRW",
+    "kontakt": {
+     "name": "Amt für Verkehrsmanagement Düsseldorf",
+     "email": "verkehrsmanagement@duesseldorf.de",
+     "fds": "https://fragdenstaat.de/behoerde/16786/amt-fur-verkehrsmanagement-der-landeshauptstadt-dusseldorf/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Düsseldorf seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind Jahresmittelwerte je Abschnitt; ich bitte um die Einzelzählungen, aus denen sie entstehen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -295,7 +371,18 @@
     "links": [],
     "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen sind 24-Stunden-Mittelwerte 2019–2023 als WFS, auch für Rad.",
+    "empfehlung": "Anfrage nach den Einzelzählungen. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Frankfurt+am+Main+Verkehr",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Frankfurt am Main seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind 24-Stunden-Mittelwerte je Zählstelle; ich bitte um die Einzelzählungen dahinter.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -320,7 +407,19 @@
     ],
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen sind Kordonzählungen am Stadtrand 1980–2024 als Summen (CSV, CC BY 4.0).",
+    "empfehlung": "Anfrage nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.",
+    "weg": "FragDenStaat, LIFG BW",
+    "kontakt": {
+     "name": "Landeshauptstadt Stuttgart",
+     "email": "post@stuttgart.de",
+     "fds": "https://fragdenstaat.de/behoerde/9384/stadt-stuttgart/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Stuttgart seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind die Kordonzählungen am Stadtrand; gemeint sind die Zählungen im Stadtgebiet.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -345,7 +444,18 @@
     ],
     "recht": "Informationsfreiheitsgesetz NRW",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen ist nur der Zählstellenplan; Werte gibt die Stadt gegen Gebühr heraus.",
+    "empfehlung": "Anfrage nach den Ergebnissen der Zählungen im Zählstellenplan, nach IFG NRW. Gebühren vorab erfragen und gegebenenfalls auf einen Teil (etwa die letzten fünf Jahre) begrenzen.",
+    "weg": "FragDenStaat, IFG NRW",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Dortmund",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Dortmund seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhr Zählstellenplan ist offen; ich bitte um die Ergebnisse der dort verzeichneten Zählungen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -366,11 +476,27 @@
      {
       "titel": "FragDenStaat 2023",
       "url": "https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/"
+     },
+     {
+      "titel": "Informationsfreiheitssatzung (L-IZ 2021)",
+      "url": "https://www.l-iz.de/politik/leipzig/2021/10/evaluierungsbericht-zur-informationsfreiheitssatzung-warten-auf-das-saechsische-transparenzgesetz-417215"
      }
     ],
     "recht": "SächsTranspG gilt für Kommunen nur per Satzung – sonst Sächsisches UIG",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Leipzig zählt 50–100-mal im Jahr; seit 2022 liefern die beauftragten Büros Tabellen. Online gibt es nur die Verkehrsmengenkarte. Eine Anfrage 2023 nach den Daten der Karte wurde abgelehnt, weil es keinen Export gibt; eine Anfrage 2020 wurde wegen Kosten zurückgezogen.",
+    "empfehlung": "Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte. An das Verkehrs- und Tiefbauamt. Grundlage: Informationsfreiheitssatzung der Stadt Leipzig und Sächsisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Informationsfreiheitssatzung Leipzig / Sächsisches UIG",
+    "kontakt": {
+     "name": "Verkehrs- und Tiefbauamt Leipzig",
+     "email": "vta@leipzig.de",
+     "fds": "https://fragdenstaat.de/behoerde/49250/verkehrs-und-tiefbauamt-leipzig/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Leipzig seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind die Zählauswertungen, die Ihnen die beauftragten Büros liefern (seit 2022 als Tabellen), und Ihre eigenen Zählungen – nicht ein Export aus der Verkehrsmengenkarte.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -395,7 +521,18 @@
     ],
     "recht": "SächsTranspG gilt für Kommunen nur per Satzung – sonst Sächsisches UIG",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene Mitarbeitende. Offen sind nur Mittelwerte der Dauerzählstellen (Verkehrsmengenkarte). Laut Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
+    "empfehlung": "Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25. Grundlage: Sächsisches Umweltinformationsgesetz – das Transparenzgesetz gilt für Kommunen nur, wenn sie es per Satzung einführen.",
+    "weg": "FragDenStaat, Sächsisches Umweltinformationsgesetz",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+Dresden",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Dresden seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIn Ihrer Antwort auf die Anfrage AF0915/25 vom 18. November 2025 schreiben Sie, dass Verkehrsdaten auf Anfrage aufbereitet und bereitgestellt werden. Gemeint sind hier die Knotenpunkt- und Querschnittszählungen, nicht die Mittelwerte der Dauerzählstellen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -424,7 +561,18 @@
     ],
     "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Über 5.000 von Hand gezählte Kfz- und Radzählungen in der stadteigenen Software DAVe, in Viertelstunden; Fußzählungen kommen dazu. DAVe kann offene Formate exportieren. Online gibt es nur Karten.",
+    "empfehlung": "Anfrage nach einem DAVe-Export aller Zählungen. Bayern hat kein Landes-IFG: Grundlage sind das Bayerische Umweltinformationsgesetz und die Informationsfreiheitssatzung der Stadt.",
+    "weg": "FragDenStaat, Bayerisches UIG / Informationsfreiheitssatzung München",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+M%C3%BCnchen+Mobilit%C3%A4tsreferat",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt München seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nDie Zählungen liegen in Ihrer Software DAVe vor, die Exporte in offene Formate erlaubt. Ein solcher Export aller Zählungen genügt.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -449,7 +597,19 @@
     ],
     "recht": "kein Landes-IFG – Niedersächsisches UIG",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Nutzt seit April 2026 dieselbe Zählsoftware wie München (DAVe). Wie viele Zählungen es gibt, ist nicht bekannt.",
+    "empfehlung": "Anfrage nach einem DAVe-Export und den älteren Zählungen. Niedersachsen hat kein Landes-IFG: Grundlage ist das Niedersächsische Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Niedersächsisches UIG",
+    "kontakt": {
+     "name": "Stadtverwaltung Wolfsburg",
+     "email": "servicecenter@stadt.wolfsburg.de",
+     "fds": "https://fragdenstaat.de/behoerde/15210/wolfsburg/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Wolfsburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nSie nutzen seit April 2026 die Zählsoftware DAVe, die Exporte in offene Formate erlaubt. Ein solcher Export genügt; ältere Zählungen bitte in dem Format, in dem sie vorliegen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -478,7 +638,18 @@
     ],
     "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Zählt seit 1967 jedes Jahr von Hand. Eine Anfrage 2025/26 bekam eine Zählung in Halbstundenwerten; abgelehnt wurden nur Geschwindigkeitsdaten der Verkehrsüberwachung.",
+    "empfehlung": "Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt. Grundlage: Bayerisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Bayerisches UIG",
+    "kontakt": {
+     "name": "Verkehrsplanungsamt Nürnberg",
+     "fds": "https://fragdenstaat.de/behoerde/52086/verkehrsplanungsamt-nuernberg/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Nürnberg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf eine Anfrage 2025/26 haben Sie eine Zählung in Halbstundenwerten herausgegeben. Ich bitte um alle Zählungen seit 2015 in dieser Form; Geschwindigkeitsdaten der Verkehrsüberwachung sind nicht gemeint.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -503,7 +674,18 @@
     ],
     "recht": "Informationsfreiheitsgesetz M-V",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Zählt an rund 100 Kreuzungen im Jahr; Jahresübersichten als Excel, auch mit Rad- und Fußzählungen. Bis 50 Zählungen kostenlos. 2020 geliefert – auf FragDenStaat liegen aber nur PDF-Umwandlungen.",
+    "empfehlung": "Die Excel-Originale und die Zählungen seit 2020 nachfordern, dazu eine Lizenz. Beim Amt für Verkehrsanlagen, Grundlage: Informationsfreiheitsgesetz M-V.",
+    "weg": "FragDenStaat, IFG M-V",
+    "kontakt": {
+     "name": "Amt für Verkehrsanlagen Rostock",
+     "fds": "https://fragdenstaat.de/behoerde/15967/amt-fur-verkehrsanlagen-hro/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Rostock seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2020 haben Sie Jahresübersichten Ihrer Verkehrszählungen herausgegeben (FragDenStaat, „Verkehrszählung“); dort liegen nur PDF-Umwandlungen. Ich bitte um die Excel-Originale und die Zählungen seither.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -528,7 +710,19 @@
     ],
     "recht": "Informationszugangsgesetz Sachsen-Anhalt (IZG LSA)",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Hat 2022 alle Zählunterlagen 2012–2020 angeboten: Viertelstundenwerte je Richtung, nach Rad, Pkw, Lieferwagen, Lkw, Lastzug und Bus – als PDF-Listen auf CD, gebührenfrei. Für die Weitergabe war ein Entgelt nach dem Weiterverwendungsgesetz im Gespräch.",
+    "empfehlung": "Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen. Grundlage: Informationszugangsgesetz Sachsen-Anhalt.",
+    "weg": "FragDenStaat, IZG LSA",
+    "kontakt": {
+     "name": "Landeshauptstadt Magdeburg",
+     "email": "info@magdeburg.de",
+     "fds": "https://fragdenstaat.de/behoerde/7460/landeshauptstadt-magdeburg/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Magdeburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2022 haben Sie die Zählunterlagen 2012–2020 als PDF-Listen auf CD angeboten. Ich bitte um die Zählungen seit 2012 in digitaler, maschinenlesbarer Form per E-Mail oder Download.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -553,7 +747,19 @@
     ],
     "recht": "Informationsfreiheitsgesetz NRW",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Hat Zählungen einzelner Straßen auf Anfrage herausgegeben.",
+    "empfehlung": "Anfrage nach allen Zählungen seit 2015 an die Stadt Paderborn. Grundlage: IFG NRW.",
+    "weg": "FragDenStaat, IFG NRW",
+    "kontakt": {
+     "name": "Stadt Paderborn",
+     "email": "info@paderborn.de",
+     "fds": "https://fragdenstaat.de/behoerde/34204/stadt-paderborn/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Paderborn seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
@@ -578,7 +784,12 @@
     ],
     "recht": "Hamburgisches Transparenzgesetz",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen sind automatische Zählungen: Wärmebildkameras an über 400 Kreuzungen mit 15-Minuten- Werten.",
+    "empfehlung": "Für die Zählkarte nur bedingt passend (Dauerzählung). Manuelle Kurzzeitzählungen bei Bedarf nach dem Hamburgischen Transparenzgesetz anfragen.",
+    "weg": "offen (automatisch)",
+    "kontakt": null,
+    "anfrage": null
    }
   },
   {
@@ -598,7 +809,19 @@
     "links": [],
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": null,
-    "zaehlungen": null
+    "zaehlungen": null,
+    "situation": "Offen sind die Werte von 12 automatischen Zählkameras.",
+    "empfehlung": "Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden- Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.",
+    "weg": "FragDenStaat, LIFG BW",
+    "kontakt": {
+     "name": "Stadt Heidelberg",
+     "email": "Koordinierungsstelle-LIFG@Heidelberg.de",
+     "fds": "https://fragdenstaat.de/behoerde/9232/stadt-heidelberg/"
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Heidelberg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   }
  ]

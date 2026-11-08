@@ -9,8 +9,8 @@ test("lädt ohne Fehler und zeigt Stellen", async ({ page }) => {
   await expect(page.locator('#thema-chips [data-thema="kfz"]')).toHaveClass(/is-active/);
   await expect(page.locator("#modus-chips")).toBeHidden(); // Kfz: nur Menge
   await expect(page.locator("body")).not.toContainText("Schulweg");
-  const n = await page.evaluate(() => window.__app.karte.querySourceFeatures("stellen").length);
-  expect(n).toBeGreaterThan(0);
+  await expect.poll(() => page.evaluate(() => window.__app.karte.querySourceFeatures("stellen").length))
+    .toBeGreaterThan(0);
 });
 
 test("Verkehrsart und Darstellung wechseln Legende und Link", async ({ page }) => {
@@ -93,5 +93,23 @@ test("Datenlage: Klick auf eine Kommune zeigt Stand und Belege", async ({ page }
   const el = page.locator("#datenlage-detail");
   await expect(el).toBeVisible();
   await expect(el).toContainText("Rostock");
-  await expect(el.locator('a[href*="fragdenstaat.de"]')).toHaveCount(1);
+  await expect(el.locator('a[href*="fragdenstaat.de/anfrage/verkehrszahlung-14/"]')).toHaveCount(1);
+  await expect(el.locator(".anfrage-text")).toHaveValue(/Excel-Originale/);
+});
+
+test("Datenlage: Empfehlung und Anfragetext für Dresden", async ({ page }) => {
+  await oeffne(page);
+  const p = await page.evaluate(async () => {
+    const k = window.__app.karte;
+    await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
+    const f = k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).find((x) => x.properties.kommune === "Dresden");
+    return k.project(f.geometry.coordinates);
+  });
+  await page.mouse.click(p.x, p.y);
+  const el = page.locator("#datenlage-detail");
+  await expect(el).toContainText("Empfehlung");
+  await expect(el.locator(".anfrage-text")).toHaveValue(/AF0915\/25/);
+  await expect(el.locator(".anfrage-text")).toHaveValue(/Stadt Dresden/);
+  await expect(el.locator('a[href^="https://fragdenstaat.de/"]').first()).toBeVisible();
+  await expect(el.locator("[data-kopieren]")).toBeVisible();
 });
