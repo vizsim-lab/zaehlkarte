@@ -120,3 +120,36 @@ def test_kategorien():
 def test_parse_gps_erkennt_vertauschte_reihenfolge():
     assert berlin_zda.parse_gps("13.42288, 52.54172") == (13.42288, 52.54172)
     assert berlin_zda.parse_gps("48.1, 11.5") == (None, None)  # nicht in Berlin
+
+
+def test_geokodier_liste_und_ergaenzung(tmp_path):
+    pfade = Pfade(pipeline=tmp_path, repo=tmp_path)
+    text = zda_text(
+        "K 0000004",
+        "04.09.2019",
+        "0700,0800",
+        KFZ_RAD,
+        [["1 0 0 0 1"] * 4],
+        arm1="Musterstraße (N)",
+        arm2="Beispielweg (O)",
+    )
+    archiv(pfade.roh / "neu.zip", {"K0000004_20190904.zda": text})
+    archiv(pfade.roh / "alt.zip", {})
+    (pfade.roh / "geo.csv").write_text(
+        "datei,geo_lon,geo_lat,geo_methode,geo_gebiet,geo_strassen\n"
+    )
+    q = quelle()
+    zeilen = berlin_zda.geokodier_liste(q, pfade)
+    assert len(zeilen) == 1
+    assert zeilen[0]["datei"] == "K0000004_20190904.zda"
+    assert zeilen[0]["plz"] == "10115" and zeilen[0]["ortsteil"] == "Mitte"
+    assert "Musterstraße" in zeilen[0]["arme"]
+    # mit Ergänzung verortet, und nicht mehr in der Liste
+    (tmp_path / "geokodierung").mkdir()
+    (tmp_path / "geokodierung" / "erg.csv").write_text(
+        "datei,geo_lon,geo_lat,geo_methode,geo_gebiet,geo_strassen\n"
+        "K0000004_20190904.zda,13.39,52.53,kreuzung,plz,A|B\n"
+    )
+    q["geokodierung_ergaenzung"] = {"datei": "geokodierung/erg.csv"}
+    (z,) = berlin_zda.lese(q, pfade)
+    assert (z.lon, z.lat, z.lage) == (13.39, 52.53, "geokodiert")

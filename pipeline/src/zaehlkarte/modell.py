@@ -48,6 +48,7 @@ class Zaehlung:
     hinweise: list[str] = field(default_factory=list)
     tagtyp: str | None = None  # schule | ferien | feiertag | wochenende | None (unbekannt)
     tagname: str | None = None  # „Sommerferien“, „Pfingstmontag“, „Samstag“
+    zusatz: dict = field(default_factory=dict)  # Rohangaben des Adapters (nicht in der Karte)
 
     def gruppen(self) -> list[str]:
         """Gruppen, für die die Zählung Werte hat (in der Reihenfolge von GRUPPEN)."""

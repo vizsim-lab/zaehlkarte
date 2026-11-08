@@ -1,0 +1,62 @@
+# Berliner Zählungen ohne Lage (vor allem Kfz vor 2021) geokodieren: Liste aus der Pipeline,
+# Geocoder aus vizsim/berlin-traffic-counts_schulwege (gepinnt wie die Rohdaten), OSM-Abzug
+# von Geofabrik. Ergebnis: pipeline/geokodierung/berlin_ergaenzung.csv als Pull Request
+# (darf Actions keine PRs anlegen, bleibt der Branch stehen – Link in der Zusammenfassung).
+# Läuft von Hand und wenn sich Werkzeug oder Workflow ändern.
+name: Berlin geokodieren
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [pipeline/werkzeuge/geokodiere_berlin.py, .github/workflows/geokodierung.yml]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  geokodieren:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/checkout@v7
+        with:
+          repository: vizsim/berlin-traffic-counts_schulwege
+          ref: d09e6f06aaa84dd339a6e9ea91dfbf25b642c1a0
+          path: schulwege
+      - uses: astral-sh/setup-uv@v10.1.0
+      - name: Liste der Zählungen ohne Lage
+        working-directory: pipeline
+        run: |
+          uv sync --locked
+          uv run zaehlkarte fetch --quelle berlin
+          uv run zaehlkarte geokodier-liste "$RUNNER_TEMP/liste.csv"
+      - name: OSM-Abzug Berlin (Geofabrik, ODbL)
+        run: curl -sSfL -o "$RUNNER_TEMP/berlin.osm.pbf" https://download.geofabrik.de/europe/germany/berlin-latest.osm.pbf
+      - name: Geokodieren
+        working-directory: schulwege/pipeline
+        run: |
+          uv sync --locked
+          uv run python "$GITHUB_WORKSPACE/pipeline/werkzeuge/geokodiere_berlin.py" \
+            "$RUNNER_TEMP/liste.csv" "$RUNNER_TEMP/berlin.osm.pbf" ../data/berlin_plz.gpkg \
+            "$GITHUB_WORKSPACE/pipeline/geokodierung/berlin_ergaenzung.csv" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Pull Request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- pipeline/geokodierung; then
+            echo "Keine Änderung." >> "$GITHUB_STEP_SUMMARY"; exit 0
+          fi
+          zweig="daten/geokodierung-$(date -u +%F)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$zweig"
+          git add pipeline/geokodierung
+          git commit -q -m "Berlin: Geokodierung der Zählungen ohne Lage ($(date -u +%F))"
+          git push -f origin "$zweig"
+          if ! gh pr create --base main --head "$zweig" --title "Berlin: Geokodierung ergänzt ($(date -u +%F))" \
+               --body "Erzeugt vom Workflow „Berlin geokodieren“. Danach \`zaehlkarte site\` (Workflow „Kartendaten neu bauen“)."; then
+            echo "PR nicht angelegt – Branch: ${{ github.server_url }}/${{ github.repository }}/compare/main...$zweig" >> "$GITHUB_STEP_SUMMARY"
+          fi

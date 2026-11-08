@@ -7,7 +7,10 @@ Verortung, in dieser Reihenfolge:
 1. `gps=` im Kopf (Dateien ab 2021) -> lage "gps"
 2. Geokodier-Cache aus vizsim/berlin-traffic-counts_schulwege (Straßenkreuzung aus OSM) für die
    Fuß- und Radzählungen -> lage "geokodiert"
-3. sonst keine Lage; `build` überträgt sie von Zählungen derselben Zählstellen-Kennung, wenn die
+3. Ergänzung für die übrigen Zählungen (`pipeline/geokodierung/berlin_ergaenzung.csv`, derselbe
+   Geocoder, Workflow „Berlin geokodieren“ – Liste von `zaehlkarte geokodier-liste`)
+   -> lage "geokodiert"
+4. sonst keine Lage; `build` überträgt sie von Zählungen derselben Zählstellen-Kennung, wenn die
    eindeutig an einem Ort liegen -> lage "uebertragen"
 
 Doppelte Zählungen (Regeln aus dem Schulwege-Projekt): dieselbe Zählung in beiden Lieferungen
@@ -165,6 +168,7 @@ def _zaehlung(z: zda.Zaehlung, quelle: dict, lieferung: dict, geo: dict, links: 
         if n
     ]
     code = bez_.alter_postbezirk(bez)
+    plz, _ = bez_.plz_und_bezirk(bez)
     vorlage = lieferung.get("rohdatei_url")
     if "rohdatei_url_liste" in lieferung:  # nur die Dateien, die es einzeln online gibt
         art = links.get(z.datei)
@@ -192,6 +196,13 @@ def _zaehlung(z: zda.Zaehlung, quelle: dict, lieferung: dict, geo: dict, links: 
         lieferung=lieferung["code"],
         bemerkung=bemerkung(z.kopf.get("bemerk", "")),
         hinweise=hinweise + z.hinweise[:3],
+        zusatz={
+            "datei": z.datei,
+            "bez": bez,
+            "arme": bez_.strassen_aus_armen(z.kopf),
+            "plz": plz,
+            "ortsteil": bez_.ortsteil(bez),
+        },
     )
 
 
@@ -204,6 +215,9 @@ def lese(quelle: dict, pfade: Pfade, bericht: Bericht | None = None) -> Iterator
     """Alle Zählungen beider Lieferungen, ohne Doppelte, mit Lage, wo bekannt."""
     bericht = bericht if bericht is not None else Bericht()
     geo = lade_geokodierung(pfade.roh / quelle["geokodierung"]["datei"])
+    if "geokodierung_ergaenzung" in quelle:  # nur, wo der Cache nichts hat
+        ergaenzung = lade_geokodierung(pfade.pipeline / quelle["geokodierung_ergaenzung"]["datei"])
+        geo = {**ergaenzung, **geo}
     links = lade_rohdatei_links(pfade.config / quelle["rohdatei_liste"])
     gesehen_namen: dict[str, str] = {}  # name_norm ohne _24h -> Lieferung
     gesehen_fp: set[tuple] = set()
@@ -244,3 +258,15 @@ def lese(quelle: dict, pfade: Pfade, bericht: Bericht | None = None) -> Iterator
                 continue
             bericht.lage[zaehlung.lage or "fehlt"] += 1
             yield zaehlung
+
+
+def geokodier_liste(quelle: dict, pfade: Pfade) -> list[dict]:
+    """Zählungen ohne Lage (kein GPS, nicht im Cache) als Eingabe für den Schulwege-Geocoder:
+    Spalten datei, bez, name, arme (mit | getrennt), plz, ortsteil."""
+    q = {k: v for k, v in quelle.items() if k != "geokodierung_ergaenzung"}
+    return [
+        {**{k: z.zusatz[k] or "" for k in ("datei", "bez", "plz", "ortsteil")},
+         "name": z.name, "arme": "|".join(z.zusatz["arme"])}
+        for z in lese(q, pfade)
+        if z.lon is None
+    ]

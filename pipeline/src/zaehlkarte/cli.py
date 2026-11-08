@@ -33,6 +33,22 @@ def build(quelle: Quellen = None) -> None:
     typer.echo(f"Stellen: {len(gebaut.stellen)}")
 
 
+@app.command("geokodier-liste")
+def geokodier_liste(ziel: str) -> None:
+    """Berliner Zählungen ohne Lage als CSV (Eingabe für den Workflow „Berlin geokodieren“)."""
+    import csv
+
+    from zaehlkarte.adapters import berlin_zda
+    from zaehlkarte.config import Pfade, quellen
+
+    zeilen = berlin_zda.geokodier_liste(quellen()["berlin"], Pfade())
+    with open(ziel, "w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["datei", "bez", "name", "arme", "plz", "ortsteil"])
+        w.writeheader()
+        w.writerows(zeilen)
+    typer.echo(f"{len(zeilen)} Zählungen ohne Lage -> {ziel}")
+
+
 @app.command()
 def site(datum: Datum = None) -> None:
     """Kartendaten nach public/data/ schreiben."""

@@ -35,8 +35,10 @@ geokodiert sind.
 
 **Lage in Berlin:** Koordinaten aus der Zähldatei (ab 2021), sonst die Geokodierung der Fuß-
 und Radzählungen aus [vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege)
-(Straßenkreuzungen aus OpenStreetMap), sonst übernommen von Zählungen derselben
-Zählstellen-Kennung, wenn die eindeutig an einem Ort liegen (in der Karte abschaltbar).
+(Straßenkreuzungen aus OpenStreetMap), für die übrigen Zählungen derselbe Geocoder im Workflow
+„Berlin geokodieren“ (`pipeline/geokodierung/berlin_ergaenzung.csv`), sonst übernommen von
+Zählungen derselben Zählstellen-Kennung, wenn die eindeutig an einem Ort liegen (in der Karte
+abschaltbar).
 
 **Datenlage:** Recherche Stand November 2026, unvollständig. Hinweise auf weitere Zählungen
 gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml).

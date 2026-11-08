@@ -24,6 +24,9 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 Konfiguration: `config/sources.yaml` (Quellen, Datenlage, Rechtslage je Land),
 `config/schulferien_*.csv` (KMK-Ferienkalender für die Einordnung des Zähltags),
 `config/berlin_rohdateien_2019-2025.txt` (welche Berliner Rohdateien einzeln online liegen).
+`geokodierung/berlin_ergaenzung.csv`: Lage der Berliner Zählungen, die weder GPS noch einen
+Eintrag im Schulwege-Cache haben – erzeugt vom Workflow „Berlin geokodieren“
+(`zaehlkarte geokodier-liste` + `werkzeuge/geokodiere_berlin.py` mit dem Schulwege-Geocoder).
 
 ```bash
 uv sync

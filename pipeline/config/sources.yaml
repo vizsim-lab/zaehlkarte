@@ -51,6 +51,10 @@ quellen:
       datei: geokodierung_berlin.csv
       url: https://raw.githubusercontent.com/vizsim/berlin-traffic-counts_schulwege/d09e6f06aaa84dd339a6e9ea91dfbf25b642c1a0/pipeline/data/geokodierung.csv
       sha256: 111e03bd6e7b6e910e176987b2d26508242c167b45b5d385bd014f8b4b566bfe
+    # Ergänzung für die übrigen Zählungen (Kfz vor 2021 ohne GPS): derselbe Geocoder, gerechnet
+    # vom Workflow „Berlin geokodieren“, im Git (relativ zu pipeline/). Nicht von Hand ändern.
+    geokodierung_ergaenzung:
+      datei: geokodierung/berlin_ergaenzung.csv
 
   ravensburg: &mobidata
     status: live
