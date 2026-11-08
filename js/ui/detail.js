@@ -188,7 +188,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     });
 
     let schulweg = "";
-    if (hat(x, "fuss")) {
+    if (hat(x, "kind") || (z.thema === "fuss" && hat(x, "fuss"))) {
       const b = bewerte(x, z.kriterien);
       const k = z.kriterien;
       const grund = b.gruende.length ? b.gruende.map(esc).join(" · ") : "keine Schwelle überschritten";

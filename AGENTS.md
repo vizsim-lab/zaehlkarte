@@ -49,7 +49,9 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
 ## Sackgassen
 - mobidata-bw.de, GovData und opendata.potsdam.de sind aus manchen Entwicklungsumgebungen
   nicht erreichbar (Proxy). Abruf dann über GitHub Actions (`zaehlkarte fetch` im Workflow
-  „Kartendaten neu bauen“).
+  „Kartendaten neu bauen“). Braucht man die Rohdateien selbst in der Sandbox: der Workflow aus
+  Commit e6f7280 (`tools/mobidata_holen.py`, früher Branch `werkzeug/mobidata`) legt sie auf
+  einen Branch, den man dann per `git fetch` holt.
 - Leipzig 2023: Ablehnung, weil die Karte keinen Export hat – nicht nach „den Daten der
   Karte“ fragen, sondern nach den gelieferten Zählauswertungen der Büros.
 - Dortmund gibt Werte nur gegen Gebühr heraus; offen ist nur der Zählstellenplan.
