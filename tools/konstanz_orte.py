@@ -24,7 +24,16 @@ def nominatim(**q):
 
 
 def overpass(abfrage):
-    return hole("https://overpass-api.de/api/interpreter", urllib.parse.urlencode({"data": abfrage}).encode())
+    fehler = None
+    for server in ("https://overpass-api.de/api/interpreter",
+                   "https://overpass.kumi.systems/api/interpreter",
+                   "https://overpass-api.de/api/interpreter"):
+        try:
+            return hole(server, urllib.parse.urlencode({"data": abfrage}).encode())
+        except Exception as e:  # noqa: BLE001
+            fehler = repr(e)
+            time.sleep(10)
+    return {"fehler": fehler, "elements": []}
 
 
 out = {}
