@@ -5,7 +5,8 @@ Max-Beckmann-Straße“, „Orsoyer Allee an VZ 274“). Daraus:
 - Straße und Hausnummer -> Nominatim (strukturierte Suche in Moers), Genauigkeit `hausnummer`;
 - „Ecke“/„Kv“ (Kreisverkehr) -> gemeinsamer Knoten beider Straßen in OSM (Overpass),
   Genauigkeit `kreuzung`;
-- nur eine Straße -> Mitte der Straße (Nominatim), Genauigkeit `strasse` – ungefähr.
+- nur eine Straße -> Mitte der Straße (Nominatim), Genauigkeit `strasse` – ungefähr;
+- nichts gefunden (Tippfehler im Namen) -> Photon (unscharfe Suche).
 
 Läuft dort, wo Nominatim und Overpass erreichbar sind (GitHub Actions):
     python3 geokodiere_moers.py ROHDATEN ZIEL
@@ -28,6 +29,7 @@ from pathlib import Path
 UA = {"User-Agent": "zaehlkarte-geokodierung/0.1 (+https://github.com/vizsim-lab/zaehlkarte)"}
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
 OVERPASS = "https://overpass-api.de/api/interpreter"
+PHOTON = "https://photon.komoot.io/api/"
 _letzte = [0.0]
 
 
@@ -36,7 +38,8 @@ def hole(url: str, daten: bytes | None = None) -> object:
     if warten > 0:
         time.sleep(warten)
     _letzte[0] = time.time()
-    with urllib.request.urlopen(urllib.request.Request(url, data=daten, headers=UA), timeout=90) as a:
+    anfrage = urllib.request.Request(url, data=daten, headers=UA)
+    with urllib.request.urlopen(anfrage, timeout=90) as a:
         return json.loads(a.read())
 
 
@@ -50,7 +53,9 @@ def adresse(name: str) -> tuple[list[str], str | None]:
     # „Höhe Pusenweg“ ist eine Kreuzung, „Höhe Grundschule“ nur ein Hinweis
     t = re.sub(r"\bHöhe\s+(?=\S*(straße|weg|allee|platz|ring|damm|gasse)\b)", " | ", t)
     t = re.sub(r"\bHöhe\b.*$", "", t)
-    t = re.sub(r"\b(gegenüber|ggü\.?|Hausnr\.?|nach|vor|\d+\.\s*Laterne)(?=\s|$)", " ", t)
+    t = re.sub(r"\bLaterne an Grundstück\b", " ", t)
+    t = re.sub(r"\b(geg\w*über|ggü\.?|Hausnr\.?|nach|vor|\d+\.\s*Laterne)(?=\s|$)", " ", t)
+    t = re.sub(r"(\d+\s*[a-zA-Z]?)\s*-\s*\d+\s*[a-zA-Z]?\b", r"\1", t)  # 63-75, 6b - 8
     t = re.sub(r"\b(Ecke|Kv|KV)\b", " | ", t)
     teile = [" ".join(s.split()) for s in t.split("|") if s.strip()]
     nummer = None
@@ -67,8 +72,10 @@ def adresse(name: str) -> tuple[list[str], str | None]:
 
 def nummer_aus_dateiname(datei: str) -> str | None:
     """'ackerstrasse40t3005112014.txt' -> '40' (Hausnummer vor der Angabe t30/t50)."""
-    m = re.match(r"^\D+?[-_]?(\d{1,3}[a-z]?)[-_]?t\d{2}", datei.lower())
-    return m.group(1) if m else None
+    m = re.match(r"^(\D+?)[-_]?(\d{1,3}[a-z]?)[-_]?t\d{2}", datei.lower())
+    if not m or m.group(1).rstrip("-_").endswith("vz"):  # „an-vz-274“: Verkehrszeichen
+        return None
+    return m.group(2)
 
 
 def aus_dateiname(datei: str) -> str:
@@ -95,6 +102,21 @@ def nominatim(strasse: str, nummer: str | None) -> dict | None:
         if treffer:
             return treffer[0]
     return None
+
+
+def photon(text: str) -> dict | None:
+    """Ersatz bei Tippfehlern im Namen („Humboldstraße“): Photon sucht unscharf."""
+    q = {"q": f"{text}, Moers", "limit": 1, "lang": "de", "lat": 51.45, "lon": 6.63}
+    treffer = hole(f"{PHOTON}?{urllib.parse.urlencode(q)}").get("features", [])
+    if not treffer:
+        return None
+    eig = treffer[0]["properties"]
+    if eig.get("city") != "Moers" and "Moers" not in str(eig.get("county", "")) + str(
+            eig.get("district", "")) + str(eig.get("locality", "")):
+        return None
+    lon, lat = treffer[0]["geometry"]["coordinates"]
+    name = ", ".join(str(eig[k]) for k in ("name", "street", "housenumber", "city") if eig.get(k))
+    return {"lon": lon, "lat": lat, "hausnummer": bool(eig.get("housenumber")), "treffer": name}
 
 
 def kreuzung(a: str, b: str) -> tuple[float, float] | None:
@@ -133,6 +155,10 @@ def verorte(name: str) -> dict:
     if t:
         return {"lon": float(t["lon"]), "lat": float(t["lat"]), "genauigkeit": "strasse",
                 "treffer": t.get("display_name", "")}
+    p = photon(f"{strassen[0]} {nummer or ''}".strip())
+    if p:
+        return {"lon": p["lon"], "lat": p["lat"], "treffer": p["treffer"],
+                "genauigkeit": "hausnummer" if p["hausnummer"] else "strasse"}
     return {"genauigkeit": ""}
 
 
