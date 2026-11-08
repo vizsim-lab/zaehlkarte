@@ -21,7 +21,12 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **`pipeline/config/sources.yaml` ist die einzige Quellenliste** – Quellen, Lizenzen und die
   Datenlage-Einträge. Das Frontend bekommt alles über `manifest.json`/`datenlage.json`; nie im
   Frontend nachtragen. Rechtliche Aussagen in der Datenlage nur mit Beleg (Link).
-- **Erzeugte Dateien nicht von Hand ändern:** `public/data/*`. Immer `uv run zaehlkarte site`.
+- **Erzeugte Dateien nicht von Hand ändern:** `public/data/*`, `docs/DATENLAGE.md` (beide
+  `uv run zaehlkarte site`), `pipeline/geokodierung/berlin_ergaenzung.csv` (Workflow „Berlin
+  geokodieren“).
+- **Datenlage-Texte** (Lage, Empfehlung, Anfragezusatz, Kontakt) stehen in `sources.yaml`.
+  Kontakte nur als Funktionsadressen (keine Namen einzelner Beschäftigter), aus der
+  FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage`) ist für alle gleich.
 - **Frontend-Vertrag:** Feldnamen in `index.json` (`stellen.felder`, `zaehlungen.felder`,
   `gruppen`, `quellen`, `lieferungen`), Aufbau von `details/NN.json`, Dateinamen in
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und
