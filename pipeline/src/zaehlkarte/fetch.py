@@ -4,7 +4,7 @@ Alles landet in pipeline/data/raw/ (gitignored). Berlin-Archive und Geokodierung
 Commit gepinnt (sha256 in sources.yaml); eine abweichende Prüfsumme bricht ab. MobiData BW
 liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt, aus dem ZIP nur
 die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
-Positionsdatei mit Prüfsumme; aus dem ZIP nur die XLS (die PDFs liest noch kein Adapter).
+Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF.
 """
 
 from __future__ import annotations
@@ -87,13 +87,13 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 zip_pfad = lade(q["url_zip"], Path(tmp) / "zaehlungen.zip")
                 n = entpacke_excel(zip_pfad, ordner / "zip")
             log.append(f"{code}: Übersicht + {n} Excel-Dateien")
-        elif q["adapter"] == "muenster_xls":
+        elif q["adapter"] == "muenster":
             ordner = pfade.roh / "muenster"
             pos = q["positionen"]
             log.append(lade_geprueft(pos["url"], ordner / pos["datei"], pos.get("sha256")))
             with tempfile.TemporaryDirectory() as tmp:
                 zip_pfad = Path(tmp) / "zaehlungen.zip"
                 lade_geprueft(q["url_zip"], zip_pfad, q.get("sha256_zip"))
-                n = entpacke_excel(zip_pfad, ordner / "zip", (".xls",))
-            log.append(f"{code}: Positionen + {n} XLS-Dateien")
+                n = entpacke_excel(zip_pfad, ordner / "zip", (".xls", ".pdf"))
+            log.append(f"{code}: Positionen + {n} XLS- und PDF-Dateien")
     return log

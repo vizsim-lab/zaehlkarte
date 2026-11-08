@@ -26,15 +26,22 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
 - **MobiData BW** (`mobidata_bw`): Übersichts-Excel (ID, NAME, Lage, bis zu vier Zählungen je
   Stelle als Spaltenblöcke) + ZIP mit Excel und PDF je Zählung. Blatt „Rohdaten“ = lange
   Tabelle (Zeit, Quelle, Ziel, Abbiegeart, Klasse, Volumen). Zeiten mit „CET“/„CEST“.
-- **Münster XLS** (`muenster_xls`): je Zählung ein Knotenstromplan, zwei Blatthälften = zwei
+- **Münster** (`muenster`, XLS und PDF): je Zählung ein Knotenstromplan, zwei Blatthälften = zwei
   Stunden („Spitzenstunde: 07.00 - 08.00 Uhr“). Je Arm Tabellen „S“ (Zufahrt) und „Q“
   (Querschnitt) nach Kfz, Pkw, Bus, Lkw, Lz, Krad, Rad; Knotensumme = Summe der S. Die
   Vorlagen (KNOTEN1–6, 2–4 Arme) liegen verschieden; der Adapter sucht die Beschriftungen
   S/Q und die Kategorie-Namen statt fester Zellen. Prüfung: Summe Q = 2 × Summe S stimmt (auf 2 %
   genau) in 1.379 von 1.382 Blatthälften. Lage: `Zählstellen.csv` (UTM 32N), sonst
   Gauß-Krüger im Blatt.
-- **PDF je Knoten** (Potsdam, Rostock-Lieferung, Magdeburg-Angebot, Münster 2010–2020):
-  braucht einen PDF-Tabellen-Leser; noch kein Adapter.
+- **Münster PDF** (`muenster_pdf`): Ausdrucke derselben Excel-Vorlagen. Senkrechte Tabellen
+  stehen gedreht im PDF – pdfplumber liest sie rückwärts („zfK“, „0301“), solange man die
+  Zeichen nicht je Drehrichtung mit `char_dir_rotated="btt"` bzw. `"ttb"` zusammensetzt.
+  Spalten über die Tabellenrahmen (dünne Rechtecke), nicht über Textmitten: Beschriftungen
+  stehen linksbündig, Zahlen rechtsbündig. 2017 gibt es eine Vorlage nur mit Kfz, Pkw, SV;
+  Radar-Berichte („Class/Volume Report“, 48 h, ohne Knotennummer) und Scans liest der
+  Adapter nicht.
+- **PDF je Knoten** (Potsdam, Rostock-Lieferung, Magdeburg-Angebot): braucht einen
+  PDF-Tabellen-Leser; noch kein Adapter (Ansatz wie `muenster_pdf`).
 
 ## Fallstricke (gemessen)
 - **MobiData BW `KFZ_n` = nur Pkw.** Nachgerechnet an allen 174 Zählungen mit Excel:
@@ -54,8 +61,9 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   ein „Schultag“ kann vor Ort frei gewesen sein. Die KMK-Kalender ab 1999/2000 stehen im
   Archiv auf kmk.org (`Ferien99_00.pdf` … `FER19_20.pdf`); `pdftotext -layout` und die
   Spaltenköpfe (Herbst, Weihnachten, …) reichen zum Auslesen.
-- **Münster:** In Kfz-Blättern ist die Kfz-Zelle teils falsch verformelt (Kfz 26 bei 315 Pkw)
-  -> Kfz aus den Fahrzeugarten rechnen. Leere Vorlagen stehen auf 0 -> eine Stunde mit
+- **Münster:** Formelfehler in den Zählblättern lassen Ströme aus – mal in der Kfz-Zelle
+  (Kfz 26 bei 315 Pkw), mal in den Fahrzeugarten (S-Zeile ohne den zweiten Strom) -> je Arm
+  den größeren der beiden Werte. Leere Vorlagen stehen auf 0 -> eine Stunde mit
   lauter Null-Kfz gilt als nicht gezählt. Einige Dateien tragen fremde Blätter (ein Blatt
   „Radverkehr“ vom Neutor 2007 in einer Datei von 2012) -> nur Blätter vom selben Zähltag.
   Datum: Dateiname und Excel-Datum im Blatt widersprechen sich in rund 20 Dateien (Tippfehler,

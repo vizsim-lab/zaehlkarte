@@ -11,7 +11,7 @@ FragDenStaat.
 | Dresden | SN | erhoben – Anfrage aussichtsreich | Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25 |
 | Düsseldorf | NW | nur Summen oder Mittelwerte offen | Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement |
 | Frankfurt am Main | HE | nur Summen oder Mittelwerte offen | Anfrage nach den Einzelzählungen |
-| Hamburg | HH | automatische Zählungen offen | Für die Zählkarte nur bedingt passend (Dauerzählung) |
+| Hamburg | HH | nur Summen oder Mittelwerte offen | Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt. |
 | Heidelberg | BW | automatische Zählungen offen | Manuelle Knotenpunktzählungen anfragen |
 | Köln | NW | nur Summen oder Mittelwerte offen | Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement |
 | Leipzig | SN | Anfrage gescheitert | Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte |
@@ -28,7 +28,7 @@ FragDenStaat.
 | Baindt | BW | in der Karte | in der Karte |
 | Berg | BW | in der Karte | in der Karte |
 | Berlin | BE | in der Karte | in der Karte |
-| Münster | NW | in der Karte | Die PDFs 2013–2020 lassen sich auslesen (nächster Schritt hier) |
+| Münster | NW | in der Karte | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
 | Ravensburg | BW | in der Karte | in der Karte |
 | Weingarten | BW | in der Karte | in der Karte |
 
@@ -152,15 +152,35 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 
-## Hamburg (HH) – automatische Zählungen offen
+## Hamburg (HH) – nur Summen oder Mittelwerte offen
 
-**Lage:** Offen sind automatische Zählungen: Wärmebildkameras an über 400 Kreuzungen mit 15-Minuten- Werten.
+**Lage:** Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen (15-Minuten-Werte).
 
-**Empfehlung:** Für die Zählkarte nur bedingt passend (Dauerzählung). Manuelle Kurzzeitzählungen bei Bedarf nach dem Hamburgischen Transparenzgesetz anfragen.
+**Empfehlung:** Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
 
-**Weg:** offen (automatisch)
+**Weg:** FragDenStaat, Hamburgisches Transparenzgesetz
 
-**Belege:** [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html)
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Beh%C3%B6rde+f%C3%BCr+Verkehr+und+Mobilit%C3%A4tswende)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Hamburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+Im Transparenzportal stehen zu den Bedarfszählstellen nur die hochgerechneten Verkehrsstärken (DTV, DTVw, Schwerverkehrsanteil). Ich bitte um die Ergebnisse der zugrunde liegenden Zählungen selbst, also die gezählten Werte je Intervall (meist 6 bis 19 Uhr) mit Zählstelle und Datum.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [Bedarfszählstellen (Metadaten)](https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML) · [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html)
 
 
 ## Heidelberg (BW) – automatische Zählungen offen

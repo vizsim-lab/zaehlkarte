@@ -118,7 +118,7 @@ quellen:
     notiz: Adapter muss die PDF-Tabellen auslesen.
   muenster:
     status: live
-    adapter: muenster_xls
+    adapter: muenster
     name: Münster
     land: NW
     traeger: Stadt Münster
@@ -126,7 +126,7 @@ quellen:
     art: >-
       Kfz-Knotenpunktzählungen von Hand, meist 7–8 und 16–17 Uhr, nach Fahrzeugart (die
       Rad-Spalte der Kfz-Zählung ist keine vollständige Radzählung und fehlt in der Karte)
-    weg: offen auf dem Open-Data-Portal der Stadt (XLS 2000–2012; die PDFs 2010–2020 liest die Karte noch nicht)
+    weg: offen auf dem Open-Data-Portal der Stadt (XLS 2000–2012, PDF 2010–2020)
     ferien: schulferien_nordrhein-westfalen.csv
     # Lizenz laut Datensatzseite und Nutzungsbedingungen des Portals (Namensnennung „Datenquelle:
     # Stadt Münster“). GovData führt dieselben Ressourcen als „other-closed“ – ein Fehler der
@@ -249,18 +249,17 @@ datenlage:
     quelle: muenster
     stand: in_karte
     was: >-
-      rund 690 Kfz-Knotenpunktzählungen 2000–2012 aus den XLS, je meist zwei Stunden (7–8 und
+      rund 1.160 Kfz-Knotenpunktzählungen 2000–2020 (XLS und PDF), je meist zwei Stunden (7–8 und
       16–17 Uhr)
     situation: >-
       Die Stadt veröffentlicht ihre manuellen Kfz-Zählungen offen (dl-de/by-2-0): ein ZIP mit
-      einer Datei je Zählung – XLS 2000–2012 (in der Karte) und PDF 2010–2020 (noch nicht
-      ausgelesen) – und die Lage der Knoten als CSV. Je Zählung stehen nur die Spitzenstunden
-      (meist 7–8 und 16–17 Uhr) nach Fahrzeugart. Die Spalte „Rad“ ist keine vollständige
-      Radzählung; Zählungen ab 2021 fehlen.
+      einer Datei je Zählung – XLS 2000–2012 und PDF 2010–2020, beide in der Karte (außer Scans
+      und Radar-Berichten ohne Knotenstromplan) – und die Lage der Knoten als CSV. Je Zählung
+      stehen nur die Spitzenstunden (meist 7–8 und 16–17 Uhr) nach Fahrzeugart. Die Spalte
+      „Rad“ ist keine vollständige Radzählung; Zählungen ab 2021 fehlen.
     empfehlung: >-
-      Die PDFs 2013–2020 lassen sich auslesen (nächster Schritt hier). Für ganze Zählfenster,
-      neuere Zählungen und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem
-      IFG NRW.
+      Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt
+      eine Anfrage nach dem IFG NRW.
     weg: "offen; ergänzend FragDenStaat, IFG NRW"
     kontakt: {fds_suche: "Stadt Münster"}
     anfrage: true
@@ -576,18 +575,29 @@ datenlage:
     land: HH
     lon: 9.9937
     lat: 53.5511
-    stand: automatisch
+    stand: aggregiert
     was: >-
-      Wärmebildkameras an über 400 Kreuzungen, 15-Minuten-Werte offen (keine manuellen
-      Einzelzählungen)
+      Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je
+      Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch)
     situation: >-
-      Offen sind automatische Zählungen: Wärmebildkameras an über 400 Kreuzungen mit 15-Minuten-
-      Werten.
+      Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an
+      Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV,
+      DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten
+      Werte. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen
+      (15-Minuten-Werte).
     empfehlung: >-
-      Für die Zählkarte nur bedingt passend (Dauerzählung). Manuelle Kurzzeitzählungen bei Bedarf
-      nach dem Hamburgischen Transparenzgesetz anfragen.
-    weg: "offen (automatisch)"
+      Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem
+      Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
+    weg: "FragDenStaat, Hamburgisches Transparenzgesetz"
+    kontakt: {fds_suche: "Behörde für Verkehr und Mobilitätswende"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Im Transparenzportal stehen zu den Bedarfszählstellen nur die hochgerechneten
+      Verkehrsstärken (DTV, DTVw, Schwerverkehrsanteil). Ich bitte um die Ergebnisse der
+      zugrunde liegenden Zählungen selbst, also die gezählten Werte je Intervall (meist 6 bis 19
+      Uhr) mit Zählstelle und Datum.
     links:
+      - ["Bedarfszählstellen (Metadaten)", "https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML"]
       - ["BMV", "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"]
   - kommune: Heidelberg
     land: BW

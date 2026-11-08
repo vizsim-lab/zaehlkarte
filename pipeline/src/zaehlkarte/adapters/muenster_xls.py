@@ -1,97 +1,39 @@
-"""Münster: manuelle Kfz-Knotenpunktzählungen der Stadt (Open Data, XLS 2000–2012).
-
-Quelle: ZIP „Verkehrszählung“ (je Zählung eine XLS oder PDF; Dateiname = Knotennummer und
-Zähltag, `<Knoten>_<TTMM>_<JJJJ>_<lfd. Nr.>…`) und `Zählstellen.csv` (Knotennummer, UTM 32N,
-Lagebezeichnung). Gezählt von Hand (meist Studierende und Rentner) während der
-Hauptverkehrszeiten im Hauptverkehrsstraßennetz.
+"""Münster: ein Zählblatt als XLS lesen (Knotenstromplan, 2000–2012). Gemeinsames in `muenster`.
 
 Ein Blatt ist ein Knotenstromplan mit zwei Hälften, links und rechts je eine Stunde
 („Spitzenstunde: 07.00 - 08.00 Uhr“, meist 7–8 und 16–17 Uhr). Je Knotenarm zwei Tabellen
 nach Fahrzeugart (Kfz, Pkw, Bus, Lkw, Lz, Krad, Rad): „S“ = Zufahrt (Summe der Ströme aus dem
 Arm), „Q“ = Querschnitt (Zu- und Abfahrt). Die Knotensumme einer Stunde ist die Summe der
-Zufahrten. Die Tabellen liest der Adapter über die Beschriftungen „S“/„Q“ und die
+Zufahrten. Die Tabellen liest der Leser über die Beschriftungen „S“/„Q“ und die
 Kategorie-Namen daneben, nicht über feste Zellen – die Vorlagen (2, 3 oder 4 Arme,
 verschoben) unterscheiden sich.
 
-- Kfz = Pkw + Bus + Lkw + Lz + Krad, nachgerechnet: Die Kfz-Zelle ist in einigen Blättern
-  falsch verformelt (dann ein Hinweis mit beiden Werten).
+- Kfz = Pkw + Bus + Lkw + Lz + Krad, nachgerechnet. In einigen Blättern sind Formeln falsch:
+  mal fehlt ein Strom in der Kfz-Zelle (Kfz 26 bei 315 Pkw), mal in den Fahrzeugarten – je
+  Arm gilt dann der größere Wert (beide Summen stehen im Hinweis).
 - Schwerverkehr = Bus + Lkw + Lz.
 - Eine Stunde, in der alle Kfz-Werte 0 sind, gilt als nicht gezählt (leere Vorlage) – im
   Hauptverkehrsnetz gibt es keine Spitzenstunde ohne ein einziges Kfz.
-- Rad: Die Spalte „Rad“ der Kfz-Blätter ist nicht die ganze Radmenge – wo die Stadt den
-  Radverkehr eigens gezählt hat (Blatt „Radverkehr“), liegt sie deutlich darunter oder steht
-  auf 0. Sie geht deshalb nicht als Radverkehr in die Karte, sondern steht im Hinweis. Ein
-  Blatt „Radverkehr“ (nur Rad, eigene Armaufteilung) gilt als Radzählung, wenn es zum
-  selben Zähltag gehört (eins ist die Kopie aus einer anderen Datei).
-- Es zählt das erste Blatt. Weitere Blätter mit anderen Stunden oder Werten nennt ein Hinweis.
-- Zähltag aus dem Dateinamen. Ausnahmen, je mit Hinweis: Das Datum im Namen gibt es nicht
-  (31.04.) oder es ist ein Wochenende, während das Zählblatt einen Werktag nennt – dann gilt
-  das Blatt; oder der Name nennt zwei Daten und das Blatt bestätigt das zweite (so stehen
-  einige Sonntagszählungen von 2011 unter dem Datum des Mittwochs davor).
-- Lage aus der CSV; fehlt der Knoten dort, aus den Gauß-Krüger-Koordinaten im Blatt, über eine
-  an den übrigen Knoten angepasste affine Abbildung auf UTM.
-- Die PDFs (2010–2020) liest der Adapter noch nicht.
+- Fehlen einem Arm die Beschriftungen S/Q oder die Kategorie-Namen, hilft die gespiegelte
+  Blatthälfte bzw. die feste Reihenfolge der Kategorien (nur, wenn die Kfz-Zelle passt).
+- Es zählt das erste Blatt; ein Blatt „Radverkehr“ (nur Rad, eigene Armaufteilung) wird
+  eigens gelesen, weitere Blätter mit anderen Stunden oder Werten nur genannt.
 """
 
 from __future__ import annotations
 
-import csv
 import re
 from collections import Counter
 from collections.abc import Iterator
-from dataclasses import dataclass, field
-from datetime import date
 from pathlib import Path
 
-from zaehlkarte.config import Pfade
-from zaehlkarte.koordinaten import affin, affin_anpassen, utm_zu_wgs84
-from zaehlkarte.modell import Zaehlung
-
-KATEGORIEN = ("Kfz", "Pkw", "Bus", "Lkw", "Lz", "Krad", "Rad")
+# Reihenfolge in allen Vorlagen (vom S weg); neuere PDFs (2017) haben nur Kfz, Pkw und SV
+REIHENFOLGE = ("Kfz", "Pkw", "Bus", "Lkw", "Lz", "Krad", "Rad")
+KATEGORIEN = (*REIHENFOLGE, "SV")
 FAHRZEUGE = ("Pkw", "Bus", "Lkw", "Lz", "Krad")  # Kfz = ihre Summe
 SCHWER = ("Bus", "Lkw", "Lz")
-_DATEI = re.compile(r"^(\d{6,8})[_-](\d{2})(\d{2})[_.-](\d{4})")
-_ZWEITES_DATUM = re.compile(r"_(\d{6,8})_(\d{2})(\d{2})_(\d{4})$")
 _STUNDE = re.compile(r"(\d{1,2})[.:](\d{2})\s*[-–]\s*(\d{1,2})[.:](\d{2})")
 _WOCHENTAG = {"mo": 0, "di": 1, "mi": 2, "do": 3, "fr": 4, "sa": 5, "so": 6}
-_TAGNAME = ("Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag")
-# Gauß-Krüger-Werte im Blatt, die zu Münster passen können (Tippfehler fallen heraus)
-_GK_RECHTS = (3390000, 3430000)
-_GK_HOCH = (5735000, 5780000)
-
-
-@dataclass
-class Bericht:
-    dateien: int = 0
-    ohne_knoten: list[str] = field(default_factory=list)
-    unlesbar: list[str] = field(default_factory=list)
-    doppelt: list[str] = field(default_factory=list)
-    kfz_korrigiert: int = 0
-    datum: list[str] = field(default_factory=list)
-    stunden_leer: int = 0
-    rad_blatt: int = 0
-    rad_blatt_fremd: list[str] = field(default_factory=list)
-    lage_csv: int = 0
-    lage_blatt: int = 0
-    ohne_lage: list[str] = field(default_factory=list)
-    anpassung: str = ""
-
-    def zeilen(self) -> list[str]:
-        out = [
-            f"{self.dateien} XLS-Dateien gelesen",
-            f"Lage: {self.lage_csv} aus der CSV, {self.lage_blatt} aus dem Blatt, "
-            f"{len(self.ohne_lage)} ohne",
-            f"Kfz nachgerechnet (Quelle weicht ab): {self.kfz_korrigiert}",
-            f"Stunden mit lauter Nullen (nicht gezählt): {self.stunden_leer}",
-            f"Zähltag mit Hinweis: {len(self.datum)}",
-            f"mit Blatt „Radverkehr“: {self.rad_blatt} (fremd: {len(self.rad_blatt_fremd)})",
-        ]
-        if self.anpassung:
-            out.append(f"Gauß-Krüger -> UTM: {self.anpassung}")
-        out += [f"ohne Knotennummer/Datum: {d}" for d in self.ohne_knoten[:5]]
-        out += [f"nicht lesbar: {d}" for d in self.unlesbar[:10]]
-        out += [f"doppelt: {d}" for d in self.doppelt[:5]]
-        return out
 
 
 # --------------------------------------------------------------------------- Blatt lesen
@@ -166,7 +108,7 @@ def _tabelle(g: Gitter, r: int, c: int, dr: int, dc: int) -> dict[str, int]:
     Krad, Rad vom S weg –, aber nur, wenn die Kfz-Zelle zur Summe der Fahrzeugarten passt."""
     werte: dict[str, int] = {}
     ohne = False
-    for i in range(1, len(KATEGORIEN) + 1):
+    for i in range(1, len(REIHENFOLGE) + 1):
         rr, cc = r + dr * i, c + dc * i
         v = _zahl(g(rr, cc))
         if v is None:
@@ -175,7 +117,7 @@ def _tabelle(g: Gitter, r: int, c: int, dr: int, dc: int) -> dict[str, int]:
         if kat is None and i == 1:
             ohne = True
         if ohne:
-            kat = KATEGORIEN[i - 1]
+            kat = REIHENFOLGE[i - 1]
         if kat is None or kat in werte:
             break
         werte[kat] = v
@@ -275,29 +217,45 @@ def _plus(summe: int | None, wert: int | None) -> int | None:
     return None if summe is None or wert is None else summe + wert
 
 
+def _fahrzeugsumme(s: dict[str, int]) -> int | None:
+    """Summe der Fahrzeugarten eines Arms (Pkw + Bus + Lkw + Lz + Krad, sonst Pkw + SV)."""
+    if all(k in s for k in FAHRZEUGE):
+        return sum(s[k] for k in FAHRZEUGE)
+    if "Pkw" in s and "SV" in s:
+        return s["Pkw"] + s["SV"]
+    return None
+
+
 def summen(liste: list[dict]) -> dict[str, int | None]:
     """Knotensummen einer Hälfte aus den Zufahrten (S) aller Arme; None = nicht gezählt.
 
-    Kfz = Summe der Fahrzeugarten (sonst die Kfz-Zelle); Schwerverkehr = Bus + Lkw + Lz – ein
-    Arm ganz ohne Kfz zählt dabei als 0."""
+    Kfz je Arm: Kfz-Zelle und Summe der Fahrzeugarten, wo beide da sind und abweichen der
+    größere Wert – die Formelfehler der Zählblätter lassen Ströme aus (mal fehlt ein Strom in
+    der Kfz-Zelle, mal in den Fahrzeugarten); `kfz_quelle` und `kfz_arten` halten beide Summen
+    für den Hinweis. Schwerverkehr = Bus + Lkw + Lz (oder die Spalte SV) – ein Arm ganz ohne
+    Kfz zählt dabei als 0."""
     kfz: int | None = 0
     sv: int | None = 0
     kfz_quelle: int | None = 0
+    kfz_arten: int | None = 0
     rad: int | None = 0
     for arm in liste:
         s = arm["s"]
-        if all(k in s for k in FAHRZEUGE):
-            kfz_arm = sum(s[k] for k in FAHRZEUGE)
-        else:
-            kfz_arm = s.get("Kfz")
+        arten = _fahrzeugsumme(s)
+        zelle = s.get("Kfz")
+        kfz_arm = max(v for v in (arten, zelle) if v is not None) if (arten, zelle) != (
+            None, None) else None
         kfz = _plus(kfz, kfz_arm)
         if all(k in s for k in SCHWER):
             sv = _plus(sv, sum(s[k] for k in SCHWER))
+        elif "SV" in s:
+            sv = _plus(sv, s["SV"])
         elif kfz_arm != 0:
             sv = None
-        kfz_quelle = _plus(kfz_quelle, s.get("Kfz"))
+        kfz_quelle = _plus(kfz_quelle, zelle)
+        kfz_arten = _plus(kfz_arten, arten)
         rad = _plus(rad, s.get("Rad"))
-    return {"kfz": kfz, "sv": sv, "kfz_quelle": kfz_quelle, "rad": rad}
+    return {"kfz": kfz, "sv": sv, "kfz_quelle": kfz_quelle, "kfz_arten": kfz_arten, "rad": rad}
 
 
 def lese_blatt(g: Gitter, gruppe: str = "kfz") -> dict:
@@ -370,11 +328,6 @@ def kopf(g: Gitter, datemode: int = 0) -> dict:
     return out
 
 
-def name_schoen(roh: str) -> str:
-    """'Freckenhorster Straße/ Telgter Straße' -> 'Freckenhorster Straße / Telgter Straße'."""
-    return re.sub(r"\s*/\s*", " / ", " ".join(roh.split())).strip(" /")
-
-
 # --------------------------------------------------------------------------- Datei lesen
 
 
@@ -406,237 +359,3 @@ def lese_datei(pfad: Path) -> dict:
         if not gleich:
             out["weitere"].append(b.name.strip())
     return out
-
-
-def datei_kennung(pfad: Path) -> str:
-    """Dateiname ohne Endung und ohne Ordnerpräfix aus dem ZIP („Verkehrszählung__“)."""
-    return re.sub(r"^Verkehrszählung__", "", pfad.stem)
-
-
-def _datum(tag: str, monat: str, jahr: str) -> date | None:
-    try:
-        return date(int(jahr), int(monat), int(tag))
-    except ValueError:
-        return None
-
-
-def aus_dateiname(kennung: str) -> tuple[str | None, date | None, date | None]:
-    """(Knoten, Datum, zweites Datum am Ende des Namens oder None)."""
-    m = _DATEI.match(kennung)
-    if not m:
-        return None, None, None
-    m2 = _ZWEITES_DATUM.search(kennung[m.end():])
-    zweites = _datum(*m2.group(2, 3, 4)) if m2 and m2.group(1) == m.group(1) else None
-    return m.group(1), _datum(*m.group(2, 3, 4)), zweites
-
-
-def zaehltag(
-    name: date | None, zweites: date | None, blatt: date | None, wochentag: int | None
-) -> tuple[date | None, str | None]:
-    """Zähltag und, wo die Angaben abweichen, ein Hinweis (siehe Modulkopf)."""
-
-    def den(d: date | None) -> str:
-        return f"den {d:%d.%m.%Y}" if d else "ein ungültiges Datum"
-
-    if name is not None and blatt in (None, name) and zweites in (None, name):
-        tag, hinweis = name, None
-    elif zweites is not None and zweites == blatt:
-        tag = zweites
-        hinweis = (f"Der Dateiname nennt {den(name)} und {den(zweites)}, das Zählblatt "
-                   f"{den(zweites)}; die Karte nimmt {den(zweites)}.")
-    elif blatt is not None and blatt.weekday() < 5 and (name is None or name.weekday() >= 5):
-        tag = blatt
-        grund = f" (ein {_TAGNAME[name.weekday()]})" if name else ""
-        hinweis = (f"Der Dateiname nennt {den(name)}{grund}; die Karte folgt dem Zählblatt "
-                   f"({den(blatt)}).")
-    elif name is not None:
-        tag = name
-        hinweis = (f"Das Zählblatt nennt als Zähltag {den(blatt)}; die Karte folgt dem "
-                   "Dateinamen." if blatt is not None and blatt != name else None)
-    else:
-        return None, None
-    if tag.weekday() >= 5 and wochentag is not None and wochentag < 5:
-        zusatz = (f"Laut Zählblatt war es ein {_TAGNAME[wochentag]} – der Zähltag "
-                  f"({_TAGNAME[tag.weekday()]}, {tag:%d.%m.%Y}) ist unsicher.")
-        hinweis = f"{hinweis} {zusatz}" if hinweis else zusatz
-    return tag, hinweis
-
-
-def lese_positionen(pfad: Path) -> dict[str, dict]:
-    """Zählstellen.csv: KNOTEN, RECHTSWERT, HOCHWERT (UTM 32N), ZAEHLSTELLE."""
-    out = {}
-    with pfad.open(encoding="utf-8-sig", newline="") as f:
-        for r in csv.DictReader(f):
-            try:
-                ost, nord = float(r["RECHTSWERT"]), float(r["HOCHWERT"])
-            except (TypeError, ValueError):
-                continue
-            out[r["KNOTEN"].strip()] = {
-                "utm": (ost, nord),
-                "name": " ".join((r.get("ZAEHLSTELLE") or "").split()),
-            }
-    return out
-
-
-def _gk(k: dict) -> tuple[float, float] | None:
-    x, y = k.get("gk_x"), k.get("gk_y")
-    if isinstance(x, float) and isinstance(y, float):
-        if _GK_RECHTS[0] < x < _GK_RECHTS[1] and _GK_HOCH[0] < y < _GK_HOCH[1]:
-            return x, y
-    return None
-
-
-def _fenster(stunden: list[int]) -> list[tuple[int, int]]:
-    """[7, 8, 16] -> [(420, 540), (960, 1020)] – aneinandergrenzende Stunden zusammen."""
-    out: list[list[int]] = []
-    for h in sorted(stunden):
-        if out and out[-1][1] == h * 60:
-            out[-1][1] = h * 60 + 60
-        else:
-            out.append([h * 60, h * 60 + 60])
-    return [(a, b) for a, b in out]
-
-
-def _reihe(werte: dict[int, dict], gruppe: str, h0: int, laenge: int) -> list[int | None]:
-    return [werte[h0 + i][gruppe] if h0 + i in werte else None for i in range(laenge)]
-
-
-def lese(quelle: dict, pfade: Pfade, bericht: Bericht | None = None) -> Iterator[Zaehlung]:
-    bericht = bericht if bericht is not None else Bericht()
-    ordner = pfade.roh / "muenster"
-    positionen = lese_positionen(ordner / quelle["positionen"]["datei"])
-    gelesen = []
-    for pfad in sorted(p for p in (ordner / "zip").rglob("*") if p.suffix.lower() == ".xls"):
-        kennung = datei_kennung(pfad)
-        knoten, im_namen, zweites = aus_dateiname(kennung)
-        if knoten is None:
-            bericht.ohne_knoten.append(kennung)
-            continue
-        try:
-            d = lese_datei(pfad)
-        except Exception as e:  # noqa: BLE001 – kaputte Datei überspringen, im Bericht
-            bericht.unlesbar.append(f"{kennung}: {e}")
-            continue
-        bericht.dateien += 1
-        bericht.stunden_leer += d["kfz"]["leer"]
-        tag, hinweis_tag = zaehltag(
-            im_namen, zweites, d["kopf"].get("datum"), d["kopf"].get("wochentag")
-        )
-        if tag is None:
-            bericht.ohne_knoten.append(kennung)
-            continue
-        if not d["kfz"]["stunden"]:
-            bericht.unlesbar.append(f"{kennung}: {'; '.join(d['kfz']['fehlt'])}")
-            continue
-        if hinweis_tag:
-            bericht.datum.append(kennung)
-        gelesen.append((kennung, knoten, tag, hinweis_tag, d))
-
-    # Gauß-Krüger aus dem Blatt -> UTM, angepasst an die Knoten, die in beiden stehen
-    paare = [
-        (gk, positionen[kn]["utm"])
-        for _, kn, _, _, d in gelesen
-        if kn in positionen and (gk := _gk(d["kopf"]))
-    ]
-    parameter = None
-    if len(paare) >= 10:
-        parameter, rms, n = affin_anpassen(paare)
-        bericht.anpassung = f"{n} Paare, mittlerer Restfehler {rms:.0f} m"
-        if rms > 30:
-            parameter = None
-
-    gesehen: dict[tuple, str] = {}
-    for kennung, knoten, tag, hinweis_tag, d in gelesen:
-        k = d["kopf"]
-        st = d["kfz"]["stunden"]
-        schluessel = (knoten, tag, tuple(sorted((h, w["kfz"]) for h, w in st.items())))
-        if schluessel in gesehen:
-            bericht.doppelt.append(f"{kennung} = {gesehen[schluessel]}")
-            continue
-        gesehen[schluessel] = kennung
-
-        hinweise = [hinweis_tag] if hinweis_tag else []
-        lon = lat = lage = None
-        if knoten in positionen:
-            lon, lat = utm_zu_wgs84(*positionen[knoten]["utm"])
-            lage = "quelle"
-            bericht.lage_csv += 1
-        elif parameter and (gk := _gk(k)):
-            lon, lat = utm_zu_wgs84(*affin(parameter, *gk))
-            lage = "quelle"
-            hinweise.append("Lage aus den Gauß-Krüger-Koordinaten im Zählblatt (der Knoten fehlt "
-                            "in der Positionsdatei der Stadt).")
-            bericht.lage_blatt += 1
-        else:
-            bericht.ohne_lage.append(kennung)
-
-        abweichend = [
-            f"{_uhr(h)}: Quelle {w['kfz_quelle']}, Summe {w['kfz']}"
-            for h, w in sorted(st.items())
-            if w["kfz_quelle"] is not None and w["kfz_quelle"] != w["kfz"]
-        ]
-        if abweichend:
-            bericht.kfz_korrigiert += 1
-            hinweise.append("Die Kfz-Summe der Quelle weicht von der Summe der Fahrzeugarten ab; "
-                            "die Karte zeigt die Summe der Fahrzeugarten ("
-                            + "; ".join(abweichend) + ").")
-
-        rad_st: dict[int, dict] = {}
-        rb = d["rad"]
-        if rb and rb["stunden"]:
-            rad_tag = rb["kopf"].get("datum")
-            if rad_tag in (None, tag):
-                rad_st = rb["stunden"]
-                bericht.rad_blatt += 1
-                hinweise.append("Rad aus dem eigenen Blatt „Radverkehr“ der Datei (eigene "
-                                "Armaufteilung, nur Radverkehr).")
-            else:
-                bericht.rad_blatt_fremd.append(kennung)
-                hinweise.append(f"Das Blatt „Radverkehr“ in der Datei gehört zu einer anderen "
-                                f"Zählung ({rb['kopf'].get('name', '')}, {rad_tag:%d.%m.%Y}) und "
-                                "fehlt deshalb.")
-        if not rad_st:
-            rad_kfz = [f"{_uhr(h)}: {w['rad']}" for h, w in sorted(st.items()) if w["rad"]]
-            if rad_kfz:
-                hinweise.append("Rad laut Spalte der Kfz-Zählung – keine vollständige "
-                                "Radzählung, daher nicht in der Karte: " + "; ".join(rad_kfz) + ".")
-        if d["kfz"]["fehlt"]:
-            hinweise.append("Nicht übernommen: " + "; ".join(d["kfz"]["fehlt"]) + ".")
-        if d["weitere"]:
-            hinweise.append("Die Datei hat weitere Blätter mit anderen Zeiten oder Werten ("
-                            + ", ".join(f"„{b}“" for b in d["weitere"])
-                            + "); die Karte zeigt das erste.")
-
-        alle_stunden = sorted(set(st) | set(rad_st))
-        h0 = alle_stunden[0]
-        laenge = alle_stunden[-1] - h0 + 1
-        stunden = {"kfz": _reihe(st, "kfz", h0, laenge)}
-        if all(w["sv"] is not None for w in st.values()):
-            stunden["sv"] = _reihe(st, "sv", h0, laenge)
-        if rad_st:
-            stunden["rad"] = _reihe(rad_st, "rad", h0, laenge)
-
-        n_arme = d["kfz"]["arme"]
-        name = name_schoen(k.get("name") or positionen.get(knoten, {}).get("name") or knoten)
-        yield Zaehlung(
-            quelle=quelle["code"],
-            kennung=kennung,
-            stelle_roh=knoten,
-            name=name,
-            typ="Q" if n_arme == 2 else "K",
-            lon=lon,
-            lat=lat,
-            lage=lage,
-            datum=tag,
-            fenster=_fenster(alle_stunden),
-            intervall=60,
-            h0=h0,
-            stunden=stunden,
-            land=quelle["land"],
-            richtungen=n_arme or None,
-            kategorien="Pkw, Bus, Lkw, Lz (Lastzug), Krad" + (", Rad" if "rad" in stunden else ""),
-            rohdatei=quelle.get("portal"),
-            bemerkung=f"Datei im ZIP der Stadt: {kennung}.xls",
-            hinweise=hinweise,
-            zusatz={"datei": f"{kennung}.xls", "blatt": d["blatt"], "arme": k["armnamen"]},
-        )

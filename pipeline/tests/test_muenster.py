@@ -6,7 +6,8 @@ from pathlib import Path
 import pytest
 import xlwt
 
-from zaehlkarte.adapters import muenster_xls as m
+from zaehlkarte.adapters import muenster as m
+from zaehlkarte.adapters import muenster_pdf as mp
 from zaehlkarte.config import Pfade
 from zaehlkarte.koordinaten import affin, affin_anpassen, utm_zu_wgs84
 
@@ -103,12 +104,13 @@ def test_knotensummen_aus_den_zufahrten(pfade):
     assert z.datum == date(2009, 4, 23) and z.typ == "K" and z.richtungen == 3
     assert z.name == "Teststraße / Beispielweg"
     assert z.fenster == [(420, 480), (960, 1020)] and z.h0 == 7 and z.intervall == 60
-    # Kfz = Summe der Fahrzeugarten (100 + 195 + 50); 16–17 Uhr samt ergänztem linken Arm
-    assert z.stunden["kfz"] == [345] + [None] * 8 + [330]
+    # Kfz-Zelle 200 > Fahrzeugarten 195 am rechten Arm: der größere Wert (100 + 200 + 50);
+    # 16–17 Uhr samt ergänztem linken Arm (Beschriftung S/Q fehlt)
+    assert z.stunden["kfz"] == [350] + [None] * 8 + [330]
     assert z.stunden["sv"] == [23] + [None] * 8 + [18]
     assert "rad" not in z.stunden  # Rad-Spalte der Kfz-Zählung geht nicht in die Karte
     text = " ".join(z.hinweise)
-    assert "Quelle 350, Summe 345" in text
+    assert "Kfz-Zellen 350, Fahrzeugarten 345, Karte 350" in text
     assert "nicht in der Karte: 7–8 Uhr: 10; 16–17 Uhr: 12." in text
     assert z.lage == "quelle"
     assert z.lon == pytest.approx(7.72738118, abs=1e-7)
@@ -121,7 +123,7 @@ def test_ungueltiges_datum_und_leere_stunde(pfade):
     bericht = m.Bericht()
     z = list(m.lese(QUELLE, pfade, bericht))[1]
     assert z.datum == date(2010, 4, 22)  # aus dem Zählblatt, der Dateiname nennt den 31.04.
-    assert z.fenster == [(420, 480)] and z.stunden["kfz"] == [345]
+    assert z.fenster == [(420, 480)] and z.stunden["kfz"] == [350]
     text = " ".join(z.hinweise)
     assert "ungültiges Datum" in text
     assert "16–17 Uhr (lauter Nullen – als nicht gezählt gewertet)" in text
@@ -145,8 +147,18 @@ def test_zaehltag():
     tag, hinweis = m.zaehltag(so, None, so, 3)
     assert tag == so and "unsicher" in hinweis
     assert m.aus_dateiname("7530025_0805_2002_01_7530025_1010_2002") == (
-        "7530025", date(2002, 5, 8), date(2002, 10, 10))
-    assert m.aus_dateiname("1012_2015_01_Brandhoveweg-Querschnitt") == (None, None, None)
+        "7530025", date(2002, 5, 8), date(2002, 10, 10), False)
+    # zweites Datum ohne Trenner hinter der Knotennummer; Jahr „1002“ ist ein Tippfehler
+    assert m.aus_dateiname("10027804_2007_1002780408052014") == (
+        "10027804", None, date(2014, 5, 8), True)
+    assert m.zaehltag(None, date(2014, 5, 8), date(2014, 5, 8), 3, True) == (date(2014, 5, 8), None)
+    assert m.aus_dateiname("10022354_3104_2005_01")[1:] == (None, None, True)
+    # ohne Knotennummer: nur das Datum (die Knotennummer kann im Blatt stehen)
+    assert m.aus_dateiname("1012_2015_01_Brandhoveweg-Querschnitt") == (
+        None, date(2015, 12, 10), None, False)
+    assert m.aus_dateiname("S_0904_2019_01_S09042019") == (None, None, None, False)
+    # kein Datum im Namen: das Blatt gilt, ohne Hinweis
+    assert m.zaehltag(None, None, date(2016, 11, 15), 1) == (date(2016, 11, 15), None)
 
 
 def test_koordinaten():
@@ -161,3 +173,49 @@ def test_koordinaten():
     assert n == 12 and rms < 0.01
     punkt = (3401500.0, 5751000.0)
     assert affin(parameter, *punkt) == pytest.approx(affin(soll, *punkt))
+
+
+def wort(text: str, x: float, y: float, breite: float = 8.0, gedreht: bool = False) -> mp.Wort:
+    return mp.Wort(text, x, y, x - breite / 2, gedreht, x + breite / 2, y - 3, y + 3)
+
+
+def test_pdf_arme_aus_lagen():
+    """Waagerechte Tabelle (Q über S, Werte links, Beschriftungen darüber) und senkrechte
+    (Q S nebeneinander, Werte darunter, Beschriftungen links in derselben Zeile)."""
+    kat = ("Kfz", "Pkw", "Bus", "Lkw", "Lz", "Krad", "Rad")
+    ws = [wort("Q", 400, 100), wort("S", 400, 110)]
+    s_werte = (154, 143, 9, 1, 1, 0, 16)
+    for i, (k, v) in enumerate(zip(kat, s_werte, strict=True)):
+        x = 390 - 20 * i
+        # linksbündige Beschriftung, rechtsbündige Zahl: Mitten 3 pt versetzt, Breiten überlappen
+        ws += [wort(k, x - 3, 90), wort(str(2 * v), x, 100, 6), wort(str(v), x, 110, 6)]
+    # senkrecht (gedreht gesetzte Tabelle eines anderen Arms)
+    ws += [wort("Q", 100, 300, 5, True), wort("S", 110, 300, 5, True)]
+    for i, (k, v) in enumerate(zip(kat, (600, 564, 1, 8, 13, 14, 0), strict=True)):
+        y = 320 + 15 * i
+        ws += [wort(k, 85, y, 5, True), wort(str(v + 100), 100, y, 5, True),
+               wort(str(v), 110, y, 5, True)]
+    # zusammengelaufene Beschriftung wird in worte() getrennt – hier schon getrennt
+    arme = {a["typ"]: a for a in mp.arme(ws)}
+    assert set(arme) == {"rechts", "oben"}
+    assert arme["rechts"]["s"] == dict(zip(kat, s_werte, strict=True))
+    assert arme["rechts"]["q"]["Kfz"] == 308
+    assert arme["oben"]["s"]["Kfz"] == 600 and arme["oben"]["s"]["Krad"] == 14
+    assert all(mp.stimmig(a) for a in arme.values())
+    # Vorlage mit SV: Kfz = Pkw + SV
+    assert mp.stimmig({"s": {"Kfz": 475, "Pkw": 452, "SV": 23}})
+
+
+def test_pdf_spitzenstunden_und_haelften():
+    ws = [wort("Spitzenstunde:", 114, 50, 50), wort("07:00", 185, 50, 20), wort("-", 199, 50, 3),
+          wort("08:00", 213, 50, 20), wort("Uhr", 234, 50, 14), wort("Zähltag:", 314, 50, 30),
+          wort("Spitzenstunde:", 475, 50, 50), wort("16:00", 546, 50, 20), wort("-", 560, 50, 3),
+          wort("17.00", 574, 50, 20), wort("Uhr", 595, 50, 14),
+          wort("Spitzenstunde:", 900, 90, 50), wort("07.15", 960, 90, 20), wort("-", 975, 90, 3),
+          wort("08.15", 990, 90, 20)]
+    angaben = mp._spitzenstunden(ws)
+    assert [(a[1], a[2]) for a in angaben] == [
+        (7, "Spitzenstunde: 07:00 - 08:00 Uhr"),
+        (16, "Spitzenstunde: 16:00 - 17.00 Uhr"),
+        (None, "Spitzenstunde: 07.15 - 08.15"),  # keine volle Uhrstunde
+    ]

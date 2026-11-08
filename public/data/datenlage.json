@@ -231,15 +231,15 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.62974,
-     51.95605
+     7.62953,
+     51.95558
     ]
    },
    "properties": {
     "kommune": "Münster",
     "land": "NW",
     "stand": "in_karte",
-    "was": "rund 690 Kfz-Knotenpunktzählungen 2000–2012 aus den XLS, je meist zwei Stunden (7–8 und 16–17 Uhr)",
+    "was": "rund 1.160 Kfz-Knotenpunktzählungen 2000–2020 (XLS und PDF), je meist zwei Stunden (7–8 und 16–17 Uhr)",
     "links": [
      {
       "titel": "Open Data Münster",
@@ -256,9 +256,9 @@
     ],
     "recht": "Informationsfreiheitsgesetz NRW",
     "quelle": "muenster",
-    "zaehlungen": 689,
-    "situation": "Die Stadt veröffentlicht ihre manuellen Kfz-Zählungen offen (dl-de/by-2-0): ein ZIP mit einer Datei je Zählung – XLS 2000–2012 (in der Karte) und PDF 2010–2020 (noch nicht ausgelesen) – und die Lage der Knoten als CSV. Je Zählung stehen nur die Spitzenstunden (meist 7–8 und 16–17 Uhr) nach Fahrzeugart. Die Spalte „Rad“ ist keine vollständige Radzählung; Zählungen ab 2021 fehlen.",
-    "empfehlung": "Die PDFs 2013–2020 lassen sich auslesen (nächster Schritt hier). Für ganze Zählfenster, neuere Zählungen und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW.",
+    "zaehlungen": 1158,
+    "situation": "Die Stadt veröffentlicht ihre manuellen Kfz-Zählungen offen (dl-de/by-2-0): ein ZIP mit einer Datei je Zählung – XLS 2000–2012 und PDF 2010–2020, beide in der Karte (außer Scans und Radar-Berichten ohne Knotenstromplan) – und die Lage der Knoten als CSV. Je Zählung stehen nur die Spitzenstunden (meist 7–8 und 16–17 Uhr) nach Fahrzeugart. Die Spalte „Rad“ ist keine vollständige Radzählung; Zählungen ab 2021 fehlen.",
+    "empfehlung": "Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW.",
     "weg": "offen; ergänzend FragDenStaat, IFG NRW",
     "kontakt": {
      "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+M%C3%BCnster",
@@ -793,9 +793,13 @@
    "properties": {
     "kommune": "Hamburg",
     "land": "HH",
-    "stand": "automatisch",
-    "was": "Wärmebildkameras an über 400 Kreuzungen, 15-Minuten-Werte offen (keine manuellen Einzelzählungen)",
+    "stand": "aggregiert",
+    "was": "Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch)",
     "links": [
+     {
+      "titel": "Bedarfszählstellen (Metadaten)",
+      "url": "https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML"
+     },
      {
       "titel": "BMV",
       "url": "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"
@@ -804,11 +808,17 @@
     "recht": "Hamburgisches Transparenzgesetz",
     "quelle": null,
     "zaehlungen": null,
-    "situation": "Offen sind automatische Zählungen: Wärmebildkameras an über 400 Kreuzungen mit 15-Minuten- Werten.",
-    "empfehlung": "Für die Zählkarte nur bedingt passend (Dauerzählung). Manuelle Kurzzeitzählungen bei Bedarf nach dem Hamburgischen Transparenzgesetz anfragen.",
-    "weg": "offen (automatisch)",
-    "kontakt": null,
-    "anfrage": null
+    "situation": "Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen (15-Minuten-Werte).",
+    "empfehlung": "Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.",
+    "weg": "FragDenStaat, Hamburgisches Transparenzgesetz",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Beh%C3%B6rde+f%C3%BCr+Verkehr+und+Mobilit%C3%A4tswende",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Hamburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIm Transparenzportal stehen zu den Bedarfszählstellen nur die hochgerechneten Verkehrsstärken (DTV, DTVw, Schwerverkehrsanteil). Ich bitte um die Ergebnisse der zugrunde liegenden Zählungen selbst, also die gezählten Werte je Intervall (meist 6 bis 19 Uhr) mit Zählstelle und Datum.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {
