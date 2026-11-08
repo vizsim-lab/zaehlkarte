@@ -1,10 +1,10 @@
-// detail.js — Seitenleiste einer Stelle: alle Zählungen, Tagesgang der gewählten Zählung,
-// Kennwerte, Schulweg-Kriterium, Herkunft und Lizenz, CSV der Stundenwerte.
+// detail.js — Seitenleiste einer Stelle: alle Zählungen je Verkehrsart, Tagesgang der gewählten
+// Zählung, Kennwerte, Herkunft und Lizenz, CSV der Stundenwerte.
 //
 // Texte aus den Daten (Namen, Bemerkungen) sind fremd: immer über esc() ins HTML.
 import { ladeDetails } from "../data/laden.js";
 import {
-  ARTEN, GRUPPEN, GRUPPEN_NAMEN, STATUS_NAMEN, STATUSFARBEN, TAGE, bewerte, formatiere, hat, kennwert, wert,
+  ARTEN, GRUPPEN, GRUPPEN_NAMEN, TAGE, formatiere, hat, kennwert, kennzahlText, wert,
 } from "../data/modell.js";
 import { proStunde, tagesgang, TG, verlauf } from "./diagramme.js";
 
@@ -71,7 +71,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     const z = gibZustand();
     const passende = s.zaehlungen.filter((x) => hat(x, z.thema));
     gewaehlt = zaehlungIndex ?? (passende.at(-1) ?? s.zaehlungen.at(-1)).index;
-    ansicht = z.thema;
+    ansicht = z.thema === "sv" ? "kfz" : z.thema; // Schwerverkehr steht im Kfz-Tagesgang
     el.hidden = false;
     document.body.classList.add("detail-offen");
     zeichneKopf();
@@ -99,7 +99,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     const typ = stelle.typ === "K" ? "Knotenpunkt" : stelle.typ === "Q" ? "Querschnitt" : "Zählstelle";
     const kennung = stelle.id.split(":").slice(1).join(":");
     const zeilen = [...stelle.zaehlungen].reverse().map((x) => {
-      const zellen = ["kfz", "rad", "fuss"].map((g) => {
+      const zellen = ["kfz", "sv", "rad", "fuss"].map((g) => {
         if (!hat(x, g)) return "<td class=\"is-leer\">–</td>";
         const v = wert(x, g, z.art);
         return `<td>${v == null ? "<span class=\"pop-hint\" data-tip=\"in diesem Zeitraum nicht vollständig gezählt\">·</span>" : zahl.format(v)}</td>`;
@@ -120,7 +120,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
       <div class="detail-verlauf" id="detail-verlauf"></div>
       <div class="detail-tabelle-wrap">
         <table class="detail-tabelle">
-          <thead><tr><th>Datum</th><th>Tag</th><th>Uhr</th><th>Kfz</th><th>Rad</th><th>Fuß</th></tr></thead>
+          <thead><tr><th>Datum</th><th>Tag</th><th>Uhr</th><th>Kfz</th><th title="Schwerverkehr">SV</th><th>Rad</th><th>Fuß</th></tr></thead>
           <tbody>${zeilen.join("")}</tbody>
         </table>
         <div class="pop-meta">Werte: Summe ${esc(ARTEN[z.art])}, alle Richtungen</div>
@@ -131,8 +131,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
 
   function zeichneVerlauf() {
     const z = gibZustand();
-    const modus = z.modus[z.thema];
-    const m = modus === "verdacht" ? "menge" : modus;
+    const m = z.modus[z.thema];
     const punkte = stelle.zaehlungen.filter((x) => x.datum).map((x) => {
       const v = kennwert(x, z.thema, m, z.art);
       return {
@@ -143,7 +142,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
       };
     });
     const svg = verlauf(punkte, (v) => formatiere(v, m));
-    const titel = m === "menge" ? `${GRUPPEN_NAMEN[z.thema]} (${ARTEN[z.art]})` : (m === "svanteil" ? "Schwerverkehrsanteil" : "Radanteil");
+    const titel = kennzahlText(z.thema, m, z.art);
     document.getElementById("detail-verlauf").innerHTML = svg
       ? `<div class="detail-abschnitt">Verlauf an dieser Stelle · ${esc(titel)}</div>${svg}`
       : "";
@@ -187,18 +186,6 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
       return `<tr><td>${esc(GRUPPEN_NAMEN[g])}</td><td>${f(wert(x, g, "w"))}</td><td>${f(wert(x, g, "w24"))}</td><td>${spitze}</td></tr>`;
     });
 
-    let schulweg = "";
-    if (hat(x, "kind") || (z.thema === "fuss" && hat(x, "fuss"))) {
-      const b = bewerte(x, z.kriterien);
-      const k = z.kriterien;
-      const grund = b.gruende.length ? b.gruende.map(esc).join(" · ") : "keine Schwelle überschritten";
-      const farbe = STATUSFARBEN[b.status] ?? "#c3c7cc";
-      schulweg = `<div class="detail-abschnitt">Schulweg-Kriterium</div>
-        <div class="dz-status"><span class="pop-pill" style="--pill-dot:${farbe}">${esc(STATUS_NAMEN[b.status])}</span>
-        <span class="pop-meta">${grund}</span></div>
-        <div class="pop-meta">Verdacht, wenn um ${k.schulstunden.join(", ")} Uhr mehr als ${k.schwelle_stunde} oder von ${k.tag_von} bis ${k.tag_bis} Uhr mehr als ${k.schwelle_tag} Kinder/Jugendliche gezählt sind – nie an schulfreien Tagen. Eigene Heuristik, keine amtliche Einstufung.</div>`;
-    }
-
     const lz = lizenz(x);
     const hinweise = (d.hinweise ?? []).map((h) => `<li>${esc(h)}</li>`).join("");
     const tagText = [TAGE[x.tag ?? "u"], d.tagname].filter(Boolean).join(": ");
@@ -212,7 +199,6 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
         <thead><tr><td></td><td>7–19 Uhr</td><td>24 h</td><td>stärkste Stunde</td></tr></thead>
         <tbody>${kennzeilen.join("")}</tbody>
       </table>
-      ${schulweg}
       ${d.bemerkung ? `<div class="detail-abschnitt">Bemerkung</div><div class="pop-meta">${esc(d.bemerkung)}</div>` : ""}
       ${hinweise ? `<div class="detail-abschnitt">Hinweise</div><ul class="detail-hinweise">${hinweise}</ul>` : ""}
       <div class="detail-abschnitt">Herkunft</div>

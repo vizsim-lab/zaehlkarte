@@ -7,19 +7,6 @@
   "datenlage": "datenlage.json"
  },
  "details_anzahl": 34,
- "kriterien": {
-  "schulstunden": [
-   7,
-   8,
-   13,
-   14,
-   15
-  ],
-  "schwelle_stunde": 50,
-  "schwelle_tag": 300,
-  "tag_von": 7,
-  "tag_bis": 19
- },
  "gruppen": [
   {
    "id": "kfz",

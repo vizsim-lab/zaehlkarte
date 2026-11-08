@@ -1,13 +1,10 @@
-"""Kennzahlen einer Zählung: Summen über ein Zeitfenster, Spitzenstunde, Schulweg-Kriterium.
+"""Kennzahlen einer Zählung: Summen über ein Zeitfenster und die stärkste Stunde.
 
-Die Einordnung (`status`) und das Kriterium (`verdacht`) rechnet die Karte mit denselben
-Regeln im Browser nach (js/data/modell.js: bewerte) – wer eine Seite ändert, ändert beide;
-tests/unit/modell.test.js prüft das Frontend gegen die Fälle aus pipeline/tests.
+Nur Zählwerte, keine Einstufung: Werte aus verschiedenen Zählfenstern werden nie ineinander
+umgerechnet; wo ein Fenster nicht vollständig gezählt ist, ist die Summe None.
 """
 
 from __future__ import annotations
-
-from dataclasses import dataclass
 
 from zaehlkarte.modell import Zaehlung
 
@@ -43,51 +40,3 @@ def spitzenstunde(z: Zaehlung, gruppe: str) -> tuple[int, int] | None:
         return None
     h = max(r, key=lambda k: (r[k], -k))
     return h, r[h]
-
-
-@dataclass(frozen=True)
-class Kriterien:
-    schulstunden: tuple[int, ...] = (7, 8, 13, 14, 15)
-    schwelle_stunde: int = 50
-    schwelle_tag: int = 300
-    tag_von: int = 7
-    tag_bis: int = 19
-
-    @classmethod
-    def aus_config(cls, cfg: dict) -> Kriterien:
-        return cls(
-            schulstunden=tuple(cfg["schulstunden"]),
-            schwelle_stunde=int(cfg["schwelle_stunde"]),
-            schwelle_tag=int(cfg["schwelle_tag"]),
-            tag_von=int(cfg["tag_von"]),
-            tag_bis=int(cfg["tag_bis"]),
-        )
-
-
-def verdacht(z: Zaehlung, k: Kriterien) -> tuple[bool | None, list[str]]:
-    """Schulweg-Kriterium nach den Zahlen: (True/False, Gründe); None = nicht beurteilbar.
-
-    Verdacht, wenn in einer Schulstunde mehr als `schwelle_stunde` Kinder/Jugendliche
-    gezählt sind ODER von `tag_von` bis `tag_bis` Uhr mehr als `schwelle_tag`."""
-    kind = {h: v for h, v in reihe(z, "kind").items() if v is not None}
-    if not kind:
-        return None, ["Kinder/Jugendliche nicht gezählt"]
-    gruende = [f"{h} Uhr: {kind[h]}" for h in k.schulstunden if kind.get(h, -1) > k.schwelle_stunde]
-    tag = summe(z, "kind", k.tag_von, k.tag_bis)
-    if tag is not None and tag > k.schwelle_tag:
-        gruende.append(f"{k.tag_von}–{k.tag_bis} Uhr: {tag}")
-    if tag is None and not any(h in kind for h in k.schulstunden):
-        return None, ["zu Schulzeiten nicht gezählt"]
-    return bool(gruende), gruende
-
-
-SCHULFREI = ("ferien", "feiertag", "wochenende")
-
-
-def status(kriterium: bool | None, tagtyp: str | None) -> str:
-    """verdacht | kein | schulfrei | unbekannt – an schulfreien Tagen nie Verdacht."""
-    if kriterium is None:
-        return "unbekannt"
-    if tagtyp in SCHULFREI:
-        return "schulfrei"
-    return "verdacht" if kriterium else "kein"

@@ -61,3 +61,4 @@ def test_kennwerte_und_fenster():
     k = kennwerte(z("a", "K1", 13.4, 52.5))
     assert k["w"] == [120, None, None, None, None] and k["w24"] is None
     assert k["sp"] == [10, None, None, None, None] and k["g"] == 1
+    assert set(k) == {"datum", "tag", "fenster", "g", "w", "w24", "sp"}

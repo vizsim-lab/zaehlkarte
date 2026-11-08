@@ -1,6 +1,6 @@
 """Pfade und Konfiguration der Pipeline.
 
-- `pipeline/config/*.yaml` – Quellen (`sources.yaml`, die einzige Quellenliste), Kriterien
+- `pipeline/config/` – Quellen (`sources.yaml`, die einzige Quellenliste), Ferienkalender
 - `pipeline/data/` – Rohdaten und Zwischenstände (gitignored, `zaehlkarte fetch` holt sie)
 - `public/data/` – die Kartendaten (im Git; Vite kopiert `public/` unverändert nach `dist/`)
 """

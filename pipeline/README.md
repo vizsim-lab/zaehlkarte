@@ -17,13 +17,12 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 | `adapters/berlin_zda.py`, `zda.py`, `kategorien.py`, `berlin_bezeichnung.py` | Berliner ZDA-Dateien (aus dem Schulwege-Projekt) |
 | `adapters/mobidata_bw.py` | MobiData BW (Ravensburg & Co.) |
 | `kalender.py` | Schultag, Ferien, Feiertag, Wochenende je Land |
-| `kennzahlen.py` | Summen je Zeitfenster, stärkste Stunde, Schulweg-Kriterium |
+| `kennzahlen.py` | Summen je Zeitfenster, stärkste Stunde |
 | `build.py` | Lage übertragen, Stellen bilden |
 | `site.py` | Kartendaten (Vertrag mit dem Frontend, Kopfkommentar) |
 
 Konfiguration: `config/sources.yaml` (Quellen, Datenlage, Rechtslage je Land),
-`config/kriterien.yaml` (Voreinstellung des Schulweg-Kriteriums),
-`config/schulferien_*.csv` (KMK-Ferienkalender),
+`config/schulferien_*.csv` (KMK-Ferienkalender für die Einordnung des Zähltags),
 `config/berlin_rohdateien_2019-2025.txt` (welche Berliner Rohdateien einzeln online liegen).
 
 ```bash

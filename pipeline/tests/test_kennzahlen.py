@@ -5,8 +5,6 @@ from datetime import date
 from zaehlkarte import kennzahlen as kz
 from zaehlkarte.modell import Zaehlung
 
-TAGTYP = {"s": "schule", "f": "ferien", "h": "feiertag", "w": "wochenende", None: None}
-
 
 def zaehlung(h0: int | None, **stunden) -> Zaehlung:
     return Zaehlung(
@@ -24,16 +22,6 @@ def zaehlung(h0: int | None, **stunden) -> Zaehlung:
         h0=h0,
         stunden=stunden,
     )
-
-
-def test_kriterium_wie_im_frontend(kriterium_faelle):
-    k = kz.Kriterien.aus_config(kriterium_faelle["kriterien"])
-    for f in kriterium_faelle["faelle"]:
-        z = zaehlung(f["kh0"], **({"kind": f["kh"]} if f["kh"] else {}))
-        wert, gruende = kz.verdacht(z, k)
-        assert wert == f["wert"], f["name"]
-        assert gruende == f["gruende"], f["name"]
-        assert kz.status(wert, TAGTYP[f["tag"]]) == f["status"], f["name"]
 
 
 def test_summe_nur_wenn_jede_stunde_gezaehlt():

@@ -4,10 +4,9 @@ Vertrag mit dem Frontend (js/data/laden.js, js/data/modell.js): Feldnamen in `in
 (`stellen.felder`, `zaehlungen.felder`), Aufbau von `details/NN.json` und die Dateinamen in
 `manifest.dateien`. Wer sie ändert, zieht das Frontend und tests/ im selben Schritt mit.
 
-- index.json: alles, was Karte, Filter und Schulweg-Kriterium brauchen – spaltenweise, damit es
-  klein bleibt. Kennwerte je Zählung als Liste in der Reihenfolge von GRUPPEN:
-  `w` = Summe 7–19 Uhr (nur, wo jede Stunde gezählt ist), `w24` = Summe über 24 Stunden,
-  `sp` = stärkste gezählte Stunde; `kh0`/`kh` = Stundenwerte Kinder/Jugendliche (Kriterium).
+- index.json: alles, was Karte und Filter brauchen – spaltenweise, damit es klein bleibt.
+  Kennwerte je Zählung als Liste in der Reihenfolge von GRUPPEN: `w` = Summe 7–19 Uhr (nur,
+  wo jede Stunde gezählt ist), `w24` = Summe über 24 Stunden, `sp` = stärkste gezählte Stunde.
   `l` = Lieferung (Index in `lieferungen`), wo eine Quelle mehrere mit eigener Lizenz hat.
 - details/NN.json: Stundenreihen aller Gruppen und die Angaben zur Zählung; je Stelle in
   einer Datei (`stellen.chunk`), geladen erst beim Klick.
@@ -31,7 +30,7 @@ TAG = {"schule": "s", "ferien": "f", "feiertag": "h", "wochenende": "w"}
 LAGEN = ["gps", "quelle", "geokodiert", "uebertragen"]
 CHUNK_BYTES = 350_000
 STELLEN_FELDER = ["id", "quelle", "name", "typ", "lon", "lat", "lage", "chunk"]
-ZAEHLUNGEN_FELDER = ["stelle", "datum", "tag", "fenster", "g", "w", "w24", "sp", "kh0", "kh", "l"]
+ZAEHLUNGEN_FELDER = ["stelle", "datum", "tag", "fenster", "g", "w", "w24", "sp", "l"]
 GRUPPEN_NAMEN = {
     "kfz": "Kfz",
     "sv": "Schwerverkehr",
@@ -69,8 +68,6 @@ def kennwerte(z: Zaehlung) -> dict:
     gruppen = z.gruppen()
     maske = sum(1 << i for i, g in enumerate(GRUPPEN) if g in gruppen)
     sp = [(kz.spitzenstunde(z, g) or (None, None))[1] for g in GRUPPEN]
-    kind = kz.reihe(z, "kind")
-    kh0 = min(kind) if kind else None
     return {
         "datum": z.datum.isoformat() if z.datum else None,
         "tag": TAG.get(z.tagtyp or ""),
@@ -79,8 +76,6 @@ def kennwerte(z: Zaehlung) -> dict:
         "w": _liste([kz.summe(z, g, 7, 19) for g in GRUPPEN]),
         "w24": _liste([kz.tag24(z, g) for g in GRUPPEN]),
         "sp": _liste(sp),
-        "kh0": kh0,
-        "kh": [kind[h] for h in range(kh0, max(kind) + 1)] if kind else None,
     }
 
 
@@ -226,7 +221,6 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
             "datenlage": "datenlage.json",
         },
         "details_anzahl": n_chunks,
-        "kriterien": lade_yaml("kriterien.yaml", pfade),
         "gruppen": [{"id": g, "name": GRUPPEN_NAMEN[g]} for g in GRUPPEN],
         "stand": STAND,
         "quellen": [

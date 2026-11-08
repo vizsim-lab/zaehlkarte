@@ -986,13 +986,6 @@ body {
 .legend-item--check { cursor: pointer; }
 .legend-item--check input { margin: 0 2px 0 0; }
 
-/* Schulweg-Regler: orange Füllung wie die Szenario-Regler der Unfallkarte */
-.kriterium { margin: 4px 0 2px; padding: 8px 10px; border-radius: 10px; background: #fafafa; border: 1px solid var(--ui-divider); }
-.kriterium label { display: block; color: var(--ui-text); }
-.kriterium input[type="range"] { width: 100%; --progress: 0%;
-  background: linear-gradient(to right, #eb6834 var(--progress), #e5e7eb var(--progress)); }
-.kriterium input[type="range"]::-webkit-slider-thumb { border-color: #eb6834; }
-.kriterium input[type="range"]::-moz-range-thumb { border-color: #eb6834; }
 
 /* Jahre: zwei Regler übereinander auf einer Schiene */
 .doppelregler { position: relative; height: 22px; margin: 2px 0; }

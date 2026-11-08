@@ -2,12 +2,11 @@
 // browserlos testbar (tests/unit/permalink.test.js); die DOM-Bindung steht in main.js.
 //
 // Kürzel sind ein Vertrag mit geteilten Links: nie umdeuten, nur ergänzen.
-//   t  Thema.Modus     fuss.verdacht | fuss.menge | kfz.menge | kfz.svanteil | rad.menge | rad.radanteil
+//   t  Verkehrsart.Darstellung  kfz.menge | sv.menge | sv.anteil | rad.menge | rad.anteil | fuss.menge
 //   a  Kennzahl-Art    w (7–19 Uhr) | w24 | sp (stärkste Stunde)
 //   j  Jahre           1990-2025
 //   d  Zähltage        Teilmenge von "sfhwu" (Schultag, Ferien, Feiertag, Wochenende, unbekannt)
 //   q  Quellen         berlin,ravensburg (fehlt = alle)
-//   k  Kriterium       Schwelle Stunde, Schwelle Tag: 50,300
 //   u  übertragene Lagen zeigen: 0 | 1
 //   dl Ebene Datenlage: 0 | 1
 //   m  Kartenausschnitt zoom/lat/lon
@@ -29,10 +28,6 @@ export function kodiere(zustand, standard, karte, stelle) {
   if (zustand.quellen.size !== standard.quellen.size || [...standard.quellen].some((q) => !zustand.quellen.has(q))) {
     p.set("q", [...zustand.quellen].join(",") || "-");
   }
-  const k = zustand.kriterien;
-  if (k.schwelle_stunde !== standard.kriterien.schwelle_stunde || k.schwelle_tag !== standard.kriterien.schwelle_tag) {
-    p.set("k", `${k.schwelle_stunde},${k.schwelle_tag}`);
-  }
   if (zustand.uebertragen !== standard.uebertragen) p.set("u", zustand.uebertragen ? "1" : "0");
   if (zustand.datenlage !== standard.datenlage) p.set("dl", zustand.datenlage ? "1" : "0");
   if (karte) p.set("m", `${karte.zoom.toFixed(2)}/${karte.lat.toFixed(5)}/${karte.lon.toFixed(5)}`);
@@ -49,7 +44,6 @@ export function dekodiere(hash, standard, bekannteQuellen) {
     jahre: [...standard.jahre],
     tage: new Set(standard.tage),
     quellen: new Set(standard.quellen),
-    kriterien: { ...standard.kriterien, schulstunden: [...standard.kriterien.schulstunden] },
   };
   const [thema, modus] = (p.get("t") ?? "").split(".");
   if (THEMEN[thema]?.modi[modus]) {
@@ -66,11 +60,6 @@ export function dekodiere(hash, standard, bekannteQuellen) {
   if (p.has("d")) z.tage = new Set([...p.get("d")].filter((t) => t in TAGE));
   if (p.has("q")) {
     z.quellen = new Set(p.get("q").split(",").filter((q) => bekannteQuellen.includes(q)));
-  }
-  const k = /^(\d{1,4}),(\d{1,5})$/.exec(p.get("k") ?? "");
-  if (k) {
-    z.kriterien.schwelle_stunde = Number(k[1]);
-    z.kriterien.schwelle_tag = Number(k[2]);
   }
   if (p.has("u")) z.uebertragen = p.get("u") !== "0";
   if (p.has("dl")) z.datenlage = p.get("dl") !== "0";

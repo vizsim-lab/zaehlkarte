@@ -3,7 +3,7 @@
 // Farbe, Rand, Radius und Zeichenreihenfolge jedes Punkts rechnet js/data/modell.js
 // (features) – der Stil liest sie nur aus (["get", …]). So bleibt die Logik browserlos testbar.
 import { Popup } from "../lib/maplibre.js";
-import { ARTEN, GRUPPEN_NAMEN, STATUS_NAMEN, TAGE, formatiere } from "../data/modell.js";
+import { TAGE, formatiere, kennzahlText } from "../data/modell.js";
 
 const LEER = { type: "FeatureCollection", features: [] };
 export const DATENLAGE_FARBEN = {
@@ -131,16 +131,10 @@ export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag }) {
       const s = daten.stellen[f.properties.i];
       const eintrag = gibEintrag(s.index);
       const modus = z.modus[z.thema];
-      let zeile;
-      if (!eintrag) {
-        zeile = "";
-      } else if (modus === "verdacht") {
-        zeile = `<div class="pop-hero pop-hero--sm">${esc(STATUS_NAMEN[eintrag.status])}</div>
-          <div class="pop-meta">${eintrag.nVerdacht ? `${eintrag.nVerdacht} von ${eintrag.n} Zählungen mit Verdacht` : `${eintrag.n === 1 ? "eine Zählung" : `${eintrag.n} Zählungen`} im Filter`}</div>`;
-      } else {
-        const einheit = modus === "menge" ? `${GRUPPEN_NAMEN[z.thema]} ${ARTEN[z.art]}` : (modus === "svanteil" ? "Schwerverkehrsanteil" : "Radanteil");
-        zeile = `<div class="pop-hero">${formatiere(eintrag.wert, modus)} <span class="pop-unit">${esc(einheit)}</span></div>`;
-      }
+      const zeile = eintrag
+        ? `<div class="pop-hero">${formatiere(eintrag.wert, modus)}</div>
+          <div class="pop-meta">${esc(kennzahlText(z.thema, modus, z.art))}</div>`
+        : "";
       const datum = eintrag?.z?.datum ? eintrag.z.datum.split("-").reverse().join(".") : "";
       html = `<div class="pop-eyebrow">${esc(manifest.quellen.find((q) => q.code === s.quelle)?.name ?? s.quelle)}</div>
         <div class="pop-title">${esc(s.name)}</div>${zeile}

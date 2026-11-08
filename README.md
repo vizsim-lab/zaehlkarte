@@ -3,21 +3,23 @@
 **Karte:** https://vizsim-lab.github.io/zaehlkarte/
 
 Städte zählen ständig Verkehr: an Kreuzungen (Knotenstromzählung) und an Straßenabschnitten
-(Querschnitt), von Hand oder per Video, für Planungen, Ampeln, Lärmkarten und Schulwege. Die
-Ergebnisse liegen meist in Schubladen. Die Zählkarte sammelt, was offen ist oder per
-Informationsfreiheitsanfrage herausgegeben wurde, und zeigt es in einem Schema:
+(Querschnitt), von Hand oder per Video, für Planungen, Ampeln und Lärmkarten. Die Ergebnisse
+liegen meist in Schubladen. Die Zählkarte sammelt, was offen ist oder per
+Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Verkehrsart:
 
-- **Fuß & Schulweg** – Fußverkehr, und wo nach Alter gezählt ist, ein einstellbarer
-  Schulweg-Verdacht (viele Kinder/Jugendliche zu Schulzeiten; eigene Heuristik).
-- **Rad** – Menge und Radanteil (Rad / (Rad + Kfz)).
-- **Kfz** – Menge und Schwerverkehrsanteil.
+- **Kfz**, **Schwerverkehr** (Menge und Anteil an Kfz), **Rad** (Menge und Radanteil
+  Rad / (Rad + Kfz)) und **Fuß** (bei nach Alter getrennten Zählungen auch
+  Kinder/Jugendliche im Tagesgang).
+- Kennzahl wählbar: Summe 7–19 Uhr, Summe 24 Stunden oder die stärkste Stunde.
 - Je Zählstelle alle Zählungen, der **Tagesgang** jeder Zählung, der Verlauf über die Jahre,
   die Rohdatei und die Lizenz; Download als CSV.
 - **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen.
 
 Gemeint sind Kurzzeitzählungen der Kommunen, keine Dauerzählstellen und keine
-Verkehrsmengenkarten (dafür: [vizsim/svz](https://github.com/vizsim/svz)).
+Verkehrsmengenkarten (dafür: [vizsim/svz](https://github.com/vizsim/svz)). Auswertungen wie
+der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
+[vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege).
 
 ## Daten
 
@@ -43,13 +45,13 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
 
 - Werte sind Summen über alle Richtungen. „7–19 Uhr“ nur, wo jede dieser Stunden gezählt ist;
   „24 h“ nur bei 24-Stunden-Zählungen; „stärkste Stunde“ vergleicht auch kurze Zählfenster.
-- Je Stelle zeigt die Karte die jüngste Zählung im Filter (beim Schulweg die stärkste
-  Einstufung). Alle Zählungen einer Stelle stehen in der Seitenleiste.
+- Je Stelle zeigt die Karte die jüngste Zählung im Filter, die die gewählte Kennzahl hat.
+  Alle Zählungen einer Stelle stehen in der Seitenleiste.
 - `-1` in den Rohdaten heißt „nicht gezählt“ und wird nie als 0 gerechnet. Eine Richtung, die
   für eine Verkehrsart gar nicht gezählt wurde, fällt aus der Summe – die Seitenleiste nennt das.
-- Schulweg-Verdacht (Voreinstellung): in einer Schulstunde (7, 8, 13, 14, 15 Uhr) mehr als 50
-  oder von 7 bis 19 Uhr mehr als 300 Kinder/Jugendliche; an Ferien-, Feier- und
-  Wochenendtagen nie. Eine eigene Heuristik, keine amtliche Einstufung.
+- Werte aus verschiedenen Zählfenstern werden nie ineinander umgerechnet (keine Hochrechnung).
+- Der Zähltag ist eingeordnet (Schultag, Ferien, Feiertag, Wochenende – KMK-Ferienkalender),
+  weil Ferienzählungen deutlich niedriger liegen können; filterbar.
 - MobiData BW: Die Übersichtstabelle nennt in `KFZ_n` nur die Pkw (nachgerechnet an allen
   Zählungen mit Excel); die Karte rechnet Kfz = Pkw + Lkw aus den Stundenwerten.
 
@@ -61,7 +63,7 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
   src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw)
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
-tests/               unit/ (node --test), web/ (Playwright gegen den Build), fixtures/
+tests/               unit/ (node --test), web/ (Playwright gegen den Build)
 ```
 
 ```bash

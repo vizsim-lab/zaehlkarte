@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Zählkarte – kommunale Verkehrszählungen</title>
-  <meta name="description" content="Kfz-, Rad- und Fußverkehrszählungen der Kommunen auf einer Karte: Tagesgang je Zählung, Radanteil, Schulweg-Verdacht und wo es solche Daten gibt.">
+  <meta name="description" content="Kfz-, Schwerverkehrs-, Rad- und Fußverkehrszählungen der Kommunen auf einer Karte: Werte je Verkehrsart, Tagesgang je Zählung und wo es solche Daten gibt.">
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./main.js"></script>
 </head>
@@ -26,11 +26,12 @@
     <div class="legend-body">
       <div class="legend-section-divider"></div>
       <div class="legend-section" data-section="thema">
-        <div class="legend-section-title"><span>Thema</span></div>
-        <div class="legend-chips" id="thema-chips" role="radiogroup" aria-label="Thema">
-          <button type="button" class="legend-chip" data-thema="fuss" role="radio">Fuß &amp; Schulweg</button>
-          <button type="button" class="legend-chip" data-thema="rad" role="radio">Rad</button>
+        <div class="legend-section-title"><span>Verkehrsart</span></div>
+        <div class="legend-chips" id="thema-chips" role="radiogroup" aria-label="Verkehrsart">
           <button type="button" class="legend-chip" data-thema="kfz" role="radio">Kfz</button>
+          <button type="button" class="legend-chip" data-thema="sv" role="radio" title="Lkw über 3,5 t, Lastzüge und Busse (wie die Quelle sie zählt)">Schwerverkehr</button>
+          <button type="button" class="legend-chip" data-thema="rad" role="radio">Rad</button>
+          <button type="button" class="legend-chip" data-thema="fuss" role="radio">Fuß</button>
         </div>
         <div class="legend-chips legend-chips--klein" id="modus-chips" role="radiogroup" aria-label="Darstellung"></div>
         <div class="legend-row-label" id="art-wahl">
@@ -42,13 +43,6 @@
           </div>
         </div>
         <div class="legend-items" id="klassen-legende"></div>
-        <div id="kriterium" class="kriterium">
-          <label for="schwelle-stunde">Kinder/Jugendliche in einer Schulstunde über <strong id="schwelle-stunde-wert"></strong></label>
-          <input type="range" id="schwelle-stunde" min="10" max="200" step="5">
-          <label for="schwelle-tag">oder 7–19 Uhr über <strong id="schwelle-tag-wert"></strong></label>
-          <input type="range" id="schwelle-tag" min="50" max="1500" step="25">
-          <div class="legend-hint">Schulstunden: <span id="schulstunden"></span> Uhr. Eigene Heuristik, keine amtliche Einstufung; an schulfreien Tagen kein Verdacht.</div>
-        </div>
       </div>
 
       <div class="legend-section-divider"></div>

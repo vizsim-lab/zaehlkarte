@@ -42,7 +42,7 @@ async function start() {
   ]);
 
   const daten = entpacke(index);
-  const standard = standardZustand(manifest.kriterien, daten.jahre, daten.quellen);
+  const standard = standardZustand(daten.jahre, daten.quellen);
   const aufruf = dekodiere(location.hash, standard, daten.quellen);
   const zustand = aufruf.zustand;
   if (aufruf.karte) karte.jumpTo({ center: [aufruf.karte.lon, aufruf.karte.lat], zoom: aufruf.karte.zoom });

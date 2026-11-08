@@ -112,7 +112,7 @@ def test_kategorien():
     assert kategorien.spalten(["Kfz", "Lkw"]) == {"kfz": [0], "sv": [1]}
     assert kategorien.spalten(["Bus", "Taxi", "Radf"]) == {"rad": [2]}  # Busspur: kein Kfz
     assert kategorien.spalten(["Erw", "Jugend"]) == {"fuss": [0, 1], "kind": [1]}
-    assert kategorien.spalten(["Fußg"]) == {"fuss": [0]}  # ohne Alter: kein Kriterium
+    assert kategorien.spalten(["Fußg"]) == {"fuss": [0]}  # ohne Altersgruppen
     assert kategorien.spalten(["Erw", "Azubi"]) == {"fuss": [0, 1]}
     assert kategorien.spalten(["ÜKfz", "Lkw"]) == {"kfz": [0, 1], "sv": [1]}
 
