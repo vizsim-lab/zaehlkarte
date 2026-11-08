@@ -109,7 +109,7 @@ def _lizenzen(q: dict) -> list[dict]:
     return [
         {
             "code": q["code"],
-            "titel": f"Straßenverkehrszählungen {q['name']}",
+            "titel": q.get("titel") or f"Straßenverkehrszählungen {q['name']}",
             "herausgeber": q.get("traeger"),
             "lizenz": q.get("lizenz"),
             "lizenz_url": q.get("lizenz_url"),

@@ -267,7 +267,8 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
       zeilen.push([`${h}-${h + 1}`, ...reihen.map((r) => r[h] ?? "")].join(";"));
     }
     const lz = lizenz(x);
-    zeilen.push("", `# ${stelle.name}; ${x.datum}; Quelle: ${lz.titel ?? ""} (${lz.lizenz ?? ""}) – über vizsim-lab/zaehlkarte`);
+    const von = `${lz.titel ?? ""}${lz.herausgeber ? `, ${lz.herausgeber}` : ""}`;
+    zeilen.push("", `# ${stelle.name}; ${x.datum}; Quelle: ${von} (${lz.lizenz ?? ""}) – über vizsim-lab/zaehlkarte`);
     const blob = new Blob([`﻿${zeilen.join("\n")}\n`], { type: "text/csv;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);

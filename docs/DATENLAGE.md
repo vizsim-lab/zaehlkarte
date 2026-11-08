@@ -17,7 +17,6 @@ FragDenStaat.
 | Leipzig | SN | Anfrage gescheitert | Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte |
 | Magdeburg | ST | auf Anfrage herausgegeben | Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen |
 | München | BY | erhoben – Anfrage aussichtsreich | Anfrage nach einem DAVe-Export aller Zählungen |
-| Münster | NW | offen, noch nicht in der Karte | Keine Anfrage nötig: Adapter für die XLS bauen |
 | Nürnberg | BY | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt |
 | Paderborn | NW | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 an die Stadt Paderborn |
 | Potsdam | BB | offen, noch nicht in der Karte | Zwei Wege: die PDFs auslesen (Adapter in Arbeit) oder dieselben Zählungen als Tabellen (CSV/XLSX) anfragen |
@@ -29,6 +28,7 @@ FragDenStaat.
 | Baindt | BW | in der Karte | in der Karte |
 | Berg | BW | in der Karte | in der Karte |
 | Berlin | BE | in der Karte | in der Karte |
+| Münster | NW | in der Karte | Die PDFs 2013–2020 lassen sich auslesen (nächster Schritt hier) |
 | Ravensburg | BW | in der Karte | in der Karte |
 | Weingarten | BW | in der Karte | in der Karte |
 
@@ -312,15 +312,6 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [stadt.muenchen.de](https://stadt.muenchen.de/infos/verkehrsdaten.html) · [DAVe](https://stadt.muenchen.de/news/open-source-anwendung-dave.html)
-
-
-## Münster (NW) – offen, noch nicht in der Karte
-
-**Lage:** Offen ist ein ZIP mit PDF/XLS je Zählung (Spitzenstunden).
-
-**Empfehlung:** Keine Anfrage nötig: Adapter für die XLS bauen. Für vollständige Tagesgänge später die Intervallwerte anfragen (IFG NRW).
-
-**Weg:** offen – Adapter bauen
 
 
 ## Nürnberg (BY) – auf Anfrage herausgegeben

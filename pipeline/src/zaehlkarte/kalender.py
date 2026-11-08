@@ -113,7 +113,7 @@ def ostersonntag(jahr: int) -> date:
 
 @cache
 def feiertage(land: str, jahr: int) -> dict[date, str]:
-    """Gesetzliche Feiertage (bundesweit + Land BE oder BW)."""
+    """Gesetzliche Feiertage (bundesweit + Land BE, BW oder NW)."""
     ostern = ostersonntag(jahr)
     tage = {
         date(jahr, 1, 1): "Neujahr",
@@ -141,6 +141,9 @@ def feiertage(land: str, jahr: int) -> dict[date, str]:
             tage[date(jahr, 5, 8)] = f"{75 if jahr == 2020 else 80}. Jahrestag der Befreiung"
     elif land == "BW":
         tage[date(jahr, 1, 6)] = "Heilige Drei Könige"
+        tage[ostern + timedelta(days=60)] = "Fronleichnam"
+        tage[date(jahr, 11, 1)] = "Allerheiligen"
+    elif land == "NW":
         tage[ostern + timedelta(days=60)] = "Fronleichnam"
         tage[date(jahr, 11, 1)] = "Allerheiligen"
     return tage

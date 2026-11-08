@@ -30,3 +30,16 @@ def test_berlin_west_ost_vor_1991():
     # Gebiet unbekannt: nur sicher, wenn beide Kalender dasselbe sagen
     assert k.status(date(1989, 7, 25), None)[0] in ("ferien", None)
     assert k.status(date(2019, 9, 2), None) == ("schule", None)  # seit 1991 ein Kalender
+
+
+def test_nrw_feiertage_und_ferien():
+    assert date(2009, 6, 11) in feiertage("NW", 2009)  # Fronleichnam
+    assert date(2009, 11, 1) in feiertage("NW", 2009)  # Allerheiligen
+    assert date(2009, 1, 6) not in feiertage("NW", 2009)
+    k = Ferienkalender.lade(Pfade().config / "schulferien_nordrhein-westfalen.csv")
+    assert tagtyp(date(2009, 4, 23), "NW", k) == ("schule", None)
+    assert tagtyp(date(2009, 10, 15), "NW", k) == ("ferien", "Herbstferien")
+    assert tagtyp(date(2000, 1, 6), "NW", k) == ("ferien", "Weihnachtsferien")
+    assert tagtyp(date(2003, 9, 11), "NW", k) == ("ferien", "Sommerferien")  # bis 13.09.
+    assert tagtyp(date(2003, 9, 16), "NW", k) == ("schule", None)
+    assert tagtyp(date(2010, 5, 25), "NW", k) == ("ferien", "Pfingstferien")  # ein Tag

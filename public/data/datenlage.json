@@ -231,24 +231,43 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     7.6261,
-     51.9607
+     7.62974,
+     51.95605
     ]
    },
    "properties": {
     "kommune": "Münster",
     "land": "NW",
-    "stand": "offen",
-    "was": "ZIP mit PDF/XLS je Zählung (Spitzenstunden), laut Notizen in vizsim/svz",
-    "links": [],
+    "stand": "in_karte",
+    "was": "rund 690 Kfz-Knotenpunktzählungen 2000–2012 aus den XLS, je meist zwei Stunden (7–8 und 16–17 Uhr)",
+    "links": [
+     {
+      "titel": "Open Data Münster",
+      "url": "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung"
+     },
+     {
+      "titel": "Nutzungsbedingungen",
+      "url": "https://opendata.stadt-muenster.de/nutzungsbedingungen"
+     },
+     {
+      "titel": "stadt-muenster.de",
+      "url": "https://www.stadt-muenster.de/verkehrsplanung/verkehr-in-zahlen/kfz-verkehrszaehlungen"
+     }
+    ],
     "recht": "Informationsfreiheitsgesetz NRW",
-    "quelle": null,
-    "zaehlungen": null,
-    "situation": "Offen ist ein ZIP mit PDF/XLS je Zählung (Spitzenstunden).",
-    "empfehlung": "Keine Anfrage nötig: Adapter für die XLS bauen. Für vollständige Tagesgänge später die Intervallwerte anfragen (IFG NRW).",
-    "weg": "offen – Adapter bauen",
-    "kontakt": null,
-    "anfrage": null
+    "quelle": "muenster",
+    "zaehlungen": 689,
+    "situation": "Die Stadt veröffentlicht ihre manuellen Kfz-Zählungen offen (dl-de/by-2-0): ein ZIP mit einer Datei je Zählung – XLS 2000–2012 (in der Karte) und PDF 2010–2020 (noch nicht ausgelesen) – und die Lage der Knoten als CSV. Je Zählung stehen nur die Spitzenstunden (meist 7–8 und 16–17 Uhr) nach Fahrzeugart. Die Spalte „Rad“ ist keine vollständige Radzählung; Zählungen ab 2021 fehlen.",
+    "empfehlung": "Die PDFs 2013–2020 lassen sich auslesen (nächster Schritt hier). Für ganze Zählfenster, neuere Zählungen und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW.",
+    "weg": "offen; ergänzend FragDenStaat, IFG NRW",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+M%C3%BCnster",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Münster seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf Ihrem Open-Data-Portal stehen die manuellen Verkehrszählungen bis 2020 mit den Spitzenstunden. Ich bitte zusätzlich um die Zählungen ab 2021, um die Werte aller gezählten Intervalle (nicht nur der Spitzenstunden) und um eine kurze Erläuterung, ob die Spalte „Rad“ alle Radfahrenden am Knoten erfasst oder nur die auf der Fahrbahn.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
    }
   },
   {

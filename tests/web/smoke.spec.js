@@ -70,6 +70,21 @@ test("Stelle aus MobiData BW: 24-Stunden-Tagesgang mit Kfz und Schwerverkehr", a
   await expect(detail).toContainText("dl-de/by-2-0");
 });
 
+test("Stelle aus Münster: zwei Spitzenstunden, nur stärkste Stunde, Rad-Spalte als Hinweis", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=sp");
+  await klickeStelle(page, (x) => x.quelle === "muenster"
+    && x.zaehlungen.some((z) => z.fenster === "7–8, 16–17"));
+  const detail = page.locator("#detail");
+  await expect(detail).toContainText("7–8, 16–17");
+  await expect(detail).toContainText("Stadt Münster");
+  await expect(detail).toContainText("dl-de/by-2-0");
+  await expect(detail.locator(".detail-hinweise")).toContainText("keine vollständige Radzählung");
+  // keine Summe 7–19 Uhr aus zwei Stunden
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "muenster").flatMap((s) => s.zaehlungen));
+  expect(z.every((x) => x.w == null && x.w24 == null && x.sp)).toBe(true);
+});
+
 test("CSV-Export der Zählungen im Filter", async ({ page }) => {
   await oeffne(page, "#t=rad.menge&q=ravensburg");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);

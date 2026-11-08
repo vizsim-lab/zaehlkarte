@@ -117,11 +117,30 @@ quellen:
     portal: https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/
     notiz: Adapter muss die PDF-Tabellen auslesen.
   muenster:
-    status: research
+    status: live
+    adapter: muenster_xls
     name: Münster
     land: NW
-    art: Knotenpunktzählungen, PDF/XLS je Zählung (Spitzenstunden)
-    notiz: laut Notizen in vizsim/svz; XLS-Format noch prüfen.
+    traeger: Stadt Münster
+    titel: Verkehrszählung – Manuelle Verkehrserhebung
+    art: >-
+      Kfz-Knotenpunktzählungen von Hand, meist 7–8 und 16–17 Uhr, nach Fahrzeugart (die
+      Rad-Spalte der Kfz-Zählung ist keine vollständige Radzählung und fehlt in der Karte)
+    weg: offen auf dem Open-Data-Portal der Stadt (XLS 2000–2012; die PDFs 2010–2020 liest die Karte noch nicht)
+    ferien: schulferien_nordrhein-westfalen.csv
+    # Lizenz laut Datensatzseite und Nutzungsbedingungen des Portals (Namensnennung „Datenquelle:
+    # Stadt Münster“). GovData führt dieselben Ressourcen als „other-closed“ – ein Fehler der
+    # Übernahme über Open.NRW; maßgeblich ist das Portal der Stadt (lizenz_beleg).
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    lizenz_beleg: https://opendata.stadt-muenster.de/nutzungsbedingungen
+    portal: https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung
+    url_zip: https://opendata.stadt-muenster.de/sites/default/files/Verkehrsz%C3%A4hlung.zip
+    sha256_zip: 87296739b1852ba0f219671f154a13bb5668bdcada953b4cab21d10bee7c7a99
+    positionen:
+      datei: Zählstellen.csv
+      url: https://opendata.stadt-muenster.de/sites/default/files/Z%C3%A4hlstellen.csv
+      sha256: 6de47c4d510b83f69824add9d9049c612fce7d3caafd3e898c5ee14860672ee0
 
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
@@ -227,19 +246,33 @@ datenlage:
       - ["Open Data Potsdam", "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/"]
       - ["potsdam.de", "https://www.potsdam.de/de/verkehrszaehlungen-der-landeshauptstadt-potsdam"]
   - kommune: Münster
-    land: NW
-    lon: 7.6261
-    lat: 51.9607
-    stand: offen
+    quelle: muenster
+    stand: in_karte
     was: >-
-      ZIP mit PDF/XLS je Zählung (Spitzenstunden), laut Notizen in vizsim/svz
+      rund 690 Kfz-Knotenpunktzählungen 2000–2012 aus den XLS, je meist zwei Stunden (7–8 und
+      16–17 Uhr)
     situation: >-
-      Offen ist ein ZIP mit PDF/XLS je Zählung (Spitzenstunden).
+      Die Stadt veröffentlicht ihre manuellen Kfz-Zählungen offen (dl-de/by-2-0): ein ZIP mit
+      einer Datei je Zählung – XLS 2000–2012 (in der Karte) und PDF 2010–2020 (noch nicht
+      ausgelesen) – und die Lage der Knoten als CSV. Je Zählung stehen nur die Spitzenstunden
+      (meist 7–8 und 16–17 Uhr) nach Fahrzeugart. Die Spalte „Rad“ ist keine vollständige
+      Radzählung; Zählungen ab 2021 fehlen.
     empfehlung: >-
-      Keine Anfrage nötig: Adapter für die XLS bauen. Für vollständige Tagesgänge später die
-      Intervallwerte anfragen (IFG NRW).
-    weg: "offen – Adapter bauen"
-    links: []
+      Die PDFs 2013–2020 lassen sich auslesen (nächster Schritt hier). Für ganze Zählfenster,
+      neuere Zählungen und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem
+      IFG NRW.
+    weg: "offen; ergänzend FragDenStaat, IFG NRW"
+    kontakt: {fds_suche: "Stadt Münster"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Auf Ihrem Open-Data-Portal stehen die manuellen Verkehrszählungen bis 2020 mit den
+      Spitzenstunden. Ich bitte zusätzlich um die Zählungen ab 2021, um die Werte aller gezählten
+      Intervalle (nicht nur der Spitzenstunden) und um eine kurze Erläuterung, ob die Spalte „Rad“
+      alle Radfahrenden am Knoten erfasst oder nur die auf der Fahrbahn.
+    links:
+      - ["Open Data Münster", "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung"]
+      - ["Nutzungsbedingungen", "https://opendata.stadt-muenster.de/nutzungsbedingungen"]
+      - ["stadt-muenster.de", "https://www.stadt-muenster.de/verkehrsplanung/verkehr-in-zahlen/kfz-verkehrszaehlungen"]
   - kommune: Xanten
     land: NW
     lon: 6.4536

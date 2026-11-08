@@ -3,7 +3,8 @@
 Alles landet in pipeline/data/raw/ (gitignored). Berlin-Archive und Geokodierung sind auf einen
 Commit gepinnt (sha256 in sources.yaml); eine abweichende Prüfsumme bricht ab. MobiData BW
 liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt, aus dem ZIP nur
-die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht).
+die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
+Positionsdatei mit Prüfsumme; aus dem ZIP nur die XLS (die PDFs liest noch kein Adapter).
 """
 
 from __future__ import annotations
@@ -50,13 +51,14 @@ def lade_geprueft(url: str, ziel: Path, soll: str | None) -> str:
     return f"{ziel.name}: geladen"
 
 
-def entpacke_excel(zip_pfad: Path, ziel: Path) -> int:
+def entpacke_excel(zip_pfad: Path, ziel: Path, endungen: tuple[str, ...] = (".xlsx",)) -> int:
+    """Nur Dateien mit diesen Endungen (Groß-/Kleinschreibung egal) nach `ziel`."""
     if ziel.exists():
         shutil.rmtree(ziel)
     n = 0
     with zipfile.ZipFile(zip_pfad) as zf:
         for info in zf.infolist():
-            if info.is_dir() or not info.filename.lower().endswith(".xlsx"):
+            if info.is_dir() or not info.filename.lower().endswith(endungen):
                 continue
             pfad = (ziel / info.filename).resolve()
             if not pfad.is_relative_to(ziel.resolve()):
@@ -85,4 +87,13 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 zip_pfad = lade(q["url_zip"], Path(tmp) / "zaehlungen.zip")
                 n = entpacke_excel(zip_pfad, ordner / "zip")
             log.append(f"{code}: Übersicht + {n} Excel-Dateien")
+        elif q["adapter"] == "muenster_xls":
+            ordner = pfade.roh / "muenster"
+            pos = q["positionen"]
+            log.append(lade_geprueft(pos["url"], ordner / pos["datei"], pos.get("sha256")))
+            with tempfile.TemporaryDirectory() as tmp:
+                zip_pfad = Path(tmp) / "zaehlungen.zip"
+                lade_geprueft(q["url_zip"], zip_pfad, q.get("sha256_zip"))
+                n = entpacke_excel(zip_pfad, ordner / "zip", (".xls",))
+            log.append(f"{code}: Positionen + {n} XLS-Dateien")
     return log

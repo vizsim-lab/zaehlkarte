@@ -27,6 +27,7 @@ der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
 |---|---|---|---|---|
 | Berlin (SenMVKU) | rund 26.600 verortete Knoten- und Querschnittszählungen, 15/60-Minuten-Werte, Kfz nach Fahrzeugart, Rad, Fuß nach Alter | 1983–2025 | IFG-Anfragen [2019](https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/) und [2025](https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/) | CC BY-SA 3.0 DE (bis 2019), dl-de/by-2-0 (ab 2019) |
 | Ravensburg, Weingarten, Berg, Baienfurt, Baindt | 24-Stunden-Videozählungen an Kreuzungen, 15-Minuten-Werte, Pkw, Lkw, Rad, Fuß | 2023–2026 | offen auf [MobiData BW](https://mobidata-bw.de/dataset/zaehldaten-ravensburg) | dl-de/by-2-0 |
+| Münster (Stadt Münster) | rund 690 Kfz-Knotenpunktzählungen von Hand, je meist zwei Stunden (7–8 und 16–17 Uhr), nach Fahrzeugart | 2000–2012 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung) (XLS; die PDFs 2010–2020 liest die Karte noch nicht) | dl-de/by-2-0, „Datenquelle: Stadt Münster“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`. Rund 1.500 Berliner Zählungen haben noch keine
@@ -55,13 +56,19 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   weil Ferienzählungen deutlich niedriger liegen können; filterbar.
 - MobiData BW: Die Übersichtstabelle nennt in `KFZ_n` nur die Pkw (nachgerechnet an allen
   Zählungen mit Excel); die Karte rechnet Kfz = Pkw + Lkw aus den Stundenwerten.
+- Münster: Je Zählung liegen nur die Spitzenstunden vor (meist 7–8 und 16–17 Uhr) – in der
+  Karte erscheinen die Zählungen deshalb nur unter „stärkste Stunde“. Kfz = Summe der
+  Fahrzeugarten (die Kfz-Zelle ist in einigen Blättern falsch verformelt), Schwerverkehr =
+  Bus + Lkw + Lastzug. Die Spalte „Rad“ der Kfz-Zählung ist keine vollständige Radzählung
+  (wo es eine eigene Radzählung gibt, liegt sie deutlich darunter oder steht auf 0); sie
+  fehlt in der Karte und steht im Hinweis der Zählung.
 
 ## Aufbau
 
 ```
 pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> Kartendaten
   config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
-  src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw)
+  src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster_xls)
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
 tests/               unit/ (node --test), web/ (Playwright gegen den Build)
