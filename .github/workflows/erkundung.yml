@@ -1,0 +1,22 @@
+# Entwicklungswerkzeug: Open-Data-Portale nach Verkehrszählungen durchsuchen (tools/erkunden.py)
+# und das Ergebnis in denselben Branch legen (Pushes mit GITHUB_TOKEN starten keinen neuen Lauf).
+name: Erkundung Zähldaten
+on:
+  push:
+    branches: [werkzeug/erkundung]
+    paths: [tools/**, .github/workflows/erkundung.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  erkunden:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - run: python3 tools/erkunden.py ergebnis
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ergebnis
+          git commit -q -m "Erkundung $(date -u +%F)" && git push origin HEAD:werkzeug/erkundung
