@@ -1,0 +1,1116 @@
+/* Zählkarte – Stil übernommen aus vizsim/unfallkarte (Legende, Panels, Popups, Mobile), dazu
+   am Ende die eigenen Bausteine (Chips, Punkte, Seitenleiste, Diagramme).
+   MapLibre-Grundstil ZUERST: die Regeln unten überschreiben Teile davon (Controls, Popups).
+   Vite löst den Paketpfad auf und bündelt beides in eine CSS-Datei. */
+@import "maplibre-gl/dist/maplibre-gl.css";
+
+/* ───── General Layout ───── */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Die Seite selbst scrollt nie — Karte füllt das Fenster, die Legende scrollt in sich.
+     Ohne diese Zeile wurde beim Ziehen des Handy-Sheets die GANZE Seite scrollbar: es ragt
+     während der Geste per transform unter das Fenster (tests/web/mobile.spec.js). */
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* ───── UI Design Tokens (an Bottom-Left-Panel/Geocoder angelehnt) ───── */
+:root {
+  --ui-surface: #ffffff;
+  --ui-border: #e3e5e9;
+  --ui-divider: #eceef1;
+  --ui-shadow: 0 14px 40px rgba(15, 23, 42, 0.18);
+  --ui-shadow-sm: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --ui-radius: 16px;
+  --ui-radius-sm: 12px;
+  --ui-text: #1f2937;
+  --ui-text-strong: #111827;
+  --ui-text-muted: #6b7280;
+  --ui-accent: #1d4ed8;
+  --ui-hover: #f3f4f6;
+}
+
+/* ────────────── Legend Style ────────────── */
+
+.legend-heading {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ui-text-strong);
+}
+
+.legend-subtext {
+  font-size: 12px;
+  color: var(--ui-text-muted);
+}
+
+.legend {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  width: 320px;
+  max-width: 100%;
+  max-height: calc(100dvh - 160px);  /* 60 top + 80 bottom */
+  background: var(--ui-surface);
+  color: var(--ui-text);
+  /* Oben KEIN Innenabstand: den trägt die klebende Titelzeile selbst, sonst bliebe über
+     ihr ein Spalt, durch den der Inhalt sichtbar wegscrollt. */
+  padding: 0 16px 14px;
+  font-size: 12px;
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+
+/* Quellen-/Lizenz-Hinweis: CSS-gezeichnetes ⓘ-Badge (Markup: <span class="info-icon">i</span>).
+   Bewusst KEIN Unicode-ⓘ/U+24D8 — das Glyph fehlt in vielen System-Fonts und
+   renderte als leeres Kästchen. */
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Höhe == Text-em (12px) inkl. Rand (border-box): das Badge belegt exakt die
+     em-Box der Schrift und kann so — wie ein echtes Glyph — die Zeilenhöhe nicht
+     strecken. font-size steuert nur das "i" im Kreis, nicht die Box-Größe. */
+  box-sizing: border-box;
+  width: 11px;
+  height: 11px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 8px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+  text-indent: 0;   /* Szenario-/Kontext-Labels vererben text-indent:-1.45em (hängender
+                       Einzug) — ohne Reset wandert das "i" aus dem Kreis heraus */
+  vertical-align: middle;
+  cursor: help;
+  color: var(--ui-text-muted, #6b7280);
+  user-select: none;
+}
+
+/* Titelzeile bleibt beim Scrollen stehen — die Legende scrollt (max-height + overflow-y),
+   vorher lief der Titel einfach oben raus. Getrennt wird mit einem weichen Schatten statt
+   einer Linie: 12px darunter steht ohnehin schon der erste Trenner, zwei Kanten so dicht
+   beieinander lesen sich als Doppellinie. */
+.legend .legend-title {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin: 0 -16px;
+  padding: 16px 16px 10px;
+  background: var(--ui-surface);
+  box-shadow: 0 6px 10px -8px rgba(15, 23, 42, 0.45);
+}
+
+.legend-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0 6px;
+  cursor: pointer;
+}
+
+.legend-header label {
+  font-size: 12px;
+}
+
+
+.legend-section-divider {
+  border-top: 1px solid var(--ui-divider);
+  margin: 12px 0 6px;
+}
+
+.legend-subsection-divider {
+  border-top: 1px solid #ddd;
+  margin: 2px 0;
+  margin-left: 16px;
+  /* Einrückung nach rechts */
+  width: calc(100% - 16px);
+  /* Optional: macht's proportional */
+}
+
+/* Items and layout */
+.legend-items {
+  margin-left: 8px;
+}
+
+.legend-items.collapsed {
+  display: none;
+}
+
+
+.legend-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.label-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  /* ← This is the key part */
+  min-width: 0;
+  /* prevents overflow on long labels */
+}
+
+.legend-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--ui-text-strong);
+  cursor: pointer;
+  gap: 6px;
+}
+
+.legend-section-title label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+
+/* ─────  ───── */
+.color-box {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+
+
+/* ───── Count Badges ───── */
+
+.count-badge {
+  font-size: 10px;
+  padding: 1px 7px;
+  background: #eef2f7;
+  border-radius: 999px;
+  min-width: 24px;
+  text-align: center;
+  white-space: nowrap;
+  color: #475569;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ───── Toggle Arrows ───── */
+
+/* Basis-Pfeil-Logik. Die Pfeile sind <button> (Tastatur/Screenreader, aria-expanded).
+   Chevron = SVG-Maske im ::before: EIN durchgehender Strich mit runden Schenkel-
+   Enden (stroke-linecap: round) und spitzer Ecke (miter). Die Maske liegt auf dem
+   Pseudo-Element, NICHT auf dem Button — sonst würde der :focus-visible-Ring
+   mitmaskiert. Farbe über --arrow-color, Größe über width/height der Varianten. */
+.toggle-arrow {
+  --arrow-color: #9ca3af;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  transform: rotate(90deg);      /* zugeklappt: Spitze zeigt nach links */
+  transition: transform 0.2s ease;
+  appearance: none;
+  background: none;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+.toggle-arrow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--arrow-color);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 6.5 10 12.5 16 6.5' fill='none' stroke='%23000' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='miter'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M4 6.5 10 12.5 16 6.5' fill='none' stroke='%23000' stroke-width='5.5' stroke-linecap='round' stroke-linejoin='miter'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.toggle-arrow:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 4px;
+}
+
+/* Offener Zustand: Spitze zeigt nach unten */
+.toggle-arrow.open {
+  transform: rotate(0deg);
+}
+
+/* Mittlere Section-Pfeile (Größe = Basis 18px) */
+.section-arrow {
+  margin-left: 8px;
+}
+
+/* Kleine Pfeile bei legend-header */
+.legend-header .toggle-arrow {
+  --arrow-color: #b0b6bf;
+  width: 13px;
+  height: 13px;
+  margin-left: 6px;
+}
+
+/* Großer Root-Pfeil — steht NACH der legend-header-Regel und ist spezifischer,
+   damit Größe/Farbe gewinnen (der Root-Pfeil liegt selbst in einem .legend-header). */
+.legend-header .toggle-arrow.toggle-root {
+  --arrow-color: #9ca3af;
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+}
+
+
+
+/* Einklappbare Sektionen */
+.legend-section.collapsed .legend-section-content {
+  display: none;
+}
+
+.legend-section.collapsed .legend-section-allcontent {
+  display: none;
+}
+
+
+
+
+/* (Kontext-Legenden starten versteckt via inline display:none im HTML —
+   früherer CSS-Default hier war redundant/teils tot und wurde entfernt.) */
+
+
+
+
+/* ────────────── Feature Count ────────────── */
+
+/* Das Layout der Zeile selbst steht bei den .fc-*-Regeln weiter unten; hier bleibt
+   nur der Rahmen der Zeile. Trenner als border-top am Wrapper (statt eigenem
+   .legend-section-divider): der Wrapper bleibt bei Zoom <11 sichtbar, ein separater
+   Divider würde dort von updateLegendVisibilityByZoom ausgeblendet. */
+#feature-count-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 6px;
+  border-top: 1px solid var(--ui-divider);
+}
+
+
+/* ────────────── zoomlock ────────────── */
+.zoom-lock {
+  font-size: 0.8em;
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+/* ────────────── Photon Geocoder (Stil: vizsim/hilo_profiler) ────────────── */
+.geocoder {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 7;
+  width: 320px;
+  max-width: calc(100vw - 24px);
+  font-family: sans-serif;
+}
+
+.geocoder-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(8px);
+}
+.geocoder-input-wrapper:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14), 0 10px 28px rgba(15, 23, 42, 0.18);
+}
+
+#search {
+  width: 100%;
+  padding: 11px 38px 11px 40px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #111827;
+  box-sizing: border-box;
+}
+#search::placeholder { color: #64748b; }
+
+.geocoder-icon {
+  position: absolute;
+  left: 12px;
+  color: #64748b;
+  pointer-events: none;
+}
+
+.geocoder-clear,
+.geocoder-loading {
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.geocoder-clear:hover { background: #eef2f7; }
+.geocoder-loading {
+  pointer-events: none;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.geocoder-results {
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid #d9e2ec;
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.18);
+  display: none;
+}
+.geocoder-result-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #d9e2ec;
+}
+.geocoder-result-item:last-child { border-bottom: none; }
+.geocoder-result-item:hover,
+.geocoder-result-item.selected { background: #eef2f7; }
+.geocoder-result-primary {
+  font-size: 14px;
+  color: #111827;
+  font-weight: 600;
+}
+.geocoder-result-secondary,
+.geocoder-no-results {
+  font-size: 12px;
+  color: #64748b;
+}
+.geocoder-no-results { padding: 10px 12px; }
+
+/* ───── Container Bottom Left ───── */
+#bottom-left-ui-container {
+  position: absolute;
+  bottom: 64px;            /* angehoben: Platz für den Karten-Panel-Button darunter */
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  z-index: 2;
+  font-family: sans-serif;
+}
+
+/* Nav (Zoom/Kompass) als 44px-Kacheln, passend zum Karten-Panel-Button (wie hilo_profiler) */
+#custom-nav-control .maplibregl-ctrl-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 44px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+#custom-nav-control .maplibregl-ctrl-group button {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #e3e5e9;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .12);
+}
+/* ───── Slider — einheitlich (Szenario = orange mit Füllung · Kontext = grau) ───── */
+.legend input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 170px;
+  max-width: 100%;
+  height: 7px;
+  border-radius: 999px;
+  background: #e5e7eb;            /* Default = Kontext: dezentes Grau */
+  outline: none;
+  cursor: pointer;
+  margin: 6px 0 2px;
+}
+.legend input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #9ca3af;     /* Default = Kontext: grauer Rand */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.legend input[type="range"]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #9ca3af;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.legend input[type="range"]:focus-visible {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* ===== Karten-Panel (unten links) — aus frontend-Makeover ===== */
+/* Karten-Panel unten links — an style.css anhängen. Aus vizsim/gradients2osm. */
+
+.map-settings-toggle {
+  position: absolute; left: 10px; bottom: 10px; z-index: 6;
+  width: 44px; height: 44px; border-radius: 12px;
+  background: #fff; border: 1px solid #e3e5e9;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #4b5563; padding: 0; cursor: pointer;
+}
+.map-settings-toggle:hover { background: #f3f4f6; }
+
+/* ───── Feature-Count-Zeile: Symbol-Chips + Repo-/Issue-Links (im Legenden-Panel) ───── */
+/* Anzahl + Zoom als linksbündige Spalte (gestapelt); Zahlen fett.
+   Auf dem Handy schwenkt die Spalte in eine Zeile (Mobile-Query am Dateiende). */
+.fc-stats { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; line-height: 1.3; color: var(--ui-text); }
+.fc-stat { position: relative; display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; cursor: help; }
+.fc-stat svg { flex: none; opacity: .65; }
+.fc-stat #fc-count, .fc-stat #fc-zoom { font-weight: 700; }
+.fc-stat #fc-lock { margin-left: 4px; }
+
+/* Feature-Count-Chips: Tooltip-Text steht in data-tip="…" (gemeinsames Bauteil). */
+.fc-stat[data-tip] { cursor: help; }
+
+/* Badge + Icons als EINE rechtsbündige Gruppe -> feste Position von rechts,
+   unabhängig von der Zahlenbreite links. */
+.fc-links { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+
+/* Status-Pille (inline statt shields.io-Bild): dezent, aber lesbar — die Karte ist
+   benutzbar, nur noch nicht fertig. */
+.fc-badge {
+  margin-right: 4px;
+  padding: 2px 8px;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: .02em;
+  white-space: nowrap;
+  cursor: help;
+}
+.fc-links a { display: inline-flex; align-items: center; color: #4b5563; text-decoration: none; }
+.fc-links a:hover { color: #111827; }
+/* Knopf im Stil der Links daneben (Export-Dialog). */
+.fc-icon-btn { display: inline-flex; align-items: center; padding: 0; border: 0; background: none; color: #4b5563; cursor: pointer; }
+.fc-icon-btn:hover { color: #111827; }
+.fc-icon-btn:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; border-radius: 4px; }
+
+.map-settings-panel {
+  position: absolute; left: 10px; bottom: 64px; width: 300px;
+  max-width: calc(100vw - 32px);
+  background: #fff; border-radius: 16px; border: 1px solid #e3e5e9;
+  box-shadow: 0 14px 40px rgba(0,0,0,.18); z-index: 5; padding: 14px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.map-settings-panel.is-collapsed { display: none; }
+.map-settings-panel-content { display: flex; flex-direction: column; gap: 10px; }
+
+.basemap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.basemap-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 6px; border: 1px solid transparent; border-radius: 10px;
+  background: #f9fafb; cursor: pointer;
+}
+.basemap-btn:hover { background: #f3f4f6; }
+.basemap-btn.selected { border-color: #1d4ed8; background: #eef2ff; }
+.basemap-preview {
+  width: 100%; aspect-ratio: 1 / 1; border-radius: 8px;
+  background-size: cover; background-position: center; background-color: #e5e7eb;
+}
+/* Thumbnails 1:1 aus vizsim/gradients2osm (viz/assets/basemaps) übernommen. */
+.basemap-preview-positron  { background-color: #eef3f7; background-image: url('./thumbs/thumb-standard.png'); }
+.basemap-preview-osm       { background-color: #f5f1df; background-image: url('./thumbs/thumb-osm.png'); }
+.basemap-preview-satellite { background-color: #516146; background-image: url('./thumbs/thumb-satellite.png'); }
+.basemap-label { font-size: 11px; color: #4b5563; }
+
+.terrain-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.terrain-row strong { font-size: 13px; }
+.terrain-row p { margin: 2px 0 0; font-size: 11px; color: #6b7280; }
+
+.switch { position: relative; display: inline-block; width: 40px; height: 22px; flex: none; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.switch-slider {
+  position: absolute; inset: 0; cursor: pointer; background: #cbd5e1;
+  border-radius: 22px; transition: .2s;
+}
+.switch-slider::before {
+  content: ""; position: absolute; height: 16px; width: 16px; left: 3px; bottom: 3px;
+  background: #fff; border-radius: 50%; transition: .2s;
+}
+.switch input:checked + .switch-slider { background: var(--ui-accent); }
+.switch input:checked + .switch-slider::before { transform: translateX(18px); }
+
+
+/* ───── Modernes Restyle: Auswahl-Controls, Scrollbar, Popups ───── */
+
+/* Akzentfarbe für alle Checkboxen/Radios im Panel (statt Browser-Default) */
+.legend input[type="checkbox"],
+.legend input[type="radio"] {
+  accent-color: var(--ui-accent);
+}
+
+/* Dezente Scrollbar (WebKit) — passend zum schlanken Firefox-scrollbar oben */
+.legend::-webkit-scrollbar { width: 10px; }
+.legend::-webkit-scrollbar-track { background: transparent; }
+.legend::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 999px;
+  border: 3px solid var(--ui-surface);
+}
+.legend::-webkit-scrollbar-thumb:hover { background: #b6bcc6; }
+
+/* ===== Popup-System — ein Baukasten, drei Tiers (Detail / Hero / Chart) =====
+   Basis: heller Rahmen; value-forward (Label gemutet, Wert dunkel/prominent).
+   .pop-* sind die gemeinsamen Bausteine. Hero-Zahlen bleiben NEUTRAL — sie
+   „poppen" über Größe/Gewicht, nicht über Farbe. */
+.maplibregl-popup-content {
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius-sm);
+  box-shadow: var(--ui-shadow);
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--ui-text-strong);
+  /* Fixiertes Fenster mit vielen gestapelten Karten: scrollen statt aus dem Viewport laufen */
+  max-height: 75vh;
+  overflow-y: auto;
+}
+.maplibregl-popup-close-button {
+  width: 22px; height: 22px; font-size: 16px; line-height: 22px;
+  color: var(--ui-text-muted); border-radius: 8px;
+}
+.maplibregl-popup-close-button:hover { background: var(--ui-hover); color: var(--ui-text); }
+
+/* Titel */
+.pop-title { font-size: 13px; font-weight: 700; color: var(--ui-text-strong); margin-bottom: 7px; }
+
+/* Tier Detail: Label/Wert-Tabelle (Label gemutet-semibold, Wert dunkel) */
+.pop-table { border-collapse: collapse; width: 100%; }
+.pop-table td { padding: 2px 0; vertical-align: top; }
+.pop-table td:first-child { padding-right: 14px; white-space: nowrap; font-weight: 600; color: var(--ui-text-muted); }
+
+/* Tier Hero: eine große Leitzahl (neutral) + Einheit/Zusatz */
+.pop-hero { font-size: 21px; font-weight: 700; line-height: 1.1; margin: 1px 0 3px; color: var(--ui-text-strong); }
+.pop-hero.pop-hero--sm { font-size: 16px; }   /* längere Text-Werte (z. B. dB-Bereich) */
+.pop-hero .pop-unit { color: var(--ui-text-muted); font-weight: 600; font-size: 11px; }
+.pop-note { font-size: 11px; font-weight: 600; color: var(--ui-text-muted); margin-left: 4px; }
+
+/* Status-Marker: bewusst NEUTRAL —
+   eine erfüllte Häufungs-Regel ist ein Warnhinweis, kein Erfolg (kein grünes ✓). */
+.pop-flag {
+  display: inline-block; margin-bottom: 5px; padding: 2px 8px; border-radius: 6px;
+  font-size: 11px; font-weight: 700; letter-spacing: .02em;
+  color: var(--ui-text-strong); background: var(--ui-hover);
+}
+
+/* Meta-Zeilen + Fußzeile (Quelle / „→ OSM"-Link) */
+.pop-meta { color: var(--ui-text-muted); font-size: 11.5px; margin-top: 2px; }
+.pop-foot { margin-top: 9px; padding-top: 7px; border-top: 1px solid var(--ui-divider); font-size: 11.5px; color: var(--ui-accent); }
+.pop-foot a { color: inherit; text-decoration: none; }
+.pop-foot a:hover { text-decoration: underline; }
+
+/* gepunktete Erklärung — nutzt den gemeinsamen data-tip-Tooltip unten */
+.pop-hint { border-bottom: 1px dotted #b9bec6; cursor: help; }
+/* Pill + Chips. Pill = Status mit Farbpunkt,
+   Chip = neutrales Merkmal mit Icon. Icons: 24er-Pfade als Strich, Farbe = Text. */
+.pop-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
+.pop-pill, .pop-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 2px 9px 2px 7px; border-radius: 999px; font-size: 11px; line-height: 1.45;
+}
+.pop-pill { font-weight: 700; }
+.pop-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--pill-dot); }
+.pop-chip { gap: 4px; font-weight: 600; color: #374151; border: 1px solid var(--ui-border); }
+.pop-icon {
+  width: 13px; height: 13px; flex-shrink: 0;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.pop-when { display: flex; align-items: center; gap: 5px; margin-top: 8px; font-size: 11.5px; color: var(--ui-text-muted); }
+.pop-when .pop-icon { width: 12px; height: 12px; }
+
+/* Ein Hover-Popup für alles (js/ui/hoverPopup.js): mehrere Objekte an einem Punkt werden
+   als Karten UNTEREINANDER gestapelt. Die Eyebrow nennt Gruppe + Quelle/Szenario
+   („Kontext · OSM", „Szenario · Schulumfeld …"), damit gleiche Ortstitel unterscheidbar
+   bleiben. Szenario-Karten (Analyse-Ergebnisse) bekommen zusätzlich einen Akzentbalken,
+   damit sie sich im Stapel von reinen Kontext-Infos abheben. */
+.pop-card + .pop-card { margin-top: 11px; padding-top: 11px; border-top: 1px solid var(--ui-divider); }
+.pop-eyebrow {
+  font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  color: var(--ui-text-muted); margin-bottom: 4px;
+}
+.pop-card--scenario { border-left: 3px solid var(--ui-accent); padding-left: 10px; }
+.pop-card--scenario .pop-eyebrow { color: var(--ui-accent); }
+/* Kopfzeile, wenn mehrere Objekte an einem Punkt gestapelt sind */
+.pop-multi {
+  font-size: 11px; font-weight: 700; color: var(--ui-text-strong);
+  margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--ui-divider);
+}
+/* Hinweis in der Hover-Vorschau: Klick fixiert das Fenster (im Pin-Popup weggelassen) */
+.pop-pinhint {
+  margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--ui-divider);
+  font-size: 11px; color: var(--ui-text-muted); text-align: center;
+}
+
+/* ===== Gemeinsamer schneller Tooltip (100 ms) — ein Bauteil, löst natives title ab.
+   JS-positioniert (js/ui/tooltip.js) auf document.body (position:fixed), damit er
+   auch aus scrollenden Panels/Popups nie abgeschnitten wird. Markup: data-tip="…". */
+.app-tooltip {
+  position: fixed; z-index: 9999; pointer-events: none; max-width: 240px;
+  background: #111827; color: #fff; font: 400 11.5px/1.35 system-ui, -apple-system, sans-serif;
+  padding: 5px 8px; border-radius: 6px; box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+  opacity: 0; transition: opacity 80ms ease;
+}
+.app-tooltip.is-visible { opacity: 1; }
+/* ───── Fehler-Banner (js/ui/errorBanner.js) ─────
+   Oben mittig über der Karte, wenn die Karte sonst kommentarlos leer bliebe
+   (z.B. Manifest/B2 nicht erreichbar). Schließbar + "Neu laden". */
+.error-banner {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: min(92vw, 560px);
+  padding: 10px 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--ui-radius-sm, 12px);
+  box-shadow: var(--ui-shadow-sm, 0 6px 16px rgba(0, 0, 0, 0.12));
+  color: #991b1b;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.error-banner-reload {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.error-banner-close {
+  border: none;
+  background: none;
+  padding: 0 2px;
+  margin-left: 2px;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+.error-banner-close:hover { color: #7f1d1d; }
+
+
+/* ══════════════════════ Mobile: Legende als Bottom-Sheet ══════════════════════
+   Bis hierher hatte das Stylesheet keine einzige @media-Query: die 320-px-Legende
+   klebte auch auf einem 360-px-Telefon oben rechts und verdeckte fast die halbe
+   Karte. Unter 640px wandert sie deshalb an den unteren Rand und wird zum Sheet —
+   zugeklappt bleibt ein Streifen mit Titel und Zählern stehen, aufgeklappt
+   deckt sie höchstens 72 % der Höhe ab. Der INHALT ändert sich nicht, nur die Lage.
+
+   Die Höhe des zugeklappten Streifens misst js/ui/mobileLayout.js und meldet sie als
+   --legend-peek; daran hängen die Bedienelemente unten links. */
+@media (max-width: 640px) {
+  .legend {
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    max-width: none;
+    max-height: 72dvh;
+    /* Innenabstand oben wandert in die klebende Titelzeile (siehe unten). */
+    padding: 0 14px calc(12px + env(safe-area-inset-bottom, 0px));
+    border-width: 1px 0 0;
+    border-radius: var(--ui-radius) var(--ui-radius) 0 0;
+    /* Über den Karten-Bedienelementen (z-index 6), aber unter Geocoder und Fehlerbanner. */
+    z-index: 6;
+    overscroll-behavior: contain;
+  }
+
+  /* Klebende Titelzeile + Schatten kommen aus den Grundregeln — hier nur die Maße
+     an den schmaleren Innenabstand anpassen. Im Sheet ist sie zugleich der Griff. */
+  .legend .legend-title {
+    margin: 0 -14px;
+    padding: 12px 14px 8px;
+    /* Griff der Zieh-Geste: der Browser darf hier NICHT selbst scrollen/zoomen,
+       sonst verliert das Sheet den Finger mitten in der Bewegung. */
+    touch-action: none;
+  }
+
+  /* Zugeklappt ist auch die Zählerzeile Teil des Streifens — und damit Griff.
+     Aufgeklappt steht sie unten im Inhalt und muss wieder scrollen dürfen. */
+  .legend.collapsed #feature-count-wrapper {
+    touch-action: none;
+  }
+
+  /* ── Schlanker Streifen ──────────────────────────────────────────────────────
+     Zugeklappt ist der Streifen das, was vom Handy-Bildschirm dauerhaft weg ist —
+     er trug vier Textzeilen (Titel, zwei Zeilen Untertitel, Zähler + Zoom
+     untereinander) und maß 144px. Gleiche Infos, aber zwei Zeilen: Untertitel
+     einzeilig, Zähler und Zoom nebeneinander. Am Desktop bleibt alles wie gehabt. */
+  .legend-heading {
+    font-size: 18px;
+  }
+
+  .legend-subtext br {
+    display: none;
+  }
+
+  .legend-header .toggle-arrow.toggle-root {
+    width: 20px;
+    height: 20px;
+  }
+
+  #feature-count-wrapper {
+    margin-top: 8px;
+  }
+
+  .fc-stats {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+  }
+
+  /* Der Root-Pfeil zeigt zugeklappt sonst nach LINKS (Desktop-Konvention: „klappt zur
+     Seite auf"). Im Bottom-Sheet fährt die Legende nach OBEN — also auch dorthin zeigen.
+     Der offene Zustand (.open, Spitze nach unten = „wieder runter") stimmt schon. */
+  .legend.collapsed .legend-title .toggle-arrow.toggle-root {
+    transform: rotate(180deg);
+  }
+
+  /* Anfasser-Strich als Affordanz — rein dekorativ. */
+  .legend .legend-title::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    width: 34px;
+    height: 4px;
+    margin-left: -17px;
+    border-radius: 2px;
+    background: var(--ui-divider);
+  }
+
+  /* Die Attribution (Lizenzpflicht: OSM/ODbL, OpenFreeMap, Mapterhorn) lag
+     bisher HINTER dem Sheet — sichtbar in keinem der beiden Zustände. Sie gehört über den
+     Streifen. Ausgeklappt wäre sie ein 44px hohes Band über die volle Breite und läge auf
+     dem Karten-Knopf links; darum startet sie auf dem Handy als ⓘ-Knopf und fährt beim
+     Antippen aus (js/ui/mobileLayout.js). */
+  .maplibregl-ctrl-bottom-right {
+    bottom: calc(var(--legend-peek, 96px) + 4px);
+  }
+
+  /* Ausgeklappt lief das Band über die volle Breite — und damit unter den Karten-Knopf
+     unten links (44px + 10px Rand). Hier gedeckelt: der Text bricht lieber um, als sich
+     mit den Bedienelementen zu überlagern. */
+  .maplibregl-ctrl-bottom-right .maplibregl-ctrl-attrib {
+    /* border-box, weil MapLibre 36px Innenabstand für den ⓘ-Knopf einrechnet — sonst
+       misst die Grenze am falschen Kasten und das Band ragt doch wieder hinüber.
+       74px = 10 Eigenrand + 44 Knopf + 10 Rand links + 10 Luft. */
+    box-sizing: border-box;
+    max-width: calc(100vw - 74px);
+  }
+
+  /* Während der Geste schiebt sich das Sheet über die Bedienelemente unten links.
+     Die stehen auf demselben z-index (6) und im Markup DAHINTER — ohne diese Zeile
+     schwebte der Karten-Knopf mitten im hochgezogenen Sheet. */
+  .legend.is-dragging {
+    z-index: 7;
+  }
+
+  /* Zugeklappt: Karten-Bedienelemente sitzen direkt ÜBER dem Streifen.
+     Geschwister-Selektor, weil .legend im Markup vor beiden steht. */
+  .legend.collapsed~.map-settings-toggle {
+    bottom: calc(var(--legend-peek, 96px) + 12px);
+  }
+
+  .legend.collapsed~#bottom-left-ui-container,
+  .legend.collapsed~.map-settings-panel {
+    bottom: calc(var(--legend-peek, 96px) + 66px);
+  }
+
+  /* Aufgeklappt deckt das Sheet die linke Seite zu — dann haben sie dort nichts zu suchen. */
+  .legend:not(.collapsed)~#bottom-left-ui-container,
+  .legend:not(.collapsed)~.map-settings-toggle,
+  .legend:not(.collapsed)~.map-settings-panel {
+    display: none;
+  }
+
+  /* Suchfeld über die volle Breite statt fester 320px … */
+  .geocoder {
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-width: none;
+  }
+
+  /* … und zugeklappt nur ein Lupen-Knopf: die Suche wird selten gebraucht, belegte oben
+     aber ein Band über die ganze Breite. Auf-/Zuklappen steuert js/ui/mobileLayout.js. */
+  .geocoder.is-collapsed {
+    right: auto;
+    width: 44px;
+  }
+
+  .geocoder.is-collapsed .geocoder-input-wrapper {
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .geocoder.is-collapsed #search,
+  .geocoder.is-collapsed .geocoder-clear,
+  .geocoder.is-collapsed .geocoder-results {
+    display: none;
+  }
+
+  /* Im Knopf sitzt die Lupe mittig statt links im Eingabefeld. */
+  .geocoder.is-collapsed .geocoder-icon {
+    position: static;
+    left: auto;
+  }
+
+  .geocoder.is-collapsed .geocoder-input-wrapper:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+}
+
+
+/* ═════════════════════════ Zählkarte: eigene Bausteine ═════════════════════════ */
+
+/* Zugeklappt bleiben Titel und Zählerzeile stehen (Desktop wie Handy). */
+.legend.collapsed .legend-body > :not(#feature-count-wrapper) { display: none; }
+.legend-body > #feature-count-wrapper { margin-top: 12px; }
+
+[hidden] { display: none !important; }
+
+.row { display: flex; align-items: center; gap: 6px; }
+.row--between { justify-content: space-between; }
+
+/* Chips als echte Knöpfe (Rolle radio, aria-checked); gewählt = Akzentrand */
+.legend-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 8px; }
+.legend-chips--klein { margin-top: 0; }
+.legend-chip {
+  padding: 4px 10px;
+  border: 1px solid var(--ui-border);
+  border-radius: 999px;
+  background: var(--ui-hover);
+  color: var(--ui-text);
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: background-color .15s, border-color .15s;
+}
+.legend-chips--klein .legend-chip { font-size: 11px; padding: 3px 8px; }
+.legend-chip:hover { background: #e9ecf1; }
+.legend-chip.is-active { border-color: var(--ui-accent); background: rgba(29, 78, 216, .12); color: var(--ui-text-strong); font-weight: 600; }
+.legend-chip:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
+
+.legend-row-label { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; color: var(--ui-text-muted); }
+.legend-row-label > span { font-weight: 600; }
+.legend-row-label .legend-chips { margin: 0; }
+
+.legend-hint { font-size: 11px; color: var(--ui-text-muted); line-height: 1.4; margin: 4px 0 6px; }
+.legend-hint--titel { font-weight: 600; color: var(--ui-text); margin-top: 6px; }
+.legend-section-subtitle { margin: 12px 0 5px; }
+
+/* Punkt-Symbol der Legende: so groß wie in der Karte (Stufe -> Größe) */
+.punkt {
+  --g: 2;
+  display: inline-block;
+  flex: none;
+  width: calc(8px + var(--g) * 1.5px);
+  height: calc(8px + var(--g) * 1.5px);
+  margin: 0 calc((6px - var(--g) * 1.5px) / 2);
+  border-radius: 50%;
+  border: 1px solid rgba(17, 24, 39, .45);
+  box-sizing: border-box;
+}
+.punkt--hohl { background: #fff; border-color: #8b929c; }
+.legend-item--check { cursor: pointer; }
+.legend-item--check input { margin: 0 2px 0 0; }
+
+/* Schulweg-Regler: orange Füllung wie die Szenario-Regler der Unfallkarte */
+.kriterium { margin: 4px 0 2px; padding: 8px 10px; border-radius: 10px; background: #fafafa; border: 1px solid var(--ui-divider); }
+.kriterium label { display: block; color: var(--ui-text); }
+.kriterium input[type="range"] { width: 100%; --progress: 0%;
+  background: linear-gradient(to right, #eb6834 var(--progress), #e5e7eb var(--progress)); }
+.kriterium input[type="range"]::-webkit-slider-thumb { border-color: #eb6834; }
+.kriterium input[type="range"]::-moz-range-thumb { border-color: #eb6834; }
+
+/* Jahre: zwei Regler übereinander auf einer Schiene */
+.doppelregler { position: relative; height: 22px; margin: 2px 0; }
+.doppelregler input[type="range"] {
+  position: absolute; left: 0; top: 2px; width: 100%; margin: 6px 0 2px;
+  pointer-events: none; background: transparent;
+}
+.doppelregler input[type="range"]:first-child { background: #e5e7eb; }
+.doppelregler input[type="range"]::-webkit-slider-thumb { pointer-events: auto; position: relative; z-index: 1; }
+.doppelregler input[type="range"]::-moz-range-thumb { pointer-events: auto; }
+
+.quelle-eintrag { margin: 6px 0 10px; }
+.quelle-name { font-weight: 600; color: var(--ui-text-strong); }
+.quelle-eintrag ul { margin: 4px 0 0; padding-left: 16px; color: var(--ui-text-muted); }
+.quelle-eintrag a, .detail-panel a { color: var(--ui-accent); text-decoration: none; }
+.quelle-eintrag a:hover, .detail-panel a:hover { text-decoration: underline; }
+
+/* ───── Seitenleiste einer Stelle (links, unter der Suche) ───── */
+.detail-panel {
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  z-index: 6;
+  width: 380px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100dvh - 76px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0 16px 14px;
+  background: var(--ui-surface);
+  color: var(--ui-text);
+  border: 1px solid var(--ui-border);
+  border-radius: var(--ui-radius);
+  box-shadow: var(--ui-shadow);
+  font-size: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+.detail-panel--klein { width: 320px; }
+.detail-kopf {
+  position: sticky; top: 0; z-index: 1;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+  margin: 0 -16px 8px; padding: 14px 16px 10px;
+  background: var(--ui-surface);
+  box-shadow: 0 6px 10px -8px rgba(15, 23, 42, .45);
+}
+.detail-titel { margin: 0 0 2px; font-size: 16px; line-height: 1.3; color: var(--ui-text-strong); }
+.detail-zu {
+  flex: none; width: 28px; height: 28px; border: 0; border-radius: 8px; background: none;
+  color: var(--ui-text-muted); font-size: 20px; line-height: 1; cursor: pointer;
+}
+.detail-zu:hover { background: var(--ui-hover); color: var(--ui-text); }
+.detail-text { margin: 4px 0 8px; line-height: 1.45; }
+.detail-abschnitt {
+  margin: 12px 0 5px; font-size: 10.5px; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; color: #374151;
+}
+.detail-tabelle-wrap { max-height: 210px; overflow-y: auto; margin-top: 4px; border-bottom: 1px solid var(--ui-divider); padding-bottom: 6px; }
+.detail-tabelle { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.detail-tabelle th { position: sticky; top: 0; background: var(--ui-surface); text-align: right; font-weight: 600; color: var(--ui-text-muted); padding: 3px 4px; border-bottom: 1px solid var(--ui-divider); }
+.detail-tabelle td { text-align: right; padding: 3px 4px; white-space: nowrap; }
+.detail-tabelle th:nth-child(-n+3), .detail-tabelle td:nth-child(-n+3) { text-align: left; }
+.dz-zeile { cursor: pointer; }
+.dz-zeile:hover { background: var(--ui-hover); }
+.dz-zeile.is-aktiv { background: rgba(29, 78, 216, .1); font-weight: 600; }
+.dz-zeile:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: -2px; }
+.dz-tag { color: var(--ui-text-muted); }
+.is-leer { color: #c3c7cc; }
+.detail-kennwerte { margin-top: 8px; font-variant-numeric: tabular-nums; }
+.detail-kennwerte thead td { font-weight: 600; color: var(--ui-text-muted); font-size: 11px; }
+.detail-kennwerte td + td { text-align: right; padding-left: 8px; }
+.detail-kennwerte td:first-child { white-space: nowrap; }
+.dz-status { display: flex; flex-direction: column; gap: 4px; margin-bottom: 4px; }
+.dz-status .pop-pill { align-self: flex-start; background: var(--ui-hover); color: var(--ui-text-strong); }
+.detail-hinweise { margin: 0; padding-left: 16px; color: var(--ui-text-muted); line-height: 1.45; }
+.detail-links { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.link-knopf { padding: 0; border: 0; background: none; color: var(--ui-accent); font: inherit; cursor: pointer; }
+.link-knopf:hover { text-decoration: underline; }
+.pop-chips .legend-chip { font-size: 11px; padding: 3px 9px; }
+
+/* Wenn die Seitenleiste offen ist, rücken die Bedienelemente unten links daneben. */
+body.detail-offen #bottom-left-ui-container,
+body.detail-offen .map-settings-toggle,
+body.detail-offen .map-settings-panel { left: 400px; }
+
+/* ───── Tagesgang und Verlauf (js/ui/diagramme.js) ───── */
+.tg-wrap { position: relative; margin-top: 6px; }
+.tg { display: block; overflow: visible; touch-action: pan-y; }
+.tg-band { fill: #f1f3f6; }
+.tg-raster { stroke: #eceef1; stroke-width: 1; }
+.tg-basis { stroke: #c3c7cc; stroke-width: 1; }
+.tg-tick { fill: var(--ui-text-muted); font-size: 9.5px; font-variant-numeric: tabular-nums; }
+.tg-linie { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.tg-kreuz { stroke: #374151; stroke-width: 1; stroke-dasharray: 2 2; }
+.tg-treffer { fill: transparent; cursor: crosshair; }
+.tg-tooltip {
+  position: absolute; top: 4px; pointer-events: none; min-width: 104px;
+  padding: 5px 8px; border-radius: 6px; background: #111827; color: #fff; font-size: 11px; line-height: 1.45;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+}
+.tg-tooltip i, .tg-legende i { display: inline-block; width: 12px; height: 2px; margin: 0 6px 3px 0; border-radius: 1px; vertical-align: middle; }
+.tg-tip-kopf { color: #cbd5e1; }
+.tg-legende { display: flex; gap: 14px; margin: 2px 0 0 42px; color: var(--ui-text); }
+.vl { display: block; overflow: visible; }
+.vl-saeule { fill: #86b6ef; cursor: help; }
+.vl-saeule:hover { fill: #3987e5; }
+.vl-saeule.is-aktiv { fill: #184f95; }
+.detail-verlauf .detail-abschnitt { margin-top: 2px; }
+
+@media (max-width: 640px) {
+  .detail-panel {
+    top: auto; left: 0; right: 0; bottom: 0; width: auto; max-width: none;
+    max-height: 70dvh; border-radius: var(--ui-radius) var(--ui-radius) 0 0; z-index: 8;
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+  }
+  .detail-panel--klein { width: auto; }
+  body.detail-offen #bottom-left-ui-container,
+  body.detail-offen .map-settings-toggle,
+  body.detail-offen .map-settings-panel { left: 10px; }
+  .legend-chip { padding: 6px 11px; }
+}

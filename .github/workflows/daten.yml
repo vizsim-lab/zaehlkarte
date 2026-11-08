@@ -1,0 +1,61 @@
+# Kartendaten neu bauen: Rohdaten holen (MobiData BW liefert laufend neue Zählungen), Pipeline
+# laufen lassen und das Ergebnis (public/data/) als Pull Request vorschlagen – nie direkt auf
+# main. Läuft am 3. jedes Monats und von Hand.
+#
+# Hinweis: Ein PR, den dieser Workflow anlegt, startet die CI nicht von selbst (GitHub-Regel
+# für GITHUB_TOKEN) – darum laufen die Tests hier mit. Darf Actions in der Organisation keine
+# PRs anlegen, bleibt der Branch stehen und die Zusammenfassung nennt den Vergleichs-Link.
+name: Kartendaten neu bauen
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 4 3 * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  daten:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.1.0
+        with:
+          enable-cache: true
+          cache-dependency-glob: pipeline/uv.lock
+      - name: Rohdaten holen
+        working-directory: pipeline
+        run: uv sync --locked && uv run zaehlkarte fetch
+      - name: Kartendaten bauen
+        working-directory: pipeline
+        run: uv run zaehlkarte site | tee "$RUNNER_TEMP/bericht.txt"
+      - name: Tests
+        working-directory: pipeline
+        run: uv run pytest -q
+      - name: Pull Request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- public/data; then
+            echo "Keine Änderung an den Kartendaten." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          zweig="daten/$(date -u +%F)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$zweig"
+          git add public/data
+          git commit -q -m "Kartendaten neu gebaut ($(date -u +%F))"
+          git push -f origin "$zweig"
+          {
+            echo "Kartendaten neu gebaut. Bericht der Pipeline:"
+            echo '```'
+            grep -v "details/" "$RUNNER_TEMP/bericht.txt" | head -80
+            echo '```'
+          } > "$RUNNER_TEMP/pr.md"
+          if ! gh pr create --base main --head "$zweig" --title "Kartendaten neu gebaut ($(date -u +%F))" --body-file "$RUNNER_TEMP/pr.md"; then
+            echo "PR nicht angelegt – bitte von Hand: ${{ github.server_url }}/${{ github.repository }}/compare/main...$zweig" >> "$GITHUB_STEP_SUMMARY"
+          fi

@@ -1,0 +1,299 @@
+{
+ "version": 1,
+ "erzeugt": "2026-11-08",
+ "dateien": {
+  "index": "index.json",
+  "details": "details/{n}.json",
+  "datenlage": "datenlage.json"
+ },
+ "details_anzahl": 34,
+ "kriterien": {
+  "schulstunden": [
+   7,
+   8,
+   13,
+   14,
+   15
+  ],
+  "schwelle_stunde": 50,
+  "schwelle_tag": 300,
+  "tag_von": 7,
+  "tag_bis": 19
+ },
+ "gruppen": [
+  {
+   "id": "kfz",
+   "name": "Kfz"
+  },
+  {
+   "id": "sv",
+   "name": "Schwerverkehr"
+  },
+  {
+   "id": "rad",
+   "name": "Rad"
+  },
+  {
+   "id": "fuss",
+   "name": "Fuß"
+  },
+  {
+   "id": "kind",
+   "name": "Kinder/Jugendliche"
+  }
+ ],
+ "stand": {
+  "in_karte": "in der Karte",
+  "offen": "offen, noch nicht in der Karte",
+  "geliefert": "auf Anfrage herausgegeben",
+  "kandidat": "erhoben – Anfrage aussichtsreich",
+  "aggregiert": "nur Summen oder Mittelwerte offen",
+  "nur_karte": "nur als Karte",
+  "automatisch": "automatische Zählungen offen",
+  "abgelehnt": "Anfrage gescheitert"
+ },
+ "quellen": [
+  {
+   "code": "berlin",
+   "name": "Berlin",
+   "land": "BE",
+   "traeger": "Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU)",
+   "art": "manuelle Knotenstrom- und Querschnittszählungen, 15- oder 60-Minuten-Werte",
+   "weg": "zwei IFG-Anfragen auf FragDenStaat (2019 und 2025)",
+   "portal": null,
+   "lizenzen": [
+    {
+     "code": "2019-2025",
+     "titel": "unplausibilisierte Rohdaten Verkehrszählungen 2019–2025",
+     "herausgeber": "SenMVKU Berlin",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/"
+    },
+    {
+     "code": "1990-2019",
+     "titel": "Verkehrszähldaten 1990–2019 (IFG-Anfrage 2019)",
+     "herausgeber": "Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin – Verkehrslenkung Berlin",
+     "lizenz": "CC BY-SA 3.0 DE",
+     "lizenz_url": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+     "herkunft_url": "https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/"
+    },
+    {
+     "code": "lage",
+     "titel": "Geokodierung der Fuß- und Radzählungen (OSM-Straßenkreuzungen)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://github.com/vizsim/berlin-traffic-counts_schulwege"
+    }
+   ],
+   "stellen": 9919,
+   "zaehlungen": 25126,
+   "ohne_lage": 2968,
+   "gruppen": {
+    "kfz": 15088,
+    "sv": 14662,
+    "rad": 17160,
+    "fuss": 5650,
+    "kind": 5617
+   },
+   "von": 1983,
+   "bis": 2025,
+   "lage": {
+    "uebertragen": 2884,
+    "geokodiert": 17444,
+    "gps": 4798
+   }
+  },
+  {
+   "code": "ravensburg",
+   "name": "Ravensburg",
+   "land": "BW",
+   "traeger": "Stadt Ravensburg, Stadtplanungsamt (Sachgebiet Verkehrsplanung)",
+   "art": "24-Stunden-Zählungen an Kreuzungen (Video), 15-Minuten-Werte, Di/Do",
+   "weg": "offen auf MobiData BW",
+   "portal": "https://mobidata-bw.de/dataset/zaehldaten-ravensburg",
+   "lizenzen": [
+    {
+     "code": "ravensburg",
+     "titel": "Straßenverkehrszählungen Ravensburg",
+     "herausgeber": "Stadt Ravensburg, Stadtplanungsamt (Sachgebiet Verkehrsplanung)",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://mobidata-bw.de/dataset/zaehldaten-ravensburg"
+    }
+   ],
+   "stellen": 96,
+   "zaehlungen": 140,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 135,
+    "sv": 135,
+    "rad": 137,
+    "fuss": 137,
+    "kind": 0
+   },
+   "von": 2023,
+   "bis": 2026,
+   "lage": {
+    "quelle": 140
+   }
+  },
+  {
+   "code": "weingarten",
+   "name": "Weingarten",
+   "land": "BW",
+   "traeger": "Stadt Weingarten (aufbereitet vom Stadtplanungsamt Ravensburg)",
+   "art": "24-Stunden-Zählungen an Kreuzungen (Video), 15-Minuten-Werte, Di/Do",
+   "weg": "offen auf MobiData BW",
+   "portal": "https://mobidata-bw.de/dataset/zaehldaten-stadt-weingarten",
+   "lizenzen": [
+    {
+     "code": "weingarten",
+     "titel": "Straßenverkehrszählungen Weingarten",
+     "herausgeber": "Stadt Weingarten (aufbereitet vom Stadtplanungsamt Ravensburg)",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://mobidata-bw.de/dataset/zaehldaten-stadt-weingarten"
+    }
+   ],
+   "stellen": 8,
+   "zaehlungen": 25,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 24,
+    "sv": 24,
+    "rad": 24,
+    "fuss": 24,
+    "kind": 0
+   },
+   "von": 2023,
+   "bis": 2026,
+   "lage": {
+    "quelle": 25
+   }
+  },
+  {
+   "code": "berg",
+   "name": "Berg",
+   "land": "BW",
+   "traeger": "Gemeinde Berg (aufbereitet vom Stadtplanungsamt Ravensburg)",
+   "art": "24-Stunden-Zählungen an Kreuzungen (Video), 15-Minuten-Werte, Di/Do",
+   "weg": "offen auf MobiData BW",
+   "portal": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-berg",
+   "lizenzen": [
+    {
+     "code": "berg",
+     "titel": "Straßenverkehrszählungen Berg",
+     "herausgeber": "Gemeinde Berg (aufbereitet vom Stadtplanungsamt Ravensburg)",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-berg"
+    }
+   ],
+   "stellen": 1,
+   "zaehlungen": 3,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 3,
+    "sv": 3,
+    "rad": 3,
+    "fuss": 3,
+    "kind": 0
+   },
+   "von": 2024,
+   "bis": 2026,
+   "lage": {
+    "quelle": 3
+   }
+  },
+  {
+   "code": "baienfurt",
+   "name": "Baienfurt",
+   "land": "BW",
+   "traeger": "Gemeinde Baienfurt (aufbereitet vom Stadtplanungsamt Ravensburg)",
+   "art": "24-Stunden-Zählungen an Kreuzungen (Video), 15-Minuten-Werte, Di/Do",
+   "weg": "offen auf MobiData BW",
+   "portal": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baienfurt",
+   "lizenzen": [
+    {
+     "code": "baienfurt",
+     "titel": "Straßenverkehrszählungen Baienfurt",
+     "herausgeber": "Gemeinde Baienfurt (aufbereitet vom Stadtplanungsamt Ravensburg)",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baienfurt"
+    }
+   ],
+   "stellen": 1,
+   "zaehlungen": 5,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 5,
+    "sv": 5,
+    "rad": 5,
+    "fuss": 5,
+    "kind": 0
+   },
+   "von": 2024,
+   "bis": 2026,
+   "lage": {
+    "quelle": 5
+   }
+  },
+  {
+   "code": "baindt",
+   "name": "Baindt",
+   "land": "BW",
+   "traeger": "Gemeinde Baindt (aufbereitet vom Stadtplanungsamt Ravensburg)",
+   "art": "24-Stunden-Zählungen an Kreuzungen (Video), 15-Minuten-Werte, Di/Do",
+   "weg": "offen auf MobiData BW",
+   "portal": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt",
+   "lizenzen": [
+    {
+     "code": "baindt",
+     "titel": "Straßenverkehrszählungen Baindt",
+     "herausgeber": "Gemeinde Baindt (aufbereitet vom Stadtplanungsamt Ravensburg)",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt"
+    }
+   ],
+   "stellen": 1,
+   "zaehlungen": 6,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 5,
+    "sv": 5,
+    "rad": 5,
+    "fuss": 5,
+    "kind": 0
+   },
+   "von": 2024,
+   "bis": 2026,
+   "lage": {
+    "quelle": 6
+   }
+  }
+ ],
+ "statistik": {
+  "stellen": 10026,
+  "zaehlungen": 25305,
+  "ohne_lage": 2968,
+  "gruppen": {
+   "kfz": 15260,
+   "sv": 14834,
+   "rad": 17334,
+   "fuss": 5824,
+   "kind": 5617
+  },
+  "von": 1983,
+  "bis": 2026,
+  "lage": {
+   "uebertragen": 2884,
+   "geokodiert": 17444,
+   "gps": 4798,
+   "quelle": 179
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "_zweck": "Gemeinsame Fälle für das Schulweg-Kriterium: pipeline/tests/test_kennzahlen.py (kennzahlen.verdacht/status) und tests/unit/modell.test.js (verdacht/status) müssen dieselben Ergebnisse liefern.",
+  "kriterien": {"schulstunden": [7, 8, 13, 14, 15], "schwelle_stunde": 50, "schwelle_tag": 300, "tag_von": 7, "tag_bis": 19},
+  "faelle": [
+    {"name": "Morgenspitze über der Stundenschwelle", "kh0": 7, "kh": [80, 20, 5, 5, 5, 5, 10, 10, 5, 5, 5, 5], "tag": "s", "wert": true, "status": "verdacht", "gruende": ["7 Uhr: 80"]},
+    {"name": "genau auf der Schwelle zählt nicht", "kh0": 7, "kh": [50, 20, 5, 5, 5, 5, 10, 10, 5, 5, 5, 5], "tag": "s", "wert": false, "status": "kein", "gruende": []},
+    {"name": "Tagessumme über 300 ohne Stundenspitze", "kh0": 7, "kh": [30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30], "tag": "s", "wert": true, "status": "verdacht", "gruende": ["7–19 Uhr: 360"]},
+    {"name": "Ferien: Zahlen hoch, aber schulfrei", "kh0": 7, "kh": [80, 20, 5, 5, 5, 5, 10, 10, 5, 5, 5, 5], "tag": "f", "wert": true, "status": "schulfrei", "gruende": ["7 Uhr: 80"]},
+    {"name": "nur nachmittags gezählt, unter der Schwelle", "kh0": 15, "kh": [12, 8, 4], "tag": "s", "wert": false, "status": "kein", "gruende": []},
+    {"name": "nur 16–19 Uhr gezählt: keine Schulstunde, keine Tagessumme", "kh0": 16, "kh": [40, 30, 20], "tag": "s", "wert": null, "status": "unbekannt", "gruende": ["zu Schulzeiten nicht gezählt"]},
+    {"name": "Kinder nicht gezählt", "kh0": null, "kh": null, "tag": "s", "wert": null, "status": "unbekannt", "gruende": ["Kinder/Jugendliche nicht gezählt"]},
+    {"name": "Lücke in der Schulstunde 8 Uhr: 7 Uhr reicht", "kh0": 7, "kh": [60, null, 5], "tag": "s", "wert": true, "status": "verdacht", "gruende": ["7 Uhr: 60"]},
+    {"name": "Wochenende", "kh0": 7, "kh": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], "tag": "w", "wert": false, "status": "schulfrei", "gruende": []},
+    {"name": "Tag unbekannt (Schuljahr nicht im Kalender) zählt wie Schultag", "kh0": 7, "kh": [70, 10], "tag": null, "wert": true, "status": "verdacht", "gruende": ["7 Uhr: 70"]}
+  ]
+}

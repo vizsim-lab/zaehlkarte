@@ -1,0 +1,81 @@
+# CI: Pipeline (ruff + pytest), Frontend (Vite-Build + Unit- + Playwright-Tests) und – nur auf
+# main – der Deploy nach GitHub Pages. Muster aus vizsim/unfallkarte.
+#
+# Deploy: Pages liefert das dist/ aus, das der web-Job gebaut UND getestet hat (getestet =
+# ausgeliefert). Voraussetzung: Repo-Settings -> Pages -> Source „GitHub Actions“.
+# Die Pipeline-Tests brauchen keine Rohdaten (synthetische Fälle); die Kartendaten liegen im
+# Repo (public/data/, erzeugt vom Workflow „Kartendaten neu bauen“).
+#
+# Runner auf ubuntu-24.04 gepinnt (wie in der Unfallkarte): ubuntu-latest zeigt seit
+# 2026-10-19 auf Ubuntu 26, und `playwright install --with-deps` braucht eine Playwright-
+# Version, die das neue Ubuntu kennt.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+jobs:
+  pipeline:
+    name: Pipeline (ruff + pytest)
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: pipeline
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.1.0
+        with:
+          enable-cache: true
+          cache-dependency-glob: pipeline/uv.lock
+      - run: uv sync --locked
+      - run: uvx ruff check
+      - run: uv run pytest
+
+  web:
+    name: Frontend (Build + Tests)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:unit
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:web
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() && failure() }}
+        with:
+          name: playwright-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+      - uses: actions/upload-pages-artifact@v5
+        if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+        with:
+          path: dist/
+
+  deploy:
+    name: Deploy (GitHub Pages)
+    needs: web
+    if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

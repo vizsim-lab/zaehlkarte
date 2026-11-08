@@ -1,4 +1,5 @@
-# Portiert aus vizsim/berlin-traffic-counts_schulwege (pipeline/src/schulwege/zda.py, MIT, © vizsim).
+# Portiert aus vizsim/berlin-traffic-counts_schulwege (pipeline/src/schulwege/zda.py,
+# MIT, © vizsim).
 # In der Zählkarte unter AGPL-3.0-or-later.
 """ZDA-Dateien der Berliner Verkehrszählungen lesen.
 

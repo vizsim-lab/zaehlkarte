@@ -1,0 +1,605 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.39255,
+     52.50961
+    ]
+   },
+   "properties": {
+    "kommune": "Berlin",
+    "land": "BE",
+    "stand": "in_karte",
+    "was": "rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter",
+    "links": [
+     {
+      "titel": "FragDenStaat 2025",
+      "url": "https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/"
+     },
+     {
+      "titel": "FragDenStaat 2019",
+      "url": "https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/"
+     }
+    ],
+    "recht": "Berliner Informationsfreiheitsgesetz (IFG)",
+    "quelle": "berlin",
+    "zaehlungen": 25126
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.60667,
+     47.78153
+    ]
+   },
+   "properties": {
+    "kommune": "Ravensburg",
+    "land": "BW",
+    "stand": "in_karte",
+    "was": "24-Stunden-Zählungen mit Kfz, Lkw, Rad und Fuß, Excel und PDF je Zählung",
+    "links": [
+     {
+      "titel": "MobiData BW",
+      "url": "https://mobidata-bw.de/dataset/zaehldaten-ravensburg"
+     }
+    ],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": "ravensburg",
+    "zaehlungen": 140
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.63506,
+     47.80987
+    ]
+   },
+   "properties": {
+    "kommune": "Weingarten",
+    "land": "BW",
+    "stand": "in_karte",
+    "was": "wie Ravensburg",
+    "links": [
+     {
+      "titel": "MobiData BW",
+      "url": "https://mobidata-bw.de/dataset/zaehldaten-stadt-weingarten"
+     }
+    ],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": "weingarten",
+    "zaehlungen": 25
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.60595,
+     47.80473
+    ]
+   },
+   "properties": {
+    "kommune": "Berg",
+    "land": "BW",
+    "stand": "in_karte",
+    "was": "wie Ravensburg",
+    "links": [
+     {
+      "titel": "MobiData BW",
+      "url": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-berg"
+     }
+    ],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": "berg",
+    "zaehlungen": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.65146,
+     47.82698
+    ]
+   },
+   "properties": {
+    "kommune": "Baienfurt",
+    "land": "BW",
+    "stand": "in_karte",
+    "was": "wie Ravensburg",
+    "links": [
+     {
+      "titel": "MobiData BW",
+      "url": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baienfurt"
+     }
+    ],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": "baienfurt",
+    "zaehlungen": 5
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.6584,
+     47.84175
+    ]
+   },
+   "properties": {
+    "kommune": "Baindt",
+    "land": "BW",
+    "stand": "in_karte",
+    "was": "wie Ravensburg",
+    "links": [
+     {
+      "titel": "MobiData BW",
+      "url": "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt"
+     }
+    ],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": "baindt",
+    "zaehlungen": 6
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.0645,
+     52.3906
+    ]
+   },
+   "properties": {
+    "kommune": "Potsdam",
+    "land": "BB",
+    "stand": "offen",
+    "was": "Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April–Oktober, 7–10 und 15–18 Uhr)",
+    "links": [
+     {
+      "titel": "Open Data Potsdam",
+      "url": "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/"
+     },
+     {
+      "titel": "potsdam.de",
+      "url": "https://www.potsdam.de/de/verkehrszaehlungen-der-landeshauptstadt-potsdam"
+     }
+    ],
+    "recht": "Akteneinsichts- und Informationszugangsgesetz (AIG)",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.6261,
+     51.9607
+    ]
+   },
+   "properties": {
+    "kommune": "Münster",
+    "land": "NW",
+    "stand": "offen",
+    "was": "ZIP mit PDF/XLS je Zählung (Spitzenstunden), laut Notizen in vizsim/svz",
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.4536,
+     51.6588
+    ]
+   },
+   "properties": {
+    "kommune": "Xanten",
+    "land": "NW",
+    "stand": "offen",
+    "was": "Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept",
+    "links": [
+     {
+      "titel": "opendata.ruhr",
+      "url": "https://opendata.ruhr/en/dataset/mobilitatskonzept/resource/fea95307-56ea-425c-9a77-535b88d10598"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9603,
+     50.9375
+    ]
+   },
+   "properties": {
+    "kommune": "Köln",
+    "land": "NW",
+    "stand": "aggregiert",
+    "was": "Mittelwerte je Zählstelle; Einzelzählungen auf Anfrage (2024 für die Kitschburger Straße herausgegeben)",
+    "links": [
+     {
+      "titel": "Open.NRW",
+      "url": "https://ckan.open.nrw.de/dataset/kfz-zaehlstellen-und-werte-koeln-k"
+     },
+     {
+      "titel": "FragDenStaat 2024",
+      "url": "https://fragdenstaat.de/anfrage/verkehrszaehlungen-auf-der-kitschburger-str-in-koeln-lindenthal/"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.7735,
+     51.2277
+    ]
+   },
+   "properties": {
+    "kommune": "Düsseldorf",
+    "land": "NW",
+    "stand": "aggregiert",
+    "was": "Jahresmittel (DTV) je Abschnitt als WFS – in vizsim/svz",
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6821,
+     50.1109
+    ]
+   },
+   "properties": {
+    "kommune": "Frankfurt am Main",
+    "land": "HE",
+    "stand": "aggregiert",
+    "was": "24-Stunden-Mittelwerte 2019–2023 als WFS, auch für Rad – in vizsim/svz",
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1829,
+     48.7758
+    ]
+   },
+   "properties": {
+    "kommune": "Stuttgart",
+    "land": "BW",
+    "stand": "aggregiert",
+    "was": "Kordonzählungen am Stadtrand 1980–2024 als CSV (CC BY 4.0)",
+    "links": [
+     {
+      "titel": "Open Data Stuttgart",
+      "url": "https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855"
+     }
+    ],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.4653,
+     51.5136
+    ]
+   },
+   "properties": {
+    "kommune": "Dortmund",
+    "land": "NW",
+    "stand": "aggregiert",
+    "was": "nur der Zählstellenplan; Werte gibt die Stadt auf Anfrage heraus (kostenpflichtig) – der Plan taugt als Grundlage einer Anfrage",
+    "links": [
+     {
+      "titel": "opendata.ruhr",
+      "url": "https://opendata.ruhr/dataset/verkehrszahlung-zahlstellenplan1"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.3731,
+     51.3397
+    ]
+   },
+   "properties": {
+    "kommune": "Leipzig",
+    "land": "SN",
+    "stand": "abgelehnt",
+    "was": "50–100 Zählungen im Jahr, seit 2022 als Tabellen der Büros; nur Karten online. 2023 abgelehnt – aber nur der Export aus der Karte. Besser nach den gelieferten Zählauswertungen fragen.",
+    "links": [
+     {
+      "titel": "FragDenStaat 2023",
+      "url": "https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/"
+     }
+    ],
+    "recht": "SächsTranspG gilt für Kommunen nur per Satzung – sonst Sächsisches UIG",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.7373,
+     51.0504
+    ]
+   },
+   "properties": {
+    "kommune": "Dresden",
+    "land": "SN",
+    "stand": "kandidat",
+    "was": "nur Karten online. Die Stadt im November 2025: „Auf Anfrage werden … Verkehrsdaten aufgearbeitet und zur Verfügung gestellt.“",
+    "links": [
+     {
+      "titel": "Antwort AF0915/25",
+      "url": "https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf"
+     }
+    ],
+    "recht": "SächsTranspG gilt für Kommunen nur per Satzung – sonst Sächsisches UIG",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.582,
+     48.1351
+    ]
+   },
+   "properties": {
+    "kommune": "München",
+    "land": "BY",
+    "stand": "kandidat",
+    "was": "über 5.000 Kfz- und Radzählungen von Hand in der stadteigenen Software DAVe (Viertelstunden), Export in offene Formate möglich; online nur Karten",
+    "links": [
+     {
+      "titel": "stadt.muenchen.de",
+      "url": "https://stadt.muenchen.de/infos/verkehrsdaten.html"
+     },
+     {
+      "titel": "DAVe",
+      "url": "https://stadt.muenchen.de/news/open-source-anwendung-dave.html"
+     }
+    ],
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.7865,
+     52.4227
+    ]
+   },
+   "properties": {
+    "kommune": "Wolfsburg",
+    "land": "NI",
+    "stand": "kandidat",
+    "was": "nutzt seit April 2026 dieselbe Zählsoftware wie München (DAVe)",
+    "links": [
+     {
+      "titel": "DAVe",
+      "url": "https://stadt.muenchen.de/news/open-source-anwendung-dave.html"
+     }
+    ],
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.0767,
+     49.4521
+    ]
+   },
+   "properties": {
+    "kommune": "Nürnberg",
+    "land": "BY",
+    "stand": "geliefert",
+    "was": "zählt seit 1967 jedes Jahr von Hand; 2025/26 eine Zählung in Halbstundenwerten herausgegeben (abgelehnt nur Tempodaten)",
+    "links": [
+     {
+      "titel": "FragDenStaat 2025/26",
+      "url": "https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/"
+     },
+     {
+      "titel": "Bericht Verkehrszählung 2018",
+      "url": "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf"
+     }
+    ],
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.0991,
+     54.0924
+    ]
+   },
+   "properties": {
+    "kommune": "Rostock",
+    "land": "MV",
+    "stand": "geliefert",
+    "was": "rund 100 Kreuzungen im Jahr, Jahresübersichten als Excel (auch Rad und Fuß); bis 50 Zählungen kostenlos. 2020 geliefert, online aber nur PDF-Umwandlungen",
+    "links": [
+     {
+      "titel": "FragDenStaat 2020",
+      "url": "https://fragdenstaat.de/anfrage/verkehrszahlung-14/"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz M-V",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.6276,
+     52.1205
+    ]
+   },
+   "properties": {
+    "kommune": "Magdeburg",
+    "land": "ST",
+    "stand": "geliefert",
+    "was": "2022 alle Zählunterlagen 2012–2020 angeboten (Viertelstunden je Richtung, Rad/Pkw/Lfw/Lkw/Lz/Bus, PDF auf CD, gebührenfrei); Weitergabe-Lizenz offen",
+    "links": [
+     {
+      "titel": "FragDenStaat 2022",
+      "url": "https://fragdenstaat.de/anfrage/rohdaten-von-verkehrszahlungen-2012-bis-2021/"
+     }
+    ],
+    "recht": "Informationszugangsgesetz Sachsen-Anhalt (IZG LSA)",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7575,
+     51.7189
+    ]
+   },
+   "properties": {
+    "kommune": "Paderborn",
+    "land": "NW",
+    "stand": "geliefert",
+    "was": "Zählungen einzelner Straßen auf Anfrage herausgegeben",
+    "links": [
+     {
+      "titel": "FragDenStaat",
+      "url": "https://fragdenstaat.de/anfrage/verkehrszahlungen-bahnhofstrae-neuhauser-strae-rathenaustrae-detmolder-strae/"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.9937,
+     53.5511
+    ]
+   },
+   "properties": {
+    "kommune": "Hamburg",
+    "land": "HH",
+    "stand": "automatisch",
+    "was": "Wärmebildkameras an über 400 Kreuzungen, 15-Minuten-Werte offen (keine manuellen Einzelzählungen)",
+    "links": [
+     {
+      "titel": "BMV",
+      "url": "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"
+     }
+    ],
+    "recht": "Hamburgisches Transparenzgesetz",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6724,
+     49.3988
+    ]
+   },
+   "properties": {
+    "kommune": "Heidelberg",
+    "land": "BW",
+    "stand": "automatisch",
+    "was": "12 Kameras mit offenen Zählwerten",
+    "links": [],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": null,
+    "zaehlungen": null
+   }
+  }
+ ]
+}

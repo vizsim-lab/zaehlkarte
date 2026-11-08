@@ -1,0 +1,278 @@
+# Die EINZIGE Quellenliste der Zählkarte (wie in vizsim/svz). Quellen, Lizenzen und die
+# Ebene „Datenlage“ in der Karte kommen von hier über public/data/manifest.json und
+# datenlage.json – nie im Frontend nachtragen.
+#
+# quellen:  status live = in der Karte (Adapter in src/zaehlkarte/adapters/), research = bekannt,
+#           Adapter fehlt noch, blocked = nicht nutzbar (Grund in `notiz`).
+# datenlage: was es außerhalb der Karte gibt – je Kommune ein Punkt mit Stand und Belegen.
+#           Neue Hinweise über das Issue-Formular „Zählung melden“.
+
+quellen:
+  berlin:
+    status: live
+    adapter: berlin_zda
+    name: Berlin
+    land: BE
+    traeger: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU)
+    art: manuelle Knotenstrom- und Querschnittszählungen, 15- oder 60-Minuten-Werte
+    weg: zwei IFG-Anfragen auf FragDenStaat (2019 und 2025)
+    ferien: schulferien_berlin.csv
+    # Lieferungen in Vorrangfolge: dieselbe Zählung in beiden -> die erste gilt (die neuere)
+    lieferungen:
+      - code: 2019-2025
+        titel: unplausibilisierte Rohdaten Verkehrszählungen 2019–2025
+        herausgeber: SenMVKU Berlin
+        lizenz: dl-de/by-2-0
+        lizenz_url: https://www.govdata.de/dl-de/by-2-0
+        herkunft_url: https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/
+        datei: rohdaten-2019-2025.7z
+        url: https://raw.githubusercontent.com/vizsim/berlin-traffic-counts_schulwege/d09e6f06aaa84dd339a6e9ea91dfbf25b642c1a0/data/rohdaten-2019-2025.7z
+        sha256: 363ff2772c5e3a61b92b69970cd4b24881dd98c6e3876515a7ef5d1cfcd129b0
+        # Einzeln online liegen nur die Fuß- (f) und Radzählungen (r) – Liste: rohdatei_liste
+        rohdatei_url_liste:
+          f: https://vizsim.github.io/berlin-traffic-counts_schulwege/data/rohdaten-fuss-2019-2025/{datei}
+          r: https://vizsim.github.io/berlin-traffic-counts_schulwege/data/rohdaten-rad-2019-2025/{datei}
+      - code: 1990-2019
+        titel: Verkehrszähldaten 1990–2019 (IFG-Anfrage 2019)
+        herausgeber: Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin – Verkehrslenkung Berlin
+        lizenz: CC BY-SA 3.0 DE
+        lizenz_url: https://creativecommons.org/licenses/by-sa/3.0/de/
+        herkunft_url: https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/
+        datei: Rohdaten_Berlin_1992-2019.zip
+        url: https://raw.githubusercontent.com/vizsim/BerlinTrafficCounts/ea048c8f9bff4d454b756f8f0d2ebf91dc910e13/Rohdaten_Berlin_1992-2019.zip
+        sha256: b826001f17a0b441038ceef179102c96d42482f3e0fab224dada9c3b2f4851db
+        rohdatei_url: https://vizsim.github.io/BerlinTrafficCounts/Rohdaten_Berlin_1992-2019/{datei}
+    rohdatei_liste: berlin_rohdateien_2019-2025.txt
+    geokodierung:
+      titel: Geokodierung der Fuß- und Radzählungen (OSM-Straßenkreuzungen)
+      herkunft_url: https://github.com/vizsim/berlin-traffic-counts_schulwege
+      lizenz: ODbL (abgeleitet aus OpenStreetMap)
+      lizenz_url: https://opendatacommons.org/licenses/odbl/
+      datei: geokodierung_berlin.csv
+      url: https://raw.githubusercontent.com/vizsim/berlin-traffic-counts_schulwege/d09e6f06aaa84dd339a6e9ea91dfbf25b642c1a0/pipeline/data/geokodierung.csv
+      sha256: 111e03bd6e7b6e910e176987b2d26508242c167b45b5d385bd014f8b4b566bfe
+
+  ravensburg: &mobidata
+    status: live
+    adapter: mobidata_bw
+    name: Ravensburg
+    land: BW
+    traeger: Stadt Ravensburg, Stadtplanungsamt (Sachgebiet Verkehrsplanung)
+    art: 24-Stunden-Zählungen an Kreuzungen (Video), 15-Minuten-Werte, Di/Do
+    weg: offen auf MobiData BW
+    ferien: schulferien_baden-wuerttemberg.csv
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    paket: zaehldaten-ravensburg
+    portal: https://mobidata-bw.de/dataset/zaehldaten-ravensburg
+    uebersicht: Verkehrszaehlungen_RV.xlsx
+    url_uebersicht: https://mobidata-bw.de/daten/portal/RV_Zaehl/Verkehrszaehlungen_RV.xlsx
+    url_zip: https://mobidata-bw.de/daten/portal/RV_Zaehl/Zaehldaten_PDF-Excel_RV.zip
+  weingarten:
+    <<: *mobidata
+    name: Weingarten
+    traeger: Stadt Weingarten (aufbereitet vom Stadtplanungsamt Ravensburg)
+    paket: zaehldaten-stadt-weingarten
+    portal: https://mobidata-bw.de/dataset/zaehldaten-stadt-weingarten
+    uebersicht: Verkehrszaehlungen-Stadt-Weingarten.xlsx
+    url_uebersicht: https://mobidata-bw.de/daten/portal/WGT_Zaehl/Verkehrszaehlungen-Stadt-Weingarten.xlsx
+    url_zip: https://mobidata-bw.de/daten/portal/WGT_Zaehl/Zaehldaten_PDF-Excel-Weingarten.zip
+  berg:
+    <<: *mobidata
+    name: Berg
+    traeger: Gemeinde Berg (aufbereitet vom Stadtplanungsamt Ravensburg)
+    paket: zaehldaten-gemeinde-berg
+    portal: https://mobidata-bw.de/dataset/zaehldaten-gemeinde-berg
+    uebersicht: Verkehrszaehlungen-Gemeinde-Berg.xlsx
+    url_uebersicht: https://mobidata-bw.de/daten/portal/Berg_Zaehl/Verkehrszaehlungen-Gemeinde-Berg.xlsx
+    url_zip: https://mobidata-bw.de/daten/portal/Berg_Zaehl/Zaehldaten_PDF-Excel_Berg.zip
+  baienfurt:
+    <<: *mobidata
+    name: Baienfurt
+    traeger: Gemeinde Baienfurt (aufbereitet vom Stadtplanungsamt Ravensburg)
+    paket: zaehldaten-gemeinde-baienfurt
+    portal: https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baienfurt
+    uebersicht: Verkehrszaehlungen-Gemeinde-Baienfurt.xlsx
+    url_uebersicht: https://mobidata-bw.de/daten/portal/Baienfurt_Zaehl/Verkehrszaehlungen-Gemeinde-Baienfurt.xlsx
+    url_zip: https://mobidata-bw.de/daten/portal/Baienfurt_Zaehl/Zaehldaten_PDF-Excel_Baienfurt.zip
+  baindt:
+    <<: *mobidata
+    name: Baindt
+    traeger: Gemeinde Baindt (aufbereitet vom Stadtplanungsamt Ravensburg)
+    paket: zaehldaten-gemeinde-baindt
+    portal: https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt
+    uebersicht: Verkehrszaehlungen-Gemeinde-Baindt.xlsx
+    url_uebersicht: https://mobidata-bw.de/daten/portal/Baindt_Zaehl/Verkehrszaehlungen-Gemeinde-Baindt.xlsx
+    url_zip: https://mobidata-bw.de/daten/portal/Baindt_Zaehl/Zaehldaten_PDF-Excel_Baindt.zip
+
+  potsdam:
+    status: research
+    name: Potsdam
+    land: BB
+    art: manuelle Knotenpunktzählungen (April–Oktober, 7–10 und 15–18 Uhr), ein PDF je Knoten
+    portal: https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/
+    notiz: Adapter muss die PDF-Tabellen auslesen.
+  muenster:
+    status: research
+    name: Münster
+    land: NW
+    art: Knotenpunktzählungen, PDF/XLS je Zählung (Spitzenstunden)
+    notiz: laut Notizen in vizsim/svz; XLS-Format noch prüfen.
+
+# Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
+# Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
+recht:
+  BB: Akteneinsichts- und Informationszugangsgesetz (AIG)
+  BE: Berliner Informationsfreiheitsgesetz (IFG)
+  BW: Landesinformationsfreiheitsgesetz (LIFG)
+  BY: kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen
+  HB: Bremer Informationsfreiheitsgesetz
+  HE: HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG
+  HH: Hamburgisches Transparenzgesetz
+  MV: Informationsfreiheitsgesetz M-V
+  NI: kein Landes-IFG – Niedersächsisches UIG
+  NW: Informationsfreiheitsgesetz NRW
+  SN: SächsTranspG gilt für Kommunen nur per Satzung – sonst Sächsisches UIG
+  ST: Informationszugangsgesetz Sachsen-Anhalt (IZG LSA)
+
+# Stand: in_karte | offen | geliefert | kandidat | aggregiert | nur_karte | automatisch | abgelehnt
+# Kommunen mit `quelle:` liegen in der Karte; ihr Punkt kommt aus den Zählstellen.
+datenlage:
+  - kommune: Berlin
+    quelle: berlin
+    stand: in_karte
+    was: rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter
+    links:
+      - [FragDenStaat 2025, https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/]
+      - [FragDenStaat 2019, https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/]
+  - {kommune: Ravensburg, quelle: ravensburg, stand: in_karte, was: "24-Stunden-Zählungen mit Kfz, Lkw, Rad und Fuß, Excel und PDF je Zählung", links: [[MobiData BW, "https://mobidata-bw.de/dataset/zaehldaten-ravensburg"]]}
+  - {kommune: Weingarten, quelle: weingarten, stand: in_karte, was: wie Ravensburg, links: [[MobiData BW, "https://mobidata-bw.de/dataset/zaehldaten-stadt-weingarten"]]}
+  - {kommune: Berg, quelle: berg, stand: in_karte, was: wie Ravensburg, links: [[MobiData BW, "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-berg"]]}
+  - {kommune: Baienfurt, quelle: baienfurt, stand: in_karte, was: wie Ravensburg, links: [[MobiData BW, "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baienfurt"]]}
+  - {kommune: Baindt, quelle: baindt, stand: in_karte, was: wie Ravensburg, links: [[MobiData BW, "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt"]]}
+  - kommune: Potsdam
+    land: BB
+    lon: 13.0645
+    lat: 52.3906
+    stand: offen
+    was: Lage der gezählten Kreuzungen und ein PDF je Kreuzung (von Hand, April–Oktober, 7–10 und 15–18 Uhr)
+    links:
+      - [Open Data Potsdam, https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/]
+      - [potsdam.de, https://www.potsdam.de/de/verkehrszaehlungen-der-landeshauptstadt-potsdam]
+  - kommune: Münster
+    land: NW
+    lon: 7.6261
+    lat: 51.9607
+    stand: offen
+    was: ZIP mit PDF/XLS je Zählung (Spitzenstunden), laut Notizen in vizsim/svz
+    links: []
+  - kommune: Xanten
+    land: NW
+    lon: 6.4536
+    lat: 51.6588
+    stand: offen
+    was: Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept
+    links:
+      - [opendata.ruhr, https://opendata.ruhr/en/dataset/mobilitatskonzept/resource/fea95307-56ea-425c-9a77-535b88d10598]
+  - kommune: Köln
+    land: NW
+    lon: 6.9603
+    lat: 50.9375
+    stand: aggregiert
+    was: Mittelwerte je Zählstelle; Einzelzählungen auf Anfrage (2024 für die Kitschburger Straße herausgegeben)
+    links:
+      - [Open.NRW, https://ckan.open.nrw.de/dataset/kfz-zaehlstellen-und-werte-koeln-k]
+      - [FragDenStaat 2024, https://fragdenstaat.de/anfrage/verkehrszaehlungen-auf-der-kitschburger-str-in-koeln-lindenthal/]
+  - {kommune: Düsseldorf, land: NW, lon: 6.7735, lat: 51.2277, stand: aggregiert, was: Jahresmittel (DTV) je Abschnitt als WFS – in vizsim/svz, links: []}
+  - {kommune: Frankfurt am Main, land: HE, lon: 8.6821, lat: 50.1109, stand: aggregiert, was: "24-Stunden-Mittelwerte 2019–2023 als WFS, auch für Rad – in vizsim/svz", links: []}
+  - kommune: Stuttgart
+    land: BW
+    lon: 9.1829
+    lat: 48.7758
+    stand: aggregiert
+    was: Kordonzählungen am Stadtrand 1980–2024 als CSV (CC BY 4.0)
+    links:
+      - [Open Data Stuttgart, https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855]
+  - kommune: Dortmund
+    land: NW
+    lon: 7.4653
+    lat: 51.5136
+    stand: aggregiert
+    was: nur der Zählstellenplan; Werte gibt die Stadt auf Anfrage heraus (kostenpflichtig) – der Plan taugt als Grundlage einer Anfrage
+    links:
+      - [opendata.ruhr, https://opendata.ruhr/dataset/verkehrszahlung-zahlstellenplan1]
+  - kommune: Leipzig
+    land: SN
+    lon: 12.3731
+    lat: 51.3397
+    stand: abgelehnt
+    was: "50–100 Zählungen im Jahr, seit 2022 als Tabellen der Büros; nur Karten online. 2023 abgelehnt – aber nur der Export aus der Karte. Besser nach den gelieferten Zählauswertungen fragen."
+    links:
+      - [FragDenStaat 2023, https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/]
+  - kommune: Dresden
+    land: SN
+    lon: 13.7373
+    lat: 51.0504
+    stand: kandidat
+    was: "nur Karten online. Die Stadt im November 2025: „Auf Anfrage werden … Verkehrsdaten aufgearbeitet und zur Verfügung gestellt.“"
+    links:
+      - [Antwort AF0915/25, https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf]
+  - kommune: München
+    land: BY
+    lon: 11.5820
+    lat: 48.1351
+    stand: kandidat
+    was: über 5.000 Kfz- und Radzählungen von Hand in der stadteigenen Software DAVe (Viertelstunden), Export in offene Formate möglich; online nur Karten
+    links:
+      - [stadt.muenchen.de, https://stadt.muenchen.de/infos/verkehrsdaten.html]
+      - [DAVe, https://stadt.muenchen.de/news/open-source-anwendung-dave.html]
+  - kommune: Wolfsburg
+    land: NI
+    lon: 10.7865
+    lat: 52.4227
+    stand: kandidat
+    was: nutzt seit April 2026 dieselbe Zählsoftware wie München (DAVe)
+    links:
+      - [DAVe, https://stadt.muenchen.de/news/open-source-anwendung-dave.html]
+  - kommune: Nürnberg
+    land: BY
+    lon: 11.0767
+    lat: 49.4521
+    stand: geliefert
+    was: zählt seit 1967 jedes Jahr von Hand; 2025/26 eine Zählung in Halbstundenwerten herausgegeben (abgelehnt nur Tempodaten)
+    links:
+      - [FragDenStaat 2025/26, https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/]
+      - [Bericht Verkehrszählung 2018, https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf]
+  - kommune: Rostock
+    land: MV
+    lon: 12.0991
+    lat: 54.0924
+    stand: geliefert
+    was: rund 100 Kreuzungen im Jahr, Jahresübersichten als Excel (auch Rad und Fuß); bis 50 Zählungen kostenlos. 2020 geliefert, online aber nur PDF-Umwandlungen
+    links:
+      - [FragDenStaat 2020, https://fragdenstaat.de/anfrage/verkehrszahlung-14/]
+  - kommune: Magdeburg
+    land: ST
+    lon: 11.6276
+    lat: 52.1205
+    stand: geliefert
+    was: 2022 alle Zählunterlagen 2012–2020 angeboten (Viertelstunden je Richtung, Rad/Pkw/Lfw/Lkw/Lz/Bus, PDF auf CD, gebührenfrei); Weitergabe-Lizenz offen
+    links:
+      - [FragDenStaat 2022, https://fragdenstaat.de/anfrage/rohdaten-von-verkehrszahlungen-2012-bis-2021/]
+  - kommune: Paderborn
+    land: NW
+    lon: 8.7575
+    lat: 51.7189
+    stand: geliefert
+    was: Zählungen einzelner Straßen auf Anfrage herausgegeben
+    links:
+      - [FragDenStaat, https://fragdenstaat.de/anfrage/verkehrszahlungen-bahnhofstrae-neuhauser-strae-rathenaustrae-detmolder-strae/]
+  - kommune: Hamburg
+    land: HH
+    lon: 9.9937
+    lat: 53.5511
+    stand: automatisch
+    was: Wärmebildkameras an über 400 Kreuzungen, 15-Minuten-Werte offen (keine manuellen Einzelzählungen)
+    links:
+      - [BMV, https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html]
+  - {kommune: Heidelberg, land: BW, lon: 8.6724, lat: 49.3988, stand: automatisch, was: 12 Kameras mit offenen Zählwerten, links: []}
