@@ -1,0 +1,44 @@
+{
+ "muenster_seite.html": {
+  "url": "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung",
+  "status": 200,
+  "bytes": 42231,
+  "final": "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung"
+ },
+ "muenster_api_show.json": {
+  "url": "https://opendata.stadt-muenster.de/api/3/action/package_show?id=verkehrsz%C3%A4hlung-manuelle-verkehrserhebung",
+  "status": 200,
+  "bytes": 5065,
+  "final": "https://opendata.stadt-muenster.de/api/3/action/package_show?id=verkehrsz%C3%A4hlung-manuelle-verkehrserhebung&page=0"
+ },
+ "muenster_api_search.json": {
+  "url": "https://opendata.stadt-muenster.de/api/3/action/package_search?q=Verkehrsz%C3%A4hlung",
+  "status": 404
+ },
+ "muenster_start.html": {
+  "url": "https://opendata.stadt-muenster.de/",
+  "status": 200,
+  "bytes": 41359,
+  "final": "https://opendata.stadt-muenster.de/"
+ },
+ "muenster_lizenzen.html": {
+  "url": "https://opendata.stadt-muenster.de/lizenzen",
+  "status": 404
+ },
+ "muenster_nutzung.html": {
+  "url": "https://opendata.stadt-muenster.de/nutzungsbedingungen",
+  "status": 200,
+  "bytes": 22037,
+  "final": "https://opendata.stadt-muenster.de/nutzungsbedingungen"
+ },
+ "opennrw_search.json": {
+  "url": "https://ckan.open.nrw.de/api/3/action/package_search?rows=20&q=%22Manuelle%20Verkehrserhebung%22",
+  "fehler": "URLError(TimeoutError('timed out'))"
+ },
+ "govdata_search.json": {
+  "url": "https://www.govdata.de/ckan/api/3/action/package_search?rows=20&q=%22Manuelle%20Verkehrserhebung%22",
+  "status": 200,
+  "bytes": 8066,
+  "final": "https://www.govdata.de/ckan/api/3/action/package_search?rows=20&q=%22Manuelle%20Verkehrserhebung%22"
+ }
+}
