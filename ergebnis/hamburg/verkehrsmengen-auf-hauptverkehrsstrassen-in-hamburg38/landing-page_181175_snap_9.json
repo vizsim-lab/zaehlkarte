@@ -1,0 +1,56 @@
+{
+  "title" : "Verkehrsmengen auf Hauptverkehrsstraßen in Hamburg",
+  "description" : "Der Datensatz enthält die Verkehrsmengen auf Hauptverkehrsstraßen (HVS) sowie Bundesautobahnen (BAB).\n\nVerkehrsmengenkarte 2019:\n\nFür das Jahr 2019 erfolgt die Angabe der Verkehrsmengen als durchschnittliche tägliche Verkehrsstärke (DTV, Montag bis Sonntag). Zusätzlich ist in den Attributen der prozentuale Schwerverkehrsanteil (SV) am durchschnittlichen täglichen Verkehr an Werktagen (DTVw, Montag bis Freitag) angegeben. \n\nDie Angaben zu den Verkehrsmengen stammen aus dem Verkehrsmodell der Stadt Hamburg. Dem Verkehrsmodell liegen unter anderem Verkehrszählungen zugrunde, die bis zum Jahr 2019 durchgeführt wurden. Die im Verkehrsmodell als DTVw vorgehaltenen Verkehrsstärken (Kfz) wurden mittels pauschaler Faktoren auf den DTV umgerechnet, anschließend manuell abgeglichen und falls erforderlich geglättet. Die im Verkehrsmodell als SV-Anteil am DTVw vorgehaltenen Angaben zum Schwerverkehr wurden hingegen nicht auf den DTV umgerechnet, sondern ohne Anpassung auf den DTV übertragen.\n\nFür Verkehrsprognosen sind die Angaben in der Verkehrsmengenkarte nicht geeignet.\n\nBearbeitungsstand 2019: 22.11.2022\n\nVerkehrsmengenkarte 2014:\n\nFür die Jahre 2013 und 2014 erfolgt die Angabe der Verkehrsmengen als durchschnittliche tägliche Verkehrsstärke an Werktagen (DTVw, Montag bis Freitag).\n\nDie Angaben zu den Verkehrsmengen stammen aus Verkehrszählungen, die bis zum Jahr 2014 an Bundesautobahnen und Hauptverkehrsstraßen durchgeführt wurden. Die Zählergebnisse wurden auf den durchschnittlichen Werktagsverkehr (DTVw), des Jahres 2014 hochgerechnet. Aufgrund umfangreicher Baustelleneinflüsse im Jahr 2014 wurden für die Bundesautobahnen die DTVw-Werte des Jahres 2013 zugrunde gelegt. Innerhalb der farbig angelegten Streckenabschnitte kann die Verkehrsmenge innerhalb der angegebenen Bandbreite schwanken.\n\nFür Verkehrsprognosen sind die Angaben in der Verkehrsmengenkarte nicht geeignet.\n\nBearbeitungsstand 2013/2014: 25.08.2016",
+  "extent" : {
+    "spatial" : {
+      "bbox" : [ [ 9.734736943339856, 53.411293750631664, 10.277047693295104, 53.72263021841847 ] ],
+      "crs" : "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    }
+  },
+  "externalDocs" : {
+    "description" : "Metadaten zum Datensatz",
+    "url" : "https://metaver.de/trefferanzeige?docuuid=2EFC4867-650E-4850-815B-CFBD2469513B"
+  },
+  "links" : [ {
+    "rel" : "alternate",
+    "type" : "text/html",
+    "title" : "This document as HTML",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen?f=html"
+  }, {
+    "rel" : "conformance",
+    "title" : "OGC API conformance classes implemented by this server",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen/conformance"
+  }, {
+    "rel" : "data",
+    "title" : "Access the data (Verkehrsmengen DTV auf Hauptverkehrsstraßen 2019, Verkehrsmengen DTV auf Bundesautobahnen 2019, Verkehrsmengen DTVw auf Bundesautobahnen 2013, Verkehrsmengen DTVw auf Hauptverkehrsstraßen 2014)",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen/collections"
+  }, {
+    "rel" : "http://www.opengis.net/def/rel/ogc/1.0/conformance",
+    "title" : "OGC API conformance classes implemented by this server",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen/conformance"
+  }, {
+    "rel" : "http://www.opengis.net/def/rel/ogc/1.0/data",
+    "title" : "Access the data (Verkehrsmengen DTV auf Hauptverkehrsstraßen 2019, Verkehrsmengen DTV auf Bundesautobahnen 2019, Verkehrsmengen DTVw auf Bundesautobahnen 2013, Verkehrsmengen DTVw auf Hauptverkehrsstraßen 2014)",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen/collections"
+  }, {
+    "rel" : "self",
+    "type" : "application/json",
+    "title" : "This document",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen?f=json"
+  }, {
+    "rel" : "service-desc",
+    "type" : "application/vnd.oai.openapi+json;version=3.0",
+    "title" : "Definition of the API in OpenAPI 3.0",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen/api?f=json"
+  }, {
+    "rel" : "service-desc",
+    "type" : "application/vnd.oai.openapi;version=3.0",
+    "title" : "Definition of the API in OpenAPI 3.0",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen/api?f=yaml"
+  }, {
+    "rel" : "service-doc",
+    "type" : "text/html",
+    "title" : "Documentation of the API",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrsmengen/api?f=html"
+  } ]
+}

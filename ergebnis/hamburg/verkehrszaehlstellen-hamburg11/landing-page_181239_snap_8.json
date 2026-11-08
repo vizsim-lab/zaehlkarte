@@ -1,0 +1,56 @@
+{
+  "title" : "Verkehrszählstellen Hamburg",
+  "description" : "Der Datensatz enthält alle Verkehrszählstellen in Hamburg für den Kfz-, Rad- und Fußverkehr.\nHierbei wird unterschieden zwischen Dauerzählstellen, jährlichen Zählstellen und Bedarfszählstellen. \n\nDauerzählstellen existieren bisher nur für Kfz und erfassen den Verkehr automatisch 24 Stunden am Tag und 365 Tage im Jahr.\nJährliche Zählstellen existieren sowohl für den Kfz- als auch für den Radverkehr und sind Zählstellen, an denen der Verkehr einmal im Jahr in der Regel von 6-19 Uhr erfasst wird.\nBedarfszählstellen existieren für alle Verkehrsarten. Die Zählungen erfolgen auf Antrag, z.B. im Zusammenhang mit verkehrlichen Planungen oder Untersuchungen.\n\nWeiterhin sind für den Kfz- und Radverkehr die aus Dauerzählstellen und jährlichen Zählstellen abgeleiteten Orte/Punkte von jährlich ermittelten Querschnittswerten (sog. \"Pegel\") angegeben.",
+  "extent" : {
+    "spatial" : {
+      "bbox" : [ [ 9.732980670734413, 53.416907789340804, 10.337990533079317, 53.71712928216402 ] ],
+      "crs" : "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    }
+  },
+  "externalDocs" : {
+    "description" : "Metadaten zum Datensatz",
+    "url" : "https://metaver.de/trefferanzeige?docuuid=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8"
+  },
+  "links" : [ {
+    "rel" : "alternate",
+    "type" : "text/html",
+    "title" : "This document as HTML",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen?f=html"
+  }, {
+    "rel" : "conformance",
+    "title" : "OGC API conformance classes implemented by this server",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen/conformance"
+  }, {
+    "rel" : "data",
+    "title" : "Access the data",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen/collections"
+  }, {
+    "rel" : "http://www.opengis.net/def/rel/ogc/1.0/conformance",
+    "title" : "OGC API conformance classes implemented by this server",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen/conformance"
+  }, {
+    "rel" : "http://www.opengis.net/def/rel/ogc/1.0/data",
+    "title" : "Access the data",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen/collections"
+  }, {
+    "rel" : "self",
+    "type" : "application/json",
+    "title" : "This document",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen?f=json"
+  }, {
+    "rel" : "service-desc",
+    "type" : "application/vnd.oai.openapi+json;version=3.0",
+    "title" : "Definition of the API in OpenAPI 3.0",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen/api?f=json"
+  }, {
+    "rel" : "service-desc",
+    "type" : "application/vnd.oai.openapi;version=3.0",
+    "title" : "Definition of the API in OpenAPI 3.0",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen/api?f=yaml"
+  }, {
+    "rel" : "service-doc",
+    "type" : "text/html",
+    "title" : "Documentation of the API",
+    "href" : "https://api.hamburg.de/datasets/v1/verkehrszaehlstellen/api?f=html"
+  } ]
+}

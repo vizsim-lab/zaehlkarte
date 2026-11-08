@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobiData BW® - Fahrradzaehldaten</title>
+</head>
+
+<body>
+    <a href="https://www.mobidata-bw.de" target="_blank">
+        <div id="MobiDataBW">
+            <img src="https://mobidata-bw.de/uploads/page_images/2025-07-04-135837.9145252023-09-12-155245.293215LogoTest3.png"
+                alt="MobiData BW®">
+        </div>
+    </a>
+    <div id="header">Fahrradzaehldaten BW (Aktuelle und Historische Daten)</div>
+
+    <hr>
+        <ul>
+	   <li><a href="https://mobidata-bw.de/fahrradzaehldaten/v2/">Fahrradzaehldaten (Stundenwerte und Tageswerte)</a></li>    
+	   <p>
+        </ul>
+    <hr>
+</body>
+
+<style>
+    #MobiDataBW img {
+        width: 250px;
+    }
+
+    #header {
+        font-family: sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        display: inline-block;
+        margin-top: 40px;
+    }
+
+    a {
+        font-size: 18px;       
+    }
+
+
+</style>
+
+</html>

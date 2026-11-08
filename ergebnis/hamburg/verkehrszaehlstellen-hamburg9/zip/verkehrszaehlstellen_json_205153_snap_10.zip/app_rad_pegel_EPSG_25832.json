@@ -1,0 +1,651 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3459",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          548841.2424999997,
+          5935933.4329
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Schulauer Weg W Tinsdaler Heideweg ",
+        "zaehlstelle": 5018,
+        "letzte_zaehlung": "09.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3460",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          554575.9446,
+          5935056.687000001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Schenefelder Landstraße N Elbchaussee",
+        "zaehlstelle": 5022,
+        "letzte_zaehlung": "09.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3461",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          554418.0066999998,
+          5935009.7084
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Elbchaussee NW Schenefelder Landstraße",
+        "zaehlstelle": 5031,
+        "letzte_zaehlung": "09.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3462",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          560276.6842,
+          5935629.364499999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Bahrenfelder Chaussee NW Von-Sauer-Straße",
+        "zaehlstelle": 5041,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3463",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          561626.2651000004,
+          5942754.505000001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Wendlohstraße NO Frohmestraße",
+        "zaehlstelle": 5053,
+        "letzte_zaehlung": "01.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3464",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          561653.2515000002,
+          5942585.571799999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Frohmestraße SO Wendlohstraße",
+        "zaehlstelle": 5065,
+        "letzte_zaehlung": "01.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3465",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          561454.3323999997,
+          5942684.535700001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Frohmestraße W Schleswiger Damm",
+        "zaehlstelle": 5078,
+        "letzte_zaehlung": "01.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3466",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565825.5266000004,
+          5938749.030099999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Hudtwalckerstraße SW Sierichstraße",
+        "zaehlstelle": 5087,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3467",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          564375.0818999996,
+          5937414.5856
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Hoheluftchaussee SO Eppendorfer Weg",
+        "zaehlstelle": 5095,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3468",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          564223.1167000001,
+          5935863.205800001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Schäferkampsallee NW Beim Schlump",
+        "zaehlstelle": 5101,
+        "letzte_zaehlung": "18.05.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3469",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          564270.0977999996,
+          5935854.2086
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Beim Schlump NO Schäferkampsallee",
+        "zaehlstelle": 5113,
+        "letzte_zaehlung": "18.05.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3470",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          564273.0961999996,
+          5935827.2193
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Schröderstiftstraße SO Beim Schlump",
+        "zaehlstelle": 5125,
+        "letzte_zaehlung": "18.05.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3471",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          564206.1227000002,
+          5935820.223200001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Kleiner Schäferkamp SW Schäferkampsallee",
+        "zaehlstelle": 5137,
+        "letzte_zaehlung": "18.05.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3472",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565554.5710000005,
+          5934929.555500001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Dammtordamm N Esplanade",
+        "zaehlstelle": 5142,
+        "letzte_zaehlung": "17.08.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3473",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565472.5994999995,
+          5934682.655200001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Dammtorstraße S Große Theaterstraße",
+        "zaehlstelle": 5156,
+        "letzte_zaehlung": "26.08.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3474",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          566122.4847999997,
+          5934770.102299999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Kennedybrücke W Ferdinandstor",
+        "zaehlstelle": 5168,
+        "letzte_zaehlung": "10.08.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3475",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          566087.3134000003,
+          5934674.4188
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Lombardsbrücke W Ballindamm",
+        "zaehlstelle": 5178,
+        "letzte_zaehlung": "10.08.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3476",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          567050.1566000003,
+          5935095.612400001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "An der Alster NO Schmilinskystraße",
+        "zaehlstelle": 5183,
+        "letzte_zaehlung": "17.08.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3477",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565464.5851999996,
+          5933628.075300001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Willy-Brandt-Straße W Kleiner Burstah",
+        "zaehlstelle": 5198,
+        "letzte_zaehlung": "19.08.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3478",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          566474.7666999996,
+          5933635.5273
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Meßberg W Deichtorplatz",
+        "zaehlstelle": 5208,
+        "letzte_zaehlung": "14.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3479",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573173.7149999999,
+          5945611.1755
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Saseler Chaussee N Stadtbahnstraße",
+        "zaehlstelle": 5212,
+        "letzte_zaehlung": "28.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3480",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573211.6990999999,
+          5945564.193499999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Stadtbahnstraße O Saseler Chaussee",
+        "zaehlstelle": 5224,
+        "letzte_zaehlung": "28.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3481",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573143.7251000004,
+          5945503.2190000005
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Saseler Chaussee S Stadtbahnstraße",
+        "zaehlstelle": 5236,
+        "letzte_zaehlung": "28.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3482",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573108.7396999998,
+          5945541.204399999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Stadtbahnstraße W Saseler Chaussee",
+        "zaehlstelle": 5248,
+        "letzte_zaehlung": "28.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3483",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          573893.3425000003,
+          5940450.2184999995
+        ]
+      },
+      "properties": {
+        "bezeichnung": "August-Krogmann-Straße N Am Luisenhof",
+        "zaehlstelle": 5252,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3484",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          574088.0193999996,
+          5937993.708799999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Stein-Hardenberg-Straße NO Tonndorfer Hauptstraße",
+        "zaehlstelle": 5263,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3485",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          574216.3969999999,
+          5937925.806299999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Tonndorfer Hauptstraße O Stein-Hardenberg-Straße",
+        "zaehlstelle": 5274,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3486",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          575497.6601999998,
+          5937844.229499999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Schöneberger Straße W Charlottenburger Straße",
+        "zaehlstelle": 5288,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3487",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          570865.4841,
+          5936605.799699999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Wandsbeker Allee N Wandsbeker Marktstraße",
+        "zaehlstelle": 5292,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3488",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          570839.4934,
+          5936540.825999999
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Wandsbeker Marktstraße W Wandsbeker Allee",
+        "zaehlstelle": 5308,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3489",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          570824.4763000002,
+          5935154.3784
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Hammer Straße NW Horner Kreisel",
+        "zaehlstelle": 5311,
+        "letzte_zaehlung": "28.04.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3490",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          570642.5393000003,
+          5934590.605900001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Horner Weg O Mettlerkampsweg",
+        "zaehlstelle": 5324,
+        "letzte_zaehlung": "26.09.2023"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3491",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          572595.7391999997,
+          5933246.1088
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Washingtonallee N Horner Landstraße",
+        "zaehlstelle": 5332,
+        "letzte_zaehlung": "26.09.2023"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3492",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          572539.7607000005,
+          5933199.1284
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Horner Landstraße W Washingtonallee",
+        "zaehlstelle": 5348,
+        "letzte_zaehlung": "17.06.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3493",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          580038.6875,
+          5927974.0844
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Lohbrügger Markt NO Lohbrügger Landstraße",
+        "zaehlstelle": 5353,
+        "letzte_zaehlung": "30.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3494",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565403.4422000004,
+          5923549.09
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Wilstorfer Straße NW Moorstraße",
+        "zaehlstelle": 5361,
+        "letzte_zaehlung": "23.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3495",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565454.4217999997,
+          5923542.092
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Moorstraße O Wilstorfer Straße",
+        "zaehlstelle": 5374,
+        "letzte_zaehlung": "23.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    },
+    {
+      "type": "Feature",
+      "id": "APP_RAD_PEGEL_3496",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          565439.4271999998,
+          5923513.103800001
+        ]
+      },
+      "properties": {
+        "bezeichnung": "Wilstorfer Straße SO Moorstraße",
+        "zaehlstelle": 5385,
+        "letzte_zaehlung": "23.09.2021"
+      },
+      "srsName": "EPSG:25832"
+    }
+  ]
+}
