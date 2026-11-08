@@ -1,7 +1,20 @@
 # Schulferien Baden-Württemberg – aus den KMK-Ferienkalendern (erster und letzter Ferientag).
-# Bewegliche Ferientage (2023/24 und 2024/25 je 5, 2025/26 3) legen die Schulen selbst fest;
-# sie fehlen hier – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen sein.
+# Bewegliche Ferientage (2019/20 5, 2020/21 4, 2023/24 und 2024/25 je 5, 2025/26 3) legen die
+# Schulen selbst fest; sie fehlen hier – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen
+# sein. 2019/20 und 2020/21: mehrzeilige Zellen der KMK-Tabelle (Herbst 28.–30.10. und 31.10.)
+# zusammengefasst. Nicht abgebildet: die pandemiebedingten Schulschließungen 2020/21.
 von,bis,ferien,schuljahr,gebiet,quelle
+2019-10-28,2019-10-31,Herbstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2019-12-23,2020-01-04,Weihnachtsferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-04-06,2020-04-18,Osterferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-06-02,2020-06-13,Pfingstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-07-30,2020-09-12,Sommerferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-10-26,2020-10-31,Herbstferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2020-12-23,2021-01-09,Weihnachtsferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-04-01,2021-04-01,Osterferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-04-06,2021-04-10,Osterferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-05-25,2021-06-05,Pfingstferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-07-29,2021-09-11,Sommerferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
 2023-10-30,2023-11-03,Herbstferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
 2023-12-23,2024-01-05,Weihnachtsferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
 2024-03-23,2024-04-05,Osterferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf

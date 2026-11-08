@@ -23,7 +23,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Frontend nachtragen. Rechtliche Aussagen in der Datenlage nur mit Beleg (Link).
 - **Erzeugte Dateien nicht von Hand ändern:** `public/data/*`, `docs/DATENLAGE.md` (beide
   `uv run zaehlkarte site`), `pipeline/geokodierung/berlin_ergaenzung.csv` (Workflow „Berlin
-  geokodieren“).
+  geokodieren“), `pipeline/geokodierung/moers.csv` (`werkzeuge/geokodiere_moers.py`).
 - **Datenlage-Texte** (Lage, Empfehlung, Anfragezusatz, Kontakt) stehen in `sources.yaml`.
   Kontakte nur als Funktionsadressen (keine Namen einzelner Beschäftigter), aus der
   FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage`) ist für alle gleich.

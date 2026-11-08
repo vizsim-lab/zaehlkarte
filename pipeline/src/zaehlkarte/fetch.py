@@ -4,16 +4,19 @@ Alles landet in pipeline/data/raw/ (gitignored). Berlin-Archive und Geokodierung
 Commit gepinnt (sha256 in sources.yaml); eine abweichende Prüfsumme bricht ab. MobiData BW
 liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt, aus dem ZIP nur
 die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
-Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF.
+Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz die Metadaten
+(CKAN-API) und alle Messdateien, jedes Mal neu.
 """
 
 from __future__ import annotations
 
 import hashlib
+import json
 import shutil
 import tempfile
 import zipfile
 from pathlib import Path
+from urllib.parse import unquote
 
 import requests
 
@@ -87,6 +90,21 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 zip_pfad = lade(q["url_zip"], Path(tmp) / "zaehlungen.zip")
                 n = entpacke_excel(zip_pfad, ordner / "zip")
             log.append(f"{code}: Übersicht + {n} Excel-Dateien")
+        elif q["adapter"] == "moers_radar":
+            n = 0
+            for paket in q["pakete"]:
+                ordner = pfade.roh / "moers" / paket
+                ordner.mkdir(parents=True, exist_ok=True)
+                antwort = requests.get(q["api"].format(paket=paket), headers=UA, timeout=120)
+                antwort.raise_for_status()
+                p = antwort.json()["result"]
+                (ordner / "paket.json").write_text(json.dumps(p, ensure_ascii=False, indent=1))
+                for r in p.get("resources", []):
+                    datei = unquote((r.get("url") or "").rsplit("/", 1)[-1])
+                    if datei:
+                        lade(r["url"], ordner / datei)
+                        n += 1
+            log.append(f"{code}: {len(q['pakete'])} Datensätze, {n} Messungen")
         elif q["adapter"] == "muenster":
             ordner = pfade.roh / "muenster"
             pos = q["positionen"]

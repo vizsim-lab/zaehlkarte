@@ -6,7 +6,7 @@
   "details": "details/{n}.json",
   "datenlage": "datenlage.json"
  },
- "details_anzahl": 38,
+ "details_anzahl": 39,
  "gruppen": [
   {
    "id": "kfz",
@@ -263,6 +263,48 @@
    }
   },
   {
+   "code": "moers",
+   "name": "Moers",
+   "land": "NW",
+   "traeger": "Stadt Moers, Fachdienst Verkehr/Straße",
+   "art": "Querschnittszählungen mit Seitenradar-Messgeräten, meist zwei Tage am Stück, beide Fahrspuren; Kfz je Fahrzeug, Schwerverkehr über die Fahrzeuglänge (ab 8 m)",
+   "weg": "offen auf offenesdatenportal.de (2010–2022)",
+   "portal": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021",
+   "lizenzen": [
+    {
+     "code": "moers",
+     "titel": "Verkehrszählungen (Seitenradar-Messgeräte)",
+     "herausgeber": "Stadt Moers, Fachdienst Verkehr/Straße",
+     "lizenz": "dl-de/zero-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/zero-2-0",
+     "herkunft_url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021"
+    },
+    {
+     "code": "lage",
+     "titel": "Geokodierung der Messstellen (Nominatim und Overpass, OpenStreetMap)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 141,
+   "zaehlungen": 541,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 541,
+    "sv": 541,
+    "rad": 0,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2010,
+   "bis": 2022,
+   "lage": {
+    "geokodiert": 541
+   }
+  },
+  {
    "code": "muenster",
    "name": "Münster",
    "land": "NW",
@@ -298,12 +340,12 @@
   }
  ],
  "statistik": {
-  "stellen": 11730,
-  "zaehlungen": 27932,
+  "stellen": 11871,
+  "zaehlungen": 28473,
   "ohne_lage": 1509,
   "gruppen": {
-   "kfz": 17735,
-   "sv": 17083,
+   "kfz": 18276,
+   "sv": 17624,
    "rad": 17342,
    "fuss": 5976,
    "kind": 5618
@@ -311,7 +353,7 @@
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "geokodiert": 20385,
+   "geokodiert": 20926,
    "gps": 4798,
    "uebertragen": 1412,
    "quelle": 1337

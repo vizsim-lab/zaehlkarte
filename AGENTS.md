@@ -33,6 +33,12 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   S/Q und die Kategorie-Namen statt fester Zellen. Prüfung: Summe Q = 2 × Summe S stimmt (auf 2 %
   genau) in 1.379 von 1.382 Blatthälften. Lage: `Zählstellen.csv` (UTM 32N), sonst
   Gauß-Krüger im Blatt.
+- **Moers** (`moers_radar`): Seitenradar (Impactor), eine Zeile je Fahrzeug
+  `TT.MM.JJ hh:mm:ss;00;Tempo;Länge;Spur`, je Messstelle eine Datei, je Jahr ein Datensatz auf
+  offenesdatenportal.de. Die Lage steht nur als Adresse im Namen der Ressource
+  („Eupener Straße gegenüber 26“, „Bruchstraße Ecke …“, „Orsoyer Allee an VZ 274“) ->
+  `werkzeuge/geokodiere_moers.py` (Nominatim, Overpass für Kreuzungen, Photon bei Tippfehlern).
+  Ein Gerät stand auf 2007 statt 2017.
 - **Münster PDF** (`muenster_pdf`): Ausdrucke derselben Excel-Vorlagen. Senkrechte Tabellen
   stehen gedreht im PDF – pdfplumber liest sie rückwärts („zfK“, „0301“), solange man die
   Zeichen nicht je Drehrichtung mit `char_dir_rotated="btt"` bzw. `"ttb"` zusammensetzt.

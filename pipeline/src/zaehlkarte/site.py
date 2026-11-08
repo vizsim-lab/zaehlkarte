@@ -106,7 +106,7 @@ def _lizenzen(q: dict) -> list[dict]:
             g = q["geokodierung"]
             out.append({"code": "lage", **{k: g.get(k) for k in felder[1:]}})
         return out
-    return [
+    out = [
         {
             "code": q["code"],
             "titel": q.get("titel") or f"Straßenverkehrszählungen {q['name']}",
@@ -116,6 +116,11 @@ def _lizenzen(q: dict) -> list[dict]:
             "herkunft_url": q.get("portal"),
         }
     ]
+    if "geokodierung" in q:
+        g = q["geokodierung"]
+        felder = ("titel", "herausgeber", "lizenz", "lizenz_url", "herkunft_url")
+        out.append({"code": "lage", **{k: g.get(k) for k in felder}})
+    return out
 
 
 FDS_SUCHE = "https://fragdenstaat.de/behoerden/?q="

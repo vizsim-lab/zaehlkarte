@@ -275,6 +275,36 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     6.64639,
+     51.44987
+    ]
+   },
+   "properties": {
+    "kommune": "Moers",
+    "land": "NW",
+    "stand": "in_karte",
+    "was": "Querschnittszählungen mit Seitenradar 2010–2022, je Fahrzeug, meist zwei Tage am Stück",
+    "links": [
+     {
+      "titel": "offenesdatenportal.de",
+      "url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": "moers",
+    "zaehlungen": 541,
+    "situation": "Die Stadt veröffentlicht ihre Messungen mit Seitenradar-Geräten offen (Datenlizenz Deutschland – Zero): je Messstelle eine Textdatei mit einer Zeile je Fahrzeug (Zeit, Geschwindigkeit, Länge, Fahrspur), meist zwei Tage am Stück. Die Lage steht nur als Adresse dabei; die Karte hat sie geokodiert.",
+    "empfehlung": "Keine Anfrage nötig. Manuelle Knoten- oder Radzählungen der Stadt sind nicht offen – wer sie braucht, fragt nach dem IFG NRW.",
+    "weg": "offen",
+    "kontakt": null,
+    "anfrage": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      6.4536,
      51.6588
     ]
