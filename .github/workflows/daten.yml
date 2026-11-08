@@ -39,7 +39,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- public/data; then
+          # Nur das Erzeugungsdatum im Manifest geändert -> kein PR
+          if git diff --quiet -- public/data ':(exclude)public/data/manifest.json'; then
             echo "Keine Änderung an den Kartendaten." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
