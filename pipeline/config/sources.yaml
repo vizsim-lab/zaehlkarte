@@ -218,9 +218,13 @@ datenlage:
     lon: 13.7373
     lat: 51.0504
     stand: kandidat
-    was: "nur Karten online. Die Stadt im November 2025: „Auf Anfrage werden … Verkehrsdaten aufgearbeitet und zur Verfügung gestellt.“"
+    was: >-
+      Zählt an Knotenpunkten (Abbiegeströme für die Ampelplanung) und im Nebennetz, meist per
+      Video oder Radar durch städtische Mitarbeitende; offen sind nur Mittelwerte der
+      Dauerzählstellen (Verkehrsmengenkarte). Laut Antwort auf die Anfrage AF0915/25 vom
+      18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.
     links:
-      - [Antwort AF0915/25, https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf]
+      - [Antwort AF0915/25 (18.11.2025), https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf]
   - kommune: München
     land: BY
     lon: 11.5820

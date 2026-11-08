@@ -6,7 +6,7 @@
   "details": "details/{n}.json",
   "datenlage": "datenlage.json"
  },
- "details_anzahl": 34,
+ "details_anzahl": 36,
  "gruppen": [
   {
    "id": "kfz",
@@ -74,22 +74,22 @@
      "herkunft_url": "https://github.com/vizsim/berlin-traffic-counts_schulwege"
     }
    ],
-   "stellen": 9919,
-   "zaehlungen": 25126,
-   "ohne_lage": 2968,
+   "stellen": 11212,
+   "zaehlungen": 26595,
+   "ohne_lage": 1499,
    "gruppen": {
-    "kfz": 15088,
-    "sv": 14662,
-    "rad": 17160,
-    "fuss": 5650,
-    "kind": 5617
+    "kfz": 16405,
+    "sv": 15755,
+    "rad": 17166,
+    "fuss": 5802,
+    "kind": 5618
    },
    "von": 1983,
    "bis": 2025,
    "lage": {
-    "uebertragen": 2884,
-    "geokodiert": 17444,
-    "gps": 4798
+    "geokodiert": 20385,
+    "gps": 4798,
+    "uebertragen": 1412
    }
   },
   {
@@ -264,22 +264,22 @@
   }
  ],
  "statistik": {
-  "stellen": 10026,
-  "zaehlungen": 25305,
-  "ohne_lage": 2968,
+  "stellen": 11319,
+  "zaehlungen": 26774,
+  "ohne_lage": 1499,
   "gruppen": {
-   "kfz": 15260,
-   "sv": 14834,
-   "rad": 17334,
-   "fuss": 5824,
-   "kind": 5617
+   "kfz": 16577,
+   "sv": 15927,
+   "rad": 17340,
+   "fuss": 5976,
+   "kind": 5618
   },
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "uebertragen": 2884,
-   "geokodiert": 17444,
+   "geokodiert": 20385,
    "gps": 4798,
+   "uebertragen": 1412,
    "quelle": 179
   }
  }
