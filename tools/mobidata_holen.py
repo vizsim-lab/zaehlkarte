@@ -43,7 +43,8 @@ def main(ziel: pathlib.Path) -> None:
     for q in ({"fq": "groups:verkehrszaehldaten"}, {"q": "Verkehrszählungen"}, {"q": "Zähldaten"}):
         try:
             for p in api("package_search", rows=200, **q)["results"]:
-                if "zaehl" in p["name"]:
+                print("gefunden:", p["name"])
+                if p["name"].startswith("zaehldaten-"):
                     namen.add(p["name"])
         except Exception as e:  # noqa: BLE001
             print("Suche", q, "fehlgeschlagen:", e)
@@ -85,7 +86,11 @@ def main(ziel: pathlib.Path) -> None:
                         if info.filename.lower().endswith(TABELLE):
                             pfad = ordner / "zip" / info.filename
                             pfad.parent.mkdir(parents=True, exist_ok=True)
-                            pfad.write_bytes(zf.read(info))
+                            try:
+                                pfad.write_bytes(zf.read(info))
+                            except Exception as e:  # noqa: BLE001
+                                inhalt[-1]["fehler"] = str(e)
+                                print("defekt:", info.filename, e)
                 eintrag["inhalt"] = inhalt
             elif not datei.lower().endswith(".pdf"):
                 (ordner / datei).write_bytes(daten)
