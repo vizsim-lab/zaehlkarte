@@ -1,0 +1,26 @@
+# Einmaliges Werkzeug für die Entwicklung: holt die MobiData-BW-Rohdaten und legt sie auf den
+# Branch `rohdaten-mobidata` (von dort liest die Entwicklungsumgebung, die mobidata-bw.de nicht
+# erreicht). Der reguläre Abruf läuft später über `zaehlkarte fetch` im Daten-Workflow.
+name: MobiData-Rohdaten holen
+on:
+  push:
+    branches: [werkzeug/mobidata]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  holen:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - run: python3 tools/mobidata_holen.py "$RUNNER_TEMP/rohdaten"
+      - name: Auf Branch rohdaten-mobidata legen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan rohdaten-mobidata
+          git rm -rf -q .
+          cp -r "$RUNNER_TEMP/rohdaten/." .
+          git add -A
+          git commit -q -m "MobiData-BW-Rohdaten ($(date -u +%F))"
+          git push -f origin rohdaten-mobidata
