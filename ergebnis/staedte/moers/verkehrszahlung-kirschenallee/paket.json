@@ -1,0 +1,91 @@
+{
+ "author": "Stadt Moers",
+ "author_email": "offenedaten@moers.de",
+ "creator_user_id": "c2c0f571-ee5f-4876-a0d7-3e375bf5f99b",
+ "id": "510894dc-9d64-4c40-9dff-8a4fd0f0d209",
+ "isopen": false,
+ "license_id": "dl-de-zero-2.0",
+ "license_title": " Datenlizenz Deutschland – Zero – Version 2.0",
+ "license_url": "https://www.govdata.de/dl-de/zero-2-0",
+ "maintainer": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung",
+ "maintainer_email": "verkehrsplanung@moers.de",
+ "metadata_created": "2015-10-08T12:46:41.391082",
+ "metadata_modified": "2026-10-20T17:48:38.804169",
+ "name": "verkehrszahlung-kirschenallee",
+ "notes": "Der Fachdienst 8.2 - Verkehr/ Straße führt regelmäßig Geschwindigkeitsmessungen auf öffentlichen Straßen im Stadtgebiet Moers durch. Für die Verkehrsmessungen wird ein Messgerät (Impactor der Firma Impact systems GmbH) verwendet, das sich in einem kleinen grauen Kasten befindet und unauffällig für die Verkehrsteilnehmer an Schilder- oder Laternenmasten befestigt wird. Das Messgerät kann durchgängig mehrtägige Zählungen und Geschwindigkeitsmessungen vornehmen, so dass sich die Verkehrssituation bewerten lässt.\r\n\r\nDas Messgerät führt die Messungen mittels Radar durch. Die Daten die aufgezeichnet werden sind:\r\n\r\nDatum, Uhrzeit, Platzhalter (00), Geschwindigkeit, Fahrzeuglänge und Fahrtrichtung\r\n\r\n17.12.14 07:19:30;00;024;01;0\r\n17.12.14 07:19:49;00;025;01;0\r\n17.12.14 07:20:42;00;024;01;1\r\n17.12.14 07:21:14;00;031;01;1\r\n17.12.14 07:22:19;00;025;01;0\r\n17.12.14 07:22:22;00;023;01;0\r\n17.12.14 07:23:16;00;028;01;0\r\n\r\nHier gibt es 2 Besonderheiten:\r\n\r\nÜber die Fahrzeuglänge im Messstrahl wird über ein gesondertes Programm die Unterscheidung zwischen Pkw und Lkw getroffen.\r\n\r\nMindestlänge Pkw 1 m\r\nMindestlänge Lkw 8 m\r\nMindestlänge Lastzüge 12 m\r\n\r\nBei der Fahrtrichtung wird die dem Messgerät am nächsten liegende Fahrspur zuerst genannt, die im Ascii-Format mit 0 und die gerätfernere Fahrspur mit 1 bezeichnet werden.\r\n\r\nDem jeweiligen Dateinamen (z.B. Landwehrstraße57_T30_15122014) sind der Straßenname, Haus-Nr., die dort zulässige Höchstgeschwindigkeit (T 30-30 km/h; T50-50 km/h usw.) und das Anfangsdatum der Messung zu entnehmen.",
+ "num_resources": 1,
+ "num_tags": 2,
+ "organization": {
+  "id": "20a7743d-057b-4e0e-a341-cf0adaf1502a",
+  "name": "moers",
+  "title": "Stadt Moers",
+  "type": "organization",
+  "description": "Hier finden Sie offene Daten aus verschiedenen Bereichen der Moerser Stadtverwaltung. Es handelt sich um \"offene\" Daten, weil die Stadt Moers die Datensätze zur freien Nutzung und in offenen, maschinenlesbaren Formaten bereitstellt. Wir folgen der Idee, die allgemein als __Open Data__ bezeichnet wird. Nach und nach werden wir den Bestand an offenen Daten erweitern. \r\n\r\nWeitere Infos über unser Projekt und Anwendungen, die aus den offenen Daten entstanden sind, finden Sie unter http://www.offenedaten.moers.de\r\n\r\nAuf Twitter versorgen wir Sie mit aktuellen Informationen zu den offenen Daten der Stadt Moers. Folgen Sie uns! https://twitter.com/OpenDataMoers\r\n\r\n##Kontakt\r\n\r\nE-Mail: offenedaten@moers.de\r\n\r\nStephan Bernoth: \r\n0 28 41 / 201-290 | stephan.bernoth@moers.de\r\n\r\nLea Gröger: \r\n0 28 41 /  201 - 298 | lea.groeger@moers.de\r\n",
+  "image_url": "https://img.moers.de/images/logo-stadt-moers.png",
+  "created": "2013-03-26T13:03:33.149641",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "20a7743d-057b-4e0e-a341-cf0adaf1502a",
+ "private": false,
+ "state": "active",
+ "title": "Verkehrszählungen 2010 (Stadt Moers)",
+ "type": "dataset",
+ "url": "http://www.offenedaten.moers.de",
+ "version": "v2015.1",
+ "groups": [
+  {
+   "description": "",
+   "display_name": "Transport und Verkehr",
+   "id": "76fde3fa-cef3-4c02-89e4-efe376a9cb6e",
+   "image_display_url": "",
+   "name": "transport-verkehr",
+   "title": "Transport und Verkehr"
+  }
+ ],
+ "resources": [
+  {
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2015-10-08T14:47:54.867574",
+   "datastore_active": false,
+   "datastore_contains_all_records_of_source_file": false,
+   "description": "Der Datensatz enthält die Daten zur Verkehrszählung Kirschenallee vom 08. bis 10.12.2010",
+   "format": "TXT",
+   "hash": "",
+   "id": "cab73363-8a64-4583-b815-98ee3c749e7c",
+   "last_modified": null,
+   "metadata_modified": "2026-10-20T17:48:38.809227",
+   "mimetype": "text/plain",
+   "mimetype_inner": null,
+   "name": "Verkehrszählung Kirschenallee",
+   "package_id": "510894dc-9d64-4c40-9dff-8a4fd0f0d209",
+   "position": 0,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "url": "https://www.offenesdatenportal.de/dataset/510894dc-9d64-4c40-9dff-8a4fd0f0d209/resource/cab73363-8a64-4583-b815-98ee3c749e7c/download/kirschenallee33t3028082014.txt",
+   "url_type": "upload"
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "Kirschenallee",
+   "id": "98540bbd-110e-413d-9492-c65201aaffbb",
+   "name": "Kirschenallee",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Verkehrszählung",
+   "id": "f0bff491-9842-4faa-bb1f-6c414b582bd6",
+   "name": "Verkehrszählung",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "extras": [],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}

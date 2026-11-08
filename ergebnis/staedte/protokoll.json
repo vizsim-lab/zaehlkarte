@@ -1,0 +1,666 @@
+{
+ "ergebnis/staedte/konstanz/package_show_id_mobile-verkehrsz-hlungen-rad-und-fu-verkehr.json": {
+  "url": "https://offenedaten-konstanz.de/api/3/action/package_show?id=mobile-verkehrsz-hlungen-rad-und-fu-verkehr",
+  "bytes": 17645
+ },
+ "ergebnis/staedte/konstanz/package_search_q_Verkehrsz_hlung_rows_50.json": {
+  "url": "https://offenedaten-konstanz.de/api/3/action/package_search?q=Verkehrsz%C3%A4hlung&rows=50",
+  "fehler": "<HTTPError 404: 'Not Found'>"
+ },
+ "ergebnis/staedte/konstanz/seite.html": {
+  "url": "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr",
+  "bytes": 70442
+ },
+ "ergebnis/staedte/konstanz/dateien/Schottenstrasse_2.csv": {
+  "url": "https://offenedaten-konstanz.de/sites/default/files/Schottenstrasse_2.csv",
+  "bytes": 134840
+ },
+ "ergebnis/staedte/konstanz/dateien/Alte_Rheinbruecke_1.csv": {
+  "url": "https://offenedaten-konstanz.de/sites/default/files/Alte_Rheinbruecke_1.csv",
+  "bytes": 100793
+ },
+ "ergebnis/staedte/konstanz/dateien/Gartenstra_e_Schottenstrasse_0.csv": {
+  "url": "https://offenedaten-konstanz.de/sites/default/files/Gartenstra%C3%9Fe_Schottenstrasse_0.csv",
+  "bytes": 112299
+ },
+ "ergebnis/staedte/konstanz/dateien/Jakobstrasse_suedlich_vom_Kreisverkehr_0.csv": {
+  "url": "https://offenedaten-konstanz.de/sites/default/files/Jakobstrasse_suedlich_vom_Kreisverkehr_0.csv",
+  "bytes": 96258
+ },
+ "ergebnis/staedte/konstanz/dateien/Theodor_Heuss_Strasse_0.csv": {
+  "url": "https://offenedaten-konstanz.de/sites/default/files/Theodor_Heuss_Strasse_0.csv",
+  "bytes": 171242
+ },
+ "ergebnis/staedte/konstanz/dateien/Z-Bruecke_1.csv": {
+  "url": "https://offenedaten-konstanz.de/sites/default/files/Z-Bruecke_1.csv",
+  "bytes": 512954
+ },
+ "ergebnis/staedte/konstanz/dateien/search.json_resource_id_b8f619a0-9049-4a3b-9597-fea0575614f0": {
+  "url": "http://offenedaten-konstanz.de/api/action/datastore/search.json?resource_id=b8f619a0-9049-4a3b-9597-fea0575614f0",
+  "bytes": 4727
+ },
+ "ergebnis/staedte/konstanz/dateien/search.json_resource_id_14b694ea-70b3-4d1c-8e18-846df5d6d6a8": {
+  "url": "http://offenedaten-konstanz.de/api/action/datastore/search.json?resource_id=14b694ea-70b3-4d1c-8e18-846df5d6d6a8",
+  "bytes": 3746
+ },
+ "ergebnis/staedte/konstanz/dateien/search.json_resource_id_9b162405-66e4-4b97-a2ba-b6feb79df1ad": {
+  "url": "http://offenedaten-konstanz.de/api/action/datastore/search.json?resource_id=9b162405-66e4-4b97-a2ba-b6feb79df1ad",
+  "bytes": 2175
+ },
+ "ergebnis/staedte/konstanz/dateien/search.json_resource_id_677d9afb-c43f-43ec-9def-3ee4e2a4511d": {
+  "url": "http://offenedaten-konstanz.de/api/action/datastore/search.json?resource_id=677d9afb-c43f-43ec-9def-3ee4e2a4511d",
+  "bytes": 2460
+ },
+ "ergebnis/staedte/konstanz/dateien/search.json_resource_id_aff836cd-e947-4c59-ad01-612c29264d27": {
+  "url": "http://offenedaten-konstanz.de/api/action/datastore/search.json?resource_id=aff836cd-e947-4c59-ad01-612c29264d27",
+  "bytes": 3282
+ },
+ "ergebnis/staedte/konstanz/dateien/search.json_resource_id_a69f795c-1e61-4c0c-8305-c9296ac48443": {
+  "url": "http://offenedaten-konstanz.de/api/action/datastore/search.json?resource_id=a69f795c-1e61-4c0c-8305-c9296ac48443",
+  "bytes": 3760
+ },
+ "ergebnis/staedte/moers/suche.json": {
+  "url": "https://www.offenesdatenportal.de/api/3/action/package_search?rows=100&q=Verkehrsz%C3%A4hlungen%20Moers",
+  "bytes": 177023
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2016/gleiwitzer-strasse-23t3026022016.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/2a60141c-cdd0-4c34-b34a-8559a0ba4591/download/gleiwitzer-strasse-23t3026022016.txt",
+  "bytes": 409408
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2016/hattropstrasse-ggu-26t3015022016.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/8ee76fbf-c09f-475c-8599-74c4fee298c5/download/hattropstrasse-ggu-26t3015022016.txt",
+  "bytes": 106208
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2016/kronprinzenstrasse-6b-8t3014092016.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/485cd1a1-628a-479a-bdb0-fd873a0dd4c8/download/kronprinzenstrasse-6b-8t3014092016.txt",
+  "bytes": 44224
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2016/niederfeldweg-3bt3028112016.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/14b41391-a232-4553-abae-d0f25023fbcc/download/niederfeldweg-3bt3028112016.txt",
+  "bytes": 116704
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2016/romerstrasse-415t3024102016.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/133e7d74-e521-4c55-9036-218ec91754eb/download/romerstrasse-415t3024102016.txt",
+  "bytes": 452864
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2016/stormstrasse-hohe-schulet3009112016.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d50a28fa-91ae-48d5-a7f8-69771f72e4df/resource/39a2de27-64a8-447a-9414-32cde29f07b8/download/stormstrasse-hohe-schulet3009112016.txt",
+  "bytes": 174080
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/friemersheimer-strasse-12t3002112015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/63de1005-8bee-40f4-b370-20276843b4d8/download/friemersheimer-strasse-12t3002112015.txt",
+  "bytes": 56800
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/galmeswegt5015012015.asc": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/1255772c-2c75-4aa7-960b-69bc2dacc764/download/galmeswegt5015012015.asc",
+  "bytes": 908512
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/gutenbergstrasset5016112015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/0a7e8efb-9ac0-4a15-b253-5a596be00eae/download/gutenbergstrasset5016112015.txt",
+  "bytes": 169952
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/hinter-dem-acker-70t3014092015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/6e1a67fa-2fa7-4b60-a534-03842e524b35/download/hinter-dem-acker-70t3014092015.txt",
+  "bytes": 74656
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/hochstrasse-28t3016112015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/b775527a-ea0d-4232-b05c-e45da0f3f2fc/download/hochstrasse-28t3016112015.txt",
+  "bytes": 99872
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/moerser-strasse-179t5009112015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/a1482186-cb02-4c5c-bca3-e2ed2d9b37fd/download/moerser-strasse-179t5009112015.txt",
+  "bytes": 328512
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/niephauser-strasse-102t3002112015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/08a915b5-2e1a-4a8f-8fc2-60799922f55d/download/niephauser-strasse-102t3002112015.txt",
+  "bytes": 31040
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/rheinhausener-strasse-38t5021092015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/2974fb40-9e20-4cab-8685-e9ae93070c07/download/rheinhausener-strasse-38t5021092015.txt",
+  "bytes": 150144
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/scherpenberger-strasse-10t3011112015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/14642abf-b0f6-4838-b055-2ada2612c4ea/download/scherpenberger-strasse-10t3011112015.txt",
+  "bytes": 125792
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/siegfriedstrasse-14t3010062015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/2e29096f-1852-4974-8fd2-9d4b9e7a81ad/download/siegfriedstrasse-14t3010062015.txt",
+  "bytes": 9504
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2015/trajanstrasse-17at3021102015.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f295e0ca-7c95-46c8-8c3b-10ec83565251/resource/e05f001f-6f16-41c6-a161-26628fc81d70/download/trajanstrasse-17at3021102015.txt",
+  "bytes": 44096
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-friedenstrabe/friedenstrasse5t3014052014.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8b366b4c-8877-4ce6-a82b-cbf0b816aa36/resource/a09362a8-2c5e-4150-900d-6f682a55adc8/download/friedenstrasse5t3014052014.txt",
+  "bytes": 122976
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-kirschenallee/kirschenallee33t3028082014.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/510894dc-9d64-4c40-9dff-8a4fd0f0d209/resource/cab73363-8a64-4583-b815-98ee3c749e7c/download/kirschenallee33t3028082014.txt",
+  "bytes": 80864
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/dorotheenstrasse5t3029022018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/74953441-ff8e-4cef-aa76-8a660ce3d210/download/dorotheenstrasse5t3029022018.txt",
+  "bytes": 178496
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/dorsterfeldstrasse24t3026022018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/28477907-8e28-44ac-bc05-d22e4ae8397f/download/dorsterfeldstrasse24t3026022018.txt",
+  "bytes": 37984
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/hochstrasse25t3020022018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/aab36758-e855-4344-aa5e-64d65431c2c2/download/hochstrasse25t3020022018.txt",
+  "bytes": 105920
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/karlstrasse89t3012022018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/410a3e4d-2340-4963-8bb2-b7876aefd128/download/karlstrasse89t3012022018.txt",
+  "bytes": 93888
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/ackerstrasse139t3004062018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/18ec815c-f8dd-4210-92a2-5d6f1b2f35fb/download/ackerstrasse139t3004062018.txt",
+  "bytes": 604576
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/blucherstrasse13t3011042018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/aa57c249-c5e7-4f0f-951c-54a59e44b098/download/blucherstrasse13t3011042018.txt",
+  "bytes": 160896
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/hattrop10t30130618.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/10fc5336-0570-41dd-96c2-aadaea61089b/download/hattrop10t30130618.txt",
+  "bytes": 74624
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/im-utforter-feld6t3029012018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/33a8bf9f-cf53-4532-b173-00a3607bfc61/download/im-utforter-feld6t3029012018.txt",
+  "bytes": 7072
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/jockenstrasse10t30160418.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/d52a9630-4141-403a-855f-1c1ae90d808a/download/jockenstrasse10t30160418.txt",
+  "bytes": 136928
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/kirchweg86ct5009042018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/ec828586-31ef-48c2-803a-b28a0c03677c/download/kirchweg86ct5009042018.txt",
+  "bytes": 246624
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/moselstrasse62t3010102018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/c0c0f264-1e5e-4fd5-afcf-5564f1567860/download/moselstrasse62t3010102018.txt",
+  "bytes": 603040
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/oderstrasse38t30280518.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/6531862b-83ac-40fb-b456-4a0ab7d63b15/download/oderstrasse38t30280518.txt",
+  "bytes": 215904
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/oderstrasse74t50280518.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/018b50e3-f21f-466e-ac7a-d81c33216d1b/download/oderstrasse74t50280518.txt",
+  "bytes": 136928
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/ringstrasse1t3016042018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/6c23d763-0f83-4d2c-8085-bf8ae14b9810/download/ringstrasse1t3016042018.txt",
+  "bytes": 13600
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/ringstrasse48t3024012018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/c40a2a66-4aa6-46d0-a507-b7ee376fd868/download/ringstrasse48t3024012018.txt",
+  "bytes": 85248
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/romerstrasse80t5008012018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/63d03111-7eeb-4848-9319-356ab2596c0e/download/romerstrasse80t5008012018.txt",
+  "bytes": 428992
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/romerstrasse273t5027062018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/75e723cb-c311-4ffe-baa4-4521c293c2cd/download/romerstrasse273t5027062018.txt",
+  "bytes": 604576
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/romerstrasse402t3011062018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/0531c1b5-a7fd-4b48-87ea-ec287c2d5cd4/download/romerstrasse402t3011062018.txt",
+  "bytes": 537792
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/roseggerstrasse22t3010102018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/873f88ae-b136-45d5-b900-399a47d35e2a/download/roseggerstrasse22t3010102018.txt",
+  "bytes": 23904
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/schillerstrasse-53t3008102018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/6ffc43e5-e256-466c-a33e-1ce7ac76d7c0/download/schillerstrasse-53t3008102018.txt",
+  "bytes": 73184
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/vinner-strasse34t3011.10.2018": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/afa7a3c4-3a04-469b-995b-ac19844802a6/download/vinner-strasse34t3011.10.2018",
+  "bytes": 185632
+ },
+ "ergebnis/staedte/moers/verkehrszahlungen-2018/zwickauer-strasse2t3025042018.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/811d0c5b-7d75-41db-bc49-d0ff1efdaa48/resource/3281f40e-61a8-47ad-84b7-6ea76a106641/download/zwickauer-strasse2t3025042018.txt",
+  "bytes": 341312
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/ackerstrasse40t3005112014.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/fe6c3ac4-caae-4583-bd1d-c1816a59340b/download/ackerstrasse40t3005112014.txt",
+  "bytes": 34496
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/aubruchsweg_2014.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/ff42e2c2-4367-4147-a8ef-437b127c487d/download/aubruchsweg_2014.txt",
+  "bytes": 57216
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/boschheideweg.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/d540785b-2f30-4f6b-91a1-3ce1b622e3ee/download/boschheideweg.txt",
+  "bytes": 22336
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/endstrasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/b2066266-4185-43f5-a5b9-f54cf9480519/download/endstrasse.txt",
+  "bytes": 87520
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/eupener_strasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/95cd1446-d284-4503-869c-0501f9632808/download/eupener_strasse.txt",
+  "bytes": 15488
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/kirchweg.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/f5ed7f33-3e40-4434-96ea-14d7b19ce04e/download/kirchweg.txt",
+  "bytes": 124224
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/landwehrstrasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/67569536-9866-46cf-936f-c83cb279bf75/download/landwehrstrasse.txt",
+  "bytes": 119296
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/pattbergstrasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/e81cc937-e984-4c50-9639-d84efd49af61/download/pattbergstrasse.txt",
+  "bytes": 81344
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/ruhrstrasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/e42e43e6-4ac6-49cd-800f-cb87392139fe/download/ruhrstrasse.txt",
+  "bytes": 57216
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/romerstrasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/12703b7d-270c-49f5-9272-e29d4d0889bf/download/romerstrasse.txt",
+  "bytes": 1349024
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/taubenstrasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/7f344fd8-5d8f-4c57-b25a-cecd1d137419/download/taubenstrasse.txt",
+  "bytes": 87520
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-ackerstrabe/vinner_strasse.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/f66488ce-50ea-47f8-be30-72d446b5d3bb/resource/ba636d3c-e201-4a33-87f1-2f3bb25b545e/download/vinner_strasse.txt",
+  "bytes": 85792
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/asberger-strasse_157_t30_25.09.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/49fbd4dd-673e-4029-86e0-c3bbc551dde9/download/asberger-strasse_157_t30_25.09.2019.txt",
+  "bytes": 248096
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/blucherstrasse_2b_t30_09.04.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/021a8be2-4c24-4d76-9060-3ba79c560b94/download/blucherstrasse_2b_t30_09.04.2019.txt",
+  "bytes": 456256
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/daheimstrasse_-9_t30__04.072019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/5aa379c4-87ba-4800-911b-f5e3fe105cb4/download/daheimstrasse_-9_t30__04.072019.txt",
+  "bytes": 58496
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/kirchweg_ggu.-14_t30_13.05.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/6f98891e-15d4-4706-b841-44b9853db169/download/kirchweg_ggu.-14_t30_13.05.2019.txt",
+  "bytes": 48608
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/liebrechtstrasse_61a_t30_30.06..2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/9880d0a2-1e14-4cc0-9a96-552822ce84e6/download/liebrechtstrasse_61a_t30_30.06..2019.txt",
+  "bytes": 48608
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/niederfeldweg_5b_t30_08.04.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/529d0e0e-324d-4bc2-9d84-b252856bd3e4/download/niederfeldweg_5b_t30_08.04.2019.txt",
+  "bytes": 269408
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/oderstrasse_38_t30_13.02.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/b87749d3-11ba-407f-94d7-585361605e74/download/oderstrasse_38_t30_13.02.2019.txt",
+  "bytes": 206816
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/romerstrasse_ggu.-826_t50_08.05.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/fabb9789-6857-4868-b99d-103621411ab6/download/romerstrasse_ggu.-826_t50_08.05.2019.txt",
+  "bytes": 112864
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/trajanstrasse_-17a_t30_13.03.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/a7beffb1-3ebc-4876-8569-5970c438d7d6/download/trajanstrasse_-17a_t30_13.03.2019.txt",
+  "bytes": 40640
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/trakehnenstrasse-hohe-nr.-13f_22.05.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/57d76453-ca05-49b3-a17b-98388904c9dc/download/trakehnenstrasse-hohe-nr.-13f_22.05.2019.txt",
+  "bytes": 107904
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/trakehnenstrasse_ggu.-13-f_t30_26.04.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/d7ad5dc3-e22f-403b-bd8c-fef84ee4491e/download/trakehnenstrasse_ggu.-13-f_t30_26.04.2019.txt",
+  "bytes": 27456
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2019/winkelhausener-strasse_9_t30_11.03.2019.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/ee3c058a-3048-4f45-ac59-b533d8c5997e/resource/ce9af6d0-81cc-44e5-95e5-807891a97854/download/winkelhausener-strasse_9_t30_11.03.2019.txt",
+  "bytes": 101600
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/cecilienstrasse-29t3016012017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/13f94157-d936-4820-9a42-0f459f8f0e07/download/cecilienstrasse-29t3016012017.txt",
+  "bytes": 80480
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/eichenstrasse-80t3011012017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/be88dee9-15c0-488a-963e-28b908188bbc/download/eichenstrasse-80t3011012017.txt",
+  "bytes": 39136
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/eichenstrasse-212t3009012017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/49a95bb4-065c-43d6-b6f5-08348ef55a5a/download/eichenstrasse-212t3009012017.txt",
+  "bytes": 99872
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/eupener-strasse-gegenuber-26t3023012017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/458bff73-2ec7-4cb8-847b-884a2c39e7e4/download/eupener-strasse-gegenuber-26t3023012017.txt",
+  "bytes": 29760
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/joachimstrasse-29t3018012017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/101c07e9-5bc5-4e8b-a43d-d2cb33e723be/download/joachimstrasse-29t3018012017.txt",
+  "bytes": 18048
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/kirschenallee117t30250117.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/948bb5c7-99ac-43b7-a3b3-ed93b9f13c16/download/kirschenallee117t30250117.txt",
+  "bytes": 277568
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/kornstrasse-4t30250117.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/7183dff9-8818-41ae-ab20-eabdd3bdf0bc/download/kornstrasse-4t30250117.txt",
+  "bytes": 380864
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/lindenstrasse-35t3023012017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/e6e20984-0ed3-4f2e-9c07-8662583b004d/download/lindenstrasse-35t3023012017.txt",
+  "bytes": 31584
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/westerbruchstrasse-zw.-brieger-und-franz-haniel-strasset5030012017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/a24f58ae-3443-4198-b198-d690855a1178/download/westerbruchstrasse-zw.-brieger-und-franz-haniel-strasset5030012017.txt",
+  "bytes": 338464
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/landwehrstrasse-63-75t3012062017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/0ae74230-de8b-4611-b6a6-b780bcf1c39b/download/landwehrstrasse-63-75t3012062017.txt",
+  "bytes": 179264
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/westerbruchstrasse-zw.-brieger-und-franz-": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/0ff45950-5912-46c4-9712-d85e9707278b/download/westerbruchstrasse-zw.-brieger-und-franz-",
+  "bytes": 338464
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/vinner-strasse5t3014092017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/88f903db-f6e3-4072-bad6-3c155bf30165/download/vinner-strasse5t3014092017.txt",
+  "bytes": 102208
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/trajanstrasse17at3020092017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/67443f27-5ee9-4518-8b71-2325916835d5/download/trajanstrasse17at3020092017.txt",
+  "bytes": 45664
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/romerstrasse-112b260617.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/0c008ebe-360b-42dc-aa17-d39527677a77/download/romerstrasse-112b260617.txt",
+  "bytes": 405120
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/moselstrasse33t3027112017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/a98e2653-e4d5-45fc-930e-c2135d9bbe5a/download/moselstrasse33t3027112017.txt",
+  "bytes": 236928
+ },
+ "ergebnis/staedte/moers/verkehrszaehlungen-2017/kirchweg-14t5021112017.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/74d9a3cf-961a-4505-80b6-9db4c4b87168/download/kirchweg-14t5021112017.txt",
+  "bytes": 77824
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/bahnhofstrasse-78_19.08.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/e0fb7ae2-c8f1-4040-8013-be89ddc03314/download/bahnhofstrasse-78_19.08.20.txt",
+  "bytes": 526019
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/baumstrasse_49_t30_06.11.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/dae44bda-ee48-4864-9432-7f18a26086a8/download/baumstrasse_49_t30_06.11.20.txt",
+  "bytes": 50531
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/bonifatiusstrasse_29_t30_28.08.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/fe05a677-1812-4420-ba28-6c3a6fbd02fd/download/bonifatiusstrasse_29_t30_28.08.20.txt",
+  "bytes": 15555
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/eicker-grund-hohe-gs_t30_20.11.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/9094237c-4482-46c6-a9e2-f9301f5046ba/download/eicker-grund-hohe-gs_t30_20.11.20.txt",
+  "bytes": 180288
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/frieda-nadig-strasse-hohe-hausnr.-32_04.03.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/4ee1821d-d8f0-4233-ae14-43bbca4ecd9f/download/frieda-nadig-strasse-hohe-hausnr.-32_04.03.20.txt",
+  "bytes": 6016
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/heideweg_72_t30_08.06.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/fa39cf09-876a-45d9-a12f-c685b3c05820/download/heideweg_72_t30_08.06.20.txt",
+  "bytes": 85472
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/hochemmerischer-strasse_175_t30_28.10.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/1048ff99-6812-45a4-9f7b-ccb0e555fb3d/download/hochemmerischer-strasse_175_t30_28.10.20.txt",
+  "bytes": 17248
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/hombergerer-strasse_375_t50_11.11.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/b7f316b2-1414-481e-adf0-d210b64746fe/download/hombergerer-strasse_375_t50_11.11.20.txt",
+  "bytes": 513408
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/hombergerer-strasse_405_t50_11.11.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/03830220-b8ac-4f91-a31e-f276dbd75c26/download/hombergerer-strasse_405_t50_11.11.20.txt",
+  "bytes": 393568
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/kirchweg_62_t30_02.06.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/ba1ae787-cac6-4a39-a912-3da6103b96f7/download/kirchweg_62_t30_02.06.20.txt",
+  "bytes": 178592
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/kirchweg_ggu.-14_t30_08.06.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/f925ef81-cb93-49f7-9697-327edb3ed13d/download/kirchweg_ggu.-14_t30_08.06.20.txt",
+  "bytes": 120608
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/laonglingsweg_41_t50_02.06.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/e5dcb683-b320-4efb-84b0-833d79c31aaf/download/laonglingsweg_41_t50_02.06.20.txt",
+  "bytes": 391968
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/niephauser-strasse_20_t30_05.11.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/ee117d61-647d-4b81-8c39-de012ca69580/download/niephauser-strasse_20_t30_05.11.20.txt",
+  "bytes": 24352
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/nussbaumweg_89_vb_26.08.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/3f41589c-df08-42d6-924c-d71139661375/download/nussbaumweg_89_vb_26.08.20.txt",
+  "bytes": 5856
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/obere-birk_17_t30_01.07.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/6fb277d4-714c-4814-9d79-3e7bc76f4501/download/obere-birk_17_t30_01.07.20.txt",
+  "bytes": 37952
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/rathausallee_hohe-pusenweg._08.06.-bis-14.06.2020.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/a0fecbe7-afc2-4dc9-a80b-1b8b8c4226c8/download/rathausallee_hohe-pusenweg._08.06.-bis-14.06.2020.txt",
+  "bytes": 1449344
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/stormstrasse_73_t30_02.12.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/38d78234-2b72-41fe-9ccd-06cec3ef3fa0/download/stormstrasse_73_t30_02.12.20.txt",
+  "bytes": 200832
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/taubenstrasse_83_t30_30.07.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/5eecbf0d-f224-4da0-b5b0-5e1a7c7a337b/download/taubenstrasse_83_t30_30.07.20.txt",
+  "bytes": 40416
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/treibweg_18_t30_28.08.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/a6a8c566-a836-4910-94eb-1533185dba9f/download/treibweg_18_t30_28.08.20.txt",
+  "bytes": 15552
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/waldstrasse_153_t30_09.12.20.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/7b4d6d4a-8615-4d68-b3fa-96e51344c0f1/download/waldstrasse_153_t30_09.12.20.txt",
+  "bytes": 191680
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2020/wiesenstrasse_32_t30_18.12.11.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/8c63b8f0-71eb-41ef-97f8-e35eb7c22686/resource/1ee53f35-dbde-4e96-8c86-a613cd7049f0/download/wiesenstrasse_32_t30_18.12.11.txt",
+  "bytes": 126816
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/ackerstrasse-ggu.-178_t30_11.06.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/6ad38901-5c0b-4f81-92c3-f6f69e634f9d/download/ackerstrasse-ggu.-178_t30_11.06.2021.txt",
+  "bytes": 17728
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/ackerstrasse-nach-165-2.laterne_t30_11.06.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4bcf5776-2fa3-48c9-970f-b2428b583475/download/ackerstrasse-nach-165-2.laterne_t30_11.06.2021.txt",
+  "bytes": 29600
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/asberger-strasse-129_01.10.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/f27ba289-a8cd-498b-b371-bf892a1843dc/download/asberger-strasse-129_01.10.2021.txt",
+  "bytes": 317376
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/asternstrasse-11_t30_19.02.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/361232c2-d96d-4536-8d9a-62b766f45113/download/asternstrasse-11_t30_19.02.2021.txt",
+  "bytes": 87520
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/bismarckstrasse-43_t50_26.07.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b8b99242-3a78-49fb-8179-b1d7d3b8f577/download/bismarckstrasse-43_t50_26.07.2021.txt",
+  "bytes": 876288
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/bismarckstrasse-99_t50_19.07.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cffdcb51-ac16-4b44-9e1e-16493de1bb33/download/bismarckstrasse-99_t50_19.07.2021.txt",
+  "bytes": 754656
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/bonifatiusstrasse_53_t30_06.10.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/8494f4f2-1acd-46dc-9ac0-50b4ebbdd0b7/download/bonifatiusstrasse_53_t30_06.10.2021.txt",
+  "bytes": 115520
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/bonifatiusstrasse53_t30_25.05.2022.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5019fe45-5fd4-431a-884c-7e11928d5dbc/download/bonifatiusstrasse53_t30_25.05.2022.txt",
+  "bytes": 123392
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/bruchstrasse-66f_t30_02.07.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cdba79c3-12af-4290-be71-178a07427cd6/download/bruchstrasse-66f_t30_02.07.2021.txt",
+  "bytes": 21888
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/bruchstrasse-ecke-max-beckmann-strasse_t30_09.06.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fb93869a-60aa-4bdf-8515-15ad649b064e/download/bruchstrasse-ecke-max-beckmann-strasse_t30_09.06.2021.txt",
+  "bytes": 9280
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/buchenweg-laterne-an-grundstuck-43_vb_02.06.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a2657493-7be3-48c6-94f7-74547f45c665/download/buchenweg-laterne-an-grundstuck-43_vb_02.06.2021.txt",
+  "bytes": 36992
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/dietrichstrasse-27_t30_08.11.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7a80cf37-ca6f-49bb-99b2-2d2108bed712/download/dietrichstrasse-27_t30_08.11.2021.txt",
+  "bytes": 15776
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/dietrichstrasse-27_t30_29.11.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/eab74664-ddb7-4e78-ab40-59eb8184e0e4/download/dietrichstrasse-27_t30_29.11.2021.txt",
+  "bytes": 36800
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/drususstrasse-16_t30_15.01.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/9c939220-34df-4e08-8d18-863da01166eb/download/drususstrasse-16_t30_15.01.2021.txt",
+  "bytes": 42144
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/erlenweg-9_vb_24.02.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/81e34600-37fd-42d7-bbc5-f268bc49f03a/download/erlenweg-9_vb_24.02.2021.txt",
+  "bytes": 9408
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/essenberger-strasse-125_t50_05.11.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/1d455611-31f9-4cea-be28-4a801d589305/download/essenberger-strasse-125_t50_05.11.2021.txt",
+  "bytes": 437504
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/essenberger-strasse-ggu.-96_t50_29.09.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b5aa9dd5-5c7c-4ee3-aeb4-34083ec0aae2/download/essenberger-strasse-ggu.-96_t50_29.09.2021.txt",
+  "bytes": 355840
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/essenberger-strasse-kv-bergstrasse-144_t50_17.11.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/180ca488-0a7d-4d14-8282-2d6f2b2eeb45/download/essenberger-strasse-kv-bergstrasse-144_t50_17.11.2021.txt",
+  "bytes": 328576
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/essenbergerstrasse-129_t50_27.09.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/c87ec98c-8943-47bd-a2c9-2505f3c96dee/download/essenbergerstrasse-129_t50_27.09.2021.txt",
+  "bytes": 796736
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/frienersheimer-strasse-12_t30_24.09.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/3dd0745b-c2b1-4ca4-bc86-7808374b53f2/download/frienersheimer-strasse-12_t30_24.09.2021.txt",
+  "bytes": 130816
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/gallierring-32_vb_03.09.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/aa87e9cc-7eb4-4e38-a5d5-5e47379215c9/download/gallierring-32_vb_03.09.2021.txt",
+  "bytes": 2528
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/galmesweg-27_t30_03.03.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2288161e-e55e-41f7-a06c-8bc73f36fb9a/download/galmesweg-27_t30_03.03.2021.txt",
+  "bytes": 175936
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/geldernsche-strasse-hohe-friedhof_t30_22.12.21.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ff3e1a13-1c89-44f7-b8b4-40a4f75fc0b7/download/geldernsche-strasse-hohe-friedhof_t30_22.12.21.txt",
+  "bytes": 87232
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/herderstrasse-4_t30_10.12.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/edcaf64e-f6e5-4171-8d9d-fd2f1cdeb2d3/download/herderstrasse-4_t30_10.12.2021.txt",
+  "bytes": 88160
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/holderbergerstrasse-54_t50_56_t50_25.03.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2cf17482-8b43-4f13-9073-9351ce0b6453/download/holderbergerstrasse-54_t50_56_t50_25.03.2021.txt",
+  "bytes": 417632
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/humboldstrasse-19_t50_08.12.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/d7aff716-ca2d-4ec8-bdbb-f40504501302/download/humboldstrasse-19_t50_08.12.2021.txt",
+  "bytes": 259520
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/jockenstrasse-27_vb_08.09.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/65f51368-0d5e-431b-9f64-5fbf3076af63/download/jockenstrasse-27_vb_08.09.2021.txt",
+  "bytes": 5184
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/jupiterweg-4_vb_16.06.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/96320d01-715b-44c2-8eb2-0ff525177f42/download/jupiterweg-4_vb_16.06.2021.txt",
+  "bytes": 24352
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/kornstrasse_t30_19.02.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a670b574-966c-4b3a-81ac-b53e81084b00/download/kornstrasse_t30_19.02.2021.txt",
+  "bytes": 152672
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/kressenstrasse-13_vb_01.07.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7fbc6488-972c-4d7e-a0f7-fc0f52f5556e/download/kressenstrasse-13_vb_01.07.2021.txt",
+  "bytes": 40256
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/langlingsweg-41-c_t50_27.08.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a9f284fa-636c-46db-8b47-c9269de7bf00/download/langlingsweg-41-c_t50_27.08.2021.txt",
+  "bytes": 377088
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/langlingsweg-ggu.-78_t50_10.09.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/34552d1e-8324-4ebe-a82a-f456db10f2dd/download/langlingsweg-ggu.-78_t50_10.09.2021.txt",
+  "bytes": 140640
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/langlingsweg-zufahrt-parkplatz_t10_16.06.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/835cde6f-17c5-456f-bf94-f9b0df5ef14d/download/langlingsweg-zufahrt-parkplatz_t10_16.06.2021.txt",
+  "bytes": 40288
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/langlingsweg_75_t20_01.09.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/46dbe24a-e8ce-4e76-9592-c853779fbd64/download/langlingsweg_75_t20_01.09.2021.txt",
+  "bytes": 98496
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/liebrechtstrasse-ggu.-27_vb_19.05.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4fa9feb3-41fd-4e62-a683-0aa6176986a4/download/liebrechtstrasse-ggu.-27_vb_19.05.2021.txt",
+  "bytes": 6816
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/mercatorstrasse_7_t30_16.12.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ce250b9d-5ab9-4cd6-9e29-d548a9db0e15/download/mercatorstrasse_7_t30_16.12.2021.txt",
+  "bytes": 15840
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/mercatorstrasse_t30_16.12.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e33e7d-fde1-4023-ad84-403a5a7d7c0d/download/mercatorstrasse_t30_16.12.2021.txt",
+  "bytes": 26816
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/moerser-strasse-ecke-bruchstrasse_t50_09.06.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/80e11e31-eed2-4ed5-8bd9-bdab7f425e00/download/moerser-strasse-ecke-bruchstrasse_t50_09.06.2021.txt",
+  "bytes": 255904
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/oderstrasse-74_t50_22.092021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7444c421-5ace-4c17-acd4-3d1a594c8b0a/download/oderstrasse-74_t50_22.092021.txt",
+  "bytes": 352704
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/oderstrasse-88_t50_17.11.21.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/454bfd69-5659-4fbd-a389-a55198d08279/download/oderstrasse-88_t50_17.11.21.txt",
+  "bytes": 162848
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/orsoyer-allee-37b_t30_15.11.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5529076e-5150-4c52-9314-48a68bfe9979/download/orsoyer-allee-37b_t30_15.11.2021.txt",
+  "bytes": 70048
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/orsoyer-allee-an-vz-274_t30_15.11.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e909eb-1852-4ee5-8253-c44a8a1e1021/download/orsoyer-allee-an-vz-274_t30_15.11.2021.txt",
+  "bytes": 45440
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/rheinbergerstrasse_6_t30_04.08.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/18a6fc08-93db-4254-8bbd-808faf0c0f2c/download/rheinbergerstrasse_6_t30_04.08.2021.txt",
+  "bytes": 510016
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/robinienweg-32_vb_28.05.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/54cb225d-c786-4a67-98dc-10f339845be6/download/robinienweg-32_vb_28.05.2021.txt",
+  "bytes": 3424
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/siedweg-ggu.-30_t30_17.03.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/979609be-46f5-45de-a3a9-8e1cd709ec61/download/siedweg-ggu.-30_t30_17.03.2021.txt",
+  "bytes": 35072
+ },
+ "ergebnis/staedte/moers/verkehrszahlung-in-moers-2021/vereinsstrasse-6_t30_13.01.2021.txt": {
+  "url": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fcd3e481-ab60-4789-a772-fbb761de593f/download/vereinsstrasse-6_t30_13.01.2021.txt",
+  "bytes": 6624
+ },
+ "ergebnis/staedte/potsdam/export.json": {
+  "url": "https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets/verkehrszahlungen/exports/json",
+  "bytes": 183490
+ },
+ "ergebnis/staedte/potsdam/meta.json": {
+  "url": "https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets/verkehrszahlungen",
+  "bytes": 5572
+ }
+}
