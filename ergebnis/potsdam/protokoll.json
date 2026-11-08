@@ -1,2352 +1,1815 @@
 {
- "nutzung.html": "ok",
- "nutzung2.html": "ok",
- "info.html": "ok",
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1851.zip": [
-  [
+ "nutzung_lhp": [
+  "https://opendata.potsdam.de/terms/terms-of-use/",
+  "https://opendata.potsdam.de/terms/terms-and-conditions/",
+  "https://opendata.potsdam.de/css/front-angular.css?49",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/stylesheet/49.css",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/logo?tstamp=149020252634"
+ ],
+ "nutzung_ods": [
+  "https://potsdam.opendatasoft.com/terms/terms-of-use/",
+  "https://mpc.huwise.com/track/?verbose=1&ip=0&_=1794174904595",
+  "https://potsdam.opendatasoft.com/terms/terms-and-conditions/",
+  "https://potsdam.opendatasoft.com/css/front-angular.css?49",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/stylesheet/49.css",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/logo?tstamp=149020252634"
+ ],
+ "bedingungen": [
+  "https://opendata.potsdam.de/terms/terms-and-conditions/",
+  "https://mpc.huwise.com/track/?verbose=1&ip=0&_=1794174911289",
+  "https://opendata.potsdam.de/css/front-angular.css?49",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/stylesheet/49.css",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/logo?tstamp=149020252634",
+  "https://mpc.huwise.com/track/?verbose=1&ip=0&_=1794174911776",
+  "https://mpc.huwise.com/track/?verbose=1&ip=0&_=1794174911985"
+ ],
+ "datensatz": [
+  "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/information/",
+  "https://opendata.potsdam.de/explore/assets/verkehrszahlungen/",
+  "https://opendata.potsdam.de/css/front-react.css?49",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/stylesheet/49.css",
+  "https://s3-eu-central-1.amazonaws.com/aws-ec2-eu-central-1-opendatasoft-staticfileset/potsdam/logo?tstamp=149020252634",
+  "https://opendata.potsdam.de/api/explore/v2.1/catalog/assets/verkehrszahlungen?lang=de&include_schema=false&include_app_metas=true",
+  "https://opendata.potsdam.de/api/portal/v1.0/glossary?include_description=false",
+  "https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets/verkehrszahlungen/attachments/",
+  "https://opendata.potsdam.de/api/explore/v2.1/catalog/metadata_templates/basic?lang=de",
+  "https://opendata.potsdam.de/api/explore/v2.1/catalog/metadata_templates/interop?lang=de",
+  "https://opendata.potsdam.de/api/portal/v1.0/related_assets/usages/verkehrszahlungen?relation_type=use&relation_type=sameAs&relation_type=private_federation&relation_type=odsurl_federation&relation_type=join&relation_type=provided_join&limit=9&offset=0&order_by=updated_at%20DESC",
+  "https://opendata.potsdam.de/api/portal/v1.0/related_assets/sources/verkehrszahlungen?relation_type=use&relation_type=sameAs&relation_type=private_federation&relation_type=odsurl_federation&relation_type=join&relation_type=provided_join&limit=9&offset=0&order_by=updated_at%20DESC",
+  "https://opendata.potsdam.de/api/explore/v2.1/catalog/assets/?include_app_metas=true&lang=de&limit=4&order_by=asset_similarity%28%22verkehrszahlungen%22%29&where=%28not%28slug%3D%22verkehrszahlungen%22%29%29+AND+%28is_excluded_from_catalog%3Dfalse+or+is_excluded_from_catalog+is+null%29",
+  "https://opendata.potsdam.de/picto/mingcute:coin_2_line.svg/?color=%23CE0037",
+  "https://opendata.potsdam.de/picto/v3:administration.svg/?color=%23162583",
+  "https://opendata.potsdam.de/picto/v3:bus.svg/?color=%23162583",
+  "https://opendata.potsdam.de/rw/vaf/events",
+  "https://mpc.huwise.com/track/?verbose=1&ip=0&_=1794174923583"
+ ],
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1851.zip": {
+  "bytes": 542194,
+  "sha256": "ccfbe115a670967c96c35a450b7d3ffa6f5bdead29c014514a72703e8f63a296",
+  "dateien": [
    "Alleestr_Eisenhartstr_2013.pdf",
-   119575
-  ],
-  [
    "Alleestr_Eisenhartstr_2014.pdf",
-   70886
-  ],
-  [
-   "Alleestr_Eisenhartstr_2018.pdf",
-   482980
+   "Alleestr_Eisenhartstr_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6630.zip": [
-  [
-   "Alt_Nowawes_Grenzstr_2013.pdf",
-   54667
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6630.zip": {
+  "bytes": 47020,
+  "sha256": "4b44663dfc2096257017117971723e79b3ee62101053b2489a5693ecfc71b735",
+  "dateien": [
+   "Alt_Nowawes_Grenzstr_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8250.zip": [
-  [
-   "Am_Buchhorst_A-Scheunert-Allee_2017.pdf",
-   55549
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8250.zip": {
+  "bytes": 48033,
+  "sha256": "6cfe2e9be91055f36ad2df1a9680bd7a94c811733f0cd4980f5fa6a4d8aa4749",
+  "dateien": [
+   "Am_Buchhorst_A-Scheunert-Allee_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1300.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1300.zip": {
+  "bytes": 86852,
+  "sha256": "d3946e23fb959c7f7287b30b98cbe51607940f59a76539d4d13d143a41e11118",
+  "dateien": [
    "Am_Kanal_Französische_Str_2011.pdf",
-   46989
-  ],
-  [
-   "Am_Kanal_Französische_Str_2017.pdf",
-   53992
+   "Am_Kanal_Französische_Str_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1240.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1240.zip": {
+  "bytes": 94683,
+  "sha256": "c9586473beaa56775a097852d973e3ce9481f8986efdf968486ad956f8674df9",
+  "dateien": [
    "Am_Kanal_Platz_der_Einheit-Ost_2010_6h.pdf",
-   17061
-  ],
-  [
    "Am_Kanal_Platz_der_Einheit-Ost_2013.pdf",
-   50351
-  ],
-  [
-   "Am_Kanal_Platz_der_Einheit-Ost_2016.pdf",
-   48914
+   "Am_Kanal_Platz_der_Einheit-Ost_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1850.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1850.zip": {
+  "bytes": 128415,
+  "sha256": "8b65c9575641a764866ccce5dd140507e5f31bc1f8f6047845b62c3d2bd55ee3",
+  "dateien": [
    "Am_Neuen_Garten_Alleestr_2013.pdf",
-   47085
-  ],
-  [
    "Am_Neuen_Garten_Alleestr_2014.pdf",
-   50681
-  ],
-  [
-   "Am_Neuen_Garten_Alleestr_2018.pdf",
-   51347
+   "Am_Neuen_Garten_Alleestr_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1860.zip": [
-  [
-   "Am_Neuen_Garten_Gr_Weinmeisterstr_2014.pdf",
-   51871
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1860.zip": {
+  "bytes": 44791,
+  "sha256": "91762c44d2f7cc7789034e5ef02ab0461d743f98c7960f2d26ab271cefa07fd5",
+  "dateien": [
+   "Am_Neuen_Garten_Gr_Weinmeisterstr_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2802.zip": [
-  [
-   "2802/Am_Wiesenrand_Am_Kirchberg_2019.pdf",
-   130031
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2802.zip": {
+  "bytes": 123537,
+  "sha256": "23f566287fac238dbffb1b65b4d07b4ad33e5cd9dca5ad9067bc8a4be24468ad",
+  "dateien": [
+   "2802/Am_Wiesenrand_Am_Kirchberg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2805.zip": [
-  [
-   "Am_Wiesenrand_Am_Lehnitzsee_2019.pdf",
-   51730
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2805.zip": {
+  "bytes": 43774,
+  "sha256": "23abfb9f1002196685926bac82151516d009ee342790690a48de0f5eaf87dc21",
+  "dateien": [
+   "Am_Wiesenrand_Am_Lehnitzsee_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2804.zip": [
-  [
-   "Am_Wiesenrand_Am_Rehweg_2019.pdf",
-   53317
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2804.zip": {
+  "bytes": 46124,
+  "sha256": "d8905f44162e6b15c6f35981a29287ce95dfb6e44f31f4c20b0b78b95a4a047b",
+  "dateien": [
+   "Am_Wiesenrand_Am_Rehweg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2801.zip": [
-  [
-   "Am Wiesenrand_Am Stinthorn_2019.pdf",
-   51720
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2801.zip": {
+  "bytes": 44311,
+  "sha256": "5dc82dbecae01d1664906682128b38dec970d0ed5c0b6684244ab4806a2ffb0a",
+  "dateien": [
+   "Am Wiesenrand_Am Stinthorn_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2800.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2800.zip": {
+  "bytes": 647327,
+  "sha256": "fd79a3cb24139151775fb4e3ed6923c113be496776763b9f62af49fff1c2849a",
+  "dateien": [
    "2800/Am_Wiesenrand(B2)_Gellertstr_2010.pdf",
-   50534
-  ],
-  [
    "2800/Am_Wiesenrand(B2)_Gellertstr_2011_KordonZ.pdf",
-   195015
-  ],
-  [
    "2800/Am_Wiesenrand(B2)_Gellertstr_2011KordonZ.pdf",
-   195015
-  ],
-  [
    "2800/Am_Wiesenrand(B2)_Gellertstr_2013.pdf",
-   51019
-  ],
-  [
    "2800/Am_Wiesenrand(B2)_Gellertstr_2018.pdf",
-   56784
-  ],
-  [
-   "2800/Am-Wiesenrand(B2)_Gellertstr_2023.pdf",
-   151406
+   "2800/Am-Wiesenrand(B2)_Gellertstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2803.zip": [
-  [
-   "2803/Am Wiesenrand_H-Heine-Weg_2019.pdf",
-   134621
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2803.zip": {
+  "bytes": 128917,
+  "sha256": "d4e13d3870bc884bb7f15073b53e2a67ac9b53b961d0280abe8384f4e310751a",
+  "dateien": [
+   "2803/Am Wiesenrand_H-Heine-Weg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2310.zip": [
-  [
-   "Amundsenstr_Am_Golfplatz_2017.pdf",
-   63809
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2310.zip": {
+  "bytes": 55703,
+  "sha256": "ea19be5c3cc3c6fa93ba7ea2360c59015074e9a0f5e3781f232a29c0a59e94fd",
+  "dateien": [
+   "Amundsenstr_Am_Golfplatz_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2450.zip": [
-  [
-   "AS_Leest_Potsdamer_Str_(O)_2017.pdf",
-   55003
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2450.zip": {
+  "bytes": 47168,
+  "sha256": "36706f2e98eb2857585d4dd7b4a58a21d6ef218e67fc79e3f1eeac9735937be4",
+  "dateien": [
+   "AS_Leest_Potsdamer_Str_(O)_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2460.zip": [
-  [
-   "AS_Leest_Potsdamer_Str_(W)_2017.pdf",
-   56345
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2460.zip": {
+  "bytes": 47126,
+  "sha256": "c97cb78a42651415b1e1b1b30d753df824d84c34cf3fecf0b619cd1279ee54cb",
+  "dateien": [
+   "AS_Leest_Potsdamer_Str_(W)_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6840.zip": [
-  [
-   "A-Bebel-Str_M-Dietrich-Allee_2013.pdf",
-   51886
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6840.zip": {
+  "bytes": 44706,
+  "sha256": "c172f0370aab721496a72d43430aadc979997cfb3939a38876f647bb492b0955",
+  "dateien": [
+   "A-Bebel-Str_M-Dietrich-Allee_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6860.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6860.zip": {
+  "bytes": 71322,
+  "sha256": "b0f26b858b15766d053d5802b4c62309b326b0a76e0bcbcd1def24b85d1b8052",
+  "dateien": [
    "A-Bebel-Str_Prof-Dr-Helmert-Str_2010_6h.pdf",
-   30916
-  ],
-  [
-   "A-Bebel-Str_Prof-Dr-Helmert-Str_2018.pdf",
-   52002
+   "A-Bebel-Str_Prof-Dr-Helmert-Str_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4050.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4050.zip": {
+  "bytes": 159225,
+  "sha256": "f5fcfafdc152adf9fd3032b3fd3db642327f629d97a223f1578b44711cfe6d18",
+  "dateien": [
    "Babelsberger_Str_F-List-Str_2011.pdf",
-   38549
-  ],
-  [
    "Babelsberger_Str_F-List-Str_2013.pdf",
-   52746
-  ],
-  [
    "Babelsberger_Str_F-List-Str_2015.pdf",
-   48828
-  ],
-  [
-   "Babelsberger_Str_F-List-Str_2017.pdf",
-   46612
+   "Babelsberger_Str_F-List-Str_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1820.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1820.zip": {
+  "bytes": 78002,
+  "sha256": "49e5ed9834f5f4f50fd6e8352af2eb656ff95a3c9e391299d265b8baf2aa95be",
+  "dateien": [
    "Behlertstr_Am_Neuen_Garten_2010.pdf",
-   43436
-  ],
-  [
-   "Behlertstr_Am_Neuen_Garten_2015.pdf",
-   48144
+   "Behlertstr_Am_Neuen_Garten_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1840.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1840.zip": {
+  "bytes": 82822,
+  "sha256": "a9f84f2e2fc50f7c48f5d511920b96aab829139f449b4b99cba6bc61ede5ff4b",
+  "dateien": [
    "Behlertstr_F-Ebert-Str_2012.pdf",
-   44949
-  ],
-  [
-   "Behlertstr_F-Ebert-Str_2016.pdf",
-   51291
+   "Behlertstr_F-Ebert-Str_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1810.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1810.zip": {
+  "bytes": 271329,
+  "sha256": "d821fe9ebb3855ae9e488c28d8b45658415862940e26dbbb0725f1eb66300cf3",
+  "dateien": [
    "1810/Behlertstr_Kurfürstenstr_2011.pdf",
-   71080
-  ],
-  [
    "1810/Behlertstr_Kurfürstenstr_2014.pdf",
-   49692
-  ],
-  [
    "1810/Behlertstr_Kurfürstenstr_2017.pdf",
-   53753
-  ],
-  [
-   "1810/Behlertstr_Kurfürstenstr_2023.pdf",
-   147454
+   "1810/Behlertstr_Kurfürstenstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1350.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1350.zip": {
+  "bytes": 111975,
+  "sha256": "3616008520c89db7c1fedb70f323fb70eb8c83293f23d5e5ab8ede396b412cf2",
+  "dateien": [
    "Berliner_Str_Am_Kanal_2010_6h.pdf",
-   29567
-  ],
-  [
    "Berliner_Str_Am_Kanal_2015.pdf",
-   51384
-  ],
-  [
-   "Berliner_Str_Am_Kanal_2019.pdf",
-   51421
+   "Berliner_Str_Am_Kanal_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1800.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1800.zip": {
+  "bytes": 445601,
+  "sha256": "a908e7d8f2967f32a696aa0dbf7d0a5fb0384bfa511d7e6c5c92abcad6153885",
+  "dateien": [
    "1800/Berliner_Str_Behlertstr_2010.pdf",
-   37638
-  ],
-  [
    "1800/Berliner_Str_Behlertstr_2011.pdf",
-   54321
-  ],
-  [
    "1800/Berliner_Str_Behlertstr_2012.pdf",
-   37300
-  ],
-  [
    "1800/Berliner_Str_Behlertstr_2014.pdf",
-   54116
-  ],
-  [
    "1800/Berliner_Str_Behlertstr_2015.pdf",
-   57398
-  ],
-  [
    "1800/Berliner_Str_Behlertstr_2016.pdf",
-   57122
-  ],
-  [
    "1800/Berliner_Str_Behlertstr_2019.pdf",
-   57990
-  ],
-  [
-   "1800/Berliner_Str_Behlertstr_2023.pdf",
-   152560
+   "1800/Berliner_Str_Behlertstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1360.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1360.zip": {
+  "bytes": 122538,
+  "sha256": "abb69caac02d62d9a433097a74a879048980778b25afc3c4b0511a56a5e6fe4f",
+  "dateien": [
    "Berliner_Str_Charlottenstr_2010_6h.pdf",
-   31930
-  ],
-  [
    "Berliner_Str_Charlottenstr_2015.pdf",
-   56307
-  ],
-  [
-   "Berliner_Str_Charlottenstr_2019.pdf",
-   57310
+   "Berliner_Str_Charlottenstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1920.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1920.zip": {
+  "bytes": 166869,
+  "sha256": "514ae0136145ddaae939197178a44db2aa9be2533464682d4e3d1487d2f6b255",
+  "dateien": [
    "1920/Berliner_Str_Mangerstr_2012.pdf",
-   47933
-  ],
-  [
-   "1920/Berliner_Str-Mangerstr_2023.pdf",
-   130933
+   "1920/Berliner_Str-Mangerstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1900.zip": [
-  [
-   "Berliner_Str_O-Nagel-Str_2013.pdf",
-   55228
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1900.zip": {
+  "bytes": 47706,
+  "sha256": "7cdc5211cfb1657bd35ae2ba78122dc196f5ba83a887c5451986ec357c9324c6",
+  "dateien": [
+   "Berliner_Str_O-Nagel-Str_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4120.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4120.zip": {
+  "bytes": 170890,
+  "sha256": "dfb12b25e18ddcfa710ef7d743af4b631d1868f4f339805ed9db0b758f61095c",
+  "dateien": [
    "Brauhausberg_A-Einstein-Str_2010.pdf",
-   45472
-  ],
-  [
    "Brauhausberg_A-Einstein-Str_2012.pdf",
-   45403
-  ],
-  [
    "Brauhausberg_A-Einstein-Str_2014.pdf",
-   54708
-  ],
-  [
-   "Brauhausberg_A-Einstein-Str_2016.pdf",
-   52481
+   "Brauhausberg_A-Einstein-Str_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1030.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1030.zip": {
+  "bytes": 135834,
+  "sha256": "320bee1a26161289623bf52f6c3d19ff1aeb31af0b935dd22c387fa982e41e51",
+  "dateien": [
    "Breite_Str_Dortustr_2010.pdf",
-   57585
-  ],
-  [
    "Breite_Str_Dortustr_2014.pdf",
-   55127
-  ],
-  [
-   "Breite_Str_Dortustr_2018.pdf",
-   55303
+   "Breite_Str_Dortustr_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1010.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1010.zip": {
+  "bytes": 238039,
+  "sha256": "cf9d1f805e76a761da72f119499b12b82bfc083545140016ec4b7dfa3e037db8",
+  "dateien": [
    "1010/Breite_Str_Schloßstr_2014.pdf",
-   49502
-  ],
-  [
    "1010/Breite_Str_Schloßstr_2018.pdf",
-   57169
-  ],
-  [
-   "1010/Breite_Str_Schloßstr_2023.pdf",
-   152115
+   "1010/Breite_Str_Schloßstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1050.zip": [
-  [
-   "Breite_Str_Schopenhauerstr_2016.pdf",
-   55132
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1050.zip": {
+  "bytes": 47103,
+  "sha256": "5d791b00223ac5acd94662c0580727d336aaa03b468983dd7775c325aa1d87df",
+  "dateien": [
+   "Breite_Str_Schopenhauerstr_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1060.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1060.zip": {
+  "bytes": 198552,
+  "sha256": "845ca6fab1792c3574a4655f4ecfaeff2d72bbf913da1bbbefc816376c2b471a",
+  "dateien": [
    "Breite_Str_Zeppelinstr_2013.pdf",
-   52424
-  ],
-  [
    "Breite_Str_Zeppelinstr_2015.pdf",
-   57772
-  ],
-  [
    "Breite_Str_Zeppelinstr_2017.pdf",
-   58449
-  ],
-  [
-   "Breite_Str_Zeppelinstr_2019.pdf",
-   58760
+   "Breite_Str_Zeppelinstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1230.zip": [
-  [
-   "Charlottenstr_Am_Bassin_2010_6h.pdf",
-   32249
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1230.zip": {
+  "bytes": 27523,
+  "sha256": "5f09fdd171c6e527b0717555d09864dbf400e0ba8174674d0acaf7eecc20d355",
+  "dateien": [
+   "Charlottenstr_Am_Bassin_2010_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1150.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1150.zip": {
+  "bytes": 75837,
+  "sha256": "8c04a08d9e8587523b8170d11f8b3bfb93d7b1aee49fb146cabfa445074c05d3",
+  "dateien": [
    "Charlottenstr_Dortustr_2010_6h.pdf",
-   32202
-  ],
-  [
-   "Charlottenstr_Dortustr_2014.pdf",
-   58933
+   "Charlottenstr_Dortustr_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1321.zip": [
-  [
-   "Charlottenstr_Französische_Str_2012.pdf",
-   51265
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1321.zip": {
+  "bytes": 43396,
+  "sha256": "56706a4d67fa6967710d56d70fd506fd7460308b3d43b209d06ca2eb8c4667be",
+  "dateien": [
+   "Charlottenstr_Französische_Str_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1320.zip": [
-  [
-   "Charlottenstr_Hebbelstr_2012.pdf",
-   52251
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1320.zip": {
+  "bytes": 44569,
+  "sha256": "a41406a3b0d256c0feff485d6e93276abe2f439bb72fc801cb2d69e1fc928776",
+  "dateien": [
+   "Charlottenstr_Hebbelstr_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1170.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1170.zip": {
+  "bytes": 83017,
+  "sha256": "2f4e808a5b5e4e031e70fcaa041aef7cbcf8719d764a0c0e9d7694043823de67",
+  "dateien": [
    "Dortustr_Yorckstr_2011.pdf",
-   45167
-  ],
-  [
-   "Dortustr_Yorckstr_2015.pdf",
-   50900
+   "Dortustr_Yorckstr_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8200.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8200.zip": {
+  "bytes": 89320,
+  "sha256": "c499458f12b8490c8d8252b16f34716f060eb9c192912acd8b8ce7e35e6445c4",
+  "dateien": [
    "Drewitzer_Str_Am_Buchhorst_2010.pdf",
-   50647
-  ],
-  [
-   "Drewitzer_Str_Am_Buchhorst_2013.pdf",
-   74189
+   "Drewitzer_Str_Am_Buchhorst_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4400.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4400.zip": {
+  "bytes": 282939,
+  "sha256": "8410c6f7cd69c280970fec26ce8053159739c8f0ebb5af51feeba82129b0bf88",
+  "dateien": [
    "4400/Drewitzer_Str_An_der_Alten_Zauche_2013.pdf",
-   72975
-  ],
-  [
    "4400/Drewitzer_Str_An_der_Alten_Zauche_2016.pdf",
-   55091
-  ],
-  [
    "4400/Drewitzer_Str_An_der_Alten_Zauche_2019.pdf",
-   55595
-  ],
-  [
-   "4400/Drewitzer_Str_An_der_Alten_Zauche_2023.pdf",
-   149467
+   "4400/Drewitzer_Str_An_der_Alten_Zauche_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4460.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4460.zip": {
+  "bytes": 75758,
+  "sha256": "e6a72cbba0b58b8aff117b59ee9d2913ed7edbef17e4c8d1fe7c44cffeeab3ec",
+  "dateien": [
    "Drewitzer_Str_E-Weinert-Str_2010_6h.pdf",
-   32458
-  ],
-  [
-   "Drewitzer_Str_E-Weinert-Str_2019.pdf",
-   55182
+   "Drewitzer_Str_E-Weinert-Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3240.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3240.zip": {
+  "bytes": 93193,
+  "sha256": "b52b11e302c9ae7dccc3c864c6b33a74a98470eb64d93ed7f98f64f4f9f16ef6",
+  "dateien": [
    "Feuerbach_Sellostraße_2019.pdf",
-   55238
-  ],
-  [
-   "Feuerbach_Sellostraße_2019_Rad.pdf",
-   53494
+   "Feuerbach_Sellostraße_2019_Rad.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7350.zip": [
-  [
-   "Flotowstr_Gluckstr_2016.pdf",
-   68851
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7350.zip": {
+  "bytes": 41646,
+  "sha256": "4c944a0af112f197c29000a1beb64f76b12e23cd8e601fb8dcceb13ab86c8539",
+  "dateien": [
+   "Flotowstr_Gluckstr_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7360.zip": [
-  [
-   "Flotowstr_Hubertusdamm_2016.pdf",
-   67986
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7360.zip": {
+  "bytes": 40308,
+  "sha256": "219a2325da77238e033af95c60e98354f195f11dd018fa4bff168a7ff16c0243",
+  "dateien": [
+   "Flotowstr_Hubertusdamm_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7340.zip": [
-  [
-   "Flotowstr_Patrizierweg_2016.pdf",
-   79536
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7340.zip": {
+  "bytes": 48048,
+  "sha256": "f9c8e334248efc2baf61f828330074fc2fb5130713bb532809758f4ba25b1367",
+  "dateien": [
+   "Flotowstr_Patrizierweg_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3330.zip": [
-  [
-   "Forststr_Im_Bogen_2015.pdf",
-   51222
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3330.zip": {
+  "bytes": 44271,
+  "sha256": "7195af392a090df942545066a9306d83fbf3aa37f4caf09c6013d2fe154c3451",
+  "dateien": [
+   "Forststr_Im_Bogen_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3300.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3300.zip": {
+  "bytes": 85108,
+  "sha256": "c760b58c4b46c403764394b487b9403b08aa2300e0bb8eca5ee0f7ff98922334",
+  "dateien": [
    "Forststr_Werderscher_Damm_2015.pdf",
-   49947
-  ],
-  [
-   "Forststr_Werderscher_Damm_2016.pdf",
-   50921
+   "Forststr_Werderscher_Damm_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1200.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1200.zip": {
+  "bytes": 158659,
+  "sha256": "222f9c5b636fd05747e5f3d2d809c76b2bed9f59c4ea3ce801877211a4b65901",
+  "dateien": [
    "F-Ebert-Str_Am_Kanal_2010.pdf",
-   27866
-  ],
-  [
    "F-Ebert-Str_Am_Kanal_2013.pdf",
-   72017
-  ],
-  [
    "F-Ebert-Str_Am_Kanal_2016.pdf",
-   54666
-  ],
-  [
-   "F-Ebert-Str_Am_Kanal_2019.pdf",
-   55950
+   "F-Ebert-Str_Am_Kanal_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1290.zip": [
-  [
-   "F-Ebert-Str_Brandenburger_Str_2013.pdf",
-   52792
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1290.zip": {
+  "bytes": 45635,
+  "sha256": "63b84a7194a535e848b0a06ae0670666b909bfd6593978a2955589a2908b278f",
+  "dateien": [
+   "F-Ebert-Str_Brandenburger_Str_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1220.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1220.zip": {
+  "bytes": 264535,
+  "sha256": "284754861db54875f459f294113cd6e47d546fc24d421e5918d5035712b77c13",
+  "dateien": [
    "1220/F-Ebert-Str_Charlottenstr_2010_6h.pdf",
-   32068
-  ],
-  [
    "1220/F-Ebert-Str_Charlottenstr_2015.pdf",
-   54346
-  ],
-  [
    "1220/F-Ebert-Str_Charlottenstr_2019.pdf",
-   55275
-  ],
-  [
-   "1220/F-Ebert-Str_Charlottenstr_2023.pdf",
-   148966
+   "1220/F-Ebert-Str_Charlottenstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1731.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1731.zip": {
+  "bytes": 88002,
+  "sha256": "2ac541d34e1b77707e31a7e718b0f0dc8b08402da2dbdcc605ba2aa6c8719b25",
+  "dateien": [
    "F-Ebert-Str_Puschkinallee_2015.pdf",
-   51413
-  ],
-  [
-   "F-Ebert-Str_Puschkinallee_2019.pdf",
-   52892
+   "F-Ebert-Str_Puschkinallee_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1730.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1730.zip": {
+  "bytes": 96948,
+  "sha256": "bba7e9a4c16f8209593d6092474bc627fad2f3067044c817c2aea6ec26b048cf",
+  "dateien": [
    "F-Ebert-Str_Reiterweg_2015.pdf",
-   56450
-  ],
-  [
-   "F-Ebert-Str_Reiterweg_2019.pdf",
-   55962
+   "F-Ebert-Str_Reiterweg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4150.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4150.zip": {
+  "bytes": 90969,
+  "sha256": "535718a5388480aea642dcbdb990bdc6e844dd2489964ce3bf5e0660104414ff",
+  "dateien": [
    "F-Engels-Str_Friedhofsgasse_2013.pdf",
-   56071
-  ],
-  [
-   "F-Engels-Str_Friedhofsgasse_2016.pdf",
-   49693
+   "F-Engels-Str_Friedhofsgasse_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4160.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4160.zip": {
+  "bytes": 125000,
+  "sha256": "7f183083c7e42a887036b79887bb48b45211ae3cef4d644d8b849a6f8cf5c284",
+  "dateien": [
    "F-Engels-Str_Schlaatzstr_2011.pdf",
-   44705
-  ],
-  [
    "F-Engels-Str_Schlaatzstr_2015.pdf",
-   50911
-  ],
-  [
-   "F-Engels-Str_Schlaatzstr_2019.pdf",
-   50307
+   "F-Engels-Str_Schlaatzstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4170.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4170.zip": {
+  "bytes": 127276,
+  "sha256": "553b075e3032ad9d6dd114d1202764a42126ddf0a75936c6de64cce1a3460cad",
+  "dateien": [
    "F-Engels-Str_Schlaatzweg_2011.pdf",
-   44690
-  ],
-  [
    "F-Engels-Str_Schlaatzweg_2015.pdf",
-   51427
-  ],
-  [
-   "F-Engels-Str_Schlaatzweg_2019.pdf",
-   51675
+   "F-Engels-Str_Schlaatzweg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7101.zip": [
-  [
-   "Gagarinstr_Bahnhofstr_2019.pdf",
-   54560
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7101.zip": {
+  "bytes": 47427,
+  "sha256": "f383f93e02149fc5a90088de9be6bf28b7cd96f185568d9e230eea7c2cb59473",
+  "dateien": [
+   "Gagarinstr_Bahnhofstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7220.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7220.zip": {
+  "bytes": 88345,
+  "sha256": "7f15c5c04ebb8a247cb349bfcf2690199e7f76f2450bbecbea295ddf15b8d579",
+  "dateien": [
    "Galileistr_M-Born-Str_2014.pdf",
-   52593
-  ],
-  [
-   "Galileistr_M-Born-Str_2019.pdf",
-   50752
+   "Galileistr_M-Born-Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7200.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7200.zip": {
+  "bytes": 127591,
+  "sha256": "e804fcf2fdb2b69d54fd45ea5f8890275e3ad2296cf595731fecb884d6a8f1c7",
+  "dateien": [
    "Galileistr_Neuendorfer_Str_2011.pdf",
-   43994
-  ],
-  [
    "Galileistr_Neuendorfer_Str_2015.pdf",
-   52801
-  ],
-  [
-   "Galileistr_Neuendorfer_Str_2019.pdf",
-   51542
+   "Galileistr_Neuendorfer_Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7210.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7210.zip": {
+  "bytes": 99367,
+  "sha256": "773ed09fceeef6783893c904b1a6642b0ac36d98a6c674d6c1073108604354c4",
+  "dateien": [
    "Galileistr_Newtonstr_2015.pdf",
-   57543
-  ],
-  [
-   "Galileistr_Newtonstr_2019.pdf",
-   57422
+   "Galileistr_Newtonstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2680.zip": [
-  [
-   "Geiselbergstr_Am_Mühlenberg_2012.pdf",
-   42832
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2680.zip": {
+  "bytes": 37126,
+  "sha256": "bcf8c65b2410ea741ac406086b38701b5ea92b544f081948de33055b2c85162d",
+  "dateien": [
+   "Geiselbergstr_Am_Mühlenberg_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3250.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3250.zip": {
+  "bytes": 192141,
+  "sha256": "2eeff7d772a3908f90a2f064834806ea28a294f4031671004ba490cd6f7a3f59",
+  "dateien": [
    "G-Scholl-Str_Am_Neuen_Palais_2010.pdf",
-   43620
-  ],
-  [
    "G-Scholl-Str_Am_Neuen_Palais_2010_6h.pdf",
-   28741
-  ],
-  [
    "G-Scholl-Str_Am_Neuen_Palais_2013.pdf",
-   44070
-  ],
-  [
    "G-Scholl-Str_Am_Neuen_Palais_2016.pdf",
-   52940
-  ],
-  [
-   "G-Scholl-Str_Am_Neuen_Palais_2019.pdf",
-   53044
+   "G-Scholl-Str_Am_Neuen_Palais_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3070.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3070.zip": {
+  "bytes": 124438,
+  "sha256": "a0ae8892eac0857f908dc4faa3577accb9a1f42fdc7669491ff88672a7b549d3",
+  "dateien": [
    "G-Scholl-Str_H-Sachs-Str_2015.pdf",
-   50435
-  ],
-  [
    "G-Scholl-Str_H-Sachs-Str_2015_T.pdf",
-   45534
-  ],
-  [
-   "G-Scholl-Str_H-Sachs-Str_2016.pdf",
-   52413
+   "G-Scholl-Str_H-Sachs-Str_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3080.zip": [
-  [
-   "G-Scholl-Str_Kantstr_2015.pdf",
-   48023
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3080.zip": {
+  "bytes": 40916,
+  "sha256": "719f116bd73f781b3b2d6ab6a525aa3225604dd34629df933e3085589e2533cc",
+  "dateien": [
+   "G-Scholl-Str_Kantstr_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3200.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3200.zip": {
+  "bytes": 203155,
+  "sha256": "ad002d45e23cb7057a032716dae4b69321b38db668f6fb8ba0ed402e81d42dda",
+  "dateien": [
    "G-Scholl-Str_Kastanienallee_2011.pdf",
-   47193
-  ],
-  [
    "G-Scholl-Str_Kastanienallee_2015.pdf",
-   45177
-  ],
-  [
    "G-Scholl-Str_Kastanienallee_2016.pdf",
-   48982
-  ],
-  [
    "G-Scholl-Str_Kastanienallee_2018.pdf",
-   48685
-  ],
-  [
-   "G-Scholl-Str_Kastanienallee_2019.pdf",
-   49729
+   "G-Scholl-Str_Kastanienallee_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3050.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3050.zip": {
+  "bytes": 232190,
+  "sha256": "c107df8777019b86aa79b95bdd5e0f2a96f56572bb47e92a1048dd673da66aea",
+  "dateien": [
    "G-Scholl-Str_Nansenstr_2015.pdf",
-   53975
-  ],
-  [
    "G-Scholl-Str_Nansenstr_2017-04.pdf",
-   53619
-  ],
-  [
    "G-Scholl-Str_Nansenstr_2017-07.pdf",
-   54405
-  ],
-  [
    "G-Scholl-Str_Nansenstr_2018-04.pdf",
-   54540
-  ],
-  [
-   "G-Scholl-Str_Nansenstr_2019.pdf",
-   55057
+   "G-Scholl-Str_Nansenstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2400.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2400.zip": {
+  "bytes": 104620,
+  "sha256": "4af1a626e2d3de9dc6cd6167bd84f1ce519b0272e056fc4191b1deaa6409754a",
+  "dateien": [
    "Golmer_Chaussee_Wublitzstr_2010_6h.pdf",
-   29189
-  ],
-  [
    "Golmer_Chaussee_Wublitzstr_2013.pdf",
-   59896
-  ],
-  [
-   "Golmer_Chaussee_Wublitzstr_2016.pdf",
-   51796
+   "Golmer_Chaussee_Wublitzstr_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2690.zip": [
-  [
-   "Golmer_Damm_Mühlendamm_2015.pdf",
-   70826
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2690.zip": {
+  "bytes": 42302,
+  "sha256": "0cef4c3dbccc6503d48f9f168df7d3adf810343fd1c58d52785945e8146f86ba",
+  "dateien": [
+   "Golmer_Damm_Mühlendamm_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6100.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6100.zip": {
+  "bytes": 84340,
+  "sha256": "d6c458e67c19f1d5301c264ac88afc0632cb1a8ae2909b6fa56275972c89cfb4",
+  "dateien": [
    "Großbeerenstr_Findling_2012.pdf",
-   67086
-  ],
-  [
-   "Großbeerenstr_Findling_2016.pdf",
-   52001
+   "Großbeerenstr_Findling_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6110.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6110.zip": {
+  "bytes": 79705,
+  "sha256": "e7e548203aef27cdba5cb1cb14462693c599dec05bb4773777e2c1c4b89b262d",
+  "dateien": [
    "Großbeerenstr_F-Zubeil-Str_2010.pdf",
-   44447
-  ],
-  [
-   "Großbeerenstr_F-Zubeil-Str_2014.pdf",
-   48739
+   "Großbeerenstr_F-Zubeil-Str_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7010.zip": [
-  [
-   "Großbeerenstr_Grotrianstr_2016.pdf",
-   55526
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7010.zip": {
+  "bytes": 48103,
+  "sha256": "7045328d38d55f759a93b5203a6544e224378992e5cb8451ad9030d1c811496e",
+  "dateien": [
+   "Großbeerenstr_Grotrianstr_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6140.zip": [
-  [
-   "Großbeerenstr_H-George-Str_2018.pdf",
-   56685
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6140.zip": {
+  "bytes": 47973,
+  "sha256": "26989deee86536a2857c5a97a7b944a6d2187584e4b37600ec0840c6fc02ba05",
+  "dateien": [
+   "Großbeerenstr_H-George-Str_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6050.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6050.zip": {
+  "bytes": 151012,
+  "sha256": "5d655ce0f7bc67be9ca7463fc30d54c8bfbddf3e9df81fcba5b768d013c52244",
+  "dateien": [
    "Großbeerenstr_Horstweg_2013_Qw.pdf",
-   31039
-  ],
-  [
    "Großbeerenstr_Horstweg_2014.pdf",
-   54382
-  ],
-  [
    "Großbeerenstr_Horstweg_2015_Qw.pdf",
-   34998
-  ],
-  [
-   "Großbeerenstr_Horstweg_2017.pdf",
-   56436
+   "Großbeerenstr_Horstweg_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7020.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7020.zip": {
+  "bytes": 141426,
+  "sha256": "d4750597f942429c496ea2e2ae69fdcd3008119d8e2d526a4bb7d00307337332",
+  "dateien": [
    "Großbeerenstr_Jagdhausstr_2011.pdf",
-   49580
-  ],
-  [
    "Großbeerenstr_Jagdhausstr_2015.pdf",
-   56752
-  ],
-  [
-   "Großbeerenstr_Jagdhausstr_2019.pdf",
-   56439
+   "Großbeerenstr_Jagdhausstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6130.zip": [
-  [
-   "Großbeerenstr_Kleine_Str_2018.pdf",
-   51762
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6130.zip": {
+  "bytes": 43817,
+  "sha256": "15af5c6de36811246038419cafa600f6cfda2c78f72a2d97b85088d87dd3674b",
+  "dateien": [
+   "Großbeerenstr_Kleine_Str_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6150.zip": [
-  [
-   "Großbeerenstr_M-Dietrich-Allee_2018.pdf",
-   51450
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6150.zip": {
+  "bytes": 43634,
+  "sha256": "41659de148834a9f729ce38d913dce6fe6f9008674a7e94a2370a860c5fc25c3",
+  "dateien": [
+   "Großbeerenstr_M-Dietrich-Allee_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7000.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7000.zip": {
+  "bytes": 184038,
+  "sha256": "54bf822108f74b8f7f8083987cbf1a355934a6fa626a1415fbe4f1502b5921cf",
+  "dateien": [
    "Großbeerenstr_Neuendorfer_Str_2013.pdf",
-   50645
-  ],
-  [
    "Großbeerenstr_Neuendorfer_Str_2014.pdf",
-   49403
-  ],
-  [
    "Großbeerenstr_Neuendorfer_Str_2017.pdf",
-   56307
-  ],
-  [
-   "Großbeerenstr_Neuendorfer_Str_2019.pdf",
-   55710
+   "Großbeerenstr_Neuendorfer_Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6120.zip": [
-  [
-   "Großbeerenstr_Weidendamm_2018.pdf",
-   52509
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6120.zip": {
+  "bytes": 44672,
+  "sha256": "578b5e30f12714067b171924ee9270c69af71c4695c6e1b02cc6cec685643f72",
+  "dateien": [
+   "Großbeerenstr_Weidendamm_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6800.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6800.zip": {
+  "bytes": 97251,
+  "sha256": "43bf51654e341777477b1ee71131079ad93017506f65e346b6d83dadd43f7280",
+  "dateien": [
    "Großbeerenstr_Wetzlarer_Str_2013.pdf",
-   56837
-  ],
-  [
-   "Großbeerenstr_Wetzlarer_Str_2019.pdf",
-   56656
+   "Großbeerenstr_Wetzlarer_Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1861.zip": [
-  [
-   "Gr_Weinmeisterstr_Beyerstr_2012.pdf",
-   45964
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1861.zip": {
+  "bytes": 40057,
+  "sha256": "3124b34af6bcf570f167f47a3e0a077ba9751833b5d91e72974cebc6e0804009",
+  "dateien": [
+   "Gr_Weinmeisterstr_Beyerstr_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1430.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1430.zip": {
+  "bytes": 133925,
+  "sha256": "ffbb3c47c05d7019399a145171976e64970eaddab0ccb6cd20957bfda65fe255",
+  "dateien": [
    "Gutenbergstr_F-Ebert-Str_2012.pdf",
-   80942
-  ],
-  [
-   "Gutenbergstr_F-Ebert-Str_2016.pdf",
-   80864
+   "Gutenbergstr_F-Ebert-Str_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1400.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1400.zip": {
+  "bytes": 141537,
+  "sha256": "e311de244831187602dc6144a689fe185977dbc780b3f67cc46ea7d634b9e133",
+  "dateien": [
    "Gutenbergstr_Hebbelstr_2011.pdf",
-   49930
-  ],
-  [
    "Gutenbergstr_Hebbelstr_2015.pdf",
-   56331
-  ],
-  [
-   "Gutenbergstr_Hebbelstr_2019.pdf",
-   56489
+   "Gutenbergstr_Hebbelstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7050.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7050.zip": {
+  "bytes": 165253,
+  "sha256": "346f9c83c215f2cfd4e8d5601658b17a4a7a816c9d590beb1cb2344abaf64a7f",
+  "dateien": [
    "Güterfelder_Eck_2011.pdf",
-   49216
-  ],
-  [
    "Güterfelder_Eck_2014.pdf",
-   74732
-  ],
-  [
    "Güterfelder_Eck_2014_Qbr.pdf",
-   39326
-  ],
-  [
-   "Güterfelder_Eck_2014_Qw.pdf",
-   73941
+   "Güterfelder_Eck_2014_Qw.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7053.zip": [
-  [
-   "Güterfelder_Eck_Kreisel_2014.pdf",
-   57349
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7053.zip": {
+  "bytes": 49877,
+  "sha256": "cde24d7f3e513b3b00a2103b7c24befcbccff210ca74e81ef07612f9dcf30580",
+  "dateien": [
+   "Güterfelder_Eck_Kreisel_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7052.zip": [
-  [
-   "Güterfelder_Eck_(Nordrampe)_2014.pdf",
-   67508
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7052.zip": {
+  "bytes": 39351,
+  "sha256": "2c84cdb0d1284b1812d2093ecea33d385553ea90c90fed3f71099805012fcde5",
+  "dateien": [
+   "Güterfelder_Eck_(Nordrampe)_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7051.zip": [
-  [
-   "Güterfelder_Eck_(Südrampe)_2014.pdf",
-   67645
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7051.zip": {
+  "bytes": 40818,
+  "sha256": "2aa2904fa004d30c168b6d3c8dca99a9e85ee15ed53f27c894b3943131f8ec5d",
+  "dateien": [
+   "Güterfelder_Eck_(Südrampe)_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1890.zip": [
-  [
-   "H-Thoma-Str_Gutenbergstr_2014.pdf",
-   42640
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1890.zip": {
+  "bytes": 34984,
+  "sha256": "b6f5ba584b496f80c55c896f75bd3c4ea74d37bdcfdb19ebc73813783b1c120e",
+  "dateien": [
+   "H-Thoma-Str_Gutenbergstr_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1870.zip": [
-  [
-   "H-Thoma-Str_Kurfürstenstr_2016.pdf",
-   49390
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1870.zip": {
+  "bytes": 42260,
+  "sha256": "72983e97418ea186d61400ff1431c57fc219a2705c839f92e7ce87b2f6812954",
+  "dateien": [
+   "H-Thoma-Str_Kurfürstenstr_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1531.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1531.zip": {
+  "bytes": 96257,
+  "sha256": "efc81d35c02ea3be5e66044ed0db1007057cd4c3f8e873ebd8d31a712b50d86e",
+  "dateien": [
    "Hegelallee_Nebenfahrb_Dortustr_2015.pdf",
-   54700
-  ],
-  [
-   "Hegelallee_Nebenfahrb_Dortustr_2019.pdf",
-   56049
+   "Hegelallee_Nebenfahrb_Dortustr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1530.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1530.zip": {
+  "bytes": 111925,
+  "sha256": "1b4c8da51f1039e1f37e9b1e0ce641a51a6b8dd7d514dd5175deffb30dfa7cb4",
+  "dateien": [
    "Hegelallee_Dortustr_2010_6h.pdf",
-   31004
-  ],
-  [
    "Hegelallee_Dortustr_2015.pdf",
-   50694
-  ],
-  [
-   "Hegelallee_Dortustr_2019.pdf",
-   50285
+   "Hegelallee_Dortustr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1520.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1520.zip": {
+  "bytes": 148685,
+  "sha256": "5d0ee67c166b2fd7a194bd47b30fe89c5008c9fe754ab63786a4ba25e9403b93",
+  "dateien": [
    "Hegelallee_Jägerallee_2011.pdf",
-   38901
-  ],
-  [
    "Hegelallee_Jägerallee_2013.pdf",
-   41306
-  ],
-  [
    "Hegelallee_Jägerallee_2015-06.pdf",
-   47423
-  ],
-  [
-   "Hegelallee_Jägerallee_2015-09.pdf",
-   47152
+   "Hegelallee_Jägerallee_2015-09.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1500.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1500.zip": {
+  "bytes": 261797,
+  "sha256": "f2c039152447670442db47da1b54c818ec652e0b66982fa35ca9904eed42b12e",
+  "dateien": [
    "1500/Hegelallee_Schopenhauerstr_2011.pdf",
-   44944
-  ],
-  [
    "1500/Hegelallee_Schopenhauerstr_2014.pdf",
-   46286
-  ],
-  [
    "1500/Hegelallee_Schopenhauerstr_2019.pdf",
-   51754
-  ],
-  [
-   "1500/Hegelallee_Schopenhauerstr_2023.pdf",
-   145868
+   "1500/Hegelallee_Schopenhauerstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4300.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4300.zip": {
+  "bytes": 101072,
+  "sha256": "34f6818cc05631907d411068b1d896f2e356b93211a3cbfee53354d7981b1870",
+  "dateien": [
    "H-Mann-Allee_An_der_Alten_Zauche_2013.pdf",
-   61536
-  ],
-  [
-   "H-Mann-Allee_An_der_Alten_Zauche_2017.pdf",
-   55431
+   "H-Mann-Allee_An_der_Alten_Zauche_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4000.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4000.zip": {
+  "bytes": 118624,
+  "sha256": "c6d35db985df80033afd6a67d0fe0989293d32b12b114c64ce8b5e64e42c6a98",
+  "dateien": [
    "H-Mann-Allee_Babelsberger_Str_2010_6h.pdf",
-   33057
-  ],
-  [
    "H-Mann-Allee_Babelsberger_Str_2012.pdf",
-   51002
-  ],
-  [
-   "H-Mann-Allee_Babelsberger_Str_2014.pdf",
-   52497
+   "H-Mann-Allee_Babelsberger_Str_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4110.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4110.zip": {
+  "bytes": 332725,
+  "sha256": "076250d2ad126c8b04782ac9337f860f62e9ef5aa3e05adb916029c3d8640c75",
+  "dateien": [
    "H-Mann-Allee_Brauhausberg_2010.pdf",
-   45846
-  ],
-  [
    "H-Mann-Allee_Brauhausberg_2011.pdf",
-   45094
-  ],
-  [
    "H-Mann-Allee_Brauhausberg_2012.pdf",
-   45034
-  ],
-  [
    "H-Mann-Allee_Brauhausberg_2014.pdf",
-   48602
-  ],
-  [
    "H-Mann-Allee_Brauhausberg_2015.pdf",
-   49767
-  ],
-  [
    "H-Mann-Allee_Brauhausberg_2016.pdf",
-   51152
-  ],
-  [
    "H-Mann-Allee_Brauhausberg_2017.pdf",
-   50621
-  ],
-  [
-   "H-Mann-Allee_Brauhausberg_2019.pdf",
-   50701
+   "H-Mann-Allee_Brauhausberg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4180.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4180.zip": {
+  "bytes": 91654,
+  "sha256": "491cb8c959c705fa70f889467cbc4cc51bfcb2349fb9a7b304a796757720473c",
+  "dateien": [
    "H-Mann-Allee_Drevesstr_2014.pdf",
-   54837
-  ],
-  [
-   "H-Mann-Allee_Drevesstr_2018.pdf",
-   51064
+   "H-Mann-Allee_Drevesstr_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4340.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4340.zip": {
+  "bytes": 144768,
+  "sha256": "53c784da95a0c01545967016721551fd14d8c9ad6b6076f09f87c7d67ac6f1c6",
+  "dateien": [
    "H-Mann-Allee_E-Weinert-Str_2010.pdf",
-   50723
-  ],
-  [
    "H-Mann-Allee_E-Weinert-Str_2014.pdf",
-   60940
-  ],
-  [
-   "H-Mann-Allee_E-Weinert-Str_2018.pdf",
-   56599
+   "H-Mann-Allee_E-Weinert-Str_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4140.zip": [
-  [
-   "H-Mann-Allee_Friedhöfe_2015.pdf",
-   58354
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4140.zip": {
+  "bytes": 50831,
+  "sha256": "13572c1378014d676ce92c3c7f4cbaab09e9315027416f6a38aff8515d101019",
+  "dateien": [
+   "H-Mann-Allee_Friedhöfe_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4130.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4130.zip": {
+  "bytes": 88587,
+  "sha256": "ffadbbeaa4d86a2363db62b359505336ffac3110cd2b9c78846b0b87e303db31",
+  "dateien": [
    "H-Mann-Allee_Friedhofsgasse_2012.pdf",
-   48362
-  ],
-  [
-   "H-Mann-Allee_Friedhofsgasse_2016.pdf",
-   55038
+   "H-Mann-Allee_Friedhofsgasse_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4330.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4330.zip": {
+  "bytes": 190579,
+  "sha256": "999df99c9679172045365cee9b0682ac7c340e3e44996ee0925c883396270742",
+  "dateien": [
    "4330/H-Mann-Allee_F-Wolf-Str_2016.pdf",
-   56010
-  ],
-  [
-   "4330/H-Mann-Allee_F-Wolf-Str_2023.pdf",
-   149341
+   "4330/H-Mann-Allee_F-Wolf-Str_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4181.zip": [
-  [
-   "H-Mann-Allee_Humboldt Gymnasium_2015.pdf",
-   147545
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4181.zip": {
+  "bytes": 117999,
+  "sha256": "050a84ec1ee60d658aa59d3ccdc126ac811e5b93b8e00d7093d6064c67cfa4c7",
+  "dateien": [
+   "H-Mann-Allee_Humboldt Gymnasium_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4320.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4320.zip": {
+  "bytes": 95741,
+  "sha256": "cd7fec1f12aa065d6cdce60a43d7d260d618d9b08de3a492a2d9168bcdc3b56f",
+  "dateien": [
    "H-Mann-Allee_Zum_Kahleberg_2015.pdf",
-   55189
-  ],
-  [
-   "H-Mann-Allee_Zum_Kahleberg_2019.pdf",
-   55540
+   "H-Mann-Allee_Zum_Kahleberg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4350.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4350.zip": {
+  "bytes": 85092,
+  "sha256": "98460e09baee3006d1188c2e8145c684beaf7a84c7004ab5ec48172c5782a131",
+  "dateien": [
    "H-Mann-Allee_Zum_Teufelssee_2015.pdf",
-   49677
-  ],
-  [
-   "H-Mann-Allee_Zum_Teufelssee_2018.pdf",
-   52782
+   "H-Mann-Allee_Zum_Teufelssee_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4610.zip": [
-  [
-   "Horstweg_An_den_Kopfweiden_2019.pdf",
-   52092
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4610.zip": {
+  "bytes": 44559,
+  "sha256": "a1c55c2f06194b771ef6a47960b695ed10f3b2a0ddd9be6dea4fbc9fb1e353f4",
+  "dateien": [
+   "Horstweg_An_den_Kopfweiden_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4600.zip": [
-  [
-   "Horstweg_An_der_Alten_Zauche_2015.pdf",
-   55870
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4600.zip": {
+  "bytes": 48239,
+  "sha256": "c9582734e8e9383f4d5549d8dd7ed3efb1d674b7f664169e8d12acad766f9048",
+  "dateien": [
+   "Horstweg_An_der_Alten_Zauche_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4620.zip": [
-  [
-   "4620/Horstweg_H-Muthesius-Str_2023.pdf",
-   149239
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4620.zip": {
+  "bytes": 143122,
+  "sha256": "92842ff2b8b2030d84c0101515de2a8873292d18d23c9133b352da1933b86b7b",
+  "dateien": [
+   "4620/Horstweg_H-Muthesius-Str_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4200.zip": [
-  [
-   "Horstweg_H-Mann-Allee_2014.pdf",
-   54656
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4200.zip": {
+  "bytes": 47845,
+  "sha256": "4d7786e8f667140e1780ec3d5fe6804e05511f1b792354eef5f3254ff1d7635b",
+  "dateien": [
+   "Horstweg_H-Mann-Allee_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4621.zip": [
-  [
-   "4621/Horstweg_Lidl-Parkplatz_2023.pdf",
-   146775
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4621.zip": {
+  "bytes": 140589,
+  "sha256": "c09534698ea0ff72dbc48ffaa25094b08788e8d5e3f1a3bee9de706a8057a757",
+  "dateien": [
+   "4621/Horstweg_Lidl-Parkplatz_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4040.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4040.zip": {
+  "bytes": 175505,
+  "sha256": "682a5a1efce527db7269869062075c36fe45e5bee114ccc9d0f63feec5523cbf",
+  "dateien": [
    "Humboldtring_Babelsberger_Str_2010.pdf",
-   44488
-  ],
-  [
    "Humboldtring_Babelsberger_Str_2013.pdf",
-   56809
-  ],
-  [
    "Humboldtring_Babelsberger_Str_2015.pdf",
-   51424
-  ],
-  [
-   "Humboldtring_Babelsberger_Str_2016.pdf",
-   51102
+   "Humboldtring_Babelsberger_Str_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2620.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2620.zip": {
+  "bytes": 86148,
+  "sha256": "29f5b71a283deb749b00519db358e1acca9c0ce7a008248ca9fc4ee3d7f79e2b",
+  "dateien": [
    "In_der_Feldmark_Am_Mühlenberg_2016.pdf",
-   52012
-  ],
-  [
-   "In_der_Feldmark_Am_Mühlenberg_2018.pdf",
-   51144
+   "In_der_Feldmark_Am_Mühlenberg_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1710.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1710.zip": {
+  "bytes": 127363,
+  "sha256": "d4362e868f3f051cd28ed095cdc7d114782adee214a03c428154fa078b882f74",
+  "dateien": [
    "Jägerallee_Pappelallee_2010.pdf",
-   61574
-  ],
-  [
    "Jägerallee_Pappelallee_2014.pdf",
-   52780
-  ],
-  [
-   "Jägerallee_Pappelallee_2018.pdf",
-   53024
+   "Jägerallee_Pappelallee_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1700.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1700.zip": {
+  "bytes": 188213,
+  "sha256": "2fcea51a305b36909a73e1865374ee11d4d6219213d224841601fe28633ab322",
+  "dateien": [
    "Jägerallee_Reiterweg_2012.pdf",
-   49463
-  ],
-  [
    "Jägerallee_Reiterweg_2015-05.pdf",
-   55609
-  ],
-  [
    "Jägerallee_Reiterweg_2015-09.pdf",
-   55671
-  ],
-  [
-   "Jägerallee_Reiterweg_2018.pdf",
-   56015
+   "Jägerallee_Reiterweg_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2550.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2550.zip": {
+  "bytes": 122246,
+  "sha256": "e4a9ea668dca950c4451db96804894b8c06758e64b9415847dc8a235ad8b2339",
+  "dateien": [
    "Kaiser-Friedrich-Str_Am_Alten_Mörtelwerk_2012.pdf",
-   52238
-  ],
-  [
    "Kaiser-Friedrich-Str_Am_Alten_Mörtelwerk_2017.pdf",
-   47181
-  ],
-  [
-   "Kaiser-Friedrich-Str_Am_Alten_Mörtelwerk_2018.pdf",
-   46925
+   "Kaiser-Friedrich-Str_Am_Alten_Mörtelwerk_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2600.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2600.zip": {
+  "bytes": 144955,
+  "sha256": "1bfd3147dee364d80eb71644288d7cecd88ce2ea215ea2eb133c682b0132d881",
+  "dateien": [
    "Kaiser-Friedrich-Str_Kuhfortdamm_2012.pdf",
-   52512
-  ],
-  [
    "Kaiser-Friedrich-Str_Kuhfortdamm_2017.pdf",
-   57924
-  ],
-  [
-   "Kaiser-Friedrich-Str_Kuhfortdamm_2018.pdf",
-   57728
+   "Kaiser-Friedrich-Str_Kuhfortdamm_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6600.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6600.zip": {
+  "bytes": 93222,
+  "sha256": "c1ab5946c73272786391378db3f01189e3e72850fb94400d3ce68ebaa23236ea",
+  "dateien": [
    "K-Liebknecht-Str_K-Gruhl-Str_2011.pdf",
-   50791
-  ],
-  [
-   "K-Liebknecht-Str_K-Gruhl-Str_2016.pdf",
-   56070
+   "K-Liebknecht-Str_K-Gruhl-Str_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2880.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2880.zip": {
+  "bytes": 95350,
+  "sha256": "8bfbdb720867a8f6c15453dbe9eb472da2457d646ce070512f1d1b874054ab9f",
+  "dateien": [
    "Ketziner_Str_Döberitzer_Str_2018.pdf",
-   54693
-  ],
-  [
-   "Ketziner_Str_Döberitzer_Str_2019.pdf",
-   54841
+   "Ketziner_Str_Döberitzer_Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2870.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2870.zip": {
+  "bytes": 265231,
+  "sha256": "03854a11be8a1cde57e9f015eeb7580bcbd0469855fb45e6238d5bc1ff8b1b9e",
+  "dateien": [
    "2870/Ketziner_Str_Marquardter_Str_2013.pdf",
-   45939
-  ],
-  [
    "2870/Ketziner_Str_Marquardter_Str_2016.pdf",
-   50609
-  ],
-  [
    "2870/Ketziner_Str_Marquardter_Str_2019.pdf",
-   49981
-  ],
-  [
-   "2870/Ketziner_Str_Marquardter_Str_2023.pdf",
-   146140
+   "2870/Ketziner_Str_Marquardter_Str_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2860.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2860.zip": {
+  "bytes": 297529,
+  "sha256": "d60aac2082b9b68bec85063bf9b9c2cc8f564c7400c289cc37d1d857da66f6bc",
+  "dateien": [
    "2860/Ketziner_Str_Von-Stechow-Str_2010.pdf",
-   60812
-  ],
-  [
    "2860/Ketziner_Str_Von-Stechow-Str_2013.pdf",
-   43390
-  ],
-  [
    "2860/Ketziner_Str_Von-Stechow-Str_2016.pdf",
-   49946
-  ],
-  [
    "2860/Ketziner_Str_Von-Stechow-Str_2018.pdf",
-   50282
-  ],
-  [
-   "2860/Ketziner_Str_Von-Stechow-Str_2023.pdf",
-   144758
+   "2860/Ketziner_Str_Von-Stechow-Str_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2890.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2890.zip": {
+  "bytes": 182335,
+  "sha256": "e7570d86297582e9d844148708f14282bb773944d69f2a191c15d4441b59efbb",
+  "dateien": [
    "Ketziner_Str_Zum_Bahnhof_2012.pdf",
-   44982
-  ],
-  [
    "Ketziner_Str_Zum_Bahnhof_2016.pdf",
-   51944
-  ],
-  [
    "Ketziner_Str_Zum_Bahnhof_2018-04.pdf",
-   57005
-  ],
-  [
-   "Ketziner_Str_Zum_Bahnhof_2018-09.pdf",
-   57044
+   "Ketziner_Str_Zum_Bahnhof_2018-09.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2350.zip": [
-  [
-   "2350/Kiepenheuerallee_G-Hermann-Allee_2016.pdf",
-   160250
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2350.zip": {
+  "bytes": 152284,
+  "sha256": "550391461dbc30f82530d6a334651cb1831e01886e29f1fde862eaeebe952189",
+  "dateien": [
+   "2350/Kiepenheuerallee_G-Hermann-Allee_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8011.zip": [
-  [
-   "K-Wolf-Allee_E-von-Winterstein-Str_2011_6h.pdf",
-   14010
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8011.zip": {
+  "bytes": 10161,
+  "sha256": "695bd4a8e1130178f7bc0f53ed47a656da8e0438f47fb3cb4cfea0b3a02ed2a4",
+  "dateien": [
+   "K-Wolf-Allee_E-von-Winterstein-Str_2011_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8012.zip": [
-  [
-   "K-Wolf-Allee_G-Seeber-Weg_2011_6h.pdf",
-   14067
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8012.zip": {
+  "bytes": 10200,
+  "sha256": "a8c69aac61c700b6937a82700a87940f66a68293d862bdc86b524ae2cea4206c",
+  "dateien": [
+   "K-Wolf-Allee_G-Seeber-Weg_2011_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8020.zip": [
-  [
-   "K-Wolf-Allee_H-Albers-Str_2011.pdf",
-   50305
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8020.zip": {
+  "bytes": 44281,
+  "sha256": "fcd92187e050c5c09e6f45033edf1492863c11a3c9b7441a9861d0ee281ade84",
+  "dateien": [
+   "K-Wolf-Allee_H-Albers-Str_2011.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8010.zip": [
-  [
-   "K-Wolf-Allee_R-Baberske-Str_2011.pdf",
-   35197
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8010.zip": {
+  "bytes": 21336,
+  "sha256": "90df31b270e65e9f5f8aadf7046b9c35d852e770d734465bea0bd1b01226c02a",
+  "dateien": [
+   "K-Wolf-Allee_R-Baberske-Str_2011.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1570.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1570.zip": {
+  "bytes": 228846,
+  "sha256": "96c8a7f364af808fdd69de74b3389b47b6498bb7219759154efcd95f19d71a4b",
+  "dateien": [
    "1570/Kurfürstenstr_Hebbelstr_2010.pdf",
-   49818
-  ],
-  [
    "1570/Kurfürstenstr_Hebbelstr_2014.pdf",
-   49571
-  ],
-  [
-   "1570/Kurfürstenstr_Hebbelstr_2023.pdf",
-   148305
+   "1570/Kurfürstenstr_Hebbelstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2910.zip": [
-  [
-   "L20_Grüner_Weg_2018.pdf",
-   54977
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2910.zip": {
+  "bytes": 47649,
+  "sha256": "8f5c694f7d079b0a157cb0818e678c7b820cfb14dce650cc32a76806a5e50f56",
+  "dateien": [
+   "L20_Grüner_Weg_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4100.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4100.zip": {
+  "bytes": 401862,
+  "sha256": "0ffdebb4cb01ab76b0e06a8873c25ebdd05fc4030aae5e9cb2b4ea5f1d959c90",
+  "dateien": [
    "Leipziger_Dreieck_2010.pdf",
-   52423
-  ],
-  [
    "Leipziger_Dreieck_2011.pdf",
-   53770
-  ],
-  [
    "Leipziger_Dreieck_2012.pdf",
-   53642
-  ],
-  [
    "Leipziger_Dreieck_2014.pdf",
-   58700
-  ],
-  [
    "Leipziger_Dreieck_2015.pdf",
-   59850
-  ],
-  [
    "Leipziger_Dreieck_2016.pdf",
-   60401
-  ],
-  [
    "Leipziger_Dreieck_2017.pdf",
-   59854
-  ],
-  [
-   "Leipziger_Dreieck_2019.pdf",
-   60837
+   "Leipziger_Dreieck_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3210.zip": [
-  [
-   "Lennestr_Carl-von-Ossietzky-Str_2010.pdf",
-   31674
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3210.zip": {
+  "bytes": 26753,
+  "sha256": "e8b689878dc02e4cc4679d722feaffe1334ab61eee34668b991dcfed3d77a17d",
+  "dateien": [
+   "Lennestr_Carl-von-Ossietzky-Str_2010.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6000.zip": [
-  [
-   "Lutherplatz_2013.pdf",
-   41207
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6000.zip": {
+  "bytes": 34532,
+  "sha256": "b3797afb23cbad2c5af55983ea0f8753c0d2592828f14f987e75348a912b0bc3",
+  "dateien": [
+   "Lutherplatz_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4500.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4500.zip": {
+  "bytes": 104620,
+  "sha256": "5f7ff2fd3c2c89e35eb6d273f14cbb84c1775c5b849c45e0614cb43da31734bc",
+  "dateien": [
    "M-Zeller-Platz_2011_6h.pdf",
-   14671
-  ],
-  [
    "M-Zeller-Platz_2014.pdf",
-   56736
-  ],
-  [
-   "M-Zeller-Platz_2017.pdf",
-   51977
+   "M-Zeller-Platz_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2720.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2720.zip": {
+  "bytes": 91835,
+  "sha256": "d42bb38c4272c3fc559a634d89c1bf218ef4018e6716528a6a5f72834d9b1c47",
+  "dateien": [
    "Marquardter_Ch(B273)_Bergstr_2013.pdf",
-   53556
-  ],
-  [
-   "Marquardter_Ch(B273)_Bergstr_2017.pdf",
-   53657
+   "Marquardter_Ch(B273)_Bergstr_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2710.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2710.zip": {
+  "bytes": 118092,
+  "sha256": "9098b1ae5edf5b76b03dc043d4714b95fdfa950f17fed59d758620d66e01252a",
+  "dateien": [
    "Marquardter_Ch(B273)_Fahrländer_Ch_2010.pdf",
-   61873
-  ],
-  [
    "Marquardter_Ch(B273)_Fahrländer_Ch_2013.pdf",
-   44650
-  ],
-  [
-   "Marquardter_Ch(B273)_Fahrländer_Ch_2017.pdf",
-   52857
+   "Marquardter_Ch(B273)_Fahrländer_Ch_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2730.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2730.zip": {
+  "bytes": 195346,
+  "sha256": "bb6464e04dc467a318cd0b83a0c3cbf22d0d5fd48a647df16cc15e5e3259a03f",
+  "dateien": [
    "2730/2730+2740_2023.pdf",
-   152914
-  ],
-  [
-   "2730/Marquardter_Ch(B273)_Friedrichpark(N)+(S)_2018.pdf",
-   56366
+   "2730/Marquardter_Ch(B273)_Friedrichpark(N)+(S)_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2740.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2740.zip": {
+  "bytes": 195346,
+  "sha256": "fdc1cd42165c49809a36bdbff58a2105f9acb252c7b6ec7d4fd638133793567c",
+  "dateien": [
    "2740/2730+2740_2023.pdf",
-   152914
-  ],
-  [
-   "2740/Marquardter_Ch(B273)_Friedrichpark(N)+(S)_2018.pdf",
-   56366
+   "2740/Marquardter_Ch(B273)_Friedrichpark(N)+(S)_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2700.zip": [
-  [
-   "Marquardter_Ch(B273)_Hauptstr_2016.pdf",
-   52263
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2700.zip": {
+  "bytes": 44972,
+  "sha256": "6437a271a50e71e3fd0a7ae134aa7e3a564842c9ee8a54b3cdcc8fb43198013b",
+  "dateien": [
+   "Marquardter_Ch(B273)_Hauptstr_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2500.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2500.zip": {
+  "bytes": 139043,
+  "sha256": "dd8180bcf703fa964c96b60f0bf002ff823ad11d934d5fd5538066045628ebab",
+  "dateien": [
    "Maulbeerallee_Amundsenstr_2013.pdf",
-   49931
-  ],
-  [
    "Maulbeerallee_Amundsenstr_2016.pdf",
-   55594
-  ],
-  [
-   "Maulbeerallee_Amundsenstr_2019.pdf",
-   55807
+   "Maulbeerallee_Amundsenstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7300.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7300.zip": {
+  "bytes": 73045,
+  "sha256": "e5989b213d3110147c042d67f99a81b90728301b9df49f81e88b6a555786c30d",
+  "dateien": [
    "M-Bartholdy-Str_Steinstr_2010_6h.pdf",
-   30199
-  ],
-  [
-   "M-Bartholdy-Str_Steinstr_2016.pdf",
-   55999
+   "M-Bartholdy-Str_Steinstr_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4700.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4700.zip": {
+  "bytes": 134163,
+  "sha256": "72b9e84927507ca9d5a3c56d7e5a13cb77452a7a671be3606981dd5f81163055",
+  "dateien": [
    "Michendorfer_Ch(B2)_Brauhausberg_2013.pdf",
-   53129
-  ],
-  [
    "Michendorfer_Ch(B2)_Brauhausberg_2016.pdf",
-   50494
-  ],
-  [
-   "Michendorfer_Ch(B2)_Brauhausberg_2019.pdf",
-   53602
+   "Michendorfer_Ch(B2)_Brauhausberg_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1550.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1550.zip": {
+  "bytes": 139660,
+  "sha256": "ca518577fdb60d23439a3b8b16ded96010eb9a5ed475456c17537f9d0d2d319e",
+  "dateien": [
    "Nauener_Tor_2011.pdf",
-   45589
-  ],
-  [
    "Nauener_Tor_2012_nurRad.pdf",
-   60903
-  ],
-  [
-   "Nauener_Tor_2015.pdf",
-   52782
+   "Nauener_Tor_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2200.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2200.zip": {
+  "bytes": 91238,
+  "sha256": "0328b6df98beb599cacd448a92121c2541dcc6559c1fa99ff41ceb471a024021",
+  "dateien": [
    "Nedlitzer_Str_Am_Pfingsberg_2011.pdf",
-   50108
-  ],
-  [
-   "Nedlitzer_Str_Am_Pfingsberg_2016.pdf",
-   55299
+   "Nedlitzer_Str_Am_Pfingsberg_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2300.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2300.zip": {
+  "bytes": 305185,
+  "sha256": "3cb04453186e54998a488ff31d611159fbbcf88a62fd8fec017f6dbc29828807",
+  "dateien": [
    "2300/Nedlitzer_Str_Amundsenstr_2012.pdf",
-   44282
-  ],
-  [
    "2300/Nedlitzer_Str_Amundsenstr_2014.pdf",
-   63001
-  ],
-  [
    "2300/Nedlitzer_Str_Amundsenstr_2016.pdf",
-   51491
-  ],
-  [
    "2300/Nedlitzer_Str_Amundsenstr_2019.pdf",
-   52410
-  ],
-  [
-   "2300/Nedlitzer_Str_Amundsenstr_2023.pdf",
-   146701
+   "2300/Nedlitzer_Str_Amundsenstr_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2220.zip": [
-  [
-   "Nedlitzer_Str_E-Arendt-Str_2013.pdf",
-   50295
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2220.zip": {
+  "bytes": 43648,
+  "sha256": "5c2d52ac54a853d645d590fb47dc2d49bbe5288046984a703820b67e8f29f559",
+  "dateien": [
+   "Nedlitzer_Str_E-Arendt-Str_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2240.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2240.zip": {
+  "bytes": 97372,
+  "sha256": "10f24ff6f1397967dcf00353f2521d532e2d14c9ea1bd21741fe442420374719",
+  "dateien": [
    "Nedlitzer_Str_G-Hermann-Allee_2012.pdf",
-   57485
-  ],
-  [
-   "Nedlitzer_Str_G-Hermann-Allee_2016.pdf",
-   55447
+   "Nedlitzer_Str_G-Hermann-Allee_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1720.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1720.zip": {
+  "bytes": 87890,
+  "sha256": "bce804f00a5888bbc53584dcce824a16f02a7a1cdd9ce1888640645488663e52",
+  "dateien": [
    "Nedlitzer_Str_Kiepenheuerallee_2013.pdf",
-   71380
-  ],
-  [
-   "Nedlitzer_Str_Kiepenheuerallee_2018.pdf",
-   54350
+   "Nedlitzer_Str_Kiepenheuerallee_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2290.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2290.zip": {
+  "bytes": 85225,
+  "sha256": "3f6aa68d2a620e0cf5e13b390d16d450d219222b67ac77522d8134cc82a0ed05",
+  "dateien": [
    "Nedlitzer_Str_Konrad-Zuse-Ring_(N)_2016.pdf",
-   69000
-  ],
-  [
-   "Nedlitzer_Str_Konrad_Zuse_Ring_(N)_2019.pdf",
-   51046
+   "Nedlitzer_Str_Konrad_Zuse_Ring_(N)_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2301.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2301.zip": {
+  "bytes": 272415,
+  "sha256": "a0631d8a6cecca6c062d2aa808d9171fa9a00c836c86f0a26f552a394909ea79",
+  "dateien": [
    "2301/Nedlitzer_Str_Lerchensteig_2014.pdf",
-   46357
-  ],
-  [
    "2301/Nedlitzer_Str_Lerchensteig_2016.pdf",
-   52574
-  ],
-  [
    "2301/Nedlitzer_Str_Lerchensteig_2019.pdf",
-   53336
-  ],
-  [
-   "2301/Nedlitzer_Str_Lerchensteig_2023.pdf",
-   148078
+   "2301/Nedlitzer_Str_Lerchensteig_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2250.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2250.zip": {
+  "bytes": 95776,
+  "sha256": "9380fbea451bdda60fe4af0becdf8c58770b8b636210b5cddf54f0497027c8bd",
+  "dateien": [
    "Nedlitzer_Str_Viereckremise_2015.pdf",
-   55307
-  ],
-  [
-   "Nedlitzer_Str_Viereckremise_2019.pdf",
-   55839
+   "Nedlitzer_Str_Viereckremise_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2251.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2251.zip": {
+  "bytes": 91619,
+  "sha256": "3e7b9822dd538903d4d41a9e0288f3fc673aa6d12fa689fae1ac1b1dbfe388d2",
+  "dateien": [
    "Nedlitzer_Str_Zum_Exerzierhaus_2015.pdf",
-   52966
-  ],
-  [
-   "Nedlitzer_Str_Zum_Exerzierhaus_2019.pdf",
-   52898
+   "Nedlitzer_Str_Zum_Exerzierhaus_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7100.zip": [
-  [
-   "Neuendorfer_Str_Ziolkowskistr_2014.pdf",
-   51268
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7100.zip": {
+  "bytes": 44296,
+  "sha256": "0019ea52d23cc03770fefef823a7505ccd0a97dcd727bbf9a81ebfe7b5365927",
+  "dateien": [
+   "Neuendorfer_Str_Ziolkowskistr_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5100.zip": [
-  [
-   "Nuthestraße_A_115_2011_Qw.pdf",
-   28021
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5100.zip": {
+  "bytes": 23329,
+  "sha256": "705013adada5cf36b0b10ff561c5b2160b44c1da6ad4b9ef4f42369c0133dbf9",
+  "dateien": [
+   "Nuthestraße_A_115_2011_Qw.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5020.zip": [
-  [
-   "Nuthestr_F-Engels-Str_2013.pdf",
-   55785
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5020.zip": {
+  "bytes": 48326,
+  "sha256": "8b0931f080401b171a6730db275ced64deaed01696d6022fd05429cfcb2fd90a",
+  "dateien": [
+   "Nuthestr_F-Engels-Str_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6250.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6250.zip": {
+  "bytes": 74282,
+  "sha256": "b49ee05f726df2e680ca5cad4aecbbec498b59e182c8024fd94cfab77a025a8a",
+  "dateien": [
    "Nuthestr_F-List-Str_(N)_2010.pdf",
-   43689
-  ],
-  [
-   "Nuthestr_F-List-Str_(N)_2014.pdf",
-   43549
+   "Nuthestr_F-List-Str_(N)_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6260.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6260.zip": {
+  "bytes": 91428,
+  "sha256": "fba55e3a01480ff73952d1fe269828288979ed4247b2c2c09de9ed1faaa75cb3",
+  "dateien": [
    "Nuthestr_F-List-Str_L-Pulewka-Str_(S)_2010.pdf",
-   51385
-  ],
-  [
-   "Nuthestr_F-List-Str_L-Pulewka-Str_(S)_2014.pdf",
-   52371
+   "Nuthestr_F-List-Str_L-Pulewka-Str_(S)_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5040.zip": [
-  [
-   "Nuthestr_Horstweg_2010_Qo_6h.pdf",
-   26310
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5040.zip": {
+  "bytes": 21946,
+  "sha256": "12a812c5e4655acd2c46183418620a4a1eadd4c180d1bd362fcd6f4a4d3f2185",
+  "dateien": [
+   "Nuthestr_Horstweg_2010_Qo_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4670.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4670.zip": {
+  "bytes": 72145,
+  "sha256": "3b2a968a986d021e2a7c0a61715a2d81cc442614d4bce0ec8ea2b81e1eb4edd0",
+  "dateien": [
    "Nuthestr_Horstweg(N)_R-Moos-Str_2010_6h.pdf",
-   31648
-  ],
-  [
-   "Nuthestr_Horstweg(N)_R-Moos-Str_2015.pdf",
-   53917
+   "Nuthestr_Horstweg(N)_R-Moos-Str_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4650.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4650.zip": {
+  "bytes": 72147,
+  "sha256": "0dd2892ed84fa1dbe9c7ed7b5230b8898904d4c28453dc870a88ce465ad9dca7",
+  "dateien": [
    "Nuthestr_Horstweg(N)_2010_6h.pdf",
-   31899
-  ],
-  [
-   "Nuthestr_Horstweg(N)_2015.pdf",
-   53316
+   "Nuthestr_Horstweg(N)_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4660.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4660.zip": {
+  "bytes": 73748,
+  "sha256": "e5212694ea8068f26b9281a543dc3db1d0c6612d94dd4b30b8bc7d370c2a5318",
+  "dateien": [
    "Nuthestr_Horstweg(S)_2010_6h.pdf",
-   32070
-  ],
-  [
-   "Nuthestr_Horstweg(S)_2015.pdf",
-   54078
+   "Nuthestr_Horstweg(S)_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5000.zip": [
-  [
-   "Nuthestr_Humboldtring_2010_Qs_6h.pdf",
-   29202
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5000.zip": {
+  "bytes": 24274,
+  "sha256": "e90b845bcdd3501fbbda0879631d85715ea503dab09d7a6cf5aa58f6febb36d5",
+  "dateien": [
+   "Nuthestr_Humboldtring_2010_Qs_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8060.zip": [
-  [
-   "Nuthestr_K-Wolf-Allee_2010_6h.pdf",
-   29152
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8060.zip": {
+  "bytes": 24540,
+  "sha256": "36a4c75157253dc6f6e03d9513d4a9a8a0887a7ea8b239aee46c7658531e94ab",
+  "dateien": [
+   "Nuthestr_K-Wolf-Allee_2010_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8050.zip": [
-  [
-   "Nuthestr_M-Born-Str_2010_6h.pdf",
-   29465
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8050.zip": {
+  "bytes": 24616,
+  "sha256": "9cbd4058b7a3ce85704069338986690b2d33c18282090de747e842f7c7c924dc",
+  "dateien": [
+   "Nuthestr_M-Born-Str_2010_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5030.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5030.zip": {
+  "bytes": 64668,
+  "sha256": "0081f14b4e117304e74cd54ec13c79b27de20cbef7865db127103df39b492c7d",
+  "dateien": [
    "Nuthestr_Neuendorfer_Anger_2010_6h.pdf",
-   28820
-  ],
-  [
-   "Nuthestr_Neuendorfer_Anger_2015.pdf",
-   47784
+   "Nuthestr_Neuendorfer_Anger_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5070.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5070.zip": {
+  "bytes": 201011,
+  "sha256": "4b5d11c00a65b02e1903bc1063515ea8f5c5d4502f9c6ff3a15a682178f9d627",
+  "dateien": [
    "Nuthestr_Neuendorfer_Str_2010_Qw.pdf",
-   30986
-  ],
-  [
    "Nuthestr_Neuendorfer_Str_2011_Qw.pdf",
-   30923
-  ],
-  [
    "Nuthestr_Neuendorfer_Str_2013_Qw.pdf",
-   32258
-  ],
-  [
    "Nuthestr_Neuendorfer_Str_2014_Qw.pdf",
-   39746
-  ],
-  [
    "Nuthestr_Neuendorfer_Str_2015_Qw.pdf",
-   35972
-  ],
-  [
    "Nuthestr_Neuendorfer_Str_2016_Qw.pdf",
-   36444
-  ],
-  [
-   "Nuthestr_Neuendorfer_Str_2019_Qw.pdf",
-   36430
+   "Nuthestr_Neuendorfer_Str_2019_Qw.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7250.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7250.zip": {
+  "bytes": 123156,
+  "sha256": "3b9e17fc899b7e2ad8098f3378b248c577640e5a3562fac1697124dc50e1e937",
+  "dateien": [
    "Nuthestr_Neuendorfer_Str(N)_2013.pdf",
-   47601
-  ],
-  [
    "Nuthestr_Neuendorfer_Str(N)_2014.pdf",
-   51073
-  ],
-  [
-   "Nuthestr_Neuendorfer_Str(N)_2017.pdf",
-   48091
+   "Nuthestr_Neuendorfer_Str(N)_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7260.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7260.zip": {
+  "bytes": 127766,
+  "sha256": "2b41002653b5fda8048ebe0ca3e681e445bc393050c5ce6853063075b843bec3",
+  "dateien": [
    "Nuthestr_Neuendorfer_Str(S)_2013.pdf",
-   47134
-  ],
-  [
    "Nuthestr_Neuendorfer_Str(S)_2014.pdf",
-   51098
-  ],
-  [
-   "Nuthestr_Neuendorfer_Str(S)_2017.pdf",
-   52332
+   "Nuthestr_Neuendorfer_Str(S)_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5080.zip": [
-  [
-   "Nuthestr_Stern-Center_2010_Qw_6h.pdf",
-   28524
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/5080.zip": {
+  "bytes": 23851,
+  "sha256": "8969f012933eaa111d4cbf3df310267cafc8e557b62feb283ac671dfe06fb36c",
+  "dateien": [
+   "Nuthestr_Stern-Center_2010_Qw_6h.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6970.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6970.zip": {
+  "bytes": 71067,
+  "sha256": "8465fa25244587f18cf4279016b7b618ff04e5646586d528d1339392baf0c66e",
+  "dateien": [
    "Nuthestr_Wetzlarer_Str(N)_2011_6h.pdf",
-   30758
-  ],
-  [
-   "Nuthestr_Wetzlarer_Str(N)_2015.pdf",
-   52376
+   "Nuthestr_Wetzlarer_Str(N)_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6960.zip": [
-  [
-   "Nuthestr_Wetzlarer_Str(S)_2015.pdf",
-   52481
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6960.zip": {
+  "bytes": 45069,
+  "sha256": "b2cbd941fa6076d06605184161dd25a691007647e4b0e1f23f20e534acc334c3",
+  "dateien": [
+   "Nuthestr_Wetzlarer_Str(S)_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1670.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1670.zip": {
+  "bytes": 120567,
+  "sha256": "a6d9c666dff147b596232a8fff697656abee120634e51294f00d21c6dd7c0f60",
+  "dateien": [
    "Pappelallee_E-Mendelsohn-Allee_2012.pdf",
-   43032
-  ],
-  [
    "Pappelallee_E-Mendelsohn-Allee_2015.pdf",
-   47970
-  ],
-  [
-   "Pappelallee_E-Mendelsohn-Allee_2018.pdf",
-   49095
+   "Pappelallee_E-Mendelsohn-Allee_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1650.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1650.zip": {
+  "bytes": 255479,
+  "sha256": "b94d9b076ab93ec366d3e9164bc0af39b3ccab9ab7cc222e3a74e5777e00c2c1",
+  "dateien": [
    "1650/Pappelallee_G-Hermann-Allee_2011.pdf",
-   43379
-  ],
-  [
    "1650/Pappelallee_G-Hermann-Allee_2014.pdf",
-   52793
-  ],
-  [
    "1650/Pappelallee_G-Hermann-Allee_2017.pdf",
-   51176
-  ],
-  [
-   "1650/Pappelallee_G-Hermann-Allee_2023.pdf",
-   133442
+   "1650/Pappelallee_G-Hermann-Allee_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2030.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2030.zip": {
+  "bytes": 109661,
+  "sha256": "cc2dd43aa06fcbc4df5ea58c4dbd05db20588cb8daa9dd5fb84655f9acd7d422",
+  "dateien": [
    "Pappelallee_Kirschallee_2013.pdf",
-   63293
-  ],
-  [
-   "Pappelallee_Kirschallee_2017.pdf",
-   62266
+   "Pappelallee_Kirschallee_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2020.zip": [
-  [
-   "2020/Pappelallee_Reiherweg_2023.pdf",
-   148234
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2020.zip": {
+  "bytes": 141759,
+  "sha256": "3e9469a9b618e1e6a65961830e86acc3e10b6b756940d7f8f4ab063b9ca81138",
+  "dateien": [
+   "2020/Pappelallee_Reiherweg_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2850.zip": [
-  [
-   "Potsdamer_Ch_Abzweig_nach_Sacrow_2012.pdf",
-   63533
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2850.zip": {
+  "bytes": 37049,
+  "sha256": "f8aee34a03878a36eb75a0e0e4274d6a885794f7b11bfe24cfd4a31757fdb0e0",
+  "dateien": [
+   "Potsdamer_Ch_Abzweig_nach_Sacrow_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2950.zip": [
-  [
-   "Potsdamer_Ch_Dorfstraße_2010.pdf",
-   67634
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2950.zip": {
+  "bytes": 40516,
+  "sha256": "c8266402c2abc90c4fcd0abc08d0c06f79698bdb5fff16984e032c8bc38ec52d",
+  "dateien": [
+   "Potsdamer_Ch_Dorfstraße_2010.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2970.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2970.zip": {
+  "bytes": 162115,
+  "sha256": "b685afab8a3f550c7d297f7a6e4c26df2287681ef0430d2218989865a22baae6",
+  "dateien": [
    "Potsdamer_Ch_Ritterfelddamm_2010.pdf",
-   28850
-  ],
-  [
    "Potsdamer_Ch_Ritterfelddamm_2013.pdf",
-   56711
-  ],
-  [
    "Potsdamer_Ch_Ritterfelddamm_2016.pdf",
-   51260
-  ],
-  [
-   "Potsdamer_Ch_Ritterfelddamm_2019.pdf",
-   51914
+   "Potsdamer_Ch_Ritterfelddamm_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2900.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2900.zip": {
+  "bytes": 213890,
+  "sha256": "a19d00dba40bc822a2bc08a02b57949b5f1cb94f5e6d679cd5e05b494d0aaa61",
+  "dateien": [
    "2900/Potsdamer_Ch_Sacrower_Allee_2010.pdf",
-   30803
-  ],
-  [
    "2900/Potsdamer_Ch_Sacrower_Allee_2013.pdf",
-   50912
-  ],
-  [
-   "2900/Potsdamer_Ch_Sacrower_Allee_2023.pdf",
-   148459
+   "2900/Potsdamer_Ch_Sacrower_Allee_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2100.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2100.zip": {
+  "bytes": 138591,
+  "sha256": "220319038c543275256e4c463243d1f40b4e14a1eb9f5ef060a92ad1d21f3b97",
+  "dateien": [
    "Potsdamer_Str_Amundsenstr_2012.pdf",
-   50510
-  ],
-  [
    "Potsdamer_Str_Amundsenstr_2016.pdf",
-   55229
-  ],
-  [
-   "Potsdamer_Str_Amundsenstr_2019.pdf",
-   55992
+   "Potsdamer_Str_Amundsenstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2140.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2140.zip": {
+  "bytes": 139077,
+  "sha256": "f9348774cb5b5e0a9c5c3b510cd24d92898437e2ed148aaa95c3063d3911e4db",
+  "dateien": [
    "Potsdamer_Str_Rückertstr_2010_6h.pdf",
-   30681
-  ],
-  [
    "Potsdamer_Str_Rückertstr_2011_6h.pdf",
-   30331
-  ],
-  [
    "Potsdamer_Str_Rückertstr_2015.pdf",
-   52412
-  ],
-  [
-   "Potsdamer_Str_Rückertstr_2019.pdf",
-   51880
+   "Potsdamer_Str_Rückertstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2040.zip": [
-  [
-   "Potsdamer_Str_Schulplatz_2012.pdf",
-   61987
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2040.zip": {
+  "bytes": 36580,
+  "sha256": "be5e40b1cdaaa44da5aab27f123307402ef63165a36f88bbcfc7f9be10b788e6",
+  "dateien": [
+   "Potsdamer_Str_Schulplatz_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1732.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1732.zip": {
+  "bytes": 87303,
+  "sha256": "1091fac8be6e0d11645bb510362faf1241b18d7c4c78dd29cce9d534fb5ed02c",
+  "dateien": [
    "Puschkinallee_Beyerstr_2015.pdf",
-   50534
-  ],
-  [
-   "Puschkinallee_Beyerstr_2019.pdf",
-   52064
+   "Puschkinallee_Beyerstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2611.zip": [
-  [
-   "Reiherbergstr_Am_Urnenfeld_2015.pdf",
-   66358
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2611.zip": {
+  "bytes": 38854,
+  "sha256": "8e2b5f9a8bf9e97714fdd4e79bf78ea7539ee85d01fcc2a87ad68490d6031615",
+  "dateien": [
+   "Reiherbergstr_Am_Urnenfeld_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2610.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2610.zip": {
+  "bytes": 118540,
+  "sha256": "345ed8faab9e967369d6e815273d95a32ffca2c58b8580e35e6a61f898fac70f",
+  "dateien": [
    "Reiherbergstr_K-Liebknecht-Str_2012.pdf",
-   39746
-  ],
-  [
    "Reiherbergstr_K-Liebknecht-Str_2016.pdf",
-   46901
-  ],
-  [
-   "Reiherbergstr_K-Liebknecht-Str_2018.pdf",
-   51905
+   "Reiherbergstr_K-Liebknecht-Str_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2150.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2150.zip": {
+  "bytes": 128147,
+  "sha256": "7251ea03d826ecdf145d9102074faff42ba4aa3bef26050a99cb7f9696fdeabe",
+  "dateien": [
    "Rückertstr_Marquardter_Ch_2011.pdf",
-   45703
-  ],
-  [
    "Rückertstr_Marquardter_Ch_2015.pdf",
-   52896
-  ],
-  [
-   "Rückertstr_Marquardter_Ch_2019.pdf",
-   51843
+   "Rückertstr_Marquardter_Ch_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2160.zip": [
-  [
-   "Rückertstr_M.-Eyth-Allee_2013.pdf",
-   41480
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2160.zip": {
+  "bytes": 34569,
+  "sha256": "8d580ff7cc6ac0f121f9897c86bd6590fd23761998b59f692c5a885aa67d3cde",
+  "dateien": [
+   "Rückertstr_M.-Eyth-Allee_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6200.zip": [
-  [
-   "R-Breitscheid-Str_Alt_Nowawes_2010.pdf",
-   50356
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6200.zip": {
+  "bytes": 44418,
+  "sha256": "d0ad035b521ff9ce789282cad0eb20d15fd4dbbf4330506dfd7cb618dcfc4bef",
+  "dateien": [
+   "R-Breitscheid-Str_Alt_Nowawes_2010.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6340.zip": [
-  [
-   "R-Breitscheid-Str_Anhaltstr_2011.pdf",
-   41589
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6340.zip": {
+  "bytes": 36040,
+  "sha256": "235125bbc9cf87c9cc7d4c4f9c3ee8f9eb5022e2ab806120a66887d9490c5a22",
+  "dateien": [
+   "R-Breitscheid-Str_Anhaltstr_2011.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6400.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6400.zip": {
+  "bytes": 100261,
+  "sha256": "7353bfe979275d92d98dc3467506c975704940bdcc0010166ad80a77d77b778c",
+  "dateien": [
    "R-Breitscheid-Str_A-Bebel-Str_2013.pdf",
-   60702
-  ],
-  [
-   "R-Breitscheid-Str_A-Bebel-Str_2018.pdf",
-   56739
+   "R-Breitscheid-Str_A-Bebel-Str_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6300.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6300.zip": {
+  "bytes": 92818,
+  "sha256": "16c436128a7d83c93dee948598884039a032c3cbf094fd2dab3ee3a2f9f19474",
+  "dateien": [
    "R-Breitscheid-Str_K-Liebknecht-Str_2011.pdf",
-   51246
-  ],
-  [
-   "R-Breitscheid-Str_K-Liebknecht-Str_2017.pdf",
-   55188
+   "R-Breitscheid-Str_K-Liebknecht-Str_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6310.zip": [
-  [
-   "R-Breitscheid-Str_Wattstr_2011.pdf",
-   43063
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6310.zip": {
+  "bytes": 35996,
+  "sha256": "ac80ffcb92a99df8bc853d3d1010579a021f84827010287e43f708c564187da0",
+  "dateien": [
+   "R-Breitscheid-Str_Wattstr_2011.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4351.zip": [
-  [
-   "Saarmunder_Str_Zum_Teufelssee_2017.pdf",
-   56170
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4351.zip": {
+  "bytes": 47891,
+  "sha256": "a39a98119563f63f4667462f84cf94e239572eeedb40bc4075b87cd765bff97b",
+  "dateien": [
+   "Saarmunder_Str_Zum_Teufelssee_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1600.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1600.zip": {
+  "bytes": 102134,
+  "sha256": "5b45da6ee549656f4e4271071fcc3d203370ce32f93c910ff65c157a31a6c2f3",
+  "dateien": [
    "Schlegelstr_Voltaireweg_2013.pdf",
-   61699
-  ],
-  [
-   "Schlegelstr_Voltaireweg_2018.pdf",
-   55628
+   "Schlegelstr_Voltaireweg_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1051.zip": [
-  [
-   "Schopenhauerstr_Marktcenter_2016.pdf",
-   51892
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/1051.zip": {
+  "bytes": 43382,
+  "sha256": "d987a1affee2e8544f6e7a595085ddd90f169ac7f9f3fd6f4196f871ce6569a1",
+  "dateien": [
+   "Schopenhauerstr_Marktcenter_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2960.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2960.zip": {
+  "bytes": 183253,
+  "sha256": "33e89e0213afbe9bb69e2ed2385588bfb5e2b5b0b679eb004a80cf9fbd3a0ed5",
+  "dateien": [
    "2960/Seeburger_Ch_Potsdamer_Ch_2017.pdf",
-   52500
-  ],
-  [
-   "2960/Seeburger_Ch_Potsdamer_Ch_2023.pdf",
-   144408
+   "2960/Seeburger_Ch_Potsdamer_Ch_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6850.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6850.zip": {
+  "bytes": 144530,
+  "sha256": "65abe637b084400161dbac009a80b71250a32a54b162e400517a9b36fa4bea7d",
+  "dateien": [
    "Stahnsdorfer_Str_A-Bebel-Str_2010.pdf",
-   50526
-  ],
-  [
    "Stahnsdorfer_Str_A-Bebel-Str_2015.pdf",
-   55879
-  ],
-  [
-   "Stahnsdorfer_Str_A-Bebel-Str_2018.pdf",
-   59837
+   "Stahnsdorfer_Str_A-Bebel-Str_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7400.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/7400.zip": {
+  "bytes": 164625,
+  "sha256": "40b444c68e76e53ab81e3521a2b68c1194ac91e0682b5bd4755cc9b8b3716a64",
+  "dateien": [
    "Stahnsdorfer_Str_B-Beyer-Str_2010_6h.pdf",
-   30126
-  ],
-  [
    "Stahnsdorfer_Str_B-Beyer-Str_2013.pdf",
-   53129
-  ],
-  [
    "Stahnsdorfer_Str_B-Beyer-Str_2016.pdf",
-   56828
-  ],
-  [
-   "Stahnsdorfer_Str_B-Beyer-Str_2019.pdf",
-   52178
+   "Stahnsdorfer_Str_B-Beyer-Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6360.zip": [
-  [
-   "Stahnsdorfer_Str_P-Neumann-Str_2012.pdf",
-   55579
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6360.zip": {
+  "bytes": 48076,
+  "sha256": "321186d2350c33c20ea1a4b2132c0fbd4731e7707a5f82a8d61596a18db60b9f",
+  "dateien": [
+   "Stahnsdorfer_Str_P-Neumann-Str_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8120.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8120.zip": {
+  "bytes": 82749,
+  "sha256": "f578ca563ad137614dc3f27830aaa1f2106a9fbe97e45794aa10f8e2fcdf2914",
+  "dateien": [
    "Sternstr_Trebbiner_Str_2010.pdf",
-   61995
-  ],
-  [
-   "Sternstr_Trebbiner_Str_2013.pdf",
-   53458
+   "Sternstr_Trebbiner_Str_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4730.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4730.zip": {
+  "bytes": 73772,
+  "sha256": "35db00bc4ebec9a6a18e373681af171390b3f36f26ef953df1efb6596afb1f4c",
+  "dateien": [
    "Templiner_Str_Alter_Tornow_2011_6h.pdf",
-   31958
-  ],
-  [
-   "Templiner_Str_Alter_Tornow_2012.pdf",
-   54354
+   "Templiner_Str_Alter_Tornow_2012.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4710.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4710.zip": {
+  "bytes": 79726,
+  "sha256": "127556b9a1fa0594f485957de801b221322f706cf625f8840936a6a1e38fb218",
+  "dateien": [
    "Templiner_Str_Brauhausberg_2013.pdf",
-   41598
-  ],
-  [
-   "Templiner_Str_Brauhausberg_2016.pdf",
-   53617
+   "Templiner_Str_Brauhausberg_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4720.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/4720.zip": {
+  "bytes": 137029,
+  "sha256": "0e060b88c5a2726ea61e4231d97d7ceb506cd647f1de667d344f87b8df12c552",
+  "dateien": [
    "Templiner_Str_Leipziger_Str_2014.pdf",
-   47534
-  ],
-  [
    "Templiner_Str_Leipziger_Str_2016.pdf",
-   55903
-  ],
-  [
-   "Templiner_Str_Leipziger_Str_2019.pdf",
-   56142
+   "Templiner_Str_Leipziger_Str_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8140.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8140.zip": {
+  "bytes": 86964,
+  "sha256": "7bc07218c5e5f64fb1a490ba560e208188aa20aea4370ca608653e3df7a81d4d",
+  "dateien": [
    "Trebbiner_Str_Neue_L_79_(OU_Drewitz)_2011.pdf",
-   47776
-  ],
-  [
-   "Trebbiner_Str_Neue_L_79_(OU_Drewitz)_2014.pdf",
-   53154
+   "Trebbiner_Str_Neue_L_79_(OU_Drewitz)_2014.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8160.zip": [
-  [
-   "Trebbiner_Str_A_115_(Ostrampe)_2017.pdf",
-   51393
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8160.zip": {
+  "bytes": 44265,
+  "sha256": "857b7b220b2a50e87f81828042ff23af426e51103811eadd97519a077acdc0d1",
+  "dateien": [
+   "Trebbiner_Str_A_115_(Ostrampe)_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8150.zip": [
-  [
-   "Trebbiner_Str_A_115_(Westrampe)_2017.pdf",
-   47335
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8150.zip": {
+  "bytes": 38979,
+  "sha256": "1eb64fdb80ce202d4f0e6cf98f27cd739350e0e6725c36e433059d5b4f0366b1",
+  "dateien": [
+   "Trebbiner_Str_A_115_(Westrampe)_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8130.zip": [
-  [
-   "Trebbiner_Str_C-Schumann-Str_2011.pdf",
-   43175
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8130.zip": {
+  "bytes": 37363,
+  "sha256": "39e2f194e12b0999e2e201236ff70915486032b51070fa8b3799d2ab5e74a8cf",
+  "dateien": [
+   "Trebbiner_Str_C-Schumann-Str_2011.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2809.zip": [
-  [
-   "Nedlitzer_Str_Am_Großen_Horn_2019.pdf",
-   50984
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2809.zip": {
+  "bytes": 43949,
+  "sha256": "e5e426ea2bd2d62cc203e1fe94774c4e686a80bc3996cb0ccbdd114c4cd735d9",
+  "dateien": [
+   "Nedlitzer_Str_Am_Großen_Horn_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3350.zip": [
-  [
-   "Werderscher_Damm_Kuhfortdamm_2013.pdf",
-   46091
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3350.zip": {
+  "bytes": 39166,
+  "sha256": "6c352b284120dcbd3edeb98d3153db1d612f2e1f23a719bc9e70700f9788117c",
+  "dateien": [
+   "Werderscher_Damm_Kuhfortdamm_2013.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6950.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/6950.zip": {
+  "bytes": 72259,
+  "sha256": "0cb822753bd4dd1b413f349e043da6f5cdbdfea5c59ce1b15ca0a0b3b457e2d7",
+  "dateien": [
    "Wetzlarer_Str_F-Zubeil-Str_2011_6h.pdf",
-   31093
-  ],
-  [
-   "Wetzlarer_Str_F-Zubeil-Str_2015.pdf",
-   53666
+   "Wetzlarer_Str_F-Zubeil-Str_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2410.zip": [
-  [
-   "Wublitzstr_Neue_Dorfstr_2017.pdf",
-   52507
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2410.zip": {
+  "bytes": 44624,
+  "sha256": "edc8e77fa85e5ee623332270db57de1079461d4584ebf5cb064efb7218620b40",
+  "dateien": [
+   "Wublitzstr_Neue_Dorfstr_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3150.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3150.zip": {
+  "bytes": 119807,
+  "sha256": "f0a7f0476b713d8dea7774a71e72a8b3b8e4d40ab6388db64fe4c762f9748f59",
+  "dateien": [
    "Zeppelinstr(B1)_An_der_Pirschheide_2010.pdf",
-   29432
-  ],
-  [
    "Zeppelinstr(B1)_An_der_Pirschheide_2013.pdf",
-   56762
-  ],
-  [
-   "Zeppelinstr(B1)_An_der_Pirschheide_2016.pdf",
-   53089
+   "Zeppelinstr(B1)_An_der_Pirschheide_2016.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3140.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3140.zip": {
+  "bytes": 91309,
+  "sha256": "9fde9b8e9ab655a4e57e7d49b193d4f7d2d461e48a722badd13cacbf2a8d6d9c",
+  "dateien": [
    "Zeppelinstr(B1)_Bf_Pirschheide_2016.pdf",
-   54086
-  ],
-  [
-   "Zeppelinstr(B1)_Bf_Pirschheide_2019.pdf",
-   53756
+   "Zeppelinstr(B1)_Bf_Pirschheide_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3130.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3130.zip": {
+  "bytes": 138836,
+  "sha256": "5f3d60bdbabe5a2153ebdede3ed552128072515b31f5d78076e1bde9974eb29e",
+  "dateien": [
    "Zeppelinstr_Forststr_2013.pdf",
-   49258
-  ],
-  [
    "Zeppelinstr_Forststr_2016.pdf",
-   56181
-  ],
-  [
-   "Zeppelinstr_Forststr_2019.pdf",
-   56299
+   "Zeppelinstr_Forststr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3000.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3000.zip": {
+  "bytes": 163389,
+  "sha256": "8eeeff981dd612736020cbb6d22d33027e7cf3ccde0d86e4e78dbe41f67f88b4",
+  "dateien": [
    "Zeppelinstr_G-Scholl-Str_2011.pdf",
-   50574
-  ],
-  [
    "Zeppelinstr_G-Scholl-Str_2013_Qs.pdf",
-   30161
-  ],
-  [
    "Zeppelinstr_G-Scholl-Str_2014.pdf",
-   50937
-  ],
-  [
-   "Zeppelinstr_G-Scholl-Str_2017.pdf",
-   58399
+   "Zeppelinstr_G-Scholl-Str_2017.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3120.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3120.zip": {
+  "bytes": 126664,
+  "sha256": "3037bffd01c269383f3c7ecc210eed60faead3e7fbfa661103d6a6f953da15c2",
+  "dateien": [
    "Zeppelinstr_Im_Bogen_2011.pdf",
-   46992
-  ],
-  [
    "Zeppelinstr_Im_Bogen_2017.pdf",
-   51500
-  ],
-  [
-   "Zeppelinstr_Im_Bogen_2018.pdf",
-   52362
+   "Zeppelinstr_Im_Bogen_2018.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3100.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3100.zip": {
+  "bytes": 329143,
+  "sha256": "01cf75874cffac14b4b581cc26c3be637ef8219e0cbc4b95891fc2bdd3ba8b60",
+  "dateien": [
    "3100/Zeppelinstr_Kastanienallee_2011.pdf",
-   50162
-  ],
-  [
    "3100/Zeppelinstr_Kastanienallee_2014.pdf",
-   50174
-  ],
-  [
    "3100/Zeppelinstr_Kastanienallee_2016.pdf",
-   56783
-  ],
-  [
    "3100/Zeppelinstr_Kastanienallee_2018.pdf",
-   56660
-  ],
-  [
-   "3100/Zeppelinstr_Kastanienallee_2023.pdf",
-   151933
+   "3100/Zeppelinstr_Kastanienallee_2023.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3010.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3010.zip": {
+  "bytes": 301543,
+  "sha256": "d440bda3fa2541b5698fdcf14f2b2a774f2f92dd53d1e293a0662fe90555e645",
+  "dateien": [
    "Zeppelinstr_Nansenstr_2011.pdf",
-   46429
-  ],
-  [
    "Zeppelinstr_Nansenstr_2014.pdf",
-   46218
-  ],
-  [
    "Zeppelinstr_Nansenstr_2016.pdf",
-   50565
-  ],
-  [
    "Zeppelinstr_Nansenstr_2017-04.pdf",
-   52600
-  ],
-  [
    "Zeppelinstr_Nansenstr_2017-07.pdf",
-   52329
-  ],
-  [
    "Zeppelinstr_Nansenstr_2018-04.pdf",
-   52252
-  ],
-  [
-   "Zeppelinstr_Nansenstr_2019.pdf",
-   52720
+   "Zeppelinstr_Nansenstr_2019.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3030.zip": [
-  [
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/3030.zip": {
+  "bytes": 82633,
+  "sha256": "c07ea1d2eca00503e509d8cef51fb691d439be291fe4b17994c5ff05247d7de3",
+  "dateien": [
    "Zeppelinstr_Wielandstr_2011.pdf",
-   43023
-  ],
-  [
-   "Zeppelinstr_Wielandstr_2015.pdf",
-   52525
+   "Zeppelinstr_Wielandstr_2015.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8100.zip": [
-  [
-   "Zum_Kirchsteigfeld_Gerlachstr_2011.pdf",
-   54242
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8100.zip": {
+  "bytes": 46232,
+  "sha256": "b210046271c2f54899d491da189a37294a08b2f4660e415e72210a60380a96ea",
+  "dateien": [
+   "Zum_Kirchsteigfeld_Gerlachstr_2011.pdf"
   ]
- ],
- "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8000.zip": [
-  [
-   "Zum_Kirchsteigfeld_K-Wolf-Allee_2014.pdf",
-   54324
+ },
+ "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/8000.zip": {
+  "bytes": 47220,
+  "sha256": "c6f62560330ee829817f3b527d83de00c56c68b0f0ccab52aac19b63bcce5ab3",
+  "dateien": [
+   "Zum_Kirchsteigfeld_K-Wolf-Allee_2014.pdf"
   ]
- ],
- "summe_bytes": 23582684
+ }
 }
