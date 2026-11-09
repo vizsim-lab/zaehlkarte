@@ -1,0 +1,127 @@
+{
+ "author": "Data Science und Mobilitätsstatistik (12-13)",
+ "author_email": "",
+ "creator_user_id": "3a4a1e20-f44d-4945-bdb6-c400536806cc",
+ "id": "6b980155-7f3c-489e-9169-004138b9d28f",
+ "isopen": true,
+ "license_id": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+ "license_title": "Creative Commons Namensnennung – 4.0 International (CC BY 4.0)",
+ "license_url": "http://creativecommons.org/licenses/by/4.0/",
+ "maintainer": "Landeshauptstadt Stuttgart, Statistisches Amt",
+ "maintainer_email": "poststelle.12-opendata@stuttgart.de",
+ "metadata_created": "2026-03-31T08:52:26.844517",
+ "metadata_modified": "2026-03-31T08:52:43.994827",
+ "name": "ergebnisse-der-verkehrszaehlungen",
+ "notes": "Im jährlich wechselnden Turnus führt das Amt für Stadtplanung und Wohnen der Landeshauptstadt Stuttgart an der Markungsgrenze und am Kesselrand Verkehrszählungen durch. Dabei werden an einem normalen Werktag innerhalb von 24 Stunden alle Fahrzeuge und deren Richtung erfasst, die die Zählstellen passieren.\r\nDer Datensatz enthält die jährlichen Ergebnisse der Verkehrszählungen, differenziert nach Messpunkt (Kesselrand vs. Markungsgrenze), Richtung, Messzeitraum (22.00-06:00 Uhr vs. 6:00-22:00 Uhr) sowie Fahrzeugart.",
+ "num_resources": 1,
+ "num_tags": 6,
+ "organization": {
+  "id": "cff29f70-5b6d-4fb9-aa8f-0f1ae66634e8",
+  "name": "statistisches-amt",
+  "title": "Statistisches Amt",
+  "type": "organization",
+  "description": "Das [Statistische Amt](https://www.stuttgart.de/service/statistik-und-wahlen/) liefert Daten, Fakten und Analysen zur Landeshauptstadt Stuttgart.  \r\nDie Durchführung von [Parlaments- und Kommunalwahlen](https://www.stuttgart.de/service/wahlen/), sowie von [Umfragen](https://www.stuttgart.de/service/statistik-und-wahlen/buergerumfragen.php) gehört ebenfalls zu dessen Zuständigkeit.",
+  "image_url": "2023-06-28-071009.218191Logo-Stat-Amt.png",
+  "created": "2023-05-11T15:59:36.181165",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "cff29f70-5b6d-4fb9-aa8f-0f1ae66634e8",
+ "private": false,
+ "state": "active",
+ "title": "Ergebnisse der Verkehrszählungen",
+ "type": "dataset",
+ "url": "Landeshauptstadt Stuttgart, Amt für Stadtplanung und Wohnen",
+ "version": "",
+ "extras": [
+  {
+   "key": "Raumbezug",
+   "value": "Messstellen Stuttgart Kesselrand bzw. Markungsgrenze"
+  },
+  {
+   "key": "Zeitbezug",
+   "value": "1980-2024"
+  }
+ ],
+ "groups": [
+  {
+   "description": "",
+   "display_name": "Verkehr",
+   "id": "98247b19-d256-4a94-8a9c-d56b25bf604d",
+   "image_display_url": "https://opendata.stuttgart.de/uploads/group/2023-06-28-071153.720346Mobilitaet.png",
+   "name": "tran",
+   "title": "Verkehr"
+  }
+ ],
+ "resources": [
+  {
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-03-31T08:52:43.828249",
+   "datastore_active": false,
+   "description": "",
+   "format": "CSV",
+   "hash": "",
+   "id": "8345d864-0173-483f-adc7-8ded2d7c7855",
+   "last_modified": "2026-03-31T08:52:43.808102",
+   "metadata_modified": "2026-03-31T08:52:44.000784",
+   "mimetype": "text/csv",
+   "mimetype_inner": null,
+   "name": "Verkehrszählungen_Stuttgart_1980_bis_2024.csv",
+   "package_id": "6b980155-7f3c-489e-9169-004138b9d28f",
+   "position": 0,
+   "resource_type": null,
+   "size": 94950,
+   "state": "active",
+   "url": "https://opendata.stuttgart.de/dataset/6b980155-7f3c-489e-9169-004138b9d28f/resource/8345d864-0173-483f-adc7-8ded2d7c7855/download/verkehrszahlungen_stuttgart_1980_bis_2024.csv",
+   "url_type": "upload"
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "Fahrräder",
+   "id": "8cc4f164-dd6b-46b6-9d98-2214917fe59e",
+   "name": "Fahrräder",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Kraftfahrzeuge",
+   "id": "2a3f8d90-a5ac-4881-84f6-aac802db4d17",
+   "name": "Kraftfahrzeuge",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Lkw",
+   "id": "d0744ec6-4640-452f-b518-199ed63dffb1",
+   "name": "Lkw",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Pkw",
+   "id": "6137d0b2-aae2-4e89-961e-0cd567a03855",
+   "name": "Pkw",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Verkehr",
+   "id": "c8c57b33-7bd2-41fc-b538-a38b6c328dce",
+   "name": "Verkehr",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Verkehrszählung",
+   "id": "05d70ed8-8143-478c-8112-7c7a58c0b353",
+   "name": "Verkehrszählung",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}
