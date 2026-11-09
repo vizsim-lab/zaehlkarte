@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
-      - run: timeout 12m python3 tools/xanten_orte.py ergebnis/xanten_osm.json || true
+      - run: timeout 15m python3 tools/bw_suche.py ergebnis/bw || true
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
