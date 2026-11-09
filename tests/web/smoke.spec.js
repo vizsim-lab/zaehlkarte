@@ -149,6 +149,24 @@ test("Stelle aus Olpe: Radarmessung je Fahrzeug, Lizenz je Datensatz", async ({ 
   expect(z.filter((x) => x.lieferung === "olpe:dl-de-by").length).toBeGreaterThan(100);
 });
 
+test("Bedienelemente unten links rücken nur neben ein Panel, das sie verdecken würde", async ({ page }) => {
+  await page.setViewportSize({ width: 1400, height: 1200 });
+  await oeffne(page);
+  const knoepfe = page.locator("#bottom-left-ui-container");
+  const links = async () => (await knoepfe.boundingBox()).x;
+  await page.evaluate(() => {
+    const a = window.__app;
+    a.oeffneStelle(a.daten.stellen.find((x) => x.quelle === "ravensburg" && x.zaehlungen.length === 1));
+  });
+  await expect(page.locator("#detail svg.tg")).toBeVisible();
+  await expect.poll(links).toBeLessThan(20); // kurzes Panel: Knöpfe bleiben am Rand
+  await page.setViewportSize({ width: 1400, height: 700 });
+  await expect.poll(links).toBeGreaterThan(380); // Panel reicht bis unten: Knöpfe daneben
+  await expect.poll(async () => (await page.locator(".map-settings-toggle").boundingBox()).x).toBeGreaterThan(380);
+  await page.locator("#detail [data-schliessen]").click();
+  await expect.poll(links).toBeLessThan(20);
+});
+
 test("CSV-Export der Zählungen im Filter", async ({ page }) => {
   await oeffne(page, "#t=rad.menge&q=ravensburg");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);

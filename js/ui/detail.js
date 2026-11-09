@@ -58,7 +58,6 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     gewaehlt = zaehlungIndex ?? (passende.at(-1) ?? s.zaehlungen.at(-1)).index;
     ansicht = z.thema === "sv" ? "kfz" : z.thema; // Schwerverkehr steht im Kfz-Tagesgang
     el.hidden = false;
-    document.body.classList.add("detail-offen");
     zeichneKopf();
     zeichneZaehlung();
   }
@@ -67,7 +66,6 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     if (el.hidden) return;
     el.hidden = true;
     stelle = null;
-    document.body.classList.remove("detail-offen");
     beiSchliessen?.();
   }
 
@@ -91,7 +89,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
       });
       const aktiv = x.index === gewaehlt ? " is-aktiv" : "";
       return `<tr class="dz-zeile${aktiv}" data-zaehlung="${x.index}" tabindex="0">
-        <td>${esc(datum(x.datum))}</td><td class="dz-tag" title="${esc(TAGE[x.tag ?? "u"])}">${esc(t(`tag_kurz.${x.tag ?? "u"}`))}</td><td>${esc(x.fenster)}</td>${zellen.join("")}</tr>`;
+        <td>${esc(datum(x.datum))}</td><td class="dz-tag" title="${esc(TAGE[x.tag ?? "u"])}">${esc(t(`tag_kurz.${x.tag ?? "u"}`))}</td><td class="dz-uhr">${String(x.fenster ?? "").split(", ").map((f) => `<span class="nw">${esc(f)}</span>`).join(", ")}</td>${zellen.join("")}</tr>`;
     });
     const anzahl = stelle.zaehlungen.length === 1 ? t("detail.eine") : t("detail.n", { n: zahl(stelle.zaehlungen.length) });
     const spalte = (g) => `<th title="${esc(GRUPPEN_NAMEN[g])}">${esc(t(`kurz.${g}`))}</th>`;

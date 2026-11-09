@@ -14,7 +14,7 @@ import { bindeUmschalter, ersteSprache, wendeAn } from "./js/sprache/umschalter.
 import { erstelleDetail } from "./js/ui/detail.js";
 import { erstelleLegende } from "./js/ui/legende.js";
 import { setupMobileLayout } from "./js/ui/mobileLayout.js";
-import { addNavigationControl, beschrifteSteuerung, setupMapPanel } from "./js/ui/setupMapPanel.js";
+import { addNavigationControl, beschrifteSteuerung, rueckeNebenPanels, setupMapPanel } from "./js/ui/setupMapPanel.js";
 import { setupTooltips } from "./js/ui/tooltip.js";
 import { setupPhotonGeocoder } from "./js/utils/geocoder.js";
 import { dekodiere, kodiere } from "./js/utils/permalinkFormat.js";
@@ -92,7 +92,6 @@ async function start() {
   const dlPanel = document.getElementById("datenlage-detail");
   function schliesseDatenlage() {
     dlPanel.hidden = true;
-    document.body.classList.remove("detail-offen");
   }
 
   function oeffneStelle(s, zaehlung = null) {
@@ -155,7 +154,6 @@ async function start() {
       e.target.textContent = t("dl.kopiert");
     });
     detail.schliesse();
-    document.body.classList.add("detail-offen"); // Bedienelemente unten links rücken daneben
     el.dataset.kommune = kommune;
   }
 
@@ -188,6 +186,7 @@ async function start() {
   setupMapPanel(karte);
   addNavigationControl(karte);
   beschrifteSteuerung();
+  rueckeNebenPanels();
   setupMobileLayout();
   zeichne();
 

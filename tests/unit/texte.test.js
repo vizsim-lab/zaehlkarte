@@ -39,6 +39,7 @@ test("Zahlen, Anteile, Daten und Uhrzeiten je Sprache", () => {
   assert.equal(prozent(0.053, "en"), "5.3%");
   assert.equal(datum("2025-06-20"), "20.06.2025");
   assert.equal(datum("2025-06-20", "en"), "20 Jun 2025");
+  assert.equal(datum("2020-09-03", "en"), "3 Sep 2020"); // nicht „Sept“
   assert.equal(datum(null, "en"), "no date");
   assert.equal(wochentag("2025-06-20", "en"), "Fri");
   assert.equal(uhr("7–19"), "7–19 Uhr");

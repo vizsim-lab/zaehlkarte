@@ -255,7 +255,7 @@ export const TEXTE = {
     "tag.h": "Public holiday",
     "tag.w": "Weekend",
     "tag.u": "unknown",
-    "tag_kurz.s": "School day",
+    "tag_kurz.s": "School",
     "tag_kurz.f": "Holidays",
     "tag_kurz.h": "Public holiday",
     "tag_kurz.w": "Weekend",
@@ -447,13 +447,15 @@ export const zahl = (v, s = aktuell) => format("zahl", s).format(v);
 export const prozent = (v, s = aktuell) =>
   format("prozent", s, { style: "percent", maximumFractionDigits: 1 }).format(v);
 
+// Monate fest mit drei Buchstaben (en-GB schriebe „Sept“) – kurz und überall gleich
+const MONATE_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 /** "2025-06-20" -> "20.06.2025" (Deutsch) bzw. "20 Jun 2025" (Englisch). */
 export function datum(iso, s = aktuell) {
   if (!iso) return t("detail.ohne_datum", {}, s);
   const [j, m, tg] = iso.split("-");
   if (s === "de") return `${tg}.${m}.${j}`;
-  return new Date(Date.UTC(Number(j), Number(m) - 1, Number(tg)))
-    .toLocaleDateString(GEBIETE[s], { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+  return `${Number(tg)} ${MONATE_EN[Number(m) - 1]} ${j}`;
 }
 
 /** Kurzer Wochentag: "Fr." bzw. "Fri". */

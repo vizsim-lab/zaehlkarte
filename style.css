@@ -1082,16 +1082,19 @@ body {
   text-transform: uppercase; color: #374151;
 }
 .detail-tabelle-wrap { max-height: 210px; overflow-y: auto; margin-top: 4px; border-bottom: 1px solid var(--ui-divider); padding-bottom: 6px; }
-.detail-tabelle { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.detail-tabelle th { position: sticky; top: 0; background: var(--ui-surface); text-align: right; font-weight: 600; color: var(--ui-text-muted); padding: 3px 4px; border-bottom: 1px solid var(--ui-divider); }
-.detail-tabelle td { text-align: right; padding: 3px 4px; white-space: nowrap; }
+.detail-tabelle { width: 100%; border-collapse: collapse; font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.detail-tabelle th { position: sticky; top: 0; background: var(--ui-surface); text-align: right; font-weight: 600; color: var(--ui-text-muted); padding: 3px; border-bottom: 1px solid var(--ui-divider); }
+.detail-tabelle td { text-align: right; padding: 3px; white-space: nowrap; }
 .detail-tabelle th:nth-child(-n+3), .detail-tabelle td:nth-child(-n+3) { text-align: left; }
 .dz-zeile { cursor: pointer; }
 .dz-zeile:hover { background: var(--ui-hover); }
 .dz-zeile.is-aktiv { background: rgba(29, 78, 216, .1); font-weight: 600; }
 .dz-zeile:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: -2px; }
 .dz-tag { color: var(--ui-text-muted); }
-.detail-tabelle td.dz-tag { white-space: normal; line-height: 1.15; } /* „School holidays“ darf umbrechen, sonst fällt Fuß rechts heraus */
+/* Tag und Zählfenster dürfen umbrechen (je Fenster am Stück), sonst ragt die Tabelle rechts
+   über das Panel hinaus und die Fuß-Spalte verschwindet im Querscrollen. */
+.detail-tabelle td.dz-tag, .detail-tabelle td.dz-uhr { white-space: normal; line-height: 1.15; }
+.nw { white-space: nowrap; }
 .is-leer { color: #c3c7cc; }
 .detail-kennwerte { margin-top: 8px; font-variant-numeric: tabular-nums; }
 .detail-kennwerte thead td { font-weight: 600; color: var(--ui-text-muted); font-size: 11px; }
@@ -1105,10 +1108,12 @@ body {
 .link-knopf:hover { text-decoration: underline; }
 .pop-chips .legend-chip { font-size: 11px; padding: 3px 9px; }
 
-/* Wenn die Seitenleiste offen ist, rücken die Bedienelemente unten links daneben. */
-body.detail-offen #bottom-left-ui-container,
-body.detail-offen .map-settings-toggle,
-body.detail-offen .map-settings-panel { left: 400px; }
+/* Reicht ein offenes Panel bis zu den Bedienelementen unten links, rücken sie daneben
+   (js/ui/setupMapPanel.js misst: rueckeNebenPanels); kurze Panels lassen sie am Rand. */
+#bottom-left-ui-container, .map-settings-toggle, .map-settings-panel { transition: left .15s ease; }
+body.steuerung-daneben #bottom-left-ui-container,
+body.steuerung-daneben .map-settings-toggle,
+body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px); }
 
 /* ───── Tagesgang und Verlauf (js/ui/diagramme.js) ───── */
 .tg-wrap { position: relative; margin-top: 6px; }
@@ -1141,9 +1146,9 @@ body.detail-offen .map-settings-panel { left: 400px; }
     padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
   }
   .detail-panel--klein { width: auto; }
-  body.detail-offen #bottom-left-ui-container,
-  body.detail-offen .map-settings-toggle,
-  body.detail-offen .map-settings-panel { left: 10px; }
+  body.steuerung-daneben #bottom-left-ui-container,
+  body.steuerung-daneben .map-settings-toggle,
+  body.steuerung-daneben .map-settings-panel { left: 10px; }
   .legend-chip { padding: 6px 11px; }
 }
 
