@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"numberMatched": 3,
+"name": "zaehl_co2_aktuell",
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "richtung": " West nach Ost", "name": "Schwarzwaldstraße", "timest": "06.05.2024 02:00", "fahrrad_count": 0, "fahrrad_co2": 0.0, "motorrad_count": 0, "motorrad_co2": 0.0, "pkw_count": 1, "pkw_co2": 139.5, "transporter_count": 1, "transporter_co2": 190.0, "bus_count": 0, "bus_co2": 0.0, "lkwl_count": 1, "lkwl_co2": 280.0, "lkws_count": 0, "lkws_co2": 0.0 }, "geometry": { "type": "Point", "coordinates": [ 7.872346, 47.988016 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "richtung": " West nach Ost", "name": "Opfinger Straße", "timest": "06.05.2024 02:00", "fahrrad_count": 0, "fahrrad_co2": 0.0, "motorrad_count": 0, "motorrad_co2": 0.0, "pkw_count": 2, "pkw_co2": 279.0, "transporter_count": 1, "transporter_co2": 190.0, "bus_count": 0, "bus_co2": 0.0, "lkwl_count": 0, "lkwl_co2": 0.0, "lkws_count": 0, "lkws_co2": 0.0 }, "geometry": { "type": "Point", "coordinates": [ 7.808897, 47.993064 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "richtung": " Süd nach Nord", "name": "Waldkircher Straße", "timest": "06.05.2024 02:00", "fahrrad_count": 0, "fahrrad_co2": 0.0, "motorrad_count": 0, "motorrad_co2": 0.0, "pkw_count": 2, "pkw_co2": 279.0, "transporter_count": 0, "transporter_co2": 0.0, "bus_count": 0, "bus_co2": 0.0, "lkwl_count": 0, "lkwl_co2": 0.0, "lkws_count": 0, "lkws_co2": 0.0 }, "geometry": { "type": "Point", "coordinates": [ 7.851672, 48.012259 ] } }
+]
+}

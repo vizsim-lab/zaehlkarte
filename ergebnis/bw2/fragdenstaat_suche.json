@@ -1,0 +1,650 @@
+{
+ "Freiburg": {
+  "anzahl": 67,
+  "funde": [
+   {
+    "title": "Verkehrszählungen im Stadtgebiet Brandenburg an der Havel",
+    "url": "/anfrage/verkehrszaehlungen-im-stadtgebiet-brandenburg-an-der-havel/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2023-12-12T15:33:55+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Landesamt für Umwelt"
+   },
+   {
+    "title": "A100-Brückenabrisse Berlin-Charlottenburg: Verkehrszählungen Nahumfahrung West",
+    "url": "/anfrage/a100-brueckenabrisse-berlin-charlottenburg-verkehrszaehlungen-nahumfahrung-west/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2025-09-04T13:23:10+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/4/",
+    "behoerde": "Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt"
+   },
+   {
+    "title": "Verkehrszählung 2023",
+    "url": "/anfrage/verkehrszaehlung-2023/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2023-06-27T16:30:57+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/1/",
+    "behoerde": "Die Autobahn GmbH des Bundes"
+   },
+   {
+    "title": "Rohdaten von Verkehrszählungen 2010 bis heute",
+    "url": "/anfrage/rohdaten-von-verkehrszahlungen-2010-bis-heute/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2019-09-18T06:58:40+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/13/",
+    "behoerde": "Landeshauptstadt Magdeburg"
+   },
+   {
+    "title": "Verkehrszählungen 2016, Rohdaten",
+    "url": "/anfrage/verkehrszahlungen-2016-rohdaten/",
+    "status": "asleep",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2018-07-05T12:36:36+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/2/",
+    "behoerde": "Kommunalverwaltung Essen"
+   },
+   {
+    "title": "Verkehrszählung Bad Breisig",
+    "url": "/anfrage/verkehrszahlung-bad-breisig/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2020-12-17T12:05:43.342719+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/6/",
+    "behoerde": "Verbandsgemeindeverwaltung Bad Breisig"
+   },
+   {
+    "title": "Ergebnis der Verkehrszählungen bis zum Jahr 2020",
+    "url": "/anfrage/ergebnis-der-verkehrszahlungen-bis-zum-jahr-2020/",
+    "status": "asleep",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2020-01-22T02:28:55.774271+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/92/",
+    "behoerde": "Stadtverwaltung Regensburg"
+   },
+   {
+    "title": "Gefährdungsbetrachtung in Fahrradstraßen an Hand von Verkehrszählungen",
+    "url": "/anfrage/gefahrdungsbetrachtung-in-fahrradstraen-an-hand-von-verkehrszahlungen/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2022-04-29T19:08:07.250943+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Polizeipräsidium Brandenburg"
+   },
+   {
+    "title": "Verkehrszählung Gartenstraße, Elsterstraße, Str. d. Einheit",
+    "url": "/anfrage/verkehrszaehlung-gartenstrasse-elsterstrasse-str-d-einheit/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2024-05-15T11:56:44+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Stadt Falkensee"
+   },
+   {
+    "title": "Verkehrszählung",
+    "url": "/anfrage/verkehrszahlung/",
+    "status": "asleep",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2014-05-31T18:33:40.599774+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Gemeinde Dallgow-Döberitz"
+   },
+   {
+    "title": "Verkehrszählung",
+    "url": "/anfrage/verkehrszahlung-14/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2020-09-14T06:45:56+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/7/",
+    "behoerde": "Hanse- und Universitätsstadt Rostock"
+   },
+   {
+    "title": "Stadt Brandenburg Verkehrszählungen, Verkehrslärmerfassung, Gutachten zum Straßenverkehrslärm, Schall- und Lärmschutzgutachten und Verkehrsgutachten 2018-2022",
+    "url": "/anfrage/stadt-brandenburg-verkehrszaehlungen-verkehrslaermerfassung-gutachten-zum-strassenverkehrslaerm-schall-und-laermschutzgutachten-und-verkehrsgutachten-2018-2022/",
+    "status": "asleep",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2022-11-22T16:19:39+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Straßenverkehrsbehörde der Stadt Brandenburg"
+   },
+   {
+    "title": "Bundesstraße B1/B102 + Verkehrszählung bzw. Verkehrslärmerfassung 08/2021 + Zustandserfassung und -bewertung 2020 (ZEB)",
+    "url": "/anfrage/bundesstrae-b1b102-verkehrszahlung-bzw-verkehrslarmerfassung-082021-zustandserfassung-und-bewertung-2020-zeb/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2022-10-12T11:35:08+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Landesbetrieb Straßenwesen"
+   },
+   {
+    "title": "Neubau der Brücke L 3130 in Langgöns & Verkehrszählungen",
+    "url": "/anfrage/neubau-der-bruecke-l-3130-in-langgoens-verkehrszaehlungen/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2022-09-26T19:48:36.534869+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/1/",
+    "behoerde": "Die Autobahn GmbH des Bundes"
+   },
+   {
+    "title": "Veröffentlichung der Daten der Verkehrszählung in der Grelckstraße durch das Polizeikommissariat 23",
+    "url": "/anfrage/veroffentlichung-der-daten-der-verkehrszahlung-in-der-grelckstrae-durch-das-polizeikommissariat-23/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2019-02-27T09:09:04+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/5/",
+    "behoerde": "Bezirksamt Eimsbüttel"
+   },
+   {
+    "title": "Verkehrsversuch Fahrradstraße Rechts der Alb: Ergebnisse der Verkehrszählungen",
+    "url": "/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2023-06-23T16:03:50+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/91/",
+    "behoerde": "Stadt Karlsruhe"
+   },
+   {
+    "title": "Verkehrszählung an Kreisstraßen 2022 in der Gemeinde Felde",
+    "url": "/anfrage/verkehrszaehlung-an-kreisstrassen-2022-in-der-gemeinde-felde/",
+    "status": "resolved",
+    "resolution": "not_held",
+    "first_message": null,
+    "last_message": "2024-01-18T12:45:44.509471+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/11/",
+    "behoerde": "Kreisverwaltung Rendsburg-Eckernförde"
+   },
+   {
+    "title": "Verkehrszählungen/Verkehrsmessungen in der Straße Rosenweg",
+    "url": "/anfrage/verkehrszahlungenverkehrsmessungen-in-der-strae-rosenweg/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2020-06-08T20:18:24.503644+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Gemeinde Michendorf"
+   },
+   {
+    "title": "Verkehrszählung im Neubaugebiet Im Schonsfeld",
+    "url": "/anfrage/verkehrszahlung-im-neubaugebiet-im-schonsfeld/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2017-01-18T15:03:02+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/2/",
+    "behoerde": "Kommunalverwaltung Troisdorf"
+   },
+   {
+    "title": "Daten der Verkehrszählung in der Bärengasse",
+    "url": "/anfrage/daten-der-verkehrszaehlung-in-der-baerengasse/",
+    "status": "resolved",
+    "resolution": "refused",
+    "first_message": null,
+    "last_message": "2024-05-16T06:55:29+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/6/",
+    "behoerde": "Stadtverwaltung Worms"
+   },
+   {
+    "title": "Antrag nach dem Brandenburgischen Akteneinsichts- und Informationszugangsgesetz (AIG)",
+    "url": "/anfrage/antrag-nach-dem-brandenburgischen-akteneinsichts-und-informationszugangsgesetz-aig/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2026-08-31T13:03:31+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Kreisverwaltung Landkreis Oder-Spree"
+   },
+   {
+    "title": "Ergebnisse der Verkehrszälungen im Rheingoldweg",
+    "url": "/anfrage/ergebnisse-der-verkehrszalungen-im-rheingoldweg/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2019-03-06T18:15:13+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/5/",
+    "behoerde": "Behörde für Wirtschaft, Arbeit und Innovation"
+   },
+   {
+    "title": "Benutzungspflichtiger Radweg an der Kaiserswerther Straße",
+    "url": "/anfrage/benutzungspflichtiger-radweg-an-der-kaiserswerther-strae/",
+    "status": "asleep",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2020-10-08T16:12:03+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/2/",
+    "behoerde": "Amt für Verkehrsmanagement der Landeshauptstadt Düsseldorf"
+   },
+   {
+    "title": "Gefährdungsbetrachtung in Fahrradstraßen",
+    "url": "/anfrage/gefahrdungsbetrachtung-in-fahrradstraen/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2022-12-05T09:57:33+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Ministerium für Infrastruktur und Landesplanung"
+   },
+   {
+    "title": "Und plötzlich ist die Ampel weg...",
+    "url": "/anfrage/und-plotzlich-ist-die-ampel-weg/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2015-01-30T12:49:07+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/5/",
+    "behoerde": "Behörde für Inneres und Sport Hamburg"
+   },
+   {
+    "title": "Unterlagen zum Antrag Verkehrsberuhigung Zabel-Krüger-Damm zum Schutz vor verkehrsbedingtem Lärm  VI B 6-7 VB-200290-290 Zabel-Krüger-Damm/RD",
+    "url": "/anfrage/unterlagen-zum-antrag-verkehrsberuhigung-zabel-krueger-damm-zum-schutz-vor-verkehrsbedingtem-laerm-vi-b-6-7-vb-200290-290-zabel-krueger-damm-rd/",
+    "status": "resolved",
+    "resolution": "user_withdrew_costs",
+    "first_message": null,
+    "last_message": "2023-01-17T11:57:38+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/4/",
+    "behoerde": "Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt"
+   },
+   {
+    "title": "Verkehszählungen im Sprengelkiez",
+    "url": "/anfrage/verkehszahlungen-im-sprengelkiez/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2016-05-04T12:51:32.670784+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/4/",
+    "behoerde": "Bezirksamt Mitte von Berlin"
+   },
+   {
+    "title": "Verkehszählungen im Sprengelkiez  ab 2016",
+    "url": "/anfrage/verkehszahlungen-im-sprengelkiez-ab-2016/",
+    "status": "resolved",
+    "resolution": "user_withdrew_costs",
+    "first_message": null,
+    "last_message": "2022-04-16T13:37:03+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/4/",
+    "behoerde": "Senatsverwaltung für Stadtentwicklung, Bauen und Wohnen"
+   },
+   {
+    "title": "Verkehrsrechtlichen Anordnungen und Planungsunterlagen Verkehrsberuhigung Donauparrallele",
+    "url": "/anfrage/verkehrsrechtlichen-anordnungen-und-planungsunterlagen-verkehrsberuhigung-donauparrallele/",
+    "status": "awaiting_response",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2026-11-06T17:25:15.501276+01:00",
+    "jurisdiction": null,
+    "behoerde": "Stadtverwaltung Regensburg"
+   },
+   {
+    "title": "Sparmaßnahmen bei der Verkehrsinfrastruktur",
+    "url": "/anfrage/sparmanahmen-bei-der-verkehrsinfrastruktur/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2013-06-27T16:48:00+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Landesbetrieb Straßenwesen"
+   },
+   {
+    "title": "Berechnung Lärmbelastung \"Nahumfahrung West\"",
+    "url": "/anfrage/berechnung-laermbelastung-nahumfahrung-west/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2026-07-20T11:55:36+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/4/",
+    "behoerde": "Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt"
+   },
+   {
+    "title": "Verkehrszahlen Industriepark Schwarze Pumpe/ Stadt Spremberg",
+    "url": "/anfrage/verkehrszahlen-industriepark-schwarze-pumpe-stadt-spremberg/",
+    "status": "resolved",
+    "resolution": "not_held",
+    "first_message": null,
+    "last_message": "2025-06-25T18:58:46.582005+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Spremberg"
+   },
+   {
+    "title": "Verkehrssituation Straße Zum Hakenberg in Wustermark-Elstal",
+    "url": "/anfrage/verkehrssituation-strae-zum-hakenberg-in-wustermark-elstal/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2021-12-22T12:22:10.696154+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Wustermark"
+   },
+   {
+    "title": "Verkehrszahlen Industriepark Schwarze Pumpe/ Stadt Spremberg",
+    "url": "/anfrage/verkehrszahlen-industriepark-schwarze-pumpe-stadt-spremberg-1/",
+    "status": "asleep",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2026-02-10T11:17:13+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Zweckverband Industriepark Schwarze Pumpe /ASG Spremberg"
+   },
+   {
+    "title": "Umsetzung Mobilitätsgesetz - Prüfung Cranachstraße Einbahnstraßenfreigabe",
+    "url": "/anfrage/umsetzung-mobilitaetsgesetz-pruefung-cranachstrasse-einbahnstrassenfreigabe/",
+    "status": "awaiting_response",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2026-06-20T10:49:21.949567+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/4/",
+    "behoerde": "Straßen- und Grünflächenamt Tempelhof-Schöneberg"
+   },
+   {
+    "title": "Radverkehrszahlen März-Juni 2018/2019/2020",
+    "url": "/anfrage/radverkehrszahlen-marz-juni-201820192020-1/",
+    "status": "resolved",
+    "resolution": "user_withdrew_costs",
+    "first_message": null,
+    "last_message": "2020-10-25T20:36:19.793176+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/13/",
+    "behoerde": "Landeshauptstadt Magdeburg"
+   },
+   {
+    "title": "Verkehrsregelung Tempo 50 auf gesamtem Ring 3 – Begründung und Entscheidungsgrundlagen",
+    "url": "/anfrage/verkehrsregelung-tempo-50-auf-gesamtem-ring-3-begruendung-und-entscheidungsgrundlagen/",
+    "status": "asleep",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2025-08-30T11:38:29.937002+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/5/",
+    "behoerde": "Behörde für Verkehr und Mobilitätswende"
+   },
+   {
+    "title": "Knotenpunkt B7 / L74 („Wiedener Kreuz“) in Wuppertal",
+    "url": "/anfrage/knotenpunkt-b7-l74-wiedener-kreuz-in-wuppertal-1/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2026-07-07T09:20:25+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/2/",
+    "behoerde": "Stadt Wuppertal"
+   },
+   {
+    "title": "Radverkehrszahlen März-Juni 2018/2019/2020",
+    "url": "/anfrage/radverkehrszahlen-marz-juni-201820192020/",
+    "status": "resolved",
+    "resolution": "not_held",
+    "first_message": null,
+    "last_message": "2020-06-19T10:26:53+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/13/",
+    "behoerde": "Ministerium für Landesentwicklung und Verkehr Sachsen-Anhalt"
+   },
+   {
+    "title": "Beschlussvorlage 3/2026 – Anregung gem. § 24 GO NRW (Geibelstraße, 3. Hauptausschuss am 05.02.2026)",
+    "url": "/anfrage/beschlussvorlage-3-2026-anregung-gem-ss-24-go-nrw-geibelstrasse-3-hauptausschuss-am-05-02-2026/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2026-03-12T12:00:00+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/2/",
+    "behoerde": "Kommunalverwaltung Lübbecke"
+   },
+   {
+    "title": "Datengrundlage Verkehrsmengenkarten der Stadt Leipzig",
+    "url": "/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/",
+    "status": "resolved",
+    "resolution": "refused",
+    "first_message": null,
+    "last_message": "2023-08-09T09:22:38+02:00",
+    "jurisdiction": null,
+    "behoerde": "Stadt Leipzig"
+   },
+   {
+    "title": "Orte und Messwerte der Zählstellen zum Verkehrsaufkommen (Hamburg)",
+    "url": "/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-hamburg/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2017-04-12T23:02:01.134095+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/5/",
+    "behoerde": "Behörde für Wirtschaft, Arbeit und Innovation"
+   },
+   {
+    "title": "Geschwindigkeitsbegrenzung 30 km/h, L 1082, Ortsdurchfahrt Niebra",
+    "url": "/anfrage/geschwindigkeitsbegrenzung-30-km-h-l-1082-ortsdurchfahrt-niebra/",
+    "status": "awaiting_response",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2026-11-04T16:45:51.801026+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/10/",
+    "behoerde": "Stadt Gera"
+   },
+   {
+    "title": "Neubau Kreuzungsbereich B1/B102 Otto-Sidow-Str./Wilhelmsdorfer Str. in Brandenburg an der Havel – Varianten, Planungsunterlagen, Verkehrsanalysen, Sicherheitsaudits, Zeitplanung",
+    "url": "/anfrage/neubau-kreuzungsbereich-b1-b102-otto-sidow-str-wilhelmsdorfer-str-in-brandenburg-an-der-havel-varianten-planungsunterlagen-verkehrsanalysen-sicherheitsaudits-zeitplanung/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2026-03-31T13:45:42+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Landesbetrieb Straßenwesen"
+   },
+   {
+    "title": "Richtlinien für die Gestaltung von Fahrradstraßen",
+    "url": "/anfrage/richtlinien-fur-die-gestaltung-von-fahrradstraen/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2022-11-24T12:00:00+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Ministerium für Infrastruktur und Landesplanung"
+   },
+   {
+    "title": "Verkehrssituation Feldstraße zwischen Rohrbeck und Wustermark-Elstal",
+    "url": "/anfrage/verkehrssituation-feldstrae-zwischen-rohrbeck-und-wustermark-elstal/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2021-11-15T11:42:24.982579+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Gemeinde Dallgow-Döberitz"
+   },
+   {
+    "title": "Verkehrsversuch Adenauerallee",
+    "url": "/anfrage/verkehrsversuch-adenauerallee/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2026-08-13T13:27:48+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/2/",
+    "behoerde": "Kommunalverwaltung Bonn"
+   },
+   {
+    "title": "Anonymität der Videodaten, die im Rahmen der 24-Stunden-Zählung in der Mariannenstraße erfasst wurden",
+    "url": "/anfrage/anonymitat-der-videodaten-die-im-rahmen-der-24-stunden-zahlung-in-der-mariannenstrae-erfasst-wurden/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2019-09-04T16:34:46.788052+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/4/",
+    "behoerde": "Bezirksamt Friedrichshain - Kreuzberg"
+   },
+   {
+    "title": "Anzahl und Standorte von Videokameras im öffentlichen Raum",
+    "url": "/anfrage/anzahl-und-standorte-von-videokameras-im-offentlichen-raum/",
+    "status": "resolved",
+    "resolution": "partially_successful",
+    "first_message": null,
+    "last_message": "2018-08-21T15:57:52+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/7/",
+    "behoerde": "Hanse- und Universitätsstadt Rostock"
+   },
+   {
+    "title": "Rohdaten der Geschwindigkeitsmessung Galgenbergstrasse vom Oktober 2021",
+    "url": "/anfrage/rohdaten-der-geschwindigkeitsmessung-galgenbergstrasse-vom-oktober-2021/",
+    "status": "asleep",
+    "resolution": "",
+    "first_message": null,
+    "last_message": "2022-03-04T12:02:03.057288+01:00",
+    "jurisdiction": null,
+    "behoerde": "Stadtverwaltung Regensburg"
+   }
+  ]
+ },
+ "Ettlingen": {
+  "anzahl": 0,
+  "funde": []
+ },
+ "Karlsruhe": {
+  "anzahl": 3,
+  "funde": [
+   {
+    "title": "Verkehrsversuch Fahrradstraße Rechts der Alb: Ergebnisse der Verkehrszählungen",
+    "url": "/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2023-06-23T16:03:50+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/91/",
+    "behoerde": "Stadt Karlsruhe"
+   },
+   {
+    "title": "Kreuzung Kriegs-/Brauer-/Reinhold-Frank-Straße: Maßgebliches Verkehrsaufkommen",
+    "url": "/anfrage/kreuzung-kriegs-brauer-reinhold-frank-strasse-massgebliches-verkehrsaufkommen/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2026-01-08T08:50:36+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/91/",
+    "behoerde": "Stadt Karlsruhe"
+   },
+   {
+    "title": "Radverkehr in der Mittermaierstraße - Urteil des Verwaltungsgerichts und Dokumente zur Umsetzung des Urteils",
+    "url": "/anfrage/radverkehr-in-der-mittermaierstrasse-urteil-des-verwaltungsgerichts-und-dokumente-zur-umsetzung-des-urteils/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2026-11-02T16:05:16.790763+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/91/",
+    "behoerde": "Stadt Heidelberg"
+   }
+  ]
+ },
+ "Mannheim": {
+  "anzahl": 1,
+  "funde": [
+   {
+    "title": "Informationen zu geplanten Bauarbeiten des Bahnübergangs im Fahrweg Worms",
+    "url": "/anfrage/informationen-zu-geplanten-bauarbeiten-des-bahnubergangs-im-fahrweg-worms/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2019-10-23T15:01:13+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/6/",
+    "behoerde": "Stadtverwaltung Worms"
+   }
+  ]
+ },
+ "Heidelberg": {
+  "anzahl": 2,
+  "funde": [
+   {
+    "title": "Radfahrerzählsysteme - vorhandene System, Planungen, Erhebungen zum Radverkehr - Ausgaben",
+    "url": "/anfrage/radfahrerzahlsysteme-vorhandene-system-planungen-erhebungen-zum-radverkehr-ausgaben/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2021-02-24T19:57:03+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/3/",
+    "behoerde": "Stadtverwaltung Potsdam"
+   },
+   {
+    "title": "Radverkehr in der Mittermaierstraße - Urteil des Verwaltungsgerichts und Dokumente zur Umsetzung des Urteils",
+    "url": "/anfrage/radverkehr-in-der-mittermaierstrasse-urteil-des-verwaltungsgerichts-und-dokumente-zur-umsetzung-des-urteils/",
+    "status": "resolved",
+    "resolution": "successful",
+    "first_message": null,
+    "last_message": "2026-11-02T16:05:16.790763+01:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/91/",
+    "behoerde": "Stadt Heidelberg"
+   }
+  ]
+ },
+ "Ulm": {
+  "anzahl": 2,
+  "funde": [
+   {
+    "title": "Ausschreibung und Vertrag bzgl. der Auswertung der Daten zur Verkehrszählung und Haushaltsbefragung",
+    "url": "/anfrage/ausschreibung-und-vertrag-bzgl-der-auswertung-der-daten-zur-verkehrszahlung-und-haushaltsbefragung/",
+    "status": "resolved",
+    "resolution": "refused",
+    "first_message": null,
+    "last_message": "2020-03-31T14:00:32+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/91/",
+    "behoerde": "Stadt Sinsheim"
+   },
+   {
+    "title": "Vermittlung bei Gutachten zur Verkehrsplanung für Ortsumgehung Oberkotzau",
+    "url": "/anfrage/vermittlung-bei-gutachten-zur-verkehrsplanung-fur-ortsumgehung-oberkotzau/",
+    "status": "resolved",
+    "resolution": "refused",
+    "first_message": null,
+    "last_message": "2021-07-09T09:20:08.309555+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/92/",
+    "behoerde": "Bürgerbeauftragter der Bayerischen Staatsregierung"
+   }
+  ]
+ },
+ "Heilbronn": {
+  "anzahl": 0,
+  "funde": []
+ },
+ "Pforzheim": {
+  "anzahl": 0,
+  "funde": []
+ },
+ "Reutlingen": {
+  "anzahl": 0,
+  "funde": []
+ },
+ "Tübingen": {
+  "anzahl": 0,
+  "funde": []
+ },
+ "Esslingen": {
+  "anzahl": 0,
+  "funde": []
+ },
+ "Ludwigsburg": {
+  "anzahl": 0,
+  "funde": []
+ },
+ "Stuttgart": {
+  "anzahl": 1,
+  "funde": [
+   {
+    "title": "Verkehrsrechtliche Anordnung: Zebrastreifen Eberhardstraße",
+    "url": "/anfrage/verkehrsrechtliche-anordnung-zebrastreifen-eberhardstrae/",
+    "status": "resolved",
+    "resolution": "refused",
+    "first_message": null,
+    "last_message": "2022-06-13T10:24:00+02:00",
+    "jurisdiction": "https://fragdenstaat.de/api/v1/jurisdiction/91/",
+    "behoerde": "Landeshauptstadt Stuttgart"
+   }
+  ]
+ }
+}

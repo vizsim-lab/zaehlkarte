@@ -1,0 +1,162 @@
+{
+ "lorapark_offnungssensor": {
+  "name": "lorapark_offnungssensor",
+  "titel": "LoRaPark Türöffnungssensor",
+  "org": "citysens",
+  "autor": "",
+  "pflege": "",
+  "lizenz": "cc-zero",
+  "geaendert": "2026-11-09T07:01:29.987584",
+  "notiz": "Dieser Türöffnungssensor ist am gemeinsamen Eingang zur Digitalen Agenda und zum Digitalisierungszentrum am Weinhof 7 verbaut. Über ein Magnetfeld wird gemessen, ob die Eingangstüre gerade geöffnet oder geschlossen ist. Anschließend wird der Status über LoRaWAN energiesparend übertragen. Als Stromquelle genügt hierfür eine Batterie, welche mehrere Jahre hält. Der aktuelle Sensor heißt: door-elsys-weinhof",
+  "ressourcen": [
+   {
+    "name": "LoRaPark_Öffnungssensor",
+    "format": "JSON",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Zählung"
+  ]
+ },
+ "fahrradzahler_lupferbruecke": {
+  "name": "fahrradzahler_lupferbruecke",
+  "titel": "Fahrrad-Dauerzählstelle am Blautalradweg (vor Unterführung bei Lupferbrücke)",
+  "org": "Digitale Agenda - Stadt Ulm",
+  "autor": "",
+  "pflege": "",
+  "lizenz": "cc-zero",
+  "geaendert": "2026-09-03T08:44:39.601190",
+  "notiz": "Am Blautalradweg, vor der Unterführung an der Lupferbrücke Richtung Eseslberg (Koordinate: 48.400824294906165, 9.9577312805451619; Google-Karte https://goo.gl/maps/UCPo76qp6NtK5Yys5), wurde am 17.01.2020 in Kooperation mit dem Team Fahrrad der Stadt Ulm eine Dauerzählstelle für Fahrräder fest in den Asphalt eingebaut. * Es ist der erste innerhalb des Stadtgebietes Ulm eingebaute Sensor dieser Art. Der dort verbaute Sensor der Firma Eco-compteur erkennt Radfahrer und die Fahrtrichtung der Fahrräder. * Dieser Datensatz ermöglicht den Zugriff auf diese Zähldaten via API * Signifikante Schwankungen in der Zählung können bei Sperrungen des Radwegs, z.B. wegen Bauarbeiten, entstehen. * Die Daten w",
+  "ressourcen": [
+   {
+    "name": "ZK_Fahrradzähler",
+    "format": "JSON",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Zählung"
+  ]
+ },
+ "vgv_ulm": {
+  "name": "vgv_ulm",
+  "titel": "vgv_ulm",
+  "org": "Fachbereich Stadtentwicklung Bau und Umwelt - Abteilung Vermessung (VGV/P3 für Verkehrstechnik)",
+  "autor": "",
+  "pflege": "",
+  "lizenz": "other-at",
+  "geaendert": "2026-10-26T09:19:30.818520",
+  "notiz": "Verkehrszählungen des VGV Ulm Projekts",
+  "ressourcen": [
+   {
+    "name": "camera1",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera3",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera4",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera5",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera3",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera3",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera3",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera3",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera2",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "camera3",
+    "format": "JSON",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Verkehr"
+  ]
+ }
+}

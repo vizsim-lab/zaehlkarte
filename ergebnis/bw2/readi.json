@@ -1,0 +1,796 @@
+{
+ "automatisierte-verkehrszahlung-in-ettlingen": {
+  "name": "automatisierte-verkehrszahlung-in-ettlingen",
+  "titel": "Automatisierte Verkehrszählung in Ettlingen",
+  "org": "Stadt Ettlingen",
+  "autor": "Ordnungsamt Ettlingen",
+  "pflege": "Stadt Ettlingen",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by-nc/4.0",
+  "geaendert": "2026-06-16T13:15:54.333318",
+  "notiz": "Automatisierte Zählung des fließenden Verkehrs.",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählung Ettlingen – Stundenwerte pro Fahrzeugtyp und Standort",
+    "format": "datastore",
+    "url": ""
+   },
+   {
+    "name": "Schillerstraße 2 stündlich 10 2024",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/e53855d7-e98c-435b-9d51-717755cf1680/download/schiller-strasse-2_20241014t100000.csv"
+   },
+   {
+    "name": "Schillerstraße 2 täglich 10 2024",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/0aa49d0e-f77c-494b-91cf-04e3cbb5e98c/download/schiller-strasse-2_20240921t000000.csv"
+   },
+   {
+    "name": "Schillerstraße 2 stündlich 02/03 2025",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/abced508-c4d3-4e82-9489-a8be9016b2f7/download/schiller-strasse-2_20250201t110000.csv"
+   },
+   {
+    "name": "Schillerstraße 2 täglich 02/03 2025",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/175f9c11-4b5f-4b77-bb29-401c788e2502/download/schiller-strasse-2_20250201t000000.csv"
+   }
+  ],
+  "treffer": [
+   "Verkehrszählung",
+   "Verkehr",
+   "Zählung",
+   "Mobilität"
+  ]
+ },
+ "flaechen-hauptnutzung-bretten": {
+  "name": "flaechen-hauptnutzung-bretten",
+  "titel": "Flächen nach Hauptnutzungsarten (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-06-11T07:26:47.964188",
+  "notiz": "Übersicht der Flächengrößen der Hauptnutzungsarten Siedlung, Vegetation, Verkehr und Gewässer in Bretten",
+  "ressourcen": [
+   {
+    "name": "Flächengrößen Hauptnutzungsarten Bretten 12/2024",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/1a4ca33b-3627-4ce1-9022-1a5c889fe60d/resource/a6e308f4-f801-4737-94b9-6453923f1949/download/33111_0006-bodenfl-bretten.csv"
+   }
+  ],
+  "treffer": [
+   "Verkehr"
+  ]
+ },
+ "flachen-verkehr-bretten": {
+  "name": "flachen-verkehr-bretten",
+  "titel": "Flächen nach Verkehrsnutzungen (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-06-11T10:46:00.010290",
+  "notiz": "Übersicht der Flächengrößen der Verkehrsnutzungen in Bretten",
+  "ressourcen": [
+   {
+    "name": "Flächengrößen Verkehrsnutzungen Bretten 12/2024",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/21af08a0-9dc4-49cc-b2e3-ae3f1be2eb54/resource/520b47a5-7993-4a95-b24d-5874581c1be3/download/33111_0009-verkehrsfl-bretten.csv"
+   }
+  ],
+  "treffer": [
+   "Verkehr"
+  ]
+ },
+ "baustelleninformationsportal-baden-baden": {
+  "name": "baustelleninformationsportal-baden-baden",
+  "titel": "Baustelleninformationsportal Baden-Baden",
+  "org": "Stadt Baden-Baden",
+  "autor": "Technologie Region Karlsruhe",
+  "pflege": "Stadt Baden-Baden - Stabsstelle Zentrale Entwicklungsplanung/Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by-nc/4.0",
+  "geaendert": "2024-10-21T08:45:35.943237",
+  "notiz": "Mobilitätsportal der Region mit Verkehrsdaten zu Baumaßnahmen, Parkmöglichkeiten, Geschwindigkeitsmessungen, Car-sharing angeboten und Verkehrslagen",
+  "ressourcen": [
+   {
+    "name": "Mobilitätsportal - Baden-Baden (Technologie-Region)",
+    "format": "HTML",
+    "url": "http://mobilitaet.trk.de/portal.html?city=Baden-Baden"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "verkehrsinformationen-rastatt": {
+  "name": "verkehrsinformationen-rastatt",
+  "titel": "Verkehrsinformationen Rastatt",
+  "org": "Stadt Rastatt",
+  "autor": "Technologie Region Karlsruhe",
+  "pflege": "Stadt Rastatt",
+  "lizenz": "http://dcat-ap.de/def/licenses/other-open",
+  "geaendert": "2024-07-30T09:25:31.804579",
+  "notiz": "Aktuelle Verkehrsinformationen der Stadt Rastatt (Baustellen, Ladestationen, ...)",
+  "ressourcen": [
+   {
+    "name": "Baustellen in Rastatt",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Rastatt&lang=de&theme=constructions&lat=48.855230000000006&lng=8.20919&zoom=13"
+   }
+  ],
+  "treffer": [
+   "Verkehr"
+  ]
+ },
+ "verkehrsinformationen-baden-baden": {
+  "name": "verkehrsinformationen-baden-baden",
+  "titel": "Verkehrsinformation Baden-Baden",
+  "org": "Stadt Baden-Baden",
+  "autor": "Technologieregion Karlsruhe",
+  "pflege": "Stadt Baden-Baden",
+  "lizenz": "http://dcat-ap.de/def/licenses/other-open",
+  "geaendert": "2024-08-01T07:26:06.341024",
+  "notiz": "Aktuelle Verkehrsinformationen des Stadtkreises Baden-Baden (Baustellen, Ladestationen, ...)",
+  "ressourcen": [
+   {
+    "name": "Baustellen in Baden-Baden",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Rastatt&lang=de&theme=constructions&lat=48.77271079422812&lng=8.17829095214845&zoom=13"
+   }
+  ],
+  "treffer": [
+   "Verkehr"
+  ]
+ },
+ "baustelleninformationsportal": {
+  "name": "baustelleninformationsportal",
+  "titel": "Baustelleninformationsportal",
+  "org": "Stadt Ettlingen",
+  "autor": "TRK",
+  "pflege": "Stadt Ettlingen - OSA",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-10-16T15:55:32.468658",
+  "notiz": "Mobilitätsportal der Region mit Verkehrsdaten zu Baumaßnahmen, Parkmöglichkeiten, Geschwindigkeitsmessungen, Car-sharing angeboten und Verkehrslagen",
+  "ressourcen": [
+   {
+    "name": "Mobilitätsportal - Ettlingen (trk.de)",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Ettlingen&lang=de&theme=&lat=48.926768400000014&lng=8.4025487&zoom=13"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "behindertenparkplaetze-bretten": {
+  "name": "behindertenparkplaetze-bretten",
+  "titel": "Behindertenparkplätze (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:35:06.949592",
+  "notiz": "Kartenmäßige Übersicht aller Behindertenparkplätze in Bretten",
+  "ressourcen": [
+   {
+    "name": "Behinderparkplätze in Bretten",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Bretten&lang=de&theme=parkinghandicapped&lat=49.02689097321053&lng=8.698162269775393&zoom=14"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "carsharingangebote-bretten": {
+  "name": "carsharingangebote-bretten",
+  "titel": "Carsharing-Angebote (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:34:01.636664",
+  "notiz": "Kartenmäßige Übersicht aller Carsharing-Angebote in Bretten",
+  "ressourcen": [
+   {
+    "name": "Carsharing-Angebot Bretten",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Bretten&lang=de&theme=carsharingstadtmobil&lat=49.03581048861125&lng=8.697261047546387&zoom=15"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "kraftfahrzeugbestand-bretten": {
+  "name": "kraftfahrzeugbestand-bretten",
+  "titel": "Kraftfahrzeugbestand (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-06-12T09:04:35.615166",
+  "notiz": "Übersicht des Kraftfahrzeugbestands nach Fahrzeugarten für Bretten",
+  "ressourcen": [
+   {
+    "name": "Kraftfahrzeugbestand Bretten 1983-2025",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/16b887c3-daab-435c-9cf3-4284dc93a584/resource/28dfa3dc-99e6-4a79-83b0-c37aa2a56cb7/download/46251_0009-kfz-bretten.csv"
+   }
+  ],
+  "treffer": [
+   "Verkehr"
+  ]
+ },
+ "freie-parkplatze-tiefgaragen-in-ettlingen": {
+  "name": "freie-parkplatze-tiefgaragen-in-ettlingen",
+  "titel": "Freie Parkplätze Tiefgaragen in Ettlingen",
+  "org": "Stadt Ettlingen",
+  "autor": "Stadt Ettlingen - Schnittstelle mobilitätsportal",
+  "pflege": "Stadt Ettlingen -OSA",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-10-16T15:54:14.441313",
+  "notiz": "Freie Parkmöglichkeiten in den Tiefgaragen in Ettlingen (Schloss und Stadtgarten)",
+  "ressourcen": [
+   {
+    "name": "Frei Parkplätze TGs in Ettlingen",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Ettlingen&lang=de&theme=parkinggarage&lat=48.94093102347483&lng=8.407954230032031&zoom=17"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "verkehrsbeeintraechtigungen-bretten": {
+  "name": "verkehrsbeeintraechtigungen-bretten",
+  "titel": "Verkehrsbeinträchtigungen (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:22:47.935333",
+  "notiz": "Kartenmäßige Übersicht aller Verkehrsbeinträchtigungen durch Baustellen und Veranstaltungen bzw. Teil- und Vollsperrungen in Bretten",
+  "ressourcen": [
+   {
+    "name": "Verkehrsbeeinträchtigungen Bretten",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Bretten&lang=de&theme=constructions&lat=49.03696400000001&lng=8.706917&zoom=13"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "fahrradzahldaten-the-land": {
+  "name": "fahrradzahldaten-the-land",
+  "titel": "Fahrradzähldaten THE LÄND",
+  "org": "Städteübergreifende Daten",
+  "autor": "Ralf Mayer",
+  "pflege": "re@di",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by-nc/4.0",
+  "geaendert": "2026-05-18T09:20:31.050571",
+  "notiz": "Gebündelte Eco-Counter Fahrradzähldaten über MobiData BW",
+  "ressourcen": [
+   {
+    "name": "Fahrradzähldaten THE LÄND",
+    "format": "HTML",
+    "url": "https://www.mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität",
+   "Fahrrad"
+  ]
+ },
+ "park-and-ride-bretten": {
+  "name": "park-and-ride-bretten",
+  "titel": "Park and Ride (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:34:55.701037",
+  "notiz": "Kartenmäßige Übersicht aller Park & Ride-Plätze und ÖPNV-Umsteigemöglichkeiten in Bretten",
+  "ressourcen": [
+   {
+    "name": "Park and Ride Bretten",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Bretten&lang=de&theme=stops&lat=49.03696400000001&lng=8.706917&zoom=13"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "sonderparkmoeglichkeiten-bretten": {
+  "name": "sonderparkmoeglichkeiten-bretten",
+  "titel": "Sonderparkmöglichkeiten Bretten",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:21:31.522686",
+  "notiz": "Kartenmäßige Übersicht aller Sonderparkmöglichkeiten für Busse, Wohnmobile und Motorräder in Bretten",
+  "ressourcen": [
+   {
+    "name": "Sonderparkmöglichkeiten (Bretten)",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Bretten&lang=de&theme=parkingsonder&lat=49.033981696223805&lng=8.716315460388186&zoom=15"
+   },
+   {
+    "name": "WohnmobilparkplätzeBretten",
+    "format": "HTML",
+    "url": "https://www.erlebebretten.de/geniessen-und-uebernachten/wohnmobilstellplaetze"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "baustellen-in-ettlingen": {
+  "name": "baustellen-in-ettlingen",
+  "titel": "Verkehrsinformationen Ettlingen",
+  "org": "Stadt Ettlingen",
+  "autor": "TRK",
+  "pflege": "TRK",
+  "lizenz": "http://dcat-ap.de/def/licenses/other-open",
+  "geaendert": "2026-03-23T13:32:12.297208",
+  "notiz": "Übersicht der Verkehrsinformationen in Ettlingen. ",
+  "ressourcen": [
+   {
+    "name": "Baustellen in Ettlingen",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?theme=constructions&lang=de&city=Ettlingen&lat=48.9353393617119&lng=8.399244218493651&zoom=14"
+   },
+   {
+    "name": "Kraftfahrzeuge und Straßenverkehrsunfälle",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/50e61abd-bc21-46b6-98cd-ee40d2b45bae/resource/cdfed12e-4014-4f5c-b1d3-38e1ae57e05a/download/kraftfahrzeuge-und-strassenverkehrsunfalle-in-der-gemeinde.csv"
+   },
+   {
+    "name": "Emissionen und Jahresfahrleistungen",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/50e61abd-bc21-46b6-98cd-ee40d2b45bae/resource/12ebadf3-388b-41fd-89c4-42712ec84d6e/download/emissionen-und-jahresfahrleistungen.csv"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "laermaktionsplan-bretten": {
+  "name": "laermaktionsplan-bretten",
+  "titel": "Lärmaktionsplan (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:21:17.348953",
+  "notiz": "Der Lärmaktionsplan ist das Konzept schädliche Auswirkungen durch Umgebungslärm zu verhindern, Ihnen vorzubeugen oder sie zu mindern, Für Bretten gibt es einen Entwurf.",
+  "ressourcen": [
+   {
+    "name": "Lärmaktionsplan-Entwurf Bretten 11/2025",
+    "format": "PDF",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Verkehr"
+  ]
+ },
+ "mobidata-bw-mobilitatsdaten": {
+  "name": "mobidata-bw-mobilitatsdaten",
+  "titel": "MobiData BW - Mobilitätsdaten",
+  "org": "Städteübergreifende Daten",
+  "autor": "NVBW - Nahverkehrsgesellschaft Baden-Württemberg mbH",
+  "pflege": "NVBW - Nahverkehrsgesellschaft Baden-Württemberg mbH",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2024-10-21T06:37:23.770995",
+  "notiz": "MobiData BW® ist die verkehrsträgerübergreifende Open-Data-Plattform für Mobilitätsdaten des Landes Baden-Württemberg. Verkehrsträgerübergreifende klimafreundliche Mobilität orientiert sich heute und in Zukunft an einer zentralen Komponente: Daten. Ob kommunale Verkehrsplanung, intelligentes Routing oder die niederschwellige Nutzung von multimodalen Wegketten – überall werden Daten wie ÖPNV-Echtzeitinformationen oder Standort- und Verfügbarkeitsangaben von Sharing-Diensten benötigt und das im besten Fall als Open-Data frei zugänglich wie auf MobiData BW®. Das Team hinter MobiData BW® unterstützt als zentrale Kompetenzstelle für offene Mobilitätsdaten im Land die Entwicklung digitaler Innovat",
+  "ressourcen": [
+   {
+    "name": "Verkehrsinformationen - Ausblick",
+    "format": "HTML",
+    "url": "https://www.verkehrsinfo-bw.de/?zoom=2&fullscreen=false&center=49.13408032168002,8.272643159750253&layers=Beschriftung,Verkehrslage,Reisezeitverlust,Verkehrsmeldungen,Baustellen%20und%20Ereignisse,Verl%C3%A4ufe,LKW%20Parkpl%C3%A4tze,Wechselwegweisung,Betriebsmeldungen&suchtext=&openebenencontrol=true"
+   },
+   {
+    "name": "Mobilitätsdaten - Ausblick",
+    "format": "HTML",
+    "url": "https://www.mobidata-bw.de/karten/gebuendelte_daten/"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "kvv-fahrplandaten": {
+  "name": "kvv-fahrplandaten",
+  "titel": "Fahrplan Karlsruher Verkehrsverbund (KVV)",
+  "org": "Städteübergreifende Daten",
+  "autor": "KVV",
+  "pflege": "KVV",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2024-10-21T10:16:25.689408",
+  "notiz": "Soll-Fahrplandaten der KVV",
+  "ressourcen": [
+   {
+    "name": "Soll-Fahrplandaten des KVV als ZIP-File",
+    "format": "TXT",
+    "url": "https://projekte.kvv-efa.de/GTFS/google_transit.zip"
+   },
+   {
+    "name": "Informationen zur „TRIAS“-Schnittstelle",
+    "format": "HTML",
+    "url": "https://www.kvv.de/fahrplan/fahrplaene/open-data.html"
+   }
+  ],
+  "treffer": [
+   "Verkehr",
+   "Mobilität"
+  ]
+ },
+ "sickerwasserrate-und-grundwasserneubildung-bretten": {
+  "name": "sickerwasserrate-und-grundwasserneubildung-bretten",
+  "titel": "Sickerwasserrate und Grundwasserneubildung (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-06-09T12:10:38.774008",
+  "notiz": "Die hier zur Verfügung gestellten Daten der Grundwasserneubildung (GWN) und der Sickerwasserrate (SWR) stammen aus der landesweiten Langzeit-Berechnung mit dem Bodenwasserhaushaltsmodell GWN-BW. GWN-BW ist ein modular aufgebautes, deterministisches und flächendifferenziertes Modell zur Berechnung der tatsächlichen Verdunstung, zur Simulation des Bodenwasserhaushaltes und der unterhalb der durchwurzelten Bodenzone gebildeten Sickerwassermenge. Wie die meisten vergleichbaren Wasserhaushaltsmodelle benötigt GWN-BW als meteorologischen Antrieb Daten der Niederschlagshöhe, der Lufttemperatur, der relativen Luftfeuchte, der Globalstrahlung oder Sonnenscheindauer sowie der Windstärke oder -geschwin",
+  "ressourcen": [
+   {
+    "name": "Sickerwasser und Grundwasserneubildung Bretten 1951-2024",
+    "format": "CSV",
+    "url": "https://opendata.readi.de/dataset/53fe5e8e-7f74-4852-a8e1-d11613301c9c/resource/2aad3e61-54fb-48af-a017-652871c92481/download/tabelle-aggregierte-daten-gemeinde-2026-05-28.csv"
+   },
+   {
+    "name": "Sickerwasser und Grundwasserneubildung Bretten 1951-2024",
+    "format": "GPKG",
+    "url": "https://opendata.readi.de/dataset/53fe5e8e-7f74-4852-a8e1-d11613301c9c/resource/12801aa8-6483-43c8-b57d-36bd53896e8c/download/tabelle-aggregierte-daten-gemeinde-2026-05-28.gpkg"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "nextbike": {
+  "name": "nextbike",
+  "titel": "Nextbike",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-11-15T08:52:12.759923",
+  "notiz": "Hier findet man alle Nextbike-Daten von VRNNextbike und KVV.Nextbike aus der Nextbike-API. Datensatz \"Nextbike\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"\" (). Siehe https://transparenz.karlsruhe.de/packages?id=f7e406a3-3370-4a91-aea5-6157d1ce5694.",
+  "ressourcen": [
+   {
+    "name": "Nextbike Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/nextbike"
+   }
+  ],
+  "treffer": [
+   "Mobilität",
+   "Fahrrad"
+  ]
+ },
+ "parkhauser": {
+  "name": "parkhauser",
+  "titel": "Parkhäuser",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-19T06:41:42.490505",
+  "notiz": "Parkhäuser in Baden-Baden, Bretten, Ettlingen, Rastatt und in anderen Städten mit Informationen zu Anzahl der Parkplätze, Aufzug, maximale Durchfahrthöhe, Kontakdaten... In Baden-Baden, Ettlingen, Karlsruhe, Rastatt und Haguenau liegen Echtzeitdaten zur Anzahl der freien Parkplätze(Spalte: freie_parkplaetze) vor. Dies ist durch echtzeit_belegung T/F gekennzeichnet. Ob der Echzeitstatus eine Störung hat erkennen Sie an der Spalte echtzeit_status.",
+  "ressourcen": [
+   {
+    "name": "Parkhäuser Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/parkhaeuser"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "e-ladestellen-bretten": {
+  "name": "e-ladestellen-bretten",
+  "titel": "E-Ladestellen (Bretten)",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:27:08.851890",
+  "notiz": "Kartenmäßige Übersicht aller E-Ladestellen in Bretten",
+  "ressourcen": [
+   {
+    "name": "E-Ladestellen Bretten",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?city=Bretten&lang=de&theme=parkingelectric&lat=49.03289939665851&lng=8.68628009928491&zoom=15"
+   },
+   {
+    "name": "E-Ladestellen (Bretten)",
+    "format": "HTML",
+    "url": "https://www.bundesnetzagentur.de/DE/Fachthemen/ElektrizitaetundGas/E-Mobilitaet/Ladesaeulenkarte/start.html"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "wohnmobilparkplatze": {
+  "name": "wohnmobilparkplatze",
+  "titel": "Wohnmobilparkplätze",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-27T14:37:49.379780",
+  "notiz": "Ausgewiesene Standorte von Wohnmobilparkplätzen in Bretten, Bruchsal, Ettlingen und in anderen Städten mit Auskunft zur Gebühren und Parkdauer. Datensatz \"Wohnmobilparkplätze\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=87143811-2668-404a-a2c0-c366d0194747.",
+  "ressourcen": [
+   {
+    "name": "Wohnmobilparkplätze Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/wohnmobilparkplaetze"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "bewohnerparken": {
+  "name": "bewohnerparken",
+  "titel": "Bewohnerparken",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-19T06:40:58.344825",
+  "notiz": "Informationen zu Bewohnerparken in den Städten Bretten, Ettlingen, Rastatt und andere. Datensatz \"Bewohnerparken\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=dab5a92a-2746-4ed5-b9ff-f2ae7f9758ab.",
+  "ressourcen": [
+   {
+    "name": "Bewohnerparken Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/bewohnerparken"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "baustellen": {
+  "name": "baustellen",
+  "titel": "Baustellen The LÄND",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-11-26T12:48:01.463261",
+  "notiz": "Baustellen in Baden-Württemberg Datensatz \"Baustellen\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=891591f0-5b38-43b8-8bcd-4102bb6cb000.",
+  "ressourcen": [
+   {
+    "name": "Baustellen Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/baustellen"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "fubgangerzonen": {
+  "name": "fubgangerzonen",
+  "titel": "Fußgängerzonen",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-11-18T08:47:51.654653",
+  "notiz": "Fußgängerzonen in Rastatt, Ettlingen und Baden-Baden und in anderen Städten. Datensatz \"Fußgängerzonen\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=ce31ce95-c811-4f45-b4ce-8c166d24680a. ",
+  "ressourcen": [
+   {
+    "name": "Fußgängerzonen Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/fussgaengerzonen"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "busparkplatze": {
+  "name": "busparkplatze",
+  "titel": "Busparkplätze",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-11-18T08:42:15.024849",
+  "notiz": "Busparkplätze in Ettlingen, Bretten, Bruchsal und in anderen Städten mit Angaben zur Gebühren und Parkzeit. Datensatz \"Busparkplätze\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=15d22922-bdf2-4d53-9802-81fecd5f402d.",
+  "ressourcen": [
+   {
+    "name": "Busparkplätze Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/busparkplaetze"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "blitzer": {
+  "name": "blitzer",
+  "titel": "Blitzer",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-11-18T08:40:57.018289",
+  "notiz": "Standorte der stationären Blitzer in Rheinstetten und in anderen Städten. Datensatz \"Blitzer\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=7e03788c-74d9-4b7a-a5ac-5e27bb8e9bba.",
+  "ressourcen": [
+   {
+    "name": "Blitzer Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/blitzer"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "motorradparkplatze": {
+  "name": "motorradparkplatze",
+  "titel": "Motorradparkplätze",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-19T06:38:45.182414",
+  "notiz": "Parkplätze für Motorräder in Baden-Baden, Bretten, Bruchsa, Ettlingen, Rastatt und in anderen Städten mit Angaben zu Gebühren und Parkzeit. Datensatz \"Motorradparkplätze\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=40c202f0-ede3-4add-bdcf-4a85a26f8f59.",
+  "ressourcen": [
+   {
+    "name": "Motorradparkplätze Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/motorradparkplaetze"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "parkscheinautomaten": {
+  "name": "parkscheinautomaten",
+  "titel": "Parkscheinautomaten",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-19T06:44:02.979889",
+  "notiz": "Standorte der Parkscheinautomaten in Baden-Baden, Bretten, Bruchsal, Ettlingen, Rastatt und in anderen Städten mit Angaben zur parkzeit und Gebühren. Datensatz \"Parkscheinautomaten\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=7cc0880d-97c0-493f-a5d9-9bda7e927e2d.",
+  "ressourcen": [
+   {
+    "name": "Parkscheinautomaten Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/parkscheinautomaten"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "parkscheiben-parkplatze": {
+  "name": "parkscheiben-parkplatze",
+  "titel": "Parkplätze mit Parkscheibenpflicht",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-19T06:43:04.832727",
+  "notiz": "Parkplätze mit Parkscheiben mit Angaben zur Parkzeit. in Bretten, Bruchsal, Ettlingen, Rastatt, Rheinstetten, Stutensee und in anderen Städten Datensatz \"Parkscheiben Parkplätze\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=896da50a-da82-44da-8f70-1f182240c8a4.",
+  "ressourcen": [
+   {
+    "name": "Parkscheiben Parkplätze Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/parkscheiben-parkplatze"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "tempozonen": {
+  "name": "tempozonen",
+  "titel": "Tempozonen",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2024-11-18T08:41:40.284595",
+  "notiz": "Tempozonen mit 20 und 30 km/h sowie verkehrsberuhigte Bereiche der Städte Stutensee, Rheinstetten, Ettlingen, Rastatt, Baden-Baden und andere. Datensatz \"Tempozonen\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=7e4d394f-5c6f-44eb-a68a-9a20c5f3fb40.",
+  "ressourcen": [
+   {
+    "name": "Tempozonen Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/tempozonen"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ },
+ "radnetz-bretten": {
+  "name": "radnetz-bretten",
+  "titel": "Radnetz Bretten",
+  "org": "Stadt Bretten",
+  "autor": "Ralf Mayer",
+  "pflege": "Stadt Bretten",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-29T09:29:17.041359",
+  "notiz": "Kartenmäßige Übersicht des Radnetzes in Bretten",
+  "ressourcen": [
+   {
+    "name": "Radnetz (Bretten)",
+    "format": "HTML",
+    "url": "https://mobil.trk.de/portal.html?theme=radnetz&lang=de&city=Bretten&lat=49.03696400000001&lng=8.706917&zoom=13"
+   }
+  ],
+  "treffer": [
+   "Mobilität",
+   "Fahrrad"
+  ]
+ },
+ "fahrradabstellanlagen": {
+  "name": "fahrradabstellanlagen",
+  "titel": "Fahrradabstellanlagen",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-19T06:37:13.134344",
+  "notiz": "Fahrrad Abstellanlagen in Baden-Baden, Bretten, Ettlingen, Rastatt, und in anderen Städten mit Angaben zur Art z.B. Fahrradabstellanlage überdacht, Fahrradbox. Datensatz \"Fahrradabstellanlagen\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=90c1e89d-f054-425a-a826-10117c05fd32.",
+  "ressourcen": [
+   {
+    "name": "Fahrrad Abstellanlagen Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/fahrrad-abstellanlagen"
+   }
+  ],
+  "treffer": [
+   "Mobilität",
+   "Fahrrad"
+  ]
+ },
+ "lkabehindertenparkplatze": {
+  "name": "lkabehindertenparkplatze",
+  "titel": "Behindertenparkplätze",
+  "org": "Städteübergreifende Daten",
+  "autor": "Digitale Mobilität",
+  "pflege": "Digitale Mobilität",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-05-19T06:35:47.332755",
+  "notiz": "Übersicht über die öffentlichen Behindertenparkplätze der Stadt Baden-Baden, Bretten, Bruchsal, Ettlingen, Rastatt, Rheinstetten und in anderen Städten mit Angaben zur Parkzeit. Datensatz \"Behindertenparkplätze\", Stadt Karlsruhe (https://transparenz.karlsruhe.de/organization/47f81b28-f494-4bca-a36c-b636924ad0c3). Veröffentlicht unter der Lizenz \"Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)\" (http://creativecommons.org/licenses/by/4.0/). Siehe https://transparenz.karlsruhe.de/packages?id=bfeaee65-f4c7-4fd9-99f8-bf8f2519c965.",
+  "ressourcen": [
+   {
+    "name": "Behindertenparkplätze Datensatz",
+    "format": "HTML",
+    "url": "https://transparenz.karlsruhe.de/dataset/behindertenparkplaetze"
+   }
+  ],
+  "treffer": [
+   "Mobilität"
+  ]
+ }
+}

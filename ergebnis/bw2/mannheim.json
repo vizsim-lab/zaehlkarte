@@ -1,0 +1,2750 @@
+{
+ "total_count": 19,
+ "results": [
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "b38-ri-aus-eco-counter-v2",
+   "dataset_uid": "da_y3a7ik",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "B38 Ri. AUS Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "B38 Ri. AUS Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "B38 Ri. AUS Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort B38 Ri. AUS, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort B38 Ri. AUS, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort B38 Ri. AUS, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Transport",
+      "Umwelt"
+     ],
+     "keyword_en": [
+      "Transport",
+      "Umwelt"
+     ],
+     "keyword_de": [
+      "Transport",
+      "Umwelt"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-13T11:21:09+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-13T11:22:38.413000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-13T11:22:38.456000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "b38-ri-in-eco-counter-v2",
+   "dataset_uid": "da_vgiah3",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "B38 Ri. IN Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "B38 Ri. IN Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "B38 Ri. IN Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort B38 Ri. IN, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort B38 Ri. IN, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort B38 Ri. IN, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-13T11:23:37+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-13T11:25:37.402000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-13T11:25:37.444000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "neckarauer-uebergang-schwetzinger-strasse-eco-counter-v2",
+   "dataset_uid": "da_zo19ao",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Neckarauer Übergang - Schwetzinger Straße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Neckarauer Übergang - Schwetzinger Straße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Neckarauer Übergang - Schwetzinger Straße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Neckarauer Übergang - Schwetzinger Straße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Neckarauer Übergang - Schwetzinger Straße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Neckarauer Übergang - Schwetzinger Straße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Umwelt",
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-13T11:17:42+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-13T11:19:35.489000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-13T11:19:35.536000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "feudenheimerstrasse-stadtauswaerts-eco-counter-v2",
+   "dataset_uid": "da_qg5pws",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Feudenheimerstraße stadtauswärts Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Feudenheimerstraße stadtauswärts Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Feudenheimerstraße stadtauswärts Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Feudenheimerstraße stadtauswärts, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Feudenheimerstraße stadtauswärts, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Feudenheimerstraße stadtauswärts, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Transport",
+      "Umwelt"
+     ],
+     "keyword_en": [
+      "Transport",
+      "Umwelt"
+     ],
+     "keyword_de": [
+      "Transport",
+      "Umwelt"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-13T11:30:12+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-13T11:33:10.583000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-13T11:33:10.630000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "name",
+     "description": null,
+     "annotations": {},
+     "label": "Standort",
+     "type": "text",
+     "label_en": "Standort",
+     "label_de": "Standort",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "id",
+     "description": null,
+     "annotations": {},
+     "label": "id",
+     "type": "int",
+     "label_en": "id",
+     "label_de": "id",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "description",
+     "description": null,
+     "annotations": {},
+     "label": "description",
+     "type": "text",
+     "label_en": "description",
+     "label_de": "description",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "location",
+     "description": null,
+     "annotations": {},
+     "label": "location",
+     "type": "geo_point_2d",
+     "label_en": "location",
+     "label_de": "location",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "firstdata",
+     "description": null,
+     "annotations": {},
+     "label": "firstData",
+     "type": "text",
+     "label_en": "firstData",
+     "label_de": "firstData",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "lastdata",
+     "description": null,
+     "annotations": {},
+     "label": "lastData",
+     "type": "text",
+     "label_en": "lastData",
+     "label_de": "lastData",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "granularity",
+     "description": null,
+     "annotations": {},
+     "label": "granularity",
+     "type": "text",
+     "label_en": "granularity",
+     "label_de": "granularity",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "travelmodes",
+     "description": null,
+     "annotations": {},
+     "label": "travelModes",
+     "type": "text",
+     "label_en": "travelModes",
+     "label_de": "travelModes",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "directional",
+     "description": null,
+     "annotations": {},
+     "label": "directional",
+     "type": "int",
+     "label_en": "directional",
+     "label_de": "directional",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "hastimestampeddata",
+     "description": null,
+     "annotations": {},
+     "label": "hasTimestampedData",
+     "type": "int",
+     "label_en": "hasTimestampedData",
+     "label_de": "hasTimestampedData",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "hasweather",
+     "description": null,
+     "annotations": {},
+     "label": "hasWeather",
+     "type": "int",
+     "label_en": "hasWeather",
+     "label_de": "hasWeather",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "verkehrszaehler-standorte-eco-counter-v2",
+   "dataset_uid": "da_gmycee",
+   "has_records": true,
+   "features": [
+    "analyze",
+    "geo"
+   ],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Verkehrszähler Standorte - Eco Counter V2",
+     "title_en": "Verkehrszähler Standorte - Eco Counter V2",
+     "title_de": "Verkehrszähler Standorte - Eco Counter V2",
+     "description": "<p>Alle Standorte</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a><br></p>",
+     "description_en": "<p>Alle Standorte</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a><br></p>",
+     "description_de": "<p>Alle Standorte</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a><br></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "keyword_en": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "keyword_de": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-11-01T00:55:06.689000+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": "https://apieco.eco-counter-tools.com/api/1.0/data/site/",
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        [
+         [
+          8.546040952205658,
+          49.514379473403096
+         ],
+         [
+          8.455722760409117,
+          49.514379473403096
+         ],
+         [
+          8.455722760409117,
+          49.471927313134074
+         ],
+         [
+          8.546040952205658,
+          49.471927313134074
+         ],
+         [
+          8.546040952205658,
+          49.514379473403096
+         ]
+        ]
+       ],
+       "type": "Polygon"
+      },
+      "properties": {}
+     },
+     "data_processed": "2026-11-01T00:55:06.689000+00:00",
+     "federated": false,
+     "geographic_reference": [
+      "de_80_082220000000"
+     ],
+     "geographic_reference_auto": true,
+     "geometry_types": [
+      "Point"
+     ],
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-11-01T00:55:06.728000+00:00",
+     "modified_updates_on_data_change": true,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 33,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": [
+      "Stadt Mannheim"
+     ],
+     "timezone": "Europe/Berlin"
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "strassenname",
+     "description": null,
+     "annotations": {
+      "sortable": true
+     },
+     "label": "Strassenname",
+     "type": "text",
+     "label_en": "Strassenname",
+     "label_de": "Strassenname",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "schluessel",
+     "description": null,
+     "annotations": {
+      "facetsort": "-count"
+     },
+     "label": "Schluessel",
+     "type": "text",
+     "label_en": "Schluessel",
+     "label_de": "Schluessel",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "suchgitter",
+     "description": null,
+     "annotations": {},
+     "label": "Suchgitter",
+     "type": "text",
+     "label_en": "Suchgitter",
+     "label_de": "Suchgitter",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "beginn_der_strasse",
+     "description": null,
+     "annotations": {},
+     "label": "Beginn_der_Strasse",
+     "type": "text",
+     "label_en": "Beginn_der_Strasse",
+     "label_de": "Beginn_der_Strasse",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "ende_der_strasse",
+     "description": null,
+     "annotations": {
+      "display_languages": [
+       "de",
+       "en"
+      ]
+     },
+     "label": "Ende_der_Strasse",
+     "type": "text",
+     "label_en": "Ende_der_Strasse",
+     "label_de": "Ende_der_Strasse",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "stadtteil",
+     "description": null,
+     "annotations": {
+      "facet": true
+     },
+     "label": "Stadtteil",
+     "type": "text",
+     "label_en": "Stadtteil",
+     "label_de": "Stadtteil",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "historisches",
+     "description": null,
+     "annotations": {},
+     "label": "Historisches",
+     "type": "text",
+     "label_en": "Historisches",
+     "label_de": "Historisches",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "bemerkungen",
+     "description": null,
+     "annotations": {},
+     "label": "Bemerkungen",
+     "type": "text",
+     "label_en": "Bemerkungen",
+     "label_de": "Bemerkungen",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "umbenannt_in",
+     "description": null,
+     "annotations": {},
+     "label": "Umbenannt_in",
+     "type": "text",
+     "label_en": "Umbenannt_in",
+     "label_de": "Umbenannt_in",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "vormals",
+     "description": null,
+     "annotations": {},
+     "label": "Vormals",
+     "type": "text",
+     "label_en": "Vormals",
+     "label_de": "Vormals",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "erloschen_am",
+     "description": null,
+     "annotations": {},
+     "label": "Erloschen_am",
+     "type": "date",
+     "label_en": "Erloschen_am",
+     "label_de": "Erloschen_am",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "erloschen",
+     "description": null,
+     "annotations": {},
+     "label": "Erloschen",
+     "type": "text",
+     "label_en": "Erloschen",
+     "label_de": "Erloschen",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "quelle",
+     "description": null,
+     "annotations": {},
+     "label": "Quelle",
+     "type": "text",
+     "label_en": "Quelle",
+     "label_de": "Quelle",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "beschlussdatum",
+     "description": null,
+     "annotations": {
+      "facetsort": "-count",
+      "facet": true
+     },
+     "label": "Beschlussdatum",
+     "type": "text",
+     "label_en": "Beschlussdatum",
+     "label_de": "Beschlussdatum",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "beschlussdatum_bis",
+     "description": null,
+     "annotations": {
+      "facetsort": "-count",
+      "facet": true,
+      "sortable": true,
+      "disjunctive": true
+     },
+     "label": "Beschlussdatum_bis",
+     "type": "text",
+     "label_en": "Beschlussdatum_bis",
+     "label_de": "Beschlussdatum_bis",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "gremium",
+     "description": null,
+     "annotations": {
+      "facet": true
+     },
+     "label": "Gremium",
+     "type": "text",
+     "label_en": "Gremium",
+     "label_de": "Gremium",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "strassennamen-in-mannheim",
+   "dataset_uid": "da_dqkuux",
+   "has_records": true,
+   "features": [
+    "timeserie",
+    "analyze"
+   ],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "historische Straßennamen in Mannheim",
+     "title_en": "historische Straßennamen in Mannheim",
+     "title_de": "historische Straßennamen in Mannheim",
+     "description": "<p>Verzeichnis aller Strassennamen in Mannheim. Mit historischer Erklärung zur Entstehung des Straßennamens</p>",
+     "description_en": "<p>Verzeichnis aller Strassennamen in Mannheim. Mit historischer Erklärung zur Entstehung des Straßennamens</p>",
+     "description_de": "<p>Verzeichnis aller Strassennamen in Mannheim. Mit historischer Erklärung zur Entstehung des Straßennamens</p>",
+     "theme": [
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Strassen",
+      "Strassennamen",
+      "Verkehr",
+      "Verzeichnis"
+     ],
+     "keyword_en": [
+      "Strassen",
+      "Strassennamen",
+      "Verkehr",
+      "Verzeichnis"
+     ],
+     "keyword_de": [
+      "Strassen",
+      "Strassennamen",
+      "Verkehr",
+      "Verzeichnis"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2016-11-16T10:03:29+00:00",
+     "publisher": "Stadt Mannheim",
+     "publisher_en": "Stadt Mannheim",
+     "publisher_de": "Stadt Mannheim",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2022-05-04T14:02:20.611000+00:00",
+     "federated": false,
+     "geographic_reference": [
+      "de_80_082220000000"
+     ],
+     "geographic_reference_auto": true,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2025-12-11T12:57:38.154000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 2574,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": [
+      "Stadt Mannheim"
+     ],
+     "timezone": null
+    },
+    "dcat": {
+     "created": "2015-11-19",
+     "issued": "2016-11-16",
+     "creator": "Dr. Harald Stockert",
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "kurt-schumacher-bruecke-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_caobam",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Kurt-Schumacher-Brücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Kurt-Schumacher-Brücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Kurt-Schumacher-Brücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Kurt-Schumacher-Brücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Kurt-Schumacher-Brücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Kurt-Schumacher-Brücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-09-24T08:32:49+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": "CONT",
+     "bbox": null,
+     "data_processed": "2026-09-24T08:36:37.541000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-09-24T08:36:37.582000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "konrad-adenauer-bruecke-nord-eco-counter-v2",
+   "dataset_uid": "da_oduey7",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Konrad-Adenauer-Brücke (Nord) Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Konrad-Adenauer-Brücke (Nord) Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Konrad-Adenauer-Brücke (Nord) Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Konrad-Adenauer-Brücke (Nord), Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Konrad-Adenauer-Brücke (Nord), Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Konrad-Adenauer-Brücke (Nord), Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Transport",
+      "Umwelt"
+     ],
+     "keyword_en": [
+      "Transport",
+      "Umwelt"
+     ],
+     "keyword_de": [
+      "Transport",
+      "Umwelt"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-13T11:34:02+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-13T11:36:22.562000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-13T11:36:22.604000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "lindenhofueberfuehrung-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_zysvvh",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Lindenhofüberführung Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Lindenhofüberführung Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Lindenhofüberführung Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Lindenhofüberführung, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Lindenhofüberführung, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Lindenhofüberführung, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Umwelt",
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-08T11:28:52+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-08T11:31:22.967000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-08T11:31:23.010000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "luzenbergstrasse-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_2h3axq",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Luzenbergstraße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Luzenbergstraße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Luzenbergstraße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Luzenbergstraße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Luzenbergstraße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Luzenbergstraße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Umwelt",
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-08T11:33:49+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-08T11:35:50.412000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-08T11:35:50.453000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "str_nr",
+     "description": null,
+     "annotations": {},
+     "label": "Str. Nr.",
+     "type": "text",
+     "label_en": "Str. Nr.",
+     "label_de": "Str. Nr.",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "strasse_katalog",
+     "description": null,
+     "annotations": {
+      "facet": true
+     },
+     "label": "Straße (Katalog)",
+     "type": "text",
+     "label_en": "Straße (Katalog)",
+     "label_de": "Straße (Katalog)",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "absch_nr",
+     "description": null,
+     "annotations": {},
+     "label": "Absch-Nr.",
+     "type": "int",
+     "label_en": "Absch-Nr.",
+     "label_de": "Absch-Nr.",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "strassenkurzel",
+     "description": null,
+     "annotations": {
+      "facet": true
+     },
+     "label": "Straßenkürzel",
+     "type": "text",
+     "label_en": "Straßenkürzel",
+     "label_de": "Straßenkürzel",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "klassifizierung",
+     "description": null,
+     "annotations": {
+      "facet": true
+     },
+     "label": "Klassifizierung",
+     "type": "text",
+     "label_en": "Klassifizierung",
+     "label_de": "Klassifizierung",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "strassentyp",
+     "description": null,
+     "annotations": {
+      "facet": true
+     },
+     "label": "Straßentyp",
+     "type": "text",
+     "label_en": "Straßentyp",
+     "label_de": "Straßentyp",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "lange",
+     "description": null,
+     "annotations": {},
+     "label": "Länge",
+     "type": "double",
+     "label_en": "Länge",
+     "label_de": "Länge",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "strassentypen-in-mannheim",
+   "dataset_uid": "da_swc91m",
+   "has_records": true,
+   "features": [
+    "analyze"
+   ],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Straßentypen in Mannheim",
+     "title_en": "Straßentypen in Mannheim",
+     "title_de": "Straßentypen in Mannheim",
+     "description": "<p>Verzeichnis der Straßentypen in Mannheim.</p>",
+     "description_en": "<p>Verzeichnis der Straßentypen in Mannheim.</p>",
+     "description_de": "<p>Verzeichnis der Straßentypen in Mannheim.</p>",
+     "theme": [
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Verkehr",
+      "Transport",
+      "Straßen",
+      "Strassen",
+      "Bundesstrassen",
+      "Kreisstrassen",
+      "Landstrassen",
+      "Gemeindestrassen"
+     ],
+     "keyword_en": [
+      "Verkehr",
+      "Transport",
+      "Straßen",
+      "Strassen",
+      "Bundesstrassen",
+      "Kreisstrassen",
+      "Landstrassen",
+      "Gemeindestrassen"
+     ],
+     "keyword_de": [
+      "Verkehr",
+      "Transport",
+      "Straßen",
+      "Strassen",
+      "Bundesstrassen",
+      "Kreisstrassen",
+      "Landstrassen",
+      "Gemeindestrassen"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2016-10-10T13:45:07+00:00",
+     "publisher": null,
+     "publisher_en": null,
+     "publisher_de": null,
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2017-05-01T17:42:17.376000+00:00",
+     "federated": false,
+     "geographic_reference": [
+      "de_80_082220000000"
+     ],
+     "geographic_reference_auto": true,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2024-08-07T11:00:21.353000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 10728,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": [
+      "Stadt Mannheim"
+     ],
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "name",
+     "description": null,
+     "annotations": {},
+     "label": "Standort",
+     "type": "text",
+     "label_en": "Standort",
+     "label_de": "Standort",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "siteid",
+     "description": null,
+     "annotations": {},
+     "label": "siteId",
+     "type": "int",
+     "label_en": "siteId",
+     "label_de": "siteId",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "value",
+     "description": null,
+     "annotations": {},
+     "label": "value",
+     "type": "double",
+     "label_en": "value",
+     "label_de": "value",
+     "description_en": null,
+     "description_de": null
+    },
+    {
+     "name": "location",
+     "description": null,
+     "annotations": {},
+     "label": "location",
+     "type": "geo_point_2d",
+     "label_en": "location",
+     "label_de": "location",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "verkehrszahler-daten-eco-counter-v2",
+   "dataset_uid": "da_vdjdpo",
+   "has_records": true,
+   "features": [
+    "analyze",
+    "geo"
+   ],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Verkehrszähler Daten - Eco Counter V2",
+     "title_en": "Verkehrszähler Daten - Eco Counter V2",
+     "title_de": "Verkehrszähler Daten - Eco Counter V2",
+     "description": "<p>Zählungen alle Standorte, Zeitraum laufendes Jahr</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com\" style=\"font-family: sans-serif; background-color: rgb(255, 255, 255);\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Zählungen alle Standorte, Zeitraum laufendes Jahr</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com\" style=\"font-family: sans-serif; background-color: rgb(255, 255, 255);\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Zählungen alle Standorte, Zeitraum laufendes Jahr</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com\" style=\"font-family: sans-serif; background-color: rgb(255, 255, 255);\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "keyword_en": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "keyword_de": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-11-01T01:01:48.083000+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": "https://apieco.eco-counter-tools.com/api/1.0/data/site/",
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": {
+      "type": "Feature",
+      "geometry": {
+       "coordinates": [
+        [
+         [
+          8.546040952205658,
+          49.514379473403096
+         ],
+         [
+          8.455722760409117,
+          49.514379473403096
+         ],
+         [
+          8.455722760409117,
+          49.471927313134074
+         ],
+         [
+          8.546040952205658,
+          49.471927313134074
+         ],
+         [
+          8.546040952205658,
+          49.514379473403096
+         ]
+        ]
+       ],
+       "type": "Polygon"
+      },
+      "properties": {}
+     },
+     "data_processed": "2026-11-01T01:01:48.083000+00:00",
+     "federated": false,
+     "geographic_reference": [
+      "de_80_082220000000"
+     ],
+     "geographic_reference_auto": true,
+     "geometry_types": [
+      "Point"
+     ],
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-11-01T01:01:48.137000+00:00",
+     "modified_updates_on_data_change": true,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 33,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": [
+      "Stadt Mannheim"
+     ],
+     "timezone": "Europe/Berlin"
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {
+      "hierarchical": "[]"
+     },
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "fernmeldeturm-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_ygyw1l",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Fernmeldeturm Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Fernmeldeturm Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Fernmeldeturm Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Fernmeldeturm, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Fernmeldeturm, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Fernmeldeturm, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "keyword_en": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "keyword_de": [
+      "Radzähler",
+      "Verkehr",
+      "Mobilität",
+      "Umwelt",
+      "Emissionen",
+      "Fußgängerzähler"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-09-24T07:01:52.608000+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-09-24T07:01:52.608000+00:00",
+     "federated": false,
+     "geographic_reference": [
+      "de_80_082220000000"
+     ],
+     "geographic_reference_auto": true,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-09-24T07:01:52.655000+00:00",
+     "modified_updates_on_data_change": true,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": [
+      "Stadt Mannheim"
+     ],
+     "timezone": "Europe/Berlin"
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": "Stadt Mannheim",
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": "opendata@mannheim.de",
+     "accrualperiodicity": "continuous",
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "jungbuschbruecke-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_dmjhc8",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Jungbuschbrücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Jungbuschbrücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Jungbuschbrücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Jungbuschbrücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Jungbuschbrücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Jungbuschbrücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Verkehr",
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Verkehr",
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Verkehr",
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-09-24T07:11:04+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-09-24T07:45:05.785000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-09-24T07:45:05.831000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": "2026-09-24",
+     "issued": "2026-09-24",
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": "continuous",
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": "2022-12-31T22:00:00+00:00",
+     "temporal_coverage_end": "2025-12-30T22:00:00+00:00",
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "renzstrasse-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_6bee0v",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Renzstraße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Renzstraße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Renzstraße Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Renzstraße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Renzstraße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Renzstraße, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Umwelt",
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-08T11:43:07+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-08T11:46:18.719000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-08T11:46:18.760000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "konrad-adenauer-bruecke-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_tfe4s6",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Konrad-Adenauer-Brücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Konrad-Adenauer-Brücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Konrad-Adenauer-Brücke Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Konrad-Adenauer-Brücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Konrad-Adenauer-Brücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Konrad-Adenauer-Brücke, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-family: sans-serif; font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Transport",
+      "Verkehr",
+      "Umwelt"
+     ],
+     "keyword_en": [
+      "Transport",
+      "Verkehr",
+      "Umwelt"
+     ],
+     "keyword_de": [
+      "Transport",
+      "Verkehr",
+      "Umwelt"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-09-24T06:46:45+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-09-24T07:02:15.447000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-09-24T07:02:15.492000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": "Stadt Mannheim",
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": "opendata@mannheim.de",
+     "accrualperiodicity": "continuous",
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "feudenheimerstrasse-stadteinwaerts-eco-counter-v2",
+   "dataset_uid": "da_wltwbg",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Feudenheimerstraße stadteinwärts Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Feudenheimerstraße stadteinwärts Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Feudenheimerstraße stadteinwärts Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Feudenheimerstraße stadteinwärts, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Feudenheimerstraße stadteinwärts, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Feudenheimerstraße stadteinwärts, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_en": [
+      "Transport, Movements",
+      "Environment"
+     ],
+     "theme_de": [
+      "Transport, Bewegungen",
+      "Umwelt"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-13T11:27:50+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-13T11:29:24.110000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-13T11:29:24.153000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "kurpfalzbruecke-gesamt-verkehrszaehler-eco-counter-v2",
+   "dataset_uid": "da_lditrr",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Kurpfalzbrücke gesamt Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Kurpfalzbrücke gesamt Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Kurpfalzbrücke gesamt Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Kurpfalzbrücke gesamt, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Kurpfalzbrücke gesamt, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Kurpfalzbrücke gesamt, Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Umwelt",
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-09-24T09:12:14+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": "CONT",
+     "bbox": null,
+     "data_processed": "2026-09-24T09:14:48.331000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-09-24T09:14:48.374000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  },
+  {
+   "visibility": "domain",
+   "fields": [
+    {
+     "name": "data",
+     "description": null,
+     "annotations": {},
+     "label": "data",
+     "type": "text",
+     "label_en": "data",
+     "label_de": "data",
+     "description_en": null,
+     "description_de": null
+    }
+   ],
+   "dataset_id": "konrad-adenauer-bruecke-sued-eco-counter-v",
+   "dataset_uid": "da_ezt66c",
+   "has_records": true,
+   "features": [],
+   "attachments": [],
+   "alternative_exports": [],
+   "data_visible": true,
+   "metas": {
+    "default": {
+     "title": "Konrad-Adenauer-Brücke (Süd) Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_en": "Konrad-Adenauer-Brücke (Süd) Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "title_de": "Konrad-Adenauer-Brücke (Süd) Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+     "description": "<p>Standort Konrad-Adenauer-Brücke (Süd), Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_en": "<p>Standort Konrad-Adenauer-Brücke (Süd), Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "description_de": "<p>Standort Konrad-Adenauer-Brücke (Süd), Zählungen pro Monat, Zeitraum 2023 bis 2025</p><p><a href=\"https://stadtmannheimdauerradzaehlstellen.eco-counter.com/\" style=\"font-family: sans-serif; color: rgb(51, 85, 255); background-color: rgb(255, 255, 255); font-weight: 400;\" target=\"_blank\">Stadt Mannheim eco-counter Zählstellen</a></p>",
+     "theme": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_en": [
+      "Environment",
+      "Transport, Movements"
+     ],
+     "theme_de": [
+      "Umwelt",
+      "Transport, Bewegungen"
+     ],
+     "keyword": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_en": [
+      "Umwelt",
+      "Transport"
+     ],
+     "keyword_de": [
+      "Umwelt",
+      "Transport"
+     ],
+     "license": "dl-de-by 2.0",
+     "license_en": "dl-de-by 2.0",
+     "license_de": "dl-de-by 2.0",
+     "license_url": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_en": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "license_url_de": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+     "language": "de",
+     "modified": "2026-10-13T11:37:08+00:00",
+     "publisher": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_en": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "publisher_de": "Eco Counter für FB Geoinformation und Stadtplanung",
+     "references": null,
+     "attributions": null,
+     "update_frequency": null,
+     "bbox": null,
+     "data_processed": "2026-10-13T11:38:42.485000+00:00",
+     "federated": false,
+     "geographic_reference": null,
+     "geographic_reference_auto": null,
+     "geometry_types": null,
+     "metadata_languages": [
+      "de"
+     ],
+     "metadata_processed": "2026-10-13T11:38:42.527000+00:00",
+     "modified_updates_on_data_change": false,
+     "modified_updates_on_metadata_change": false,
+     "parent_domain": null,
+     "records_count": 1,
+     "shared_catalog": null,
+     "source_dataset": null,
+     "source_domain": null,
+     "source_domain_address": null,
+     "source_domain_title": null,
+     "territory": null,
+     "timezone": null
+    },
+    "dcat": {
+     "created": null,
+     "issued": null,
+     "creator": null,
+     "contributor": null,
+     "contact_name": null,
+     "contact_email": null,
+     "accrualperiodicity": null,
+     "spatial": null,
+     "temporal": null,
+     "granularity": null,
+     "dataquality": null,
+     "publisher_type": null,
+     "conforms_to": null,
+     "temporal_coverage_start": null,
+     "temporal_coverage_end": null,
+     "accessRights": null,
+     "relation": null
+    },
+    "dcat_ap_de": {
+     "political_geocoding": null,
+     "political_geocoding_level": null
+    }
+   }
+  }
+ ]
+}

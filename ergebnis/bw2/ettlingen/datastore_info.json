@@ -1,0 +1,222 @@
+{
+ "include_total": true,
+ "limit": 3,
+ "records_format": "objects",
+ "resource_id": "a903967d-9177-4db6-977c-267fd745a390",
+ "total_estimation_threshold": null,
+ "records": [
+  {
+   "_id": 1,
+   "timestamp": "2025-05-13T22:00:00",
+   "dataset_id": "50",
+   "label": "Pforzheimer Strasse 14",
+   "avg_speed": 52.00826446280992,
+   "link": "https://goo.gl/maps/U2F7XY8xkC8UbWTa7",
+   "classification": "LKW+Anhänger",
+   "amount": 0,
+   "series_name": "LKW+Anhänger",
+   "y": 0,
+   "latitude": null,
+   "longitude": null,
+   "direction": null,
+   "lane_index": null,
+   "sensor_id": null,
+   "sid": null,
+   "source": null
+  },
+  {
+   "_id": 2,
+   "timestamp": "2025-05-14T03:00:00",
+   "dataset_id": "50",
+   "label": "Pforzheimer Strasse 14",
+   "avg_speed": 52.19092331768388,
+   "link": "https://goo.gl/maps/U2F7XY8xkC8UbWTa7",
+   "classification": "LKW+Anhänger",
+   "amount": 0,
+   "series_name": "Leichtes Nutzfahrzeug",
+   "y": 9,
+   "latitude": null,
+   "longitude": null,
+   "direction": null,
+   "lane_index": null,
+   "sensor_id": null,
+   "sid": null,
+   "source": null
+  },
+  {
+   "_id": 3,
+   "timestamp": "2025-05-14T04:00:00",
+   "dataset_id": "50",
+   "label": "Pforzheimer Strasse 14",
+   "avg_speed": 52.19092331768388,
+   "link": "https://goo.gl/maps/U2F7XY8xkC8UbWTa7",
+   "classification": "LKW+Anhänger",
+   "amount": 0,
+   "series_name": "LKW",
+   "y": 4,
+   "latitude": null,
+   "longitude": null,
+   "direction": null,
+   "lane_index": null,
+   "sensor_id": null,
+   "sid": null,
+   "source": null
+  }
+ ],
+ "fields": [
+  {
+   "id": "_id",
+   "type": "int"
+  },
+  {
+   "id": "timestamp",
+   "type": "timestamp",
+   "info": {
+    "label": "timestamp",
+    "notes": "Zeitstempel im ISO-Format (UTC) mit stündlicher Auflösung",
+    "type_override": "timestamp"
+   }
+  },
+  {
+   "id": "dataset_id",
+   "type": "text",
+   "info": {
+    "label": "dataset_id ",
+    "notes": "Eindeutige ID des Messstandorts",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "label",
+   "type": "text",
+   "info": {
+    "label": "label",
+    "notes": "Bezeichnung des Standorts (z. B. Straßenname)",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "avg_speed",
+   "type": "numeric",
+   "info": {
+    "label": "avg_speed ",
+    "notes": "Durchschnittsgeschwindigkeit (km/h)",
+    "type_override": "numeric"
+   }
+  },
+  {
+   "id": "link",
+   "type": "text",
+   "info": {
+    "label": "link",
+    "notes": "Link zur Geoposition (Google Maps)",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "classification",
+   "type": "text",
+   "info": {
+    "label": "classification",
+    "notes": "Fahrzeugklassifikation für die aggregierte Summe",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "amount",
+   "type": "numeric",
+   "info": {
+    "label": "amount ",
+    "notes": "Gesamtanzahl Fahrzeuge je Klasse pro Tag (optional)",
+    "type_override": "numeric"
+   }
+  },
+  {
+   "id": "series_name",
+   "type": "text",
+   "info": {
+    "label": "series_name ",
+    "notes": "Fahrzeugtyp für Zeitreihen (z. B. PKW, LKW)",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "y",
+   "type": "numeric",
+   "info": {
+    "label": "y",
+    "notes": " Anzahl Fahrzeuge je Stunde und Typ",
+    "type_override": "numeric"
+   }
+  },
+  {
+   "id": "latitude",
+   "type": "numeric",
+   "info": {
+    "label": "latitude",
+    "notes": "Breitengrad der Messposition aus den UrbanPulse-Messdaten",
+    "type_override": "numeric"
+   }
+  },
+  {
+   "id": "longitude",
+   "type": "numeric",
+   "info": {
+    "label": "longitude",
+    "notes": "Längengrad der Messposition aus den UrbanPulse-Messdaten",
+    "type_override": "numeric"
+   }
+  },
+  {
+   "id": "direction",
+   "type": "text",
+   "info": {
+    "label": "direction",
+    "notes": "Fahrtrichtung bzw. Richtung des erfassten Verkehrs",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "lane_index",
+   "type": "numeric",
+   "info": {
+    "label": "lane_index",
+    "notes": "Kennung bzw. Index der Fahrspur innerhalb der Messstelle",
+    "type_override": "numeric"
+   }
+  },
+  {
+   "id": "sensor_id",
+   "type": "text",
+   "info": {
+    "label": "sensor_id",
+    "notes": "ID des physischen Sensors in UrbanPulse",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "sid",
+   "type": "text",
+   "info": {
+    "label": "sid",
+    "notes": "Eindeutige UrbanPulse-ID des Datenstroms bzw. Sensor-Streams",
+    "type_override": "text"
+   }
+  },
+  {
+   "id": "source",
+   "type": "text",
+   "info": {
+    "label": "source",
+    "notes": "Herkunft der Messdaten",
+    "type_override": "text"
+   }
+  }
+ ],
+ "_links": {
+  "start": "/api/3/action/datastore_search?resource_id=a903967d-9177-4db6-977c-267fd745a390&limit=3",
+  "next": "/api/3/action/datastore_search?resource_id=a903967d-9177-4db6-977c-267fd745a390&limit=3&offset=3"
+ },
+ "total": 199554,
+ "total_was_estimated": false
+}

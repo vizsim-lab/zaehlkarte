@@ -1,0 +1,1322 @@
+{
+ "karte-der-strassenverkehrszahlung-in-baden-wurttemberg": {
+  "name": "karte-der-strassenverkehrszahlung-in-baden-wurttemberg",
+  "titel": "Karte der Straßenverkehrszählung in Baden-Württemberg",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Verkehrsministerium Baden-Württemberg",
+  "pflege": "Verkehrsministerium Baden-Württemberg",
+  "lizenz": "",
+  "geaendert": "2026-09-23T06:49:52.181636",
+  "notiz": "<p>Die Straßenverkehrszählung (SVZ) umfasst alle Zählungen mittels Dauerzählstellen, temporären Zählstellen (Seitenradargeräten / Verkehrsmonitoring) und manuellen Zählstellen.</p> <h3>Zählstellen-Karte</h3> <p>Die Karte zeigt die temporären, dauerhaften und manuellen Zählstellen in Baden-Württemberg. Eingeblendet sind zunächst die Zählstellen an Autobahnen, welche bei hoher Zoomstufe durch die übrigen Zählstellen an Bundes-, Land- und Kreisstraßen ergänzt werden. Durch Klick auf eine Zählstelle lassen sich in einem Popup die jeweilige Straße und Zählstellennummer anzeigen. <p>Der folgende Link führt zur <strong> <a href=\"https://www.mobidata-bw.de/karten/count_car/\" target=\"_blank\">Vollbild",
+  "ressourcen": [
+   {
+    "name": "Darstellung der Methodik für die Straßenverkehrszählung",
+    "format": "PDF",
+    "url": "https://mobidata-bw.de/vm/Verkehrsentwicklungen_Jahresvergleiche_Strassenverkehr_BW/Jahresvergleiche/Darstellung_MethodikUndErgebnisse_2015_2017.pdf"
+   },
+   {
+    "name": "Grunddaten hinter der SVZ-Karte BW",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://mobidata-bw.de/vm/Karte_Strassenverkehrszaehlung_BW/SVZ-Zaehlstellen_2026-06-26_augmented_SVZ2024.csv"
+   }
+  ],
+  "treffer": [
+   "Zählung",
+   "Zählstelle",
+   "Zählstellen",
+   "Kfz"
+  ]
+ },
+ "automatisierte-verkehrszahlung-in-ettlingen": {
+  "name": "automatisierte-verkehrszahlung-in-ettlingen",
+  "titel": "Automatisierte Verkehrszählung in Ettlingen",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Ordnungsamt Ettlingen",
+  "pflege": "Stadt Ettlingen",
+  "lizenz": "",
+  "geaendert": "2026-06-20T11:45:31.243860",
+  "notiz": "Automatisierte Zählung des fließenden Verkehrs.",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählung Ettlingen – Stundenwerte pro Fahrzeugtyp und Standort",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": ""
+   },
+   {
+    "name": "Schillerstraße 2 stündlich 10 2024",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/e53855d7-e98c-435b-9d51-717755cf1680/download/schiller-strasse-2_20241014t100000.csv"
+   },
+   {
+    "name": "Schillerstraße 2 täglich 10 2024",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/0aa49d0e-f77c-494b-91cf-04e3cbb5e98c/download/schiller-strasse-2_20240921t000000.csv"
+   },
+   {
+    "name": "Schillerstraße 2 stündlich 02/03 2025",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/abced508-c4d3-4e82-9489-a8be9016b2f7/download/schiller-strasse-2_20250201t110000.csv"
+   },
+   {
+    "name": "Schillerstraße 2 täglich 02/03 2025",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://opendata.readi.de/dataset/ac8d2d37-8a0b-4e0a-97e8-4c657bb6b2cb/resource/175f9c11-4b5f-4b77-bb29-401c788e2502/download/schiller-strasse-2_20250201t000000.csv"
+   }
+  ],
+  "treffer": [
+   "Zählung",
+   "Verkehrszählung"
+  ]
+ },
+ "tatverdachtige-nach-alter-staatsangehorigkeit-und-geschlecht": {
+  "name": "tatverdachtige-nach-alter-staatsangehorigkeit-und-geschlecht",
+  "titel": "Tatverdächtige nach Alter, Staatsangehörigkeit und Geschlecht",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Personal- und Sozialstatistik (12-33)",
+  "pflege": "Statistisches Amt der Landeshauptstadt Stuttgart",
+  "lizenz": "",
+  "geaendert": "2026-09-11T06:12:34.140132",
+  "notiz": "Nachgewiesen werden: Alle Straftaten, einschließlich der mit Strafe bedrohten Versuche, denen eine polizeilich bearbeitete Anzeige zugrunde liegt, mit Ausnahme der Staatsschutzdelikte und der Verkehrsdelikte sowie der Straftaten, die außerhalb des Geltungsbereichs der Strafgesetze der Bundesrepublik Deutschland begangen wurden. Die Polizeiliche Kriminalstatistik wird als Ausgangsstatistik geführt, das heißt ein Fall wird beim Abschluss des polizeilichen Ermittlungsverfahrens und bei der Abgabe des Vorgangs an die Strafverfolgungsbehörde oder das Gericht statistisch erfasst. Auch die von Kindern begangenen strafbaren Handlungen werden erhoben. Daneben wird jeder ermittelte Tatverdächtige erfa",
+  "ressourcen": [
+   {
+    "name": "Tatverdächtige in Stuttgart seit 1980",
+    "format": "CSV",
+    "url": "https://opendata.stuttgart.de/dataset/1815986e-a769-4318-b1cf-0cca92a6995a/resource/5d69fd85-fd9e-464a-8bb9-412528cbc71a/download/tatverdaechtige-in-stuttgart-seit-1980.csv"
+   },
+   {
+    "name": "tatverdaechtige_in_stuttgart.xlsx",
+    "format": "XLSX",
+    "url": "https://opendata.stuttgart.de/dataset/1815986e-a769-4318-b1cf-0cca92a6995a/resource/b26aea52-6bfa-44c3-be05-f0115b870c38/download/tatverdaechtige_in_stuttgart.xlsx"
+   }
+  ],
+  "treffer": [
+   "Zählung"
+  ]
+ },
+ "kohlendioxid-emissionen-kommunale-co2-bilanzen-stadt-konstanz": {
+  "name": "kohlendioxid-emissionen-kommunale-co2-bilanzen-stadt-konstanz",
+  "titel": "Kohlendioxid-Emissionen: Kommunale CO2 Bilanzen Stadt Konstanz",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": "Team Offene Daten Stadt Konstanz",
+  "lizenz": "",
+  "geaendert": "2026-09-23T06:49:29.853500",
+  "notiz": "<p>Die Angaben über CO2-Emissionen nach Sektoren beruhen auf den Energiebilanzen für Baden-Württemberg, die zunächst nur auf Landesebene vorliegen. Bei der Berechnung der Emissionswerte auf Kreis- und Gemeindeebene wird notwendigerweise auf modellhafte und damit in den verschiedenen Sektoren zum Teil verallgemeinernde Annahmen zurückgegriffen. Insbesondere wird aufgrund fehlender primärstatistischer Angaben im Sektor Haushalte, Gewerbe, Handel, Dienstleistungen und übrige Verbraucher mit einem durchschnittlichen Energieverbrauch je Wohnung bzw. je sozialversicherungspflichtig Beschäftigtem gerechnet. Regionale Minderungsmaßnahmen in diesem Sektor werden deshalb in der Modellrechnung nicht vo",
+  "ressourcen": [
+   {
+    "name": "Quellenbezogene_CO2-Emissionen_2010-2017_nach_Sektoren.csv",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Quellenbezogene_CO2_Emissionen_2010-2017_nach_Sektoren_0_0.csv"
+   },
+   {
+    "name": "Verursacherbezogene_CO2-Emissionen_2010-2017_nach_Sektoren.csv",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Verursacherbezogene_CO2-Emissionen_2010-2017_nach_Sektoren_1.csv"
+   },
+   {
+    "name": "Quellenbezogene_CO2-Emissionen_2010-2017_nach_Sektoren.csv",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/kohlendioxid-emissionen-kommunale-co2-bilanzen-stadt-konstanz/resource/048aec49-cb59-432d"
+   },
+   {
+    "name": "Verursacherbezogene_CO2-Emissionen_2010-2017_nach_Sektoren.csv",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/kohlendioxid-emissionen-kommunale-co2-bilanzen-stadt-konstanz/resource/3d8aa106-eb78-427b"
+   }
+  ],
+  "treffer": [
+   "Zählung",
+   "Verkehrsbelastung",
+   "Kfz",
+   "Verkehrszählung"
+  ]
+ },
+ "fahrrad-zahlstellen-zeitreihe": {
+  "name": "fahrrad-zahlstellen-zeitreihe",
+  "titel": "Fahrrad-Zählstellen Zeitreihe",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": "Nicole Kühn",
+  "lizenz": "",
+  "geaendert": "2026-07-17T06:56:40.261174",
+  "notiz": "Fahrrad-Zählstellen Zeitreihe",
+  "ressourcen": [
+   {
+    "name": "Fahrrad-Zählstellen Zeitreihe",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe/content.csv"
+   }
+  ],
+  "treffer": [
+   "Zählstelle",
+   "Zählstellen"
+  ]
+ },
+ "radfahrende-nach-zahlstellen": {
+  "name": "radfahrende-nach-zahlstellen",
+  "titel": "Radfahrende an den Zählstellen in Stuttgart seit 2013 nach Jahreszeiten",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Verkehrsstatistik und statistische Methoden (12-13)",
+  "pflege": "Statistisches Amt der Landeshauptstadt Stuttgart",
+  "lizenz": "",
+  "geaendert": "2026-09-17T06:33:11.323101",
+  "notiz": "Nachgewiesen werden: Radfahrer, die an einer der beiden Fahrraddauerzählstellen erfasst werden. In Stuttgart gibt es zwei fest eingerichtete automatische Fahrradzählstellen. Die erste Dauerzählstelle wurde am 1. Juli 2012 auf der König-Karls-Brücke in Bad Cannstatt an der Hauptradroute 1 eingerichtet. Eine weitere Zählstelle, ebenfalls auf der Hauptradroute 1 befindet sich in Stuttgart-Süd in der Böblinger Straße. Hier werden die Radler seit 10. Dezember 2013 gezählt. Zukünftig soll es weitere Dauerzählstellen, die die Radfahrerinnen und Radfahrer auf wichtigen Radrouten erfassen, geben. ### Periodizität Die Statistik wird jährlich zum 31. Dezember eines Jahres erstellt und steht ab 28. Febr",
+  "ressourcen": [
+   {
+    "name": "Radfahrer an den Zählstellen in Stuttgart seit 2013",
+    "format": "CSV",
+    "url": "https://opendata.stuttgart.de/dataset/151063a6-8367-4ef4-bbdf-a1120e97335e/resource/f1815117-5d64-44be-83f9-f9bf6f67a300/download/radfahrende_nach_zahlstelleund_jahr.csv"
+   },
+   {
+    "name": "Radfahrer an den Zählstellen in Stuttgart seit 2013 nach Jahreszeiten",
+    "format": "XLSX",
+    "url": "https://www.domino1.stuttgart.de/web/komunis/komunissde.nsf/715a84c741dea0de412565f3003c484d/083cff8e36bf12cdc12584d3004830e7/%24FILE/bqh02_.xlsx"
+   }
+  ],
+  "treffer": [
+   "Zählstelle",
+   "Zählstellen"
+  ]
+ },
+ "kfz-und-verkehrsbelastung-heilbronn": {
+  "name": "kfz-und-verkehrsbelastung-heilbronn",
+  "titel": "Kfz und Verkehrsbelastung Heilbronn",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": "Offene Daten Heilbronn",
+  "lizenz": "",
+  "geaendert": "2025-10-03T03:03:59.410105",
+  "notiz": "<p>Dieser Datensatz beinhaltet den Bestand an Kraftfahrzeugen in den Kreisen Heilbronns seit 1976 nach Fahrzeugart. Ab 2017 auch die Jahresfahrleistungen im Straßenverkehr nach Fahrzeugarten in Heilbronn. </p> <h3 id=\"datenquelle-\">Datenquelle:</h3> <p><a href=\"https://opendata.heilbronn.de/dataset/kfz-und-verkehrsbelastung-heilbronn\">Open Data Heilbronn</a> unter CC BY 4.0</p> ",
+  "ressourcen": [
+   {
+    "name": "Bestand an Kraftfahrzeugen in den Kreisen seit 1976 nach Fahrzeugart im Stadtkreis Heilbronn",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://www.statistik-bw.de/Verkehr/KFZBelastung/10023020.tab?R=KR121&amp%3Bform=csv"
+   },
+   {
+    "name": "Jahresfahrleistungen im Straßenverkehr ab 2017 nach Fahrzeugarten in Heilbronn",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://www.statistik-bw.de/Verkehr/KFZBelastung/10026017.tab?R=KR121&amp%3Bform=csv"
+   }
+  ],
+  "treffer": [
+   "Zählstelle",
+   "Verkehrsbelastung",
+   "Kfz"
+  ]
+ },
+ "fernmeldeturm-verkehrszahler-2023-bis-2025-eco-counter-v2": {
+  "name": "fernmeldeturm-verkehrszahler-2023-bis-2025-eco-counter-v2",
+  "titel": "Fernmeldeturm Verkehrszähler 2023 bis 2025 - Eco Counter V2",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-17T06:31:31.376367",
+  "notiz": "Standort Fernmeldeturm, Zählungen pro Monat, Zeitraum 2023 bis 2025[Stadt Mannheim eco-counter Zählstellen](https://stadtmannheimdauerradzaehlstellen.eco-counter.com/)",
+  "ressourcen": [
+   {
+    "name": "csv",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/fernmeldeturm-verkehrszaehler-eco-counter-v2/exports/csv?use_labels=true"
+   },
+   {
+    "name": "json",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/fernmeldeturm-verkehrszaehler-eco-counter-v2/exports/json"
+   }
+  ],
+  "treffer": [
+   "Zählstellen"
+  ]
+ },
+ "verkehrszahler-daten-eco-counter-v2": {
+  "name": "verkehrszahler-daten-eco-counter-v2",
+  "titel": "Verkehrszähler Daten - Eco Counter V2",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-17T06:31:30.212583",
+  "notiz": "Zählungen alle Standorte, Zeitraum laufendes Jahr[Stadt Mannheim eco-counter Zählstellen](https://stadtmannheimdauerradzaehlstellen.eco-counter.com)",
+  "ressourcen": [
+   {
+    "name": "csv",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/verkehrszahler-daten-eco-counter-v2/exports/csv?use_labels=true"
+   },
+   {
+    "name": "json",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/verkehrszahler-daten-eco-counter-v2/exports/json"
+   },
+   {
+    "name": "geojson",
+    "format": "http://publications.europa.eu/resource/authority/file-type/GEOJSON",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/verkehrszahler-daten-eco-counter-v2/exports/geojson"
+   }
+  ],
+  "treffer": [
+   "Zählstellen"
+  ]
+ },
+ "verkehrszahler-standorte-eco-counter-v2": {
+  "name": "verkehrszahler-standorte-eco-counter-v2",
+  "titel": "Verkehrszähler Standorte - Eco Counter V2",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-11T06:16:25.969893",
+  "notiz": "Alle Standorte[Stadt Mannheim eco-counter Zählstellen](https://stadtmannheimdauerradzaehlstellen.eco-counter.com/)",
+  "ressourcen": [
+   {
+    "name": "csv",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/verkehrszaehler-standorte-eco-counter-v2/exports/csv?use_labels=true"
+   },
+   {
+    "name": "json",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/verkehrszaehler-standorte-eco-counter-v2/exports/json"
+   },
+   {
+    "name": "geojson",
+    "format": "http://publications.europa.eu/resource/authority/file-type/GEOJSON",
+    "url": "https://mannheim.opendatasoft.com/api/explore/v2.1/catalog/datasets/verkehrszaehler-standorte-eco-counter-v2/exports/geojson"
+   }
+  ],
+  "treffer": [
+   "Zählstellen"
+  ]
+ },
+ "jahresfahrleistung-fur-kraftfahrzeuge": {
+  "name": "jahresfahrleistung-fur-kraftfahrzeuge",
+  "titel": "Jahresfahrleistung für Kraftfahrzeuge",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Data Science und Mobilitätsstatistik (12-13)",
+  "pflege": "Landeshauptstadt Stuttgart, Statistisches Amt",
+  "lizenz": "",
+  "geaendert": "2026-09-17T06:31:49.712770",
+  "notiz": "Die Jahresfahrleistung gibt die Summe der Kilometer an, die alle Kraftfahrzeuge in einem Jahr zurücklegen. Grundlage dafür sind die ermittelten Fahraufkommen aus den alle 5 Jahre durchgeführten Straßenverkehrszählungen des Landesamts für Straßenwesen. Die Fortschreibung erfolgt dazwischen jährlich anhand der über automatische Zählstellen ermittelten Veränderungsraten unter Berücksichtigung der Straßennetzänderungen. Die Daten sind differenziert nach Straßenkategorie und Fahrzeugart ausgewiesen.",
+  "ressourcen": [
+   {
+    "name": "Jahresfahrleistung_1985_bis_2023.csv",
+    "format": "CSV",
+    "url": "https://opendata.stuttgart.de/dataset/f0035dac-7963-459a-ac80-58111c469db8/resource/1ca95bc7-fcd4-408e-ba94-c74e948432c6/download/jahresfahrleistung_1985_bis_2023.csv"
+   }
+  ],
+  "treffer": [
+   "Zählstellen",
+   "Kfz"
+  ]
+ },
+ "ergebnisse-der-verkehrszahlungen": {
+  "name": "ergebnisse-der-verkehrszahlungen",
+  "titel": "Ergebnisse der Verkehrszählungen",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Data Science und Mobilitätsstatistik (12-13)",
+  "pflege": "Landeshauptstadt Stuttgart, Statistisches Amt",
+  "lizenz": "",
+  "geaendert": "2026-09-17T06:31:43.711022",
+  "notiz": "Im jährlich wechselnden Turnus führt das Amt für Stadtplanung und Wohnen der Landeshauptstadt Stuttgart an der Markungsgrenze und am Kesselrand Verkehrszählungen durch. Dabei werden an einem normalen Werktag innerhalb von 24 Stunden alle Fahrzeuge und deren Richtung erfasst, die die Zählstellen passieren. Der Datensatz enthält die jährlichen Ergebnisse der Verkehrszählungen, differenziert nach Messpunkt (Kesselrand vs. Markungsgrenze), Richtung, Messzeitraum (22.00-06:00 Uhr vs. 6:00-22:00 Uhr) sowie Fahrzeugart.",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählungen_Stuttgart_1980_bis_2024.csv",
+    "format": "CSV",
+    "url": "https://opendata.stuttgart.de/dataset/6b980155-7f3c-489e-9169-004138b9d28f/resource/8345d864-0173-483f-adc7-8ded2d7c7855/download/verkehrszahlungen_stuttgart_1980_bis_2024.csv"
+   }
+  ],
+  "treffer": [
+   "Zählstellen",
+   "Verkehrszählung"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2021-verkehrsmengen-total6f74d": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2021-verkehrsmengen-total6f74d",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2021 (Verkehrsmengen total)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:45:01.122863",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2021. Verfügbar ist die Durchschnittliche Geschwindigkeit der Radfahrer, die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, ka",
+  "ressourcen": [
+   {
+    "name": "\"count_total_2021\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2021&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"count_total_2021\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2021&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"count_total_2021\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2021&OUTPUTFORMAT=shapezip"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen",
+   "Geschwindigkeit"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2024-verkehrsmengen-totaldfb9a": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2024-verkehrsmengen-totaldfb9a",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2024 (Verkehrsmengen total)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:43:41.385885",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2024. Verfügbar ist die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, kann es vorkommen, dass unterschiedliche GPS-Spuren auf",
+  "ressourcen": [
+   {
+    "name": "\"count_total_2024\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2024&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"count_total_2024\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2024&OUTPUTFORMAT=shapezip"
+   },
+   {
+    "name": "\"count_total_2024\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2024&OUTPUTFORMAT=geojson"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2025-verkehrsmengen-totalb1e7f": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2025-verkehrsmengen-totalb1e7f",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2025 (Verkehrsmengen total)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:43:33.693834",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2025. Verfügbar ist die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, kann es vorkommen, dass unterschiedliche GPS-Spuren auf",
+  "ressourcen": [
+   {
+    "name": "\"count_total_2025\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2025&OUTPUTFORMAT=shapezip"
+   },
+   {
+    "name": "\"count_total_2025\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2025&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"count_total_2025\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2025&OUTPUTFORMAT=geojson"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2022-verkehrsmengen-total0e598": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2022-verkehrsmengen-total0e598",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2022 (Verkehrsmengen total)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:43:11.353051",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2022. Verfügbar ist die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, kann es vorkommen, dass unterschiedliche GPS-Spuren auf",
+  "ressourcen": [
+   {
+    "name": "\"count_total_2022\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2022&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"count_total_2022\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2022&OUTPUTFORMAT=shapezip"
+   },
+   {
+    "name": "\"count_total_2022\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2022&OUTPUTFORMAT=geopackage"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2022-verkehrsmengen-gerichtet72a2b": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2022-verkehrsmengen-gerichtet72a2b",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2022 (Verkehrsmengen gerichtet)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:37:10.144180",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2022. Verfügbar ist die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, kann es vorkommen, dass unterschiedliche GPS-Spuren auf",
+  "ressourcen": [
+   {
+    "name": "\"count_direction_2022\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2022&OUTPUTFORMAT=shapezip"
+   },
+   {
+    "name": "\"count_direction_2022\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2022&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"count_direction_2022\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2022&OUTPUTFORMAT=geojson"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2023-verkehrsmengen-gerichtet90d49": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2023-verkehrsmengen-gerichtet90d49",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2023 (Verkehrsmengen gerichtet)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:21:32.034585",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2023. Verfügbar ist die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, kann es vorkommen, dass unterschiedliche GPS-Spuren auf",
+  "ressourcen": [
+   {
+    "name": "\"count_direction_2023\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2023&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"count_direction_2023\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2023&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"count_direction_2023\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2023&OUTPUTFORMAT=shapezip"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2023-verkehrsmengen-total95870": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2023-verkehrsmengen-total95870",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2023 (Verkehrsmengen total)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:19:57.671543",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2023. Verfügbar ist die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, kann es vorkommen, dass unterschiedliche GPS-Spuren auf",
+  "ressourcen": [
+   {
+    "name": "\"count_total_2023\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2023&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"count_total_2023\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2023&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"count_total_2023\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_total_2023&OUTPUTFORMAT=shapezip"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2021-verkehrsmengen-gerichtetf135a": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2021-verkehrsmengen-gerichtetf135a",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2021 (Verkehrsmengen gerichtet)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:40:55.843128",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2021. Verfügbar ist die Durchschnittliche Geschwindigkeit der Radfahrer, die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Verkehrsmenge wird die Anzahl der aufgezeichneten Fahrten je Verkehrsweg dargestellt. Die originalen GPS-Spuren werden dabei mittels eines Routing-Algorithmus auf das zugrunde liegende Verkehrsnetz gezogen. Aufgrund der stets vorhandenen Ungenauigkeit des GPS gelingt das nicht immer fehlerfrei. Sind im Verkehrsnetz zwei Fahrspuren als separate Spuren angelegt, ka",
+  "ressourcen": [
+   {
+    "name": "\"count_direction_2021\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2021&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"count_direction_2021\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2021&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"count_direction_2021\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=count_direction_2021&OUTPUTFORMAT=shapezip"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen",
+   "Geschwindigkeit"
+  ]
+ },
+ "stadtradeln": {
+  "name": "stadtradeln",
+  "titel": "Stadtradeln",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "flow.d GmbH",
+  "pflege": "Stadt Konstanz",
+  "lizenz": "",
+  "geaendert": "2026-09-23T06:51:38.239972",
+  "notiz": "<p>Hier finden Sie Datensätze zum Stadtradeln in Konstanz von den Jahren 2020, 2022, 2023 und 2024.</p> <p>Quelle: flow.d GmbH, bitte Lizenz CC BY-NC-SA 4.0 beachten!</p> ",
+  "ressourcen": [
+   {
+    "name": "Statistiken der Stadtradel Daten von 2020",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Statistik_2020.zip"
+   },
+   {
+    "name": "Statistiken der Stadtradel Daten von 2022",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Statistik_2022.zip"
+   },
+   {
+    "name": "Statistiken der Stadtradel Daten von 2023",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Statistik_2023.zip"
+   },
+   {
+    "name": "Statistiken der Stadtradel Daten von 2024",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Statistik_2024.zip"
+   },
+   {
+    "name": "Stadtradeln 2020 Geschwindigkeiten gesamt und je Wochentag",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Geschwindigkeiten%202020_Konstanz_je_Wochentag_gesamt.zip"
+   },
+   {
+    "name": "Stadtradeln 2022 Geschwindigkeiten gesamt und je Wochentag",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Geschwindigkeiten%202022_Konstanz_je_Wochentag_gesamt.zip"
+   },
+   {
+    "name": "Stadtradeln 2023 Geschwindigkeiten gesamt und je Wochentag",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Geschwindigkeiten%202023_Konstanz_je_Wochentag_gesamt.zip"
+   },
+   {
+    "name": "Stadtradeln 2024 Verkehrsmengen gesamt und je Wochentag",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Verkehrsmengen%202.0_SR%202024_Konstanz_UTM32_je_Wochentag_gesamt.zip"
+   },
+   {
+    "name": "Stadtradeln 2024 Geschwindigkeiten gesamt und je Wochentag",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Geschwindigkeiten%202024_Konstanz_UTM32_je_Wochentag_gesamt.zip"
+   },
+   {
+    "name": "Geopackages mit der Auswertung der Stadtradeldaten  von 2024 als Heatmap",
+    "format": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Stadtradeln_Heatmap_2024_Konstanz_UTM32_H3_Zellen_8%20_10_12.zip"
+   },
+   {
+    "name": "Stadtradeln in Konstanz in den Jahren 2020, 2022 , 2023 und 2024",
+    "format": "APP",
+    "url": "https://offenedaten-konstanz.de/dataset/stadtradeln/resource/2002bf48-41e5-4f50-971c-325a8e290d38"
+   }
+  ],
+  "treffer": [
+   "Verkehrsmengen"
+  ]
+ },
+ "geschwindigkeitsdisplays": {
+  "name": "geschwindigkeitsdisplays",
+  "titel": "Geschwindigkeitsdisplays",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": "Team Offene Daten Stadt Konstanz",
+  "lizenz": "",
+  "geaendert": "2026-09-23T06:51:39.404047",
+  "notiz": "<p>Dieser Datensatz enthält Informationen zu den 16 Geschwindigkeitsanzeigedisplays, die im Besitz des Bürgeramtes sind.</p> <p>Die Geschwindigkeitsdisplays zeigen nicht nur lokal die Geschwindigkeiten für den individuellen Autofahrer, sondern speichern auch im 30-Minuten-Takt die Anzahl der Messungen, die niedrigste und höchste Geschwindigkeit sowie die Durchschnittsgeschwindigkeit in diesem Zeitraum.</p> <p>Hinweis: Aus den Geschwindigkeitsmessungen können keine genauen Aussagen zu den Mengen an Verkehr abgeleitet werden, da bei sehr dichtem Verkehr dazwischen fahrende Fahrzeuge ggf. nicht aufgezeichnet werden.</p> <p><em>Zu diesem Datensatz haben wir auch einen </em><strong><a href=\"https",
+  "ressourcen": [
+   {
+    "name": "Geschwindigkeitsdisplays_ 2020",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Geschwindigkeitsdisplays_2020_1.csv"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2020",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/geschwindigkeits-berwachung/resource/b2825dfc-7bc0-4784-b6ae-94024c80552d"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2021",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Geschwindigkeitsdisplays_2021_1.csv"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2021",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/geschwindigkeits-berwachung/resource/264cbe67-5d39-42b7-aad4-920b65b8af13"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2022",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Geschwindigkeitsdisplays_2022_0.csv"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2022",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/geschwindigkeits-berwachung/resource/b13d15c5-7619-4cc9-af8f-d7c02e035a88"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2023",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Geschwindigkeitsdisplays_2023_0.csv"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2023",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/geschwindigkeits-berwachung/resource/5d620f55-f49c-4356-9dbe-c269b9e97cd9"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2024",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Geschwindigkeitsdisplays_2024.csv"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays_ 2024",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/geschwindigkeits-berwachung/resource/65d6a3fa-449e-41ec-8a84-cd93e2e21925"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays 2025",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Geschwindigkeitsdisplays_2025.csv"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays 2025",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/geschwindigkeitsdisplays/resource/53343a81-a1f5-4642-8783-d94fc19f5bdd"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays 2026",
+    "format": "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Geschwindigkeitsdisplays_2026.csv"
+   },
+   {
+    "name": "Geschwindigkeitsdisplays 2026",
+    "format": "http://publications.europa.eu/resource/authority/file-type/JSON",
+    "url": "https://offenedaten-konstanz.de/dataset/geschwindigkeitsdisplays/resource/163f07e6-eeec-4e2d-8f45-f132d3f1b7cc"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2025-geschwindigkeitend8f81": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2025-geschwindigkeitend8f81",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2025 (Geschwindigkeiten)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:44:52.176629",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2025. Verfügbar ist die Durchschnittliche Geschwindigkeit der Radfahrer, die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Darstellung der Geschwindigkeit werden alle Fahrten auf dem Verkehrsweg hinsichtlich ihrer Geschwindigkeit gemittelt. Bitte vergleichen Sie diese Daten unbedingt mit der Verkehrsmenge. Auch bei nur wenigen aufgezeichneten Fahrten auf einem Verkehrsweg wird die durchschnittliche Geschwindigkeit berechnet. Die Aussagekraft ist aber bei wenigen Fahrten an einer best",
+  "ressourcen": [
+   {
+    "name": "\"avs_2025\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2025&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"avs_2025\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2025&OUTPUTFORMAT=shapezip"
+   },
+   {
+    "name": "\"avs_2025\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2025&OUTPUTFORMAT=geopackage"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2024-geschwindigkeitenf1077": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2024-geschwindigkeitenf1077",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2024 (Geschwindigkeiten)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:41:43.369057",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2024. Verfügbar ist die Durchschnittliche Geschwindigkeit der Radfahrer, die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Darstellung der Geschwindigkeit werden alle Fahrten auf dem Verkehrsweg hinsichtlich ihrer Geschwindigkeit gemittelt. Bitte vergleichen Sie diese Daten unbedingt mit der Verkehrsmenge. Auch bei nur wenigen aufgezeichneten Fahrten auf einem Verkehrsweg wird die durchschnittliche Geschwindigkeit berechnet. Die Aussagekraft ist aber bei wenigen Fahrten an einer best",
+  "ressourcen": [
+   {
+    "name": "\"avs_2024\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2024&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"avs_2024\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2024&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"avs_2024\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2024&OUTPUTFORMAT=shapezip"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2023-geschwindigkeiten1c7fd": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2023-geschwindigkeiten1c7fd",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2023 (Geschwindigkeiten)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:39:42.006562",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2023. Verfügbar ist die Durchschnittliche Geschwindigkeit der Radfahrer, die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\". Bei der Darstellung der Geschwindigkeit werden alle Fahrten auf dem Verkehrsweg hinsichtlich ihrer Geschwindigkeit gemittelt. Bitte vergleichen Sie diese Daten unbedingt mit der Verkehrsmenge. Auch bei nur wenigen aufgezeichneten Fahrten auf einem Verkehrsweg wird die durchschnittliche Geschwindigkeit berechnet. Die Aussagekraft ist aber bei wenigen Fahrten an einer best",
+  "ressourcen": [
+   {
+    "name": "\"avs_2023\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2023&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"avs_2023\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2023&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"avs_2023\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2023&OUTPUTFORMAT=shapezip"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2022-geschwindigkeitene732a": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2022-geschwindigkeitene732a",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2022 (Geschwindigkeiten)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:46:13.914078",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2022. Verfügbar ist die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Bei der Darstellung der Geschwindigkeit werden alle Fahrten auf dem Verkehrsweg hinsichtlich ihrer Geschwindigkeit gemittelt. Bitte vergleichen Sie diese Daten unbedingt mit der Verkehrsmenge. Auch bei nur wenigen aufgezeichneten Fahrten auf einem Verkehrsweg wird die durchschnittliche Geschwindigkeit berechnet. Die Aussagekraft ist aber bei wenigen Fahrten an einer bestimmten Stelle sehr eingeschränkt und ggf. irreführend.",
+  "ressourcen": [
+   {
+    "name": "\"avs_2022\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2022&OUTPUTFORMAT=shapezip"
+   },
+   {
+    "name": "\"avs_2022\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2022&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"avs_2022\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=avs_2022&OUTPUTFORMAT=geojson"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "gebundelte-daten-motorradlarm-hotspots-baden-wurttemberg": {
+  "name": "gebundelte-daten-motorradlarm-hotspots-baden-wurttemberg",
+  "titel": "Gebündelte Daten Motorradlärm-Hotspots Baden-Württemberg",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "NVBW MobiData BW",
+  "pflege": "Abdullahi Fatola",
+  "lizenz": "",
+  "geaendert": "2026-09-23T06:49:49.971581",
+  "notiz": "<p>Das Verkehrsministerium hat mit den Erhebungen ein Vorzeigeprojekt geschaffen, da es bisher bundesweit keine umfangreichen Erhebungen zum Motorradlärm und Motorradaufkommen gibt. Erfasst wurden die Fahrzeugart, die gefahrene Geschwindigkeit und der maximale Lärmpegel bei der Vorbeifahrt an rund 100 Strecken für einen Zeitraum von ca. 14 Tagen von Juni bis Oktober 2020 und von Mai bis September 2021. Im Untersuchungszeitraum wurden insgesamt 3,3 Millionen Fahrzeuge erfasst, darunter 2,94 Millionen Pkw und 206.000 Motorräder. </p> <p><strong>Die Links zu den Einzelergebnissen der Lärmauswertungen und Hotspots können in den folgenden Excel-Dateien unter der Spalte &quot;Verlinkung&quot; gefu",
+  "ressourcen": [
+   {
+    "name": "Hotspots von Motorradlärm in 2020",
+    "format": "http://publications.europa.eu/resource/authority/file-type/XLSX",
+    "url": "https://www.mobidata-bw.de/data/motorradlarm/2020_gebundelte_motorradlarm_einzelergebnisse.xlsx"
+   },
+   {
+    "name": "Hotspots von Motorradlärm in 2021",
+    "format": "http://publications.europa.eu/resource/authority/file-type/XLSX",
+    "url": "https://www.mobidata-bw.de/data/motorradlarm/2021_gebundelte_motorradlarm_einzelergebnisse.xlsx"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "freiburg-i-br-fahrradstatistik-stadtradeln-2021-heatmap9a65f": {
+  "name": "freiburg-i-br-fahrradstatistik-stadtradeln-2021-heatmap9a65f",
+  "titel": "Freiburg i. Br. - Fahrradstatistik Stadtradeln 2021 (Heatmap)",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:42:38.646485",
+  "notiz": "Der Geodatensatz enthält die statistische Auswertung des Stadtradeln-Wettbewerbs in der Stadt Freiburg vom Jahr 2021. Verfügbar ist die Durchschnittliche Geschwindigkeit der Radfahrer, die Anzahl der Fahrten je Richtung, die Anzahl der Fahrten je Streckenabschnitt und eine Heatmap des Radverkehrs. Die Daten sind \"Open Data\" Bei der „Heatmap“ werden die aufgezeichneten GPS-Punkte der Radfahrten dargestellt. Die Darstellung funktioniert wie das Bild einer Wärmekamera, je „wärmer“ (rote Farben) die Darstellung ist, desto mehr Punkte wurden an dieser Stelle aufgezeichnet. Ist ein Ort als besonders „warm“ dargestellt, wurden an dieser Stelle viele GPS-Punkte übermittelt. Dies kann zwei verschiede",
+  "ressourcen": [
+   {
+    "name": "\"rad_heatmap_2021\" als GeoPackage",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=rad_heatmap_2021&OUTPUTFORMAT=geopackage"
+   },
+   {
+    "name": "\"rad_heatmap_2021\" als GeoJSON",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=rad_heatmap_2021&OUTPUTFORMAT=geojson"
+   },
+   {
+    "name": "\"rad_heatmap_2021\" als Shapefile (.zip)",
+    "format": "",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_fahrrad_stat/gdm_fahrrad_stat?REQUEST=GetFeature&SRSNAME=EPSG:25832&SERVICE=WFS&VERSION=2.0.0&TYPENAMES=rad_heatmap_2021&OUTPUTFORMAT=shapezip"
+   }
+  ],
+  "treffer": [
+   "Geschwindigkeit"
+  ]
+ },
+ "klima-und-wetterdaten": {
+  "name": "klima-und-wetterdaten",
+  "titel": "Klima- und Wetterdaten",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Wohnen und Umwelt (12-23)",
+  "pflege": "Landeshauptstadt Stuttgart, Statistisches Amt",
+  "lizenz": "",
+  "geaendert": "2026-09-17T06:31:38.020457",
+  "notiz": "Die Datei enthält Messwerte zu Temperatur, Niederschlag und Luftdruck für Stuttgart seit 1980. Die Daten stammen bis 1983 von der Messstelle des Wetteramts Stuttgart, seit 1984 von der automatischen Messstelle des Deutschen Wetterdienstes auf dem Schnarrenberg und werden monatlich aktualisiert. Rechtsgrundlage ist das Gesetz über den deutschen Wetterdienst (DWD-Gesetz) vom 10. September 1998 (BGBl. I S. 2871), zuletzt durch Artikel 1 des Gesetzes vom 11. April 2024 (BGBl. I S. 120) geändert.",
+  "ressourcen": [
+   {
+    "name": "Wetter_Stuttgart_seit_1980.csv",
+    "format": "CSV",
+    "url": "https://opendata.stuttgart.de/dataset/cf9b839d-2557-4e2e-bcc7-7afef4a50ac8/resource/0444ca72-d77b-4f4b-9e5a-ee330a06e125/download/wetter_stuttgart_seit_1980.csv"
+   }
+  ],
+  "treffer": [
+   "Messstelle"
+  ]
+ },
+ "bodensee-pegelstand-konstanz": {
+  "name": "bodensee-pegelstand-konstanz",
+  "titel": "Bodensee Pegelstand Konstanz",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": "Team Offene Daten Stadt Konstanz",
+  "lizenz": "",
+  "geaendert": "2026-09-23T06:51:09.130690",
+  "notiz": "<p>Dieser Datensatz bietet aktuelle Pegelstanddaten in Konstanz. Über die <strong><a href=\"https://www.pegelonline.wsv.de/webservice/ueberblick\" target=\"_blank\">PegelOnline Webservices</a></strong> der <strong><a href=\"https://www.gdws.wsv.bund.de/\" target=\"_blank\">Wasserstraßen- und Schifffahrtsverwaltung des Bundes</a></strong> werden Daten aus dem Projekt Gewässerkundliches Informationssystem bereitgestellt. Diese Daten können per <strong><a href=\"https://www.pegelonline.wsv.de/webservice/guideRestapi\" target=\"_blank\">REST-API</a></strong> über spezielle URL-Paramter automatisiert abgerufen werden. Die bereitgestellten Daten enthalten diverse Informationen, die am bundesweiten gewässerkun",
+  "ressourcen": [
+   {
+    "name": "Pegelstationen_Bodensee",
+    "format": "API",
+    "url": "https://offenedaten-konstanz.de/dataset/bodensee-pegelstand-konstanz/resource/95d62905-4ac1-4b85-b263-e997f67a7f62"
+   },
+   {
+    "name": "Aktueller_Pegelstand_Konstanz_Bodensee",
+    "format": "API",
+    "url": "https://offenedaten-konstanz.de/dataset/bodensee-pegelstand-konstanz/resource/2bfb847c-ea00-4bb0-8f76-6121df0d5f27"
+   },
+   {
+    "name": "Pegelstand_und_Stationsdaten_Konstanz_Bodensee",
+    "format": "API",
+    "url": "https://offenedaten-konstanz.de/dataset/bodensee-pegelstand-konstanz/resource/6ef1c1d0-13ee-45e0-af3a-43d66af812ae"
+   },
+   {
+    "name": "Pegelstände_Zeitreihe_vergangene_15_Tage_Konstanz_Bodensee",
+    "format": "API",
+    "url": "https://offenedaten-konstanz.de/dataset/bodensee-pegelstand-konstanz/resource/ae7872ea-b9f3-4f40-9356-6177bdb9ff47"
+   },
+   {
+    "name": "Pegelstand_Zeitreihe_15_Tage_grafisch_Konstanz_Bodensee",
+    "format": "API",
+    "url": "https://offenedaten-konstanz.de/dataset/bodensee-pegelstand-konstanz/resource/729b5209-0d1e-4407-bae9-43c7d9d97789"
+   },
+   {
+    "name": "Hochwasservorhersagezentrale_Baden-Württemberg_Pegel_Konstanz_Bodensee",
+    "format": "APP",
+    "url": "https://offenedaten-konstanz.de/dataset/bodensee-pegelstand-konstanz/resource/3e707685-8e9f-4bfe-b743-8253650c7521"
+   },
+   {
+    "name": "Hochwasservorhersagezentrale_Baden-Württemberg_Pegel_Konstanz_Rhein",
+    "format": "APP",
+    "url": "https://offenedaten-konstanz.de/dataset/bodensee-pegelstand-konstanz/resource/6b2fb47d-2b37-4cc2-af8c-ecf3f64eafb6"
+   }
+  ],
+  "treffer": [
+   "Messstelle"
+  ]
+ },
+ "pegelonline-gewasserkundliche-daten1c5b7": {
+  "name": "pegelonline-gewasserkundliche-daten1c5b7",
+  "titel": "PEGELONLINE Gewässerkundliche Daten",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:37:11.804399",
+  "notiz": "Bezug von Tagesdateien mit Messwerten verschiedener gewässerkundlicher Parameter aus den letzten 30 Tagen",
+  "ressourcen": [
+   {
+    "name": "Freier Download gewässerkundlicher Daten",
+    "format": "",
+    "url": "https://www.pegelonline.wsv.de/webservice/downloads"
+   }
+  ],
+  "treffer": [
+   "Messstelle"
+  ]
+ },
+ "pegelonline-aktuelle-wasserstande3c978": {
+  "name": "pegelonline-aktuelle-wasserstande3c978",
+  "titel": "PEGELONLINE Aktuelle Wasserstände",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:16:07.224809",
+  "notiz": "Aktuelle Wasserstände von Binnen- und Küstenpegeln der Wasserstraßen des Bundes",
+  "ressourcen": [
+   {
+    "name": "PEGELONLINE WMS Aktuell (MNW/MHW)",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WMS_SRVC",
+    "url": "https://www.pegelonline.wsv.de/webservices/gis/wms/aktuell/mnwmhw?request=GetCapabilities"
+   },
+   {
+    "name": "Pegel Zeitreihen-Download",
+    "format": "http://publications.europa.eu/resource/authority/file-type/HTML",
+    "url": "https://www.pegelonline.wsv.de/gast/pegeltabelle"
+   },
+   {
+    "name": "PEGELONLINE WMS Aktuell (HSW)",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WMS_SRVC",
+    "url": "https://www.pegelonline.wsv.de/webservices/gis/wms/aktuell/nswhsw?service=wms&request=getcapabilities"
+   },
+   {
+    "name": "PEGELONLINE WFS Aktuell",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WFS_SRVC",
+    "url": "http://pegelonline.wsv.de/webservices/gis/aktuell/wfs?service=wfs&request=getcapabilities&version=1.1.0"
+   }
+  ],
+  "treffer": [
+   "Messstelle"
+  ]
+ },
+ "stellplatzsatzung-der-stadt-freiburg-i-br-zonierung8b5bb": {
+  "name": "stellplatzsatzung-der-stadt-freiburg-i-br-zonierung8b5bb",
+  "titel": "Stellplatzsatzung der Stadt Freiburg i. Br. – Zonierung",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-21T07:13:06.770684",
+  "notiz": "Der Datensatz enthält die Zonierung der Stellplatzsatzung. Je nach Zone gilt ein anderer Kfz-Stellplatzschlüssel für Wohnbauvorhaben mit mehr als drei Wohnungen nach der Tabelle der Anlage 2, unterschieden nach frei finanziertem und gefördertem Wohnungsbau. Für die Zonierung wurden die vorhandenen Baublöcke u.a. in Abhängigkeit ihrer Lage, dem vorhandenen Pkw-Besitz sowie der ÖPNV-Anbindung einer der vier Zonen zugeteilt. Die Stellplatzsatzung wurde am 29.07.2025 vom Gemeinderat beschlossen (<a href=\"https://ris.freiburg.de/submission?id=5680805100130\">DS G-25-128</a>).",
+  "ressourcen": [
+   {
+    "name": "Stellplatzsatzung der Stadt Freiburg i. Br. – Zonierung",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WMS_SRVC",
+    "url": "https://geospatial.freiburg.intern/wms/gut_zonen_stellpl/gut_zonen_stellpl?REQUEST=GetCapabilities&SERVICE=WMS"
+   },
+   {
+    "name": "Anzahl herzustellender Kfz-Stellplätze pro Wohnung",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WMS_SRVC",
+    "url": "https://geoportal.freiburg.de/files/stellplatzsatzung/Tabelle_der_Anlage_2_der_Satzung.pdf"
+   },
+   {
+    "name": "Satzungstext",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WMS_SRVC",
+    "url": "https://geoportal.freiburg.de/files/stellplatzsatzung/Stellplatzsatzung_vom_29.07.2025_-_reiner_Satzungstext.pdf"
+   }
+  ],
+  "treffer": [
+   "Kfz"
+  ]
+ },
+ "regional-und-grossstadtvergleich-mobilitat": {
+  "name": "regional-und-grossstadtvergleich-mobilitat",
+  "titel": "Regional- und Großstadtvergleich Mobilität",
+  "org": "Open Data Baden-Württemberg",
+  "autor": "Data Science und Mobilitätsstatistik (12-13)",
+  "pflege": "Landeshauptstadt Stuttgart, Statistisches Amt",
+  "lizenz": "",
+  "geaendert": "2026-09-17T06:31:46.131286",
+  "notiz": "Der Regional- und Großstadtvergleich bündelt jährliche Kennzahlen zum Kraftfahrzeugbestand, zu Straßenverkehrsunfällen sowie zu getöteten bzw. verletzten Personen im Rahmen von Verkehrsunfällen für ausgewählte deutsche Großstädte sowie die Landkreise der Region Stuttgart und Baden-Württemberg. Die Daten werden vom Statistischen Amt i.d.R. jährlich zusammengestellt und aktualisiert.",
+  "ressourcen": [
+   {
+    "name": "Regionalvergleich_Mobilität_1995-2023.csv",
+    "format": "CSV",
+    "url": "https://opendata.stuttgart.de/dataset/fc8b420b-6c9d-406f-a9f0-4a702ccfbf16/resource/3e8a42af-38e6-42b6-a9fe-0b12933db39c/download/regionalvergleich_mobilitat_1995-2023.csv"
+   }
+  ],
+  "treffer": [
+   "Kfz"
+  ]
+ },
+ "bebauungsplan-gartenacker-herrenberg": {
+  "name": "bebauungsplan-gartenacker-herrenberg",
+  "titel": "Bebauungsplan Gartenäcker, Herrenberg",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-08-20T08:12:10.691039",
+  "notiz": "Bauleitplanung",
+  "ressourcen": [
+   {
+    "name": "Drucksache 2026-094-a-2",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/161/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Bekanntmachung_Satzungsbeschluss-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/162/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Ergänzendes Verfahren-3",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/163/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Geruchsgutachten-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/164/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Plan_Ergänzendes Verfahren-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/165/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Plangebiet_Stand_02.07.2026-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/166/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Schalltechnische_Untersuchung-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/167/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Umweltbericht-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/168/latest"
+   },
+   {
+    "name": "BP_Gartenäcker_Verkehrsuntersuchung-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/169/latest"
+   },
+   {
+    "name": "BP_Gartenaecker_Begründung_Ergänzendes Verfahren-1",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/170/latest"
+   },
+   {
+    "name": "BP_Gartenaecker_Zusammenfassende_Erklaerung-2",
+    "format": "http://publications.europa.eu/resource/authority/file-type/PDF",
+    "url": "https://munigrid.de/api/distribution/171/latest"
+   }
+  ],
+  "treffer": [
+   "Verkehrsuntersuchung"
+  ]
+ },
+ "b-plan-781-altenberg-1-anderung": {
+  "name": "b-plan-781-altenberg-1-anderung",
+  "titel": "B-Plan 781 ALTENBERG, 1. Änderung",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-21T07:12:45.607867",
+  "notiz": "Der Bebauungsplan enthält die rechtsverbindlichen Festsetzungen für die städtebauliche Ordnung.",
+  "ressourcen": [
+   {
+    "name": "Schnitt 03 und 09",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SCHN_3.pdf"
+   },
+   {
+    "name": "Schnitt 04, 07/1",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SCHN_4.pdf"
+   },
+   {
+    "name": "Schalltechnische Untersuchung- Erläuterungsbericht",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_EB3.pdf"
+   },
+   {
+    "name": "ALTENBERG, 1. Änderung - INSPIRE",
+    "format": "application/gml+xml",
+    "url": "https://lahr.terragis.de/inspire/bplan/xml/inspire/inspire_08317065_4870_112_01.gml"
+   },
+   {
+    "name": "Städtebauliches Konzept",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SBK.pdf"
+   },
+   {
+    "name": "Nutzungsplan",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_RE.pdf"
+   },
+   {
+    "name": "Schnitt 01,05,06,07,08",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SCHN.pdf"
+   },
+   {
+    "name": "Schnitt 02, 04",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SCHN_2.pdf"
+   },
+   {
+    "name": "5.b spezielle artenschutzrechtliche Prüfung",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SAP.pdf"
+   },
+   {
+    "name": "Verkehrskonzept",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_EB.pdf"
+   },
+   {
+    "name": "Fachgutachten zu den lokalklimatischen Auswirkungen",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_FGA2.pdf"
+   },
+   {
+    "name": "Geltungsbereich - GeoTIFF",
+    "format": "TIFF",
+    "url": "https://lahr.terragis.de/inspire/bplan/georef/08317065_4870_112_01_RE.tif"
+   },
+   {
+    "name": "Freiflächenkonzept",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_FK.pdf"
+   },
+   {
+    "name": "1. Schriftliche Festsetzungen",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SF.pdf"
+   },
+   {
+    "name": "3. Begründung",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_BG.pdf"
+   },
+   {
+    "name": "Geotechnischer Vorbericht",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_GEOV.pdf"
+   },
+   {
+    "name": "Umweltbeitrag mit integriertem Grünordnungsplan",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_UW.pdf"
+   },
+   {
+    "name": "4. Satzung",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SA.pdf"
+   },
+   {
+    "name": "Fachgutachten Fledermäuse",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_FGA.pdf"
+   },
+   {
+    "name": "Schnitt 07/2 und 07/3",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_SCHN_5.pdf"
+   },
+   {
+    "name": "Geltungsbereich",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_GB.pdf"
+   },
+   {
+    "name": "ALTENBERG, 1. Änderung - XPlanung",
+    "format": "application/gml+xml",
+    "url": "https://lahr.terragis.de/inspire/bplan/xml/xplan/08317065_4870_112_01.gml"
+   },
+   {
+    "name": "Fortschreibung Verkehrsuntersuchung- Erläuterungsbericht",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_EB2.pdf"
+   },
+   {
+    "name": "B-Plan 781 ALTENBERG, 1. Änderung (WMS)",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WMS_SRVC",
+    "url": "https://lahr.terragis.de/inspire/bplan/ows/781?SERVICE=WMS&REQUEST=GetCapabilities"
+   },
+   {
+    "name": "Gestaltungshandbuch",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_GEHA.pdf"
+   },
+   {
+    "name": "2. Örtliche Bauvorschriften",
+    "format": "PDF",
+    "url": "https://lahr.terragis.de/inspire/bplan/doc/obj781_08317065_4870_112_01_OB_x102.pdf"
+   }
+  ],
+  "treffer": [
+   "Verkehrsuntersuchung"
+  ]
+ },
+ "co2-sequenzierung-des-verkehrs-der-stadt-freiburg-im-breisgaua003f": {
+  "name": "co2-sequenzierung-des-verkehrs-der-stadt-freiburg-im-breisgaua003f",
+  "titel": "CO2-Sequenzierung des Verkehrs der Stadt Freiburg im Breisgau",
+  "org": "Open Data Baden-Württemberg",
+  "autor": null,
+  "pflege": null,
+  "lizenz": "",
+  "geaendert": "2026-09-19T07:43:52.008867",
+  "notiz": "Dieser Datensatz enthält eine fortlaufende Echtzeit-Verkehrszählung ab Frühjahr 2024 an drei Standorten in der Stadt Freiburg mit der Unterscheidung in die Verkehrsklassen: PKW, Transporter, LKW (leicht), LKW (Schwer), Motorrad, Bus, Fahrrad. Diese Klassen sind über die lokalen Zulassungsstatistiken und Daten der European Environmental Agency mit den flotten-typischen CO2-Ausstoßen hinterlegt. Der Datensatz steht als OpenData zur Verfügung.",
+  "ressourcen": [
+   {
+    "name": "Verkehrssensordaten für Freiburg i. Br. - WFS",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WFS_SRVC",
+    "url": "https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS"
+   },
+   {
+    "name": "Verkehrssensordaten für Freiburg i. Br. - WMS",
+    "format": "http://publications.europa.eu/resource/authority/file-type/WMS_SRVC",
+    "url": "https://geoportal.freiburg.de/wms/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WMS"
+   }
+  ],
+  "treffer": [
+   "Verkehrszählung"
+  ]
+ }
+}
