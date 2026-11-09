@@ -86,7 +86,7 @@ for name, p in sorted(pakete.items()):
             continue
         datei = urllib.parse.unquote(url.rsplit("/", 1)[-1])
         try:
-            daten = hole(url)
+            daten = hole(url, roh=True)
             (ordner / (datei + ".gz")).write_bytes(gzip.compress(daten))
             eintrag = {"url": url, "bytes": len(daten), "sha256": hashlib.sha256(daten).hexdigest(),
                        "ressource": r.get("name")}
