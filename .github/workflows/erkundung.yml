@@ -11,11 +11,11 @@ permissions:
 jobs:
   erkunden:
     runs-on: ubuntu-24.04
-    timeout-minutes: 35
+    timeout-minutes: 55
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
-      - run: timeout 10m python3 tools/ulm_vgv.py ergebnis/ulm || true
+      - run: timeout 50m python3 tools/laender.py ergebnis/laender || true
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
