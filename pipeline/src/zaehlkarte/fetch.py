@@ -150,6 +150,10 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 shutil.copytree(neu, ordner / "pdf")
             (ordner / "abruf.txt").write_text(date.today().isoformat())
             log.append(f"{code}: {len(knoten)} Knoten, {n} Zählpläne")
+        elif q["adapter"] == "xanten_pdf":
+            for d in q["dateien"]:
+                ziel = pfade.roh / "xanten" / d["datei"]
+                log.append(lade_geprueft(d["url"], ziel, d.get("sha256")))
         elif q["adapter"] == "konstanz_mobil":
             ordner = pfade.roh / "konstanz"
             for st in q["standorte"]:

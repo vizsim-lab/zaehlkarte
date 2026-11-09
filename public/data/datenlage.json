@@ -345,27 +345,27 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     6.4536,
-     51.6588
+     6.45327,
+     51.66066
     ]
    },
    "properties": {
     "kommune": "Xanten",
     "land": "NW",
-    "stand": "offen",
-    "was": "Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept",
+    "stand": "in_karte",
+    "was": "Videozählung vom 25.08.2020 für das Mobilitätskonzept: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte (24 h), Viertelstundenwerte nach Fahrzeugart",
     "links": [
      {
       "titel": "opendata.ruhr",
-      "url": "https://opendata.ruhr/en/dataset/mobilitatskonzept/resource/fea95307-56ea-425c-9a77-535b88d10598"
+      "url": "https://opendata.ruhr/dataset/mobilitatskonzept"
      }
     ],
     "recht": "Informationsfreiheitsgesetz NRW",
-    "quelle": null,
-    "zaehlungen": null,
-    "situation": "Offen ist eine Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept.",
-    "empfehlung": "Keine Anfrage nötig: Adapter für die Übersicht bauen.",
-    "weg": "offen – Adapter bauen",
+    "quelle": "xanten",
+    "zaehlungen": 18,
+    "situation": "Für ihr Mobilitätskonzept hat die Stadt am 25. August 2020 an 12 Knotenpunkten (7–9 und 15–18 Uhr) und 6 Querschnitten (24 Stunden) per Video gezählt. Offen sind die Zählwerte je Viertelstunde, Strom und Fahrzeugart als PDF (Datenlizenz Deutschland – Zero), dazu der Bericht mit der Karte der Zählstellen. Rad und Fuß sind nicht gezählt.",
+    "empfehlung": "Keine Anfrage nötig. Ob es weitere Zählungen gibt (etwa Rad- und Fußverkehr), ließe sich nach dem IFG NRW erfragen.",
+    "weg": "offen",
     "kontakt": null,
     "anfrage": null
    }
@@ -487,7 +487,7 @@
     "kommune": "Stuttgart",
     "land": "BW",
     "stand": "aggregiert",
-    "was": "Kordonzählungen am Stadtrand 1980–2024 als CSV (CC BY 4.0)",
+    "was": "Kordonzählungen 1980–2024 an der Markungsgrenze und am Kesselrand – offen nur als Summe über alle Zählstellen je Jahr (CSV, CC BY 4.0)",
     "links": [
      {
       "titel": "Open Data Stuttgart",
@@ -497,8 +497,8 @@
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": null,
     "zaehlungen": null,
-    "situation": "Offen sind Kordonzählungen am Stadtrand 1980–2024 als Summen (CSV, CC BY 4.0).",
-    "empfehlung": "Anfrage nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.",
+    "situation": "Die Stadt zählt im jährlichen Wechsel an der Markungsgrenze und am Kesselrand an einem Werktag über 24 Stunden alle Fahrzeuge an den Zählstellen. Offen sind nur die Summen über alle Zählstellen je Jahr, Richtung (stadtein-/stadtauswärts), Zeitraum (6–22 und 22–6 Uhr) und Fahrzeugart (CSV, CC BY 4.0) – keine Werte je Zählstelle, daher nicht in der Karte.",
+    "empfehlung": "Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.",
     "weg": "FragDenStaat, LIFG BW",
     "kontakt": {
      "name": "Landeshauptstadt Stuttgart",
@@ -507,7 +507,7 @@
     },
     "anfrage": {
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
-     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Stuttgart seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind die Kordonzählungen am Stadtrand; gemeint sind die Zählungen im Stadtgebiet.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Stuttgart seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind die Ergebnisse Ihrer Kordonzählungen an der Markungsgrenze und am Kesselrand als Summen über alle Zählstellen. Ich bitte um dieselben Zählungen je Zählstelle (Lage, Datum, Werte je Stunde, Richtung und Fahrzeugart) und um die Knotenpunkt- und Querschnittszählungen im Stadtgebiet.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     }
    }
   },

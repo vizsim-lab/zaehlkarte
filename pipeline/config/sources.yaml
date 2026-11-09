@@ -316,6 +316,60 @@ quellen:
               Oktober unter 100, an den vollen Tagen vom 17. bis 22. Oktober 130–230. Die Datei
               nennt keinen Grund.
 
+  xanten:
+    status: live
+    adapter: xanten_pdf
+    name: Xanten
+    land: NW
+    traeger: Stadt Xanten (Verkehrserhebung zum Mobilitätskonzept, büro stadtVerkehr)
+    titel: Mobilitätskonzept – Ergebnisse der Verkehrszählungen
+    art: >-
+      Videozählung am 25.08.2020: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte
+      (24 Stunden), Viertelstundenwerte nach Fahrzeugart, nur Kfz
+    weg: offen auf opendata.ruhr (PDF)
+    ferien: schulferien_nordrhein-westfalen.csv
+    lizenz: dl-de/zero-2-0
+    lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+    portal: https://opendata.ruhr/dataset/mobilitatskonzept
+    # Fassung vom Juni 2025 (letzte Änderung im Portal), Prüfsumme wie bei Münster
+    dateien:
+      - datei: Gesamtuebersicht_Zaehldaten_Xanten_Knotenpunkte.pdf
+        titel: Gesamtübersicht Zähldaten Knotenpunkte
+        url: https://opendata.ruhr/dataset/dd58836a-5e0c-4b05-97df-d3bd714e702e/resource/fea95307-56ea-425c-9a77-535b88d10598/download/20210104_gesamtubersicht_zahldaten_xanten_knotenpunkte.pdf
+        sha256: bea50918a281897686648162f4933289d1e21fb4c4ee6e4a7a5ec1e5662bff27
+      - datei: Gesamtuebersicht_Zaehldaten_Xanten_Querschnitte.pdf
+        titel: Gesamtübersicht Zähldaten Querschnitte
+        url: https://opendata.ruhr/dataset/dd58836a-5e0c-4b05-97df-d3bd714e702e/resource/2ed3cd21-576f-4174-9db5-dbf32b2a2851/download/20201204-gesamtubersicht_zahldaten_xanten_querschnitte.pdf
+        sha256: a475dfe0d12fbd92a81b048ba76051cdf14c86a3912d14bad6e9548dd21d5617
+    # Lage: Knotenpunkte = gemeinsamer Knoten der Straßen in OpenStreetMap (Overpass), an
+    # Kreisverkehren (K1, K5, K6) die Mitte der Wegenden; Querschnitte = Lage auf der
+    # Zählstellenkarte des Berichts (Abb. 3.-1, S. 61), über die Knotenpunkte auf Koordinaten
+    # umgerechnet (Abweichung der Knotenpunkte 4–19 m) und auf die Straße gelegt. November 2026.
+    geokodierung:
+      titel: Lage der Zählstellen (OpenStreetMap; Querschnitte nach der Karte im Bericht)
+      lizenz: ODbL (abgeleitet aus OpenStreetMap)
+      lizenz_url: https://opendatacommons.org/licenses/odbl/
+      herkunft_url: https://www.openstreetmap.org/copyright
+    orte:
+      K1: {lon: 6.435211, lat: 51.670692, genauigkeit: kreisverkehr}
+      K2: {lon: 6.454478, lat: 51.668612, genauigkeit: kreuzung}
+      K3: {lon: 6.461153, lat: 51.660725, genauigkeit: kreuzung}
+      K4: {lon: 6.46686, lat: 51.656744, genauigkeit: kreuzung}
+      K5: {lon: 6.450835, lat: 51.66066, genauigkeit: kreisverkehr}
+      K6: {lon: 6.445245, lat: 51.657222, genauigkeit: kreisverkehr}
+      K7: {lon: 6.457925, lat: 51.653787, genauigkeit: kreuzung}
+      K8: {lon: 6.442191, lat: 51.648169, genauigkeit: kreuzung}
+      K9: {lon: 6.456684, lat: 51.65594, genauigkeit: kreuzung}
+      K10: {lon: 6.45952, lat: 51.657995, genauigkeit: kreuzung}
+      K11: {lon: 6.427789, lat: 51.643677, genauigkeit: kreuzung}
+      K12: {lon: 6.429095, lat: 51.650613, genauigkeit: kreuzung}
+      Q1: &karte {lon: 6.436436, lat: 51.661884, genauigkeit: karte, hinweise: ["Lage nach der Zählstellenkarte im Bericht zum Mobilitätskonzept (Abb. 3.-1), auf die Straße gelegt."]}
+      Q2: {<<: *karte, lon: 6.452314, lat: 51.660726}
+      Q3: {<<: *karte, lon: 6.458501, lat: 51.660357}
+      Q4: {<<: *karte, lon: 6.451619, lat: 51.662662}
+      Q5: {<<: *karte, lon: 6.453272, lat: 51.66434}
+      Q6: {<<: *karte, lon: 6.455416, lat: 51.663258}
+
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
 recht:
@@ -503,19 +557,22 @@ datenlage:
     links:
       - ["Offene Daten Konstanz", "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr"]
   - kommune: Xanten
-    land: NW
-    lon: 6.4536
-    lat: 51.6588
-    stand: offen
+    quelle: xanten
+    stand: in_karte
     was: >-
-      Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept
+      Videozählung vom 25.08.2020 für das Mobilitätskonzept: 12 Knotenpunkte (7–9 und 15–18 Uhr)
+      und 6 Querschnitte (24 h), Viertelstundenwerte nach Fahrzeugart
     situation: >-
-      Offen ist eine Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept.
+      Für ihr Mobilitätskonzept hat die Stadt am 25. August 2020 an 12 Knotenpunkten (7–9 und
+      15–18 Uhr) und 6 Querschnitten (24 Stunden) per Video gezählt. Offen sind die Zählwerte je
+      Viertelstunde, Strom und Fahrzeugart als PDF (Datenlizenz Deutschland – Zero), dazu der
+      Bericht mit der Karte der Zählstellen. Rad und Fuß sind nicht gezählt.
     empfehlung: >-
-      Keine Anfrage nötig: Adapter für die Übersicht bauen.
-    weg: "offen – Adapter bauen"
+      Keine Anfrage nötig. Ob es weitere Zählungen gibt (etwa Rad- und Fußverkehr), ließe sich
+      nach dem IFG NRW erfragen.
+    weg: "offen"
     links:
-      - ["opendata.ruhr", "https://opendata.ruhr/en/dataset/mobilitatskonzept/resource/fea95307-56ea-425c-9a77-535b88d10598"]
+      - ["opendata.ruhr", "https://opendata.ruhr/dataset/mobilitatskonzept"]
   - kommune: Köln
     land: NW
     lon: 6.9603
@@ -582,17 +639,25 @@ datenlage:
     lat: 48.7758
     stand: aggregiert
     was: >-
-      Kordonzählungen am Stadtrand 1980–2024 als CSV (CC BY 4.0)
+      Kordonzählungen 1980–2024 an der Markungsgrenze und am Kesselrand – offen nur als Summe über
+      alle Zählstellen je Jahr (CSV, CC BY 4.0)
     situation: >-
-      Offen sind Kordonzählungen am Stadtrand 1980–2024 als Summen (CSV, CC BY 4.0).
+      Die Stadt zählt im jährlichen Wechsel an der Markungsgrenze und am Kesselrand an einem Werktag
+      über 24 Stunden alle Fahrzeuge an den Zählstellen. Offen sind nur die Summen über alle
+      Zählstellen je Jahr, Richtung (stadtein-/stadtauswärts), Zeitraum (6–22 und 22–6 Uhr) und
+      Fahrzeugart (CSV, CC BY 4.0) – keine Werte je Zählstelle, daher nicht in der Karte.
     empfehlung: >-
-      Anfrage nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet. Grundlage:
-      Landesinformationsfreiheitsgesetz Baden-Württemberg.
+      Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und
+      Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz
+      Baden-Württemberg.
     weg: "FragDenStaat, LIFG BW"
     kontakt: {name: "Landeshauptstadt Stuttgart", email: "post@stuttgart.de", fds: "https://fragdenstaat.de/behoerde/9384/stadt-stuttgart/"}
     anfrage: true
     anfrage_zusatz: >-
-      Offen sind die Kordonzählungen am Stadtrand; gemeint sind die Zählungen im Stadtgebiet.
+      Offen sind die Ergebnisse Ihrer Kordonzählungen an der Markungsgrenze und am Kesselrand als
+      Summen über alle Zählstellen. Ich bitte um dieselben Zählungen je Zählstelle (Lage, Datum,
+      Werte je Stunde, Richtung und Fahrzeugart) und um die Knotenpunkt- und Querschnittszählungen
+      im Stadtgebiet.
     links:
       - ["Open Data Stuttgart", "https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855"]
   - kommune: Dortmund

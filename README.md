@@ -30,6 +30,7 @@ der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
 | Moers (Stadt Moers) | rund 540 Tageszählungen an 140 Stellen mit Seitenradar-Messgeräten (meist zwei Tage am Stück), Kfz je Stunde, Schwerverkehr über die Länge | 2010–2022 | offen auf [offenesdatenportal.de](https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021) | dl-de/zero-2-0 |
 | Münster (Stadt Münster) | rund 1.160 Kfz-Knotenpunktzählungen von Hand, je meist zwei Stunden (7–8 und 16–17 Uhr), nach Fahrzeugart | 2000–2020 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung) (XLS und PDF) | dl-de/by-2-0, „Datenquelle: Stadt Münster“ |
 | Potsdam (Bereich Verkehrsentwicklung) | rund 470 Knotenpunktzählungen von Hand (7–10 und 15–18 Uhr), je Zählung Früh- und Nachmittagsspitzenstunde und Summe der sechs Stunden, Kfz, Schwerverkehr, Rad | 2010–2023 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/) (ein PDF je Zählung) | [Nutzungsbedingungen der LHP](https://opendata.potsdam.de/terms/terms-of-use/), „© LHP/NB-16-OGD/Datum der Entnahme“ |
+| Xanten (Mobilitätskonzept, büro stadtVerkehr) | 18 Zählungen vom 25.08.2020 per Video: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte (24 h), Viertelstunden nach Fahrzeugart, nur Kfz | 2020 | offen auf [opendata.ruhr](https://opendata.ruhr/dataset/mobilitatskonzept) (PDF) | dl-de/zero-2-0 |
 | Konstanz (Amt für Stadtplanung und Umwelt) | 83 Tageszählungen an sechs Stellen mit mobilen Zählgeräten (ein bis sechs Wochen am Stück), 5- oder 15-Minuten-Werte, Rad, Fuß, an zwei Stellen Kfz | 2020 | offen auf [Offene Daten Konstanz](https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr) | CC0 1.0 |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
@@ -87,7 +88,7 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
 pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> Kartendaten
   config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
   src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
-                            konstanz_mobil, potsdam_pdf)
+                            konstanz_mobil, potsdam_pdf, xanten_pdf)
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
 tests/               unit/ (node --test), web/ (Playwright gegen den Build)

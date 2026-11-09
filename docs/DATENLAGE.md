@@ -1,6 +1,6 @@
 # Datenlage: kommunale Verkehrszählungen
 
-Erzeugt von `zaehlkarte site` am 2026-11-08 aus `pipeline/config/sources.yaml` –
+Erzeugt von `zaehlkarte site` am 2026-11-09 aus `pipeline/config/sources.yaml` –
 nicht von Hand ändern. Dieselben Angaben zeigt die Karte unter „Datenlage je Kommune“.
 Rechtliche Hinweise sind keine Rechtsberatung; Kontakte aus der Behördendatenbank von
 FragDenStaat.
@@ -33,9 +33,8 @@ FragDenStaat.
 | Paderborn | NW | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 an die Stadt Paderborn |
 | Rostock | MV | auf Anfrage herausgegeben | Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz für die Veröffentlichung |
 | Saarbrücken | SL | erhoben – Anfrage aussichtsreich | Anfrage nach den Zählungen für den Mobilitätsplan 2040 und nach älteren Zählungen |
-| Stuttgart | BW | nur Summen oder Mittelwerte offen | Anfrage nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet |
+| Stuttgart | BW | nur Summen oder Mittelwerte offen | Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet |
 | Wolfsburg | NI | erhoben – Anfrage aussichtsreich | Anfrage nach einem DAVe-Export und den älteren Zählungen |
-| Xanten | NW | offen, noch nicht in der Karte | Keine Anfrage nötig: Adapter für die Übersicht bauen. |
 | Baienfurt | BW | in der Karte | in der Karte |
 | Baindt | BW | in der Karte | in der Karte |
 | Berg | BW | in der Karte | in der Karte |
@@ -46,6 +45,7 @@ FragDenStaat.
 | Potsdam | BB | in der Karte | Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und Informationszugangsgesetz Brandenburg. |
 | Ravensburg | BW | in der Karte | in der Karte |
 | Weingarten | BW | in der Karte | in der Karte |
+| Xanten | NW | in der Karte | Keine Anfrage nötig |
 
 ## Bremerhaven (HB) – auf Anfrage herausgegeben
 
@@ -845,9 +845,9 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Stuttgart (BW) – nur Summen oder Mittelwerte offen
 
-**Lage:** Offen sind Kordonzählungen am Stadtrand 1980–2024 als Summen (CSV, CC BY 4.0).
+**Lage:** Die Stadt zählt im jährlichen Wechsel an der Markungsgrenze und am Kesselrand an einem Werktag über 24 Stunden alle Fahrzeuge an den Zählstellen. Offen sind nur die Summen über alle Zählstellen je Jahr, Richtung (stadtein-/stadtauswärts), Zeitraum (6–22 und 22–6 Uhr) und Fahrzeugart (CSV, CC BY 4.0) – keine Werte je Zählstelle, daher nicht in der Karte.
 
-**Empfehlung:** Anfrage nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
+**Empfehlung:** Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
 
 **Weg:** FragDenStaat, LIFG BW
 
@@ -864,7 +864,7 @@ Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stad
 
 Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
 
-Offen sind die Kordonzählungen am Stadtrand; gemeint sind die Zählungen im Stadtgebiet.
+Offen sind die Ergebnisse Ihrer Kordonzählungen an der Markungsgrenze und am Kesselrand als Summen über alle Zählstellen. Ich bitte um dieselben Zählungen je Zählstelle (Lage, Datum, Werte je Stunde, Richtung und Fahrzeugart) und um die Knotenpunkt- und Querschnittszählungen im Stadtgebiet.
 
 Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
 
@@ -903,14 +903,3 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [DAVe](https://stadt.muenchen.de/news/open-source-anwendung-dave.html)
-
-
-## Xanten (NW) – offen, noch nicht in der Karte
-
-**Lage:** Offen ist eine Übersicht der Kreuzungszählungen aus dem Mobilitätskonzept.
-
-**Empfehlung:** Keine Anfrage nötig: Adapter für die Übersicht bauen.
-
-**Weg:** offen – Adapter bauen
-
-**Belege:** [opendata.ruhr](https://opendata.ruhr/en/dataset/mobilitatskonzept/resource/fea95307-56ea-425c-9a77-535b88d10598)

@@ -54,3 +54,9 @@ def test_brandenburg_feiertage_und_ferien():
     assert tagtyp(date(2013, 11, 1), "BB", k) == ("ferien", "Herbstferien")
     assert tagtyp(date(2023, 7, 6), "BB", k) == ("schule", None)  # Sommerferien ab 13.07.
     assert tagtyp(date(2023, 7, 13), "BB", k) == ("ferien", "Sommerferien")
+
+
+def test_nrw_ab_2020():
+    k = Ferienkalender.lade(Pfade().config / "schulferien_nordrhein-westfalen.csv")
+    assert tagtyp(date(2020, 8, 25), "NW", k) == ("schule", None)  # Xanten, nach den Sommerferien
+    assert tagtyp(date(2022, 7, 12), "NW", k) == ("ferien", "Sommerferien")

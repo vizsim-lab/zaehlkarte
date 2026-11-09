@@ -10,6 +10,7 @@ from zaehlkarte.adapters import (
     moers_radar,
     muenster,
     potsdam_pdf,
+    xanten_pdf,
 )
 
 ADAPTER = {
@@ -19,4 +20,5 @@ ADAPTER = {
     "moers_radar": moers_radar,
     "konstanz_mobil": konstanz_mobil,
     "potsdam_pdf": potsdam_pdf,
+    "xanten_pdf": xanten_pdf,
 }

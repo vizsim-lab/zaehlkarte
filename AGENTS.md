@@ -75,6 +75,12 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   Werte mit Nachkommastellen sind errechnet (Plan nicht übernommen), „nurRad“-Pläne haben Kfz 0
   (= nicht gezählt), „_Qw“/„_Qs“/„_Qbr“ sind Querschnitte am Knoten, „KordonZ“ ein 24-Stunden-
   Tagesgang ohne Tagesdatum (nicht übernommen).
+- **Xanten** (`xanten_pdf`): zwei PDFs eines Planungsbüros („Gesamtübersicht Zähldaten“, Knoten
+  und Querschnitte) mit Viertelstunden je Strom und Fahrzeugart; Text mit pdfplumber, je Zeile
+  Dezimalstunde („7,25“ = 7:15), Art und Ströme, die Zeile „Summe“ prüft die Viertelstunde
+  (alle 816 stimmen). Lage: die Karte im Bericht ist ein Rasterbild – Marker über die Farbe
+  gefunden, über die zwölf Knotenpunkte (OSM) affin auf Koordinaten umgerechnet (Restfehler
+  4–19 m). An Kreisverkehren haben die Straßen in OSM keinen gemeinsamen Knoten.
 - **PDF je Knoten** (Magdeburg-Angebot): noch kein Adapter (Ansatz wie `potsdam_pdf` bzw.
   `muenster_pdf`).
 - **MobiData BW `KFZ_n` = nur Pkw.** Nachgerechnet an allen 174 Zählungen mit Excel:

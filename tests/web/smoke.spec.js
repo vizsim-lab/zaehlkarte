@@ -119,6 +119,21 @@ test("Stelle aus Potsdam: Spitzenstunden laut Zählplan, Quellenangabe nach NB-1
   expect(z.filter((x) => x.sp).length).toBeGreaterThan(400);
 });
 
+test("Stelle aus Xanten: 24-Stunden-Querschnitt aus dem Mobilitätskonzept, nur Kfz", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=w24");
+  await klickeStelle(page, (x) => x.quelle === "xanten" && x.typ === "Q" && x.name.startsWith("Westwall"));
+  const detail = page.locator("#detail");
+  await expect(detail).toContainText("Querschnitt 2");
+  await expect(detail.locator("svg.tg")).toBeVisible();
+  await expect(detail).toContainText("dl-de/zero-2-0");
+  await expect(detail.locator(".detail-hinweise")).toContainText("Zählstellenkarte im Bericht");
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "xanten").flatMap((s) => s.zaehlungen));
+  expect(z.length).toBe(18);
+  expect(z.filter((x) => x.w24).length).toBe(6); // 6 Querschnitte über 24 Stunden
+  expect(z.filter((x) => x.fenster === "7–9, 15–18").length).toBe(12);
+});
+
 test("CSV-Export der Zählungen im Filter", async ({ page }) => {
   await oeffne(page, "#t=rad.menge&q=ravensburg");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);

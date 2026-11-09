@@ -1,4 +1,4 @@
-# Schulferien Nordrhein-Westfalen – aus den KMK-Ferienkalendern 1999/2000 bis 2019/2020 (erster und
+# Schulferien Nordrhein-Westfalen – aus den KMK-Ferienkalendern 1999/2000 bis 2025/2026 (erster und
 # letzter Ferientag; je Datei die Spalte „Nordrhein-Westfalen“, ausgelesen mit pdftotext -layout).
 # Bewegliche Ferientage (je Schuljahr 3 oder 4) legen die Schulen bzw. Schulträger selbst fest; sie
 # fehlen hier – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen sein. Nicht abgebildet: die
@@ -105,3 +105,32 @@ von,bis,ferien,schuljahr,gebiet,quelle
 2020-04-06,2020-04-18,Osterferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
 2020-06-02,2020-06-02,Pfingstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
 2020-06-29,2020-08-11,Sommerferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-10-12,2020-10-24,Herbstferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2020-12-23,2021-01-06,Weihnachtsferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-03-29,2021-04-10,Osterferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-05-25,2021-05-25,Pfingstferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-07-05,2021-08-17,Sommerferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-10-11,2021-10-23,Herbstferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2021-12-24,2022-01-08,Weihnachtsferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-04-11,2022-04-23,Osterferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-06-27,2022-08-09,Sommerferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-10-04,2022-10-15,Herbstferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2022-12-23,2023-01-06,Weihnachtsferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-04-03,2023-04-15,Osterferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-05-30,2023-05-30,Pfingstferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-06-22,2023-08-04,Sommerferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-10-02,2023-10-14,Herbstferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2023-12-21,2024-01-05,Weihnachtsferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-03-25,2024-04-06,Osterferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-05-21,2024-05-21,Pfingstferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-07-08,2024-08-20,Sommerferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-10-14,2024-10-26,Herbstferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2024-12-23,2025-01-06,Weihnachtsferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-04-14,2025-04-26,Osterferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-06-10,2025-06-10,Pfingstferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-07-14,2025-08-26,Sommerferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-10-13,2025-10-25,Herbstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2025-12-22,2026-01-06,Weihnachtsferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-03-30,2026-04-11,Osterferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-05-26,2026-05-26,Pfingstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-07-20,2026-09-01,Sommerferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf

@@ -1,6 +1,6 @@
 {
  "version": 1,
- "erzeugt": "2026-11-08",
+ "erzeugt": "2026-11-09",
  "dateien": {
   "index": "index.json",
   "details": "details/{n}.json",
@@ -413,15 +413,57 @@
    "lage": {
     "geokodiert": 83
    }
+  },
+  {
+   "code": "xanten",
+   "name": "Xanten",
+   "land": "NW",
+   "traeger": "Stadt Xanten (Verkehrserhebung zum Mobilitätskonzept, büro stadtVerkehr)",
+   "art": "Videozählung am 25.08.2020: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte (24 Stunden), Viertelstundenwerte nach Fahrzeugart, nur Kfz",
+   "weg": "offen auf opendata.ruhr (PDF)",
+   "portal": "https://opendata.ruhr/dataset/mobilitatskonzept",
+   "lizenzen": [
+    {
+     "code": "xanten",
+     "titel": "Mobilitätskonzept – Ergebnisse der Verkehrszählungen",
+     "herausgeber": "Stadt Xanten (Verkehrserhebung zum Mobilitätskonzept, büro stadtVerkehr)",
+     "lizenz": "dl-de/zero-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/zero-2-0",
+     "herkunft_url": "https://opendata.ruhr/dataset/mobilitatskonzept"
+    },
+    {
+     "code": "lage",
+     "titel": "Lage der Zählstellen (OpenStreetMap; Querschnitte nach der Karte im Bericht)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 18,
+   "zaehlungen": 18,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 18,
+    "sv": 18,
+    "rad": 0,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2020,
+   "bis": 2020,
+   "lage": {
+    "geokodiert": 18
+   }
   }
  ],
  "statistik": {
-  "stellen": 12090,
-  "zaehlungen": 29028,
+  "stellen": 12108,
+  "zaehlungen": 29046,
   "ohne_lage": 1509,
   "gruppen": {
-   "kfz": 18775,
-   "sv": 18093,
+   "kfz": 18793,
+   "sv": 18111,
    "rad": 17884,
    "fuss": 6016,
    "kind": 5618
@@ -429,7 +471,7 @@
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "geokodiert": 21009,
+   "geokodiert": 21027,
    "gps": 4798,
    "uebertragen": 1412,
    "quelle": 1809
