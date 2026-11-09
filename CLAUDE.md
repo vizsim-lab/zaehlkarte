@@ -48,15 +48,22 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **`data-tip` nur an Hinweis-Zeichen (ⓘ), nie an Knöpfen oder Links:** der Tooltip fängt
   Klicks darauf ab (Touch). Bedienelemente bekommen `title`/`aria-label`.
 - **REIN halten** (kein DOM, kein window): `js/data/modell.js`, `js/ui/diagramme.js`,
-  `js/utils/permalinkFormat.js` – browserlos getestet. Permalink-Kürzel sind Vertrag mit
-  geteilten Links: nie umdeuten, nur ergänzen.
+  `js/utils/permalinkFormat.js`, `js/sprache/texte.js` – browserlos getestet.
+  Permalink-Kürzel sind Vertrag mit geteilten Links: nie umdeuten, nur ergänzen (die Sprache
+  steht nicht im #-Teil, sondern in `?lang=`).
 - **Fremde Texte** (Namen, Bemerkungen aus den Daten) nur escaped ins HTML (`esc()`).
 - **Lizenz:** AGPL-3.0-or-later. Aus dem Schulwege-Projekt (MIT) übernommene Dateien tragen
   einen Herkunftsvermerk.
 
 ## Konventionen
 - **uv**, nie `pip install`. Lint `uvx ruff check`, Tests `uv run pytest` (aus `pipeline/`).
-- **Sprache:** Deutsch in UI, Doku, Kommentaren und Bezeichnern.
+- **Sprache:** Deutsch in Doku, Kommentaren und Bezeichnern. Die UI ist zweisprachig
+  (Deutsch Standard, Englisch per Umschalter): jeder neue UI-Text als Schlüssel in
+  `js/sprache/texte.js`, in beiden Sprachen (Unit-Test prüft gleiche Schlüssel und
+  Platzhalter); statisches HTML über `data-i18n`/`data-i18n-attr`. Inhalte aus den Daten
+  (Hinweise, Quellenbeschreibungen, Datenlage- und Anfragetexte) bleiben deutsch und tragen
+  `lang="de"`; englische Stand-Namen kommen als `manifest.stand_en` aus `site.py`. CSV-Exporte
+  bleiben in beiden Sprachen gleich (deutsche Spalten und Werte).
 - **Neue Quelle:** Eintrag in `sources.yaml` (`status: research` bis der Adapter steht),
   Adapter mit `lese(quelle, pfade, bericht)` und `Bericht`, Test mit synthetischer Datei.
   Mehrere Kommunen mit gleichem Format teilen sich einen Adapter (`adapter:`).

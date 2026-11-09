@@ -3,6 +3,8 @@
 //   1. die Höhe des zugeklappten Sheets als `--legend-peek` melden – daran hängen die
 //      Bedienelemente unten links und die Attribution;
 //   2. die Suche auf dem Handy zum Lupen-Knopf falten.
+import { t } from "../sprache/texte.js";
+
 const MOBIL = "(max-width: 640px)";
 
 export function setupMobileLayout() {
@@ -28,11 +30,13 @@ export function setupMobileLayout() {
     if (zu) {
       wrapper.setAttribute("role", "button");
       wrapper.setAttribute("tabindex", "0");
-      wrapper.setAttribute("aria-label", "Adresse suchen");
+      wrapper.setAttribute("aria-label", t("suche.label"));
+      wrapper.dataset.i18nAttr = "aria-label:suche.label"; // folgt dem Sprachwechsel
     } else {
       wrapper.removeAttribute("role");
       wrapper.removeAttribute("tabindex");
       wrapper.removeAttribute("aria-label");
+      delete wrapper.dataset.i18nAttr;
     }
   };
   const oeffne = () => {

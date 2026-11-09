@@ -5,11 +5,21 @@
 // Die Karte zeigt je Verkehrsart (Kfz, Schwerverkehr, Rad, Fuß) die gezählten Werte. Je Stelle
 // steht EINE Zählung aus dem Filter: die jüngste mit Kennwert, sonst die jüngste (hohl
 // gezeichnet). Werte aus verschiedenen Zählfenstern werden nie ineinander umgerechnet.
+//
+// Bezeichnungen kommen aus js/sprache/texte.js und folgen der gewählten Sprache (DE/EN).
+import { prozent, t, zahl } from "../sprache/texte.js";
+
+/** {schlüssel: Text} – der Text wird erst beim Lesen geholt, folgt also dem Sprachwechsel. */
+function namen(schluessel, praefix) {
+  return Object.defineProperties({}, Object.fromEntries(schluessel.map((k) => [
+    k, { get: () => t(`${praefix}.${k}`), enumerable: true },
+  ])));
+}
 
 export const GRUPPEN = ["kfz", "sv", "rad", "fuss", "kind"];
-export const GRUPPEN_NAMEN = { kfz: "Kfz", sv: "Schwerverkehr", rad: "Rad", fuss: "Fuß", kind: "Kinder/Jugendliche" };
-export const TAGE = { s: "Schultag", f: "Ferien", h: "Feiertag", w: "Wochenende", u: "unbekannt" };
-export const ARTEN = { w: "7–19 Uhr", w24: "24 Stunden", sp: "stärkste Stunde" };
+export const GRUPPEN_NAMEN = namen(GRUPPEN, "gruppe");
+export const TAGE = namen(["s", "f", "h", "w", "u"], "tag");
+export const ARTEN = namen(["w", "w24", "sp"], "art");
 const BIT = Object.fromEntries(GRUPPEN.map((g, i) => [g, 1 << i]));
 
 // Eine Blau-Stufung (hell -> dunkel), gegen den Positron-Hintergrund #f2f3f0 geprüft.
@@ -26,23 +36,24 @@ export const STUFEN = {
 
 // Verkehrsarten (Themen heißen wie ihre Gruppe) und ihre Darstellungen.
 // `braucht` = Gruppen, die eine Zählung haben muss, um in der Darstellung zu erscheinen.
+const darstellung = (schluessel, braucht) => ({ get name() { return t(schluessel); }, braucht });
 export const THEMEN = {
-  kfz: { name: "Kfz", modi: { menge: { name: "Menge", braucht: ["kfz"] } } },
+  kfz: { get name() { return t("gruppe.kfz"); }, modi: { menge: darstellung("modus.menge", ["kfz"]) } },
   sv: {
-    name: "Schwerverkehr",
+    get name() { return t("gruppe.sv"); },
     modi: {
-      menge: { name: "Menge", braucht: ["sv"] },
-      anteil: { name: "Anteil an Kfz", braucht: ["kfz", "sv"] },
+      menge: darstellung("modus.menge", ["sv"]),
+      anteil: darstellung("modus.sv.anteil", ["kfz", "sv"]),
     },
   },
   rad: {
-    name: "Rad",
+    get name() { return t("gruppe.rad"); },
     modi: {
-      menge: { name: "Menge", braucht: ["rad"] },
-      anteil: { name: "Radanteil", braucht: ["rad", "kfz"] },
+      menge: darstellung("modus.menge", ["rad"]),
+      anteil: darstellung("modus.rad.anteil", ["rad", "kfz"]),
     },
   },
-  fuss: { name: "Fuß", modi: { menge: { name: "Menge", braucht: ["fuss"] } } },
+  fuss: { get name() { return t("gruppe.fuss"); }, modi: { menge: darstellung("modus.menge", ["fuss"]) } },
 };
 
 export function standardZustand(jahre, quellen) {
@@ -199,27 +210,26 @@ export function features(eintraege) {
   };
 }
 
-const zahl = new Intl.NumberFormat("de-DE");
-const prozent = new Intl.NumberFormat("de-DE", { style: "percent", maximumFractionDigits: 1 });
-
 export function formatiere(v, modus) {
   if (v == null) return "–";
-  return modus === "anteil" ? prozent.format(v) : zahl.format(v);
+  return modus === "anteil" ? prozent(v) : zahl(v);
 }
 
 /** Bezeichnung der gezeigten Kennzahl, etwa „Rad, Summe 7–19 Uhr“ oder „Radanteil (24 Stunden)“. */
 export function kennzahlText(thema, modus, art) {
-  if (modus === "anteil") return `${thema === "sv" ? "Schwerverkehrsanteil" : "Radanteil"} (${ARTEN[art]})`;
-  return art === "sp" ? `${GRUPPEN_NAMEN[thema]}, stärkste Stunde` : `${GRUPPEN_NAMEN[thema]}, Summe ${ARTEN[art]}`;
+  if (modus === "anteil") return t("kennzahl.anteil", { anteil: t(`anteil.${thema}`), art: ARTEN[art] });
+  return art === "sp"
+    ? t("kennzahl.spitze", { gruppe: GRUPPEN_NAMEN[thema] })
+    : t("kennzahl.summe", { gruppe: GRUPPEN_NAMEN[thema], art: ARTEN[art] });
 }
 
 /** Legendenzeilen zu Grenzen: ["unter 5.000", "5.000 bis unter 10.000", …, "ab 35.000"]. */
 export function stufenText(grenzen, modus) {
   const f = (v) => formatiere(v, modus);
   return [
-    `unter ${f(grenzen[0])}`,
-    ...grenzen.slice(0, -1).map((g, i) => `${f(g)} bis unter ${f(grenzen[i + 1])}`),
-    `ab ${f(grenzen[grenzen.length - 1])}`,
+    t("stufe.unter", { wert: f(grenzen[0]) }),
+    ...grenzen.slice(0, -1).map((g, i) => t("stufe.bis", { von: f(g), bis: f(grenzen[i + 1]) })),
+    t("stufe.ab", { wert: f(grenzen[grenzen.length - 1]) }),
   ];
 }
 
@@ -229,7 +239,10 @@ function csvFeld(v) {
   return /[";\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
-/** CSV (Semikolon, UTF-8) aller Zählungen im Filter – nicht nur der gezeigten je Stelle. */
+/**
+ * CSV (Semikolon, UTF-8) aller Zählungen im Filter – nicht nur der gezeigten je Stelle.
+ * Spalten und Werte bleiben in jeder Sprache gleich (deutsch), damit Auswertungen nicht brechen.
+ */
 export function csv(daten, zustand, lizenzVon) {
   const kopf = [
     "quelle", "stelle", "name", "typ", "lon", "lat", "lage", "datum", "zaehltag", "fenster",
@@ -242,7 +255,7 @@ export function csv(daten, zustand, lizenzVon) {
     for (const z of s.zaehlungen) {
       if (!imFilter(z, zustand, [])) continue;
       zeilen.push([
-        s.quelle, s.id, s.name, s.typ, s.lon, s.lat, s.lage, z.datum, TAGE[z.tag ?? "u"], z.fenster,
+        s.quelle, s.id, s.name, s.typ, s.lon, s.lat, s.lage, z.datum, t(`tag.${z.tag ?? "u"}`, {}, "de"), z.fenster,
         ...GRUPPEN.map((g) => wert(z, g, "w")), ...GRUPPEN.map((g) => wert(z, g, "w24")),
         ...GRUPPEN.map((g) => wert(z, g, "sp")), lizenzVon(s.quelle, z.lieferung),
       ].map(csvFeld).join(";"));

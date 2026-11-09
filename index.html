@@ -9,37 +9,45 @@
   <script type="module" src="./main.js"></script>
 </head>
 <body>
-  <div id="map" aria-label="Karte"></div>
+  <!-- Texte: Deutsch steht hier als Standard; data-i18n / data-i18n-attr nennen die Schlüssel
+       in js/sprache/texte.js, die der Sprachumschalter (DE/EN) einsetzt. -->
+  <div id="map" aria-label="Karte" data-i18n-attr="aria-label:karte"></div>
 
   <div class="legend" id="legend">
     <script>if (matchMedia("(max-width: 640px)").matches) document.currentScript.parentElement.classList.add("collapsed");</script>
     <div class="legend-header legend-title" data-toggle="legend-root">
-      <div>
-        <div class="legend-heading">Zählkarte</div>
-        <div class="legend-subtext">Kommunale Verkehrszählungen <br>Kfz · Rad · Fuß
-          <span class="info-icon" data-tip="Von Hand oder per Video gezählte Kurzzeitzählungen der Städte (Knotenpunkte und Querschnitte), keine Dauerzählstellen. Quellen und Lizenzen unten.">i</span>
+      <div class="legend-kopf">
+        <div class="legend-kopfzeile">
+          <div class="legend-heading">Zählkarte</div>
+          <div id="sprachwahl" class="sprachwahl" role="group" aria-label="Sprache wählen" data-i18n-attr="aria-label:sprache.wahl">
+            <button type="button" class="is-active" data-sprache="de" lang="de" title="Deutsch" aria-pressed="true">DE</button>
+            <button type="button" data-sprache="en" lang="en" title="English" aria-pressed="false">EN</button>
+          </div>
+        </div>
+        <div class="legend-subtext"><span data-i18n="legende.untertitel">Kommunale Verkehrszählungen</span> <br><span data-i18n="legende.arten">Kfz · Rad · Fuß</span>
+          <span class="info-icon" data-tip="Von Hand, per Video oder mit Messgeräten gezählte Kurzzeitzählungen der Städte (Knotenpunkte und Querschnitte), keine Dauerzählstellen. Quellen und Lizenzen unten." data-i18n-attr="data-tip:legende.info">i</span>
         </div>
       </div>
-      <button class="toggle-arrow toggle-root open" type="button" aria-expanded="true" aria-label="Legende ein-/ausklappen"></button>
+      <button class="toggle-arrow toggle-root open" type="button" aria-expanded="true" aria-label="Legende ein-/ausklappen" data-i18n-attr="aria-label:legende.klappen"></button>
     </div>
 
     <div class="legend-body">
       <div class="legend-section-divider"></div>
       <div class="legend-section" data-section="thema">
-        <div class="legend-section-title"><span>Verkehrsart</span></div>
-        <div class="legend-chips" id="thema-chips" role="radiogroup" aria-label="Verkehrsart">
-          <button type="button" class="legend-chip" data-thema="kfz" role="radio">Kfz</button>
-          <button type="button" class="legend-chip" data-thema="sv" role="radio" title="Lkw über 3,5 t, Lastzüge und Busse (wie die Quelle sie zählt)">Schwerverkehr</button>
-          <button type="button" class="legend-chip" data-thema="rad" role="radio">Rad</button>
-          <button type="button" class="legend-chip" data-thema="fuss" role="radio">Fuß</button>
+        <div class="legend-section-title"><span data-i18n="thema.titel">Verkehrsart</span></div>
+        <div class="legend-chips" id="thema-chips" role="radiogroup" aria-label="Verkehrsart" data-i18n-attr="aria-label:thema.titel">
+          <button type="button" class="legend-chip" data-thema="kfz" role="radio" data-i18n="gruppe.kfz">Kfz</button>
+          <button type="button" class="legend-chip" data-thema="sv" role="radio" title="Lkw über 3,5 t, Lastzüge und Busse (wie die Quelle sie zählt)" data-i18n="gruppe.sv" data-i18n-attr="title:thema.sv_tip">Schwerverkehr</button>
+          <button type="button" class="legend-chip" data-thema="rad" role="radio" data-i18n="gruppe.rad">Rad</button>
+          <button type="button" class="legend-chip" data-thema="fuss" role="radio" data-i18n="gruppe.fuss">Fuß</button>
         </div>
-        <div class="legend-chips legend-chips--klein" id="modus-chips" role="radiogroup" aria-label="Darstellung"></div>
+        <div class="legend-chips legend-chips--klein" id="modus-chips" role="radiogroup" aria-label="Darstellung" data-i18n-attr="aria-label:modus.gruppe"></div>
         <div class="legend-row-label" id="art-wahl">
-          <span>Kennzahl</span>
-          <div class="legend-chips legend-chips--klein" id="art-chips" role="radiogroup" aria-label="Kennzahl">
-            <button type="button" class="legend-chip" data-art="w" role="radio" title="Summe von 7 bis 19 Uhr – nur, wo jede dieser Stunden gezählt ist. Die meisten Zählungen decken das ab.">7–19 Uhr</button>
-            <button type="button" class="legend-chip" data-art="w24" role="radio" title="Summe über 24 Stunden – nur bei 24-Stunden-Zählungen.">24 h</button>
-            <button type="button" class="legend-chip" data-art="sp" role="radio" title="Die stärkste gezählte Stunde – vergleichbar auch bei kurzen Zählfenstern.">stärkste Stunde</button>
+          <span data-i18n="kennzahl.titel">Kennzahl</span>
+          <div class="legend-chips legend-chips--klein" id="art-chips" role="radiogroup" aria-label="Kennzahl" data-i18n-attr="aria-label:kennzahl.titel">
+            <button type="button" class="legend-chip" data-art="w" role="radio" title="Summe von 7 bis 19 Uhr – nur, wo jede dieser Stunden gezählt ist. Die meisten Zählungen decken das ab." data-i18n="art.w" data-i18n-attr="title:art.w_tip">7–19 Uhr</button>
+            <button type="button" class="legend-chip" data-art="w24" role="radio" title="Summe über 24 Stunden – nur bei 24-Stunden-Zählungen." data-i18n="art.w24_kurz" data-i18n-attr="title:art.w24_tip">24 h</button>
+            <button type="button" class="legend-chip" data-art="sp" role="radio" title="Die stärkste gezählte Stunde – vergleichbar auch bei kurzen Zählfenstern." data-i18n="art.sp" data-i18n-attr="title:art.sp_tip">stärkste Stunde</button>
           </div>
         </div>
         <div class="legend-items" id="klassen-legende"></div>
@@ -47,25 +55,25 @@
 
       <div class="legend-section-divider"></div>
       <div class="legend-section" data-section="filter">
-        <div class="legend-section-title" data-toggle="filter"><span>Filter</span>
-          <button class="toggle-arrow section-arrow open" type="button" aria-expanded="true" aria-label="Filter ein-/ausklappen"></button>
+        <div class="legend-section-title" data-toggle="filter"><span data-i18n="filter.titel">Filter</span>
+          <button class="toggle-arrow section-arrow open" type="button" aria-expanded="true" aria-label="Filter ein-/ausklappen" data-i18n-attr="aria-label:filter.klappen"></button>
         </div>
         <div class="legend-section-content">
           <div class="filter-jahre">
-            <div class="row row--between"><span>Zeitraum</span><strong id="jahre-wert"></strong></div>
+            <div class="row row--between"><span data-i18n="filter.zeitraum">Zeitraum</span><strong id="jahre-wert"></strong></div>
             <div class="doppelregler">
-              <input type="range" id="jahr-von" aria-label="Jahr von">
-              <input type="range" id="jahr-bis" aria-label="Jahr bis">
+              <input type="range" id="jahr-von" aria-label="Jahr von" data-i18n-attr="aria-label:filter.jahr_von">
+              <input type="range" id="jahr-bis" aria-label="Jahr bis" data-i18n-attr="aria-label:filter.jahr_bis">
             </div>
-            <div class="legend-hint">Je Stelle zeigt die Karte die jüngste Zählung im Zeitraum.</div>
+            <div class="legend-hint" data-i18n="filter.jahre_hinweis">Je Stelle zeigt die Karte die jüngste Zählung im Zeitraum.</div>
           </div>
-          <div class="legend-section-subtitle">Zähltag</div>
+          <div class="legend-section-subtitle" data-i18n="filter.zaehltag">Zähltag</div>
           <div class="legend-items" id="tage-liste"></div>
-          <div class="legend-section-subtitle">Quellen</div>
+          <div class="legend-section-subtitle" data-i18n="filter.quellen">Quellen</div>
           <div class="legend-items" id="quellen-liste"></div>
           <label class="legend-item legend-item--check">
-            <span class="label-wrapper"><input type="checkbox" id="toggle-uebertragen"> übernommene Lagen zeigen
-              <span class="info-icon" data-tip="Zählungen ohne eigene Koordinaten, verortet über andere Zählungen derselben Zählstellen-Kennung. Meist richtig, aber nicht geprüft.">i</span></span>
+            <span class="label-wrapper"><input type="checkbox" id="toggle-uebertragen"> <span data-i18n="filter.uebertragen">übernommene Lagen zeigen</span>
+              <span class="info-icon" data-tip="Zählungen ohne eigene Koordinaten, verortet über andere Zählungen derselben Zählstellen-Kennung. Meist richtig, aber nicht geprüft." data-i18n-attr="data-tip:filter.uebertragen_tip">i</span></span>
           </label>
         </div>
       </div>
@@ -73,38 +81,38 @@
       <div class="legend-section-divider"></div>
       <div class="legend-section" data-section="datenlage">
         <div class="legend-section-title">
-          <label><input type="checkbox" class="section-checkbox" id="toggle-datenlage"> Datenlage je Kommune</label>
-          <span class="info-icon" data-tip="Wo es solche Zählungen gibt: offen, auf Anfrage herausgegeben oder aussichtsreich für eine IFG-/UIG-Anfrage. Recherche Stand November 2026, unvollständig – Hinweise gern als Issue.">i</span>
+          <label><input type="checkbox" class="section-checkbox" id="toggle-datenlage"> <span data-i18n="datenlage.titel">Datenlage je Kommune</span></label>
+          <span class="info-icon" data-tip="Wo es solche Zählungen gibt: offen, auf Anfrage herausgegeben oder aussichtsreich für eine IFG-/UIG-Anfrage. Recherche Stand November 2026, unvollständig – Hinweise gern als Issue." data-i18n-attr="data-tip:datenlage.tip">i</span>
         </div>
         <div class="legend-items" id="datenlage-legende"></div>
       </div>
 
       <div class="legend-section-divider"></div>
       <div class="legend-section collapsed" data-section="quellen">
-        <div class="legend-section-title" data-toggle="quellen"><span>Quellen &amp; Lizenzen</span>
-          <button class="toggle-arrow section-arrow" type="button" aria-expanded="false" aria-label="Quellen ein-/ausklappen"></button>
+        <div class="legend-section-title" data-toggle="quellen"><span data-i18n="quellen.titel">Quellen &amp; Lizenzen</span>
+          <button class="toggle-arrow section-arrow" type="button" aria-expanded="false" aria-label="Quellen ein-/ausklappen" data-i18n-attr="aria-label:quellen.klappen"></button>
         </div>
         <div class="legend-section-content" id="quellen-text"></div>
       </div>
 
       <div id="feature-count-wrapper">
         <div id="feature-count" class="fc-stats">
-          <span class="fc-stat" data-tip="Zählstellen in der Karte (nach Filter)">
+          <span class="fc-stat" data-tip="Zählstellen in der Karte (nach Filter)" data-i18n-attr="data-tip:zaehler.stellen_tip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg>
-            <span id="fc-stellen">–</span> Stellen</span>
-          <span class="fc-stat" data-tip="Zählungen im Filter (alle Jahre der Stellen, nicht nur die gezeigte)">
+            <span id="fc-stellen">–</span> <span data-i18n="zaehler.stellen">Stellen</span></span>
+          <span class="fc-stat" data-tip="Zählungen im Filter (alle Jahre der Stellen, nicht nur die gezeigte)" data-i18n-attr="data-tip:zaehler.zaehlungen_tip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
-            <span id="fc-zaehlungen">–</span> Zählungen</span>
+            <span id="fc-zaehlungen">–</span> <span data-i18n="zaehler.zaehlungen">Zählungen</span></span>
         </div>
         <div class="fc-links">
-          <span class="fc-badge" data-tip="Im Aufbau: Quellen kommen dazu, Werte ohne Gewähr">Beta</span>
-          <button id="export-csv" class="fc-icon-btn" type="button" aria-label="Zählungen im Filter als CSV laden" title="Zählungen im Filter als CSV">
+          <span class="fc-badge" data-tip="Im Aufbau: Quellen kommen dazu, Werte ohne Gewähr" data-i18n-attr="data-tip:beta.tip">Beta</span>
+          <button id="export-csv" class="fc-icon-btn" type="button" aria-label="Zählungen im Filter als CSV laden" title="Zählungen im Filter als CSV" data-i18n-attr="aria-label:export.label;title:export.titel">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
           </button>
-          <a href="https://github.com/vizsim-lab/zaehlkarte" target="_blank" rel="noopener" aria-label="Code auf GitHub" title="Code und Pipeline auf GitHub">
+          <a href="https://github.com/vizsim-lab/zaehlkarte" target="_blank" rel="noopener" aria-label="Code auf GitHub" title="Code und Pipeline auf GitHub" data-i18n-attr="aria-label:github.label;title:github.titel">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
           </a>
-          <a href="https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml" target="_blank" rel="noopener" aria-label="Zählung melden" title="Zählungen einer Kommune melden">
+          <a href="https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml" target="_blank" rel="noopener" aria-label="Zählung melden" title="Zählungen einer Kommune melden" data-i18n-attr="aria-label:melden.label;title:melden.titel">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M12 7v4M12 14h.01"/></svg>
           </a>
         </div>
@@ -112,22 +120,22 @@
     </div>
   </div>
 
-  <aside id="detail" class="detail-panel" hidden aria-label="Details zur Zählstelle"></aside>
-  <aside id="datenlage-detail" class="detail-panel detail-panel--klein" hidden aria-label="Datenlage einer Kommune"></aside>
+  <aside id="detail" class="detail-panel" hidden aria-label="Details zur Zählstelle" data-i18n-attr="aria-label:panel.detail"></aside>
+  <aside id="datenlage-detail" class="detail-panel detail-panel--klein" hidden aria-label="Datenlage einer Kommune" data-i18n-attr="aria-label:panel.datenlage"></aside>
 
-  <button id="map-settings-toggle" class="map-settings-toggle" type="button" aria-expanded="false" aria-controls="map-settings-panel" aria-label="Karteneinstellungen">
+  <button id="map-settings-toggle" class="map-settings-toggle" type="button" aria-expanded="false" aria-controls="map-settings-panel" aria-label="Karteneinstellungen" data-i18n-attr="aria-label:einstellungen">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
   </button>
-  <section id="map-settings-panel" class="map-settings-panel is-collapsed" aria-label="Karteneinstellungen">
+  <section id="map-settings-panel" class="map-settings-panel is-collapsed" aria-label="Karteneinstellungen" data-i18n-attr="aria-label:einstellungen">
     <div class="map-settings-panel-content">
-      <strong>Hintergrundkarte</strong>
+      <strong data-i18n="einstellungen.hintergrund">Hintergrundkarte</strong>
       <div class="basemap-grid">
         <button class="basemap-btn selected" type="button" data-basemap="positron"><span class="basemap-preview basemap-preview-positron"></span><span class="basemap-label">Positron</span></button>
         <button class="basemap-btn" type="button" data-basemap="osm"><span class="basemap-preview basemap-preview-osm"></span><span class="basemap-label">OSM</span></button>
-        <button class="basemap-btn" type="button" data-basemap="satellite"><span class="basemap-preview basemap-preview-satellite"></span><span class="basemap-label">Luftbild</span></button>
+        <button class="basemap-btn" type="button" data-basemap="satellite"><span class="basemap-preview basemap-preview-satellite"></span><span class="basemap-label" data-i18n="einstellungen.luftbild">Luftbild</span></button>
       </div>
       <div class="terrain-row">
-        <div><strong>Relief</strong><p>Gelände aus Mapterhorn</p></div>
+        <div><strong data-i18n="einstellungen.relief">Relief</strong><p data-i18n="einstellungen.relief_text">Gelände aus Mapterhorn</p></div>
         <label class="switch"><input type="checkbox" id="toggle-relief"><span class="switch-slider"></span></label>
       </div>
     </div>

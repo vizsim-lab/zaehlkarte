@@ -4,6 +4,7 @@
 // (features) – der Stil liest sie nur aus (["get", …]). So bleibt die Logik browserlos testbar.
 import { Popup } from "../lib/maplibre.js";
 import { TAGE, formatiere, kennzahlText } from "../data/modell.js";
+import { datum, lokal, t, zahl } from "../sprache/texte.js";
 
 const LEER = { type: "FeatureCollection", features: [] };
 export const DATENLAGE_FARBEN = {
@@ -13,12 +14,16 @@ export const DATENLAGE_FARBEN = {
   kandidat: "#eb6834",
 };
 export const DATENLAGE_GRAU = "#9ca3af";
+const klasse = (id, farbe, stand) => ({ id, farbe, stand, get name() { return t(`datenlage.klasse.${id}`); } });
 export const DATENLAGE_KLASSEN = [
-  { id: "in_karte", name: "in der Karte", farbe: "#2a78d6", stand: ["in_karte"] },
-  { id: "offen", name: "offen oder auf Anfrage herausgegeben", farbe: "#1baf7a", stand: ["offen", "geliefert"] },
-  { id: "kandidat", name: "erhoben – Anfrage aussichtsreich", farbe: "#eb6834", stand: ["kandidat"] },
-  { id: "sonst", name: "nur Summen, Karten, automatisch oder abgelehnt", farbe: DATENLAGE_GRAU, stand: ["aggregiert", "nur_karte", "automatisch", "abgelehnt"] },
+  klasse("in_karte", "#2a78d6", ["in_karte"]),
+  klasse("offen", "#1baf7a", ["offen", "geliefert"]),
+  klasse("kandidat", "#eb6834", ["kandidat"]),
+  klasse("sonst", DATENLAGE_GRAU, ["aggregiert", "nur_karte", "automatisch", "abgelehnt"]),
 ];
+
+/** Bezeichnung eines Datenlage-Stands in der gewählten Sprache (manifest.stand bzw. stand_en). */
+export const standText = (manifest, code) => lokal(manifest, "stand")?.[code] ?? manifest.stand?.[code] ?? code;
 
 export function fuegeEbenenHinzu(map, datenlage) {
   map.addSource("stellen", { type: "geojson", data: LEER });
@@ -109,7 +114,6 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 /** EIN Hover-Popup für Zählstellen und Datenlage (wie in der Unfallkarte). */
 export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag }) {
   const popup = new Popup({ closeButton: false, closeOnClick: false, maxWidth: "280px", offset: 10 });
-  const stand = manifest.stand;
   const ebenen = ["stellen-kreis", "datenlage-kreis"];
   map.on("mousemove", (e) => {
     const f = map.queryRenderedFeatures(e.point, { layers: ebenen.filter((id) => map.getLayer(id)) })[0];
@@ -122,10 +126,10 @@ export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag }) {
     let html;
     if (f.layer.id === "datenlage-kreis") {
       const p = f.properties;
-      html = `<div class="pop-eyebrow">Datenlage · ${esc(p.land ?? "")}</div>
+      html = `<div class="pop-eyebrow">${esc(t("hover.datenlage", { land: p.land ?? "" }))}</div>
         <div class="pop-title">${esc(p.kommune)}</div>
-        <div class="pop-meta">${esc(stand[p.stand] ?? p.stand)}</div>
-        <div class="pinhint pop-pinhint">Klick für Belege</div>`;
+        <div class="pop-meta">${esc(standText(manifest, p.stand))}</div>
+        <div class="pinhint pop-pinhint">${esc(t("hover.belege"))}</div>`;
     } else {
       const z = gibZustand();
       const s = daten.stellen[f.properties.i];
@@ -135,11 +139,11 @@ export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag }) {
         ? `<div class="pop-hero">${formatiere(eintrag.wert, modus)}</div>
           <div class="pop-meta">${esc(kennzahlText(z.thema, modus, z.art))}</div>`
         : "";
-      const datum = eintrag?.z?.datum ? eintrag.z.datum.split("-").reverse().join(".") : "";
+      const tag = eintrag?.z?.datum ? datum(eintrag.z.datum) : "";
       html = `<div class="pop-eyebrow">${esc(manifest.quellen.find((q) => q.code === s.quelle)?.name ?? s.quelle)}</div>
         <div class="pop-title">${esc(s.name)}</div>${zeile}
-        <div class="pop-meta">${datum}${eintrag?.z ? ` · ${esc(TAGE[eintrag.z.tag ?? "u"])}` : ""}${s.zaehlungen.length > 1 ? ` · ${s.zaehlungen.length} Zählungen an der Stelle` : ""}</div>
-        <div class="pop-pinhint">Klick für Tagesgang und Details</div>`;
+        <div class="pop-meta">${esc(tag)}${eintrag?.z ? ` · ${esc(TAGE[eintrag.z.tag ?? "u"])}` : ""}${s.zaehlungen.length > 1 ? ` · ${esc(t("hover.mehrere", { n: zahl(s.zaehlungen.length) }))}` : ""}</div>
+        <div class="pop-pinhint">${esc(t("hover.details"))}</div>`;
     }
     popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
   });

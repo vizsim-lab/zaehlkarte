@@ -52,6 +52,44 @@ body {
   color: var(--ui-text-muted);
 }
 
+/* Titel und Sprachumschalter DE|EN in einer Zeile (wie in vizsim/osm_hashtag_analyse) */
+.legend-kopf { min-width: 0; }
+.legend-kopfzeile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sprachwahl {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  border: 1px solid var(--ui-border);
+  border-radius: 999px;
+  background: var(--ui-hover);
+}
+.sprachwahl button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--ui-text-muted);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+}
+.sprachwahl button:hover { color: var(--ui-text-strong); }
+.sprachwahl button.is-active {
+  background: var(--ui-surface);
+  color: var(--ui-accent);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.16);
+}
+.sprachwahl button:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 1px; }
+
 .legend {
   position: absolute;
   top: 60px;
@@ -1053,6 +1091,7 @@ body {
 .dz-zeile.is-aktiv { background: rgba(29, 78, 216, .1); font-weight: 600; }
 .dz-zeile:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: -2px; }
 .dz-tag { color: var(--ui-text-muted); }
+.detail-tabelle td.dz-tag { white-space: normal; line-height: 1.15; } /* „School holidays“ darf umbrechen, sonst fällt Fuß rechts heraus */
 .is-leer { color: #c3c7cc; }
 .detail-kennwerte { margin-top: 8px; font-variant-numeric: tabular-nums; }
 .detail-kennwerte thead td { font-weight: 600; color: var(--ui-text-muted); font-size: 11px; }
