@@ -16,8 +16,16 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   `https://fragdenstaat.de/api/v1/request/search/?q=Verkehrsz%C3%A4hlung`.
 - **Ratsinformationssysteme:** Antworten auf Anfragen nennen Zahl und Format der Zählungen
   (Dresden AF0915/25, München DAVe-Vorlage).
-- **Zählsoftware:** München und Wolfsburg nutzen DAVe (Open Source, Export in offene Formate)
-  – dort lohnt eine Anfrage nach dem Export statt nach PDFs.
+- **Zählsoftware:** München und Wolfsburg nutzen DAVe (Open Source, Export in offene Formate),
+  Lübeck die Plattform mytrafficdata (datacollect) – dort lohnt eine Anfrage nach dem Export
+  statt nach PDFs.
+- **Stadtseiten statt Portale:** Neue Funde (Halle, Chemnitz, Saarbrücken, Mönchengladbach,
+  Lübeck, Essen) kamen fast nur über die Suche mit Filter auf die Domain der Stadt, etwa
+  „Verkehrszählungen Verkehrsmengen Zählstellen Stadtgebiet“. Begriffe auf Stadtseiten:
+  „Bereitstellung von Verkehrsdaten“ (Gera), „Verkehrsmengendaten“ (Halle),
+  „Verkehrserhebungen“ (Mönchengladbach, Essen, Saarbrücken), „Verkehrsdaten“ (Kiel). Allgemeine
+  Suchen liefern fast nur Gutachten aus Bebauungsplänen. Außer MobiData BW sammelt kein
+  Landesportal kommunale Kurzzeitzählungen.
 
 ## Formate, die vorkommen
 - **Berlin ZDA** (`berlin_zda`): Text, Kopf `schlüssel=wert`, `data=`, je Richtung `; 1 -> 2`
@@ -67,8 +75,8 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   Werte mit Nachkommastellen sind errechnet (Plan nicht übernommen), „nurRad“-Pläne haben Kfz 0
   (= nicht gezählt), „_Qw“/„_Qs“/„_Qbr“ sind Querschnitte am Knoten, „KordonZ“ ein 24-Stunden-
   Tagesgang ohne Tagesdatum (nicht übernommen).
-- **PDF je Knoten** (Rostock-Lieferung, Magdeburg-Angebot): noch kein Adapter (Ansatz wie
-  `potsdam_pdf` bzw. `muenster_pdf`).
+- **PDF je Knoten** (Magdeburg-Angebot): noch kein Adapter (Ansatz wie `potsdam_pdf` bzw.
+  `muenster_pdf`).
 - **MobiData BW `KFZ_n` = nur Pkw.** Nachgerechnet an allen 174 Zählungen mit Excel:
   `KFZ_n` = Klasse PKW, `SV_n` = Klasse LKW (Ravensburg 1000, 16.11.2023: 14.217 + 1.919 =
   16.136 Kfz). Wer die Übersicht allein nutzt (wie `vizsim/svz`), unterschätzt Kfz um den
@@ -108,19 +116,46 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
 ## Sackgassen
 - mobidata-bw.de, GovData, opendata.potsdam.de (auch de.ftp.opendatasoft.com),
   opendata.stadt-muenster.de, offenedaten-konstanz.de, fragdenstaat.de und kmk.org sind aus
-  manchen Entwicklungsumgebungen nicht erreichbar (Proxy). Die Nutzungsbedingungen der LHP
-  (Potsdam) stehen erst nach JavaScript auf der Seite – lesen mit Playwright; die
-  Opendatasoft-API sperrt Crawler per robots.txt. FragDenStaat: die Links „/anhang/…“ liefern
-  eine HTML-Seite, die Datei liegt unter media.frag-den-staat.de/files/foi/<Nachricht>/<Name>. Abruf dann über GitHub Actions (`zaehlkarte fetch` im Workflow
-  „Kartendaten neu bauen“). Braucht man die Rohdateien selbst in der Sandbox: der Workflow aus
-  Commit e6f7280 (`tools/mobidata_holen.py`, früher Branch `werkzeug/mobidata`) legt sie auf
-  einen Branch, den man dann per `git fetch` holt.
+  manchen Entwicklungsumgebungen nicht erreichbar (Proxy). Abruf dann über GitHub Actions
+  (`zaehlkarte fetch` im Workflow „Kartendaten neu bauen“). Braucht man die Rohdateien selbst in
+  der Sandbox: ein Werkzeug-Workflow auf einem eigenen Branch legt sie dort ab (Muster: Commit
+  e6f7280, `tools/mobidata_holen.py`), dann `git fetch`.
+- Die Nutzungsbedingungen der LHP (Potsdam) stehen erst nach JavaScript auf der Seite – lesen mit
+  Playwright; die Opendatasoft-API und die CKAN-APIs von GovData und Open.NRW sperren
+  Abruf-Werkzeuge per robots.txt (die Websuche mit Filter auf govdata.de/open.nrw geht).
+  FragDenStaat: die Links „/anhang/…“ liefern eine HTML-Seite, die Datei liegt unter
+  media.frag-den-staat.de/files/foi/<Nachricht>/<Name>.
+- Nicht abrufbar (Stand November 2026): wuppertal.de (Dienstleistung „Verkehrsbelastung“
+  104.51 – lohnt einen zweiten Blick), bau.bremen.de, mobil.osnabrueck.de; datenhub.ulm.de
+  braucht JavaScript.
+- Geprüft ohne verwertbaren Fund (Stadtseite, Portal, FragDenStaat; November 2026 – eine Anfrage
+  nach der Vorlage geht trotzdem überall): Karlsruhe (Zählwerte nur in Gutachten im
+  Ratsinformationssystem), Mannheim, Freiburg, Ulm, Tübingen, Heilbronn, Pforzheim, Reutlingen,
+  Augsburg, Regensburg, Ingolstadt, Erlangen, Würzburg, Cottbus, Bremen, Wiesbaden, Darmstadt,
+  Offenbach, Schwerin, Greifswald, Hannover, Braunschweig, Oldenburg, Lüneburg, Duisburg,
+  Bochum, Bielefeld, Bonn, Krefeld, Oberhausen, Siegen, Mainz, Ludwigshafen, Koblenz, Trier,
+  Kaiserslautern, Worms, Flensburg, Erfurt, Jena – meist nur Rad- oder Dauerzähler offen.
 - Leipzig 2023: Ablehnung, weil die Karte keinen Export hat – nicht nach „den Daten der
   Karte“ fragen, sondern nach den gelieferten Zählauswertungen der Büros.
 - Dortmund gibt Werte nur gegen Gebühr heraus; offen ist nur der Zählstellenplan.
+- Rostock 2020 (FragDenStaat „Verkehrszählung“): die „Übersichten“ sind ein Register, welcher
+  Knoten wann gezählt wurde (2009–2019), ohne Werte; Werte nur in drei Beispielzählungen
+  (`Z_xxxx`, Viertelstunden je Strom) und ohne Lizenzangabe – daher nicht in der Karte. Die Stadt
+  gibt auf genaue Anfrage bis 50 Zählungen kostenlos als Excel heraus.
 
 ## Rechtliches (Stand 2026, keine Rechtsberatung)
 Bayern und Niedersachsen haben kein Landes-IFG; in Sachsen und Hessen gilt es für Kommunen
 nur per Satzung. Das UIG gilt überall – Zählungen gehen in die Lärmkartierung ein, darum mit
 anführen. Sachsen: LfULG-Handlungsempfehlung (Mai 2026) verlangt Intervallwerte als CSV/XLSX
-von beauftragten Büros. Kurzfassung je Land: `recht:` in `pipeline/config/sources.yaml`.
+von beauftragten Büros. Kurzfassung je Land: `recht:` in `pipeline/config/sources.yaml`
+(RP LTranspG, SH IZG-SH, SL SIFG, TH ThürTG gelten auch für Gemeinden; Belege dort).
+
+Neue Gesetze ändern daran nichts (Stand November 2026): Das IVSG 2026 (Mobilithek) meint
+Sperrungen, Baustellen, Belegungs- und Ladedaten, keine Verkehrsmengen; die EU-Verordnung 2022/670
+verlangt nur, was schon digital vorliegt (Detektoren, Dauerzählstellen); das Datennutzungsgesetz
+schafft keinen Anspruch, § 7 ist aber ein Argument für Excel/CSV statt PDF. Einziger Hebel zum
+Einsammeln: das Landesmobilitätsgesetz Baden-Württemberg (Datenbereitstellungspflichten, Verordnung
+noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR0940B0026.html),
+[VO 2022/670, Erwägungsgrund 19](https://gesetze.legal/eu/vo_eu_2022_670/praeambel),
+[DNG](https://www.gesetze-im-internet.de/dng/BJNR294200021.html),
+[MobiData BW Factsheet](https://mobidata-bw.de/data/MobiData-BW-Factsheet-Datenbereitstellungspflichten.pdf).

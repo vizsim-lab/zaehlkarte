@@ -142,8 +142,8 @@ test("Datenlage: Klick auf eine Kommune zeigt Stand und Belege", async ({ page }
   const el = page.locator("#datenlage-detail");
   await expect(el).toBeVisible();
   await expect(el).toContainText("Rostock");
-  await expect(el.locator('a[href*="fragdenstaat.de/anfrage/verkehrszahlung-14/"]')).toHaveCount(1);
-  await expect(el.locator(".anfrage-text")).toHaveValue(/Excel-Originale/);
+  await expect(el.locator('a[href$="fragdenstaat.de/anfrage/verkehrszahlung-14/"]')).toHaveCount(1);
+  await expect(el.locator(".anfrage-text")).toHaveValue(/50 jüngsten Knotenpunktzählungen/);
 });
 
 test("Datenlage: Empfehlung und Anfragetext für Dresden", async ({ page }) => {

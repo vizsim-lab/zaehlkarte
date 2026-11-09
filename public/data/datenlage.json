@@ -754,18 +754,22 @@
     "kommune": "Rostock",
     "land": "MV",
     "stand": "geliefert",
-    "was": "rund 100 Kreuzungen im Jahr, Jahresübersichten als Excel (auch Rad und Fuß); bis 50 Zählungen kostenlos. 2020 geliefert, online aber nur PDF-Umwandlungen",
+    "was": "zählt jedes Jahr rund 100 Kreuzungen von Hand; 2020 ein Register der Zählungen 2009–2019 (ohne Werte) und drei Beispielzählungen herausgegeben, bis 50 Zählungen kostenlos als Excel",
     "links": [
      {
       "titel": "FragDenStaat 2020",
       "url": "https://fragdenstaat.de/anfrage/verkehrszahlung-14/"
+     },
+     {
+      "titel": "Antwortschreiben 2020",
+      "url": "https://fragdenstaat.de/anfrage/verkehrszahlung-14/519369/anhang/Anschreiben_konvertiert_geschwaerzt.pdf"
      }
     ],
     "recht": "Informationsfreiheitsgesetz M-V",
     "quelle": null,
     "zaehlungen": null,
-    "situation": "Zählt an rund 100 Kreuzungen im Jahr; Jahresübersichten als Excel, auch mit Rad- und Fußzählungen. Bis 50 Zählungen kostenlos. 2020 geliefert – auf FragDenStaat liegen aber nur PDF-Umwandlungen.",
-    "empfehlung": "Die Excel-Originale und die Zählungen seit 2020 nachfordern, dazu eine Lizenz. Beim Amt für Verkehrsanlagen, Grundlage: Informationsfreiheitsgesetz M-V.",
+    "situation": "Die Stadt zählt jedes Jahr an rund 100 Kreuzungen von Hand – Kfz nach Fahrzeugart, Rad dort, wo Radfahrende eindeutig auf der Straße fahren, keine Fußgänger –, früh 6:30–8:30 und nachmittags 15–18 Uhr in Viertelstunden je Strom. 2020 hat sie auf FragDenStaat ein Register herausgegeben, welcher Knoten wann gezählt wurde (2009–2019), dazu drei Zählungen mit Viertelstundenwerten (2018, 2020) – als PDF-Umwandlung und ohne Angabe, unter welchen Bedingungen man sie veröffentlichen darf. Bis zu 50 Zählungen gibt sie auf eine genaue Anfrage kostenlos als Excel heraus.",
+    "empfehlung": "Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz für die Veröffentlichung. Grundlage: Informationsfreiheitsgesetz M-V; das Register von 2020 hilft bei der Auswahl.",
     "weg": "FragDenStaat, IFG M-V",
     "kontakt": {
      "name": "Amt für Verkehrsanlagen Rostock",
@@ -773,7 +777,7 @@
     },
     "anfrage": {
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
-     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Rostock seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2020 haben Sie Jahresübersichten Ihrer Verkehrszählungen herausgegeben (FragDenStaat, „Verkehrszählung“); dort liegen nur PDF-Umwandlungen. Ich bitte um die Excel-Originale und die Zählungen seither.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Rostock seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2020 haben Sie auf FragDenStaat (Anfrage „Verkehrszählung“) ein Register Ihrer Knotenpunktzählungen 2009–2019 herausgegeben und angeboten, bis zu 50 Zählungen kostenlos als Excel-Dateien zu übermitteln. Ich bitte um die 50 jüngsten Knotenpunktzählungen (Viertelstundenwerte je Strom und Fahrzeugart, einschließlich Rad, wo gezählt) als Excel-Dateien und um die Angabe, unter welcher Lizenz ich sie veröffentlichen darf.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     }
    }
   },
@@ -920,6 +924,502 @@
     "anfrage": {
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Heidelberg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.4425,
+     51.1946
+    ]
+   },
+   "properties": {
+    "kommune": "Mönchengladbach",
+    "land": "NW",
+    "stand": "kandidat",
+    "was": "rund 360 Knotenpunkte im Fünf-Jahres-Rhythmus (6:30–9 und 15:30–19 Uhr), dazu knapp 90 Querschnitte mit 24-Stunden-Ganglinien; online nichts",
+    "links": [
+     {
+      "titel": "moenchengladbach.de",
+      "url": "https://www.moenchengladbach.de/rathaus/buergerinfo-a-z/planen-bauen-mobilitaet-umwelt-dezernat-vi/fachbereich-stadtentwicklung-und-planung-61/abteilung-kommunale-verkehrsplanung-und-mobilitaetsplanung/motorisierter-verkehr/verkehrserhebungen"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Mönchengladbach zählt seine rund 360 Knotenpunkte reihum im Fünf-Jahres-Rhythmus (6:30–9:00 und 15:30–19:00 Uhr) und rechnet auf den Werktag hoch; für knapp 90 Querschnitte liegen 24-Stunden-Ganglinien vor. Die Zählungen gehen ins Verkehrsmodell, online steht nichts.",
+    "empfehlung": "Anfrage nach den gezählten Werten der Knotenpunktzählungen (nicht der Hochrechnung) und nach den Querschnitts-Ganglinien. Grundlage: IFG NRW.",
+    "weg": "FragDenStaat, IFG NRW",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+M%C3%B6nchengladbach",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Mönchengladbach seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nLaut Ihrer Seite „Verkehrserhebungen“ zählen Sie rund 360 Knotenpunkte im Fünf-Jahres-Rhythmus und haben für knapp 90 Querschnitte 24-Stunden-Ganglinien. Ich bitte um die gezählten Werte, nicht um die Hochrechnung auf den Werktag.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.9696,
+     51.4825
+    ]
+   },
+   "properties": {
+    "kommune": "Halle (Saale)",
+    "land": "ST",
+    "stand": "kandidat",
+    "was": "laufende Querschnittszählungen an größeren Straßen und Knotenstromzählungen an wichtigen Kreuzungen; Ergebnisse als Dienstleistung gegen Gebühr, online nichts",
+    "links": [
+     {
+      "titel": "Serviceportal Halle (Saale)",
+      "url": "https://halle.de/serviceportal/dienstleistungen/leistung/verkehrsmengendaten/398483920"
+     }
+    ],
+    "recht": "Informationszugangsgesetz Sachsen-Anhalt (IZG LSA)",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Halle lässt laufend an den größeren Straßen (Querschnitte) und an wichtigen Kreuzungen (Knotenströme) zählen, meist dienstags bis donnerstags, nach Rad, Krad, Pkw, Transporter, Lkw und Lastzug, selten auch Fußverkehr. Die Abteilung Verkehrsplanung gibt Ergebnisse für 24 Stunden, 16 Stunden (6–22 Uhr) oder die Spitzenstunde auf Antrag heraus, für 20 Euro je angefangene halbe Bearbeitungsstunde.",
+    "empfehlung": "Anfrage nach allen Zählungen seit 2015 als Tabelle (je Intervall, Strom und Fahrzeugart), vorab mit Kostenschätzung. Grundlage: Informationszugangsgesetz Sachsen-Anhalt.",
+    "weg": "FragDenStaat, IZG LSA",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Halle+%28Saale%29",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Halle (Saale) seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhre Dienstleistung „Verkehrsmengendaten“ nennt Querschnitts- und Knotenstromzählungen. Ich bitte um die Zählwerte selbst in Tabellenform, nicht um Belastungspläne je Knoten, und vorab um eine Kostenschätzung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.0817,
+     50.8806
+    ]
+   },
+   "properties": {
+    "kommune": "Gera",
+    "land": "TH",
+    "stand": "kandidat",
+    "was": "Knotenpunktzählungen von Hand einmal im Jahr (Rad, Krad, Pkw, Lkw, Lastzug, Bus) und Zählgeräte; Herausgabe auf Antrag beim Stadtplanungsamt, online nichts",
+    "links": [
+     {
+      "titel": "gera.de",
+      "url": "https://www.gera.de/bauen-stadtentwicklung/stadtplanung-gestaltung/verkehrs-mobilitaetsplanung/bereitstellung-von-verkehrsdaten"
+     },
+     {
+      "titel": "ThürTG (TLfDI)",
+      "url": "https://tlfdi.de/fileadmin/tlfdi/info/Transparenzjahr_2025/Infobroschuere_Transparenzgesetze.pdf"
+     }
+    ],
+    "recht": "Thüringer Transparenzgesetz (ThürTG) – Gebühren höchstens 500 Euro",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Gera zählt einmal im Jahr von Hand an Knotenpunkten, getrennt nach Rad, Krad, Pkw, Lkw, Lastzug und Bus, und misst zusätzlich mit Zählgeräten (Pkw, Lkw, Lastzug). Die Daten gibt das Stadtplanungsamt auf Antrag heraus (Formular auf der Stadtseite); online steht nichts.",
+    "empfehlung": "Anfrage nach allen Knotenpunktzählungen seit 2015 als Tabelle. Grundlage: Thüringer Transparenzgesetz (gilt für Gemeinden, Gebühren höchstens 500 Euro).",
+    "weg": "FragDenStaat oder Antragsformular der Stadt, ThürTG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Gera",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Gera seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nLaut Ihrer Seite „Bereitstellung von Verkehrsdaten“ zählen Sie einmal im Jahr von Hand an Knotenpunkten, getrennt nach Fahrzeugarten und Rad. Ich bitte um diese Zählungen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.9965,
+     49.2354
+    ]
+   },
+   "properties": {
+    "kommune": "Saarbrücken",
+    "land": "SL",
+    "stand": "kandidat",
+    "was": "für den Mobilitätsplan 2040 im Jahr 2025 an rund 65 Knotenpunkten (Spitzenstunden) und 20 Querschnitten (24 h) gezählt, ausgewertet im Januar 2026; online nichts",
+    "links": [
+     {
+      "titel": "Mobilitätsplan 2040",
+      "url": "https://mobilitaetsplan.saarbruecken.de/analyse_grundlagen/verkehrserhebungen"
+     },
+     {
+      "titel": "SIFG (Datenschutz Saarland)",
+      "url": "https://www.datenschutz.saarland.de/fileadmin/user_upload/uds/informationsfreiheit/IFG_Flyer_web.pdf"
+     }
+    ],
+    "recht": "Saarländisches Informationsfreiheitsgesetz (SIFG)",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Für den Mobilitätsplan 2040 hat Saarbrücken im Frühsommer 2025 (teils nach den Sommerferien) an rund 65 Knotenpunkten in der Morgen- und Nachmittagsspitze und an 20 Querschnitten über 24 Stunden gezählt; die Auswertung lag im Januar 2026 vor. Die Zählwerte stehen nicht online.",
+    "empfehlung": "Anfrage nach den Zählungen für den Mobilitätsplan 2040 und nach älteren Zählungen. Grundlage: Saarländisches Informationsfreiheitsgesetz (gilt auch für Gemeinden).",
+    "weg": "FragDenStaat, SIFG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+Saarbr%C3%BCcken",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Saarbrücken seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind insbesondere die Zählungen an rund 65 Knotenpunkten und 20 Querschnitten, die 2025 für den Mobilitätsplan Saarbrücken 2040 erhoben wurden.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.9214,
+     50.8322
+    ]
+   },
+   "properties": {
+    "kommune": "Chemnitz",
+    "land": "SN",
+    "stand": "kandidat",
+    "was": "Videozählungen an Kreuzungen durch ein beauftragtes Büro (April 2025: elf Kreuzungen, ganztägig); online nichts",
+    "links": [
+     {
+      "titel": "Pressemitteilung 7.4.2025",
+      "url": "https://www.chemnitz.de/de/aktuell/presse/pressemitteilungen/detail/verkehrszaehlungen-im-stadtgebiet"
+     }
+    ],
+    "recht": "SächsTranspG gilt für Kommunen nur per Satzung – sonst Sächsisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Chemnitz lässt Kreuzungen per Video zählen, durch ein beauftragtes Ingenieurbüro und ganztägig – im April 2025 etwa an elf Kreuzungen. Die Ergebnisse stehen nicht online.",
+    "empfehlung": "Anfrage nach den Zählungen seit 2015, ausdrücklich nach den Auswertungen der Büros. Grundlage: Sächsisches Umweltinformationsgesetz – das Transparenzgesetz gilt für Kommunen nur per Satzung.",
+    "weg": "FragDenStaat, Sächsisches Umweltinformationsgesetz",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Chemnitz",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Chemnitz seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind auch die Videozählungen an elf Kreuzungen vom April 2025 (Pressemitteilung vom 7. April 2025) und die Auswertungen, die Ihnen beauftragte Büros liefern.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.6866,
+     53.8655
+    ]
+   },
+   "properties": {
+    "kommune": "Lübeck",
+    "land": "SH",
+    "stand": "kandidat",
+    "was": "Kreuzungszählungen, ausgewertet in der Plattform eines Zähldienstleisters (Kfz nach Klassen, Rad, Fuß); eine Auswertung von 2025 liegt als PDF online",
+    "links": [
+     {
+      "titel": "Verkehrserhebung 2025 (PDF)",
+      "url": "https://www.luebeck.de/file/verkehrserhebung_2025_fruehspitze.pdf"
+     },
+     {
+      "titel": "IZG-SH (ULD)",
+      "url": "https://datenschutzzentrum.de/uploads/IZGFolien.pdf"
+     }
+    ],
+    "recht": "Informationszugangsgesetz (IZG-SH) – umfasst auch Umweltinformationen",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Online steht eine Kreuzungszählung als PDF (Forstmeisterweg, 3. Juni 2025, 7:30–8:30 Uhr): Kfz nach Fahrzeugklassen, Rad und Fuß je Arm und Abbiegestrom, erzeugt mit der Plattform eines Zähldienstleisters (mytrafficdata). Weitere Zählungen stehen nicht online.",
+    "empfehlung": "Anfrage nach allen Zählungen seit 2015, am besten als Export aus der Zählplattform (CSV/XLSX). Grundlage: Informationszugangsgesetz Schleswig-Holstein.",
+    "weg": "FragDenStaat, IZG-SH",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Hansestadt+L%C3%BCbeck",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Lübeck seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhre Auswertungen entstehen in einer Zählplattform (etwa die Verkehrserhebung Forstmeisterweg vom 3. Juni 2025); ein Export der Zählungen aus dieser Plattform genügt.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.2611,
+     53.5568
+    ]
+   },
+   "properties": {
+    "kommune": "Neubrandenburg",
+    "land": "MV",
+    "stand": "kandidat",
+    "was": "Videozählung an 24 Stellen am 12.08.2020 (6–18 Uhr; Fahrzeuge, Rad, Fuß) für das Verkehrsmodell; online nichts",
+    "links": [
+     {
+      "titel": "Pressemitteilung 10.8.2020",
+      "url": "https://www.neubrandenburg.de/Quicknavigation/Startseite/Verkehrsz%C3%A4hlung-per-Kamera.php?object=tx%2C3330.5&ModID=7&FID=3330.2750.1"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz M-V",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Neubrandenburg hat am 12. August 2020 an 24 Stellen von 6 bis 18 Uhr per Video gezählt – Fahrzeuge, Rad- und Fußverkehr – als Grundlage für das Verkehrsmodell; die Stadt kündigt auch weitere Einzelzählungen an. Ergebnisse stehen nicht online.",
+    "empfehlung": "Anfrage nach der Videozählung 2020 und den Zählungen seither. Grundlage: Informationsfreiheitsgesetz M-V.",
+    "weg": "FragDenStaat, IFG M-V",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Neubrandenburg",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Neubrandenburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint ist insbesondere die Videozählung an 24 Stellen vom 12. August 2020 (Fahrzeuge, Rad und Fuß) für Ihr Verkehrsmodell.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.1228,
+     54.3233
+    ]
+   },
+   "properties": {
+    "kommune": "Kiel",
+    "land": "SH",
+    "stand": "geliefert",
+    "was": "Knotenpunkt- und Querschnittszählungen (meist Spitzenstunden); 2025 auf Anfrage Zählberichte 2016–2019 als PDF herausgegeben, auf FragDenStaat nicht öffentlich",
+    "links": [
+     {
+      "titel": "kiel.de",
+      "url": "https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php"
+     },
+     {
+      "titel": "FragDenStaat 2025",
+      "url": "https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/"
+     },
+     {
+      "titel": "IZG-SH (ULD)",
+      "url": "https://datenschutzzentrum.de/uploads/IZGFolien.pdf"
+     }
+    ],
+    "recht": "Informationszugangsgesetz (IZG-SH) – umfasst auch Umweltinformationen",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Kiel zählt an Knotenpunkten (alle Ströme, teils mit Rad und Fuß) und an Querschnitten, meist in den Spitzenstunden, und rechnet auf 24 Stunden hoch; dazu kommen 27 Kfz-Dauerzählstellen. Auf eine Anfrage 2025 zur Werftstraße hat die Stadt Zählberichte von 2016, 2018 und 2019 als PDF geschickt – auf FragDenStaat nicht öffentlich.",
+    "empfehlung": "Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je Intervall (nicht der Hochrechnung), maschinenlesbar. Grundlage: Informationszugangsgesetz Schleswig-Holstein.",
+    "weg": "FragDenStaat, IZG-SH",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+Kiel",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Kiel seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2025 haben Sie auf eine Anfrage zur Werftstraße Zählberichte als PDF geschickt. Ich bitte um alle Zählungen mit den gezählten Werten je Intervall statt der Hochrechnung auf 24 Stunden.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.5809,
+     53.5396
+    ]
+   },
+   "properties": {
+    "kommune": "Bremerhaven",
+    "land": "HB",
+    "stand": "geliefert",
+    "was": "24-Stunden-Querschnittszählungen des Stadtplanungsamts; 2024 auf Anfrage Tageswerte zweier Stellen (31.08.2023) per E-Mail",
+    "links": [
+     {
+      "titel": "FragDenStaat 2024",
+      "url": "https://fragdenstaat.de/anfrage/verkehrszaehlung-barkhausenstrasse-und-lloydstrasse-bremerhaven/"
+     }
+    ],
+    "recht": "Bremer Informationsfreiheitsgesetz",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Das Stadtplanungsamt zählt über 24 Stunden im Querschnitt. Auf eine Anfrage 2024 hat die Stadt die Tageswerte zweier Stellen vom 31. August 2023 per E-Mail genannt; die Anfrage war vorab als gebührenfrei eingestuft.",
+    "empfehlung": "Anfrage nach allen Zählungen seit 2015 mit den Werten je Intervall. Grundlage: Bremer Informationsfreiheitsgesetz.",
+    "weg": "FragDenStaat, BremIFG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Magistrat+der+Stadt+Bremerhaven",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Bremerhaven seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2024 haben Sie auf eine Anfrage die Tageswerte der Zählung vom 31. August 2023 an der Barkhausenstraße und der Lloydstraße genannt. Ich bitte um alle Zählungen mit den Werten je Intervall.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4797,
+     51.3127
+    ]
+   },
+   "properties": {
+    "kommune": "Kassel",
+    "land": "HE",
+    "stand": "nur_karte",
+    "was": "Verkehrsmengenkarten 2022–2024 (Werktagsmittel) als PDF; die Stadt zählt außerdem regelmäßig in Kampagnen per Video und Radar",
+    "links": [
+     {
+      "titel": "kassel.de",
+      "url": "https://www.kassel.de/buerger/verkehr_und_mobilitaet/verkehrsprojekte/verkehrszaehlungen.php"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Offen sind Verkehrsmengenkarten 2022, 2023 und 2024 als PDF (Kfz je Richtung, Mittel Mo–Fr) aus den Dauerzählstellen. Das Straßenverkehrs- und Tiefbauamt zählt außerdem regelmäßig in Kampagnen per Video und Radar, mit Fahrzeugklassen.",
+    "empfehlung": "Anfrage nach den Einzelzählungen der Kampagnen (Video und Radar), nicht nach den Karten. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Kassel",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Kassel seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind Ihre Verkehrsmengenkarten; ich bitte um die Einzelzählungen Ihrer Zählkampagnen per Video und Radar.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.9158,
+     51.5413
+    ]
+   },
+   "properties": {
+    "kommune": "Göttingen",
+    "land": "NI",
+    "stand": "nur_karte",
+    "was": "stadtweite Zählung 2023/2024 (je Stelle zweimal vier Stunden, auf DTVw hochgerechnet); auf Anfrage 2026 nur die Verkehrsmengenkarte als PDF",
+    "links": [
+     {
+      "titel": "FragDenStaat 2026",
+      "url": "https://fragdenstaat.de/anfrage/verkehrszaehlung-2023-1/"
+     }
+    ],
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Göttingen hat 2023/2024 stadtweit gezählt – je Stelle zweimal vier Stunden, hochgerechnet auf den Werktag (DTVw). Auf eine Anfrage 2026 nach den Ergebnissen kam nur die Verkehrsmengenkarte 2024 als PDF.",
+    "empfehlung": "Neu anfragen, gezielt nach den gezählten Werten je Zählstelle (die zweimal vier Stunden), nicht nach der Karte. Grundlage: Niedersächsisches Umweltinformationsgesetz; die Anfrage 2026 nannte zusätzlich die Informationsfreiheitssatzung der Stadt.",
+    "weg": "FragDenStaat, Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+G%C3%B6ttingen",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Göttingen seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf die Anfrage „Verkehrszählung 2023“ (FragDenStaat, Juni 2026) haben Sie die Verkehrsmengenkarte 2024 geschickt. Ich bitte um die Zählungen selbst: die gezählten Werte je Zählstelle und Intervall, vor der Hochrechnung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.0116,
+     51.4556
+    ]
+   },
+   "properties": {
+    "kommune": "Essen",
+    "land": "NW",
+    "stand": "automatisch",
+    "was": "offen nur die Auswertungen der Dauerzählstellen 2017 (57 PDFs); Knotenpunkt- und Querschnittszählungen von Hand nicht online",
+    "links": [
+     {
+      "titel": "essen.de Verkehrserhebung",
+      "url": "https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html"
+     },
+     {
+      "titel": "Zähldaten 2017",
+      "url": "https://www.essen.de/leben/mobilitaet/zaehldaten_2017.de.html"
+     }
+    ],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Offen sind nur die Auswertungen 2017 der Essener Dauerzählstellen (57 PDFs). Die Stadt zählt außerdem von Hand an Querschnitten und Knotenpunkten, in der Regel dienstags bis donnerstags außerhalb der Ferien; diese Zählungen stehen nicht online.",
+    "empfehlung": "Anfrage nach den Knotenpunkt- und Querschnittszählungen beim Amt für Straßen und Verkehr. Grundlage: IFG NRW.",
+    "weg": "FragDenStaat, IFG NRW",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Kommunalverwaltung+Essen",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Essen seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOnline sind nur die Auswertungen Ihrer Dauerzählstellen von 2017; gemeint sind hier die Zählungen von Hand an Knotenpunkten und Querschnitten.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.0472,
+     52.2799
+    ]
+   },
+   "properties": {
+    "kommune": "Osnabrück",
+    "land": "NI",
+    "stand": "automatisch",
+    "was": "KI-Sensor an der Kreuzung Bramscher Straße/Hansastraße (Pkw, Lkw, Krad, Rad, Fuß) mit offener API; laut Stadt zusätzlich mobile Rad- und Fußzählungen",
+    "links": [
+     {
+      "titel": "Datenplattform Osnabrück",
+      "url": "https://datenplattform.osnabrueck.de/verkehrszaehlung/"
+     },
+     {
+      "titel": "Meldung mobile Zählstellen",
+      "url": "https://mobil.osnabrueck.de/de/aktuelles/daten-fuer-nachhaltige-mobilitaetsplanung-mobile-zaehlstellen-erfassen-rad-und-fussverkehr-in-osnabrueck/"
+     }
+    ],
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Offen ist ein automatischer Zähler (KI-Sensor) an der Kreuzung Bramscher Straße/Hansastraße mit fünf Klassen (Pkw, Lkw, Krad, Rad, Fuß), abrufbar über eine API (auch als CSV). Laut einer Meldung der Stadt erfassen mobile Zählstellen zusätzlich Rad- und Fußverkehr.",
+    "empfehlung": "Anfrage nach den mobilen Rad- und Fußzählungen und nach Knotenpunktzählungen. Niedersachsen hat kein Landes-IFG: Grundlage ist das Niedersächsische Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Osnabr%C3%BCck",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Osnabrück seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind auch die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     }
    }
   }
