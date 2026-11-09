@@ -1,0 +1,1860 @@
+{
+ "verkehrsmessung-alte-landstrabe/verkehrsdaten_alte-landstr_1_20250519-20250615.json": {
+  "url": "https://opendata.olpe.de/dataset/ddbee83a-7987-4b57-9786-c2227725ccb3/resource/ae3230eb-cc99-4102-9e73-c3bfc2d1407e/download/verkehrsdaten_alte-landstr_1_20250519-20250615.json",
+  "bytes": 3659488,
+  "sha256": "51382e0cb0c1048f8c3b23e25f125218d66c66e5ab0c1abdb7b575dd0dfd3f6b",
+  "ressource": "Verkehrsdaten Alte Landstraße 1",
+  "format": "geraet",
+  "header": {
+   "first_device": 8325,
+   "first_from": "2025-05-16 09:52:54Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8325,
+   "last_from": "2025-05-16 09:52:54Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 8326,
+   "next_from": "2025-05-16 09:52:55Z",
+   "next_to": "2100-01-01 22:59:59Z",
+   "count_vehicles": 9830
+  },
+  "request": {
+   "devicenr": 8325,
+   "continuous": false,
+   "from": "2025-05-19T11:52:00Z",
+   "to": "2025-06-15T00:00:00Z"
+  },
+  "fahrzeuge": 9830,
+  "erstes": "2025-05-19 11:54:02",
+  "letztes": "2025-06-12 08:48:58",
+  "codes": [
+   [
+    7,
+    8613
+   ],
+   [
+    230,
+    646
+   ],
+   [
+    10,
+    234
+   ],
+   [
+    11,
+    163
+   ],
+   [
+    3,
+    69
+   ],
+   [
+    2,
+    37
+   ],
+   [
+    8,
+    31
+   ],
+   [
+    250,
+    27
+   ],
+   [
+    6,
+    5
+   ],
+   [
+    9,
+    5
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    2,
+    5119
+   ],
+   [
+    1,
+    4711
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    9830
+   ]
+  ],
+  "stunden": [
+   28,
+   28,
+   7,
+   40,
+   178,
+   1172,
+   392,
+   655,
+   314,
+   462,
+   401,
+   575,
+   662,
+   1108,
+   916,
+   976,
+   766,
+   523,
+   254,
+   142,
+   103,
+   88,
+   19,
+   21
+  ],
+  "lagen": 24,
+  "lage_median": [
+   7.861096,
+   51.048833
+  ],
+  "lage_erste": [
+   [
+    7.861107,
+    51.048827,
+    "2025-05-19 09:46:43Z",
+    "2025-05-19 17:50:06Z"
+   ],
+   [
+    7.861098,
+    51.048815,
+    "2025-05-19 17:50:06Z",
+    "2025-05-19 18:14:13Z"
+   ],
+   [
+    7.861118,
+    51.048847,
+    "2025-05-19 18:14:13Z",
+    "2025-05-19 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessung-standort-zum-honigsack-35/datensatzbeschreibung.txt": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung.txt",
+  "bytes": 1358,
+  "sha256": "d3e032623079da5f1ccecccf159e799b15051d507ee1480681d15496e30573d1",
+  "ressource": "Datensatzbeschreibung"
+ },
+ "verkehrsmessung-standort-zum-honigsack-35/Zum Honigsack 35.csv": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.csv",
+  "bytes": 149886,
+  "sha256": "0da5512796bc8f86b7a1138da546da93e89b55fb762730e8627d5e61ddc1baad",
+  "ressource": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41"
+ },
+ "verkehrsmessung-standort-zum-honigsack-35/Zum Honigsack 35.json": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.json",
+  "bytes": 682894,
+  "sha256": "e6373d0d8d4ccef40c17f5168af14852c9ed90be991422e9435defb243ba4616",
+  "ressource": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41",
+  "format": "flach",
+  "fahrzeuge": 1925,
+  "erstes": "25.03.2026 01:14:11",
+  "letztes": "31.03.2026 23:42:41",
+  "codes": [
+   [
+    7,
+    1626
+   ],
+   [
+    11,
+    157
+   ],
+   [
+    3,
+    40
+   ],
+   [
+    2,
+    37
+   ],
+   [
+    10,
+    32
+   ],
+   [
+    230,
+    18
+   ],
+   [
+    8,
+    7
+   ],
+   [
+    9,
+    7
+   ],
+   [
+    5,
+    1
+   ]
+  ],
+  "namen": [
+   [
+    [
+     7,
+     "Pkw"
+    ],
+    1626
+   ],
+   [
+    [
+     11,
+     "Lfw"
+    ],
+    157
+   ],
+   [
+    [
+     3,
+     "Lkw"
+    ],
+    40
+   ],
+   [
+    [
+     2,
+     "PkwA"
+    ],
+    37
+   ],
+   [
+    [
+     10,
+     "Krad"
+    ],
+    32
+   ],
+   [
+    [
+     230,
+     "Radfahrer"
+    ],
+    18
+   ],
+   [
+    [
+     8,
+     "LkwA"
+    ],
+    7
+   ],
+   [
+    [
+     9,
+     "Sattel-Kfz"
+    ],
+    7
+   ],
+   [
+    [
+     5,
+     "Bus"
+    ],
+    1
+   ]
+  ],
+  "richtungen": [
+   [
+    1,
+    1022
+   ],
+   [
+    2,
+    903
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    1925
+   ]
+  ],
+  "stunden": [
+   9,
+   11,
+   5,
+   3,
+   12,
+   44,
+   45,
+   101,
+   72,
+   83,
+   82,
+   107,
+   142,
+   162,
+   191,
+   171,
+   166,
+   188,
+   127,
+   87,
+   57,
+   21,
+   28,
+   11
+  ],
+  "lagen": 0,
+  "lage_median": null,
+  "lage_erste": []
+ },
+ "verkehrsmessung-weite-schluppe/verkehrsdaten_weite_schluppe-20250626-20250709.json": {
+  "url": "https://opendata.olpe.de/dataset/367f474c-68bc-40c3-b759-b08d7b4be80e/resource/41fe33e6-3dad-4131-8016-ae8d57f98d32/download/verkehrsdaten_weite_schluppe-20250626-20250709.json",
+  "bytes": 480978,
+  "sha256": "5c9deed32b8c8a2e52bbf8423e9bf351c61106d32de2cf6651efe06ac44e30d6",
+  "ressource": "verkehrsdaten_weite_schlüppe-20250626-20250709.json",
+  "format": "geraet",
+  "header": {
+   "first_device": 8326,
+   "first_from": "2025-05-16 09:52:55Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8326,
+   "last_from": "2025-05-16 09:52:55Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 0,
+   "next_from": "",
+   "next_to": "",
+   "count_vehicles": 1278
+  },
+  "request": {
+   "devicenr": 8326,
+   "continuous": false,
+   "from": "2025-06-26T10:00:00Z",
+   "to": "2025-07-09T07:00:00Z"
+  },
+  "fahrzeuge": 1278,
+  "erstes": "2025-06-26 10:19:39",
+  "letztes": "2025-07-09 06:59:44",
+  "codes": [
+   [
+    7,
+    808
+   ],
+   [
+    230,
+    338
+   ],
+   [
+    10,
+    54
+   ],
+   [
+    11,
+    35
+   ],
+   [
+    3,
+    31
+   ],
+   [
+    8,
+    5
+   ],
+   [
+    6,
+    3
+   ],
+   [
+    2,
+    2
+   ],
+   [
+    250,
+    1
+   ],
+   [
+    5,
+    1
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    941
+   ],
+   [
+    2,
+    337
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    1278
+   ]
+  ],
+  "stunden": [
+   8,
+   7,
+   0,
+   4,
+   34,
+   95,
+   161,
+   42,
+   57,
+   54,
+   96,
+   80,
+   93,
+   120,
+   73,
+   89,
+   76,
+   75,
+   46,
+   37,
+   10,
+   11,
+   2,
+   8
+  ],
+  "lagen": 20,
+  "lage_median": [
+   7.843676,
+   51.032144
+  ],
+  "lage_erste": [
+   [
+    7.843687,
+    51.032117,
+    "2025-06-26 08:05:29Z",
+    "2025-06-27 21:59:59Z"
+   ],
+   [
+    7.843693,
+    51.032117,
+    "2025-06-26 08:05:29Z",
+    "2025-06-26 21:59:59Z"
+   ],
+   [
+    7.843625,
+    51.03219,
+    "2025-06-26 08:05:29Z",
+    "2025-06-28 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-gunsestrabe/verkehrsdaten_guensestr-kindergarten-20250616-20250620.json": {
+  "url": "https://opendata.olpe.de/dataset/ab7dfd75-5bad-4eaa-adf6-36c49b301f6e/resource/b0bea2d6-f454-44ac-a56e-9e4bed9c538f/download/verkehrsdaten_guensestr-kindergarten-20250616-20250620.json",
+  "bytes": 9321761,
+  "sha256": "e23dd7e0b6f580f5fa3b64778f0febb29ff32334a8066c8867d662574208ef9a",
+  "ressource": "Höhe Kindergarten 16.06.2025 - 20.06.2025",
+  "format": "geraet",
+  "header": {
+   "first_device": 8325,
+   "first_from": "2025-05-16 09:52:54Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8325,
+   "last_from": "2025-05-16 09:52:54Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 8326,
+   "next_from": "2025-05-16 09:52:55Z",
+   "next_to": "2100-01-01 22:59:59Z",
+   "count_vehicles": 25067
+  },
+  "request": {
+   "devicenr": 8325,
+   "continuous": false,
+   "from": "2025-06-16T12:00:00Z",
+   "to": "2025-06-20T09:00:00Z"
+  },
+  "fahrzeuge": 25067,
+  "erstes": "2025-06-16 12:00:10",
+  "letztes": "2025-06-20 08:59:23",
+  "codes": [
+   [
+    7,
+    20539
+   ],
+   [
+    11,
+    1935
+   ],
+   [
+    10,
+    773
+   ],
+   [
+    250,
+    626
+   ],
+   [
+    230,
+    459
+   ],
+   [
+    3,
+    377
+   ],
+   [
+    2,
+    255
+   ],
+   [
+    5,
+    41
+   ],
+   [
+    9,
+    38
+   ],
+   [
+    8,
+    22
+   ],
+   [
+    6,
+    2
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    13406
+   ],
+   [
+    2,
+    11661
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    25067
+   ]
+  ],
+  "stunden": [
+   38,
+   28,
+   73,
+   302,
+   640,
+   1650,
+   1444,
+   1279,
+   1448,
+   1188,
+   1396,
+   1425,
+   2076,
+   2381,
+   2431,
+   2231,
+   1727,
+   1213,
+   838,
+   495,
+   365,
+   162,
+   148,
+   89
+  ],
+  "lagen": 12,
+  "lage_median": [
+   7.8530964999999995,
+   51.0264095
+  ],
+  "lage_erste": [
+   [
+    7.852968,
+    51.028393,
+    "2025-06-16 09:40:41Z",
+    "2025-06-16 21:59:59Z"
+   ],
+   [
+    7.852997,
+    51.028393,
+    "2025-06-16 09:40:41Z",
+    "2025-06-17 21:59:59Z"
+   ],
+   [
+    7.85295,
+    51.028418,
+    "2025-06-16 09:40:41Z",
+    "2025-06-18 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-gunsestrabe/verkehrsdaten_Guensestr_26-20250620-20250626.json": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Guensestr_26-20250620-20250626.json",
+  "bytes": 10719037,
+  "sha256": "e00588671cb764d73655cd765d9d159437c5df45496eb8fd3336c6d9209b5d23",
+  "ressource": "Günsestraße 26 20.06.2025 - 26.06.2025",
+  "format": "geraet",
+  "header": {
+   "first_device": 8325,
+   "first_from": "2025-05-16 09:52:54Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8325,
+   "last_from": "2025-05-16 09:52:54Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 8326,
+   "next_from": "2025-05-16 09:52:55Z",
+   "next_to": "2100-01-01 22:59:59Z",
+   "count_vehicles": 28826
+  },
+  "request": {
+   "devicenr": 8325,
+   "continuous": false,
+   "from": "2025-06-20T10:00:00Z",
+   "to": "2025-06-26T09:30:00Z"
+  },
+  "fahrzeuge": 28826,
+  "erstes": "2025-06-20 10:00:13",
+  "letztes": "2025-06-26 09:29:59",
+  "codes": [
+   [
+    7,
+    24299
+   ],
+   [
+    11,
+    2193
+   ],
+   [
+    10,
+    856
+   ],
+   [
+    250,
+    411
+   ],
+   [
+    3,
+    383
+   ],
+   [
+    230,
+    245
+   ],
+   [
+    2,
+    221
+   ],
+   [
+    9,
+    121
+   ],
+   [
+    5,
+    68
+   ],
+   [
+    8,
+    28
+   ],
+   [
+    6,
+    1
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    14422
+   ],
+   [
+    2,
+    14404
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    28826
+   ]
+  ],
+  "stunden": [
+   57,
+   34,
+   80,
+   492,
+   1037,
+   2371,
+   1680,
+   1501,
+   1771,
+   1762,
+   2113,
+   2035,
+   2136,
+   2229,
+   2215,
+   2099,
+   1685,
+   1088,
+   885,
+   605,
+   473,
+   237,
+   160,
+   81
+  ],
+  "lagen": 21,
+  "lage_median": [
+   7.944135,
+   51.07537
+  ],
+  "lage_erste": [
+   [
+    7.853107,
+    51.02638,
+    "2025-06-20 07:44:26Z",
+    "2025-06-20 21:59:59Z"
+   ],
+   [
+    7.853132,
+    51.026392,
+    "2025-06-20 07:44:26Z",
+    "2025-06-21 21:59:59Z"
+   ],
+   [
+    7.853098,
+    51.026402,
+    "2025-06-20 07:44:26Z",
+    "2025-06-22 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-hatzenbergstrabe/verkehrsdaten_hatzenbergstr-ggue-17-20250715-20250804.json": {
+  "url": "https://opendata.olpe.de/dataset/cbb6fc6d-3322-4240-b9e4-42a34880f0c8/resource/274e0828-201b-4098-9157-874e9e5373d1/download/verkehrsdaten_hatzenbergstr-ggue-17-20250715-20250804.json",
+  "bytes": 4697926,
+  "sha256": "9d326e89748d49e5a2602cf18385e617932fab5329630b907ad6605274c02b52",
+  "ressource": "Hatzenbergstraße-20250715-20250804",
+  "format": "geraet",
+  "header": {
+   "first_device": 8326,
+   "first_from": "2025-05-16 09:52:55Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8326,
+   "last_from": "2025-05-16 09:52:55Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 0,
+   "next_from": "",
+   "next_to": "",
+   "count_vehicles": 12631
+  },
+  "request": {
+   "devicenr": 8326,
+   "continuous": false,
+   "from": "2025-07-15T11:00:00Z",
+   "to": "2025-08-04T23:59:00Z"
+  },
+  "fahrzeuge": 12631,
+  "erstes": "2025-07-15 11:00:01",
+  "letztes": "2025-07-27 10:27:44",
+  "codes": [
+   [
+    7,
+    10779
+   ],
+   [
+    11,
+    990
+   ],
+   [
+    10,
+    277
+   ],
+   [
+    5,
+    208
+   ],
+   [
+    230,
+    139
+   ],
+   [
+    3,
+    101
+   ],
+   [
+    2,
+    83
+   ],
+   [
+    250,
+    46
+   ],
+   [
+    9,
+    4
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    6,
+    1
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    2,
+    6388
+   ],
+   [
+    1,
+    6243
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    12631
+   ]
+  ],
+  "stunden": [
+   40,
+   20,
+   26,
+   121,
+   274,
+   493,
+   652,
+   786,
+   889,
+   1020,
+   1031,
+   1022,
+   1125,
+   1080,
+   856,
+   860,
+   601,
+   578,
+   462,
+   248,
+   199,
+   127,
+   68,
+   53
+  ],
+  "lagen": 13,
+  "lage_median": [
+   7.855973,
+   51.039053
+  ],
+  "lage_erste": [
+   [
+    7.855992,
+    51.039053,
+    "2025-07-15 08:17:41Z",
+    "2025-07-15 21:59:59Z"
+   ],
+   [
+    7.855973,
+    51.03905,
+    "2025-07-15 08:17:41Z",
+    "2025-07-16 21:59:59Z"
+   ],
+   [
+    7.855938,
+    51.039057,
+    "2025-07-15 08:17:41Z",
+    "2025-07-17 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-hatzenbergstrabe/verkehrsdaten_hatzenbergstr-20250709-20250715.json": {
+  "url": "https://opendata.olpe.de/dataset/cbb6fc6d-3322-4240-b9e4-42a34880f0c8/resource/e1928b0f-903c-490a-89f1-878359928133/download/verkehrsdaten_hatzenbergstr-20250709-20250715.json",
+  "bytes": 3340107,
+  "sha256": "5f372675cdc244fe110f1dd7cc3ecc7646b8051d0c867938e30aadd712587032",
+  "ressource": "Hatzenbergstr-20250709-20250715.json",
+  "format": "geraet",
+  "header": {
+   "first_device": 8326,
+   "first_from": "2025-05-16 09:52:55Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8326,
+   "last_from": "2025-05-16 09:52:55Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 0,
+   "next_from": "",
+   "next_to": "",
+   "count_vehicles": 8973
+  },
+  "request": {
+   "devicenr": 8326,
+   "continuous": false,
+   "from": "2025-07-09T08:00:00Z",
+   "to": "2025-07-15T10:00:00Z"
+  },
+  "fahrzeuge": 8973,
+  "erstes": "2025-07-09 08:00:29",
+  "letztes": "2025-07-15 09:59:35",
+  "codes": [
+   [
+    7,
+    7809
+   ],
+   [
+    11,
+    429
+   ],
+   [
+    10,
+    213
+   ],
+   [
+    230,
+    168
+   ],
+   [
+    250,
+    92
+   ],
+   [
+    5,
+    85
+   ],
+   [
+    2,
+    78
+   ],
+   [
+    3,
+    72
+   ],
+   [
+    8,
+    22
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    6,
+    2
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    4667
+   ],
+   [
+    2,
+    4306
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    8973
+   ]
+  ],
+  "stunden": [
+   15,
+   10,
+   25,
+   98,
+   178,
+   365,
+   495,
+   483,
+   614,
+   722,
+   618,
+   594,
+   677,
+   701,
+   687,
+   728,
+   615,
+   461,
+   334,
+   199,
+   176,
+   90,
+   51,
+   37
+  ],
+  "lagen": 20,
+  "lage_median": [
+   7.856005,
+   51.03906
+  ],
+  "lage_erste": [
+   [
+    7.857447,
+    51.039592,
+    "2025-07-09 05:58:33Z",
+    "2025-07-11 21:59:59Z"
+   ],
+   [
+    7.857422,
+    51.039557,
+    "2025-07-09 05:58:33Z",
+    "2025-07-15 08:09:16Z"
+   ],
+   [
+    7.857418,
+    51.039523,
+    "2025-07-09 05:58:33Z",
+    "2025-07-12 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-in-der-wuste/verkehrsdaten_In-der-Wüste-26_20251112-20251119.json": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_In-der-W%C3%BCste-26_20251112-20251119.json",
+  "bytes": 32855643,
+  "sha256": "c493e126005b373e850956826db5de0c0cd1edad31e60962d9f2cd3b939a293d",
+  "ressource": "In der Wüste 26 12.11.2025 - 19.11.2025",
+  "format": "geraet",
+  "header": {
+   "first_device": 8326,
+   "first_from": "2025-05-16T09:52:55Z",
+   "first_to": "2100-01-01T22:59:59Z",
+   "last_device": 8326,
+   "last_from": "2025-05-16T09:52:55Z",
+   "last_to": "2100-01-01T22:59:59Z",
+   "next_device": 0,
+   "next_from": "",
+   "next_to": "",
+   "count_vehicles": 70419
+  },
+  "request": {
+   "devicenr": 8326,
+   "continuous": false,
+   "from": "2025-11-12T09:30:00Z",
+   "to": "2025-11-19T10:00:00Z"
+  },
+  "fahrzeuge": 70419,
+  "erstes": "2025-11-12T09:53:43.736Z",
+  "letztes": "2025-11-18T23:57:08.983Z",
+  "codes": [
+   [
+    7,
+    59424
+   ],
+   [
+    11,
+    6236
+   ],
+   [
+    250,
+    1727
+   ],
+   [
+    3,
+    1110
+   ],
+   [
+    5,
+    692
+   ],
+   [
+    9,
+    423
+   ],
+   [
+    2,
+    418
+   ],
+   [
+    10,
+    204
+   ],
+   [
+    8,
+    162
+   ],
+   [
+    230,
+    23
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    35456
+   ],
+   [
+    2,
+    34963
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    70419
+   ]
+  ],
+  "stunden": [
+   409,
+   206,
+   164,
+   126,
+   224,
+   908,
+   1627,
+   3190,
+   3523,
+   3476,
+   4425,
+   4595,
+   5252,
+   5601,
+   5936,
+   5908,
+   6352,
+   5670,
+   4335,
+   2840,
+   2034,
+   1694,
+   1288,
+   636
+  ],
+  "lagen": 9,
+  "lage_median": [
+   7.841215,
+   51.034742
+  ],
+  "lage_erste": [
+   [
+    7.841277,
+    51.034715,
+    "2025-11-12T09:54:42.000Z",
+    "2025-11-13T23:59:59.000Z"
+   ],
+   [
+    7.841215,
+    51.034825,
+    "2025-11-12T09:54:42.000Z",
+    "2025-11-12T23:59:59.000Z"
+   ],
+   [
+    7.841205,
+    51.03473,
+    "2025-11-12T09:54:42.000Z",
+    "2025-11-14T23:59:59.000Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-in-der-wuste/verkehrsdaten_In_der_Wueste-20250620-20250626.json": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_In_der_Wueste-20250620-20250626.json",
+  "bytes": 25255390,
+  "sha256": "76b187352830a6f5f0e8b6c5fde9e011003b9da06f29546c43b1fee9e26a06e5",
+  "ressource": "In der Wüste Höhe Freizeitbad 20.06.2025 - 26.06.2025",
+  "format": "geraet",
+  "header": {
+   "first_device": 8326,
+   "first_from": "2025-05-16 09:52:55Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8326,
+   "last_from": "2025-05-16 09:52:55Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 0,
+   "next_from": "",
+   "next_to": "",
+   "count_vehicles": 67926
+  },
+  "request": {
+   "devicenr": 8326,
+   "continuous": false,
+   "from": "2025-06-20T10:00:00Z",
+   "to": "2025-06-26T09:30:00Z"
+  },
+  "fahrzeuge": 67926,
+  "erstes": "2025-06-20 10:00:01",
+  "letztes": "2025-06-26 09:18:40",
+  "codes": [
+   [
+    7,
+    55933
+   ],
+   [
+    11,
+    5772
+   ],
+   [
+    250,
+    1974
+   ],
+   [
+    10,
+    1462
+   ],
+   [
+    3,
+    968
+   ],
+   [
+    5,
+    730
+   ],
+   [
+    2,
+    470
+   ],
+   [
+    9,
+    370
+   ],
+   [
+    8,
+    163
+   ],
+   [
+    230,
+    77
+   ],
+   [
+    6,
+    7
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    36639
+   ],
+   [
+    2,
+    31287
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    67926
+   ]
+  ],
+  "stunden": [
+   150,
+   107,
+   301,
+   1191,
+   2137,
+   4096,
+   3741,
+   3316,
+   3246,
+   3489,
+   4784,
+   4960,
+   5157,
+   5322,
+   5491,
+   5214,
+   4284,
+   3104,
+   2334,
+   1883,
+   1520,
+   1100,
+   694,
+   305
+  ],
+  "lagen": 20,
+  "lage_median": [
+   7.8435865,
+   51.032144
+  ],
+  "lage_erste": [
+   [
+    7.841567,
+    51.033545,
+    "2025-06-20 07:57:33Z",
+    "2025-06-20 21:59:59Z"
+   ],
+   [
+    7.841458,
+    51.033485,
+    "2025-06-20 07:57:33Z",
+    "2025-06-21 21:59:59Z"
+   ],
+   [
+    7.841548,
+    51.033572,
+    "2025-06-20 07:57:33Z",
+    "2025-06-22 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-k18/verkehrsdaten_k18-20250806-20250813.json": {
+  "url": "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a/download/verkehrsdaten_k18-20250806-20250813.json",
+  "bytes": 2585003,
+  "sha256": "e21ad4b9d72101154807a906a0a3fbe3d7ccad277823d0e5dcdfa02ef17ec853",
+  "ressource": "verkehrsdaten_K18-20250806-20250813.json",
+  "format": "geraet",
+  "header": {
+   "first_device": 8326,
+   "first_from": "2025-05-16 09:52:55Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8326,
+   "last_from": "2025-05-16 09:52:55Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 0,
+   "next_from": "",
+   "next_to": "",
+   "count_vehicles": 6943
+  },
+  "request": {
+   "devicenr": 8326,
+   "continuous": false,
+   "from": "2025-08-06T11:30:00Z",
+   "to": "2025-08-13T14:30:00Z"
+  },
+  "fahrzeuge": 6943,
+  "erstes": "2025-08-07 06:52:21",
+  "letztes": "2025-08-13 12:33:09",
+  "codes": [
+   [
+    7,
+    3928
+   ],
+   [
+    10,
+    2009
+   ],
+   [
+    11,
+    367
+   ],
+   [
+    2,
+    256
+   ],
+   [
+    3,
+    193
+   ],
+   [
+    230,
+    79
+   ],
+   [
+    8,
+    50
+   ],
+   [
+    9,
+    44
+   ],
+   [
+    250,
+    12
+   ],
+   [
+    5,
+    5
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    2,
+    3556
+   ],
+   [
+    1,
+    3387
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    6943
+   ]
+  ],
+  "stunden": [
+   19,
+   8,
+   25,
+   128,
+   143,
+   162,
+   178,
+   281,
+   444,
+   549,
+   617,
+   712,
+   755,
+   603,
+   662,
+   543,
+   457,
+   260,
+   170,
+   117,
+   57,
+   23,
+   22,
+   8
+  ],
+  "lagen": 7,
+  "lage_median": [
+   7.901947,
+   51.073185
+  ],
+  "lage_erste": [
+   [
+    7.901935,
+    51.073192,
+    "2025-08-07 06:51:25Z",
+    "2025-08-07 21:59:59Z"
+   ],
+   [
+    7.901952,
+    51.073172,
+    "2025-08-07 06:51:25Z",
+    "2025-08-08 21:59:59Z"
+   ],
+   [
+    7.901912,
+    51.073212,
+    "2025-08-07 06:51:25Z",
+    "2025-08-10 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-oberveischede/verkehrsdaten_feuerwehrhaus_oberveischede_20250709-20250715.json": {
+  "url": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66/resource/3caedc6a-4498-42a6-8a54-95ff132d45f4/download/verkehrsdaten_feuerwehrhaus_oberveischede_20250709-20250715.json",
+  "bytes": 1124300,
+  "sha256": "49830cd9283beac1de8a4e56570a153a18a923f3afe4a27c05b83da5a3812b07",
+  "ressource": "Feuerwehrhaus_Oberveischede_20250709-20250715",
+  "format": "geraet",
+  "header": {
+   "first_device": 8325,
+   "first_from": "2025-05-16 09:52:54Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8325,
+   "last_from": "2025-05-16 09:52:54Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 8326,
+   "next_from": "2025-05-16 09:52:55Z",
+   "next_to": "2100-01-01 22:59:59Z",
+   "count_vehicles": 3017
+  },
+  "request": {
+   "devicenr": 8325,
+   "continuous": false,
+   "from": "2025-07-09T15:00:00Z",
+   "to": "2100-01-01T23:59:00Z"
+  },
+  "fahrzeuge": 3017,
+  "erstes": "2025-07-09 15:00:23",
+  "letztes": "2025-07-15 10:46:27",
+  "codes": [
+   [
+    7,
+    2111
+   ],
+   [
+    230,
+    340
+   ],
+   [
+    11,
+    216
+   ],
+   [
+    5,
+    118
+   ],
+   [
+    3,
+    75
+   ],
+   [
+    2,
+    70
+   ],
+   [
+    10,
+    65
+   ],
+   [
+    8,
+    12
+   ],
+   [
+    250,
+    4
+   ],
+   [
+    9,
+    3
+   ],
+   [
+    6,
+    3
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    1525
+   ],
+   [
+    2,
+    1492
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    3017
+   ]
+  ],
+  "stunden": [
+   13,
+   5,
+   41,
+   83,
+   112,
+   154,
+   169,
+   175,
+   195,
+   192,
+   272,
+   196,
+   203,
+   210,
+   188,
+   199,
+   193,
+   136,
+   88,
+   78,
+   42,
+   22,
+   17,
+   34
+  ],
+  "lagen": 7,
+  "lage_median": [
+   7.951253,
+   51.076118
+  ],
+  "lage_erste": [
+   [
+    7.951297,
+    51.076097,
+    "2025-07-09 12:40:09Z",
+    "2025-07-10 21:59:59Z"
+   ],
+   [
+    7.951248,
+    51.076118,
+    "2025-07-09 12:40:09Z",
+    "2025-07-09 21:59:59Z"
+   ],
+   [
+    7.951262,
+    51.076103,
+    "2025-07-09 12:40:09Z",
+    "2025-07-11 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-oberveischede/verkehrsdaten_Oberveischede-20250626-20250708.json": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Oberveischede-20250626-20250708.json",
+  "bytes": 44147308,
+  "sha256": "41dbc47ee075f23f0abb431585c6f184a7b2186665332eddda299a445bb835ee",
+  "ressource": "Ortseingang Oberveischede 26.06.2025 - 08.07.2025",
+  "format": "geraet",
+  "header": {
+   "first_device": 8325,
+   "first_from": "2025-05-16 09:52:54Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8325,
+   "last_from": "2025-05-16 09:52:54Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 8326,
+   "next_from": "2025-05-16 09:52:55Z",
+   "next_to": "2100-01-01 22:59:59Z",
+   "count_vehicles": 118742
+  },
+  "request": {
+   "devicenr": 8325,
+   "continuous": false,
+   "from": "2025-06-26T10:00:00Z",
+   "to": "2025-07-08T10:00:00Z"
+  },
+  "fahrzeuge": 118742,
+  "erstes": "2025-06-26 10:00:09",
+  "letztes": "2025-07-08 09:59:59",
+  "codes": [
+   [
+    7,
+    86253
+   ],
+   [
+    11,
+    12723
+   ],
+   [
+    3,
+    5928
+   ],
+   [
+    9,
+    4862
+   ],
+   [
+    250,
+    2839
+   ],
+   [
+    10,
+    1955
+   ],
+   [
+    2,
+    1683
+   ],
+   [
+    8,
+    1284
+   ],
+   [
+    6,
+    515
+   ],
+   [
+    5,
+    443
+   ],
+   [
+    230,
+    257
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    61971
+   ],
+   [
+    2,
+    56771
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    118742
+   ]
+  ],
+  "stunden": [
+   421,
+   401,
+   896,
+   3514,
+   5014,
+   7558,
+   6504,
+   7094,
+   7290,
+   7665,
+   7999,
+   8659,
+   8964,
+   8631,
+   8560,
+   8219,
+   6509,
+   4549,
+   3347,
+   2568,
+   1886,
+   1111,
+   835,
+   548
+  ],
+  "lagen": 13,
+  "lage_median": [
+   7.944147,
+   51.07539
+  ],
+  "lage_erste": [
+   [
+    7.944165,
+    51.075367,
+    "2025-06-26 08:10:31Z",
+    "2025-06-26 21:59:59Z"
+   ],
+   [
+    7.944127,
+    51.075392,
+    "2025-06-26 08:10:31Z",
+    "2025-06-27 21:59:59Z"
+   ],
+   [
+    7.944135,
+    51.075388,
+    "2025-06-26 08:10:31Z",
+    "2025-06-28 21:59:59Z"
+   ]
+  ]
+ },
+ "verkehrsmessungen-rochusstrabe/verkehrsdaten_Rochusstr-20250827-20250908.json": {
+  "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Rochusstr-20250827-20250908.json",
+  "bytes": 18280427,
+  "sha256": "7aa8fa32ecef27974f4c8772b26f3d35f37e528ca91c3731a2dca4ab57e384b6",
+  "ressource": "Verkehrsmessung 27.08.2025 - 08.09.2025",
+  "format": "geraet",
+  "header": {
+   "first_device": 8326,
+   "first_from": "2025-05-16 09:52:55Z",
+   "first_to": "2100-01-01 22:59:59Z",
+   "last_device": 8326,
+   "last_from": "2025-05-16 09:52:55Z",
+   "last_to": "2100-01-01 22:59:59Z",
+   "next_device": 0,
+   "next_from": "",
+   "next_to": "",
+   "count_vehicles": 49168
+  },
+  "request": {
+   "devicenr": 8326,
+   "continuous": false,
+   "from": "2025-08-27T15:00:00Z",
+   "to": "2025-09-08T13:59:00Z"
+  },
+  "fahrzeuge": 49168,
+  "erstes": "2025-08-27 15:00:05",
+  "letztes": "2025-09-07 17:26:20",
+  "codes": [
+   [
+    7,
+    41024
+   ],
+   [
+    11,
+    4961
+   ],
+   [
+    10,
+    1149
+   ],
+   [
+    250,
+    688
+   ],
+   [
+    3,
+    570
+   ],
+   [
+    230,
+    465
+   ],
+   [
+    2,
+    212
+   ],
+   [
+    5,
+    33
+   ],
+   [
+    9,
+    32
+   ],
+   [
+    8,
+    30
+   ],
+   [
+    6,
+    4
+   ]
+  ],
+  "namen": [],
+  "richtungen": [
+   [
+    1,
+    27076
+   ],
+   [
+    2,
+    22092
+   ]
+  ],
+  "spuren": [
+   [
+    0,
+    49168
+   ]
+  ],
+  "stunden": [
+   70,
+   52,
+   126,
+   626,
+   1256,
+   3588,
+   2978,
+   2826,
+   3103,
+   3286,
+   3608,
+   3622,
+   3759,
+   3726,
+   3786,
+   3828,
+   3178,
+   2132,
+   1501,
+   980,
+   541,
+   291,
+   179,
+   126
+  ],
+  "lagen": 12,
+  "lage_median": [
+   7.850452499999999,
+   51.031727
+  ],
+  "lage_erste": [
+   [
+    7.850472,
+    51.031767,
+    "2025-08-27 12:18:29Z",
+    "2025-08-27 21:59:59Z"
+   ],
+   [
+    7.850512,
+    51.031713,
+    "2025-08-27 12:18:29Z",
+    "2025-08-28 21:59:59Z"
+   ],
+   [
+    7.850523,
+    51.031727,
+    "2025-08-27 12:18:29Z",
+    "2025-08-29 21:59:59Z"
+   ]
+  ]
+ }
+}
