@@ -1,0 +1,44 @@
+Datensatzbeschreibung
+=====================
+
+Titel
+Schülerzahlen der Franziskusschule nach Jahrgang im jeweiligen Schuljahr
+
+Kurzbeschreibung
+Der Datensatz enthält die Schülerzahlen der Franziskusschule in Olpe nach Schulzweig und Jahrgangsstufe für das jeweilige Schuljahr. Die Franziskusschule ist in der Ausgangsstatistik gesondert von den städtischen Schulen ausgewiesen.
+
+Herausgeber
+Kreisstadt Olpe
+
+Fachbereich / Quelle
+Amt 40 – Statistische Erfassung der Schülerzahlen
+
+Räumlicher Bezug
+Kreisstadt Olpe
+
+Zeitlicher Bezug
+Schuljahr 2025/2026; Stichtag 15.10.2025
+
+Aktualisierungsintervall
+Jährlich, sofern eine entsprechende Schulstatistik vorliegt
+
+Lizenzempfehlung
+Datenlizenz Deutschland – Namensnennung – Version 2.0
+Namensnennung: Kreisstadt Olpe
+
+Enthaltene Formate
+CSV (UTF-8 mit BOM, Semikolon als Trennzeichen), JSON, XML, TXT und Original-PDF
+
+Felder
+- schuljahr
+- stichtag
+- schule
+- schulart
+- jahrgang
+- schueler_gesamt
+
+Hinweise zur Nutzung
+Leere Felder bedeuten, dass in der Ausgangsstatistik kein Wert ausgewiesen wurde. Sie sind nicht automatisch als Nullwert zu interpretieren. Summen- und Zwischenzeilen sind anhand der Bezeichnungen und Hinweise zu berücksichtigen. Das Original-PDF ist als Quellenbeleg beigefügt.
+
+Quelle
+Statistische Erfassung der Schülerzahlen im Schuljahr 2025/2026, Amt 40, Stand 15.10.2025.

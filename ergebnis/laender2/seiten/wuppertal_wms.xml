@@ -1,0 +1,1125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "https://maps.wuppertal.de/verkehr?request=DTD" [<!ELEMENT VendorSpecificCapabilities EMPTY>]>
+<WMT_MS_Capabilities version="1.1.1" updateSequence="0">
+  <Service>
+    <Name>OGC:WMS</Name>
+    <Title>Offener Wuppertaler WMS - Verkehrsdaten</Title>
+    <Abstract>Der frei verfügbare WMS der Stadt Wuppertal</Abstract>
+    <KeywordList>
+      <Keyword>OGC services</Keyword>
+      <Keyword>wuppertal</Keyword>
+    </KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://www.wuppertal.de/microsite/geoportal/index.php"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Geodatenzentrum</ContactPerson>
+        <ContactOrganization>Stadt Wuppertal</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition></ContactPosition>
+      <ContactAddress>
+        <AddressType>postal</AddressType>
+        <Address>Johannes-Rau-Platz 1</Address>
+        <City>Wuppertal</City>
+        <StateOrProvince>NRW</StateOrProvince>
+        <PostCode>42275</PostCode>
+        <Country>Germany</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone>+49 202 563 5399</ContactVoiceTelephone>
+      <ContactFacsimileTelephone></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress>geodatenzentrum@stadt.wuppertal.de</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>None</Fees>
+    <AccessConstraints>None</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.wuppertal.de/verkehr?"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>image/png; subtype=8bit</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/x-ms-bmp</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.wuppertal.de/verkehr?"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>text/plain</Format>
+        <Format>text/html</Format>
+        <Format>application/gml+xml; version=2.1</Format>
+        <Format>application/gml+xml; version=3.0</Format>
+        <Format>application/gml+xml; version=3.1</Format>
+        <Format>application/gml+xml; version=3.2</Format>
+        <Format>text/xml; subtype=gml/2.1.2</Format>
+        <Format>text/xml; subtype=gml/3.0.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.2.1</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.wuppertal.de/verkehr?"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/png; subtype=8bit</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/x-ms-bmp</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://maps.wuppertal.de/verkehr?"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetLegendGraphic>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+    </Exception>
+    <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+      <Title>Stadt Wuppertal - Verkehr</Title>
+      <Abstract>Dieser Dienst stellt die Verkehrsdatendaten der Stadt Wuppertal zur Verfügung.</Abstract>
+      <SRS>EPSG:25832</SRS>
+      <SRS>EPSG:4326</SRS>
+      <SRS>EPSG:4258</SRS>
+      <SRS>EPSG:31466</SRS>
+      <SRS>EPSG:31467</SRS>
+      <SRS>EPSG:3857</SRS>
+      <SRS>EPSG:3035</SRS>
+      <SRS>EPSG:3044</SRS>
+      <SRS>EPSG:3045</SRS>
+      <LatLonBoundingBox minx="6.99062929" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+      <BoundingBox SRS="EPSG:25832" minx="359312.63214025" miny="5662162.82306526" maxx="388699.92654467" maxy="5696223.75304283"/>
+      <BoundingBox SRS="EPSG:4326" minx="6.99062929" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+      <BoundingBox SRS="EPSG:4258" minx="6.99062929" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+      <BoundingBox SRS="EPSG:31466" minx="2568981.14266817" miny="5663238.82294288" maxx="2598105.25973185" maxy="5697078.47942478"/>
+      <BoundingBox SRS="EPSG:31467" minx="3359329.72427545" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698062.16699981"/>
+      <BoundingBox SRS="EPSG:3857" minx="778193.29288734" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+      <BoundingBox SRS="EPSG:3035" minx="4110269.34625441" miny="3113104.98179480" maxx="4140103.50718672" maxy="3147556.62718088"/>
+      <BoundingBox SRS="EPSG:3044" minx="359312.63214025" miny="5662162.82306526" maxx="388699.92654467" maxy="5696223.75304283"/>
+      <BoundingBox SRS="EPSG:3045" minx="-60415.61575452" miny="5688467.17679075" maxx="-28344.26936973" maxy="5724809.36711013"/>
+      <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>strassenhierarchie</Name>
+        <Title>Strassenhierarchie</Title>
+        <Abstract>Inhalt: Bearbeitungen auf Grundlage des Straßennetzes aus dem Wuppertaler Verkehrsmodell. Ausgeprägt wird die Straßenhierarchie nach dem Beschlussstand Dezember 2024 auf Grundlage der Erarbeitungen aus dem Analysejahr 2022. Sichtbarkeit: Öffentlich, Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes. Stadt Wuppertal 2025. </Abstract>
+        <KeywordList>
+          <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_strassenhierarchie.png</Keyword>
+          <Keyword>carmaconf://infoBoxMapping:header: 'Strassenhierarchie'</Keyword>
+          <Keyword>carmaconf://infoBoxMapping:title: p.str_hierarchie</Keyword>
+          <Keyword>carmaconf://infoBoxMapping:subtitle:'Straßenname: ' + p.str_name</Keyword>
+          <Keyword>carmaconf://infoBoxMapping:headerColor: "#006c72"</Keyword>
+          <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+        </KeywordList>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:3857</SRS>
+        <SRS>EPSG:3035</SRS>
+        <SRS>EPSG:3044</SRS>
+        <SRS>EPSG:3045</SRS>
+        <SRS>EPSG:31466</SRS>
+        <LatLonBoundingBox minx="6.99062929" miny="51.14631009" maxx="7.32710809" maxy="51.33123950"/>
+        <BoundingBox SRS="EPSG:25832" minx="359453.27602588" miny="5667425.79207547" maxx="383455.25076350" maxy="5688577.87817815"/>
+        <BoundingBox SRS="EPSG:4326" minx="6.99062929" miny="51.14631009" maxx="7.32710809" maxy="51.33123950"/>
+        <BoundingBox SRS="EPSG:3857" minx="778193.29288734" miny="6647215.20408222" maxx="815649.94156608" maxy="6680096.63717561"/>
+        <BoundingBox SRS="EPSG:3035" minx="4110480.43788470" miny="3118438.13181706" maxx="4134755.48206288" maxy="3139912.13857815"/>
+        <BoundingBox SRS="EPSG:3044" minx="359453.27602588" miny="5667425.79207547" maxx="383455.25076350" maxy="5688577.87817815"/>
+        <BoundingBox SRS="EPSG:3045" minx="-59852.66674932" miny="5694138.71708126" maxx="-34207.96560455" maxy="5717179.23631905"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569084.53695062" miny="5668390.69038921" maxx="2592906.76676797" maxy="5689334.55260866"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="32" height="32">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_kgliederung_strassenhierarchie.png"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>Strassenhierarchie</Name>
+          <Title>Strassenhierarchie</Title>
+          <LegendURL width="32" height="32">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_kgliederung_strassenhierarchie.png"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="7.91959595"/>
+      </Layer>
+      <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Title>Verkehrsberuhigung</Title>
+        <Abstract>Alle Daten zu Verkehrsberuhigungsmaßnahmen im Stadtgebiet von Wuppertal.</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:31466</SRS>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:4258</SRS>
+        <SRS>EPSG:31467</SRS>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+        <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+        <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+        <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>einstr</Name>
+          <Title>Einbahnstraßen</Title>
+          <Abstract>Inhalt: Auszug aus dem Wuppertaler Verkehrsmodell mit den Straßenmittelachsen der Einbahnstraßen im Stadtgebiet Wuppertal, Lage abgestimmt auf die Digitale Grundkarte DGK, ausgeprägt werden die Liniensegmente mit Signaturen (Fahrtrichtung, Freigabe für Radfahrer, unechte Einbahnstraßen), Fortführung bei Bedarf. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_einstr.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/einbahnstra%C3%9Fen-wuppertal</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=7d86b75c-19ed-4c3d-8221-282f9e4fc342"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_verkehrsmodel_einbahnstr.png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>zone30</Name>
+          <Title>Tempo 30 Zonen</Title>
+          <Abstract>Inhalt: Flächenhafte Darstellung aller Tempo 30-Zonen in Wuppertal, konstruiert auf der DGK anhand der vorhandenen Akten und Pläne (insb. verkehrsrechtliche Anordnungen), PDF-Übersichtspläne mit allen Verkehrsberuhigungsmaßnahmen in einer Zone sind über die Sachdatenabfrage verfügbar. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_zone30.png</Keyword>
+            <Keyword>carmaconf://infoBoxMapping:function createInfoBoxInfo(p) {let color = "#22FFBE"; const info = { headerColor: color, header: 'Tempo 30-Zonen', title: 'Zone: ' +p.zone, genericLinks: [{url: p.url, tooltip: "Dokument", iconname: "file-pdf-o"}], additionalInfo: 'Beschluss vom: ' + p.dat_besch, }; return info; }</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/tempo-30-zonen-wuppertal-beschilderung</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/tempo_30/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=c000666a-82e0-4b79-8939-334ce241d542"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_zone30.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="791.95959493"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>sch30</Name>
+          <Title>Tempo 30 Zonen Beschilderung</Title>
+          <Abstract>Inhalt: Punktförmige Darstellung aller Beschilderungsstandorte von Tempo 30-Zonen in Wuppertal, digitalisiert auf der DGK anhand der vorhandenen Akten und Pläne (insb. verkehrsrechtliche Anordnungen). Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_sch30.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/tempo-30-zonen-wuppertal-beschilderung</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/tempo_30_schilder/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=7e233e24-1329-4cdc-974a-6cb5e9cbb563"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_sch30.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="3.959"/>
+        </Layer>
+      </Layer>
+      <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Title>Verkehrsbelastung</Title>
+        <Abstract>Alle Daten zu Verkehrsbelastungen im Stadtgebiet von Wuppertal.</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:4258</SRS>
+        <SRS>EPSG:31466</SRS>
+        <SRS>EPSG:31467</SRS>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+        <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+        <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+        <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+        <ScaleHint min="0.0" max="791.95959493"/>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>vbel2020</Name>
+          <Title>Kfz-Verkehrsbelastung 2020</Title>
+          <Abstract>Inhalt: Durchschnittlicher werktäglicher (Mo-Fr) Kfz-Tagesverkehr DTVw in Wuppertal, Jahresmittelwert für 2020, Querschnittsbelastung (beide Fahrtrichtungen), berechnet aus dem Verkehrsmodell der Stadt Wuppertal unter Einbeziehung sowohl von kontinuierlichen als auch von stichprobenhaften Verkehrszählungen. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_vbel2020.png</Keyword>
+            <Keyword>carmaconf://infoBoxMapping:function createInfoBoxInfo(p) { let color = ""; if (p.QUERS_BEL>=0 &amp;&amp; p.QUERS_BEL &lt;= 1000){color='#D1FF0F';} if (p.QUERS_BEL>1000 &amp;&amp; p.QUERS_BEL &lt;= 2500){color='#E6E600';} if (p.QUERS_BEL>2500 &amp;&amp; p.QUERS_BEL &lt;= 5000){color='#55FF00';} if (p.QUERS_BEL>5000 &amp;&amp; p.QUERS_BEL &lt;= 7500){color='#38A800';} if (p.QUERS_BEL>7500 &amp;&amp; p.QUERS_BEL &lt;= 10000){color='#00C5FF';} if (p.QUERS_BEL>10000 &amp;&amp; p.QUERS_BEL &lt;= 15000){color='#005CE6';} if (p.QUERS_BEL>15000 &amp;&amp; p.QUERS_BEL &lt;= 20000){color='#A87000';} if (p.QUERS_BEL>20000 &amp;&amp; p.QUERS_BEL &lt;= 25000){color='#FFAA00';} if (p.QUERS_BEL>25000 &amp;&amp; p.QUERS_BEL &lt;= 30000){color='#FF7F7F';} if (p.QUERS_BEL>30000 &amp;&amp; p.QUERS_BEL &lt;= 40000){color='#FF0000';} if (p.QUERS_BEL>40000 &amp;&amp; p.QUERS_BEL &lt;= 50000){color='#FF00C5';} if (p.QUERS_BEL>50000 &amp;&amp; p.QUERS_BEL &lt;= 100000){color='#8400A8';} const info = { headerColor: color, header: 'Verkehrsbelastung 2020 ', title: p.STR_NAME, subtitle:'Querschnittsbelastung: '+ Math.floor(p.QUERS_BEL) +' Kfz / Tag', }; return info; }</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/verkehrsbelastung_2020/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_verkehrsbelastung.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="791.95959493"/>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>vbel2013</Name>
+          <Title>Kfz-Verkehrsbelastung 2013</Title>
+          <Abstract>Inhalt: Durchschnittlicher werktäglicher (Mo-Fr) Kfz-Tagesverkehr DTVw in Wuppertal, Jahresmittelwert für 2013, Querschnittsbelastung (beide Fahrtrichtungen), berechnet aus dem Verkehrsmodell der Stadt Wuppertal unter Einbeziehung sowohl von kontinuierlichen als auch von stichprobenhaften Verkehrszählungen. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_vbel2013.png</Keyword>
+            <Keyword>carmaconf://infoBoxMapping:function createInfoBoxInfo(p) { let color = ""; if (p.QUERS_BEL>=0 &amp;&amp; p.QUERS_BEL &lt;= 1000){color='#D1FF0F';} if (p.QUERS_BEL>1000 &amp;&amp; p.QUERS_BEL &lt;= 2500){color='#E6E600';} if (p.QUERS_BEL>2500 &amp;&amp; p.QUERS_BEL &lt;= 5000){color='#55FF00';} if (p.QUERS_BEL>5000 &amp;&amp; p.QUERS_BEL &lt;= 7500){color='#38A800';} if (p.QUERS_BEL>7500 &amp;&amp; p.QUERS_BEL &lt;= 10000){color='#00C5FF';} if (p.QUERS_BEL>10000 &amp;&amp; p.QUERS_BEL &lt;= 15000){color='#005CE6';} if (p.QUERS_BEL>15000 &amp;&amp; p.QUERS_BEL &lt;= 20000){color='#A87000';} if (p.QUERS_BEL>20000 &amp;&amp; p.QUERS_BEL &lt;= 25000){color='#FFAA00';} if (p.QUERS_BEL>25000 &amp;&amp; p.QUERS_BEL &lt;= 30000){color='#FF7F7F';} if (p.QUERS_BEL>30000 &amp;&amp; p.QUERS_BEL &lt;= 40000){color='#FF0000';} if (p.QUERS_BEL>40000 &amp;&amp; p.QUERS_BEL &lt;= 50000){color='#FF00C5';} if (p.QUERS_BEL>50000 &amp;&amp; p.QUERS_BEL &lt;= 100000){color='#8400A8';} const info = { headerColor: color, header: 'Verkehrsbelastung 2013 ', title: p.STR_NAME, subtitle:'Querschnittsbelastung: '+ Math.floor(p.QUERS_BEL) +' Kfz / Tag', }; return info; }</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/verkehrsbelastung_2013/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_verkehrsbelastung.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="791.95959493"/>
+        </Layer>
+      </Layer>
+      <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>carsharing</Name>
+        <Title>Carsharing</Title>
+        <Abstract>Inhalt: Carsharing-Stationen von in Wuppertal aktiven Betreibern (z.B. cambio, Flinkster, RUHRAUTOe) im Wuppertaler Stadtgebiet; erstmalig erhoben im Dezember 2017 als Punktgeometrie mit einigen über die Sachdatenabfrage verfügbaren Fachattributen; Aktualisierung auf Grundlage einer von cambio bereitgestellten fortgeschriebenen Stationsliste. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+        <KeywordList>
+          <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+          <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_carsharing.png</Keyword>
+          <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/carsharing-stationen-wuppertal</Keyword>
+          <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/carsharing/style.json</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:31466</SRS>
+        <SRS>EPSG:31467</SRS>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:3857</SRS>
+        <SRS>EPSG:4258</SRS>
+        <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+        <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+        <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+        <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+        <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <MetadataURL type="TC211">
+          <Format>application/xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=ce0c3f0f-912e-45d8-90c4-cdd849572142"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="32" height="32">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_carsharing.png"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="59.0"/>
+      </Layer>
+      <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Title>Parken</Title>
+        <Abstract>Alle Daten zum Thema Parken im Stadtgebiet von Wuppertal.</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:31466</SRS>
+        <SRS>EPSG:3857</SRS>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:4258</SRS>
+        <SRS>EPSG:31467</SRS>
+        <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+        <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+        <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+        <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+        <ScaleHint min="0.0" max="59.39696962"/>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>kb_parken</Name>
+          <Title>Behindertenparkplätze</Title>
+          <Abstract>Inhalt: Gemäß Straßenverkehrsordnung (StVO) ausgeschilderte Behindertenparkplätze im Stadtgebiet von Wuppertal, erfasst auf Basis der Amtlichen Basiskarte ABK und kommunaler Orthofotos. Angabe der Anzahl, Parkzeit und Parkdauer; fortlaufend aktualisiert. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://icon:mobi/Behindertenparkplatz</Keyword>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_behindertenparkplaetze.png</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaconf://featuredUntil:2027.01.17</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/kb_parken/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:3857</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/verkehr_behindertenparkplaetze.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="59.39696962"/>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>bewohnerbereiche</Name>
+          <Title>Bewohnerparkbereiche</Title>
+          <Abstract>Inhalt: Anlassbezogen aktualisierte Bewohnerparkbereiche im Stadtgebiet Wuppertal, erstmalig konstruiert auf der Grundlage der Amtlichen Basiskarte ABK in 03/2023 anhand der Straßen- und Adressbereichszuordnungen in der öffentlichen Bewohnerparkzonenliste sowie über einen Abgleich mit dem Verkehrszeichenkataster; Bewohnerparkbereiche sind diejenigen Flächen innerhalb von Bewohnerparkzonen, auf denen PKW mit einem für die jeweilige Zone gültigen Bewohnerparkausweis geparkt werden dürfen. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_bewohnerbereiche.png</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/bewohnerparkbereiche-wuppertal</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/bewohnerparkbereiche/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:3857</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=51d67182-86a3-4e1d-97bf-9dc30b0d9097"/>
+          </MetadataURL>
+          <Style>
+            <Name>Standard</Name>
+            <Title>Standard</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_bewohnerparkzonen_bereiche.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="59.39696962"/>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>bewohnerzonen</Name>
+          <Title>Bewohnerparkzonen</Title>
+          <Abstract>Inhalt: Anlassbezogen aktualisierte Bewohnerparkzonen im Stadtgebiet Wuppertal, erstmalig konstruiert auf der Grundlage der Amtlichen Basiskarte ABK in 08/2016 anhand der Straßen- und Adressbereichszuordnungen in der öffentlichen Bewohnerparkzonenliste, durchgreifende Überarbeitung in 03/2023; wer in einer solchen Zone amtlich gemeldet ist, darf die Ausstellung eines Bewohnerparkausweises beantragen, der zum Parken in örtlich besonders gekennzeichneten Bewohnerparkbereichen berechtigt. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_bewohnerzonen.png</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/bewohnerparkzonen-wuppertal</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/bewohnerparkzonen/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:3857</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=6ec6645e-a12f-45ed-8a39-58f134d1c298"/>
+          </MetadataURL>
+          <Style>
+            <Name>Standard</Name>
+            <Title>Standard</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_bewohnerparkzonen_zonen.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="59.39696962"/>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>cityparkflaechen</Name>
+          <Title>City-Parkflächen</Title>
+          <Abstract>Inhalt: Anlassbezogen aktualisierte City-Parkflächen im Stadtgebiet Wuppertal, in 02/2023 vektorisiert auf der Grundlage einer PDF-Kartendarstellung des Ressorts Straßen und Verkehr; City-Parkflächen sind diejenigen Flächen innerhalb einer City-Parkzone, auf denen PKW mit einem für die jeweilige Zone gültigen City-Parkausweis geparkt werden dürfen. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_cityparkflaechen.png</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/city-parkfl%C3%A4chen-wuppertal</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/city_parkflaechen/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:3857</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=27f691bf-ed9e-49af-972e-ee0a9ea3baa2"/>
+          </MetadataURL>
+          <Style>
+            <Name>Standard</Name>
+            <Title>Standard</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_bewohnerparkzonen_city-flaechen.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="59.39696962"/>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>cityzonen</Name>
+          <Title>City-Parkzonen</Title>
+          <Abstract>Inhalt: Anlassbezogen aktualisierte City-Parkzonen (auch als City-Parkbereiche bezeichnet) im Stadtgebiet Wuppertal, erstmalig konstruiert auf der Grundlage der Amtlichen Basiskarte ABK in 06/2023 anhand der öffentlichen "Liste berechtigter Straßen"; wer in einer solchen Zone amtlich gemeldet ist, darf die Ausstellung eines City-Parkausweises beantragen, der zum Parken auf örtlich besonders gekennzeichneten City-Parkflächen berechtigt. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_cityzonen.png</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/city-parkzonen-wuppertal</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/city_parkzonen/style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:3857</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=62d58a38-d3cd-4d43-8624-cf61c0519c9a"/>
+          </MetadataURL>
+          <Style>
+            <Name>Standard</Name>
+            <Title>Standard</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_bewohnerparkzonen_city-zonen.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="59.39696962"/>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>pranlagen</Name>
+          <Title>P+R-Anlagen</Title>
+          <Abstract>Inhalt: Erstmalig in 12/2015 fertiggestellte Datensammlung der im Wuppertaler Stadtgebiet und im stadtnahen Außenbereich vorhandenen Park and Ride Anlagen, erfasst als Punktgeometrien auf Basis der Digitalen Grundkarte DGK und kommunaler Orthofotos; Beschreibung jeder Anlage einschließlich Link zu einer themenspezifischen, mobilen Kartenanwendung (Projekt TopicMaps Wuppertal) über Sachdatenabfrage verfügbar, Fortführung bei Bedarf. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_pranlagen.png</Keyword>
+            <Keyword>carmaconf://infoBoxMapping:function createInfoBoxInfo(p) { let color = "#154889"; let fahrplanauskunft = ""; if (p.haltestelle){ fahrplanauskunft = 'https://efa.vrr.de/wswstd/XSLT_TRIP_REQUEST2?language=de&amp;sessionID=0&amp;odvMacro=true&amp;commonMacro=true&amp;lineRestriction=403&amp;SpEncId=0&amp;type_origin=any&amp;type_destination=any&amp;useRealtime=1&amp;nameinfo_origin=invalid&amp;nameInfo_destination=invalid&amp;name_origin='+p.haltestelle+'&amp;name_destination=' } const info = { headerColor: color, foto: p.foto, header: 'P+R Anlagen (' + p.anzahl_plaetze + ' Stellplätze)', genericLinks: [{url: fahrplanauskunft, tooltip:"Zur Fahrplanauskunft", iconname: "bus"}, {url: p.topicmap, tooltip:"Zur Topicmap", iconname: "trademark"},], title: 'Name: '+p.name, additionalInfo: 'Nächste Haltestelle: '+p.haltestelle, subtitle: 'Beschreibung: '+p.beschreibung, modal:"xandRideSIM"}; return info; }</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/park-and-ride-anlagen-wuppertal</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/br_pr_anlagen/pr.style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:3857</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=3713b7a8-4f76-46d7-9368-6de2e0297d1d"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_pranlagen.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="59.39696962"/>
+        </Layer>
+      </Layer>
+      <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>treppen</Name>
+        <Title>Treppen</Title>
+        <Abstract>Inhalt: Aus dem Fachverfahren Treppen tagesaktuell abgeleitete Flächen mit Treppenanlagen einschließlich solcher Anlagen, für deren Bauwerksüberwachung und Erhalt nicht die Stadt Wuppertal zuständig ist. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes. </Abstract>
+        <KeywordList>
+          <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_treppen.png</Keyword>
+          <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/treppen/style.json</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:4258</SRS>
+        <SRS>EPSG:31466</SRS>
+        <SRS>EPSG:31467</SRS>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+        <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+        <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+        <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="32" height="32">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_treppen_einfarbig.png"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.0" max="55.00000001"/>
+      </Layer>
+      <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Title>Radverkehrsnetz</Title>
+        <Abstract>Alle Daten zu Radwegen im Stadtgebiet von Wuppertal.</Abstract>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:31466</SRS>
+        <SRS>EPSG:3857</SRS>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:4258</SRS>
+        <SRS>EPSG:31467</SRS>
+        <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+        <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+        <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+        <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>branlagen</Name>
+          <Title>B+R-Anlagen</Title>
+          <Abstract>Inhalt: Erstmalig in 10/2016 fertiggestellte Datensammlung der im Wuppertaler Stadtgebiet und im stadtnahen Außenbereich vorhandenen Bike and Ride Anlagen, erfasst als Punktgeometrien auf Basis der Digitalen Grundkarte DGK und kommunaler Orthofotos; Beschreibung jeder Anlage einschließlich Link zu einer themenspezifischen, mobilen Kartenanwendung (Projekt TopicMaps Wuppertal) über Sachdatenabfrage verfügbar, Fortführung bei Bedarf. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_branlagen.png</Keyword>
+            <Keyword>carmaconf://infoBoxMapping:function createInfoBoxInfo(p) { let color = "#009933"; let fahrplanauskunft = ""; if (p.haltestelle){ fahrplanauskunft = 'https://efa.vrr.de/wswstd/XSLT_TRIP_REQUEST2?language=de&amp;sessionID=0&amp;odvMacro=true&amp;commonMacro=true&amp;lineRestriction=403&amp;SpEncId=0&amp;type_origin=any&amp;type_destination=any&amp;useRealtime=1&amp;nameinfo_origin=invalid&amp;nameInfo_destination=invalid&amp;name_origin='+p.haltestelle+'&amp;name_destination=' } const info = { headerColor: color, foto: p.foto, header: 'B+R Anlagen (' + p.anzahl_plaetze + ' Stellplätze)', genericLinks: [{url: fahrplanauskunft, tooltip:"Zur Fahrplanauskunft", iconname: "bus"}, {url: p.topicmap, tooltip:"Zur Topicmap", iconname: "trademark"},], title: 'Name: '+p.name, additionalInfo: 'Nächste Haltestelle: '+p.haltestelle, subtitle: 'Beschreibung: '+p.beschreibung, modal:"xandRideSIM"}; return info; }</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/bike-and-ride-anlagen-wuppertal</Keyword>
+            <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/br_pr_anlagen/br.style.json</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:3857</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31467</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=2202a8e0-69c8-40a7-a7f3-310bb87f3b96"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_branlagen.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="59.39696962"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-ein</Name>
+          <Title>Einbahnstraßen (Radverkehrsnetz)</Title>
+          <Abstract>Inhalt: Auszug aus dem Wuppertaler Verkehrsmodell mit den Straßenmittelachsen der Einbahnstraßen im Stadtgebiet Wuppertal, Lage abgestimmt auf die Digitale Grundkarte DGK, ausgeprägt werden die Fahrtrichtungssymbole für jedes Liniensegment, für den Radverkehr in Gegenrichtung freigegebene Strecken sind mit einem speziellen Symbol gekennzeichnet (Fortführung bei Bedarf). Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-ein.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/radverkehrsfreie-einbahnstra%C3%9Fen-wuppertal</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=7d86b75c-19ed-4c3d-8221-282f9e4fc342"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_Einbahn_frei.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="11.00000001"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-bel</Name>
+          <Title>Beleuchtete Strecken</Title>
+          <Abstract>Inhalt: Beleuchtete Abschnitte der ausgeschilderten Radwege, kommunalen Radwanderwege und des NRW-Radverkehrsnetzes im Stadtgebiet von Wuppertal, teilautomatisiert erstellt durch Abgleich mit den Daten des Beleuchtungsinformationssystem BelIS. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-bel.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/beleuchtete-strecken-im-radverkehrsnetz-wuppertal</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=3332e977-5df4-45f4-873c-9a7644af531a"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_Licht.png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-stg</Name>
+          <Title>Steile Streckenabschnitte</Title>
+          <Abstract>Inhalt: Steile Streckenabschnitte von mindestens 500 m Länge im Wuppertaler Radwegenetz (kommunale Radwanderwege, Strecken des NRW-Radverkehrsnetzes, Straßen mit begleitenden Radwegen oder kombinierte Geh- und Radwege sowie ausgewählte Wald- oder Wirtschaftswege) in zwei Steigungskategorien (3% bis 7% und größer 7%), teilautomatisiert erstellt durch Verschneidung der Daten des Radverkehrsnetzes mit einem Digitalen Geländemodell. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-stg.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/steile-strecken-im-radverkehrsnetz-wuppertal</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=d4f55f94-5c41-4443-a059-135199dd0515"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_Steigung.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="18.0000002"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-ast</Name>
+          <Title>Radabstellanlagen</Title>
+          <Abstract>Inhalt: Radabstellanlagen im Stadtgebiet von Wuppertal, als Punktgeometrien erfasst auf Basis der Digitalen Grundkarte DGK und kommunaler Orthofotos, erstmalig fertiggestellt in 01/2011 (Fortführung bei Bedarf), ausgeprägt wird eine Signatur mit Angabe der Kapazität der Radabstellanlage. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-ast.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/radabstellanlagen-wuppertal</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=04223ab3-1f00-487a-835b-cf7d331e346f"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_abstellanlagen.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="18.0000002"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-sper</Name>
+          <Title>Radwegenetz Einschränkungen/Sperrungen</Title>
+          <Abstract>Inhalt: Laufend aktualisierte Darstellung temporärer Einschränkungen und Sperrungen von kommunalen Radwanderwegen im Wuppertaler Radwegenetz, ausgeprägt wird die linienhafte Ausdehnung zusammen mit einem zentralen Symbol für Baustelle (=Einschränkung) oder Sperrung. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-sper.png</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_Einschr_sperre.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="30.00000006"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-zun</Name>
+          <Title>Zugänge zu Bahntrassenradwegen</Title>
+          <Abstract>Inhalt: Zugangspunkte und -wege zu den Wuppertaler Bahntrassenradwegen (Nordbahntrasse und Sambatrasse), als Punkt- bzw. Liniengeometrie erfasst auf Basis der Digitalen Grundkarte DGK, erstmalig fertiggestellt in 02/2014 (Fortführung bei Bedarf), ausgeprägt werden eine Punktsignatur für den Zugangspunkt, ggf. ein Linienzug für den Zugangsweg und soweit im Betrachtungsmaßstab darstellbar der Name des Zugangs. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-zun.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/search/type/dataset/tags/geo-17?query=Bahntrassenradwegen&amp;sorting=title%7CASC</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=65529873-eab6-44dc-b84f-6637e3604847"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_zugaenge_nbt.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="18.0000002"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-bau</Name>
+          <Title>Markante Bauwerke</Title>
+          <Abstract>Inhalt: Markante Bauwerke (Brücken und Tunnel) auf dem Wuppertaler Radwegenetz, erstmalig fertiggestellt in 02/2014 (Fortführung bei Bedarf), ausgeprägt wird eine flächenhaft wirkende Linienbegleitsignatur, die nicht die echte Breite des Bauwerks repräsentiert. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-bau.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/markante-bauwerke-wuppertaler-radwanderwegen</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=fa505762-4d34-4c73-a1c4-a99b93f98516"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_markante_bauwerke.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="18.0000002"/>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-wst</Name>
+          <Title>Radwegetyp (STVO)</Title>
+          <Abstract>Inhalt: Gemäß Straßenverkehrsordnung (StVO) ausgeschilderte Radwege im Stadtgebiet von Wuppertal, repräsentiert durch die Mittelachsen der zugehörigen Straßen und Wege, erfasst auf Basis der Digitalen Grundkarte DGK anhand eines CorelDRAW-Projektes (Ressort Straßen und Verkehr, Stand 09/2010), erstmalig fertiggestellt in 01/2011 (Fortführung bei Bedarf), für beide Straßenseiten wird der Radwegetyp als linienbegleitende Signatur dargestellt; zusätzliche Ausprägung von Bahntrassenradwegen, Fahrradstraßen, für den Radverkehr temporär freigegebenen Fußgängerzonen sowie ausgewählten, routenrelevanten Wald- und Wirtschaftswegen mit geringem KFZ-Verkehr. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-wst.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/radwege-wuppertal</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=2be5d5af-3b53-46a8-a6b9-838e9e45d0b6"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_typ.png"/>
+            </LegendURL>
+          </Style>
+          <ScaleHint min="0.0" max="9.89949494"/>
+        </Layer>
+        <Layer queryable="1" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-w</Name>
+          <Title>Radwanderwege (kommunal)</Title>
+          <Abstract>Inhalt: Örtlich ausgeschilderte kommunale Radwanderwege der Stadt Wuppertal sowie damit zusammenhängende Teilstrecken von Radwanderwegen außerhalb des Wuppertaler Stadtgebietes, repräsentiert durch die Mittelachsen der zugehörigen Straßen und Wege, erfasst auf Basis der Digitalen Grundkarte DGK, erstmalig fertiggestellt in 01/2011 (Fortführung bei Bedarf); übereinander liegende Radwanderwege werden verdrängt dargestellt, zusätzlich werden Start- und Zielpunkte der Wanderwege ausgeprägt; Höhenprofile sind über die Sachdatenabfrage verfügbar. Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaconf://infoBoxMapping:header: 'Radverkehrsnetz'</Keyword>
+            <Keyword>carmaconf://infoBoxMapping:title:'Route: '+p.route</Keyword>
+            <Keyword>carmaconf://infoBoxMapping:foto: p.url</Keyword>
+            <Keyword>carmaconf://blockLegacyGetFeatureInfo</Keyword>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-w.png</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=9f04ffcb-0819-44c9-a902-c2cd017e89df"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_routen_komplett_2014.png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+        <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+          <Name>rad-nrw</Name>
+          <Title>Radwanderwege (NRW)</Title>
+          <Abstract>Inhalt: Für Wuppertal relevanter Auszug der Strecken aus dem Radverkehrsnetz NRW, erfasst auf Basis der Digitalen Grundkarte DGK anhand der Karte "Radverkehrsnetz NRW - Stadt Wuppertal" (Ministerium für Bauen und Verkehr des Landes NRW, Ausgabe 01/2007), erstmalig fertiggestellt in 01/2011 (Fortführung bei Bedarf). Sichtbarkeit: öffentlich. Nutzung: frei innerhalb der Grenzen des Urheberrechtsgesetzes; der zugrunde liegende Datensatz ist unter einer Open-Data-Lizenz (CC BY 4.0) verfügbar.</Abstract>
+          <KeywordList>
+            <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_rad-nrw.png</Keyword>
+            <Keyword>carmaConf://opendata:https://www.offenedaten-wuppertal.de/dataset/radrouten-wuppertal</Keyword>
+          </KeywordList>
+          <SRS>EPSG:4326</SRS>
+          <SRS>EPSG:4258</SRS>
+          <SRS>EPSG:31466</SRS>
+          <SRS>EPSG:31467</SRS>
+          <SRS>EPSG:25832</SRS>
+          <SRS>EPSG:3857</SRS>
+          <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+          <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+          <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+          <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+          <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+          <MetadataURL type="TC211">
+            <Format>application/xml</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://apps.geoportal.nrw.de/soapServices/CSWStartup?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;outputSchema=https://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id=9f04ffcb-0819-44c9-a902-c2cd017e89df"/>
+          </MetadataURL>
+          <Style>
+            <Name>default</Name>
+            <Title>default</Title>
+            <LegendURL width="32" height="32">
+              <Format>image/png</Format>
+              <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_radverkehrsnetz_NRW.png"/>
+            </LegendURL>
+          </Style>
+        </Layer>
+      </Layer>
+      <Layer queryable="0" cascaded="1" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>reitwege</Name>
+        <Title>Reitwege</Title>
+        <Abstract>Inhalt: Es wird der durch Verträge vereinbarte oder durch die Politik beschlossene Verlauf der offiziell gekennzeichneten Reitwege in Wuppertal angezeigt. Die einzelnen Reitwege wurden seit den 80er Jahren geplant und fortlaufend ergänzt. 
+Zusätzlich ist das Reiten in der freien Landschaft gem. § 58 (1) LNatSchG auf öffentlichen Verkehrsflächen, privaten Straßen und Wegen auf eigene Gefahr gestattet. Das Reiten im Wald ist nach § 58 (2) LNatSchG auf den nach der Straßenverkehrsordnung als Reitwegen gekennzeichneten Straßen, Wegen und Fahrwegen (befestigte oder naturfeste Waldwirtschaftswege) gestattet. Das Führen von Pferden ist im Wald auf allen Wegen, auch auf den für das Reiten gesperrten, gestattet. Diese Wege werden nicht extra im Layer dargestellt!
+In unregelmäßigen Abständen werden Kontrollen der Wege durchgeführt. 2017 wurden die Wege bei Marscheid, Stiepelhaus und im Talsperrenwald kontrolliert. 2019 erfolgte erneut eine Kontrolle der Reitwege Stiepelhaus und Sudberg. 2024 wurden die Reitwege im Bereich Eckbusch/Aprath kontrolliert.
+</Abstract>
+        <KeywordList>
+          <Keyword>carmaConf://thumbnail:https://geo.wuppertal.de/geoportal/geoportal_vorschau/verkehr_reitwege.png</Keyword>
+          <Keyword>carmaConf://vectorStyle:https://tiles.cismet.de/reitwege/style.json</Keyword>
+        </KeywordList>
+        <SRS>EPSG:4326</SRS>
+        <SRS>EPSG:4258</SRS>
+        <SRS>EPSG:31466</SRS>
+        <SRS>EPSG:31467</SRS>
+        <SRS>EPSG:25832</SRS>
+        <SRS>EPSG:3857</SRS>
+        <LatLonBoundingBox minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4326" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:4258" minx="7.00000000" miny="51.10000000" maxx="7.40000000" maxy="51.40000000"/>
+        <BoundingBox SRS="EPSG:31466" minx="2569633.25126776" miny="5663247.70326252" maxx="2598105.25973185" maxy="5697078.47942478"/>
+        <BoundingBox SRS="EPSG:31467" minx="3359986.02717938" miny="5663987.82103950" maxx="3388728.52162088" maxy="5698044.33551918"/>
+        <BoundingBox SRS="EPSG:25832" minx="359968.67208700" miny="5662162.82306526" maxx="388699.92654467" maxy="5696205.92336619"/>
+        <BoundingBox SRS="EPSG:3857" minx="779236.43555291" miny="6639001.66376131" maxx="823764.23187022" maxy="6692356.43526254"/>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="32" height="32">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo.wuppertal.de/geoportal/legenden/default_reitwege.png"/>
+          </LegendURL>
+        </Style>
+        <ScaleHint min="0.00039598" max="222.45062817"/>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMT_MS_Capabilities>

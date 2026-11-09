@@ -1,0 +1,665 @@
+{
+ "verkehrsmessung-standort-zum-honigsack-35": {
+  "name": "verkehrsmessung-standort-zum-honigsack-35",
+  "titel": "Verkehrsmessung Standort \"Zum Honigsack 35\"",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "lizenz_titel": "Creative Commons Namensnennung – 4.0 International (CC BY 4.0)",
+  "lizenz_url": "http://creativecommons.org/licenses/by/4.0/",
+  "geaendert": "2026-07-15T04:41:42.661835",
+  "notiz": "Der Datensatz enthält anonymisierte Einzelmessungen des Straßenverkehrs am Messstandort „Zum Honigsack 35“ in Olpe. Für jedes erkannte Verkehrsobjekt werden unter anderem Messzeitpunkt, Fahrtrichtung, Geschwindigkeit, Fahrzeugklasse, Fahrzeuglänge sowie weitere technische Messwerte bereitgestellt. Personenbezogene Daten und Fahrzeugkennzeichen sind nicht enthalten. ",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Datensatzbeschreibung",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung.txt",
+    "beschreibung": ""
+   },
+   {
+    "name": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "verkehrsmessung-alte-landstrabe": {
+  "name": "verkehrsmessung-alte-landstrabe",
+  "titel": "Verkehrsmessungen Alte Landstraße",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-08T06:24:50.984503",
+  "notiz": "Verkehrsmessung Olpe-Rhode, Alte Landstraße 1, 57462 Olpe im Zeitraum 19.05. - 15.06.2025 ",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Verkehrsdaten Alte Landstraße 1",
+    "format": "JSON",
+    "url": "https://opendata.olpe.de/dataset/ddbee83a-7987-4b57-9786-c2227725ccb3/resource/ae3230eb-cc99-4102-9e73-c3bfc2d1407e/download/verkehrsdaten_alte-landstr_1_20250519-20250615.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "verkehrsmessung-weite-schluppe": {
+  "name": "verkehrsmessung-weite-schluppe",
+  "titel": "Verkehrsmessungen Weite Schlüppe",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-08T09:19:15.030809",
+  "notiz": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "verkehrsdaten_weite_schlüppe-20250626-20250709.json",
+    "format": "JSON",
+    "url": "https://opendata.olpe.de/dataset/367f474c-68bc-40c3-b759-b08d7b4be80e/resource/41fe33e6-3dad-4131-8016-ae8d57f98d32/download/verkehrsdaten_weite_schluppe-20250626-20250709.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "verkehrsmessungen-rochusstrabe": {
+  "name": "verkehrsmessungen-rochusstrabe",
+  "titel": "Verkehrsmessungen Rochusstraße",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-09T08:47:56.600685",
+  "notiz": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Verkehrsmessung 27.08.2025 - 08.09.2025",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Rochusstr-20250827-20250908.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "verkehrsmessungen-oberveischede": {
+  "name": "verkehrsmessungen-oberveischede",
+  "titel": "Verkehrsmessungen Oberveischede",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-09T09:08:23.178331",
+  "notiz": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten. ",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Feuerwehrhaus_Oberveischede_20250709-20250715",
+    "format": "JSON",
+    "url": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66/resource/3caedc6a-4498-42a6-8a54-95ff132d45f4/download/verkehrsdaten_feuerwehrhaus_oberveischede_20250709-20250715.json",
+    "beschreibung": "Verkehrsmessung am Feuerwehrhaus 09.07.- 15.07.2025"
+   },
+   {
+    "name": "Ortseingang Oberveischede 26.06.2025 - 08.07.2025",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Oberveischede-20250626-20250708.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "verkehrsmessungen-gunsestrabe": {
+  "name": "verkehrsmessungen-gunsestrabe",
+  "titel": "Verkehrsmessungen Günsestraße",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-09T09:18:10.029369",
+  "notiz": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Höhe Kindergarten 16.06.2025 - 20.06.2025",
+    "format": "JSON",
+    "url": "https://opendata.olpe.de/dataset/ab7dfd75-5bad-4eaa-adf6-36c49b301f6e/resource/b0bea2d6-f454-44ac-a56e-9e4bed9c538f/download/verkehrsdaten_guensestr-kindergarten-20250616-20250620.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Günsestraße 26 20.06.2025 - 26.06.2025",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Guensestr_26-20250620-20250626.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "verkehrsmessungen-hatzenbergstrabe": {
+  "name": "verkehrsmessungen-hatzenbergstrabe",
+  "titel": "Verkehrsmessungen Hatzenbergstraße",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-09T09:02:46.448500",
+  "notiz": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Hatzenbergstraße-20250715-20250804",
+    "format": "JSON",
+    "url": "https://opendata.olpe.de/dataset/cbb6fc6d-3322-4240-b9e4-42a34880f0c8/resource/274e0828-201b-4098-9157-874e9e5373d1/download/verkehrsdaten_hatzenbergstr-ggue-17-20250715-20250804.json",
+    "beschreibung": "Messung Verkehrsdaten Hatzenbergstraße ggü Hausnummer 17 vom 15.07.2025 - 04.07.2025"
+   },
+   {
+    "name": "Hatzenbergstr-20250709-20250715.json",
+    "format": "JSON",
+    "url": "https://opendata.olpe.de/dataset/cbb6fc6d-3322-4240-b9e4-42a34880f0c8/resource/e1928b0f-903c-490a-89f1-878359928133/download/verkehrsdaten_hatzenbergstr-20250709-20250715.json",
+    "beschreibung": "Messung Verkehr Hatzenbergstraße 09.07.2025 - 15.07.2025"
+   }
+  ]
+ },
+ "verkehrsmessungen-k18": {
+  "name": "verkehrsmessungen-k18",
+  "titel": "Verkehrsmessungen K18",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-09T08:43:08.416813",
+  "notiz": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "verkehrsdaten_K18-20250806-20250813.json",
+    "format": "JSON",
+    "url": "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a/download/verkehrsdaten_k18-20250806-20250813.json",
+    "beschreibung": "Verkehrsmessungen vom 06.08.2025 - 13.08.2025"
+   }
+  ]
+ },
+ "verkehrsmessungen-in-der-wuste": {
+  "name": "verkehrsmessungen-in-der-wuste",
+  "titel": "Verkehrsmessungen In der Wüste",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-09T09:27:59.517881",
+  "notiz": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "In der Wüste 26 12.11.2025 - 19.11.2025",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_In-der-W%C3%BCste-26_20251112-20251119.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "In der Wüste Höhe Freizeitbad 20.06.2025 - 26.06.2025",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_In_der_Wueste-20250620-20250626.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "radverkehrsnetz_test": {
+  "name": "radverkehrsnetz_test",
+  "titel": "Radverkehrsnetz NRW",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-07-15T12:25:10.025787",
+  "notiz": "Radverkehrsnetz NRW",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Radverkehrsnetz geojson",
+    "format": "GeoJSON",
+    "url": "https://opendata.olpe.de/dataset/a11828a6-d228-46dc-98be-bdcdc099f3e6/resource/d07925e4-eafd-4b5c-8163-be00ce60986a/download/testdaten_radverkehrsnetz-kopie.geojson",
+    "beschreibung": ""
+   },
+   {
+    "name": "Radverkehrsnetz csv",
+    "format": "CSV",
+    "url": "https://opendata.olpe.de/dataset/a11828a6-d228-46dc-98be-bdcdc099f3e6/resource/5aa50657-ba5e-4704-a863-55212102ed56/download/testdaten_radverkehrsnetz.csf",
+    "beschreibung": ""
+   },
+   {
+    "name": "Radverkehrsnetz gml",
+    "format": "gml",
+    "url": "https://opendata.olpe.de/dataset/a11828a6-d228-46dc-98be-bdcdc099f3e6/resource/7326eaa7-483b-4157-ba0f-b95e55bb6946/download/testdaten_radverkehrsnetz.gml",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "radverkehrskonzept": {
+  "name": "radverkehrskonzept",
+  "titel": "Radverkehrskonzept",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-14T14:19:57.599817",
+  "notiz": "Radverkehr in Olpe - Bestandsaufnahme, Analyse, Konzeption",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Radverkehrskonzept Kreisstadt Olpe",
+    "format": "PDF",
+    "url": "https://opendata.olpe.de/dataset/a7f7660e-246c-4069-8994-7bab797fc89a/resource/1bff90df-a5bb-4960-8010-f164eaa4f660/download/169431_radverkehrskonzept.pdf",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "parkraumkonzept-olpe-2014-ergebnisse": {
+  "name": "parkraumkonzept-olpe-2014-ergebnisse",
+  "titel": "Parkraumkonzept Olpe 2014 - Ergebnisse",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-07-09T09:25:29.971368",
+  "notiz": "Parkraumkonzept Olpe - Ergebnisse ",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Parkraumkonzept Innenstadt Olpe 2014",
+    "format": "PDF",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Entwurf_Parkraumkonzept.PDF",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "verkehrsbilanz-der-kreisstadt-olpe": {
+  "name": "verkehrsbilanz-der-kreisstadt-olpe",
+  "titel": "Verkehrsbilanz der Kreisstadt Olpe",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "lizenz_titel": "Creative Commons Namensnennung – 4.0 International (CC BY 4.0)",
+  "lizenz_url": "http://creativecommons.org/licenses/by/4.0/",
+  "geaendert": "2026-07-13T11:28:27.935387",
+  "notiz": "Dieser Datensatz enthält Kennzahlen zum Endenergieverbrauch, zur Verkehrsleistung und zu den Treibhausgasemissionen des Verkehrs im Gebiet der Stadt Olpe. Die Daten sind nach Fahrzeugarten und teilweise nach Straßenkategorien gegliedert. Ergänzend enthält das Paket den Modal Split sowie ausgewählte Zeitpunkte der Entwicklung des Endenergieverbrauchs im Verkehrssektor. Die Daten stammen aus dem Bericht „Erstellung einer Energie- und Treibhausgasbilanz für die Stadt Olpe“. Die Verkehrsbilanz wurde mit dem Klimaschutz-Planer nach der Bilanzierungssystematik Kommunal (BISKO) erstellt.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "readme",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/README.md",
+    "beschreibung": ""
+   },
+   {
+    "name": "Verkehrsbilanz nach Fahrzeugarten",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsbilanz_nach_fahrzeugarten.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Verkehrsbilanz nach Fahrzeugarten",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsbilanz_nach_fahrzeugarten.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Treibhausgasbilanz nach Fahrzeugarten",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_treibhausgasbilanz_nach_fahrzeugarten.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Treibhausgasbilanz nach Fahrzeugarten",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_treibhausgasbilanz_nach_fahrzeugarten.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Modal Split",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_modal_split.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Modal Split",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_modal_split.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Endenergieentwicklung 2010 - 2020",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_endenergieentwicklung_ausgewaehlte_jahre_2010_2020.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Endenergieentwicklung 2010 - 2020",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_endenergieentwicklung_ausgewaehlte_jahre_2010_2020.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Endenergieverbrauch nach Straßenklassen",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_endenergieverbrauch_nach_strassenklassen.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Endenergieverbrauch nach Straßenklassen",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehr_endenergieverbrauch_nach_strassenklassen.csv",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "straben-und-wegekonzepte-der-kreisstadt-olpe": {
+  "name": "straben-und-wegekonzepte-der-kreisstadt-olpe",
+  "titel": "Straßen- und Wegekonzepte der Kreisstadt Olpe",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-30T11:26:13.124293",
+  "notiz": "Straßen- und Wegekonzepte der Kreisstadt Olpe",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Straßen- und Wegekonzept 2025",
+    "format": "PDF",
+    "url": "https://opendata.olpe.de/dataset/53cf682e-a4c8-42d8-90b0-7f1abc68bfa3/resource/7daad977-2e74-435a-a55f-a6ea67f0fc6c/download/strassen-_und_wegekonzept_der_kreisstadt_olpe_2025.pdf",
+    "beschreibung": ""
+   },
+   {
+    "name": "Straßen- und Wegekonzept 2026",
+    "format": "PDF",
+    "url": "https://opendata.olpe.de/dataset/53cf682e-a4c8-42d8-90b0-7f1abc68bfa3/resource/ab09a535-ddd7-43d3-b6d8-e7d77097a357/download/strassen_wegekonzept_2026.pdf",
+    "beschreibung": ""
+   },
+   {
+    "name": "Strassen- und Wegekonzept 2025",
+    "format": "CSV",
+    "url": "https://opendata.olpe.de/dataset/53cf682e-a4c8-42d8-90b0-7f1abc68bfa3/resource/07b166d5-c3a3-4f37-8356-97807ff750f0/download/kopie-von-strassen-und-wegekonzept-der-kreisstadt-olpe-2025-stand-entwu.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Straßen- und Wegekonzept 2026",
+    "format": "CSV",
+    "url": "https://opendata.olpe.de/dataset/53cf682e-a4c8-42d8-90b0-7f1abc68bfa3/resource/2ad3dbfa-3d3c-46e4-9774-65cf415c0f1f/download/kopie-von-strassen-und-wegekonzept-der-kreisstadt-olpe-2026-stand-15012.csv",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "haltestellen-opnv-im-kreis-olpe": {
+  "name": "haltestellen-opnv-im-kreis-olpe",
+  "titel": "Haltestellen ÖPNV im Kreis Olpe",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "lizenz_titel": "Creative Commons Namensnennung – 4.0 International (CC BY 4.0)",
+  "lizenz_url": "http://creativecommons.org/licenses/by/4.0/",
+  "geaendert": "2026-07-15T04:32:47.057452",
+  "notiz": "Dieser Datensatz enthält die Standorte der Haltestellen des öffentlichen Personennahverkehrs (ÖPNV) im Kreis Olpe. Für jede Haltestelle werden unter anderem Name, eindeutige Kennungen, Koordinaten sowie weitere technische Merkmale bereitgestellt.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Datensatzbeschreibung",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung_haltestellen_kreis_olpe.txt",
+    "beschreibung": ""
+   },
+   {
+    "name": "Haltestellen im Kreis Olpe",
+    "format": "GeoJSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/haltestellen_kreis_olpe.geojson",
+    "beschreibung": ""
+   },
+   {
+    "name": "Haltestellen im Kreis Olpe",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Haltestellen_Olpe_UTM32N.csv",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "kfz-e-ladestationen-im-stadtgebiet-olpe": {
+  "name": "kfz-e-ladestationen-im-stadtgebiet-olpe",
+  "titel": "Kfz-E-Ladestationen im Stadtgebiet Olpe",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-07-14T11:53:04.866966",
+  "notiz": "Der Datensatz enthält Standorte von Kfz-E-Ladestationen im Stadtgebiet Olpe. Zu jedem Standort werden eine eindeutige ID, die Lagebezeichnung, der Betreiber, die technische Ausführung, die daraus ableitbare Anzahl gleichzeitig ladbarer Fahrzeuge sowie die geografische Position bereitgestellt.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Datensatzbeschreibung",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung.txt",
+    "beschreibung": ""
+   },
+   {
+    "name": "QGIS Metadaten",
+    "format": "qmd",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/qgis_metadaten_original.qmd",
+    "beschreibung": ""
+   },
+   {
+    "name": "Validierungsbericht",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/validierungsbericht.txt",
+    "beschreibung": ""
+   },
+   {
+    "name": "Kfz E-Ladestationen EPSG25832",
+    "format": "GeoJSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/original_kfz_eladestationen_epsg25832.geojson",
+    "beschreibung": ""
+   },
+   {
+    "name": "metadaten",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/metadaten.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Kfz E-Ladestationen ",
+    "format": "GeoJSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/kfz_e_ladestationen_olpe.geojson",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "parkplatzbelegung-am-biggeurfer": {
+  "name": "parkplatzbelegung-am-biggeurfer",
+  "titel": "Parkplatzbelegung \"Am Biggeurfer\"",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "lizenz_titel": "Creative Commons Namensnennung – 4.0 International (CC BY 4.0)",
+  "lizenz_url": "http://creativecommons.org/licenses/by/4.0/",
+  "geaendert": "2026-07-13T13:27:41.197050",
+  "notiz": "Dieser Datensatz enthält historische Belegungsdaten der smarten Parkplatzsensoren auf dem Parkplatz „Am Biggeufer“ in der Kreisstadt Olpe. Die Daten wurden durch fest installierte Bodensensoren erfasst und dokumentieren Statusänderungen der einzelnen Stellplätze über den jeweiligen Erfassungszeitraum. Der Datensatz eignet sich insbesondere für Analysen zur Parkplatzauslastung, Belegungsdauer, Auslastungsverläufen sowie zur Entwicklung intelligenter Mobilitätsanwendungen.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Belegung \"Am Biggeufer\" 2024",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/parkplatzstatus_biggeufer_gesamt.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Belegung \"Am Biggeufer\" 2023",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/parkplatzstatus_biggeufer_2023.json",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "mobilitatskonzept": {
+  "name": "mobilitatskonzept",
+  "titel": "Mobilitätskonzept",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-08T09:25:40.866759",
+  "notiz": "Mit dem Konzept ist eine Grundlage für ein nachhaltiges, das heißt langfristig tragbares Verkehrsangebot mit Zielhorizont 2035 geschaffen worden. Es bietet sich die Chance, aus einer Gesamtstrategie heraus die Mobilitätsoptionen für die Menschen durch verschiedene Maßnahmen zu verbessern, die Wahlfreiheit in der Verkehrsmittelwahl zu erhöhen, im Zusammenspiel mit anderen städtischen Konzepten die Lebens- und Aufenthaltsqualitäten zu steigern sowie Olpe auf den Pfad zur Klimaneutralität zu bringen.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Zielkonzept Mobilitätskonzept",
+    "format": "PDF",
+    "url": "https://opendata.olpe.de/dataset/d13ae4a0-9958-4057-91ac-bdf1c3550c85/resource/f8a31c4d-e353-45fb-8110-d2659ba941b5/download/zielkonzept_moko.pdf",
+    "beschreibung": ""
+   },
+   {
+    "name": "Endbericht Mobilitätskonzept",
+    "format": "PDF",
+    "url": "https://opendata.olpe.de/dataset/d13ae4a0-9958-4057-91ac-bdf1c3550c85/resource/ea0a6911-7331-4279-b600-c84e3a0b7a81/download/endbericht_moko.pdf",
+    "beschreibung": ""
+   },
+   {
+    "name": "Bestandanalyse Mobilitätskonzept",
+    "format": "PDF",
+    "url": "https://opendata.olpe.de/dataset/d13ae4a0-9958-4057-91ac-bdf1c3550c85/resource/81705074-8196-4879-a7ea-6f5d6af25547/download/bestandanalyse_moko.pdf",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "flachennutzungsplan-der-kreisstadt-olpe": {
+  "name": "flachennutzungsplan-der-kreisstadt-olpe",
+  "titel": "Flächennutzungsplan der Kreisstadt Olpe",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-07-14T10:46:27.085812",
+  "notiz": "Der Datensatz enthält 735 flächenhafte Darstellungen des Flächennutzungsplans im Gebiet der Kreisstadt Olpe. Er umfasst unter anderem Wohnbauflächen, gemischte und gewerbliche Bauflächen, Flächen für Landwirtschaft und Wald, Grün- und Wasserflächen, Sonderbauflächen, Gemeinbedarfsflächen sowie Verkehrs-, Bahn- und Versorgungsflächen.",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Datensatzbeschreibung",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung_flaechendarstellungen_olpe.txt",
+    "beschreibung": ""
+   },
+   {
+    "name": "Flächennutzungsplan CSV",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/flaechendarstellungen_olpe.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Flächennutzungsplan WGS84",
+    "format": "GeoJSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/flaechendarstellungen_olpe_wgs84.geojson",
+    "beschreibung": ""
+   },
+   {
+    "name": "Flächennutzungsplan EPSG25832",
+    "format": "GeoJSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/flaechendarstellungen_olpe_epsg25832.geojson",
+    "beschreibung": ""
+   },
+   {
+    "name": "Validierungsbericht ",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/validierungsbericht_flaechendarstellungen_olpe.txt",
+    "beschreibung": ""
+   },
+   {
+    "name": "Flächennutzungsplan Originaldatei",
+    "format": "gpkg",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/original_flaechendarstellungen.gpkg",
+    "beschreibung": ""
+   },
+   {
+    "name": "Flächennutzungsplan JSON",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/flaechendarstellungen_olpe.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Flächennutzungsplan XML",
+    "format": "XML",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/flaechendarstellungen_olpe.xml",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "olper-bevolkerung-nach-geburtsjahrgangen": {
+  "name": "olper-bevolkerung-nach-geburtsjahrgangen",
+  "titel": "Olper Bevölkerung nach Geburtsjahrgängen",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "lizenz_titel": "Datenlizenz Deutschland Namensnennung 2.0",
+  "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+  "geaendert": "2026-04-14T15:50:21.727374",
+  "notiz": "Zählung der Olper Bevölkerung nach Geburtsjahrgängen",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Zählung nach Geburtsjahrgängen 30.06.2025",
+    "format": "CSV",
+    "url": "https://opendata.olpe.de/dataset/30b5a9a4-f623-4ec2-846e-538d4c0f48d6/resource/5702bd3d-4d66-4c38-b858-28e4bbeca33d/download/05966024_geburtsstatistik_20250630.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Einwohnerstatistik nach Jahrgängen 30.06.2022",
+    "format": "CSV",
+    "url": "https://opendata.olpe.de/dataset/30b5a9a4-f623-4ec2-846e-538d4c0f48d6/resource/f77d2c0a-f6ac-4c16-b27c-283b4f77a359/download/einwohnerstatistik-nach-jahrgangen-30.06.2022.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Einwohnerstatistik nach Jahrgängen 31.12.2022",
+    "format": "CSV",
+    "url": "https://opendata.olpe.de/dataset/30b5a9a4-f623-4ec2-846e-538d4c0f48d6/resource/ec10f9a2-e01b-496f-afab-b0f7d4f6c8c1/download/einwohnerstatistik-nach-jahrgangen-31.12.2022.csv",
+    "beschreibung": ""
+   }
+  ]
+ },
+ "personalbestand": {
+  "name": "personalbestand",
+  "titel": "Personalbestand",
+  "org": "Kreisstadt Olpe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "lizenz_titel": "Creative Commons Namensnennung – 4.0 International (CC BY 4.0)",
+  "lizenz_url": "http://creativecommons.org/licenses/by/4.0/",
+  "geaendert": "2026-07-14T06:44:38.005126",
+  "notiz": "Anzahl der Beschäftigten der Kreisstadt Olpe nach Geschlecht zum jeweiligen Stichtag. Die Zählung erfolgt nach Personen und nicht nach Vollzeitäquivalenten. ",
+  "extras": {},
+  "ressourcen": [
+   {
+    "name": "Datensatzbeschreibung",
+    "format": "TXT",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung.txt",
+    "beschreibung": ""
+   },
+   {
+    "name": "Personalbestand 31.12.2019",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/personalbestand_kreisstadt_olpe_2019_12_31.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Personalbestand 31.12.2019",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/personalbestand_kreisstadt_olpe_2019_12_31.json",
+    "beschreibung": ""
+   },
+   {
+    "name": "Personalbestand 31.12.2023",
+    "format": "CSV",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/personalbestand_kreisstadt_olpe_2023_12_31.csv",
+    "beschreibung": ""
+   },
+   {
+    "name": "Personalbestand 31.12.2023",
+    "format": "JSON",
+    "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/personalbestand_kreisstadt_olpe_2023_12_31.json",
+    "beschreibung": ""
+   }
+  ]
+ }
+}
