@@ -15,10 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
-      - run: |
-          python3 -m venv /tmp/v && /tmp/v/bin/pip install --quiet playwright
-          /tmp/v/bin/python -m playwright install --with-deps chromium > /dev/null
-      - run: timeout 30m /tmp/v/bin/python tools/laender2.py ergebnis/laender2 || true
+      - run: timeout 20m python3 tools/olpe_holen.py ergebnis/olpe || true
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
