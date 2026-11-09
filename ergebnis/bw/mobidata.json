@@ -1,0 +1,3962 @@
+{
+ "eco-counter-fahrradzahler": {
+  "name": "eco-counter-fahrradzahler",
+  "titel": "Gebündelte Daten Eco-Counter Fahrradzählstellen Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:30:46.519720",
+  "notiz": "<p>Bei den aufgelisteten Daten handelt es sich um gebündelte Fahrradzähldaten der aktuellen Eco-Counter Fahrradzählstellen in Städten und Gemeinden aus Baden-Württemberg. Über die Eco Visio Domain und den API-Store des Fahrradzählstellenbetreibers EcoCounter werden die lokal erhobenen Fahrradzähldaten abgerufen und in die hier genannten Ausgabeformate überführt.</p> <h3 id=\"aktuell-enthaltene-anbieter\">Fahrradzählstellen</h3> <p>In der Übersichtskarte sind alle Fahrradzählstellen dargestellt, deren Daten hier gebündelt verfügbar sind. Die Zählstellen sind mit einer jährlichen Gesamtsumme hinte",
+  "ressourcen": [
+   {
+    "name": "Anleitung zur Nutzung der Fahrradzähldaten",
+    "format": "PDF",
+    "url": "https://www.mobidata-bw.de/data/Tutorial_EcoCounter-Daten.pdf"
+   },
+   {
+    "name": "Gebündelte Fahrradzähldaten - Stundenwerte (CSV)",
+    "format": "CSV",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten.csv"
+   },
+   {
+    "name": "Gebündelte Fahrradzähldaten - Stundenwerte (JSON)",
+    "format": "JSON",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten.json"
+   },
+   {
+    "name": "Gebündelte Fahrradzähldaten - Tageswerte (CSV)",
+    "format": "CSV",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten.csv"
+   },
+   {
+    "name": "Gebündelte Fahrradzähldaten - Tageswerte (JSON)",
+    "format": "JSON",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten.json"
+   },
+   {
+    "name": "Monatl. gebündelte Zähldaten - Stundenwerte (CSV)",
+    "format": "CSV",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_{yyyymm}.csv.gz"
+   },
+   {
+    "name": "Monatl. gebündelte Zähldaten - Stundenwerte (JSON)",
+    "format": "JSON",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_{yyyymm}.json.gz"
+   },
+   {
+    "name": "Monatl. gebündelte Zähldaten - Tageswerte (CSV)",
+    "format": "CSV",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_{yyyymm}.csv.gz"
+   },
+   {
+    "name": "Monatl. gebündelte Zähldaten - Tageswerte (JSON)",
+    "format": "JSON",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_{yyyymm}.json.gz"
+   },
+   {
+    "name": "Jährl. gebündelte Zähldaten - Tageswerte (JSON)",
+    "format": "JSON",
+    "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_yyyy.json.gz"
+   },
+   {
+    "name": "Historische Fahrradzähldaten (Januar 2013 - heute)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/fahrradzaehldaten/"
+   },
+   {
+    "name": "Historische Fahrradzähldaten (Januar 2013 - Dezember 2024) ",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/eco-counter/gebundelte_eco_counter_fahrradzaehler_bw.xlsx"
+   },
+   {
+    "name": "Fahrradzähldaten (CSV)",
+    "format": "CSV",
+    "url": "https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.csv"
+   },
+   {
+    "name": "Fahrradzähldaten (JSON)",
+    "format": "GeoJSON",
+    "url": "https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.json"
+   },
+   {
+    "name": "Fahrradzähldaten (EXCEL)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.xlsx"
+   },
+   {
+    "name": "Daten-API für historische Daten (Stundenwerte)",
+    "format": "API",
+    "url": ""
+   },
+   {
+    "name": "Daten-API für historische Daten (Tageswerte)",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Zähldaten",
+   "Freiburg",
+   "Karlsruhe",
+   "Mannheim",
+   "Ulm",
+   "Tübingen",
+   "Heilbronn",
+   "Pforzheim",
+   "Reutlingen",
+   "Ludwigsburg"
+  ]
+ },
+ "zaehldaten-gemeinde-berg": {
+  "name": "zaehldaten-gemeinde-berg",
+  "titel": "Straßenverkehrszählungen Gemeinde Berg",
+  "org": "Gemeinde Berg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:09:38.247548",
+  "notiz": "<p>Die Zählungen wurden jeweil Dienstags oder Donnerstags über 24 Stunden durchgeführt. Sie erfolgten jährlich, saisonal (Winter- und Sommerzeit) sowie projektbezogen in Einzelfällen. </p> <p>Es handelt sich dabei um Knotenpunktszählungen mit insgesamt 12 Verkehrsarten, die als Excel und PDF zur Verfügung stehen. </p> <hr/> <h3>Übersicht</h3> <p><iframe src=\"https://www.mobidata-bw.de/karten/map-as-a-service/strassenverkehrszaehlung/\" width=\"100%\" height=\"900px\"></iframe></p> <p>Hier geht es zur <strong><a href=\"https://www.mobidata-bw.de/karten/map-as-a-service/strassenverkehrszaehlung/\" targ",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählungen Zusammenfassung (XLSX)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/portal/Berg_Zaehl/Verkehrszaehlungen-Gemeinde-Berg.xlsx"
+   },
+   {
+    "name": "Verkehrszählungen (ZIP)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/daten/portal/Berg_Zaehl/Zaehldaten_PDF-Excel_Berg.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Verkehrszählung",
+   "Zählung",
+   "Knotenpunkt",
+   "Zähldaten"
+  ]
+ },
+ "zaehldaten-stadt-weingarten": {
+  "name": "zaehldaten-stadt-weingarten",
+  "titel": "Straßenverkehrszählungen Stadt Weingarten",
+  "org": "Stadt Weingarten",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:08:20.624900",
+  "notiz": "<p>Die Zählungen wurden jeweil Dienstags oder Donnerstags über 24 Stunden durchgeführt. Sie erfolgten jährlich, saisonal (Winter- und Sommerzeit) sowie projektbezogen in Einzelfällen. </p> <p>Es handelt sich dabei um Knotenpunktszählungen mit insgesamt 12 Verkehrsarten, die als Excel und PDF zur Verfügung stehen. </p> <hr/> <h3>Übersicht</h3> <p><iframe src=\"https://mobidata-bw.de/karten/map-as-a-service/strassenverkehrszaehlung/#12.00/47.80314/9.63566\" width=\"100%\" height=\"900px\"></iframe></p> <p>Hier geht es zur <strong> <a href=\"https://www.mobidata-bw.de/karten/map-as-a-service/strassenver",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählungen Zusammenfassung (XLSX)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/portal/WGT_Zaehl/Verkehrszaehlungen-Stadt-Weingarten.xlsx"
+   },
+   {
+    "name": "Verkehrszählungen (ZIP)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/daten/portal/WGT_Zaehl/Zaehldaten_PDF-Excel-Weingarten.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Verkehrszählung",
+   "Zählung",
+   "Knotenpunkt",
+   "Zähldaten"
+  ]
+ },
+ "zaehldaten-gemeinde-baienfurt": {
+  "name": "zaehldaten-gemeinde-baienfurt",
+  "titel": "Straßenverkehrszählungen Gemeinde Baienfurt",
+  "org": "Gemeinde Baienfurt",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:08:19.086868",
+  "notiz": "<p>Die Zählungen wurden jeweil Dienstags oder Donnerstags über 24 Stunden durchgeführt. Sie erfolgten jährlich, saisonal (Winter- und Sommerzeit) sowie projektbezogen in Einzelfällen. </p> <p>Es handelt sich dabei um Knotenpunktszählungen mit insgesamt 12 Verkehrsarten, die als Excel und PDF zur Verfügung stehen. </p> <hr/> <h3>Übersicht</h3> <p><iframe src=\"https://mobidata-bw.de/karten/map-as-a-service/strassenverkehrszaehlung/#12.00/47.80314/9.63566\" width=\"100%\" height=\"900px\"></iframe></p> <p>Hier geht es zur <strong><a href=\"https://www.mobidata-bw.de/karten/map-as-a-service/strassenverk",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählungen Zusammenfassung (XLSX)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/portal/Baienfurt_Zaehl/Verkehrszaehlungen-Gemeinde-Baienfurt.xlsx"
+   },
+   {
+    "name": "Verkehrszählungen (ZIP)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/daten/portal/Baienfurt_Zaehl/Zaehldaten_PDF-Excel_Baienfurt.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Verkehrszählung",
+   "Zählung",
+   "Knotenpunkt",
+   "Zähldaten"
+  ]
+ },
+ "zaehldaten-gemeinde-baindt": {
+  "name": "zaehldaten-gemeinde-baindt",
+  "titel": "Straßenverkehrszählungen Gemeinde Baindt",
+  "org": "Gemeinde Baindt",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:08:17.516677",
+  "notiz": "<p>Die Zählungen wurden jeweil Dienstags oder Donnerstags über 24 Stunden durchgeführt. Sie erfolgten jährlich, saisonal (Winter- und Sommerzeit) sowie projektbezogen in Einzelfällen. </p> <p>Es handelt sich dabei um Knotenpunktszählungen mit insgesamt 12 Verkehrsarten, die als Excel und PDF zur Verfügung stehen. </p> <hr/> <h3>Übersicht</h3> <p><iframe src=\"https://mobidata-bw.de/karten/map-as-a-service/strassenverkehrszaehlung/#12.00/47.80314/9.63566\" width=\"100%\" height=\"900px\"></iframe></p> <p>Hier geht es zur <strong> <a href=\"https://www.mobidata-bw.de/karten/map-as-a-service/strassenver",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählungen Zusammenfassung (XLSX)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/portal/Baindt_Zaehl/Verkehrszaehlungen-Gemeinde-Baindt.xlsx"
+   },
+   {
+    "name": "Verkehrszählungen (ZIP)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/daten/portal/Baindt_Zaehl/Zaehldaten_PDF-Excel_Baindt.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Verkehrszählung",
+   "Zählung",
+   "Knotenpunkt",
+   "Zähldaten"
+  ]
+ },
+ "karte_strassenverkehrszaehlung": {
+  "name": "karte_strassenverkehrszaehlung",
+  "titel": "Karte der Straßenverkehrszählung in Baden-Württemberg",
+  "org": "Verkehrsministerium Baden - Württemberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:08:15.073206",
+  "notiz": "<p>Die Straßenverkehrszählung (SVZ) umfasst alle Zählungen mittels Dauerzählstellen, temporären Zählstellen (Seitenradargeräten / Verkehrsmonitoring) und manuellen Zählstellen.</p> <h3>Zählstellen-Karte</h3> <p>Die Karte zeigt die temporären, dauerhaften und manuellen Zählstellen in Baden-Württemberg. Eingeblendet sind zunächst die Zählstellen an Autobahnen, welche bei hoher Zoomstufe durch die übrigen Zählstellen an Bundes-, Land- und Kreisstraßen ergänzt werden. Durch Klick auf eine Zählstelle lassen sich in einem Popup die jeweilige Straße und Zählstellennummer anzeigen. <p>Der folgende Lin",
+  "ressourcen": [
+   {
+    "name": "Darstellung der Methodik für die Straßenverkehrszählung",
+    "format": "Visualisierung",
+    "url": "https://mobidata-bw.de/vm/Verkehrsentwicklungen_Jahresvergleiche_Strassenverkehr_BW/Jahresvergleiche/Darstellung_MethodikUndErgebnisse_2015_2017.pdf"
+   },
+   {
+    "name": "Grunddaten hinter der SVZ-Karte BW",
+    "format": "CSV",
+    "url": "https://mobidata-bw.de/vm/Karte_Strassenverkehrszaehlung_BW/SVZ-Zaehlstellen_2026-06-26_augmented_SVZ2024.csv"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Zählung",
+   "Zähldaten"
+  ]
+ },
+ "zaehldaten-ravensburg": {
+  "name": "zaehldaten-ravensburg",
+  "titel": "Straßenverkehrszählungen Stadt Ravensburg",
+  "org": "Stadt Ravensburg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:02:10.872941",
+  "notiz": "<p>Die Zählungen wurden jeweil Dienstags oder Donnerstags über 24 Stunden durchgeführt. Sie erfolgten jährlich, saisonal (Winter- und Sommerzeit) sowie projektbezogen in Einzelfällen. </p> <p>Es handelt sich dabei um Knotenpunktszählungen mit insgesamt 12 Verkehrsarten, die als Excel und PDF zur Verfügung stehen. </p> <hr/> <h3>Übersicht</h3> <p><iframe src=\"https://www.mobidata-bw.de/karten/map-as-a-service/strassenverkehrszaehlung/\" width=\"100%\" height=\"900px\"></iframe></p> <p>Hier geht es zur <strong><a href=\"https://www.mobidata-bw.de/karten/map-as-a-service/strassenverkehrszaehlung/\" targ",
+  "ressourcen": [
+   {
+    "name": "Verkehrszählungen Zusammenfassung (XLSX)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/portal/RV_Zaehl/Verkehrszaehlungen_RV.xlsx"
+   },
+   {
+    "name": "Verkehrszählungen (ZIP)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/daten/portal/RV_Zaehl/Zaehldaten_PDF-Excel_RV.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Verkehrszählung",
+   "Zählung",
+   "Knotenpunkt",
+   "Zähldaten"
+  ]
+ },
+ "stundenwerte_dauerzaehlstellen": {
+  "name": "stundenwerte_dauerzaehlstellen",
+  "titel": "Stundenwerte der Dauerzählstellen in Baden-Württemberg",
+  "org": "Verkehrsministerium Baden - Württemberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-19T12:57:10.698424",
+  "notiz": "<p>Die in den Ergebnistabellen aufgelisteten erfassten Fahrzeugarten richten sich nach der Grundklassifizierung gem. TLS (Technische Lieferbedingungen der Streckenstationen). Bei den aufgeführten Zählgeräten wird mit TLS-gerechter Erfassung von 8+1-Fahrzeugarten nach ausgewiesener Grundklassifizierung erfasst.</p> <p>Aus den der BASt (Bundesanstalt für Straßenwesen) zu übermittelnden Dateien sind die bereitgestellten csv-Dateien abgeleitet. Die Stundendateien enthalten eine allgemeine Beschreibung zur Identifizierung und Lage der Dauerzählstellen, sowie die Angaben zur Fahrstreifenanzahl. Nebe",
+  "ressourcen": [
+   {
+    "name": "Stundenwerte August 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202608.zip"
+   },
+   {
+    "name": "Stundenwerte Juli 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202607.zip"
+   },
+   {
+    "name": "Stundenwerte Juni 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202606.zip"
+   },
+   {
+    "name": "Stundenwerte Mai 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202605.zip"
+   },
+   {
+    "name": "Stundenwerte April 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202604.zip"
+   },
+   {
+    "name": "Stundenwerte März 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202603.zip"
+   },
+   {
+    "name": "Stundenwerte Februar 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202602.zip"
+   },
+   {
+    "name": "Stundenwerte Januar 2026 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202601.zip"
+   },
+   {
+    "name": "Stundenwerte Dezember 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202512.zip"
+   },
+   {
+    "name": "Stundenwerte November 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202511.zip"
+   },
+   {
+    "name": "Stundenwerte Oktober 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202510.zip"
+   },
+   {
+    "name": "Stundenwerte September 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202509.zip"
+   },
+   {
+    "name": "Stundenwerte August 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202508.zip"
+   },
+   {
+    "name": "Stundenwerte Juli 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202507.zip"
+   },
+   {
+    "name": "Stundenwerte Juni 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202506.zip"
+   },
+   {
+    "name": "Stundenwerte Mai 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202505.zip"
+   },
+   {
+    "name": "Stundenwerte April 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202504.zip"
+   },
+   {
+    "name": "Stundenwerte März 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202503.zip"
+   },
+   {
+    "name": "Stundenwerte Februar 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202502.zip"
+   },
+   {
+    "name": "Stundenwerte Januar 2025 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202501.zip"
+   },
+   {
+    "name": "ARCHIV Stundenwerte 2016 - 2024 (csv)",
+    "format": "CSV(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_Archiv.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Zähldaten"
+  ]
+ },
+ "ergebnisse_ganglinien_dauerzaehlstellen": {
+  "name": "ergebnisse_ganglinien_dauerzaehlstellen",
+  "titel": "Ergebnisse und Ganglinien der Dauerzählstellen in Baden-Württemberg",
+  "org": "Verkehrsministerium Baden - Württemberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-19T11:33:05.179087",
+  "notiz": "<p><strong>Ergebnisse der Dauerzählstellen in BW</strong>: Das Zählstellennetz der Dauerzählstellen (DZ) umfasst rd. 150 Zählstellen auf Bundesautobahnen, Bundes- und Landstraßen in Baden-Württemberg. Erfasst werden an den Dauerzählstellen alle Kraftfahrzeuge (Kfz). Es werden hierbei 8 + 1 = 9 Fahrzeugarten unterschieden.</p> <h3>Zählstellen-Karte</h3> <p>Die Karte zeigt die temporären, dauerhaften und manuellen Zählstellen in Baden-Württemberg. Eingeblendet sind zunächst die Zählstellen an Autobahnen, welche bei hoher Zoomstufe durch die übrigen Zählstellen an Bundes-, Land- und Kreisstraßen ",
+  "ressourcen": [
+   {
+    "name": "Ganglinien Autobahnen",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ganglinien_Autobahnen.zip"
+   },
+   {
+    "name": "Ganglinien Bundesstraßen",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ganglinien_Bundesstrassen.zip"
+   },
+   {
+    "name": "Ganglinien Landesstraßen",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ganglinien_Landesstrassen.zip"
+   },
+   {
+    "name": "Ganglinien Kreisstraßen",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm//Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ganglinien_Kreisstrassen.zip"
+   },
+   {
+    "name": "Ganglinien Gemeindestraßen",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ganglinien_Gemeindestrassen.zip"
+   },
+   {
+    "name": "Wochen- und Tagesganglinien",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ganglinien_WochenUndTage.zip"
+   },
+   {
+    "name": "Ergebnisse 2026 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2026_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2026 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2026_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2025 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2025_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2025 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2025_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2024 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2024_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2024 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2024_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2023 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2023_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2023 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2023_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2022 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2022_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2022 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2022_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2021 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2021_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2021 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2021_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2020 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2020_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2020 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2020_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2019 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2019_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2019 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2019_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2018 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2018_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2018 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2018_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2017 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2017_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2017 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2017_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2016 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2016_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2015 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2015_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2014 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2014_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2013 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2013_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2012 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2012_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2011 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2011_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2010 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2010_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2009 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2009_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2008 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2008_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2007 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2007_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2006 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2006_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2005 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2005_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2004 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2004_PDF.zip"
+   },
+   {
+    "name": "Ergebnisse 2003 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Ergebnisse_Ganglinien_Dauerzaehlstellen_BW/Ergebnisse_2003_PDF.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Zähldaten",
+   "Freiburg",
+   "Karlsruhe",
+   "Mannheim",
+   "Ulm",
+   "Tübingen",
+   "Pforzheim",
+   "Reutlingen",
+   "Ludwigsburg"
+  ]
+ },
+ "verkehrsentwicklungen_jahresvergleiche_strassenverkehr": {
+  "name": "verkehrsentwicklungen_jahresvergleiche_strassenverkehr",
+  "titel": "Verkehrsentwicklungen / Jahresvergleiche des Straßenverkehrs in Baden-Württemberg",
+  "org": "Verkehrsministerium Baden - Württemberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:24:08.520740",
+  "notiz": "<p>Der Jahresvergleich beschreibt das Verkehrsgeschehen auf den klassifizierten Straßen im Land Baden-Württemberg (Bundesautobahnen, Bundesstraßen, Landesstraßen und Kreisstraßen). Angaben zur Entwicklung des Kfz-Bestandes, der durchschnittlichen täglichen Verkehrsstärken, der Jahresfahrleistungen und des grenzüberschreitenden Verkehrs sind enthalten. Darüber hinaus wird auch das Unfallgeschehen auf den Straßen dargestellt. Die Unfallsituation, die langfristige Unfallentwicklung, die Unfallraten und die Unfallursachen werden beschrieben.</p> <p>In der nachfolgenden Ressource werden Links zu al",
+  "ressourcen": [
+   {
+    "name": "Jahresvergleiche 2002-2024",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Verkehrsentwicklungen_Jahresvergleiche_Strassenverkehr_BW/Jahresvergleiche.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten"
+  ]
+ },
+ "nachfragekarte-spnv-bw": {
+  "name": "nachfragekarte-spnv-bw",
+  "titel": "Karte der Nachfrage im Schienenpersonennahverkehr in Baden-Württemberg",
+  "org": "NVBW - Team Nachfragemanagement",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:23:57.610639",
+  "notiz": "<p>Die Karte zeigt die Zahl an Fahrgästen im Schienenpersonennahverkehr <strong>je Tag pro Streckenabschnitt</strong> in Baden-Württemberg. Es handelt sich dabei um Zählungen von Montag bis Freitag an Schulwerktagen. </p> <p>Erfasst wurden: </p> <p><ul> <li>Durchschnittliche tägliche Fahrgastzahlen im 1. und 2. Halbjahr 2024</li> <li>Durchschnittliche tägliche Fahrgastzahlen im 1. und 2. Halbjahr 2025</li> </ul></p> <p>Der Wert für den <strong>Querschnitt </strong>stellt den Durchschnitt der Zähldaten aus den genannten drei Halbjahren dar.</p> <hr/> <h3>Karte der SPNV-Nachfrage in BW</h3> <p><",
+  "ressourcen": [
+   {
+    "name": "Querschnittdaten (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobidata-bw.de/portal/opnv/afzs/Querschnittdaten2025.geojson"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Zählung",
+   "Zähldaten"
+  ]
+ },
+ "endergebnisse_strassenverkehrszaehlung": {
+  "name": "endergebnisse_strassenverkehrszaehlung",
+  "titel": "Endergebnisse der Straßenverkehrszählung in Baden-Württemberg",
+  "org": "Verkehrsministerium Baden - Württemberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:23:33.541975",
+  "notiz": "<p>Die Straßenverkehrszählung (SVZ) umfasst alle Zählungen mittels Dauerzählstellen, temporären Zählstellen (Seitenradargeräten / Verkehrsmonitoring) und manuellen Zählstellen.</p> <h3>Zählstellen-Karte</h3> <p>Die Karte zeigt die temporären, dauerhaften und manuellen Zählstellen in Baden-Württemberg. Eingeblendet sind zunächst die Zählstellen an Autobahnen, welche bei hoher Zoomstufe durch die übrigen Zählstellen an Bundes-, Land- und Kreisstraßen ergänzt werden. Durch Klick auf eine Zählstelle lassen sich in einem Popup die jeweilige Straße und Zählstellennummer anzeigen. <p>Der folgende Lin",
+  "ressourcen": [
+   {
+    "name": "Ergebnisse 2024 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2024.zip"
+   },
+   {
+    "name": "Ergebnisse 2024 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2024_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2023 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2023.zip"
+   },
+   {
+    "name": "Ergebnisse 2023 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2023_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2022 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2022.zip"
+   },
+   {
+    "name": "Ergebnisse 2022 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2022_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2021 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2021.zip"
+   },
+   {
+    "name": "Ergebnisse 2021 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2021_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2020 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2020.zip"
+   },
+   {
+    "name": "Ergebnisse 2020 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2020_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2019 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2019.zip"
+   },
+   {
+    "name": "Ergebnisse 2019 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2019_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2018 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2018.zip"
+   },
+   {
+    "name": "Ergebnisse 2018 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2018_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2017 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2017.zip"
+   },
+   {
+    "name": "Ergebnisse 2017 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2017_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2016 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2016.zip"
+   },
+   {
+    "name": "Ergebnisse 2016 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2016_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2015 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2015.zip"
+   },
+   {
+    "name": "Ergebnisse 2015 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2015_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2014 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2014.zip"
+   },
+   {
+    "name": "Ergebnisse 2014 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2014_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2013 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2013.zip"
+   },
+   {
+    "name": "Ergebnisse 2013 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2013_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2012 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2012.zip"
+   },
+   {
+    "name": "Ergebnisse 2012 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2012_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2011 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2011.zip"
+   },
+   {
+    "name": "Ergebnisse 2011 (Excel)",
+    "format": "XLSX(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2011_Excel.zip"
+   },
+   {
+    "name": "Ergebnisse 2010 (PDF)",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Endergebnisse_Strassenverkehrszaehlung_BW/Ergebnisse_2010.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Zählung",
+   "Zähldaten"
+  ]
+ },
+ "bundesweite_strassenverkehrszaehlung": {
+  "name": "bundesweite_strassenverkehrszaehlung",
+  "titel": "Bundesweite Straßenverkehrszählung",
+  "org": "Verkehrsministerium Baden - Württemberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:23:28.962025",
+  "notiz": "<p>Zur Überwachung der Verkehrsentwicklung und zur Ermittlung der Verkehrsstärken findet eine bundesweite Straßenverkehrszählung (SVZ) auf Bundesautobahnen und Bundesstraßen im Rahmen des üblichen Fünf-Jahres-Turnus statt. Die Zählungen wurden entsprechend der Vorgabe des Bundes teilweise manuell (mit Zählpersonal), teilweise aber auch mit automatischen Zählgeräten durchgeführt. Die Zähldaten der Bundesfernstraßen wurden von der Bundesanstalt für Straßenwesen (BASt) hochgerechnet und veröffentlicht.</p> <p>Weitere Informationen zu den Straßenverkehrszählungen finden Sie auf den Internetseiten ",
+  "ressourcen": [
+   {
+    "name": "Straßenverkehrszählung 2015",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Bundesweite_Strassenverkehrszaehlung/Strassenverkehrszaehlung_2015.zip"
+   },
+   {
+    "name": "Straßenverkehrszählung 2010",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Bundesweite_Strassenverkehrszaehlung/Strassenverkehrszaehlung_2010.zip"
+   },
+   {
+    "name": "Verkehrsstärkenkarte 2010",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Bundesweite_Strassenverkehrszaehlung/Verkehrsstaerkenkarte_2010.zip"
+   },
+   {
+    "name": "Zählungen des ausländischen Kraftfahrzeugverkehrs 2008",
+    "format": "PDF",
+    "url": "https://mobidata-bw.de/vm/Bundesweite_Strassenverkehrszaehlung/Zaehlungen_auslaendischerKfzVerkehr_2008/AVZ_2008.pdf"
+   },
+   {
+    "name": "Straßenverkehrszählung 2005",
+    "format": "PDF(ZIP)",
+    "url": "https://mobidata-bw.de/vm/Bundesweite_Strassenverkehrszaehlung/Strassenverkehrszaehlung_2005.zip"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Verkehrszählung",
+   "Zählung",
+   "Zähldaten"
+  ]
+ },
+ "automatische-fahrgast-zahldaten-baden-wurttemberg": {
+  "name": "automatische-fahrgast-zahldaten-baden-wurttemberg",
+  "titel": "Fahrgast-Zähldaten im Schienenpersonennahverkehr Baden-Württemberg",
+  "org": "NVBW - Team Nachfragemanagement",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:23:22.505831",
+  "notiz": "<p>Die Nachfragedaten, die das Land Baden-Württemberg für die verkehrswissenschaftliche Analysen verwendet, stammen im Wesentlichen aus zwei Quellen: </p> <p>In vielen neu vergebenen SPNV-Netzen wurden in den vergangenen Jahren <strong>automatische Fahrgastzählsysteme (AFZS)</strong> in Betrieb genommen. Hier messen Sensoren an den Außentüren die Einsteiger-, Aussteigerzahlen und somit die Besetzung mit höchster Genauigkeit. Auf manchen Strecken sind jedoch noch ältere Fahrzeuge im Einsatz, die nicht mit automatischen Zählsystemen ausgestattet sind. In solchen Fällen erhebt externes Zählperson",
+  "ressourcen": [
+   {
+    "name": "1. Halbjahr 2025",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2025_1.HJ_20241215-20250614.csv.gz"
+   },
+   {
+    "name": "2. Halbjahr 2025",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2025_2.HJ_20250615-20251213.csv.gz"
+   },
+   {
+    "name": "1. Halbjahr 2024",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2024_1.HJ_20231210-20240608.7z"
+   },
+   {
+    "name": "2. Halbjahr 2024",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2024_2.HJ_20240609-20241214.7z"
+   },
+   {
+    "name": "1. Halbjahr 2023",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2023_1.HJ_20221211-20230610.csv.gz"
+   },
+   {
+    "name": "2. Halbjahr 2023",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2023_2.HJ_20230611-20231209.zip"
+   },
+   {
+    "name": "1. Halbjahr 2022",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2022_1.HJ_20211212-20220611.7z"
+   },
+   {
+    "name": "2. Halbjahr 2022",
+    "format": "CSV(ZIP)",
+    "url": "http://mobidata-bw.de/portal/opnv/afzs/2022_2.HJ_20220612-20221210.7z"
+   }
+  ],
+  "treffer": [
+   "groups:verkehrszaehldaten",
+   "Zähldaten"
+  ]
+ },
+ "mobile-verkehrsz-hlungen-rad-und-fu-verkehr": {
+  "name": "mobile-verkehrsz-hlungen-rad-und-fu-verkehr",
+  "titel": "Verkehrszählungen Konstanz",
+  "org": "Stadt Konstanz",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:27:05.971614",
+  "notiz": "<p>Dieser Datensatz beinhaltet Zähldaten von mobilen Zählstellen des MIV sowie Rad- und Fußverkehrs in der Stadt Konstanz. </p> <p>Das Handlungsfeld Mobilität ist ein zentrales Thema auf dem Weg zur Klimaneutralität. Mit einer Mobilitätswende soll die Senkung des Energieverbrauchs ohne Einschränkung der Mobilität erreicht werden. Dabei geht es nicht nur um die Klärung, wie und mit welchen Verkehrsmitteln sich die Bürgerinnen und Bürger zukünftig bewegen. Es geht auch darum, wie der knappe öffentliche Raum genutzt wird.</p> <p>Für einen besseren Überblick über die Anzahl der Radfahrer, Autos un",
+  "ressourcen": [
+   {
+    "name": "Schottenstraße.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Schottenstra%C3%9Fe.csv"
+   },
+   {
+    "name": "Alte_Rheinbruecke.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Alte_Rheinbruecke.csv"
+   },
+   {
+    "name": "Gartenstraße_Schottenstraße.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Gartenstra%C3%9Fe_Schottenstra%C3%9Fe.csv"
+   },
+   {
+    "name": "Jakobstraße_suedlich_vom_Kreisverkehr.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Jakobstra%C3%9Fe_suedlich_vom_Kreisverkehr.csv"
+   },
+   {
+    "name": "Theodor_Heuss_Straße.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Theodor_Heuss_Stra%C3%9Fe.csv"
+   }
+  ],
+  "treffer": [
+   "Verkehrszählung",
+   "Zähldaten"
+  ]
+ },
+ "kfz-und-verkehrsbelastung-heilbronn": {
+  "name": "kfz-und-verkehrsbelastung-heilbronn",
+  "titel": "Kfz und Verkehrsbelastung Heilbronn",
+  "org": "Stadt Heilbronn",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:53.377988",
+  "notiz": "<p>Dieser Datensatz beinhaltet den Bestand an Kraftfahrzeugen in den Kreisen Heilbronns seit 1976 nach Fahrzeugart. Ab 2017 auch die Jahresfahrleistungen im Straßenverkehr nach Fahrzeugarten in Heilbronn. </p> <h3 id=\"datenquelle-\">Datenquelle:</h3> <p><a href=\"https://opendata.heilbronn.de/dataset/kfz-und-verkehrsbelastung-heilbronn\">Open Data Heilbronn</a> unter CC BY 4.0</p> ",
+  "ressourcen": [
+   {
+    "name": "Bestand an Kraftfahrzeugen in den Kreisen seit 1976 nach Fahrzeugart im Stadtkreis Heilbronn",
+    "format": "CSV",
+    "url": "https://www.statistik-bw.de/Verkehr/KFZBelastung/10023020.tab?R=KR121&amp;form=csv"
+   },
+   {
+    "name": "Jahresfahrleistungen im Straßenverkehr ab 2017 nach Fahrzeugarten in Heilbronn",
+    "format": "CSV",
+    "url": "https://www.statistik-bw.de/Verkehr/KFZBelastung/10026017.tab?R=KR121&amp;form=csv"
+   }
+  ],
+  "treffer": [
+   "Verkehrszählung",
+   "Heilbronn"
+  ]
+ },
+ "mobility_main_bikecounter": {
+  "name": "mobility_main_bikecounter",
+  "titel": "Fahrradzählstellen in Heidelberg",
+  "org": "Stadt Heidelberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:23:55.914277",
+  "notiz": "<p>Hier finden Sie die stündlichen Zählstände der Fahrradzählstellen im Stadtgebiet vom Vortag.</p> <p>Jede Fahrradzählstelle ist als einzelne Ressource hinterlegt. Pro Fahrradzählstelle wird der kumulierte Fahrraddurchgangsverkehr (Anzahl) pro Messintervall (stündlich) ausgegeben.</p> <p>Messwerte:</p><ul> <li>intensity (Anzahl)</li> <li>dateobserved (Zeitintervallendpunkt)</li> <li>dateobservedfrom (Zeitintervallanfangspunkt)</li> </ul> <p>Datenmodell:</p> https://github.com/smart-data-models/dataModel.Transportation/blob/master/TrafficFlowObserved/doc/spec_DE.md",
+  "ressourcen": [
+   {
+    "name": "Echtzeitdaten-API (ORION-V2)",
+    "format": "JSON",
+    "url": "https://api.datenplattform.heidelberg.de/ckan/or/mobility/main/eco-counter/v2/entities?limit=50&api-key=360d5d1b-42d9-4562-9261-a70c1c027f79"
+   },
+   {
+    "name": "Historische Daten-API (Quantum Leap)",
+    "format": "JSON",
+    "url": "https://api.datenplattform.heidelberg.de/ckan/ql/mobility/main/eco-counter/v2/entities/urn:ngsiv2:TrafficFlowObserved:100012161?fromDate=2024-04-05T09:00:00.000Z&toDate=2024-04-05T09:15:00.000Z&api-key=9e794010-518e-4abf-9bc9-213a88a78646"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100012161_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/6415f29c-ede7-4ab7-9a49-e7ee405911b9?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100012608_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/e39e5a6b-589a-4c70-876b-ccce7a75d603?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100013034_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/cee2f3e5-4e37-446b-aeba-dfba13c904ad?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100040194_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/1c728348-590c-487d-b92e-5b471148ea34?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100040195_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/7a0ee0ef-9fd7-43ee-ad77-2749d5cac28f?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100040196_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/d07f07bb-9d85-46ad-9a47-5ea8fda3cb06?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100040868_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/8375805d-8348-4eec-b0e2-74cc4f9a694d?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100040869_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/3380f490-47d8-460f-ba43-b0e0c07ad3fe?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100049883_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/d078ec51-fd18-4cf9-9909-df7e82969764?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100049884_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/eee90ee0-f325-44b2-949c-25396cae73cf?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100049885_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/4ce886dc-5e3a-4ff3-9edb-1ed3322e5d4d?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100049901_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/b2190b67-7551-4b97-ba2c-b5a72098916b?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100056769_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/84f5d432-638a-473e-8e35-891ed8c34d18?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100056770_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/8cca7110-c468-4298-bcc1-626ec184fd59?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100056771_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/462dc0f9-c8c2-4b32-a188-fe2e2b746e61?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100056772_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/6ec6beb8-91e8-4eb9-8c27-61377db36535?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100056773_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/65522015-7a70-4751-b486-fdaf9b69e55c?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100056774_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/94edbf26-2eae-4fcf-bcdd-142fef1e450c?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_100011985_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/c2b21e67-9cf5-4a32-b3ce-f46447e3a29b?bom=True"
+   }
+  ],
+  "treffer": [
+   "Verkehrszählung",
+   "Mannheim"
+  ]
+ },
+ "mobility_main_trafficcamera": {
+  "name": "mobility_main_trafficcamera",
+  "titel": "Verkehrskameras in Heidelberg",
+  "org": "Stadt Heidelberg",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:23:56.302610",
+  "notiz": "<p>Der Datensatz beinhaltet eine Beobachtung des Verkehrsflusses an einem bestimmten Ort und zu einer bestimmten Zeit. Angegeben sind die aktuellen und vergangenen Messwerte der Verkehrszählungskameras im Stadtgebiet Heidelberg (Messintervall: 15 min).</p> <p>Der jeweilige Datensatz enthält neben allgemeinen Standortangaben beispielsweise Angaben zur Anzahl gemessener Fahrzeuge und Fahrzeugtypen, der durchschnittlichen Abstandslänge zwischen Fahrzeugen, sowie deren Vorbeifahrtzeit.</p> <p>Eine ausführliche Beschreibung des Datenmodells und der Spezifikation ist hier zu finden:</p> https://gith",
+  "ressourcen": [
+   {
+    "name": "Echtzeitdaten-API (ORION-V2)",
+    "format": "JSON",
+    "url": "https://api.datenplattform.heidelberg.de/ckan/or/mobility/main/trafficcamera/v2/entities?limit=50&api-key=218c1c52-1205-4687-8079-5374e133aa6a"
+   },
+   {
+    "name": "Historische Daten-API (Quantum Leap)",
+    "format": "JSON",
+    "url": "https://api.datenplattform.heidelberg.de/ckan/ql/mobility/main/trafficcamera/v2/entities/urn:ngsiv2:TrafficFlowObserved:20951a57-2e18-4e17-ba68-b98db74c63ea?fromDate=2024-12-31T09:00:00.000Z&toDate=2024-12-31T09:30:00.000Z&api-key=f4b94110-d876-4f56-9af7-e021c13a8499"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_7f69b1f6-b13b-4f13-a970-56a3e88b071a_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/05e8ef1c-fcf6-473c-89cc-bfab0accdcf1?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_3403dbdb-dd66-4752-a595-05d0febeeb7d_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/ef443489-03bf-4607-9bc7-41472473639c?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_8ef25839-7e73-408a-8025-89b2e1bc01b6_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/dc5200b1-8783-4800-82cb-4f5718c00581?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_a50fd4d9-e153-4b1b-9dd5-70846caff24a_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/5725a391-c537-4724-9575-abc0fd7bc47a?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_56d18b33-038a-4fd9-a9aa-6e7dcb6f7293_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/4fdf4ee7-c226-4a33-a695-85f6c9e712f1?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_0ef8e794-ea09-4b51-83af-fa939a86945d_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/b266a9b9-7a63-46b0-b8ce-408fd7395512?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_2d458741-2a9a-45ba-a062-f8a790a976aa_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/b95871b2-7de0-46b1-b377-db497250f8a0?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_7cfd6a06-3e81-4684-9aea-9c486475ec5b_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/2a469ef6-634b-435a-874b-9fd40ba9bd5c?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_b0a0594f-95cf-4bc9-b1a8-1d0c19c3fbad_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/2d93d846-83c2-4b2c-afbd-25c17d421c0d?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_20951a57-2e18-4e17-ba68-b98db74c63ea_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/7e6b52dd-740b-4e1f-9c74-467905bc10ba?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_130a084c-a7e1-403a-891e-0e34c52b8afa_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/4d63ef2f-d4c2-4cf1-81a8-ec9430d74725?bom=True"
+   },
+   {
+    "name": "urn_ngsiv2_trafficflowobserved_1e1e69be-f894-4db3-ae69-d1394e49c852_trafficflowobserved",
+    "format": "CSV",
+    "url": "https://ckan.datenplattform.heidelberg.de/de/datastore/dump/6c3c621c-8710-4485-ac45-e201879cf9ae?bom=True"
+   }
+  ],
+  "treffer": [
+   "Verkehrszählung"
+  ]
+ },
+ "fahrrad-dauerz-hlstellen": {
+  "name": "fahrrad-dauerz-hlstellen",
+  "titel": "Fahrrad-Dauerzählstellen Konstanz",
+  "org": "Stadt Konstanz",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:29:59.898764",
+  "notiz": "<p>Der Datensatz enthält die Messergebnisse der Fahrradzählungen aller städtischen Dauerzählstellen im Konstanzer Stadtgebiet. Mit diesen Daten kann genau festgestellt werden, wann wie viele Radfahrerinnen und Radfahrer an diesen Orten unterwegs gewesen sind. Die Messergebnisse sind im 15 Minuten-Rhythmus erfasst. Die Zählstellen dienen als wichtige Datengrundlage für die städtische Radpolitik.</p> <p>Aktuell betreibt die Stadt Konstanz eine Dauerzählstelle im Stadtgebiet. Die Fahrradzählstelle befindet sich am Ende der Fahrradbrücke beim Herosépark (weitere Infos und Bilder <a href=\"http://ww",
+  "ressourcen": [
+   {
+    "name": "Interaktive Karte: Eco Counter",
+    "format": "",
+    "url": "http://eco-public.com/ParcPublic/?id=4586#"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2018_stuendlich.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2018_stuendlich.csv"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2018_stuendlich_Wetter.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2018_stuendlich_Wetter.csv"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2019_15min.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2019_15min.csv"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2019_stuendlich_Wetter.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2019_stuendlich_Wetter.csv"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2020_15min.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2020_15min.csv"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2020_stuendlich_Wetter.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2020_stuendlich_Wetter.csv"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2021_15min.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2021_15min.csv"
+   },
+   {
+    "name": "Zaehlstelle_Herose_2021_stuendlich_Wetter.csv",
+    "format": "CSV",
+    "url": "https://offenedaten-konstanz.de/sites/default/files/Zaehlstelle_Herose_2021_stuendlich_Wetter.csv"
+   },
+   {
+    "name": "Interaktive Karte: Bicycle-Data-Initiative",
+    "format": "",
+    "url": "https://www.bicycle-data.de/city-analysis/"
+   }
+  ],
+  "treffer": [
+   "Zählung"
+  ]
+ },
+ "vz-freiburg": {
+  "name": "vz-freiburg",
+  "titel": "Verkehrszeichen Freiburg",
+  "org": "Stadt Freiburg im Breisgäu",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:24:09.463581",
+  "notiz": "<p>Der Datensatz enthält alle Verkehrsschilder der Stadt Freiburg nach dem amtlichen Verkehrszeichenkatalog (VwV-StVO 2017 inklusive Erweiterung im Rahmen der StVO-Novelle in 2020). Fahrbahnmarkierungen sind nicht im Datensatz enthalten.</p> <p>Die Verkehrsschilder wurden über einen KI-basierten Ansatz aus den Befahrungsdaten aus dem <strong>Frühjahr 2024</strong> abgeleitet und geben folglich die Situation zum damaligen Befahrungszeitpunkt wieder. Damals temporär bestehende Beschilderungen (z.B. aufgrund von Baustellen) sind nicht im Datensatz enthalten. Vorhandener Text auf den Verkehrsschil",
+  "ressourcen": [
+   {
+    "name": "Verkehrszeichen Freiburg (WFS)",
+    "format": "WFS",
+    "url": "https://geoportal.freiburg.de/wfs/digit_verkehrszeichen/digit_verkehrszeichen?REQUEST=GetCapabilities&SERVICE=WFS&VERSION=2.0.0"
+   }
+  ],
+  "treffer": [
+   "Freiburg"
+  ]
+ },
+ "parkdaten-freiburg": {
+  "name": "parkdaten-freiburg",
+  "titel": "Parkdaten Freiburg im Breisgau",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+  "geaendert": "2026-10-01T13:23:58.924501",
+  "notiz": "<p>Dieser Datensatz beinhaltet Echtzeit-Belegungsdaten des Parkleitsystems der Stadt Freiburg im 5-Minuten-Takt. </p> <p>Das Parkleitsystem informiert über die freien Parkplätze in den Parkhäusern des Innenstadtsbereichs, der in 3 Parkzonen (Altstadt, Bahnhof und Universität) unterteilt ist. Die 30 dynamischen Anzeigetafeln vor Ort zeigen jederzeit die aktuelle Anzahl der freien Parkplätze an und führen Sie direkt an das gewünschte Parkhaus.</p> <p>Die Daten sind in das landesweite <a href=\"https://www.mobidata-bw.de/dataset/gebuendelte-parkdaten-bw\">Parkdatenprofil</a> auf MobiData BW integri",
+  "ressourcen": [
+   {
+    "name": "Parkleitsystem Freiburg - WFS ",
+    "format": "WFS",
+    "url": "https://geoportal.freiburg.de/wfs/gdm_pls/gdm_pls?request=GetFeature&service=WFS&version=2.0.0&typeName=pls&outputFormat=text/xml;%20subtype=gml/3.1.1"
+   },
+   {
+    "name": "Parkleitsystem Freiburg - WMS ",
+    "format": "WMS",
+    "url": "https://geoportal.freiburg.de/wms/gdm_pls/gdm_pls?REQUEST=GetCapabilities&SERVICE=WMS"
+   },
+   {
+    "name": "Parkleitsystem Freiburg - ParkAPI",
+    "format": "GeoJSON",
+    "url": "https://api.parkendd.de/Freiburg"
+   },
+   {
+    "name": "Parkleitsystem Freiburg Karte in Web und Smartphone App",
+    "format": "HTML",
+    "url": "https://parkendd.de/map.html#Freiburg"
+   },
+   {
+    "name": "Parkdaten (ParkAPI)",
+    "format": "ParkAPI",
+    "url": "https://api.mobidata-bw.de/park-api/api/public/v3/parking-sites"
+   }
+  ],
+  "treffer": [
+   "Freiburg"
+  ]
+ },
+ "radservicepunkte": {
+  "name": "radservicepunkte",
+  "titel": "Gebündelte Daten Radservicepunkte Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+  "geaendert": "2026-11-08T02:08:22.309232",
+  "notiz": "<p>Dieser Datensatz beinhaltet die gebündelten Standorte der Radservicepunkte in Baden-Württemberg. </p> <hr> <h3>Übersicht der Radservicepunkte</h3> <p><iframe src=\"https://mobidata-bw.de/karten/ipl/bicycle_service_points/\"width=\"100%\" height=\"900px\"></iframe></p> <p><p> Hier geht es zur <strong> <a href=\"https://mobidata-bw.de/karten/ipl/bicycle_service_points/\" target=\"_blank\">Vollbildansicht</a></strong> der Karte.</span></p> <hr> <h3 id=\"verf-gbare-daten\">Verfügbare Daten</h3> <table class=\"datasetTable\"> <tr> <td><strong>Datengeber</strong></td> <td><strong>dynamisch</strong></td> <td><s",
+  "ressourcen": [
+   {
+    "name": "Radservicepunkte (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Abicycle_service_points&maxFeatures=5000&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Radservicepunkte (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Abicycle_service_points&maxFeatures=5000&outputFormat=csv"
+   },
+   {
+    "name": "Radservicepunkte (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Tübingen"
+  ]
+ },
+ "e-kleinkraftrad-sharing": {
+  "name": "e-kleinkraftrad-sharing",
+  "titel": "Gebündelte Daten E-Kleinkraftrad-Sharing Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:07:47.790243",
+  "notiz": "<p>Dieses Datenprofil bündelt Daten zu <strong>Standorten von verfügbaren E-Kleinkrafträdern</strong> von verschiedenen Sharing-Angeboten in Baden-Württemberg. Es handelt sich jeweils um dynamische Daten. </p> <p>Detaillierte Informationen zum Datenprofil finden Sie im dazugehörigen <strong><a href=\"https://mobidata-bw.de/data/MobiData_BW_Factsheet_Sharing.pdf\">Factsheet Datenprofil Sharing Mobility</a></strong>.</p> <p class=\"infokasten\">Für Kommunen und Infrastrukturbetreiber gelten die Datenbereitstellungspflichten der <strong><a href=\"https://eur-lex.europa.eu/legal-content/DE/TXT/PDF/?uri",
+  "ressourcen": [
+   {
+    "name": "E-Kleinkraftrad-Sharing (GBFS)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs"
+   },
+   {
+    "name": "E-Kleinkraftrad-Sharing (GBFS 3.0)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/manifest.json"
+   },
+   {
+    "name": "GBFS Dokumentation",
+    "format": "",
+    "url": "https://github.com/MobilityData/gbfs"
+   },
+   {
+    "name": "E-Kleinkraftrad-Sharing (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   },
+   {
+    "name": "E-Kleinkraftrad-Sharing - Free-Floating (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_vehicles&CQL_FILTER=form_factor%20%3D%20%27moped%27&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "E-Kleinkraftrad-Sharing (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://api.mobidata-bw.de/sharing/graphql"
+   },
+   {
+    "name": "GraphQL Dokumentation",
+    "format": "",
+    "url": "https://graphql.org/learn/"
+   }
+  ],
+  "treffer": [
+   "Freiburg"
+  ]
+ },
+ "cargobike": {
+  "name": "cargobike",
+  "titel": "Gebündelte Daten Lastenrad-Sharing Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:07:42.016537",
+  "notiz": "<p>Dieses Datenprofil bündelt Daten zu <strong>Standorten</strong> der Stationen und zu <strong>verfügbaren Lastenrädern</strong> an den Stationen von verschiedenen Bikesharing-Angeboten in Baden-Württemberg und der Schweiz. Es handelt sich jeweils um dynamische Daten. </p> <p>Detaillierte Informationen zum Datenprofil finden Sie im dazugehörigen <strong><a href=\"https://www.mobidata-bw.de/data/MobiData_BW_Factsheet_Sharing.pdf\">Factsheet Datenprofil Sharing Mobility</a></strong>.</p> <p class=\"infokasten\">Für Kommunen und Infrastrukturbetreiber gelten die Datenbereitstellungspflichten der <st",
+  "ressourcen": [
+   {
+    "name": "Lastenrad-Sharing (GBFS)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs"
+   },
+   {
+    "name": "Lastenrad-Sharing (GBFS 3.0)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/manifest.json"
+   },
+   {
+    "name": "GBFS Dokumentation",
+    "format": "",
+    "url": "https://github.com/MobilityData/gbfs"
+   },
+   {
+    "name": "Lastenrad-Sharing (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   },
+   {
+    "name": "Lastenrad-Sharing - Stationen (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_stations&CQL_FILTER=num_cargo_bicycles_available>=0&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "Lastenrad-Sharing - Free-Floating (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_vehicles&CQL_FILTER=form_factor%20%3D%20%27cargo_bicycle%27&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "Lastenrad-Sharing (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://api.mobidata-bw.de/sharing/graphql"
+   },
+   {
+    "name": "GraphQL Dokumentation",
+    "format": "",
+    "url": "https://graphql.org/learn/"
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Karlsruhe"
+  ]
+ },
+ "escootch": {
+  "name": "escootch",
+  "titel": "Gebündelte Daten E-Scooter-Sharing Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:07:57.900254",
+  "notiz": "<p>Dieses Datenprofil bündelt dynamische Daten zu <strong>Standorten und Verfügbarkeiten</strong> von E-Scootern in Baden-Württemberg, der Schweiz und Frankreich (Region Grand Est). Die Daten setzen sich zusammen aus verschiedenen <a href=\"https://github.com/SFOE/sharedmobility/blob/main/providers.csv\">online verfügbaren GBFS-Feeds</a> sowie eigens angebundenen und validierten Feeds.</p> <p>Detaillierte Informationen zum Datenprofil finden Sie im dazugehörigen <strong><a href=\"https://www.mobidata-bw.de/data/MobiData_BW_Factsheet_Sharing.pdf\">Factsheet Datenprofil Sharing Mobility</a></strong>",
+  "ressourcen": [
+   {
+    "name": "E-Scooter-Daten (GBFS)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs"
+   },
+   {
+    "name": "E-Scooter-Daten (GBFS 3.0)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/manifest.json"
+   },
+   {
+    "name": "GBFS Dokumentation",
+    "format": "",
+    "url": "https://github.com/MobilityData/gbfs"
+   },
+   {
+    "name": "E-Scooter-Daten (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   },
+   {
+    "name": "E-Scooter-Daten - Stationen (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_stations&CQL_FILTER=num_scooters_available>=0&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "E-Scooter-Daten - Free-Floating (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_vehicles&CQL_FILTER=form_factor%20%3D%20%27scooter%27&maxFeatures=50000&outputFormat=csv"
+   },
+   {
+    "name": "E-Scooter-Daten (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://api.mobidata-bw.de/sharing/graphql"
+   },
+   {
+    "name": "GraphQL Dokumentation",
+    "format": "",
+    "url": "https://graphql.org/learn/"
+   },
+   {
+    "name": "Historische Daten E-Scooter (Free-Floating)",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Karlsruhe",
+   "Mannheim",
+   "Ulm",
+   "Tübingen",
+   "Heilbronn",
+   "Pforzheim",
+   "Reutlingen",
+   "Ludwigsburg"
+  ]
+ },
+ "carsharing": {
+  "name": "carsharing",
+  "titel": "Gebündelte Daten Carsharing Baden Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:07:49.279685",
+  "notiz": "<p>Dieses Datenprofil bündelt Daten zu<strong> Standorten von Stationen</strong> und zu verfügbaren <strong>Carsharing-Fahrzeugen </strong>an den Stationen von Carsharing-Angeboten in Baden-Württemberg und angrenzenden Regionen. Es handelt sich dabei um statische und dynamische Daten. Der Schnittstellenzugriff ermöglicht den gebündelten Zugang zu Stations- und Verfügbarkeitsdaten der aufgelisteten Anbieter. </p> <p>Detaillierte Informationen zum Datenprofil finden Sie im dazugehörigen <strong><a href=\"https://www.mobidata-bw.de/data/MobiData_BW_Factsheet_Sharing.pdf\">Factsheet Datenprofil Shar",
+  "ressourcen": [
+   {
+    "name": "Carsharingdaten (GBFS)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs"
+   },
+   {
+    "name": "Carsharingdaten (GBFS 3.0)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/manifest.json"
+   },
+   {
+    "name": "GBFS Dokumentation",
+    "format": "",
+    "url": "https://github.com/MobilityData/gbfs"
+   },
+   {
+    "name": "Carsharingdaten (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   },
+   {
+    "name": "Carsharingdaten - Stationen (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_stations&CQL_FILTER=num_cars_available>=0&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "Carsharingdaten - Free-Floating (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_vehicles&CQL_FILTER=form_factor%20%3D%20%27car%27&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "Carsharingdaten (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://api.mobidata-bw.de/sharing/graphql"
+   },
+   {
+    "name": "GraphQL Dokumentation",
+    "format": "",
+    "url": "https://graphql.org/learn/"
+   },
+   {
+    "name": "Historische Daten Carsharing (Stationen)",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Karlsruhe"
+  ]
+ },
+ "soll-fahrplandaten-verkehrsverbunde-bw-einzeln-ohne-linienverlauf": {
+  "name": "soll-fahrplandaten-verkehrsverbunde-bw-einzeln-ohne-linienverlauf",
+  "titel": "Soll-Fahrplandaten Verkehrsverbünde Baden-Württemberg (einzeln) ohne Linienverlauf",
+  "org": "NVBW - Team Daten und Dienste im ÖV",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:24:04.145286",
+  "notiz": "Dieser Datensatz beinhaltet die Soll-Fahrplandaten aller Verkehrsverbünde aus Baden-Württemberg, <strong>OHNE Linienverlauf</strong>, im GTFS-Format. Die gezippten GTFS-Daten werden wöchentlich aktualisiert. <hr>",
+  "ressourcen": [
+   {
+    "name": "Donau-Iller-Nahverkehrsverbund (DING)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/ding.zip"
+   },
+   {
+    "name": "Tarifverbund Ortenau (TGO)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/tgo.zip"
+   },
+   {
+    "name": "Bodensee-Oberschwaben Verkehrsverbund (bodo)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/bodo.zip"
+   },
+   {
+    "name": "Waldshuter Tarifverbund (WTV)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/wtv.zip"
+   },
+   {
+    "name": "Verkehrsverbund Pforzheim-Enzkreis (VPE)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/vpe.zip"
+   },
+   {
+    "name": "Verkehrsverbund Schwarzwald-Baar-Heuberg (Move)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/move.zip"
+   },
+   {
+    "name": "Verkehrsverbund Neckar-Alb-Donau (naldo)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/naldo.zip"
+   },
+   {
+    "name": "Kreisverkehr Schwäbisch Hall (KSVH)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/kvsh.zip"
+   },
+   {
+    "name": "Heilbronner Hohenloher Haller Nahverkehr (HNV)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/hnv.zip"
+   },
+   {
+    "name": "Regio Verkehrsverbund Lörrach (RVL)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/rvl.zip"
+   },
+   {
+    "name": "Ostalbmobil",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/oam.zip"
+   },
+   {
+    "name": "Verkehrsgesellschaft Bäderkreis Calw (VGC)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/vgc.zip"
+   },
+   {
+    "name": "Verkehrs-Gemeinschaft Landkreis Freudenstadt (VGF) ",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/vgf.zip"
+   },
+   {
+    "name": "Verkehrsverbund Hegau-Bodensee (VHB) ",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/vhb.zip"
+   },
+   {
+    "name": "Regio-Verkehrsverbund Freiburg (RVF)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/rvf.zip"
+   },
+   {
+    "name": "Heidenheimer Tarifverbund (HTV)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_ohne_liniennetz/htv.zip"
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Ulm",
+   "Heilbronn",
+   "Pforzheim"
+  ]
+ },
+ "soll-fahrplandaten-verkehrsverbunde-bw-einzeln-mit-linienverlauf": {
+  "name": "soll-fahrplandaten-verkehrsverbunde-bw-einzeln-mit-linienverlauf",
+  "titel": "Soll-Fahrplandaten Verkehrsverbünde Baden-Württemberg (einzeln) mit Linienverlauf",
+  "org": "NVBW - Team Daten und Dienste im ÖV",
+  "lizenz": "http://dcat-ap.de/def/licenses/odbl",
+  "geaendert": "2026-10-01T13:24:03.899466",
+  "notiz": "Dieser Datensatz beinhaltet die Soll-Fahrplandaten aller Verkehrsverbünde aus Baden-Württemberg, <strong>MIT Linienverlauf</strong>, im GTFS-Format. Die gezippten GTFS-Daten werden wöchentlich aktualisiert. Bitte beachten Sie die <a href=\"https://www.nvbw.de/open-data/fahrplandaten\" target=\"_blank\">Hinweise zu den Lizenzarten (Absatz &quot;Fahrplandaten mit Liniennetz - Sonderlizenz&quot;)</a>. <hr> ",
+  "ressourcen": [
+   {
+    "name": "Donau-Iller-Nahverkehrsverbund (DING)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/ding.zip"
+   },
+   {
+    "name": "Tarifverbund Ortenau (TGO)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/tgo.zip"
+   },
+   {
+    "name": "Bodensee-Oberschwaben Verkehrsverbund (bodo)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/bodo.zip"
+   },
+   {
+    "name": "Waldshuter Tarifverbund (WTV)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/wtv.zip"
+   },
+   {
+    "name": "Verkehrsverbund Pforzheim-Enzkreis (VPE)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/vpe.zip"
+   },
+   {
+    "name": "Verkehrsverbund Schwarzwald-Baar-Heuberg (Move)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/move.zip"
+   },
+   {
+    "name": "Verkehrsverbund Neckar-Alb-Donau (naldo)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/naldo.zip"
+   },
+   {
+    "name": "Kreisverkehr Schwäbisch Hall (KSVH)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/kvsh.zip"
+   },
+   {
+    "name": "Heilbronner Hohenloher Haller Nahverkehr (HNV)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/hnv.zip"
+   },
+   {
+    "name": "Regio Verkehrsverbund Lörrach (RVL)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/rvl.zip"
+   },
+   {
+    "name": "Ostalbmobil",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/oam.zip"
+   },
+   {
+    "name": "Verkehrsgesellschaft Bäderkreis Calw (VGC)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/vgc.zip"
+   },
+   {
+    "name": "Verkehrs-Gemeinschaft Landkreis Freudenstadt (VGF)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/vgf.zip"
+   },
+   {
+    "name": "Verkehrsverbund Hegau-Bodensee (VHB)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/vhb.zip"
+   },
+   {
+    "name": "Regio-Verkehrsverbund Freiburg (RVF)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/rvf.zip"
+   },
+   {
+    "name": "Heidenheimer Tarifverbund (HTV)",
+    "format": "GTFS",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/fahrplandaten_mit_liniennetz/htv.zip"
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Ulm",
+   "Heilbronn",
+   "Pforzheim"
+  ]
+ },
+ "bfrk-barrierefreiheit-an-bw-haltestellen": {
+  "name": "bfrk-barrierefreiheit-an-bw-haltestellen",
+  "titel": "Barrierefreiheit an Haltestellen (ÖPNV) Baden-Württemberg",
+  "org": "NVBW - Team Daten und Dienste im ÖV",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:03:55.467209",
+  "notiz": "<p>In Baden-Württemberg werden die Bahnhöfe und Haltepunkte (SPNV) sowie die Bushaltestellen (ÖPNV) hinsichtlich ihrer Eignung zur Nutzung durch mobilitätseingeschränkte Personen vor Ort geprüft. Dazu hat die NVBW Nahverkehrsgesellschaft Baden-Württemberg mbH für das Verkehrsministerium BW einen Kriterienkatalog definiert, der auf dem <a href=\"https://www.delfi.de/media/delfi_handbuch_barrierefreie_reiseketten_1._auflage_mai_2018.pdf\">Handbuch &quot;Barrierefreie Reiseketten in der Fahrgastinformation&quot;</a> der DELFI Version basiert. Mit einem <a href=\"https://vm.baden-wuerttemberg.de/de/s",
+  "ressourcen": [
+   {
+    "name": "bfrk-barrierefreiheit-an-bw-haltestellen.zip",
+    "format": "CSV(ZIP)",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/BFRK_Barrierefreiheit_an_BW-Haltestellen.zip"
+   },
+   {
+    "name": "BFRK-Barrierefreiheit-an-BW-Haltestellen-Schnittstellendokumentation",
+    "format": "PDF",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/BFRK-OpenData-Schnittstellendokumentation-V1_1.pdf"
+   },
+   {
+    "name": "BFRK Erfassungsleitfaden ÖPNV",
+    "format": "PDF",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/publikationen/NVBW-BFRK-Erfassungsleitfaden_ÖPNV.pdf"
+   },
+   {
+    "name": "BFRK_Haltestelle.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Haltestelle.csv"
+   },
+   {
+    "name": "BFRK_Haltesteig.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Haltesteig.csv"
+   },
+   {
+    "name": "BFRK_Aufzug.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Aufzug.csv"
+   },
+   {
+    "name": "BFRK_Engstelle.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Engstelle.csv"
+   },
+   {
+    "name": "BFRK_Fahrkartenautomat.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Fahrkartenautomat.csv"
+   },
+   {
+    "name": "BFRK_Fahrradanlage.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Fahrradanlage.csv"
+   },
+   {
+    "name": "BFRK_Informationsstelle.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Informationsstelle.csv"
+   },
+   {
+    "name": "BFRK_Leihradanlage.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Leihradanlage.csv"
+   },
+   {
+    "name": "BFRK_Parkplatz.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Parkplatz.csv"
+   },
+   {
+    "name": "BFRK_Rampe.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Rampe.csv"
+   },
+   {
+    "name": "BFRK_Stationsplan.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Stationsplan.csv"
+   },
+   {
+    "name": "BFRK_Taxi.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Taxi.csv"
+   },
+   {
+    "name": "BFRK_Toilette.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Toilette.csv"
+   },
+   {
+    "name": "BFRK_Treppe.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Treppe.csv"
+   },
+   {
+    "name": "BFRK_Verkaufsstelle.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Verkaufsstelle.csv"
+   },
+   {
+    "name": "BFRK_Weg.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/BFRK_Weg.csv"
+   },
+   {
+    "name": "OSMObjektbezug.csv",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/OEPNV/OSMObjektbezug.csv"
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Ulm",
+   "Tübingen",
+   "Heilbronn",
+   "Pforzheim",
+   "Reutlingen"
+  ]
+ },
+ "bikesh": {
+  "name": "bikesh",
+  "titel": "Gebündelte Daten Bikesharing Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:07:37.284432",
+  "notiz": "<p>Dieses Datenprofil bündelt Daten zu <strong>Standorten der Stationen</strong>, zu <strong>verfügbaren Leihfahrrädern</strong> an den Stationen sowie zu <strong>free-floating Fahrrädern</strong> von verschiedenen Bikesharing-Angeboten in Baden-Württemberg, der Schweiz und Frankreich (Region Grand Est). Es handelt sich jeweils um dynamische Daten. </p> <p>Detaillierte Informationen zum Datenprofil finden Sie im dazugehörigen <strong><a href=\"https://www.mobidata-bw.de/data/MobiData_BW_Factsheet_Sharing.pdf\">Factsheet Datenprofil Sharing Mobility</a></strong>.</p> <p class=\"infokasten\">Für Kom",
+  "ressourcen": [
+   {
+    "name": "Bikesharingdaten (GBFS)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs"
+   },
+   {
+    "name": "Bikesharingdaten (GBFS 3.0)",
+    "format": "GBFS",
+    "url": "https://api.mobidata-bw.de/sharing/gbfs/v3/manifest.json"
+   },
+   {
+    "name": "GBFS Dokumentation",
+    "format": "",
+    "url": "https://github.com/MobilityData/gbfs"
+   },
+   {
+    "name": "Bikesharingdaten (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   },
+   {
+    "name": "Bikesharingdaten - Stationen (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_stations&CQL_FILTER=num_bicycles_available>=0&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "Bikesharingdaten - Free-Floating (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Asharing_vehicles&CQL_FILTER=form_factor%20%3D%20%27bicycle%27&maxFeatures=20000&outputFormat=csv"
+   },
+   {
+    "name": "Bikesharingdaten (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://api.mobidata-bw.de/sharing/graphql"
+   },
+   {
+    "name": "GraphQL Dokumentation",
+    "format": "",
+    "url": "https://graphql.org/learn/"
+   },
+   {
+    "name": "Historische Daten Bikesharing (Stationen)",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Karlsruhe",
+   "Ulm",
+   "Tübingen",
+   "Heilbronn",
+   "Reutlingen"
+  ]
+ },
+ "gebundelte-daten-strassen-parkplatze-bw": {
+  "name": "gebundelte-daten-strassen-parkplatze-bw",
+  "titel": "Gebündelte Daten Straßen-Parkplätze Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:02:45.319067",
+  "notiz": "<p>Dieses Datenprofil bündelt <strong>Standortinformationen</strong> und, wenn vorhanden, <strong>Echtzeit-Belegungsdaten</strong> zu Parkmöglichkeiten im öffentlichen Straßenraum in Baden-Württemberg. Dies umfasst <strong>nicht bewirtschafteten Parkraum am Fahrbahnrand</strong> sowie <strong>bewirtschaftete und ggf. geordnete Parkstände am Fahrbahnrand oder im Seitenraum</strong>. <strong>Sonderparkplätze</strong> wie Behindertenparkplätze, Carsharing-Stellplätze, Familienparkplätze oder Plätze mit Lademöglichkeit gehören ebenfalls dazu. In den Übersichts-Karten können <strong>Behindertenpark",
+  "ressourcen": [
+   {
+    "name": "Straßen-Parkplätze (ParkAPI)",
+    "format": "ParkAPI",
+    "url": "https://api.mobidata-bw.de/park-api/documentation/public.html#/"
+   },
+   {
+    "name": "Straßen-Parkplätze (Datex II Light)",
+    "format": "Datex II Light",
+    "url": "https://api.mobidata-bw.de/park-api/api/public/datex2/json"
+   },
+   {
+    "name": "Straßen-Parkplätze (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/"
+   },
+   {
+    "name": "Straßen-Parkplätze (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Apark-api_car&CQL_FILTER=type%3D%27ON_STREET%27%20OR%20type%20IS%20NULL&maxFeatures=50000&outputFormat=csv"
+   },
+   {
+    "name": "Historische Daten Straßen-Parkplätze, Parkplätze & Parkbauten ",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Karlsruhe",
+   "Mannheim",
+   "Reutlingen",
+   "Esslingen"
+  ]
+ },
+ "gebuendelte-parkdaten-bw": {
+  "name": "gebuendelte-parkdaten-bw",
+  "titel": "Gebündelte Daten Parkplätze und Parkbauten Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:02:23.968661",
+  "notiz": "<p>Dieses Datenprofil bündelt Daten zu <strong>Standorten</strong> und, wenn vorhanden, <strong>Echtzeit-Belegungsdaten</strong> von Parkplätzen und Parkbauten in Baden-Württemberg. Dies umfasst <strong>Parkhäuser & Tiefgaragen, P+R-Anlagen an Haltepunkten sowie öffentliche Plätze mit Parkplätzen (mit und ohne Parkraumbewirtschaftung)</strong>. Dazu zählen auch sonstige Parkanlagen mit mehreren Stellplätzen sowie zentralen Ein- und Ausfahrten. <strong>Sonderparkplätze</strong> wie Behindertenparkplätze, Carsharing-Stellplätze, Familienparkplätze oder Plätze mit Lademöglichkeit gehören ebenfall",
+  "ressourcen": [
+   {
+    "name": "Parkplätze und Parkbauten (ParkAPI)",
+    "format": "ParkAPI",
+    "url": "https://api.mobidata-bw.de/park-api/documentation/public.html#/"
+   },
+   {
+    "name": "Parkplätze und Parkbauten (Datex II Light)",
+    "format": "Datex II Light",
+    "url": "https://api.mobidata-bw.de/park-api/api/public/datex2/json"
+   },
+   {
+    "name": "Parkplätze und Parkbauten (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   },
+   {
+    "name": "Parkplätze und Parkbauten (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Apark-api_car&cql_filter=type%3C%3E%27ON_STREET%27%20OR%20type%20is%20NULL&maxFeatures=30000&outputFormat=csv"
+   },
+   {
+    "name": "Parkdaten-Referenz-Tabelle (XLSX)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/publikationen/Parkdaten-Referenz-Tabelle.xlsx"
+   },
+   {
+    "name": "Historische Daten Parkplätze, Parkbauten & Straßen-Parkplätze",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Freiburg",
+   "Karlsruhe",
+   "Mannheim",
+   "Ulm",
+   "Heilbronn",
+   "Pforzheim",
+   "Reutlingen",
+   "Esslingen"
+  ]
+ },
+ "escooter-in-karlsruhe": {
+  "name": "escooter-in-karlsruhe",
+  "titel": "Escooter in Karlsruhe",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:35.787690",
+  "notiz": "Standorte der eScooter in Karlsruhe. Anbieter: Voi und Bolt. ",
+  "ressourcen": [
+   {
+    "name": "eScooter Karlsruhe (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aescooter&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "eScooter Karlsruhe (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aescooter&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Escooter (GrpahQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "pendlerverflechtungen-in-karlsruhe-2009-2019": {
+  "name": "pendlerverflechtungen-in-karlsruhe-2009-2019",
+  "titel": "Pendlerverflechtungen in Karlsruhe",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by-nd/4.0",
+  "geaendert": "2026-10-01T13:24:00.949685",
+  "notiz": "Entwicklung der Berufspendler 2009 – 2019",
+  "ressourcen": [
+   {
+    "name": "Bericht 2020",
+    "format": "PDF",
+    "url": "https://web6.karlsruhe.de/Stadtentwicklung/statistik/pdf/2019/2019-pendlerbericht.pdf"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "radnetz-stadt-karlsruhe": {
+  "name": "radnetz-stadt-karlsruhe",
+  "titel": "Radnetz Stadt Karlsruhe",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:24:01.901078",
+  "notiz": "Radnetz der Stadt Karlsruhe mit Wegart z.B. Fahrradstraße, Wirtschaftsweg und Fuß- und Radweg gemeinsam und Informationen zum Belag",
+  "ressourcen": [
+   {
+    "name": "Radnetz Karlsruhe (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aradrouten&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Radnetz Karlsruhe (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aradrouten&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "GraphQL",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "soll-fahrplandaten-kvv": {
+  "name": "soll-fahrplandaten-kvv",
+  "titel": "Soll-Fahrplandaten Karlsruher Verkehrsverbund (KVV)",
+  "org": "Karlsruher Verkehrsverbund (KVV)",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:24:03.389999",
+  "notiz": "<p>Soll-Fahrplandaten des Verkehrsverbundes ohne Linienverlauf im GTFS-Format. </p> <p>Es wird auf die Website <a href=\"https://www.kvv.de/fahrplan/fahrplaene/open-data.html\">Open Data-Initiative des KVV</a> verwiesen.</p> <p>Abweichende Lizenz: Für die KVV-Fahrplandaten gilt die Creative Commons CCZero Lizenz.</p> ",
+  "ressourcen": [
+   {
+    "name": "Soll-Fahrplandaten ohne Linienverlauf",
+    "format": "GTFS",
+    "url": "https://projekte.kvv-efa.de/GTFS/google_transit.zip"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "lastenrad-sharing-lastenkarle": {
+  "name": "lastenrad-sharing-lastenkarle",
+  "titel": "Lastenrad-Sharing Lastenkarle in Karlsruhe und Umgebung",
+  "org": "Lastenrad-Initiative für die Region Karlsruhe e.V.",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:23:54.227675",
+  "notiz": "<p>Der Datensatz beschreibt die Standorte (Stationen) der Lastenräder des Lastenrad-Initiative für die Region Karlsruhe e.V. (Lastenkarle) sowie deren Verfügbarkeit. Er umfasst derzeit 18 Standorte mit den dort stationierten Lastenrädern, einschließlich Fahrzeugtyp und technischer Eckdaten (Antrieb, Zuladung, Ladevolumen, Reichweite). Die Daten werden automatisch aus dem Buchungssystem CommonsBooking erzeugt und dynamisch bereitgestellt. Sie enthalten den aktuellen Zustand je Station und die in den nächsten Tagen buchbaren Zeitfenster je Fahrzeug. Es handelt sich um stationsbasierte Fahrzeuge ",
+  "ressourcen": [
+   {
+    "name": "Lastenkarle (GBFS 3.1)",
+    "format": "GBFS",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "parkscheinautomaten": {
+  "name": "parkscheinautomaten",
+  "titel": "Parkscheinautomaten",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-07T02:28:52.052812",
+  "notiz": "Standorte der Parkscheinautomaten in Karlsruhe, Ettlingen, Baden-Baden, Bruchsal, Gaggenau, Germersheim, Haguenau, Landau, Rastatt, Bretten und Saverne mit Angaben zur parkzeit und Gebühren. Die zugehörigen Parkflächen finden sie [hier](https://transparenz.karlsruhe.de/dataset/parkscheinautomatenflachen). Weitere Parkdaten wie [Parkhäuser](https://transparenz.karlsruhe.de/dataset/parkhaeuser), [kostenlose Parkplätze](https://transparenz.karlsruhe.de/dataset/freies-parken), [Parkschein-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheinautomaten), [Parkscheiben-Parkplätze](https://t",
+  "ressourcen": [
+   {
+    "name": "Parkscheinautomaten (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheinautomaten&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Parkscheinautomaten (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheinautomaten&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Parkscheinautomaten (CSV)",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheinautomaten&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Parkscheinautomaten (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "parkhaeuser": {
+  "name": "parkhaeuser",
+  "titel": "Parkhäuser",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-09T02:31:34.909597",
+  "notiz": "Parkhäuser in Karlsruhe, Rastatt, Wörth, Saverne, Haguenau, Baden-Baden, Bühl, Ettlingen, Gaggenau, Landau und Bretten mit Informationen zu Anzahl der Parkplätze, Aufzug, maximale Durchfahrthöhe, Kontakdaten... In Baden-Baden, Ettlingen, Karlsruhe, Rastatt und Haguenau liegen Echtzeitdaten zur Anzahl der freien Parkplätze(Spalte: freie_parkplaetze) vor. Dies ist durch echtzeit_belegung T/F gekennzeichnet. Ob der Echzeitstatus eine Störung hat erkennen Sie an der Spalte echtzeit_status. Weitere Parkdaten wie [Parkhäuser](https://transparenz.karlsruhe.de/dataset/parkhaeuser),[kostenlose Parkplät",
+  "ressourcen": [
+   {
+    "name": "Parkhäuser (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkhaeuser&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Parkhäuser (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkhaeuser&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Parkhäuser (CSV)",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkhaeuser&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Parkhäuser (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "parken-und-mitfahren": {
+  "name": "parken-und-mitfahren",
+  "titel": "Parken und Mitfahren",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:26:33.877148",
+  "notiz": "Parken und Mitfahren Stellplätze in der Technologie Region Karlsruhe. Weitere Parkdaten wie [Parkhäuser](https://transparenz.karlsruhe.de/dataset/parkhaeuser), [kostenlose Parkplätze](https://transparenz.karlsruhe.de/dataset/freies-parken), [Parkschein-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheinautomaten), [Parkscheiben-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheiben-parkplatze) und [Parken und Mitfahren](https://transparenz.karlsruhe.de/dataset/parken-und-mitfahren) sind auch vorhanden.",
+  "ressourcen": [
+   {
+    "name": "Parken und Mitfahren JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparken_mitfahren&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Parken und Mitfahren Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparken_mitfahren&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Parken und Mitfahren CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparken_mitfahren&outputFormat=csv"
+   },
+   {
+    "name": "Parken und Mitfahren (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "parkscheiben-parkplatze": {
+  "name": "parkscheiben-parkplatze",
+  "titel": "Parkscheiben Parkplätze",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:16:11.924714",
+  "notiz": "Parkplätze mit Parkscheiben in Karlsruhe, Wissembourg, Bühl, Ettlingen, Bruchsal, Gaggenau, Germersheim, Landau, Rastatt, Rheinstetten, Stutensee, Bretten und Saverne mit Angaben zur Parkzeit. Weitere Parkdaten wie [Parkhäuser](https://transparenz.karlsruhe.de/dataset/parkhaeuser), [kostenlose Parkplätze](https://transparenz.karlsruhe.de/dataset/freies-parken), [Parkschein-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheinautomaten), [Parkscheiben-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheiben-parkplatze) und [Parken und Mitfahren](https://transparenz.karlsruhe.",
+  "ressourcen": [
+   {
+    "name": "Parkscheiben Parkplätze (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheiben&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Parkscheiben Parkplätze (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheiben&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Parkscheiben Parkplätze (CSV)",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheiben&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Parkscheiben (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "park-and-ride": {
+  "name": "park-and-ride",
+  "titel": "Park and Ride",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-09T02:23:16.951019",
+  "notiz": "Hier findet man Park und Ride Stellplätze in der Technologieregion Karlsruhe. In Baden-Baden gibt es eine Echtzeit-Belegungsanzeige. Weitere Parkdaten wie [Parkhäuser](https://transparenz.karlsruhe.de/dataset/parkhaeuser), [kostenlose Parkplätze](https://transparenz.karlsruhe.de/dataset/freies-parken), [Parkschein-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheinautomaten), [Parkscheiben-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheiben-parkplatze) und [Parken und Mitfahren](https://transparenz.karlsruhe.de/dataset/parken-und-mitfahren) sind auch vorhanden.",
+  "ressourcen": [
+   {
+    "name": "Park and Ride GeoJSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Apark_ride&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Park and Ride Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Apark_ride&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Park and Ride CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Apark_ride&outputFormat=csv"
+   },
+   {
+    "name": "Park and Ride (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "freies-parken": {
+  "name": "freies-parken",
+  "titel": "Freies Parken",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:27:54.985042",
+  "notiz": "Hier findet man Daten zu kostenlosen Parkplätzen in Bühl, Gaggenau, Germersheim, Wissembourg, Wörth, Bretten, Saverne und Haguenau. Weitere Parkdaten wie [Parkhäuser](https://transparenz.karlsruhe.de/dataset/parkhaeuser), [kostenlose Parkplätze](https://transparenz.karlsruhe.de/dataset/freies-parken), [Parkschein-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheinautomaten), [Parkscheiben-Parkplätze](https://transparenz.karlsruhe.de/dataset/parkscheiben-parkplatze) und [Parken und Mitfahren](https://transparenz.karlsruhe.de/dataset/parken-und-mitfahren) sind auch vorhanden.",
+  "ressourcen": [
+   {
+    "name": "Freies Parken JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afreies_parken&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Freies Parken Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afreies_parken&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Freies Parken CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afreies_parken&outputFormat=csv"
+   },
+   {
+    "name": "Freies Parken (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "baustellen": {
+  "name": "baustellen",
+  "titel": "Baustellen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:22.789004",
+  "notiz": "Baustellen in Karlsruhe, Ettlingen, Rastatt, Baden-Baden, Bruchsal, Rheinstetten, Stutensee und Collectivité européenne d’Alsace.",
+  "ressourcen": [
+   {
+    "name": "Baustellen_aktuell (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abaustellen_aktuell&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Baustellen_Karlsruhe (DATEX)",
+    "format": "XML",
+    "url": "https://mobil.trk.de/datex/datex.xml"
+   },
+   {
+    "name": "Baustellen_Vorschau (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abaustellen_vorschau&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Baustellen",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abaustellen_aktuell&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Baustellen (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   },
+   {
+    "name": "Baustellen_Vorschau (Shape)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abaustellen_vorschau&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Baustellen_aktuell (SHAPE)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abaustellen_aktuell&outputFormat=SHAPE-ZIP"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "geschwindigkeiten": {
+  "name": "geschwindigkeiten",
+  "titel": "Geschwindigkeiten",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:50.974553",
+  "notiz": "Straßen mit Geschwindigkeitslimits in Karlsruhe. Die Tempozonen finden Sie [hier](https://transparenz.karlsruhe.de/dataset/tempozonen)",
+  "ressourcen": [
+   {
+    "name": "Geschwindigkeiten (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Ageschwindigkeiten&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Geschwindigkeiten (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Ageschwindigkeiten&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Geschwindigkeiten (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "parkscheinautomatenflachen": {
+  "name": "parkscheinautomatenflachen",
+  "titel": "Parkscheinautomatenflächen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:24:00.815400",
+  "notiz": "Dieser Datensatz enthält Flächen mit kostenpflichtige Parkschein-Parkplätzen in Karlsruhe. Standorte der Parkscheinautomaten finden Sie [hier](https://transparenz.karlsruhe.de/dataset/parkscheinautomaten).",
+  "ressourcen": [
+   {
+    "name": "Parkscheinautomatenflächen (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheinautomaten_flaechen&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Parkscheinautomatenflächen (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkscheinautomaten_flaechen&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Parkscheinautomatenflächen (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "tempozonen": {
+  "name": "tempozonen",
+  "titel": "Tempozonen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:26:56.742952",
+  "notiz": "Tempozonen mit 20 und 30 km/h sowie verkehrsberuhigte Bereiche der Städte Karlsruhe, Stutensee, Rheinstetten, Ettlingen, Rastatt und Baden-Baden. Weitere Angaben zur Geschwindigkeiten auf den Straßen ist [hier](https://transparenz.karlsruhe.de/dataset/geschwindigkeiten)",
+  "ressourcen": [
+   {
+    "name": "Tempozonen GeoJSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Atempozonen&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Shape Tempozonen",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Averanstaltungen_vorschau&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Atempozonen&outputFormat=csv&"
+   },
+   {
+    "name": "Tempozonen (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "verkehrsmittelwahl-und-mobilitatsverhalten": {
+  "name": "verkehrsmittelwahl-und-mobilitatsverhalten",
+  "titel": "Verkehrsmittelwahl und Mobilitätsverhalten",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by-nd/4.0",
+  "geaendert": "2026-10-01T13:24:08.889542",
+  "notiz": "Die Erhebung von Daten zum Verkehrsverhalten der Bevölkerung dient als Datengrundlage formeller und informeller Verkehrsplanungen sowie politischer Entscheidungen. Die Analysedaten gliedern sich in Haushalts-, Personen- und Wegedaten, die in Form von repräsentativen Haushaltsbefragungen erhoben werden. Der Erhebungs-zeitraum für Karlsruhe erstreckte sich von Februar 2018 bis Januar 2019",
+  "ressourcen": [
+   {
+    "name": "Ergebnisse 2018",
+    "format": "PDF",
+    "url": "https://www.karlsruhe.de/securedl/sdl-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMzc3MzksImV4cCI6MzMyMTc2MjY0NTYsInVzZXIiOjAsImdyb3VwcyI6WzAsLTFdLCJmaWxlIjoiZmlsZWFkbWluXC91c2VyX3VwbG9hZFwvMDVfTW9iaWxpdGFldF9TdGFkdGJpbGRcLzA1MV9Nb2JpbGl0YWV0XC84X1ZlcmtlaHJzcGxhbnVuZ19Lb256ZXB0ZVwvTW9iaWxpdGFldHN2ZXJoYWx0ZW5faW5fS2FybHNydWhlXC9TclYyMDE4X1ZlcmtlaHJzbWl0dGVsd2FobF91bmRfTW9iaWxpdGFldHN2ZXJoYWx0ZW5fS2FybHNydWhlLnBkZiIsInBhZ2UiOjMxODF9.J5szDV4vbMpI8dTeKJBSVqujawDAd9QyTwXW1AWOx_c/SrV2018_Verkehrsmittelwahl_und_Mobilitaetsverhalten_Karlsruhe.pdf"
+   },
+   {
+    "name": "Mobilitätssteckbrief",
+    "format": "PDF",
+    "url": "https://www.karlsruhe.de/securedl/sdl-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMzc3MzksImV4cCI6MzMyMTc2MjY0NTYsInVzZXIiOjAsImdyb3VwcyI6WzAsLTFdLCJmaWxlIjoiZmlsZWFkbWluXC91c2VyX3VwbG9hZFwvMDVfTW9iaWxpdGFldF9TdGFkdGJpbGRcLzA1MV9Nb2JpbGl0YWV0XC84X1ZlcmtlaHJzcGxhbnVuZ19Lb256ZXB0ZVwvTW9iaWxpdGFldHN2ZXJoYWx0ZW5faW5fS2FybHNydWhlXC9TclYyMDE4X01vYmlsaXRhZXRzc3RlY2ticmllZl9LYXJsc3J1aGUucGRmIiwicGFnZSI6MzE4MX0.SiVrH8exsYosEDTh0Evgmj0h2vdjKYDllljtL_BLY6s/SrV2018_Mobilitaetssteckbrief_Karlsruhe.pdf"
+   },
+   {
+    "name": "Tabellenbericht Karlsruhe 2018 - Mobilität in Städten",
+    "format": "PDF",
+    "url": "https://www.karlsruhe.de/securedl/sdl-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjQyMzc3MzksImV4cCI6MzMyMTc2MjY0NTYsInVzZXIiOjAsImdyb3VwcyI6WzAsLTFdLCJmaWxlIjoiZmlsZWFkbWluXC91c2VyX3VwbG9hZFwvMDVfTW9iaWxpdGFldF9TdGFkdGJpbGRcLzA1MV9Nb2JpbGl0YWV0XC84X1ZlcmtlaHJzcGxhbnVuZ19Lb256ZXB0ZVwvTW9iaWxpdGFldHN2ZXJoYWx0ZW5faW5fS2FybHNydWhlXC9TclYyMDE4X1RhYmVsbGVuYmVyaWNodC5wZGYiLCJwYWdlIjozMTgxfQ.tWTBLmzYQA3vnfZfuMYj3Hcd3rUMQhK7svTAXX1Ey1U/SrV2018_Tabellenbericht.pdf"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "leihfahrrader": {
+  "name": "leihfahrrader",
+  "titel": "Leihfahrräder",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:54.384354",
+  "notiz": "Fahrräder von nextbike und Ritmo in der Technologieregion Karlsruhe",
+  "ressourcen": [
+   {
+    "name": "Leihfahrräder (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aleihfahrraeder&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Leihfahrräder (GEOJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aleihfahrraeder&outputFormat=application%2Fjson"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "geschwindigkeitsmessungen": {
+  "name": "geschwindigkeitsmessungen",
+  "titel": "Geschwindigkeitsmessungen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:52.612619",
+  "notiz": "Vorgesehene Geschwindigkeitsmessungen in den nächsten Tagen. Kurzfristige Änderungen oder zusätzliche Messstellen sind aus aktuellem Anlass möglich.",
+  "ressourcen": [
+   {
+    "name": "aktuelle Geschwindigkeitsmessungen",
+    "format": "HTML",
+    "url": "https://www.karlsruhe.de/stadt-rathaus/service-buergerinformation/sicherheit-ordnung/geschwindigkeitsmessungen"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "radnetz_osm": {
+  "name": "radnetz_osm",
+  "titel": "Radnetz OSM",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "",
+  "geaendert": "2026-10-01T13:24:01.991205",
+  "notiz": "Radnetz der Technologie Region auf deutscher Seite ohne Karlsruhe aus OpenStreetMap. Lizenz: https://www.openstreetmap.org/copyright ",
+  "ressourcen": [
+   {
+    "name": "Radnetz OSM JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aradnetz_osm&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Radnetz OSM Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aradnetz_osm&outputFormat=SHAPE-ZIP"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "blitzer": {
+  "name": "blitzer",
+  "titel": "Blitzer",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:26:44.953036",
+  "notiz": "Standorte der stationären Blitzer in Karlsruhe und Rheinstetten.",
+  "ressourcen": [
+   {
+    "name": "Blitzer Stationär (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Ablitzer&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Blitzer Stationär (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Ablitzer&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Blitzer Stationär (CSV)",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Ablitzer&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Blitzer (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "kvv-nextbike": {
+  "name": "kvv-nextbike",
+  "titel": "KVV.nextbike-Zone",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:54.105268",
+  "notiz": "Dieser Datensatz enthält die Geometrie der Nextbike-Flexzone in Karlsruhe. Innerhalb dieser Zone dürfen Nextbikes auch außerhalb von Nextbike-Stationen abgestellt werden.",
+  "ressourcen": [
+   {
+    "name": "KVV.nextbike Zone JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Anextbike_zone&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "KVV.nextbike Zone Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Anextbike_zone&outputFormat=SHAPE-ZIP"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "fussgaengerzonen": {
+  "name": "fussgaengerzonen",
+  "titel": "Fußgängerzonen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:45.897178",
+  "notiz": "Fußgängerzonen in Karlsruhe, Rastatt, Ettlingen und Baden-Baden.",
+  "ressourcen": [
+   {
+    "name": "Fußgängerzone (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afussgaengerzonen&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Fußgängerzone (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afussgaengerzonen&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Fußgängerzonen (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "winterdienst-rad": {
+  "name": "winterdienst-rad",
+  "titel": "Winterdienst Rad",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:24:09.940219",
+  "notiz": "Straßenabschnitte für Fahrräder in Karlsruhe und Rheinstetten, die im Winter geräumt werden.",
+  "ressourcen": [
+   {
+    "name": "Winterdienst Rad JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Awinterdienst_rad&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Winterdienst Rad Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Awinterdienst_rad&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Winterdienst Rad (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "einbahnstrassen": {
+  "name": "einbahnstrassen",
+  "titel": "Einbahnstrassen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:29:45.106336",
+  "notiz": "Einbahnstrassen in Karlsruhe mit Informationen z.B. Radfahrer frei",
+  "ressourcen": [
+   {
+    "name": "Geojson Einbahnstrassen",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aeinbahnstrassen&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Shapefile Einbahnstrassen",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aeinbahnstrassen&&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "CSV Einbahnstrassen",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aeinbahnstrassen&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Freies Parken (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "winterdienst-auto": {
+  "name": "winterdienst-auto",
+  "titel": "Winterdienst Auto",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:24:09.750656",
+  "notiz": "Straßenabschnitte in Karlsruhe und Rheinstetten, die im Winter geräumt werden.",
+  "ressourcen": [
+   {
+    "name": "Winterdienst Auto JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Awinterdienst_auto&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Winterdienst Auto Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Awinterdienst_auto&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Winterdienst Auto (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "fahrrad-abstellanlagen": {
+  "name": "fahrrad-abstellanlagen",
+  "titel": "Fahrradabstellanlagen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:36.244312",
+  "notiz": "Fahrrad Abstellanlagen in Karlsruhe, Baden-Baden, Bühl, Ettlingen, Rastatt, Wörth, Bretten, Haguenau und Saverne mit Angaben zur Art z.B. Fahrradabstellanlage überdacht, Fahrradbox.",
+  "ressourcen": [
+   {
+    "name": "Fahrrad Abstellanlagen (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afahrradanlagen&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Fahrradabstellanlagen (Shape)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afahrradanlagen&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Fahrradabstellanalgen (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "bewohnerparken": {
+  "name": "bewohnerparken",
+  "titel": "Bewohnerparken",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:32:10.921191",
+  "notiz": "Informationen zu Bewohnerparken in den Städten Karlsruhe, Ettlingen, Raststatt, Landau und Bretten",
+  "ressourcen": [
+   {
+    "name": "Bewohnerparken (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abewohnerparken&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Bewohnerparken (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abewohnerparken&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Bewohnerparken (CSV)",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abewohnerparken&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Bewohnerparken (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "motorradparkplaetze": {
+  "name": "motorradparkplaetze",
+  "titel": "Motorradparkplätze",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:29:12.421296",
+  "notiz": "Parkplätze für Motorräder in Karlsruhe, Rastatt, Germersheim, Ettlingen, Baden-Baden, Bruchsal, Haguenau mit Angaben zu Gebühren und Parkzeit.",
+  "ressourcen": [
+   {
+    "name": "Motorradparkplätze (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Amotorrad_parken&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Motorradparkplätze (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Amotorrad_parken&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Motorradparkplätze (CSV)",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Amotorrad_parken&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Motorradparkplätze (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "veranstaltungen": {
+  "name": "veranstaltungen",
+  "titel": "Veranstaltungen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:28:41.680816",
+  "notiz": "Veranstaltungen, die verkehrsrechtlich angeordnet sind aus dem Baustelleninformationssystem in Karlsruhe.",
+  "ressourcen": [
+   {
+    "name": "Veranstaltungen_Vorschau GeoJson",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Averanstaltungen_vorschau&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Veranstaltungen_Vorschau Shape",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Averanstaltungen_vorschau&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Veranstaltungen_Vorschau CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Averanstaltungen_vorschau&outputFormat=csv"
+   },
+   {
+    "name": "Veranstaltungen_aktuell GeoJson",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Averanstaltungen_aktuell&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Veranstaltungen_aktuell Shape",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Averanstaltungen_aktuell&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Veranstaltungen_aktuell CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Averanstaltungen_aktuell&outputFormat=csv"
+   },
+   {
+    "name": "Veranstaltungen (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "lkw-parkplatze": {
+  "name": "lkw-parkplatze",
+  "titel": "LKW-Parkplätze",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:15:58.224876",
+  "notiz": "Parkplätze für LKWs in Ettlingen, Bruchsal, Landau und Karlsruhe mit Gebühren und Parkzeit.",
+  "ressourcen": [
+   {
+    "name": "LKW-Parkplätze JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Alkw_parken&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "LKW-Parkplätze Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Alkw_parken&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "LKW-Parkplätze CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Alkw_parken&outputFormat=csv"
+   },
+   {
+    "name": "LKW-Parkplätze (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "wohnmobilparkplaetze": {
+  "name": "wohnmobilparkplaetze",
+  "titel": "Wohnmobilparkplätze",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:24:10.234737",
+  "notiz": "Ausgewiesene Standorte von Wohnmobilparkplätzen in Karlsruhe, Germerheim, Ettlingen, Bühl, Bruchsal, Bretten und Haguenau mit Auskunft zur Gebühren und Parkdauer.",
+  "ressourcen": [
+   {
+    "name": "Wohnmobilparkplätze (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "http://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Awohnmobil_parken&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Wohnmobilparkplätze (Shapefile)",
+    "format": "SHP",
+    "url": "http://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Awohnmobil_parken&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Wohnmobilparkplätze (CSV)",
+    "format": "CSV",
+    "url": "http://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Awohnmobil_parken&outputFormat=text%2Fcsv"
+   },
+   {
+    "name": "Wohnmobilparkplätze (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "busparkplaetze": {
+  "name": "busparkplaetze",
+  "titel": "Busparkplätze",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:29.118844",
+  "notiz": "Busparkplätze in Karlsruhe, Wissembourg, Landau, Ettlingen, Germersheim, Bühl, Bretten, Bruchsal, Haguenau und Saverne mit Angaben zur Gebühren und Parkzeit.",
+  "ressourcen": [
+   {
+    "name": "Busparkplätze (GeoJSON)",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abus_parken&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Busparkplätze (Shapefile)",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abus_parken&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Busparkplätze (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "behindertenparkplaetze": {
+  "name": "behindertenparkplaetze",
+  "titel": "Behindertenparkplätze",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:31:35.440940",
+  "notiz": "Übersicht über die öffentlichen Behindertenparkplätze der Stadt Karlsruhe, Wissembourg, Baden-Baden, Bruchsal, Ettlingen, Germersheim, Haguenau, Landau, Rastatt, Rheinstetten und Saverne mit ANgaben zur Parkzeit.",
+  "ressourcen": [
+   {
+    "name": "Behindertenparkplätze als GeoJSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abehinderten_parkplaetze&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Behindertenparkplätze als ESRI Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abehinderten_parkplaetze&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Behindertenparkplätze als CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Abehinderten_parkplaetze&outputFormat=csv"
+   },
+   {
+    "name": "Behindertenparkplätze (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "points-of-interest-radverkehr1": {
+  "name": "points-of-interest-radverkehr1",
+  "titel": "Points of Interest - Radverkehr",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:24:01.396575",
+  "notiz": "",
+  "ressourcen": [
+   {
+    "name": "Fahrradclubs",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Radverkehr/MapServer/0/query?where=GRUPPENNAME_DE+%3D+%27Fahrradclubs%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Radverkauf / Radreparatur",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Radverkehr/MapServer/1/query?where=GRUPPENNAME_DE+%3D+%27Radverkauf%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Radverleih / Fächerrad",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Radverkehr/MapServer/2/query?where=GRUPPENNAME_DE+%3D+%27Radverleih%27%20OR%20GRUPPENNAME_DE+%3D+%27Radstationen%2FF%C3%A4cherrad%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Fahrradabstellplätze",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Radverkehr/MapServer/3/query?where=GRUPPENNAME_DE+%3D+%27Fahrradabstellplätze%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "nextbike": {
+  "name": "nextbike",
+  "titel": "Nextbike",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "",
+  "geaendert": "2026-11-08T02:30:48.924571",
+  "notiz": "Hier findet man alle Nextbike-Daten von VRNNextbike und KVV.Nextbike aus der Nextbike-API. ",
+  "ressourcen": [
+   {
+    "name": "Nextbike JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Anextbike&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Nextbike Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Anextbike&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Nextbike CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Anextbike&outputFormat=csv"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "regiomove-ports": {
+  "name": "regiomove-ports",
+  "titel": "regiomove-Ports",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:15:59.570448",
+  "notiz": "Liste der regiomove-Ports.",
+  "ressourcen": [
+   {
+    "name": "Regiomove-Ports",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aregiomoveports&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Regiomove-Ports Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aregiomoveports&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "regiomove-Ports CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aregiomoveports&outputFormat=csv"
+   },
+   {
+    "name": "regiomove-Ports (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "fahren": {
+  "name": "fahren",
+  "titel": "Fähren",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-11-08T02:15:01.259649",
+  "notiz": "Der Datensatz enthält Daten über die Fähren zwischen Greffern-Drusenheim und Speyer-Rheinhausen.",
+  "ressourcen": [
+   {
+    "name": "Fähren JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afaehren&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Fähren Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afaehren&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Fähren CSV",
+    "format": "CSV",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Afaehren&outputFormat=csv"
+   },
+   {
+    "name": "Fähren (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "umweltzonen": {
+  "name": "umweltzonen",
+  "titel": "Umweltzonen",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "",
+  "geaendert": "2026-10-01T13:24:07.929653",
+  "notiz": "Umweltzone in Straßburg. Lizenz: https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+  "ressourcen": [
+   {
+    "name": "Umweltzone JSON",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aumweltzonen&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Umweltzonen Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aumweltzonen&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Umweltzonen (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "points-of-interest-parken-und-autoservices1": {
+  "name": "points-of-interest-parken-und-autoservices1",
+  "titel": "Points of Interest - Parken und Autoservices",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:24:01.292658",
+  "notiz": "",
+  "ressourcen": [
+   {
+    "name": "Barrierefrei zugängliche Parkhäuser",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/0/query?where=GRUPPENNAME_DE+%3D+%27barrierefrei zugängliche Parkhäuser%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Behindertenparkplätze",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/1/query?where=GRUPPENNAME_DE+%3D+%27Behindertenparkplätze%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Park&Ride",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/2/query?where=GRUPPENNAME_DE+%3D+%27Park%2BRide%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Parkhäuser / Tiefgaragen",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/3/query?where=GRUPPENNAME_DE+%3D+%27Parkhäuser/Tiefgaragen%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Abschleppdienste",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/4/query?where=GRUPPENNAME_DE+%3D+%27Abschleppdienste%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Autoclubs",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/5/query?where=GRUPPENNAME_DE+%3D+%27Autoclubs%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Autoprüfstellen",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/6/query?where=GRUPPENNAME_DE+%3D+%27Autoprüfstellen%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Autovermietungen",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/7/query?where=GRUPPENNAME_DE+%3D+%27Autovermietungen%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Autoverwertungen",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/8/query?where=GRUPPENNAME_DE+%3D+%27Autoverwertungen%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Autowaschstationen",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/9/query?where=GRUPPENNAME_DE+%3D+%27Autowaschstationen%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Autowerkstätten",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/10/query?where=GRUPPENNAME_DE+%3D+%27Autowerkstätten%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Stadtmobil (Carsharing)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/11/query?where=GRUPPENNAME_DE+%3D+%27Stadtmobil carsharing%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Tankstellen",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/12/query?where=GRUPPENNAME_DE+%3D+%27Tankstellen%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Taxi",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/13/query?where=GRUPPENNAME_DE+%3D+%27Taxi%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Verkehrsübungsplätze",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_Parken_Autoservices/MapServer/14/query?where=GRUPPENNAME_DE+%3D+%27Verkehrsübungsplätze%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "dynamische-infotafeln": {
+  "name": "dynamische-infotafeln",
+  "titel": "Dynamische Infotafeln",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+  "geaendert": "2026-10-01T13:23:30.165819",
+  "notiz": "Der Datensatz enthält Daten von Verkehrsinfotafeln im Collectivité européenne d’Alsace (CeA)",
+  "ressourcen": [
+   {
+    "name": "Dynamische Infotafeln",
+    "format": "GeoJSON",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Adynamische_tafeln&outputFormat=application%2Fjson"
+   },
+   {
+    "name": "Dynamische Infotafeln Shapefile",
+    "format": "SHP",
+    "url": "https://mobil.trk.de/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Adynamische_tafeln&outputFormat=SHAPE-ZIP"
+   },
+   {
+    "name": "Dynamische Infotafeln (GraphQL)",
+    "format": "GraphQL",
+    "url": "https://mobil.trk.de/graphiql"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "kvv-fahrplandaten": {
+  "name": "kvv-fahrplandaten",
+  "titel": "KVV Fahrplandaten",
+  "org": "Karlsruher Verkehrsverbund (KVV)",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:23:53.717789",
+  "notiz": "Soll-Fahrplandaten des Karlsruher Verkehrsverbundes.",
+  "ressourcen": [
+   {
+    "name": "Fahrplandaten",
+    "format": "GTFS",
+    "url": "https://projekte.kvv-efa.de/GTFS/google_transit.zip"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "points-of-interest-offentlicher-nahverkehr-opnv1": {
+  "name": "points-of-interest-offentlicher-nahverkehr-opnv1",
+  "titel": "Points of Interest - Öffentlicher Nahverkehr (ÖPNV)",
+  "org": "Stadt Karlsruhe",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:24:01.064447",
+  "notiz": "",
+  "ressourcen": [
+   {
+    "name": "Bahnhöfe",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/0/query?where=GRUPPENNAME_DE+%3D+%27Bahnhöfe%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Haltestellen",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/1/query?where=GRUPPENNAME_DE+%3D+%27Haltestellen (S-Bahn/Tram/Bus)%27&outFields=NAME%2CGRUPPENNAME_DE%2CUPDATED&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 1 (Tram)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/4/query?where=NAME+%3D+%27Linie 1%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 2 (Tram)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/5/query?where=NAME+%3D+%27Linie 2%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 3 (Tram)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/6/query?where=NAME+%3D+%27Linie 3%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 4 (Tram)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/7/query?where=NAME+%3D+%27Linie 4%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 5 (Tram)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/8/query?where=NAME+%3D+%27Linie 5%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 6 (Tram)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/9/query?where=NAME+%3D+%27Linie 6%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 8 (Tram)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/10/query?where=NAME+%3D+%27Linie 8%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie 10 (Schienersatzverkehr)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/11/query?where=NAME+%3D+%27Linie 10 (SEV)%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S1/S11 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/12/query?where=NAME+%3D+%27Linie S1%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S2 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/13/query?where=NAME+%3D+%27Linie S2%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S3 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/14/query?where=NAME+%3D+%27Linie S3%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S4 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/16/query?where=NAME+%3D+%27Linie S4%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S5 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/17/query?where=NAME+%3D+%27Linie S5%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S51 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/18/query?where=NAME+%3D+%27Linie S51%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S52 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/19/query?where=NAME+%3D+%27Linie S52%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S7 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/20/query?where=NAME+%3D+%27Linie S7%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S71 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/21/query?where=NAME+%3D+%27Linie S71%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S8 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/22/query?where=NAME+%3D+%27Linie S8%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S81 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/23/query?where=NAME+%3D+%27Linie S81%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Straßenbahn-/Busliniennnetz",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/2/query?where=GRUPPENNAME_DE+%3D+%27Alle%20Linien%27OR%20GRUPPENNAME_DE+%3D+%27Alle%20Buslinien%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S31 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/15/query?where=NAME+%3D+%27Linie S31%27&outFields=NAME&returnGeometry=true&f=geojson"
+   },
+   {
+    "name": "Linie S32 (S-Bahn)",
+    "format": "GeoJSON",
+    "url": "https://geoportal.karlsruhe.de/server/rest/services/Stadtplan/Stadtplan_POIs_OEPNV/MapServer/25/query?where=NAME+%3D+%27Linie S32%27&outFields=NAME&returnGeometry=true&f=geojson"
+   }
+  ],
+  "treffer": [
+   "Karlsruhe"
+  ]
+ },
+ "gebundelte-fahrradabstellanlagen-baden-wurttemberg": {
+  "name": "gebundelte-fahrradabstellanlagen-baden-wurttemberg",
+  "titel": "Gebündelte Daten Fahrradabstellanlagen Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:02:46.790025",
+  "notiz": "<p>Dieses Datenprofil bündelt Daten zu <strong>Standorten </strong> und, wenn vorhanden, <strong>Echtzeit-Belegungsdaten</strong> von Fahrradabstellanlagen in Baden-Württemberg. </p> <p>Detaillierte Informationen zum Datenprofil finden Sie im dazugehörigen <strong><a href=\"https://www.mobidata-bw.de/data/MobiData_BW_Factsheet_Datenformate_ParkingBikes.pdf\" target=\"_blank\">Factsheet Datenprofil Fahrradabstellanlagen</a></strong>.</p> <p class=\"infokasten\">Für Kommunen und Infrastrukturbetreiber gelten die Datenbereitstellungspflichten der <strong><a href=\"https://eur-lex.europa.eu/legal-content",
+  "ressourcen": [
+   {
+    "name": "Fahrradabstellanlagen BW (ParkAPI)",
+    "format": "ParkAPI",
+    "url": "https://api.mobidata-bw.de/park-api/documentation/public.html#/"
+   },
+   {
+    "name": "Fahrradabstellanlagen BW (Datex II Light)",
+    "format": "Datex II Light",
+    "url": "https://api.mobidata-bw.de/park-api/api/public/datex2/json"
+   },
+   {
+    "name": "Fahrradabstellanlagen (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/"
+   },
+   {
+    "name": "Fahrradabstellanlagen (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Apark-api_bicycle&cql_filter=purpose%3D%27BIKE%27&maxFeatures=30000&outputFormat=csv"
+   },
+   {
+    "name": "Schließfächer an Fahrradabstellanlagen (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Apark-api_bicycle&cql_filter=purpose%3D%27ITEM%27&maxFeatures=5000&outputFormat=csv"
+   },
+   {
+    "name": "Fahrradparkdaten-Referenz-Tabelle (XLSX)",
+    "format": "XLSX",
+    "url": "https://mobidata-bw.de/daten/publikationen/Fahrradparkdaten-Referenz-Tabelle.xlsx"
+   },
+   {
+    "name": "Historische Daten von Fahrradabstellanlagen",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Karlsruhe",
+   "Pforzheim",
+   "Reutlingen"
+  ]
+ },
+ "behindertenparkplatze": {
+  "name": "behindertenparkplatze",
+  "titel": "Behindertenparkplätze Ulm",
+  "org": "Digitale Agenda - Stadt Ulm",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:23:24.449895",
+  "notiz": "<p>In diesem Datensatz lässt sich eine Übersicht über die öffentlichen Behindertenparkplätze der Stadt Ulm abrufen. Es handelt sich dabei unter anderem um Daten zu Standorten sowie der Anzahl an Parkplätzen. Zusätzlich jeweils ein Foto des Ortes.</p> <p>Erfassungszeitpunkt der Daten: April 2021</p> <h3 id=\"datenquelle-\">Datenquelle:</h3> <p><a href=\"https://datenhub.ulm.de/ckan/dataset/behindertenparkplatze\">Datenhub der Stadt Ulm</a> unter CC-Zero</p> ",
+  "ressourcen": [
+   {
+    "name": "Behindertenparkplätze mit online verlinkten Bildern.geojson",
+    "format": "GeoJSON",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/546b9525-236a-4be8-8bca-74618a0e7118/download/blaue_parkplatze_web.geojson"
+   },
+   {
+    "name": "1A3E5710-29BB-4080-BA66-8FD99833B824.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/08ac4975-0639-487e-bad2-28c9ea451c25/download/1a3e5710-29bb-4080-ba66-8fd99833b824.jpeg"
+   },
+   {
+    "name": "1D404FB7-3CD1-4C30-868A-8E77E5A7C939.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/d298bb53-1f0f-4cd9-bdf5-9ed9ec682f85/download/1d404fb7-3cd1-4c30-868a-8e77e5a7c939.jpeg"
+   },
+   {
+    "name": "2AA73331-4840-4D0E-BBF9-E67C158A6689.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/39ce3a75-df69-44ee-92bb-34adb353151a/download/2aa73331-4840-4d0e-bbf9-e67c158a6689.jpeg"
+   },
+   {
+    "name": "2CDADD6F-FE11-4B98-A63A-6E300B417FC6.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/bb7521ad-e118-4eca-a561-fc6eac6e15f7/download/2cdadd6f-fe11-4b98-a63a-6e300b417fc6.jpeg"
+   },
+   {
+    "name": "4B023087-0C2B-4F8E-BF88-037EA5E0B9DD.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/7fb0758f-cd59-43d8-9553-bef50655fa97/download/4b023087-0c2b-4f8e-bf88-037ea5e0b9dd.jpeg"
+   },
+   {
+    "name": "5A0079C9-4F8A-4E47-8EFB-D498BDAAF266.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/4e7028f0-3b89-4ff1-9b4c-634e3fba664d/download/5a0079c9-4f8a-4e47-8efb-d498bdaaf266.jpeg"
+   },
+   {
+    "name": "6D130648-168F-4032-BCB3-63F58AF725EB.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/8ccd58ef-dff6-49be-9f60-cd4667772f8a/download/6d130648-168f-4032-bcb3-63f58af725eb.jpeg"
+   },
+   {
+    "name": "6F126718-2CD3-43CE-8E06-B2C4F4FCBA6B.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/bbbb7208-b7f7-4281-8282-39f19417fb2c/download/6f126718-2cd3-43ce-8e06-b2c4f4fcba6b.jpeg"
+   },
+   {
+    "name": "7E823599-A0A1-4F68-B15D-593933E42357.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/00c70fd2-c35c-4a60-abe5-07890d2b5623/download/7e823599-a0a1-4f68-b15d-593933e42357.jpeg"
+   },
+   {
+    "name": "9A4477C1-6080-413A-BE45-41D6098026D9.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/eb6add49-5577-4558-b997-4afe53009a40/download/9a4477c1-6080-413a-be45-41d6098026d9.jpeg"
+   },
+   {
+    "name": "017EBFE0-19BC-4AD1-BB2B-7664417E9559.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/59b31411-2d1e-46e7-8c3f-958bc179f46f/download/017ebfe0-19bc-4ad1-bb2b-7664417e9559.jpeg"
+   },
+   {
+    "name": "18D8879D-7D87-41BC-B6F1-29D342F7AE58.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/1b76eeb9-c194-461f-bdc4-1f615ebb767b/download/18d8879d-7d87-41bc-b6f1-29d342f7ae58.jpeg"
+   },
+   {
+    "name": "22DF00BC-3AD5-4C88-9C97-712D5D637E9C.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/41b0478d-e5e0-49bf-bb47-d9b6690f27d1/download/22df00bc-3ad5-4c88-9c97-712d5d637e9c.jpeg"
+   },
+   {
+    "name": "39A85097-02A9-418A-B6C8-447338351EB0.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/2c6ff930-b154-461f-9a5f-1d793360a45d/download/39a85097-02a9-418a-b6c8-447338351eb0.jpeg"
+   },
+   {
+    "name": "76B5C7AB-4686-4378-9C5A-3D90BEA75959.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/c428fab3-9773-4ab1-89ce-a57cb9998923/download/76b5c7ab-4686-4378-9c5a-3d90bea75959.jpeg"
+   },
+   {
+    "name": "077BA66C-CA96-4A5E-B157-3873951614F9.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/20dfdf2a-178a-4a6a-866d-521a90fc3f95/download/077ba66c-ca96-4a5e-b157-3873951614f9.jpeg"
+   },
+   {
+    "name": "94A6FD69-6AA9-46C3-8324-7A5773865846.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/81487a17-8123-480d-8595-c0ca99b836ce/download/94a6fd69-6aa9-46c3-8324-7a5773865846.jpeg"
+   },
+   {
+    "name": "96F02D7A-98BA-4077-ABC1-340723F8436C.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/4475927e-7e0a-41af-87f0-32135ca166dd/download/96f02d7a-98ba-4077-abc1-340723f8436c.jpeg"
+   },
+   {
+    "name": "097A2015-18B8-4E6D-AAA1-643616FC1E91.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/562ed434-9a58-4836-9363-c6a11b919a24/download/097a2015-18b8-4e6d-aaa1-643616fc1e91.jpeg"
+   },
+   {
+    "name": "97DEB629-81E0-47DF-8114-59A3663D8333.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/6de3fa6a-de42-4c17-97fb-9127dabba1ed/download/97deb629-81e0-47df-8114-59a3663d8333.jpeg"
+   },
+   {
+    "name": "332C2B65-5C8A-49AD-9F64-7C449EB1FC57.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/b5a171b6-f85b-43f6-9e4f-2cfd7bf2b599/download/332c2b65-5c8a-49ad-9f64-7c449eb1fc57.jpeg"
+   },
+   {
+    "name": "432D7F3E-EF80-43AD-8F84-AFC6F1ECF469.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/ba4778cf-56d0-4449-9a1f-0ebf533e310c/download/432d7f3e-ef80-43ad-8f84-afc6f1ecf469.jpeg"
+   },
+   {
+    "name": "517E2D42-6E4B-4448-AB0E-30D2A3C21B2D.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/12979351-dc16-4c5a-947b-76eb42dd6266/download/517e2d42-6e4b-4448-ab0e-30d2a3c21b2d.jpeg"
+   },
+   {
+    "name": "2528C927-9D5E-4263-87EB-BB086C2AFED6.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/d89c2244-1908-4c40-bb79-ef933feb3763/download/2528c927-9d5e-4263-87eb-bb086c2afed6.jpeg"
+   },
+   {
+    "name": "9998BC5F-9C12-45D1-9732-143757CB359F.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/b32623d6-e540-427e-9bed-2fbabb13be07/download/9998bc5f-9c12-45d1-9732-143757cb359f.jpeg"
+   },
+   {
+    "name": "10773A72-7CAB-418B-81B0-9F6388A1C4B2.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/1ef21aad-e989-4eaa-bc08-b10e88237306/download/10773a72-7cab-418b-81b0-9f6388a1c4b2.jpeg"
+   },
+   {
+    "name": "033956BF-AD87-4746-B392-9321783C6090.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/271dd2d8-3ddb-4ff1-88d6-049959ff3cb8/download/033956bf-ad87-4746-b392-9321783c6090.jpeg"
+   },
+   {
+    "name": "387585E4-EB96-4088-9667-7C7E04D95819.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/3b964ef1-18b2-4951-b375-8d5d33b02a67/download/387585e4-eb96-4088-9667-7c7e04d95819.jpeg"
+   },
+   {
+    "name": "619171EB-3ED0-4506-A7CF-C9382080A47E.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/7a4dc271-143a-4b75-966f-2371363e8380/download/619171eb-3ed0-4506-a7cf-c9382080a47e.jpeg"
+   },
+   {
+    "name": "933736E9-C56C-4E5E-BB23-08FC531A5FF7.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/4db10daf-15cd-4849-8dc0-39c86a06ad7b/download/933736e9-c56c-4e5e-bb23-08fc531a5ff7.jpeg"
+   },
+   {
+    "name": "0961031B-DAC9-4646-ABFF-989518AC831F.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/20729812-57e8-4cf8-ba59-a64ae8ee09ac/download/0961031b-dac9-4646-abff-989518ac831f.jpeg"
+   },
+   {
+    "name": "59587564-9056-430C-A974-332057815FD0.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/5c3b40ea-444c-4b25-9178-5fe2d7bb1102/download/59587564-9056-430c-a974-332057815fd0.jpeg"
+   },
+   {
+    "name": "A12D57F5-7706-4E83-8C2B-A440794BDF34.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/e7de3b26-0b76-401b-987a-e5a99694b2e2/download/a12d57f5-7706-4e83-8c2b-a440794bdf34.jpeg"
+   },
+   {
+    "name": "A3781A61-9A92-4009-A2CD-F9CA91644C2E.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/48d13a6c-3c0e-485a-a43f-ec872279b3c9/download/a3781a61-9a92-4009-a2cd-f9ca91644c2e.jpeg"
+   },
+   {
+    "name": "A0566915-1CEB-439C-94DA-12A5DBB5AD49.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/2a3c52bc-86e1-49dd-8243-73a7f79136aa/download/a0566915-1ceb-439c-94da-12a5dbb5ad49.jpeg"
+   },
+   {
+    "name": "AA3E33F9-E894-4060-81C7-7F08B7D979B1.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/5aa16206-da60-4f58-abe2-dbb12267f663/download/aa3e33f9-e894-4060-81c7-7f08b7d979b1.jpeg"
+   },
+   {
+    "name": "ADB2F5F2-0E3A-4FE0-9C2A-E6FD0E58C8C6.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/aac2263d-723c-432e-b836-8f8862f71671/download/adb2f5f2-0e3a-4fe0-9c2a-e6fd0e58c8c6.jpeg"
+   },
+   {
+    "name": "AE4DEF66-AE76-43C3-9110-A55178CD6B52.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/bb71ef61-98c7-42b4-84b9-422f5e5b73d2/download/ae4def66-ae76-43c3-9110-a55178cd6b52.jpeg"
+   },
+   {
+    "name": "AE9ED5A3-02AB-4299-89DB-5C2BE7DF9BE5.jpeg",
+    "format": "JPEG",
+    "url": "https://datenhub.ulm.de/ckan/dataset/694e940c-6255-472a-865b-2f36c726f13e/resource/7194aa10-d188-4988-9701-40e29937c8c1/download/ae9ed5a3-02ab-4299-89db-5c2be7df9be5.jpeg"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "gps-daten-wochenmarkt-lieferdienst": {
+  "name": "gps-daten-wochenmarkt-lieferdienst",
+  "titel": "Wochenmarkt-Lieferdienst Ulm",
+  "org": "Digitale Agenda - Stadt Ulm",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:23:52.752055",
+  "notiz": "<p>Der Datensatz enthält die Trackerdaten des Lieferfahrzeugs von mein-Wochenmarkt.online aus 02/21. Der Datensatz enthält die GPS-Daten von mehreren Markttagen (19.02.20, 21.02.20, 21.03.20) und wurde so bearbeitet, dass die exakten Start und Endpunkte nicht einsehbar sind um die Adressdaten von Kundinnen und Kunden zu schützen. Bei mein-Wochenmarkt.online handelt es sich um ein Startup, das zwischen Februar und Dezember 2020 bestand und an Markttagen Waren vom Ulmer Wochenmarkt und vom Wochenmarkt am Eselsberg bis zur Haustüre ausgeliefert hat. </p> <h3 id=\"datenquelle-\">Datenquelle:</h3> <p",
+  "ressourcen": [
+   {
+    "name": "anonymisierte-trackindaten-wochenamrkt-lieferdienstr",
+    "format": "GeoJSON",
+    "url": "https://datenhub.ulm.de/ckan/dataset/1bea5bd4-86eb-45e9-81e8-e70c54bcc610/resource/14a301a1-bfdb-4c0e-845c-88f00fa22b5d/download/anonymisierte-trackindaten-gesamt.geojson"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "posterumfrage-angebote-mobilitatsstation-eselsberg-2107": {
+  "name": "posterumfrage-angebote-mobilitatsstation-eselsberg-2107",
+  "titel": "Umfrage Mobilitätsstation Ulm",
+  "org": "Digitale Agenda - Stadt Ulm",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-11-08T02:13:31.185949",
+  "notiz": "<p>Der Datensatz enthält Umfrageergebnisse zum Thema &quot;Welches Angebot würden Sie hier an der kommenden Mobilitätsstation nutzen und ausprobieren?&quot; . In der Umfrage vom 2.7.2021 bis einschl. 23.7.2021 wollten die Geschäftsstelle Digitale Agenda im Förderprojekt Zukunftskommune@bw vorab wissen, welche der kommenden Angebote an dem Prototyp der Mobilitätsstation am Eselsberg, der am 24.7.2021 eröffnet wurde, für die Bürgerschaft interessant(er) ist. 184 mal wurden die Knöpfe von zwei Umfragepostern gedrückt, die in der Nähe der kommenden Mobilitätsstation an Laternen angebracht waren.</",
+  "ressourcen": [
+   {
+    "name": "210702-210723_Antworten_Nutzung-Angebote-Mobstation-vor-Eroeffnung.csv",
+    "format": "CSV",
+    "url": "https://datenhub.ulm.de/ckan/dataset/cd750144-6556-412e-a880-b61e4d4a71a3/resource/d33d5196-45bd-4510-89d3-8e961409ff0f/download/210702-210723_antworten_nutzung-angebote-mobstation-vor-eroeffnung.csv"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "umfrageergebnisse-umfrageposter-intermodale-mobilitat": {
+  "name": "umfrageergebnisse-umfrageposter-intermodale-mobilitat",
+  "titel": "Umfrage Intermodale Mobilität Ulm",
+  "org": "Digitale Agenda - Stadt Ulm",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-11-08T02:15:15.945056",
+  "notiz": "<p>Der Datensatz enthält Umfrageergebnisse zum Thema intermodale Mobilität, die am Green Parking Day, am 19.09.2020 an Passantinnen und Passanten gestellt wurde. Die Frage lautete: Wie hoch schätzen Sie den Mehrwert eines Routenplaners ein, der verschiedene Verkehrsmittel miteinander verbindet?&quot; Antwortskala reicht von &quot;sehr hoch&quot;, &quot;eher hoch&quot;, &quot;eher gering&quot; bis &quot;sehr gering&quot;. </p> <p>Die Befragung ist anonym und erfolgt, indem das Umfrageposter im Stadtgebiet aufgehängt wird, sodass Passant*innen per Knopfdruck über unterschiedliche Sachverhalte ab",
+  "ressourcen": [
+   {
+    "name": "Umfrage_Intermodale-Mobilität_GreenParkingDay",
+    "format": "CSV",
+    "url": "https://datenhub.ulm.de/ckan/dataset/0e0cb8c6-7be0-42b9-9591-61bb6528be3d/resource/bf953541-2068-42f9-9327-843071ea1304/download/intermodale-mobilitat_umfrageposter_200919.csv"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "lorapark_hochwassersensor": {
+  "name": "lorapark_hochwassersensor",
+  "titel": "Radweg-Hochwassersensor Ulm",
+  "org": "temporärhaus e.V. / TTN-LoRaWan-Community",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:23:54.776190",
+  "notiz": "<p>Dieser Datensatz beinhaltet Daten der Hochwassersensoren am Donauradweg sowie an der Blau in der Stadt Ulm.</p> <p>Zur Ermittlung des Wasserstandes wurde ein Ultraschallsensor über dem Fußgänger/Radweg an der Donau unter der Herdbrücke in Ulm aufgehängt. Dort wird in regelmäßigen Intervallen der Abstand vom Sensor zum Boden via LoRaWAN übermittelt und im Backend ausgewertet. Alle 2 Stunden wird der Median der letzten Messungen berechnet und mit dem letzten Medianwert verglichen. Falls die Differenz der Mediane größer als 1 beträgt, dann handelt es sich um ein Hochwasser. Durch dieses Vorgeh",
+  "ressourcen": [
+   {
+    "name": "LoRaPark_Hochwassersensor",
+    "format": "JSON",
+    "url": "https://datenhub.ulm.de/ckan/datastore/dump/eb1aaef3-bbe7-4f1a-a458-1b2044b1347f?format=json"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "swu2go-gbfs": {
+  "name": "swu2go-gbfs",
+  "titel": "swu2go Carsharing Ulm",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:24:07.243549",
+  "notiz": "<p>Dieser Datensatz beinhaltet die aktuelle Echtzeit-Verfügbarkeit und Standorte des <a href=\"https://www.swu.de\">Swu2go</a> Carsharing-Angebots an dem Prototyp der Mobilitätsstation am Eselsberg im <a href=\"https://github.com/MobilityData/gbfs\">GBFS-Format</a>.</p> <p>Die Konvertierung aus dem internen IXSI-Format (<a href=\"https://carsharing.de/themen/carsharing-schnittstelle/auskunftsschnittstelle-ixsi-50\">einer Schnittstelle des Bundescarsharing-Verbandes</a>) erfolgt mittels des für alle nachnutzbaren OpenSource-Software <a href=\"https://github.com/stadtulm/ixsi-gbfs-converter\">ixsi-gbfs-",
+  "ressourcen": [
+   {
+    "name": "swu2go-gbfs",
+    "format": "GeoJSON",
+    "url": "https://ixsi.swu.de/gbfs.json"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "opnv-fahrplandaten-der-swu": {
+  "name": "opnv-fahrplandaten-der-swu",
+  "titel": "ÖPNV-Fahrplandaten SWU",
+  "org": "SWU Stadtwerke Ulm/Neu-Ulm GmbH",
+  "lizenz": "http://dcat-ap.de/def/licenses/cc-zero",
+  "geaendert": "2026-10-01T13:23:58.309704",
+  "notiz": "<p>In diesem Datensatz lassen sich die ÖPNV-Fahrplandaten der Stadtwerke Ulm/Neu-Ulm (SWU) abrufen. </p> <p>GTFS (Generalized Transit Feed Specification) ist ein von vielen EntwicklerInnen verwendetes Datenaustauschformat, um komplette Fahrpläne abzubilden. Im Gegensatz zu den vielen nationalen Standards wie beispielsweise VDV-452 für Deutschland, die hauptsächlich zum internen Datenaustausch von Verkehrsbetrieben und -verbünden dienen, wird GTFS bei der Entwicklung vieler innovativer und nützlicher Anwendungen verwendet - und zwar weltweit. </p> <h3 id=\"datenquelle-\">Datenquelle:</h3> <p><a h",
+  "ressourcen": [
+   {
+    "name": "SWU GTFS-Daten",
+    "format": "GTFS",
+    "url": "https://gtfs.swu.de/daten/SWU.zip"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "haltestellen-baden-wuerttemberg": {
+  "name": "haltestellen-baden-wuerttemberg",
+  "titel": "Gebündelte Daten Haltestellen Baden-Württemberg",
+  "org": "NVBW - Team Daten und Dienste im ÖV",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:05:48.023475",
+  "notiz": "<p>Dieser Datensatz beinhaltet eine Liste der Haltestellen des öffentlichen Personennahverkehrs (ÖPNV) und des Schienenpersonennahverkehrs (SPNV) in Baden-Württemberg. Zusätzlich werden die Haltestellen auch der bayerischen Kreise Neu-Ulm und Lindau (Bodensee) mit bereitgestellt, weil für deren Pflege Baden-Württembergische die Verkehrsverbünde DING und Bodo zuständig sind. Zu jeder Haltestelle sind die Haltesteige, Koordinaten und ergänzende Namen verfügbar.</p> <p>Wenn Sie Fragen zum Datensatz haben oder Fehler vor Ort finden, können Sie bevorzugt auf <a href=\"https://github.com/mfdz/nvbw-ha",
+  "ressourcen": [
+   {
+    "name": "Haltestellen Baden-Württemberg im CSV-Format",
+    "format": "CSV",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/haltestellen.csv"
+   },
+   {
+    "name": "Haltestellen Baden-Württemberg im Excel-Format",
+    "format": "XLSX",
+    "url": "https://www.nvbw.de/fileadmin/user_upload/service/open_data/haltestellen/haltestellen.xlsx"
+   },
+   {
+    "name": "INSPIRE Haltestellen BW (WFS)",
+    "format": "WFS",
+    "url": "https://haleconnect.com/ows/services/org.1473.15f035da-725b-4f16-854a-3e72ef6352a3_wfs?SERVICE=WFS&REQUEST=GetCapabilities&VERSION=2.0.0"
+   },
+   {
+    "name": "INSPIRE Haltestellen BW Metadaten (WFS)",
+    "format": "XML",
+    "url": "https://haleconnect.com/services/bsp/org.1473.15f035da-725b-4f16-854a-3e72ef6352a3/md/service/id_direct_download"
+   },
+   {
+    "name": "INSPIRE Haltestellen BW (WMS)",
+    "format": "WMS",
+    "url": "https://haleconnect.com/ows/services/org.1473.15f035da-725b-4f16-854a-3e72ef6352a3_wms?SERVICE=WMS&REQUEST=GetCapabilities&VERSION=1.1.1"
+   },
+   {
+    "name": "INSPIRE Haltestellen BW Metadaten (WMS)",
+    "format": "XML",
+    "url": "https://haleconnect.com/services/bsp/org.1473.15f035da-725b-4f16-854a-3e72ef6352a3/md/service/id_wms"
+   }
+  ],
+  "treffer": [
+   "Ulm"
+  ]
+ },
+ "e-ladesaulen": {
+  "name": "e-ladesaulen",
+  "titel": "Gebündelte Daten E-Ladesäulen Baden-Württemberg",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-09T02:09:12.556726",
+  "notiz": "<p>Dieses Datenprofil bündelt Daten zu <strong> Standorten, Eigenschaften sowie Betriebszustand und Verfügbarkeiten </strong>von Ladesäulen bzw. Ladepunkten in Baden-Württemberg. Ergänzend werden - soweit vorhanden - auch <strong>Preisinformationen</strong> angegeben. Die Basis des gebündelten Datensatzes bildet das <strong>Ladesäulenregister der Bundesnetzagentur</strong>, welches sich aus der in der Ladesäulenverordnung (LSV) hinterlegten Meldepflicht für Betreiber öffentlich zugänglicher Ladeinfrastruktur ergibt.</p> <p>Die <strong>statischen Daten</strong> der Bundesnetzagentur stellen die",
+  "ressourcen": [
+   {
+    "name": "Ladesäulen (OCPDB-API)",
+    "format": "OCPDB-API",
+    "url": "https://api.mobidata-bw.de/ocpdb/api/ocpi/3.0/locations"
+   },
+   {
+    "name": "Ladesäulen (DATEX II)",
+    "format": "DATEX II",
+    "url": "https://api.mobidata-bw.de/ocpdb/api/public/datex/v3.5/json/realtime"
+   },
+   {
+    "name": "Ladesäulen (CSV)",
+    "format": "CSV",
+    "url": "https://api.mobidata-bw.de/geoserver/MobiData-BW/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=MobiData-BW%3Acharge_points&outputFormat=csv"
+   },
+   {
+    "name": "Ladesäulen (WMS/WFS)",
+    "format": "WMS/WFS",
+    "url": "https://api.mobidata-bw.de/geoserver/web/"
+   },
+   {
+    "name": "Dokumentation Ladestationen-API (JSON)",
+    "format": "JSON",
+    "url": "https://ladestationen.api.bund.dev/"
+   },
+   {
+    "name": "Historische Daten E-Ladesäulen ",
+    "format": "API",
+    "url": ""
+   }
+  ],
+  "treffer": [
+   "Tübingen",
+   "Heilbronn",
+   "Pforzheim",
+   "Ludwigsburg"
+  ]
+ },
+ "ferdinand-steinbeis-institut-pilotstudie-track4science": {
+  "name": "ferdinand-steinbeis-institut-pilotstudie-track4science",
+  "titel": "Ferdinand-Steinbeis-Institut Pilotstudie track4science",
+  "org": "Ferdinand-Steinbeis-Institut",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-11-08T02:09:26.793722",
+  "notiz": "<p><strong><a href=\"https://track4science.de/\" target=\"_blank\">track4science</a></strong> ist eine Pilotstudie zur Erfassung von Mobilitätsdaten über eine Smartphone-App. Die Studie wurde vom Ferdinand-Steinbeis-Institut in Zusammenarbeit mit der Technischen Hochschule München durchgeführt und von der Dieter Schwarz Stiftung und der Innovationsinitiative mFUND des Bundesministeriums für Digitales und Verkehr gefördert. <p>Die Datenerhebung erfolgte über eine App. Diese nutzt Sensordaten des Smartphones, etwa GPS, Beschleunigungssensor, Wi Fi oder Mobilfunknetze, um Fahrten und Verkehrsmittel w",
+  "ressourcen": [
+   {
+    "name": "track4science (CSV)",
+    "format": "CSV",
+    "url": "https://mobidata-bw.de/daten/portal/track4science/track4science_mobidata_anonym_101125.csv"
+   },
+   {
+    "name": "README (md)",
+    "format": "md",
+    "url": "https://mobidata-bw.de/daten/portal/track4science/README.md"
+   }
+  ],
+  "treffer": [
+   "Heilbronn"
+  ]
+ },
+ "motorradparkplatze-pforzheim": {
+  "name": "motorradparkplatze-pforzheim",
+  "titel": "Motorradparkplätze Pforzheim",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:23:57.450440",
+  "notiz": "Dieser Datensatz enthält statische Daten zu Motorradparkplätzen in der Stadt Pforzheim. ",
+  "ressourcen": [
+   {
+    "name": "Motorradparkplätze (JSON)",
+    "format": "JSON",
+    "url": "https://www.mobidata-bw.de/daten/ip-api/parkingMotorbikes.json"
+   }
+  ],
+  "treffer": [
+   "Pforzheim"
+  ]
+ },
+ "winterdienstsensor-neulingen-olbronn-durrn": {
+  "name": "winterdienstsensor-neulingen-olbronn-durrn",
+  "titel": "Winterdienstsensor Neulingen und Ölbronn-Dürrn",
+  "org": "Stadtwerke Pforzheim",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:24:10.083106",
+  "notiz": "<p>An zwei neuralgischen Straßenabschnitten in den Gemeinden Neulingen und Ölbronn-Dürrn wurde jeweils der DecentLab Infrarot Winterdienstsensor installiert. Das Gerät erfasst die:</p> <p> <ul> <li>Lufttemperatur</li> <li>Luftfeuchtigkeit</li> <li>Oberflächentemperatur der Fahrbahn (berührungslos per Infrarot Messung)</li> </ul> </p> <p>Die Daten werden in kurzen Intervallen ausgewertet, um Taupunktannäherungen, Temperaturabfälle und potenzielle Glätte frühzeitig zu erkennen. Damit dient die Messstelle als zuverlässige Unterstützung für den Winterdienstbetrieb.</p> <hr> <h3>Standorte</h3> <p><",
+  "ressourcen": [
+   {
+    "name": "Winterdienstsensor Neulingen (JSON)",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "Winterdienstsensor Ölbronn-Dürrn (JSON)",
+    "format": "JSON",
+    "url": ""
+   },
+   {
+    "name": "Datenblatt Sensor",
+    "format": "PDF",
+    "url": "https://mobidata-bw.de/daten/portal/swp/DL-WRM-Datasheet.pdf"
+   }
+  ],
+  "treffer": [
+   "Pforzheim"
+  ]
+ },
+ "fahrrad-e-ladesaulen": {
+  "name": "fahrrad-e-ladesaulen",
+  "titel": "(Fahrrad-) E-Ladesäulen Reutlingen",
+  "org": "MobiData BW",
+  "lizenz": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+  "geaendert": "2026-10-01T13:23:36.672727",
+  "notiz": "<p>Über dieses Datenprofil können die gebündelten Daten zu Standorten von Ladesäulen für Pkw und Fahrräder abgerufen werden. Es soll kontinuierlich erweitert werden. </p> <p> Die Daten weisen eine höhere Genauigkeit und Aktualtiät auf als die Daten im Datensatz der Bundesnetzagentur, da die Erhebung durch die Stadt Reutlingen stattfand. </p> <h3 id=\"aktuell-enthaltene-datenquellen-\">Aktuell enthaltene Datenquellen:</h3> <p>Stadt Reutlingen, statische Daten</p> ",
+  "ressourcen": [
+   {
+    "name": "Fahrrad-Ladesäulen (JSON)",
+    "format": "JSON",
+    "url": "https://www.mobidata-bw.de/daten/ip-api/EVChargingBikes.json"
+   },
+   {
+    "name": "Ladesäulen (JSON)",
+    "format": "JSON",
+    "url": "https://www.mobidata-bw.de/uploads/page_images/2024-02-27-091439.829249stromtankstellen.json"
+   }
+  ],
+  "treffer": [
+   "Reutlingen"
+  ]
+ }
+}
