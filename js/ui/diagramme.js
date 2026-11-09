@@ -6,6 +6,8 @@
 // Werte in Textfarbe; mehr als eine Reihe nur mit derselben Einheit (Fahrzeuge oder Personen
 // je Stunde) – Kfz und Schwerverkehr, Fuß und Kinder/Jugendliche.
 
+import { zahl } from "../sprache/texte.js";
+
 export const TG = { breite: 340, hoehe: 156, l: 42, r: 10, o: 12, u: 24 };
 
 /** Runde Obergrenze und Schritt für 3–5 Rasterlinien. */
@@ -17,7 +19,6 @@ export function achse(max) {
   return { max: Math.ceil(max / schritt) * schritt, schritt };
 }
 
-const zahl = new Intl.NumberFormat("de-DE");
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
 /** Werte je Stunde 0..23 aus einer Reihe ab h0 (fehlende Stunden = null). */
@@ -62,7 +63,7 @@ export function tagesgang(reihen, opt = TG) {
   });
   for (let v = 0; v <= max + 1e-9; v += schritt) {
     teile.push(`<line class="tg-raster" x1="${l}" x2="${l + w}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/>`);
-    teile.push(`<text class="tg-tick" x="${l - 6}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">${zahl.format(v)}</text>`);
+    teile.push(`<text class="tg-tick" x="${l - 6}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">${zahl(v)}</text>`);
   }
   for (const s of [0, 6, 12, 18, 24]) {
     teile.push(`<text class="tg-tick" x="${x(s).toFixed(1)}" y="${hoehe - 6}" text-anchor="middle">${s}</text>`);
@@ -88,7 +89,7 @@ export function tagesgang(reihen, opt = TG) {
  * punkte: [{ datum, wert, text, aktiv }], format: Zahl -> Text der Achse
  * -> SVG-Text (leer, wenn weniger als zwei Werte).
  */
-export function verlauf(punkte, format = (v) => zahl.format(v), opt = { breite: 340, hoehe: 96, l: 42, r: 10, o: 8, u: 20 }) {
+export function verlauf(punkte, format = (v) => zahl(v), opt = { breite: 340, hoehe: 96, l: 42, r: 10, o: 8, u: 20 }) {
   const mit = punkte.filter((p) => p.wert != null);
   if (mit.length < 2) return "";
   const { breite, hoehe, l, r, o, u } = opt;

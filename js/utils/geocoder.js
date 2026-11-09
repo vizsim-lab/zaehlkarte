@@ -1,8 +1,12 @@
 // geocoder.js — Photon-Geocoder im Stil von vizsim/hilo_profiler
 // (Such-Icon, Clear-Button, Loading-Spinner, Tastatur-Navigation, primary/secondary).
-// bbox auf Deutschland beschränkt. Übernommen aus vizsim/unfallkarte.
+// bbox auf Deutschland beschränkt. Übernommen aus vizsim/unfallkarte; Ergebnisse escaped,
+// Texte und Sprache der Treffer (Photon `lang`) folgen dem Sprachumschalter.
 
 import { Marker } from "../lib/maplibre.js";
+import { sprache, t } from "../sprache/texte.js";
+
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
 export function setupPhotonGeocoder(map) {
   const container = document.createElement('div');
@@ -13,8 +17,8 @@ export function setupPhotonGeocoder(map) {
         <circle cx="11" cy="11" r="8"></circle>
         <path d="m21 21-4.35-4.35"></path>
       </svg>
-      <input type="text" id="search" placeholder="Adresse suchen..." autocomplete="off" />
-      <button class="geocoder-clear" id="geocoder-clear" style="display: none;" title="Löschen">
+      <input type="text" id="search" placeholder="${esc(t("suche.platzhalter"))}" aria-label="${esc(t("suche.label"))}" autocomplete="off" data-i18n-attr="placeholder:suche.platzhalter;aria-label:suche.label" />
+      <button class="geocoder-clear" id="geocoder-clear" style="display: none;" title="${esc(t("suche.loeschen"))}" aria-label="${esc(t("suche.loeschen"))}" data-i18n-attr="title:suche.loeschen;aria-label:suche.loeschen">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -41,7 +45,7 @@ export function setupPhotonGeocoder(map) {
   let currentResults = [];
 
   async function fetchSuggestions(query) {
-    const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&lang=de&limit=8&bbox=5,47,15,55`;
+    const url = `https://photon.komoot.io/api/?q=${encodeURIComponent(query)}&lang=${sprache()}&limit=8&bbox=5,47,15,55`;
     const response = await fetch(url);
     const payload = await response.json();
     return payload.features || [];
@@ -49,7 +53,7 @@ export function setupPhotonGeocoder(map) {
 
   function formatResult(feature) {
     const props = feature.properties || {};
-    let primary = props.name || props.street || 'Unbekannter Ort';
+    let primary = props.name || props.street || t('suche.unbekannt');
 
     if (props.street && props.housenumber) {
       primary = `${props.street} ${props.housenumber}`;
@@ -98,7 +102,7 @@ export function setupPhotonGeocoder(map) {
     selectedIndex = -1;
 
     if (!features.length) {
-      resultsElement.innerHTML = '<div class="geocoder-no-results">Keine Ergebnisse gefunden</div>';
+      resultsElement.innerHTML = `<div class="geocoder-no-results">${esc(t('suche.keine'))}</div>`;
       resultsElement.style.display = 'block';
       return;
     }
@@ -108,8 +112,8 @@ export function setupPhotonGeocoder(map) {
       const formatted = formatResult(feature);
       item.className = 'geocoder-result-item';
       item.innerHTML = `
-        <div class="geocoder-result-primary">${formatted.primary}</div>
-        ${formatted.secondary ? `<div class="geocoder-result-secondary">${formatted.secondary}</div>` : ''}
+        <div class="geocoder-result-primary">${esc(formatted.primary)}</div>
+        ${formatted.secondary ? `<div class="geocoder-result-secondary">${esc(formatted.secondary)}</div>` : ''}
       `;
       item.addEventListener('click', () => selectResult(feature));
       item.addEventListener('mouseenter', () => {

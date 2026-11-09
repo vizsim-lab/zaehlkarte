@@ -1,0 +1,467 @@
+// texte.js — die Texte der Oberfläche auf Deutsch (Standard) und Englisch, dazu Zahlen und
+// Daten im Format der Sprache. REIN (kein DOM, kein window): tests/unit/texte.test.js prüft,
+// dass beide Sprachen dieselben Schlüssel und Platzhalter haben.
+//
+// Übersetzt wird, was die Oberfläche selbst schreibt. Inhalte aus den Daten – Datenlage-Texte,
+// Hinweise und Bemerkungen der Zählungen, Quellenbeschreibungen, Anfragetexte – bleiben deutsch
+// (im HTML mit lang="de"); nur feste Namen aus den Daten (Ferien, Feiertage, Spitzenstunden)
+// haben hier eine englische Fassung. Neue UI-Texte immer in beiden Sprachen anlegen.
+
+export const SPRACHEN = ["de", "en"];
+const GEBIETE = { de: "de-DE", en: "en-GB" };
+let aktuell = "de";
+
+export const sprache = () => aktuell;
+
+export function setzeSprache(s) {
+  if (SPRACHEN.includes(s)) aktuell = s;
+  return aktuell;
+}
+
+export const TEXTE = {
+  de: {
+    "dokument.titel": "Zählkarte – kommunale Verkehrszählungen",
+    "dokument.beschreibung": "Kfz-, Schwerverkehrs-, Rad- und Fußverkehrszählungen der Kommunen auf einer Karte: Werte je Verkehrsart, Tagesgang je Zählung und wo es solche Daten gibt.",
+    "karte": "Karte",
+    "fehler.laden": "Die Karte konnte nicht geladen werden: {fehler}",
+    "sprache.wahl": "Sprache wählen",
+    "schliessen": "Schließen",
+
+    "legende.untertitel": "Kommunale Verkehrszählungen",
+    "legende.arten": "Kfz · Rad · Fuß",
+    "legende.info": "Von Hand, per Video oder mit Messgeräten gezählte Kurzzeitzählungen der Städte (Knotenpunkte und Querschnitte), keine Dauerzählstellen. Quellen und Lizenzen unten.",
+    "legende.klappen": "Legende ein-/ausklappen",
+
+    "thema.titel": "Verkehrsart",
+    "thema.sv_tip": "Lkw über 3,5 t, Lastzüge und Busse (wie die Quelle sie zählt)",
+    "modus.gruppe": "Darstellung",
+    "modus.menge": "Menge",
+    "modus.sv.anteil": "Anteil an Kfz",
+    "modus.rad.anteil": "Radanteil",
+    "modus.sv.anteil_tip": "Schwerverkehr (Lkw, Lastzüge, Busse) geteilt durch alle Kfz – nur, wo beides gezählt ist.",
+    "modus.rad.anteil_tip": "Radfahrende geteilt durch Radfahrende + Kfz – nur, wo auch Kfz gezählt sind.",
+    "kennzahl.titel": "Kennzahl",
+    "art.w": "7–19 Uhr",
+    "art.w24": "24 Stunden",
+    "art.w24_kurz": "24 h",
+    "art.sp": "stärkste Stunde",
+    "art.w_tip": "Summe von 7 bis 19 Uhr – nur, wo jede dieser Stunden gezählt ist. Die meisten Zählungen decken das ab.",
+    "art.w24_tip": "Summe über 24 Stunden – nur bei 24-Stunden-Zählungen.",
+    "art.sp_tip": "Die stärkste gezählte Stunde – vergleichbar auch bei kurzen Zählfenstern.",
+    "kennzahl.summe": "{gruppe}, Summe {art}",
+    "kennzahl.spitze": "{gruppe}, stärkste Stunde",
+    "kennzahl.anteil": "{anteil} ({art})",
+    "anteil.sv": "Schwerverkehrsanteil",
+    "anteil.rad": "Radanteil",
+    "stufe.unter": "unter {wert}",
+    "stufe.bis": "{von} bis unter {bis}",
+    "stufe.ab": "ab {wert}",
+    "klasse.nicht": "nicht in „{art}“ gezählt",
+    "klasse.nicht_tip": "Gezählt, aber nicht in diesem Zeitfenster – etwa nur 15–19 Uhr statt 7–19 Uhr. Klick zeigt den Tagesgang.",
+
+    "gruppe.kfz": "Kfz",
+    "gruppe.sv": "Schwerverkehr",
+    "gruppe.rad": "Rad",
+    "gruppe.fuss": "Fuß",
+    "gruppe.kind": "Kinder/Jugendliche",
+    "kurz.kfz": "Kfz",
+    "kurz.sv": "SV",
+    "kurz.rad": "Rad",
+    "kurz.fuss": "Fuß",
+    "tag.s": "Schultag",
+    "tag.f": "Ferien",
+    "tag.h": "Feiertag",
+    "tag.w": "Wochenende",
+    "tag.u": "unbekannt",
+    "tag_kurz.s": "Schultag",
+    "tag_kurz.f": "Ferien",
+    "tag_kurz.h": "Feiertag",
+    "tag_kurz.w": "Wochenende",
+    "tag_kurz.u": "unbekannt",
+    "uhr": "{zeit} Uhr",
+
+    "filter.titel": "Filter",
+    "filter.klappen": "Filter ein-/ausklappen",
+    "filter.zeitraum": "Zeitraum",
+    "filter.jahr_von": "Jahr von",
+    "filter.jahr_bis": "Jahr bis",
+    "filter.jahre_hinweis": "Je Stelle zeigt die Karte die jüngste Zählung im Zeitraum.",
+    "filter.zaehltag": "Zähltag",
+    "filter.quellen": "Quellen",
+    "filter.uebertragen": "übernommene Lagen zeigen",
+    "filter.uebertragen_tip": "Zählungen ohne eigene Koordinaten, verortet über andere Zählungen derselben Zählstellen-Kennung. Meist richtig, aber nicht geprüft.",
+
+    "datenlage.titel": "Datenlage je Kommune",
+    "datenlage.tip": "Wo es solche Zählungen gibt: offen, auf Anfrage herausgegeben oder aussichtsreich für eine IFG-/UIG-Anfrage. Recherche Stand November 2026, unvollständig – Hinweise gern als Issue.",
+    "datenlage.klasse.in_karte": "in der Karte",
+    "datenlage.klasse.offen": "offen oder auf Anfrage herausgegeben",
+    "datenlage.klasse.kandidat": "erhoben – Anfrage aussichtsreich",
+    "datenlage.klasse.sonst": "nur Summen, Karten, automatisch oder abgelehnt",
+
+    "quellen.titel": "Quellen & Lizenzen",
+    "quellen.klappen": "Quellen ein-/ausklappen",
+    "quellen.umfang": "{zaehlungen} Zählungen an {stellen} Stellen",
+    "quellen.ohne_lage": "{n} weitere Zählungen noch ohne Lage (nicht in der Karte)",
+    "quellen.karte": "Karte: © OpenStreetMap-Mitwirkende, OpenFreeMap; Relief: Mapterhorn. Stand der Daten: {datum}.",
+    "quellen.deutsch": "",
+
+    "zaehler.stellen": "Stellen",
+    "zaehler.zaehlungen": "Zählungen",
+    "zaehler.stellen_tip": "Zählstellen in der Karte (nach Filter)",
+    "zaehler.zaehlungen_tip": "Zählungen im Filter (alle Jahre der Stellen, nicht nur die gezeigte)",
+    "beta.tip": "Im Aufbau: Quellen kommen dazu, Werte ohne Gewähr",
+    "export.label": "Zählungen im Filter als CSV laden",
+    "export.titel": "Zählungen im Filter als CSV",
+    "github.label": "Code auf GitHub",
+    "github.titel": "Code und Pipeline auf GitHub",
+    "melden.label": "Zählung melden",
+    "melden.titel": "Zählungen einer Kommune melden",
+
+    "panel.detail": "Details zur Zählstelle",
+    "panel.datenlage": "Datenlage einer Kommune",
+    "einstellungen": "Karteneinstellungen",
+    "einstellungen.hintergrund": "Hintergrundkarte",
+    "einstellungen.luftbild": "Luftbild",
+    "einstellungen.relief": "Relief",
+    "einstellungen.relief_text": "Gelände aus Mapterhorn",
+    "steuerung.plus": "Vergrößern",
+    "steuerung.minus": "Verkleinern",
+    "steuerung.norden": "Nach Norden ausrichten",
+    "steuerung.quellenangabe": "Quellenangaben ein-/ausblenden",
+
+    "suche.platzhalter": "Adresse suchen...",
+    "suche.label": "Adresse suchen",
+    "suche.loeschen": "Löschen",
+    "suche.keine": "Keine Ergebnisse gefunden",
+    "suche.unbekannt": "Unbekannter Ort",
+
+    "hover.datenlage": "Datenlage · {land}",
+    "hover.belege": "Klick für Belege",
+    "hover.mehrere": "{n} Zählungen an der Stelle",
+    "hover.details": "Klick für Tagesgang und Details",
+
+    "detail.typ.K": "Knotenpunkt",
+    "detail.typ.Q": "Querschnitt",
+    "detail.typ.sonst": "Zählstelle",
+    "detail.eine": "eine Zählung",
+    "detail.n": "{n} Zählungen",
+    "detail.lage": "Lage {lage}",
+    "lage.gps": "Koordinaten aus der Zähldatei",
+    "lage.quelle": "Koordinaten der Quelle",
+    "lage.geokodiert": "aus den Straßennamen verortet (OpenStreetMap)",
+    "lage.uebertragen": "von Zählungen derselben Zählstellen-Kennung übernommen",
+    "detail.spalte.datum": "Datum",
+    "detail.spalte.tag": "Tag",
+    "detail.spalte.uhr": "Uhr",
+    "detail.nicht_voll": "in diesem Zeitraum nicht vollständig gezählt",
+    "detail.werte": "Werte: Summe {art}, alle Richtungen",
+    "detail.verlauf": "Verlauf an dieser Stelle · {kennzahl}",
+    "detail.lade": "Lade Stundenwerte …",
+    "detail.ladefehler": "Stundenwerte nicht ladbar ({fehler})",
+    "detail.ohne_datum": "ohne Datum",
+    "detail.zaehlung_vom": "Zählung vom {wochentag} {datum} · {tag}",
+    "detail.je_stunde": "je Stunde, alle Richtungen · grau hinterlegt: gezählte Stunden ({fenster})",
+    "detail.nur_summen": "Nur Tagessummen geliefert (keine Stundenwerte).",
+    "detail.nur_zaehlplan": "Keine Stundenwerte – der Zählplan nennt nur Spitzenstunden und die Summe der gezählten Stunden.",
+    "detail.keine_stunden": "Für diese Gruppe keine Stundenwerte.",
+    "detail.zaehlplan": "Laut Zählplan",
+    "detail.summe_fenster": "Summe {fenster}",
+    "detail.spitze_nach": "Spitzenstunden nach {gruppe} bestimmt – die übrigen Werte stehen in diesen Stunden, nicht in ihren eigenen.",
+    "detail.bemerkung": "Bemerkung",
+    "detail.hinweise": "Hinweise",
+    "detail.herkunft": "Herkunft",
+    "detail.kennung": "Kennung",
+    "detail.kategorien": "Kategorien",
+    "detail.richtungen": "Richtungen",
+    "detail.intervall": "Intervall",
+    "detail.minuten": "{n} Minuten",
+    "detail.quelle": "Quelle",
+    "detail.lizenz": "Lizenz",
+    "detail.rohdatei": "Rohdatei →",
+    "detail.herkunft_link": "Herkunft →",
+    "detail.csv": "Stundenwerte als CSV",
+    "detail.nicht_gezaehlt": "nicht gezählt",
+    "csv.quelle": "Quelle: {von} ({lizenz}) – über vizsim-lab/zaehlkarte",
+
+    "dl.in_karte": "{n} Zählungen in der Karte – hinzoomen",
+    "dl.deutsch": "",
+    "dl.lage": "Lage",
+    "dl.empfehlung": "Empfehlung",
+    "dl.kontakt": "Kontakt",
+    "dl.fds": "Behörde auf FragDenStaat",
+    "dl.fds_suche": "Behörde auf FragDenStaat suchen",
+    "dl.anfrage": "Anfragetext",
+    "dl.anfrage_hinweis": "Für das Feld „Anfrage“ auf FragDenStaat – Anrede, Rechtsgrundlage und Gebührenhinweis ergänzt FragDenStaat. Betreff: {betreff}",
+    "dl.kopieren": "Text kopieren",
+    "dl.kopiert": "Kopiert ✓",
+    "dl.stellen": "Auf FragDenStaat stellen →",
+    "dl.recht": "Rechtslage im Land",
+    "dl.keine_beratung": "Keine Rechtsberatung.",
+    "dl.belege": "Belege",
+    "dl.melden": "Neues zu {kommune} melden →",
+  },
+
+  en: {
+    "dokument.titel": "Zählkarte – municipal traffic counts",
+    "dokument.beschreibung": "Motor vehicle, heavy vehicle, cycling and pedestrian counts of German municipalities on one map: values per mode, the daily profile of each count, and where such data exist.",
+    "karte": "Map",
+    "fehler.laden": "The map could not be loaded: {fehler}",
+    "sprache.wahl": "Choose language",
+    "schliessen": "Close",
+
+    "legende.untertitel": "Municipal traffic counts",
+    "legende.arten": "Vehicles · Bikes · Pedestrians",
+    "legende.info": "Short-term counts by German municipalities – by hand, on video or with counting devices (junctions and cross-sections), no permanent counters. Sources and licences below.",
+    "legende.klappen": "Expand or collapse the legend",
+
+    "thema.titel": "Mode",
+    "thema.sv_tip": "Trucks over 3.5 t, articulated lorries and buses (as the source counts them)",
+    "modus.gruppe": "Display",
+    "modus.menge": "Volume",
+    "modus.sv.anteil": "Share of motor vehicles",
+    "modus.rad.anteil": "Cycling share",
+    "modus.sv.anteil_tip": "Heavy vehicles (trucks, articulated lorries, buses) divided by all motor vehicles – only where both are counted.",
+    "modus.rad.anteil_tip": "Cyclists divided by cyclists + motor vehicles – only where motor vehicles are counted too.",
+    "kennzahl.titel": "Measure",
+    "art.w": "7–19 h",
+    "art.w24": "24 hours",
+    "art.w24_kurz": "24 h",
+    "art.sp": "peak hour",
+    "art.w_tip": "Total from 7:00 to 19:00 – only where every one of these hours is counted. Most counts cover this.",
+    "art.w24_tip": "Total over 24 hours – only for 24-hour counts.",
+    "art.sp_tip": "The busiest counted hour – comparable even for short count windows.",
+    "kennzahl.summe": "{gruppe}, total {art}",
+    "kennzahl.spitze": "{gruppe}, peak hour",
+    "kennzahl.anteil": "{anteil} ({art})",
+    "anteil.sv": "Heavy vehicle share",
+    "anteil.rad": "Cycling share",
+    "stufe.unter": "under {wert}",
+    "stufe.bis": "{von} to under {bis}",
+    "stufe.ab": "{wert} and more",
+    "klasse.nicht": "not counted in “{art}”",
+    "klasse.nicht_tip": "Counted, but not in this time window – e.g. only 15–19 h instead of 7–19 h. Click to see the daily profile.",
+
+    "gruppe.kfz": "Motor vehicles",
+    "gruppe.sv": "Heavy vehicles",
+    "gruppe.rad": "Cyclists",
+    "gruppe.fuss": "Pedestrians",
+    "gruppe.kind": "Children/teens",
+    "kurz.kfz": "Motor",
+    "kurz.sv": "Heavy",
+    "kurz.rad": "Bike",
+    "kurz.fuss": "Foot",
+    "tag.s": "School day",
+    "tag.f": "School holidays",
+    "tag.h": "Public holiday",
+    "tag.w": "Weekend",
+    "tag.u": "unknown",
+    "tag_kurz.s": "School day",
+    "tag_kurz.f": "Holidays",
+    "tag_kurz.h": "Public holiday",
+    "tag_kurz.w": "Weekend",
+    "tag_kurz.u": "unknown",
+    "uhr": "{zeit} h",
+
+    "filter.titel": "Filter",
+    "filter.klappen": "Expand or collapse the filter",
+    "filter.zeitraum": "Period",
+    "filter.jahr_von": "Year from",
+    "filter.jahr_bis": "Year to",
+    "filter.jahre_hinweis": "For each site, the map shows the latest count in the period.",
+    "filter.zaehltag": "Count day",
+    "filter.quellen": "Sources",
+    "filter.uebertragen": "show inferred locations",
+    "filter.uebertragen_tip": "Counts without their own coordinates, located via other counts with the same site ID. Usually right, but not checked.",
+
+    "datenlage.titel": "Data availability by municipality",
+    "datenlage.tip": "Where such counts exist: open, released on request, or promising for a freedom-of-information request (IFG/UIG). Research as of November 2026, incomplete – tips welcome as an issue.",
+    "datenlage.klasse.in_karte": "on the map",
+    "datenlage.klasse.offen": "open or released on request",
+    "datenlage.klasse.kandidat": "collected – request promising",
+    "datenlage.klasse.sonst": "only totals, maps, automatic or refused",
+
+    "quellen.titel": "Sources & licences",
+    "quellen.klappen": "Expand or collapse sources",
+    "quellen.umfang": "{zaehlungen} counts at {stellen} sites",
+    "quellen.ohne_lage": "{n} more counts without a location yet (not on the map)",
+    "quellen.karte": "Map: © OpenStreetMap contributors, OpenFreeMap; terrain: Mapterhorn. Data as of {datum}.",
+    "quellen.deutsch": "The descriptions of the sources are in German.",
+
+    "zaehler.stellen": "sites",
+    "zaehler.zaehlungen": "counts",
+    "zaehler.stellen_tip": "Count sites on the map (after filtering)",
+    "zaehler.zaehlungen_tip": "Counts in the filter (all years of the sites, not only the one shown)",
+    "beta.tip": "Work in progress: more sources to come, values without guarantee",
+    "export.label": "Download the counts in the filter as CSV",
+    "export.titel": "Counts in the filter as CSV",
+    "github.label": "Code on GitHub",
+    "github.titel": "Code and pipeline on GitHub",
+    "melden.label": "Report counts",
+    "melden.titel": "Report a municipality's counts",
+
+    "panel.detail": "Count site details",
+    "panel.datenlage": "Data availability of a municipality",
+    "einstellungen": "Map settings",
+    "einstellungen.hintergrund": "Basemap",
+    "einstellungen.luftbild": "Aerial",
+    "einstellungen.relief": "Terrain",
+    "einstellungen.relief_text": "Terrain from Mapterhorn",
+    "steuerung.plus": "Zoom in",
+    "steuerung.minus": "Zoom out",
+    "steuerung.norden": "Reset bearing to north",
+    "steuerung.quellenangabe": "Toggle attribution",
+
+    "suche.platzhalter": "Search address...",
+    "suche.label": "Search address",
+    "suche.loeschen": "Clear",
+    "suche.keine": "No results found",
+    "suche.unbekannt": "Unknown place",
+
+    "hover.datenlage": "Data availability · {land}",
+    "hover.belege": "Click for sources",
+    "hover.mehrere": "{n} counts at this site",
+    "hover.details": "Click for the daily profile and details",
+
+    "detail.typ.K": "Junction",
+    "detail.typ.Q": "Cross-section",
+    "detail.typ.sonst": "Count site",
+    "detail.eine": "one count",
+    "detail.n": "{n} counts",
+    "detail.lage": "location {lage}",
+    "lage.gps": "from the count file",
+    "lage.quelle": "from the source",
+    "lage.geokodiert": "from the street names (OpenStreetMap)",
+    "lage.uebertragen": "taken from counts with the same site ID",
+    "detail.spalte.datum": "Date",
+    "detail.spalte.tag": "Day",
+    "detail.spalte.uhr": "Time",
+    "detail.nicht_voll": "not fully counted in this window",
+    "detail.werte": "Values: total {art}, all directions",
+    "detail.verlauf": "Over time at this site · {kennzahl}",
+    "detail.lade": "Loading hourly values …",
+    "detail.ladefehler": "Hourly values could not be loaded ({fehler})",
+    "detail.ohne_datum": "no date",
+    "detail.zaehlung_vom": "Count on {wochentag} {datum} · {tag}",
+    "detail.je_stunde": "per hour, all directions · grey band: counted hours ({fenster})",
+    "detail.nur_summen": "Only daily totals supplied (no hourly values).",
+    "detail.nur_zaehlplan": "No hourly values – the count sheet only gives the peak hours and the total of the counted hours.",
+    "detail.keine_stunden": "No hourly values for this group.",
+    "detail.zaehlplan": "According to the count sheet",
+    "detail.summe_fenster": "Total {fenster}",
+    "detail.spitze_nach": "Peak hours determined by {gruppe} – the other values refer to these hours, not to their own.",
+    "detail.bemerkung": "Remark (in German)",
+    "detail.hinweise": "Notes (in German)",
+    "detail.herkunft": "Provenance",
+    "detail.kennung": "ID",
+    "detail.kategorien": "Categories",
+    "detail.richtungen": "Directions",
+    "detail.intervall": "Interval",
+    "detail.minuten": "{n} minutes",
+    "detail.quelle": "Source",
+    "detail.lizenz": "Licence",
+    "detail.rohdatei": "Raw file →",
+    "detail.herkunft_link": "Source page →",
+    "detail.csv": "Hourly values as CSV",
+    "detail.nicht_gezaehlt": "not counted",
+    "csv.quelle": "Source: {von} ({lizenz}) – via vizsim-lab/zaehlkarte",
+
+    "dl.in_karte": "{n} counts on the map – zoom in",
+    "dl.deutsch": "The research notes are in German.",
+    "dl.lage": "Situation",
+    "dl.empfehlung": "Recommendation",
+    "dl.kontakt": "Contact",
+    "dl.fds": "Authority on FragDenStaat",
+    "dl.fds_suche": "Search for the authority on FragDenStaat",
+    "dl.anfrage": "Request text",
+    "dl.anfrage_hinweis": "For the “Anfrage” field on FragDenStaat, the German freedom-of-information platform – it adds the salutation, legal basis and fee note. The text is in German because it goes to a German authority. Subject: {betreff}",
+    "dl.kopieren": "Copy text",
+    "dl.kopiert": "Copied ✓",
+    "dl.stellen": "Submit on FragDenStaat →",
+    "dl.recht": "Legal situation in the state",
+    "dl.keine_beratung": "Not legal advice.",
+    "dl.belege": "Sources",
+    "dl.melden": "Report news on {kommune} →",
+  },
+};
+
+// Feste Namen aus den Daten (Kalender der Pipeline, Zählpläne): Englisch, sonst wie geliefert.
+const NAMEN_EN = {
+  Sommerferien: "summer holidays",
+  Osterferien: "Easter holidays",
+  Herbstferien: "autumn holidays",
+  Weihnachtsferien: "Christmas holidays",
+  Winterferien: "winter holidays",
+  Pfingstferien: "Whitsun holidays",
+  ferien: "holidays",
+  "unterrichtsfreier Tag": "day without lessons",
+  Samstag: "Saturday",
+  Sonntag: "Sunday",
+  Neujahr: "New Year's Day",
+  Karfreitag: "Good Friday",
+  Ostermontag: "Easter Monday",
+  "Tag der Arbeit": "Labour Day",
+  "Christi Himmelfahrt": "Ascension Day",
+  Pfingstmontag: "Whit Monday",
+  "1. Weihnachtstag": "Christmas Day",
+  "2. Weihnachtstag": "Boxing Day",
+  "Tag der Deutschen Einheit": "German Unity Day",
+  "Tag der deutschen Einheit (17. Juni)": "Day of German Unity (17 June)",
+  "Buß- und Bettag": "Day of Repentance and Prayer",
+  Reformationstag: "Reformation Day",
+  "Reformationstag (500 Jahre)": "Reformation Day (500 years)",
+  "Internationaler Frauentag": "International Women's Day",
+  "75. Jahrestag der Befreiung": "75th anniversary of the liberation",
+  "80. Jahrestag der Befreiung": "80th anniversary of the liberation",
+  "Heilige Drei Könige": "Epiphany",
+  Fronleichnam: "Corpus Christi",
+  Allerheiligen: "All Saints' Day",
+  Frühspitze: "Morning peak",
+  Nachmittagsspitze: "Afternoon peak",
+  Spitzenstunde: "Peak hour",
+};
+
+/** Text zum Schlüssel; {name} wird aus `werte` ersetzt. Fehlt er, gilt Deutsch, dann der Schlüssel. */
+export function t(schluessel, werte = {}, s = aktuell) {
+  const vorlage = TEXTE[s]?.[schluessel] ?? TEXTE.de[schluessel] ?? schluessel;
+  return vorlage.replace(/\{(\w+)\}/g, (m, name) => (name in werte ? String(werte[name]) : m));
+}
+
+/** Fester Name aus den Daten (Ferien, Feiertag, Spitzenstunde) in der Sprache, sonst wie geliefert. */
+export function name(text, s = aktuell) {
+  return (s === "en" && NAMEN_EN[text]) || text;
+}
+
+/** Feld eines Objekts aus den Daten in der Sprache: `feld_en`, wenn vorhanden, sonst `feld`. */
+export function lokal(obj, feld, s = aktuell) {
+  return (s !== "de" && obj?.[`${feld}_${s}`]) || obj?.[feld];
+}
+
+const formate = new Map();
+function format(art, s, optionen) {
+  const k = `${art}:${s}`;
+  if (!formate.has(k)) formate.set(k, new Intl.NumberFormat(GEBIETE[s], optionen));
+  return formate.get(k);
+}
+
+export const zahl = (v, s = aktuell) => format("zahl", s).format(v);
+export const prozent = (v, s = aktuell) =>
+  format("prozent", s, { style: "percent", maximumFractionDigits: 1 }).format(v);
+
+/** "2025-06-20" -> "20.06.2025" (Deutsch) bzw. "20 Jun 2025" (Englisch). */
+export function datum(iso, s = aktuell) {
+  if (!iso) return t("detail.ohne_datum", {}, s);
+  const [j, m, tg] = iso.split("-");
+  if (s === "de") return `${tg}.${m}.${j}`;
+  return new Date(Date.UTC(Number(j), Number(m) - 1, Number(tg)))
+    .toLocaleDateString(GEBIETE[s], { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+}
+
+/** Kurzer Wochentag: "Fr." bzw. "Fri". */
+export function wochentag(iso, s = aktuell) {
+  if (!iso) return "";
+  const [j, m, tg] = iso.split("-").map(Number);
+  return new Date(Date.UTC(j, m - 1, tg)).toLocaleDateString(GEBIETE[s], { weekday: "short", timeZone: "UTC" });
+}
+
+/** Uhrzeit-Spanne mit Einheit: "7–19" -> "7–19 Uhr" bzw. "7–19 h". */
+export const uhr = (zeit, s = aktuell) => t("uhr", { zeit }, s);

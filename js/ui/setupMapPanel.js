@@ -5,6 +5,26 @@
 
 import { NavigationControl } from "../lib/maplibre.js";
 import { setBasemap, setRelief } from "../map/basemapTerrain.js";
+import { t } from "../sprache/texte.js";
+
+// Knöpfe, die MapLibre selbst beschriftet (englisch): hier in der Sprache der Oberfläche.
+const STEUERUNG = [
+  [".maplibregl-ctrl-zoom-in", "steuerung.plus"],
+  [".maplibregl-ctrl-zoom-out", "steuerung.minus"],
+  [".maplibregl-ctrl-compass", "steuerung.norden"],
+  [".maplibregl-ctrl-attrib-button", "steuerung.quellenangabe"],
+];
+
+/** Titel der MapLibre-Knöpfe setzen und für den Sprachwechsel markieren (data-i18n-attr). */
+export function beschrifteSteuerung() {
+  for (const [sel, schluessel] of STEUERUNG) {
+    for (const b of document.querySelectorAll(sel)) {
+      b.dataset.i18nAttr = `title:${schluessel};aria-label:${schluessel}`;
+      b.title = t(schluessel);
+      b.setAttribute("aria-label", t(schluessel));
+    }
+  }
+}
 
 /** Panel unten links: Basemap-Auswahl (Positron/OSM/Esri) und Relief. */
 export function setupMapPanel(map) {

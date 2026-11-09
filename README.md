@@ -15,6 +15,9 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   die Rohdatei und die Lizenz; Download als CSV.
 - **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen.
+- **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
+  `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
+  Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
 
 Gemeint sind Kurzzeitzählungen der Kommunen, keine Dauerzählstellen und keine
 Verkehrsmengenkarten (dafür: [vizsim/svz](https://github.com/vizsim/svz)). Auswertungen wie
@@ -98,6 +101,7 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
                             olpe_radar, konstanz_mobil, potsdam_pdf, xanten_pdf)
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
+  js/sprache/          Texte der Oberfläche DE/EN (texte.js) und der Umschalter
 tests/               unit/ (node --test), web/ (Playwright gegen den Build)
 ```
 

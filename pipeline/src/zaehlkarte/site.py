@@ -50,6 +50,17 @@ STAND = {
     "automatisch": "automatische Zählungen offen",
     "abgelehnt": "Anfrage gescheitert",
 }
+# Für den Sprachumschalter der Karte (DE/EN); die Datenlage-Texte selbst bleiben deutsch.
+STAND_EN = {
+    "in_karte": "on the map",
+    "offen": "open, not yet on the map",
+    "geliefert": "released on request",
+    "kandidat": "collected – request promising",
+    "aggregiert": "only totals or averages open",
+    "nur_karte": "only as a map",
+    "automatisch": "automatic counts open",
+    "abgelehnt": "request failed",
+}
 
 
 def fenster_text(fenster: list[tuple[int, int]]) -> str:
@@ -330,6 +341,7 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
         "details_anzahl": n_chunks,
         "gruppen": [{"id": g, "name": GRUPPEN_NAMEN[g]} for g in GRUPPEN],
         "stand": STAND,
+        "stand_en": STAND_EN,
         "quellen": [
             {
                 "code": c,

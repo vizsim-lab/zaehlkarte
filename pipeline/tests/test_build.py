@@ -4,7 +4,7 @@ from datetime import date
 
 from zaehlkarte.build import bilde_stellen, uebertrage_lage
 from zaehlkarte.modell import Zaehlung
-from zaehlkarte.site import fenster_text, kennwerte
+from zaehlkarte.site import STAND, STAND_EN, fenster_text, kennwerte
 
 
 def z(kennung, stelle, lon, lat, name="A-Str. / B-Str.", jahr=2020, lage="geokodiert"):
@@ -62,3 +62,7 @@ def test_kennwerte_und_fenster():
     assert k["w"] == [120, None, None, None, None] and k["w24"] is None
     assert k["sp"] == [10, None, None, None, None] and k["g"] == 1
     assert set(k) == {"datum", "tag", "fenster", "g", "w", "w24", "sp"}
+
+
+def test_stand_in_beiden_sprachen():
+    assert STAND_EN.keys() == STAND.keys()  # der Sprachumschalter der Karte braucht jeden Stand
