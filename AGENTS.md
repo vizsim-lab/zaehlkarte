@@ -10,10 +10,15 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
 ## Wo suchen
 - **Open-Data-Portale der Städte und Länder:** MobiData BW (CKAN, Gruppe
   `verkehrszaehldaten`, Pakete `zaehldaten-*`), opendata.potsdam.de, opendata.ruhr, Open.NRW.
-  CKAN-API: `/api/3/action/package_search?q=Verkehrszählung`.
+  CKAN-API: `/api/3/action/package_search?q=Verkehrszählung`. Für Baden-Württemberg reicht
+  GovData mit `fq=organization:open-data-baden-wurttemberg` (= daten.bw, sammelt Freiburg,
+  Mannheim, Heilbronn, Konstanz, Stuttgart und das Portal re@di der Städte der TechnologieRegion
+  Karlsruhe, `opendata.readi.de`).
 - **FragDenStaat:** rund 200 Anfragen zu „Verkehrszählung“, meist zu einzelnen Straßen. Was
   geliefert wurde, liegt oft als PDF im Anhang. API:
-  `https://fragdenstaat.de/api/v1/request/search/?q=Verkehrsz%C3%A4hlung`.
+  `https://fragdenstaat.de/api/v1/request/search/?q=Verkehrsz%C3%A4hlung` (Volltext: „Verkehrszählung
+  Freiburg“ liefert 67 Treffer, keiner zu Freiburg – nach Behörde filtern; `/api/v1/request/?q=`
+  ignoriert `q`). Behörden samt Funktionsadresse: `/api/v1/publicbody/?q=Stadt Freiburg`.
 - **Ratsinformationssysteme:** Antworten auf Anfragen nennen Zahl und Format der Zählungen
   (Dresden AF0915/25, München DAVe-Vorlage).
 - **Zählsoftware:** München und Wolfsburg nutzen DAVe (Open Source, Export in offene Formate),
@@ -132,11 +137,21 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   FragDenStaat: die Links „/anhang/…“ liefern eine HTML-Seite, die Datei liegt unter
   media.frag-den-staat.de/files/foi/<Nachricht>/<Name>.
 - Nicht abrufbar (Stand November 2026): wuppertal.de (Dienstleistung „Verkehrsbelastung“
-  104.51 – lohnt einen zweiten Blick), bau.bremen.de, mobil.osnabrueck.de; datenhub.ulm.de
-  braucht JavaScript.
+  104.51 – lohnt einen zweiten Blick), bau.bremen.de, mobil.osnabrueck.de. Der Datenhub Ulm
+  braucht im Browser JavaScript, seine CKAN-API (`datenhub.ulm.de/ckan/api/3/action/…`) geht.
+- Baden-Württemberg (November 2026, GovData/daten.bw, re@di, Stadtportale, FragDenStaat): offene
+  Kurzzeitzählungen nur bei MobiData BW (Ravensburg und Umland) und in Konstanz. Sonst sind nur
+  Dauerzählungen offen – Freiburg (Rad-Zählstellen; 25 Sensoren im Testbetrieb, der WFS
+  `digit_verkehrszaehl` zeigt nur drei Standorte vom Mai 2024; Stadtradeln = GPS-Spuren, keine
+  Zählung), Ettlingen (Sensoren, CC BY-NC 4.0; im Datastore stehen alte Kennungen 46–54 ohne
+  Richtung neben UrbanPulse-Strömen je Spur ab August 2026), Ulm (Kameras „vgv_ulm“, eine Zeile
+  je Verkehrsteilnehmer, Standorte nur als Kürzel), Mannheim (Eco-Counter), Heidelberg
+  (Kameras). Die Geschwindigkeitsdisplays in Konstanz taugen laut Stadt nicht für
+  Verkehrsmengen; Heilbronn hat nur Kfz-Bestand und Fahrleistung (Statistisches Landesamt);
+  Aalen zählt mit eigenem Seitenradar, veröffentlicht aber nichts. Karlsruhe hat 2023 Zählungen
+  eines Verkehrsversuchs als Excel herausgegeben (FragDenStaat) – alles in der Datenlage.
 - Geprüft ohne verwertbaren Fund (Stadtseite, Portal, FragDenStaat; November 2026 – eine Anfrage
-  nach der Vorlage geht trotzdem überall): Karlsruhe (Zählwerte nur in Gutachten im
-  Ratsinformationssystem), Mannheim, Freiburg, Ulm, Tübingen, Heilbronn, Pforzheim, Reutlingen,
+  nach der Vorlage geht trotzdem überall): Mannheim, Tübingen, Heilbronn, Pforzheim, Reutlingen,
   Augsburg, Regensburg, Ingolstadt, Erlangen, Würzburg, Cottbus, Bremen, Wiesbaden, Darmstadt,
   Offenbach, Schwerin, Greifswald, Hannover, Braunschweig, Oldenburg, Lüneburg, Duisburg,
   Bochum, Bielefeld, Bonn, Krefeld, Oberhausen, Siegen, Mainz, Ludwigshafen, Koblenz, Trier,

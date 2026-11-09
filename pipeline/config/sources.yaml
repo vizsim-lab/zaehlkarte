@@ -660,6 +660,122 @@ datenlage:
       im Stadtgebiet.
     links:
       - ["Open Data Stuttgart", "https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855"]
+  # Freiburg, Karlsruhe, Ettlingen: Recherche November 2026 (GovData/daten.bw, Portale der Städte,
+  # FragDenStaat-Volltextsuche; Werkzeug-Branch werkzeug/erkundung, ergebnis/bw2).
+  - kommune: Freiburg im Breisgau
+    land: BW
+    lon: 7.8499
+    lat: 47.9948
+    stand: automatisch
+    was: >-
+      offen nur automatische Zählungen: Rad-Zählstellen (Stundenwerte seit 2015), dazu 25
+      Verkehrssensoren im Testbetrieb; Knotenpunkt- und Querschnittszählungen nicht online
+    situation: >-
+      Offen sind die Stundenwerte der Rad-Zählstellen seit 2015 (FR.ITZ, Datenlizenz Deutschland –
+      Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach
+      zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die
+      Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte
+      mit Werten vom Mai 2024. Beides sind Dauerzählstellen, nicht in der Karte. Die
+      Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen
+      der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und
+      Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.
+    empfehlung: >-
+      Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch
+      nach denen, die für Verkehrsuntersuchungen erhoben wurden. Grundlage:
+      Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    kontakt: {name: "Stadt Freiburg im Breisgau", email: "buergerberatung@stadt.freiburg.de", fds: "https://fragdenstaat.de/behoerde/9204/stadt-freiburg-im-breisgau/"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Gemeint sind die Kurzzeitzählungen an Knotenpunkten und Querschnitten, auch die für
+      Verkehrsuntersuchungen erhobenen (etwa die Stichprobenzählungen im Mai bis Juli 2022 zur
+      Verkehrsuntersuchung Schlossbergring) – nicht die Rad-Zählstellen und die Verkehrssensoren.
+    links:
+      - ["FR.ITZ: Fahrrad-Zählstellen", "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"]
+      - ["Meldung Sensoren (24.7.2025)", "https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg"]
+      - ["Geoportal: Verkehrssensoren (WFS)", "https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS"]
+      - ["VU Schlossbergring 2023 (PDF)", "https://www.freiburg.de/pb/site/Freiburg/get/params_E-138366714/2151489/231205_Bericht_VU%20Schlossberring.pdf"]
+  - kommune: Karlsruhe
+    land: BW
+    lon: 8.4037
+    lat: 49.0093
+    stand: geliefert
+    was: >-
+      2023 auf Anfrage die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb herausgegeben
+      (Excel); sonst Zählwerte nur in Verkehrsuntersuchungen im Ratsinformationssystem
+    situation: >-
+      2023 hat die Stadt (Ordnungs- und Bürgeramt) auf eine Anfrage nach dem LIFG die Zählungen
+      zum Verkehrsversuch Fahrradstraße Rechts der Alb herausgegeben – als Excel-Datei, auf
+      FragDenStaat nur als umgewandelte PDF und ohne Lizenzangabe. Auf eine Anfrage 2025 zu einer
+      Kreuzung in der Innenstadt verwies sie auf eine Verkehrsuntersuchung im
+      Ratsinformationssystem. Einen offenen Datensatz mit Zählungen gibt es nicht.
+    empfehlung: >-
+      Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023.
+      Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    kontakt: {fds_suche: "Stadt Karlsruhe"}
+    anfrage: true
+    anfrage_zusatz: >-
+      2023 haben Sie die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb als Excel-Datei
+      herausgegeben. Ich bitte in derselben Form um alle Zählungen, auch um die für
+      Verkehrsuntersuchungen erhobenen.
+    links:
+      - ["FragDenStaat 2023", "https://fragdenstaat.de/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/"]
+      - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/kreuzung-kriegs-brauer-reinhold-frank-strasse-massgebliches-verkehrsaufkommen/"]
+  - kommune: Ettlingen
+    land: BW
+    lon: 8.4078
+    lat: 48.9406
+    stand: automatisch
+    was: >-
+      automatische Zählstellen an sechs Stellen, Stundenwerte je Fahrzeugklasse seit Mai 2025 –
+      offen, aber nur nicht kommerziell (CC BY-NC 4.0)
+    situation: >-
+      Die Stadt veröffentlicht die Werte ihrer automatischen Zählstellen auf dem Open-Data-Portal
+      re@di (Städte der TechnologieRegion Karlsruhe): Stundenwerte je Fahrzeugklasse (Pkw, leichte
+      Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad, an einer Stelle Rad) an sechs Stellen in der
+      Karlsruher, Rastatter, Durlacher, Pforzheimer und Schillerstraße, die meisten seit Mai 2025
+      durchgehend. Lizenz: CC BY-NC 4.0, also nur nicht kommerziell. Das sind Dauerzählstellen, daher nicht in der Karte; Kurzzeitzählungen an
+      Knotenpunkten stehen nicht online.
+    empfehlung: >-
+      Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder
+      erheben lässt. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    kontakt: {name: "Stadt Ettlingen", email: "hauptamt@ettlingen.de", fds: "https://fragdenstaat.de/behoerde/9199/stadt-ettlingen/"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Gemeint sind nicht die automatischen Zählstellen, deren Werte Sie auf dem Open-Data-Portal
+      veröffentlichen, sondern Zählungen an Knotenpunkten und Querschnitten (etwa für
+      Verkehrsuntersuchungen).
+    links:
+      - ["Open-Data-Portal (re@di)", "https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen"]
+  - kommune: Ulm
+    land: BW
+    lon: 9.9916
+    lat: 48.3985
+    stand: automatisch
+    was: >-
+      fünf Zählkameras seit Juli 2024, je Verkehrsteilnehmer eine Zeile, Standorte nur als Kürzel;
+      dazu eine Rad-Dauerzählstelle; Kurzzeitzählungen nicht online
+    situation: >-
+      Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit
+      Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und
+      Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa
+      „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch. Dazu kommt die Rad-Dauerzählstelle am
+      Blautalradweg. Beides ist nicht in der Karte; Knotenpunkt- und Querschnittszählungen stehen
+      nicht online.
+    empfehlung: >-
+      Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras.
+      Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    kontakt: {fds_suche: "Stadt Ulm"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Zu den Kamerazählungen im Datenhub (Datensatz „vgv_ulm“) bitte ich nur um die Standorte der
+      Kameras (Koordinaten zu den Kürzeln wie „Cam-1-01“) und ihre Zählzeiträume.
+    links:
+      - ["Datenhub Ulm: vgv_ulm", "https://datenhub.ulm.de/ckan/dataset/vgv_ulm"]
+      - ["Datenhub Ulm: Fahrradzählstelle", "https://datenhub.ulm.de/ckan/dataset/fahrradzahler_lupferbruecke"]
   - kommune: Dortmund
     land: NW
     lon: 7.4653
