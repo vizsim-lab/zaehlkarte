@@ -1,0 +1,122 @@
+{
+ "accessRights": "oeffentlich",
+ "accrualPeriodicity": "bei Bedarf",
+ "author": null,
+ "author_email": "smartcity@olpe.de",
+ "contactPoint": "",
+ "creator": "Kreisstadt Olpe, Smart City",
+ "creator_user_id": "05dfe834-7249-4efb-8b48-e51eb8436c4b",
+ "datenpflege": ".json",
+ "datenpflege2": ".json",
+ "erfassungsgrundlage": "",
+ "geocodingDescription": "olpe",
+ "hvd_category": "",
+ "id": "d67399e8-949d-4ff3-a57a-0111ad456c16",
+ "isopen": true,
+ "lagegenauigkeit": "",
+ "language": "deutsch",
+ "letzteFortführung": "08.09.2025",
+ "license_id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+ "license_title": "Datenlizenz Deutschland Namensnennung 2.0",
+ "license_url": "https://www.govdata.de/dl-de/by-2-0",
+ "maintainer": "Kreisstadt Olpe, Ordnungsamt",
+ "maintainer_email": "",
+ "metadata_created": "2026-04-08T06:39:07.308719",
+ "metadata_modified": "2026-04-09T08:47:56.600685",
+ "name": "verkehrsmessungen-rochusstrabe",
+ "notes": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+ "num_resources": 1,
+ "num_tags": 5,
+ "organization": {
+  "id": "ea182c9e-6f42-4764-b8ed-0c86a9136756",
+  "name": "kreisstadt-olpe",
+  "title": "Kreisstadt Olpe",
+  "type": "organization",
+  "description": "Hier finden Sie offene Daten der Kreisstadt Olpe – frei zugänglich, maschinenlesbar und nutzbar für alle. Unser Ziel ist es, Transparenz zu fördern, die Entwicklung digitaler Lösungen zu unterstützen und datenbasierte Entscheidungen zu ermöglichen.\r\n\r\nEntdecken Sie vielfältige Datensätze aus Bereichen wie Bevölkerung und Gesellschaft, Bildung, Kultur und Sport. Die Daten stehen Ihnen zum Download zur Verfügung.",
+  "image_url": "2025-06-24-101012.634921smart-city-logo-olpe.jpg",
+  "created": "2025-06-24T10:10:12.644015",
+  "is_organization": true,
+  "approval_status": "approved",
+  "state": "active"
+ },
+ "owner_org": "ea182c9e-6f42-4764-b8ed-0c86a9136756",
+ "private": false,
+ "publisher": "Kreisstadt Olpe, Smart City",
+ "spatial": "WGS84: POLYGON (7.5 51.3, 8.1 51.4)",
+ "spatialResolutionInMeters": "",
+ "state": "active",
+ "temporal": "27.08.2025 - 08.09.2025",
+ "temporalResolution": "",
+ "theme": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "title": "Verkehrsmessungen Rochusstraße",
+ "type": "dataset",
+ "url": null,
+ "version": null,
+ "resources": [
+  {
+   "cache_last_updated": null,
+   "cache_url": null,
+   "created": "2026-04-09T08:47:56.625491",
+   "datastore_active": false,
+   "datastore_contains_all_records_of_source_file": false,
+   "description": "",
+   "format": "JSON",
+   "hash": "",
+   "id": "a1f401ba-9843-4224-9053-676871c66a77",
+   "last_modified": null,
+   "metadata_modified": "2026-04-09T08:47:56.613407",
+   "mimetype": "application/json",
+   "mimetype_inner": null,
+   "name": "Verkehrsmessung 27.08.2025 - 08.09.2025",
+   "package_id": "d67399e8-949d-4ff3-a57a-0111ad456c16",
+   "position": 0,
+   "resource_type": null,
+   "size": null,
+   "state": "active",
+   "url": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Rochusstr-20250827-20250908.json",
+   "url_type": ""
+  }
+ ],
+ "tags": [
+  {
+   "display_name": "2025",
+   "id": "fb71ed14-0f4a-4196-b4ba-4262bf798c80",
+   "name": "2025",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Geschwindigkeiten",
+   "id": "185515b5-da4d-4ffc-8c48-3884b0d2b2f0",
+   "name": "Geschwindigkeiten",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Lärm",
+   "id": "72082792-d60d-44b8-9d7a-6c70298e6368",
+   "name": "Lärm",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Mobilität",
+   "id": "2fd50568-98ba-49f6-881c-5090637d9cfa",
+   "name": "Mobilität",
+   "state": "active",
+   "vocabulary_id": null
+  },
+  {
+   "display_name": "Verkehr",
+   "id": "10e9e3b9-9e5a-4fd0-b935-0eacfea0ca49",
+   "name": "Verkehr",
+   "state": "active",
+   "vocabulary_id": null
+  }
+ ],
+ "groups": [],
+ "relationships_as_subject": [],
+ "relationships_as_object": []
+}
