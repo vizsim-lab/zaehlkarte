@@ -1,0 +1,1274 @@
+{
+ "7f6bab64-4901-4b0a-8f64-77e35f6184f4": {
+  "name": "camera1",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 5646016,
+  "erste": [
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T08:44:10",
+    "class": "Pkw",
+    "site": "Cam-1-01",
+    "direction": "S"
+   },
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T08:44:10",
+    "class": "Pkw",
+    "site": "Cam-1-03",
+    "direction": "N"
+   },
+   {
+    "_id": 3,
+    "id": 2,
+    "timestamp": "2024-07-30T08:44:11",
+    "class": "Pkw",
+    "site": "Cam-1-01",
+    "direction": "S"
+   },
+   {
+    "_id": 4,
+    "id": 3,
+    "timestamp": "2024-07-30T08:44:12",
+    "class": "Pkw",
+    "site": "Cam-1-03",
+    "direction": "N"
+   },
+   {
+    "_id": 5,
+    "id": 4,
+    "timestamp": "2024-07-30T08:44:12",
+    "class": "Pkw",
+    "site": "Cam-1-03",
+    "direction": "N"
+   }
+  ],
+  "letzte": [
+   {
+    "_id": 10962900,
+    "id": 5679555,
+    "timestamp": "2026-10-27T08:52:19",
+    "class": "Pkw",
+    "site": "Cam-1-03",
+    "direction": "N"
+   },
+   {
+    "_id": 10962899,
+    "id": 5679554,
+    "timestamp": "2026-10-27T08:52:18",
+    "class": "Pkw",
+    "site": "Cam-1-03",
+    "direction": "N"
+   },
+   {
+    "_id": 10962898,
+    "id": 5679553,
+    "timestamp": "2026-10-27T08:52:16",
+    "class": "Pkw",
+    "site": "Cam-1-03",
+    "direction": "N"
+   },
+   {
+    "_id": 10962897,
+    "id": 5679552,
+    "timestamp": "2026-10-27T08:52:14",
+    "class": "Pkw",
+    "site": "Cam-1-01",
+    "direction": "S"
+   },
+   {
+    "_id": 10962896,
+    "id": 5679551,
+    "timestamp": "2026-10-27T08:52:12",
+    "class": "Pkw",
+    "site": "Cam-1-01",
+    "direction": "S"
+   }
+  ],
+  "frueheste": [
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T08:44:10",
+    "class": "Pkw",
+    "site": "Cam-1-03",
+    "direction": "N"
+   },
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T08:44:10",
+    "class": "Pkw",
+    "site": "Cam-1-01",
+    "direction": "S"
+   }
+  ]
+ },
+ "095e5e0c-5cc2-4644-8ccc-21557daa98b3": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 5136978,
+  "erste": [
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:02:12",
+    "class": "Pkw",
+    "site": "Cam-2-04",
+    "direction": "SW"
+   },
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:02:12",
+    "class": "Pkw",
+    "site": "Cam-2-04",
+    "direction": "SW"
+   },
+   {
+    "_id": 3,
+    "id": 2,
+    "timestamp": "2024-07-30T09:54:14",
+    "class": "Pkw",
+    "site": "Cam-2-05",
+    "direction": "NE"
+   },
+   {
+    "_id": 4,
+    "id": 3,
+    "timestamp": "2024-07-30T09:54:15",
+    "class": "Pkw",
+    "site": "Cam-2-04",
+    "direction": "NE"
+   },
+   {
+    "_id": 5,
+    "id": 4,
+    "timestamp": "2024-07-30T09:54:15",
+    "class": "Pkw",
+    "site": "Cam-2-03",
+    "direction": "W"
+   }
+  ],
+  "letzte": [
+   {
+    "_id": 5449153,
+    "id": 5142551,
+    "timestamp": "2025-11-27T22:01:51",
+    "class": "Fussgaenger",
+    "site": "Cam-2-06",
+    "direction": "SE"
+   },
+   {
+    "_id": 5449152,
+    "id": 5142550,
+    "timestamp": "2025-11-27T21:54:45",
+    "class": "Pkw",
+    "site": "Cam-2-04",
+    "direction": "SW"
+   },
+   {
+    "_id": 5449151,
+    "id": 5142549,
+    "timestamp": "2025-11-27T21:52:23",
+    "class": "Pkw",
+    "site": "Cam-2-04",
+    "direction": "SW"
+   },
+   {
+    "_id": 5449150,
+    "id": 5142548,
+    "timestamp": "2025-11-27T21:52:01",
+    "class": "Pkw",
+    "site": "Cam-2-03",
+    "direction": "W"
+   },
+   {
+    "_id": 5449149,
+    "id": 5142547,
+    "timestamp": "2025-11-27T21:49:55",
+    "class": "Pkw",
+    "site": "Cam-2-05",
+    "direction": "NE"
+   }
+  ],
+  "frueheste": [
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:02:12",
+    "class": "Pkw",
+    "site": "Cam-2-04",
+    "direction": "SW"
+   },
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:02:12",
+    "class": "Pkw",
+    "site": "Cam-2-04",
+    "direction": "SW"
+   }
+  ]
+ },
+ "f3f80321-a062-4a69-8cba-f77622886c78": {
+  "name": "camera3",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 9060981,
+  "erste": [
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:05:22",
+    "class": "Pkw",
+    "site": "Cam-3-01",
+    "direction": "N"
+   },
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:05:24",
+    "class": "Pkw",
+    "site": "Cam-3-01",
+    "direction": "N"
+   },
+   {
+    "_id": 3,
+    "id": 2,
+    "timestamp": "2024-07-30T09:05:25",
+    "class": "Pkw",
+    "site": "Cam-3-01",
+    "direction": "N"
+   },
+   {
+    "_id": 4,
+    "id": 3,
+    "timestamp": "2024-07-30T09:05:25",
+    "class": "Pkw",
+    "site": "Cam-3-06",
+    "direction": "S"
+   },
+   {
+    "_id": 5,
+    "id": 4,
+    "timestamp": "2024-07-30T09:05:26",
+    "class": "Pkw",
+    "site": "Cam-3-06",
+    "direction": "S"
+   }
+  ],
+  "letzte": [
+   {
+    "_id": 9901035,
+    "id": 9083509,
+    "timestamp": "2025-12-19T08:55:00",
+    "class": "Pkw",
+    "site": "Cam-3-02",
+    "direction": "S"
+   },
+   {
+    "_id": 9901029,
+    "id": 9083508,
+    "timestamp": "2025-12-19T08:49:42",
+    "class": "Pkw",
+    "site": "Cam-3-02",
+    "direction": "S"
+   },
+   {
+    "_id": 9901028,
+    "id": 9083507,
+    "timestamp": "2025-12-19T08:44:06",
+    "class": "Pkw",
+    "site": "Cam-3-01",
+    "direction": "N"
+   },
+   {
+    "_id": 9901013,
+    "id": 9083506,
+    "timestamp": "2025-12-19T08:41:48",
+    "class": "Pkw",
+    "site": "Cam-3-06",
+    "direction": "S"
+   },
+   {
+    "_id": 9901007,
+    "id": 9083505,
+    "timestamp": "2025-12-19T08:39:50",
+    "class": "Pkw",
+    "site": "Cam-3-05",
+    "direction": "SW"
+   }
+  ],
+  "frueheste": [
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:05:22",
+    "class": "Pkw",
+    "site": "Cam-3-01",
+    "direction": "N"
+   },
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:05:24",
+    "class": "Pkw",
+    "site": "Cam-3-01",
+    "direction": "N"
+   }
+  ]
+ },
+ "44587a3b-cbfe-47ef-8d28-48a5c6913ad1": {
+  "name": "camera4",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 6946965,
+  "erste": [
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:06:18",
+    "class": "Pkw",
+    "site": "Cam-4-01",
+    "direction": "N"
+   },
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:06:20",
+    "class": "Pkw",
+    "site": "Cam-4-01",
+    "direction": "N"
+   },
+   {
+    "_id": 3,
+    "id": 2,
+    "timestamp": "2024-07-30T09:06:21",
+    "class": "Pkw",
+    "site": "Cam-4-01",
+    "direction": "N"
+   },
+   {
+    "_id": 4,
+    "id": 3,
+    "timestamp": "2024-07-30T09:06:24",
+    "class": "Pkw",
+    "site": "Cam-4-01",
+    "direction": "N"
+   },
+   {
+    "_id": 5,
+    "id": 4,
+    "timestamp": "2024-07-30T09:06:27",
+    "class": "Pkw",
+    "site": "Cam-4-01",
+    "direction": "N"
+   }
+  ],
+  "letzte": [
+   {
+    "_id": 12076352,
+    "id": 6972550,
+    "timestamp": "2026-10-27T08:57:26",
+    "class": "Pkw",
+    "site": "Cam-4-02",
+    "direction": "N"
+   },
+   {
+    "_id": 12076351,
+    "id": 6972549,
+    "timestamp": "2026-10-27T08:57:25",
+    "class": "Pkw",
+    "site": "Cam-4-04",
+    "direction": "SW"
+   },
+   {
+    "_id": 12076350,
+    "id": 6972548,
+    "timestamp": "2026-10-27T08:57:23",
+    "class": "Pkw",
+    "site": "Cam-4-02",
+    "direction": "N"
+   },
+   {
+    "_id": 12076349,
+    "id": 6972547,
+    "timestamp": "2026-10-27T08:57:21",
+    "class": "Pkw",
+    "site": "Cam-4-02",
+    "direction": "N"
+   },
+   {
+    "_id": 12076348,
+    "id": 6972546,
+    "timestamp": "2026-10-27T08:57:18",
+    "class": "Pkw",
+    "site": "Cam-4-02",
+    "direction": "N"
+   }
+  ],
+  "frueheste": [
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:06:18",
+    "class": "Pkw",
+    "site": "Cam-4-01",
+    "direction": "N"
+   },
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:06:20",
+    "class": "Pkw",
+    "site": "Cam-4-01",
+    "direction": "N"
+   }
+  ]
+ },
+ "7d889b02-8488-47ca-bf0d-761a94adf9a8": {
+  "name": "camera5",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 1033230,
+  "erste": [
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:06:59",
+    "class": "Pkw",
+    "site": "Cam-5-02",
+    "direction": "S"
+   },
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:06:59",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   },
+   {
+    "_id": 3,
+    "id": 2,
+    "timestamp": "2024-07-30T09:06:59",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   },
+   {
+    "_id": 4,
+    "id": 3,
+    "timestamp": "2024-07-30T09:06:59",
+    "class": "Pkw",
+    "site": "Cam-5-02",
+    "direction": "S"
+   },
+   {
+    "_id": 5,
+    "id": 4,
+    "timestamp": "2024-07-30T09:07:02",
+    "class": "Pkw",
+    "site": "Cam-5-02",
+    "direction": "S"
+   }
+  ],
+  "letzte": [
+   {
+    "_id": 1062232,
+    "id": 1033299,
+    "timestamp": "2024-11-02T19:56:29",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   },
+   {
+    "_id": 1062231,
+    "id": 1033298,
+    "timestamp": "2024-11-02T19:56:07",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   },
+   {
+    "_id": 1062230,
+    "id": 1033297,
+    "timestamp": "2024-11-02T19:55:15",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   },
+   {
+    "_id": 1062229,
+    "id": 1033296,
+    "timestamp": "2024-11-02T19:54:11",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   },
+   {
+    "_id": 1062228,
+    "id": 1033295,
+    "timestamp": "2024-11-02T19:52:29",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   }
+  ],
+  "frueheste": [
+   {
+    "_id": 2,
+    "id": 1,
+    "timestamp": "2024-07-30T09:06:59",
+    "class": "Pkw",
+    "site": "Cam-5-01",
+    "direction": "N"
+   },
+   {
+    "_id": 1,
+    "id": 0,
+    "timestamp": "2024-07-30T09:06:59",
+    "class": "Pkw",
+    "site": "Cam-5-02",
+    "direction": "S"
+   }
+  ]
+ },
+ "b0a73d75-f15f-4b3f-b40b-a33bff95e74a": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "cc56889a-1e1c-49b5-a101-aecde23440a9": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "ff520741-9c5e-4533-96d9-0598c6974337": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "04c8f834-ff6d-456a-8179-97ac967f3079": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "909a26af-10d1-43ba-89f8-dcd60af5fa4e": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "620aa146-769b-49c1-a4ad-40f13fb9bd09": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "83c93d84-b6b3-4c06-9988-7a269f3720cd": {
+  "name": "camera3",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "e48faa21-bfde-4d14-a31a-7ac8f6586d0d": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "d77836b3-4745-4690-b4a5-befc4d9d346c": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "67b60b0a-e5bb-48cb-a02a-b82490b334e0": {
+  "name": "camera3",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "c80b8e81-7b15-4af0-aa97-263c77a2bcd9": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "f8b756a6-b489-4915-8034-ac62dba21e69": {
+  "name": "camera3",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "8cfeb263-4a2a-443c-8123-c1815977a432": {
+  "name": "camera3",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "373dc898-32ca-4cf4-b472-fe6f9a597fc2": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "f6009300-9a10-4773-84e0-831f52a227a5": {
+  "name": "camera2",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ },
+ "7e5aa3de-13c4-4c8f-bfee-d47b7d9ad844": {
+  "name": "camera3",
+  "url": "",
+  "format": "JSON",
+  "beschreibung": "created via API",
+  "datastore": true,
+  "felder": [
+   {
+    "type": "int",
+    "id": "_id"
+   },
+   {
+    "type": "int4",
+    "id": "id"
+   },
+   {
+    "type": "timestamp",
+    "id": "timestamp"
+   },
+   {
+    "type": "text",
+    "id": "class"
+   },
+   {
+    "type": "text",
+    "id": "site"
+   },
+   {
+    "type": "text",
+    "id": "direction"
+   }
+  ],
+  "zeilen": 0,
+  "erste": [],
+  "letzte": [],
+  "frueheste": []
+ }
+}
