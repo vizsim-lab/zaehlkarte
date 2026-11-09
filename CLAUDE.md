@@ -65,7 +65,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Neues Verhalten = neuer Test in `tests/web/`.
 - **Daten neu bauen:** Workflow „Kartendaten neu bauen“ (`.github/workflows/daten.yml`) oder
   lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW und die Portale von Münster,
-  Konstanz und Potsdam sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
+  Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
   Workflow nutzen.
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

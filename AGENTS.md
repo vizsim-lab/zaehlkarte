@@ -14,8 +14,19 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   GovData mit `fq=organization:open-data-baden-wurttemberg` (= daten.bw, sammelt Freiburg,
   Mannheim, Heilbronn, Konstanz, Stuttgart und das Portal re@di der Städte der TechnologieRegion
   Karlsruhe, `opendata.readi.de`).
+- **GovData je Land sortieren:** Die Pakete tragen den Regionalschlüssel
+  (`extras.politicalGeocodingURI`, `…/regionalKey/<Land, 2 Ziffern>…`). Die Suche nach
+  „Verkehrszählung“/„Zählstelle“/„DTV“ füllt sich mit den Zählstellen der Landes- und
+  Bundesstraßen (Bayern und Schleswig-Holstein: ein Paket je Zählstelle und Jahr) – ausblenden mit
+  `fq=-organization:open-data-bayern AND -organization:land-schleswig-holstein`. Rundgang
+  November 2026 (Werkzeug `tools/laender.py` auf dem Branch `werkzeug/erkundung`): kommunale
+  Kurzzeitzählungen nur Moers, Münster, Xanten, Konstanz, Ravensburg & Co., Potsdam – und neu
+  Olpe; sonst Rad- und Dauerzähler, DTV-Karten, Lärmkartierung.
 - **FragDenStaat:** rund 200 Anfragen zu „Verkehrszählung“, meist zu einzelnen Straßen. Was
-  geliefert wurde, liegt oft als PDF im Anhang. API:
+  geliefert wurde, liegt oft als PDF im Anhang; die Antworten verraten, wie eine Stadt zählt und
+  was sie herausgibt (Kassel: Excel mit 15-Minuten-Werten, Osnabrück: Radar-Textdateien,
+  Bremen: Liste plus 5 Euro je Zählstelle und Tag). Die Anhänge samt Antworttexten holt
+  `tools/laender.py` über `/api/v1/request/<id>/` (Feld `messages[].attachments`). API:
   `https://fragdenstaat.de/api/v1/request/search/?q=Verkehrsz%C3%A4hlung` (Volltext: „Verkehrszählung
   Freiburg“ liefert 67 Treffer, keiner zu Freiburg – nach Behörde filtern; `/api/v1/request/?q=`
   ignoriert `q`). Behörden samt Funktionsadresse: `/api/v1/publicbody/?q=Stadt Freiburg`.
@@ -46,6 +57,17 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   S/Q und die Kategorie-Namen statt fester Zellen. Prüfung: Summe Q = 2 × Summe S stimmt (auf 2 %
   genau) in 1.379 von 1.382 Blatthälften. Lage: `Zählstellen.csv` (UTM 32N), sonst
   Gauß-Krüger im Blatt.
+- **Olpe** (`olpe_radar`): je Messung eine JSON-Datei, zwei Formate. Geräte-Export
+  (`header`, `request` mit Exportfenster, `data[].vehicle_data[]` mit `date`, `direction`,
+  `code`, `length` in dm, `v1`) – Zeiten in UTC, teils mit „Z“ und Millisekunden; dazu
+  `measurement_data[]` = ein GPS-Punkt je Tag, auch für Tage nach dem Export (das Gerät stand da
+  schon an der nächsten Stelle: Günsestraße 26 zeigt sonst auf Oberveischede). Tabelle (CSV/JSON
+  mit deutschen Spalten „Datum“, „Klasse“, „Fahrzeugklassen-Bezeichnung“) in Ortszeit ohne Lage.
+  Klassen-Codes (aus der Tabelle): 2 PkwA, 3 Lkw, 5 Bus, 7 Pkw, 8 LkwA, 9 Sattel-Kfz, 10 Krad,
+  11 Lfw, 230 Radfahrer; 6 und 250 ohne Namen (Länge ≈ 4,2 m, Tempo ≈ 50 km/h -> Kfz). Die
+  Geräte fallen zeitweise aus (Hatzenbergstraße: 23 Stunden ohne Fahrzeug) -> Lücken über das
+  erwartete Aufkommen erkennen, nicht über feste Uhrzeiten (ruhige Straßen sind sonntags früh
+  wirklich leer).
 - **Moers** (`moers_radar`): Seitenradar (Impactor), eine Zeile je Fahrzeug
   `TT.MM.JJ hh:mm:ss;00;Tempo;Länge;Spur`, je Messstelle eine Datei, je Jahr ein Datensatz auf
   offenesdatenportal.de. Die Lage steht nur als Adresse im Namen der Ressource
@@ -88,6 +110,12 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   4–19 m). An Kreisverkehren haben die Straßen in OSM keinen gemeinsamen Knoten.
 - **PDF je Knoten** (Magdeburg-Angebot): noch kein Adapter (Ansatz wie `potsdam_pdf` bzw.
   `muenster_pdf`).
+- **Miovision-Excel** („Tabellenbericht“: Blatt „Übersicht“ mit Studienname, Zeitintervall,
+  Zeitzone, Breiten-/Längengrad, je Klasse ein Blatt, Blatt „Rohdaten“): dasselbe Format wie die
+  Excel-Dateien von MobiData BW – Kassel hat 2021 so geliefert (FragDenStaat); `mobidata_bw`
+  liest das Blatt „Rohdaten“.
+- **Seitenradar als Text, eine Zeile je Fahrzeug** (Osnabrück 2021 auf Anfrage: km/h, Uhrzeit,
+  Datum, Richtung 1/2, Länge): wie Moers; ohne Lizenzangabe nicht in der Karte.
 - **MobiData BW `KFZ_n` = nur Pkw.** Nachgerechnet an allen 174 Zählungen mit Excel:
   `KFZ_n` = Klasse PKW, `SV_n` = Klasse LKW (Ravensburg 1000, 16.11.2023: 14.217 + 1.919 =
   16.136 Kfz). Wer die Übersicht allein nutzt (wie `vizsim/svz`), unterschätzt Kfz um den
@@ -130,15 +158,18 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   manchen Entwicklungsumgebungen nicht erreichbar (Proxy). Abruf dann über GitHub Actions
   (`zaehlkarte fetch` im Workflow „Kartendaten neu bauen“). Braucht man die Rohdateien selbst in
   der Sandbox: ein Werkzeug-Workflow auf einem eigenen Branch legt sie dort ab (Muster: Commit
-  e6f7280, `tools/mobidata_holen.py`), dann `git fetch`.
+  e6f7280, `tools/mobidata_holen.py` auf dem Branch `werkzeug/mobidata`), dann `git fetch`.
 - Die Nutzungsbedingungen der LHP (Potsdam) stehen erst nach JavaScript auf der Seite – lesen mit
   Playwright; die Opendatasoft-API und die CKAN-APIs von GovData und Open.NRW sperren
   Abruf-Werkzeuge per robots.txt (die Websuche mit Filter auf govdata.de/open.nrw geht).
   FragDenStaat: die Links „/anhang/…“ liefern eine HTML-Seite, die Datei liegt unter
   media.frag-den-staat.de/files/foi/<Nachricht>/<Name>.
-- Nicht abrufbar (Stand November 2026): wuppertal.de (Dienstleistung „Verkehrsbelastung“
-  104.51 – lohnt einen zweiten Blick), bau.bremen.de, mobil.osnabrueck.de. Der Datenhub Ulm
+- Nicht abrufbar (Stand November 2026): mobil.osnabrueck.de; wuppertal.de nur mit Playwright
+  (`tools/laender2.py` auf `werkzeug/erkundung`), bau.bremen.de nur über das Abruf-Werkzeug. Der Datenhub Ulm
   braucht im Browser JavaScript, seine CKAN-API (`datenhub.ulm.de/ckan/api/3/action/…`) geht.
+  Die Mobilithek-Suche wertet `searchString` ohne JavaScript nicht aus (GovData führt ihre
+  Angebote als Organisation `mcloud`). Open.NRW (`ckan.open.nrw.de`) lief aus GitHub Actions in
+  Zeitüberschreitungen; GovData spiegelt es (Organisation `open-nrw`).
 - Baden-Württemberg (November 2026, GovData/daten.bw, re@di, Stadtportale, FragDenStaat): offene
   Kurzzeitzählungen nur bei MobiData BW (Ravensburg und Umland) und in Konstanz. Sonst sind nur
   Dauerzählungen offen – Freiburg (Rad-Zählstellen; 25 Sensoren im Testbetrieb, der WFS
@@ -150,12 +181,34 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   Verkehrsmengen; Heilbronn hat nur Kfz-Bestand und Fahrleistung (Statistisches Landesamt);
   Aalen zählt mit eigenem Seitenradar, veröffentlicht aber nichts. Karlsruhe hat 2023 Zählungen
   eines Verkehrsversuchs als Excel herausgegeben (FragDenStaat) – alles in der Datenlage.
+- Übrige Länder (November 2026, GovData je Land, Landes- und Stadtportale, alle
+  FragDenStaat-Anfragen samt Anhängen, Stadtseiten): neu offen nur Olpe (in der Karte). Neu in der
+  Datenlage: Bremen, Augsburg, Amberg, Wuppertal, Falkensee, Lingen (Ems); präzisiert: Kassel
+  (Excel geliefert), Osnabrück (Radar-Textdateien geliefert), Düsseldorf, Hamburg
+  (Leistungsverzeichnis: 15-Minuten-Werte in der Zähldatenbank).
+  - Brandenburg: Das Landesamt für Umwelt lässt für die Lärmkartierung selbst zählen – 2023 in
+    mehreren Städten Knotenpunkte von 6 bis 19 Uhr (Bericht „Datengrundlagen zur
+    Immissionsberechnung 2023“, mindestens 20 Messpunkte). Auf eine Anfrage
+    ([FragDenStaat 2023](https://fragdenstaat.de/anfrage/verkehrszaehlungen-im-stadtgebiet-brandenburg-an-der-havel/))
+    kam nur der Auszug für Brandenburg an der Havel (DTV und Stundenmittel nach RLS-19, keine
+    Zählwerte). Eine Anfrage beim LfU nach den gezählten Werten aller Messpunkte könnte mehrere
+    Städte auf einmal bringen.
+  - Kleine Gemeinden geben Messungen ihrer Geschwindigkeitsanzeigen und Radargeräte auf Anfrage
+    meist heraus, fast immer als PDF-Bericht (Delbrück, Hatzenbühl, Marpingen, Merzig,
+    Nieder-Olm, Karben, Michendorf) – kein Bestand, aber ein Zeichen, wo es Geräte gibt.
+  - Nur Einzelwerte statt Zählungen: Hannover 2020 (ein Querschnittswert), Siegen 2024 (DTV aus
+    Geschwindigkeitsmessungen), Dessau-Roßlau 2025 (DTV eines Statistikgeräts). Bonn misst per
+    Bluetooth nur Reisezeiten. Nürnberg verweigert Daten der kommunalen Verkehrsüberwachung
+    („einsatztaktische Gründe“), Dresden nennt 2025 seine automatischen Zählstellen mit Kosten.
 - Geprüft ohne verwertbaren Fund (Stadtseite, Portal, FragDenStaat; November 2026 – eine Anfrage
   nach der Vorlage geht trotzdem überall): Mannheim, Tübingen, Heilbronn, Pforzheim, Reutlingen,
-  Augsburg, Regensburg, Ingolstadt, Erlangen, Würzburg, Cottbus, Bremen, Wiesbaden, Darmstadt,
-  Offenbach, Schwerin, Greifswald, Hannover, Braunschweig, Oldenburg, Lüneburg, Duisburg,
-  Bochum, Bielefeld, Bonn, Krefeld, Oberhausen, Siegen, Mainz, Ludwigshafen, Koblenz, Trier,
-  Kaiserslautern, Worms, Flensburg, Erfurt, Jena – meist nur Rad- oder Dauerzähler offen.
+  Regensburg, Ingolstadt, Erlangen, Würzburg, Fürth, Cottbus, Wiesbaden, Darmstadt, Offenbach,
+  Hanau, Schwerin, Greifswald, Hannover, Braunschweig, Oldenburg, Lüneburg, Hildesheim,
+  Salzgitter, Duisburg, Bochum, Bielefeld, Bonn, Krefeld, Oberhausen, Siegen, Gelsenkirchen,
+  Aachen, Hagen, Hamm, Mülheim, Leverkusen, Solingen, Herne, Neuss, Bottrop, Recklinghausen,
+  Bergisch Gladbach, Remscheid, Gütersloh, Mainz, Ludwigshafen, Koblenz, Trier, Kaiserslautern,
+  Worms, Flensburg, Neumünster, Norderstedt, Erfurt, Jena, Weimar, Zwickau, Dessau-Roßlau – meist
+  nur Rad- oder Dauerzähler offen, sonst Zählwerte nur in Gutachten aus Bebauungsplänen.
 - Leipzig 2023: Ablehnung, weil die Karte keinen Export hat – nicht nach „den Daten der
   Karte“ fragen, sondern nach den gelieferten Zählauswertungen der Büros.
 - Dortmund gibt Werte nur gegen Gebühr heraus; offen ist nur der Zählstellenplan.
@@ -165,8 +218,19 @@ Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dau
   gibt auf genaue Anfrage bis 50 Zählungen kostenlos als Excel heraus.
 
 ## Rechtliches (Stand 2026, keine Rechtsberatung)
-Bayern und Niedersachsen haben kein Landes-IFG; in Sachsen und Hessen gilt es für Kommunen
-nur per Satzung. Das UIG gilt überall – Zählungen gehen in die Lärmkartierung ein, darum mit
+Bayern und Niedersachsen haben kein Landes-IFG (Niedersachsen: Entwurf eines
+Transparenzgesetzes liegt laut Justizministerin im Ministerium, im Landtag noch nicht –
+[Drucksache 19/11074, Juni 2026](https://www.landtag-niedersachsen.de/drucksachen/drucksachen_19_12500/11001-11500/19-11074.pdf));
+manche Städte haben eine Informationsfreiheitssatzung (Osnabrück, Lingen, Göttingen – so
+genannt in ihren Antworten auf FragDenStaat). In Sachsen und Hessen gilt das Landesgesetz für
+Kommunen nur per Satzung. Berlin hat das IFG im April 2026 um eine Ausnahme für Einrichtungen
+der kritischen Infrastruktur ergänzt (§ 2 Abs. 3,
+[GVBl. 2026 S. 158](https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/gvbl/g26110158.pdf));
+Verkehrszählungen nennt sie nicht. Brandenburg bereitet eine ähnliche Änderung des AIG vor
+([netzpolitik.org, Juli 2026](https://netzpolitik.org/?p=526375)); in Mecklenburg-Vorpommern,
+Thüringen und Schleswig-Holstein gibt es Pläne, die Informationsfreiheit einzuschränken (etwa
+Anfragen nur mit Wohnsitz im Land) – vor Anfragen dort den Stand prüfen
+([heise, 2026](https://heise.de/-11242410)). Das UIG gilt überall – Zählungen gehen in die Lärmkartierung ein, darum mit
 anführen. Sachsen: LfULG-Handlungsempfehlung (Mai 2026) verlangt Intervallwerte als CSV/XLSX
 von beauftragten Büros. Kurzfassung je Land: `recht:` in `pipeline/config/sources.yaml`
 (RP LTranspG, SH IZG-SH, SL SIFG, TH ThürTG gelten auch für Gemeinden; Belege dort).

@@ -145,6 +145,56 @@ quellen:
       herkunft_url: https://www.openstreetmap.org/copyright
       datei: geokodierung/moers.csv
 
+  olpe:
+    status: live
+    adapter: olpe_radar
+    name: Olpe
+    land: NW
+    traeger: Kreisstadt Olpe, Ordnungsamt
+    titel: Verkehrsmessungen
+    art: >-
+      Querschnittsmessungen mit Radar-Messgeräten, meist ein bis zwei Wochen am Stück; je
+      Fahrzeug Zeit, Richtung und Fahrzeugklasse (Kfz, Schwerverkehr, als Radfahrer erkannt)
+    weg: offen auf opendata.olpe.de (ab 2025)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://opendata.olpe.de/dataset/?q=Verkehrsmessung
+    # alle Datensätze „Verkehrsmessung(en) …“ – neue Messungen kommen beim nächsten fetch dazu
+    api_suche: https://opendata.olpe.de/api/3/action/package_search?q=Verkehrsmessung&rows=200
+    paket_muster: ^verkehrsmess
+    # Lizenz je Datensatz (license_id); ein Datensatz mit einer anderen Lizenz bleibt draußen
+    lieferungen:
+      - code: dl-de-by
+        lizenz_id: http://dcat-ap.de/def/licenses/dl-by-de/2.0
+        titel: "Verkehrsmessungen (verändert: Stundensummen aus den Einzelmessungen)"
+        herausgeber: Kreisstadt Olpe
+        lizenz: dl-de/by-2-0
+        lizenz_url: https://www.govdata.de/dl-de/by-2-0
+        herkunft_url: https://opendata.olpe.de/dataset/?q=Verkehrsmessung
+      - code: cc-by
+        lizenz_id: http://dcat-ap.de/def/licenses/cc-by/4.0
+        titel: "Verkehrsmessung Zum Honigsack 35 (verändert: Stundensummen aus den Einzelmessungen)"
+        herausgeber: Kreisstadt Olpe
+        lizenz: CC BY 4.0
+        lizenz_url: https://creativecommons.org/licenses/by/4.0/deed.de
+        herkunft_url: https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35
+    # Lage: GPS des Geräts; „Zum Honigsack 35“ hat keins – Hausnummer laut Nominatim (November 2026)
+    geokodierung:
+      titel: Lage der Messstelle Zum Honigsack 35 (Nominatim, OpenStreetMap)
+      lizenz: ODbL (abgeleitet aus OpenStreetMap)
+      lizenz_url: https://opendatacommons.org/licenses/odbl/
+      herkunft_url: https://www.openstreetmap.org/copyright
+    # Namen, wo der Titel des Datensatzes mehrere Messstellen zusammenfasst (je Datei)
+    orte:
+      "Zum Honigsack 35.json": {name: "Zum Honigsack 35", lon: 7.851839, lat: 51.003047}
+      verkehrsdaten_guensestr-kindergarten-20250616-20250620.json: {name: "Günsestraße, Höhe Kindergarten"}
+      verkehrsdaten_Guensestr_26-20250620-20250626.json: {name: "Günsestraße 26"}
+      verkehrsdaten_In-der-Wüste-26_20251112-20251119.json: {name: "In der Wüste 26"}
+      verkehrsdaten_In_der_Wueste-20250620-20250626.json: {name: "In der Wüste, Höhe Freizeitbad"}
+      verkehrsdaten_feuerwehrhaus_oberveischede_20250709-20250715.json: {name: "Oberveischede, Feuerwehrhaus"}
+      verkehrsdaten_Oberveischede-20250626-20250708.json: {name: "Oberveischede, Ortseingang"}
+      verkehrsdaten_alte-landstr_1_20250519-20250615.json: {name: "Alte Landstraße 1"}
+      verkehrsdaten_k18-20250806-20250813.json: {name: "K 18"}
+
   potsdam:
     status: live
     adapter: potsdam_pdf
@@ -488,6 +538,33 @@ datenlage:
       - ["Open Data Potsdam", "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/"]
       - ["Nutzungsbedingungen (NB-16-OGD)", "https://opendata.potsdam.de/terms/terms-of-use/"]
       - ["potsdam.de", "https://www.potsdam.de/de/verkehrszaehlungen-der-landeshauptstadt-potsdam"]
+  - kommune: Falkensee
+    land: BB
+    lon: 13.0920
+    lat: 52.5600
+    stand: aggregiert
+    was: >-
+      Liste von rund 600 Messungen seit 2018 (Straßenabschnitt, Monat, Kfz am Tag) als PDF; die
+      Messberichte der Geräte gibt die Stadt auf Anfrage heraus (2024: 22 Berichte)
+    situation: >-
+      Die Stadt veröffentlicht eine Liste „Verkehrszahlen April 2018 bis Juli 2025“: je Messung den
+      Straßenabschnitt, den Monat und die durchschnittliche Zahl der Kfz am Tag – keine Stunden- oder
+      Richtungswerte, kein genaues Datum. Auf eine Anfrage 2024 kamen die Messberichte von 22
+      Messungen an drei Straßen als PDF (mit Stundenwerten als Grafik).
+    empfehlung: >-
+      Anfrage nach den Messungen der Liste mit Datum, Lage und Werten je Stunde und Richtung, am
+      besten als Export der Messgeräte. Grundlage: Akteneinsichts- und Informationszugangsgesetz
+      Brandenburg.
+    weg: "FragDenStaat, AIG Brandenburg"
+    kontakt: {fds_suche: "Stadt Falkensee"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Ihre Liste „Verkehrszahlen April 2018 bis Juli 2025“ nennt je Messung nur den Tagesmittelwert.
+      Ich bitte um die Messungen selbst – Datum, genaue Lage und Werte je Stunde und Richtung – am
+      besten als Export der Messgeräte; 2024 haben Sie auf eine Anfrage 22 Messberichte geschickt.
+    links:
+      - ["Verkehrszahlen 2018–2025 (PDF)", "https://daten2.verwaltungsportal.de/dateien/seitengenerator/3ad0dae377296992aa797d0d2f44217222831/Verkehrszahlen_bis_Juli_25.pdf"]
+      - ["FragDenStaat 2024", "https://fragdenstaat.de/anfrage/verkehrszaehlung-gartenstrasse-elsterstrasse-str-d-einheit/"]
   - kommune: Münster
     quelle: muenster
     stand: in_karte
@@ -531,6 +608,23 @@ datenlage:
     weg: "offen"
     links:
       - ["offenesdatenportal.de", "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021"]
+  - kommune: Olpe
+    quelle: olpe
+    stand: in_karte
+    was: >-
+      13 Radar-Messungen 2025/26 an zwölf Stellen, je Fahrzeug Zeit, Richtung und Klasse (Kfz,
+      Schwerverkehr, Rad)
+    situation: >-
+      Die Stadt (Ordnungsamt) veröffentlicht ihre Messungen mit Radar-Messgeräten offen
+      (Datenlizenz Deutschland – Namensnennung 2.0, eine Messung CC BY 4.0): je Messung eine
+      JSON-Datei mit einer Zeile je Fahrzeug (Zeit, Richtung, Fahrzeugklasse, Länge, Tempo) und der
+      GPS-Lage des Geräts, meist ein bis zwei Wochen am Stück. Die Karte bildet daraus Stundenwerte.
+    empfehlung: >-
+      Keine Anfrage nötig. Messungen vor 2025 stehen nicht im Portal – wer sie braucht, fragt nach
+      dem IFG NRW.
+    weg: "offen"
+    links:
+      - ["Open Data Olpe", "https://opendata.olpe.de/dataset/?q=Verkehrsmessung"]
   - kommune: Konstanz
     quelle: konstanz
     stand: in_karte
@@ -602,9 +696,12 @@ datenlage:
     lat: 51.2277
     stand: aggregiert
     was: >-
-      Jahresmittel (DTV) je Abschnitt als WFS – in vizsim/svz
+      Mittel der Zählungen der letzten fünf Jahre je Abschnitt (DTV je Fahrzeugart, Stand 2019 und
+      2024) – in vizsim/svz
     situation: >-
-      Offen sind Jahresmittelwerte (DTV) je Abschnitt als WFS.
+      Offen sind die gemittelten Verkehrszähldaten der letzten fünf Jahre je Abschnitt, Stand 2019
+      und 2024: Jahresmittel (DTV) je Fahrzeugart (Kfz, Krad, Lieferwagen, Lkw mit Anhänger …) als
+      CSV, GeoJSON und WFS – keine einzelnen Zählungen.
     empfehlung: >-
       Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für
       Verkehrsmanagement. Grundlage: IFG NRW.
@@ -614,7 +711,8 @@ datenlage:
     anfrage_zusatz: >-
       Offen sind Jahresmittelwerte je Abschnitt; ich bitte um die Einzelzählungen, aus denen sie
       entstehen.
-    links: []
+    links:
+      - ["Verkehrszähldaten 2024 (Open Data Düsseldorf)", "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60"]
   - kommune: Frankfurt am Main
     land: HE
     lon: 8.6821
@@ -919,6 +1017,61 @@ datenlage:
     links:
       - ["FragDenStaat 2025/26", "https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/"]
       - ["Bericht Verkehrszählung 2018", "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf"]
+  - kommune: Augsburg
+    land: BY
+    lon: 10.8978
+    lat: 48.3689
+    stand: geliefert
+    was: >-
+      2017 auf Anfrage eine Karte der jüngsten Zählung je Zählstelle (Kfz/24 h am Werktag,
+      Lkw-Anteil, Jahr) und eine Liste der Zählstellen mit Koordinaten; Stundenwerte nur gegen
+      Aufbereitung
+    situation: >-
+      Auf eine Anfrage 2017 hat die Stadt eine Karte mit der jeweils jüngsten Zählung je Zählstelle
+      geschickt (Kfz in 24 Stunden an einem durchschnittlichen Werktag, Lkw-Anteil, Zähljahr) und
+      eine Excel-Liste der neueren Zählstellen mit Koordinaten; gezählt wird meist an Kreuzungen. Die
+      stündlichen Zählungen seien nicht geokodiert und ohne Erläuterung schwer verständlich; ihre
+      Aufbereitung würde Wochen dauern und koste Gebühren.
+    empfehlung: >-
+      Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den
+      Zählstellen erlaubt die Liste von 2017. Bayern hat kein Landes-IFG: Grundlage ist das
+      Bayerische Umweltinformationsgesetz.
+    weg: "FragDenStaat, Bayerisches UIG"
+    kontakt: {fds_suche: "Stadt Augsburg"}
+    anfrage: true
+    anfrage_zusatz: >-
+      2017 haben Sie auf eine Anfrage eine Karte der jüngsten Zählungen und eine Liste der
+      Zählstellen mit Koordinaten geschickt. Ich bitte um die Zählungen selbst (Stunden- oder
+      Viertelstundenwerte) in der Form, in der sie bei Ihnen vorliegen; eine Aufbereitung ist nicht
+      nötig.
+    links:
+      - ["FragDenStaat 2017", "https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/"]
+  - kommune: Amberg
+    land: BY
+    lon: 11.8583
+    lat: 49.4447
+    stand: geliefert
+    was: >-
+      städtische Verkehrszählung 2022; 2026 auf Anfrage die Daten als Download – erst nach einer
+      unterschriebenen Nutzungserklärung
+    situation: >-
+      Auf eine Anfrage 2026 schickte die Stabsstelle Mobilität und Verkehr eine Karte aller
+      Messstellen der Zählung 2022 und eine standardisierte Nutzungserklärung; nach deren
+      Unterzeichnung kam ein Link zu den Daten der städtischen Verkehrszählung. Was die Erklärung für
+      die Weiterverwendung erlaubt, ist nicht öffentlich.
+    empfehlung: >-
+      Bei der Anfrage gleich nach den Bedingungen der Nutzungserklärung fragen und um eine offene
+      Lizenz bitten. Bayern hat kein Landes-IFG: Grundlage ist das Bayerische
+      Umweltinformationsgesetz.
+    weg: "FragDenStaat, Bayerisches UIG"
+    kontakt: {fds_suche: "Stadt Amberg"}
+    anfrage: true
+    anfrage_zusatz: >-
+      2026 haben Sie die Daten Ihrer Verkehrszählung 2022 nach einer Nutzungserklärung
+      bereitgestellt. Ich bitte um diese und spätere Zählungen und um die Weiterverwendung unter
+      einer offenen Lizenz ohne gesonderte Erklärung.
+    links:
+      - ["FragDenStaat 2026", "https://fragdenstaat.de/anfrage/verkehrszaehlungsdaten/"]
   - kommune: Rostock
     land: MV
     lon: 12.0991
@@ -1002,8 +1155,10 @@ datenlage:
       Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an
       Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV,
       DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten
-      Werte. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen
-      (15-Minuten-Werte).
+      Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in
+      15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in
+      die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras
+      an über 400 Kreuzungen (15-Minuten-Werte).
     empfehlung: >-
       Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem
       Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
@@ -1014,8 +1169,10 @@ datenlage:
       Im Transparenzportal stehen zu den Bedarfszählstellen nur die hochgerechneten
       Verkehrsstärken (DTV, DTVw, Schwerverkehrsanteil). Ich bitte um die Ergebnisse der
       zugrunde liegenden Zählungen selbst, also die gezählten Werte je Intervall (meist 6 bis 19
-      Uhr) mit Zählstelle und Datum.
+      Uhr) mit Zählstelle und Datum. Nach Ihrem Leistungsverzeichnis (Vergabe FB 2022001735) liegen
+      sie in 15-Minuten-Intervallen je Fahrbeziehung in Ihrer Datenbank vor; ein Export genügt.
     links:
+      - ["Leistungsverzeichnis 2022 (Transparenzportal)", "https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735"]
       - ["Bedarfszählstellen (Metadaten)", "https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML"]
       - ["BMV", "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"]
   - kommune: Heidelberg
@@ -1058,6 +1215,34 @@ datenlage:
       nicht um die Hochrechnung auf den Werktag.
     links:
       - ["moenchengladbach.de", "https://www.moenchengladbach.de/rathaus/buergerinfo-a-z/planen-bauen-mobilitaet-umwelt-dezernat-vi/fachbereich-stadtentwicklung-und-planung-61/abteilung-kommunale-verkehrsplanung-und-mobilitaetsplanung/motorisierter-verkehr/verkehrserhebungen"]
+  - kommune: Wuppertal
+    land: NW
+    lon: 7.1508
+    lat: 51.2562
+    stand: geliefert
+    was: >-
+      alle Zählungen in einer zentralen Verkehrsdatenbank, Auskünfte daraus auf Anfrage; 2024 die
+      Ergebnisse einer Zählung (Hünefeldstraße) herausgegeben
+    situation: >-
+      Laut den Dienstleistungsseiten der Stadt werden Zählungen an Straßen und Kreuzungen in
+      Zeitintervallen nach Pkw, Lkw, Bus und Krad erhoben und mit den Daten der automatischen
+      Messstellen in einer zentralen Verkehrsdatenbank verwaltet; Anfragen zu Verkehrsmengen
+      beantwortet die Stadt daraus. Auf eine Anfrage nach dem IFG NRW kamen 2024 die Ergebnisse einer
+      Zählung in der Hünefeldstraße (24.05.2023, 7–9 und 15:30–17 Uhr) als Brief. Offen ist nur die
+      modellierte Kfz-Verkehrsbelastung 2013 und 2020 (DTVw) als Kartendienst.
+    empfehlung: >-
+      Anfrage nach einem Export aller Zählungen seit 2015 aus der Verkehrsdatenbank (je Intervall,
+      Richtung und Fahrzeugart). Grundlage: IFG NRW.
+    weg: "FragDenStaat, IFG NRW"
+    kontakt: {fds_suche: "Stadt Wuppertal"}
+    anfrage: true
+    anfrage_zusatz: >-
+      Laut Ihren Dienstleistungsseiten stehen alle Ergebnisse von Verkehrszählungen in Ihrer
+      zentralen Verkehrsdatenbank. Ein Export der Zählungen seit 2015 daraus genügt.
+    links:
+      - ["wuppertal.de: Verkehrszählung", "https://www.wuppertal.de/vv/produkte/104/104.31_Verkehrszaehlungen.php"]
+      - ["wuppertal.de: Verkehrsbelastungsdaten", "https://www.wuppertal.de/vv/produkte/104/104.31_Verkehrsbelastungsdaten.php"]
+      - ["FragDenStaat 2024", "https://fragdenstaat.de/anfrage/verkehrszaehlung-huenefeldstr/"]
   - kommune: Halle (Saale)
     land: ST
     lon: 11.9696
@@ -1228,6 +1413,33 @@ datenlage:
       - ["kiel.de", "https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php"]
       - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/"]
       - ["IZG-SH (ULD)", "https://datenschutzzentrum.de/uploads/IZGFolien.pdf"]
+  - kommune: Bremen
+    land: HB
+    lon: 8.8072
+    lat: 53.0758
+    stand: kandidat
+    was: >-
+      zählt an Knoten und Querschnitten, auch Rad; 2017 auf Anfrage eine Liste der Erhebungen 2016
+      mit Übersichtsplänen – Werte nur gegen Aufbereitung (rund 5 Euro je Zählstelle und Tag)
+    situation: >-
+      Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online
+      stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen
+      Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit
+      Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der
+      gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag.
+    empfehlung: >-
+      Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung).
+      Grundlage: Bremer Informationsfreiheitsgesetz.
+    weg: "FragDenStaat, BremIFG"
+    kontakt: {fds_suche: "Senatorin für Bau, Mobilität und Stadtentwicklung"}
+    anfrage: true
+    anfrage_zusatz: >-
+      2017 haben Sie auf eine Anfrage eine Liste der 2016 durchgeführten Verkehrserhebungen mit
+      Übersichtsplänen geschickt. Ich bitte um die Ergebnisse der Zählungen seit 2015 in der Form, in
+      der sie bei Ihnen vorliegen; eine Aufbereitung ist nicht nötig.
+    links:
+      - ["FragDenStaat 2017", "https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-bremen/"]
+      - ["bau.bremen.de: Verkehrsdaten", "https://bau.bremen.de/mobilitaet/verkehrsdaten-3841"]
   - kommune: Bremerhaven
     land: HB
     lon: 8.5809
@@ -1256,26 +1468,33 @@ datenlage:
     land: HE
     lon: 9.4797
     lat: 51.3127
-    stand: nur_karte
+    stand: geliefert
     was: >-
-      Verkehrsmengenkarten 2022–2024 (Werktagsmittel) als PDF; die Stadt zählt außerdem regelmäßig in
-      Kampagnen per Video und Radar
+      2021 auf Anfrage fünf 24-Stunden-Knotenstromzählungen (2018–2020), vier als Excel mit allen
+      Verkehrsarten in 15-Minuten-Werten; offen nur Verkehrsmengenkarten 2022–2024
     situation: >-
-      Offen sind Verkehrsmengenkarten 2022, 2023 und 2024 als PDF (Kfz je Richtung, Mittel Mo–Fr) aus
-      den Dauerzählstellen. Das Straßenverkehrs- und Tiefbauamt zählt außerdem regelmäßig in Kampagnen
-      per Video und Radar, mit Fahrzeugklassen.
+      Die Stadt zählt laut ihrer Antwort von 2021 auf vier Arten: Dauerzählstellen mit
+      Induktionsschleifen, Kurzzeitzählungen mit Seitenradar und mit Dialog-Displays an wechselnden
+      Orten und Knotenstromzählungen über einen Tag an wechselnden Kreuzungen. Auf eine Anfrage 2021
+      kamen fünf Knotenstromzählungen 2018–2020 (24 Stunden an Werktagen), vier davon als Excel mit
+      allen gezählten Verkehrsarten in 15-Minuten-Intervallen, eine als PDF-Tabellenbericht, dazu
+      Grafiken des Radverkehrs – ohne Lizenzangabe, daher nicht in der Karte. Offen sind sonst nur
+      die Verkehrsmengenkarten 2022, 2023 und 2024 als PDF (Kfz je Richtung, Mittel Mo–Fr) aus den
+      Dauerzählstellen.
     empfehlung: >-
-      Anfrage nach den Einzelzählungen der Kampagnen (Video und Radar), nicht nach den Karten. Das
-      hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische
-      Umweltinformationsgesetz gilt immer.
+      Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel)
+      samt Lizenz. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das
+      Hessische Umweltinformationsgesetz gilt immer.
     weg: "FragDenStaat, Hessisches UIG"
     kontakt: {fds_suche: "Stadt Kassel"}
     anfrage: true
     anfrage_zusatz: >-
-      Offen sind Ihre Verkehrsmengenkarten; ich bitte um die Einzelzählungen Ihrer Zählkampagnen per
-      Video und Radar.
+      2021 haben Sie auf eine Anfrage Knotenstromzählungen als Excel-Tabellenbericht mit
+      15-Minuten-Werten aller Verkehrsarten geschickt. Ich bitte um alle Knotenstrom- und
+      Seitenradarzählungen seit 2015 in derselben Form.
     links:
       - ["kassel.de", "https://www.kassel.de/buerger/verkehr_und_mobilitaet/verkehrsprojekte/verkehrszaehlungen.php"]
+      - ["FragDenStaat 2021", "https://fragdenstaat.de/anfrage/ifg-anfrage-radverkehrszahlung/"]
   - kommune: Göttingen
     land: NI
     lon: 9.9158
@@ -1329,22 +1548,56 @@ datenlage:
     land: NI
     lon: 8.0472
     lat: 52.2799
-    stand: automatisch
+    stand: geliefert
     was: >-
-      KI-Sensor an der Kreuzung Bramscher Straße/Hansastraße (Pkw, Lkw, Krad, Rad, Fuß) mit offener
-      API; laut Stadt zusätzlich mobile Rad- und Fußzählungen
+      2021 auf Anfrage alle Seitenradar-Messungen in verkehrsberuhigten Bereichen seit 2011 als
+      Textdateien (eine Zeile je Fahrzeug); offen ein KI-Sensor an der Bramscher Straße
     situation: >-
+      Auf eine Anfrage 2021 hat die Stadt ihre Verkehrserhebungen in verkehrsberuhigten Bereichen
+      seit 2011 als 44 Textdateien geschickt – Messungen mit einem Seitenradar, eine Zeile je Fahrzeug
+      mit Zeit, Richtung, Geschwindigkeit und Länge, ohne Lizenzangabe (daher nicht in der Karte).
       Offen ist ein automatischer Zähler (KI-Sensor) an der Kreuzung Bramscher Straße/Hansastraße mit
       fünf Klassen (Pkw, Lkw, Krad, Rad, Fuß), abrufbar über eine API (auch als CSV). Laut einer
       Meldung der Stadt erfassen mobile Zählstellen zusätzlich Rad- und Fußverkehr.
     empfehlung: >-
-      Anfrage nach den mobilen Rad- und Fußzählungen und nach Knotenpunktzählungen. Niedersachsen hat
-      kein Landes-IFG: Grundlage ist das Niedersächsische Umweltinformationsgesetz.
-    weg: "FragDenStaat, Niedersächsisches UIG"
+      Anfrage nach allen Seitenradar-Messungen und Zählungen seit 2015 in derselben Form, mit Lage
+      der Messstellen und einer Lizenz. Grundlage: die Informationsfreiheitssatzung der Stadt und das
+      Niedersächsische Umweltinformationsgesetz (Niedersachsen hat kein Landes-IFG).
+    weg: "FragDenStaat, Informationsfreiheitssatzung Osnabrück"
     kontakt: {fds_suche: "Stadt Osnabrück"}
     anfrage: true
     anfrage_zusatz: >-
-      Gemeint sind auch die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr.
+      2021 haben Sie die Verkehrserhebungen in verkehrsberuhigten Bereichen seit 2011 als
+      Textdateien geschickt (eine Zeile je Fahrzeug). Ich bitte um alle solchen Messungen seit 2015,
+      auch außerhalb verkehrsberuhigter Bereiche, in derselben Form und mit der Lage der Messstellen,
+      und um die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr.
     links:
+      - ["FragDenStaat 2021", "https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen/"]
       - ["Datenplattform Osnabrück", "https://datenplattform.osnabrueck.de/verkehrszaehlung/"]
       - ["Meldung mobile Zählstellen", "https://mobil.osnabrueck.de/de/aktuelles/daten-fuer-nachhaltige-mobilitaetsplanung-mobile-zaehlstellen-erfassen-rad-und-fussverkehr-in-osnabrueck/"]
+  - kommune: Lingen (Ems)
+    land: NI
+    lon: 7.3172
+    lat: 52.5233
+    stand: geliefert
+    was: >-
+      Verkehrserhebungen mit Messgeräten, nach Straßen abgelegt; 2022 auf Anfrage Berichte als PDF
+      (etwa Kiesbergstraße 2021 an sechs Messstellen)
+    situation: >-
+      Die Stadt legt ihre Verkehrserhebungen nach Straßennamen ab. Auf zwei Anfragen 2022 kamen die
+      Berichte der Messgeräte als PDF – etwa sechs Messstellen in der Kiesbergstraße vom April 2021
+      und Messungen in verkehrsberuhigten Bereichen von 2017 –, gebührenfrei nach der
+      Informationsfreiheitssatzung der Stadt.
+    empfehlung: >-
+      Anfrage nach allen Verkehrserhebungen seit 2015, am besten als Export der Messgeräte statt als
+      PDF. Grundlage: Informationsfreiheitssatzung der Stadt Lingen (Ems).
+    weg: "FragDenStaat, Informationsfreiheitssatzung Lingen"
+    kontakt: {fds_suche: "Stadt Lingen"}
+    anfrage: true
+    anfrage_zusatz: >-
+      2022 haben Sie auf Anfragen Berichte einzelner Verkehrserhebungen als PDF geschickt (etwa
+      Kiesbergstraße, April 2021). Ich bitte um alle Erhebungen seit 2015, am besten als Export der
+      Messgeräte.
+    links:
+      - ["FragDenStaat 2022 (Kiesbergstraße)", "https://fragdenstaat.de/anfrage/verkehrsmengen-kiesbergstrasse/"]
+      - ["FragDenStaat 2022 (verkehrsberuhigte Bereiche)", "https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen-1/"]

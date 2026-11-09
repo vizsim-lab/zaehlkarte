@@ -134,6 +134,21 @@ test("Stelle aus Xanten: 24-Stunden-Querschnitt aus dem Mobilitätskonzept, nur 
   expect(z.filter((x) => x.fenster === "7–9, 15–18").length).toBe(12);
 });
 
+test("Stelle aus Olpe: Radarmessung je Fahrzeug, Lizenz je Datensatz", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=w24");
+  await klickeStelle(page, (x) => x.quelle === "olpe" && x.name === "Zum Honigsack 35");
+  const detail = page.locator("#detail");
+  await expect(detail).toContainText("Zum Honigsack 35");
+  await expect(detail).toContainText("CC BY 4.0"); // diese Messung hat eine eigene Lizenz
+  await expect(detail.locator(".detail-hinweise")).toContainText("Radargerät");
+  await expect(detail.locator("svg.tg")).toBeVisible();
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "olpe").flatMap((s) => s.zaehlungen));
+  expect(z.length).toBeGreaterThan(100);
+  expect(z.filter((x) => x.w24).length).toBeGreaterThan(50); // volle Tage
+  expect(z.filter((x) => x.lieferung === "olpe:dl-de-by").length).toBeGreaterThan(100);
+});
+
 test("CSV-Export der Zählungen im Filter", async ({ page }) => {
   await oeffne(page, "#t=rad.menge&q=ravensburg");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);

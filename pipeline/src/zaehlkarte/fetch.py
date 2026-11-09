@@ -8,12 +8,14 @@ Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz 
 (CKAN-API) und alle Messdateien, jedes Mal neu. Konstanz: je Standort eine CSV mit Prüfsumme.
 Potsdam: Knotenliste (Opendatasoft-API) und je Knoten das ZIP der Zählpläne, jedes Mal neu; das
 Datum des Abrufs steht in `potsdam/abruf.txt` – es gehört zur Quellenangabe (NB-16-OGD).
+Olpe: alle Datensätze „Verkehrsmessung(en) …“ (CKAN-Suche) samt JSON-Dateien, jedes Mal neu.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+import re
 import shutil
 import tempfile
 import zipfile
@@ -154,6 +156,30 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
             for d in q["dateien"]:
                 ziel = pfade.roh / "xanten" / d["datei"]
                 log.append(lade_geprueft(d["url"], ziel, d.get("sha256")))
+        elif q["adapter"] == "olpe_radar":
+            antwort = requests.get(q["api_suche"], headers=UA, timeout=120)
+            antwort.raise_for_status()
+            pakete = [p for p in antwort.json()["result"]["results"]
+                      if re.search(q["paket_muster"], p["name"])]
+            if not pakete:
+                raise ValueError(f"{code}: keine Datensätze gefunden ({q['api_suche']})")
+            n = 0
+            with tempfile.TemporaryDirectory() as tmp:
+                neu = Path(tmp) / "olpe"
+                for p in pakete:
+                    ordner = neu / p["name"]
+                    ordner.mkdir(parents=True)
+                    (ordner / "paket.json").write_text(json.dumps(p, ensure_ascii=False, indent=1),
+                                                       encoding="utf-8")
+                    for r in p.get("resources", []):
+                        datei = unquote((r.get("url") or "").rsplit("/", 1)[-1])
+                        if datei.lower().endswith(".json"):
+                            lade(r["url"], ordner / datei)
+                            n += 1
+                if (pfade.roh / "olpe").exists():
+                    shutil.rmtree(pfade.roh / "olpe")
+                shutil.copytree(neu, pfade.roh / "olpe")
+            log.append(f"{code}: {len(pakete)} Datensätze, {n} Messungen")
         elif q["adapter"] == "konstanz_mobil":
             ordner = pfade.roh / "konstanz"
             for st in q["standorte"]:

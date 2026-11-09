@@ -9,6 +9,7 @@ fetch  Rohdaten -> data/raw/           Berlin-Archive + Geokodierung (sha256 gep
                                          MobiData BW: Übersicht + Excel aus den ZIPs,
                                          Münster: Positionen + XLS/PDF aus dem ZIP (sha256),
                                          Moers: Datensätze 2010–2022 (CKAN-API),
+                                         Olpe: alle Verkehrsmessungen (CKAN-Suche), JSON,
                                          Konstanz: eine CSV je Standort (sha256),
                                          Potsdam: Knotenliste (API) + Zählpläne aus den ZIPs,
                                          Xanten: zwei PDFs (sha256)
@@ -22,6 +23,7 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 | `adapters/berlin_zda.py`, `zda.py`, `kategorien.py`, `berlin_bezeichnung.py` | Berliner ZDA-Dateien (aus dem Schulwege-Projekt) |
 | `adapters/mobidata_bw.py` | MobiData BW (Ravensburg & Co.) |
 | `adapters/moers_radar.py` | Moers: Seitenradar-Messungen (eine Zeile je Fahrzeug) |
+| `adapters/olpe_radar.py` | Olpe: Radar-Messungen als JSON (je Fahrzeug, UTC, GPS je Tag) |
 | `adapters/konstanz_mobil.py` | Konstanz: mobile Zählgeräte, 5- und 15-Minuten-Werte je Richtung |
 | `adapters/potsdam_pdf.py` | Potsdam: Zählpläne (PDF) mit Spitzenstunden und 6-Stunden-Summen |
 | `adapters/xanten_pdf.py` | Xanten: Viertelstundenwerte aus den PDFs des Mobilitätskonzepts |

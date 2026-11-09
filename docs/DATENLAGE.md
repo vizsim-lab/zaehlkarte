@@ -7,6 +7,9 @@ FragDenStaat.
 
 | Kommune | Land | Stand | Empfehlung |
 |---|---|---|---|
+| Amberg | BY | auf Anfrage herausgegeben | Bei der Anfrage gleich nach den Bedingungen der Nutzungserklärung fragen und um eine offene Lizenz bitten |
+| Augsburg | BY | auf Anfrage herausgegeben | Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den Zählstellen erlaubt die Liste von 2017 |
+| Bremen | HB | erhoben – Anfrage aussichtsreich | Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung) |
 | Bremerhaven | HB | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 mit den Werten je Intervall |
 | Chemnitz | SN | erhoben – Anfrage aussichtsreich | Anfrage nach den Zählungen seit 2015, ausdrücklich nach den Auswertungen der Büros |
 | Dortmund | NW | nur Summen oder Mittelwerte offen | Anfrage nach den Ergebnissen der Zählungen im Zählstellenplan, nach IFG NRW |
@@ -14,6 +17,7 @@ FragDenStaat.
 | Düsseldorf | NW | nur Summen oder Mittelwerte offen | Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement |
 | Essen | NW | automatische Zählungen offen | Anfrage nach den Knotenpunkt- und Querschnittszählungen beim Amt für Straßen und Verkehr |
 | Ettlingen | BW | automatische Zählungen offen | Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder erheben lässt |
+| Falkensee | BB | nur Summen oder Mittelwerte offen | Anfrage nach den Messungen der Liste mit Datum, Lage und Werten je Stunde und Richtung, am besten als Export der Messgeräte |
 | Frankfurt am Main | HE | nur Summen oder Mittelwerte offen | Anfrage nach den Einzelzählungen |
 | Freiburg im Breisgau | BW | automatische Zählungen offen | Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch nach denen, die für Verkehrsuntersuchungen erhoben wurden |
 | Gera | TH | erhoben – Anfrage aussichtsreich | Anfrage nach allen Knotenpunktzählungen seit 2015 als Tabelle |
@@ -22,23 +26,25 @@ FragDenStaat.
 | Hamburg | HH | nur Summen oder Mittelwerte offen | Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt. |
 | Heidelberg | BW | automatische Zählungen offen | Manuelle Knotenpunktzählungen anfragen |
 | Karlsruhe | BW | auf Anfrage herausgegeben | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023 |
-| Kassel | HE | nur als Karte | Anfrage nach den Einzelzählungen der Kampagnen (Video und Radar), nicht nach den Karten |
+| Kassel | HE | auf Anfrage herausgegeben | Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz |
 | Kiel | SH | auf Anfrage herausgegeben | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je Intervall (nicht der Hochrechnung), maschinenlesbar |
 | Köln | NW | nur Summen oder Mittelwerte offen | Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement |
 | Leipzig | SN | Anfrage gescheitert | Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte |
+| Lingen (Ems) | NI | auf Anfrage herausgegeben | Anfrage nach allen Verkehrserhebungen seit 2015, am besten als Export der Messgeräte statt als PDF |
 | Lübeck | SH | erhoben – Anfrage aussichtsreich | Anfrage nach allen Zählungen seit 2015, am besten als Export aus der Zählplattform (CSV/XLSX) |
 | Magdeburg | ST | auf Anfrage herausgegeben | Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen |
 | Mönchengladbach | NW | erhoben – Anfrage aussichtsreich | Anfrage nach den gezählten Werten der Knotenpunktzählungen (nicht der Hochrechnung) und nach den Querschnitts-Ganglinien |
 | München | BY | erhoben – Anfrage aussichtsreich | Anfrage nach einem DAVe-Export aller Zählungen |
 | Neubrandenburg | MV | erhoben – Anfrage aussichtsreich | Anfrage nach der Videozählung 2020 und den Zählungen seither |
 | Nürnberg | BY | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt |
-| Osnabrück | NI | automatische Zählungen offen | Anfrage nach den mobilen Rad- und Fußzählungen und nach Knotenpunktzählungen |
+| Osnabrück | NI | auf Anfrage herausgegeben | Anfrage nach allen Seitenradar-Messungen und Zählungen seit 2015 in derselben Form, mit Lage der Messstellen und einer Lizenz |
 | Paderborn | NW | auf Anfrage herausgegeben | Anfrage nach allen Zählungen seit 2015 an die Stadt Paderborn |
 | Rostock | MV | auf Anfrage herausgegeben | Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz für die Veröffentlichung |
 | Saarbrücken | SL | erhoben – Anfrage aussichtsreich | Anfrage nach den Zählungen für den Mobilitätsplan 2040 und nach älteren Zählungen |
 | Stuttgart | BW | nur Summen oder Mittelwerte offen | Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet |
 | Ulm | BW | automatische Zählungen offen | Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras |
 | Wolfsburg | NI | erhoben – Anfrage aussichtsreich | Anfrage nach einem DAVe-Export und den älteren Zählungen |
+| Wuppertal | NW | auf Anfrage herausgegeben | Anfrage nach einem Export aller Zählungen seit 2015 aus der Verkehrsdatenbank (je Intervall, Richtung und Fahrzeugart) |
 | Baienfurt | BW | in der Karte | in der Karte |
 | Baindt | BW | in der Karte | in der Karte |
 | Berg | BW | in der Karte | in der Karte |
@@ -46,10 +52,104 @@ FragDenStaat.
 | Konstanz | BW | in der Karte | Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg. |
 | Moers | NW | in der Karte | Keine Anfrage nötig |
 | Münster | NW | in der Karte | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
+| Olpe | NW | in der Karte | Keine Anfrage nötig |
 | Potsdam | BB | in der Karte | Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und Informationszugangsgesetz Brandenburg. |
 | Ravensburg | BW | in der Karte | in der Karte |
 | Weingarten | BW | in der Karte | in der Karte |
 | Xanten | NW | in der Karte | Keine Anfrage nötig |
+
+## Amberg (BY) – auf Anfrage herausgegeben
+
+**Lage:** Auf eine Anfrage 2026 schickte die Stabsstelle Mobilität und Verkehr eine Karte aller Messstellen der Zählung 2022 und eine standardisierte Nutzungserklärung; nach deren Unterzeichnung kam ein Link zu den Daten der städtischen Verkehrszählung. Was die Erklärung für die Weiterverwendung erlaubt, ist nicht öffentlich.
+
+**Empfehlung:** Bei der Anfrage gleich nach den Bedingungen der Nutzungserklärung fragen und um eine offene Lizenz bitten. Bayern hat kein Landes-IFG: Grundlage ist das Bayerische Umweltinformationsgesetz.
+
+**Weg:** FragDenStaat, Bayerisches UIG
+
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Amberg)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Amberg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+2026 haben Sie die Daten Ihrer Verkehrszählung 2022 nach einer Nutzungserklärung bereitgestellt. Ich bitte um diese und spätere Zählungen und um die Weiterverwendung unter einer offenen Lizenz ohne gesonderte Erklärung.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [FragDenStaat 2026](https://fragdenstaat.de/anfrage/verkehrszaehlungsdaten/)
+
+
+## Augsburg (BY) – auf Anfrage herausgegeben
+
+**Lage:** Auf eine Anfrage 2017 hat die Stadt eine Karte mit der jeweils jüngsten Zählung je Zählstelle geschickt (Kfz in 24 Stunden an einem durchschnittlichen Werktag, Lkw-Anteil, Zähljahr) und eine Excel-Liste der neueren Zählstellen mit Koordinaten; gezählt wird meist an Kreuzungen. Die stündlichen Zählungen seien nicht geokodiert und ohne Erläuterung schwer verständlich; ihre Aufbereitung würde Wochen dauern und koste Gebühren.
+
+**Empfehlung:** Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den Zählstellen erlaubt die Liste von 2017. Bayern hat kein Landes-IFG: Grundlage ist das Bayerische Umweltinformationsgesetz.
+
+**Weg:** FragDenStaat, Bayerisches UIG
+
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Augsburg)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Augsburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+2017 haben Sie auf eine Anfrage eine Karte der jüngsten Zählungen und eine Liste der Zählstellen mit Koordinaten geschickt. Ich bitte um die Zählungen selbst (Stunden- oder Viertelstundenwerte) in der Form, in der sie bei Ihnen vorliegen; eine Aufbereitung ist nicht nötig.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/)
+
+
+## Bremen (HB) – erhoben – Anfrage aussichtsreich
+
+**Lage:** Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag.
+
+**Empfehlung:** Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung). Grundlage: Bremer Informationsfreiheitsgesetz.
+
+**Weg:** FragDenStaat, BremIFG
+
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Senatorin+f%C3%BCr+Bau%2C+Mobilit%C3%A4t+und+Stadtentwicklung)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Bremen seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+2017 haben Sie auf eine Anfrage eine Liste der 2016 durchgeführten Verkehrserhebungen mit Übersichtsplänen geschickt. Ich bitte um die Ergebnisse der Zählungen seit 2015 in der Form, in der sie bei Ihnen vorliegen; eine Aufbereitung ist nicht nötig.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-bremen/) · [bau.bremen.de: Verkehrsdaten](https://bau.bremen.de/mobilitaet/verkehrsdaten-3841)
+
 
 ## Bremerhaven (HB) – auf Anfrage herausgegeben
 
@@ -177,7 +277,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Düsseldorf (NW) – nur Summen oder Mittelwerte offen
 
-**Lage:** Offen sind Jahresmittelwerte (DTV) je Abschnitt als WFS.
+**Lage:** Offen sind die gemittelten Verkehrszähldaten der letzten fünf Jahre je Abschnitt, Stand 2019 und 2024: Jahresmittel (DTV) je Fahrzeugart (Kfz, Krad, Lieferwagen, Lkw mit Anhänger …) als CSV, GeoJSON und WFS – keine einzelnen Zählungen.
 
 **Empfehlung:** Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement. Grundlage: IFG NRW.
 
@@ -202,6 +302,8 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
+
+**Belege:** [Verkehrszähldaten 2024 (Open Data Düsseldorf)](https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60)
 
 
 ## Essen (NW) – automatische Zählungen offen
@@ -264,6 +366,37 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [Open-Data-Portal (re@di)](https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen)
+
+
+## Falkensee (BB) – nur Summen oder Mittelwerte offen
+
+**Lage:** Die Stadt veröffentlicht eine Liste „Verkehrszahlen April 2018 bis Juli 2025“: je Messung den Straßenabschnitt, den Monat und die durchschnittliche Zahl der Kfz am Tag – keine Stunden- oder Richtungswerte, kein genaues Datum. Auf eine Anfrage 2024 kamen die Messberichte von 22 Messungen an drei Straßen als PDF (mit Stundenwerten als Grafik).
+
+**Empfehlung:** Anfrage nach den Messungen der Liste mit Datum, Lage und Werten je Stunde und Richtung, am besten als Export der Messgeräte. Grundlage: Akteneinsichts- und Informationszugangsgesetz Brandenburg.
+
+**Weg:** FragDenStaat, AIG Brandenburg
+
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Falkensee)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Falkensee seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+Ihre Liste „Verkehrszahlen April 2018 bis Juli 2025“ nennt je Messung nur den Tagesmittelwert. Ich bitte um die Messungen selbst – Datum, genaue Lage und Werte je Stunde und Richtung – am besten als Export der Messgeräte; 2024 haben Sie auf eine Anfrage 22 Messberichte geschickt.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [Verkehrszahlen 2018–2025 (PDF)](https://daten2.verwaltungsportal.de/dateien/seitengenerator/3ad0dae377296992aa797d0d2f44217222831/Verkehrszahlen_bis_Juli_25.pdf) · [FragDenStaat 2024](https://fragdenstaat.de/anfrage/verkehrszaehlung-gartenstrasse-elsterstrasse-str-d-einheit/)
 
 
 ## Frankfurt am Main (HE) – nur Summen oder Mittelwerte offen
@@ -421,7 +554,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Hamburg (HH) – nur Summen oder Mittelwerte offen
 
-**Lage:** Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen (15-Minuten-Werte).
+**Lage:** Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen (15-Minuten-Werte).
 
 **Empfehlung:** Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
 
@@ -440,14 +573,14 @@ Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stad
 
 Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
 
-Im Transparenzportal stehen zu den Bedarfszählstellen nur die hochgerechneten Verkehrsstärken (DTV, DTVw, Schwerverkehrsanteil). Ich bitte um die Ergebnisse der zugrunde liegenden Zählungen selbst, also die gezählten Werte je Intervall (meist 6 bis 19 Uhr) mit Zählstelle und Datum.
+Im Transparenzportal stehen zu den Bedarfszählstellen nur die hochgerechneten Verkehrsstärken (DTV, DTVw, Schwerverkehrsanteil). Ich bitte um die Ergebnisse der zugrunde liegenden Zählungen selbst, also die gezählten Werte je Intervall (meist 6 bis 19 Uhr) mit Zählstelle und Datum. Nach Ihrem Leistungsverzeichnis (Vergabe FB 2022001735) liegen sie in 15-Minuten-Intervallen je Fahrbeziehung in Ihrer Datenbank vor; ein Export genügt.
 
 Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
 
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Bedarfszählstellen (Metadaten)](https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML) · [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html)
+**Belege:** [Leistungsverzeichnis 2022 (Transparenzportal)](https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735) · [Bedarfszählstellen (Metadaten)](https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML) · [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html)
 
 
 ## Heidelberg (BW) – automatische Zählungen offen
@@ -508,11 +641,11 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/) · [FragDenStaat 2025](https://fragdenstaat.de/anfrage/kreuzung-kriegs-brauer-reinhold-frank-strasse-massgebliches-verkehrsaufkommen/)
 
 
-## Kassel (HE) – nur als Karte
+## Kassel (HE) – auf Anfrage herausgegeben
 
-**Lage:** Offen sind Verkehrsmengenkarten 2022, 2023 und 2024 als PDF (Kfz je Richtung, Mittel Mo–Fr) aus den Dauerzählstellen. Das Straßenverkehrs- und Tiefbauamt zählt außerdem regelmäßig in Kampagnen per Video und Radar, mit Fahrzeugklassen.
+**Lage:** Die Stadt zählt laut ihrer Antwort von 2021 auf vier Arten: Dauerzählstellen mit Induktionsschleifen, Kurzzeitzählungen mit Seitenradar und mit Dialog-Displays an wechselnden Orten und Knotenstromzählungen über einen Tag an wechselnden Kreuzungen. Auf eine Anfrage 2021 kamen fünf Knotenstromzählungen 2018–2020 (24 Stunden an Werktagen), vier davon als Excel mit allen gezählten Verkehrsarten in 15-Minuten-Intervallen, eine als PDF-Tabellenbericht, dazu Grafiken des Radverkehrs – ohne Lizenzangabe, daher nicht in der Karte. Offen sind sonst nur die Verkehrsmengenkarten 2022, 2023 und 2024 als PDF (Kfz je Richtung, Mittel Mo–Fr) aus den Dauerzählstellen.
 
-**Empfehlung:** Anfrage nach den Einzelzählungen der Kampagnen (Video und Radar), nicht nach den Karten. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.
+**Empfehlung:** Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.
 
 **Weg:** FragDenStaat, Hessisches UIG
 
@@ -529,14 +662,14 @@ Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stad
 
 Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
 
-Offen sind Ihre Verkehrsmengenkarten; ich bitte um die Einzelzählungen Ihrer Zählkampagnen per Video und Radar.
+2021 haben Sie auf eine Anfrage Knotenstromzählungen als Excel-Tabellenbericht mit 15-Minuten-Werten aller Verkehrsarten geschickt. Ich bitte um alle Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form.
 
 Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
 
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [kassel.de](https://www.kassel.de/buerger/verkehr_und_mobilitaet/verkehrsprojekte/verkehrszaehlungen.php)
+**Belege:** [kassel.de](https://www.kassel.de/buerger/verkehr_und_mobilitaet/verkehrsprojekte/verkehrszaehlungen.php) · [FragDenStaat 2021](https://fragdenstaat.de/anfrage/ifg-anfrage-radverkehrszahlung/)
 
 
 ## Kiel (SH) – auf Anfrage herausgegeben
@@ -630,6 +763,37 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/) · [Informationsfreiheitssatzung (L-IZ 2021)](https://www.l-iz.de/politik/leipzig/2021/10/evaluierungsbericht-zur-informationsfreiheitssatzung-warten-auf-das-saechsische-transparenzgesetz-417215)
+
+
+## Lingen (Ems) (NI) – auf Anfrage herausgegeben
+
+**Lage:** Die Stadt legt ihre Verkehrserhebungen nach Straßennamen ab. Auf zwei Anfragen 2022 kamen die Berichte der Messgeräte als PDF – etwa sechs Messstellen in der Kiesbergstraße vom April 2021 und Messungen in verkehrsberuhigten Bereichen von 2017 –, gebührenfrei nach der Informationsfreiheitssatzung der Stadt.
+
+**Empfehlung:** Anfrage nach allen Verkehrserhebungen seit 2015, am besten als Export der Messgeräte statt als PDF. Grundlage: Informationsfreiheitssatzung der Stadt Lingen (Ems).
+
+**Weg:** FragDenStaat, Informationsfreiheitssatzung Lingen
+
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Lingen)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Lingen (Ems) seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+2022 haben Sie auf Anfragen Berichte einzelner Verkehrserhebungen als PDF geschickt (etwa Kiesbergstraße, April 2021). Ich bitte um alle Erhebungen seit 2015, am besten als Export der Messgeräte.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [FragDenStaat 2022 (Kiesbergstraße)](https://fragdenstaat.de/anfrage/verkehrsmengen-kiesbergstrasse/) · [FragDenStaat 2022 (verkehrsberuhigte Bereiche)](https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen-1/)
 
 
 ## Lübeck (SH) – erhoben – Anfrage aussichtsreich
@@ -818,13 +982,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Belege:** [FragDenStaat 2025/26](https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/) · [Bericht Verkehrszählung 2018](https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf)
 
 
-## Osnabrück (NI) – automatische Zählungen offen
+## Osnabrück (NI) – auf Anfrage herausgegeben
 
-**Lage:** Offen ist ein automatischer Zähler (KI-Sensor) an der Kreuzung Bramscher Straße/Hansastraße mit fünf Klassen (Pkw, Lkw, Krad, Rad, Fuß), abrufbar über eine API (auch als CSV). Laut einer Meldung der Stadt erfassen mobile Zählstellen zusätzlich Rad- und Fußverkehr.
+**Lage:** Auf eine Anfrage 2021 hat die Stadt ihre Verkehrserhebungen in verkehrsberuhigten Bereichen seit 2011 als 44 Textdateien geschickt – Messungen mit einem Seitenradar, eine Zeile je Fahrzeug mit Zeit, Richtung, Geschwindigkeit und Länge, ohne Lizenzangabe (daher nicht in der Karte). Offen ist ein automatischer Zähler (KI-Sensor) an der Kreuzung Bramscher Straße/Hansastraße mit fünf Klassen (Pkw, Lkw, Krad, Rad, Fuß), abrufbar über eine API (auch als CSV). Laut einer Meldung der Stadt erfassen mobile Zählstellen zusätzlich Rad- und Fußverkehr.
 
-**Empfehlung:** Anfrage nach den mobilen Rad- und Fußzählungen und nach Knotenpunktzählungen. Niedersachsen hat kein Landes-IFG: Grundlage ist das Niedersächsische Umweltinformationsgesetz.
+**Empfehlung:** Anfrage nach allen Seitenradar-Messungen und Zählungen seit 2015 in derselben Form, mit Lage der Messstellen und einer Lizenz. Grundlage: die Informationsfreiheitssatzung der Stadt und das Niedersächsische Umweltinformationsgesetz (Niedersachsen hat kein Landes-IFG).
 
-**Weg:** FragDenStaat, Niedersächsisches UIG
+**Weg:** FragDenStaat, Informationsfreiheitssatzung Osnabrück
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Osnabr%C3%BCck)
 
@@ -839,14 +1003,14 @@ Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stad
 
 Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
 
-Gemeint sind auch die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr.
+2021 haben Sie die Verkehrserhebungen in verkehrsberuhigten Bereichen seit 2011 als Textdateien geschickt (eine Zeile je Fahrzeug). Ich bitte um alle solchen Messungen seit 2015, auch außerhalb verkehrsberuhigter Bereiche, in derselben Form und mit der Lage der Messstellen, und um die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr.
 
 Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
 
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Datenplattform Osnabrück](https://datenplattform.osnabrueck.de/verkehrszaehlung/) · [Meldung mobile Zählstellen](https://mobil.osnabrueck.de/de/aktuelles/daten-fuer-nachhaltige-mobilitaetsplanung-mobile-zaehlstellen-erfassen-rad-und-fussverkehr-in-osnabrueck/)
+**Belege:** [FragDenStaat 2021](https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen/) · [Datenplattform Osnabrück](https://datenplattform.osnabrueck.de/verkehrszaehlung/) · [Meldung mobile Zählstellen](https://mobil.osnabrueck.de/de/aktuelles/daten-fuer-nachhaltige-mobilitaetsplanung-mobile-zaehlstellen-erfassen-rad-und-fussverkehr-in-osnabrueck/)
 
 
 ## Paderborn (NW) – auf Anfrage herausgegeben
@@ -1031,3 +1195,34 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [DAVe](https://stadt.muenchen.de/news/open-source-anwendung-dave.html)
+
+
+## Wuppertal (NW) – auf Anfrage herausgegeben
+
+**Lage:** Laut den Dienstleistungsseiten der Stadt werden Zählungen an Straßen und Kreuzungen in Zeitintervallen nach Pkw, Lkw, Bus und Krad erhoben und mit den Daten der automatischen Messstellen in einer zentralen Verkehrsdatenbank verwaltet; Anfragen zu Verkehrsmengen beantwortet die Stadt daraus. Auf eine Anfrage nach dem IFG NRW kamen 2024 die Ergebnisse einer Zählung in der Hünefeldstraße (24.05.2023, 7–9 und 15:30–17 Uhr) als Brief. Offen ist nur die modellierte Kfz-Verkehrsbelastung 2013 und 2020 (DTVw) als Kartendienst.
+
+**Empfehlung:** Anfrage nach einem Export aller Zählungen seit 2015 aus der Verkehrsdatenbank (je Intervall, Richtung und Fahrzeugart). Grundlage: IFG NRW.
+
+**Weg:** FragDenStaat, IFG NRW
+
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Wuppertal)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Wuppertal seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+Laut Ihren Dienstleistungsseiten stehen alle Ergebnisse von Verkehrszählungen in Ihrer zentralen Verkehrsdatenbank. Ein Export der Zählungen seit 2015 daraus genügt.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [wuppertal.de: Verkehrszählung](https://www.wuppertal.de/vv/produkte/104/104.31_Verkehrszaehlungen.php) · [wuppertal.de: Verkehrsbelastungsdaten](https://www.wuppertal.de/vv/produkte/104/104.31_Verkehrsbelastungsdaten.php) · [FragDenStaat 2024](https://fragdenstaat.de/anfrage/verkehrszaehlung-huenefeldstr/)

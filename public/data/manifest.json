@@ -6,7 +6,7 @@
   "details": "details/{n}.json",
   "datenlage": "datenlage.json"
  },
- "details_anzahl": 40,
+ "details_anzahl": 41,
  "gruppen": [
   {
    "id": "kfz",
@@ -305,6 +305,57 @@
    }
   },
   {
+   "code": "olpe",
+   "name": "Olpe",
+   "land": "NW",
+   "traeger": "Kreisstadt Olpe, Ordnungsamt",
+   "art": "Querschnittsmessungen mit Radar-Messgeräten, meist ein bis zwei Wochen am Stück; je Fahrzeug Zeit, Richtung und Fahrzeugklasse (Kfz, Schwerverkehr, als Radfahrer erkannt)",
+   "weg": "offen auf opendata.olpe.de (ab 2025)",
+   "portal": "https://opendata.olpe.de/dataset/?q=Verkehrsmessung",
+   "lizenzen": [
+    {
+     "code": "dl-de-by",
+     "titel": "Verkehrsmessungen (verändert: Stundensummen aus den Einzelmessungen)",
+     "herausgeber": "Kreisstadt Olpe",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://opendata.olpe.de/dataset/?q=Verkehrsmessung"
+    },
+    {
+     "code": "cc-by",
+     "titel": "Verkehrsmessung Zum Honigsack 35 (verändert: Stundensummen aus den Einzelmessungen)",
+     "herausgeber": "Kreisstadt Olpe",
+     "lizenz": "CC BY 4.0",
+     "lizenz_url": "https://creativecommons.org/licenses/by/4.0/deed.de",
+     "herkunft_url": "https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35"
+    },
+    {
+     "code": "lage",
+     "titel": "Lage der Messstelle Zum Honigsack 35 (Nominatim, OpenStreetMap)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 12,
+   "zaehlungen": 128,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 128,
+    "sv": 128,
+    "rad": 128,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2025,
+   "bis": 2026,
+   "lage": {
+    "gps": 121,
+    "geokodiert": 7
+   }
+  },
+  {
    "code": "potsdam",
    "name": "Potsdam",
    "land": "BB",
@@ -458,21 +509,21 @@
   }
  ],
  "statistik": {
-  "stellen": 12108,
-  "zaehlungen": 29046,
+  "stellen": 12120,
+  "zaehlungen": 29174,
   "ohne_lage": 1509,
   "gruppen": {
-   "kfz": 18793,
-   "sv": 18111,
-   "rad": 17884,
+   "kfz": 18921,
+   "sv": 18239,
+   "rad": 18012,
    "fuss": 6016,
    "kind": 5618
   },
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "geokodiert": 21027,
-   "gps": 4798,
+   "geokodiert": 21034,
+   "gps": 4919,
    "uebertragen": 1412,
    "quelle": 1809
   }
