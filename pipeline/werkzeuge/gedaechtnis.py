@@ -43,8 +43,11 @@ def repo() -> str:
 
 
 def assets(release: str) -> dict[str, int]:
-    d = json.loads(gh("api", f"repos/{repo()}/releases/tags/{release}", ausgabe=True))
-    return {a["name"]: a["id"] for a in d.get("assets", [])}
+    """Alle Assets des Releases (seitenweise – mit den Monaten werden es mit der Zeit viele)."""
+    rid = json.loads(gh("api", f"repos/{repo()}/releases/tags/{release}", ausgabe=True))["id"]
+    seiten = gh("api", "--paginate", "--slurp",
+                f"repos/{repo()}/releases/{rid}/assets?per_page=100", ausgabe=True)
+    return {a["name"]: a["id"] for seite in json.loads(seiten) for a in seite}
 
 
 def sha(pfad: Path) -> str:
