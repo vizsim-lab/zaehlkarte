@@ -16,6 +16,18 @@ baue() {
   fi
 }
 
-command -v pdftotext > /dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
-mkdir -p ergebnis/kmk
-python3 tools/dauer_kmk.py ergebnis/kmk > ergebnis/kmk/log.txt 2>&1 || true
+# Bau mit dem App-Branch, dazu das Gedächtnis als Saat für den Release sichern
+baue dauer-staedte
+mkdir -p ergebnis/dauer/gedaechtnis
+for d in app/pipeline/data/raw/*/gedaechtnis; do
+  [ -d "$d" ] || continue
+  code=$(basename "$(dirname "$d")")
+  for f in "$d"/*; do cp "$f" "ergebnis/dauer/gedaechtnis/${code}__$(basename "$f")"; done
+done
+ls -la ergebnis/dauer/gedaechtnis >> ergebnis/dauer/bau/bericht.txt
+for u in https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg \
+         https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14 \
+         https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg \
+         https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20; do
+  curl -s -o /dev/null -L -w "%{http_code} %{url_effective} $u\n" "$u"
+done > ergebnis/dauer/links.txt 2>&1
