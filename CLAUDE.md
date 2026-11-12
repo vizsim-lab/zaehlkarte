@@ -42,7 +42,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und
   `tests/web/vertrag.spec.js` im selben Schritt mit. Dauerzählstellen: Felder in
   `dauer/index.json` (`stellen.felder`, `gruppen` = Bits von `g`, `dateien`, `kalender`,
-  `standardtag`, `quellen[].gruppen`/`standardtag`), Aufbau von
+  `standardtag`, `quellen[].gruppen`/`zeitraeume`/`standardtag`), Aufbau von
   `dauer/tage/JJJJ.json` und `dauer/NN.json` (Kopf von `pipeline/src/zaehlkarte/dauer/site.py`)
   – mitziehen: `js/data/dauer.js`, `js/ui/dauerdetail.js`, `tests/web/vertrag.spec.js` und die
   Fixtures `tests/web/fixtures/dauer/`.

@@ -270,9 +270,9 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     // Quellen mit dieser Verkehrsart, die an dem Tag keine Werte haben: Zeitraum und Sprung
     const ohne = quellenOhneTag(dauer, g, iso);
     $("dauer-quellen").hidden = !ohne.length;
-    $("dauer-quellen").innerHTML = ohne.map((q) => `
-      <div class="dauer-quelle"><span>${esc(t("dauer.ohne_tag", { quelle: q.name, von: datum(q.von), bis: datum(q.bis) }))}</span>
-        ${q.standardtag ? `<button type="button" class="link-knopf" data-sprung="${esc(q.standardtag)}">${esc(t("dauer.springen", { datum: datum(q.standardtag) }))}</button>` : ""}</div>`).join("");
+    $("dauer-quellen").innerHTML = ohne.map((o) => `
+      <div class="dauer-quelle"><span>${esc(t("dauer.ohne_tag", { quelle: o.quelle.name, von: datum(o.von), bis: datum(o.bis) }))}</span>
+        <button type="button" class="link-knopf" data-sprung="${esc(o.sprung)}">${esc(t("dauer.springen", { datum: datum(o.sprung) }))}</button></div>`).join("");
     $("fc-stellen").textContent = zahl(zahlen.stellen);
     $("fc-zaehlungen").textContent = zahl(zahlen.vollstaendig);
   }

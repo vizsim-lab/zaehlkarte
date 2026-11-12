@@ -52,6 +52,10 @@ test("dauer/index.json, Jahres- und Detaildateien haben die erwarteten Felder", 
     expect(q.gruppen.length).toBeGreaterThan(0);
     expect(q.gruppen.every((g) => d.gruppen.includes(g))).toBe(true);
     expect(q.standardtag >= q.von && q.standardtag <= q.bis).toBe(true);
+    for (const [g, [von, bis]] of Object.entries(q.zeitraeume)) {
+      expect(q.gruppen).toContain(g);
+      expect(von >= q.von && von <= bis && bis <= q.bis).toBe(true);
+    }
   }
   const jahr = await (await request.get(`/data/${d.dateien.tage.replace("{jahr}", d.bis.slice(0, 4))}`)).json();
   expect(Object.keys(jahr.werte).sort()).toEqual([...d.gruppen].sort());

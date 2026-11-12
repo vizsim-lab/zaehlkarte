@@ -22,13 +22,15 @@ export const DAUER_THEMEN = {
 };
 
 // Klassengrenzen der Tagessummen je Zählstelle (4 Grenzen -> 5 Stufen), an den Quintilen der
-// Quellen ausgerichtet (Bericht von `zaehlkarte dauer site`). Kfz und Lkw: Berliner Detektoren
-// 2015–2025 (Kfz 6.350 / 9.760 / 12.820 / 16.820, Lkw 190 / 360 / 590 / 990).
+// Quellen ausgerichtet (Bericht von `zaehlkarte dauer site`, November 2026):
+// Kfz Berlin 6.350 / 9.760 / 12.820 / 16.820, Hamburg 5.000 / 8.140 / 11.950 / 18.190;
+// Lkw Berlin 190 / 360 / 590 / 990; Schwerverkehr Hamburg 170 / 350 / 600 / 990;
+// Rad Hamburg 360 / 660 / 1.100 / 1.950. Fuß: noch keine Quelle (Platzhalter).
 export const DAUER_STUFEN = {
   kfz: [6000, 10000, 13000, 17000],
   lkw: [200, 350, 600, 1000],
-  sv: [100, 250, 500, 1000],
-  rad: [250, 500, 1000, 2000],
+  sv: [200, 350, 600, 1000],
+  rad: [350, 700, 1100, 2000],
   fuss: [500, 1000, 2500, 5000],
 };
 
@@ -53,6 +55,9 @@ export function entpackeDauer(index) {
     stellen,
     quellen: index.quellen.map((q) => q.code),
     quellenMeta: index.quellen,
+    // Zeitraum je Quelle und Gruppe: Hamburg zählt Schwerverkehr länger als Kfz (Stunden der
+    // Quelle verfallen nach zwei Monaten) – außerhalb fehlt die Gruppe, statt „nicht vollständig“
+    zeitraeume: new Map(index.quellen.map((q) => [q.code, q.zeitraeume ?? {}])),
     jeId: new Map(stellen.map((s) => [s.id, s])),
   };
 }
@@ -76,9 +81,21 @@ export const hatGruppe = (s, g) => s.gruppen.includes(g);
 /** Gruppe, die die Karte zeigt: die gewählte, wenn es sie gibt, sonst die erste der Daten. */
 export const themaIn = (d, g) => (d.gruppen.includes(g) ? g : d.gruppen[0]);
 
-/** Quellen, die die Gruppe zählen, aber am Tag keine Werte haben (Zeitraum endet oder beginnt später). */
+/**
+ * Quellen, die die Gruppe zählen, aber am Tag keine Werte haben (ihr Zeitraum für die Gruppe
+ * endet vorher oder beginnt später): [{ quelle, von, bis, sprung }] – `sprung` ist der
+ * Standardtag der Quelle, liegt er außerhalb, das Ende ihres Zeitraums.
+ */
 export function quellenOhneTag(d, g, iso) {
-  return d.quellenMeta.filter((q) => (q.gruppen ?? d.gruppen).includes(g) && (iso < q.von || iso > q.bis));
+  const out = [];
+  for (const q of d.quellenMeta) {
+    if (!(q.gruppen ?? d.gruppen).includes(g)) continue;
+    const [von, bis] = q.zeitraeume?.[g] ?? [q.von, q.bis];
+    if (iso >= von && iso <= bis) continue;
+    const sprung = q.standardtag && q.standardtag >= von && q.standardtag <= bis ? q.standardtag : bis;
+    out.push({ quelle: q, von, bis, sprung });
+  }
+  return out;
 }
 
 /** Tagtyp je Land der Quellen, die den Tag abdecken: [{ land, typ }] (gleiche Typen zusammen). */
@@ -102,6 +119,8 @@ export function ansichtDauer(d, zustand, jahr, iso) {
   const out = [];
   for (const s of d.stellen) {
     if (iso < s.von || iso > s.bis || !hatGruppe(s, g)) continue;
+    const z = d.zeitraeume?.get(s.quelle)?.[g];
+    if (z && (iso < z[0] || iso > z[1])) continue;
     const v = wertAm(jahr, s, g, iso);
     out.push({ stelle: s, wert: v, stufe: v == null ? -1 : stufe(v, grenzen) });
   }

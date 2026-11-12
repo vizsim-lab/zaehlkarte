@@ -230,6 +230,8 @@ def test_site_mit_hamburg(api, pfade):
     assert index["gruppen"] == ["kfz", "sv"]
     assert index["gruppen_namen"]["sv"] == "Schwerverkehr (Detektor)"
     assert index["quellen"][0]["gruppen"] == ["kfz", "sv"]
+    assert index["quellen"][0]["zeitraeume"] == {"kfz": ["2026-11-02", "2026-11-04"],
+                                                 "sv": ["2026-11-02", "2026-11-04"]}
     werte = dict(zip(index["stellen"]["felder"], index["stellen"]["werte"][0], strict=True))
     assert werte["g"] == 3 and werte["von"] == "2026-11-02" and werte["bis"] == "2026-11-04"
     chunk = json.loads((pfade.karte / "dauer" / "0.json").read_text())

@@ -4,7 +4,8 @@ Workflow „Dauerzählstellen bauen“ und mit der Seite ausgeliefert).
 Vertrag mit dem Frontend (js/data/dauer.js, tests/web/vertrag.spec.js) – wer ihn ändert, zieht
 beide im selben Schritt mit:
 - dauer/index.json: Stellen spaltenweise (`stellen.felder`; `g` = Bitmaske der Gruppen in der
-  Reihenfolge von `gruppen`), Quellen mit Lizenzen, ihren Gruppen und ihrem eigenen Standardtag,
+  Reihenfolge von `gruppen`), Quellen mit Lizenzen, ihren Gruppen, dem Zeitraum je Gruppe
+  (`zeitraeume`: erster und letzter vollständig gezählter Tag) und ihrem eigenen Standardtag,
   Zeitraum (`von`, `bis`), Kalender je Land (ein Zeichen je Tag ab `von`: s Schultag, f Ferien,
   h Feiertag, w Wochenende, u unbekannt) und die Namen der übrigen Dateien (`dateien`).
 - dauer/tage/JJJJ.json: Tagessummen aller Stellen eines Jahres je Gruppe, in der Reihenfolge der
@@ -122,6 +123,12 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
                                              + [None] * hinten)
             anzahl += 1
         bericht.append(f"{q['code']}: {anzahl} Stellen mit vollständigen Tagen, {ohne} ohne")
+        zeitraeume = {}
+        for g, s in summen.items():
+            tage_mit = np.flatnonzero((s >= 0).any(axis=0))
+            if tage_mit.size:
+                zeitraeume[g] = [r.tag(int(tage_mit[0])).isoformat(),
+                                 r.tag(int(tage_mit[-1])).isoformat()]
         land_kal = kalender(q["land"], pfade.config / q["ferien"] if q.get("ferien") else None,
                             von, tage_gesamt)
         quellen_meta.append({
@@ -132,6 +139,7 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
             "hinweise": [" ".join(h.split()) for h in q.get("hinweise", [])],
             "stellen": anzahl, "von": r.von.isoformat(), "bis": r.tag(r.tage - 1).isoformat(),
             "gruppen": [g for g in gruppen if g in r.werte],
+            "zeitraeume": zeitraeume,
             "standardtag": standardtag([(q, r)], {q["land"]: land_kal}, von).isoformat(),
             "stunden_von": r.tag(stunden_ab).isoformat(),
             "verfahren": [{"von": a.isoformat(), "bis": b.isoformat(), "text": t}
