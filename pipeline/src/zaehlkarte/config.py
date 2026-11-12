@@ -53,3 +53,9 @@ def quellen(pfade: Pfade | None = None, nur_live: bool = True) -> dict[str, dict
     """Quellen aus sources.yaml (Code -> Eintrag), standardmäßig nur `status: live`."""
     alle = lade_yaml("sources.yaml", pfade)["quellen"]
     return {k: {**v, "code": k} for k, v in alle.items() if not nur_live or v["status"] == "live"}
+
+
+def dauerquellen(pfade: Pfade | None = None, nur_live: bool = True) -> dict[str, dict]:
+    """Quellen der Familie Dauerzählstellen (Abschnitt `dauer:` in sources.yaml)."""
+    alle = lade_yaml("sources.yaml", pfade).get("dauer") or {}
+    return {k: {**v, "code": k} for k, v in alle.items() if not nur_live or v["status"] == "live"}

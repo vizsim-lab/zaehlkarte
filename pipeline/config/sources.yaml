@@ -4,6 +4,8 @@
 #
 # quellen:  status live = in der Karte (Adapter in src/zaehlkarte/adapters/), research = bekannt,
 #           Adapter fehlt noch, blocked = nicht nutzbar (Grund in `notiz`).
+# dauer:    Familie Dauerzählstellen (Adapter in src/zaehlkarte/dauer/, Bau `zaehlkarte dauer`,
+#           Kartendaten unter public/data/dauer/ – nicht im Git, Workflow „Dauerzählstellen bauen“).
 # datenlage: was es außerhalb der Karte gibt – je Kommune ein Punkt mit Stand und Belegen.
 #           Neue Hinweise über das Issue-Formular „Zählung melden“.
 
@@ -419,6 +421,37 @@ quellen:
       Q4: {<<: *karte, lon: 6.451619, lat: 51.662662}
       Q5: {<<: *karte, lon: 6.453272, lat: 51.66434}
       Q6: {<<: *karte, lon: 6.455416, lat: 51.663258}
+
+# Familie Dauerzählstellen: fest eingebaute Zähler mit Stunden- oder Tageswerten über Jahre.
+# Abgrenzung zu vizsim/svz: hier die gezählten Werte im Zeitverlauf (Stunden, Tage) – keine
+# Jahresmittel, kein DTV. Eine Tagessumme nur aus allen Stunden des Tages.
+dauer:
+  berlin_viz:
+    status: live
+    adapter: berlin_viz
+    name: Berlin (Verkehrsdetektion)
+    land: BE
+    traeger: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt, Verkehrsinformationszentrale (VIZ)
+    art: >-
+      Infrarot-Detektoren (TEU) über den Fahrstreifen an rund 250 Standorten; Stundenwerte je
+      Richtung (Messquerschnitt) für Kfz und Lkw, wie die Detektoren sie unterscheiden
+    weg: offen im Archiv der Digitalen Plattform Stadtverkehr Berlin
+    ferien: schulferien_berlin.csv
+    portal: https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin
+    archiv: https://mdhopendata.blob.core.windows.net/verkehrsdetektion
+    archiv_seite: https://api.viz.berlin.de/daten/verkehrsdetektion
+    stammdaten: Stammdaten_Verkehrsdetektion_2022_07_20.xlsx
+    # ab diesem Monat die neue Qualitätssicherung (Fahrstreifen -> Messquerschnitt); davor die
+    # Messquerschnitte der alten wie geliefert. 2023–2024 gibt es beide – der Bericht vergleicht.
+    neue_qs_ab: 2025-01
+    vollstaendig_mindestens: 75  # % gültiger Messintervalle je Stunde (Regel der alten QS)
+    titel: >-
+      Verkehrsdetektion Berlin (verändert: Stundenwerte zu Tagessummen; ab 2025 Fahrstreifen zu
+      Messquerschnitten summiert)
+    herausgeber: Digitale Plattform Stadtverkehr Berlin
+    quellenvermerk: Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
 
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
