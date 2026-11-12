@@ -1,6 +1,7 @@
-# Entwicklungswerkzeug: Dauerzählstellen mit dem Code des Branches `dauerzaehlstellen` bauen
-# (Berlin-Archiv ist aus manchen Entwicklungsumgebungen nicht erreichbar) und das gepackte
-# Ergebnis samt Bericht in diesen Branch legen (Pushes mit GITHUB_TOKEN starten keinen Lauf).
+# Entwicklungswerkzeug: Quellen erkunden oder Dauerzählstellen mit dem Code eines App-Branches
+# bauen (Berlin- und Hamburg-Quellen sind aus manchen Entwicklungsumgebungen nicht erreichbar).
+# Was ein Lauf tut, steht in tools/lauf.sh; Ergebnisse landen in ergebnis/ (Pushes mit
+# GITHUB_TOKEN starten keinen neuen Lauf).
 name: Erkundung Dauerzählstellen
 on:
   push:
@@ -15,24 +16,12 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/checkout@v7
-        with:
-          ref: dauerzaehlstellen
-          path: app
       - uses: astral-sh/setup-uv@v10.1.0
-      - name: Bauen
-        working-directory: app/pipeline
-        run: |
-          mkdir -p "$GITHUB_WORKSPACE/ergebnis/dauer/bau"
-          ( uv sync --locked && uv run zaehlkarte dauer fetch && uv run zaehlkarte dauer site ) 2>&1 | tail -200 > "$GITHUB_WORKSPACE/ergebnis/dauer/bau/bericht.txt" || true
-          git -C .. rev-parse HEAD > "$GITHUB_WORKSPACE/ergebnis/dauer/bau/stand.txt"
-          if [ -d ../public/data/dauer ]; then
-            tar -czf "$GITHUB_WORKSPACE/ergebnis/dauer/bau/dauer.tar.gz" -C ../public/data dauer
-            du -sh ../public/data/dauer >> "$GITHUB_WORKSPACE/ergebnis/dauer/bau/bericht.txt"
-          fi
+      - name: Lauf (tools/lauf.sh)
+        run: bash tools/lauf.sh
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ergebnis
-          git commit -q -m "Bau Dauerzählstellen $(date -u +%F)" && git push origin HEAD:werkzeug/dauer
+          git commit -q -m "Werkzeug-Lauf $(date -u +%FT%H:%MZ)" && git push origin HEAD:werkzeug/dauer
