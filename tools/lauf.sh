@@ -16,5 +16,5 @@ baue() {
   fi
 }
 
-mkdir -p ergebnis/dauer/staedte1
-python3 tools/dauer_staedte1.py ergebnis/dauer/staedte1 > ergebnis/dauer/staedte1/log.txt 2>&1 || true
+mkdir -p ergebnis/dauer/staedte2
+timeout 1500 python3 tools/dauer_staedte2.py ergebnis/dauer/staedte2 > ergebnis/dauer/staedte2/log.txt 2>&1 || true
