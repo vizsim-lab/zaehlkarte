@@ -26,6 +26,7 @@ jobs:
           mkdir -p "$GITHUB_WORKSPACE/ergebnis/dauer/bau"
           ( uv sync --locked && uv run zaehlkarte dauer fetch && uv run zaehlkarte dauer site ) 2>&1 | tail -200 > "$GITHUB_WORKSPACE/ergebnis/dauer/bau/bericht.txt" || true
           git -C .. rev-parse HEAD > "$GITHUB_WORKSPACE/ergebnis/dauer/bau/stand.txt"
+          uv run python "$GITHUB_WORKSPACE/tools/dauer_vergleich.py" "$GITHUB_WORKSPACE/ergebnis/dauer/bau/vergleich.json" > "$GITHUB_WORKSPACE/ergebnis/dauer/bau/vergleich.txt" 2>&1 || true
           if [ -d ../public/data/dauer ]; then
             tar -czf "$GITHUB_WORKSPACE/ergebnis/dauer/bau/dauer.tar.gz" -C ../public/data dauer
             du -sh ../public/data/dauer >> "$GITHUB_WORKSPACE/ergebnis/dauer/bau/bericht.txt"
