@@ -81,14 +81,20 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       return;
     }
     const g = hatGruppe(stelle, z.dthema) ? z.dthema : stelle.gruppen[0];
-    const werte = detail.tage[g] ?? [];
+    // Reihe der gewählten Gruppe von ihrem ersten bis zum letzten vollständigen Tag (Hamburg:
+    // Schwerverkehr seit März, Kfz erst seit September – sonst stünde vorn eine lange Lücke)
+    const alle = detail.tage[g] ?? [];
+    const erster = Math.max(0, alle.findIndex((v) => v != null));
+    const letzter = Math.max(erster, alle.findLastIndex((v) => v != null));
+    const werte = alle.slice(erster, letzter + 1);
+    const reiheVon = plusTage(detail.von, erster);
     const kal = d.kalender?.[q?.land] ?? "";
-    const ab = tageZwischen(d.von, detail.von);
+    const ab = tageZwischen(d.von, reiheVon);
     const typen = kal.slice(ab, ab + werte.length);
-    const gewaehlt = tageZwischen(detail.von, tag);
-    const tr = tagesreihe(werte, typen, detail.von, gewaehlt);
+    const gewaehlt = tageZwischen(reiheVon, tag);
+    const tr = tagesreihe(werte, typen, reiheVon, gewaehlt);
     const reihe = tr.svg ? `
-      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: DAUER_THEMEN[g].name, zeitraum: zeitraumText(stelle.von, stelle.bis) }))}</div>
+      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: DAUER_THEMEN[g].name, zeitraum: zeitraumText(reiheVon, plusTage(detail.von, letzter)) }))}</div>
       <div class="tr-wrap">${tr.svg}<div class="tg-tooltip" hidden></div></div>
       <div class="tr-legende">
         <span><i style="background:${TR_FARBEN.s}"></i>${esc(TAGE.s)}</span>
@@ -154,12 +160,12 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
         <button type="button" class="link-knopf" data-csv-tage>${esc(t("dd.csv_tage"))}</button>
         ${stunden ? `<button type="button" class="link-knopf" data-csv-stunden>${esc(t("dd.csv_stunden"))}</button>` : ""}
       </div>`;
-    if (tr.svg) bindeReihe(el.querySelector(".tr-wrap"), werte, typen, tr);
+    if (tr.svg) bindeReihe(el.querySelector(".tr-wrap"), werte, typen, tr, reiheVon);
     if (stunden) bindeTagesgang(el.querySelector(".detail-tag .tg-wrap"), stunden.reihen, stunden.tg);
   }
 
   /** Hover und Klick auf der Tagesreihe: Wert des Tags zeigen, Klick wählt den Tag. */
-  function bindeReihe(wrap, werte, typen, tr) {
+  function bindeReihe(wrap, werte, typen, tr, von) {
     const svg = wrap.querySelector("svg");
     const kreuz = svg.querySelector(".tg-kreuz");
     const tip = wrap.querySelector(".tg-tooltip");
@@ -170,7 +176,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     };
     svg.addEventListener("pointermove", (e) => {
       const i = position(e.clientX);
-      const iso = plusTage(detail.von, i);
+      const iso = plusTage(von, i);
       const box = svg.getBoundingClientRect();
       const xx = tr.x(i);
       kreuz.setAttribute("x1", xx);
@@ -191,7 +197,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       kreuz.setAttribute("visibility", "hidden");
       tip.hidden = true;
     });
-    svg.addEventListener("click", (e) => beiTag?.(plusTage(detail.von, position(e.clientX))));
+    svg.addEventListener("click", (e) => beiTag?.(plusTage(von, position(e.clientX))));
   }
 
   function bindeTagesgang(wrap, reihen, tg) {
