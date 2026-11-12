@@ -1268,7 +1268,8 @@ datenlage:
     stand: aggregiert
     was: >-
       Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je
-      Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch)
+      Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch, in der
+      Karte als Dauerzählstellen)
     situation: >-
       Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an
       Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV,
@@ -1276,7 +1277,8 @@ datenlage:
       Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in
       15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in
       die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras
-      an über 400 Kreuzungen (15-Minuten-Werte).
+      an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als
+      Dauerzählstellen.
     empfehlung: >-
       Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem
       Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
@@ -1299,16 +1301,23 @@ datenlage:
     lat: 49.3988
     stand: automatisch
     was: >-
-      12 Kameras mit offenen Zählwerten
+      Zählkameras und Verkehrsrechnerdaten im Katalog der Datenplattform, zurzeit nicht frei
+      abrufbar
     situation: >-
-      Offen sind die Werte von 12 automatischen Zählkameras.
+      Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved,
+      15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht
+      (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es
+      nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte ist
+      davon nichts.
     empfehlung: >-
       Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden-
       Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
     weg: "FragDenStaat, LIFG BW"
     kontakt: {name: "Stadt Heidelberg", email: "Koordinierungsstelle-LIFG@Heidelberg.de", fds: "https://fragdenstaat.de/behoerde/9232/stadt-heidelberg/"}
     anfrage: true
-    links: []
+    links:
+      - ["Datenplattform: Kamera (Beispiel)", "https://ckan.datenplattform.heidelberg.de/en/dataset/mobility_main_trafficcamera/resource/b95871b2-7de0-46b1-b377-db497250f8a0"]
+      - ["MobiData BW: Verkehrsrechnerdaten", "https://mobidata-bw.de/en/dataset/verkehrsleitrechnerdaten-in-heidelberg/resource/18936b7b-af96-45c5-ad05-f7f09ef6d9a3"]
   - kommune: Mönchengladbach
     land: NW
     lon: 6.4425
@@ -1674,9 +1683,11 @@ datenlage:
       Auf eine Anfrage 2021 hat die Stadt ihre Verkehrserhebungen in verkehrsberuhigten Bereichen
       seit 2011 als 44 Textdateien geschickt – Messungen mit einem Seitenradar, eine Zeile je Fahrzeug
       mit Zeit, Richtung, Geschwindigkeit und Länge, ohne Lizenzangabe (daher nicht in der Karte).
-      Offen ist ein automatischer Zähler (KI-Sensor) an der Kreuzung Bramscher Straße/Hansastraße mit
-      fünf Klassen (Pkw, Lkw, Krad, Rad, Fuß), abrufbar über eine API (auch als CSV). Laut einer
-      Meldung der Stadt erfassen mobile Zählstellen zusätzlich Rad- und Fußverkehr.
+      Offen sind die Werte von KI-Sensoren an rund zehn Kreuzungen (je Fahrstreifen bzw.
+      Abbiegestrom Pkw, Lkw, Bus, Krad, Rad, Fuß; 15-Minuten-Werte seit 2023) über die
+      SensorThings-Schnittstelle der Datenplattform – ohne Lizenzangabe, daher nicht als
+      Dauerzählstellen in der Karte. Laut einer Meldung der Stadt erfassen mobile Zählstellen
+      zusätzlich Rad- und Fußverkehr.
     empfehlung: >-
       Anfrage nach allen Seitenradar-Messungen und Zählungen seit 2015 in derselben Form, mit Lage
       der Messstellen und einer Lizenz. Grundlage: die Informationsfreiheitssatzung der Stadt und das
@@ -1688,10 +1699,12 @@ datenlage:
       2021 haben Sie die Verkehrserhebungen in verkehrsberuhigten Bereichen seit 2011 als
       Textdateien geschickt (eine Zeile je Fahrzeug). Ich bitte um alle solchen Messungen seit 2015,
       auch außerhalb verkehrsberuhigter Bereiche, in derselben Form und mit der Lage der Messstellen,
-      und um die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr.
+      und um die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr. Bitte nennen Sie
+      außerdem die Lizenz, unter der die Werte der KI-Sensoren auf Ihrer Datenplattform stehen.
     links:
       - ["FragDenStaat 2021", "https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen/"]
       - ["Datenplattform Osnabrück", "https://datenplattform.osnabrueck.de/verkehrszaehlung/"]
+      - ["SensorThings-Schnittstelle", "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"]
       - ["Meldung mobile Zählstellen", "https://mobil.osnabrueck.de/de/aktuelles/daten-fuer-nachhaltige-mobilitaetsplanung-mobile-zaehlstellen-erfassen-rad-und-fussverkehr-in-osnabrueck/"]
   - kommune: Lingen (Ems)
     land: NI

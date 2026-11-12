@@ -7,6 +7,7 @@
 import { ladeDauer } from "../data/laden.js";
 import {
   DAUER_GRUPPEN, DAUER_THEMEN, hatGruppe, plusTage, stundenAm, stundenDesTags, tagAusDetail, tageZwischen, tagtyp,
+  zeitraumText,
 } from "../data/dauer.js";
 import { TAGE } from "../data/modell.js";
 import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
@@ -87,7 +88,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const gewaehlt = tageZwischen(detail.von, tag);
     const tr = tagesreihe(werte, typen, detail.von, gewaehlt);
     const reihe = tr.svg ? `
-      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: DAUER_THEMEN[g].name, von: stelle.von.slice(0, 4), bis: stelle.bis.slice(0, 4) }))}</div>
+      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: DAUER_THEMEN[g].name, zeitraum: zeitraumText(stelle.von, stelle.bis) }))}</div>
       <div class="tr-wrap">${tr.svg}<div class="tg-tooltip" hidden></div></div>
       <div class="tr-legende">
         <span><i style="background:${TR_FARBEN.s}"></i>${esc(TAGE.s)}</span>

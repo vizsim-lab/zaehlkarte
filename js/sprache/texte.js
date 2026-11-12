@@ -229,7 +229,7 @@ export const TEXTE = {
     "hover.dauer": "Dauerzählstelle · {quelle}",
     "hover.dauer_details": "Klick für Tagesreihe und Tagesgang",
     "dd.typ": "Dauerzählstelle",
-    "dd.reihe": "Tagessummen {gruppe} · {von}–{bis}",
+    "dd.reihe": "Tagessummen {gruppe} · {zeitraum}",
     "dd.reihe_hinweis": "Ein Strich je vollständig gezähltem Tag, Lücke: nicht vollständig gezählt. Klick wählt den Tag.",
     "dd.legende.w": "Wochenende, Feiertag",
     "dd.tag": "{wochentag} {datum} · {tag}",
@@ -249,7 +249,7 @@ export const TEXTE = {
     "dd.csv_tage": "Tagessummen als CSV",
     "dd.csv_stunden": "Stunden des Tags als CSV",
     "quellen.dauer": "Dauerzählstellen",
-    "quellen.dauer_umfang": "{stellen} Stellen, {von}–{bis}",
+    "quellen.dauer_umfang": "{stellen} Stellen, {zeitraum}",
   },
 
   en: {
@@ -462,7 +462,7 @@ export const TEXTE = {
     "hover.dauer": "Permanent counter · {quelle}",
     "hover.dauer_details": "Click for the daily series and profile",
     "dd.typ": "Permanent counter",
-    "dd.reihe": "Daily totals {gruppe} · {von}–{bis}",
+    "dd.reihe": "Daily totals {gruppe} · {zeitraum}",
     "dd.reihe_hinweis": "One stroke per fully counted day, gap: not fully counted. Click to choose the day.",
     "dd.legende.w": "Weekend, public holiday",
     "dd.tag": "{wochentag} {datum} · {tag}",
@@ -482,7 +482,7 @@ export const TEXTE = {
     "dd.csv_tage": "Daily totals as CSV",
     "dd.csv_stunden": "Hours of the day as CSV",
     "quellen.dauer": "Permanent counters",
-    "quellen.dauer_umfang": "{stellen} sites, {von}–{bis}",
+    "quellen.dauer_umfang": "{stellen} sites, {zeitraum}",
   },
 };
 

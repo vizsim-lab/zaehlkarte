@@ -6,7 +6,7 @@
 //
 // Eine Tagessumme gibt es nur, wenn jede Stunde des Tages gezählt ist – null heißt „nicht
 // vollständig gezählt“, nie 0. Keine Mittelwerte, keine Hochrechnung: gezeigt wird der Tag.
-import { t } from "../sprache/texte.js";
+import { datum, t } from "../sprache/texte.js";
 import { STUFENFARBEN, stufe } from "./modell.js";
 
 // Gruppen, wie die Quellen sie zählen – nie ineinander gemischt: Berlins „Lkw“ und Hamburgs
@@ -134,6 +134,12 @@ export function featuresDauer(eintraege) {
       };
     }),
   };
+}
+
+/** Zeitraum einer Quelle oder Stelle: über Jahre „2015–2025“, sonst die Tage. */
+export function zeitraumText(von, bis) {
+  if (Number(bis.slice(0, 4)) - Number(von.slice(0, 4)) >= 2) return `${von.slice(0, 4)}–${bis.slice(0, 4)}`;
+  return `${datum(von)} – ${datum(bis)}`;
 }
 
 /** Bezeichnung der gezeigten Kennzahl: „Kfz, Tagessumme am 26.06.2025“. */

@@ -236,3 +236,47 @@ def test_site_mit_hamburg(api, pfade):
     d = chunk["stellen"]["hamburg_kfz:0248931"]
     assert d["tage"]["sv"] == [24, 24, 24] and d["n"]["kfz"] == [24, 24, 24]
     assert "kalender" in index and index["kalender"]["HH"][0] in "swhfu"
+
+
+def test_strassennamen_und_knotenpunkt(api, pfade, tmp_path, monkeypatch):
+    # zwei Arme eines Knotenpunkts an zwei Straßen: Name = eigene Straße, Abschnitt = die andere
+    osm = tmp_path / "hh.osm"
+    osm.write_text("""<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6">
+ <node id="1" lat="53.6000" lon="9.9900"/><node id="2" lat="53.6000" lon="10.0100"/>
+ <node id="3" lat="53.5900" lon="10.0000"/><node id="4" lat="53.6100" lon="10.0000"/>
+ <way id="10"><nd ref="1"/><nd ref="2"/><tag k="highway" v="primary"/>
+  <tag k="name" v="Bramfelder Straße"/></way>
+ <way id="11"><nd ref="3"/><nd ref="4"/><tag k="highway" v="secondary"/>
+  <tag k="name" v="Steilshooper Straße"/></way>
+</osm>
+""")
+    import zaehlkarte.fetch
+
+    geladen = []
+
+    def lade(url, ziel):
+        geladen.append(url)
+        ziel.parent.mkdir(parents=True, exist_ok=True)
+        ziel.write_bytes(osm.read_bytes())
+        return ziel
+
+    monkeypatch.setattr(zaehlkarte.fetch, "lade", lade)
+    a = thing("0248931", 10.0050, 53.60005, "Ost nach West", "Ost")  # an der Bramfelder Straße
+    b = thing("0248942", 10.00005, 53.6050, "Nord nach Süd", "Nord")  # an der Steilshooper Straße
+    obs = stunden(utc(2026, 11, 1, 23), 48)
+    api.ds = [{"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {}, "obs": obs},
+              {"id": 2, "layer": "Kfz_1-Stunde", "thing": b, "props": {}, "obs": obs}]
+    q = {**Q, "osm": "https://download.example/hamburg-latest.osm"}  # XML statt PBF
+    log = hh.hole(q, pfade)
+    assert any("Straßennamen für 2 neue Stellen (2 gefunden)" in z for z in log)
+    hh.hole(q, pfade)  # zweiter Lauf: Namen aus dem Gedächtnis, kein neuer Abzug
+    assert len(geladen) == 1
+    namen = json.loads((pfade.roh / "hamburg_kfz" / "gedaechtnis" / "strassen.json").read_text())
+    assert "OpenStreetMap" in namen["lizenz"]
+    r = hh.lese(q, pfade, hh.Bericht())
+    s = {x.kennung: x for x in r.stellen}
+    assert s["0248931"].name == "Bramfelder Straße"
+    assert s["0248931"].abschnitt == "Knotenpunkt mit Steilshooper Straße, Arm Ost"
+    assert s["0248942"].name == "Steilshooper Straße"
+    assert s["0248942"].abschnitt == "Knotenpunkt mit Bramfelder Straße, Arm Nord"

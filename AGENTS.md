@@ -264,16 +264,57 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
   Stunde „7“ oder „07“), je Stunde oft eine NaN-Zeile neben der gültigen; die Stammdaten
   (Juli 2022) kennen die neuen Messquerschnitte „…n“ nicht; das ReadMe beschreibt eine andere
   Stammdaten-Datei (Blätter DET/MQ, Gauß-Krüger) als die im Archiv (ein Blatt, WGS84).
-- **Hamburg (nächster Kandidat):** SensorThings `https://iot.hamburg.de/v1.1`, Dienste
-  `HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren` (rund 830 Zählstellen Kfz, 341 auch
-  Schwerverkehr) und `HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren` (312 Zählstellen);
-  Layer 5-Min, 15-Min, 1-Stunde, 1-Tag, 1-Woche. Stundenwerte reichen nur rund 75 Tage zurück
-  (Schwerverkehr seit Februar 2026), Tageswerte bis 2020 – die Vollständigkeit eines Tags lässt
-  sich nur mit Stundenwerten prüfen, also braucht es einen eigenen Archivlauf. Die alten Dienste
-  `HH_STA_AutomatisierteVerkehrsmengenerfassung` und `HH_STA_HamburgerRadzaehlnetz` heißen
-  „(veraltet)“ und enden im März 2026. Zeitstempel in UTC. dl-de/by-2-0, „Freie und Hansestadt
-  Hamburg, Behörde für Verkehr und Mobilitätswende“.
-- **Weitere Kandidaten** (Datenlage, Stand `automatisch`): Heidelberg (12 Kameras), Ulm (5
-  Kameras, Standorte nur als Kürzel), Freiburg (25 Sensoren im Test), Osnabrück (1 KI-Sensor),
-  Ettlingen (6 Zählstellen, nur CC BY-NC – nicht aufnehmen); zu prüfen: Darmstadt, Wiesbaden,
-  Konstanz, Gelsenkirchen, Mannheim, Leipzig, Aachen.
+- **Hamburg (in der Karte, `hamburg_kfz`, `hamburg_rad`, Adapter `hamburg_sta`):** SensorThings
+  `https://iot.hamburg.de/v1.1`, Dienste `HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren` (829
+  Zählstellen Kfz, 341 davon auch Schwerverkehr – an denselben Things) und
+  `HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren` (312); Layer je Zählstelle 5-Min, 15-Min,
+  1-Stunde, 1-Tag, 1-Woche. Datastreams per `properties/serviceName` und `properties/layerName`
+  filtern (die Things tragen den Dienst nicht). Fallen:
+  - **Rückreichweite:** laut Datensatzbeschreibung im Transparenzportal Stundenwerte nur „für die
+    letzten zwei Monate“ (beobachtet: Kfz und Rad ab 29.08.2026, Schwerverkehr ab 28.02.2026),
+    Tageswerte das laufende und das letzte Jahr, Wochenwerte seit Beginn. Die Vollständigkeit
+    eines Tags lässt sich nur an Stunden prüfen → die Zählkarte hebt die Stunden selbst auf
+    (Gedächtnis, Monatsdateien im Release `dauerzaehlstellen`, `pipeline/werkzeuge/gedaechtnis.py`).
+  - Ganze Tage fehlen bei allen Stellen zugleich (Ausfälle der Plattform); Werte können sich
+    noch nach ein paar Tagen ändern → jeder Lauf holt 14 Tage erneut, in die Karte kommen nur
+    Stunden, die sieben Tage alt sind.
+  - UTC (laut Quelle). Die Rückstellung legt zwei UTC-Stunden auf 2 Uhr Ortszeit.
+  - Keine Straßennamen, nur Kennung (`assetID` = Knotenpunkt, 9, Arm, Richtung) und Punkt →
+    nächste benannte Straße aus dem Geofabrik-Abzug (OSM, ODbL), Kreuzungsname aus den
+    übrigen Armen desselben Knotenpunkts.
+  - Verschachteltes `$expand=Observations(…;$filter=phenomenonTime ge …;$top=10000)` über eine
+    Seite Datastreams spart Abfragen; `$top` bis 20.000 geht.
+  - Die alten Dienste `HH_STA_AutomatisierteVerkehrsmengenerfassung` und
+    `HH_STA_HamburgerRadzaehlnetz` heißen „(veraltet)“, Tageswerte bis März 2026, Stundenwerte
+    nur noch bei 5 Datastreams (2021–2023) – keine Hamburger Historie aus Stunden.
+  - Lizenz dl-de/by-2-0 (beide Datensätze im Transparenzportal), Genauigkeit laut Quelle Kfz
+    ±10 %, Schwerverkehrsanteil ±15 %, Rad ±10–20 %.
+- **Geprüft, nicht aufgenommen (Stand 12.11.2026,** Werkzeug-Branch `werkzeug/dauer`,
+  `tools/dauer_staedte1.py`, `dauer_staedte2.py`):
+  - **Osnabrück:** SensorThings `https://daten-api.osnabrueck.de/v1.1` mit KI-Sensoren an
+    rund zehn Kreuzungen (Things „Verkehrszaehlung …“ je Fahrstreifen bzw. Abbiegestrom; PKWs,
+    LKWs, Busse, Motorräder, Fahrräder, Personen; 15-Minuten-Werte seit 2023, Zeitstempel
+    unregelmäßig zum Zeitpunkt der Übertragung). Keine Lizenzangabe (GovData-Eintrag ohne
+    Lizenz) → erst nach Klärung; die Stunden müssten aus 15-Minuten-Meldungen ohne festes
+    Raster gebildet werden.
+  - **Ulm** (`vgv_ulm`, CKAN-Datastore `datenhub.ulm.de`): eine Zeile je erkanntem
+    Verkehrsteilnehmer (Zeit, Klasse, Kamera-Kürzel, Richtung), Millionen Zeilen. Keine
+    Standorte, und ohne Betriebszeiten ist eine Stunde ohne Zeile nicht von einem Ausfall zu
+    unterscheiden → nicht aufnehmbar.
+  - **Heidelberg:** Kameradaten (TrafficFlowObserved, CC0) im CKAN der Datenplattform, aber die
+    CKAN-API antwortet mit 404 (Metadaten zuletzt 2023); die Verkehrsrechnerdaten gibt es nur
+    über eine API mit Schlüssel (`api-key` im MobiData-Eintrag) → nicht keyless.
+  - **Freiburg:** WFS `digit_verkehrszaehl` nur mit der Ebene `zaehl_co2_aktuell` (letzte
+    Werte vom Mai 2024, keine Reihe) – weiter Testbetrieb.
+  - **Ettlingen:** Stundenwerte je Fahrzeugklasse, aber nur CC BY-NC 4.0 → nicht aufnehmen.
+  - **Leipzig, Mannheim, Aachen, Ulm (Blautalradweg):** offen nur Rad-Zählsäulen (Eco-Counter)
+    – eigener späterer Schritt (Konzept, Entscheidung 1). Leipzigs 24 Kfz-Dauerzählstellen nur
+    im Dashboard, nicht als Daten.
+  - **Darmstadt, Wiesbaden, Kaiserslautern:** keine offenen kommunalen Zeitreihen gefunden (in
+    Darmstadt sind die „Verkehrssensoren“ bei sensoto.io die BASt-Zählstellen; das Portal
+    `opendata.cloud.wiesbaden.de` war aus dem Workflow nicht erreichbar).
+  - **Konstanz, Gelsenkirchen:** laut svz (AGENTS.md § 3) nur Echtzeit-Zähler (DATEX II) – nicht
+    weiter geprüft.
+  - **Nicht kommunal** (wie BASt, vorerst nicht): „Stundenwerte der Dauerzählstellen in
+    Baden-Württemberg“ (Mobilithek). Kandidat mit einer Stelle: Bielefeld,
+    Verkehrszählstelle Ostwestfalendamm (Rohdaten im BASt-Format, Open.NRW).

@@ -131,3 +131,9 @@ test("Gruppen aus den Daten: Bits je Stelle, Thema, Quellen ohne Werte am Tag, T
     "2025-01-03", () => "dl-de/by-2-0");
   assert.match(csv.split("\n")[0], /;tagtyp;kfz_tagessumme;sv_tagessumme;rad_tagessumme;lizenz$/);
 });
+
+test("Zeitraum: über Jahre als Jahre, sonst als Tage", async () => {
+  const { zeitraumText } = await import("../../js/data/dauer.js");
+  assert.equal(zeitraumText("2015-01-01", "2025-06-30"), "2015–2025");
+  assert.equal(zeitraumText("2026-08-29", "2026-11-05"), "29.08.2026 – 05.11.2026");
+});

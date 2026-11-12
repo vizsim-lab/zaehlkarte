@@ -7,7 +7,9 @@
 // Texte der Oberfläche über t() (js/sprache/texte.js); nach einem Sprachwechsel baut
 // `uebersetze()` die erzeugten Listen neu.
 import { ARTEN, STUFENFARBEN, TAGE, THEMEN, kennzahlText, stufenFuer, stufenText } from "../data/modell.js";
-import { DAUER_STUFEN, DAUER_THEMEN, kennzahlTextDauer, plusTage, quellenOhneTag, tageZwischen, tagtypen } from "../data/dauer.js";
+import {
+  DAUER_STUFEN, DAUER_THEMEN, kennzahlTextDauer, plusTage, quellenOhneTag, tageZwischen, tagtypen, zeitraumText,
+} from "../data/dauer.js";
 import { DATENLAGE_KLASSEN } from "../map/ebenen.js";
 import { datum, t, wochentag, zahl } from "../sprache/texte.js";
 
@@ -297,7 +299,7 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     block.id = "quellen-dauer";
     block.innerHTML = `<div class="legend-section-subtitle">${esc(t("quellen.dauer"))}</div>` + dauer.quellenMeta.map((q) => `
       <div class="quelle-eintrag">
-        <div class="quelle-name">${esc(q.name)} <span class="pop-meta">${esc(t("quellen.dauer_umfang", { stellen: zahl(q.stellen), von: q.von.slice(0, 4), bis: q.bis.slice(0, 4) }))}</span></div>
+        <div class="quelle-name">${esc(q.name)} <span class="pop-meta">${esc(t("quellen.dauer_umfang", { stellen: zahl(q.stellen), zeitraum: zeitraumText(q.von, q.bis) }))}</span></div>
         <div class="pop-meta" lang="de">${esc(q.art ?? "")}${q.weg ? ` · ${esc(q.weg)}` : ""}</div>
         <ul lang="de">${q.lizenzen.map((l) => `<li>${l.herkunft_url ? `<a href="${esc(l.herkunft_url)}" target="_blank" rel="noopener">${esc(l.titel)}</a>` : esc(l.titel)}${l.herausgeber ? `, ${esc(l.herausgeber)}` : ""} – ${l.lizenz_url ? `<a href="${esc(l.lizenz_url)}" target="_blank" rel="noopener">${esc(l.lizenz)}</a>` : esc(l.lizenz ?? "")}</li>`).join("")}</ul>
       </div>`).join("");

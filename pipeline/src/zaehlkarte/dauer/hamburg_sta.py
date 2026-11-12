@@ -294,8 +294,10 @@ def _strassen(q: dict, pfade: Pfade, ds: dict[str, list[dict]], gordner: Path) -
         return []
     from zaehlkarte.fetch import lade
 
-    osm = pfade.roh / q["code"] / Path(urllib.parse.urlparse(q["osm"]).path).name
-    lade(q["osm"], osm)
+    # ein Abzug für alle Quellen derselben Gegend; am selben Tag nicht noch einmal laden
+    osm = pfade.roh / "osm" / Path(urllib.parse.urlparse(q["osm"]).path).name
+    if not osm.exists() or time.time() - osm.stat().st_mtime > 86_400:
+        lade(q["osm"], osm)
     treffer = naechste_strassen(osm, fehlt)
     for k in fehlt:
         stellen[k] = treffer.get(k) or {"name": None}

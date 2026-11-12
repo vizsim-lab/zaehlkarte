@@ -16,8 +16,8 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
 - **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen.
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
-  Legende): fest eingebaute Zähler mit Werten über Jahre – die Karte zeigt die Tagessumme
-  an einem wählbaren Tag, je Stelle die Tagessummen aller Jahre und den Tagesgang des Tags.
+  Legende): fest eingebaute Zähler in Berlin und Hamburg – die Karte zeigt die Tagessumme an
+  einem wählbaren Tag, je Stelle die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
 - **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
   `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
   Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
@@ -26,7 +26,7 @@ Zwei Familien, beide nur mit gezählten Werten im Zeitverlauf: **Kurzzeitzählun
 Kommunen (Werte je Zählung) und **Dauerzählstellen** der Kommunen (Stunden- und Tageswerte).
 Nicht gemeint sind Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür gibt
 es [vizsim/svz](https://github.com/vizsim/svz). Liefert eine Quelle beides, nimmt jedes Repo
-seinen Teil: Hamburgs DTV-Tabelle gehört nach svz, die Stundenwerte der Detektoren hierher.
+seinen Teil: Hamburgs DTV-Tabelle gehört nach svz, die Stundenwerte der Wärmebildkameras hierher.
 Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
 [vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege).
 
@@ -48,6 +48,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Quelle | Was | Zeitraum | Weg | Lizenz |
 |---|---|---|---|---|
 | Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
+| Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; Straßennamen aus OpenStreetMap | Kfz und Rad ab 29.08.2026, Schwerverkehr ab 28.02.2026, wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`. Rund 1.500 Berliner Zählungen haben noch keine
@@ -114,8 +115,13 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   vollständig sind); Pfeile, Datum und Regler wählen einen anderen. Die Seitenleiste zeigt die
   Tagessummen über alle Jahre (gefärbt nach Schultag, Ferien, Wochenende/Feiertag) und den
   Tagesgang des Tags – Stundenwerte für die jüngsten 12 Monate der Quelle.
-- **Lkw (Detektor)** ist die Klasse, die der Detektor von Pkw unterscheidet – nicht dasselbe
-  wie der Schwerverkehr der Kurzzeitzählungen, darum eine eigene Verkehrsart.
+- **Lkw (Detektor)** (Berlin) und **Schwerverkehr (Detektor)** (Hamburg) sind die Klassen, die
+  der Detektor bzw. die Kamera von Pkw unterscheidet – nicht dasselbe wie der Schwerverkehr der
+  Kurzzeitzählungen und nicht dasselbe wie einander, darum je eine eigene Verkehrsart. Welche
+  Verkehrsarten es gibt, richtet sich nach den Quellen (Kfz, Lkw, Schwerverkehr, Rad).
+- Mehrere Quellen, verschiedene Zeiträume: Berlin endet im Juni 2025, Hamburg ist aktuell.
+  Hat eine Quelle am gewählten Tag keine Werte, nennt die Legende ihren Zeitraum und springt auf
+  Wunsch zu ihrem Standardtag. Schultag und Ferien gelten je Land.
 - Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
   (eine Stunde nur bei mindestens 75 % gültigen Messintervallen und nur, wenn alle Fahrstreifen
   gültig sind). Ab 2025 gibt es nur die neue Qualitätssicherung je Fahrstreifen; die Zählkarte
@@ -123,6 +129,13 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   auf ±2 % überein (Median-Abweichung 0 %). Ab 2021 sind deutlich weniger Tage vollständig
   gezählt als davor. Messquerschnitte, die in den Stammdaten (Stand Juli 2022) fehlen – vor
   allem neue mit „n“ am Ende der Kennung –, haben keine Lage und fehlen in der Karte.
+- Hamburg: Stundenwerte je Zählstelle wie geliefert (UTC, in Ortszeit umgerechnet; bei der
+  Rückstellung liegen zwei Stunden in 2–3 Uhr). Die Quelle hält Stundenwerte nur zwei Monate
+  vor; die Zählkarte hebt sie selbst auf (Gedächtnis, siehe unten) und übernimmt eine Stunde
+  erst, wenn sie sieben Tage alt ist (Lücken werden laut Quelle noch nachgeliefert). Ganze Tage
+  fehlen gelegentlich an allen Stellen zugleich. Die Quelle nennt keine Straßen: Der Name ist die
+  nächste benannte Straße aus OpenStreetMap, die Kreuzung ergibt sich aus den übrigen Armen
+  desselben Knotenpunkts.
 
 ## Aufbau
 
@@ -131,7 +144,7 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
   config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
   src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
                             olpe_radar, konstanz_mobil, potsdam_pdf, xanten_pdf)
-  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz), eigener Bau
+  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta), eigener Bau
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
@@ -159,12 +172,18 @@ kleinen synthetischen Datei in `pipeline/tests/`. Wie man Quellen findet und was
 funktioniert hat: [AGENTS.md](AGENTS.md).
 
 Die Daten erneuert der Workflow „Kartendaten neu bauen“ (monatlich und von Hand) als Pull
-Request. Die Dauerzählstellen baut der Workflow „Dauerzählstellen bauen“ (monatlich, von Hand
-und bei Änderungen an `pipeline/src/zaehlkarte/dauer/`) und legt sie als Release-Asset
-`dauerzaehlstellen/dauer.tar.gz` ab – rund 30 MB, die sich laufend ändern, gehören nicht ins
-Git. Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die
-Kurzzeitzählungen. Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages
-ausgeliefert.
+Request. Die Dauerzählstellen baut der Workflow „Dauerzählstellen bauen“ (wöchentlich, von
+Hand und bei Änderungen an `pipeline/src/zaehlkarte/dauer/`) und legt sie als Release-Asset
+`dauerzaehlstellen/dauer.tar.gz` ab – Daten, die sich laufend ändern, gehören nicht ins Git.
+Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die Kurzzeitzählungen.
+
+**Gedächtnis:** Hamburg hält Stundenwerte nur zwei Monate vor. Was die Zählkarte davon
+aufhebt (Monatsdateien je Quelle, `<code>__stunden_JJJJ-MM.csv.gz`, und die Straßennamen
+`<code>__strassen.json`), liegt im selben Release. Der Workflow holt es vor dem Abruf und legt
+danach ab, was sich geändert hat – nie mit weniger Werten (`pipeline/werkzeuge/gedaechtnis.py`).
+Wer diese Assets löscht, verliert die Stunden, die die Quelle nicht mehr hat.
+
+Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
 
 ## Lizenz
 
