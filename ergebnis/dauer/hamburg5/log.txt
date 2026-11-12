@@ -1,0 +1,13 @@
+spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Kfz_Zaehlstelle_1-Stunde {'n': 829, 'mit_zeit': 798}
+spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde {'n': 341, 'mit_zeit': 341}
+spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Kfz_Zaehlstelle_15-Min {'n': 829, 'mit_zeit': 781}
+spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Kfz_Zaehlstelle_5-Min {'n': 829, 'mit_zeit': 829}
+spanne HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren Anzahl_Fahrraeder_Zaehlstelle_1-Stunde {'n': 312, 'mit_zeit': 312}
+spanne HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren Anzahl_Fahrraeder_Zaehlstelle_15-Min {'n': 312, 'mit_zeit': 309}
+spanne HH_STA_AutomatisierteVerkehrsmengenerfassung Anzahl_Kfz_Zaehlstelle_1-Stunde {'n': 820, 'mit_zeit': 5}
+spanne HH_STA_HamburgerRadzaehlnetz Anzahl_Fahrraeder_Zaehlstelle_1-Stunde {'n': 311, 'mit_zeit': 0}
+spanne HH_STA_AutomatisierteVerkehrsmengenerfassung Anzahl_Kfz_Zaehlstelle_1-Tag {'n': 819, 'mit_zeit': 811}
+things HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren ok
+things HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren ok
+abruf {'top1000': {'geliefert': 1000, 'sekunden': 1.22, 'naechste': True, 'naechste_url': 'https://iot.hamburg.de/v1.1/Datastreams(26349)/Observations?$top=1000&$skip=1000&$select=phenomenonTime,result&$orderby=phenomenonTime+asc,%40iot.id+asc&$skipFilter=%28phenomenonTime+gt+2026-10-18T17%3A00%3A00Z%2F2026-10-18T17%3A59%3A59Z%29'}, 'top5000': {'geliefert': 1601, 'sekunden': 1.22, 'naechste': False, 'naechste_url': ''}, 'top10000': {'geliefert': 1601, 'sekunden': 1.03, 'naechste': False, 'naechste_url': ''}, 'top20000': {'geliefert': 1601, 'sekunden': 1.0, 'naechste': False, 'naechste_url': ''}, 'expand50': {'datastreams': 50, 'sekunden': 4.14, 'obs': [284, 284, 152, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 0, 284, 269, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 0, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284, 284], 'obs_naechste': [False, False, False, False, False, False, False, False, False, False], 'naechste': True}}
+luecken ok

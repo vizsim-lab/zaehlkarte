@@ -1,0 +1,1820 @@
+{
+ "abgefragt": "2026-11-12T20:16:58Z",
+ "spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Kfz_Zaehlstelle_1-Stunde": {
+  "n": 829,
+  "mit_zeit": 798,
+  "beginn": [
+   "2026-08-29T00:00:00Z",
+   "2026-08-29T00:00:00Z",
+   "2026-10-13T07:00:00Z"
+  ],
+  "ende": [
+   "2026-08-29T23:59:59Z",
+   "2026-11-12T19:59:59Z",
+   "2026-11-12T19:59:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2026-08-29",
+    792
+   ],
+   [
+    "2026-09-08",
+    2
+   ],
+   [
+    "2026-09-22",
+    2
+   ],
+   [
+    "2026-10-13",
+    2
+   ]
+  ]
+ },
+ "spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde": {
+  "n": 341,
+  "mit_zeit": 341,
+  "beginn": [
+   "2026-02-28T00:00:00Z",
+   "2026-02-28T00:00:00Z",
+   "2026-07-16T07:00:00Z"
+  ],
+  "ende": [
+   "2026-03-19T10:59:59Z",
+   "2026-11-12T19:59:59Z",
+   "2026-11-12T19:59:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2026-02-28",
+    297
+   ],
+   [
+    "2026-04-16",
+    9
+   ],
+   [
+    "2026-04-18",
+    9
+   ],
+   [
+    "2026-07-16",
+    9
+   ],
+   [
+    "2026-03-16",
+    6
+   ]
+  ]
+ },
+ "spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Kfz_Zaehlstelle_15-Min": {
+  "n": 829,
+  "mit_zeit": 781,
+  "beginn": [
+   "2026-10-28T22:15:00Z",
+   "2026-10-28T22:15:00Z",
+   "2026-11-06T12:00:00Z"
+  ],
+  "ende": [
+   "2026-10-30T13:59:59Z",
+   "2026-11-12T19:59:59Z",
+   "2026-11-12T19:59:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2026-10-28",
+    769
+   ],
+   [
+    "2026-11-06",
+    6
+   ],
+   [
+    "2026-11-03",
+    3
+   ],
+   [
+    "2026-11-05",
+    3
+   ]
+  ]
+ },
+ "spanne HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren Anzahl_Kfz_Zaehlstelle_5-Min": {
+  "n": 829,
+  "mit_zeit": 829,
+  "beginn": [
+   "2026-02-28T00:00:00Z",
+   "2026-02-28T00:00:00Z",
+   "2026-07-16T07:55:00Z"
+  ],
+  "ende": [
+   "2026-03-19T11:14:59Z",
+   "2026-11-12T20:09:59Z",
+   "2026-11-12T20:09:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2026-02-28",
+    777
+   ],
+   [
+    "2026-04-18",
+    9
+   ],
+   [
+    "2026-07-16",
+    9
+   ],
+   [
+    "2026-03-18",
+    8
+   ],
+   [
+    "2026-03-01",
+    7
+   ]
+  ]
+ },
+ "spanne HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren Anzahl_Fahrraeder_Zaehlstelle_1-Stunde": {
+  "n": 312,
+  "mit_zeit": 312,
+  "beginn": [
+   "2026-08-29T00:00:00Z",
+   "2026-08-29T00:00:00Z",
+   "2026-08-29T00:00:00Z"
+  ],
+  "ende": [
+   "2026-10-01T09:59:59Z",
+   "2026-11-12T19:59:59Z",
+   "2026-11-12T19:59:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2026-08-29",
+    312
+   ]
+  ]
+ },
+ "spanne HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren Anzahl_Fahrraeder_Zaehlstelle_15-Min": {
+  "n": 312,
+  "mit_zeit": 309,
+  "beginn": [
+   "2026-10-28T21:45:00Z",
+   "2026-10-28T21:45:00Z",
+   "2026-10-28T21:45:00Z"
+  ],
+  "ende": [
+   "2026-11-04T08:29:59Z",
+   "2026-11-12T19:59:59Z",
+   "2026-11-12T19:59:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2026-10-28",
+    309
+   ]
+  ]
+ },
+ "spanne HH_STA_AutomatisierteVerkehrsmengenerfassung Anzahl_Kfz_Zaehlstelle_1-Stunde": {
+  "n": 820,
+  "mit_zeit": 5,
+  "beginn": [
+   "2021-01-21T23:00:00Z",
+   "2021-01-21T23:00:00Z",
+   "2022-09-01T22:00:00Z"
+  ],
+  "ende": [
+   "2022-11-02T11:59:59Z",
+   "2023-04-06T19:59:59Z",
+   "2023-04-17T04:59:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2021-01-21",
+    3
+   ],
+   [
+    "2022-09-01",
+    2
+   ]
+  ]
+ },
+ "spanne HH_STA_HamburgerRadzaehlnetz Anzahl_Fahrraeder_Zaehlstelle_1-Stunde": {
+  "n": 311,
+  "mit_zeit": 0
+ },
+ "spanne HH_STA_AutomatisierteVerkehrsmengenerfassung Anzahl_Kfz_Zaehlstelle_1-Tag": {
+  "n": 819,
+  "mit_zeit": 811,
+  "beginn": [
+   "2019-12-31T23:00:00Z",
+   "2020-04-08T22:00:00Z",
+   "2025-06-25T22:00:00Z"
+  ],
+  "ende": [
+   "2020-03-12T22:59:59Z",
+   "2026-03-01T22:59:59Z",
+   "2026-03-01T22:59:59Z"
+  ],
+  "beginn_haeufig": [
+   [
+    "2019-12-31",
+    201
+   ],
+   [
+    "2020-10-31",
+    43
+   ],
+   [
+    "2020-01-13",
+    33
+   ],
+   [
+    "2020-01-24",
+    22
+   ],
+   [
+    "2020-01-29",
+    15
+   ]
+  ]
+ },
+ "things HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren": {
+  "datastreams": 829,
+  "things": 829,
+  "thing_schluessel": [
+   [
+    "art",
+    829
+   ],
+   [
+    "assetID",
+    829
+   ],
+   [
+    "infoLastUpdate",
+    829
+   ],
+   [
+    "internID",
+    829
+   ],
+   [
+    "keywords",
+    829
+   ],
+   [
+    "language",
+    829
+   ],
+   [
+    "ownerThing",
+    829
+   ],
+   [
+    "richtung",
+    823
+   ],
+   [
+    "direction",
+    6
+   ]
+  ],
+  "location_schluessel": [
+   [
+    "infoLastUpdate",
+    829
+   ],
+   [
+    "internID",
+    829
+   ]
+  ],
+  "location_namen_haeufig": [
+   [
+    "Verkehrszählstelle 0248931",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0295971",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0238972",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0211982",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0349970",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0246982",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0244981",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0408931",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0360941",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0394930",
+    1
+   ]
+  ],
+  "location_typen": [
+   [
+    "Feature",
+    829
+   ]
+  ],
+  "beispiele": [
+   {
+    "@iot.id": 12102,
+    "name": "Verkehrszählstelle 0248931",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "0248931",
+     "infoLastUpdate": "2025-11-25T10:45:51.030Z",
+     "internID": "MQ_1240",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Nordost nach Südwest"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523925,
+      "name": "Verkehrszählstelle 0248931",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 0248 auf dem Richtungsarm Nordost von Nordost nach Südwest",
+      "properties": {
+       "infoLastUpdate": "2025-11-25T10:45:51.030Z",
+       "internID": "MQ_1240"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         10.167711,
+         53.606159
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12079,
+    "name": "Verkehrszählstelle 0295971",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "0295971",
+     "infoLastUpdate": "2025-11-19T09:01:57.307Z",
+     "internID": "MQ_1506",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Nordost nach Südwest"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523915,
+      "name": "Verkehrszählstelle 0295971",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 0295 auf dem Richtungsarm Südwest von Nordost nach Südwest",
+      "properties": {
+       "infoLastUpdate": "2025-11-19T09:01:57.307Z",
+       "internID": "MQ_1506"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         9.998994,
+         53.579992
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12075,
+    "name": "Verkehrszählstelle 0238972",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "0238972",
+     "infoLastUpdate": "2025-11-25T10:28:45.243Z",
+     "internID": "MQ_1455",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Südwest nach Nordost"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523916,
+      "name": "Verkehrszählstelle 0238972",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 0238 auf dem Richtungsarm Südwest von Südwest nach Nordost",
+      "properties": {
+       "infoLastUpdate": "2025-11-25T10:28:45.243Z",
+       "internID": "MQ_1455"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         10.068329,
+         53.600544
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12104,
+    "name": "Verkehrszählstelle 0211982",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "0211982",
+     "infoLastUpdate": "2026-03-17T15:46:03.429Z",
+     "internID": "MQ_1122",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "West nach Ost"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523932,
+      "name": "Verkehrszählstelle 0211982",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 0211 auf dem Richtungsarm West von West nach Ost",
+      "properties": {
+       "infoLastUpdate": "2026-01-13T10:02:30.258Z",
+       "internID": "MQ_1122"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         9.929822,
+         53.629161
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12112,
+    "name": "Verkehrszählstelle 0349970",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "0349970",
+     "infoLastUpdate": "2025-11-19T20:08:25.664Z",
+     "internID": "MQ_1531",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Keine Richtung"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523938,
+      "name": "Verkehrszählstelle 0349970",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 0349 auf dem Richtungsarm Zählquerschnitt für den Zählquerschnitt",
+      "properties": {
+       "infoLastUpdate": "2025-11-19T20:08:25.664Z",
+       "internID": "MQ_1531"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         10.108517,
+         53.592061
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12132,
+    "name": "Verkehrszählstelle 0246982",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "0246982",
+     "infoLastUpdate": "2025-11-25T10:04:30.724Z",
+     "internID": "MQ_1000",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "West nach Ost"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523970,
+      "name": "Verkehrszählstelle 0246982",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 0246 auf dem Richtungsarm West von West nach Ost",
+      "properties": {
+       "infoLastUpdate": "2025-11-25T10:04:30.724Z",
+       "internID": "MQ_1000"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         10.009475,
+         53.648345
+        ]
+       }
+      }
+     }
+    ]
+   }
+  ],
+  "ds_schluessel": [
+   [
+    "aggregationDuration",
+    829
+   ],
+   [
+    "aggregationMethod",
+    829
+   ],
+   [
+    "art",
+    829
+   ],
+   [
+    "assetID",
+    829
+   ],
+   [
+    "direction",
+    829
+   ],
+   [
+    "infoLastUpdate",
+    829
+   ],
+   [
+    "internID",
+    829
+   ],
+   [
+    "knotenarm",
+    829
+   ],
+   [
+    "layerName",
+    829
+   ],
+   [
+    "mediaMonitored",
+    829
+   ],
+   [
+    "ownerData",
+    829
+   ],
+   [
+    "resultNature",
+    829
+   ],
+   [
+    "serviceName",
+    829
+   ],
+   [
+    "topic",
+    829
+   ],
+   [
+    "typ",
+    829
+   ],
+   [
+    "zaehlfelder",
+    823
+   ],
+   [
+    "zusammensetzung",
+    6
+   ]
+  ],
+  "ds_beispiele": [
+   {
+    "@iot.id": 26349,
+    "name": "Kfz-Aufkommen an Verkehrszählstelle 0248931 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "0248",
+     "direction": "1",
+     "infoLastUpdate": "2026-03-30T09:40:58.915Z",
+     "internID": "MQ_1240",
+     "knotenarm": "3",
+     "layerName": "Anzahl_Kfz_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Kfz",
+     "zaehlfelder": [
+      "0699-Z.3",
+      "0699-Z.4"
+     ]
+    }
+   },
+   {
+    "@iot.id": 26353,
+    "name": "Kfz-Aufkommen an Verkehrszählstelle 0295971 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "0295",
+     "direction": "1",
+     "infoLastUpdate": "2026-04-13T11:54:44.502Z",
+     "internID": "MQ_1506",
+     "knotenarm": "7",
+     "layerName": "Anzahl_Kfz_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Kfz",
+     "zaehlfelder": [
+      "2167-Z.2"
+     ]
+    }
+   },
+   {
+    "@iot.id": 26354,
+    "name": "Kfz-Aufkommen an Verkehrszählstelle 0238972 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "0238",
+     "direction": "2",
+     "infoLastUpdate": "2026-03-26T11:24:21.929Z",
+     "internID": "MQ_1455",
+     "knotenarm": "7",
+     "layerName": "Anzahl_Kfz_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Kfz",
+     "zaehlfelder": [
+      "0601-Z.6",
+      "0601-Z.7",
+      "0601-Z.8"
+     ]
+    }
+   },
+   {
+    "@iot.id": 26372,
+    "name": "Kfz-Aufkommen an Verkehrszählstelle 0211982 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "0211",
+     "direction": "2",
+     "infoLastUpdate": "2026-03-17T15:46:03.429Z",
+     "internID": "MQ_1122",
+     "knotenarm": "8",
+     "layerName": "Anzahl_Kfz_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Kfz",
+     "zaehlfelder": [
+      "0751-Z.13",
+      "0751-Z.14",
+      "0751-Z.15",
+      "0751-Z.16"
+     ]
+    }
+   }
+  ],
+  "sv_things": 341,
+  "sv_ohne_kfz_thing": 0,
+  "sv_ds_beispiel": [
+   {
+    "@iot.id": 26360,
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "0211",
+     "direction": "1",
+     "infoLastUpdate": "2026-03-17T15:45:59.580Z",
+     "internID": "MQ_1454",
+     "knotenarm": "8",
+     "layerName": "Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Schwerverkehr",
+     "zaehlfelder": [
+      "0751-Z.22",
+      "0751-Z.23"
+     ]
+    },
+    "Thing": {
+     "@iot.id": 12092
+    }
+   },
+   {
+    "@iot.id": 26365,
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "0219",
+     "direction": "2",
+     "infoLastUpdate": "2026-03-17T15:55:02.679Z",
+     "internID": "MQ_1991",
+     "knotenarm": "8",
+     "layerName": "Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Schwerverkehr",
+     "zaehlfelder": [
+      "0360-Z.16",
+      "0360-Z.18",
+      "0360-Z.19",
+      "0360-Z.20",
+      "0360-Z.21"
+     ]
+    },
+    "Thing": {
+     "@iot.id": 12094
+    }
+   }
+  ]
+ },
+ "things HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren": {
+  "datastreams": 312,
+  "things": 312,
+  "thing_schluessel": [
+   [
+    "art",
+    312
+   ],
+   [
+    "assetID",
+    312
+   ],
+   [
+    "infoLastUpdate",
+    312
+   ],
+   [
+    "internID",
+    312
+   ],
+   [
+    "keywords",
+    312
+   ],
+   [
+    "language",
+    312
+   ],
+   [
+    "ownerThing",
+    312
+   ],
+   [
+    "richtung",
+    312
+   ]
+  ],
+  "location_schluessel": [
+   [
+    "infoLastUpdate",
+    312
+   ],
+   [
+    "internID",
+    312
+   ]
+  ],
+  "location_namen_haeufig": [
+   [
+    "Verkehrszählstelle 7433952",
+    1
+   ],
+   [
+    "Verkehrszählstelle 6085970",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0285940",
+    1
+   ],
+   [
+    "Verkehrszählstelle 7241941",
+    1
+   ],
+   [
+    "Verkehrszählstelle 7784972",
+    1
+   ],
+   [
+    "Verkehrszählstelle 6408960",
+    1
+   ],
+   [
+    "Verkehrszählstelle 0211950",
+    1
+   ],
+   [
+    "Verkehrszählstelle 7435961",
+    1
+   ],
+   [
+    "Verkehrszählstelle 7436960",
+    1
+   ],
+   [
+    "Verkehrszählstelle 7433912",
+    1
+   ]
+  ],
+  "location_typen": [
+   [
+    "Feature",
+    312
+   ]
+  ],
+  "beispiele": [
+   {
+    "@iot.id": 12091,
+    "name": "Verkehrszählstelle 7433952",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "7433952",
+     "infoLastUpdate": "2025-11-24T08:39:57.463Z",
+     "internID": "MQ_1920",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Südost nach Nordwest"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523937,
+      "name": "Verkehrszählstelle 7433952",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 7433 auf dem Richtungsarm Südost von Südost nach Nordwest",
+      "properties": {
+       "infoLastUpdate": "2025-11-24T08:39:57.463Z",
+       "internID": "MQ_1920"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         9.972782,
+         53.581487
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12236,
+    "name": "Verkehrszählstelle 6085970",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "6085970",
+     "infoLastUpdate": "2025-11-24T12:29:58.767Z",
+     "internID": "MQ_1648",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Keine Richtung"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26524072,
+      "name": "Verkehrszählstelle 6085970",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 6085 auf dem Richtungsarm Zählquerschnitt für den Zählquerschnitt",
+      "properties": {
+       "infoLastUpdate": "2025-11-24T12:29:58.767Z",
+       "internID": "MQ_1648"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         10.119304,
+         53.605705
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12253,
+    "name": "Verkehrszählstelle 0285940",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "0285940",
+     "infoLastUpdate": "2025-11-21T12:01:11.315Z",
+     "internID": "MQ_1756",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Keine Richtung"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26524089,
+      "name": "Verkehrszählstelle 0285940",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 0285 auf dem Richtungsarm Zählquerschnitt für den Zählquerschnitt",
+      "properties": {
+       "infoLastUpdate": "2025-11-21T12:01:11.315Z",
+       "internID": "MQ_1756"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         9.967573,
+         53.557355
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12260,
+    "name": "Verkehrszählstelle 7241941",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "7241941",
+     "infoLastUpdate": "2025-11-24T09:56:19.925Z",
+     "internID": "MQ_1855",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Ost nach West"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26524093,
+      "name": "Verkehrszählstelle 7241941",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 7241 auf dem Richtungsarm Ost von Ost nach West",
+      "properties": {
+       "infoLastUpdate": "2025-11-24T09:56:19.925Z",
+       "internID": "MQ_1855"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         10.018583105,
+         53.649513513
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12142,
+    "name": "Verkehrszählstelle 7784972",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "7784972",
+     "infoLastUpdate": "2025-11-25T07:17:43.102Z",
+     "internID": "MQ_1688",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Südwest nach Nordost"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26523979,
+      "name": "Verkehrszählstelle 7784972",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 7784 auf dem Richtungsarm Südwest von Südwest nach Nordost",
+      "properties": {
+       "infoLastUpdate": "2025-11-25T07:17:43.102Z",
+       "internID": "MQ_1688"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         9.999147,
+         53.554462
+        ]
+       }
+      }
+     }
+    ]
+   },
+   {
+    "@iot.id": 12247,
+    "name": "Verkehrszählstelle 6408960",
+    "description": "Verkehrszählstelle zur Zählung der von Infrarotdetektoren erfassten Mobilitätswerkzeuge",
+    "properties": {
+     "art": "Zählstelle",
+     "assetID": "6408960",
+     "infoLastUpdate": "2025-10-10T10:26:54.933Z",
+     "internID": "MQ_1776",
+     "keywords": [
+      "Infrarotdetektor",
+      "Verkehrsmenge",
+      "automatisierte Verkehrsmengenerfassung",
+      "Hamburg",
+      "Hamburger Radzählnetz",
+      "aVME",
+      "HaRaZäN",
+      "Zählstelle"
+     ],
+     "language": "de",
+     "ownerThing": "Freie und Hansestadt Hamburg",
+     "richtung": "Keine Richtung"
+    },
+    "Locations": [
+     {
+      "@iot.id": 26524083,
+      "name": "Verkehrszählstelle 6408960",
+      "description": "Mittelpunkt des Streckenverlaufes bezüglich Zählstelle 6408 auf dem Richtungsarm Zählquerschnitt für den Zählquerschnitt",
+      "properties": {
+       "infoLastUpdate": "2025-10-10T10:26:54.933Z",
+       "internID": "MQ_1776"
+      },
+      "location": {
+       "type": "Feature",
+       "geometry": {
+        "type": "Point",
+        "coordinates": [
+         9.989954,
+         53.559573
+        ]
+       }
+      }
+     }
+    ]
+   }
+  ],
+  "ds_schluessel": [
+   [
+    "aggregationDuration",
+    312
+   ],
+   [
+    "aggregationMethod",
+    312
+   ],
+   [
+    "art",
+    312
+   ],
+   [
+    "assetID",
+    312
+   ],
+   [
+    "direction",
+    312
+   ],
+   [
+    "infoLastUpdate",
+    312
+   ],
+   [
+    "internID",
+    312
+   ],
+   [
+    "knotenarm",
+    312
+   ],
+   [
+    "layerName",
+    312
+   ],
+   [
+    "mediaMonitored",
+    312
+   ],
+   [
+    "ownerData",
+    312
+   ],
+   [
+    "resultNature",
+    312
+   ],
+   [
+    "serviceName",
+    312
+   ],
+   [
+    "topic",
+    312
+   ],
+   [
+    "typ",
+    312
+   ],
+   [
+    "zaehlfelder",
+    312
+   ]
+  ],
+  "ds_beispiele": [
+   {
+    "@iot.id": 26385,
+    "name": "Fahrrad-Aufkommen an Verkehrszählstelle 7433952 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "7433",
+     "direction": "2",
+     "infoLastUpdate": "2026-04-30T09:16:10.380Z",
+     "internID": "MQ_1920",
+     "knotenarm": "5",
+     "layerName": "Anzahl_Fahrraeder_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Rad",
+     "zaehlfelder": [
+      "MQ31.5-B_31.5_2_I",
+      "MQ31.6-B_31.6_2_G"
+     ]
+    }
+   },
+   {
+    "@iot.id": 26504,
+    "name": "Fahrrad-Aufkommen an Verkehrszählstelle 6085970 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "6085",
+     "direction": "0",
+     "infoLastUpdate": "2026-04-30T07:14:18.474Z",
+     "internID": "MQ_1648",
+     "knotenarm": "7",
+     "layerName": "Anzahl_Fahrraeder_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Rad",
+     "zaehlfelder": [
+      "MQ45.3-B_45.3_1_G",
+      "MQ45.3-B_45.3_2_I",
+      "MQ45.4-D_45.4_1_I"
+     ]
+    }
+   },
+   {
+    "@iot.id": 26534,
+    "name": "Fahrrad-Aufkommen an Verkehrszählstelle 0285940 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "0285",
+     "direction": "0",
+     "infoLastUpdate": "2026-04-07T10:29:26.898Z",
+     "internID": "MQ_1756",
+     "knotenarm": "4",
+     "layerName": "Anzahl_Fahrraeder_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Rad",
+     "zaehlfelder": [
+      "MQ2.4-G_2.4_1_I",
+      "MQ2.5-H_2.5_2_I"
+     ]
+    }
+   },
+   {
+    "@iot.id": 26538,
+    "name": "Fahrrad-Aufkommen an Verkehrszählstelle 7241941 im 1-Stunde-Intervall",
+    "properties": {
+     "aggregationDuration": "P1H",
+     "aggregationMethod": "count",
+     "art": "Zählstelle",
+     "assetID": "7241",
+     "direction": "1",
+     "infoLastUpdate": "2026-04-30T09:08:46.738Z",
+     "internID": "MQ_1855",
+     "knotenarm": "4",
+     "layerName": "Anzahl_Fahrraeder_Zaehlstelle_1-Stunde",
+     "mediaMonitored": "transport",
+     "ownerData": "Freie und Hansestadt Hamburg",
+     "resultNature": "processed",
+     "serviceName": "HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren",
+     "topic": "Verkehr",
+     "typ": "Rad",
+     "zaehlfelder": [
+      "MQ41.5-B_41.5_1_I",
+      "MQ41.4-B_41.4_1_G"
+     ]
+    }
+   }
+  ]
+ },
+ "abruf": {
+  "top1000": {
+   "geliefert": 1000,
+   "sekunden": 1.22,
+   "naechste": true,
+   "naechste_url": "https://iot.hamburg.de/v1.1/Datastreams(26349)/Observations?$top=1000&$skip=1000&$select=phenomenonTime,result&$orderby=phenomenonTime+asc,%40iot.id+asc&$skipFilter=%28phenomenonTime+gt+2026-10-18T17%3A00%3A00Z%2F2026-10-18T17%3A59%3A59Z%29"
+  },
+  "top5000": {
+   "geliefert": 1601,
+   "sekunden": 1.22,
+   "naechste": false,
+   "naechste_url": ""
+  },
+  "top10000": {
+   "geliefert": 1601,
+   "sekunden": 1.03,
+   "naechste": false,
+   "naechste_url": ""
+  },
+  "top20000": {
+   "geliefert": 1601,
+   "sekunden": 1.0,
+   "naechste": false,
+   "naechste_url": ""
+  },
+  "expand50": {
+   "datastreams": 50,
+   "sekunden": 4.14,
+   "obs": [
+    284,
+    284,
+    152,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    0,
+    284,
+    269,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    0,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284,
+    284
+   ],
+   "obs_naechste": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "naechste": true
+  }
+ },
+ "luecken": {
+  "26349": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 196,
+   "max": 528
+  },
+  "27756": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 566,
+   "max": 1233
+  },
+  "29130": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 1122,
+   "max": 2365
+  },
+  "30471": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 483,
+   "max": 1662
+  },
+  "31771": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 175,
+   "max": 757
+  },
+  "33360": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 885,
+   "max": 2204
+  },
+  "34538": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 218,
+   "max": 539
+  },
+  "36015": {
+   "n": 1601,
+   "erste": [
+    "2026-08-29T00:00:00Z",
+    "2026-08-29T01:00:00Z"
+   ],
+   "letzte": [
+    "2026-11-12T18:00:00Z",
+    "2026-11-12T19:00:00Z"
+   ],
+   "doppelt": 0,
+   "tage": 67,
+   "tage_24": 64,
+   "tage_verteilung": [
+    [
+     24,
+     64
+    ],
+    [
+     22,
+     1
+    ],
+    [
+     23,
+     1
+    ],
+    [
+     20,
+     1
+    ]
+   ],
+   "ende_minute": [
+    [
+     "59:59",
+     1601
+    ]
+   ],
+   "nicht_ganzzahlig": 0,
+   "negativ": 0,
+   "median": 236,
+   "max": 625
+  }
+ }
+}
