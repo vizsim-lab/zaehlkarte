@@ -1,0 +1,70 @@
+{
+ "dateien": 272,
+ "bytes": 842066343,
+ "je_jahr": {
+  "2015": 24,
+  "2016": 24,
+  "2017": 24,
+  "2018": 24,
+  "2019": 24,
+  "2020": 24,
+  "2021": 24,
+  "2022": 24,
+  "2023": 36,
+  "2024": 36,
+  "2025": 6,
+  "ReadMe.txt": 1,
+  "Stammdaten_Verkehrsdetektion_2022_07_20.xlsx": 1
+ },
+ "bytes_je_jahr": {
+  "2015": 79643610,
+  "2016": 77930130,
+  "2017": 79575573,
+  "2018": 87738055,
+  "2019": 83179573,
+  "2020": 81241881,
+  "2021": 55216246,
+  "2022": 48499881,
+  "2023": 106546846,
+  "2024": 123483557,
+  "2025": 18934318
+ },
+ "muster": {
+  "####/alte_qualitaetssicherung/Fahrstreifendetektoren/det_val_hr_####_##.csv.gz": {
+   "n": 120,
+   "erste": "2015/alte_qualitaetssicherung/Fahrstreifendetektoren/det_val_hr_2015_01.csv.gz",
+   "letzte": "2024/alte_qualitaetssicherung/Fahrstreifendetektoren/det_val_hr_2024_12.csv.gz",
+   "groesste": 5580282
+  },
+  "####/alte_qualitaetssicherung/Messquerschnitte/mq_hr_####_##.csv.gz": {
+   "n": 120,
+   "erste": "2015/alte_qualitaetssicherung/Messquerschnitte/mq_hr_2015_01.csv.gz",
+   "letzte": "2024/alte_qualitaetssicherung/Messquerschnitte/mq_hr_2024_12.csv.gz",
+   "groesste": 2121494
+  },
+  "####/neue_qualitaetssicherung/Fahrstreifendetektoren/detektor_####_##.tgz": {
+   "n": 6,
+   "erste": "2025/neue_qualitaetssicherung/Fahrstreifendetektoren/detektor_2025_01.tgz",
+   "letzte": "2025/neue_qualitaetssicherung/Fahrstreifendetektoren/detektor_2025_06.tgz",
+   "groesste": 3667525
+  },
+  "####/neue_qualitaetssicherung/Fahrstreifendetektoren/detektoren_####_##.tgz": {
+   "n": 24,
+   "erste": "2023/neue_qualitaetssicherung/Fahrstreifendetektoren/detektoren_2023_01.tgz",
+   "letzte": "2024/neue_qualitaetssicherung/Fahrstreifendetektoren/detektoren_2024_12.tgz",
+   "groesste": 7522499
+  },
+  "ReadMe.txt": {
+   "n": 1,
+   "erste": "ReadMe.txt",
+   "letzte": "ReadMe.txt",
+   "groesste": 4704
+  },
+  "Stammdaten_Verkehrsdetektion_####_##_##.xlsx": {
+   "n": 1,
+   "erste": "Stammdaten_Verkehrsdetektion_2022_07_20.xlsx",
+   "letzte": "Stammdaten_Verkehrsdetektion_2022_07_20.xlsx",
+   "groesste": 71969
+  }
+ }
+}

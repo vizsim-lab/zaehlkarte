@@ -1,0 +1,39 @@
+{
+ "dienst": "HH_STA_AutomatisierteVerkehrsmengenerfassung",
+ "basis": "https://iot.hamburg.de/v1.1",
+ "things_anzahl": 0,
+ "things_beispiel": [],
+ "datastreams_je_layer": {
+  "Anzahl_Kfz_Zaehlstelle_15-Min": 821,
+  "Anzahl_Kfz_Zaehlstelle_1-Stunde": 820,
+  "Anzahl_Kfz_Zaehlstelle_1-Tag": 819,
+  "Anzahl_Kfz_Zaehlstelle_1-Woche": 821
+ },
+ "zeitraum_je_layer": {
+  "Anzahl_Kfz_Zaehlstelle_1-Tag": {
+   "n": 811,
+   "fruehester_beginn": "2019-12-31T23:00:00Z",
+   "spaetester_beginn": "2025-06-25T22:00:00Z",
+   "spaetestes_ende": "2026-03-01T22:59:59Z"
+  },
+  "Anzahl_Kfz_Zaehlstelle_1-Woche": {
+   "n": 819,
+   "fruehester_beginn": "2020-10-25T23:00:00Z",
+   "spaetester_beginn": "2025-06-29T22:00:00Z",
+   "spaetestes_ende": "2026-03-01T22:59:59Z"
+  },
+  "Anzahl_Kfz_Zaehlstelle_15-Min": {
+   "n": 5,
+   "fruehester_beginn": "2021-01-21T23:00:00Z",
+   "spaetester_beginn": "2022-09-23T22:00:00Z",
+   "spaetestes_ende": "2023-04-17T05:14:59Z"
+  },
+  "Anzahl_Kfz_Zaehlstelle_1-Stunde": {
+   "n": 5,
+   "fruehester_beginn": "2021-01-21T23:00:00Z",
+   "spaetester_beginn": "2022-09-01T22:00:00Z",
+   "spaetestes_ende": "2023-04-17T04:59:59Z"
+  }
+ },
+ "beobachtungen_erste_thing": {}
+}

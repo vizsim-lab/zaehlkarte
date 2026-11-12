@@ -1,0 +1,34 @@
+{
+ "dienst": "HH_STA_HamburgerRadzaehlnetz",
+ "basis": "https://iot.hamburg.de/v1.0",
+ "things_anzahl": 0,
+ "things_beispiel": [],
+ "datastreams_je_layer": {
+  "Anzahl_Fahrraeder_Zaehlstelle_15-Min": 311,
+  "Anzahl_Fahrraeder_Zaehlstelle_1-Stunde": 311,
+  "Anzahl_Fahrraeder_Zaehlstelle_1-Tag": 311,
+  "Anzahl_Fahrraeder_Zaehlstelle_1-Woche": 311,
+  "Anzahl_Fahrraeder_Zaehlfeld_5-Min": 359
+ },
+ "zeitraum_je_layer": {
+  "Anzahl_Fahrraeder_Zaehlstelle_1-Tag": {
+   "n": 311,
+   "fruehester_beginn": "2019-12-31T23:00:00Z",
+   "spaetester_beginn": "2024-12-25T23:00:00Z",
+   "spaetestes_ende": "2026-03-01T22:59:59Z"
+  },
+  "Anzahl_Fahrraeder_Zaehlstelle_1-Woche": {
+   "n": 311,
+   "fruehester_beginn": "2019-12-31T23:00:00Z",
+   "spaetester_beginn": "2025-01-19T23:00:00Z",
+   "spaetestes_ende": "2026-03-01T22:59:59Z"
+  },
+  "Anzahl_Fahrraeder_Zaehlfeld_5-Min": {
+   "n": 358,
+   "fruehester_beginn": "2019-12-31T23:00:00Z",
+   "spaetester_beginn": "2025-08-08T08:00:00Z",
+   "spaetestes_ende": "2026-03-02T06:49:59Z"
+  }
+ },
+ "beobachtungen_erste_thing": {}
+}
