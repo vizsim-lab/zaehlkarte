@@ -1,0 +1,4146 @@
+{
+ "lizenz": "Straßennamen: © OpenStreetMap-Mitwirkende, ODbL 1.0 (nächste benannte Straße)",
+ "osm": "https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf",
+ "stand": "2026-11-12",
+ "stellen": {
+  "0113920": {
+   "name": "Shanghaiallee",
+   "highway": "secondary",
+   "abstand_m": 4.2
+  },
+  "0113921": {
+   "name": "Shanghaiallee",
+   "highway": "secondary",
+   "abstand_m": 5.0
+  },
+  "0113922": {
+   "name": "Shanghaiallee",
+   "highway": "secondary",
+   "abstand_m": 2.7
+  },
+  "0201980": {
+   "name": "Tarpen",
+   "highway": "tertiary",
+   "abstand_m": 0.4
+  },
+  "0201981": {
+   "name": "Tarpen",
+   "highway": "tertiary",
+   "abstand_m": 9.6
+  },
+  "0201982": {
+   "name": "Tarpen",
+   "highway": "tertiary",
+   "abstand_m": 8.7
+  },
+  "0202980": {
+   "name": "Meenkwiese",
+   "highway": "tertiary",
+   "abstand_m": 0.5
+  },
+  "0202981": {
+   "name": "Meenkwiese",
+   "highway": "tertiary",
+   "abstand_m": 8.9
+  },
+  "0202982": {
+   "name": "Meenkwiese",
+   "highway": "tertiary",
+   "abstand_m": 7.9
+  },
+  "0203910": {
+   "name": "Pinneberger Straße",
+   "highway": "secondary",
+   "abstand_m": 0.6
+  },
+  "0203911": {
+   "name": "Pinneberger Straße",
+   "highway": "secondary",
+   "abstand_m": 9.1
+  },
+  "0203912": {
+   "name": "Pinneberger Straße",
+   "highway": "secondary",
+   "abstand_m": 10.3
+  },
+  "0204920": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 0.1
+  },
+  "0204921": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 10.0
+  },
+  "0204922": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 9.9
+  },
+  "0205960": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 0.2
+  },
+  "0205961": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 9.7
+  },
+  "0205962": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 10.0
+  },
+  "0206950": {
+   "name": "Schleswiger Damm",
+   "highway": "secondary",
+   "abstand_m": 0.7
+  },
+  "0206951": {
+   "name": "Schleswiger Damm",
+   "highway": "secondary",
+   "abstand_m": 10.5
+  },
+  "0206952": {
+   "name": "Schleswiger Damm",
+   "highway": "secondary",
+   "abstand_m": 9.1
+  },
+  "0207960": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 5.5
+  },
+  "0207961": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 4.4
+  },
+  "0207962": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 4.0
+  },
+  "0208920": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 3.5
+  },
+  "0208921": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 6.3
+  },
+  "0208922": {
+   "name": "Holsteiner Chaussee",
+   "highway": "primary",
+   "abstand_m": 5.4
+  },
+  "0210930": {
+   "name": "Papenreye",
+   "highway": "secondary",
+   "abstand_m": 0.4
+  },
+  "0210931": {
+   "name": "Papenreye",
+   "highway": "secondary",
+   "abstand_m": 10.0
+  },
+  "0210932": {
+   "name": "Papenreye",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0211910": {
+   "name": "Schleswiger Damm",
+   "highway": "primary",
+   "abstand_m": 1.3
+  },
+  "0211911": {
+   "name": "Schleswiger Damm",
+   "highway": "primary",
+   "abstand_m": 8.6
+  },
+  "0211912": {
+   "name": "Schleswiger Damm",
+   "highway": "primary",
+   "abstand_m": 11.1
+  },
+  "0211930": {
+   "name": "Wendlohstraße",
+   "highway": "tertiary",
+   "abstand_m": 0.1
+  },
+  "0211931": {
+   "name": "Wendlohstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.2
+  },
+  "0211932": {
+   "name": "Wendlohstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.4
+  },
+  "0211950": {
+   "name": "Frohmestraße",
+   "highway": "primary",
+   "abstand_m": 0.3
+  },
+  "0211951": {
+   "name": "Frohmestraße",
+   "highway": "primary",
+   "abstand_m": 9.4
+  },
+  "0211952": {
+   "name": "Frohmestraße",
+   "highway": "primary",
+   "abstand_m": 6.6
+  },
+  "0211980": {
+   "name": "Frohmestraße",
+   "highway": "secondary",
+   "abstand_m": 1.3
+  },
+  "0211981": {
+   "name": "Frohmestraße",
+   "highway": "secondary",
+   "abstand_m": 8.3
+  },
+  "0211982": {
+   "name": "Frohmestraße",
+   "highway": "secondary",
+   "abstand_m": 10.9
+  },
+  "0212910": {
+   "name": "Borsteler Chaussee",
+   "highway": "secondary",
+   "abstand_m": 1.6
+  },
+  "0212911": {
+   "name": "Borsteler Chaussee",
+   "highway": "secondary",
+   "abstand_m": 11.4
+  },
+  "0212912": {
+   "name": "Borsteler Chaussee",
+   "highway": "secondary",
+   "abstand_m": 8.1
+  },
+  "0212930": {
+   "name": "Alsterkrugchaussee",
+   "highway": "primary",
+   "abstand_m": 16.6
+  },
+  "0212931": {
+   "name": "Alsterkrugchaussee",
+   "highway": "primary",
+   "abstand_m": 9.5
+  },
+  "0212932": {
+   "name": "Alsterkrugchaussee",
+   "highway": "primary",
+   "abstand_m": 7.7
+  },
+  "0212950": {
+   "name": "Deelböge",
+   "highway": "primary",
+   "abstand_m": 8.2
+  },
+  "0212951": {
+   "name": "Deelböge",
+   "highway": "primary",
+   "abstand_m": 0.9
+  },
+  "0212952": {
+   "name": "Deelböge",
+   "highway": "primary",
+   "abstand_m": 0.5
+  },
+  "0212970": {
+   "name": "Rosenbrook",
+   "highway": "primary",
+   "abstand_m": 13.0
+  },
+  "0212971": {
+   "name": "Rosenbrook",
+   "highway": "primary",
+   "abstand_m": 6.0
+  },
+  "0212972": {
+   "name": "Rosenbrook",
+   "highway": "primary",
+   "abstand_m": 3.1
+  },
+  "0213940": {
+   "name": "Nedderfeld",
+   "highway": "secondary",
+   "abstand_m": 0.9
+  },
+  "0213941": {
+   "name": "Nedderfeld",
+   "highway": "secondary",
+   "abstand_m": 5.0
+  },
+  "0213942": {
+   "name": "Nedderfeld",
+   "highway": "secondary",
+   "abstand_m": 10.7
+  },
+  "0214910": {
+   "name": "Pinneberger Chaussee",
+   "highway": "secondary",
+   "abstand_m": 0.6
+  },
+  "0214911": {
+   "name": "Pinneberger Chaussee",
+   "highway": "secondary",
+   "abstand_m": 10.4
+  },
+  "0214912": {
+   "name": "Pinneberger Chaussee",
+   "highway": "secondary",
+   "abstand_m": 9.2
+  },
+  "0215920": {
+   "name": "Niendorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 1.4
+  },
+  "0215921": {
+   "name": "Niendorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 8.1
+  },
+  "0215922": {
+   "name": "Niendorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 10.9
+  },
+  "0216930": {
+   "name": "Oldesloer Straße",
+   "highway": "primary",
+   "abstand_m": 1.8
+  },
+  "0216931": {
+   "name": "Oldesloer Straße",
+   "highway": "primary",
+   "abstand_m": 7.3
+  },
+  "0216932": {
+   "name": "Oldesloer Straße",
+   "highway": "primary",
+   "abstand_m": 7.8
+  },
+  "0217930": {
+   "name": "Oldesloer Straße",
+   "highway": "primary",
+   "abstand_m": 5.5
+  },
+  "0217931": {
+   "name": "Oldesloer Straße",
+   "highway": "primary",
+   "abstand_m": 3.7
+  },
+  "0217932": {
+   "name": "Oldesloer Straße",
+   "highway": "primary",
+   "abstand_m": 3.8
+  },
+  "0217970": {
+   "name": "Oldesloer Straße",
+   "highway": "secondary",
+   "abstand_m": 5.3
+  },
+  "0217971": {
+   "name": "Oldesloer Straße",
+   "highway": "secondary",
+   "abstand_m": 3.3
+  },
+  "0217972": {
+   "name": "Oldesloer Straße",
+   "highway": "secondary",
+   "abstand_m": 1.2
+  },
+  "0218910": {
+   "name": "Schleswiger Damm",
+   "highway": "secondary",
+   "abstand_m": 0.4
+  },
+  "0218911": {
+   "name": "Schleswiger Damm",
+   "highway": "secondary",
+   "abstand_m": 8.7
+  },
+  "0218912": {
+   "name": "Schleswiger Damm",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0219920": {
+   "name": "Kollaustraße",
+   "highway": "primary",
+   "abstand_m": 1.7
+  },
+  "0219921": {
+   "name": "Kollaustraße",
+   "highway": "primary",
+   "abstand_m": 10.9
+  },
+  "0219922": {
+   "name": "Kollaustraße",
+   "highway": "primary",
+   "abstand_m": 7.4
+  },
+  "0219940": {
+   "name": "Osterfeldstraße",
+   "highway": "primary",
+   "abstand_m": 4.0
+  },
+  "0219941": {
+   "name": "Osterfeldstraße",
+   "highway": "primary",
+   "abstand_m": 4.8
+  },
+  "0219942": {
+   "name": "Osterfeldstraße",
+   "highway": "primary",
+   "abstand_m": 4.2
+  },
+  "0219960": {
+   "name": "Lokstedter Steindamm",
+   "highway": "primary",
+   "abstand_m": 1.6
+  },
+  "0219961": {
+   "name": "Lokstedter Steindamm",
+   "highway": "primary",
+   "abstand_m": 7.7
+  },
+  "0219962": {
+   "name": "Lokstedter Steindamm",
+   "highway": "primary",
+   "abstand_m": 11.0
+  },
+  "0219980": {
+   "name": "Vogt-Wells-Straße",
+   "highway": "primary",
+   "abstand_m": 3.3
+  },
+  "0219981": {
+   "name": "Vogt-Wells-Straße",
+   "highway": "primary",
+   "abstand_m": 13.0
+  },
+  "0219982": {
+   "name": "Vogt-Wells-Straße",
+   "highway": "primary",
+   "abstand_m": 6.3
+  },
+  "0221920": {
+   "name": "Hummelsbütteler Landstraße",
+   "highway": "secondary",
+   "abstand_m": 0.7
+  },
+  "0221921": {
+   "name": "Hummelsbütteler Landstraße",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0221922": {
+   "name": "Hummelsbütteler Landstraße",
+   "highway": "secondary",
+   "abstand_m": 10.7
+  },
+  "0222910": {
+   "name": "Karlshöher Weg",
+   "highway": "tertiary",
+   "abstand_m": 0.3
+  },
+  "0222911": {
+   "name": "Karlshöher Weg",
+   "highway": "tertiary",
+   "abstand_m": 9.4
+  },
+  "0222912": {
+   "name": "Karlshöher Weg",
+   "highway": "tertiary",
+   "abstand_m": 8.9
+  },
+  "0222930": {
+   "name": "Berner Heerweg",
+   "highway": "secondary",
+   "abstand_m": 1.5
+  },
+  "0222931": {
+   "name": "Berner Heerweg",
+   "highway": "secondary",
+   "abstand_m": 10.8
+  },
+  "0222932": {
+   "name": "Berner Heerweg",
+   "highway": "secondary",
+   "abstand_m": 7.9
+  },
+  "0222950": {
+   "name": "Berner Brücke",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0222951": {
+   "name": "Berner Brücke",
+   "highway": "secondary",
+   "abstand_m": 9.9
+  },
+  "0222952": {
+   "name": "Berner Brücke",
+   "highway": "secondary",
+   "abstand_m": 9.8
+  },
+  "0222970": {
+   "name": "Berner Heerweg",
+   "highway": "secondary",
+   "abstand_m": 6.3
+  },
+  "0222971": {
+   "name": "Berner Heerweg",
+   "highway": "secondary",
+   "abstand_m": 1.8
+  },
+  "0222972": {
+   "name": "Berner Heerweg",
+   "highway": "secondary",
+   "abstand_m": 2.9
+  },
+  "0222980": {
+   "name": "Berner Allee",
+   "highway": "tertiary",
+   "abstand_m": 0.6
+  },
+  "0222981": {
+   "name": "Berner Allee",
+   "highway": "tertiary",
+   "abstand_m": 10.4
+  },
+  "0222982": {
+   "name": "Berner Allee",
+   "highway": "tertiary",
+   "abstand_m": 9.2
+  },
+  "0223940": {
+   "name": "Steilshooper Allee",
+   "highway": "secondary",
+   "abstand_m": 4.4
+  },
+  "0223941": {
+   "name": "Steilshooper Allee",
+   "highway": "secondary",
+   "abstand_m": 3.4
+  },
+  "0223942": {
+   "name": "Steilshooper Allee",
+   "highway": "secondary",
+   "abstand_m": 5.4
+  },
+  "0224910": {
+   "name": "Alsterdorfer Damm",
+   "highway": "tertiary",
+   "abstand_m": 0.2
+  },
+  "0224911": {
+   "name": "Alsterdorfer Damm",
+   "highway": "tertiary",
+   "abstand_m": 9.7
+  },
+  "0224912": {
+   "name": "Alsterdorfer Damm",
+   "highway": "tertiary",
+   "abstand_m": 10.0
+  },
+  "0225910": {
+   "name": "Traute-Lafrenz-Straße",
+   "highway": "secondary",
+   "abstand_m": 0.3
+  },
+  "0225911": {
+   "name": "Traute-Lafrenz-Straße",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0225912": {
+   "name": "Traute-Lafrenz-Straße",
+   "highway": "secondary",
+   "abstand_m": 8.9
+  },
+  "0226910": {
+   "name": "Sengelmannstraße",
+   "highway": "primary",
+   "abstand_m": 4.5
+  },
+  "0226911": {
+   "name": "Sengelmannstraße",
+   "highway": "primary",
+   "abstand_m": 1.6
+  },
+  "0226912": {
+   "name": "Sengelmannstraße",
+   "highway": "primary",
+   "abstand_m": 5.3
+  },
+  "0227960": {
+   "name": "Tangstedter Landstraße",
+   "highway": "tertiary",
+   "abstand_m": 0.3
+  },
+  "0227961": {
+   "name": "Tangstedter Landstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.9
+  },
+  "0227962": {
+   "name": "Tangstedter Landstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.3
+  },
+  "0228920": {
+   "name": "Glashütter Landstraße",
+   "highway": "tertiary",
+   "abstand_m": 0.7
+  },
+  "0228921": {
+   "name": "Glashütter Landstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.3
+  },
+  "0228922": {
+   "name": "Glashütter Landstraße",
+   "highway": "tertiary",
+   "abstand_m": 10.7
+  },
+  "0229910": {
+   "name": "Harksheider Straße",
+   "highway": "secondary",
+   "abstand_m": 0.9
+  },
+  "0229911": {
+   "name": "Harksheider Straße",
+   "highway": "secondary",
+   "abstand_m": 10.7
+  },
+  "0229912": {
+   "name": "Harksheider Straße",
+   "highway": "secondary",
+   "abstand_m": 8.9
+  },
+  "0230920": {
+   "name": "Meiendorfer Straße",
+   "highway": "primary",
+   "abstand_m": 0.5
+  },
+  "0230921": {
+   "name": "Meiendorfer Straße",
+   "highway": "primary",
+   "abstand_m": 5.6
+  },
+  "0230922": {
+   "name": "Meiendorfer Straße",
+   "highway": "primary",
+   "abstand_m": 8.2
+  },
+  "0230940": {
+   "name": "Oldenfelder Stieg",
+   "highway": "secondary",
+   "abstand_m": 4.5
+  },
+  "0230941": {
+   "name": "Oldenfelder Stieg",
+   "highway": "secondary",
+   "abstand_m": 5.0
+  },
+  "0230942": {
+   "name": "Oldenfelder Stieg",
+   "highway": "secondary",
+   "abstand_m": 4.9
+  },
+  "0230960": {
+   "name": "Bargteheider Straße",
+   "highway": "primary",
+   "abstand_m": 5.2
+  },
+  "0230961": {
+   "name": "Bargteheider Straße",
+   "highway": "primary",
+   "abstand_m": 3.5
+  },
+  "0230962": {
+   "name": "Bargteheider Straße",
+   "highway": "primary",
+   "abstand_m": 1.2
+  },
+  "0230980": {
+   "name": "Berner Straße",
+   "highway": "secondary",
+   "abstand_m": 4.0
+  },
+  "0230981": {
+   "name": "Berner Straße",
+   "highway": "secondary",
+   "abstand_m": 5.7
+  },
+  "0230982": {
+   "name": "Berner Straße",
+   "highway": "secondary",
+   "abstand_m": 2.2
+  },
+  "0231960": {
+   "name": "Halenreie",
+   "highway": "secondary",
+   "abstand_m": 0.9
+  },
+  "0231961": {
+   "name": "Halenreie",
+   "highway": "secondary",
+   "abstand_m": 8.8
+  },
+  "0231962": {
+   "name": "Halenreie",
+   "highway": "secondary",
+   "abstand_m": 10.5
+  },
+  "0233961": {
+   "name": "Fuhlsbüttler Straße",
+   "highway": "secondary",
+   "abstand_m": 10.1
+  },
+  "0234980": {
+   "name": "Gehlengraben",
+   "highway": "primary",
+   "abstand_m": 4.5
+  },
+  "0234981": {
+   "name": "Gehlengraben",
+   "highway": "primary",
+   "abstand_m": 4.6
+  },
+  "0234982": {
+   "name": "Gehlengraben",
+   "highway": "primary",
+   "abstand_m": 4.7
+  },
+  "0235960": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 1.1
+  },
+  "0235961": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 10.7
+  },
+  "0235962": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 8.6
+  },
+  "0236920": {
+   "name": "Lemsahler Landstraße",
+   "highway": "secondary",
+   "abstand_m": 1.1
+  },
+  "0236921": {
+   "name": "Lemsahler Landstraße",
+   "highway": "secondary",
+   "abstand_m": 6.9
+  },
+  "0236922": {
+   "name": "Lemsahler Landstraße",
+   "highway": "secondary",
+   "abstand_m": 9.1
+  },
+  "0237980": {
+   "name": "Saseler Damm",
+   "highway": "primary",
+   "abstand_m": 5.1
+  },
+  "0237981": {
+   "name": "Saseler Damm",
+   "highway": "primary",
+   "abstand_m": 4.3
+  },
+  "0237982": {
+   "name": "Saseler Damm",
+   "highway": "primary",
+   "abstand_m": 3.4
+  },
+  "0238930": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 0.1
+  },
+  "0238931": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 8.9
+  },
+  "0238932": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 8.8
+  },
+  "0238950": {
+   "name": "Werner-Otto-Straße",
+   "highway": "secondary",
+   "abstand_m": 1.4
+  },
+  "0238951": {
+   "name": "Werner-Otto-Straße",
+   "highway": "secondary",
+   "abstand_m": 6.8
+  },
+  "0238952": {
+   "name": "Werner-Otto-Straße",
+   "highway": "secondary",
+   "abstand_m": 6.9
+  },
+  "0238970": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 3.7
+  },
+  "0238971": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 4.9
+  },
+  "0238972": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 5.2
+  },
+  "0239920": {
+   "name": "August-Krogmann-Straße",
+   "highway": "secondary",
+   "abstand_m": 1.2
+  },
+  "0239921": {
+   "name": "August-Krogmann-Straße",
+   "highway": "secondary",
+   "abstand_m": 11.0
+  },
+  "0239922": {
+   "name": "August-Krogmann-Straße",
+   "highway": "secondary",
+   "abstand_m": 8.5
+  },
+  "0239950": {
+   "name": "August-Krogmann-Straße",
+   "highway": "secondary",
+   "abstand_m": 2.6
+  },
+  "0239951": {
+   "name": "August-Krogmann-Straße",
+   "highway": "secondary",
+   "abstand_m": 5.9
+  },
+  "0239952": {
+   "name": "August-Krogmann-Straße",
+   "highway": "secondary",
+   "abstand_m": 6.7
+  },
+  "0239980": {
+   "name": "Am Luisenhof",
+   "highway": "secondary",
+   "abstand_m": 0.6
+  },
+  "0239981": {
+   "name": "Am Luisenhof",
+   "highway": "secondary",
+   "abstand_m": 10.5
+  },
+  "0239982": {
+   "name": "Am Luisenhof",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0240920": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 1.3
+  },
+  "0240921": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 8.5
+  },
+  "0240922": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 11.1
+  },
+  "0240940": {
+   "name": "Erdkampsweg",
+   "highway": "secondary",
+   "abstand_m": 0.9
+  },
+  "0240941": {
+   "name": "Erdkampsweg",
+   "highway": "secondary",
+   "abstand_m": 8.3
+  },
+  "0240942": {
+   "name": "Erdkampsweg",
+   "highway": "secondary",
+   "abstand_m": 10.2
+  },
+  "0240960": {
+   "name": "Alsterkrugchaussee",
+   "highway": "secondary",
+   "abstand_m": 0.7
+  },
+  "0240961": {
+   "name": "Alsterkrugchaussee",
+   "highway": "secondary",
+   "abstand_m": 10.2
+  },
+  "0240962": {
+   "name": "Alsterkrugchaussee",
+   "highway": "secondary",
+   "abstand_m": 8.9
+  },
+  "0241930": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 0.3
+  },
+  "0241931": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 9.5
+  },
+  "0241932": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 7.3
+  },
+  "0241940": {
+   "name": "Berner Chaussee",
+   "highway": "tertiary",
+   "abstand_m": 1.2
+  },
+  "0241941": {
+   "name": "Berner Chaussee",
+   "highway": "tertiary",
+   "abstand_m": 8.0
+  },
+  "0241942": {
+   "name": "Berner Chaussee",
+   "highway": "tertiary",
+   "abstand_m": 10.5
+  },
+  "0241970": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 3.5
+  },
+  "0241971": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 6.3
+  },
+  "0241972": {
+   "name": "Bramfelder Chaussee",
+   "highway": "primary",
+   "abstand_m": 5.9
+  },
+  "0242940": {
+   "name": "Jahnbrücke",
+   "highway": "primary",
+   "abstand_m": 6.7
+  },
+  "0242941": {
+   "name": "Jahnbrücke",
+   "highway": "primary",
+   "abstand_m": 3.1
+  },
+  "0242942": {
+   "name": "Jahnbrücke",
+   "highway": "primary",
+   "abstand_m": 3.2
+  },
+  "0242960": {
+   "name": "Saarlandstraße",
+   "highway": "secondary",
+   "abstand_m": 4.6
+  },
+  "0242961": {
+   "name": "Saarlandstraße",
+   "highway": "secondary",
+   "abstand_m": 5.3
+  },
+  "0242962": {
+   "name": "Saarlandstraße",
+   "highway": "secondary",
+   "abstand_m": 4.8
+  },
+  "0242980": {
+   "name": "Jahnring",
+   "highway": "primary",
+   "abstand_m": 10.9
+  },
+  "0242981": {
+   "name": "Jahnring",
+   "highway": "primary",
+   "abstand_m": 1.0
+  },
+  "0242982": {
+   "name": "Jahnring",
+   "highway": "primary",
+   "abstand_m": 3.3
+  },
+  "0243930": {
+   "name": "Bergstedter Chaussee",
+   "highway": "primary",
+   "abstand_m": 0.2
+  },
+  "0243931": {
+   "name": "Bergstedter Chaussee",
+   "highway": "primary",
+   "abstand_m": 9.7
+  },
+  "0243932": {
+   "name": "Bergstedter Chaussee",
+   "highway": "primary",
+   "abstand_m": 10.1
+  },
+  "0244920": {
+   "name": "Saseler Chaussee",
+   "highway": "primary",
+   "abstand_m": 0.7
+  },
+  "0244921": {
+   "name": "Saseler Chaussee",
+   "highway": "primary",
+   "abstand_m": 9.1
+  },
+  "0244922": {
+   "name": "Saseler Chaussee",
+   "highway": "primary",
+   "abstand_m": 10.2
+  },
+  "0244940": {
+   "name": "Stadtbahnstraße",
+   "highway": "secondary",
+   "abstand_m": 2.9
+  },
+  "0244941": {
+   "name": "Stadtbahnstraße",
+   "highway": "secondary",
+   "abstand_m": 7.0
+  },
+  "0244942": {
+   "name": "Stadtbahnstraße",
+   "highway": "secondary",
+   "abstand_m": 12.9
+  },
+  "0244960": {
+   "name": "Saseler Chaussee",
+   "highway": "primary",
+   "abstand_m": 0.3
+  },
+  "0244961": {
+   "name": "Saseler Chaussee",
+   "highway": "primary",
+   "abstand_m": 9.8
+  },
+  "0244962": {
+   "name": "Saseler Chaussee",
+   "highway": "primary",
+   "abstand_m": 9.1
+  },
+  "0244980": {
+   "name": "Stadtbahnstraße",
+   "highway": "primary",
+   "abstand_m": 0.2
+  },
+  "0244981": {
+   "name": "Stadtbahnstraße",
+   "highway": "primary",
+   "abstand_m": 10.1
+  },
+  "0244982": {
+   "name": "Stadtbahnstraße",
+   "highway": "primary",
+   "abstand_m": 9.7
+  },
+  "0245920": {
+   "name": "Brombeerweg",
+   "highway": "secondary",
+   "abstand_m": 5.1
+  },
+  "0245921": {
+   "name": "Brombeerweg",
+   "highway": "secondary",
+   "abstand_m": 2.1
+  },
+  "0245922": {
+   "name": "Brombeerweg",
+   "highway": "secondary",
+   "abstand_m": 4.8
+  },
+  "0246920": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 3.8
+  },
+  "0246921": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 6.2
+  },
+  "0246922": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 4.3
+  },
+  "0246940": {
+   "name": "Krohnstieg",
+   "highway": "primary",
+   "abstand_m": 6.2
+  },
+  "0246941": {
+   "name": "Krohnstieg",
+   "highway": "primary",
+   "abstand_m": 2.6
+  },
+  "0246942": {
+   "name": "Krohnstieg",
+   "highway": "primary",
+   "abstand_m": 1.1
+  },
+  "0246960": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 0.0
+  },
+  "0246961": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 8.8
+  },
+  "0246962": {
+   "name": "Langenhorner Chaussee",
+   "highway": "secondary",
+   "abstand_m": 8.9
+  },
+  "0246980": {
+   "name": "Krohnstieg",
+   "highway": "primary",
+   "abstand_m": 3.8
+  },
+  "0246981": {
+   "name": "Krohnstieg",
+   "highway": "primary",
+   "abstand_m": 5.0
+  },
+  "0246982": {
+   "name": "Krohnstieg",
+   "highway": "primary",
+   "abstand_m": 4.9
+  },
+  "0247970": {
+   "name": "Meiendorfer Straße",
+   "highway": "primary",
+   "abstand_m": 0.6
+  },
+  "0247971": {
+   "name": "Meiendorfer Straße",
+   "highway": "primary",
+   "abstand_m": 10.3
+  },
+  "0247972": {
+   "name": "Meiendorfer Straße",
+   "highway": "primary",
+   "abstand_m": 9.2
+  },
+  "0248930": {
+   "name": "Sieker Landstraße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0248931": {
+   "name": "Rahlstedter Straße",
+   "highway": "secondary",
+   "abstand_m": 9.4
+  },
+  "0248932": {
+   "name": "Sieker Landstraße",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0248940": {
+   "name": "Stapelfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 0.1
+  },
+  "0248941": {
+   "name": "Stapelfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 9.9
+  },
+  "0248942": {
+   "name": "Stapelfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 9.7
+  },
+  "0249980": {
+   "name": "Wedeler Landstraße",
+   "highway": "primary",
+   "abstand_m": 0.7
+  },
+  "0249981": {
+   "name": "Wedeler Landstraße",
+   "highway": "primary",
+   "abstand_m": 9.2
+  },
+  "0249982": {
+   "name": "Wedeler Landstraße",
+   "highway": "primary",
+   "abstand_m": 10.6
+  },
+  "0250940": {
+   "name": "Nincoper Straße",
+   "highway": "secondary",
+   "abstand_m": 1.1
+  },
+  "0250941": {
+   "name": "Nincoper Straße",
+   "highway": "secondary",
+   "abstand_m": 10.8
+  },
+  "0250942": {
+   "name": "Nincoper Straße",
+   "highway": "secondary",
+   "abstand_m": 8.6
+  },
+  "0251980": {
+   "name": "Neuenfelder Hauptdeich",
+   "highway": "secondary",
+   "abstand_m": 1.1
+  },
+  "0251981": {
+   "name": "Neuenfelder Hauptdeich",
+   "highway": "secondary",
+   "abstand_m": 10.7
+  },
+  "0251982": {
+   "name": "Neuenfelder Hauptdeich",
+   "highway": "secondary",
+   "abstand_m": 8.5
+  },
+  "0252920": {
+   "name": "Schenefelder Landstraße",
+   "highway": "secondary",
+   "abstand_m": 1.3
+  },
+  "0252921": {
+   "name": "Schenefelder Landstraße",
+   "highway": "secondary",
+   "abstand_m": 11.2
+  },
+  "0252922": {
+   "name": "Schenefelder Landstraße",
+   "highway": "secondary",
+   "abstand_m": 8.6
+  },
+  "0253980": {
+   "name": "Schulauer Weg",
+   "highway": "tertiary",
+   "abstand_m": 0.6
+  },
+  "0253981": {
+   "name": "Schulauer Weg",
+   "highway": "tertiary",
+   "abstand_m": 9.3
+  },
+  "0253982": {
+   "name": "Schulauer Weg",
+   "highway": "tertiary",
+   "abstand_m": 10.5
+  },
+  "0254910": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 0.3
+  },
+  "0254911": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0254912": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 8.9
+  },
+  "0254920": {
+   "name": "Schenefelder Landstraße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0254921": {
+   "name": "Schenefelder Landstraße",
+   "highway": "secondary",
+   "abstand_m": 9.9
+  },
+  "0254922": {
+   "name": "Schenefelder Landstraße",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0256980": {
+   "name": "Ottenser Marktplatz",
+   "highway": "tertiary",
+   "abstand_m": 0.2
+  },
+  "0256981": {
+   "name": "Ottenser Marktplatz",
+   "highway": "tertiary",
+   "abstand_m": 9.9
+  },
+  "0256982": {
+   "name": "Ottenser Marktplatz",
+   "highway": "tertiary",
+   "abstand_m": 9.4
+  },
+  "0257980": {
+   "name": "Palmaille",
+   "highway": "secondary",
+   "abstand_m": 44.8
+  },
+  "0257981": {
+   "name": "Palmaille",
+   "highway": "secondary",
+   "abstand_m": 47.2
+  },
+  "0257982": {
+   "name": "Palmaille",
+   "highway": "secondary",
+   "abstand_m": 44.6
+  },
+  "0258940": {
+   "name": "Neuhöfer Straße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0258941": {
+   "name": "Neuhöfer Straße",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0258942": {
+   "name": "Neuhöfer Straße",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0259920": {
+   "name": "Messeplatz",
+   "highway": "secondary",
+   "abstand_m": 0.7
+  },
+  "0259921": {
+   "name": "Messeplatz",
+   "highway": "secondary",
+   "abstand_m": 8.7
+  },
+  "0259922": {
+   "name": "Messeplatz",
+   "highway": "secondary",
+   "abstand_m": 10.1
+  },
+  "0260970": {
+   "name": "Eppendorfer Weg",
+   "highway": "residential",
+   "abstand_m": 0.2
+  },
+  "0260971": {
+   "name": "Eppendorfer Weg",
+   "highway": "residential",
+   "abstand_m": 9.7
+  },
+  "0260972": {
+   "name": "Eppendorfer Weg",
+   "highway": "residential",
+   "abstand_m": 9.2
+  },
+  "0261960": {
+   "name": "Ebertallee",
+   "highway": "secondary",
+   "abstand_m": 7.0
+  },
+  "0261961": {
+   "name": "Ebertallee",
+   "highway": "secondary",
+   "abstand_m": 2.5
+  },
+  "0261962": {
+   "name": "Ebertallee",
+   "highway": "secondary",
+   "abstand_m": 1.4
+  },
+  "0262910": {
+   "name": "Am Barls",
+   "highway": "tertiary",
+   "abstand_m": 0.6
+  },
+  "0262911": {
+   "name": "Am Barls",
+   "highway": "tertiary",
+   "abstand_m": 9.9
+  },
+  "0262912": {
+   "name": "Am Barls",
+   "highway": "tertiary",
+   "abstand_m": 8.8
+  },
+  "0263940": {
+   "name": "Stresemannstraße",
+   "highway": "primary",
+   "abstand_m": 1.0
+  },
+  "0263941": {
+   "name": "Stresemannstraße",
+   "highway": "primary",
+   "abstand_m": 8.4
+  },
+  "0263942": {
+   "name": "Stresemannstraße",
+   "highway": "primary",
+   "abstand_m": 10.5
+  },
+  "0264910": {
+   "name": "Stresemannstraße",
+   "highway": "primary",
+   "abstand_m": 2.2
+  },
+  "0264911": {
+   "name": "Stresemannstraße",
+   "highway": "primary",
+   "abstand_m": 7.7
+  },
+  "0264912": {
+   "name": "Stresemannstraße",
+   "highway": "primary",
+   "abstand_m": 12.1
+  },
+  "0264920": {
+   "name": "Neuer Pferdemarkt",
+   "highway": "tertiary",
+   "abstand_m": 5.0
+  },
+  "0264921": {
+   "name": "Neuer Pferdemarkt",
+   "highway": "tertiary",
+   "abstand_m": 4.9
+  },
+  "0264922": {
+   "name": "Neuer Pferdemarkt",
+   "highway": "tertiary",
+   "abstand_m": 3.9
+  },
+  "0264960": {
+   "name": "Neuer Pferdemarkt",
+   "highway": "primary",
+   "abstand_m": 9.1
+  },
+  "0264961": {
+   "name": "Neuer Pferdemarkt",
+   "highway": "primary",
+   "abstand_m": 0.3
+  },
+  "0264962": {
+   "name": "Neuer Pferdemarkt",
+   "highway": "primary",
+   "abstand_m": 0.8
+  },
+  "0265980": {
+   "name": "Finkenwerder Straße",
+   "highway": "secondary",
+   "abstand_m": 1.9
+  },
+  "0265981": {
+   "name": "Finkenwerder Straße",
+   "highway": "secondary",
+   "abstand_m": 6.4
+  },
+  "0265982": {
+   "name": "Finkenwerder Straße",
+   "highway": "secondary",
+   "abstand_m": 10.2
+  },
+  "0266920": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 0.6
+  },
+  "0266921": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 10.5
+  },
+  "0266922": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 9.4
+  },
+  "0267920": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 1.2
+  },
+  "0267921": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 8.6
+  },
+  "0267922": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 11.0
+  },
+  "0267950": {
+   "name": "Langenfelder Damm",
+   "highway": "tertiary",
+   "abstand_m": 0.3
+  },
+  "0267951": {
+   "name": "Langenfelder Damm",
+   "highway": "tertiary",
+   "abstand_m": 10.0
+  },
+  "0267952": {
+   "name": "Langenfelder Damm",
+   "highway": "tertiary",
+   "abstand_m": 9.4
+  },
+  "0267960": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 0.1
+  },
+  "0267961": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 9.9
+  },
+  "0267962": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 9.6
+  },
+  "0268920": {
+   "name": "Holstenstraße",
+   "highway": "secondary",
+   "abstand_m": 1.2
+  },
+  "0268921": {
+   "name": "Holstenstraße",
+   "highway": "secondary",
+   "abstand_m": 10.6
+  },
+  "0268922": {
+   "name": "Holstenstraße",
+   "highway": "secondary",
+   "abstand_m": 8.2
+  },
+  "0268930": {
+   "name": "Max-Brauer-Allee",
+   "highway": "secondary",
+   "abstand_m": 2.4
+  },
+  "0268931": {
+   "name": "Max-Brauer-Allee",
+   "highway": "secondary",
+   "abstand_m": 7.2
+  },
+  "0268932": {
+   "name": "Max-Brauer-Allee",
+   "highway": "secondary",
+   "abstand_m": 12.0
+  },
+  "0268960": {
+   "name": "Holstenstraße",
+   "highway": "secondary",
+   "abstand_m": 0.4
+  },
+  "0268961": {
+   "name": "Holstenstraße",
+   "highway": "secondary",
+   "abstand_m": 10.2
+  },
+  "0268962": {
+   "name": "Holstenstraße",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0268970": {
+   "name": "Max-Brauer-Allee",
+   "highway": "secondary_link",
+   "abstand_m": 2.0
+  },
+  "0268971": {
+   "name": "Max-Brauer-Allee",
+   "highway": "secondary",
+   "abstand_m": 1.4
+  },
+  "0268972": {
+   "name": "Max-Brauer-Allee",
+   "highway": "secondary",
+   "abstand_m": 3.3
+  },
+  "0269910": {
+   "name": "Schäferkampsallee",
+   "highway": "primary",
+   "abstand_m": 5.9
+  },
+  "0269911": {
+   "name": "Schäferkampsallee",
+   "highway": "primary",
+   "abstand_m": 4.0
+  },
+  "0269912": {
+   "name": "Schäferkampsallee",
+   "highway": "primary",
+   "abstand_m": 2.8
+  },
+  "0269930": {
+   "name": "Beim Schlump",
+   "highway": "secondary",
+   "abstand_m": 5.9
+  },
+  "0269931": {
+   "name": "Beim Schlump",
+   "highway": "secondary",
+   "abstand_m": 15.4
+  },
+  "0269932": {
+   "name": "Beim Schlump",
+   "highway": "secondary",
+   "abstand_m": 3.7
+  },
+  "0269950": {
+   "name": "Schröderstiftstraße",
+   "highway": "primary",
+   "abstand_m": 5.2
+  },
+  "0269951": {
+   "name": "Schröderstiftstraße",
+   "highway": "primary",
+   "abstand_m": 4.0
+  },
+  "0269952": {
+   "name": "Schröderstiftstraße",
+   "highway": "primary",
+   "abstand_m": 4.6
+  },
+  "0269970": {
+   "name": "Kleiner Schäferkamp",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0269971": {
+   "name": "Kleiner Schäferkamp",
+   "highway": "secondary",
+   "abstand_m": 10.0
+  },
+  "0269972": {
+   "name": "Kleiner Schäferkamp",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0270920": {
+   "name": "Hoheluftchaussee",
+   "highway": "primary",
+   "abstand_m": 9.2
+  },
+  "0270921": {
+   "name": "Hoheluftchaussee",
+   "highway": "primary",
+   "abstand_m": 0.0
+  },
+  "0270922": {
+   "name": "Hoheluftchaussee",
+   "highway": "primary",
+   "abstand_m": 0.4
+  },
+  "0270930": {
+   "name": "Breitenfelder Straße",
+   "highway": "primary",
+   "abstand_m": 6.9
+  },
+  "0270931": {
+   "name": "Breitenfelder Straße",
+   "highway": "primary",
+   "abstand_m": 1.3
+  },
+  "0270932": {
+   "name": "Breitenfelder Straße",
+   "highway": "primary",
+   "abstand_m": 2.4
+  },
+  "0270950": {
+   "name": "Hoheluftchaussee",
+   "highway": "primary",
+   "abstand_m": 6.7
+  },
+  "0270951": {
+   "name": "Hoheluftchaussee",
+   "highway": "primary",
+   "abstand_m": 0.1
+  },
+  "0270952": {
+   "name": "Hoheluftchaussee",
+   "highway": "primary",
+   "abstand_m": 2.9
+  },
+  "0270970": {
+   "name": "Gärtnerstraße",
+   "highway": "primary",
+   "abstand_m": 4.7
+  },
+  "0270971": {
+   "name": "Gärtnerstraße",
+   "highway": "primary",
+   "abstand_m": 4.2
+  },
+  "0270972": {
+   "name": "Gärtnerstraße",
+   "highway": "primary",
+   "abstand_m": 0.8
+  },
+  "0271930": {
+   "name": "Rugenfeld",
+   "highway": "primary",
+   "abstand_m": 0.0
+  },
+  "0271931": {
+   "name": "Rugenfeld",
+   "highway": "primary",
+   "abstand_m": 9.7
+  },
+  "0271932": {
+   "name": "Rugenfeld",
+   "highway": "primary",
+   "abstand_m": 9.6
+  },
+  "0271940": {
+   "name": "Osdorfer Landstraße",
+   "highway": "primary",
+   "abstand_m": 5.4
+  },
+  "0271941": {
+   "name": "Osdorfer Landstraße",
+   "highway": "primary",
+   "abstand_m": 0.2
+  },
+  "0271942": {
+   "name": "Osdorfer Landstraße",
+   "highway": "primary",
+   "abstand_m": 4.3
+  },
+  "0271970": {
+   "name": "Isfeldstraße",
+   "highway": "secondary",
+   "abstand_m": 6.6
+  },
+  "0271971": {
+   "name": "Isfeldstraße",
+   "highway": "secondary",
+   "abstand_m": 2.2
+  },
+  "0271972": {
+   "name": "Isfeldstraße",
+   "highway": "secondary",
+   "abstand_m": 3.0
+  },
+  "0271980": {
+   "name": "Osdorfer Landstraße",
+   "highway": "primary",
+   "abstand_m": 6.6
+  },
+  "0271981": {
+   "name": "Osdorfer Landstraße",
+   "highway": "primary",
+   "abstand_m": 2.9
+  },
+  "0271982": {
+   "name": "Osdorfer Landstraße",
+   "highway": "primary",
+   "abstand_m": 1.3
+  },
+  "0272980": {
+   "name": "Baumwall",
+   "highway": "secondary",
+   "abstand_m": 14.4
+  },
+  "0272981": {
+   "name": "Baumwall",
+   "highway": "secondary",
+   "abstand_m": 4.8
+  },
+  "0272982": {
+   "name": "Baumwall",
+   "highway": "secondary",
+   "abstand_m": 4.5
+  },
+  "0273980": {
+   "name": "Ludwig-Erhard-Straße",
+   "highway": "primary",
+   "abstand_m": 5.2
+  },
+  "0273981": {
+   "name": "Ludwig-Erhard-Straße",
+   "highway": "primary",
+   "abstand_m": 4.3
+  },
+  "0273982": {
+   "name": "Ludwig-Erhard-Straße",
+   "highway": "primary",
+   "abstand_m": 3.2
+  },
+  "0274920": {
+   "name": "Stadthausbrücke",
+   "highway": "secondary",
+   "abstand_m": 0.4
+  },
+  "0274921": {
+   "name": "Stadthausbrücke",
+   "highway": "secondary",
+   "abstand_m": 3.5
+  },
+  "0274922": {
+   "name": "Stadthausbrücke",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0276920": {
+   "name": "Neuer Jungfernstieg",
+   "highway": "primary",
+   "abstand_m": 16.9
+  },
+  "0276921": {
+   "name": "Neuer Jungfernstieg",
+   "highway": "primary",
+   "abstand_m": 7.5
+  },
+  "0276922": {
+   "name": "Neuer Jungfernstieg",
+   "highway": "primary",
+   "abstand_m": 10.7
+  },
+  "0279920": {
+   "name": "Heilwigstraße",
+   "highway": "tertiary",
+   "abstand_m": 0.6
+  },
+  "0279921": {
+   "name": "Heilwigstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.0
+  },
+  "0279922": {
+   "name": "Heilwigstraße",
+   "highway": "tertiary",
+   "abstand_m": 10.1
+  },
+  "0280920": {
+   "name": "Oderfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 0.3
+  },
+  "0280921": {
+   "name": "Oderfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 9.7
+  },
+  "0280922": {
+   "name": "Oderfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 10.3
+  },
+  "0281950": {
+   "name": "Eppendorfer Baum",
+   "highway": "secondary",
+   "abstand_m": 0.0
+  },
+  "0281951": {
+   "name": "Eppendorfer Baum",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0281952": {
+   "name": "Eppendorfer Baum",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0282960": {
+   "name": "Lehmweg",
+   "highway": "tertiary",
+   "abstand_m": 1.0
+  },
+  "0282961": {
+   "name": "Lehmweg",
+   "highway": "tertiary",
+   "abstand_m": 10.7
+  },
+  "0282962": {
+   "name": "Lehmweg",
+   "highway": "tertiary",
+   "abstand_m": 8.7
+  },
+  "0283930": {
+   "name": "Martinistraße",
+   "highway": "tertiary",
+   "abstand_m": 0.4
+  },
+  "0283931": {
+   "name": "Martinistraße",
+   "highway": "tertiary",
+   "abstand_m": 9.2
+  },
+  "0283932": {
+   "name": "Martinistraße",
+   "highway": "tertiary",
+   "abstand_m": 10.0
+  },
+  "0284980": {
+   "name": "St. Pauli Hafenstraße",
+   "highway": "secondary",
+   "abstand_m": 1.1
+  },
+  "0284981": {
+   "name": "St. Pauli Hafenstraße",
+   "highway": "secondary",
+   "abstand_m": 8.7
+  },
+  "0284982": {
+   "name": "Bei den St. Pauli-Landungsbrücken",
+   "highway": "service",
+   "abstand_m": 7.4
+  },
+  "0285940": {
+   "name": "Neuer Kamp",
+   "highway": "secondary",
+   "abstand_m": 3.4
+  },
+  "0285941": {
+   "name": "Neuer Kamp",
+   "highway": "secondary",
+   "abstand_m": 5.3
+  },
+  "0285942": {
+   "name": "Neuer Kamp",
+   "highway": "secondary",
+   "abstand_m": 6.6
+  },
+  "0286980": {
+   "name": "Platz der Republik",
+   "highway": "residential",
+   "abstand_m": 5.5
+  },
+  "0286981": {
+   "name": "Platz der Republik",
+   "highway": "residential",
+   "abstand_m": 4.4
+  },
+  "0286982": {
+   "name": "Platz der Republik",
+   "highway": "residential",
+   "abstand_m": 4.0
+  },
+  "0287980": {
+   "name": "Lessingtunnel",
+   "highway": "secondary",
+   "abstand_m": 5.3
+  },
+  "0287981": {
+   "name": "Lessingtunnel",
+   "highway": "secondary",
+   "abstand_m": 4.4
+  },
+  "0287982": {
+   "name": "Lessingtunnel",
+   "highway": "secondary",
+   "abstand_m": 4.5
+  },
+  "0288940": {
+   "name": "Plöner Straße",
+   "highway": "tertiary",
+   "abstand_m": 0.4
+  },
+  "0288941": {
+   "name": "Plöner Straße",
+   "highway": "tertiary",
+   "abstand_m": 9.5
+  },
+  "0288942": {
+   "name": "Plöner Straße",
+   "highway": "tertiary",
+   "abstand_m": 10.3
+  },
+  "0289980": {
+   "name": "Holstenkamp",
+   "highway": "secondary",
+   "abstand_m": 0.3
+  },
+  "0289981": {
+   "name": "Holstenkamp",
+   "highway": "secondary",
+   "abstand_m": 8.9
+  },
+  "0289982": {
+   "name": "Holstenkamp",
+   "highway": "secondary",
+   "abstand_m": 8.3
+  },
+  "0290980": {
+   "name": "Sportplatzring",
+   "highway": "primary",
+   "abstand_m": 4.5
+  },
+  "0290981": {
+   "name": "Sportplatzring",
+   "highway": "primary",
+   "abstand_m": 5.2
+  },
+  "0290982": {
+   "name": "Sportplatzring",
+   "highway": "primary",
+   "abstand_m": 4.8
+  },
+  "0291950": {
+   "name": "Luruper Chaussee",
+   "highway": "secondary",
+   "abstand_m": 0.5
+  },
+  "0291951": {
+   "name": "Luruper Chaussee",
+   "highway": "secondary",
+   "abstand_m": 10.3
+  },
+  "0291952": {
+   "name": "Luruper Chaussee",
+   "highway": "secondary",
+   "abstand_m": 9.4
+  },
+  "0292910": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 0.4
+  },
+  "0292911": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 9.4
+  },
+  "0292912": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 3.6
+  },
+  "0292950": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 5.0
+  },
+  "0292951": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 1.2
+  },
+  "0292952": {
+   "name": "Kieler Straße",
+   "highway": "primary",
+   "abstand_m": 4.8
+  },
+  "0294970": {
+   "name": "Hudtwalckerstraße",
+   "highway": "primary",
+   "abstand_m": 4.2
+  },
+  "0294971": {
+   "name": "Hudtwalckerstraße",
+   "highway": "primary",
+   "abstand_m": 4.6
+  },
+  "0294972": {
+   "name": "Hudtwalckerstraße",
+   "highway": "primary",
+   "abstand_m": 5.5
+  },
+  "0295970": {
+   "name": "Krugkoppel",
+   "highway": "tertiary",
+   "abstand_m": 0.1
+  },
+  "0295971": {
+   "name": "Krugkoppel",
+   "highway": "tertiary",
+   "abstand_m": 9.7
+  },
+  "0295972": {
+   "name": "Krugkoppel",
+   "highway": "tertiary",
+   "abstand_m": 9.9
+  },
+  "0296910": {
+   "name": "Budapester Straße",
+   "highway": "primary",
+   "abstand_m": 5.5
+  },
+  "0296911": {
+   "name": "Budapester Straße",
+   "highway": "primary",
+   "abstand_m": 4.3
+  },
+  "0296912": {
+   "name": "Budapester Straße",
+   "highway": "primary",
+   "abstand_m": 3.9
+  },
+  "0296950": {
+   "name": "Budapester Straße",
+   "highway": "primary",
+   "abstand_m": 5.7
+  },
+  "0296951": {
+   "name": "Budapester Straße",
+   "highway": "primary",
+   "abstand_m": 0.8
+  },
+  "0296952": {
+   "name": "Budapester Straße",
+   "highway": "primary",
+   "abstand_m": 4.0
+  },
+  "0296980": {
+   "name": "Simon-von-Utrecht-Straße",
+   "highway": "secondary",
+   "abstand_m": 0.5
+  },
+  "0296981": {
+   "name": "Simon-von-Utrecht-Straße",
+   "highway": "secondary",
+   "abstand_m": 10.5
+  },
+  "0296982": {
+   "name": "Simon-von-Utrecht-Straße",
+   "highway": "residential",
+   "abstand_m": 5.1
+  },
+  "0297980": {
+   "name": "Kennedybrücke",
+   "highway": "primary",
+   "abstand_m": 1.2
+  },
+  "0297981": {
+   "name": "Kennedybrücke",
+   "highway": "primary",
+   "abstand_m": 7.9
+  },
+  "0297982": {
+   "name": "Kennedybrücke",
+   "highway": "primary",
+   "abstand_m": 10.4
+  },
+  "0300980": {
+   "name": "Reeperbahn",
+   "highway": "secondary",
+   "abstand_m": 4.1
+  },
+  "0300981": {
+   "name": "Reeperbahn",
+   "highway": "secondary",
+   "abstand_m": 4.1
+  },
+  "0300982": {
+   "name": "Reeperbahn",
+   "highway": "secondary",
+   "abstand_m": 5.8
+  },
+  "0301930": {
+   "name": "Elbgaustraße",
+   "highway": "primary",
+   "abstand_m": 0.3
+  },
+  "0301931": {
+   "name": "Elbgaustraße",
+   "highway": "primary",
+   "abstand_m": 9.0
+  },
+  "0301932": {
+   "name": "Elbgaustraße",
+   "highway": "primary",
+   "abstand_m": 8.5
+  },
+  "0301940": {
+   "name": "Farnhornweg",
+   "highway": "primary",
+   "abstand_m": 1.5
+  },
+  "0301941": {
+   "name": "Farnhornweg",
+   "highway": "primary",
+   "abstand_m": 8.3
+  },
+  "0301942": {
+   "name": "Farnhornweg",
+   "highway": "primary",
+   "abstand_m": 8.1
+  },
+  "0301970": {
+   "name": "Elbgaustraße",
+   "highway": "primary",
+   "abstand_m": 1.5
+  },
+  "0301971": {
+   "name": "Elbgaustraße",
+   "highway": "primary",
+   "abstand_m": 8.0
+  },
+  "0301972": {
+   "name": "Elbgaustraße",
+   "highway": "primary",
+   "abstand_m": 11.3
+  },
+  "0302920": {
+   "name": "Halbmondsweg",
+   "highway": "tertiary",
+   "abstand_m": 0.0
+  },
+  "0302921": {
+   "name": "Halbmondsweg",
+   "highway": "tertiary",
+   "abstand_m": 9.9
+  },
+  "0302922": {
+   "name": "Halbmondsweg",
+   "highway": "tertiary",
+   "abstand_m": 10.0
+  },
+  "0302940": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 0.8
+  },
+  "0302941": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 9.2
+  },
+  "0302942": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 8.2
+  },
+  "0302980": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 0.6
+  },
+  "0302981": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 7.9
+  },
+  "0302982": {
+   "name": "Elbchaussee",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0303980": {
+   "name": "Barsbütteler Straße",
+   "highway": "secondary",
+   "abstand_m": 2.7
+  },
+  "0303981": {
+   "name": "Barsbütteler Straße",
+   "highway": "secondary",
+   "abstand_m": 12.6
+  },
+  "0303982": {
+   "name": "Barsbütteler Straße",
+   "highway": "secondary",
+   "abstand_m": 7.2
+  },
+  "0307920": {
+   "name": "Schwanenwik",
+   "highway": "secondary",
+   "abstand_m": 3.3
+  },
+  "0307921": {
+   "name": "Schwanenwik",
+   "highway": "secondary",
+   "abstand_m": 6.7
+  },
+  "0307922": {
+   "name": "Schwanenwik",
+   "highway": "secondary",
+   "abstand_m": 6.0
+  },
+  "0308910": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0308911": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 9.4
+  },
+  "0308912": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 9.8
+  },
+  "0308930": {
+   "name": "Alter Teichweg",
+   "highway": "tertiary",
+   "abstand_m": 0.5
+  },
+  "0308931": {
+   "name": "Alter Teichweg",
+   "highway": "tertiary",
+   "abstand_m": 9.2
+  },
+  "0308932": {
+   "name": "Alter Teichweg",
+   "highway": "tertiary",
+   "abstand_m": 10.3
+  },
+  "0309920": {
+   "name": "Wilhelmsburger Brücke",
+   "highway": "tertiary",
+   "abstand_m": 0.0
+  },
+  "0309921": {
+   "name": "Wilhelmsburger Brücke",
+   "highway": "tertiary",
+   "abstand_m": 9.9
+  },
+  "0309922": {
+   "name": "Wilhelmsburger Brücke",
+   "highway": "tertiary",
+   "abstand_m": 10.0
+  },
+  "0310920": {
+   "name": "Hufnerstraße",
+   "highway": "secondary",
+   "abstand_m": 0.0
+  },
+  "0310921": {
+   "name": "Hufnerstraße",
+   "highway": "secondary",
+   "abstand_m": 9.2
+  },
+  "0310922": {
+   "name": "Hufnerstraße",
+   "highway": "secondary",
+   "abstand_m": 9.2
+  },
+  "0311910": {
+   "name": "Adolph-Schönfelder-Straße",
+   "highway": "secondary",
+   "abstand_m": 5.0
+  },
+  "0311911": {
+   "name": "Adolph-Schönfelder-Straße",
+   "highway": "secondary",
+   "abstand_m": 4.1
+  },
+  "0311912": {
+   "name": "Adolph-Schönfelder-Straße",
+   "highway": "secondary",
+   "abstand_m": 4.7
+  },
+  "0311930": {
+   "name": "Hamburger Straße",
+   "highway": "primary",
+   "abstand_m": 7.1
+  },
+  "0311931": {
+   "name": "Hamburger Straße",
+   "highway": "primary",
+   "abstand_m": 2.7
+  },
+  "0311932": {
+   "name": "Hamburger Straße",
+   "highway": "primary",
+   "abstand_m": 2.5
+  },
+  "0311950": {
+   "name": "Wagnerstraße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0311951": {
+   "name": "Wagnerstraße",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0311952": {
+   "name": "Wagnerstraße",
+   "highway": "secondary",
+   "abstand_m": 10.0
+  },
+  "0311970": {
+   "name": "Hamburger Straße",
+   "highway": "primary",
+   "abstand_m": 11.0
+  },
+  "0311971": {
+   "name": "Hamburger Straße",
+   "highway": "primary",
+   "abstand_m": 1.1
+  },
+  "0311972": {
+   "name": "Oberaltenallee",
+   "highway": "primary",
+   "abstand_m": 5.5
+  },
+  "0312920": {
+   "name": "Mühlendamm",
+   "highway": "secondary",
+   "abstand_m": 2.3
+  },
+  "0312921": {
+   "name": "Mühlendamm",
+   "highway": "secondary",
+   "abstand_m": 7.3
+  },
+  "0312922": {
+   "name": "Mühlendamm",
+   "highway": "secondary",
+   "abstand_m": 6.9
+  },
+  "0312930": {
+   "name": "Lübecker Straße",
+   "highway": "primary",
+   "abstand_m": 2.6
+  },
+  "0312931": {
+   "name": "Lübecker Straße",
+   "highway": "primary",
+   "abstand_m": 5.7
+  },
+  "0312932": {
+   "name": "Lübecker Straße",
+   "highway": "primary",
+   "abstand_m": 7.0
+  },
+  "0312960": {
+   "name": "Steinhauerdamm",
+   "highway": "primary",
+   "abstand_m": 3.7
+  },
+  "0312961": {
+   "name": "Steinhauerdamm",
+   "highway": "primary",
+   "abstand_m": 6.1
+  },
+  "0312962": {
+   "name": "Steinhauerdamm",
+   "highway": "primary",
+   "abstand_m": 5.1
+  },
+  "0312980": {
+   "name": "Lübecker Straße",
+   "highway": "secondary",
+   "abstand_m": 3.7
+  },
+  "0312981": {
+   "name": "Lübecker Straße",
+   "highway": "secondary",
+   "abstand_m": 3.7
+  },
+  "0312982": {
+   "name": "Lübecker Straße",
+   "highway": "secondary",
+   "abstand_m": 5.9
+  },
+  "0313970": {
+   "name": "Eilbeker Weg",
+   "highway": "tertiary",
+   "abstand_m": 0.7
+  },
+  "0313972": {
+   "name": "Eilbeker Weg",
+   "highway": "tertiary",
+   "abstand_m": 10.1
+  },
+  "0314920": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0314921": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0314922": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0314940": {
+   "name": "Straßburger Straße",
+   "highway": "secondary",
+   "abstand_m": 8.7
+  },
+  "0314941": {
+   "name": "Straßburger Straße",
+   "highway": "secondary",
+   "abstand_m": 0.7
+  },
+  "0314942": {
+   "name": "Straßburger Straße",
+   "highway": "secondary",
+   "abstand_m": 0.4
+  },
+  "0314960": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0314961": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0314962": {
+   "name": "Krausestraße",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0314980": {
+   "name": "Dehnhaide",
+   "highway": "secondary",
+   "abstand_m": 6.3
+  },
+  "0314981": {
+   "name": "Dehnhaide",
+   "highway": "secondary",
+   "abstand_m": 2.7
+  },
+  "0314982": {
+   "name": "Dehnhaide",
+   "highway": "secondary",
+   "abstand_m": 3.2
+  },
+  "0315910": {
+   "name": "Sievekingsallee",
+   "highway": "secondary",
+   "abstand_m": 5.7
+  },
+  "0315911": {
+   "name": "Sievekingsallee",
+   "highway": "secondary",
+   "abstand_m": 3.8
+  },
+  "0315912": {
+   "name": "Sievekingsallee",
+   "highway": "secondary",
+   "abstand_m": 4.0
+  },
+  "0315920": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 3.6
+  },
+  "0315921": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 6.0
+  },
+  "0315922": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 3.9
+  },
+  "0315940": {
+   "name": "Hermannstal",
+   "highway": "tertiary",
+   "abstand_m": 1.7
+  },
+  "0315941": {
+   "name": "Hermannstal",
+   "highway": "tertiary",
+   "abstand_m": 8.2
+  },
+  "0315942": {
+   "name": "Hermannstal",
+   "highway": "tertiary",
+   "abstand_m": 11.5
+  },
+  "0315960": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 19.4
+  },
+  "0315961": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 10.0
+  },
+  "0315962": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 12.3
+  },
+  "0316950": {
+   "name": "Washingtonallee",
+   "highway": "tertiary",
+   "abstand_m": 6.8
+  },
+  "0316951": {
+   "name": "Washingtonallee",
+   "highway": "tertiary",
+   "abstand_m": 3.0
+  },
+  "0316952": {
+   "name": "Washingtonallee",
+   "highway": "tertiary",
+   "abstand_m": 2.0
+  },
+  "0316960": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 4.2
+  },
+  "0316961": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 5.5
+  },
+  "0316962": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 5.7
+  },
+  "0317920": {
+   "name": "Willinghusener Weg",
+   "highway": "tertiary",
+   "abstand_m": 4.6
+  },
+  "0317921": {
+   "name": "Willinghusener Weg",
+   "highway": "tertiary",
+   "abstand_m": 14.4
+  },
+  "0317922": {
+   "name": "Willinghusener Weg",
+   "highway": "tertiary",
+   "abstand_m": 5.3
+  },
+  "0317940": {
+   "name": "Möllner Landstraße",
+   "highway": "secondary",
+   "abstand_m": 4.8
+  },
+  "0317941": {
+   "name": "Möllner Landstraße",
+   "highway": "secondary",
+   "abstand_m": 4.5
+  },
+  "0317942": {
+   "name": "Möllner Landstraße",
+   "highway": "secondary",
+   "abstand_m": 4.9
+  },
+  "0317980": {
+   "name": "Glinder Straße",
+   "highway": "secondary",
+   "abstand_m": 1.4
+  },
+  "0317981": {
+   "name": "Glinder Straße",
+   "highway": "secondary",
+   "abstand_m": 10.9
+  },
+  "0317982": {
+   "name": "Glinder Straße",
+   "highway": "secondary",
+   "abstand_m": 8.1
+  },
+  "0318920": {
+   "name": "Jenfelder Allee",
+   "highway": "secondary",
+   "abstand_m": 1.1
+  },
+  "0318921": {
+   "name": "Jenfelder Allee",
+   "highway": "secondary",
+   "abstand_m": 7.4
+  },
+  "0318922": {
+   "name": "Jenfelder Allee",
+   "highway": "secondary",
+   "abstand_m": 7.1
+  },
+  "0318940": {
+   "name": "Rodigallee",
+   "highway": "secondary",
+   "abstand_m": 0.4
+  },
+  "0318941": {
+   "name": "Rodigallee",
+   "highway": "secondary",
+   "abstand_m": 10.1
+  },
+  "0318942": {
+   "name": "Rodigallee",
+   "highway": "secondary",
+   "abstand_m": 7.8
+  },
+  "0318960": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 4.5
+  },
+  "0318961": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 5.2
+  },
+  "0318962": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 3.5
+  },
+  "0318980": {
+   "name": "Rodigallee",
+   "highway": "secondary",
+   "abstand_m": 1.0
+  },
+  "0318981": {
+   "name": "Rodigallee",
+   "highway": "secondary",
+   "abstand_m": 9.0
+  },
+  "0318982": {
+   "name": "Rodigallee",
+   "highway": "secondary",
+   "abstand_m": 10.9
+  },
+  "0319920": {
+   "name": "Saarlandstraße",
+   "highway": "secondary",
+   "abstand_m": 5.0
+  },
+  "0319921": {
+   "name": "Saarlandstraße",
+   "highway": "secondary",
+   "abstand_m": 5.0
+  },
+  "0319922": {
+   "name": "Saarlandstraße",
+   "highway": "secondary",
+   "abstand_m": 3.5
+  },
+  "0320920": {
+   "name": "Bachstraße",
+   "highway": "primary",
+   "abstand_m": 4.9
+  },
+  "0320921": {
+   "name": "Barmbeker Straße",
+   "highway": "primary",
+   "abstand_m": 4.5
+  },
+  "0320922": {
+   "name": "Bachstraße",
+   "highway": "primary",
+   "abstand_m": 4.8
+  },
+  "0321960": {
+   "name": "Hofweg",
+   "highway": "tertiary",
+   "abstand_m": 0.6
+  },
+  "0321961": {
+   "name": "Hofweg",
+   "highway": "tertiary",
+   "abstand_m": 9.6
+  },
+  "0321962": {
+   "name": "Hofweg",
+   "highway": "tertiary",
+   "abstand_m": 8.4
+  },
+  "0323910": {
+   "name": "Amsinckstraße",
+   "highway": "primary",
+   "abstand_m": 8.2
+  },
+  "0323911": {
+   "name": "Amsinckstraße",
+   "highway": "primary",
+   "abstand_m": 0.4
+  },
+  "0323912": {
+   "name": "Amsinckstraße",
+   "highway": "primary",
+   "abstand_m": 1.5
+  },
+  "0324910": {
+   "name": "Heidenkampsweg",
+   "highway": "primary",
+   "abstand_m": 6.3
+  },
+  "0324911": {
+   "name": "Heidenkampsweg",
+   "highway": "primary",
+   "abstand_m": 3.0
+  },
+  "0324912": {
+   "name": "Heidenkampsweg",
+   "highway": "primary",
+   "abstand_m": 0.0
+  },
+  "0325940": {
+   "name": "Eiffestraße",
+   "highway": "primary",
+   "abstand_m": 4.9
+  },
+  "0325941": {
+   "name": "Eiffestraße",
+   "highway": "primary",
+   "abstand_m": 4.3
+  },
+  "0325942": {
+   "name": "Eiffestraße",
+   "highway": "primary",
+   "abstand_m": 5.0
+  },
+  "0326940": {
+   "name": "Borgfelder Straße",
+   "highway": "secondary",
+   "abstand_m": 2.5
+  },
+  "0326941": {
+   "name": "Borgfelder Straße",
+   "highway": "secondary",
+   "abstand_m": 7.3
+  },
+  "0326942": {
+   "name": "Borgfelder Straße",
+   "highway": "secondary",
+   "abstand_m": 1.6
+  },
+  "0327940": {
+   "name": "Bürgerweide",
+   "highway": "primary",
+   "abstand_m": 7.6
+  },
+  "0327941": {
+   "name": "Bürgerweide",
+   "highway": "primary",
+   "abstand_m": 0.4
+  },
+  "0327942": {
+   "name": "Bürgerweide",
+   "highway": "primary",
+   "abstand_m": 1.7
+  },
+  "0328970": {
+   "name": "Mundsburger Damm",
+   "highway": "primary",
+   "abstand_m": 1.4
+  },
+  "0328971": {
+   "name": "Mundsburger Damm",
+   "highway": "primary",
+   "abstand_m": 8.4
+  },
+  "0328972": {
+   "name": "Mundsburger Damm",
+   "highway": "primary",
+   "abstand_m": 11.3
+  },
+  "0330940": {
+   "name": "Steintordamm",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0330941": {
+   "name": "Steintordamm",
+   "highway": "secondary",
+   "abstand_m": 9.8
+  },
+  "0330942": {
+   "name": "Steintordamm",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0331930": {
+   "name": "Ernst-Merck-Straße",
+   "highway": "tertiary",
+   "abstand_m": 4.2
+  },
+  "0331931": {
+   "name": "Ernst-Merck-Straße",
+   "highway": "tertiary",
+   "abstand_m": 2.4
+  },
+  "0331932": {
+   "name": "Ernst-Merck-Straße",
+   "highway": "tertiary",
+   "abstand_m": 5.7
+  },
+  "0333960": {
+   "name": "Freihafenelbbrücke",
+   "highway": "unclassified",
+   "abstand_m": 0.2
+  },
+  "0333961": {
+   "name": "Freihafenelbbrücke",
+   "highway": "unclassified",
+   "abstand_m": 8.7
+  },
+  "0333962": {
+   "name": "Freihafenelbbrücke",
+   "highway": "unclassified",
+   "abstand_m": 9.0
+  },
+  "0334970": {
+   "name": "Kuehnstraße",
+   "highway": "tertiary",
+   "abstand_m": 0.2
+  },
+  "0334971": {
+   "name": "Kuehnstraße",
+   "highway": "tertiary",
+   "abstand_m": 10.0
+  },
+  "0334972": {
+   "name": "Kuehnstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.5
+  },
+  "0335920": {
+   "name": "Holstenhofweg",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0335921": {
+   "name": "Holstenhofweg",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0335922": {
+   "name": "Holstenhofweg",
+   "highway": "secondary",
+   "abstand_m": 9.9
+  },
+  "0336910": {
+   "name": "Horner Landstraße",
+   "highway": "secondary",
+   "abstand_m": 0.4
+  },
+  "0336911": {
+   "name": "Horner Landstraße",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0336912": {
+   "name": "Horner Landstraße",
+   "highway": "secondary",
+   "abstand_m": 10.2
+  },
+  "0337910": {
+   "name": "Ausschläger Allee",
+   "highway": "tertiary",
+   "abstand_m": 0.4
+  },
+  "0337911": {
+   "name": "Ausschläger Allee",
+   "highway": "tertiary",
+   "abstand_m": 8.8
+  },
+  "0337912": {
+   "name": "Ausschläger Allee",
+   "highway": "tertiary",
+   "abstand_m": 9.7
+  },
+  "0338920": {
+   "name": "Friedrichsberger Straße",
+   "highway": "tertiary",
+   "abstand_m": 1.1
+  },
+  "0338921": {
+   "name": "Friedrichsberger Straße",
+   "highway": "tertiary",
+   "abstand_m": 8.9
+  },
+  "0338922": {
+   "name": "Friedrichsberger Straße",
+   "highway": "tertiary",
+   "abstand_m": 11.1
+  },
+  "0339980": {
+   "name": "Hammer Landstraße",
+   "highway": "secondary",
+   "abstand_m": 4.5
+  },
+  "0339981": {
+   "name": "Hammer Landstraße",
+   "highway": "secondary",
+   "abstand_m": 1.9
+  },
+  "0339982": {
+   "name": "Hammer Landstraße",
+   "highway": "secondary",
+   "abstand_m": 4.7
+  },
+  "0340980": {
+   "name": "Sievekingsallee",
+   "highway": "primary",
+   "abstand_m": 6.9
+  },
+  "0340981": {
+   "name": "Sievekingsallee",
+   "highway": "primary",
+   "abstand_m": 2.7
+  },
+  "0340982": {
+   "name": "Sievekingsallee",
+   "highway": "primary",
+   "abstand_m": 2.7
+  },
+  "0342970": {
+   "name": "Pappelallee",
+   "highway": "secondary",
+   "abstand_m": 0.8
+  },
+  "0342971": {
+   "name": "Pappelallee",
+   "highway": "secondary",
+   "abstand_m": 10.5
+  },
+  "0342972": {
+   "name": "Pappelallee",
+   "highway": "secondary",
+   "abstand_m": 9.0
+  },
+  "0343930": {
+   "name": "Stormarner Straße",
+   "highway": "tertiary",
+   "abstand_m": 3.8
+  },
+  "0343931": {
+   "name": "Stormarner Straße",
+   "highway": "tertiary",
+   "abstand_m": 5.5
+  },
+  "0343932": {
+   "name": "Stormarner Straße",
+   "highway": "tertiary_link",
+   "abstand_m": 4.1
+  },
+  "0345930": {
+   "name": "Bramfelder Straße",
+   "highway": "secondary",
+   "abstand_m": 0.8
+  },
+  "0345931": {
+   "name": "Bramfelder Straße",
+   "highway": "primary",
+   "abstand_m": 0.5
+  },
+  "0345932": {
+   "name": "Bramfelder Straße",
+   "highway": "primary",
+   "abstand_m": 2.2
+  },
+  "0348930": {
+   "name": "Berner Heerweg",
+   "highway": "tertiary",
+   "abstand_m": 0.2
+  },
+  "0348931": {
+   "name": "Berner Heerweg",
+   "highway": "tertiary",
+   "abstand_m": 9.7
+  },
+  "0348932": {
+   "name": "Berner Heerweg",
+   "highway": "tertiary",
+   "abstand_m": 10.1
+  },
+  "0348970": {
+   "name": "Berner Heerweg",
+   "highway": "tertiary",
+   "abstand_m": 0.5
+  },
+  "0348971": {
+   "name": "Berner Heerweg",
+   "highway": "tertiary",
+   "abstand_m": 7.5
+  },
+  "0348972": {
+   "name": "Berner Heerweg",
+   "highway": "tertiary",
+   "abstand_m": 8.4
+  },
+  "0349970": {
+   "name": "Friedrich-Ebert-Damm",
+   "highway": "secondary",
+   "abstand_m": 5.3
+  },
+  "0349971": {
+   "name": "Friedrich-Ebert-Damm",
+   "highway": "secondary",
+   "abstand_m": 4.2
+  },
+  "0349972": {
+   "name": "Friedrich-Ebert-Damm",
+   "highway": "secondary",
+   "abstand_m": 1.0
+  },
+  "0350930": {
+   "name": "Friedrich-Ebert-Damm",
+   "highway": "secondary",
+   "abstand_m": 5.5
+  },
+  "0350931": {
+   "name": "Friedrich-Ebert-Damm",
+   "highway": "secondary",
+   "abstand_m": 3.5
+  },
+  "0350932": {
+   "name": "Friedrich-Ebert-Damm",
+   "highway": "secondary",
+   "abstand_m": 4.2
+  },
+  "0351940": {
+   "name": "Bergedorfer Straße",
+   "highway": "trunk",
+   "abstand_m": 9.2
+  },
+  "0351941": {
+   "name": "Bergedorfer Straße",
+   "highway": "trunk",
+   "abstand_m": 0.5
+  },
+  "0351942": {
+   "name": "Bergedorfer Straße",
+   "highway": "trunk",
+   "abstand_m": 0.4
+  },
+  "0352920": {
+   "name": "Horner Rampe",
+   "highway": "primary",
+   "abstand_m": 0.5
+  },
+  "0352921": {
+   "name": "Horner Rampe",
+   "highway": "primary",
+   "abstand_m": 5.9
+  },
+  "0352922": {
+   "name": "Horner Rampe",
+   "highway": "primary",
+   "abstand_m": 8.9
+  },
+  "0352960": {
+   "name": "Horner Rampe",
+   "highway": "primary",
+   "abstand_m": 5.5
+  },
+  "0352961": {
+   "name": "Horner Rampe",
+   "highway": "primary",
+   "abstand_m": 4.4
+  },
+  "0352962": {
+   "name": "Horner Rampe",
+   "highway": "primary",
+   "abstand_m": 3.3
+  },
+  "0357920": {
+   "name": "Andreas-Meyer-Straße",
+   "highway": "primary",
+   "abstand_m": 6.1
+  },
+  "0357921": {
+   "name": "Andreas-Meyer-Straße",
+   "highway": "primary",
+   "abstand_m": 2.8
+  },
+  "0357922": {
+   "name": "Amandus-Stubbe-Straße",
+   "highway": "primary",
+   "abstand_m": 2.6
+  },
+  "0357962": {
+   "name": "Amandus-Stubbe-Straße",
+   "highway": "tertiary",
+   "abstand_m": 9.5
+  },
+  "0358980": {
+   "name": "Rothenhauschaussee",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0358981": {
+   "name": "Rothenhauschaussee",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0358982": {
+   "name": "Rothenhauschaussee",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0359910": {
+   "name": "Andreas-Meyer-Straße",
+   "highway": "primary",
+   "abstand_m": 6.0
+  },
+  "0359911": {
+   "name": "Andreas-Meyer-Straße",
+   "highway": "primary",
+   "abstand_m": 3.8
+  },
+  "0359912": {
+   "name": "Andreas-Meyer-Straße",
+   "highway": "primary",
+   "abstand_m": 1.9
+  },
+  "0359930": {
+   "name": "Unterer Landweg",
+   "highway": "secondary",
+   "abstand_m": 3.7
+  },
+  "0359931": {
+   "name": "Unterer Landweg",
+   "highway": "secondary",
+   "abstand_m": 3.1
+  },
+  "0359932": {
+   "name": "Unterer Landweg",
+   "highway": "secondary",
+   "abstand_m": 5.7
+  },
+  "0360940": {
+   "name": "Horner Weg",
+   "highway": "residential",
+   "abstand_m": 0.5
+  },
+  "0360941": {
+   "name": "Horner Weg",
+   "highway": "residential",
+   "abstand_m": 10.4
+  },
+  "0360942": {
+   "name": "Horner Weg",
+   "highway": "residential",
+   "abstand_m": 9.4
+  },
+  "0361910": {
+   "name": "Kattensteert",
+   "highway": "tertiary",
+   "abstand_m": 0.2
+  },
+  "0361911": {
+   "name": "Kattensteert",
+   "highway": "tertiary",
+   "abstand_m": 9.8
+  },
+  "0361912": {
+   "name": "Kattensteert",
+   "highway": "tertiary",
+   "abstand_m": 5.1
+  },
+  "0361930": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0361931": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0361932": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 9.2
+  },
+  "0361950": {
+   "name": "Schiffbeker Höhe",
+   "highway": "secondary",
+   "abstand_m": 0.5
+  },
+  "0361951": {
+   "name": "Schiffbeker Höhe",
+   "highway": "secondary",
+   "abstand_m": 9.9
+  },
+  "0361952": {
+   "name": "Schiffbeker Höhe",
+   "highway": "secondary",
+   "abstand_m": 8.8
+  },
+  "0361970": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0361971": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 9.1
+  },
+  "0361972": {
+   "name": "Schiffbeker Weg",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0362930": {
+   "name": "Stein-Hardenberg-Straße",
+   "highway": "primary",
+   "abstand_m": 4.5
+  },
+  "0362931": {
+   "name": "Stein-Hardenberg-Straße",
+   "highway": "primary",
+   "abstand_m": 4.4
+  },
+  "0362932": {
+   "name": "Stein-Hardenberg-Straße",
+   "highway": "primary",
+   "abstand_m": 5.2
+  },
+  "0362940": {
+   "name": "Tonndorfer Hauptstraße",
+   "highway": "secondary",
+   "abstand_m": 1.2
+  },
+  "0362941": {
+   "name": "Tonndorfer Hauptstraße",
+   "highway": "secondary",
+   "abstand_m": 10.9
+  },
+  "0362942": {
+   "name": "Tonndorfer Hauptstraße",
+   "highway": "secondary",
+   "abstand_m": 8.7
+  },
+  "0362970": {
+   "name": "Stein-Hardenberg-Straße",
+   "highway": "primary",
+   "abstand_m": 6.3
+  },
+  "0362971": {
+   "name": "Stein-Hardenberg-Straße",
+   "highway": "primary",
+   "abstand_m": 3.6
+  },
+  "0362972": {
+   "name": "Stein-Hardenberg-Straße",
+   "highway": "primary",
+   "abstand_m": 3.1
+  },
+  "0363910": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 0.0
+  },
+  "0363911": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 9.4
+  },
+  "0363912": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 9.4
+  },
+  "0364930": {
+   "name": "Reinbeker Redder",
+   "highway": "secondary",
+   "abstand_m": 0.8
+  },
+  "0364931": {
+   "name": "Reinbeker Redder",
+   "highway": "secondary",
+   "abstand_m": 6.5
+  },
+  "0364932": {
+   "name": "Reinbeker Redder",
+   "highway": "secondary",
+   "abstand_m": 7.7
+  },
+  "0364950": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 0.6
+  },
+  "0364951": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 10.4
+  },
+  "0364952": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 9.3
+  },
+  "0366970": {
+   "name": "Cuxhavener Straße",
+   "highway": "primary",
+   "abstand_m": 0.6
+  },
+  "0366971": {
+   "name": "Cuxhavener Straße",
+   "highway": "primary",
+   "abstand_m": 10.2
+  },
+  "0366972": {
+   "name": "Cuxhavener Straße",
+   "highway": "primary",
+   "abstand_m": 8.9
+  },
+  "0367980": {
+   "name": "Stader Straße",
+   "highway": "primary",
+   "abstand_m": 0.8
+  },
+  "0367981": {
+   "name": "Stader Straße",
+   "highway": "primary",
+   "abstand_m": 9.2
+  },
+  "0367982": {
+   "name": "Stader Straße",
+   "highway": "primary",
+   "abstand_m": 10.7
+  },
+  "0369960": {
+   "name": "Ehestorfer Heuweg",
+   "highway": "secondary",
+   "abstand_m": 1.0
+  },
+  "0369961": {
+   "name": "Ehestorfer Heuweg",
+   "highway": "secondary",
+   "abstand_m": 8.7
+  },
+  "0369962": {
+   "name": "Ehestorfer Heuweg",
+   "highway": "secondary",
+   "abstand_m": 10.7
+  },
+  "0370920": {
+   "name": "Ehestorfer Weg",
+   "highway": "secondary",
+   "abstand_m": 0.5
+  },
+  "0370921": {
+   "name": "Ehestorfer Weg",
+   "highway": "secondary",
+   "abstand_m": 8.0
+  },
+  "0370922": {
+   "name": "Ehestorfer Weg",
+   "highway": "secondary",
+   "abstand_m": 9.0
+  },
+  "0372930": {
+   "name": "Bremer Straße",
+   "highway": "primary",
+   "abstand_m": 0.2
+  },
+  "0372931": {
+   "name": "Bremer Straße",
+   "highway": "primary",
+   "abstand_m": 9.3
+  },
+  "0372932": {
+   "name": "Bremer Straße",
+   "highway": "primary",
+   "abstand_m": 9.7
+  },
+  "0374960": {
+   "name": "Ernst-Bergeest-Weg",
+   "highway": "tertiary",
+   "abstand_m": 1.1
+  },
+  "0374961": {
+   "name": "Ernst-Bergeest-Weg",
+   "highway": "tertiary",
+   "abstand_m": 11.0
+  },
+  "0374962": {
+   "name": "Ernst-Bergeest-Weg",
+   "highway": "tertiary",
+   "abstand_m": 8.8
+  },
+  "0374970": {
+   "name": "Bremer Straße",
+   "highway": "primary",
+   "abstand_m": 0.6
+  },
+  "0374971": {
+   "name": "Bremer Straße",
+   "highway": "primary",
+   "abstand_m": 10.4
+  },
+  "0374972": {
+   "name": "Bremer Straße",
+   "highway": "primary",
+   "abstand_m": 9.2
+  },
+  "0375910": {
+   "name": "Wilstorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 2.2
+  },
+  "0375911": {
+   "name": "Wilstorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 7.6
+  },
+  "0375912": {
+   "name": "Wilstorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 12.1
+  },
+  "0378960": {
+   "name": "Bremer Straße",
+   "highway": "secondary",
+   "abstand_m": 0.5
+  },
+  "0378961": {
+   "name": "Bremer Straße",
+   "highway": "secondary",
+   "abstand_m": 10.4
+  },
+  "0378962": {
+   "name": "Bremer Straße",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0378970": {
+   "name": null
+  },
+  "0378971": {
+   "name": null
+  },
+  "0378972": {
+   "name": null
+  },
+  "0380910": {
+   "name": "König-Georg-Deich",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0380911": {
+   "name": "König-Georg-Deich",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0380912": {
+   "name": "König-Georg-Deich",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0382980": {
+   "name": "Hohe Straße",
+   "highway": "primary",
+   "abstand_m": 5.8
+  },
+  "0382981": {
+   "name": "Hohe Straße",
+   "highway": "primary",
+   "abstand_m": 3.3
+  },
+  "0382982": {
+   "name": "Hohe Straße",
+   "highway": "primary",
+   "abstand_m": 4.0
+  },
+  "0383970": {
+   "name": "Bremer Straße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0383971": {
+   "name": "Bremer Straße",
+   "highway": "secondary",
+   "abstand_m": 10.0
+  },
+  "0383972": {
+   "name": "Bremer Straße",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0384970": {
+   "name": "Eißendorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 0.6
+  },
+  "0384971": {
+   "name": "Eißendorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 10.2
+  },
+  "0384972": {
+   "name": "Eißendorfer Straße",
+   "highway": "secondary",
+   "abstand_m": 7.0
+  },
+  "0385910": {
+   "name": "Schwarzenbergstraße",
+   "highway": "tertiary",
+   "abstand_m": 0.7
+  },
+  "0385911": {
+   "name": "Schwarzenbergstraße",
+   "highway": "tertiary",
+   "abstand_m": 9.1
+  },
+  "0385912": {
+   "name": "Schwarzenbergstraße",
+   "highway": "tertiary",
+   "abstand_m": 10.5
+  },
+  "0386960": {
+   "name": "Hittfelder Straße",
+   "highway": "secondary",
+   "abstand_m": 4.6
+  },
+  "0386961": {
+   "name": "Hittfelder Straße",
+   "highway": "secondary",
+   "abstand_m": 5.2
+  },
+  "0386962": {
+   "name": "Hittfelder Straße",
+   "highway": "secondary",
+   "abstand_m": 1.9
+  },
+  "0387920": {
+   "name": "Vogteistraße",
+   "highway": "tertiary",
+   "abstand_m": 3.7
+  },
+  "0387921": {
+   "name": "Vogteistraße",
+   "highway": "tertiary",
+   "abstand_m": 4.8
+  },
+  "0387922": {
+   "name": "Vogteistraße",
+   "highway": "tertiary",
+   "abstand_m": 12.2
+  },
+  "0388980": {
+   "name": "Neuländer Straße",
+   "highway": "secondary",
+   "abstand_m": 3.3
+  },
+  "0388981": {
+   "name": "Neuländer Straße",
+   "highway": "secondary",
+   "abstand_m": 1.9
+  },
+  "0388982": {
+   "name": "Neuländer Straße",
+   "highway": "secondary",
+   "abstand_m": 6.5
+  },
+  "0391920": {
+   "name": "Nettelnburger Landweg",
+   "highway": "secondary",
+   "abstand_m": 4.5
+  },
+  "0391921": {
+   "name": "Nettelnburger Landweg",
+   "highway": "secondary",
+   "abstand_m": 5.2
+  },
+  "0391922": {
+   "name": "Nettelnburger Landweg",
+   "highway": "secondary",
+   "abstand_m": 4.1
+  },
+  "0393930": {
+   "name": "Lohbrügger Markt",
+   "highway": "secondary",
+   "abstand_m": 2.6
+  },
+  "0393931": {
+   "name": "Lohbrügger Markt",
+   "highway": "secondary",
+   "abstand_m": 3.9
+  },
+  "0393932": {
+   "name": "Lohbrügger Markt",
+   "highway": "secondary",
+   "abstand_m": 8.9
+  },
+  "0394930": {
+   "name": "Mohnhof",
+   "highway": "primary",
+   "abstand_m": 0.6
+  },
+  "0394931": {
+   "name": "Mohnhof",
+   "highway": "primary",
+   "abstand_m": 10.4
+  },
+  "0394932": {
+   "name": "Mohnhof",
+   "highway": "living_street",
+   "abstand_m": 9.2
+  },
+  "0394950": {
+   "name": "Mohnhof",
+   "highway": "primary",
+   "abstand_m": 0.1
+  },
+  "0394951": {
+   "name": "Mohnhof",
+   "highway": "primary",
+   "abstand_m": 6.8
+  },
+  "0394952": {
+   "name": "Mohnhof",
+   "highway": "primary",
+   "abstand_m": 7.5
+  },
+  "0394980": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 0.4
+  },
+  "0394981": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 9.7
+  },
+  "0394982": {
+   "name": "Bergedorfer Straße",
+   "highway": "primary",
+   "abstand_m": 8.7
+  },
+  "0395930": {
+   "name": "Binnenfeldredder",
+   "highway": "secondary",
+   "abstand_m": 0.3
+  },
+  "0395931": {
+   "name": "Binnenfeldredder",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0395932": {
+   "name": "Binnenfeldredder",
+   "highway": "secondary",
+   "abstand_m": 9.0
+  },
+  "0396940": {
+   "name": "Reinbeker Redder",
+   "highway": "secondary",
+   "abstand_m": 0.3
+  },
+  "0396941": {
+   "name": "Reinbeker Redder",
+   "highway": "secondary",
+   "abstand_m": 9.9
+  },
+  "0396942": {
+   "name": "Reinbeker Redder",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0398970": {
+   "name": "Sieker Landstraße",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0398971": {
+   "name": "Sieker Landstraße",
+   "highway": "secondary",
+   "abstand_m": 9.2
+  },
+  "0398972": {
+   "name": "Sieker Landstraße",
+   "highway": "secondary",
+   "abstand_m": 0.0
+  },
+  "0399970": {
+   "name": "Stapelfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 1.0
+  },
+  "0399971": {
+   "name": "Stapelfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 6.0
+  },
+  "0399972": {
+   "name": "Stapelfelder Straße",
+   "highway": "tertiary",
+   "abstand_m": 7.0
+  },
+  "0400920": {
+   "name": "Lohe",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0400921": {
+   "name": "Lohe",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0400922": {
+   "name": "Hoopwischen",
+   "highway": "residential",
+   "abstand_m": 4.3
+  },
+  "0401970": {
+   "name": "Oldesloer Straße",
+   "highway": "secondary",
+   "abstand_m": 0.3
+  },
+  "0401971": {
+   "name": "Oldesloer Straße",
+   "highway": "secondary",
+   "abstand_m": 9.9
+  },
+  "0401972": {
+   "name": "Oldesloer Straße",
+   "highway": "secondary",
+   "abstand_m": 9.4
+  },
+  "0403920": {
+   "name": "Veddeler Straße",
+   "highway": "secondary",
+   "abstand_m": 4.2
+  },
+  "0403921": {
+   "name": "Veddeler Straße",
+   "highway": "secondary",
+   "abstand_m": 5.7
+  },
+  "0403922": {
+   "name": "Veddeler Straße",
+   "highway": "secondary",
+   "abstand_m": 2.5
+  },
+  "0404940": {
+   "name": "Harburger Chaussee",
+   "highway": "secondary",
+   "abstand_m": 0.7
+  },
+  "0404941": {
+   "name": "Harburger Chaussee",
+   "highway": "secondary",
+   "abstand_m": 9.0
+  },
+  "0404942": {
+   "name": "Harburger Chaussee",
+   "highway": "secondary",
+   "abstand_m": 10.4
+  },
+  "0405920": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "tertiary",
+   "abstand_m": 1.6
+  },
+  "0405921": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "tertiary",
+   "abstand_m": 8.3
+  },
+  "0405922": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "tertiary",
+   "abstand_m": 11.6
+  },
+  "0405940": {
+   "name": "Mengestraße",
+   "highway": "secondary",
+   "abstand_m": 4.7
+  },
+  "0405941": {
+   "name": "Mengestraße",
+   "highway": "secondary",
+   "abstand_m": 1.2
+  },
+  "0405942": {
+   "name": "Mengestraße",
+   "highway": "secondary",
+   "abstand_m": 4.6
+  },
+  "0405960": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0405961": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 10.2
+  },
+  "0405962": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 9.8
+  },
+  "0405980": {
+   "name": "Bei der Wollkämmerei",
+   "highway": "secondary",
+   "abstand_m": 2.7
+  },
+  "0405981": {
+   "name": "Bei der Wollkämmerei",
+   "highway": "secondary",
+   "abstand_m": 7.2
+  },
+  "0405982": {
+   "name": "Bei der Wollkämmerei",
+   "highway": "secondary",
+   "abstand_m": 2.1
+  },
+  "0406920": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0406921": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0406922": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 9.8
+  },
+  "0406960": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 0.2
+  },
+  "0406961": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 9.9
+  },
+  "0406962": {
+   "name": "Georg-Wilhelm-Straße",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0406980": {
+   "name": "Pollhornweg",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0406981": {
+   "name": "Pollhornweg",
+   "highway": "secondary",
+   "abstand_m": 9.8
+  },
+  "0406982": {
+   "name": "Pollhornweg",
+   "highway": "secondary",
+   "abstand_m": 9.6
+  },
+  "0407980": {
+   "name": "Kornweide",
+   "highway": "secondary",
+   "abstand_m": 0.6
+  },
+  "0407981": {
+   "name": "Kornweide",
+   "highway": "secondary",
+   "abstand_m": 10.3
+  },
+  "0407982": {
+   "name": "Kornweide",
+   "highway": "secondary",
+   "abstand_m": 9.3
+  },
+  "0408920": {
+   "name": "Bei St. Annen",
+   "highway": "secondary",
+   "abstand_m": 0.1
+  },
+  "0408921": {
+   "name": "Bei St. Annen",
+   "highway": "secondary",
+   "abstand_m": 9.7
+  },
+  "0408922": {
+   "name": "Bei St. Annen",
+   "highway": "secondary",
+   "abstand_m": 9.5
+  },
+  "0408930": {
+   "name": "Brooktorkai",
+   "highway": "secondary",
+   "abstand_m": 7.6
+  },
+  "0408931": {
+   "name": "Brooktorkai",
+   "highway": "secondary",
+   "abstand_m": 1.8
+  },
+  "0408932": {
+   "name": "Brooktorkai",
+   "highway": "secondary",
+   "abstand_m": 0.8
+  },
+  "0408970": {
+   "name": "Am Sandtorkai",
+   "highway": "secondary",
+   "abstand_m": 6.8
+  },
+  "0408971": {
+   "name": "Am Sandtorkai",
+   "highway": "secondary",
+   "abstand_m": 2.1
+  },
+  "0408972": {
+   "name": "Am Sandtorkai",
+   "highway": "secondary",
+   "abstand_m": 1.3
+  },
+  "0409920": {
+   "name": "Osakaallee",
+   "highway": "secondary",
+   "abstand_m": 3.6
+  },
+  "0409921": {
+   "name": "Osakaallee",
+   "highway": "secondary",
+   "abstand_m": 4.1
+  },
+  "0409922": {
+   "name": "Osakaallee",
+   "highway": "secondary",
+   "abstand_m": 5.6
+  },
+  "0409980": {
+   "name": "Überseeallee",
+   "highway": "residential",
+   "abstand_m": 3.2
+  },
+  "0409981": {
+   "name": "Überseeallee",
+   "highway": "residential",
+   "abstand_m": 3.5
+  },
+  "0409982": {
+   "name": "Überseeallee",
+   "highway": "residential",
+   "abstand_m": 6.6
+  },
+  "0423960": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 0.4
+  },
+  "0423961": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 9.9
+  },
+  "0423962": {
+   "name": "Rennbahnstraße",
+   "highway": "primary",
+   "abstand_m": 9.1
+  },
+  "0424910": {
+   "name": "Sievekingsallee",
+   "highway": "secondary",
+   "abstand_m": 5.3
+  },
+  "0424911": {
+   "name": "Sievekingsallee",
+   "highway": "secondary",
+   "abstand_m": 4.2
+  },
+  "0424912": {
+   "name": "Sievekingsallee",
+   "highway": "secondary",
+   "abstand_m": 4.2
+  },
+  "6694940": {
+   "name": "Altmannbrücke",
+   "highway": "secondary",
+   "abstand_m": 4.6
+  },
+  "6694941": {
+   "name": "Altmannbrücke",
+   "highway": "secondary",
+   "abstand_m": 4.9
+  },
+  "6694942": {
+   "name": "Altmannbrücke",
+   "highway": "secondary",
+   "abstand_m": 4.2
+  },
+  "6811920": {
+   "name": "Friedhofstraße",
+   "highway": "tertiary",
+   "abstand_m": 0.7
+  },
+  "6811921": {
+   "name": "Friedhofstraße",
+   "highway": "tertiary",
+   "abstand_m": 10.0
+  },
+  "6811922": {
+   "name": "Friedhofstraße",
+   "highway": "tertiary",
+   "abstand_m": 8.6
+  },
+  "7459910": {
+   "name": "Hammer Straße",
+   "highway": "secondary",
+   "abstand_m": 2.9
+  },
+  "7459911": {
+   "name": "Hammer Straße",
+   "highway": "secondary",
+   "abstand_m": 6.3
+  },
+  "7459912": {
+   "name": "Hammer Straße",
+   "highway": "secondary",
+   "abstand_m": 6.5
+  },
+  "7621980": {
+   "name": "Eulenkrugstraße",
+   "highway": "secondary",
+   "abstand_m": 1.1
+  },
+  "7621981": {
+   "name": "Eulenkrugstraße",
+   "highway": "secondary",
+   "abstand_m": 10.0
+  },
+  "7621982": {
+   "name": "Eulenkrugstraße",
+   "highway": "secondary",
+   "abstand_m": 7.7
+  }
+ }
+}
