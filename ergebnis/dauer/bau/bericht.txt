@@ -1,0 +1,87 @@
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .venv
+Resolved 47 packages in 1ms
+   Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Downloading pygments (1.2MiB)
+Downloading pycryptodomex (2.2MiB)
+Downloading pypdfium2 (3.8MiB)
+Downloading numpy (16.0MiB)
+Downloading brotli (1.4MiB)
+Downloading pillow (6.8MiB)
+Downloading cryptography (4.5MiB)
+Downloading pandas (11.5MiB)
+Downloading ruff (10.1MiB)
+Downloading pdfminer-six (6.3MiB)
+ Downloaded brotli
+ Downloaded pygments
+ Downloaded pycryptodomex
+ Downloaded pypdfium2
+ Downloaded cryptography
+ Downloaded pdfminer-six
+ Downloaded pillow
+ Downloaded ruff
+ Downloaded pandas
+ Downloaded numpy
+      Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Prepared 44 packages in 683ms
+Installed 44 packages in 44ms
+ + annotated-doc==0.0.5
+ + backports-zstd==1.8.0
+ + brotli==1.2.1
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + cryptography==50.0.2
+ + et-xmlfile==2.0.0
+ + idna==3.20
+ + inflate64==1.0.4
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + multivolumefile==0.2.3
+ + numpy==2.5.4
+ + openpyxl==3.1.5
+ + packaging==26.3
+ + pandas==3.1.1
+ + pdfminer-six==20260107
+ + pdfplumber==0.11.10
+ + pillow==13.0.0
+ + pluggy==1.7.0
+ + psutil==7.2.2
+ + py7zr==1.1.4
+ + pybcj==1.0.8
+ + pycparser==3.12
+ + pycryptodomex==3.24.2
+ + pygments==2.21.0
+ + pypdfium2==5.15.1
+ + pyppmd==1.3.1
+ + pytest==9.2.0
+ + python-dateutil==4.0.0
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + rich==15.0.0
+ + ruff==0.17.4
+ + shellingham==1.5.4
+ + texttable==1.7.2
+ + typer==0.28.0
+ + tzdata==2026.6
+ + urllib3==2.8.0
+ + xlrd==2.0.2
+ + xlwt==1.3.0
+ + zaehlkarte==0.1.0 (from file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline)
+berlin_viz: 152 Dateien (152 neu geladen)
+berlin_viz: 120 Monate alte QS (2015-01 bis 2024-12), 6 Monate neue QS (2025-01 bis 2025-06), 19237440 Stunden je Messquerschnitt
+berlin_viz: ohne Stammdaten (nicht in der Karte): TE424n (8331 Std.), TE507n (8256 Std.), TE530n (8169 Std.), TE334n (8052 Std.), TE471n (8037 Std.), TE523n (7636 Std.), TE349n (7619 Std.), TE477n (7273 Std.), TE425n (6929 Std.), TE202n (6714 Std.)
+berlin_viz: neue QS: Detektor-Stunden unter der Vollständigkeitsgrenze: 62996
+berlin_viz: 2025-01: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-02: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-03: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-04: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-05: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-06: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: Vergleich alte/neue QS: 2417461 Stunden in beiden, 80.9 % gleich (±2 %), Median-Abweichung 0.0 %; nur alte QS 198808, nur neue QS 537288
+berlin_viz: 288 Stellen mit vollständigen Tagen, 4 ohne
+38 Dateien, 31.1 MB, 26 Detail-Dateien
+berlin_viz: vollständige Kfz-Tage je Jahr (Stellen × Tage) – 2015: 87554, 2016: 84301, 2017: 85938, 2018: 90551, 2019: 90872, 2020: 90732, 2021: 29952, 2022: 27750, 2023: 41447, 2024: 34745, 2025: 12453
+berlin_viz: Kfz-Tagessummen, Quintilgrenzen [6400, 9800, 12800, 16800], Median 11263, Maximum 75466
+30M	../public/data/dauer
