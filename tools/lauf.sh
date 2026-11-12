@@ -16,5 +16,6 @@ baue() {
   fi
 }
 
-mkdir -p ergebnis/dauer/staedte1
-python3 tools/dauer_staedte1.py ergebnis/dauer/staedte1 > ergebnis/dauer/staedte1/log.txt 2>&1 || true
+command -v pdftotext > /dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
+mkdir -p ergebnis/kmk
+python3 tools/dauer_kmk.py ergebnis/kmk > ergebnis/kmk/log.txt 2>&1 || true

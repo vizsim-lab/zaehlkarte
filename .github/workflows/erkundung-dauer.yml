@@ -5,7 +5,7 @@
 name: Erkundung Dauerzählstellen
 on:
   push:
-    branches: [werkzeug/dauer]
+    branches: [werkzeug/dauer, werkzeug/dauer2]
     paths: [tools/**, .github/workflows/erkundung-dauer.yml]
   workflow_dispatch:
 permissions:
@@ -24,4 +24,4 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ergebnis
-          git commit -q -m "Werkzeug-Lauf $(date -u +%FT%H:%MZ)" && git push origin HEAD:werkzeug/dauer
+          git commit -q -m "Werkzeug-Lauf $(date -u +%FT%H:%MZ)" && git push origin "HEAD:${GITHUB_REF_NAME}"
