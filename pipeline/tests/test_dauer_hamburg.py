@@ -266,12 +266,15 @@ def test_strassennamen_und_knotenpunkt(api, pfade, tmp_path, monkeypatch):
     monkeypatch.setattr(zaehlkarte.fetch, "lade", lade)
     a = thing("0248931", 10.0050, 53.60005, "Ost nach West", "Ost")  # an der Bramfelder Straße
     b = thing("0248942", 10.00005, 53.6050, "Nord nach Süd", "Nord")  # an der Steilshooper Straße
+    # Gegenrichtung desselben Arms, näher an der Querstraße (20 m) als an ihrer eigenen (30 m)
+    c = thing("0248932", 10.0003, 53.60027, "West nach Ost", "Ost")
     obs = stunden(utc(2026, 11, 1, 23), 48)
     api.ds = [{"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {}, "obs": obs},
-              {"id": 2, "layer": "Kfz_1-Stunde", "thing": b, "props": {}, "obs": obs}]
+              {"id": 2, "layer": "Kfz_1-Stunde", "thing": b, "props": {}, "obs": obs},
+              {"id": 3, "layer": "Kfz_1-Stunde", "thing": c, "props": {}, "obs": obs}]
     q = {**Q, "osm": "https://download.example/hamburg-latest.osm"}  # XML statt PBF
     log = hh.hole(q, pfade)
-    assert any("Straßennamen für 2 neue Stellen (2 gefunden)" in z for z in log)
+    assert any("Straßennamen für 3 neue Stellen (3 gefunden)" in z for z in log)
     hh.hole(q, pfade)  # zweiter Lauf: Namen aus dem Gedächtnis, kein neuer Abzug
     assert len(geladen) == 1
     namen = json.loads((pfade.roh / "hamburg_kfz" / "gedaechtnis" / "strassen.json").read_text())
@@ -282,3 +285,5 @@ def test_strassennamen_und_knotenpunkt(api, pfade, tmp_path, monkeypatch):
     assert s["0248931"].abschnitt == "Knotenpunkt mit Steilshooper Straße, Arm Ost"
     assert s["0248942"].name == "Steilshooper Straße"
     assert s["0248942"].abschnitt == "Knotenpunkt mit Bramfelder Straße, Arm Nord"
+    assert namen["stellen"]["0248932"]["name"] == "Steilshooper Straße"  # eigener Treffer …
+    assert s["0248932"].name == "Bramfelder Straße"  # … aber der Arm heißt wie sein bester

@@ -324,11 +324,22 @@ def _stellen(q: dict, ds: dict[str, list[dict]], namen: dict[str, dict],
                 if f"Zählfeld {z}" not in spuren[k]:
                     spuren[k].append(f"Zählfeld {z}")
     punkte = _punkte(ds)
+    # Ein Name je Arm: Kennung = Knotenpunkt (4), 9, Arm, Richtung – alle Stellen eines Arms
+    # (beide Richtungen, Querschnitt) heißen nach dem Treffer, der seiner Straße am nächsten liegt.
+    def arm_von(k: str) -> str:
+        return k[:6] if len(k) == 7 and k.isdigit() and k[4] == "9" else k
+
+    je_arm: dict[str, tuple[str, float]] = {}
+    for k in erste:
+        n = namen.get(k) or {}
+        if n.get("name"):
+            alt = je_arm.get(arm_von(k))
+            if alt is None or n.get("abstand_m", 1e9) < alt[1]:
+                je_arm[arm_von(k)] = (n["name"], n.get("abstand_m", 1e9))
     # Knotenpunkt -> Straßennamen seiner Arme (für „Knotenpunkt mit …“)
     je_knoten: dict[str, set[str]] = defaultdict(set)
-    for k in erste:
-        if (namen.get(k) or {}).get("name"):
-            je_knoten[k[:4]].add(namen[k]["name"])
+    for arm, (name, _) in je_arm.items():
+        je_knoten[arm[:4]].add(name)
     out = []
     for k, d in sorted(erste.items()):
         if k not in punkte:
@@ -336,7 +347,7 @@ def _stellen(q: dict, ds: dict[str, list[dict]], namen: dict[str, dict],
             continue
         thing = d.get("Thing") or {}
         locs = thing.get("Locations") or [{}]
-        name = (namen.get(k) or {}).get("name")
+        name = je_arm.get(arm_von(k), (None, 0))[0]
         bericht.strassen["osm" if name else "kennung"] += 1
         arm = ARM.search(locs[0].get("description") or "")
         arm = arm[1] if arm and arm[1] != "Zählquerschnitt" else None

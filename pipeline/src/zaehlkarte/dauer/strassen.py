@@ -16,9 +16,10 @@ from pathlib import Path
 FAHRSTRASSEN = {
     "motorway", "trunk", "primary", "secondary", "tertiary", "unclassified", "residential",
     "living_street", "motorway_link", "trunk_link", "primary_link", "secondary_link",
-    "tertiary_link", "road", "busway", "service",
+    "tertiary_link", "road", "busway",
 }
-WEGE = {"cycleway", "footway", "path", "pedestrian", "track", "bridleway", "steps"}
+# zweite Wahl: Zufahrten (oft mit Namen von Arealen) sowie Rad- und Fußwege
+WEGE = {"service", "cycleway", "footway", "path", "pedestrian", "track", "bridleway", "steps"}
 UMKREIS_M = 50.0
 ZELLE = 0.002  # Grad, Raster für die Suche (rund 140 × 220 m)
 LIZENZ = "Straßennamen: © OpenStreetMap-Mitwirkende, ODbL 1.0 (nächste benannte Straße)"
