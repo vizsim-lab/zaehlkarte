@@ -456,6 +456,87 @@ dauer:
       - >-
         Laut Quelle Rohdaten, die vereinzelt Messfehler enthalten können. Die Zählkarte prüft nur,
         ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  # Hamburg: zwei Dienste derselben Wärmebildkameras (aVME-HH, Hamburger Radzählnetz), ein Adapter.
+  # Stundenwerte hält die Quelle nur „für die letzten zwei Monate“ vor (Datensatzbeschreibung im
+  # Transparenzportal, Stand November 2026) -> die Zählkarte hebt sie selbst auf (gedaechtnis/ im
+  # Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt).
+  hamburg_kfz:
+    status: live
+    adapter: hamburg_sta
+    name: Hamburg (Kfz, Wärmebildkameras)
+    land: HH
+    traeger: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+    art: >-
+      Wärmebildkameras (Infrarot-Detektoren) an Kreuzungen; Stundenwerte je Zählstelle (eine
+      Richtung an einem Knotenarm) für Kfz, an einem Teil der Stellen auch Schwerverkehr, wie die
+      Kamera ihn erkennt
+    weg: offen über die SensorThings API der Urban Data Platform Hamburg
+    ferien: schulferien_hamburg.csv
+    portal: https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14
+    api: https://iot.hamburg.de/v1.1
+    dienst: HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren
+    layer:
+      kfz: Anzahl_Kfz_Zaehlstelle_1-Stunde
+      sv: Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde
+    nachladen_tage: 14  # so weit zurück holt jeder Lauf die Stunden erneut (Werte ändern sich noch)
+    frisch_tage: 7  # jüngere Stunden kommen noch nicht in die Karte
+    osm: https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf
+    titel: >-
+      Verkehrsdaten Kfz Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
+      zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
+    herausgeber: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+    quellenvermerk: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Laut Quelle nicht umfassend qualitätsgesichert und nicht amtlich geprüft; Lücken können noch
+        nach ein paar Tagen nachgeliefert werden. Angestrebte Genauigkeit laut Quelle: ±10 % bei
+        den Verkehrsstärken, ±15 % beim Schwerverkehrsanteil.
+      - >-
+        Die Zählkarte übernimmt Stunden erst nach sieben Tagen und prüft nur, ob jede Stunde
+        gezählt ist – nicht, ob die Werte plausibel sind.
+      - >-
+        Die Quelle nennt keine Straßen. Der Name ist die nächste benannte Straße aus OpenStreetMap
+        (© OpenStreetMap-Mitwirkende, ODbL) und kann an Kreuzungen danebenliegen.
+  hamburg_rad:
+    status: live
+    adapter: hamburg_sta
+    name: Hamburg (Rad, Wärmebildkameras)
+    land: HH
+    traeger: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+    art: >-
+      Wärmebildkameras (Infrarot-Detektoren) des Hamburger Radzählnetzes; Stundenwerte je
+      Zählstelle (eine Richtung an einem Knotenarm oder ein Querschnitt ohne Richtung)
+    weg: offen über die SensorThings API der Urban Data Platform Hamburg
+    ferien: schulferien_hamburg.csv
+    portal: https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20
+    api: https://iot.hamburg.de/v1.1
+    dienst: HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren
+    layer:
+      rad: Anzahl_Fahrraeder_Zaehlstelle_1-Stunde
+    nachladen_tage: 14
+    frisch_tage: 7
+    osm: https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf
+    titel: >-
+      Verkehrsdaten Rad Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
+      zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
+    herausgeber: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+    quellenvermerk: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Laut Quelle nicht umfassend qualitätsgesichert und nicht amtlich geprüft; Lücken können noch
+        nach ein paar Tagen nachgeliefert werden. Angestrebte Genauigkeit laut Quelle: ±10 % auf
+        Geh- und Radwegen und Radfahrstreifen, ±20 % im Mischverkehr; an Zählstellen, die mehrere
+        Zählfelder zusammenfassen, bis ±20 %.
+      - >-
+        Die Zählkarte übernimmt Stunden erst nach sieben Tagen und prüft nur, ob jede Stunde
+        gezählt ist – nicht, ob die Werte plausibel sind.
+      - >-
+        Die Quelle nennt keine Straßen. Der Name ist die nächste benannte Straße aus OpenStreetMap
+        (© OpenStreetMap-Mitwirkende, ODbL) und kann an Kreuzungen danebenliegen.
 
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.

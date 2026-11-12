@@ -1,0 +1,23 @@
+# Schulferien Hamburg – aus den KMK-Ferienkalendern 2025/2026 bis 2027/2028 (erster und letzter
+# Ferientag; je Datei die Zeile „Hamburg“, ausgelesen mit pdftotext -layout). Gebraucht für die
+# Dauerzählstellen (Stundenwerte ab 2026). Bewegliche oder schulfreie Einzeltage, die die KMK
+# nicht aufführt, fehlen – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen sein.
+von,bis,ferien,schuljahr,gebiet,quelle
+2025-10-20,2025-10-31,Herbstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2025-12-17,2026-01-02,Weihnachtsferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-01-30,2026-01-30,Winterferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-03-02,2026-03-13,Frühjahrsferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-05-11,2026-05-15,Himmelfahrt/Pfingsten,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-07-09,2026-08-19,Sommerferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-10-19,2026-10-30,Herbstferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2026-12-21,2027-01-01,Weihnachtsferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-01-29,2027-01-29,Winterferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-03-01,2027-03-12,Frühjahrsferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-05-07,2027-05-14,Himmelfahrt/Pfingsten,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-07-01,2027-08-11,Sommerferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-10-11,2027-10-22,Herbstferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2027-12-20,2027-12-31,Weihnachtsferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-01-28,2028-01-28,Winterferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-03-06,2028-03-17,Frühjahrsferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-05-22,2028-05-26,Himmelfahrt/Pfingsten,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-07-03,2028-08-11,Sommerferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf

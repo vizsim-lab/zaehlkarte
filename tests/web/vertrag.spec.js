@@ -42,23 +42,30 @@ test("dauer/index.json, Jahres- und Detaildateien haben die erwarteten Felder", 
   expect(d.version).toBe(1);
   expect(d.stellen.felder).toEqual(["id", "quelle", "name", "abschnitt", "richtung", "lon", "lat", "von", "bis", "g", "chunk"]);
   expect(Object.keys(d.dateien)).toEqual(["tage", "details"]);
-  expect(d.gruppen).toEqual(["kfz", "lkw"]);
+  const bekannt = ["kfz", "lkw", "sv", "rad", "fuss"];
+  expect(d.gruppen.length).toBeGreaterThan(0);
+  expect(d.gruppen.every((g) => bekannt.includes(g))).toBe(true);
   expect(d.standardtag >= d.von && d.standardtag <= d.bis).toBe(true);
   for (const q of d.quellen) {
     expect(q.lizenzen.length).toBeGreaterThan(0);
     expect(d.kalender[q.land].length).toBe(Math.round((Date.parse(d.bis) - Date.parse(d.von)) / 86_400_000) + 1);
+    expect(q.gruppen.length).toBeGreaterThan(0);
+    expect(q.gruppen.every((g) => d.gruppen.includes(g))).toBe(true);
+    expect(q.standardtag >= q.von && q.standardtag <= q.bis).toBe(true);
   }
   const jahr = await (await request.get(`/data/${d.dateien.tage.replace("{jahr}", d.bis.slice(0, 4))}`)).json();
-  expect(jahr.werte.kfz.length).toBe(d.stellen.werte.length);
-  const zeile = jahr.werte.kfz.find((x) => x);
+  expect(Object.keys(jahr.werte).sort()).toEqual([...d.gruppen].sort());
+  for (const g of d.gruppen) expect(jahr.werte[g].length).toBe(d.stellen.werte.length);
+  const zeile = d.gruppen.map((g) => jahr.werte[g].find((x) => x)).find((x) => x);
   expect(zeile.length).toBe(jahr.tage);
   expect(zeile.every((v) => v == null || v > 0)).toBe(true); // nie 0 für „nicht vollständig“
-  const [id, , , , , , , von, , , chunk] = d.stellen.werte[0];
+  const [id, , , , , , , von, , maske, chunk] = d.stellen.werte[0];
+  const gruppe = d.gruppen.find((_, i) => (maske & (1 << i)) !== 0);
   const details = await (await request.get(`/data/${d.dateien.details.replace("{n}", chunk)}`)).json();
   const s = details.stellen[id];
   expect(s.von).toBe(von);
-  expect(s.tage.kfz.length).toBe(s.n.length);
-  expect(s.stunden.kfz.every((t) => t === null || t.length === 24)).toBe(true);
+  expect(s.tage[gruppe].length).toBe(s.n[gruppe].length); // gezählte Stunden je Gruppe und Tag
+  expect(s.stunden[gruppe].every((t) => t === null || t.length === 24)).toBe(true);
   for (let n = 0; n < d.details_anzahl; n += 1) {
     expect((await request.get(`/data/${d.dateien.details.replace("{n}", n)}`)).ok()).toBe(true);
   }

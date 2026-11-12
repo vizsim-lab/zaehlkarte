@@ -1157,6 +1157,9 @@ body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px)
 .dauer-schritt:hover:not(:disabled) { background: var(--ui-hover); }
 .dauer-schritt:disabled { opacity: .4; cursor: default; }
 .dauer-regler { width: 100%; }
+.dauer-quellen { margin: 4px 0 0; display: grid; gap: 3px; }
+.dauer-quelle { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; color: var(--ui-text-muted); font-size: 11px; line-height: 1.35; }
+.dauer-quellen[hidden] { display: none; }
 
 /* ───── Tagesreihe einer Dauerzählstelle (js/ui/dauerdetail.js) ───── */
 .tr-wrap { position: relative; margin-top: 6px; }

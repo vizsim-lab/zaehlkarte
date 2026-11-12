@@ -195,6 +195,8 @@ def test_site_schreibt_vertrag(tmp_path):
     assert index["kalender"]["BE"][2] == "h"  # 3.10. Tag der Deutschen Einheit
     # Standardtag: jüngster Schultag mit fast so vielen vollständigen Stellen wie am besten Tag
     assert index["standardtag"] == "2025-03-03"
+    assert index["quellen"][0]["standardtag"] == "2025-03-03"
+    assert index["gruppen"] == ["kfz", "lkw"] and index["quellen"][0]["gruppen"] == ["kfz", "lkw"]
     assert index["quellen"][0]["verfahren"][-1]["von"] == "2025-03-01"
     felder = index["stellen"]["felder"]
     werte = {w[0]: dict(zip(felder, w, strict=True)) for w in index["stellen"]["werte"]}
@@ -209,7 +211,7 @@ def test_site_schreibt_vertrag(tmp_path):
     assert jahr["werte"]["kfz"][i][tag + 1] is None  # unvollständig, nie 0
     chunk = json.loads((ziel / f"{werte['berlin_viz:TE001']['chunk']}.json").read_text())
     d = chunk["stellen"]["berlin_viz:TE001"]
-    assert d["von"] == "2024-10-01" and d["n"][1] == 23
+    assert d["von"] == "2024-10-01" and d["n"]["kfz"][1] == 23
     assert d["doppelt"] == ["2024-10-27"]
     assert d["stunden_von"] == "2024-10-01"  # weniger als 12 Monate: alles
     assert d["stunden"]["kfz"][0][:3] == [100, 101, 102]
@@ -219,5 +221,6 @@ def test_site_schreibt_vertrag(tmp_path):
 
 
 def test_messreihe_leer():
-    r = Messreihe.leer("x", date(2025, 1, 1), date(2025, 1, 31), [])
+    r = Messreihe.leer("x", date(2025, 1, 1), date(2025, 1, 31), [], ("kfz", "lkw"))
     assert r.werte["kfz"].shape == (0, 31, 24)
+    assert set(r.werte) == {"kfz", "lkw"}

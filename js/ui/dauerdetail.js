@@ -13,7 +13,9 @@ import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
 import { TG, TR_FARBEN, tagesgang, tagesreihe } from "./diagramme.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const FARBE = { kfz: "#2a78d6", lkw: "#eb6834" };
+// Farben der Reihen im Tagesgang nach Reihenfolge der Gruppen der Stelle (wie bei den
+// Kurzzeitzählungen: erste Reihe blau, zweite orange)
+const FARBEN = ["#2a78d6", "#eb6834", "#1f9e6e", "#8a5cd1"];
 
 export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiSchliessen }) {
   const el = document.getElementById("dauer-detail");
@@ -77,7 +79,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       el.innerHTML = `${kopf}<div class="pop-meta">${esc(fehler ? t("detail.ladefehler", { fehler }) : t("detail.lade"))}</div>`;
       return;
     }
-    const g = hatGruppe(stelle, z.dthema) ? z.dthema : DAUER_GRUPPEN.find((x) => hatGruppe(stelle, x));
+    const g = hatGruppe(stelle, z.dthema) ? z.dthema : stelle.gruppen[0];
     const werte = detail.tage[g] ?? [];
     const kal = d.kalender?.[q?.land] ?? "";
     const ab = tageZwischen(d.von, detail.von);
@@ -102,7 +104,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       tagTeil = `<div class="pop-meta">${esc(t("dd.ausserhalb", { datum: datum(tag), von: datum(stelle.von), bis: datum(stelle.bis) }))}</div>`;
     } else {
       const gruppen = DAUER_GRUPPEN.filter((x) => hatGruppe(stelle, x));
-      const reihen = gruppen.map((x) => ({ id: x, name: DAUER_THEMEN[x].name, farbe: FARBE[x], stunden: stundenAm(detail, x, tag) }))
+      const reihen = gruppen.map((x, i) => ({ id: x, name: DAUER_THEMEN[x].name, farbe: FARBEN[i], stunden: stundenAm(detail, x, tag) }))
         .filter((r) => r.stunden);
       const tg = reihen.length ? tagesgang(reihen) : null;
       const soll = stundenDesTags(tag);
@@ -247,11 +249,12 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const d = gibDauer();
     const q = quelle(d);
     const gruppen = DAUER_GRUPPEN.filter((x) => detail.tage[x]);
-    const zeilen = [["datum", "tagtyp", ...gruppen.map((x) => `${x}_tagessumme`), "gezaehlte_stunden"].join(";")];
-    const n = detail.n.length;
+    const zeilen = [["datum", "tagtyp", ...gruppen.flatMap((x) => [`${x}_tagessumme`, `${x}_gezaehlte_stunden`])].join(";")];
+    const n = detail.tage[gruppen[0]]?.length ?? 0;
     for (let i = 0; i < n; i += 1) {
       const iso = plusTage(detail.von, i);
-      zeilen.push([iso, t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"), ...gruppen.map((x) => detail.tage[x][i] ?? ""), detail.n[i]].join(";"));
+      zeilen.push([iso, t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"),
+        ...gruppen.flatMap((x) => [detail.tage[x][i] ?? "", detail.n?.[x]?.[i] ?? 0])].join(";"));
     }
     zeilen.push("", quellzeile());
     lade(`${zeilen.join("\n")}\n`, `dauerzaehlstelle_${detail.kennung}_tage.csv`);

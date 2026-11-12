@@ -51,6 +51,7 @@ from zaehlkarte.dauer.modell import LEER, Dauerstelle, Messreihe, umstellungen
 
 UA = {"User-Agent": "zaehlkarte-pipeline (+https://github.com/vizsim-lab/zaehlkarte)"}
 ORDNER = "berlin_viz"
+GRUPPEN = ("kfz", "lkw")  # Lkw = Klasse des Detektors
 ALT = re.compile(
     r"^(\d{4})/alte_qualitaetssicherung/Messquerschnitte/mq_hr_(\d{4})_(\d{2})\.csv\.gz$")
 NEU = re.compile(
@@ -421,7 +422,7 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
     mindestens = float(q.get("vollstaendig_mindestens", 75))
     von = date(*monate[0], 1)
     bis = date(monate[-1][0], monate[-1][1], calendar.monthrange(*monate[-1])[1])
-    reihe = Messreihe.leer(q["code"], von, bis, sd.stellen)
+    reihe = Messreihe.leer(q["code"], von, bis, sd.stellen, GRUPPEN)
     verfahren = {}
     for jm in monate:
         if jm < ab and jm in alte:
@@ -430,7 +431,7 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
             verfahren[jm] = "alt"
             if jm in neue:  # zum Vergleich: dasselbe Monat nach dem neuen Verfahren
                 tag0, tag1 = date(*jm, 1), date(*jm, calendar.monthrange(*jm)[1])
-                stueck = Messreihe.leer(q["code"], tag0, tag1, sd.stellen)
+                stueck = Messreihe.leer(q["code"], tag0, tag1, sd.stellen, GRUPPEN)
                 lies_neue(neue[jm], stueck, sd, mindestens, Bericht(), *jm)
                 teil = Messreihe(q["code"], tag0, stueck.tage, sd.stellen,
                                  {g: w[:, (tag0 - von).days:(tag1 - von).days + 1]

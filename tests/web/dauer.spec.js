@@ -1,6 +1,7 @@
 // Familie Dauerzählstellen im Browser – mit kleinen Fixture-Dateien (tests/web/fixtures/dauer/)
 // statt der echten Daten, damit der Test nicht vom Release-Asset „dauerzaehlstellen“ abhängt.
-// Fixture: zwei Messquerschnitte in Berlin, Juni 2025; am 3.6. fehlt bei TE001 eine Stunde.
+// Fixture: zwei Messquerschnitte in Berlin, Juni 2025 (am 3.6. fehlt bei TE001 eine Stunde), dazu
+// Hamburg vom 15.6. bis 10.7.2025: eine Kfz-Zählstelle mit Schwerverkehr und eine Rad-Zählstelle.
 import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 import { oeffne, zahl } from "./helpers.js";
@@ -46,11 +47,14 @@ test("Umschalter lädt die Dauerzählstellen: Tag, Klassen, Zähler und Link", a
   await expect(page.locator('[data-section="filter"]')).toBeHidden();
   await expect(page.locator("#art-wahl")).toBeHidden();
   await expect(page.locator('#thema-chips [data-thema="lkw"]')).toBeVisible();
-  await expect(page.locator('#thema-chips [data-thema="sv"]')).toBeHidden();
+  // Schwerverkehr gibt es hier nur als Klasse der Kamera – anders beschriftet als bei den Kurzzeitzählungen
+  await expect(page.locator('#thema-chips [data-thema="sv"]')).toHaveText("Schwerverkehr (Detektor)");
+  await expect(page.locator('#thema-chips [data-thema="rad"]')).toBeVisible();
+  await expect(page.locator('#thema-chips [data-thema="fuss"]')).toBeHidden();
   await expect(page.locator("#fc-zaehlungen-name")).toHaveText("vollständig");
-  expect(await zahl(page.locator("#fc-stellen"))).toBe(2);
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(3); // zwei in Berlin, eine in Hamburg (Kfz)
   // querySourceFeatures liefert je Kachel – Stellen zählen, nicht Treffer
-  await expect.poll(() => page.evaluate(() => new Set(window.__app.karte.querySourceFeatures("dauer").map((f) => f.properties.i)).size)).toBe(2);
+  await expect.poll(() => page.evaluate(() => new Set(window.__app.karte.querySourceFeatures("dauer").map((f) => f.properties.i)).size)).toBe(3);
   expect(await page.evaluate(() => window.__app.karte.getLayoutProperty("stellen-kreis", "visibility"))).toBe("none");
 
   // ein Tag zurück, dann der 3.6.: TE001 dort nicht vollständig gezählt -> hohl, kein Wert
@@ -66,6 +70,7 @@ test("Umschalter lädt die Dauerzählstellen: Tag, Klassen, Zähler und Link", a
   // zurück zu den Kurzzeitzählungen: Filter und Kennzahl wieder da, f=d weg
   await page.locator('[data-familie="k"]').click();
   await expect(page.locator('[data-section="filter"]')).toBeVisible();
+  await expect(page.locator('#thema-chips [data-thema="sv"]')).toHaveText("Schwerverkehr");
   await expect(page).not.toHaveURL(/f=d/);
   expect(await zahl(page.locator("#fc-stellen"))).toBeGreaterThan(1000);
   expect(fehler).toEqual([]);
@@ -106,9 +111,10 @@ test("CSV der Dauerzählstellen: Tagessummen des Tags, leer statt 0", async ({ p
   expect(download.suggestedFilename()).toBe("dauerzaehlstellen_2025-06-03.csv");
   const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
   const zeilen = text.replace(/^﻿/, "").trim().split("\n");
-  expect(zeilen[0]).toBe("quelle;stelle;name;abschnitt;richtung;lon;lat;datum;tagtyp;kfz_tagessumme;lkw_tagessumme;lizenz");
-  expect(zeilen[1]).toMatch(/^berlin_viz;berlin_viz:TE001;.*;2025-06-03;Schultag;;;dl-de\/by-2-0$/);
-  expect(zeilen[2]).toMatch(/;2025-06-03;Schultag;\d+;\d+;dl-de\/by-2-0$/);
+  expect(zeilen[0]).toBe("quelle;stelle;name;abschnitt;richtung;lon;lat;datum;tagtyp;kfz_tagessumme;lkw_tagessumme;sv_tagessumme;rad_tagessumme;lizenz");
+  expect(zeilen).toHaveLength(3); // Hamburg beginnt erst am 15.6.
+  expect(zeilen[1]).toMatch(/^berlin_viz;berlin_viz:TE001;.*;2025-06-03;Schultag;;;;;dl-de\/by-2-0$/);
+  expect(zeilen[2]).toMatch(/;2025-06-03;Schultag;\d+;\d+;;;dl-de\/by-2-0$/);
 });
 
 test("Ohne Dauerzählstellen bleibt der Umschalter aus, die Karte läuft wie bisher", async ({ page }) => {
@@ -128,4 +134,37 @@ test("Dauerzählstellen auf Englisch", async ({ page }) => {
   await expect(page.locator("#klassen-legende")).toContainText("Motor vehicles, daily total on 26 Jun 2025");
   await expect(page.locator("#dauer-tag-wert")).toHaveText("Thu 26 Jun 2025 · School day");
   await expect(page.locator("#fc-zaehlungen-name")).toHaveText("complete");
+});
+
+test("Mehrere Quellen: Schwerverkehr und Rad aus Hamburg, Sprung zu Berlin außerhalb seines Zeitraums", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page, "#f=d&z=2025-07-05");
+  await expect(page.locator("#dauer-tag-wert")).toHaveText(/^Sa\.? 05\.07\.2025 · Wochenende$/);
+  // Berlin zählt Kfz, hat am 5.7. aber keine Werte mehr: Hinweis mit Sprung zu seinem Standardtag
+  const hinweis = page.locator("#dauer-quellen");
+  await expect(hinweis).toBeVisible();
+  await expect(hinweis).toContainText("Berlin (Verkehrsdetektion): Werte vom 01.06.2025 bis 30.06.2025");
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(1);
+
+  await page.locator('#thema-chips [data-thema="sv"]').click();
+  await expect(page).toHaveURL(/t=sv\.menge/);
+  await expect(page.locator("#klassen-legende")).toContainText("Schwerverkehr (Detektor), Tagessumme am 05.07.2025");
+  await expect(hinweis).toBeHidden(); // Schwerverkehr zählt nur Hamburg
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(1);
+
+  await page.locator('#thema-chips [data-thema="rad"]').click();
+  await expect(page).toHaveURL(/t=rad\.menge/);
+  await klickeDauer(page, "hamburg_rad:7433952");
+  const detail = page.locator("#dauer-detail");
+  await expect(detail.locator(".detail-titel")).toHaveText("Alsterufer");
+  await expect(detail).toContainText("ohne Richtung (Querschnitt)");
+  await expect(detail.locator(".detail-kennwerte")).toContainText("Rad");
+
+  // zurück zu Kfz und per Sprung zu Berlin
+  await page.locator('#thema-chips [data-thema="kfz"]').click();
+  await hinweis.locator("[data-sprung]").click();
+  await expect(page).toHaveURL(/z=2025-06-26/);
+  await expect(hinweis).toBeHidden();
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(3);
+  expect(fehler).toEqual([]);
 });

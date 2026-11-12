@@ -9,19 +9,27 @@
 import { t } from "../sprache/texte.js";
 import { STUFENFARBEN, stufe } from "./modell.js";
 
-export const DAUER_GRUPPEN = ["kfz", "lkw"];
-const BIT = Object.fromEntries(DAUER_GRUPPEN.map((g, i) => [g, 1 << i]));
+// Gruppen, wie die Quellen sie zählen – nie ineinander gemischt: Berlins „Lkw“ und Hamburgs
+// „Schwerverkehr“ sind je eine Klasse des Detektors, keiner der Schwerverkehr der
+// Kurzzeitzählungen. Welche es gibt, steht in dauer/index.json (`gruppen`, Bits der Stellen).
+export const DAUER_GRUPPEN = ["kfz", "lkw", "sv", "rad", "fuss"];
 export const DAUER_THEMEN = {
   kfz: { get name() { return t("gruppe.kfz"); } },
   lkw: { get name() { return t("gruppe.lkw"); } },
+  sv: { get name() { return t("gruppe.sv_detektor"); } },
+  rad: { get name() { return t("gruppe.rad"); } },
+  fuss: { get name() { return t("gruppe.fuss"); } },
 };
 
-// Klassengrenzen der Tagessummen je Richtung (4 Grenzen -> 5 Stufen), an den Quintilen der
-// Berliner Detektoren 2015–2025 ausgerichtet (Bericht von `zaehlkarte dauer site`: Kfz
-// 6.350 / 9.760 / 12.820 / 16.820, Lkw 190 / 360 / 590 / 990).
+// Klassengrenzen der Tagessummen je Zählstelle (4 Grenzen -> 5 Stufen), an den Quintilen der
+// Quellen ausgerichtet (Bericht von `zaehlkarte dauer site`). Kfz und Lkw: Berliner Detektoren
+// 2015–2025 (Kfz 6.350 / 9.760 / 12.820 / 16.820, Lkw 190 / 360 / 590 / 990).
 export const DAUER_STUFEN = {
   kfz: [6000, 10000, 13000, 17000],
   lkw: [200, 350, 600, 1000],
+  sv: [100, 250, 500, 1000],
+  rad: [250, 500, 1000, 2000],
+  fuss: [500, 1000, 2500, 5000],
 };
 
 const TAG_MS = 86_400_000;
@@ -35,10 +43,11 @@ const gueltigesDatum = (iso) => /^\d{4}-\d{2}-\d{2}$/.test(iso ?? "") && isoAus(
 /** index.json -> { stellen (Objekte), quellen (Codes), quellenMeta, … } */
 export function entpackeDauer(index) {
   const f = index.stellen.felder;
-  const stellen = index.stellen.werte.map((r, i) => ({
-    ...Object.fromEntries(f.map((k, j) => [k, r[j]])),
-    index: i,
-  }));
+  const gruppen = index.gruppen ?? ["kfz"];
+  const stellen = index.stellen.werte.map((r, i) => {
+    const s = Object.fromEntries(f.map((k, j) => [k, r[j]]));
+    return { ...s, index: i, gruppen: gruppen.filter((_, b) => (s.g & (1 << b)) !== 0) };
+  });
   return {
     ...index,
     stellen,
@@ -62,7 +71,22 @@ export function tagtyp(d, land, iso) {
   return (k && k[tageZwischen(d.von, iso)]) || "u";
 }
 
-export const hatGruppe = (s, g) => (s.g & BIT[g]) !== 0;
+export const hatGruppe = (s, g) => s.gruppen.includes(g);
+
+/** Gruppe, die die Karte zeigt: die gewählte, wenn es sie gibt, sonst die erste der Daten. */
+export const themaIn = (d, g) => (d.gruppen.includes(g) ? g : d.gruppen[0]);
+
+/** Quellen, die die Gruppe zählen, aber am Tag keine Werte haben (Zeitraum endet oder beginnt später). */
+export function quellenOhneTag(d, g, iso) {
+  return d.quellenMeta.filter((q) => (q.gruppen ?? d.gruppen).includes(g) && (iso < q.von || iso > q.bis));
+}
+
+/** Tagtyp je Land der Quellen, die den Tag abdecken: [{ land, typ }] (gleiche Typen zusammen). */
+export function tagtypen(d, iso) {
+  const laender = [...new Set(d.quellenMeta.filter((q) => q.von <= iso && iso <= q.bis).map((q) => q.land))];
+  const liste = (laender.length ? laender : [d.quellenMeta[0]?.land]).map((land) => ({ land, typ: tagtyp(d, land, iso) }));
+  return new Set(liste.map((x) => x.typ)).size === 1 ? [{ land: null, typ: liste[0].typ }] : liste;
+}
 
 /** Tagessumme einer Stelle am Tag aus der Jahresdatei (null = nicht vollständig gezählt). */
 export function wertAm(jahr, stelle, g, iso) {
@@ -129,7 +153,7 @@ function csvFeld(v) {
  */
 export function csvDauer(d, jahr, iso, lizenzVon) {
   const kopf = ["quelle", "stelle", "name", "abschnitt", "richtung", "lon", "lat", "datum", "tagtyp",
-    ...DAUER_GRUPPEN.map((g) => `${g}_tagessumme`), "lizenz"];
+    ...d.gruppen.map((g) => `${g}_tagessumme`), "lizenz"];
   const zeilen = [kopf.join(";")];
   for (const s of d.stellen) {
     if (iso < s.von || iso > s.bis) continue;
@@ -137,7 +161,7 @@ export function csvDauer(d, jahr, iso, lizenzVon) {
     zeilen.push([
       s.quelle, s.id, s.name, s.abschnitt, s.richtung, s.lon, s.lat, iso,
       t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"),
-      ...DAUER_GRUPPEN.map((g) => (hatGruppe(s, g) ? wertAm(jahr, s, g, iso) : null)),
+      ...d.gruppen.map((g) => (hatGruppe(s, g) ? wertAm(jahr, s, g, iso) : null)),
       lizenzVon(s.quelle),
     ].map(csvFeld).join(";"));
   }
@@ -150,11 +174,11 @@ export function stundenAm(detail, g, iso) {
   return detail.stunden[g][tageZwischen(detail.stunden_von, iso)] ?? null;
 }
 
-/** Tagessumme und gezählte Stunden einer Stelle am Tag aus den Details. */
+/** Tagessumme und gezählte Stunden einer Gruppe am Tag aus den Details. */
 export function tagAusDetail(detail, g, iso) {
   const i = tageZwischen(detail.von, iso);
   if (i < 0) return { wert: null, stunden: 0 };
-  return { wert: detail.tage?.[g]?.[i] ?? null, stunden: detail.n?.[i] ?? 0 };
+  return { wert: detail.tage?.[g]?.[i] ?? null, stunden: detail.n?.[g]?.[i] ?? 0 };
 }
 
 /** Stunden, die es am Tag gibt: 23 am Tag der Umstellung auf Sommerzeit, sonst 24. */

@@ -2,8 +2,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  DAUER_STUFEN, ansichtDauer, csvDauer, entpackeDauer, featuresDauer, plusTage, stundenAm, stundenDesTags,
-  tagAusDetail, tagImZeitraum, tageZwischen, tagtyp, wertAm, zaehleDauer,
+  DAUER_STUFEN, DAUER_THEMEN, ansichtDauer, csvDauer, entpackeDauer, featuresDauer, hatGruppe, plusTage,
+  quellenOhneTag, stundenAm, stundenDesTags, tagAusDetail, tagImZeitraum, tageZwischen, tagtyp, tagtypen,
+  themaIn, wertAm, zaehleDauer,
 } from "../../js/data/dauer.js";
 import { standardZustand } from "../../js/data/modell.js";
 
@@ -81,7 +82,7 @@ test("csvDauer: deutsche Spalten, leer statt 0, Lizenz", () => {
 
 test("Details: Tagessumme, gezählte Stunden und Stundenwerte am Tag", () => {
   const detail = {
-    von: "2025-01-01", tage: { kfz: [10, null, 30] }, n: [24, 20, 24],
+    von: "2025-01-01", tage: { kfz: [10, null, 30] }, n: { kfz: [24, 20, 24] },
     stunden_von: "2025-01-02", stunden: { kfz: [Array(24).fill(1), null] },
   };
   assert.deepEqual(tagAusDetail(detail, "kfz", "2025-01-02"), { wert: null, stunden: 20 });
@@ -90,4 +91,43 @@ test("Details: Tagessumme, gezählte Stunden und Stundenwerte am Tag", () => {
   assert.equal(stundenAm(detail, "kfz", "2025-01-02").length, 24);
   assert.equal(stundenAm(detail, "kfz", "2025-01-03"), null);
   assert.equal(stundenAm(detail, "lkw", "2025-01-02"), null);
+});
+
+test("Gruppen aus den Daten: Bits je Stelle, Thema, Quellen ohne Werte am Tag, Tagtyp je Land", () => {
+  const index = {
+    ...INDEX,
+    gruppen: ["kfz", "sv", "rad"],
+    bis: "2025-01-10",
+    kalender: { BE: "sshfffwwssss", HH: "sshssswwssss" },
+    quellen: [
+      { code: "berlin_viz", name: "Berlin", land: "BE", gruppen: ["kfz"], von: "2024-12-30", bis: "2025-01-05", standardtag: "2025-01-02" },
+      { code: "hamburg_kfz", name: "Hamburg Kfz", land: "HH", gruppen: ["kfz", "sv"], von: "2025-01-02", bis: "2025-01-10", standardtag: "2025-01-09" },
+      { code: "hamburg_rad", name: "Hamburg Rad", land: "HH", gruppen: ["rad"], von: "2025-01-02", bis: "2025-01-10", standardtag: "2025-01-09" },
+    ],
+    stellen: {
+      felder: INDEX.stellen.felder,
+      werte: [
+        ["berlin_viz:TE001", "berlin_viz", "Clayallee", null, null, 13.26, 52.43, "2024-12-30", "2025-01-05", 1, 0],
+        ["hamburg_kfz:0248931", "hamburg_kfz", "Bramfelder Straße", null, null, 10.05, 53.6, "2025-01-02", "2025-01-10", 3, 0],
+        ["hamburg_rad:7433952", "hamburg_rad", "Alsterufer", null, null, 10.0, 53.56, "2025-01-02", "2025-01-10", 4, 0],
+      ],
+    },
+  };
+  const e = entpackeDauer(index);
+  assert.deepEqual(e.stellen.map((s) => s.gruppen), [["kfz"], ["kfz", "sv"], ["rad"]]);
+  assert.ok(hatGruppe(e.stellen[1], "sv") && !hatGruppe(e.stellen[0], "sv"));
+  assert.equal(themaIn(e, "lkw"), "kfz"); // gibt es hier nicht -> erste Gruppe
+  assert.equal(themaIn(e, "rad"), "rad");
+  assert.equal(DAUER_THEMEN.sv.name, "Schwerverkehr (Detektor)");
+  // am 8.1.: Berlin zählt Kfz, hat aber keine Werte mehr; beim Rad fehlt nichts
+  assert.deepEqual(quellenOhneTag(e, "kfz", "2025-01-08").map((q) => q.code), ["berlin_viz"]);
+  assert.deepEqual(quellenOhneTag(e, "rad", "2025-01-08"), []);
+  assert.deepEqual(quellenOhneTag(e, "sv", "2024-12-31").map((q) => q.code), ["hamburg_kfz"]);
+  // Tagtyp: gleich in allen Ländern -> einer; verschieden -> je Land; nur Länder mit Werten am Tag
+  assert.deepEqual(tagtypen(e, "2025-01-01"), [{ land: null, typ: "h" }]);
+  assert.deepEqual(tagtypen(e, "2025-01-03"), [{ land: "BE", typ: "f" }, { land: "HH", typ: "s" }]);
+  assert.deepEqual(tagtypen(e, "2025-01-08"), [{ land: null, typ: "s" }]); // nur Hamburg
+  const csv = csvDauer(e, { werte: { kfz: [null, null, null], sv: [null, null, null], rad: [null, null, null] } },
+    "2025-01-03", () => "dl-de/by-2-0");
+  assert.match(csv.split("\n")[0], /;tagtyp;kfz_tagessumme;sv_tagessumme;rad_tagessumme;lizenz$/);
 });

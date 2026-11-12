@@ -7,7 +7,7 @@
 // Texte der Oberfläche über t() (js/sprache/texte.js); nach einem Sprachwechsel baut
 // `uebersetze()` die erzeugten Listen neu.
 import { ARTEN, STUFENFARBEN, TAGE, THEMEN, kennzahlText, stufenFuer, stufenText } from "../data/modell.js";
-import { DAUER_STUFEN, DAUER_THEMEN, kennzahlTextDauer, plusTage, tageZwischen, tagtyp } from "../data/dauer.js";
+import { DAUER_STUFEN, DAUER_THEMEN, kennzahlTextDauer, plusTage, quellenOhneTag, tageZwischen, tagtypen } from "../data/dauer.js";
 import { DATENLAGE_KLASSEN } from "../map/ebenen.js";
 import { datum, t, wochentag, zahl } from "../sprache/texte.js";
 
@@ -67,6 +67,10 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
   legende.querySelectorAll("[data-schritt]").forEach((b) => b.addEventListener("click", () => {
     if (dauer && tagJetzt) tagWechseln?.(plusTage(tagJetzt, Number(b.dataset.schritt)));
   }));
+  $("dauer-quellen").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-sprung]");
+    if (b) tagWechseln?.(b.dataset.sprung);
+  });
   $("dauer-datum").addEventListener("change", (e) => {
     if (e.target.value) tagWechseln?.(e.target.value);
   });
@@ -151,10 +155,11 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     zeichne();
   }
 
-  /** "Do. 26.06.2025 · Schultag" für den Tag der Dauerzählstellen. */
+  /** "Do. 26.06.2025 · Schultag" für den Tag der Dauerzählstellen; unterscheiden sich die
+   *  Länder der Quellen an dem Tag: "… · BE Schultag, HH Ferien". */
   function tagText(iso) {
-    const land = dauer?.quellenMeta[0]?.land;
-    return `${wochentag(iso)} ${datum(iso)} · ${TAGE[tagtyp(dauer, land, iso)]}`;
+    const typen = tagtypen(dauer, iso);
+    return `${wochentag(iso)} ${datum(iso)} · ${typen.map((x) => (x.land ? `${x.land} ${TAGE[x.typ]}` : TAGE[x.typ])).join(", ")}`;
   }
 
   function zeichneJahre() {
@@ -168,8 +173,15 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     setzeChips($("familie-chips"), "familie", zustand.familie);
     $("familie-chips").querySelector('[data-familie="d"]').disabled = !dauerDa;
     $("thema-chips").querySelectorAll("[data-thema]").forEach((b) => {
-      b.hidden = d ? !(b.dataset.thema in DAUER_THEMEN) : !(b.dataset.thema in THEMEN);
+      b.hidden = d ? !(b.dataset.thema in DAUER_THEMEN) || (dauer != null && !dauer.gruppen.includes(b.dataset.thema))
+        : !(b.dataset.thema in THEMEN);
     });
+    // Schwerverkehr: bei den Dauerzählstellen die Klasse der Kamera, nicht der gezählte der Kurzzeitzählungen
+    const sv = $("thema-chips").querySelector('[data-thema="sv"]');
+    sv.dataset.i18n = d ? "gruppe.sv_detektor" : "gruppe.sv";
+    sv.dataset.i18nAttr = `title:${d ? "thema.sv_detektor_tip" : "thema.sv_tip"}`;
+    sv.textContent = t(sv.dataset.i18n);
+    sv.title = t(d ? "thema.sv_detektor_tip" : "thema.sv_tip");
     $("art-wahl").hidden = d;
     $("dauer-tag").hidden = !d;
     legende.querySelector('[data-section="filter"]').hidden = d;
@@ -253,6 +265,12 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     $("dauer-regler").value = String(tageZwischen(dauer.von, iso));
     legende.querySelector('[data-schritt="-1"]').disabled = iso <= dauer.von;
     legende.querySelector('[data-schritt="1"]').disabled = iso >= dauer.bis;
+    // Quellen mit dieser Verkehrsart, die an dem Tag keine Werte haben: Zeitraum und Sprung
+    const ohne = quellenOhneTag(dauer, g, iso);
+    $("dauer-quellen").hidden = !ohne.length;
+    $("dauer-quellen").innerHTML = ohne.map((q) => `
+      <div class="dauer-quelle"><span>${esc(t("dauer.ohne_tag", { quelle: q.name, von: datum(q.von), bis: datum(q.bis) }))}</span>
+        ${q.standardtag ? `<button type="button" class="link-knopf" data-sprung="${esc(q.standardtag)}">${esc(t("dauer.springen", { datum: datum(q.standardtag) }))}</button>` : ""}</div>`).join("");
     $("fc-stellen").textContent = zahl(zahlen.stellen);
     $("fc-zaehlungen").textContent = zahl(zahlen.vollstaendig);
   }

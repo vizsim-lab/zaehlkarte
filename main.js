@@ -9,7 +9,7 @@
 import { Map as Karte } from "./js/lib/maplibre.js";
 import { gibtDauer, ladeDauer, ladeStart } from "./js/data/laden.js";
 import { ansicht, csv, entpacke, features, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
-import { ansichtDauer, csvDauer, entpackeDauer, featuresDauer, tagImZeitraum, zaehleDauer } from "./js/data/dauer.js";
+import { ansichtDauer, csvDauer, entpackeDauer, featuresDauer, tagImZeitraum, themaIn, zaehleDauer } from "./js/data/dauer.js";
 import { addBasemapTerrain } from "./js/map/basemapTerrain.js";
 import {
   bindeHover, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeDauer, setzeFamilie, setzeStellen, standText,
@@ -95,6 +95,7 @@ async function start() {
   async function holeDauer() {
     if (!dauer) {
       dauer = entpackeDauer(await ladeDauer());
+      zustand.dthema = themaIn(dauer, zustand.dthema);
       legende.setzeDauer({ da: true, d: dauer });
     }
     return dauer;
