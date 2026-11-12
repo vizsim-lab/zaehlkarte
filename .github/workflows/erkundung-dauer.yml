@@ -1,0 +1,25 @@
+# Entwicklungswerkzeug: Aufbau der Dauerzählstellen-Daten (Berlin VIZ, Hamburg SensorThings)
+# erkunden (tools/dauer_erkunden.py) und das Ergebnis in denselben Branch legen (Pushes mit
+# GITHUB_TOKEN starten keinen neuen Lauf).
+name: Erkundung Dauerzählstellen
+on:
+  push:
+    branches: [werkzeug/dauer]
+    paths: [tools/**, .github/workflows/erkundung-dauer.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  erkunden:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v7
+      - uses: astral-sh/setup-uv@v10.1.0
+      - run: timeout 45m uv run --no-project --with openpyxl python tools/dauer_erkunden.py ergebnis/dauer || true
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ergebnis
+          git commit -q -m "Erkundung Dauerzählstellen $(date -u +%F)" && git push origin HEAD:werkzeug/dauer
