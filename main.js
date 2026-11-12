@@ -3,14 +3,20 @@
 // Ablauf: manifest.json + index.json + datenlage.json laden (parallel zur Karte), Zustand aus
 // dem Permalink (#…) lesen, Layer anlegen, bei jeder Änderung `zeichne()`. Details einer
 // Stelle lädt detail.js erst beim Klick. Test-Hook: window.__app (tests/web/).
+// Familie Dauerzählstellen (f=d): dauer/index.json erst beim Umschalten, dazu die Jahresdatei
+// des gewählten Tags; Details einer Dauerstelle lädt dauerdetail.js beim Klick.
 // Sprache (DE Standard, EN wählbar): js/sprache/ – nach einem Wechsel wird neu gezeichnet.
 import { Map as Karte } from "./js/lib/maplibre.js";
-import { ladeStart } from "./js/data/laden.js";
+import { gibtDauer, ladeDauer, ladeStart } from "./js/data/laden.js";
 import { ansicht, csv, entpacke, features, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
+import { ansichtDauer, csvDauer, entpackeDauer, featuresDauer, tagImZeitraum, zaehleDauer } from "./js/data/dauer.js";
 import { addBasemapTerrain } from "./js/map/basemapTerrain.js";
-import { bindeHover, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeStellen, standText } from "./js/map/ebenen.js";
+import {
+  bindeHover, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeDauer, setzeFamilie, setzeStellen, standText,
+} from "./js/map/ebenen.js";
 import { t, zahl } from "./js/sprache/texte.js";
 import { bindeUmschalter, ersteSprache, wendeAn } from "./js/sprache/umschalter.js";
+import { erstelleDauerDetail } from "./js/ui/dauerdetail.js";
 import { erstelleDetail } from "./js/ui/detail.js";
 import { erstelleLegende } from "./js/ui/legende.js";
 import { setupMobileLayout } from "./js/ui/mobileLayout.js";
@@ -59,6 +65,13 @@ async function start() {
 
   let eintraege = [];
   let jeStelle = new Map();
+  // Dauerzählstellen: entpackte dauer/index.json, Jahresdatei des Tags, Einträge je Stelle
+  let dauer = null;
+  let dauerJahr = null;
+  let dauerEintraege = [];
+  let jeDauer = new Map();
+  const tagJetzt = () => (dauer ? tagImZeitraum(dauer, zustand.tag) : null);
+
   const detail = erstelleDetail({
     manifest,
     daten,
@@ -66,16 +79,80 @@ async function start() {
     beiSchliessen: () => { setzeAuswahl(karte, null); merkeLink(); },
     beiWechsel: () => merkeLink(),
   });
-  const legende = erstelleLegende({ manifest, daten, zustand, datenlage, geaendert: () => zeichne() });
+  const dauerDetail = erstelleDauerDetail({
+    gibDauer: () => dauer,
+    gibZustand: () => zustand,
+    gibTag: () => tagJetzt(),
+    beiTag: (iso) => tagWechseln(iso),
+    beiSchliessen: () => { setzeAuswahl(karte, null); merkeLink(); },
+  });
+  const legende = erstelleLegende({
+    manifest, daten, zustand, datenlage, geaendert: () => zeichne(),
+    familieWechseln: (f) => familieWechseln(f),
+    tagWechseln: (iso) => tagWechseln(iso),
+  });
 
-  function zeichne() {
-    eintraege = ansicht(daten, zustand);
-    jeStelle = new Map(eintraege.map((e) => [e.stelle.index, e]));
-    setzeStellen(karte, features(eintraege));
+  async function holeDauer() {
+    if (!dauer) {
+      dauer = entpackeDauer(await ladeDauer());
+      legende.setzeDauer({ da: true, d: dauer });
+    }
+    return dauer;
+  }
+
+  async function familieWechseln(f) {
+    if (f === "d") {
+      try {
+        await holeDauer();
+      } catch (err) {
+        legende.hinweis(t("familie.d_fehlt", { fehler: err.message }));
+        return;
+      }
+    }
+    legende.hinweis(null);
+    zustand.familie = f;
+    detail.schliesse();
+    dauerDetail.schliesse();
+    setzeAuswahl(karte, null);
+    legende.zeichne();
+    await zeichne();
+  }
+
+  async function tagWechseln(iso) {
+    if (!dauer) return;
+    zustand.tag = tagImZeitraum(dauer, iso);
+    await zeichne();
+  }
+
+  let zeichneNr = 0;
+  async function zeichne() {
+    const nr = ++zeichneNr;
+    setzeFamilie(karte, zustand.familie);
     setzeDatenlage(karte, zustand.datenlage);
-    legende.zeichneKlassen(zaehleKlassen(eintraege), zaehlen(daten, zustand, eintraege));
-    detail.aktualisiere();
+    if (zustand.familie === "d" && dauer) {
+      const tag = tagJetzt();
+      let jahr = null;
+      try {
+        jahr = await ladeDauer(dauer.dateien.tage.replace("{jahr}", tag.slice(0, 4)));
+      } catch (err) {
+        legende.hinweis(t("familie.d_fehlt", { fehler: err.message }));
+      }
+      if (nr !== zeichneNr) return;
+      dauerJahr = jahr;
+      dauerEintraege = ansichtDauer(dauer, zustand, jahr, tag);
+      jeDauer = new Map(dauerEintraege.map((e) => [e.stelle.index, e]));
+      setzeDauer(karte, featuresDauer(dauerEintraege));
+      legende.zeichneDauer(tag, zaehleDauer(dauerEintraege));
+      dauerDetail.aktualisiere();
+    } else {
+      eintraege = ansicht(daten, zustand);
+      jeStelle = new Map(eintraege.map((e) => [e.stelle.index, e]));
+      setzeStellen(karte, features(eintraege));
+      legende.zeichneKlassen(zaehleKlassen(eintraege), zaehlen(daten, zustand, eintraege));
+      detail.aktualisiere();
+    }
     merkeLink();
+    document.documentElement.dataset.gezeichnet = String(nr);
   }
 
   let linkTimer = null;
@@ -83,7 +160,8 @@ async function start() {
     clearTimeout(linkTimer);
     linkTimer = setTimeout(() => {
       const c = karte.getCenter();
-      const hash = kodiere(zustand, standard, { zoom: karte.getZoom(), lat: c.lat, lon: c.lng }, detail.stelle?.id ?? null);
+      const stelle = zustand.familie === "d" ? dauerDetail.stelle?.id : detail.stelle?.id;
+      const hash = kodiere(zustand, standard, { zoom: karte.getZoom(), lat: c.lat, lon: c.lng }, stelle ?? null);
       history.replaceState(null, "", `#${hash}`); // ?lang= bleibt stehen
     }, 250);
   }
@@ -96,6 +174,14 @@ async function start() {
 
   function oeffneStelle(s, zaehlung = null) {
     detail.zeige(s, zaehlung ?? jeStelle.get(s.index)?.z.index ?? null);
+    setzeAuswahl(karte, s);
+    dlPanel.hidden = true;
+    merkeLink();
+  }
+
+  function oeffneDauer(s) {
+    detail.schliesse();
+    dauerDetail.zeige(s);
     setzeAuswahl(karte, s);
     dlPanel.hidden = true;
     merkeLink();
@@ -154,21 +240,39 @@ async function start() {
       e.target.textContent = t("dl.kopiert");
     });
     detail.schliesse();
+    dauerDetail.schliesse();
     el.dataset.kommune = kommune;
   }
 
-  const popup = bindeHover(karte, { daten, manifest, gibZustand: () => zustand, gibEintrag: (i) => jeStelle.get(i) });
+  const popup = bindeHover(karte, {
+    daten, manifest, gibZustand: () => zustand, gibEintrag: (i) => jeStelle.get(i),
+    gibDauer: () => ({ d: dauer, tag: tagJetzt(), eintrag: (i) => jeDauer.get(i) }),
+  });
   karte.on("click", (e) => {
-    const treffer = karte.queryRenderedFeatures(e.point, { layers: ["stellen-kreis", "datenlage-kreis"] });
+    const treffer = karte.queryRenderedFeatures(e.point, { layers: ["stellen-kreis", "dauer-kreis", "datenlage-kreis"] });
     const s = treffer.find((f) => f.layer.id === "stellen-kreis");
     if (s) { oeffneStelle(daten.stellen[s.properties.i]); return; }
+    const ds = treffer.find((f) => f.layer.id === "dauer-kreis");
+    if (ds && dauer) { oeffneDauer(dauer.stellen[ds.properties.i]); return; }
     const d = treffer.find((f) => f.layer.id === "datenlage-kreis");
     if (d) { zeigeDatenlage(d.properties.kommune); return; }
     detail.schliesse();
+    dauerDetail.schliesse();
     schliesseDatenlage();
   });
 
   document.getElementById("export-csv").addEventListener("click", () => {
+    if (zustand.familie === "d" && dauer) {
+      const tag = tagJetzt();
+      const lizenz = (quelle) => dauer.quellenMeta.find((q) => q.code === quelle)?.lizenzen[0]?.lizenz ?? "";
+      const blob = new Blob([csvDauer(dauer, dauerJahr, tag, lizenz)], { type: "text/csv;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `dauerzaehlstellen_${tag}.csv`;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      return;
+    }
     const lizenzVon = (quelle, lieferung) => {
       const q = manifest.quellen.find((x) => x.code === quelle);
       const code = lieferung ? lieferung.split(":")[1] : quelle;
@@ -188,7 +292,18 @@ async function start() {
   beschrifteSteuerung();
   rueckeNebenPanels();
   setupMobileLayout();
-  zeichne();
+  // Dauerzählstellen: nur nachsehen, ob es sie gibt; geladen wird beim Umschalten (oder f=d)
+  gibtDauer().then((da) => { if (!dauer) legende.setzeDauer({ da }); });
+  if (zustand.familie === "d") {
+    try {
+      await holeDauer();
+    } catch (err) {
+      zustand.familie = "k";
+      legende.hinweis(t("familie.d_fehlt", { fehler: err.message }));
+    }
+  }
+  legende.zeichne();
+  await zeichne();
 
   // Sprachwechsel: statische Texte setzt der Umschalter, hier alles Erzeugte neu zeichnen
   bindeUmschalter(() => {
@@ -200,13 +315,16 @@ async function start() {
   });
 
   if (aufruf.stelle) {
-    const s = daten.stellen.find((x) => x.id === aufruf.stelle);
+    const s = zustand.familie === "d" ? dauer?.jeId.get(aufruf.stelle) : daten.stellen.find((x) => x.id === aufruf.stelle);
     if (s) {
-      oeffneStelle(s);
+      if (zustand.familie === "d") oeffneDauer(s); else oeffneStelle(s);
       if (!aufruf.karte) karte.jumpTo({ center: [s.lon, s.lat], zoom: 14 });
     }
   }
-  window.__app = { karte, daten, zustand, manifest, zeichne, oeffneStelle, zeigeDatenlage, detail, eintraege: () => eintraege };
+  window.__app = {
+    karte, daten, zustand, manifest, zeichne, oeffneStelle, zeigeDatenlage, detail, eintraege: () => eintraege,
+    dauer: () => dauer, dauerDetail, oeffneDauer, familieWechseln, tagWechseln, dauerEintraege: () => dauerEintraege,
+  };
   document.documentElement.dataset.bereit = "1";
 }
 

@@ -3,9 +3,18 @@
 Learnings aus dem Aufbau (November 2026). Ergänzen, wenn etwas Neues auffällt.
 
 ## Was gesucht ist
-Kurzzeitzählungen der Kommunen mit **Werten je Zählung** – am besten je Intervall (15/60
-Minuten) und Richtung, mindestens Tagessummen je Verkehrsart. Nicht gemeint: Dauerzählstellen
-(Rad-Zählsäulen, aVME), Verkehrsmengenkarten und DTV-Mittelwerte (dafür `vizsim/svz`).
+Zwei Familien, beide mit gezählten Werten im Zeitverlauf:
+- **Kurzzeitzählungen** der Kommunen mit **Werten je Zählung** – am besten je Intervall (15/60
+  Minuten) und Richtung, mindestens Tagessummen je Verkehrsart.
+- **Dauerzählstellen** der Kommunen (fest eingebaute Detektoren, Kameras) mit Stunden- oder
+  Tageswerten über Monate und Jahre – Abschnitt `dauer:` in sources.yaml, Code in
+  `src/zaehlkarte/dauer/`.
+
+Nicht gemeint: Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür
+`vizsim/svz`. Prüffrage: Ein Wert je Stelle und Jahr → svz; Werte je Intervall oder Tag →
+hier; beides → jedes Repo seinen Teil (Hamburg: DTV-Tabelle svz, Detektor-Stunden hier).
+Klassische Rad-Zählsäulen (Eco-Counter u. a.) sind vorerst nicht dabei; Stundenwerte der BASt
+auch nicht (nicht kommunal).
 
 ## Wo suchen
 - **Open-Data-Portale der Städte und Länder:** MobiData BW (CKAN, Gruppe
@@ -244,3 +253,27 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
 [VO 2022/670, Erwägungsgrund 19](https://gesetze.legal/eu/vo_eu_2022_670/praeambel),
 [DNG](https://www.gesetze-im-internet.de/dng/BJNR294200021.html),
 [MobiData BW Factsheet](https://mobidata-bw.de/data/MobiData-BW-Factsheet-Datenbereitstellungspflichten.pdf).
+
+## Dauerzählstellen (November 2026)
+
+- **Berlin (in der Karte, `berlin_viz`):** öffentlicher Azure-Container
+  `https://mdhopendata.blob.core.windows.net/verkehrsdetektion`, Liste per
+  `?restype=container&comp=list` (Content-MD5 je Datei; `fetch` lädt nur Geändertes). Aus
+  manchen Entwicklungsumgebungen nicht erreichbar → Workflow. Fallen: drei Formate der neuen
+  QS (CSV oder CSV.GZ im TGZ, „qkfz“/„kfz“, Vollständigkeit in Prozent oder als Anteil,
+  Stunde „7“ oder „07“), je Stunde oft eine NaN-Zeile neben der gültigen; die Stammdaten
+  (Juli 2022) kennen die neuen Messquerschnitte „…n“ nicht; das ReadMe beschreibt eine andere
+  Stammdaten-Datei (Blätter DET/MQ, Gauß-Krüger) als die im Archiv (ein Blatt, WGS84).
+- **Hamburg (nächster Kandidat):** SensorThings `https://iot.hamburg.de/v1.1`, Dienste
+  `HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren` (rund 830 Zählstellen Kfz, 341 auch
+  Schwerverkehr) und `HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren` (312 Zählstellen);
+  Layer 5-Min, 15-Min, 1-Stunde, 1-Tag, 1-Woche. Stundenwerte reichen nur rund 75 Tage zurück
+  (Schwerverkehr seit Februar 2026), Tageswerte bis 2020 – die Vollständigkeit eines Tags lässt
+  sich nur mit Stundenwerten prüfen, also braucht es einen eigenen Archivlauf. Die alten Dienste
+  `HH_STA_AutomatisierteVerkehrsmengenerfassung` und `HH_STA_HamburgerRadzaehlnetz` heißen
+  „(veraltet)“ und enden im März 2026. Zeitstempel in UTC. dl-de/by-2-0, „Freie und Hansestadt
+  Hamburg, Behörde für Verkehr und Mobilitätswende“.
+- **Weitere Kandidaten** (Datenlage, Stand `automatisch`): Heidelberg (12 Kameras), Ulm (5
+  Kameras, Standorte nur als Kürzel), Freiburg (25 Sensoren im Test), Osnabrück (1 KI-Sensor),
+  Ettlingen (6 Zählstellen, nur CC BY-NC – nicht aufnehmen); zu prüfen: Darmstadt, Wiesbaden,
+  Konstanz, Gelsenkirchen, Mannheim, Leipzig, Aachen.

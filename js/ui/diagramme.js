@@ -84,6 +84,73 @@ export function tagesgang(reihen, opt = TG) {
   return { svg, max, x, y };
 }
 
+// Tagtypen der Tagesreihe: Schultag kräftig, Ferien heller, Wochenende/Feiertag grau –
+// eine Farbfamilie wie die Karte, damit die Reihe nicht nach Kategorien „schreit“.
+export const TR_FARBEN = { s: "#256abf", f: "#6da7ec", h: "#9ca3af", w: "#9ca3af", u: "#9ca3af" };
+
+/**
+ * Tagessummen einer Dauerzählstelle über die ganze Reihe: je Tag ein senkrechter Strich,
+ * gefärbt nach Tagtyp; fehlt ein Tag (nicht vollständig gezählt), bleibt die Lücke.
+ * werte: Tagessummen ab dem ersten Tag (null = nicht vollständig), typen: Tagtyp je Tag
+ * (s f h w u), von: ISO-Datum des ersten Tags, gewaehlt: Index des gewählten Tags (oder -1).
+ * -> { svg, x(i) -> Pixel, index(px) -> Tag } (svg leer, wenn kein Wert da ist).
+ */
+export function tagesreihe(werte, typen, von, gewaehlt = -1, format = (v) => zahl(v),
+  opt = { breite: 340, hoehe: 112, l: 42, r: 10, o: 8, u: 20 }) {
+  const { breite, hoehe, l, r, o, u } = opt;
+  const w = breite - l - r;
+  const h = hoehe - o - u;
+  const n = werte.length;
+  const mit = werte.filter((v) => v != null);
+  if (!n || !mit.length) return { svg: "", x: () => 0, index: () => -1 };
+  const { max, schritt } = achse(Math.max(...mit));
+  const x = (i) => l + ((i + 0.5) / n) * w;
+  const y = (v) => o + h - (v / max) * h;
+  const teile = [];
+  for (let v = 0; v <= max + 1e-9; v += schritt * 2) {
+    teile.push(`<line class="tg-raster" x1="${l}" x2="${l + w}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/>`);
+    teile.push(`<text class="tg-tick" x="${l - 6}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">${esc(format(v))}</text>`);
+  }
+  // Jahresanfänge als Achse; Beschriftung höchstens jedes zweite Jahr, wenn es eng wird
+  const jahr0 = Number(von.slice(0, 4));
+  const start = Date.UTC(jahr0, Number(von.slice(5, 7)) - 1, Number(von.slice(8, 10)));
+  const jahre = [];
+  for (let j = jahr0 + 1; ; j += 1) {
+    const i = Math.round((Date.UTC(j, 0, 1) - start) / 86_400_000);
+    if (i >= n) break;
+    jahre.push({ j, i });
+  }
+  const jedes = jahre.length > 6 ? 2 : 1;
+  for (const [k, { j, i }] of jahre.entries()) {
+    const xx = l + (i / n) * w;
+    teile.push(`<line class="tr-jahr" x1="${xx.toFixed(1)}" x2="${xx.toFixed(1)}" y1="${o}" y2="${o + h}"/>`);
+    if (k % jedes === 0) teile.push(`<text class="tg-tick" x="${(xx + 2).toFixed(1)}" y="${hoehe - 6}">${j}</text>`);
+  }
+  // ein Pfad je Tagtyp: senkrechte Striche von der Basis zum Wert
+  const pfade = {};
+  werte.forEach((v, i) => {
+    if (v == null) return;
+    const typ = TR_FARBEN[typen[i]] ? typen[i] : "u";
+    const farbe = TR_FARBEN[typ];
+    pfade[farbe] = (pfade[farbe] ?? "") + `M${x(i).toFixed(2)},${(o + h).toFixed(1)}V${y(v).toFixed(1)}`;
+  });
+  const dicke = Math.max(0.6, Math.min(3, w / n));
+  for (const [farbe, d] of Object.entries(pfade)) {
+    teile.push(`<path class="tr-tage" stroke="${esc(farbe)}" stroke-width="${dicke.toFixed(2)}" d="${d}"/>`);
+  }
+  teile.push(`<line class="tg-basis" x1="${l}" x2="${l + w}" y1="${o + h}" y2="${o + h}"/>`);
+  if (gewaehlt >= 0 && gewaehlt < n) {
+    const xx = x(gewaehlt).toFixed(1);
+    teile.push(`<line class="tr-gewaehlt" x1="${xx}" x2="${xx}" y1="${o}" y2="${o + h}"/>`);
+    if (werte[gewaehlt] != null) teile.push(`<circle class="tr-punkt" cx="${xx}" cy="${y(werte[gewaehlt]).toFixed(1)}" r="3.5"/>`);
+  }
+  teile.push(`<line class="tg-kreuz" x1="0" x2="0" y1="${o}" y2="${o + h}" visibility="hidden"/>`);
+  teile.push(`<rect class="tg-treffer" x="${l}" y="${o}" width="${w}" height="${h}"/>`);
+  const svg = `<svg class="tr" viewBox="0 0 ${breite} ${hoehe}" width="100%" role="img">${teile.join("")}</svg>`;
+  const index = (px) => Math.max(0, Math.min(n - 1, Math.floor(((px - l) / w) * n)));
+  return { svg, x, index };
+}
+
 /**
  * Verlauf eines Kennwerts über die Zählungen einer Stelle (Säulen nach Datum).
  * punkte: [{ datum, wert, text, aktiv }], format: Zahl -> Text der Achse

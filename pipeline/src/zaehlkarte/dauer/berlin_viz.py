@@ -17,9 +17,12 @@ Aufbau laut ReadMe.txt des Archivs (Stand Februar 2026) und den Dateien selbst:
 
 Verwendet wird je Monat ein Verfahren: vor `neue_qs_ab` die Messquerschnitte der alten
 Qualitätssicherung wie geliefert, ab dann die Detektoren der neuen, summiert nach der Regel der
-Quelle (eine Stunde je Messquerschnitt nur, wenn jeder Detektor mit Werten gültig ist; gültig =
-Wert vorhanden und mindestens `vollstaendig_mindestens` % der Messintervalle). Wo beide
-Verfahren denselben Monat abdecken, vergleicht der Bericht sie.
+Quelle (eine Stunde je Messquerschnitt nur, wenn jeder seiner Detektoren gültig ist; gültig =
+Wert vorhanden und mindestens `vollstaendig_mindestens` % der Messintervalle). Detektoren, die
+die Stammdaten als deinstalliert führen, zählen nie mit – 2025 liefern einige davon Werte,
+etwa über Fahrstreifen, die laut Stammdaten heute Rad- oder Busspuren sind (Vergleich im
+Werkzeug-Branch `werkzeug/dauer`, tools/dauer_vergleich.py). Wo beide Verfahren denselben Monat
+abdecken, vergleicht der Bericht sie.
 """
 
 from __future__ import annotations
@@ -62,6 +65,7 @@ class Bericht:
     unbekannt: Counter = field(default_factory=Counter)  # Messquerschnitte ohne Stammdaten
     widerspruch: int = 0  # doppelte Stunden mit verschiedenen Werten (verworfen)
     unvollstaendig_neu: int = 0  # Detektor-Stunden mit Wert, aber zu wenigen Messintervallen
+    deinstalliert_neu: int = 0  # Stunden mit Wert von laut Stammdaten deinstallierten Detektoren
     ohne_datei: Counter = field(default_factory=Counter)  # Monat -> MQ ohne Detektordatei
     vergleich: Counter = field(default_factory=Counter)
     abweichung: list[float] = field(default_factory=list)
@@ -78,6 +82,9 @@ class Bericht:
         if self.unvollstaendig_neu:
             z.append("neue QS: Detektor-Stunden unter der Vollständigkeitsgrenze: "
                      f"{self.unvollstaendig_neu}")
+        if self.deinstalliert_neu:
+            z.append("neue QS: Stunden mit Wert von laut Stammdaten deinstallierten Detektoren "
+                     f"(nicht gezählt): {self.deinstalliert_neu}")
         for monat, n in sorted(self.ohne_datei.items()):
             z.append(f"{monat}: {n} Messquerschnitte ohne Datei für einen ihrer Detektoren")
         v = self.vergleich
@@ -341,6 +348,9 @@ def lies_neue(pfad: Path, reihe: Messreihe, sd: Stammdaten, mindestens: float,
             if m.name.lower().endswith(".gz"):
                 inhalt = gzip.decompress(inhalt)
             d = _detektor_csv(inhalt, jahr, monat, mindestens, rueck, bericht)
+            if name in sd.deinstalliert:
+                bericht.deinstalliert_neu += len(d)
+                continue
             kfz = np.full((tage, 24), np.nan)
             lkw = np.full((tage, 24), np.nan)
             dop = np.zeros((tage, 24), dtype=bool)
@@ -353,9 +363,8 @@ def lies_neue(pfad: Path, reihe: Messreihe, sd: Stammdaten, mindestens: float,
     n = 0
     ohne = 0
     for mq, i in sd.index.items():
-        # gebraucht: jeder Detektor, der nicht als deinstalliert gilt – und jeder mit Werten
-        noetig = [x for x in sd.detektoren[mq]
-                  if x not in sd.deinstalliert or (x in det and np.isfinite(det[x][0]).any())]
+        # gebraucht: jeder Detektor des Messquerschnitts, der nicht als deinstalliert gilt
+        noetig = [x for x in sd.detektoren[mq] if x not in sd.deinstalliert]
         if not noetig:
             continue
         if any(x not in det for x in noetig):

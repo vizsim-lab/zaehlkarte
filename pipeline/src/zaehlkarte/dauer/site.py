@@ -124,6 +124,7 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
             "art": q.get("art"), "weg": q.get("weg"), "portal": q.get("portal"),
             "archiv": q.get("archiv_seite") or q.get("archiv"),
             "quellenvermerk": q.get("quellenvermerk"), "lizenzen": _lizenzen(q),
+            "hinweise": [" ".join(h.split()) for h in q.get("hinweise", [])],
             "stellen": anzahl, "von": r.von.isoformat(), "bis": r.tag(r.tage - 1).isoformat(),
             "stunden_von": r.tag(stunden_ab).isoformat(),
             "verfahren": [{"von": a.isoformat(), "bis": b.isoformat(), "text": t}
@@ -144,6 +145,7 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
 
     laender = sorted({q["land"] for q, _ in gelesen})
     ferien = {q["land"]: pfade.config / q["ferien"] for q, _ in gelesen if q.get("ferien")}
+    kal = {land: kalender(land, ferien.get(land), von, tage_gesamt) for land in laender}
     index = {
         "version": VERSION,
         "erzeugt": (erzeugt or date.today()).isoformat(),
@@ -154,7 +156,8 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
         "von": von.isoformat(),
         "bis": bis.isoformat(),
         "jahre": list(jahreswerte),
-        "kalender": {land: kalender(land, ferien.get(land), von, tage_gesamt) for land in laender},
+        "kalender": kal,
+        "standardtag": standardtag(gelesen, kal, von).isoformat(),
         "quellen": quellen_meta,
         "stellen": {"felder": STELLEN_FELDER, "werte": stellen_werte},
     }
@@ -175,6 +178,26 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
     return list(dateien), bericht
 
 
+def standardtag(gelesen: list[tuple[dict, Messreihe]], kal: dict[str, str], von: date,
+                anteil: float = 0.8) -> date:
+    """Tag, den die Karte zuerst zeigt: der jüngste Schultag der letzten 12 Monate, an dem
+    mindestens `anteil` so viele Stellen vollständig gezählt sind wie am besten Schultag dort."""
+    je_tag: dict[date, int] = {}
+    for q, r in gelesen:
+        s, _ = tagessummen(r, "kfz")
+        voll = (s >= 0).sum(axis=0)
+        for t in range(r.tage):
+            tag = r.tag(t)
+            if kal.get(q["land"], "")[(tag - von).days: (tag - von).days + 1] == "s":
+                je_tag[tag] = je_tag.get(tag, 0) + int(voll[t])
+    if not je_tag:
+        return max(r.tag(r.tage - 1) for _, r in gelesen)
+    letzter = max(je_tag)
+    jahr = {t: n for t, n in je_tag.items() if (letzter - t).days < 365}
+    grenze = anteil * max(jahr.values())
+    return max(t for t, n in jahr.items() if n >= grenze)
+
+
 def statistik(gelesen: list[tuple[dict, Messreihe]]) -> list[str]:
     """Kurzbericht: vollständige Tage je Jahr und Quelle (Kfz)."""
     zeilen = []
@@ -185,9 +208,11 @@ def statistik(gelesen: list[tuple[dict, Messreihe]]) -> list[str]:
             je_jahr[r.tag(t).year] = je_jahr.get(r.tag(t).year, 0) + int((s[:, t] >= 0).sum())
         teile = ", ".join(f"{j}: {n}" for j, n in sorted(je_jahr.items()))
         zeilen.append(f"{q['code']}: vollständige Kfz-Tage je Jahr (Stellen × Tage) – {teile}")
-        werte = s[s >= 0]
-        if werte.size:
-            q4 = np.quantile(werte, [0.2, 0.4, 0.6, 0.8]).round(-2).astype(int).tolist()
-            zeilen.append(f"{q['code']}: Kfz-Tagessummen, Quintilgrenzen {q4}, "
-                          f"Median {int(np.median(werte))}, Maximum {int(werte.max())}")
+        for g in GRUPPEN:
+            werte = tagessummen(r, g)[0]
+            werte = werte[werte >= 0]
+            if werte.size:
+                q4 = np.quantile(werte, [0.2, 0.4, 0.6, 0.8]).round(-1).astype(int).tolist()
+                zeilen.append(f"{q['code']}: {g}-Tagessummen, Quintilgrenzen {q4}, "
+                              f"Median {int(np.median(werte))}, Maximum {int(werte.max())}")
     return zeilen

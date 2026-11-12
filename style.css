@@ -1139,6 +1139,37 @@ body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px)
 .vl-saeule.is-aktiv { fill: #184f95; }
 .detail-verlauf .detail-abschnitt { margin-top: 2px; }
 
+/* ───── Familie und Tag der Dauerzählstellen (js/ui/legende.js) ───── */
+.legend-chips--familie { flex-wrap: nowrap; }
+.legend-chips--familie .legend-chip { flex: 1 1 0; text-align: center; }
+.legend-chip:disabled { opacity: .45; cursor: not-allowed; }
+.legend-chip[hidden] { display: none; }
+.dauer-tag { margin: 2px 0 6px; }
+.dauer-tag-wahl { display: flex; align-items: center; gap: 6px; margin: 5px 0 2px; }
+.dauer-tag-wahl input[type="date"] {
+  flex: 1; min-width: 0; padding: 3px 6px; border: 1px solid var(--ui-border); border-radius: 8px;
+  background: var(--ui-surface); color: var(--ui-text); font: inherit; font-size: 12px;
+}
+.dauer-schritt {
+  flex: none; width: 28px; height: 26px; border: 1px solid var(--ui-border); border-radius: 8px;
+  background: var(--ui-surface); color: var(--ui-text); font: inherit; font-size: 16px; line-height: 1; cursor: pointer;
+}
+.dauer-schritt:hover:not(:disabled) { background: var(--ui-hover); }
+.dauer-schritt:disabled { opacity: .4; cursor: default; }
+.dauer-regler { width: 100%; }
+
+/* ───── Tagesreihe einer Dauerzählstelle (js/ui/dauerdetail.js) ───── */
+.tr-wrap { position: relative; margin-top: 6px; }
+.tr { display: block; overflow: visible; touch-action: pan-y; }
+.tr-tage { fill: none; stroke-opacity: .85; }
+.tr-jahr { stroke: #eceef1; stroke-width: 1; }
+.tr-gewaehlt { stroke: #111827; stroke-width: 1.2; }
+.tr-punkt { fill: #111827; stroke: #fff; stroke-width: 1.5; }
+.tr .tg-treffer { cursor: pointer; }
+.tr-legende { display: flex; flex-wrap: wrap; gap: 12px; margin: 2px 0 0 42px; color: var(--ui-text); font-size: 11px; }
+.tr-legende i { display: inline-block; width: 10px; height: 10px; margin: 0 5px -1px 0; border-radius: 2px; }
+.detail-kennwerte td.is-leer { color: var(--ui-text-muted); }
+
 @media (max-width: 640px) {
   .detail-panel {
     top: auto; left: 0; right: 0; bottom: 0; width: auto; max-width: none;

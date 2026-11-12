@@ -25,13 +25,21 @@
           </div>
         </div>
         <div class="legend-subtext"><span data-i18n="legende.untertitel">Kommunale Verkehrszählungen</span> <br><span data-i18n="legende.arten">Kfz · Rad · Fuß</span>
-          <span class="info-icon" data-tip="Von Hand, per Video oder mit Messgeräten gezählte Kurzzeitzählungen der Städte (Knotenpunkte und Querschnitte), keine Dauerzählstellen. Quellen und Lizenzen unten." data-i18n-attr="data-tip:legende.info">i</span>
+          <span class="info-icon" data-tip="Zwei Familien: Kurzzeitzählungen der Städte an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre). Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten." data-i18n-attr="data-tip:legende.info">i</span>
         </div>
       </div>
       <button class="toggle-arrow toggle-root open" type="button" aria-expanded="true" aria-label="Legende ein-/ausklappen" data-i18n-attr="aria-label:legende.klappen"></button>
     </div>
 
     <div class="legend-body">
+      <div class="legend-section-divider"></div>
+      <div class="legend-section" data-section="familie">
+        <div class="legend-chips legend-chips--familie" id="familie-chips" role="radiogroup" aria-label="Zählungen" data-i18n-attr="aria-label:familie.titel">
+          <button type="button" class="legend-chip is-active" data-familie="k" role="radio" aria-checked="true" title="Einzelne Zähltage an Knotenpunkten und Querschnitten" data-i18n="familie.k" data-i18n-attr="title:familie.k_tip">Kurzzeitzählungen</button>
+          <button type="button" class="legend-chip" data-familie="d" role="radio" aria-checked="false" title="Fest eingebaute Zähler: Tagessummen über Jahre, Stunden der jüngsten 12 Monate" data-i18n="familie.d" data-i18n-attr="title:familie.d_tip" disabled>Dauerzählstellen</button>
+        </div>
+        <div class="legend-hint" id="familie-hinweis" hidden></div>
+      </div>
       <div class="legend-section-divider"></div>
       <div class="legend-section" data-section="thema">
         <div class="legend-section-title"><span data-i18n="thema.titel">Verkehrsart</span></div>
@@ -40,6 +48,7 @@
           <button type="button" class="legend-chip" data-thema="sv" role="radio" title="Lkw über 3,5 t, Lastzüge und Busse (wie die Quelle sie zählt)" data-i18n="gruppe.sv" data-i18n-attr="title:thema.sv_tip">Schwerverkehr</button>
           <button type="button" class="legend-chip" data-thema="rad" role="radio" data-i18n="gruppe.rad">Rad</button>
           <button type="button" class="legend-chip" data-thema="fuss" role="radio" data-i18n="gruppe.fuss">Fuß</button>
+          <button type="button" class="legend-chip" data-thema="lkw" role="radio" title="Lkw, wie der Detektor sie von Pkw unterscheidet – nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen" data-i18n="gruppe.lkw" data-i18n-attr="title:thema.lkw_tip" hidden>Lkw (Detektor)</button>
         </div>
         <div class="legend-chips legend-chips--klein" id="modus-chips" role="radiogroup" aria-label="Darstellung" data-i18n-attr="aria-label:modus.gruppe"></div>
         <div class="legend-row-label" id="art-wahl">
@@ -49,6 +58,16 @@
             <button type="button" class="legend-chip" data-art="w24" role="radio" title="Summe über 24 Stunden – nur bei 24-Stunden-Zählungen." data-i18n="art.w24_kurz" data-i18n-attr="title:art.w24_tip">24 h</button>
             <button type="button" class="legend-chip" data-art="sp" role="radio" title="Die stärkste gezählte Stunde – vergleichbar auch bei kurzen Zählfenstern." data-i18n="art.sp" data-i18n-attr="title:art.sp_tip">stärkste Stunde</button>
           </div>
+        </div>
+        <div class="dauer-tag" id="dauer-tag" hidden>
+          <div class="row row--between"><span data-i18n="dauer.tag">Tag</span><strong id="dauer-tag-wert"></strong></div>
+          <div class="dauer-tag-wahl">
+            <button type="button" class="dauer-schritt" data-schritt="-1" aria-label="Einen Tag zurück" title="Einen Tag zurück" data-i18n-attr="aria-label:dauer.zurueck;title:dauer.zurueck">‹</button>
+            <input type="date" id="dauer-datum" aria-label="Datum wählen" data-i18n-attr="aria-label:dauer.datum">
+            <button type="button" class="dauer-schritt" data-schritt="1" aria-label="Einen Tag vor" title="Einen Tag vor" data-i18n-attr="aria-label:dauer.vor;title:dauer.vor">›</button>
+          </div>
+          <input type="range" id="dauer-regler" class="dauer-regler" aria-label="Tag im Zeitraum" data-i18n-attr="aria-label:dauer.regler">
+          <div class="legend-hint" data-i18n="dauer.hinweis">Tagessumme 0–24 Uhr je Richtung – nur, wo jede Stunde des Tages gezählt ist.</div>
         </div>
         <div class="legend-items" id="klassen-legende"></div>
       </div>
@@ -97,12 +116,12 @@
 
       <div id="feature-count-wrapper">
         <div id="feature-count" class="fc-stats">
-          <span class="fc-stat" data-tip="Zählstellen in der Karte (nach Filter)" data-i18n-attr="data-tip:zaehler.stellen_tip">
+          <span class="fc-stat" id="fc-stellen-stat" data-tip="Zählstellen in der Karte (nach Filter)" data-i18n-attr="data-tip:zaehler.stellen_tip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="9"/></svg>
             <span id="fc-stellen">–</span> <span data-i18n="zaehler.stellen">Stellen</span></span>
-          <span class="fc-stat" data-tip="Zählungen im Filter (alle Jahre der Stellen, nicht nur die gezeigte)" data-i18n-attr="data-tip:zaehler.zaehlungen_tip">
+          <span class="fc-stat" id="fc-zaehlungen-stat" data-tip="Zählungen im Filter (alle Jahre der Stellen, nicht nur die gezeigte)" data-i18n-attr="data-tip:zaehler.zaehlungen_tip">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
-            <span id="fc-zaehlungen">–</span> <span data-i18n="zaehler.zaehlungen">Zählungen</span></span>
+            <span id="fc-zaehlungen">–</span> <span id="fc-zaehlungen-name" data-i18n="zaehler.zaehlungen">Zählungen</span></span>
         </div>
         <div class="fc-links">
           <span class="fc-badge" data-tip="Im Aufbau: Quellen kommen dazu, Werte ohne Gewähr" data-i18n-attr="data-tip:beta.tip">Beta</span>
@@ -121,6 +140,7 @@
   </div>
 
   <aside id="detail" class="detail-panel" hidden aria-label="Details zur Zählstelle" data-i18n-attr="aria-label:panel.detail"></aside>
+  <aside id="dauer-detail" class="detail-panel" hidden aria-label="Details zur Dauerzählstelle" data-i18n-attr="aria-label:panel.dauer"></aside>
   <aside id="datenlage-detail" class="detail-panel detail-panel--klein" hidden aria-label="Datenlage einer Kommune" data-i18n-attr="aria-label:panel.datenlage"></aside>
 
   <button id="map-settings-toggle" class="map-settings-toggle" type="button" aria-expanded="false" aria-controls="map-settings-panel" aria-label="Karteneinstellungen" data-i18n-attr="aria-label:einstellungen">

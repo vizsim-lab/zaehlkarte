@@ -116,9 +116,10 @@ def _archiv(pfade: Pfade):
                  nan_davor=False) \
         + zeilen("2025-03-30", [h for h in range(24) if h != 2], 50, 5, "100.00", nan_davor=False)
     det2 = kopf_a + zeilen("2025-03-03", range(24), 70, 7, "1.00")
+    det3 = kopf_a + zeilen("2025-03-03", range(24), 45, 0, "1.00")  # deinstalliert (Radspur)
     _tgz(o / "2025/neue_qualitaetssicherung/Fahrstreifendetektoren/detektor_2025_03.tgz",
          {"2025_03/TEU00001_Det0.csv": det0, "2025_03/TEU00001_Det1.csv.gz": det1,
-          "2025_03/TEU00002_Det0.csv": det2})
+          "2025_03/TEU00002_Det0.csv": det2, "2025_03/TEU00002_Det1.csv": det3})
     # neue QS auch für Oktober 2024 (nur zum Vergleich): TE001 am 1.10. gleich
     vgl0 = kopf_a + "".join(f"2024-10-01;{h};{60 + h};0;6;50;50;40;0;0;0;1.00;0.9\n"
                             for h in range(24))
@@ -170,8 +171,9 @@ def test_lese_beide_verfahren(tmp_path):
     assert lkw[0, t(date(2025, 3, 3))] == 24 * 15
     assert kfz[0, t(date(2025, 3, 4))] == -1 and n[0, t(date(2025, 3, 4))] == 23
     assert kfz[0, t(date(2025, 3, 30))] == 23 * 150  # Sommerzeit-Beginn: 23 Stunden
-    # TE002: deinstallierter Detektor ohne Datei ist nicht nötig
+    # TE002: der deinstallierte Detektor zählt nicht mit, auch wenn er Werte liefert
     assert kfz[1, t(date(2025, 3, 3))] == 24 * 70
+    assert bericht.deinstalliert_neu == 24
     assert bericht.unvollstaendig_neu == 1
     # Vergleich Oktober 2024: TE001 am 1.10. in beiden gleich (24 Stunden)
     assert bericht.vergleich["beide"] == 24 and bericht.vergleich["gleich"] == 24
@@ -191,6 +193,9 @@ def test_site_schreibt_vertrag(tmp_path):
     assert index["von"] == "2024-10-01" and index["bis"] == "2025-03-31"
     assert len(index["kalender"]["BE"]) == (date(2025, 3, 31) - date(2024, 10, 1)).days + 1
     assert index["kalender"]["BE"][2] == "h"  # 3.10. Tag der Deutschen Einheit
+    # Standardtag: jüngster Schultag mit fast so vielen vollständigen Stellen wie am besten Tag
+    assert index["standardtag"] == "2025-03-03"
+    assert index["quellen"][0]["verfahren"][-1]["von"] == "2025-03-01"
     felder = index["stellen"]["felder"]
     werte = {w[0]: dict(zip(felder, w, strict=True)) for w in index["stellen"]["werte"]}
     assert set(werte) == {"berlin_viz:TE001", "berlin_viz:TE002"}
