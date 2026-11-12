@@ -2,29 +2,9 @@ Using CPython 3.12.3 interpreter at: /usr/bin/python3
 Creating virtual environment at: .venv
 Resolved 47 packages in 1ms
    Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
-Downloading pygments (1.2MiB)
-Downloading pycryptodomex (2.2MiB)
-Downloading pypdfium2 (3.8MiB)
-Downloading numpy (16.0MiB)
-Downloading brotli (1.4MiB)
-Downloading pillow (6.8MiB)
-Downloading cryptography (4.5MiB)
-Downloading pandas (11.5MiB)
-Downloading ruff (10.1MiB)
-Downloading pdfminer-six (6.3MiB)
- Downloaded brotli
- Downloaded pygments
- Downloaded pycryptodomex
- Downloaded pypdfium2
- Downloaded cryptography
- Downloaded pdfminer-six
- Downloaded pillow
- Downloaded ruff
- Downloaded pandas
- Downloaded numpy
       Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
-Prepared 44 packages in 683ms
-Installed 44 packages in 44ms
+Prepared 1 package in 366ms
+Installed 44 packages in 40ms
  + annotated-doc==0.0.5
  + backports-zstd==1.8.0
  + brotli==1.2.1
