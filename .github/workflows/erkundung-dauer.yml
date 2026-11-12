@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
-      - run: timeout 45m python3 tools/dauer_erkunden2.py ergebnis/dauer || true
+      - run: timeout 45m python3 tools/dauer_erkunden3.py ergebnis/dauer || true
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
