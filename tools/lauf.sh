@@ -16,5 +16,5 @@ baue() {
   fi
 }
 
-mkdir -p ergebnis/dauer/hamburg5
-python3 tools/dauer_erkunden5.py ergebnis/dauer/hamburg5 > ergebnis/dauer/hamburg5/log.txt 2>&1 || true
+mkdir -p ergebnis/dauer/staedte1
+python3 tools/dauer_staedte1.py ergebnis/dauer/staedte1 > ergebnis/dauer/staedte1/log.txt 2>&1 || true
