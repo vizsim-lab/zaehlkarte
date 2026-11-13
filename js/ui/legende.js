@@ -10,7 +10,7 @@
 import { ARTEN, STUFENFARBEN, TAGE, THEMEN, kennzahlText, stufenFuer, stufenText } from "../data/modell.js";
 import {
   DAUER_STUFEN, DAUER_THEMEN, gruppenName, hatThema, imJuengsten, kennzahlTextDauer, kennzahlTextJuengster,
-  klassenDerQuellen, plusTage, quellenOhneTag, tageJeQuelle, tageZwischen, tagtypen, zeitraumText,
+  klassenDerQuellen, plusTage, quellenOhneTag, tageJeQuelle, tageSpanne, tageZwischen, tagtypen, zeitraumText,
 } from "../data/dauer.js";
 import { datenlageKlassen, datenlageStand } from "../map/ebenen.js";
 import { datum, t, wochentag, zahl } from "../sprache/texte.js";
@@ -304,7 +304,7 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
       const tage = tageJeQuelle(dauer, eintraege);
       $("dauer-quellen").hidden = !tage.length;
       $("dauer-quellen").innerHTML = (tage.length ? `<div class="dauer-quellen-titel">${esc(t("dauer.j_tage"))}</div>` : "") + tage.map((o) => `
-      <div class="dauer-quelle"><span>${esc(t("dauer.j_quelle", { quelle: o.quelle.name, tage: o.von === o.bis ? datum(o.bis) : zeitraumText(o.von, o.bis) }))}</span>
+      <div class="dauer-quelle"><span>${esc(t("dauer.j_quelle", { quelle: o.ort, tage: tageSpanne(o.von, o.bis) }))}</span>
         <button type="button" class="link-knopf" data-sprung="${esc(o.bis)}">${esc(t("dauer.springen", { datum: datum(o.bis) }))}</button></div>`).join("");
     } else {
       $("dauer-tag-wert").textContent = tagText(iso);

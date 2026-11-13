@@ -113,18 +113,27 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   ist; sonst ist der Tag „nicht vollständig gezählt“ (hohler Punkt) – nie aufgefüllt, nie
   hochgerechnet, keine Mittelwerte. Am Tag der Umstellung auf Sommerzeit hat der Tag 23
   Stunden, bei der Rückstellung 25 (Stunde 2–3 Uhr zweimal, mit Hinweis).
-- Gezeigt wird ein Tag (Standard: der jüngste Schultag, an dem die meisten Stellen
-  vollständig sind); Pfeile, Datum und Regler wählen einen anderen. Die Seitenleiste zeigt die
-  Tagessummen über alle Jahre (gefärbt nach Schultag, Ferien, Wochenende/Feiertag) und den
-  Tagesgang des Tags – Stundenwerte für die jüngsten 12 Monate der Quelle.
-- **Lkw (Detektor)** (Berlin) und **Schwerverkehr (Detektor)** (Hamburg) sind die Klassen, die
-  der Detektor bzw. die Kamera von Pkw unterscheidet – nicht dasselbe wie der Schwerverkehr der
-  Kurzzeitzählungen und nicht dasselbe wie einander, darum je eine eigene Verkehrsart. Welche
-  Verkehrsarten es gibt, richtet sich nach den Quellen (Kfz, Lkw, Schwerverkehr, Rad).
-- Mehrere Quellen, verschiedene Zeiträume: Berlin endet im Juni 2025, Hamburg und Ettlingen
-  sind aktuell.
-  Hat eine Quelle am gewählten Tag keine Werte, nennt die Legende ihren Zeitraum und springt auf
-  Wunsch zu ihrem Standardtag. Schultag und Ferien gelten je Land.
+- Standard: je Stelle die Tagessumme ihres **jüngsten vollständig gezählten Schultags** – so
+  stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume sich nicht überschneiden
+  (Berlin endet im Juni 2025, Hamburg und Ettlingen sind aktuell). Der Tag steht bei jedem Wert
+  (Hover, Seitenleiste, CSV), die Legende nennt die Tage je Quelle – Stellen, die nicht mehr
+  zählen, zeigen ihren letzten Schultag, in Berlin auch Jahre zurück. Schultag und Ferien gelten
+  je Land.
+- „Tag wählen“ zeigt alle Stellen am selben Tag (zuerst der jüngste Schultag, an dem die meisten
+  Stellen vollständig sind); Pfeile, Datum und Regler wählen einen anderen. Hat eine Quelle an
+  dem Tag keine Werte, nennt die Legende ihren Zeitraum und springt auf Wunsch zu ihrem
+  Standardtag. Die Seitenleiste zeigt die Tagessummen über alle Jahre (gefärbt nach Schultag,
+  Ferien, Wochenende/Feiertag) und den Tagesgang des Tags – Stundenwerte für die jüngsten 12
+  Monate der Quelle; ein Klick in die Tagesreihe wählt den Tag.
+- **Lkw/Schwerverkehr:** Berlin und Ettlingen zählen „Lkw“, Hamburg „Schwerverkehr“ – jeweils
+  die Klasse, die der Detektor bzw. die Kamera von Pkw unterscheidet, je Quelle anders
+  abgegrenzt und nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen. Ein Chip zeigt
+  beide: jede Stelle in ihrer Klasse und mit deren Namen, nie zusammengezählt; die Legende nennt,
+  welche Stadt welche Klasse zählt. Welche Verkehrsarten es gibt, richtet sich nach den Quellen
+  (Kfz, Lkw/Schwerverkehr, Rad).
+- **Datenlage:** Die Ebene „Datenlage je Kommune“ folgt der Familie – bei den Dauerzählstellen
+  mit eigenem Stand je Kommune (in der Karte, offen und nicht in der Karte, vorhanden mit nicht
+  offenen Werten) und eigenen Belegen.
 - Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
   (eine Stunde nur bei mindestens 75 % gültigen Messintervallen und nur, wenn alle Fahrstreifen
   gültig sind). Ab 2025 gibt es nur die neue Qualitätssicherung je Fahrstreifen; die Zählkarte
@@ -140,7 +149,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   nächste benannte Straße aus OpenStreetMap, die Kreuzung ergibt sich aus den übrigen Armen
   desselben Knotenpunkts.
 - Ettlingen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse (UTC, in Ortszeit umgerechnet);
-  Kfz ist die Summe der Klassen (Pkw, leichte Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad).
+  Kfz ist die Summe der Klassen (Pkw, leichte Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad),
+  Lkw die von Lkw und Lkw mit Anhänger.
   Klassen ohne Fahrzeug liefert die Quelle nicht; eine Stunde ganz ohne Werte gilt als nicht
   gezählt. Alle Richtungen eines Sensors haben dieselbe Lage – die Seitenleiste schaltet
   zwischen ihnen um. Die Werte vor dem 20.08.2026 (laufende Tageszähler ohne Fahrtrichtung)
@@ -168,6 +178,7 @@ tests/               unit/ (node --test), web/ (Playwright gegen den Build)
 uv sync
 uv run zaehlkarte fetch      # Rohdaten nach pipeline/data/raw/
 uv run zaehlkarte site       # Kartendaten nach public/data/
+uv run zaehlkarte datenlage  # nur datenlage.json und docs/DATENLAGE.md (geänderte Datenlage-Texte)
 uv run zaehlkarte dauer fetch && uv run zaehlkarte dauer site   # Dauerzählstellen
 uv run pytest && uvx ruff check
 

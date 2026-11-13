@@ -350,7 +350,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, LIFG BW
 
-**Dauerzählstellen (in der Karte):** automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse ab 20.08.2026 (CC BY-NC 4.0, nur nicht kommerziell), in der Karte als Dauerzählstellen; die älteren Werte ab Mai 2025 sind laufende Tageszähler ohne Fahrtrichtung und nicht übernommen
+**Dauerzählstellen (in der Karte):** automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse ab 20.08.2026 (CC BY-NC 4.0, nur nicht kommerziell), in der Karte als Dauerzählstellen (Kfz und Lkw); die älteren Werte ab Mai 2025 sind laufende Tageszähler ohne Fahrtrichtung und nicht übernommen
 
 **Kontakt:** Stadt Ettlingen · <hauptamt@ettlingen.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/9199/stadt-ettlingen/)
 

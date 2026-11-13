@@ -8,7 +8,7 @@
 //
 // Eine Tagessumme gibt es nur, wenn jede Stunde des Tages gezählt ist – null heißt „nicht
 // vollständig gezählt“, nie 0. Keine Mittelwerte, keine Hochrechnung: gezeigt wird ein Tag.
-import { datum, t } from "../sprache/texte.js";
+import { datum, sprache, t } from "../sprache/texte.js";
 import { STUFENFARBEN, stufe } from "./modell.js";
 
 /** Vertrag mit dauer/index.json (`version`, VERSION in pipeline/src/zaehlkarte/dauer/site.py). */
@@ -200,7 +200,7 @@ export function ansichtJuengster(d, zustand) {
   return out;
 }
 
-/** Je Quelle der Einträge mit Wert: frühester und jüngster gezeigter Tag – [{ quelle, von, bis }]. */
+/** Je Quelle der Einträge mit Wert: frühester und jüngster gezeigter Tag – [{ quelle, ort, von, bis }]. */
 export function tageJeQuelle(d, eintraege) {
   const je = new Map();
   for (const e of eintraege) {
@@ -210,7 +210,7 @@ export function tageJeQuelle(d, eintraege) {
     else if (e.tag < x.von) x.von = e.tag;
     else if (e.tag > x.bis) x.bis = e.tag;
   }
-  return d.quellenMeta.filter((q) => je.has(q.code)).map((q) => ({ quelle: q, ...je.get(q.code) }));
+  return d.quellenMeta.filter((q) => je.has(q.code)).map((q) => ({ quelle: q, ort: ort(q), ...je.get(q.code) }));
 }
 
 /**
@@ -258,6 +258,14 @@ export function featuresDauer(eintraege) {
 export function zeitraumText(von, bis) {
   if (Number(bis.slice(0, 4)) - Number(von.slice(0, 4)) >= 2) return `${von.slice(0, 4)}–${bis.slice(0, 4)}`;
   return `${datum(von)} – ${datum(bis)}`;
+}
+
+/** Kurze Spanne gezeigter Tage: „05.11.2026“, „11.09.–05.11.2026“ (EN „11 Sep – 5 Nov 2026“), über Jahre „2020–2025“. */
+export function tageSpanne(von, bis) {
+  if (von === bis) return datum(bis);
+  if (Number(bis.slice(0, 4)) - Number(von.slice(0, 4)) >= 2) return `${von.slice(0, 4)}–${bis.slice(0, 4)}`;
+  const anfang = von.slice(0, 4) === bis.slice(0, 4) ? datum(von).replace(/\s*\d{4}$/, "") : datum(von);
+  return sprache() === "de" ? `${anfang}–${datum(bis)}` : `${anfang} – ${datum(bis)}`;
 }
 
 /** Bezeichnung der gezeigten Kennzahl: „Kfz, Tagessumme am 26.06.2025“ (Name des Themas oder der Gruppe). */

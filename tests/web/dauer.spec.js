@@ -66,9 +66,9 @@ test("Umschalter lädt die Dauerzählstellen: alle Quellen am jüngsten Schultag
   await expect(page.locator("#klassen-legende")).toContainText("Kfz, Tagessumme am jüngsten Schultag je Stelle");
   const quellen = page.locator("#dauer-quellen");
   await expect(quellen).toContainText("Gezeigte Tage je Quelle");
-  await expect(quellen).toContainText("Berlin (Verkehrsdetektion): 30.06.2025");
-  await expect(quellen).toContainText("Hamburg (Kfz, Wärmebildkameras): 10.07.2025");
-  await expect(quellen).toContainText("Ettlingen (automatische Zählstellen): 10.07.2025");
+  await expect(quellen).toContainText("Berlin: 30.06.2025");
+  await expect(quellen).toContainText("Hamburg: 10.07.2025");
+  await expect(quellen).toContainText("Ettlingen: 10.07.2025");
   await expect(page.locator('[data-section="filter"]')).toBeHidden();
   await expect(page.locator("#art-wahl")).toBeHidden();
   // Lkw (Berlin, Ettlingen) und Schwerverkehr (Hamburg) unter einem Chip, kein eigener Lkw-Chip

@@ -206,6 +206,21 @@ test("Zeitraum: über Jahre als Jahre, sonst als Tage", async () => {
   assert.equal(zeitraumText("2026-08-29", "2026-11-05"), "29.08.2026 – 05.11.2026");
 });
 
+test("Spanne gezeigter Tage: kurz, im selben Jahr ohne doppeltes Jahr, über Jahre als Jahre", async () => {
+  const { tageSpanne } = await import("../../js/data/dauer.js");
+  const { setzeSprache } = await import("../../js/sprache/texte.js");
+  assert.equal(tageSpanne("2026-11-05", "2026-11-05"), "05.11.2026");
+  assert.equal(tageSpanne("2026-09-11", "2026-11-05"), "11.09.–05.11.2026");
+  assert.equal(tageSpanne("2025-12-30", "2026-01-05"), "30.12.2025–05.01.2026");
+  assert.equal(tageSpanne("2020-12-03", "2025-06-30"), "2020–2025");
+  setzeSprache("en");
+  try {
+    assert.equal(tageSpanne("2026-09-11", "2026-11-05"), "11 Sep – 5 Nov 2026");
+  } finally {
+    setzeSprache("de");
+  }
+});
+
 test("Zeitraum je Gruppe: vor dem Kfz-Beginn fehlt die Stelle beim Kfz, beim Schwerverkehr nicht", () => {
   const index = {
     ...INDEX,
