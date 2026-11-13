@@ -1,6 +1,7 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
-# SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin
-# und München), Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
+# SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
+# München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock und Bochum), Kartendaten nach
+# public/data/dauer/ schreiben und als Release-Asset
 # „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach
 # startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
 #
@@ -10,7 +11,9 @@
 #   MobiData BW (neu geholt werden fehlende und die jüngsten zwei) und die Dateien Münchens (neu
 #   nur bei geänderter URL); Münster, Aachen und Berlin (Rad) holt jeder Lauf ganz neu – der Cache
 #   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
-# - Hamburg hält Stundenwerte nur einige Monate vor. Die Zählkarte hebt sie selbst auf
+#   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund) und Essens Quartale nur bei Änderung.
+# - Hamburg und Leipzig halten Stundenwerte nur Wochen bis Monate vor (Leipzig: 31 Tage). Die
+#   Zählkarte hebt sie selbst auf
 #   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
 #   (Assets `<code>__<datei>`): vor dem Abruf holen, danach ablegen, was sich geändert hat –
 #   nie mit weniger Werten (pipeline/werkzeuge/gedaechtnis.py). Scheitert das Holen, bricht der
@@ -60,13 +63,27 @@ jobs:
             pipeline/data/raw/berlin_rad
           key: dauer-rad-roh-${{ github.run_id }}
           restore-keys: dauer-rad-roh-
-      - name: Release anlegen (beim ersten Lauf)
+      - uses: actions/cache@v6  # Rad, zweite Runde – eigener Cache, die anderen bleiben gültig
+        with:
+          path: |
+            pipeline/data/raw/wuerzburg_rad
+            pipeline/data/raw/rhein_kreis_neuss_rad
+            pipeline/data/raw/dortmund_rad
+            pipeline/data/raw/essen_rad
+            pipeline/data/raw/rostock_rad
+            pipeline/data/raw/bochum_rad
+            pipeline/data/raw/leipzig_rad/standorte.csv
+          key: dauer-rad2-roh-${{ github.run_id }}
+          restore-keys: dauer-rad2-roh-
+      - name: Release anlegen bzw. Beschreibung nachführen
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if ! gh release view dauerzaehlstellen > /dev/null 2>&1; then
-            gh release create dauerzaehlstellen --latest=false --title "Daten: Dauerzählstellen" \
-              --notes "Kartendaten der Familie Dauerzählstellen (dauer.tar.gz, public/data/dauer/) und das Gedächtnis der Quellen, die ihre Stundenwerte nur einige Monate vorhalten (Assets <code>__<datei>; Hamburg: Monatsdateien mit den Stundenwerten wie geliefert, dl-de/by-2-0, Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende; strassen.json: © OpenStreetMap-Mitwirkende, ODbL). Gebaut vom Workflow „Dauerzählstellen bauen“."
+          notes="Kartendaten der Familie Dauerzählstellen (dauer.tar.gz, public/data/dauer/) und das Gedächtnis der Quellen, die ihre Stundenwerte nur Wochen bis Monate vorhalten (Assets <code>__<datei>; Monatsdateien mit den Stundenwerten wie geliefert – Hamburg: dl-de/by-2-0, Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende; Leipzig: dl-de/by-2-0, Stadt Leipzig; strassen.json: © OpenStreetMap-Mitwirkende, ODbL). Gebaut vom Workflow „Dauerzählstellen bauen“."
+          if gh release view dauerzaehlstellen > /dev/null 2>&1; then
+            gh release edit dauerzaehlstellen --notes "$notes"
+          else
+            gh release create dauerzaehlstellen --latest=false --title "Daten: Dauerzählstellen" --notes "$notes"
           fi
       - name: Gedächtnis holen
         working-directory: pipeline

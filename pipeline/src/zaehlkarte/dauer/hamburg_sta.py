@@ -26,9 +26,6 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer`, tools/dauer_erkun
 
 from __future__ import annotations
 
-import csv
-import gzip
-import io
 import json
 import re
 import time
@@ -42,15 +39,16 @@ import numpy as np
 import requests
 
 from zaehlkarte.config import Pfade
+from zaehlkarte.dauer import gedaechtnis
+from zaehlkarte.dauer.gedaechtnis import Gedaechtnis, letzte_stunde
+from zaehlkarte.dauer.gedaechtnis import lies as lies_gedaechtnis
+from zaehlkarte.dauer.gedaechtnis import schreibe as schreibe_gedaechtnis
 from zaehlkarte.dauer.modell import Dauerstelle, Messreihe, kuerze, setze_utc
 
 UA = {"User-Agent": "zaehlkarte-pipeline (+https://github.com/vizsim-lab/zaehlkarte)"}
-KOPF = ["stelle", "gruppe", "tag", *(f"h{h:02d}" for h in range(24))]
 ZEIT = re.compile(r"^(\d{4}-\d{2}-\d{2})T(\d{2}):00:00(?:\.0+)?Z/\1T\2:59:59(?:\.\d+)?Z$")
 # „… bezüglich Zählstelle 0248 auf dem Richtungsarm Nordost von Nordost nach Südwest“
 ARM = re.compile(r"Richtungsarm (\S+)")
-
-Gedaechtnis = dict[tuple[str, str, str], list[int | None]]  # (Stelle, Gruppe, UTC-Tag) -> 24
 
 
 @dataclass
@@ -175,40 +173,6 @@ def beobachtungen(q: dict, sitzung: requests.Session, gruppe: str, seit: datetim
 # ---------------------------------------------------------------- Gedächtnis
 
 
-def lies_gedaechtnis(ordner: Path) -> Gedaechtnis:
-    g: Gedaechtnis = {}
-    for pfad in sorted(ordner.glob("stunden_*.csv.gz")):
-        with gzip.open(pfad, "rt", encoding="utf-8", newline="") as f:
-            r = csv.reader(f, delimiter=";")
-            if next(r, None) != KOPF:
-                raise ValueError(f"{pfad.name}: unerwarteter Kopf")
-            for z in r:
-                g[(z[0], z[1], z[2])] = [int(x) if x != "" else None for x in z[3:27]]
-    return g
-
-
-def schreibe_gedaechtnis(ordner: Path, g: Gedaechtnis) -> list[str]:
-    """Je UTC-Monat eine Datei, sortiert und ohne Zeitstempel im gzip – gleicher Inhalt, gleiche
-    Bytes (der Workflow lädt nur Geändertes hoch). -> geänderte Dateien."""
-    ordner.mkdir(parents=True, exist_ok=True)
-    je_monat: dict[str, list] = defaultdict(list)
-    for (stelle, gruppe, tag), werte in g.items():
-        je_monat[tag[:7]].append((stelle, gruppe, tag, werte))
-    geaendert = []
-    for monat, zeilen in sorted(je_monat.items()):
-        puffer = io.StringIO()
-        w = csv.writer(puffer, delimiter=";", lineterminator="\n")
-        w.writerow(KOPF)
-        for stelle, gruppe, tag, werte in sorted(zeilen, key=lambda z: z[:3]):
-            w.writerow([stelle, gruppe, tag, *("" if v is None else v for v in werte)])
-        daten = gzip.compress(puffer.getvalue().encode("utf-8"), compresslevel=9, mtime=0)
-        pfad = ordner / f"stunden_{monat}.csv.gz"
-        if not pfad.exists() or pfad.read_bytes() != daten:
-            pfad.write_bytes(daten)
-            geaendert.append(pfad.name)
-    return geaendert
-
-
 def uebernimm(g: Gedaechtnis, gruppe: str, stelle: str,
               obs: list[tuple[str, object]]) -> tuple[int, int]:
     """Observations in das Gedächtnis (neue Werte ersetzen alte derselben Stunde).
@@ -222,16 +186,6 @@ def uebernimm(g: Gedaechtnis, gruppe: str, stelle: str,
         g.setdefault((stelle, gruppe, m[1]), [None] * 24)[int(m[2])] = wert
         ok += 1
     return ok, weg
-
-
-def letzte_stunde(g: Gedaechtnis) -> datetime | None:
-    letzte = None
-    for (_, _, tag), werte in g.items():
-        h = max((i for i, v in enumerate(werte) if v is not None), default=None)
-        if h is not None:
-            t = datetime.fromisoformat(tag).replace(tzinfo=UTC) + timedelta(hours=h)
-            letzte = t if letzte is None or t > letzte else letzte
-    return letzte
 
 
 def hole(q: dict, pfade: Pfade) -> list[str]:
@@ -391,16 +345,8 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
     gruppen = tuple(q["layer"])
     je: dict[str, tuple[np.ndarray, np.ndarray, np.ndarray]] = {}
     for gruppe in gruppen:
-        zeilen = [(idx[st], tag, werte) for (st, gr, tag), werte in g.items()
-                  if gr == gruppe and st in idx]
-        if not zeilen:
-            continue
-        s_ = np.array([z[0] for z in zeilen], dtype=np.int64)
-        basis = np.array([z[1] for z in zeilen], dtype="datetime64[h]")
-        w_ = np.array([[-1 if v is None else v for v in z[2]] for z in zeilen], dtype=np.int64)
-        da = w_ >= 0
-        t_ = (basis[:, None] + np.arange(24).astype("timedelta64[h]"))[da]
-        je[gruppe] = (np.repeat(s_, da.sum(axis=1)), t_, w_[da])
+        if (f := gedaechtnis.felder(g, gruppe, idx)) is not None:
+            je[gruppe] = f
     if not je:
         raise ValueError(f"{q['code']}: Gedächtnis leer – erst `zaehlkarte dauer fetch`")
     zeiten = np.concatenate([t for _, t, _ in je.values()])

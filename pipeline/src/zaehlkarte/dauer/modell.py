@@ -128,6 +128,42 @@ def setze_utc(reihe: Messreihe, gruppe: str, stelle: np.ndarray, utc: np.ndarray
     return int(voll.sum())
 
 
+def utc_stunden(stelle: np.ndarray, utc: np.ndarray, werte: np.ndarray, anzahl: int
+                ) -> tuple[np.ndarray, np.ndarray, np.ndarray, int]:
+    """Teilwerte mit UTC-Beginn (etwa Viertelstunden, datetime64) zu UTC-Stunden zusammenfassen.
+
+    Eine Stunde gilt, wenn sie `anzahl` verschiedene Zeitpunkte hat und keiner nicht gezählt ist
+    (Wert < 0). Derselbe Zeitpunkt zweimal: gleicher Wert zählt einmal, verschiedene gar nicht
+    (die Stunde ist dann nicht gezählt). -> (Stelle, Stunde als datetime64[h], Summe, Anzahl der
+    Zeitpunkte, die doppelt mit verschiedenen Werten kamen)."""
+    stelle = np.asarray(stelle, dtype=np.int64)
+    utc = np.asarray(utc).astype("datetime64[m]")
+    werte = np.asarray(werte, dtype=np.int64)
+    if not len(stelle):
+        leer = np.array([], dtype=np.int64)
+        return leer, np.array([], dtype="datetime64[h]"), leer, 0
+    # gleiche (Stelle, Zeitpunkt): ein Eintrag, bei verschiedenen Werten „nicht gezählt“
+    ordnung = np.lexsort((werte, utc, stelle))
+    stelle, utc, werte = stelle[ordnung], utc[ordnung], werte[ordnung]
+    neu = np.ones(len(stelle), dtype=bool)
+    neu[1:] = (stelle[1:] != stelle[:-1]) | (utc[1:] != utc[:-1])
+    gruppe = np.cumsum(neu) - 1
+    erst = np.flatnonzero(neu)
+    verschieden = np.zeros(len(erst), dtype=bool)
+    np.logical_or.at(verschieden, gruppe, werte != werte[erst][gruppe])
+    stelle, utc = stelle[erst], utc[erst]
+    werte = np.where(verschieden, -1, werte[erst])
+    stunde = utc.astype("datetime64[h]")
+    basis = stunde.min()
+    breite = int((stunde.max() - basis).astype(np.int64)) + 1
+    k = stelle * breite + (stunde - basis).astype(np.int64)
+    _, erste, inv, n = np.unique(k, return_index=True, return_inverse=True, return_counts=True)
+    neg = np.bincount(inv, weights=(werte < 0).astype(np.int64))
+    summe = np.bincount(inv, weights=np.maximum(werte, 0)).astype(np.int64)
+    ok = (n == anzahl) & (neg == 0)
+    return stelle[erste][ok], stunde[erste][ok], summe[ok], int(verschieden.sum())
+
+
 def setze_lokal(reihe: Messreihe, gruppe: str, stelle: np.ndarray, tag: np.ndarray,
                 stunde: np.ndarray, werte: np.ndarray, anzahl: int = 1,
                 rueck: str = "zusammen") -> tuple[int, int]:

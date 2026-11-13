@@ -9,14 +9,14 @@ FragDenStaat.
 | Kommune | Land | Stand | Dauerzählstellen | Empfehlung |
 |---|---|---|---|---|
 | Amberg | BY | auf Anfrage herausgegeben |  | Bei der Anfrage gleich nach den Bedingungen der Nutzungserklärung fragen und um eine offene Lizenz bitten |
-| Augsburg | BY | auf Anfrage herausgegeben |  | Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den Zählstellen erlaubt die Liste von 2017 |
+| Augsburg | BY | auf Anfrage herausgegeben | offen, nicht in der Karte | Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den Zählstellen erlaubt die Liste von 2017 |
 | Bremen | HB | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung) |
 | Bremerhaven | HB | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 mit den Werten je Intervall |
 | Chemnitz | SN | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen seit 2015, ausdrücklich nach den Auswertungen der Büros |
-| Dortmund | NW | nur Summen oder Mittelwerte offen |  | Anfrage nach den Ergebnissen der Zählungen im Zählstellenplan, nach IFG NRW |
+| Dortmund | NW | nur Summen oder Mittelwerte offen | in der Karte | Anfrage nach den Ergebnissen der Zählungen im Zählstellenplan, nach IFG NRW |
 | Dresden | SN | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25 |
 | Düsseldorf | NW | nur Summen oder Mittelwerte offen |  | Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement |
-| Essen | NW | automatische Zählungen offen | vorhanden, Werte nicht offen | Anfrage nach den Knotenpunkt- und Querschnittszählungen beim Amt für Straßen und Verkehr |
+| Essen | NW | automatische Zählungen offen | in der Karte | Anfrage nach den Knotenpunkt- und Querschnittszählungen beim Amt für Straßen und Verkehr |
 | Ettlingen | BW | automatische Zählungen offen | in der Karte | Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder erheben lässt |
 | Falkensee | BB | nur Summen oder Mittelwerte offen |  | Anfrage nach den Messungen der Liste mit Datum, Lage und Werten je Stunde und Richtung, am besten als Export der Messgeräte |
 | Frankfurt am Main | HE | nur Summen oder Mittelwerte offen |  | Anfrage nach den Einzelzählungen |
@@ -29,8 +29,8 @@ FragDenStaat.
 | Karlsruhe | BW | auf Anfrage herausgegeben | in der Karte | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023 |
 | Kassel | HE | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz |
 | Kiel | SH | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je Intervall (nicht der Hochrechnung), maschinenlesbar |
-| Köln | NW | nur Summen oder Mittelwerte offen |  | Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement |
-| Leipzig | SN | Anfrage gescheitert |  | Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte |
+| Köln | NW | nur Summen oder Mittelwerte offen | offen, nicht in der Karte | Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement |
+| Leipzig | SN | Anfrage gescheitert | in der Karte | Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte |
 | Lingen (Ems) | NI | auf Anfrage herausgegeben |  | Anfrage nach allen Verkehrserhebungen seit 2015, am besten als Export der Messgeräte statt als PDF |
 | Lübeck | SH | erhoben – Anfrage aussichtsreich |  | Anfrage nach allen Zählungen seit 2015, am besten als Export aus der Zählplattform (CSV/XLSX) |
 | Magdeburg | ST | auf Anfrage herausgegeben |  | Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen |
@@ -40,7 +40,7 @@ FragDenStaat.
 | Nürnberg | BY | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt |
 | Osnabrück | NI | auf Anfrage herausgegeben | offen, nicht in der Karte | Anfrage nach allen Seitenradar-Messungen und Zählungen seit 2015 in derselben Form, mit Lage der Messstellen und einer Lizenz |
 | Paderborn | NW | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 an die Stadt Paderborn |
-| Rostock | MV | auf Anfrage herausgegeben |  | Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz für die Veröffentlichung |
+| Rostock | MV | auf Anfrage herausgegeben | in der Karte | Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz für die Veröffentlichung |
 | Saarbrücken | SL | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen für den Mobilitätsplan 2040 und nach älteren Zählungen |
 | Stuttgart | BW | nur Summen oder Mittelwerte offen | in der Karte | Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet |
 | Ulm | BW | automatische Zählungen offen | in der Karte | Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras |
@@ -98,6 +98,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Bayerisches UIG
 
+**Dauerzählstellen (offen, nicht in der Karte):** Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte
+
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Augsburg)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -118,7 +120,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/)
+**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/) · [Radzählstationen (Stadt Augsburg)](https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen)
 
 
 ## Bremen (HB) – erhoben – Anfrage aussichtsreich
@@ -222,6 +224,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, IFG NRW
 
+**Dauerzählstellen (in der Karte):** Dauerzählstelle Radverkehr Schnettkerbrücke: 15-Minuten-Werte je Richtung seit Januar 2018 (dl-de/zero-2-0) – in der Karte als Dauerzählstelle
+
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Dortmund)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -242,7 +246,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [opendata.ruhr](https://opendata.ruhr/dataset/verkehrszahlung-zahlstellenplan1)
+**Belege:** [opendata.ruhr](https://opendata.ruhr/dataset/verkehrszahlung-zahlstellenplan1) · [Dauerzählstelle Radverkehr Schnettkerbrücke](https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/)
 
 
 ## Dresden (SN) – erhoben – Anfrage aussichtsreich
@@ -317,7 +321,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, IFG NRW
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** Dauerzählstellen; offen nur ihre Auswertungen 2017 als 57 PDFs, nicht die Zählwerte
+**Dauerzählstellen (in der Karte):** Rad-Zählstellen Grugatrasse und Huyssenallee: Stundenwerte je Richtung als Quartalsdateien, offen ab 2021 (2018–2020 unter geschlossener Lizenz) – in der Karte als Dauerzählstellen. Von den Kfz-Dauerzählstellen offen nur die Auswertungen 2017 als 57 PDFs, nicht die Zählwerte
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Kommunalverwaltung+Essen)
 
@@ -339,7 +343,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [essen.de Verkehrserhebung](https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html) · [Zähldaten 2017](https://www.essen.de/leben/mobilitaet/zaehldaten_2017.de.html)
+**Belege:** [essen.de Verkehrserhebung](https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html) · [Zähldaten 2017](https://www.essen.de/leben/mobilitaet/zaehldaten_2017.de.html) · [Radverkehrszählungen (Open.NRW)](https://open.nrw/dataset/radverkehrszahlungen-e)
 
 
 ## Ettlingen (BW) – automatische Zählungen offen
@@ -699,7 +703,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, IZG-SH
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** 87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte
+**Dauerzählstellen (vorhanden, Werte nicht offen):** 87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte. Ebenso die Radzählstationen an sechs Standorten: nur der Vortag, nur über die Vermittlung der Mobilithek (Konto)
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+Kiel)
 
@@ -721,7 +725,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [kiel.de](https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php) · [FragDenStaat 2025](https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/) · [IZG-SH (ULD)](https://datenschutzzentrum.de/uploads/IZGFolien.pdf) · [Mobilithek: Angebot seit Oktober 2026](https://mobilithek.info/offers/1045322209798569984) · [Mobilithek: älteres Angebot (CC BY 4.0)](https://mobilithek.info/offers/995318989663924224) · [DatenDock der KielRegion (Dashboard)](https://datendock.civora.org/app/dashboards/30)
+**Belege:** [kiel.de](https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php) · [FragDenStaat 2025](https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/) · [IZG-SH (ULD)](https://datenschutzzentrum.de/uploads/IZGFolien.pdf) · [Mobilithek: Angebot seit Oktober 2026](https://mobilithek.info/offers/1045322209798569984) · [Mobilithek: älteres Angebot (CC BY 4.0)](https://mobilithek.info/offers/995318989663924224) · [DatenDock der KielRegion (Dashboard)](https://datendock.civora.org/app/dashboards/30) · [Mobilithek: Radzählstationen Kiel](https://mobilithek.info/offers/1046783892706476032)
 
 
 ## Köln (NW) – nur Summen oder Mittelwerte offen
@@ -731,6 +735,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Empfehlung:** Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement. Grundlage: IFG NRW.
 
 **Weg:** FragDenStaat, IFG NRW
+
+**Dauerzählstellen (offen, nicht in der Karte):** Rad-Dauerzählstellen (Eco-Counter): offen nur Monatssummen je Zählstelle, 2009–2022 (dl-de/zero-2-0) – ohne Stundenwerte nicht in der Karte; jüngere Werte nur auf der Seite von Eco-Counter
 
 **Kontakt:** Amt für Verkehrsmanagement Köln · <verkehrsmanagement@stadt-koeln.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/15906/amt-fur-straen-und-verkehrsentwicklung/)
 
@@ -752,7 +758,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Open.NRW](https://ckan.open.nrw.de/dataset/kfz-zaehlstellen-und-werte-koeln-k) · [FragDenStaat 2024](https://fragdenstaat.de/anfrage/verkehrszaehlungen-auf-der-kitschburger-str-in-koeln-lindenthal/)
+**Belege:** [Open.NRW](https://ckan.open.nrw.de/dataset/kfz-zaehlstellen-und-werte-koeln-k) · [FragDenStaat 2024](https://fragdenstaat.de/anfrage/verkehrszaehlungen-auf-der-kitschburger-str-in-koeln-lindenthal/) · [Fahrrad Verkehrsdaten Köln 2022 (Open.NRW)](https://open.nrw/dataset/fahrrad-verkehrsdaten-koln-2022-k)
 
 
 ## Leipzig (SN) – Anfrage gescheitert
@@ -762,6 +768,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Empfehlung:** Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte. An das Verkehrs- und Tiefbauamt. Grundlage: Informationsfreiheitssatzung der Stadt Leipzig und Sächsisches Umweltinformationsgesetz.
 
 **Weg:** FragDenStaat, Informationsfreiheitssatzung Leipzig / Sächsisches UIG
+
+**Dauerzählstellen (in der Karte):** Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS – die Zählkarte hebt sie selbst auf, in der Karte seit November 2026; Tageswerte zweier Jahre ohne Stunden. Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten
 
 **Kontakt:** Verkehrs- und Tiefbauamt Leipzig · <vta@leipzig.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/49250/verkehrs-und-tiefbauamt-leipzig/)
 
@@ -783,7 +791,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/) · [Informationsfreiheitssatzung (L-IZ 2021)](https://www.l-iz.de/politik/leipzig/2021/10/evaluierungsbericht-zur-informationsfreiheitssatzung-warten-auf-das-saechsische-transparenzgesetz-417215)
+**Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/) · [Informationsfreiheitssatzung (L-IZ 2021)](https://www.l-iz.de/politik/leipzig/2021/10/evaluierungsbericht-zur-informationsfreiheitssatzung-warten-auf-das-saechsische-transparenzgesetz-417215) · [Radverkehr: Stundenwerte der letzten 31 Tage](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei) · [Radverkehr: Standorte](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-stationen-stadt-leipzig)
 
 
 ## Lingen (Ems) (NI) – auf Anfrage herausgegeben
@@ -1075,6 +1083,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, IFG M-V
 
+**Dauerzählstellen (in der Karte):** Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle seit 2012, CC0 – in der Karte als Dauerzählstellen
+
 **Kontakt:** Amt für Verkehrsanlagen Rostock · [FragDenStaat](https://fragdenstaat.de/behoerde/15967/amt-fur-verkehrsanlagen-hro/)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -1095,7 +1105,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2020](https://fragdenstaat.de/anfrage/verkehrszahlung-14/) · [Antwortschreiben 2020](https://fragdenstaat.de/anfrage/verkehrszahlung-14/519369/anhang/Anschreiben_konvertiert_geschwaerzt.pdf)
+**Belege:** [FragDenStaat 2020](https://fragdenstaat.de/anfrage/verkehrszahlung-14/) · [Antwortschreiben 2020](https://fragdenstaat.de/anfrage/verkehrszahlung-14/519369/anhang/Anschreiben_konvertiert_geschwaerzt.pdf) · [OpenData.HRO: Radmonitore](https://www.opendata-hro.de/dataset/radmonitore)
 
 
 ## Saarbrücken (SL) – erhoben – Anfrage aussichtsreich
