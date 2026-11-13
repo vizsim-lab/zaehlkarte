@@ -5,7 +5,7 @@ import {
   DAUER_STUFEN, DAUER_THEMEN, amSelbenPunkt, ansichtDauer, ansichtJuengster, csvDauer, csvDauerJuengster, entpackeDauer,
   featuresDauer, gruppeFuer, gruppenName, hatGruppe, hatThema, imJuengsten, klassenDerQuellen, plusTage, quellenOhneTag,
   stundenAm, stundenDesTags, tagAusDetail, tagDerStelle, tagImZeitraum, tageJeQuelle, tageZwischen, tagtyp, tagtypen,
-  themaIn, themaVon, wertAm, zaehleDauer,
+  themaFuerKommune, themaIn, themaVon, wertAm, zaehleDauer,
 } from "../../js/data/dauer.js";
 import { standardZustand } from "../../js/data/modell.js";
 
@@ -267,4 +267,30 @@ test("amSelbenPunkt: Stellen derselben Quelle mit gleicher Lage (Richtungen eine
   assert.deepEqual(ids("ettlingen:1263-2"), ["ettlingen:1263-1", "ettlingen:1263-2"]);
   assert.deepEqual(ids("ettlingen:395842-1"), ["ettlingen:395842-1"]);
   assert.deepEqual(ids("berlin_viz:TE001"), ["berlin_viz:TE001"]);
+});
+
+test("Verkehrsart für eine Kommune: was sie zählt, ohne eigene Quelle die nächste Stelle", () => {
+  const e = entpackeDauer({
+    ...INDEX,
+    gruppen: ["kfz", "lkw", "rad"],
+    quellen: [
+      { code: "ettlingen", name: "Ettlingen (automatische Zählstellen)", land: "BW", gruppen: ["kfz", "lkw"] },
+      { code: "leipzig_rad", name: "Leipzig (Rad-Zählstellen)", land: "SN", gruppen: ["rad"] },
+      { code: "mobidata_rad", name: "Baden-Württemberg (Rad-Zählstellen, MobiData BW)", land: "BW", gruppen: ["rad"] },
+    ],
+    stellen: {
+      felder: INDEX.stellen.felder,
+      werte: [
+        ["ettlingen:1", "ettlingen", "Karlsruher Straße", null, null, 8.4, 48.94, "2025-01-01", "2025-01-05", 3, 0],
+        ["leipzig_rad:1", "leipzig_rad", "Manetstraße", null, null, 12.37, 51.34, "2025-01-01", "2025-01-05", 4, 0],
+        ["mobidata_rad:1", "mobidata_rad", "Erbprinzenstraße", null, null, 8.4, 49.01, "2025-01-01", "2025-01-05", 4, 0],
+      ],
+    },
+  });
+  assert.equal(themaFuerKommune(e, "Leipzig", 12.373, 51.34, "kfz"), "rad"); // zählt nur Rad
+  assert.equal(themaFuerKommune(e, "Leipzig", 12.373, 51.34, "rad"), "rad");
+  assert.equal(themaFuerKommune(e, "Ettlingen", 8.408, 48.941, "rad"), "kfz"); // Rad aus Karlsruhe zählt nicht
+  assert.equal(themaFuerKommune(e, "Ettlingen", 8.408, 48.941, "sv"), "sv"); // Lkw: im Thema Lkw/Schwerverkehr
+  assert.equal(themaFuerKommune(e, "Karlsruhe", 8.404, 49.009, "kfz"), "rad"); // nächste Stelle: MobiData
+  assert.equal(themaFuerKommune(e, "Kiel", 10.13, 54.32, "kfz"), "kfz"); // nichts im Umkreis: bleibt
 });
