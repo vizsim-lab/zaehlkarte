@@ -1,0 +1,1923 @@
+[
+ {
+  "name": "opendata_raddauerzaehlstellen",
+  "title": "Raddauerzählstellen",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2026-11-13T06:45:12.906889",
+  "resources": [
+   {
+    "name": "WFS (CSV)",
+    "url": "https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=csv",
+    "format": "CSV"
+   },
+   {
+    "name": "WFS (GeoJSON)",
+    "url": "https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=application/json",
+    "format": "GeoJSON"
+   },
+   {
+    "name": "WFS (Shape)",
+    "url": "https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=shape-zip",
+    "format": "WFS"
+   },
+   {
+    "name": "WFS (GML)",
+    "url": "https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen",
+    "format": "GML"
+   },
+   {
+    "name": "Open Geodata Portal des Geoportals",
+    "url": "https://geoportal.muenchen.de/portal/opendata/",
+    "format": "HTML"
+   },
+   {
+    "name": "Metadaten (XML)",
+    "url": "https://geoportal.muenchen.de/csw?service=CSW&request=GetRecordById&version=2.0.2&elementsetname=full&id=f9cf2cab-10a2-4f13-a4eb-0148faa368f7",
+    "format": "XML"
+   },
+   {
+    "name": "WMS (GetCapabilities)",
+    "url": "https://geoportal.muenchen.de/geoserver/mor_wfs/raddauerzaehlstellen/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+    "format": "WMS"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-2025",
+  "title": "Daten der Raddauerzählstellen München 2025",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2026-01-12T15:15:45.330564",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Januar 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/635835ae-10cd-49d3-8b83-8ddffe65022c/download/rad_2025_01_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Januar 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/c585f025-c3d0-4b62-87b0-46164f2a1873/download/rad_2025_01_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Februar 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/d2744606-9aed-43b4-8e20-981113b797fc/download/rad_2025_02_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Februar 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/bcacf6fe-345b-498f-ac5a-f4cc81b0d347/download/rad_2025_02_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - März 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/cd3160f0-44ea-415b-a672-f2e8f9967f9b/download/rad_2025_03_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - März 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/6d3b172f-171b-463a-9495-bd27b730c539/download/rad_2025_03_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - April 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/d4383b6d-5fee-4431-951f-1bef34508629/download/rad_2025_04_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - April 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/b1f4e6c1-5b9d-4e51-96d7-5345f4ea762b/download/rad_2025_04_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Mai 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/06e63eea-abb4-4d2c-b8af-b2c36bb97912/download/rad_2025_05_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Mai 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/0df3e615-4990-48be-9f51-3af1697b827b/download/rad_2025_05_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juni 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/d941e4ac-79a6-411e-a073-22e3a0fc6860/download/rad_2025_06_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juni 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/37c2bb4b-05af-4ae6-8d85-a18efeb7e427/download/rad_2025_06_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juli 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/8add809e-aa19-40c3-a1e4-803f80a9a74f/download/rad_2025_07_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juli 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/671c56d9-8f48-450e-a805-47b7928bdd0d/download/rad_2025_07_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - August 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/738b634a-6c7b-49ff-863d-c6f690aade27/download/rad_2025_08_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - August 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/ceee2e5c-1acc-4adf-b651-d5c57c707e0e/download/rad_2025_08_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - September 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/7d9e2291-f1c1-433a-a4b1-2fd671e50794/download/rad_2025_09_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - September 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/de75e274-423d-40ee-bd47-acf905d05079/download/rad_2025_09_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Oktober 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/21e16cf0-abec-41d6-b512-627f7ed284ca/download/rad_2025_10_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Oktober 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/3c91d1c9-48c1-4c35-81d7-f9ae00fc55fe/download/rad_2025_10_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - November 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/9d481564-13c2-47cd-baa0-26fd0e364300/download/rad_2025_11_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - November 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/d1b7158a-00b1-4e7b-aebf-8773245558e1/download/rad_2025_11_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Dezember 2025 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/03634017-27ec-4325-92a7-61d993a9d890/download/rad_2025_12_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Dezember 2025 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/0816140b-6963-4438-846d-c3ac396bcf37/download/rad_2025_12_15min.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-2023",
+  "title": "Daten der Raddauerzählstellen München 2023",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:43.609560",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Januar 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/63899327-2f90-42f8-8953-9344a158129b/download/rad_2023_01_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Januar 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/c2d22114-8ca0-44d5-895a-39b422977cff/download/rad_2023_01_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Februar 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/6f9f934a-d70c-4deb-b365-de79c21f5e44/download/rad_2023_02_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Februar 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/5506ca79-edb7-4241-90eb-e8406430fab4/download/rad_2023_02_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - März 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/e8536f7f-d03a-4dce-8b9e-81907fdff40f/download/rad_2023_03_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - März 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/51898d07-2aa5-4ee7-977d-c0b80f8910a3/download/rad_2023_03_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - April 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/653f1acb-f02e-4ba6-8dc3-fe1c975a28be/download/rad_2023_04_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - April 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/b12f851c-70a4-4864-9efe-1f6ee85c24dc/download/rad_2023_04_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Mai 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/c5e32d17-6162-4d66-b3a1-e5509eba07e2/download/rad_2023_05_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Mai 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/98d6814b-8850-4859-9266-f04fd941e68a/download/rad_2023_05_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juni 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/f79567a5-9d2a-4274-b54a-5d34112ac13c/download/rad_2023_06_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juni 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/9bfaf5ce-868b-44bb-8963-45028087dfc7/download/rad_2023_06_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juli 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/24f8cb55-05b5-40d0-9ef7-fc66d1e53fd1/download/rad_2023_07_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juli 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/26fb8325-c885-4911-8a10-c4b880402283/download/rad_2023_07_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - August 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/88ca9f2b-3505-4855-9b7d-dee58bc5eb72/download/rad_2023_08_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - August 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/d87fab0d-5701-4507-8575-f76408805967/download/rad_2023_08_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - September 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/dbecbda4-a962-47db-b866-f8739de08629/download/rad_2023_09_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - September 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/ca383d9b-a057-4957-890e-0f30899e411a/download/rad_2023_09_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Oktober 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/9b8816a0-dc08-4255-ac23-2a72b0344a7d/download/rad_2023_10_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Oktober 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/93250158-a33d-47b8-abb4-5aa8ea976bdb/download/rad_2023_10_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - November 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/1936091a-c9e7-4c81-b2ad-4a47686aca1c/download/rad_2023_11_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - November 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/c5bd3226-f615-4567-9f2f-cc480372f638/download/rad_2023_11_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Dezember 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/f007bb38-5f16-42ea-957d-545aabb9d0f9/download/rad_2023_12_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Dezember 2023 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/95bf8b8a-7e78-4cc9-902e-9b32737a2707/download/rad_2023_12_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-2022",
+  "title": "Daten der Raddauerzählstellen München 2022",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:04.902649",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Januar 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/6923fc72-b67f-4257-907f-f5138040afba/download/rad_2022_01_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Januar 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/1779016c-968c-4572-bfe4-7bd1ff3859dc/download/rad_2022_01_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Februar 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/56075b94-4fba-4654-9db9-dca4cd1771e2/download/rad_2022_02_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Februar 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/af5684e4-72b1-4ed9-8150-ad9c491d11dd/download/rad_2022_02_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - März 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/8521b4d0-72a3-45bb-8550-ae3fad36f601/download/rad_2022_03_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - März 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/bad3f046-10b2-46c8-94b9-1d7f1462498d/download/rad_2022_03_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - April 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/8e0cdcb9-e46e-4d50-a889-d541452aa2ce/download/rad_2022_04_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - April 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/96ebcff6-a582-4da4-928e-1fc0a60b4809/download/rad_2022_04_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Mai 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/0100ebaa-b0f3-48bf-a41e-7801852b2085/download/rad_2022_05_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Mai 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/ef27eba9-091b-4154-a2ab-cdc074ed3447/download/rad_2022_05_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juni 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/57b537a6-25e0-444d-a105-5424dfe53ad5/download/rad_2022_06_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juni 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/bcbad2b5-89e2-4802-91fb-8d9f01c9f514/download/rad_2022_06_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juli 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/3a09910d-d8fb-49b8-a043-cb4ad832905f/download/rad_2022_07_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juli 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/590c0d78-9b26-4eb7-b252-28ad2dabb03b/download/rad_2022_07_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - August 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/ed07619f-942d-4174-b9cf-c1e2cd4c6fa4/download/rad_2022_08_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - August 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/f84961a2-8887-4fb5-8f3e-805381916c56/download/rad_2022_08_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - September 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/9bc69fbd-02cd-4f79-a38c-7b75ec904df6/download/rad_2022_09_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - September 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/99f4cd46-40bd-4d81-8fb3-f7dfbb2a20a1/download/rad_2022_09_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Oktober 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/5b1b8e38-d3c3-48f1-ae66-cd4c62c9a896/download/rad_2022_10_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Oktober 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/0fb582ab-332f-4e01-ab7b-35d2b96f403f/download/rad_2022_10_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - November 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/762b779a-723d-4dbe-a3d0-62751f01d132/download/rad_2022_11_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - November 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/1882966e-27b6-4265-a596-9001c3a4cbac/download/rad_2022_11_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Dezember 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/2c8b6e8e-893c-4c46-81b9-d73678e34127/download/rad_2022_12_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Dezember 2022 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/c43b0bfb-836b-4291-b987-bf0fde74daaa/resource/b7155508-0639-4d10-a471-0a7de11fba17/download/rad_2022_12_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-2026",
+  "title": "Daten der Raddauerzählstellen München 2026",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2026-10-08T08:19:47.755460",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Januar 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/1b099f15-85fb-4481-b10f-da0e59357099/download/rad_2026_01_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Januar 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/77d30ce3-ecea-4e9f-a30f-bfdf13bc23a9/download/rad_2026_01_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Februar 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/939517ef-6448-4f2f-b493-70b57d5cfcba/download/rad_2026_02_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Februar 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/0d5abff4-97c8-4679-be23-72bdbd32cd96/download/rad_2026_02_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - März 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/190070c2-adec-43b9-bde9-b368d7d4f355/download/rad_2026_03_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - März 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/052a399a-8d9d-454e-b733-a989bdbe28f7/download/rad_2026_03_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - April 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/2b1f611e-5dca-4781-a750-0d184a5f2e84/download/rad_2026_04_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - April 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/93b90485-56bb-40c1-a2e1-d5c4ae0a96fc/download/rad_2026_04_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Mai 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/15cf1952-371c-49cd-b3ef-ceac8965ed0d/download/rad_2026_05_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Mai 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/3d405eb4-5a8f-49ee-b3cf-a1f375226b66/download/rad_2026_05_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juni 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/d8078d26-3d33-42cc-8260-f88465e5c502/download/rad_2026_06_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juni 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/114896a1-b596-404e-93cc-ceafdcc5b4c1/download/rad_2026_06_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juli 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/43f464bd-2302-4e41-a4bd-a412aec87108/download/rad_2026_07_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juli 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/da247282-c72b-4845-880d-7523ccbcb020/download/rad_2026_07_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - August 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/6ad9d554-1219-479f-85d2-5d5521646b09/download/rad_2026_08_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - August 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/fca3b7df-873c-4aa6-85e0-c2491a9a458b/download/rad_2026_08_tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - September 2026 - Daten der Raddauerzählstellen",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/1da5b9c9-7e62-464c-b400-659d7accce9b/download/rad_2026_09_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - September 2026 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/7613ada3-1cd8-4998-8a21-2fe383eec609/download/rad_2026_09_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-2024",
+  "title": "Daten der Raddauerzählstellen München 2024",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:20.343496",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Januar 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/d3972f53-6a41-4ebb-b2e9-05780969c185/download/rad_2024_01_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Januar 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/f5c738c0-161c-480e-900c-dbb858a3f40d/download/rad_2024_01_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Februar 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/131ce417-e615-4730-a740-5baeb63426e7/download/rad_2024_02_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Februar 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/20362e6c-d20d-4275-9635-a1fe043474f1/download/rad_2024_02_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - März 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/36e4ec84-dfb2-4360-a55a-b87b8e02539f/download/rad_2024_03_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - März 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/7026e61e-c02a-4e79-bcf6-7c76f88f2797/download/rad_2024_03_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - April 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/a882d55c-3686-46b5-8e30-d62f7c82fd98/download/rad_2024_04_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - April 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/8e360b37-0a2d-4bbf-9166-45b306a52601/download/rad_2024_04_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Mai 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/466a0628-d748-4f74-a329-ca5e7e0114a9/download/rad_2024_05_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Mai 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/8528aaa8-ee32-492b-b006-819ea0785bc8/download/rad_2024_05_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juni 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/f0c6c72d-60ce-4617-91a5-b8472b408a2e/download/rad_2024_06_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juni 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/94e71c4c-f2d2-42e1-a43b-15eee048e348/download/rad_2024_06_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Juli 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/912019b9-5819-44fe-abbd-c5bda356ce60/download/rad_2024_07_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Juli 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/2d14b209-cd9b-42fa-a42c-dfbcfed64f06/download/rad_2024_07_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - August 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/a7bb220f-9c26-4c0d-8e25-36e8c4dfc3ad/download/rad_2024_08_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - August 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/7b38bcf5-fa05-4c11-9612-73f9cc5ae689/download/rad_2024_08_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - September 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/d15e8a9f-23e8-4b43-831b-f6b86f7e3c30/download/rad_2024_09_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - September 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/fe3a60bb-dd60-44d0-9809-b273a1c8642a/download/rad_2024_09_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Oktober 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/e7c4e2a9-68c0-4bd3-98f7-f527bce8d354/download/rad_2024_10_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Oktober 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/85d0d113-8a47-4f2f-aca4-a46a009e0f9e/download/rad_2024_10_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - November 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/394f2959-715f-4783-a5c8-4db3097e9d5b/download/rad_2024_11_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - November 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/179d5c60-9577-4a71-ad76-a0c39bfaa3f7/download/rad_2024_11_tage_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Dezember 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/9ff1120f-5fe2-4ca2-bb4e-85206d47bdd5/download/rad_2024_12_15min_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Dezember 2024 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5c002874-3b9f-498e-a4a0-fbf7905fa0c1/resource/4d7ab772-47b9-4e77-9830-05309159715f/download/rad_2024_12_tage_korr.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-jahreszahlen",
+  "title": "Daten der Raddauerzählstellen München - Jahreszahlen",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2026-11-03T15:05:49.817858",
+  "resources": [
+   {
+    "name": "15 Minuten Werte 2008",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/66be7619-a672-4382-bf88-e3688c5abc2b/download/rad_2008_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2008",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/53ef8c4b-d411-477f-9cf3-b044a4c1aaaa/download/rad_2008_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2009",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/3ef8aad9-a6b0-4c97-a6b7-8c3a63226b37/download/rad_2009_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2009",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/89dbef6c-c6cb-4bfc-8729-93049e91223d/download/rad_2009_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2010",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/6558a5f9-2c96-4e4b-985d-8eb99b7b73b1/download/rad_2010_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2010",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/cb720004-bcde-4c0e-babf-64ee995c5232/download/rad_2010_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2011",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/86962013-4854-4deb-aaf9-36e3770cde24/download/rad_2011_15min_export_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2011",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/8c752f92-2cb3-4765-aecf-bda349592ab2/download/rad_2011_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2012",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/ff5d2ebf-dde6-4f21-9c68-2aab74addeec/download/rad_2012_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2012",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/7304e087-e02d-4ca1-b4da-5c46b27fa223/download/rad_2012_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2013",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/9f4f798f-0ad1-4e86-8157-15c5e46eaf91/download/rad_2013_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2013",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/e281aac1-c476-48da-84ce-2bf52bf20a08/download/rad_2013_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2014",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/784b925b-1d5f-43d3-8353-fd5d02fc7c53/download/rad_2014_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2014",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/b78e7a05-33a5-422c-98fa-27c5cf9afe81/download/rad_2014_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2015",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/d6b3a72c-b180-40a0-a2ab-d97040737f20/download/rad_2015_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2015",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/d5dd6fda-77ee-4ac7-9c7f-af54ccea64e4/download/rad_2015_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2016",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/3913d9e6-1be8-4ee4-ab88-1266cbf161f1/download/rad_2016_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2016",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/2f9e99cf-e82d-41fb-990c-67783cf23ab7/download/rad_2016_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2017",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/694b9927-b4d5-4e8f-9c62-09b8ac03c39a/download/rad_2017_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2017",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/d584bb5e-021b-43ea-8d32-8ba6c92b8f1e/download/rad_2017_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2018",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/0a97a624-daa4-4cd8-a820-7d2fa6ffe89a/download/rad_2018_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2018",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/00c5eaf9-d464-433f-8c9b-ce8a2a16db2b/download/rad_2018_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2019",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/893e1f16-6504-4f4f-b8b3-f907ef406cd5/download/rad_2019_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2019",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/f6d559cc-9e30-4307-b005-7b105b967ec0/download/rad_2019_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2020",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/9be77b23-a444-4ba5-be9e-7f8594aa0188/download/rad_2020_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2020",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/8ae44963-171e-4edf-bf16-f12503717042/download/rad_2020_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2021",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/205c5c9e-9689-4c28-97cb-e575c6c772ce/download/rad_2021_15min_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2021",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/561fb0d5-2d27-41bb-bda9-a383d6d42ad1/download/rad_2021_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2022",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/e65e0e26-ce1f-4e58-9260-beccac196e75/download/rad_2022_15min_export_06_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2022",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/05a2178d-3138-4874-a9fd-1ede6f0cedc1/download/rad_2022_tage_19_06_23_r.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2023",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/fc7f889b-9a42-4955-957e-6581a9270c61/download/20240403_rad-dzs_2023_minutenwertena2.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2023",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/35a5825b-a8c8-4414-92f3-11c880576bd4/download/tages_werte_2023na2korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2024",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/ec6818c9-b986-49c5-a373-446158f97d38/download/minuten_werte_2024_korr2.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2024",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/d50ed6f4-93ee-4021-b30d-6d763b7b9603/download/tages_werte_2024_korr.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten Werte 2025",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/e2912a58-9738-410e-ac81-d46b34436535/download/rad_2025_15min_export_19_01_25.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte Wetter 2025",
+    "url": "https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/11f6b146-afac-4d96-bc49-8f49ff545c3c/download/rad_2025_tage_export_19_01_25.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juni-2017",
+  "title": "Daten der Raddauerzählstellen München Juni 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:03.124675",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juni 2017",
+    "url": "https://opendata.muenchen.de/dataset/dda40d14-4592-4fe2-8057-21208bc57ec2/resource/c0b9f554-ea43-4d43-8654-57fbcfb079d5/download/rad20170615min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juni 2017",
+    "url": "https://opendata.muenchen.de/dataset/dda40d14-4592-4fe2-8057-21208bc57ec2/resource/0dbe1c6e-cf96-41c4-a903-ff1539af6c88/download/rad201706tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzahlstellen-munchen-dezember-2021",
+  "title": "Daten der Raddauerzählstellen München Dezember 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:44.764444",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Dezember 2021",
+    "url": "https://opendata.muenchen.de/dataset/52f49094-6a0b-4db8-88a8-83d0764bb963/resource/43e5cbff-ee71-4999-87fc-33fc89d5a18f/download/rad_2021_12_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Dezember 2021",
+    "url": "https://opendata.muenchen.de/dataset/52f49094-6a0b-4db8-88a8-83d0764bb963/resource/d59c8486-ce97-4516-96f6-7e816eea5eb9/download/rad_2021_12_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-februar-2019",
+  "title": "Daten der Raddauerzählstellen München Februar 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:43.195451",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Februar 2019",
+    "url": "https://opendata.muenchen.de/dataset/ef88638f-dd93-49a4-8c14-df237fe2c43d/resource/b1b09617-e613-4bcf-809d-6ac92fcd0d1b/download/rad20190215min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Februar 2019",
+    "url": "https://opendata.muenchen.de/dataset/ef88638f-dd93-49a4-8c14-df237fe2c43d/resource/e454af57-76ca-4e59-960c-ce2490b030d6/download/rad201902tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-februar-2021",
+  "title": "Daten der Raddauerzählstellen München Februar 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:42.559301",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Februar 2021",
+    "url": "https://opendata.muenchen.de/dataset/13bfd8d0-a4bb-4e90-b4b3-75248f46ab4c/resource/8e509be2-ddfc-41f0-ba3f-f4c2228d041e/download/rad20210215min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Februar 2021",
+    "url": "https://opendata.muenchen.de/dataset/13bfd8d0-a4bb-4e90-b4b3-75248f46ab4c/resource/52ce7abb-4410-47a4-8b1c-812e7387bccc/download/rad202102tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-april-2020",
+  "title": "Daten der Raddauerzählstellen München April 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:40.074457",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München April 2020",
+    "url": "https://opendata.muenchen.de/dataset/fafb47de-59b4-49ae-946c-a82c4da94ed8/resource/178c9660-7a44-4d89-ab7e-7a92db67f9d2/download/rad20200415min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München April 2020",
+    "url": "https://opendata.muenchen.de/dataset/fafb47de-59b4-49ae-946c-a82c4da94ed8/resource/02d3b3e8-8ef7-4a00-8186-b9038957452b/download/rad202004tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-april-2021",
+  "title": "Daten der Raddauerzählstellen München April 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:38.792815",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München April 2021",
+    "url": "https://opendata.muenchen.de/dataset/a569aa0e-5098-4701-8101-2e715b628f41/resource/4d38fbe0-1e64-4677-b16a-11b80a9a6d06/download/rad20210415min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München April 2021",
+    "url": "https://opendata.muenchen.de/dataset/a569aa0e-5098-4701-8101-2e715b628f41/resource/8f9a0723-a70c-4f5a-b42a-58d88baffd32/download/rad202104tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-januar-2017",
+  "title": "Daten der Raddauerzählstellen München Januar 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:37.857059",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Januar 2017",
+    "url": "https://opendata.muenchen.de/dataset/011c0015-8e1c-4c94-af9a-bd5ba118b6e9/resource/9f3b9a02-8782-4e1a-935a-1516fc78b719/download/rad20170115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Januar 2017",
+    "url": "https://opendata.muenchen.de/dataset/011c0015-8e1c-4c94-af9a-bd5ba118b6e9/resource/c42b2895-e9df-4c1f-9562-8f3c6839108b/download/rad201701tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-februar-2020",
+  "title": "Daten der Raddauerzählstellen München Februar 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:34.181645",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Februar 2020",
+    "url": "https://opendata.muenchen.de/dataset/67f5be21-77df-41c4-ba8e-e6e097290489/resource/a20da4e9-0164-4c62-879d-6082db76458b/download/rad20200215min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Februar 2020",
+    "url": "https://opendata.muenchen.de/dataset/67f5be21-77df-41c4-ba8e-e6e097290489/resource/7c9318f2-9712-45bd-874f-43e4bfebb6ad/download/rad202002tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-september-2019",
+  "title": "Daten der Raddauerzählstellen München September 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:32.500161",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München September 2019",
+    "url": "https://opendata.muenchen.de/dataset/35e98c7b-72e0-4791-9b7b-3fc0cde17a49/resource/25597be4-ee1c-4370-afa8-90f547f2f2e5/download/rad20190915min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München September 2019",
+    "url": "https://opendata.muenchen.de/dataset/35e98c7b-72e0-4791-9b7b-3fc0cde17a49/resource/0e928a89-2511-428b-b99b-bf23a4dc1387/download/rad201909tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-maerz-2019",
+  "title": "Daten der Raddauerzählstellen München März 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:31.486204",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München März 2019",
+    "url": "https://opendata.muenchen.de/dataset/72d7cf3d-8218-4895-b928-699c0a200885/resource/f77c81aa-dccc-43d4-9fb6-d53c4aa0487c/download/rad20190315min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2019",
+    "url": "https://opendata.muenchen.de/dataset/72d7cf3d-8218-4895-b928-699c0a200885/resource/f1b65131-95ca-43dd-bbb0-56d300ee6331/download/rad201903tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-september-2018",
+  "title": "Daten der Raddauerzählstellen München September 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:31.179408",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München September 2018",
+    "url": "https://opendata.muenchen.de/dataset/4352cd03-5993-40d4-9e99-e065d364f12f/resource/2d334e8c-82b6-493f-bf57-0bbc744aa545/download/rad20180915min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München September 2018",
+    "url": "https://opendata.muenchen.de/dataset/4352cd03-5993-40d4-9e99-e065d364f12f/resource/fc504fb5-9bfd-4153-9ec9-41421f5e1d7c/download/rad201809tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-maerz-2017",
+  "title": "Daten der Raddauerzählstellen München März 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:28.927109",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München März 2017",
+    "url": "https://opendata.muenchen.de/dataset/c9af32b1-fc32-4099-be51-4df58a577919/resource/74810400-6740-4f23-842d-f1f8618dc8f7/download/rad20170315min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2017",
+    "url": "https://opendata.muenchen.de/dataset/c9af32b1-fc32-4099-be51-4df58a577919/resource/9036aca9-729d-44e2-aa8b-8937248bec76/download/rad201703tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-november-2018",
+  "title": "Daten der Raddauerzählstellen München November 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:28.598461",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München November 2018",
+    "url": "https://opendata.muenchen.de/dataset/73d4d62b-eb29-445d-80d2-e46764c9569c/resource/ade699ed-fd88-4ba4-a306-8798cf91e021/download/rad20181115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München November 2018",
+    "url": "https://opendata.muenchen.de/dataset/73d4d62b-eb29-445d-80d2-e46764c9569c/resource/52a60289-1bd6-449c-bddd-b8277d9861c8/download/rad201811tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-mai-2019",
+  "title": "Daten der Raddauerzählstellen München Mai 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:26.880632",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Mai 2019",
+    "url": "https://opendata.muenchen.de/dataset/235da1b4-b1f4-4406-bae1-e53169e03887/resource/2cc580da-89d0-4e4c-968c-82b391338bb0/download/rad20190515min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Mai 2019",
+    "url": "https://opendata.muenchen.de/dataset/235da1b4-b1f4-4406-bae1-e53169e03887/resource/59ccd361-90ed-41a9-b251-590e16e9a763/download/rad201905tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juni-2018",
+  "title": "Daten der Raddauerzählstellen München Juni 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:26.548325",
+  "resources": [
+   {
+    "name": " 15 Minuten-Werte - Daten der Raddauerzählstellen München Juni 2018 ",
+    "url": "https://opendata.muenchen.de/dataset/6467f3c5-d473-4a52-99ee-188dea48ed2d/resource/9d4d7922-f232-4a46-bb26-e23dec7520a1/download/rad20180615min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juni 2018",
+    "url": "https://opendata.muenchen.de/dataset/6467f3c5-d473-4a52-99ee-188dea48ed2d/resource/6a2b9e10-b937-48bf-b09a-631a51f8cdd4/download/rad201806tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juni-2021",
+  "title": "Daten der Raddauerzählstellen München Juni 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:25.919338",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juni 2021",
+    "url": "https://opendata.muenchen.de/dataset/460641f5-52e7-48fd-96db-3413caba9688/resource/2872d047-afb2-443f-b999-176709d930c1/download/rad_2021_06_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juni 2021",
+    "url": "https://opendata.muenchen.de/dataset/460641f5-52e7-48fd-96db-3413caba9688/resource/4e432546-8be8-43a7-a602-aa3361ad7d75/download/rad_2021_06_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-maerz-2020",
+  "title": "Daten der Raddauerzählstellen München März 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:18.930423",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München März 2020",
+    "url": "https://opendata.muenchen.de/dataset/ab168721-7eb6-4715-a12b-46800a2879c2/resource/aece96df-4fad-49fc-bd21-2d64f8ea50e9/download/rad20200315min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2020",
+    "url": "https://opendata.muenchen.de/dataset/ab168721-7eb6-4715-a12b-46800a2879c2/resource/20e83eaf-00ac-46d1-a7bb-84c936393c74/download/rad202003tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-maerz-2018",
+  "title": "Daten der Raddauerzählstellen München März 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:17.471301",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München März  2018",
+    "url": "https://opendata.muenchen.de/dataset/e47d63ec-ba1c-409b-bf76-fea0775373cd/resource/43be98e1-e73f-41e3-9327-cf6f7519b90b/download/rad_2018_03_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München März  2018",
+    "url": "https://opendata.muenchen.de/dataset/e47d63ec-ba1c-409b-bf76-fea0775373cd/resource/f1694c61-41e0-47aa-94c0-57992929a6c1/download/rad_2018_03_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-august-2019",
+  "title": "Daten der Raddauerzählstellen München August 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:16.255717",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München August 2019",
+    "url": "https://opendata.muenchen.de/dataset/126c1d3d-3bd2-4286-9d99-c2e36930979c/resource/8c548b17-ceaa-464b-bcac-11ad7ee5a3d0/download/rad20190815min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München August 2019",
+    "url": "https://opendata.muenchen.de/dataset/126c1d3d-3bd2-4286-9d99-c2e36930979c/resource/3d567619-28dd-443d-ae16-3ff92cf96aa8/download/rad201908tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-oktober-2017",
+  "title": "Daten der Raddauerzählstellen München Oktober 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:12.299243",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Oktober 2017",
+    "url": "https://opendata.muenchen.de/dataset/0305bb19-049d-4204-a38a-41895c61f44e/resource/bdc0744c-dd46-48be-8a33-a08f22140e72/download/rad20171015min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Oktober 2017",
+    "url": "https://opendata.muenchen.de/dataset/0305bb19-049d-4204-a38a-41895c61f44e/resource/3f1b26ff-1fd4-48cd-8187-c248ecb80efd/download/rad201710tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-september-2020",
+  "title": "Daten der Raddauerzählstellen München September 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:11.970076",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München September 2020",
+    "url": "https://opendata.muenchen.de/dataset/13e1fa56-4b8e-47fe-a9fa-210890bab968/resource/f7fbca17-c54f-44d8-ae94-7009a1c37bee/download/rad20200915min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München September 2020",
+    "url": "https://opendata.muenchen.de/dataset/13e1fa56-4b8e-47fe-a9fa-210890bab968/resource/d8149405-208b-4561-b2d2-ad0a1ed06af0/download/rad202009tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juli-2020",
+  "title": "Daten der Raddauerzählstellen München Juli 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:07.608280",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juli 2020",
+    "url": "https://opendata.muenchen.de/dataset/6068825c-626f-408c-9b9a-11a1b7fedbef/resource/9a3592bf-234c-43fd-b03e-493e4b86b4b9/download/rad20200715min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juli 2020",
+    "url": "https://opendata.muenchen.de/dataset/6068825c-626f-408c-9b9a-11a1b7fedbef/resource/8ab7403c-f8a8-4cd9-8ebd-4e9970be0ca8/download/rad202007tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-august-2020",
+  "title": "Daten der Raddauerzählstellen München August 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:06.629512",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München August 2020",
+    "url": "https://opendata.muenchen.de/dataset/37ba15ed-b94e-43dc-8ca0-5c2f107a38d3/resource/b9fa9fcd-3267-44b9-ae4a-2b143c4304d1/download/rad20200815min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München August 2020",
+    "url": "https://opendata.muenchen.de/dataset/37ba15ed-b94e-43dc-8ca0-5c2f107a38d3/resource/8110cc37-fee3-4992-ab1f-5552b6c8752f/download/rad202008tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juli-2018",
+  "title": "Daten der Raddauerzählstellen München Juli 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:01.552237",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juli 2018",
+    "url": "https://opendata.muenchen.de/dataset/26eeb32f-489b-43d9-ac55-c954c7c643fd/resource/fb305c18-68db-4e95-9dcd-0cf7d163b496/download/rad20180715min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juli 2018",
+    "url": "https://opendata.muenchen.de/dataset/26eeb32f-489b-43d9-ac55-c954c7c643fd/resource/7368547c-7118-49bf-9286-e510ea621c58/download/rad201807tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-januar-2020",
+  "title": "Daten der Raddauerzählstellen München Januar 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:53.022295",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Januar 2020",
+    "url": "https://opendata.muenchen.de/dataset/c63a040e-0307-48de-9de9-19f55bd9e938/resource/bed75fcd-6a04-4907-b628-7f7408fe3f21/download/rad20200115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Januar 2020",
+    "url": "https://opendata.muenchen.de/dataset/c63a040e-0307-48de-9de9-19f55bd9e938/resource/99fad795-d999-4fa8-ad99-4bed0312f355/download/rad202001tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-november-2017",
+  "title": "Daten der Raddauerzählstellen München November 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:52.691623",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München November 2017",
+    "url": "https://opendata.muenchen.de/dataset/f27430b0-2f95-4b3f-8436-c984377ec3b8/resource/b71ca8a2-d881-4156-86a6-f03eaf326caf/download/rad20171115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München November 2017",
+    "url": "https://opendata.muenchen.de/dataset/f27430b0-2f95-4b3f-8436-c984377ec3b8/resource/48e34f1e-8416-4b4d-8531-727ac2c794aa/download/rad201711tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-september-2017",
+  "title": "Daten der Raddauerzählstellen München September 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:51.678641",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München September 2017",
+    "url": "https://opendata.muenchen.de/dataset/01e93140-0509-42ae-8b7d-2d343797d5a7/resource/05384396-2694-4d39-921b-19bd7f19b038/download/rad20170915min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München September 2017",
+    "url": "https://opendata.muenchen.de/dataset/01e93140-0509-42ae-8b7d-2d343797d5a7/resource/06f79d2a-cb8c-49a7-9ab4-739d49083bb5/download/rad201709tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-november-2020",
+  "title": "Daten der Raddauerzählstellen München November 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:48.790032",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München November 2020",
+    "url": "https://opendata.muenchen.de/dataset/e0737e09-d643-4486-842b-f43fdc010e3b/resource/6276e87c-a5fa-4ba8-888a-06ae7b2f08af/download/rad20201115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München November 2020",
+    "url": "https://opendata.muenchen.de/dataset/e0737e09-d643-4486-842b-f43fdc010e3b/resource/23b5bc71-8070-42f7-93c8-aa3e2d2a9cce/download/rad202011tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-januar-2019",
+  "title": "Daten der Raddauerzählstellen München Januar 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:48.482825",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Januar 2019",
+    "url": "https://opendata.muenchen.de/dataset/097f12d3-dc8a-4c83-a6f4-403b8c110540/resource/3dabb519-48d9-47ff-bea5-83e3fadd7b1b/download/rad20190115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Januar 2019",
+    "url": "https://opendata.muenchen.de/dataset/097f12d3-dc8a-4c83-a6f4-403b8c110540/resource/685dd828-a7b8-4368-b0ff-963f994e1c52/download/rad201901tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-august-2017",
+  "title": "Daten der Raddauerzählstellen München August 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:48.199858",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München August 2017",
+    "url": "https://opendata.muenchen.de/dataset/72c6ccde-fb30-4129-ba3c-86afb40af405/resource/12e8c6b9-c7f7-47ee-b442-e68dc48fa538/download/rad20170815min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München August 2017",
+    "url": "https://opendata.muenchen.de/dataset/72c6ccde-fb30-4129-ba3c-86afb40af405/resource/72056b6a-bfdc-4e8d-96b7-c22b98dc3e69/download/rad201708tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-oktober-2019",
+  "title": "Daten der Raddauerzählstellen München Oktober 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:36.904111",
+  "resources": [
+   {
+    "name": "  15 Minuten-Werte - Daten der Raddauerzählstellen München Oktober 2019",
+    "url": "https://opendata.muenchen.de/dataset/f2571a94-18b7-48fa-8440-6a10d6a7b99b/resource/05623bcf-135b-4c20-a268-a4eea47a90aa/download/rad20191015min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Oktober 2019",
+    "url": "https://opendata.muenchen.de/dataset/f2571a94-18b7-48fa-8440-6a10d6a7b99b/resource/34e46c29-08e9-48f6-a017-f69ad5b4e775/download/rad201910tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-mai-2017",
+  "title": "Daten der Raddauerzählstellen München Mai 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:35.980673",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Mai 2017",
+    "url": "https://opendata.muenchen.de/dataset/852f8c2f-e4af-4e24-9d84-45e7f9322f5d/resource/a6a5f3e9-2126-4022-ac77-3f0dcae769ff/download/rad20170515min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Mai 2017",
+    "url": "https://opendata.muenchen.de/dataset/852f8c2f-e4af-4e24-9d84-45e7f9322f5d/resource/dccf12b3-4df3-4cdc-8b7f-2946b32cb21f/download/rad201705tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-maerz-2021",
+  "title": "Daten der Raddauerzählstellen München März 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:35.097072",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München März 2021",
+    "url": "https://opendata.muenchen.de/dataset/b5a2c6f9-f42b-46f9-9bed-44648a7ce6a9/resource/9ef47826-fc1b-48d7-b163-a780cb1bd35c/download/rad20210315min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München März 2021",
+    "url": "https://opendata.muenchen.de/dataset/b5a2c6f9-f42b-46f9-9bed-44648a7ce6a9/resource/e67b75e5-e66c-4511-818a-a81bfe403068/download/rad202103tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-februar-2017",
+  "title": "Daten der Raddauerzählstellen München Februar 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:34.808686",
+  "resources": [
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Februar 2017",
+    "url": "https://opendata.muenchen.de/dataset/4def19b1-7b05-4a0c-ad6d-0d1061e88038/resource/66ab7797-e225-4f20-9dfd-efa1f984fb7d/download/rad201702tage.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Februar 2017",
+    "url": "https://opendata.muenchen.de/dataset/4def19b1-7b05-4a0c-ad6d-0d1061e88038/resource/3c367280-32de-4598-8352-4b2d780214c6/download/rad20170215min.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-dezember-2020",
+  "title": "Daten der Raddauerzählstellen München Dezember 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:30.206253",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Dezember 2020",
+    "url": "https://opendata.muenchen.de/dataset/0b275843-eccf-4d59-bbce-2d4a252939a9/resource/19766f2d-7f14-4147-8f71-22834f9d263f/download/rad20201215minbearbeitet.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Dezember 2020",
+    "url": "https://opendata.muenchen.de/dataset/0b275843-eccf-4d59-bbce-2d4a252939a9/resource/4a17d7ab-b1ac-4059-b4e4-5025d522059f/download/rad202012tagebearbeitet.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-dezember-2017",
+  "title": "Daten der Raddauerzählstellen München Dezember 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:29.918672",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Dezember 2017",
+    "url": "https://opendata.muenchen.de/dataset/77f13894-918e-481b-af7c-c2b3d40105dc/resource/ba1e478b-d736-4e96-9b7d-53c090b95cb1/download/rad20171215min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Dezember 2017",
+    "url": "https://opendata.muenchen.de/dataset/77f13894-918e-481b-af7c-c2b3d40105dc/resource/9a0a1db6-8273-4b5a-9474-8aefa3a5629f/download/rad201712tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-april-2018",
+  "title": "Daten der Raddauerzählstellen München April 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:29.049746",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München April 2018",
+    "url": "https://opendata.muenchen.de/dataset/4f982f60-73e1-4b9f-95cd-cdf83635c3c7/resource/725b8a9b-78c8-4f93-b5a9-3f1a0bd766d8/download/rad20180415min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München April 2018",
+    "url": "https://opendata.muenchen.de/dataset/4f982f60-73e1-4b9f-95cd-cdf83635c3c7/resource/68e6a9e0-2b8c-4e03-9e19-c0b6e09405ae/download/rad201804tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-april-2017",
+  "title": "Daten der Raddauerzählstellen München April 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:24.318631",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München April 2017",
+    "url": "https://opendata.muenchen.de/dataset/b6f69f11-8175-4810-a5e5-699175f01744/resource/6743e71f-60a8-4223-9644-c95b96cd7251/download/rad20170415min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München April 2017",
+    "url": "https://opendata.muenchen.de/dataset/b6f69f11-8175-4810-a5e5-699175f01744/resource/71e42786-1992-4186-a0e3-17e41fda0108/download/rad201704tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-april-2019",
+  "title": "Daten der Raddauerzählstellen München April 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:22.813283",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München April 2019",
+    "url": "https://opendata.muenchen.de/dataset/2285225b-f71a-4a17-84bf-ce1addffd389/resource/e7b36075-4c5f-4059-be8d-49582386b89b/download/rad20190415min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München April 2019",
+    "url": "https://opendata.muenchen.de/dataset/2285225b-f71a-4a17-84bf-ce1addffd389/resource/9b106572-b8c8-4f69-bd6f-654e8267c1df/download/rad201904tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-januar-2018",
+  "title": "Daten der Raddauerzählstellen München Januar 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:21.353867",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Januar 2018",
+    "url": "https://opendata.muenchen.de/dataset/261318dd-afd7-4bcf-b7fd-c6c9b4aebbe2/resource/767008cc-34da-42b0-b813-e900e2be9d68/download/rad20180115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Januar  2018",
+    "url": "https://opendata.muenchen.de/dataset/261318dd-afd7-4bcf-b7fd-c6c9b4aebbe2/resource/1e26f02e-4e77-48a9-bc40-015b86d190cb/download/rad201801tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-februar-2018",
+  "title": "Daten der Raddauerzählstellen München Februar 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:21.000557",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Februar 2018",
+    "url": "https://opendata.muenchen.de/dataset/29236de7-ec90-402b-a13c-ba3ddeb0bc78/resource/02d5d30f-b63e-4cfc-98c5-4e0ac11586f1/download/rad20180215min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Februar 2018",
+    "url": "https://opendata.muenchen.de/dataset/29236de7-ec90-402b-a13c-ba3ddeb0bc78/resource/bc25c027-511a-424d-9be9-c1983d2da021/download/rad201802tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-mai-2021",
+  "title": "Daten der Raddauerzählstellen München Mai 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:18.247292",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Mai 2021",
+    "url": "https://opendata.muenchen.de/dataset/6e0ce72c-b2b1-4bab-bf7a-7b6113b827d5/resource/105dbf71-a2f7-4d70-993c-e7d92a05d7fb/download/rad20210515min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Mai 2021",
+    "url": "https://opendata.muenchen.de/dataset/6e0ce72c-b2b1-4bab-bf7a-7b6113b827d5/resource/75574efa-df26-42e5-b015-111c67058e0d/download/rad202105tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juli-2017",
+  "title": "Daten der Raddauerzählstellen München Juli 2017",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:17.145084",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juli 2017",
+    "url": "https://opendata.muenchen.de/dataset/58d3ec0a-240a-4863-8b8a-0f7b6989a9cf/resource/19a4a6f0-946c-4cd4-a8ba-d5cf5f48ce49/download/rad20170715min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juli 2017",
+    "url": "https://opendata.muenchen.de/dataset/58d3ec0a-240a-4863-8b8a-0f7b6989a9cf/resource/44e7e8f6-b088-4a4c-9173-5b90240c0924/download/rad201707tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-oktober-2018",
+  "title": "Daten der Raddauerzählstellen München Oktober 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:15.372033",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Oktober 2018",
+    "url": "https://opendata.muenchen.de/dataset/8c45c9ed-7aac-46d6-99a8-a281cc9f90b3/resource/4feae414-7d7e-43b6-8aba-dd1774e73655/download/rad20181015min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Oktober 2018",
+    "url": "https://opendata.muenchen.de/dataset/8c45c9ed-7aac-46d6-99a8-a281cc9f90b3/resource/f6104439-4f59-4c8d-896f-2b343f49c6af/download/rad201810tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-november-2019",
+  "title": "Daten der Raddauerzählstellen München November 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:15.078151",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München November 2019",
+    "url": "https://opendata.muenchen.de/dataset/4bca92b3-95dd-4822-a171-468a2bc0dfbd/resource/deec23c1-7121-4042-b2e3-67577e97c776/download/rad20191115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München November 2019",
+    "url": "https://opendata.muenchen.de/dataset/4bca92b3-95dd-4822-a171-468a2bc0dfbd/resource/d8917e9c-dc75-41e7-98c4-91b9514a46f5/download/rad201911tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-dezember-2019",
+  "title": "Daten der Raddauerzählstellen München Dezember 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:14.161678",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Dezember 2019",
+    "url": "https://opendata.muenchen.de/dataset/7840db73-d293-40d0-82c7-9a67fab70734/resource/74368767-f877-49c4-b908-102b0dddf2a5/download/rad20191215min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Dezember 2019",
+    "url": "https://opendata.muenchen.de/dataset/7840db73-d293-40d0-82c7-9a67fab70734/resource/def548e1-14ae-48c2-aba9-070ff81313bb/download/rad201912tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-oktober-2020",
+  "title": "Daten der Raddauerzählstellen München Oktober 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:13.161535",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Oktober 2020",
+    "url": "https://opendata.muenchen.de/dataset/5917c597-dc58-49ee-bb8b-5e169c888935/resource/a5751b08-8444-4f9c-af1b-58e28f15f196/download/rad20201015min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Oktober 2020 - Daten der Raddauerzählstellen München",
+    "url": "https://opendata.muenchen.de/dataset/5917c597-dc58-49ee-bb8b-5e169c888935/resource/d14809f2-e331-4fe8-bf5e-066b6ccfc177/download/rad202010tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-august-2018",
+  "title": "Daten der Raddauerzählstellen München August 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:10.747487",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München August 2018 ",
+    "url": "https://opendata.muenchen.de/dataset/b2a4dc15-2928-4e94-a0a3-df1177ed6ce7/resource/96f0566e-1811-4e3e-9cdb-e7bc8cddb206/download/rad20180815min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München August 2018",
+    "url": "https://opendata.muenchen.de/dataset/b2a4dc15-2928-4e94-a0a3-df1177ed6ce7/resource/cefe233a-a6fa-4b43-92ed-a2266994ff68/download/rad201808tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-dezember-2018",
+  "title": "Daten der Raddauerzählstellen München Dezember 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:07.764207",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Dezember 2018",
+    "url": "https://opendata.muenchen.de/dataset/8e74a0b6-3c28-4c86-811f-f0b036546e45/resource/35456ce5-1785-4aa1-b39c-048008440b77/download/rad20181215min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Dezember 2018",
+    "url": "https://opendata.muenchen.de/dataset/8e74a0b6-3c28-4c86-811f-f0b036546e45/resource/0b256f86-66cd-434a-ac8f-d1e994a279d7/download/rad201812tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-mai-2018",
+  "title": "Daten der Raddauerzählstellen München Mai 2018",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:07.009017",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Mai 2018",
+    "url": "https://opendata.muenchen.de/dataset/83ce2a0d-7a22-409d-b2a1-2692426b747d/resource/8dd210a2-cd4d-406e-b3be-3af861a9c404/download/rad20180515min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Mai  2018",
+    "url": "https://opendata.muenchen.de/dataset/83ce2a0d-7a22-409d-b2a1-2692426b747d/resource/b4e6ddd3-715c-4e39-addf-e79e8a1cb02d/download/rad201805tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-januar-2021",
+  "title": "Daten der Raddauerzählstellen München Januar 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:05.048484",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Januar 2021",
+    "url": "https://opendata.muenchen.de/dataset/db8c69e8-f7ac-44a6-82f6-8e8c8c8f3369/resource/73c321e3-606c-4e9d-8cfb-d76c7529f5ba/download/rad20210115min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Januar 2021",
+    "url": "https://opendata.muenchen.de/dataset/db8c69e8-f7ac-44a6-82f6-8e8c8c8f3369/resource/dff8d249-c952-40e0-8bdc-4dda1634b409/download/rad202101tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juni-2020",
+  "title": "Daten der Raddauerzählstellen München Juni 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:03.382740",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen MünchenJuni 2020",
+    "url": "https://opendata.muenchen.de/dataset/92a78630-2c08-4a48-8714-32630d068d44/resource/3bc66619-efcd-45be-9d45-d4074673c128/download/rad20200615min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juni 2020",
+    "url": "https://opendata.muenchen.de/dataset/92a78630-2c08-4a48-8714-32630d068d44/resource/5da10532-c118-4a8f-af59-d29d3a808d44/download/rad202006tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juli-2021",
+  "title": "Daten der Raddauerzählstellen München Juli 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:23.191476",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juli 2021",
+    "url": "https://opendata.muenchen.de/dataset/f181e547-f8dc-4a71-a8f9-0e67460f6b49/resource/62bea560-e1d2-40df-826d-87dbfd36870d/download/rad_2021_07_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juli 2021",
+    "url": "https://opendata.muenchen.de/dataset/f181e547-f8dc-4a71-a8f9-0e67460f6b49/resource/24595cd7-056f-4a52-831b-2878c9937912/download/rad_2021_07_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-september-2021",
+  "title": "Daten der Raddauerzählstellen München September 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:19.245432",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München September 2021",
+    "url": "https://opendata.muenchen.de/dataset/245d0a6a-2b33-4afa-95d4-4043e8d55eb2/resource/4cb7280b-003e-43fb-8fea-3eb4b165f1cf/download/rad_2021_09_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München September 2021",
+    "url": "https://opendata.muenchen.de/dataset/245d0a6a-2b33-4afa-95d4-4043e8d55eb2/resource/d5c8ea45-1400-4029-b957-8495d3ce1148/download/rad_2021_09_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-november-2021",
+  "title": "Daten der Raddauerzählstellen München November 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:18:02.486039",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München November 2021",
+    "url": "https://opendata.muenchen.de/dataset/8015869b-f288-445d-a12f-1fb1e9fd3005/resource/61fced4f-dd74-46f3-9d0d-bd48fd82e341/download/rad_2021_11_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München November 2021",
+    "url": "https://opendata.muenchen.de/dataset/8015869b-f288-445d-a12f-1fb1e9fd3005/resource/e2e18f22-25a2-4b0c-a026-0d747ae8a611/download/rad_2021_11_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-august-2021",
+  "title": "Daten der Raddauerzählstellen München August 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:34.525503",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München August 2021",
+    "url": "https://opendata.muenchen.de/dataset/700599d3-a336-47e3-8abd-64168f1b49fc/resource/ba2db7af-bfdb-489a-bf41-5f46017febd3/download/rad_2021_08_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München August 2021",
+    "url": "https://opendata.muenchen.de/dataset/700599d3-a336-47e3-8abd-64168f1b49fc/resource/3c09982b-bdd8-41b0-a4aa-922adf888a8a/download/rad_2021_08_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-oktober-2021",
+  "title": "Daten der Raddauerzählstellen München Oktober 2021",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:27.072582",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Oktober 2021",
+    "url": "https://opendata.muenchen.de/dataset/d595bcef-430c-4ca1-b919-b00ffea4badd/resource/9f4a47d0-144d-4033-b895-d385e80b07ea/download/rad_2021_10_15min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Oktober 2021",
+    "url": "https://opendata.muenchen.de/dataset/d595bcef-430c-4ca1-b919-b00ffea4badd/resource/15f35255-ef75-407b-81ae-e46b76e00c34/download/rad_2021_10_tage.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juli-2019",
+  "title": "Daten der Raddauerzählstellen München Juli 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:03.978424",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juli 2019",
+    "url": "https://opendata.muenchen.de/dataset/ca7130ef-8115-4975-ab0b-8092576b068c/resource/979f5a27-d881-4257-b863-b758e6d78595/download/rad20190715min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juli 2019",
+    "url": "https://opendata.muenchen.de/dataset/ca7130ef-8115-4975-ab0b-8092576b068c/resource/4dba28f0-bb46-45fb-9e1e-e8cf22085f2e/download/rad201907tageneu.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-juni-2019",
+  "title": "Daten der Raddauerzählstellen München Juni 2019",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:27.720739",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Juni 2019",
+    "url": "https://opendata.muenchen.de/dataset/2778adcb-f051-4837-adec-34dc19343f30/resource/87728670-5788-415a-9ed4-0bbb5a859c51/download/rad20190615min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Juni 2019",
+    "url": "https://opendata.muenchen.de/dataset/2778adcb-f051-4837-adec-34dc19343f30/resource/422569b2-e753-4bfc-8e05-51b79c290cda/download/rad201906tageneu.csv",
+    "format": "CSV"
+   }
+  ]
+ },
+ {
+  "name": "daten-der-raddauerzaehlstellen-muenchen-mai-2020",
+  "title": "Daten der Raddauerzählstellen München Mai 2020",
+  "license_id": "dl-by-de/2.0",
+  "modified": "2025-09-26T08:17:36.326710",
+  "resources": [
+   {
+    "name": "15 Minuten-Werte - Daten der Raddauerzählstellen München Mai 2020",
+    "url": "https://opendata.muenchen.de/dataset/21a0987f-e822-413d-95d2-17f9c513c305/resource/57c8b8c0-4f1f-494b-8e35-e89800eea19e/download/rad20200515min.csv",
+    "format": "CSV"
+   },
+   {
+    "name": "Tageswerte und Wetter - Daten der Raddauerzählstellen München Mai 2020",
+    "url": "https://opendata.muenchen.de/dataset/21a0987f-e822-413d-95d2-17f9c513c305/resource/1c67f607-b14d-4f1d-a0d0-003dcb60f7a1/download/rad202005tage.csv",
+    "format": "CSV"
+   }
+  ]
+ }
+]
