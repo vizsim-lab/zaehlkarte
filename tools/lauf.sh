@@ -3,8 +3,8 @@
 # dieses Branches; Ergebnisse nach ergebnis/ (werden danach committet).
 set -u
 
-# Erkundung 13.11.2026, Teil 12: übrige Quellen des Artefakts „Offene Radzähldaten“
-# (tools/rad_erkunden12.py, ergebnis/rad12/)
+# Erkundung 13.11.2026, Teil 13: die Rad-Quellen des Artefakts im Detail
+# (tools/rad_erkunden13.py, ergebnis/rad13/)
 
 mkdir -p ergebnis
-uv run --no-project --with openpyxl python tools/rad_erkunden12.py 2>&1 | tail -80 > ergebnis/rad12_lauf.txt || true
+uv run --no-project --with pandas --with openpyxl python tools/rad_erkunden13.py 2>&1 | tail -80 > ergebnis/rad13_lauf.txt || true
