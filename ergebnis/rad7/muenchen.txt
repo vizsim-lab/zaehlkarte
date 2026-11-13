@@ -1,0 +1,44 @@
+## 15 Minuten Werte 2017: rad_2017_15min_06_06_23_r.csv 10164467 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 2017-01-01 … 2017-12-31 (365), Stellen {'Arnulf': 35040, 'Kreuther': 35040, 'Olympia': 35040, 'Hirsch': 35040, 'Margareten': 35040, 'Erhardt': 35040}
+   kommentar: [('NA', 210240)]
+   Beispiel: ['2017-01-01', '00:00:00', '00:15:00', 'Arnulf', '0', '0', '0', 'NA'] | ['2017-07-09', '23:45:00', '00:00:00', 'Arnulf', '2', '0', '2', 'NA']
+## 15 Minuten Werte 2018: rad_2018_15min_06_06_23_r.csv 10179010 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 2018-01-01 … 2018-12-31 (365), Stellen {'Arnulf': 35040, 'Kreuther': 35040, 'Olympia': 35036, 'Hirsch': 35040, 'Margareten': 35040, 'Erhardt': 35036}
+   kommentar: [('NA', 210232)]
+   Beispiel: ['2018-01-01', '00:00:00', '00:15:00', 'Arnulf', '0', '0', '0', 'NA'] | ['2018-07-09', '22:45:00', '23:00:00', 'Arnulf', '12', '1', '13', 'NA']
+## 15 Minuten Werte 2019: rad_2019_15min_06_06_23_r.csv 9892700 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 2019-01-01 … 2019-12-31 (365), Stellen {'Arnulf': 29184, 'Kreuther': 34656, 'Olympia': 35040, 'Hirsch': 35038, 'Margareten': 35040, 'Erhardt': 35040}
+   kommentar: [('NA', 203806), ('Ausfall nach Beschädigung', 192)]
+   Beispiel: ['2019-01-01', '00:00:00', '00:15:00', 'Arnulf', '0', '0', '0', 'NA'] | ['2019-07-11', '12:00:00', '12:15:00', 'Kreuther', '4', '1', '5', 'NA']
+## 15 Minuten Werte 2020: rad_2020_15min_06_06_23_r.csv 10242582 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 2020-01-01 … 2020-12-31 (366), Stellen {'Arnulf': 35136, 'Kreuther': 35136, 'Olympia': 35136, 'Hirsch': 35136, 'Margareten': 35136, 'Erhardt': 35136}
+   kommentar: [('NA', 210816)]
+   Beispiel: ['2020-01-01', '00:00:00', '00:15:00', 'Arnulf', '0', '1', '1', 'NA'] | ['2020-07-06', '23:45:00', '00:00:00', 'Arnulf', '1', '0', '1', 'NA']
+## 15 Minuten Werte 2021: rad_2021_15min_06_06_23_r.csv 10504756 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 2021-01-01 … 2021-12-31 (365), Stellen {'Arnulf': 35040, 'Kreuther': 35040, 'Olympia': 35040, 'Hirsch': 35040, 'Margareten': 35040, 'Erhardt': 35040}
+   kommentar: [('NA', 178176), ('Baustelle', 32064)]
+   Beispiel: ['2021-01-01', '00:00:00', '00:15:00', 'Arnulf', 'NA', 'NA', 'NA', 'Baustelle'] | ['2021-07-09', '23:45:00', '00:00:00', 'Arnulf', 'NA', 'NA', 'NA', 'Baustelle']
+## 15 Minuten Werte 2022: rad_2022_15min_export_06_06_23_r.csv 14586998 B, Trenner ',', Kopf ['t', 'datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 2022-01-01 … 2022-12-31 (365), Stellen {'Arnulf': 35040, 'Kreuther': 35040, 'Olympia': 35040, 'Hirsch': 35040, 'Margareten': 35040, 'Erhardt': 35040}
+   kommentar: [('NA', 202752), ('Ausfall nach Beschädigung', 7488)]
+   Beispiel: ['2022-01-01 00:00:00', '2022-01-01', '00:00', '00:15', 'Arnulf', '0', '0', '0', 'NA'] | ['2022-07-09 23:45:00', '2022-07-09', '23:45', '00:00', 'Arnulf', '10', '0', '10', 'NA']
+## 15 Minuten Werte 2023: 20240403_rad-dzs_2023_minutenwertena2.csv 9119689 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 20230101 … 20231231 (365), Stellen {'Arnulf': 35040, 'Kreuther': 17376, 'Olympia': 35040, 'Hirsch': 35040, 'Margareten': 35040, 'Erhardt': 35040}
+   kommentar: [('NA', 180172), ('Ausfall nach Beschädigung', 11386), ('Ausfall, baustellenbedingte Demontage', 1018)]
+   Beispiel: ['20230101', '00:00:00', '00:15:00', 'Arnulf', '0', '0', '0', 'NA'] | ['20230607', '23:45:00', '00:00:00', 'Hirsch', '2', '1', '3', 'NA']
+## 15 Minuten Werte 2024: minuten_werte_2024_korr2.csv 5541877 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+   Tage 2024.01.01 … 2024.12.31 (366), Stellen {'Arnulf': 35136, 'Erhardt': 27264, 'Hirsch': 35136, 'Olympia': 35136}
+   kommentar: [('NA', 132672)]
+   Beispiel: ['2024.01.01', '00:00', '00:15', 'Arnulf', '0', '1', '1', 'NA'] | ['2024.02.10', '23:45', '00:00', 'Hirsch', '0', '0', '0', 'NA']
+## 15 Minuten Werte 2025: rad_2025_15min_export_19_01_25.csv 5794031 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt']
+   Tage 2025.01.01 … 2025.12.31 (365), Stellen {'Arnulf': 35040, 'Olympia': 35040, 'Hirsch': 35040, 'Erhardt': 35040, 'Kreuther': 8832}
+   kommentar: []
+   Beispiel: ['2025.01.01', '00:00', '00:15', 'Arnulf', '1', '0', '1'] | ['2025.07.21', '23:45', '00:00', 'Olympia', '3', '2', '5']
+## 15 Minuten-Werte - Dezember 2025 - Daten der Raddauerzählstellen: rad_2025_12_15min.csv 573825 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt']
+   Tage 2025.12.01 … 2025.12.31 (31), Stellen {'Arnulf': 2976, 'Kreuther': 2976, 'Olympia': 2976, 'Hirsch': 2976, 'Erhardt': 2976}
+   kommentar: []
+   Beispiel: ['2025.12.01', '00:00', '00:15', 'Arnulf', '2', '0', '2'] | ['2025.12.16', '11:45', '12:00', 'Olympia', '5', '8', '13']
+## 15 Minuten-Werte - Januar 2025 - Daten der Raddauerzählstellen: rad_2025_01_15min.csv 457054 B, Trenner ',', Kopf ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt']
+   Tage 2025.01.01 … 2025.01.31 (31), Stellen {'Arnulf': 2976, 'Olympia': 2976, 'Hirsch': 2976, 'Erhardt': 2976}
+   kommentar: []
+   Beispiel: ['2025.01.01', '00:00', '00:15', 'Arnulf', '1', '0', '1'] | ['2025.01.31', '23:45', '00:00', 'Olympia', '0', '1', '1']
