@@ -1,0 +1,112 @@
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .venv
+Resolved 48 packages in 0.97ms
+   Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Downloading pillow (6.8MiB)
+Downloading cryptography (4.5MiB)
+Downloading pygments (1.2MiB)
+Downloading pycryptodomex (2.2MiB)
+Downloading osmium (1.8MiB)
+Downloading ruff (10.1MiB)
+Downloading brotli (1.4MiB)
+Downloading pandas (11.5MiB)
+Downloading numpy (16.0MiB)
+Downloading pypdfium2 (3.8MiB)
+Downloading pdfminer-six (6.3MiB)
+ Downloaded pygments
+ Downloaded brotli
+ Downloaded osmium
+ Downloaded pycryptodomex
+ Downloaded pypdfium2
+ Downloaded cryptography
+ Downloaded pillow
+ Downloaded pdfminer-six
+ Downloaded ruff
+ Downloaded numpy
+ Downloaded pandas
+      Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Prepared 45 packages in 780ms
+Installed 45 packages in 49ms
+ + annotated-doc==0.0.5
+ + backports-zstd==1.8.0
+ + brotli==1.2.1
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + cryptography==50.0.2
+ + et-xmlfile==2.0.0
+ + idna==3.20
+ + inflate64==1.0.4
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + multivolumefile==0.2.3
+ + numpy==2.5.4
+ + openpyxl==3.1.5
+ + osmium==4.3.2
+ + packaging==26.3
+ + pandas==3.1.1
+ + pdfminer-six==20260107
+ + pdfplumber==0.11.10
+ + pillow==13.0.0
+ + pluggy==1.7.0
+ + psutil==7.2.2
+ + py7zr==1.1.4
+ + pybcj==1.0.8
+ + pycparser==3.12
+ + pycryptodomex==3.24.2
+ + pygments==2.21.0
+ + pypdfium2==5.15.1
+ + pyppmd==1.3.1
+ + pytest==9.2.0
+ + python-dateutil==4.0.0
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + rich==15.0.0
+ + ruff==0.17.4
+ + shellingham==1.5.4
+ + texttable==1.7.2
+ + typer==0.28.0
+ + tzdata==2026.6
+ + urllib3==2.8.0
+ + xlrd==2.0.2
+ + xlwt==1.3.0
+ + zaehlkarte==0.1.0 (from file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline)
+mobidata_rad: 167 Monatsdateien geladen
+muenster_rad: Archiv geholt (23.6 MB, 1339 Dateien)
+aachen_rad: 2 Jahresdateien (2025, 2026) und Standorte geholt
+berlin_rad: Gesamtdatei geholt (17.8 MB)
+muenchen_rad: 27 Dateien, davon 27 neu geladen
+gelesen in 94 s
+mobidata_rad: 167 Monatsdateien, 8249927 Zeilen (0 ohne Wert, 0 doppelt verworfen, 0 widersprüchlich = nicht gezählt); 178 Zählstellen
+mobidata_rad: je Kommune/Kreis: Landratsamt Rems-Murr-Kreis 25, Stadt Ludwigsburg 22, Stadt Freiburg 17, Stadt Mannheim 17, Landeshauptstadt Stuttgart 17, Stadt Heidelberg 15, Landratsamt Ostalbkreis 11, Stadt Heilbronn 8, Stadt Reutlingen 8, Stadt Konstanz 6, Landratsamt Heilbronn 5, Stadt Tübingen 4, Ravensburg Tws Gmbh & Co. Kg 4, Stadt Ravensburg 3, Stadt Lörrach 2, Landkreis Böblingen 2, Stadt Bad Säckingen 2, Stadt Karlsruhe 1, Stadt Kirchheim Unter Teck 1, Stadt Offenburg 1, Stadt Ulm 1, Stadtverwaltung Aalen 1, Stadt Singen 1, Stadt Baden-Baden 1, Stadt Emmendingen 1, Stadt Pforzheim 1, Stadt Neckarsulm 1
+mobidata_rad: Stunden in der Karte: rad 8028687; noch nicht übernommen (jünger als frisch_tage): 0; Zeilen um 2 Uhr am Tag der Sommerzeit verworfen: 0; Zeitstempel ohne Versatz (nicht gezählt): 2
+mobidata_rad: nicht in der Karte: Fuß- & Radtunnel Südportal - Derendinger Allee (100003358): Fuß- & Radtunnel Südportal (Tübingen) – ob nur Räder gezählt sind, ist nicht erkennbar; Hardware für Waiblinger-/ Taubenheimstr. (100037408): „Hardware für Waiblinger-/ Taubenheimstr.“ (Stuttgart) – das Gerät der Zählstellen Waiblinger Straße und Taubenheimstraße (gleiche Seriennummer), sonst doppelt in der Karte; Bad Wimpfen (300048165): Bad Wimpfen – Zählstelle des Regierungspräsidiums Stuttgart, also des Landes (die Karte bleibt bei kommunalen Zählstellen); 1 Wilhelm-Leuschner-Straße (CITIX AI) - Hardware - Fuß- und Radverkehr (300069828): Wilhelm-Leuschner-Straße (Heilbronn), Kamera für Fuß- und Radverkehr – ob nur Räder gezählt sind, ist nicht erkennbar
+muenster_rad: 1338 Monatsdateien, 3705899 Viertelstunden; Status: 0 3630004, validated 57294, 4 10170, modified 8335, leer 96; Gesamtspalte ≠ Summe der Kanäle: 86 (nicht gezählt)
+muenster_rad: 23 Zählstellen; Stunden in der Karte: rad 919122
+aachen_rad: Dateien 2025, 2026: 16305 Stunden; 26 Zählstellen mit 50 Kanälen; Stunden in der Karte: rad 411392
+aachen_rad: Stunden mit leerem Kanal (nicht gezählt): 418426 1520, 418428 1028, 402607 563, 448507 474, 447911 233, 448498 227, 448501 188, 448506 182
+aachen_rad: Lage aus sources.yaml statt PDF: 447917 (im PDF Länge 6.80208)
+berlin_rad: Blätter 2012–2025: 3699406 Zellen, davon 1135214 leer; markiert (nicht gezählt): 0/unplausibel 92937, rekonstruiert 17005, keine Daten 16856, Sommerzeit 226
+berlin_rad: doppelte Stunden: 227760 gleich (einmal gezählt), 0 verschieden (nicht gezählt); 33 Zählstellen; Stunden in der Karte: rad 2257104
+berlin_rad: ohne Lage (nicht in der Karte): 02-MI-AL-W, 02-PA-SE-N, 03-SP-NO-O, 03-SP-NO-W, 17-SZ-BRE-O, 17-SZ-BRE-W
+muenchen_rad: 27 Dateien (2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026_01, 2026_02, 2026_03, 2026_04, 2026_05, 2026_06, 2026_07, 2026_08, 2026_09): 3442934 Viertelstunden, 180500 ohne Wert, 0 mit gesamt ≠ Summe der Richtungen (nicht gezählt); 6 Zählstellen; Stunden in der Karte: rad 815221; Zeilen um 2 Uhr am Tag der Sommerzeit verworfen: 392
+muenchen_rad: Kommentare der Quelle: Zählstelle noch nicht in Betrieb (98688), Baustelle (56928), Ausfall nach Beschädigung (19066), Radweg vereist / nach Schneefall nicht geräumt / keine Messung möglich (4608), Ausfall, baustellenbedingte Demontage (1018), Austausch Sensor (192)
+mobidata_rad: 178 Stellen mit vollständigen Tagen, 0 ohne
+muenster_rad: 23 Stellen mit vollständigen Tagen, 0 ohne
+aachen_rad: 26 Stellen mit vollständigen Tagen, 0 ohne
+berlin_rad: 33 Stellen mit vollständigen Tagen, 0 ohne
+muenchen_rad: 6 Stellen mit vollständigen Tagen, 0 ohne
+32 Dateien, 13.1 MB, 12 Detail-Dateien
+mobidata_rad: vollständige Tage je Jahr (Stellen × Tage) – 2013: 1535, 2014: 3687, 2015: 4928, 2016: 6959, 2017: 9318, 2018: 11785, 2019: 15502, 2020: 21024, 2021: 31548, 2022: 33273, 2023: 39689, 2024: 48792, 2025: 56271, 2026: 49873
+mobidata_rad: rad-Tagessummen, Quintilgrenzen [200, 500, 1020, 2450], Median 710, Maximum 21219
+muenster_rad: vollständige Tage je Jahr (Stellen × Tage) – 2019: 2706, 2020: 3283, 2021: 3117, 2022: 3144, 2023: 3888, 2024: 7896, 2025: 7441, 2026: 6733
+muenster_rad: rad-Tagessummen, Quintilgrenzen [1520, 3050, 5300, 8400], Median 3890, Maximum 24693
+aachen_rad: vollständige Tage je Jahr (Stellen × Tage) – 2025: 9246, 2026: 7551
+aachen_rad: rad-Tagessummen, Quintilgrenzen [240, 540, 920, 1490], Median 702, Maximum 5039
+berlin_rad: vollständige Tage je Jahr (Stellen × Tage) – 2012: 305, 2013: 365, 2014: 365, 2015: 3483, 2016: 7478, 2017: 8650, 2018: 8493, 2019: 7622, 2020: 7896, 2021: 8237, 2022: 8228, 2023: 10015, 2024: 11429, 2025: 11238
+berlin_rad: rad-Tagessummen, Quintilgrenzen [780, 1530, 2470, 3680], Median 1990, Maximum 10495
+muenchen_rad: vollständige Tage je Jahr (Stellen × Tage) – 2008: 407, 2009: 875, 2010: 1427, 2011: 1791, 2012: 2190, 2013: 1954, 2014: 2184, 2015: 2168, 2016: 2188, 2017: 2182, 2018: 2182, 2019: 2115, 2020: 2189, 2021: 1851, 2022: 2106, 2023: 1872, 2024: 1379, 2025: 1546, 2026: 1269
+muenchen_rad: rad-Tagessummen, Quintilgrenzen [430, 930, 1610, 2830], Median 1226, Maximum 15009
+fertig in 96 s, RSS-Spitze 2.78 GB, 32 Dateien
+13M	app_aus/public/data/dauer
