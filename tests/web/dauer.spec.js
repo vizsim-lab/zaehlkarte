@@ -312,6 +312,25 @@ test("Stellen am selben Punkt: Umschalter in der Seitenleiste, Lizenz CC BY-NC",
   expect(fehler).toEqual([]);
 });
 
+test("Datenlage: „hinzoomen“ wechselt auf die Verkehrsart, die die Kommune zählt", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page, "#f=d&t=rad.menge&dl=1");
+  await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
+  // Ettlingen zählt Kfz und Lkw, kein Rad: die Karte wechselt auf Kfz (Standard, ohne t= im Link)
+  await page.evaluate(() => window.__app.zeigeDatenlage("Ettlingen"));
+  await page.locator("#datenlage-detail [data-hinzoomen]").click();
+  await expect(page.locator('#thema-chips [data-thema="kfz"]')).toHaveClass(/is-active/);
+  await expect(page).not.toHaveURL(/t=rad/);
+  await expect.poll(() => page.evaluate(() => window.__app.dauerEintraege().filter((e) => e.stelle.quelle === "ettlingen").length)).toBeGreaterThan(0);
+  // Hamburg zählt beides: die gewählte Verkehrsart bleibt
+  await page.locator('#thema-chips [data-thema="rad"]').click();
+  await page.evaluate(() => window.__app.zeigeDatenlage("Hamburg"));
+  await page.locator("#datenlage-detail [data-hinzoomen]").click();
+  await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
+  await expect(page).toHaveURL(/t=rad\.menge/);
+  expect(fehler).toEqual([]);
+});
+
 test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstellen", async ({ page }) => {
   await dauer(page);
   const fehler = await oeffne(page, "#f=d&dl=1");
