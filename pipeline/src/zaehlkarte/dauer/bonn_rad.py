@@ -30,9 +30,9 @@ from zaehlkarte.dauer.modell import Dauerstelle, Messreihe, kuerze, setze_lokal
 
 JAHR = re.compile(r"^Fahrradmessstellen Ergebnisse Radzählungen (20\d{2})$")
 STELLE = re.compile(r"^(\d+\.\d+) BN - (.+?)\s*$")
-MONATE = {"jan": 1, "feb": 2, "mär": 3, "märz": 3, "mrz": 3, "apr": 4, "mai": 5, "jun": 6,
-          "juni": 6, "jul": 7, "juli": 7, "aug": 8, "sep": 9, "sept": 9, "okt": 10, "nov": 11,
-          "dez": 12}
+MONATE = {"jan": 1, "feb": 2, "febr": 2, "mär": 3, "märz": 3, "mrz": 3, "apr": 4, "mai": 5,
+          "jun": 6, "juni": 6, "jul": 7, "juli": 7, "aug": 8, "sep": 9, "sept": 9, "okt": 10,
+          "nov": 11, "dez": 12}
 ZIFFERN = re.compile(r"^(\d{1,2})\.(\d{1,2})\.(\d{4})\s+(\d{1,2}):(\d{2})")
 WORT = re.compile(r"^(\d{1,2})\.\s*([^\W\d_]+)\.?\s+(\d{4})\s+(\d{1,2}):(\d{2})")
 
@@ -167,15 +167,8 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
     if not dateien:
         raise ValueError(f"{q['code']}: keine Jahresdateien in {ordner} – erst "
                          "`zaehlkarte dauer fetch`")
-    kennungen = [str(k) for k in q["stellen"]]
-    idx = {k: i for i, k in enumerate(kennungen)}
-    stellen = []
-    for k in kennungen:
-        info = q["stellen"][k]
-        stellen.append(Dauerstelle(
-            quelle=q["code"], kennung=k, name=info["name"], abschnitt=info.get("abschnitt"),
-            richtung=None, lon=float(info["lon"]), lat=float(info["lat"]), land=q["land"],
-            hinweise=list(info.get("hinweise") or [])))
+    lage = {str(k): v for k, v in q["stellen"].items()}
+    stellen, idx, namen = [], {}, {}
     s_, t_, h_, w_ = [], [], [], []
     for p in dateien:
         spalten, zeilen, weg = lies_jahr(text(p.read_bytes()))
@@ -185,9 +178,12 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
         if any(t0.minute for t0, _ in zeilen):
             raise ValueError(f"{q['code']}: {p.name} ist keine Stundenauswertung")
         for spalte, (kennung, name) in spalten.items():
-            if kennung not in idx:
+            if kennung not in lage:
                 bericht.ohne_lage.add(f"{kennung} {name}")
                 continue
+            namen.setdefault(kennung, name)  # Name aus dem Kopf, wenn sources.yaml keinen nennt
+            if kennung not in idx:
+                idx[kennung] = len(idx)
             i = idx[kennung]
             for t0, f in zeilen:
                 v = f[spalte].strip() if spalte < len(f) else ""
@@ -200,6 +196,12 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
                 w_.append(int(v))
     if not s_:
         raise ValueError(f"{q['code']}: keine gezählte Stunde einer Zählstelle mit Lage")
+    for k in idx:  # nur Stellen, die in einer Datei stehen – in sources.yaml stehen auch neue
+        info = lage[k]
+        stellen.append(Dauerstelle(
+            quelle=q["code"], kennung=k, name=info.get("name") or namen[k],
+            abschnitt=info.get("abschnitt"), richtung=None, lon=float(info["lon"]),
+            lat=float(info["lat"]), land=q["land"], hinweise=list(info.get("hinweise") or [])))
     t = np.array(t_, dtype="datetime64[D]")
     reihe = Messreihe.leer(q["code"], t.min().astype(date), t.max().astype(date), stellen, ("rad",))
     bericht.stunden, bericht.sommerzeit = setze_lokal(
