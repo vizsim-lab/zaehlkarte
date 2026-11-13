@@ -450,10 +450,35 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
       gestattet“ → steht in `lizenz` (Seitenleiste, CSV). Die Stadt wählt je Richtung einen
       Kanalblock („pick best block“); an der Springorumtrasse Süd vermutet sie fehlende Kanäle →
       `ohne`. An einzelnen Tagen nur volle Stunden (Viertelstunden leer) – nicht gezählt.
-    - **Noch offen:** Bonn (CC0, Jahresdateien 2019–2025 aus Eco-Visio mit Summenspalten, 2022 je
-      Kanal, 2019 in Mac-Roman; Standorte im Stadtplan, der oft 502/504 liefert) und Düsseldorf
-      (dl-de/by-2-0 ab 2020, eine Datei je Stelle und Jahr, Formate je Jahr verschieden, Server
-      lehnt viele Abrufe ab) – siehe `tools/rad_erkunden15.py`.
+  - **Dritte Runde (Bonn, Düsseldorf; Werkzeug-Branch `werkzeug/dauer`,
+    `tools/rad_erkunden15–16.py`, Ergebnisse `ergebnis/rad15–16/`):**
+    - **Bonn** (`bonn_rad`, CC0): Katalog `opendata.bonn.de/data.json`, je Jahr ein Datensatz
+      „Fahrradmessstellen Ergebnisse Radzählungen JJJJ“ mit Stunden- und teils
+      15-Minuten-Auswertung (Stunde = Summe der vier Viertelstunden, geprüft 2020, 2023, 2024).
+      Zeit „01.01.2025 00:00“ oder „1. Jan. 2024 00:00“ (2021 „Febr.“). Spalten „N.NN BN - Name“,
+      dahinter die Summen der Brücken (Kennedy-, Nord-, Südbrücke = ihre zwei Seiten, an jeder
+      Stunde) und „Summe“. Sommerzeit: 3 Uhr zweimal, die erste Zeile leer; Rückstellung: 2 Uhr
+      einmal. 2022: nur je Kanal, und alle Kanäle einer Stelle zählen gleichzeitig („Radfahrer
+      Ri. …“ und „[Bike IN]/[Bike OUT]“, teils doppelt) – nicht übernommen. 2019: bei Open.NRW
+      „other-closed“, Mac-Roman mit CR – nicht übernommen. Der Datensatz „Vortag“ (Stadtplan-CSV)
+      ist nur ein Tag. Lage: Der Stadtplan (`stadtplan.bonn.de/geojson?Thema=22640`) antwortete in
+      zwei Läufen nur mit 502; OSM hat alle Zählstellen der Stadt als `monitoring_station` mit
+      `ref` = Kennung (5.12 Straßburger Weg ohne Werte, 5.16/5.17 noch ohne Jahresdatei).
+    - **Düsseldorf** (`duesseldorf_rad`, dl-de/by-2-0 ab 2020; 2012–2019 „other-closed“): Pakete
+      `wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-JJJJ-d` auf Open.NRW, kein
+      Paket 2022; Lizenz je Ressource (2020 Koblenzer stadtauswärts und Koblenzer Straße
+      geschlossen). Formate: 2020 `Zeit;Stunde;Anzahl`, 2021 `datum;stunde;anzahl` (Datum auch
+      „1012021“) oder `Zeit;<Stelle>`, ab 2023 `Zeit;<IN>;<OUT>` mit „26-03-2023 01:00:00“; Werte
+      vor der ersten Wetter-Spalte. Summen, aus den Tagessummen belegt: Fleher Deich Rampe = Ost +
+      West, Oberkasseler Brücke = OKB Nord + Süd, Koblenzer Straße (2023) = die drei Koblenzer
+      Stellen; 2024 steht bei Fleher Deich und OKB Süd vorn eine Summenspalte. 2021 ist „Koblenzer
+      einwärts nach TLS“ eine Kopie von „vor TLS“. Sommerzeit 2020/2021: 3 Uhr zweimal, eine Zeile
+      leer („weather_condition_null“); ab 2023 fehlt 2 Uhr; Rückstellung: 2 Uhr einmal. Luegallee
+      2025 und Friedrichstraße 2023 nur mit 0. Kaputte Zeilen (Fleher Deich, Mannesmannufer 2020)
+      gelten als nicht gezählt. Lage: „Standorte der Dauerzählstellen Radverkehr“ (dl-de/zero-2-0,
+      `Zählstellen_2.csv`), Hofgartenrampe und Luegallee aus OSM; Kölner Straße 186 und
+      Pempelforter Straße 42 (ab 2025 mit Werten) ohne Lage. Der Server lehnt Abrufe zeitweise ab
+      („Connection refused“) – Wiederholungen und Cache im Workflow.
   - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue

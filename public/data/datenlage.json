@@ -602,7 +602,21 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Düsseldorf seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind Jahresmittelwerte je Abschnitt; ich bitte um die Einzelzählungen, aus denen sie entstehen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung als Jahresdateien, offen ab 2020 (dl-de/by-2-0; 2012–2019 unter geschlossener Lizenz, 2022 nicht veröffentlicht) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Jahresübersicht Dauerzählstellen Radverkehr 2025 (Open.NRW)",
+       "url": "https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d"
+      },
+      {
+       "titel": "Standorte der Dauerzählstellen Radverkehr (Open.NRW)",
+       "url": "https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d"
+      }
+     ]
+    }
    }
   },
   {

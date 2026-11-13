@@ -1559,6 +1559,15 @@ datenlage:
     lon: 6.7735
     lat: 51.2277
     stand: aggregiert
+    dauer:
+      stand: in_karte
+      was: >-
+        Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung als Jahresdateien,
+        offen ab 2020 (dl-de/by-2-0; 2012–2019 unter geschlossener Lizenz, 2022 nicht
+        veröffentlicht) – in der Karte als Dauerzählstellen
+      links:
+        - ["Jahresübersicht Dauerzählstellen Radverkehr 2025 (Open.NRW)", "https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d"]
+        - ["Standorte der Dauerzählstellen Radverkehr (Open.NRW)", "https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d"]
     was: >-
       Mittel der Zählungen der letzten fünf Jahre je Abschnitt (DTV je Fahrzeugart, Stand 2019 und
       2024) – in vizsim/svz

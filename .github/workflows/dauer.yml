@@ -1,7 +1,7 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
 # SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
-# München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock und Bochum),
-# Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
+# München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum, Bonn und
+# Düsseldorf), Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
 # „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach
 # startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
 #
@@ -11,7 +11,8 @@
 #   MobiData BW (neu geholt werden fehlende und die jüngsten zwei) und die Dateien Münchens (neu
 #   nur bei geänderter URL); Münster, Aachen und Berlin (Rad) holt jeder Lauf ganz neu – der Cache
 #   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
-#   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund) und Essens Quartale nur bei Änderung.
+#   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund), Essens Quartale und Düsseldorfs
+#   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu.
 # - Hamburg und Leipzig halten Stundenwerte nur Wochen bis Monate vor (Leipzig: 31 Tage). Die
 #   Zählkarte hebt sie selbst auf
 #   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
@@ -75,6 +76,13 @@ jobs:
             pipeline/data/raw/leipzig_rad/standorte.csv
           key: dauer-rad2-roh-${{ github.run_id }}
           restore-keys: dauer-rad2-roh-
+      - uses: actions/cache@v6  # Rad, dritte Runde (Düsseldorfs Server lehnt Abrufe oft ab)
+        with:
+          path: |
+            pipeline/data/raw/bonn_rad
+            pipeline/data/raw/duesseldorf_rad
+          key: dauer-rad3-roh-${{ github.run_id }}
+          restore-keys: dauer-rad3-roh-
       - name: Release anlegen bzw. Beschreibung nachführen
         env:
           GH_TOKEN: ${{ github.token }}

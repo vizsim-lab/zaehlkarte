@@ -15,7 +15,7 @@ FragDenStaat.
 | Chemnitz | SN | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen seit 2015, ausdrücklich nach den Auswertungen der Büros |
 | Dortmund | NW | nur Summen oder Mittelwerte offen | in der Karte | Anfrage nach den Ergebnissen der Zählungen im Zählstellenplan, nach IFG NRW |
 | Dresden | SN | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25 |
-| Düsseldorf | NW | nur Summen oder Mittelwerte offen |  | Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement |
+| Düsseldorf | NW | nur Summen oder Mittelwerte offen | in der Karte | Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement |
 | Essen | NW | automatische Zählungen offen | in der Karte | Anfrage nach den Knotenpunkt- und Querschnittszählungen beim Amt für Straßen und Verkehr |
 | Ettlingen | BW | automatische Zählungen offen | in der Karte | Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder erheben lässt |
 | Falkensee | BB | nur Summen oder Mittelwerte offen |  | Anfrage nach den Messungen der Liste mit Datum, Lage und Werten je Stunde und Richtung, am besten als Export der Messgeräte |
@@ -290,6 +290,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, IFG NRW
 
+**Dauerzählstellen (in der Karte):** Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung als Jahresdateien, offen ab 2020 (dl-de/by-2-0; 2012–2019 unter geschlossener Lizenz, 2022 nicht veröffentlicht) – in der Karte als Dauerzählstellen
+
 **Kontakt:** Amt für Verkehrsmanagement Düsseldorf · <verkehrsmanagement@duesseldorf.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/16786/amt-fur-verkehrsmanagement-der-landeshauptstadt-dusseldorf/)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -310,7 +312,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Verkehrszähldaten 2024 (Open Data Düsseldorf)](https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60)
+**Belege:** [Verkehrszähldaten 2024 (Open Data Düsseldorf)](https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60) · [Jahresübersicht Dauerzählstellen Radverkehr 2025 (Open.NRW)](https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d) · [Standorte der Dauerzählstellen Radverkehr (Open.NRW)](https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d)
 
 
 ## Essen (NW) – automatische Zählungen offen
