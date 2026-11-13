@@ -46,7 +46,9 @@ export const hatThema = (d, thema) => DAUER_THEMEN[thema]?.gruppen.some((g) => d
 // beide Klassen (nur die Farbstufen; die Werte bleiben je Klasse, wie die Quelle sie zählt);
 // Rad Hamburg 360 / 660 / 1.100 / 1.950; seit den Rad-Zählstellen (Berlin, Münster, Aachen,
 // München, MobiData BW) die Quintile der jüngsten Schultage aller 578 Rad-Stellen
-// 330 / 720 / 1.290 / 2.460 (je Stufe 18–21 % der Stellen). Fuß: noch keine Quelle (Platzhalter).
+// 330 / 720 / 1.290 / 2.460 (je Stufe 18–21 % der Stellen); mit der zweiten Runde (Würzburg,
+// Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum) 642 Stellen: 330 / 720 / 1.290 /
+// 2.420, die Stufen bleiben (je Stufe 18–21 %). Fuß: noch keine Quelle (Platzhalter).
 export const DAUER_STUFEN = {
   kfz: [6000, 10000, 13000, 17000],
   sv: [200, 350, 600, 1000],

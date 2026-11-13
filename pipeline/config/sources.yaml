@@ -770,6 +770,304 @@ dauer:
       - >-
         Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
 
+  # Zweite Runde (November 2026): die übrigen Quellen des Artefakts „Offene Radzähldaten“, gegen
+  # die nichts spricht (Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkunden12–14.py). Aufbau und
+  # Fallen je Adapter und in AGENTS.md.
+  wuerzburg_rad:
+    status: live
+    adapter: ods_eco
+    name: Würzburg (Rad-Zählstellen)
+    land: BY
+    traeger: Stadt Würzburg
+    art: >-
+      Rad-Zählstellen der Stadt (Eco-Counter); Stundenwerte je Zählstelle, am Greinberg je
+      Richtung eine Stelle
+    weg: offen im Open-Data-Portal der Stadt (Opendatasoft, täglich aktualisiert)
+    ferien: schulferien_bayern.csv
+    portal: https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/
+    basis: https://opendata.wuerzburg.de
+    datensatz: fahrrad-zaehlung-daten
+    standorte: bicycle_counter_sites
+    titel: >-
+      Fahrradzählung Daten – EcoCounter Stationen (verändert: Stundenwerte zu Tagessummen
+      zusammengefasst)
+    herausgeber: Stadt Würzburg
+    quellenvermerk: Stadt Würzburg
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Übernommen sind nur Rohwerte (Status „raw“); Stunden, die die Quelle als gelöscht führt,
+        gelten als nicht gezählt.
+      - >-
+        Die Quelle unterscheidet nicht immer zwischen einem Ausfall und null Rädern: An den beiden
+        Zählstellen in Heidingsfeld stehen Hunderte ganzer Tage mit 0 – in der Karte als gezählte
+        Tage.
+      - >-
+        Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+        dieser Tag gilt als nicht vollständig gezählt.
+      - >-
+        Die Radar-Sensoren (LoRaWAN) der Smarten Region Würzburg sind nicht in der Karte: Ihre
+        Meldungen haben kein festes Stundenraster.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  rhein_kreis_neuss_rad:
+    status: live
+    adapter: ods_eco
+    name: Rhein-Kreis Neuss (Rad-Zählstellen)
+    land: NW
+    traeger: Rhein-Kreis Neuss
+    art: >-
+      fünf Rad-Zählstationen des Kreises auf Rhein- und Erft-Radweg (Induktionsschleifen,
+      Eco-Counter); Stundenwerte je Kanal, in der Karte je Station die Summe
+    weg: offen im Open-Data-Portal des Kreises (Opendatasoft)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/
+    basis: https://opendata.rhein-kreis-neuss.de
+    datensatz: eco-counter-data
+    kanaele: true  # eine Zeile je Kanal; eine Stunde ist gezählt, wenn jeder Kanal einen Wert hat
+    stellen:  # Lage und Ort laut Datensatzbeschreibung (die Daten nennen nur die Kommune)
+      "100019715": {name: Rhein-Radweg, abschnitt: Meerbusch-Büderich}
+      "100019716": {name: Rhein-Radweg, abschnitt: Dormagen-Zons}
+      "100019717": {name: Erft-Radweg, abschnitt: Neuss-Reuschenberg}
+      "100019718": {name: Erft-Radweg, abschnitt: Grevenbroich-Wevelinghoven}
+      "100019719": {name: Radweg zwischen Schloss Dyck und Nikolauskloster, abschnitt: Jüchen}
+    titel: >-
+      Rhein-Kreis Neuss: Radzählstationen Auswertung (verändert: Kanäle und Stundenwerte zu
+      Tagessummen zusammengefasst)
+    herausgeber: Rhein-Kreis Neuss
+    quellenvermerk: Rhein-Kreis Neuss
+    lizenz: CC0 1.0
+    lizenz_url: https://creativecommons.org/publicdomain/zero/1.0/deed.de
+    hinweise:
+      - >-
+        Der Datensatz ist seit dem 05.07.2026 nicht mehr aktualisiert worden (Stand November 2026);
+        Neuss, Grevenbroich und Jüchen liefern schon seit dem Frühjahr 2025 keine Werte mehr.
+      - >-
+        Je Station die Summe ihrer Kanäle (Zählschleifen); eine Stunde ist gezählt, wenn jeder Kanal
+        einen Wert hat. Werte, die die Quelle als geändert („modified“) führt, gelten als nicht
+        gezählt.
+      - >-
+        Die Quelle unterscheidet nicht immer zwischen einem Ausfall und null Rädern: In Grevenbroich
+        und Jüchen stehen Dutzende ganzer Tage mit 0 – in der Karte als gezählte Tage.
+      - >-
+        Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+        dieser Tag gilt als nicht vollständig gezählt.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  dortmund_rad:
+    status: live
+    adapter: dortmund_rad
+    name: Dortmund (Rad-Zählstelle Schnettkerbrücke)
+    land: NW
+    traeger: Stadt Dortmund, Stadtplanungs- und Bauordnungsamt
+    art: >-
+      Dauerzählstelle Radverkehr auf dem Fuß- und Radweg nördlich der B 1 (Eco-Counter);
+      15-Minuten-Werte je Richtung, in der Karte beide Richtungen zusammen
+    weg: offen im Open-Data-Portal der Stadt (Opendatasoft, täglich aktualisiert)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/
+    basis: https://open-data.dortmund.de
+    datensatz: fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke
+    stellen:  # Lage nicht im Datensatz: Knoten 5639350907 in OpenStreetMap (© OpenStreetMap-
+      # Mitwirkende, ODbL), „Dauerzählstelle Radverkehr“ mit Verweis auf die Eco-Counter-Seite der
+      # Stelle (Abfrage über Overpass, 13.11.2026)
+      schnettkerbruecke:
+        name: Schnettkerbrücke
+        abschnitt: Fuß- und Radweg nördlich der B 1, zwischen Wittekindstraße und Dorstfelder Allee
+        lat: 51.499258
+        lon: 7.426735
+    titel: >-
+      Dauerzählstelle Radverkehr Schnettkerbrücke (verändert: 15-Minuten-Werte zu Stunden und
+      Tagessummen zusammengefasst)
+    herausgeber: Stadt Dortmund
+    quellenvermerk: Stadt Dortmund
+    lizenz: dl-de/zero-2-0
+    lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+    hinweise:
+      - >-
+        Je Viertelstunde beide Richtungen zusammen; eine Stunde ist gezählt, wenn alle vier
+        Viertelstunden einen Wert haben.
+      - >-
+        Der Datensatz nennt keine Koordinaten; die Lage stammt aus OpenStreetMap (© OpenStreetMap-
+        Mitwirkende, ODbL), wo die Zählstelle mit ihrer Anzeigetafel eingetragen ist.
+      - >-
+        Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+        dieser Tag gilt als nicht vollständig gezählt.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  essen_rad:
+    status: live
+    adapter: essen_rad
+    name: Essen (Rad-Zählstellen)
+    land: NW
+    traeger: Stadt Essen, Amt für Stadtplanung und Bauordnung
+    art: >-
+      automatische Radverkehrszählungen an der Grugatrasse und der Huyssenallee; Stundenwerte je
+      Richtung, in der Karte beide Richtungen zusammen
+    weg: offen im Open-Data-Portal der Stadt (eine CSV je Quartal)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://open.nrw/dataset/radverkehrszahlungen-e
+    api: https://open.nrw/api/3/action/package_show
+    paket: radverkehrszahlungen-e
+    lizenz_ressource: dl-by-de  # nur Quartale mit dieser Lizenz (2018–2020: geschlossen)
+    rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal
+    spalten:  # Reihenfolge der Wertespalten jeder Quartalsdatei (die Köpfe wechseln)
+      - [grugatrasse, Richtung Rüttenscheid (West)]
+      - [grugatrasse, Richtung Ruhr (Ost)]
+      - [huyssenallee, Richtung Rüttenscheid (Süd)]
+      - [huyssenallee, Richtung Stadtkern (Nord)]
+    stellen:  # Gauß-Krüger (DHDN, Streifen 2) aus der Datensatzbeschreibung, nach WGS84 umgerechnet
+      grugatrasse: {name: Grugatrasse, lat: 51.426592, lon: 7.038219}  # R 2572251, H 5699618
+      huyssenallee: {name: Huyssenallee, lat: 51.446642, lon: 7.009876}  # R 2570249, H 5701821
+    titel: >-
+      Radverkehrszählungen der Stadt Essen (verändert: Richtungen und Stundenwerte zu Tagessummen
+      zusammengefasst)
+    herausgeber: Stadt Essen
+    quellenvermerk: Stadt Essen
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Die Quartalsdateien von Juni 2018 bis Ende 2020 stehen unter einer geschlossenen Lizenz und
+        fehlen deshalb – in der Karte ab Januar 2021.
+      - >-
+        Je Zählstelle beide Richtungen zusammen; fehlt der Wert einer Richtung, ist die Stunde nicht
+        gezählt. Die Lage steht nur als Gauß-Krüger-Koordinate in der Datensatzbeschreibung.
+      - >-
+        Am Tag der Rückstellung der Uhr steht 2 Uhr in der Quelle nur einmal – dieser Tag gilt als
+        nicht vollständig gezählt.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  # Leipzig hält Stundenwerte nur 31 Tage vor -> die Zählkarte hebt sie selbst auf (gedaechtnis/
+  # im Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt, wie Hamburg).
+  leipzig_rad:
+    status: live
+    adapter: leipzig_rad
+    name: Leipzig (Rad-Zählstellen)
+    land: SN
+    traeger: Stadt Leipzig, Verkehrs- und Tiefbauamt
+    art: Dauerzählstellen Radverkehr der Stadt (Eco-Counter); Stundenwerte je Zählstelle
+    weg: offen im WFS des Geoportals (nur die letzten 31 Tage; die Zählkarte hebt sie auf)
+    ferien: schulferien_sachsen.csv
+    portal: https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei
+    wfs: https://geodienste.leipzig.de/l3/OpenData/wfs
+    ebenen:
+      standorte: OpenData:radverkehr_dauerzaehlstelle_standort_statisch
+      stunden: OpenData:radverkehr_dauerzaehlstelle_anzahl_stunde_zeitreihe
+    titel: >-
+      Dauerzählstellen Radverkehr – Gesamtanzahl der Fahrräder pro Stunde der letzten 31 Tage, Stadt
+      Leipzig (verändert: Stundenwerte gesammelt und zu Tagessummen zusammengefasst)
+    herausgeber: Stadt Leipzig
+    quellenvermerk: Stadt Leipzig
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Die Quelle hält die Stundenwerte nur 31 Tage vor; die Zählkarte hebt sie seit ihrem ersten
+        Abruf im November 2026 selbst auf – ältere Stunden fehlen in der Karte.
+      - >-
+        Die Tageswerte der Quelle (zwei Jahre) sind nicht übernommen: Ohne Stunden lässt sich nicht
+        prüfen, ob ein Tag vollständig gezählt ist; sie weichen zudem meist etwas von der Summe der
+        Stundenwerte ab. Die Zählstelle Jahnallee liefert keine Stundenwerte.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  rostock_rad:
+    status: live
+    adapter: rostock_rad
+    name: Rostock (Radmonitore)
+    land: MV
+    traeger: Hanse- und Universitätsstadt Rostock
+    art: >-
+      Radmonitore der Stadt (Eco-Counter); 15-Minuten-Werte je Zählstelle, beide Richtungen
+      zusammen
+    weg: offen im Open-Data-Portal OpenData.HRO (täglich aktualisiert)
+    ferien: schulferien_mecklenburg-vorpommern.csv
+    portal: https://www.opendata-hro.de/dataset/radmonitore
+    daten: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.csv
+    standorte: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.json
+    ohne:  # Zählstellen, die nicht in die Karte kommen, mit Grund
+      "300041920": >-
+        Saarplatz Lindenpark – laut Quelle „Steuergerät“; seine Tageswerte liegen stets etwas über
+        denen der Zählstelle Saarplatz Nord (100 m entfernt), vermutlich die Summe mehrerer
+        Querschnitte – sonst doppelt in der Karte
+    titel: >-
+      Radmonitore (verändert: 15-Minuten-Werte zu Stunden und Tagessummen zusammengefasst)
+    herausgeber: Hanse- und Universitätsstadt Rostock
+    quellenvermerk: Hanse- und Universitätsstadt Rostock
+    lizenz: CC0 1.0
+    lizenz_url: https://creativecommons.org/publicdomain/zero/1.0/deed.de
+    hinweise:
+      - >-
+        Die Quelle führt keinen Status – ob Werte rekonstruiert sind, ist nicht erkennbar. Ganze Tage
+        mit 0 kommen vor (etwa an der Zählstelle Graal-Müritz) und erscheinen als gezählte Tage.
+      - >-
+        Holbeinplatz und Lange Straße sind laut Quelle die Summe zweier Messquerschnitte (Nord und
+        Süd). Saarplatz Lindenpark (laut Quelle „Steuergerät“) fehlt, weil seine Werte die der
+        Zählstelle Saarplatz Nord einschließen dürften.
+      - >-
+        Am Tag der Rückstellung der Uhr ist die Stunde 2–3 Uhr in der Quelle unvollständig – dieser
+        Tag gilt als nicht vollständig gezählt.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  # Bochum: Lizenz laut Portal der Stadt (bochum.opendata.ruhr) und README dl-de/by-2-0, dazu eine
+  # Nutzungsbeschränkung in der Datensatzbeschreibung (kein Wettbewerb zu Eco-Counter) – sie steht
+  # in `lizenz`, damit sie in der Seitenleiste und in jeder Zeile des CSV-Exports mitkommt.
+  bochum_rad:
+    status: live
+    adapter: bochum_rad
+    name: Bochum (Rad-Zählstellen)
+    land: NW
+    traeger: Stadt Bochum
+    art: >-
+      Zählstellen für Rad- und Fußverkehr (Eco-Counter); 15-Minuten-Werte je Richtung, in der Karte
+      Rad, beide Richtungen zusammen
+    weg: offen im GitLab der Stadt auf openCode.de (täglich aktualisiert)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter
+    api: https://gitlab.opencode.de/api/v4
+    projekt: StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter
+    stellen:  # Ordner im Repository; Name und Lage laut Tabelle im README
+      wittener_strasse: {name: Wittener Straße, lat: 51.479338, lon: 7.225140}
+      springorumtrasse: {name: Springorumtrasse, lat: 51.468826, lon: 7.229204}
+      brueckstrasse: {name: Brückstraße, lat: 51.485022, lon: 7.215437}
+      universitaetsstrasse: {name: Universitätsstraße, lat: 51.457704, lon: 7.238026}
+      erzbahntrasse: {name: Erzbahntrasse, lat: 51.487049, lon: 7.184623}
+      hofsteder_bach: {name: Hofsteder Bach, lat: 51.501092, lon: 7.186044}
+      lothringentrasse: {name: Lothringentrasse, lat: 51.510388, lon: 7.261104}
+      springorumtrasse_sued: {name: Springorumtrasse Süd, lat: 51.442427, lon: 7.182626}
+      bluecherstrasse: {name: Blücherstraße, lat: 51.491676, lon: 7.160200}
+    ohne:
+      springorumtrasse_sued: >-
+        laut README der Stadt Verdacht auf fehlende Rad-Kanäle („Bias“, Korrektur wartet auf
+        Eco-Counter) – die Summe wäre zu klein
+    titel: >-
+      Rad- und Fußverkehr – Zählstellen Eco-Counter, Stadt Bochum (verändert: nur Rad,
+      15-Minuten-Werte zu Stunden und Tagessummen zusammengefasst)
+    herausgeber: Stadt Bochum
+    quellenvermerk: Stadt Bochum
+    lizenz: >-
+      dl-de/by-2-0, mit Nutzungsbeschränkung der Stadt: nicht für Produkte oder Services im direkten
+      Wettbewerb zu Eco-Counter
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Lizenz laut Portal der Stadt (bochum.opendata.ruhr) und README des Repositories:
+        Datenlizenz Deutschland – Namensnennung 2.0. Die Datensatzbeschreibung schränkt ein: „Die
+        Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter
+        stehen, ist nicht gestattet.“ Das gilt auch für die Werte aus der Zählkarte. (Open.NRW führt
+        die Datensätze unter „Andere geschlossene Lizenz“, die Lizenzdatei des Repositories nennt
+        CC0 – maßgeblich ist hier das Portal der Stadt.)
+      - >-
+        Laut Stadt Rohdaten ohne Gewähr; die Stadt fasst die Kanäle der Eco-Counter-API selbst
+        zusammen. Die Springorumtrasse Süd fehlt, weil die Stadt dort fehlende Rad-Kanäle vermutet.
+        In der Karte nur Rad (beide Richtungen), nicht Fuß.
+      - >-
+        Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+        dieser Tag gilt als nicht vollständig gezählt.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
 recht:
@@ -1061,6 +1359,14 @@ datenlage:
     lon: 6.9603
     lat: 50.9375
     stand: aggregiert
+    dauer:
+      stand: offen
+      was: >-
+        Rad-Dauerzählstellen (Eco-Counter): offen nur Monatssummen je Zählstelle, 2009–2022
+        (dl-de/zero-2-0) – ohne Stundenwerte nicht in der Karte; jüngere Werte nur auf der Seite von
+        Eco-Counter
+      links:
+        - ["Fahrrad Verkehrsdaten Köln 2022 (Open.NRW)", "https://open.nrw/dataset/fahrrad-verkehrsdaten-koln-2022-k"]
     was: >-
       Mittelwerte je Zählstelle; Einzelzählungen auf Anfrage (2024 für die Kitschburger Straße
       herausgegeben)
@@ -1312,6 +1618,13 @@ datenlage:
     lon: 7.4653
     lat: 51.5136
     stand: aggregiert
+    dauer:
+      stand: in_karte
+      was: >-
+        Dauerzählstelle Radverkehr Schnettkerbrücke: 15-Minuten-Werte je Richtung seit Januar 2018
+        (dl-de/zero-2-0) – in der Karte als Dauerzählstelle
+      links:
+        - ["Dauerzählstelle Radverkehr Schnettkerbrücke", "https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/"]
     was: >-
       nur der Zählstellenplan; Werte gibt die Stadt auf Anfrage heraus (kostenpflichtig) – der Plan
       taugt als Grundlage einer Anfrage
@@ -1332,6 +1645,15 @@ datenlage:
     lon: 12.3731
     lat: 51.3397
     stand: abgelehnt
+    dauer:
+      stand: in_karte
+      was: >-
+        Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS – die
+        Zählkarte hebt sie selbst auf, in der Karte seit November 2026; Tageswerte zweier Jahre ohne
+        Stunden. Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten
+      links:
+        - ["Radverkehr: Stundenwerte der letzten 31 Tage", "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei"]
+        - ["Radverkehr: Standorte", "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-stationen-stadt-leipzig"]
     was: >-
       50–100 Zählungen im Jahr, seit 2022 als Tabellen der Büros; nur Karten online. 2023 abgelehnt
       – aber nur der Export aus der Karte. Besser nach den gelieferten Zählauswertungen fragen.
@@ -1469,6 +1791,13 @@ datenlage:
     lon: 10.8978
     lat: 48.3689
     stand: geliefert
+    dauer:
+      stand: offen
+      was: >-
+        Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden
+        lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte
+      links:
+        - ["Radzählstationen (Stadt Augsburg)", "https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen"]
     was: >-
       2017 auf Anfrage eine Karte der jüngsten Zählung je Zählstelle (Kfz/24 h am Werktag,
       Lkw-Anteil, Jahr) und eine Liste der Zählstellen mit Koordinaten; Stundenwerte nur gegen
@@ -1524,6 +1853,13 @@ datenlage:
     lon: 12.0991
     lat: 54.0924
     stand: geliefert
+    dauer:
+      stand: in_karte
+      was: >-
+        Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle seit 2012, CC0 – in der Karte als
+        Dauerzählstellen
+      links:
+        - ["OpenData.HRO: Radmonitore", "https://www.opendata-hro.de/dataset/radmonitore"]
     was: >-
       zählt jedes Jahr rund 100 Kreuzungen von Hand; 2020 ein Register der Zählungen 2009–2019
       (ohne Werte) und drei Beispielzählungen herausgegeben, bis 50 Zählungen kostenlos als Excel
@@ -1870,11 +2206,14 @@ datenlage:
       was: >-
         87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der
         Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das
-        ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte
+        ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte. Ebenso die
+        Radzählstationen an sechs Standorten: nur der Vortag, nur über die Vermittlung der Mobilithek
+        (Konto)
       links:
         - ["Mobilithek: Angebot seit Oktober 2026", "https://mobilithek.info/offers/1045322209798569984"]
         - ["Mobilithek: älteres Angebot (CC BY 4.0)", "https://mobilithek.info/offers/995318989663924224"]
         - ["DatenDock der KielRegion (Dashboard)", "https://datendock.civora.org/app/dashboards/30"]
+        - ["Mobilithek: Radzählstationen Kiel", "https://mobilithek.info/offers/1046783892706476032"]
     was: >-
       Knotenpunkt- und Querschnittszählungen (meist Spitzenstunden); 2025 auf Anfrage Zählberichte
       2016–2019 als PDF herausgegeben, auf FragDenStaat nicht öffentlich
@@ -2018,10 +2357,14 @@ datenlage:
     lat: 51.4556
     stand: automatisch
     dauer:
-      stand: kandidat
+      stand: in_karte
       was: >-
-        Dauerzählstellen; offen nur ihre Auswertungen 2017 als 57 PDFs, nicht die Zählwerte
+        Rad-Zählstellen Grugatrasse und Huyssenallee: Stundenwerte je Richtung als Quartalsdateien,
+        offen ab 2021 (2018–2020 unter geschlossener Lizenz) – in der Karte als Dauerzählstellen.
+        Von den Kfz-Dauerzählstellen offen nur die Auswertungen 2017 als 57 PDFs, nicht die
+        Zählwerte
       links:
+        - ["Radverkehrszählungen (Open.NRW)", "https://open.nrw/dataset/radverkehrszahlungen-e"]
         - ["essen.de Verkehrserhebung", "https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html"]
         - ["Zähldaten 2017", "https://www.essen.de/leben/mobilitaet/zaehldaten_2017.de.html"]
     was: >-

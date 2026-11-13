@@ -33,6 +33,7 @@ LAENDER = ["Baden-Württemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "H
            "Saarland", "Sachsen-Anhalt", "Sachsen", "Schleswig-Holstein", "Thüringen"]
 DATUM = r"(\d{1,2})\s?\.\s?(\d{1,2})\.?(?:\s?\d{4})?"
 EINTRAG = re.compile(DATUM + r"(?:\s*[-–]\s*" + DATUM + r")?")
+STRICH = re.compile(r"(?<!\S)(?:--?|–)(?!\S)")  # Zelle ohne Ferien
 
 
 def _land(zeile: str) -> str | None:
@@ -75,6 +76,18 @@ def _treffer(zeile: str, mitten: list[float]) -> list[tuple[int, re.Match]]:
     return out
 
 
+def _belegt(zeile: str, mitten: list[float]) -> set[int]:
+    """Spalten, in denen die Zeile etwas einträgt: ein Datum oder einen Strich („-“, „--“ heißt
+    keine Ferien – die Zelle ist belegt, eine mehrzeilige Zelle daneben gehört nicht dazu)."""
+    z = re.sub(r"\(\s*[-\d]*\s*\)", lambda m: " " * len(m.group(0)), zeile)
+    spalten = {k for k, _ in _treffer(zeile, mitten)}
+    rest = EINTRAG.sub(lambda m: " " * len(m.group(0)), z)
+    for m in STRICH.finditer(rest):
+        mitte = (m.start() + m.end()) / 2
+        spalten.add(min(range(len(mitten)), key=lambda k: abs(mitten[k] - mitte)))
+    return spalten
+
+
 def lies(text: str, land: str, schuljahr: str) -> list[tuple[date, date, str]]:
     """-> [(von, bis, Name)] des Landes in diesem Schuljahr („2012/2013“)."""
     y1 = int(schuljahr[:4])
@@ -98,10 +111,10 @@ def lies(text: str, land: str, schuljahr: str) -> list[tuple[date, date, str]]:
     eigene = reihen[pos][0]
     oben = reihen[pos - 1][0] if pos else None
     unten = reihen[pos + 1][0] if pos + 1 < len(reihen) else None
-    belegt_eigen = {k for k, _ in _treffer(zeilen[eigene], mitten)}
+    belegt_eigen = _belegt(zeilen[eigene], mitten)
 
     def belegt(i: int | None) -> set[int]:
-        return {k for k, _ in _treffer(zeilen[i], mitten)} if i is not None else set()
+        return _belegt(zeilen[i], mitten) if i is not None else set()
 
     zellen: dict[int, list[tuple[int, re.Match]]] = {k: [] for k in range(len(SPALTEN))}
     von_i = oben + 1 if oben is not None else kopf + 1

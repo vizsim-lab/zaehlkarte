@@ -21,7 +21,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **`public/data/dauer/`** — Dauerzählstellen, erzeugt von `zaehlkarte dauer site`, NICHT im
   Git (gitignored): Workflow „Dauerzählstellen bauen“ legt sie als Release-Asset
   `dauerzaehlstellen/dauer.tar.gz` ab, die CI holt es vor dem Build. Im selben Release liegt
-  das **Gedächtnis** der Quellen, die Stundenwerte nur kurz vorhalten (Hamburg: zwei Monate):
+  das **Gedächtnis** der Quellen, die Stundenwerte nur kurz vorhalten (Hamburg: zwei Monate,
+  Leipzig: 31 Tage):
   Assets `<code>__<datei>` aus `pipeline/data/raw/<code>/gedaechtnis/`, geholt und abgelegt von
   `pipeline/werkzeuge/gedaechtnis.py` – nie löschen, nie mit weniger Werten ersetzen (sonst
   sind die Stunden verloren).
@@ -91,9 +92,10 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Permalink-Kürzel sind Vertrag mit geteilten Links: nie umdeuten, nur ergänzen (die Sprache
   steht nicht im #-Teil, sondern in `?lang=`).
 - **Fremde Texte** (Namen, Bemerkungen aus den Daten) nur escaped ins HTML (`esc()`).
-- **Lizenzen mit Einschränkung** (Ettlingen: CC BY-NC 4.0, nur nicht kommerziell) nur mit
-  Hinweis an der Quelle (`hinweise` in sources.yaml); die Lizenz steht in der Seitenleiste und in
-  jeder Zeile des CSV-Exports – nie eine Quelle ohne Lizenzangabe aufnehmen.
+- **Lizenzen mit Einschränkung** (Ettlingen: CC BY-NC 4.0, nur nicht kommerziell; Bochum:
+  dl-de/by-2-0, aber nicht für Produkte im Wettbewerb zu Eco-Counter) nur mit Hinweis an der
+  Quelle (`hinweise` in sources.yaml); die Lizenz – samt Einschränkung – steht in der
+  Seitenleiste und in jeder Zeile des CSV-Exports – nie eine Quelle ohne Lizenzangabe aufnehmen.
 - **Lizenz:** AGPL-3.0-or-later. Aus dem Schulwege-Projekt (MIT) übernommene Dateien tragen
   einen Herkunftsvermerk.
 
@@ -118,8 +120,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Workflow nutzen. Dauerzählstellen: Workflow „Dauerzählstellen bauen“
   (`.github/workflows/dauer.yml`, wöchentlich) – Ergebnis als Release-Asset, kein PR; danach
   startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de`,
-  `opendata.readi.de` (Ettlingen) und die Rad-Quellen (MobiData BW, berlin.de, die Portale von
-  Münster, Aachen und München) sind aus der Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch
+  `opendata.readi.de` (Ettlingen) und die Rad-Quellen (MobiData BW, berlin.de, Open.NRW, die
+  Portale von Münster, Aachen, München, Würzburg, Neuss, Dortmund, Leipzig, Rostock und Bochums
+  GitLab) sind aus der Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch
   `werkzeug/dauer`, `tools/lauf.sh`); GitHub geht (Münsters Repository).
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

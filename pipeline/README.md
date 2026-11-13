@@ -24,7 +24,11 @@ dauer fetch  -> data/raw/berlin_viz/     Berlin: Monatsarchive der Verkehrsdetek
              -> data/raw/*_rad/          Rad-Zählstellen: MobiData BW (Monatsdateien, fehlende und
                                          die jüngsten zwei), Münster (Archiv des GitHub-Repositorys,
                                          sha256), Aachen (Jahres-CSV, PDF der Standorte), Berlin
-                                         (Excel, sha256), München (Jahres- und Monatsdateien, WFS)
+                                         (Excel, sha256), München (Jahres- und Monatsdateien, WFS),
+                                         Würzburg, Rhein-Kreis Neuss, Dortmund (Opendatasoft-Export,
+                                         nur bei Änderung), Essen (Quartale über Open.NRW), Leipzig
+                                         (WFS -> gedaechtnis/), Rostock (CSV, GeoJSON), Bochum
+                                         (GitLab, eine CSV je Zählstelle)
 dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (nicht im Git)
 ```
 
@@ -52,6 +56,13 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/aachen_rad.py` | Aachen: Radzählstellen je Kanal (UTC), Standorte aus dem PDF |
 | `dauer/berlin_rad.py` | Berlin: Rad-Zählstellen aus der Excel-Datei der Senatsverwaltung, Markierungen per Zellfarbe |
 | `dauer/muenchen_rad.py` | München: Raddauerzählstellen, 15-Minuten-Werte (drei Datumsformate), Lage aus dem WFS |
+| `dauer/ods.py`, `dauer/ods_eco.py` | Opendatasoft-Export (nur bei Änderung); Würzburg und Rhein-Kreis Neuss: Eco-Counter-Stunden (UTC) mit Status, in Neuss je Kanal |
+| `dauer/dortmund_rad.py` | Dortmund: Schnettkerbrücke, 15-Minuten-Werte in Ortszeit mit Versatz |
+| `dauer/essen_rad.py` | Essen: Quartalsdateien (Lizenz je Ressource), Spalten nach Reihenfolge |
+| `dauer/leipzig_rad.py` | Leipzig: WFS mit 31 Tagen, Gedächtnis; doppelte 2 Uhr nach objectid, jüngste Lieferung gilt |
+| `dauer/rostock_rad.py` | Rostock: Radmonitore, 15-Minuten-Werte mit Versatz, Standorte als GeoJSON |
+| `dauer/bochum_rad.py` | Bochum: Gesamtdatei je Zählstelle aus dem GitLab der Stadt, nur Rad |
+| `dauer/gedaechtnis.py` | Gedächtnis der Quellen mit kurzer Vorhaltezeit (Hamburg, Leipzig): Monatsdateien je UTC-Tag |
 | `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen) |
 | `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen (Workflow) |
 | `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Text von `pdftotext -layout`), mit Abgleich gegen eine vorhandene CSV |

@@ -11,11 +11,17 @@ from zaehlkarte.dauer import (
     aachen_rad,
     berlin_rad,
     berlin_viz,
+    bochum_rad,
+    dortmund_rad,
+    essen_rad,
     hamburg_sta,
+    leipzig_rad,
     mobidata_eco,
     muenchen_rad,
     muenster_rad,
+    ods_eco,
     readi_urbanpulse,
+    rostock_rad,
 )
 from zaehlkarte.dauer import site as site_
 from zaehlkarte.dauer.modell import Messreihe
@@ -23,7 +29,9 @@ from zaehlkarte.dauer.modell import Messreihe
 ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta,
            "readi_urbanpulse": readi_urbanpulse, "mobidata_eco": mobidata_eco,
            "muenster_rad": muenster_rad, "aachen_rad": aachen_rad, "berlin_rad": berlin_rad,
-           "muenchen_rad": muenchen_rad}
+           "muenchen_rad": muenchen_rad, "ods_eco": ods_eco, "dortmund_rad": dortmund_rad,
+           "essen_rad": essen_rad, "leipzig_rad": leipzig_rad, "rostock_rad": rostock_rad,
+           "bochum_rad": bochum_rad}
 
 
 def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list[str], list[str]]:

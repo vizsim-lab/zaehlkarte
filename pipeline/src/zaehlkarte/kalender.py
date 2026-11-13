@@ -113,7 +113,7 @@ def ostersonntag(jahr: int) -> date:
 
 @cache
 def feiertage(land: str, jahr: int) -> dict[date, str]:
-    """Gesetzliche Feiertage (bundesweit + Land BB, BE, BW, BY, NW; HB, HH, NI, SH)."""
+    """Gesetzliche Feiertage (bundesweit + Land BB, BE, BW, BY, MV, NW, SN; HB, HH, NI, SH)."""
     ostern = ostersonntag(jahr)
     tage = {
         date(jahr, 1, 1): "Neujahr",
@@ -155,6 +155,16 @@ def feiertage(land: str, jahr: int) -> dict[date, str]:
         tage[date(jahr, 11, 1)] = "Allerheiligen"
     elif land == "BB":
         tage[date(jahr, 10, 31)] = "Reformationstag"
+    elif land == "MV":  # § 2 Feiertagsgesetz M-V; der Frauentag seit der Änderung vom 07.07.2022
+        tage[date(jahr, 10, 31)] = "Reformationstag"
+        if jahr >= 2023:
+            tage[date(jahr, 3, 8)] = "Internationaler Frauentag"
+    elif land == "SN":  # § 1 SächsSFG (revosax.sachsen.de/vorschrift/3997-SaechsSFG)
+        tage[date(jahr, 10, 31)] = "Reformationstag"
+        nov22 = date(jahr, 11, 22)
+        tage[nov22 - timedelta(days=(nov22.weekday() - 2) % 7)] = "Buß- und Bettag"
+        # Fronleichnam nur in den per Verordnung bestimmten Gemeinden (sorbisches Gebiet) –
+        # nicht in Leipzig, hier nicht abgebildet
     elif land in ("HB", "HH", "NI", "SH") and jahr >= 2018:  # seit 2018 gesetzlicher Feiertag
         tage[date(jahr, 10, 31)] = "Reformationstag"
     return tage

@@ -76,3 +76,27 @@ def test_nrw_ab_2020():
     k = Ferienkalender.lade(Pfade().config / "schulferien_nordrhein-westfalen.csv")
     assert tagtyp(date(2020, 8, 25), "NW", k) == ("schule", None)  # Xanten, nach den Sommerferien
     assert tagtyp(date(2022, 7, 12), "NW", k) == ("ferien", "Sommerferien")
+
+
+def test_sachsen_feiertage_und_ferien():
+    assert date(2026, 11, 18) in feiertage("SN", 2026)  # Buß- und Bettag (Mittwoch vor dem 23.11.)
+    assert date(2025, 11, 19) in feiertage("SN", 2025)
+    assert date(2026, 10, 31) in feiertage("SN", 2026)  # Reformationstag
+    assert date(2026, 11, 18) not in feiertage("BY", 2026)  # in Bayern nur unterrichtsfrei
+    k = Ferienkalender.lade(Pfade().config / "schulferien_sachsen.csv")
+    assert tagtyp(date(2026, 11, 18), "SN", k) == ("feiertag", "Buß- und Bettag")
+    assert tagtyp(date(2026, 10, 20), "SN", k) == ("ferien", "Herbstferien")
+    assert tagtyp(date(2026, 11, 12), "SN", k) == ("schule", None)
+    # zweizeilige Zelle über der Zeile „Sachsen“, das Saarland daneben mit „--“ (keine Ferien)
+    assert tagtyp(date(2027, 5, 7), "SN", k) == ("ferien", "Pfingstferien")
+    assert tagtyp(date(2018, 5, 11), "SN", k) == ("ferien", "Pfingstferien")
+
+
+def test_mecklenburg_vorpommern_feiertage_und_ferien():
+    assert date(2026, 3, 8) in feiertage("MV", 2026)  # Frauentag seit 2023
+    assert date(2022, 3, 8) not in feiertage("MV", 2022)
+    assert date(2026, 10, 31) in feiertage("MV", 2026)
+    k = Ferienkalender.lade(Pfade().config / "schulferien_mecklenburg-vorpommern.csv")
+    assert tagtyp(date(2026, 10, 20), "MV", k) == ("ferien", "Herbstferien")
+    assert tagtyp(date(2026, 11, 12), "MV", k) == ("schule", None)
+    assert tagtyp(date(2021, 2, 19), "MV", k) == ("ferien", "Winterferien")  # zweizeilige Zelle

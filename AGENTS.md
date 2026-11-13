@@ -406,16 +406,67 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     je Jahr (das Blatt 2012 reicht bis Ende 2013). München: Jahresdateien „15 Minuten Werte JJJJ“
     (2008–2025, Paket „…Jahreszahlen“), fürs laufende Jahr Monatsdateien; Datum als 2008-06-01,
     20230101 oder 2024.01.01, 2022 mit einer Spalte `t` vorn, bis 2024 `kommentar`.
-  - **Kandidaten für den nächsten Schritt:** Bochum (GitLab opencode.de, CC0, 15 Minuten, Rad
-    und Fuß getrennt), Dortmund (Schnettkerbrücke, dl-de/zero-2.0), Würzburg und Rhein-Kreis
-    Neuss (Opendatasoft, Status „raw“; Neuss zuletzt 05.07.2026), Leipzig (Gedächtnis nötig),
-    Bonn (CC0, aktuelle Dateien nicht gefunden), Köln (Jahresdateien bis 2022, Inhalt ungeprüft).
-    Nicht offen als Stundenwerte: Hessen Mobil (Eco-Counter-Portal mit Export der
-    Diagrammwerte je Stelle – Tage, Wochen, Monate; `hessen-mobil.eco-counter.com` sperrt
-    Abruf-Werkzeuge per robots.txt) und Bielefeld – dort hilft eine Anfrage (Eco-Counter-Kunden
-    haben in Eco-Visio einen Export).
-    Nur Summen (nicht nutzbar): Oldenburg (Monate), Mannheims Portal (Summe je Zähler),
-    Stuttgarts Portal (Saisons), Düsseldorf (Jahre).
+  - **Zweite Runde (in der Karte seit November 2026,** alle Quellen des Artefakts „Offene
+    Radzähldaten“, `tools/rad_erkunden12–14.py`, Ergebnisse `ergebnis/rad12–14/`):
+    - **Würzburg, Rhein-Kreis Neuss** (`ods_eco`): Opendatasoft-Export (`…/exports/csv?select=…
+      &timezone=UTC`), Eco-Counter-Stunden in UTC. Status Würzburg als Liste (`["raw"]`,
+      `["deleted"]` ohne Wert), Neuss als Text (`raw`, `modified`, leer). Würzburg: rund 1.000
+      doppelte Stunden (45 mit verschiedenen Werten), eine Stelle ohne Standort (100020242,
+      fast nur „deleted“), Hunderte ganzer Tage mit 0 in Heidingsfeld; die Radar-Sensoren
+      (LoRaWAN, Datensatz `fahrradzaehlung`) melden ohne festes Raster – nicht aufnehmbar. Neuss:
+      vier bis sechs Kanäle je Station über die ganze Laufzeit, der Datensatz der Zählstellen
+      ist leer (Lage aus `coordinates` der Daten), seit dem 05.07.2026 nicht aktualisiert; am Tag
+      der Sommerzeit eine leere Zeile zur selben UTC-Stunde wie eine gezählte (leere Zeilen
+      zählen nicht mit).
+    - **Rückstellung der Uhr:** In Würzburg, Neuss, Dortmund und Bochum fehlt die erste der beiden
+      Stunden 2–3 Uhr (in UTC 0 Uhr), Essen und Düsseldorf führen 2 Uhr einmal. Ob diese eine
+      Stunde beide enthält, ließ sich nicht klären (Verhältnis 2 Uhr / Mittel aus 1 und 3 Uhr am
+      Rückstelltag streut zu stark, `ergebnis/rad14/rueckstellung.txt`) → der Tag ist nicht
+      vollständig. Leipzig führt beide Stunden einzeln, Rostock unvollständig.
+    - **Dortmund** (Schnettkerbrücke): `zeitpunkt_utc` ist trotz des Namens die Ortszeit mit
+      Versatz, `zeitpunkt` dieselbe Ortszeit als UTC ausgewiesen; am Tag der Sommerzeit stehen
+      leere Zeilen 2:00–2:45 Uhr (+01:00). Lage nicht im Datensatz und nicht auf dortmund.de –
+      OSM-Knoten 5639350907 („Dauerzählstelle Radverkehr“, Verweis auf die Eco-Counter-Seite),
+      gefunden über Overpass (`ergebnis/rad14/osm.txt`).
+    - **Essen:** Quartals-CSV über Open.NRW (`radverkehrszahlungen-e`), Lizenz je Ressource:
+      2018–2020 „other-closed“, ab 2021 dl-de/by-2-0. Spalten 1+2 Grugatrasse, 3+4 Huyssenallee
+      (belegt durch die kumulierten Jahresdateien); 2026 heißt Spalte 2 fälschlich „Huyssenallee
+      Stadtkern_Nord“, 2023 Q4 mit Tab. Lage als Gauß-Krüger in der Beschreibung (umgerechnet mit
+      pyproj, EPSG:31466 → 4326, Werte in sources.yaml).
+    - **Leipzig:** WFS `radverkehr_dauerzaehlstelle_anzahl_stunde_zeitreihe` (31 Tage, Ortszeit
+      ohne Versatz) → Gedächtnis wie Hamburg (`dauer/gedaechtnis.py`). Am Rückstelltag 2 Uhr
+      zweimal (objectid folgt der Zeit); 0 Uhr des Folgetags kommt mit der nächsten Lieferung
+      (`fme_tstamp`) erneut, oft mit anderem Wert → es gilt die jüngste Lieferung. Die Tageswerte
+      (zwei Jahre) passen meist nicht genau zur Summe der Stunden; Jahnallee ohne Stunden. Lage in
+      UTM 33 (`koordinaten.utm_zu_wgs84`).
+    - **Rostock** (Radmonitore, CC0): eine CSV mit 5,4 Mio. Viertelstunden seit 2012, Zeit
+      „2013/07/15 22:15:00+02“, keine Doppelten. Holbeinplatz und Lange Straße laut Quelle Summen
+      zweier Querschnitte; Saarplatz Lindenpark („Steuergerät“) liegt täglich etwas über Saarplatz
+      Nord (100 m entfernt) → `ohne`. Hinrichshagen, Markgrafenheide und Graal-Müritz liegen am
+      selben Punkt (drei Wege), Graal-Müritz mit 174 ganzen Tagen 0.
+    - **Bochum** (GitLab openCode, `StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter`):
+      Lizenz laut bochum.opendata.ruhr und README dl-de/by-2-0, in Open.NRW „other-closed“, die
+      LICENSE-Datei CC0; dazu die Klausel „Nutzung … im direkten Wettbewerb zu Eco-Counter nicht
+      gestattet“ → steht in `lizenz` (Seitenleiste, CSV). Die Stadt wählt je Richtung einen
+      Kanalblock („pick best block“); an der Springorumtrasse Süd vermutet sie fehlende Kanäle →
+      `ohne`. An einzelnen Tagen nur volle Stunden (Viertelstunden leer) – nicht gezählt.
+    - **Noch offen:** Bonn (CC0, Jahresdateien 2019–2025 aus Eco-Visio mit Summenspalten, 2022 je
+      Kanal, 2019 in Mac-Roman; Standorte im Stadtplan, der oft 502/504 liefert) und Düsseldorf
+      (dl-de/by-2-0 ab 2020, eine Datei je Stelle und Jahr, Formate je Jahr verschieden, Server
+      lehnt viele Abrufe ab) – siehe `tools/rad_erkunden15.py`.
+  - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
+    Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
+    sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue
+    Angebot „LICENSE_RESTRICTED_USE_FREE_OF_CHARGE“), Jena (keine offene Schnittstelle gefunden),
+    Nürnberg (nur die Eco-Counter-Seite). Dieselben Zähler wie im
+    MobiData-Bündel, also doppelt: Konstanz (Jahres-CSV CC0 – Herosé, Bahnhaltepunkte Fürstenberg
+    und Petershausen, Alte Rheinbrücke, Friedrichstraße), Heidelberg (CKAN-API 404), Ulm
+    (Lupferbrücke, eingestellt), Mannheims Portal (ohne Lizenzangabe). Nicht offen als
+    Stundenwerte: Hessen Mobil (Land, also ohnehin nicht kommunal; Export der Diagrammwerte je
+    Stelle – Tage, Wochen, Monate;
+    `hessen-mobil.eco-counter.com` sperrt Abruf-Werkzeuge per robots.txt) und Bielefeld – dort
+    hilft eine Anfrage (Eco-Counter-Kunden haben in Eco-Visio einen Export). Nur Summen:
+    Mannheims Portal (Summe je Zähler), Stuttgarts Portal (Saisons).
 - **Nicht kommunal (dokumentiert, nicht in der Karte):**
   - **Baden-Württemberg, Verkehrsministerium:** „Stundenwerte der Dauerzählstellen in
     Baden-Württemberg“ (MobiData `stundenwerte_dauerzaehlstellen`, dl-de/by-2-0): ein ZIP je

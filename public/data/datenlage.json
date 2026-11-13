@@ -554,7 +554,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Köln seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind Mittelwerte je Zählstelle. Ich bitte um die zugrundeliegenden Einzelzählungen; 2024 haben Sie solche Zählungen für die Kitschburger Straße herausgegeben.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "offen",
+     "was": "Rad-Dauerzählstellen (Eco-Counter): offen nur Monatssummen je Zählstelle, 2009–2022 (dl-de/zero-2-0) – ohne Stundenwerte nicht in der Karte; jüngere Werte nur auf der Seite von Eco-Counter",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrrad Verkehrsdaten Köln 2022 (Open.NRW)",
+       "url": "https://open.nrw/dataset/fahrrad-verkehrsdaten-koln-2022-k"
+      }
+     ]
+    }
    }
   },
   {
@@ -935,7 +945,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Dortmund seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhr Zählstellenplan ist offen; ich bitte um die Ergebnisse der dort verzeichneten Zählungen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Dauerzählstelle Radverkehr Schnettkerbrücke: 15-Minuten-Werte je Richtung seit Januar 2018 (dl-de/zero-2-0) – in der Karte als Dauerzählstelle",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Dauerzählstelle Radverkehr Schnettkerbrücke",
+       "url": "https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/"
+      }
+     ]
+    }
    }
   },
   {
@@ -977,7 +997,21 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Leipzig seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind die Zählauswertungen, die Ihnen die beauftragten Büros liefern (seit 2022 als Tabellen), und Ihre eigenen Zählungen – nicht ein Export aus der Verkehrsmengenkarte.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS – die Zählkarte hebt sie selbst auf, in der Karte seit November 2026; Tageswerte zweier Jahre ohne Stunden. Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radverkehr: Stundenwerte der letzten 31 Tage",
+       "url": "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei"
+      },
+      {
+       "titel": "Radverkehr: Standorte",
+       "url": "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-stationen-stadt-leipzig"
+      }
+     ]
+    }
    }
   },
   {
@@ -1191,7 +1225,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Augsburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2017 haben Sie auf eine Anfrage eine Karte der jüngsten Zählungen und eine Liste der Zählstellen mit Koordinaten geschickt. Ich bitte um die Zählungen selbst (Stunden- oder Viertelstundenwerte) in der Form, in der sie bei Ihnen vorliegen; eine Aufbereitung ist nicht nötig.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "offen",
+     "was": "Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählstationen (Stadt Augsburg)",
+       "url": "https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen"
+      }
+     ]
+    }
    }
   },
   {
@@ -1269,7 +1313,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Rostock seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2020 haben Sie auf FragDenStaat (Anfrage „Verkehrszählung“) ein Register Ihrer Knotenpunktzählungen 2009–2019 herausgegeben und angeboten, bis zu 50 Zählungen kostenlos als Excel-Dateien zu übermitteln. Ich bitte um die 50 jüngsten Knotenpunktzählungen (Viertelstundenwerte je Strom und Fahrzeugart, einschließlich Rad, wo gezählt) als Excel-Dateien und um die Angabe, unter welcher Lizenz ich sie veröffentlichen darf.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle seit 2012, CC0 – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "OpenData.HRO: Radmonitore",
+       "url": "https://www.opendata-hro.de/dataset/radmonitore"
+      }
+     ]
+    }
    }
   },
   {
@@ -1823,7 +1877,7 @@
     },
     "dauer": {
      "stand": "kandidat",
-     "was": "87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte",
+     "was": "87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte. Ebenso die Radzählstationen an sechs Standorten: nur der Vortag, nur über die Vermittlung der Mobilithek (Konto)",
      "situation": null,
      "links": [
       {
@@ -1837,6 +1891,10 @@
       {
        "titel": "DatenDock der KielRegion (Dashboard)",
        "url": "https://datendock.civora.org/app/dashboards/30"
+      },
+      {
+       "titel": "Mobilithek: Radzählstationen Kiel",
+       "url": "https://mobilithek.info/offers/1046783892706476032"
       }
      ]
     }
@@ -2051,10 +2109,14 @@
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Essen seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOnline sind nur die Auswertungen Ihrer Dauerzählstellen von 2017; gemeint sind hier die Zählungen von Hand an Knotenpunkten und Querschnitten.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
     "dauer": {
-     "stand": "kandidat",
-     "was": "Dauerzählstellen; offen nur ihre Auswertungen 2017 als 57 PDFs, nicht die Zählwerte",
+     "stand": "in_karte",
+     "was": "Rad-Zählstellen Grugatrasse und Huyssenallee: Stundenwerte je Richtung als Quartalsdateien, offen ab 2021 (2018–2020 unter geschlossener Lizenz) – in der Karte als Dauerzählstellen. Von den Kfz-Dauerzählstellen offen nur die Auswertungen 2017 als 57 PDFs, nicht die Zählwerte",
      "situation": null,
      "links": [
+      {
+       "titel": "Radverkehrszählungen (Open.NRW)",
+       "url": "https://open.nrw/dataset/radverkehrszahlungen-e"
+      },
       {
        "titel": "essen.de Verkehrserhebung",
        "url": "https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html"

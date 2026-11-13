@@ -357,8 +357,9 @@ test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstell
   await expect(el.locator('a[href^="https://fragdenstaat.de/"]').first()).toBeVisible();
   await expect(el.locator(".anfrage-text")).toHaveCount(0);
   // eine Kommune ohne Stand der Dauerzählstellen schließt sich beim Wechsel zu ihnen
+  // (Xanten: nur Kurzzeitzählungen; Rostock hat seit den Radmonitoren einen Stand)
   await page.locator('[data-familie="k"]').click();
-  await page.evaluate(() => window.__app.zeigeDatenlage("Rostock"));
+  await page.evaluate(() => window.__app.zeigeDatenlage("Xanten"));
   await page.locator('[data-familie="d"]').click();
   await expect(el).toBeHidden();
   expect(fehler).toEqual([]);
