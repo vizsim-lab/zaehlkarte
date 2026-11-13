@@ -1,0 +1,483 @@
+Jahrespakete: [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025]
+
+https://opendata.duesseldorf.de/sites/default/files/Z%C3%A4hlstellen_2.csv:
+standort;installiert;latitude;longitude;kommentar
+bilker allee fahrtrichtung innenstadt;10.12.2013;51.21074;6.77131;1 schleifenpaar in asphalt geschnitten
+bilker allee fahrtrichtung stadtauswaerts;10.12.2013;51.21074;6.77151;1 schleifenpaar in asphalt geschnitten
+christophstrasse;18.12.2014;51.19623;6.79654;5 schleifenpaare unter 8 cm knochensteine gelegt
+elisabethstrasse;15.09.2016;51.21641;6.77528;
+fleher deich;14.08.2019;51.187888;6.777990;
+fleher deich ost stromaufwaerts;09.12.2013;51.18834;6.77571;2 schleifenpaare unter 6cm knochensteine gelegt
+fleher deich rampe;09.12.2013;51.18834;6.77571;
+fleher deich west stromabwaerts;10.12.2013;51.18774;6.77514;2 schleifenpaareunter 6 cm knochensteine gelegt
+friedrichstrasse;14.09.2016;51.21461;6.77685;1 schleifenpaar
+kirchfeldstrasse;11.12.2013;51.21246;6.77076;3 schleifenpaare in asphalt geschnitten
+koblenzer einwaerts nach theodor-litt-strasse;09.12.2013;51.14922;6.88603;2 schleifenpaare in asphalt geschnitten
+koblenzer einwaerts vor theodor-litt-strasse;09.12.2013;51.14898;6.88668;2 schleifenpaare in asphalt geschnitten
+koblenzer stadtauswaerts;09.12.2013;51.14911;6.88611;4 schleifenpaare in asphalt geschnitten
+koenigsallee/steinstraße;02.08.2012;51.22324;6.77918;
+lohauser deich;09.12.2013;51.27754;6.71409;2 schleifenpaare
+mannesmann ufer-totem 01;10.12.2013;51.22015;6.76712;3 schleifenpaare unter 6 cm steine gelegt totem am 27.10.2014 installiert
+muenchener/ickerswarder strasse;14.08.2019;51.170336;6.821488;
+oberkasseler bruecke nord;27.07.2012;51.23166;6.76320;
+oberkasseler bruecke sued;02.08.2012;51.23146;6.76324;2 zelte auf dem mischweg, rad und gehweg, 1 zelt auf dem radweg auf der strasse
+
+
+https://opendata.duesseldorf.de/sites/default/files/Z%C3%A4hlstellen_1.geojson:
+{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"standort":"bilker allee fahrtrichtung innenstadt","installiert":"10.12.2013","kommentar":"1 schleifenpaar in asphalt geschnitten"},"geometry":{"type":"Point","coordinates":[6.77131,51.21074]}},{"type":"Feature","properties":{"standort":"bilker allee fahrtrichtung stadtauswaerts","installiert":"10.12.2013","kommentar":"1 schleifenpaar in asphalt geschnitten"},"geometry":{"type":"Point","coordinates":[6.77151,51.21074]}},{"type":"Feature","properties":{"standort":"christophstrasse","installiert":"18.12.2014","kommentar":"5 schleifenpaare unter 8 cm knochensteine gelegt"},"geometry":{"type":"Point","coordinates":[6.79654,51.19623]}},{"type":"Feature","properties":{"standort":"elisabethstrasse","installiert":"15.09.2016","kommentar":""},"geometry":{"type":"Point","coordinates":[6.77528,51.21641]}},{"type":"Feature","properties":{"standort":"fleher deich","installiert":"14.08.2019","kommentar":""},"geometry":{"type":"Point","coordinates":[6.77799,51.187888]}},{"type":"Feature","properties":{"standort":"fleher deich ost stromaufwaerts","installiert":"09.12.2013","kommentar":"2 schleifenpaare unter 6cm knochensteine gelegt"},"geometry":{"type":"Point","coordinates":[6.77571,51.18834]}},{"type":"Feature","properties":{"standort":"fleher deich rampe","installiert":"09.12.2013","kommentar":""},"geometry":{"type":"Point","coordinates":[6.77571,51.18834]}},{"type":"Feature","properties":{"standort":"fleher deich west stromabwaerts","installiert":"10.12.2013","kommentar":"2 schleifenpaareunter 6 cm knochensteine gelegt"},"geometry":{"type":"Point","coordinates":[6.77514,51.18774]}},{"type":"Feature","properties":{"standort":"friedrichstrasse","installiert":"14.09.2016","kommentar":"1 schleifenpaar"},"geometry":{"type":"Point","coordinates":[6.77685,51.21461]}},{"type":"Feature","properties":{"standort":"kirchfeldstrasse","installiert":"11.12.2013","kommentar":"3 schleifenpaare in asphalt geschnitten"},"geometry":{"type":"Point","coordinates":[6.77076,51.21246]}},{"type":"Feature","properties":{"standort":"koblenzer einwaerts nach theodor-litt-strasse","installiert":"09.12.2013","kommentar":"2 schleifenpaare in asphalt geschnitten"},"geometry":{"type":"Point","coordinates":[6.88603,51.14922]}},{"type":"Feature","properties":{"standort":"koblenzer einwaerts vor theodor-litt-strasse","installiert":"09.12.2013","kommentar":"2 schleifenpaare in asphalt geschnitten"},"geometry":{"type":"Point","coordinates":[6.88668,51.14898]}},{"type":"Feature","properties":{"standort":"koblenzer stadtauswaerts","installiert":"09.12.2013","kommentar":"4 schleifenpaare in asphalt geschnitten"},"geometry":{"type":"Point","coordinates":[6.88611,51.14911]}},{"type":"Feature","properties":{"standort":"koenigsallee/steinstraße","installiert":"02.08.2012","kommentar":""},"geometry":{"type":"Point","coordinates":[6.77918,51.22324]}},{"type":"Feature","properties":{"standort":"lohauser deich","installiert":"09.12.2013","kommentar":"2 schleifenpaare"},"geometry":{"type":"Point","coordinates":[6.71409,51.27754]}},{"type":"Feature","properties":{"standort":"mannesmann ufer-totem 01","installiert":"10.12.2013","kommentar":"3 schleifenpaare unter 6 cm steine gelegt totem am 27.10.2014 installiert"},"geometry":{"type":"Point","coordinates":[6.76712,51.22015]}},{"type":"Feature","properties":{"standort":"muenchener/ickerswarder strasse","installiert":"14.08.2019","kommentar":""},"geometry":{"type":"Point","coordinates":[6.821488,51.170336]}},{"type":"Feature","properties":{"standort":"oberkasseler bruecke nord","installiert":"27.07.2012","kommentar":""},"geometry":{"type":"Point","coordinates":[6.7632,51.23166]}},{"type":"Feature","properties":{"standort":"oberkasseler bruecke sued","installiert":"02.08.2012","kommentar":"2 zelte auf dem mischweg, rad und gehweg, 1 zelt auf dem radweg auf der strasse"},"geometry":{"type":"Point","coordinates":[6.76324,51.23146]}}]}
+
+## 2012: 3 CSV
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2012 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202012_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2012 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202012_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2012 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202012_2.csv | icenses/other-closed
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2012: 8783 Zeilen, Kopf 'Datum;Stunde;KOE Steinstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2012;00:00:00;;Nieselregen;9;97;93'
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2012: 8783 Zeilen, Kopf 'Datum;Stunde;OKB Nord;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2012;00:00:00;;Nieselregen;9;97;93'
+
+## 2013: 13 CSV
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2013 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2013 | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2013 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20%202013_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich west stromabwärts 2013 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kirchfeldstraße 2013 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%202013_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee OUT 2013 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee IN 2013 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2013 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2013 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%202013_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße stadtauswärts 2013 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2013 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202013_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2013 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202013_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2013 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202013_1.csv | icenses/other-closed
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2013: 720 Zeilen, Kopf 'Datum;Stunde;Lohauser Deich;Wetter;Temperatur;Gefuehlte Temperatur;Regen', erste '02.12.2013;00:00:00;;Leichter Nebel;5;3;'
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2013: 8759 Zeilen, Kopf 'Datum;Stunde;Mannesmann Ufer;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2013;00:00:00;;Leichter Regenfall;'
+
+## 2014: 14 CSV
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2014 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202014_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2014 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2014 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202014_2.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße stadtauswärts 2014 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2014 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2014 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee IN 2014 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%202014_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee OUT 2014 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kirchfeldstraße 2014 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%202014_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich west stromabwärts 2014 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2014 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2014 | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2014 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%202014_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Christophstraße 2014 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%202014_1.csv | icenses/other-closed
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2014: 8759 Zeilen, Kopf 'Datum;Stunde;KOE Steinstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2014;00:00:00;12;Nieselregen;3;67;'
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2014: 8759 Zeilen, Kopf 'Datum;Stunde;OKB Nord;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2014;00:00:00;11;Nieselregen;3;67;'
+
+## 2015: 14 CSV
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Christophstraße 2015 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%202015_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2015 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2015 | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2015 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20%202015_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich west stromabwärts 2015 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kirchfeldstraße 2015 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%202015_2.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee OUT 2015 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee IN 2015 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2015 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2015 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße stadtauswärts 2015 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2015 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202015_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2015 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202015_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2015 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202015_1.csv | icenses/other-closed
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Christophstraße 2015: 8759 Zeilen, Kopf 'Datum;Stunde;Christophstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2015;00:00:00;2;Leichter Nebel;0;9'
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2015: 8759 Zeilen, Kopf 'Datum;Stunde;Lohauser Deich;Wetter;Temperatur;Gefuehlte Temperatur;Regen', erste '01.01.2015;00:00:00;1;Leichter Nebel;1;-'
+
+## 2016: 16 CSV
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Friedrichstraße 2016 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe%202016_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Elisabethstraße 2016 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe%202016_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Christophstraße 2016 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%202016_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2016 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2016 | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2016 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich west stromabwärts 2016 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kirchfeldstraße 2016 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%202016_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee OUT 2016 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee IN 2016 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2016 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2016 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße stadtauswärts 2016 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%202016_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2016 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2016 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202016_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2016 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202016_1.csv | icenses/other-closed
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Friedrichstraße 2016: 8783 Zeilen, Kopf 'Datum;Stunde;Friedrichstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2016;00:00:00;;Sonnig;3;81;3;2;0;1'
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Elisabethstraße 2016: 8783 Zeilen, Kopf 'Datum;Stunde;Elisabethstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2016;00:00:00;;Sonnig;3;81;3;2;0;1'
+
+## 2017: 16 CSV
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Friedrichstraße 2017 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe%202017_2.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Elisabethstraße 2017 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe%202017_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Christophstraße 2017 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%202017_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2017 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2017 | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2017 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich west stromabwärts 2017 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kirchfeldstraße 2017 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%202017_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee OUT 2017 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee IN 2017 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2017 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2017 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße stadtauswärts 2017 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2017 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2017 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202017_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2017 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202017_0.csv | icenses/other-closed
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Friedrichstraße 2017: 8759 Zeilen, Kopf 'Datum;Stunde;Friedrichstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2017;00:00:00;1;Sonnig;1;47;5;-3;0'
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Elisabethstraße 2017: 8783 Zeilen, Kopf 'Datum;Stunde;Elisabethstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2017;00:00:00;1;Sonnig;1;47;5;-3;0'
+
+## 2018: 16 CSV
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2018 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202018_2.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2018 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%202018_2.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2018 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%202018_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2018 | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%202018_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2018 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202018_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2018 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202018_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee IN 2018 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%202018_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee OUT 2018 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%202018_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Christophstraße 2018 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%202018_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Elisabethstraße 2018 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe%202018_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2018 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20%202018_2.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich west stromabwärts 2018 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%202018_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Friedrichstraße 2018 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe%202018_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kirchfeldstraße 2018 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%202018_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2018 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202018_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße stadtauswärts 2018 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202018_1.csv | icenses/other-closed
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2018: 8759 Zeilen, Kopf 'Datum;Stunde;Koblenzer einwaerts nach TLS;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2018;00:00:00;0;Leichter Regenfall'
+  > Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2018: 8759 Zeilen, Kopf 'Datum;Stunde;Koblenzer einwaerts vor TLS;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuelte Temperatur;Regen;Wind', erste '01.01.2018;00:00:00;0;Leichter Regenfall'
+
+## 2019: 16 CSV
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2019 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Elisabethstraße 2019 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe%202019_1.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Christophstraße 2019 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%202019_1.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee OUT 2019 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%202019_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Bilker Allee IN 2019 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%202019_1.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Nord 2019 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%202019_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Oberkasseler Brücke Süd 2019 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Kö - Steinstraße 2019 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6%20Steinstra%C3%9Fe%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Kirchfeldstraße 2019 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Friedrichstraße 2019 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe%202019_0.csv | icenses/other-closed
+  · Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich west stromabwärts 2019 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Mannesmannufer 2019 | https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Lohauser Deich 2019 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße stadtauswärts 2019 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts vor Theodor-Litt-Straße 2019 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%202019_0.csv | icenses/other-closed
+  ·  Wetterabhängige Jahresübersicht Dauerzählstelle Koblenzer Straße einwärts nach Theodor-Litt-Straße 2019 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%202019_0_0.csv | icenses/other-closed
+  >  Wetterabhängige Jahresübersicht Dauerzählstelle Fleher Deich ost stromaufwärts 2019: 8759 Zeilen, Kopf 'Datum;Stunde;Fleher Deich Ost stromaufwaerts;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2019;00:00:00;0;Stellenweiser Rege'
+  >  Wetterabhängige Jahresübersicht Dauerzählstelle Elisabethstraße 2019: 8759 Zeilen, Kopf 'Datum;Stunde;Elisabethstrasse;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2019;00:00:00;5;Stellenweiser Rege'
+
+## 2020: 20 CSV
+  · Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020_0.csv | icenses/dl-by-de/2.0
+  · Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Fleher Deich Ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Rampe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/K%C3%96%20Steinstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts nach TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts vor TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/other-closed
+  · Koblenzer Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20Stra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/other-closed
+  · Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Mannesmann Ufer - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · Münchener_Ickeswarder Str - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchener_Ickeswarder%20Str%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  · OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | icenses/dl-by-de/2.0
+  > Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;2;Sonnig;4;81;0;3;0;'
+  > Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;1;Sonnig;4;81;0;3;0;'
+  > Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;4;Sonnig;4;81;0;3;0;'
+  > Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;7;Sonnig;4;81;0;3;0;'
+  > Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8785 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;2;Sonnig;4;81;0;3;0;'
+  > Fleher Deich Ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;3;Sonnig;4;81;0;3;0;'
+  > Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;7;Sonnig;4;81;0;3;0;'
+  > Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;4;Sonnig;4;81;0;3;0;'
+  > Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;4;Sonnig;4;81;0;3;0;'
+  > Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;14;Sonnig;4;81;0;3;0'
+  > KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;5;Sonnig;4;81;0;3;0;'
+  > Koblenzer einwärts nach TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;2;Sonnig;3;83;0;2;0;'
+  > Koblenzer einwärts vor TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;;Sonnig;3;83;0;2;0;8'
+  > Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;;Sonnig;3;83;0;2;0;8'
+  > Koblenzer Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;2;Sonnig;3;83;0;2;0;'
+  > Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;3;Sonnig;4;81;0;3;0;'
+  > Mannesmann Ufer - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;4;Sonnig;4;81;0;3;0;'
+  > Münchener_Ickeswarder Str - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;0;Sonnig;4;81;0;3;0;'
+  > OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;7;Sonnig;4;81;0;3;0;'
+  > OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2020: 8784 Zeilen, Kopf 'Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2020;00:00:00;29;Sonnig;4;81;0;3;0'
+
+## 2021: 19 CSV
+  · Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20IN%202021.csv | icenses/dl-by-de/2.0
+  · Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20OUT%202021.csv | icenses/dl-by-de/2.0
+  · Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Christophstra%C3%9Fe%202021.csv | icenses/dl-by-de/2.0
+  · Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Elisabethstra%C3%9Fe%202021_5.csv | icenses/dl-by-de/2.0
+  · Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%202021_0.csv | icenses/dl-by-de/2.0
+  · Fleher Deich O stromauf - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20O%20stromauf%202021.csv | icenses/dl-by-de/2.0
+  · Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20Rampe%202021.csv | icenses/dl-by-de/2.0
+  · Fleher Deich W stromab - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20W%20stromab%202021.csv | icenses/dl-by-de/2.0
+  · Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Friedrichstra%C3%9Fe%202021.csv | icenses/dl-by-de/2.0
+  · Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Kirchfeldstr%202021.csv | icenses/dl-by-de/2.0
+  · KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20K%C3%B6%20Steinstrasse%202021_0.csv | icenses/dl-by-de/2.0
+  · Koblenzer Straße einwärts nach TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20einw%C3%A4rts%20vor%20TL%20S%202021.csv | icenses/dl-by-de/2.0
+  · Koblenzer Straße einwärts vor TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20einw%C3%A4rts%20vor%20TL%20S%202021_0.csv | icenses/dl-by-de/2.0
+  · Koblenzer Straße stadtauswärts  - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20stadtausw%C3%A4rts%202021.csv | icenses/dl-by-de/2.0
+  · Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Lohauser%20Deich%202021.csv | icenses/dl-by-de/2.0
+  · Mannesmannufer - Totem 01 - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Mannesmann%20Ufer-Totem%2001%202021.csv | icenses/dl-by-de/2.0
+  · Münchener Straße Ickerswarder Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20M%C3%BCnchener_Ickerswarder%20Str%202021.csv | icenses/dl-by-de/2.0
+  · OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20OKB%20Nord%202021.csv | icenses/dl-by-de/2.0
+  · OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20OKB%20S%C3%BCd%202021.csv | icenses/dl-by-de/2.0
+  > Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind', erste '01.01.2021;0:00;2;Leichter Regenfall;0;9'
+  > Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind', erste '01.01.2021;0:00;2;Leichter Regenfall;0;9'
+  > Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind', erste '01.01.2021;0:00;4;Nieselregen;0;0;0.1;;;'
+  > Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind', erste '1012021;00:00:00;2;Leichter Regenfall;0;'
+  > Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind', erste '1012021;00:00:00;1;Leichter Regenfall;0;'
+  > Fleher Deich O stromauf - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind', erste '1012021;00:00:00;0;Leichter Regenfall;0;'
+  > Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind', erste '1012021;00:00:00;0;Leichter Regenfall;0;'
+  > Fleher Deich W stromab - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Fleher Deich west stromabwaerts;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;0;Leichter Regenfall;0;'
+  > Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;FriedrichstraßeFriedrichstraße;Symbol Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;2;Leichter Regenfall;0;'
+  > Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Kirchfeldstraße;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;6;Leichter Regenfall;0;'
+  > KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;KOE Steinstraße;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;6;Leichter Regenfall;0;'
+  > Koblenzer Straße einwärts nach TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Koblenzer einwaerts vor TLS;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;1;Nieselregen;0;95;100;'
+  > Koblenzer Straße einwärts vor TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Koblenzer einwaerts vor TLS;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;1;Nieselregen;0;95;100;'
+  > Koblenzer Straße stadtauswärts  - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Koblenzer stadtauswaerts;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;0;Nieselregen;0;95;100;'
+  > Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Lohauser Deich;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;0;Leichter Regenfall;0;'
+  > Mannesmannufer - Totem 01 - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Mannesmann Ufer;Symbol Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;43;Leichter Regenfall;0'
+  > Münchener Straße Ickerswarder Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;Muenchener_Ickeswarder Str;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;4;Nieselregen;0;95;100;'
+  > OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;OKB Nord;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefühlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;6;Leichter Regenfall;0;'
+  > OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2021: 8760 Zeilen, Kopf 'Zeit;OKB Sued;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind', erste '01.01.2021 00:00;8;Leichter Regenfall;0;'
+
+## 2023: 24 CSV
+  · Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2023_0.csv | icenses/dl-by-de/2.0
+  · Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2023_0.csv | icenses/dl-by-de/2.0
+  · Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_Rampe_2023_0.csv | icenses/dl-by-de/2.0
+  · Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_west_stromabw%C3%A4rts_2023_0.csv | icenses/dl-by-de/2.0
+  · Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2023_0.csv | icenses/dl-by-de/2.0
+  · Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2023_1.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2023.csv | icenses/dl-by-de/2.0
+  · Koblenzer Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_Stra%C3%9Fe_2023_0.csv | icenses/dl-by-de/2.0
+  · Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2023_1.csv | icenses/dl-by-de/2.0
+  · Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  · Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2023_0.csv | icenses/dl-by-de/2.0
+  ! Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023: URLError(ConnectionRefusedError(111, 'Connection refused'))
+  > Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023: 8759 Zeilen, Kopf 'Zeit;Christophstrasse Stadtauswaerts;Christophstrasse Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2023 00:00:00;0;3;Sonnig;15;0'
+
+## 2024: 21 CSV
+  · Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2024_1.csv | icenses/dl-by-de/2.0
+  · Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2024_0.csv | icenses/dl-by-de/2.0
+  · Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2024_0.csv | icenses/dl-by-de/2.0
+  · Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2024.csv | icenses/dl-by-de/2.0
+  · Koblenzer stadtauswärts 2024 - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2024_0.csv | icenses/dl-by-de/2.0
+  · Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2024.csv | icenses/dl-by-de/2.0
+  · Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2024_1.csv | icenses/dl-by-de/2.0
+  · OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  · Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2024_0.csv | icenses/dl-by-de/2.0
+  > Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Bilker Allee Stadteinwaerts;Bilker Allee Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;5;1;Stellenweiser Re'
+  > Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Christophstrasse Stadtauswaerts;Christophstrasse Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;5;3;Stellenweiser Re'
+  > Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Elisabethstrasse;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;5;Stellenweiser Rege'
+  > Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Fleher Deich;Fleher Deich Stadteinwaerts;Fleher Deich Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;4;2;2;Stellenweiser '
+  > Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Fleher Deich Ost stromaufwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;2;Stellenweiser Rege'
+  > Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Friedrichstrasse;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;;Stellenweiser Regen'
+  > Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Hofgartenrampe Oederallee IN - Ri. Innenstadt;Hofgartenrampe Oederallee OUT - Ri. Oberkassel;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;4;5;Stellenweiser Re'
+  > Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Kirchfeldstrasse IN;Kirchfeldstrasse OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;8;1;Stellenweiser Re'
+  > KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;KÖ Steinstrasse IN;KÖ Steinstrasse OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;0;2;Stellenweiser Re'
+  > Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Koblenzer einwaerts nach TLS IN - stadteinwaerts;Koblenzer einwaerts nach TLS OUT - stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen', erste '01-01-2024 00:00:00;0;1;Stellenweiser Re'
+  > Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Koblenzer einwaerts vor TLS IN - stadteinwaerts;Koblenzer einwaerts vor TLS OUT - stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (', erste '01-01-2024 00:00:00;0;1;Stellenweiser Re'
+  > Koblenzer stadtauswärts 2024 - Wetterabhängige Jahresübersicht Dauerzählstelle 2023: 8783 Zeilen, Kopf 'Zeit;Koblenzer stadtauswaerts Stadtauswaerts;Koblenzer stadtauswaerts Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;3;2;Stellenweiser Re'
+  > Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Kölner Straße 186 (Radweg) IN;Kölner Straße 186 (Radweg) OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;;;Stellenweiser Rege'
+  > Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Lohauser Deich Stadteinwaerts;Lohauser Deich Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;0;0;Stellenweiser Re'
+  > Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Luegallee IN;Luegallee OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;10;13;Stellenweiser '
+  > Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Mannesmann Ufer Stadteinwaerts (Ri. Sueden);Mannesmann Ufer Stadtauswaerts (Ri. Norden);Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;1;0;Stellenweiser Re'
+  > Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Muenchener/Ickeswarder Str Stadteinwaerts;Muenchener/Ickeswarder Str Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;1;1;Stellenweiser Re'
+  > Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Oberkasseler Bruecke Richtung Innenstadt;Oberkasseler Bruecke Richtung Oberkassel;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;18;12;;;'
+  > OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;OKB Nord Richtung Innenstadt;OKB Nord Richtung Oberkassel;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;1;11;Stellenweiser R'
+  > OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;OKB Sued;OKB Sued Richtung Innenstadt;OKB Sued Richtung Oberkassel;Symbol Wetter;Temperatur ( °C)', erste '01-01-2024 00:00:00;18;17;1;Stellenweise'
+  > Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024: 8783 Zeilen, Kopf 'Zeit;Pempelforter Strasse 42 (Mischverkehr) IN;Pempelforter Strasse 42 (Mischverkehr) OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2024 00:00:00;;;Stellenweiser Rege'
+
+## 2025: 23 CSV
+  · Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2025_0.csv | icenses/dl-by-de/2.0
+  · Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2025.csv | icenses/dl-by-de/2.0
+  · Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Fleher Deich ost stromaufwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2025.csv | icenses/dl-by-de/2.0
+  · Fleher Deich Rampe IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_Rampe_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Fleher Deich west stromabwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_west_stromabw%C3%A4rts_2025.csv | icenses/dl-by-de/2.0
+  · Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2025.csv | icenses/dl-by-de/2.0
+  · Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · KÖ IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2025.csv | icenses/dl-by-de/2.0
+  · Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2025_0.csv | icenses/dl-by-de/2.0
+  · OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  · Pempelforter Straße 42 Mischverkehr IN OUT 2025 - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2025.csv | icenses/dl-by-de/2.0
+  > Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Bilker Allee Stadteinwaerts;Bilker Allee Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;6;0;Sonnig;6;0'
+  > Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Christophstraße Stadtauswaerts;Christophstraße Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;1;1;Sonnig;6;0'
+  > Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Elisabethstraße;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;4;Sonnig;6;0'
+  > Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Fleher Deich Stadteinwaerts;Fleher Deich Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;1;26;Sonnig;6;0'
+  > Fleher Deich ost stromaufwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Fleher Deich Ost stromaufwaerts Stadteinwaerts;Fleher Deich Ost stromaufwaerts Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;0;4;Sonnig;6;0'
+  > Fleher Deich Rampe IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Fleher Deich Rampe Rampe abwaerts;Fleher Deich Rampe Rampe aufwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;5;4;Sonnig;6;0'
+  > Fleher Deich west stromabwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Fleher Deich west stromabwaerts Stadteinwaerts;Fleher Deich west stromabwaerts Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;5;0;Sonnig;6;0'
+  > Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Friedrichstraße;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;;Sonnig;6;0'
+  > Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Hofgartenrampe Oederallee IN - Ri. Innenstadt;Hofgartenrampe Oederallee OUT - Ri. Oberkassel;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;5;5;Sonnig;6;0'
+  > Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Kirchfeldstraße IN;Kirchfeldstraße OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;8;1;Sonnig;6;0'
+  > KÖ IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;KOE Steinstraße IN;KOE Steinstraße OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;0;2;Sonnig;6;0'
+  > Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Koblenzer einwaerts nach TLS IN - stadteinwaerts;Koblenzer einwaerts nach TLS OUT - stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen', erste '01-01-2025 00:00:00;0;0;Sonnig;4;0'
+  > Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Koblenzer einwaerts vor TLS IN - stadteinwaerts;Koblenzer einwaerts vor TLS OUT - stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (', erste '01-01-2025 00:00:00;0;0;Sonnig;4;0'
+  > Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Koblenzer stadtauswaerts Stadtauswaerts;Koblenzer stadtauswaerts Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;0;0;Sonnig;4;0'
+  > Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Koelner Straße 186 (Radweg) IN;Koelner Straße 186 (Radweg) OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;;;Sonnig;6;0'
+  ! Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: URLError(ConnectionRefusedError(111, 'Connection refused'))
+  > Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Luegallee IN;Luegallee OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;0;0;Sonnig;6;0'
+  > Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Mannesmann Ufer Stadteinwaerts (Ri. Sueden);Mannesmann Ufer Stadtauswaerts (Ri. Norden);Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;0;6;Sonnig;6;0'
+  > Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Muenchener/Ickeswarder Str Stadteinwaerts;Muenchener/Ickeswarder Str Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;0;0;Sonnig;6;0'
+  > Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Oberkasseler Bruecke Richtung Innenstadt;Oberkasseler Bruecke Richtung Oberkassel;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;7;12;;;'
+  > OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;OKB Nord Richtung Innenstadt;OKB Nord Richtung Oberkassel;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;1;9;Sonnig;6;0'
+  > OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;OKB Sued Richtung Innenstadt;OKB Sued Richtung Oberkassel;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;6;3;Sonnig;6;0'
+  > Pempelforter Straße 42 Mischverkehr IN OUT 2025 - Wetterabhängige Jahresübersicht Dauerzählstelle 2025: 8759 Zeilen, Kopf 'Zeit;Pempelforter Straße 42 (Mischverkehr) IN;Pempelforter Straße 42 (Mischverkehr) OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)', erste '01-01-2025 00:00:00;;;Sonnig;6;0'
+  2012 Wetterabhängige Jahresübersicht Dauerzählstel Sommerzeit 2012-03-25: 23 Zeilen; 1–3 Uhr: ['25.03.2012;01:00:00;;Leicht bewölkt;9;91', '25.03.2012;03:00:00;;Sonnig;8;93;19;7;0;', '25.03.2012;04:00:00;;Sonnig;8;92;14;7;0;']
+  2012 Wetterabhängige Jahresübersicht Dauerzählstel Rückstellung 2012-10-28: 24 Zeilen; 1–3 Uhr: ['28.10.2012;01:00:00;20;Sonnig;0;85;2;-3;', '28.10.2012;02:00:00;8;Sonnig;0;86;2;-2;0', '28.10.2012;03:00:00;12;Sonnig;0;87;1;-2;']
+  2013 Wetterabhängige Jahresübersicht Dauerzählstel Sommerzeit 2013-03-31: 0 Zeilen; 1–3 Uhr: []
+  2013 Wetterabhängige Jahresübersicht Dauerzählstel Rückstellung 2013-10-27: 0 Zeilen; 1–3 Uhr: []
+  2014 Wetterabhängige Jahresübersicht Dauerzählstel Sommerzeit 2014-03-30: 23 Zeilen; 1–3 Uhr: ['30.03.2014;01:00:00;23;Sonnig;8;69;16;6;', '30.03.2014;03:00:00;6;Sonnig;7;72;14;5;0', '30.03.2014;04:00:00;2;Sonnig;7;73;11;5;0']
+  2014 Wetterabhängige Jahresübersicht Dauerzählstel Rückstellung 2014-10-26: 24 Zeilen; 1–3 Uhr: ['26.10.2014;01:00:00;23;Nebel;9;96;71;8;0', '26.10.2014;02:00:00;10;Leichter Nebel;9;', '26.10.2014;03:00:00;8;Leichter Nebel;9;9']
+  2015 Wetterabhängige Jahresübersicht Dauerzählstel Sommerzeit 2015-03-29: 23 Zeilen; 1–3 Uhr: ['29.03.2015;01:00:00;1;Nieselregen;7;89;1', '29.03.2015;03:00:00;1;Leichter Regenscha', '29.03.2015;04:00:00;0;Leichter Regenscha']
+  2015 Wetterabhängige Jahresübersicht Dauerzählstel Rückstellung 2015-10-25: 24 Zeilen; 1–3 Uhr: ['25.10.2015;01:00:00;4;Stellenweiser Nies', '25.10.2015;02:00:00;8;Leichter Nebel;10;', '25.10.2015;03:00:00;3;Leichter Nebel;9;9']
+  2016 Wetterabhängige Jahresübersicht Dauerzählstel Sommerzeit 2016-03-27: 23 Zeilen; 1–3 Uhr: ['27.03.2016;01:00:00;;Sonnig;9;72;24;6;0;', '27.03.2016;03:00:00;;Leicht bewölkt;10;7', '27.03.2016;04:00:00;;Leicht bewölkt;9;75']
+  2016 Wetterabhängige Jahresübersicht Dauerzählstel Rückstellung 2016-10-30: 24 Zeilen; 1–3 Uhr: ['30.10.2016;01:00:00;8;Sonnig;6;93;20;7;0', '30.10.2016;02:00:00;8;Sonnig;6;93;18;7;0', '30.10.2016;03:00:00;0;Sonnig;6;93;16;7;0']
+  2017 Wetterabhängige Jahresübersicht Dauerzählstel Sommerzeit 2017-03-26: 23 Zeilen; 1–3 Uhr: ['26.03.2017;01:00:00;15;Sonnig;5;84;6;2;0', '26.03.2017;03:00:00;4;Sonnig;5;90;12;1;0', '26.03.2017;04:00:00;5;Sonnig;5;91;13;2;0']
+  2017 Wetterabhängige Jahresübersicht Dauerzählstel Rückstellung 2017-10-29: 24 Zeilen; 1–3 Uhr: ['29.10.2017;01:00:00;6;Mäßiger Regenfall;', '29.10.2017;02:00:00;20;Leichter Regenfal', '29.10.2017;03:00:00;3;Leichter Regenfall']
+  2018 Wetterabhängige Jahresübersicht Dauerzählstel Sommerzeit 2018-03-25: 23 Zeilen; 1–3 Uhr: ['25.03.2018;01:00:00;0;Leicht bewölkt;7;7', '25.03.2018;03:00:00;0;Leicht bewölkt;6;7', '25.03.2018;04:00:00;0;Leicht bewölkt;6;7']
+  2018 Wetterabhängige Jahresübersicht Dauerzählstel Rückstellung 2018-10-28: 24 Zeilen; 1–3 Uhr: ['28.10.2018;01:00:00;1;Leicht bewölkt;7;7', '28.10.2018;02:00:00;0;Leicht bewölkt;6;7', '28.10.2018;03:00:00;0;Leicht bewölkt;6;7']
+  2019  Wetterabhängige Jahresübersicht Dauerzählste Sommerzeit 2019-03-31: 23 Zeilen; 1–3 Uhr: ['31.03.2019;01:00:00;1;Leicht bewölkt;11;', '31.03.2019;03:00:00;3;Bewölkt;11;74;74;1', '31.03.2019;04:00:00;0;Bewölkt;11;74;68;1']
+  2019  Wetterabhängige Jahresübersicht Dauerzählste Rückstellung 2019-10-27: 24 Zeilen; 1–3 Uhr: ['27.10.2019;01:00:00;1;Leicht bewölkt;16;', '27.10.2019;02:00:00;2;Bedeckt;15;70;89;1', '27.10.2019;03:00:00;0;Bedeckt;15;75;100;']
+  2020 Bilker Allee IN - Wetterabhängige Jahresübers Sommerzeit 2020-03-29: 24 Zeilen; 1–3 Uhr: ['29.03.2020;01:00:00;0;Bedeckt;5;58;57;1;', '29.03.2020;03:00:00;;weather_condition_n', '29.03.2020;03:00:00;0;Leicht bewölkt;5;5']
+  2020 Bilker Allee IN - Wetterabhängige Jahresübers Rückstellung 2020-10-25: 24 Zeilen; 1–3 Uhr: ['25.10.2020;01:00:00;3;Leicht bewölkt;14;', '25.10.2020;02:00:00;3;Bewölkt;14;70;59;1', '25.10.2020;03:00:00;1;Bewölkt;14;70;58;1']
+  2021 Bilker Allee IN - Wetterabhängige Jahresübers Sommerzeit 2021-03-28: 24 Zeilen; 1–3 Uhr: ['28.03.2021;1:00;0;Leicht bewoelkt;7;65;9', '28.03.2021;3:00;;weather_condition_null;', '28.03.2021;3:00;2;Leicht bewoelkt;7;65;3']
+  2021 Bilker Allee IN - Wetterabhängige Jahresübers Rückstellung 2021-10-31: 24 Zeilen; 1–3 Uhr: ['31.10.2021;1:00;2;Stellenweiser Regenfal', '31.10.2021;2:00;3;Leicht bewoelkt;11;90;', '31.10.2021;3:00;0;Leicht bewoelkt;11;91;']
+  2023 Christophstraße IN OUT - Wetterabhängige Jahr Sommerzeit 2023-03-26: 23 Zeilen; 1–3 Uhr: ['26-03-2023 01:00:00;2;3;Leichter Regensc', '26-03-2023 03:00:00;5;1;Stellenweiser Re', '26-03-2023 04:00:00;1;1;Stellenweiser Re']
+  2023 Christophstraße IN OUT - Wetterabhängige Jahr Rückstellung 2023-10-29: 24 Zeilen; 1–3 Uhr: ['29-10-2023 01:00:00;1;8;Nieselregen;12;0', '29-10-2023 02:00:00;6;1;Stellenweiser Re', '29-10-2023 03:00:00;0;0;Stellenweiser Re']
+  2024 Bilker Allee IN OUT - Wetterabhängige Jahresü Sommerzeit 2024-03-31: 23 Zeilen; 1–3 Uhr: ['31-03-2024 01:00:00;4;2;Bewoelkt;9;0', '31-03-2024 03:00:00;0;0;Bedeckt;9;0', '31-03-2024 04:00:00;0;0;Bewoelkt;9;0']
+  2024 Bilker Allee IN OUT - Wetterabhängige Jahresü Rückstellung 2024-10-27: 24 Zeilen; 1–3 Uhr: ['27-10-2024 01:00:00;5;5;Sonnig;8;0', '27-10-2024 02:00:00;11;3;Sonnig;8;0', '27-10-2024 03:00:00;0;4;Sonnig;8;0']
+  2025 Bilker Allee IN OUT - Wetterabhängige Jahresü Sommerzeit 2025-03-30: 23 Zeilen; 1–3 Uhr: ['30-03-2025 01:00:00;6;2;Sonnig;6;0', '30-03-2025 03:00:00;1;1;Sonnig;6;0', '30-03-2025 04:00:00;1;1;Leicht bewoelkt;']
+  2025 Bilker Allee IN OUT - Wetterabhängige Jahresü Rückstellung 2025-10-26: 24 Zeilen; 1–3 Uhr: ['26-10-2025 01:00:00;12;2;Nieselregen;7;0', '26-10-2025 02:00:00;1;0;Stellenweiser Re', '26-10-2025 03:00:00;0;0;Stellenweiser Re']
+  Juni-Werktage 2014 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [2.5, 14.0, 45.5, 94.0, 75.8, 65.9]
+  Juni-Werktage 2014 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [6.9, 38.4, 131.8, 226.9, 150.3, 93.9]
+  Juni-Werktage 2015 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [7.5, 21.4, 79.9, 172.9, 101.6, 131.9]
+  Juni-Werktage 2015 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 10 Uhr, spät 17 Uhr; 5–10 Uhr [4.8, 19.2, 36.7, 39.5, 43.8, 66.8]
+  Juni-Werktage 2017 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [5.1, 18.0, 51.5, 103.0, 78.1, 63.4]
+  Juni-Werktage 2017 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 10 Uhr, spät 18 Uhr; 5–10 Uhr [2.1, 5.5, 9.4, 21.4, 22.4, 22.7]
+  Juni-Werktage 2018 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 7 Uhr, spät 15 Uhr; 5–10 Uhr [16.0, 15.3, 182.4, 45.7, 53.6, 30.9]
+  Juni-Werktage 2018 Wetterabhängige Jahresübersicht Dauerzählstel: Spitze früh 7 Uhr, spät 15 Uhr; 5–10 Uhr [14.1, 14.5, 229.3, 51.3, 57.0, 32.8]
+  Juni-Werktage 2019  Wetterabhängige Jahresübersicht Dauerzählste: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [16.6, 53.9, 89.7, 84.2, 38.5, 31.9]
+  Juni-Werktage 2019  Wetterabhängige Jahresübersicht Dauerzählste: Spitze früh 9 Uhr, spät 18 Uhr; 5–10 Uhr [3.6, 6.4, 13.8, 24.9, 28.5, 27.5]
+  Juni-Werktage 2020 Bilker Allee IN - Wetterabhängige Jahresübers: Spitze früh 9 Uhr, spät 18 Uhr; 5–10 Uhr [3.6, 7.2, 12.0, 16.5, 16.7, 16.5]
+  Juni-Werktage 2020 Bilker Allee OUT - Wetterabhängige Jahresüber: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [3.0, 8.2, 12.6, 19.6, 19.5, 15.7]
+  Juni-Werktage 2020 Christophstraße - Wetterabhängige Jahresübers: Spitze früh 9 Uhr, spät 15 Uhr; 5–10 Uhr [8.7, 26.3, 66.5, 76.8, 78.9, 62.0]
+  Juni-Werktage 2020 Elisabethstraße - Wetterabhängige Jahresübers: Spitze früh 9 Uhr, spät 17 Uhr; 5–10 Uhr [4.0, 6.2, 19.8, 24.5, 34.0, 32.5]
+  Juni-Werktage 2020 Fleher Deich - Wetterabhängige Jahresübersich: Spitze früh 10 Uhr, spät 17 Uhr; 5–10 Uhr [33.5, 73.9, 107.3, 108.0, 89.5, 113.5]
+  Juni-Werktage 2020 Fleher Deich Ost stromaufwärts - Wetterabhäng: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [16.4, 40.7, 75.2, 58.4, 35.6, 34.9]
+  Juni-Werktage 2020 Fleher Deich Rampe - Wetterabhängige Jahresüb: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [25.7, 69.0, 119.0, 97.0, 73.1, 82.3]
+  Juni-Werktage 2020 Fleher Deich west stromabwärts - Wetterabhäng: Spitze früh 10 Uhr, spät 16 Uhr; 5–10 Uhr [9.3, 28.3, 43.8, 38.5, 37.5, 47.4]
+  Juni-Werktage 2020 Friedrichstraße - Wetterabhängige Jahresübers: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [8.5, 20.1, 73.3, 108.0, 91.8, 78.0]
+  Juni-Werktage 2020 Kirchfeldstraße - Wetterabhängige Jahresübers: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [8.2, 31.7, 104.5, 165.1, 116.4, 92.5]
+  Juni-Werktage 2020 KÖ Steinstraße - Wetterabhängige Jahresübersi: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [10.5, 49.9, 136.3, 242.8, 193.6, 167.1]
+  Juni-Werktage 2020 Koblenzer einwärts nach TLS - Wetterabhängige: Spitze früh 8 Uhr, spät 15 Uhr; 5–10 Uhr [10.4, 11.5, 27.6, 39.5, 36.0, 35.2]
+  Juni-Werktage 2020 Koblenzer einwärts vor TLS - Wetterabhängige : Spitze früh 8 Uhr, spät 15 Uhr; 5–10 Uhr [11.0, 11.7, 30.0, 52.5, 43.7, 39.5]
+  Juni-Werktage 2020 Koblenzer stadtauswärts - Wetterabhängige Jah: Spitze früh 10 Uhr, spät 16 Uhr; 5–10 Uhr [5.1, 16.3, 38.0, 35.4, 30.3, 49.4]
+  Juni-Werktage 2020 Koblenzer Straße - Wetterabhängige Jahresüber: Spitze früh 8 Uhr, spät 16 Uhr; 5–10 Uhr [26.5, 39.5, 95.5, 127.4, 110.0, 124.0]
+  Juni-Werktage 2020 Lohauser Deich - Wetterabhängige Jahresübersi: Spitze früh 10 Uhr, spät 18 Uhr; 5–10 Uhr [6.4, 25.2, 47.6, 52.5, 58.3, 83.6]
+  Juni-Werktage 2020 Mannesmann Ufer - Wetterabhängige Jahresübers: Spitze früh 8 Uhr, spät 14 Uhr; 5–10 Uhr [176.9, 249.7, 348.2, 389.1, 279.0, None]
+  Juni-Werktage 2020 Münchener_Ickeswarder Str - Wetterabhängige J: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [14.0, 32.0, 70.8, 62.7, 44.4, 44.3]
+  Juni-Werktage 2020 OKB Nord - Wetterabhängige Jahresübersicht Da: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [14.0, 47.1, 131.3, 188.5, 127.1, 113.6]
+  Juni-Werktage 2020 OKB Süd - Wetterabhängige Jahresübersicht Dau: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [7.6, 20.0, 72.0, 109.4, 87.0, 73.8]
+  Juni-Werktage 2021 Bilker Allee OUT - Wetterabhängige Jahresüber: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [2.9, 8.2, 18.2, 38.2, 24.3, 21.9]
+  Juni-Werktage 2021 Christophstraße - Wetterabhängige Jahresübers: Spitze früh 7 Uhr, spät 18 Uhr; 5–10 Uhr [10.2, 19.6, 129.2, 123.5, 77.2, 62.4]
+  Juni-Werktage 2021 Fleher Deich W stromab - Wetterabhängige Jahr: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [13.0, 31.4, 52.8, 45.1, 37.0, 40.1]
+  Juni-Werktage 2021 Friedrichstraße - Wetterabhängige Jahresübers: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [7.0, 23.8, 81.8, 122.2, 99.1, 80.0]
+  Juni-Werktage 2021 Kirchfeldstraße - Wetterabhängige Jahresübers: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [9.8, 28.6, 147.8, 177.7, 118.8, 92.4]
+  Juni-Werktage 2021 KÖ Steinstraße - Wetterabhängige Jahresübersi: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [9.3, 45.1, 145.4, 206.8, 165.2, 157.9]
+  Juni-Werktage 2021 Koblenzer Straße einwärts nach TL S - Wettera: Spitze früh 7 Uhr, spät 15 Uhr; 5–10 Uhr [10.5, 13.6, 143.6, 66.4, 46.0, 34.5]
+  Juni-Werktage 2021 Koblenzer Straße einwärts vor TL S - Wetterab: Spitze früh 7 Uhr, spät 15 Uhr; 5–10 Uhr [10.5, 13.6, 143.6, 66.4, 46.0, 34.5]
+  Juni-Werktage 2021 Koblenzer Straße stadtauswärts  - Wetterabhän: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [6.0, 19.1, 130.8, 76.3, 58.1, 54.2]
+  Juni-Werktage 2021 Lohauser Deich - Wetterabhängige Jahresübersi: Spitze früh 10 Uhr, spät 18 Uhr; 5–10 Uhr [7.0, 24.7, 53.9, 56.4, 59.4, 77.5]
+  Juni-Werktage 2021 Mannesmannufer - Totem 01 - Wetterabhängige J: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [26.5, 90.6, 293.3, 342.6, 209.5, 172.9]
+  Juni-Werktage 2021 Münchener Straße Ickerswarder Straße - Wetter: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [14.0, 32.9, 122.0, 74.0, 45.0, 39.4]
+  Juni-Werktage 2021 OKB Nord - Wetterabhängige Jahresübersicht Da: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [17.5, 48.9, 173.5, 193.7, 120.4, 105.3]
+  Juni-Werktage 2021 OKB Süd - Wetterabhängige Jahresübersicht Dau: Spitze früh 7 Uhr, spät 18 Uhr; 5–10 Uhr [7.3, 18.5, 112.3, 112.0, 73.0, 66.7]
+  Juni-Werktage 2023 Christophstraße IN OUT - Wetterabhängige Jahr: Spitze früh 8 Uhr, spät 16 Uhr; 5–10 Uhr [2.7, 12.2, 53.0, 98.2, 65.6, 69.3]
+  Juni-Werktage 2024 Bilker Allee IN OUT - Wetterabhängige Jahresü: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [2.1, 6.8, 19.1, 23.8, 21.4, 20.1]
+  Juni-Werktage 2024 Christophstraße IN OUT - Wetterabhängige Jahr: Spitze früh 8 Uhr, spät 16 Uhr; 5–10 Uhr [4.3, 15.5, 102.0, 112.2, 69.5, 64.0]
+  Juni-Werktage 2024 Elisabethstraße - Wetterabhängige Jahresübers: Spitze früh 10 Uhr, spät 18 Uhr; 5–10 Uhr [3.6, 7.5, 23.9, 30.9, 30.1, 33.8]
+  Juni-Werktage 2024 Fleher Deich IN OUT - Wetterabhängige Jahresü: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [34.1, 69.6, 135.0, 116.4, 80.1, 80.7]
+  Juni-Werktage 2024 Fleher Deich ost stromaufwärts - Wetterabhäng: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [21.9, 45.0, 72.5, 58.5, 32.1, 27.6]
+  Juni-Werktage 2024 Hofgartenrampe Oederallee IN OUT - Wetterabhä: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [2.6, 5.0, 8.8, 12.1, 6.8, 7.0]
+  Juni-Werktage 2024 Kirchfeldstraße IN OUT - Wetterabhängige Jahr: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [3.2, 13.2, 50.1, 44.1, 40.5, 28.6]
+  Juni-Werktage 2024 KÖ Steinstraße IN OUT - Wetterabhängige Jahre: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [4.8, 16.2, 55.1, 114.2, 82.8, 63.5]
+  Juni-Werktage 2024 Koblenzer einwärts nach TLS IN OUT - Wetterab: Spitze früh 7 Uhr, spät 15 Uhr; 5–10 Uhr [15.4, 14.0, 99.0, 24.5, 28.4, 23.4]
+  Juni-Werktage 2024 Koblenzer einwärts vor TLS IN OUT - Wetterabh: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [11.9, 12.2, 115.0, 31.0, 26.2, 20.3]
+  Juni-Werktage 2024 Koblenzer stadtauswärts 2024 - Wetterabhängig: Spitze früh 7 Uhr, spät 15 Uhr; 5–10 Uhr [11.8, 16.1, 83.3, 36.4, 30.4, 29.9]
+  Juni-Werktage 2024 Lohauser Deich IN OUT - Wetterabhängige Jahre: Spitze früh 7 Uhr, spät 18 Uhr; 5–10 Uhr [2.9, 9.6, 30.4, 26.7, 19.8, 23.1]
+  Juni-Werktage 2024 Luegallee IN OUT - Wetterabhängige Jahresüber: Spitze früh 5 Uhr, spät 14 Uhr; 5–10 Uhr [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  Juni-Werktage 2024 Mannesmannufer IN OUT - Wetterabhängige Jahre: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [5.7, 24.3, 93.2, 123.8, 54.6, 42.8]
+  Juni-Werktage 2024 Münchner Ickerswarder Straße IN OUT - Wettera: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [9.9, 27.7, 100.1, 63.1, 32.4, 24.2]
+  Juni-Werktage 2024 Oberkasseler Brücke IN OUT - Wetterabhängige : Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [15.4, 39.3, 142.5, 189.1, 118.7, 87.3]
+  Juni-Werktage 2024 OKB Nord IN OUT - Wetterabhängige Jahresübers: Spitze früh 7 Uhr, spät 18 Uhr; 5–10 Uhr [5.2, 11.5, 22.2, 16.0, 11.8, 13.1]
+  Juni-Werktage 2024 OKB Süd IN OUT - Wetterabhängige Jahresübersi: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [11.6, 28.8, 122.7, 176.4, 109.3, 78.0]
+  Juni-Werktage 2025 Bilker Allee IN OUT - Wetterabhängige Jahresü: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [2.1, 7.0, 22.2, 25.4, 21.5, 21.9]
+  Juni-Werktage 2025 Christophstraße IN OUT - Wetterabhängige Jahr: Spitze früh 8 Uhr, spät 14 Uhr; 5–10 Uhr [2.0, 7.1, 50.4, 80.0, 46.2, 53.8]
+  Juni-Werktage 2025 Elisabethstraße - Wetterabhängige Jahresübers: Spitze früh 10 Uhr, spät 17 Uhr; 5–10 Uhr [4.2, 6.8, 24.8, 32.5, 32.8, 34.8]
+  Juni-Werktage 2025 Fleher Deich IN OUT - Wetterabhängige Jahresü: Spitze früh 10 Uhr, spät 16 Uhr; 5–10 Uhr [21.0, 40.8, 56.1, 49.9, 43.5, 57.0]
+  Juni-Werktage 2025 Fleher Deich ost stromaufwärts IN OUT - Wette: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [19.2, 34.9, 74.0, 61.9, 28.7, 24.3]
+  Juni-Werktage 2025 Fleher Deich Rampe IN OUT - Wetterabhängige J: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [28.0, 47.0, 99.7, 90.0, 46.2, 38.5]
+  Juni-Werktage 2025 Fleher Deich west stromabwärts IN OUT - Wette: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [8.8, 12.1, 25.6, 28.1, 17.5, 14.2]
+  Juni-Werktage 2025 Hofgartenrampe Oederallee IN OUT - Wetterabhä: Spitze früh 8 Uhr, spät 18 Uhr; 5–10 Uhr [0.7, 3.8, 9.2, 11.0, 6.5, 6.6]
+  Juni-Werktage 2025 Kirchfeldstraße IN OUT - Wetterabhängige Jahr: Spitze früh 7 Uhr, spät 18 Uhr; 5–10 Uhr [3.2, 11.6, 43.9, 42.4, 33.4, 28.2]
+  Juni-Werktage 2025 KÖ IN OUT - Wetterabhängige Jahresübersicht D: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [3.6, 13.2, 44.8, 89.9, 58.9, 45.4]
+  Juni-Werktage 2025 Koblenzer einwärts nach TLS IN OUT - Wetterab: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [15.0, 13.2, 89.0, 26.8, 23.8, 25.7]
+  Juni-Werktage 2025 Koblenzer einwärts vor TLS IN OUT - Wetterabh: Spitze früh 7 Uhr, spät 16 Uhr; 5–10 Uhr [12.3, 12.0, 102.0, 30.6, 28.0, 23.4]
+  Juni-Werktage 2025 Koblenzer stadtauswärts - Wetterabhängige Jah: Spitze früh 7 Uhr, spät 15 Uhr; 5–10 Uhr [12.5, 13.4, 102.3, 30.4, 29.8, 26.1]
+  Juni-Werktage 2025 Kölner Straße 186 Radweg IN OUT - Wetterabhän: Spitze früh 9 Uhr, spät 19 Uhr; 5–10 Uhr [2.0, 2.7, 2.0, 3.0, 3.1, 2.3]
+  Juni-Werktage 2025 Luegallee IN OUT - Wetterabhängige Jahresüber: Spitze früh 5 Uhr, spät 14 Uhr; 5–10 Uhr [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  Juni-Werktage 2025 Mannesmannufer IN OUT - Wetterabhängige Jahre: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [8.0, 35.2, 120.8, 176.3, 88.9, 63.7]
+  Juni-Werktage 2025 Münchner Ickerswarder Straße IN OUT - Wettera: Spitze früh 7 Uhr, spät 17 Uhr; 5–10 Uhr [11.4, 32.0, 97.5, 64.0, 34.8, 29.4]
+  Juni-Werktage 2025 Oberkasseler Brücke IN OUT - Wetterabhängige : Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [8.2, 33.0, 136.6, 179.0, 115.6, 97.0]
+  Juni-Werktage 2025 OKB Nord IN OUT - Wetterabhängige Jahresübers: Spitze früh 7 Uhr, spät 18 Uhr; 5–10 Uhr [1.5, 7.2, 15.5, 15.3, 11.4, 9.6]
+  Juni-Werktage 2025 OKB Süd IN OUT - Wetterabhängige Jahresübersi: Spitze früh 8 Uhr, spät 17 Uhr; 5–10 Uhr [6.7, 25.8, 121.1, 163.7, 104.2, 87.5]
+  Juni-Werktage 2025 Pempelforter Straße 42 Mischverkehr IN OUT 20: Spitze früh 8 Uhr, spät 14 Uhr; 5–10 Uhr [0.0, 0.0, 0.0, 0.2, 0.1, 0.1]
+
+2025: {'Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerz': 278933, 'Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dau': 333974, 'Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzähls': 0, 'Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerz': 564612, 'Fleher Deich Rampe IN OUT - Wetterabhängige Jahresübersicht ': 460407, 'Fleher Deich ost stromaufwärts IN OUT - Wetterabhängige Jahr': 211648, 'Fleher Deich west stromabwärts IN OUT - Wetterabhängige Jahr': 248759, 'Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzähls': 0, 'Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübe': 269905, 'Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dau': 419314, 'Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresü': 159922, 'Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresüb': 157715, 'Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Da': 344354, 'KÖ IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle ': 550664, 'Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresüber': 54580, 'Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzähl': 0, 'Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Daue': 1044358, 'Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahres': 264526, 'OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzähls': 491810, 'OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählst': 463212, 'Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht': 955022, 'Pempelforter Straße 42 Mischverkehr IN OUT 2025 - Wetterabhä': 36006}
+  Summe: Fleher Deich ost stromaufwärts IN OUT - Wetterabhängige Jahr + Fleher Deich west stromabwärts IN OUT - Wetterabhängige Jahr = Fleher Deich Rampe IN OUT - Wetterabhängige Jahresübersicht  an 100% von 365 Tagen
+  Summe: OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzähls + OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählst = Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht an 100% von 365 Tagen
