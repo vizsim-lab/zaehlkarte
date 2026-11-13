@@ -1,4 +1,7 @@
-"""Nur die Rad-Quellen bauen (Code von app/), Ausgabe nach <ziel>/public/data/dauer; Bericht."""
+"""Nur die Rad-Quellen bauen (Code von app/), Ausgabe nach <ziel>/public/data/dauer; Bericht.
+
+    rad_bau.py <ziel> [quelle,quelle,…]
+"""
 import resource
 import sys
 import time
@@ -8,6 +11,8 @@ from zaehlkarte.config import Pfade
 from zaehlkarte.dauer import bau, site
 
 RAD = ["mobidata_rad", "muenster_rad", "aachen_rad", "berlin_rad", "muenchen_rad"]
+if len(sys.argv) > 2:  # Quellen als Liste mit Komma
+    RAD = sys.argv[2].split(",")
 ziel = Path(sys.argv[1])
 pfade = Pfade(repo=ziel)
 t0 = time.time()
