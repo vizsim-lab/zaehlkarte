@@ -1,7 +1,8 @@
 // Familie Dauerzählstellen im Browser – mit kleinen Fixture-Dateien (tests/web/fixtures/dauer/)
 // statt der echten Daten, damit der Test nicht vom Release-Asset „dauerzaehlstellen“ abhängt.
 // Fixture: zwei Messquerschnitte in Berlin, Juni 2025 (am 3.6. fehlt bei TE001 eine Stunde), dazu
-// Hamburg vom 15.6. bis 10.7.2025: eine Kfz-Zählstelle mit Schwerverkehr und eine Rad-Zählstelle.
+// Hamburg vom 15.6. bis 10.7.2025: eine Kfz-Zählstelle mit Schwerverkehr und eine Rad-Zählstelle,
+// und Ettlingen vom 1.6. bis 10.7.2025: zwei Richtungen eines Sensors am selben Punkt (CC BY-NC).
 import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 import { oeffne, zahl } from "./helpers.js";
@@ -52,9 +53,9 @@ test("Umschalter lädt die Dauerzählstellen: Tag, Klassen, Zähler und Link", a
   await expect(page.locator('#thema-chips [data-thema="rad"]')).toBeVisible();
   await expect(page.locator('#thema-chips [data-thema="fuss"]')).toBeHidden();
   await expect(page.locator("#fc-zaehlungen-name")).toHaveText("vollständig");
-  expect(await zahl(page.locator("#fc-stellen"))).toBe(3); // zwei in Berlin, eine in Hamburg (Kfz)
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(5); // Berlin zwei, Hamburg eine (Kfz), Ettlingen zwei
   // querySourceFeatures liefert je Kachel – Stellen zählen, nicht Treffer
-  await expect.poll(() => page.evaluate(() => new Set(window.__app.karte.querySourceFeatures("dauer").map((f) => f.properties.i)).size)).toBe(3);
+  await expect.poll(() => page.evaluate(() => new Set(window.__app.karte.querySourceFeatures("dauer").map((f) => f.properties.i)).size)).toBe(5);
   expect(await page.evaluate(() => window.__app.karte.getLayoutProperty("stellen-kreis", "visibility"))).toBe("none");
 
   // ein Tag zurück, dann der 3.6.: TE001 dort nicht vollständig gezählt -> hohl, kein Wert
@@ -62,7 +63,7 @@ test("Umschalter lädt die Dauerzählstellen: Tag, Klassen, Zähler und Link", a
   await expect(page).toHaveURL(/z=2025-06-25/);
   await page.locator("#dauer-datum").fill("2025-06-03");
   await expect(page).toHaveURL(/z=2025-06-03/);
-  await expect(page.locator("#fc-zaehlungen")).toHaveText("1");
+  await expect(page.locator("#fc-zaehlungen")).toHaveText("3"); // TE002 und die beiden in Ettlingen
   const nicht = page.locator("#klassen-legende .legend-item").last();
   await expect(nicht).toContainText("an dem Tag nicht vollständig gezählt");
   await expect(nicht.locator(".count-badge")).toHaveText("1");
@@ -112,9 +113,11 @@ test("CSV der Dauerzählstellen: Tagessummen des Tags, leer statt 0", async ({ p
   const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
   const zeilen = text.replace(/^﻿/, "").trim().split("\n");
   expect(zeilen[0]).toBe("quelle;stelle;name;abschnitt;richtung;lon;lat;datum;tagtyp;kfz_tagessumme;lkw_tagessumme;sv_tagessumme;rad_tagessumme;lizenz");
-  expect(zeilen).toHaveLength(3); // Hamburg beginnt erst am 15.6.
+  expect(zeilen).toHaveLength(5); // Hamburg beginnt erst am 15.6.
   expect(zeilen[1]).toMatch(/^berlin_viz;berlin_viz:TE001;.*;2025-06-03;Schultag;;;;;dl-de\/by-2-0$/);
   expect(zeilen[2]).toMatch(/;2025-06-03;Schultag;\d+;\d+;;;dl-de\/by-2-0$/);
+  // die Lizenz steht in jeder Zeile – bei Ettlingen nur nicht kommerziell
+  expect(zeilen[3]).toMatch(/^ettlingen;ettlingen:1263-2;Rastatter Straße;;Richtung Bruchhausen;.*;2025-06-03;Schultag;1142;;;;CC BY-NC 4\.0$/);
 });
 
 test("Ohne Dauerzählstellen bleibt der Umschalter aus, die Karte läuft wie bisher", async ({ page }) => {
@@ -144,7 +147,7 @@ test("Mehrere Quellen: Schwerverkehr und Rad aus Hamburg, Sprung zu Berlin auße
   const hinweis = page.locator("#dauer-quellen");
   await expect(hinweis).toBeVisible();
   await expect(hinweis).toContainText("Berlin (Verkehrsdetektion): Werte vom 01.06.2025 bis 30.06.2025");
-  expect(await zahl(page.locator("#fc-stellen"))).toBe(1);
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(3); // Hamburg eine, Ettlingen zwei
 
   await page.locator('#thema-chips [data-thema="sv"]').click();
   await expect(page).toHaveURL(/t=sv\.menge/);
@@ -165,6 +168,33 @@ test("Mehrere Quellen: Schwerverkehr und Rad aus Hamburg, Sprung zu Berlin auße
   await hinweis.locator("[data-sprung]").click();
   await expect(page).toHaveURL(/z=2025-06-26/);
   await expect(hinweis).toBeHidden();
-  expect(await zahl(page.locator("#fc-stellen"))).toBe(3);
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(5);
+  expect(fehler).toEqual([]);
+});
+
+test("Stellen am selben Punkt: Umschalter in der Seitenleiste, Lizenz CC BY-NC", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page, "#f=d&z=2025-06-26&s=ettlingen:1263-2");
+  const detail = page.locator("#dauer-detail");
+  await expect(detail.locator(".detail-titel")).toHaveText("Rastatter Straße");
+  const punkt = detail.locator(".dd-punkt");
+  await expect(punkt).toContainText("Am selben Punkt");
+  await expect(punkt.locator("button")).toHaveCount(2);
+  await expect(punkt.locator('[aria-pressed="true"]')).toHaveText("Richtung Bruchhausen");
+  await expect(detail.locator(".detail-kennwerte")).toContainText("1.142");
+  await expect(detail.getByRole("link", { name: "CC BY-NC 4.0" })).toHaveAttribute("href", /licenses\/by-nc\/4\.0/);
+  await expect(detail.locator(".detail-hinweise")).toContainText("nur nicht kommerziell");
+
+  // zur anderen Richtung: Seitenleiste und Link wechseln, der Tag bleibt
+  await punkt.locator("button", { hasText: "Richtung Innenstadt" }).click();
+  await expect(page).toHaveURL(/s=ettlingen:1263-3/);
+  await expect(page).toHaveURL(/z=2025-06-26/);
+  await expect(detail.locator('.dd-punkt [aria-pressed="true"]')).toHaveText("Richtung Innenstadt");
+  await expect(detail.locator(".detail-kennwerte")).toContainText("2.092");
+
+  // Stellen ohne Nachbarn am selben Punkt haben keinen Umschalter
+  await klickeDauer(page, "berlin_viz:TE001");
+  await expect(detail.locator(".detail-titel")).toHaveText("Clayallee");
+  await expect(detail.locator(".dd-punkt")).toHaveCount(0);
   expect(fehler).toEqual([]);
 });

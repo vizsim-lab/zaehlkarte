@@ -139,3 +139,17 @@ def tagessummen(reihe: Messreihe, gruppe: str) -> tuple[np.ndarray, np.ndarray]:
     summe = np.where(gezaehlt, w, 0).sum(axis=2, dtype=np.int64)
     voll = n == erwartet.sum(axis=2)
     return np.where(voll, summe, LEER).astype(np.int64), n
+
+
+def kuerze(reihe: Messreihe) -> None:
+    """Leere Tage vorn und hinten abschneiden (etwa die Ränder der Umrechnung UTC -> Ortszeit)."""
+    da = np.zeros(reihe.tage, dtype=bool)
+    for w in reihe.werte.values():
+        da |= (w >= 0).any(axis=(0, 2))
+    if not da.any():
+        return
+    a, b = int(np.argmax(da)), int(reihe.tage - 1 - np.argmax(da[::-1]))
+    reihe.von = reihe.tag(a)
+    reihe.tage = b - a + 1
+    reihe.werte = {g: w[:, a:b + 1] for g, w in reihe.werte.items()}
+    reihe.doppelt = reihe.doppelt[:, a:b + 1]

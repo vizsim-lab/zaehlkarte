@@ -84,6 +84,7 @@ async function start() {
     gibZustand: () => zustand,
     gibTag: () => tagJetzt(),
     beiTag: (iso) => tagWechseln(iso),
+    beiStelle: (s) => oeffneDauer(s),
     beiSchliessen: () => { setzeAuswahl(karte, null); merkeLink(); },
   });
   const legende = erstelleLegende({

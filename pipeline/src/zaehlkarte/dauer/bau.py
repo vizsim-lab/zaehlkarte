@@ -7,11 +7,12 @@ from datetime import date
 from pathlib import Path
 
 from zaehlkarte.config import Pfade, dauerquellen
-from zaehlkarte.dauer import berlin_viz, hamburg_sta
+from zaehlkarte.dauer import berlin_viz, hamburg_sta, readi_urbanpulse
 from zaehlkarte.dauer import site as site_
 from zaehlkarte.dauer.modell import Messreihe
 
-ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta}
+ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta,
+           "readi_urbanpulse": readi_urbanpulse}
 
 
 def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list[str], list[str]]:

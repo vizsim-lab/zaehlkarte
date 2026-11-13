@@ -183,8 +183,8 @@ auch nicht (nicht kommunal).
   Kurzzeitzählungen nur bei MobiData BW (Ravensburg und Umland) und in Konstanz. Sonst sind nur
   Dauerzählungen offen – Freiburg (Rad-Zählstellen; 25 Sensoren im Testbetrieb, der WFS
   `digit_verkehrszaehl` zeigt nur drei Standorte vom Mai 2024; Stadtradeln = GPS-Spuren, keine
-  Zählung), Ettlingen (Sensoren, CC BY-NC 4.0; im Datastore stehen alte Kennungen 46–54 ohne
-  Richtung neben UrbanPulse-Strömen je Spur ab August 2026), Ulm (Kameras „vgv_ulm“, eine Zeile
+  Zählung), Ettlingen (Sensoren, CC BY-NC 4.0; seit November 2026 als Dauerzählstellen in der
+  Karte, siehe unten), Ulm (Kameras „vgv_ulm“, eine Zeile
   je Verkehrsteilnehmer, Standorte nur als Kürzel), Mannheim (Eco-Counter), Heidelberg
   (Kameras). Die Geschwindigkeitsdisplays in Konstanz taugen laut Stadt nicht für
   Verkehrsmengen; Heilbronn hat nur Kfz-Bestand und Fahrleistung (Statistisches Landesamt);
@@ -289,6 +289,33 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     nur noch bei 5 Datastreams (2021–2023) – keine Hamburger Historie aus Stunden.
   - Lizenz dl-de/by-2-0 (beide Datensätze im Transparenzportal), Genauigkeit laut Quelle Kfz
     ±10 %, Schwerverkehrsanteil ±15 %, Rad ±10–20 %.
+- **Ettlingen (in der Karte, `ettlingen`, Adapter `readi_urbanpulse`):** Datensatz
+  „Automatisierte Verkehrszählung in Ettlingen“ auf re@di (CKAN `opendata.readi.de`),
+  Ressource „Stundenwerte pro Fahrzeugtyp und Standort“ nur als Datastore; der ganze Bestand
+  kommt über `/datastore/dump/<Ressource>` (CSV, rund 40 MB, aus GitHub Actions in Sekunden; aus
+  manchen Entwicklungsumgebungen nicht erreichbar). `datastore_search_sql` ist abgeschaltet
+  (400). Lizenz CC BY-NC 4.0 – aufgenommen, die Lizenz steht an der Quelle, in der Seitenleiste
+  und in jeder CSV-Zeile. Erkundet im Werkzeug-Branch `werkzeug/dauer`
+  (`tools/dauer_ettlingen.py`, `ergebnis/dauer/ettlingen/`). Fallen:
+  - **Drei Arten Zeilen in einer Tabelle:** (1) Ströme der Plattform UrbanPulse
+    (`source` = „UrbanPulse“, seit 20.08.2026) – je Fahrtrichtung ein Strom (`sid`, `lane_index`,
+    `direction`), Lage je Sensor (`sensor_id`, `latitude`, `longitude`); nur die übernimmt die
+    Karte. (2) Ältere Kennungen 46–54 (Mai 2025 bis 19.08.2026, ohne `source`, Richtung und
+    Lage – nur ein `goo.gl`-Link): **laufende Tageszähler**, kein Stundenwert (der Wert steigt
+    über den Tag, Neubeginn um Mitternacht Ortszeit; in der letzten Stunde des Tags bleibt er
+    gleich, nach Mitternacht fehlen Stunden) → nicht übernommen. (3) Testimporte vom
+    05.08.2026 (Zeitstempel minutengenau, Richtungen in `series_name`) und Übergangszeilen vom
+    20.08.2026 (`label` „Straße | …“).
+  - Klassen ohne Fahrzeug fehlen in der Stunde (keine Nullzeilen); eine Stunde ganz ohne Zeile
+    ist nicht gezählt – auch tagsüber fehlen Stunden, eine Woche fehlt an allen Stellen
+    (164 Stunden). Vollständige Tage je Richtung: 17–56 von rund 80; Schillerstraße („Zone1–3“)
+    und Durlacher Straße Richtung Durlach haben keinen.
+  - Alle Richtungen eines Sensors haben dieselbe Lage → in der Karte übereinander; die
+    Seitenleiste schaltet um (`amSelbenPunkt` in `js/data/dauer.js`).
+  - `timestamp` ohne Zonenangabe, laut Datenbeschreibung UTC (der Tagesgang passt dazu).
+  - Namen uneinheitlich („Strasse“, „Pforzheimer-Str-14“, „Rcihtung“) → Straße und Abschnitt je
+    Sensor in `sources.yaml` (`stellen`), die Richtung ohne den vorangestellten Straßennamen.
+  - `classification` und `amount` sind unbrauchbar (fast überall „LKW+Anhänger“ bzw. 0).
 - **Geprüft, nicht aufgenommen (Stand 12.11.2026,** Werkzeug-Branch `werkzeug/dauer`,
   `tools/dauer_staedte1.py`, `dauer_staedte2.py`):
   - **Osnabrück:** SensorThings `https://daten-api.osnabrueck.de/v1.1` mit KI-Sensoren an
@@ -306,7 +333,6 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     über eine API mit Schlüssel (`api-key` im MobiData-Eintrag) → nicht keyless.
   - **Freiburg:** WFS `digit_verkehrszaehl` nur mit der Ebene `zaehl_co2_aktuell` (letzte
     Werte vom Mai 2024, keine Reihe) – weiter Testbetrieb.
-  - **Ettlingen:** Stundenwerte je Fahrzeugklasse, aber nur CC BY-NC 4.0 → nicht aufnehmen.
   - **Leipzig, Mannheim, Aachen, Ulm (Blautalradweg):** offen nur Rad-Zählsäulen (Eco-Counter)
     – eigener späterer Schritt (Konzept, Entscheidung 1). Leipzigs 24 Kfz-Dauerzählstellen nur
     im Dashboard, nicht als Daten.

@@ -16,8 +16,9 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
 - **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen.
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
-  Legende): fest eingebaute Zähler in Berlin und Hamburg – die Karte zeigt die Tagessumme an
-  einem wählbaren Tag, je Stelle die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
+  Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen – die Karte zeigt die
+  Tagessumme an einem wählbaren Tag, je Stelle die Tagessummen der ganzen Reihe und den
+  Tagesgang des Tags.
 - **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
   `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
   Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
@@ -49,6 +50,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 |---|---|---|---|---|
 | Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
 | Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; in der Karte rund 1.120 Zählstellen, Straßennamen aus OpenStreetMap | vollständig gezählte Tage: Kfz und Rad ab 09.09.2026, Schwerverkehr ab 01.03.2026; wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
+| Ettlingen (Stadt Ettlingen) | automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der Karte als Kfz (Summe der Klassen); 10 Richtungen an 5 Stellen mit vollständigen Tagen | ab 20.08.2026 (ältere Werte ab Mai 2025 nicht übernommen); wöchentlich ergänzt | offen im [Open-Data-Portal re@di](https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen) (Datastore) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.de) – nur nicht kommerziell, „Stadt Ettlingen“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`. Rund 1.500 Berliner Zählungen haben noch keine
@@ -119,7 +121,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   der Detektor bzw. die Kamera von Pkw unterscheidet – nicht dasselbe wie der Schwerverkehr der
   Kurzzeitzählungen und nicht dasselbe wie einander, darum je eine eigene Verkehrsart. Welche
   Verkehrsarten es gibt, richtet sich nach den Quellen (Kfz, Lkw, Schwerverkehr, Rad).
-- Mehrere Quellen, verschiedene Zeiträume: Berlin endet im Juni 2025, Hamburg ist aktuell.
+- Mehrere Quellen, verschiedene Zeiträume: Berlin endet im Juni 2025, Hamburg und Ettlingen
+  sind aktuell.
   Hat eine Quelle am gewählten Tag keine Werte, nennt die Legende ihren Zeitraum und springt auf
   Wunsch zu ihrem Standardtag. Schultag und Ferien gelten je Land.
 - Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
@@ -136,6 +139,13 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   fehlen gelegentlich an allen Stellen zugleich. Die Quelle nennt keine Straßen: Der Name ist die
   nächste benannte Straße aus OpenStreetMap, die Kreuzung ergibt sich aus den übrigen Armen
   desselben Knotenpunkts.
+- Ettlingen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse (UTC, in Ortszeit umgerechnet);
+  Kfz ist die Summe der Klassen (Pkw, leichte Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad).
+  Klassen ohne Fahrzeug liefert die Quelle nicht; eine Stunde ganz ohne Werte gilt als nicht
+  gezählt. Alle Richtungen eines Sensors haben dieselbe Lage – die Seitenleiste schaltet
+  zwischen ihnen um. Die Werte vor dem 20.08.2026 (laufende Tageszähler ohne Fahrtrichtung)
+  sind nicht übernommen. Lizenz CC BY-NC 4.0: Weiterverwendung nur nicht kommerziell; die
+  Lizenz steht an der Quelle, in der Seitenleiste und in jeder Zeile des CSV-Exports.
 
 ## Aufbau
 
@@ -144,7 +154,8 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
   config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
   src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
                             olpe_radar, konstanz_mobil, potsdam_pdf, xanten_pdf)
-  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta), eigener Bau
+  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta, readi_urbanpulse),
+                            eigener Bau
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)

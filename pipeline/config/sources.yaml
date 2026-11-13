@@ -537,6 +537,56 @@ dauer:
       - >-
         Die Quelle nennt keine Straßen. Der Name ist die nächste benannte Straße aus OpenStreetMap
         (© OpenStreetMap-Mitwirkende, ODbL) und kann an Kreuzungen danebenliegen.
+  # Ettlingen: automatische Zählstellen der Stadt im Datastore von re@di. Lizenz CC BY-NC 4.0 –
+  # nur nicht kommerziell; aufgenommen mit der Lizenz an Quelle, Seitenleiste und CSV
+  # (Entscheidung November 2026). Aufbau und Fallen: readi_urbanpulse.py und AGENTS.md.
+  ettlingen:
+    status: live
+    adapter: readi_urbanpulse
+    name: Ettlingen (automatische Zählstellen)
+    land: BW
+    traeger: Stadt Ettlingen
+    art: >-
+      automatische Zählstellen der Stadt; Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der
+      Karte als Kfz (Summe der Klassen)
+    weg: offen im Datastore des Open-Data-Portals re@di (TechnologieRegion Karlsruhe)
+    ferien: schulferien_baden-wuerttemberg.csv
+    portal: https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen
+    dump: https://opendata.readi.de/datastore/dump/a903967d-9177-4db6-977c-267fd745a390
+    klassen:  # Gruppe -> Klassen der Quelle (series_name), deren Summe sie ist
+      kfz: [PKW, Leichtes Nutzfahrzeug, LKW, LKW+Anhänger, Motorrad]
+    frisch_tage: 2  # jüngere Stunden kommen noch nicht in die Karte
+    stellen:  # Straße und Abschnitt je Sensor – die Quelle schreibt sie uneinheitlich
+      "1263": {name: Rastatter Straße}
+      "386119": {name: Schillerstraße, abschnitt: Höhe Hausnummern 2–4}
+      "386121": {name: Pforzheimer Straße, abschnitt: Höhe Hausnummern 78–104}
+      "386122": {name: Durlacher Straße}
+      "395387": {name: Pforzheimer Straße, abschnitt: Höhe Hausnummer 14}
+      "395842": {name: Karlsruher Straße}
+    titel: >-
+      Automatisierte Verkehrszählung in Ettlingen (verändert: Fahrzeugklassen zu Kfz und
+      Stundenwerte zu Tagessummen zusammengefasst)
+    herausgeber: Stadt Ettlingen
+    quellenvermerk: Stadt Ettlingen
+    lizenz: CC BY-NC 4.0
+    lizenz_url: https://creativecommons.org/licenses/by-nc/4.0/deed.de
+    hinweise:
+      - >-
+        Lizenz CC BY-NC 4.0: Die Werte dürfen nur nicht kommerziell und mit Namensnennung (Stadt
+        Ettlingen) weiterverwendet werden.
+      - >-
+        Kfz ist die Summe der Fahrzeugklassen der Quelle (Pkw, leichte Nutzfahrzeuge, Lkw, Lkw mit
+        Anhänger, Motorrad). Klassen ohne Fahrzeug fehlen in einer Stunde; fehlt die ganze Stunde,
+        gilt sie als nicht gezählt – nachts kann das auch eine Stunde ohne Fahrzeug sein.
+      - >-
+        Alle Richtungen einer Zählstelle haben in der Quelle dieselbe Lage; in der Seitenleiste
+        lässt sich zwischen ihnen wechseln.
+      - >-
+        In der Karte stehen die Werte ab dem 20.08.2026. Die älteren Werte ab Mai 2025 stehen in
+        der Quelle als laufende Tageszähler ohne Fahrtrichtung, deren Zeitstempel sich keiner
+        Stunde sicher zuordnen lassen – sie sind nicht übernommen.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde geliefert ist – nicht, ob die Werte plausibel sind.
 
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
@@ -944,15 +994,16 @@ datenlage:
     lat: 48.9406
     stand: automatisch
     was: >-
-      automatische Zählstellen an sechs Stellen, Stundenwerte je Fahrzeugklasse seit Mai 2025 –
-      offen, aber nur nicht kommerziell (CC BY-NC 4.0)
+      automatische Zählstellen an sechs Stellen, Stundenwerte je Fahrzeugklasse (CC BY-NC 4.0) –
+      in der Karte als Dauerzählstellen; Kurzzeitzählungen nicht online
     situation: >-
       Die Stadt veröffentlicht die Werte ihrer automatischen Zählstellen auf dem Open-Data-Portal
       re@di (Städte der TechnologieRegion Karlsruhe): Stundenwerte je Fahrzeugklasse (Pkw, leichte
-      Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad, an einer Stelle Rad) an sechs Stellen in der
-      Karlsruher, Rastatter, Durlacher, Pforzheimer und Schillerstraße, die meisten seit Mai 2025
-      durchgehend. Lizenz: CC BY-NC 4.0, also nur nicht kommerziell. Das sind Dauerzählstellen, daher nicht in der Karte; Kurzzeitzählungen an
-      Knotenpunkten stehen nicht online.
+      Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad) an sechs Stellen in der Karlsruher,
+      Rastatter, Durlacher, Pforzheimer und Schillerstraße, seit August 2026 je Fahrtrichtung.
+      Lizenz: CC BY-NC 4.0, also nur nicht kommerziell. Die Karte zeigt sie als Dauerzählstellen
+      ab dem 20.08.2026; die älteren Werte ab Mai 2025 sind laufende Tageszähler ohne
+      Fahrtrichtung. Kurzzeitzählungen an Knotenpunkten stehen nicht online.
     empfehlung: >-
       Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder
       erheben lässt. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
