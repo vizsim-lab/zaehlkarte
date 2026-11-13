@@ -13,7 +13,7 @@ permissions:
 jobs:
   bauen:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    timeout-minutes: 120  # ein voller Bau mit Hamburg braucht knapp eine Stunde
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0

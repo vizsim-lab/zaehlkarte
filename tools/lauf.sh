@@ -16,5 +16,6 @@ baue() {
   fi
 }
 
-# Dauerzählstellen mit dem Ettlingen-Branch bauen (Berlin, Hamburg, Ettlingen)
-baue dauer-ettlingen
+# Dauerzählstellen mit dem Branch dauer-integration bauen (Vertrag v2: jüngster Schultag je Stelle,
+# Ettlingen mit Lkw)
+baue dauer-integration
