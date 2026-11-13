@@ -16,5 +16,6 @@ baue() {
   fi
 }
 
-mkdir -p ergebnis/dauer/staedte2
-timeout 1500 python3 tools/dauer_staedte2.py ergebnis/dauer/staedte2 > ergebnis/dauer/staedte2/log.txt 2>&1 || true
+# Ettlingen (re@di): Datastore der automatischen Zählstellen erkunden
+mkdir -p ergebnis/dauer/ettlingen
+timeout 2700 uv run --no-project --with pandas python tools/dauer_ettlingen.py ergebnis/dauer/ettlingen "$RUNNER_TEMP/ettlingen" > ergebnis/dauer/ettlingen/log.txt 2>&1 || true
