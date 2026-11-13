@@ -133,6 +133,26 @@ export function klassenDerQuellen(d, thema) {
 }
 
 /**
+ * Verkehrsart für den Blick auf eine Kommune („hinzoomen“ in der Datenlage): das gewählte Thema,
+ * wenn die Kommune es zählt, sonst das ihrer ersten Gruppe – Leipzig und Essen zählen nur Rad, mit
+ * Kfz gewählt bliebe die Karte dort leer. Die Kommune sind die Quellen ihres Namens („Leipzig
+ * (Rad-Zählstellen)“); ohne eigene Quelle (Städte im Bündel von MobiData BW) die nächste Stelle
+ * höchstens 15 km vom Punkt der Kommune.
+ */
+export function themaFuerKommune(d, kommune, lon, lat, thema) {
+  const gruppen = d.quellenMeta.filter((q) => ort(q) === kommune).flatMap((q) => q.gruppen ?? d.gruppen);
+  if (gruppen.length) return gruppen.some((g) => themaVon(g) === thema) ? thema : themaVon(gruppen[0]);
+  const kx = 111.32 * Math.cos((lat * Math.PI) / 180);
+  let naechste = null;
+  let km = 15;
+  for (const s of d.stellen) {
+    const e = Math.hypot((s.lon - lon) * kx, (s.lat - lat) * 110.57);
+    if (e <= km) [naechste, km] = [s, e];
+  }
+  return !naechste || gruppeFuer(naechste, thema) ? thema : themaVon(naechste.gruppen[0]);
+}
+
+/**
  * Quellen, die das Thema zählen, aber am Tag keine Werte haben (ihr Zeitraum für die Gruppe
  * endet vorher oder beginnt später): [{ quelle, von, bis, sprung }] – `sprung` ist der
  * Standardtag der Quelle, liegt er außerhalb, das Ende ihres Zeitraums.

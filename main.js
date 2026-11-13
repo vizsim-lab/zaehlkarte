@@ -12,7 +12,7 @@ import { gibtDauer, ladeDauer, ladeStart } from "./js/data/laden.js";
 import { ansicht, csv, entpacke, features, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
 import {
   ansichtDauer, ansichtJuengster, csvDauer, csvDauerJuengster, entpackeDauer, featuresDauer, imJuengsten, tagDerStelle,
-  tagImZeitraum, themaIn, zaehleDauer,
+  tagImZeitraum, themaFuerKommune, themaIn, zaehleDauer,
 } from "./js/data/dauer.js";
 import { addBasemapTerrain } from "./js/map/basemapTerrain.js";
 import {
@@ -271,6 +271,15 @@ async function start() {
     el.scrollTop = behalteScroll ? scroll : 0;
     el.querySelector("[data-schliessen]").onclick = schliesseDatenlage;
     el.querySelector("[data-hinzoomen]")?.addEventListener("click", () => {
+      // Dauerzählstellen: auf die Verkehrsart wechseln, die die Kommune zählt (Leipzig nur Rad)
+      if (dl && dauer) {
+        const thema = themaFuerKommune(dauer, p.kommune, ...f.geometry.coordinates, zustand.dthema);
+        if (thema !== zustand.dthema) {
+          zustand.dthema = thema;
+          legende.zeichne();
+          zeichne();
+        }
+      }
       karte.flyTo({ center: f.geometry.coordinates, zoom: 11 });
       el.hidden = true;
     });
