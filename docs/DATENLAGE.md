@@ -604,7 +604,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Lage:** Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved, 15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind davon nur die Rad-Zählstellen (über MobiData BW).
 
-**Empfehlung:** Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden- Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
+**Empfehlung:** Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
 
 **Weg:** FragDenStaat, LIFG BW
 

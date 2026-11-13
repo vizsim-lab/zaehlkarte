@@ -869,9 +869,9 @@ dauer:
     portal: https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/
     basis: https://open-data.dortmund.de
     datensatz: fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke
-    stellen:  # Lage nicht im Datensatz: Knoten 5639350907 in OpenStreetMap (© OpenStreetMap-
-      # Mitwirkende, ODbL), „Dauerzählstelle Radverkehr“ mit Verweis auf die Eco-Counter-Seite der
-      # Stelle (Abfrage über Overpass, 13.11.2026)
+    stellen:  # Lage nicht im Datensatz: Knoten 5639350907 in OpenStreetMap
+      # (© OpenStreetMap-Mitwirkende, ODbL), „Dauerzählstelle Radverkehr“ mit Verweis auf die
+      # Eco-Counter-Seite der Stelle (Abfrage über Overpass, 13.11.2026)
       schnettkerbruecke:
         name: Schnettkerbrücke
         abschnitt: Fuß- und Radweg nördlich der B 1, zwischen Wittekindstraße und Dorstfelder Allee
@@ -889,8 +889,9 @@ dauer:
         Je Viertelstunde beide Richtungen zusammen; eine Stunde ist gezählt, wenn alle vier
         Viertelstunden einen Wert haben.
       - >-
-        Der Datensatz nennt keine Koordinaten; die Lage stammt aus OpenStreetMap (© OpenStreetMap-
-        Mitwirkende, ODbL), wo die Zählstelle mit ihrer Anzeigetafel eingetragen ist.
+        Der Datensatz nennt keine Koordinaten; die Lage stammt aus OpenStreetMap
+        (© OpenStreetMap-Mitwirkende, ODbL), wo die Zählstelle mit ihrer Anzeigetafel eingetragen
+        ist.
       - >-
         Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
         dieser Tag gilt als nicht vollständig gezählt.
@@ -2175,8 +2176,8 @@ datenlage:
       nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind
       davon nur die Rad-Zählstellen (über MobiData BW).
     empfehlung: >-
-      Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden-
-      Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
+      Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz
+      Baden-Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
     weg: "FragDenStaat, LIFG BW"
     kontakt: {name: "Stadt Heidelberg", email: "Koordinierungsstelle-LIFG@Heidelberg.de", fds: "https://fragdenstaat.de/behoerde/9232/stadt-heidelberg/"}
     anfrage: true

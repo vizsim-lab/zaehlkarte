@@ -339,10 +339,10 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     über eine API mit Schlüssel (`api-key` im MobiData-Eintrag) → nicht keyless.
   - **Freiburg:** WFS `digit_verkehrszaehl` nur mit der Ebene `zaehl_co2_aktuell` (letzte
     Werte vom Mai 2024, keine Reihe) – weiter Testbetrieb.
-  - **Leipzig:** Rad-Zählstellen nur mit den Stundenwerten der letzten 31 Tage (WFS), dazu
-    Tageswerte zweier Jahre – bräuchte ein Gedächtnis wie Hamburg. Die 24 Kfz-Dauerzählstellen
-    nur im Dashboard, nicht als Daten. (Mannheim, Aachen, Ulm: seit November 2026 mit ihren
-    Rad-Zählstellen in der Karte, siehe unten.)
+  - **Leipzig:** Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten. Die
+    Rad-Zählstellen (nur die Stundenwerte der letzten 31 Tage im WFS, dazu Tageswerte zweier
+    Jahre) sind seit November 2026 mit einem Gedächtnis wie Hamburg in der Karte (siehe unten);
+    ebenso die Rad-Zählstellen von Mannheim, Aachen und Ulm.
   - **Darmstadt:** „Verkehrsdaten im Rohformat“ 2022–2026 (ein Datensatz je Jahr,
     dl-de/by-2-0) aus dem Verkehrsleitrechner: je Kreuzung ein ZIP mit Monats-CSV im
     Minutentakt, je Detektor Belegungen und Verweilzeit (Schleifen `D…`, Taster `TBS…`), laut
@@ -406,8 +406,9 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     je Jahr (das Blatt 2012 reicht bis Ende 2013). München: Jahresdateien „15 Minuten Werte JJJJ“
     (2008–2025, Paket „…Jahreszahlen“), fürs laufende Jahr Monatsdateien; Datum als 2008-06-01,
     20230101 oder 2024.01.01, 2022 mit einer Spalte `t` vorn, bis 2024 `kommentar`.
-  - **Zweite Runde (in der Karte seit November 2026,** alle Quellen des Artefakts „Offene
-    Radzähldaten“, `tools/rad_erkunden12–14.py`, Ergebnisse `ergebnis/rad12–14/`):
+  - **Zweite Runde (in der Karte seit November 2026,** Würzburg, Rhein-Kreis Neuss, Dortmund,
+    Essen, Leipzig, Rostock, Bochum; `tools/rad_erkunden12–14.py`, Ergebnisse
+    `ergebnis/rad12–14/`):
     - **Würzburg, Rhein-Kreis Neuss** (`ods_eco`): Opendatasoft-Export (`…/exports/csv?select=…
       &timezone=UTC`), Eco-Counter-Stunden in UTC. Status Würzburg als Liste (`["raw"]`,
       `["deleted"]` ohne Wert), Neuss als Text (`raw`, `modified`, leer). Würzburg: rund 1.000
@@ -418,11 +419,12 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
       ist leer (Lage aus `coordinates` der Daten), seit dem 05.07.2026 nicht aktualisiert; am Tag
       der Sommerzeit eine leere Zeile zur selben UTC-Stunde wie eine gezählte (leere Zeilen
       zählen nicht mit).
-    - **Rückstellung der Uhr:** In Würzburg, Neuss, Dortmund und Bochum fehlt die erste der beiden
-      Stunden 2–3 Uhr (in UTC 0 Uhr), Essen und Düsseldorf führen 2 Uhr einmal. Ob diese eine
-      Stunde beide enthält, ließ sich nicht klären (Verhältnis 2 Uhr / Mittel aus 1 und 3 Uhr am
-      Rückstelltag streut zu stark, `ergebnis/rad14/rueckstellung.txt`) → der Tag ist nicht
-      vollständig. Leipzig führt beide Stunden einzeln, Rostock unvollständig.
+    - **Rückstellung der Uhr:** In Würzburg, Neuss, Dortmund und Bochum fehlt die erste der
+      beiden Stunden 2–3 Uhr (in UTC 0 Uhr), Essen und Düsseldorf (in der dritten Runde auch
+      Bonn) führen 2 Uhr einmal. Ob diese eine Stunde beide enthält, ließ sich nicht klären
+      (Verhältnis 2 Uhr / Mittel aus 1 und 3 Uhr am Rückstelltag streut zu stark,
+      `ergebnis/rad14/rueckstellung.txt`) → der Tag ist nicht vollständig. Leipzig führt beide
+      Stunden einzeln, Rostock unvollständig.
     - **Dortmund** (Schnettkerbrücke): `zeitpunkt_utc` ist trotz des Namens die Ortszeit mit
       Versatz, `zeitpunkt` dieselbe Ortszeit als UTC ausgewiesen; am Tag der Sommerzeit stehen
       leere Zeilen 2:00–2:45 Uhr (+01:00). Lage nicht im Datensatz und nicht auf dortmund.de –
@@ -478,10 +480,10 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
       leer („weather_condition_null“); ab 2023 fehlt 2 Uhr; Rückstellung: 2 Uhr einmal. Luegallee
       2025 und Friedrichstraße 2023 nur mit 0 (Luegallee 2024 meist). Kaputte Zeilen (Fleher Deich,
       Mannesmannufer 2020) gelten als nicht gezählt; am Mannesmannufer 2020 stehen viele Stunden
-      doppelt (rund 4.500) – nur 42 Tage vollständig. Lage: „Standorte der Dauerzählstellen Radverkehr“ (dl-de/zero-2-0,
-      `Zählstellen_2.csv`), Hofgartenrampe und Luegallee aus OSM; Kölner Straße 186 und
-      Pempelforter Straße 42 (ab 2025 mit Werten) ohne Lage. Der Server lehnt Abrufe zeitweise ab
-      („Connection refused“) – Wiederholungen und Cache im Workflow.
+      doppelt (rund 4.500) – nur 42 Tage vollständig. Lage: „Standorte der Dauerzählstellen
+      Radverkehr“ (dl-de/zero-2-0, `Zählstellen_2.csv`), Hofgartenrampe und Luegallee aus OSM;
+      Kölner Straße 186 und Pempelforter Straße 42 (ab 2025 mit Werten) ohne Lage. Der Server
+      lehnt Abrufe zeitweise ab („Connection refused“) – Wiederholungen und Cache im Workflow.
   - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue

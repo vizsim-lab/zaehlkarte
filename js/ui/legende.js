@@ -154,7 +154,7 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
         <div class="pop-meta" lang="de">${esc(q.art ?? "")}${q.weg ? ` · ${esc(q.weg)}` : ""}</div>
         ${q.ohne_lage ? `<div class="pop-meta">${esc(t("quellen.ohne_lage", { n: zahl(q.ohne_lage) }))}</div>` : ""}
         <ul lang="de">${q.lizenzen.map((l) => `<li>${l.herkunft_url ? `<a href="${esc(l.herkunft_url)}" target="_blank" rel="noopener">${esc(l.titel)}</a>` : esc(l.titel)}${l.herausgeber ? `, ${esc(l.herausgeber)}` : ""} – ${l.lizenz_url ? `<a href="${esc(l.lizenz_url)}" target="_blank" rel="noopener">${esc(l.lizenz)}</a>` : esc(l.lizenz ?? "")}</li>`).join("")}</ul>
-      </div>`).join("") + `<div class="pop-meta">${esc(t("quellen.karte", { datum: manifest.erzeugt }))}</div>`;
+      </div>`).join("") + `<div class="pop-meta">${esc(t("quellen.karte", { datum: datum(manifest.erzeugt) }))}</div>`;
     zeichne();
   }
 
@@ -343,7 +343,9 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     if (!dauer) return;
     const block = document.createElement("div");
     block.id = "quellen-dauer";
-    block.innerHTML = `<div class="legend-section-subtitle">${esc(t("quellen.dauer"))}</div>` + dauer.quellenMeta.map((q) => `
+    block.innerHTML = `<div class="legend-section-subtitle">${esc(t("quellen.dauer"))}</div>`
+      + (dauer.erzeugt ? `<div class="pop-meta">${esc(t("quellen.dauer_stand", { datum: datum(dauer.erzeugt) }))}</div>` : "")
+      + dauer.quellenMeta.map((q) => `
       <div class="quelle-eintrag">
         <div class="quelle-name">${esc(q.name)} <span class="pop-meta">${esc(t("quellen.dauer_umfang", { stellen: zahl(q.stellen), zeitraum: zeitraumText(q.von, q.bis) }))}</span></div>
         <div class="pop-meta" lang="de">${esc(q.art ?? "")}${q.weg ? ` · ${esc(q.weg)}` : ""}</div>
