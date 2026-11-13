@@ -16,6 +16,5 @@ baue() {
   fi
 }
 
-# Ettlingen (re@di): Datastore der automatischen Zählstellen erkunden
-mkdir -p ergebnis/dauer/ettlingen
-timeout 2700 uv run --no-project --with pandas python tools/dauer_ettlingen.py ergebnis/dauer/ettlingen "$RUNNER_TEMP/ettlingen" > ergebnis/dauer/ettlingen/log.txt 2>&1 || true
+# Dauerzählstellen mit dem Ettlingen-Branch bauen (Berlin, Hamburg, Ettlingen)
+baue dauer-ettlingen
