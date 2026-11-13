@@ -1,0 +1,308 @@
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .venv
+Resolved 48 packages in 1ms
+   Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Downloading cryptography (4.5MiB)
+Downloading brotli (1.4MiB)
+Downloading pandas (11.5MiB)
+Downloading numpy (16.0MiB)
+Downloading pdfminer-six (6.3MiB)
+Downloading pillow (6.8MiB)
+Downloading pygments (1.2MiB)
+Downloading ruff (10.1MiB)
+Downloading pycryptodomex (2.2MiB)
+Downloading osmium (1.8MiB)
+Downloading pypdfium2 (3.8MiB)
+ Downloaded brotli
+ Downloaded pygments
+ Downloaded osmium
+ Downloaded pycryptodomex
+ Downloaded pypdfium2
+ Downloaded cryptography
+ Downloaded pdfminer-six
+ Downloaded pillow
+ Downloaded ruff
+ Downloaded pandas
+ Downloaded numpy
+      Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Prepared 43 packages in 716ms
+Installed 45 packages in 57ms
+ + annotated-doc==0.0.5
+ + backports-zstd==1.8.0
+ + brotli==1.2.1
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + cryptography==50.0.2
+ + et-xmlfile==2.0.0
+ + idna==3.20
+ + inflate64==1.0.4
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + multivolumefile==0.2.3
+ + numpy==2.5.4
+ + openpyxl==3.1.5
+ + osmium==4.3.2
+ + packaging==26.3
+ + pandas==3.1.1
+ + pdfminer-six==20260107
+ + pdfplumber==0.11.10
+ + pillow==13.0.0
+ + pluggy==1.7.0
+ + psutil==7.2.2
+ + py7zr==1.1.4
+ + pybcj==1.0.8
+ + pycparser==3.12
+ + pycryptodomex==3.24.2
+ + pygments==2.21.0
+ + pypdfium2==5.15.1
+ + pyppmd==1.3.1
+ + pytest==9.2.0
+ + python-dateutil==4.0.0
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + rich==15.0.0
+ + ruff==0.17.4
+ + shellingham==1.5.4
+ + texttable==1.7.2
+ + typer==0.28.0
+ + tzdata==2026.6
+ + urllib3==2.8.0
+ + xlrd==2.0.2
+ + xlwt==1.3.0
+ + zaehlkarte==0.1.0 (from file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline)
+berlin_viz: 152 Dateien (152 neu geladen)
+hamburg_kfz: 1170 Datastreams, 3157438 Stunden geholt ab Beginn (0 verworfen), Gedächtnis geändert: stunden_2026-02.csv.gz, stunden_2026-03.csv.gz, stunden_2026-04.csv.gz, stunden_2026-05.csv.gz, stunden_2026-06.csv.gz, stunden_2026-07.csv.gz, stunden_2026-08.csv.gz, stunden_2026-09.csv.gz, stunden_2026-10.csv.gz, stunden_2026-11.csv.gz
+hamburg_kfz: Straßennamen für 829 neue Stellen (826 gefunden)
+hamburg_rad: 312 Datastreams, 500393 Stunden geholt ab Beginn (0 verworfen), Gedächtnis geändert: stunden_2026-08.csv.gz, stunden_2026-09.csv.gz, stunden_2026-10.csv.gz, stunden_2026-11.csv.gz
+hamburg_rad: Straßennamen für 312 neue Stellen (309 gefunden)
+ettlingen: Datastore geholt (38.4 MB)
+mobidata_rad: 167 Monatsdateien geladen
+muenster_rad: Archiv geholt (23.6 MB, 1339 Dateien)
+aachen_rad: 2 Jahresdateien (2025, 2026) und Standorte geholt
+berlin_rad: Gesamtdatei geholt (17.8 MB)
+muenchen_rad: 27 Dateien, davon 27 neu geladen
+	Command being timed: "uv run zaehlkarte dauer fetch"
+	User time (seconds): 34.46
+	System time (seconds): 2.94
+	Percent of CPU this job got: 2%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:38.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 823276
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 19
+	Minor (reclaiming a frame) page faults: 366556
+	Voluntary context switches: 56233
+	Involuntary context switches: 502
+	Swaps: 0
+	File system inputs: 109080
+	File system outputs: 1709776
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/[0m[1mcli.py[0m:1 [31m│[0m
+[31m│[0m 00 in dauer_site                                                             [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 97 [0m[2m│   [0m[94mfrom[0m[90m [0m[4;96mzaehlkarte[0m[4;96m.[0m[4;96mdauer[0m[90m [0m[94mimport[0m bau                                   [31m│[0m
+[31m│[0m   [2m 98 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m 99 [0m[2m│   [0merzeugt = date.fromisoformat(datum) [94mif[0m datum [94melse[0m [94mNone[0m             [31m│[0m
+[31m│[0m [31m❱ [0m100 [2m│   [0m_, zeilen = [1;4mbau.site(erzeugt=erzeugt)[0m                              [31m│[0m
+[31m│[0m   [2m101 [0m[2m│   [0m[94mfor[0m z [95min[0m zeilen:                                                   [31m│[0m
+[31m│[0m   [2m102 [0m[2m│   │   [0mtyper.echo(z)                                                  [31m│[0m
+[31m│[0m   [2m103 [0m                                                                       [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mba[0m [31m│[0m
+[31m│[0m [1mu.py[0m:64 in site                                                              [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m61 [0m                                                                        [31m│[0m
+[31m│[0m   [2m62 [0m                                                                        [31m│[0m
+[31m│[0m   [2m63 [0m[94mdef[0m[90m [0m[92msite[0m(pfade: Pfade | [94mNone[0m = [94mNone[0m, erzeugt: date | [94mNone[0m = [94mNone[0m) ->    [31m│[0m
+[31m│[0m      [96mtuple[0m[[96mlist[0m[Path], [96mlist[0m[[96mstr[0m]]:                                           [31m│[0m
+[31m│[0m [31m❱ [0m64 [2m│   [0mgelesen, berichte = [1;4mbaue(pfade)[0m                                     [31m│[0m
+[31m│[0m   [2m65 [0m[2m│   [0mdateien, zeilen = site_.schreibe(gelesen, pfade, erzeugt)           [31m│[0m
+[31m│[0m   [2m66 [0m[2m│   [0malle = [[33mf[0m[33m"[0m[33m{[0mc[33m}[0m[33m: [0m[33m{[0mz[33m}[0m[33m"[0m [94mfor[0m c, zs [95min[0m berichte.items() [94mfor[0m z [95min[0m zs]      [31m│[0m
+[31m│[0m   [2m67 [0m[2m│   [0m[94mreturn[0m dateien, [*alle, *zeilen, *site_.statistik(gelesen)]         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mba[0m [31m│[0m
+[31m│[0m [1mu.py[0m:58 in baue                                                              [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m55 [0m[2m│   │   │   [0m[94mcontinue[0m                                                    [31m│[0m
+[31m│[0m   [2m56 [0m[2m│   │   [0mmodul = ADAPTER[q[[33m"[0m[33madapter[0m[33m"[0m]]                                   [31m│[0m
+[31m│[0m   [2m57 [0m[2m│   │   [0mbericht = modul.Bericht()                                       [31m│[0m
+[31m│[0m [31m❱ [0m58 [2m│   │   [0mgelesen.append((q, [1;4mmodul.lese(q, pfade, bericht)[0m))              [31m│[0m
+[31m│[0m   [2m59 [0m[2m│   │   [0mberichte[code] = bericht.zeilen()                               [31m│[0m
+[31m│[0m   [2m60 [0m[2m│   [0m[94mreturn[0m gelesen, berichte                                            [31m│[0m
+[31m│[0m   [2m61 [0m                                                                        [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mmo[0m [31m│[0m
+[31m│[0m [1mbidata_eco.py[0m:179 in lese                                                    [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m176 [0m[2m│   │   [0mbericht.anzahl += [96mlen[0m(df)                                      [31m│[0m
+[31m│[0m   [2m177 [0m[2m│   │   [0m[94mfor[0m _, z [95min[0m df.drop_duplicates([33m"[0m[33mcounter_site_id[0m[33m"[0m,              [31m│[0m
+[31m│[0m       keep=[33m"[0m[33mlast[0m[33m"[0m).iterrows():                                               [31m│[0m
+[31m│[0m   [2m178 [0m[2m│   │   │   [0mmeta[[96mint[0m(z[[33m"[0m[33mcounter_site_id[0m[33m"[0m])] = z  [2m# die jüngste Angabe [0m [31m│[0m
+[31m│[0m       [2mje Zählstelle gilt[0m                                                     [31m│[0m
+[31m│[0m [31m❱ [0m179 [2m│   │   [0m[94mfor[0m liste, x [95min[0m [96mzip[0m(felder, [1;4mkompakt(df)[0m, strict=[94mTrue[0m):         [31m│[0m
+[31m│[0m   [2m180 [0m[2m│   │   │   [0mliste.append(x)                                            [31m│[0m
+[31m│[0m   [2m181 [0m[2m│   │   [0m[94mdel[0m df                                                         [31m│[0m
+[31m│[0m   [2m182 [0m[2m│   [0mgesammelt = []                                                     [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mmo[0m [31m│[0m
+[31m│[0m [1mbidata_eco.py[0m:128 in kompakt                                                 [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m125 [0m[2m│   [0m[94mif[0m np.isnat(tag).any():                                            [31m│[0m
+[31m│[0m   [2m126 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33miso_timestamp ohne Datum[0m[33m"[0m)                   [31m│[0m
+[31m│[0m   [2m127 [0m[2m│   [0mstunde = ts.slice([94m11[0m, [94m13[0m).astype(np.int64).to_numpy()              [31m│[0m
+[31m│[0m [31m❱ [0m128 [2m│   [0mversatz = [1;4mts.slice([0m[1;4;94m19[0m[1;4m, [0m[1;4;94m22[0m[1;4m).astype(np.int64)[0m.to_numpy()  [2m# „+02:00“[0m [31m│[0m
+[31m│[0m       [2m-> 2[0m                                                                   [31m│[0m
+[31m│[0m   [2m129 [0m[2m│   [0mtage = tag.view(np.int64)                                          [31m│[0m
+[31m│[0m   [2m130 [0m[2m│   [0mutc = tage * [94m24[0m + stunde - versatz                                 [31m│[0m
+[31m│[0m   [2m131 [0m[2m│   [0mroh = df[[33m"[0m[33mchannels_all[0m[33m"[0m].str.strip()                               [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/[0m[1mgeneric.py[0m:6781 in astype                            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 6778 [0m[2m│   │   [0m                                                             [31m│[0m
+[31m│[0m   [2m 6779 [0m[2m│   │   [0m[94melse[0m:                                                        [31m│[0m
+[31m│[0m   [2m 6780 [0m[2m│   │   │   [0m[2m# else, only a single dtype is given[0m                     [31m│[0m
+[31m│[0m [31m❱ [0m 6781 [2m│   │   │   [0mnew_data = [1;4;96mself[0m[1;4m._mgr.astype(dtype=dtype, errors=errors)[0m  [31m│[0m
+[31m│[0m   [2m 6782 [0m[2m│   │   │   [0mres = [96mself[0m._constructor_from_mgr(new_data,               [31m│[0m
+[31m│[0m         axes=new_data.axes)                                                  [31m│[0m
+[31m│[0m   [2m 6783 [0m[2m│   │   │   [0m[94mreturn[0m res.__finalize__([96mself[0m, method=[33m"[0m[33mastype[0m[33m"[0m)           [31m│[0m
+[31m│[0m   [2m 6784 [0m                                                                     [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/internals/[0m[1mmanagers.py[0m:632 in astype                  [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 629 [0m[2m│   │   [0m[94mreturn[0m [96mself[0m.apply([33m"[0m[33mdiff[0m[33m"[0m, n=n)                                [31m│[0m
+[31m│[0m   [2m 630 [0m[2m│   [0m                                                                  [31m│[0m
+[31m│[0m   [2m 631 [0m[2m│   [0m[94mdef[0m[90m [0m[92mastype[0m([96mself[0m, dtype, errors: [96mstr[0m = [33m"[0m[33mraise[0m[33m"[0m) -> Self:           [31m│[0m
+[31m│[0m [31m❱ [0m 632 [2m│   │   [0m[94mreturn[0m [1;4;96mself[0m[1;4m.apply([0m[1;4;33m"[0m[1;4;33mastype[0m[1;4;33m"[0m[1;4m, dtype=dtype, errors=errors)[0m       [31m│[0m
+[31m│[0m   [2m 633 [0m[2m│   [0m                                                                  [31m│[0m
+[31m│[0m   [2m 634 [0m[2m│   [0m[94mdef[0m[90m [0m[92mconvert[0m([96mself[0m) -> Self:                                        [31m│[0m
+[31m│[0m   [2m 635 [0m[2m│   │   [0m[94mreturn[0m [96mself[0m.apply([33m"[0m[33mconvert[0m[33m"[0m)                                  [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/internals/[0m[1mmanagers.py[0m:456 in apply                   [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 453 [0m[2m│   │   │   [0m[94mif[0m [96mcallable[0m(f):                                           [31m│[0m
+[31m│[0m   [2m 454 [0m[2m│   │   │   │   [0mapplied = b.apply(f, **kwargs)                        [31m│[0m
+[31m│[0m   [2m 455 [0m[2m│   │   │   [0m[94melse[0m:                                                     [31m│[0m
+[31m│[0m [31m❱ [0m 456 [2m│   │   │   │   [0mapplied = [1;4;96mgetattr[0m[1;4m(b, f)(**kwargs)[0m                     [31m│[0m
+[31m│[0m   [2m 457 [0m[2m│   │   │   [0mresult_blocks = extend_blocks(applied, result_blocks)     [31m│[0m
+[31m│[0m   [2m 458 [0m[2m│   │   [0m                                                              [31m│[0m
+[31m│[0m   [2m 459 [0m[2m│   │   [0mout = [96mtype[0m([96mself[0m).from_blocks(result_blocks, [ax.view() [94mfor[0m ax [31m│[0m
+[31m│[0m        [95min[0m [96mself[0m.axes])                                                        [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/internals/[0m[1mblocks.py[0m:623 in astype                    [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 620 [0m[2m│   │   │   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mCan not squeeze with more than one [0m [31m│[0m
+[31m│[0m        [33mcolumn.[0m[33m"[0m)                                                             [31m│[0m
+[31m│[0m   [2m 621 [0m[2m│   │   │   [0mvalues = values[[94m0[0m, :]  [2m# type: ignore[call-overload][0m      [31m│[0m
+[31m│[0m   [2m 622 [0m[2m│   │   [0m                                                              [31m│[0m
+[31m│[0m [31m❱ [0m 623 [2m│   │   [0mnew_values = [1;4mastype_array_safe(values, dtype, errors=errors)[0m  [31m│[0m
+[31m│[0m   [2m 624 [0m[2m│   │   [0m                                                              [31m│[0m
+[31m│[0m   [2m 625 [0m[2m│   │   [0mnew_values = maybe_coerce_values(new_values)                  [31m│[0m
+[31m│[0m   [2m 626 [0m                                                                      [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:245 in astype_array_safe            [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m242 [0m[2m│   │   [0mdtype = dtype.numpy_dtype                                      [31m│[0m
+[31m│[0m   [2m243 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m244 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
+[31m│[0m [31m❱ [0m245 [2m│   │   [0mnew_values = astype_array(values, dtype, copy=copy)            [31m│[0m
+[31m│[0m   [2m246 [0m[2m│   [0m[94mexcept[0m ([96mValueError[0m, [96mTypeError[0m):                                    [31m│[0m
+[31m│[0m   [2m247 [0m[2m│   │   [0m[2m# e.g. _astype_nansafe can fail on object-dtype of strings[0m     [31m│[0m
+[31m│[0m   [2m248 [0m[2m│   │   [0m[2m#  trying to convert to float[0m                                  [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:187 in astype_array                 [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m184 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m185 [0m[2m│   [0m[94mif[0m [95mnot[0m [96misinstance[0m(values, np.ndarray):                             [31m│[0m
+[31m│[0m   [2m186 [0m[2m│   │   [0m[2m# i.e. ExtensionArray[0m                                          [31m│[0m
+[31m│[0m [31m❱ [0m187 [2m│   │   [0mvalues = [1;4mvalues.astype(dtype, copy=copy)[0m                       [31m│[0m
+[31m│[0m   [2m188 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m189 [0m[2m│   [0m[94melse[0m:                                                              [31m│[0m
+[31m│[0m   [2m190 [0m[2m│   │   [0mvalues = _astype_nansafe(values, dtype, copy=copy)             [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/arrays/[0m[1mstring_.py[0m:957 in astype                      [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m 954 [0m[2m│   │   │   [0mvalues[mask] = np.nan                                     [31m│[0m
+[31m│[0m   [2m 955 [0m[2m│   │   │   [0m[94mreturn[0m values                                             [31m│[0m
+[31m│[0m   [2m 956 [0m[2m│   │   [0m                                                              [31m│[0m
+[31m│[0m [31m❱ [0m 957 [2m│   │   [0m[94mreturn[0m [1;4;96msuper[0m[1;4m().astype(dtype, copy)[0m                            [31m│[0m
+[31m│[0m   [2m 958 [0m[2m│   [0m                                                                  [31m│[0m
+[31m│[0m   [2m 959 [0m[2m│   [0m[94mdef[0m[90m [0m[92m_reduce[0m(                                                      [31m│[0m
+[31m│[0m   [2m 960 [0m[2m│   │   [0m[96mself[0m,                                                         [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/arrays/[0m[1mnumpy_.py[0m:334 in astype                       [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m331 [0m[2m│   │   │   │   [0m[94mreturn[0m [96mself[0m.copy()                                     [31m│[0m
+[31m│[0m   [2m332 [0m[2m│   │   │   [0m[94mreturn[0m [96mself[0m                                                [31m│[0m
+[31m│[0m   [2m333 [0m[2m│   │   [0m                                                               [31m│[0m
+[31m│[0m [31m❱ [0m334 [2m│   │   [0mresult = [1;4mastype_array([0m[1;4;96mself[0m[1;4m._ndarray, dtype=dtype, copy=copy)[0m   [31m│[0m
+[31m│[0m   [2m335 [0m[2m│   │   [0m[94mreturn[0m result                                                  [31m│[0m
+[31m│[0m   [2m336 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m337 [0m[2m│   [0m[94mdef[0m[90m [0m[92misna[0m([96mself[0m) -> np.ndarray:                                      [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:190 in astype_array                 [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m187 [0m[2m│   │   [0mvalues = values.astype(dtype, copy=copy)                       [31m│[0m
+[31m│[0m   [2m188 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m189 [0m[2m│   [0m[94melse[0m:                                                              [31m│[0m
+[31m│[0m [31m❱ [0m190 [2m│   │   [0mvalues = [1;4m_astype_nansafe(values, dtype, copy=copy)[0m             [31m│[0m
+[31m│[0m   [2m191 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m192 [0m[2m│   [0m[2m# in pandas we don't store numpy str dtypes, so convert to object[0m  [31m│[0m
+[31m│[0m   [2m193 [0m[2m│   [0m[94mif[0m [96misinstance[0m(dtype, np.dtype) [95mand[0m [96missubclass[0m(values.dtype.type,   [31m│[0m
+[31m│[0m       [96mstr[0m):                                                                  [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
+[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:139 in _astype_nansafe              [31m│[0m
+[31m│[0m                                                                              [31m│[0m
+[31m│[0m   [2m136 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m137 [0m[2m│   [0m[94mif[0m copy [95mor[0m [96mobject[0m [95min[0m (arr.dtype, dtype):                           [31m│[0m
+[31m│[0m   [2m138 [0m[2m│   │   [0m[2m# Explicit copy, or required since NumPy can't view from / to [0m [31m│[0m
+[31m│[0m       [2mobject.[0m                                                                [31m│[0m
+[31m│[0m [31m❱ [0m139 [2m│   │   [0m[94mreturn[0m [1;4marr.astype(dtype, copy=[0m[1;4;94mTrue[0m[1;4m)[0m                            [31m│[0m
+[31m│[0m   [2m140 [0m[2m│   [0m                                                                   [31m│[0m
+[31m│[0m   [2m141 [0m[2m│   [0m[94mreturn[0m arr.astype(dtype, copy=copy)                                [31m│[0m
+[31m│[0m   [2m142 [0m                                                                       [31m│[0m
+[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
+[1;91mValueError: [0minvalid literal for [1;35mint[0m[1m([0m[1m)[0m with base [1;36m10[0m: [32m''[0m
+Command exited with non-zero status 1
+	Command being timed: "uv run zaehlkarte dauer site"
+	User time (seconds): 122.87
+	System time (seconds): 2.78
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:05.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 876896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1173664
+	Voluntary context switches: 274
+	Involuntary context switches: 998
+	Swaps: 0
+	File system inputs: 216
+	File system outputs: 6912
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
