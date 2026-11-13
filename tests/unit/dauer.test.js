@@ -2,9 +2,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  DAUER_STUFEN, DAUER_THEMEN, amSelbenPunkt, ansichtDauer, csvDauer, entpackeDauer, featuresDauer, hatGruppe, plusTage,
-  quellenOhneTag, stundenAm, stundenDesTags, tagAusDetail, tagImZeitraum, tageZwischen, tagtyp, tagtypen,
-  themaIn, wertAm, zaehleDauer,
+  DAUER_STUFEN, DAUER_THEMEN, amSelbenPunkt, ansichtDauer, ansichtJuengster, csvDauer, csvDauerJuengster, entpackeDauer,
+  featuresDauer, gruppeFuer, gruppenName, hatGruppe, hatThema, imJuengsten, klassenDerQuellen, plusTage, quellenOhneTag,
+  stundenAm, stundenDesTags, tagAusDetail, tagDerStelle, tagImZeitraum, tageJeQuelle, tageZwischen, tagtyp, tagtypen,
+  themaIn, themaVon, wertAm, zaehleDauer,
 } from "../../js/data/dauer.js";
 import { standardZustand } from "../../js/data/modell.js";
 
@@ -56,9 +57,74 @@ test("Werte am Tag: null heißt nicht vollständig, Stellen außerhalb ihres Zei
   const am4 = ansichtDauer(d, z, JAHR, "2025-01-04");
   assert.equal(am4[0].stufe, -1);
   assert.deepEqual(zaehleDauer(am4), { stellen: 2, vollstaendig: 1, klassen: { "-1": 1, 1: 1 } });
-  z.dthema = "lkw";
-  assert.deepEqual(ansichtDauer(d, z, JAHR, "2025-01-03").map((e) => e.stelle.id), ["berlin_viz:TE001"]); // TE002 zählt kein Lkw
+  z.dthema = "sv"; // Lkw/Schwerverkehr: Berlin zeigt seine Klasse Lkw
+  const lkw = ansichtDauer(d, z, JAHR, "2025-01-03");
+  assert.deepEqual(lkw.map((e) => [e.stelle.id, e.gruppe, e.wert]), [["berlin_viz:TE001", "lkw", 3]]); // TE002 zählt kein Lkw
   assert.equal(DAUER_STUFEN.kfz.length, 4);
+});
+
+test("Lkw/Schwerverkehr: ein Thema, je Stelle die Klasse ihres Detektors, nie zusammengezählt", () => {
+  assert.deepEqual(DAUER_THEMEN.sv.gruppen, ["lkw", "sv"]);
+  assert.equal(DAUER_THEMEN.sv.name, "Lkw/Schwerverkehr");
+  assert.equal(gruppenName("lkw"), "Lkw (Detektor)");
+  assert.equal(gruppenName("sv"), "Schwerverkehr (Detektor)");
+  assert.equal(themaVon("lkw"), "sv"); // alte Links mit t=lkw.menge
+  assert.equal(themaVon("kfz"), "kfz");
+  const berlin = { gruppen: ["kfz", "lkw"] };
+  const hamburg = { gruppen: ["kfz", "sv"] };
+  assert.equal(gruppeFuer(berlin, "sv"), "lkw");
+  assert.equal(gruppeFuer(hamburg, "sv"), "sv");
+  assert.equal(gruppeFuer({ gruppen: ["rad"] }, "sv"), null);
+  assert.ok(hatThema(d, "sv") && !hatThema(d, "rad"));
+  assert.equal(themaIn(d, "lkw"), "sv");
+  // welche Stadt welche Klasse zählt (Ortsname ohne Zusatz in Klammern, jeder Ort einmal)
+  const e = entpackeDauer({
+    ...INDEX,
+    gruppen: ["kfz", "lkw", "sv", "rad"],
+    quellen: [
+      { code: "berlin_viz", name: "Berlin (Verkehrsdetektion)", land: "BE", gruppen: ["kfz", "lkw"] },
+      { code: "hamburg_kfz", name: "Hamburg (Kfz, Wärmebildkameras)", land: "HH", gruppen: ["kfz", "sv"] },
+      { code: "hamburg_rad", name: "Hamburg (Rad, Wärmebildkameras)", land: "HH", gruppen: ["rad"] },
+      { code: "ettlingen", name: "Ettlingen (automatische Zählstellen)", land: "BW", gruppen: ["kfz", "lkw"] },
+    ],
+  });
+  assert.deepEqual(klassenDerQuellen(e, "sv"), [{ gruppe: "lkw", orte: ["Berlin", "Ettlingen"] }, { gruppe: "sv", orte: ["Hamburg"] }]);
+  assert.deepEqual(klassenDerQuellen(e, "kfz"), []);
+});
+
+test("Jüngster Schultag je Stelle: Standardansicht ohne gewählten Tag, Tag je Stelle, CSV", () => {
+  const index = {
+    ...INDEX,
+    juengster: { kfz: [["2025-01-03", 30000], ["2025-01-03", 8000]], lkw: [["2025-01-02", 2], null] },
+  };
+  const e = entpackeDauer(index);
+  const z = zustand();
+  assert.ok(imJuengsten(e, z));
+  assert.ok(!imJuengsten(d, z)); // ohne `juengster` (älterer Vertrag): Standardtag
+  assert.ok(!imJuengsten(e, { ...z, tag: "2025-01-02" }));
+  const kfz = ansichtJuengster(e, z);
+  assert.deepEqual(kfz.map((x) => [x.stelle.id, x.gruppe, x.tag, x.wert, x.stufe]), [
+    ["berlin_viz:TE001", "kfz", "2025-01-03", 30000, 4],
+    ["berlin_viz:TE002", "kfz", "2025-01-03", 8000, 1],
+  ]);
+  // Lkw/Schwerverkehr: nur Stellen mit der Klasse; ohne vollständigen Schultag hohl, ohne Tag
+  z.dthema = "sv";
+  assert.deepEqual(ansichtJuengster(e, z).map((x) => [x.stelle.id, x.tag, x.wert, x.stufe]), [["berlin_viz:TE001", "2025-01-02", 2, 0]]);
+  // Tag der Seitenleiste: der jüngste der gezeigten Gruppe, sonst einer anderen, sonst der letzte Tag
+  assert.equal(tagDerStelle(e, z, e.stellen[0]), "2025-01-02");
+  assert.equal(tagDerStelle(e, { ...z, dthema: "kfz" }, e.stellen[0]), "2025-01-03");
+  assert.equal(tagDerStelle(e, z, e.stellen[1]), "2025-01-03"); // TE002 zählt kein Lkw -> Kfz
+  assert.equal(tagDerStelle(entpackeDauer({ ...index, juengster: { kfz: [null, null], lkw: [null, null] } }), z, e.stellen[1]), "2025-01-05");
+  assert.equal(tagDerStelle(e, { ...z, tag: "2025-01-04" }, e.stellen[0]), "2025-01-04");
+  // je Quelle die gezeigten Tage (für den Hinweis in der Legende)
+  const gemischt = [{ stelle: e.stellen[0], tag: "2025-01-03", wert: 1 }, { stelle: e.stellen[1], tag: "2024-12-30", wert: 2 },
+    { stelle: e.stellen[1], tag: null, wert: null }];
+  assert.deepEqual(tageJeQuelle(e, gemischt).map((x) => [x.quelle.code, x.von, x.bis]), [["berlin_viz", "2024-12-30", "2025-01-03"]]);
+  // CSV: je Gruppe Tag und Tagessumme, leer statt 0, Lizenz in jeder Zeile
+  const zeilen = csvDauerJuengster(e, () => "dl-de/by-2-0").replace(/^﻿/, "").trim().split("\n");
+  assert.equal(zeilen[0], "quelle;stelle;name;abschnitt;richtung;lon;lat;kfz_juengster_schultag;kfz_tagessumme;lkw_juengster_schultag;lkw_tagessumme;lizenz");
+  assert.match(zeilen[1], /^berlin_viz;berlin_viz:TE001;Clayallee;in Höhe 343;Richtung Süd;13\.26;52\.43;2025-01-03;30000;2025-01-02;2;dl-de\/by-2-0$/);
+  assert.match(zeilen[2], /;2025-01-03;8000;;;dl-de\/by-2-0$/);
 });
 
 test("featuresDauer: hohl ohne vollständigen Tag, sonst Farbe und Größe der Stufe", () => {
@@ -117,9 +183,9 @@ test("Gruppen aus den Daten: Bits je Stelle, Thema, Quellen ohne Werte am Tag, T
   const e = entpackeDauer(index);
   assert.deepEqual(e.stellen.map((s) => s.gruppen), [["kfz"], ["kfz", "sv"], ["rad"]]);
   assert.ok(hatGruppe(e.stellen[1], "sv") && !hatGruppe(e.stellen[0], "sv"));
-  assert.equal(themaIn(e, "lkw"), "kfz"); // gibt es hier nicht -> erste Gruppe
+  assert.equal(themaIn(e, "fuss"), "kfz"); // gibt es hier nicht -> Thema der ersten Gruppe
   assert.equal(themaIn(e, "rad"), "rad");
-  assert.equal(DAUER_THEMEN.sv.name, "Schwerverkehr (Detektor)");
+  assert.equal(themaIn(e, "lkw"), "sv"); // Lkw gibt es hier nicht, aber Schwerverkehr im selben Thema
   // am 8.1.: Berlin zählt Kfz, hat aber keine Werte mehr; beim Rad fehlt nichts
   assert.deepEqual(quellenOhneTag(e, "kfz", "2025-01-08").map((o) => o.quelle.code), ["berlin_viz"]);
   assert.deepEqual(quellenOhneTag(e, "kfz", "2025-01-08")[0].sprung, "2025-01-02");
@@ -138,6 +204,21 @@ test("Zeitraum: über Jahre als Jahre, sonst als Tage", async () => {
   const { zeitraumText } = await import("../../js/data/dauer.js");
   assert.equal(zeitraumText("2015-01-01", "2025-06-30"), "2015–2025");
   assert.equal(zeitraumText("2026-08-29", "2026-11-05"), "29.08.2026 – 05.11.2026");
+});
+
+test("Spanne gezeigter Tage: kurz, im selben Jahr ohne doppeltes Jahr, über Jahre als Jahre", async () => {
+  const { tageSpanne } = await import("../../js/data/dauer.js");
+  const { setzeSprache } = await import("../../js/sprache/texte.js");
+  assert.equal(tageSpanne("2026-11-05", "2026-11-05"), "05.11.2026");
+  assert.equal(tageSpanne("2026-09-11", "2026-11-05"), "11.09.–05.11.2026");
+  assert.equal(tageSpanne("2025-12-30", "2026-01-05"), "30.12.2025–05.01.2026");
+  assert.equal(tageSpanne("2020-12-03", "2025-06-30"), "2020–2025");
+  setzeSprache("en");
+  try {
+    assert.equal(tageSpanne("2026-09-11", "2026-11-05"), "11 Sep – 5 Nov 2026");
+  } finally {
+    setzeSprache("de");
+  }
 });
 
 test("Zeitraum je Gruppe: vor dem Kfz-Beginn fehlt die Stelle beim Kfz, beim Schwerverkehr nicht", () => {

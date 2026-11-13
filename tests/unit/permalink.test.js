@@ -38,14 +38,19 @@ test("Hin und zurück", () => {
 test("Dauerzählstellen: f, t und z hin und zurück; Kurzzeit-Links bleiben gleich", () => {
   const z = std();
   z.familie = "d";
-  z.dthema = "lkw";
+  z.dthema = "sv";
   z.tag = "2025-05-19";
   const hash = kodiere(z, std(), null, "berlin_viz:TE001");
-  assert.equal(hash, "f=d&t=lkw.menge&z=2025-05-19&s=berlin_viz:TE001");
+  assert.equal(hash, "f=d&t=sv.menge&z=2025-05-19&s=berlin_viz:TE001");
   const { zustand, stelle } = dekodiere(`#${hash}`, std(), QUELLEN);
   assert.equal(zustand.familie, "d");
-  assert.equal(zustand.dthema, "lkw");
+  assert.equal(zustand.dthema, "sv");
   assert.equal(zustand.tag, "2025-05-19");
+  // alte Links: t=lkw.menge (bis November 2026 ein eigener Chip) gilt als Lkw/Schwerverkehr
+  assert.equal(dekodiere("#f=d&t=lkw.menge", std(), QUELLEN).zustand.dthema, "sv");
+  // ohne z: kein Tag gewählt – die Karte zeigt je Stelle ihren jüngsten Schultag
+  assert.equal(dekodiere("#f=d", std(), QUELLEN).zustand.tag, null);
+  assert.equal(kodiere({ ...z, tag: null }, std(), null, null), "f=d&t=sv.menge");
   assert.equal(zustand.thema, "kfz"); // die Verkehrsart der Kurzzeitzählungen bleibt
   assert.equal(stelle, "berlin_viz:TE001");
   // t=lkw.menge ohne f=d gilt nicht (kein Thema der Kurzzeitzählungen), z ohne f=d auch nicht

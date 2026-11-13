@@ -32,26 +32,38 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Datenlage-Einträge. Das Frontend bekommt alles über `manifest.json`/`datenlage.json`; nie im
   Frontend nachtragen. Rechtliche Aussagen in der Datenlage nur mit Beleg (Link).
 - **Erzeugte Dateien nicht von Hand ändern:** `public/data/*`, `docs/DATENLAGE.md` (beide
-  `uv run zaehlkarte site`), `pipeline/geokodierung/berlin_ergaenzung.csv` (Workflow „Berlin
-  geokodieren“), `pipeline/geokodierung/moers.csv` (`werkzeuge/geokodiere_moers.py`).
+  `uv run zaehlkarte site`; nur `datenlage.json` und `DATENLAGE.md` nach geänderten
+  Datenlage-Texten: `uv run zaehlkarte datenlage`), `pipeline/geokodierung/berlin_ergaenzung.csv`
+  (Workflow „Berlin geokodieren“), `pipeline/geokodierung/moers.csv`
+  (`werkzeuge/geokodiere_moers.py`).
 - **Datenlage-Texte** (Lage, Empfehlung, Anfragezusatz, Kontakt) stehen in `sources.yaml`.
   Kontakte nur als Funktionsadressen (keine Namen einzelner Beschäftigter), aus der
   FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage`) ist für alle gleich.
+  Die Datenlage folgt der Familie: je Kommune `stand` für die Kurzzeitzählungen und, wo
+  recherchiert, ein Block `dauer:` (`stand` in_karte | offen | kandidat, `was`, `links`) für die
+  Dauerzählstellen – die Karte zeigt bei ihnen nur Kommunen mit diesem Block, ohne Anfragetext.
 - **Frontend-Vertrag:** Feldnamen in `index.json` (`stellen.felder`, `zaehlungen.felder`,
   `gruppen`, `quellen`, `lieferungen`), Aufbau von `details/NN.json`, Dateinamen in
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und
   `tests/web/vertrag.spec.js` im selben Schritt mit. Dauerzählstellen: Felder in
   `dauer/index.json` (`stellen.felder`, `gruppen` = Bits von `g`, `dateien`, `kalender`,
-  `standardtag`, `quellen[].gruppen`/`zeitraeume`/`standardtag`), Aufbau von
+  `standardtag`, `juengster`, `quellen[].gruppen`/`zeitraeume`/`standardtag`), Aufbau von
   `dauer/tage/JJJJ.json` und `dauer/NN.json` (Kopf von `pipeline/src/zaehlkarte/dauer/site.py`)
   – mitziehen: `js/data/dauer.js`, `js/ui/dauerdetail.js`, `tests/web/vertrag.spec.js` und die
-  Fixtures `tests/web/fixtures/dauer/`.
+  Fixtures `tests/web/fixtures/dauer/`, und die Vertragsversion erhöhen (`VERSION` in
+  `dauer/site.py` = `DAUER_VERSION` in `js/data/dauer.js`): Bis „Dauerzählstellen bauen“ nach dem
+  Merge neu gebaut hat, überspringt der Vertragstest das alte Asset im PR; auf `main` hält er die
+  Auslieferung so lange an.
 - **Nur Zählwerte, keine Einstufungen.** Je Verkehrsart Menge (und bei Schwerverkehr/Rad der
   Anteil). Kinder/Jugendliche nur als Zählkategorie (Tagesgang Fuß), keine Schwellen.
   Dauerzählstellen: eine Tagessumme nur aus allen Stunden des Tages (Zeitumstellung beachten),
   sonst „nicht vollständig gezählt“ – nie auffüllen, keine Mittel über Tage, kein DTV. Klassen
-  der Detektoren nie ineinander mischen (Berlins „Lkw“ und Hamburgs „Schwerverkehr“ sind je
-  eine eigene Verkehrsart, keine der Schwerverkehr der Kurzzeitzählungen).
+  der Detektoren nie zusammenzählen oder ineinander umrechnen: Berlins und Ettlingens „Lkw“ und
+  Hamburgs „Schwerverkehr“ bleiben eigene Gruppen der Daten, keine ist der Schwerverkehr der
+  Kurzzeitzählungen. Die Karte zeigt sie unter einem Chip „Lkw/Schwerverkehr“ – jede Stelle in
+  ihrer Klasse und mit deren Namen, die Legende nennt, welche Stadt welche Klasse zählt.
+  Standardansicht: je Stelle der jüngste vollständig gezählte Schultag (so stehen alle Quellen
+  zugleich in der Karte; der Tag steht bei jedem Wert), ein gewählter Tag gilt für alle.
 - **Wording:** Quellkategorien Jugend, Kinder, Schüler heißen „Kinder/Jugendliche“.
   `-1`/fehlend heißt „nicht gezählt“, nie 0. Werte aus verschiedenen Zählfenstern nie
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.

@@ -4,8 +4,8 @@
 // (features) – der Stil liest sie nur aus (["get", …]). So bleibt die Logik browserlos testbar.
 import { Popup } from "../lib/maplibre.js";
 import { TAGE, formatiere, kennzahlText } from "../data/modell.js";
-import { kennzahlTextDauer, tagtyp } from "../data/dauer.js";
-import { datum, lokal, t, zahl } from "../sprache/texte.js";
+import { gruppenName, kennzahlTextDauer, tagtyp } from "../data/dauer.js";
+import { datum, lokal, t, wochentag, zahl } from "../sprache/texte.js";
 
 const LEER = { type: "FeatureCollection", features: [] };
 export const DATENLAGE_FARBEN = {
@@ -15,16 +15,33 @@ export const DATENLAGE_FARBEN = {
   kandidat: "#eb6834",
 };
 export const DATENLAGE_GRAU = "#9ca3af";
-const klasse = (id, farbe, stand) => ({ id, farbe, stand, get name() { return t(`datenlage.klasse.${id}`); } });
+const klasse = (id, farbe, stand, texte = "datenlage.klasse") => ({ id, farbe, stand, get name() { return t(`${texte}.${id}`); } });
 export const DATENLAGE_KLASSEN = [
   klasse("in_karte", "#2a78d6", ["in_karte"]),
   klasse("offen", "#1baf7a", ["offen", "geliefert"]),
   klasse("kandidat", "#eb6834", ["kandidat"]),
   klasse("sonst", DATENLAGE_GRAU, ["aggregiert", "nur_karte", "automatisch", "abgelehnt"]),
 ];
+// Dauerzählstellen: eigener Stand je Kommune (`dauer` in datenlage.json, aus sources.yaml) – die
+// Ebene zeigt dann nur die Kommunen mit einem solchen Eintrag
+export const DATENLAGE_KLASSEN_D = [
+  klasse("in_karte", "#2a78d6", ["in_karte"], "datenlage.d.klasse"),
+  klasse("offen", "#1baf7a", ["offen"], "datenlage.d.klasse"),
+  klasse("kandidat", "#eb6834", ["kandidat"], "datenlage.d.klasse"),
+];
+/** Klassen der Datenlage der Familie (k Kurzzeitzählungen | d Dauerzählstellen). */
+export const datenlageKlassen = (familie) => (familie === "d" ? DATENLAGE_KLASSEN_D : DATENLAGE_KLASSEN);
+/** Stand einer Kommune in der Familie (Dauerzählstellen: `dauer_stand`, null ohne Eintrag). */
+export const datenlageStand = (p, familie) => (familie === "d" ? (p.dauer_stand ?? null) : p.stand);
 
 /** Bezeichnung eines Datenlage-Stands in der gewählten Sprache (manifest.stand bzw. stand_en). */
 export const standText = (manifest, code) => lokal(manifest, "stand")?.[code] ?? manifest.stand?.[code] ?? code;
+/** Dasselbe für die Dauerzählstellen (Texte der Oberfläche, wie DAUER_STAND in site.py). */
+export const standTextDauer = (code) => t(`datenlage.d.klasse.${code}`);
+
+// Farbe der Datenlage je Familie: Stand der Kurzzeitzählungen (`stand`) bzw. der Dauerzählstellen
+const FARBE_K = ["match", ["get", "stand"], ...Object.entries(DATENLAGE_FARBEN).flat(), DATENLAGE_GRAU];
+const FARBE_D = ["match", ["get", "dauer_stand"], ...DATENLAGE_KLASSEN_D.flatMap((k) => [k.stand, k.farbe]), DATENLAGE_GRAU];
 
 export function fuegeEbenenHinzu(map, datenlage) {
   map.addSource("stellen", { type: "geojson", data: LEER });
@@ -81,15 +98,13 @@ export function fuegeEbenenHinzu(map, datenlage) {
       "circle-stroke-width": 2.5,
     },
   });
-  const farbe = ["match", ["get", "stand"],
-    ...Object.entries(DATENLAGE_FARBEN).flat(), DATENLAGE_GRAU];
   map.addLayer({
     id: "datenlage-kreis",
     type: "circle",
     source: "datenlage",
     maxzoom: 10,
     paint: {
-      "circle-color": farbe,
+      "circle-color": FARBE_K,
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 4.5, 9, 9],
       "circle-stroke-color": "#ffffff",
       "circle-stroke-width": 1.5,
@@ -135,10 +150,14 @@ export function setzeAuswahl(map, stelle) {
     : LEER);
 }
 
-export function setzeDatenlage(map, sichtbar) {
+/** Ebene Datenlage: sichtbar oder nicht; bei den Dauerzählstellen nur Kommunen mit deren Stand. */
+export function setzeDatenlage(map, sichtbar, familie = "k") {
   for (const id of ["datenlage-kreis", "datenlage-text"]) {
-    if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", sichtbar ? "visible" : "none");
+    if (!map.getLayer(id)) continue;
+    map.setLayoutProperty(id, "visibility", sichtbar ? "visible" : "none");
+    map.setFilter(id, familie === "d" ? ["has", "dauer_stand"] : null);
   }
+  if (map.getLayer("datenlage-kreis")) map.setPaintProperty("datenlage-kreis", "circle-color", familie === "d" ? FARBE_D : FARBE_K);
 }
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -157,24 +176,27 @@ export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag, gibDa
     map.getCanvas().style.cursor = "pointer";
     let html;
     if (f.layer.id === "dauer-kreis") {
-      const { d, tag, eintrag } = gibDauer();
+      // Tag und Gruppe je Eintrag: im Standard der jüngste Schultag der Stelle, sonst der gewählte;
+      // die Gruppe ist die Klasse der Stelle (bei Lkw/Schwerverkehr je Stadt eine andere)
+      const { d, juengster, eintrag } = gibDauer();
       const s = d.stellen[f.properties.i];
       const e = eintrag(s.index);
       const q = d.quellenMeta.find((x) => x.code === s.quelle);
-      const z = gibZustand();
+      const tag = e?.tag ?? null;
       const hero = e?.wert != null
-        ? `<div class="pop-hero">${formatiere(e.wert, "menge")}</div><div class="pop-meta">${esc(kennzahlTextDauer(z.dthema, datum(tag)))}</div>`
-        : `<div class="pop-meta">${esc(t("dauer.nicht"))} · ${esc(datum(tag))}</div>`;
+        ? `<div class="pop-hero">${formatiere(e.wert, "menge")}</div><div class="pop-meta">${esc(kennzahlTextDauer(gruppenName(e.gruppe), `${wochentag(tag)} ${datum(tag)}`))}</div>`
+        : `<div class="pop-meta">${esc(t(juengster ? "dauer.nicht_j" : "dauer.nicht"))}${tag ? ` · ${esc(datum(tag))}` : ""}</div>`;
       html = `<div class="pop-eyebrow">${esc(t("hover.dauer", { quelle: q?.name ?? s.quelle }))}</div>
         <div class="pop-title">${esc(s.name)}</div>
         ${s.richtung ? `<div class="pop-meta" lang="de">${esc(s.richtung)}</div>` : ""}${hero}
-        <div class="pop-meta">${esc(TAGE[tagtyp(d, q?.land, tag)])}</div>
+        ${tag ? `<div class="pop-meta">${esc(TAGE[tagtyp(d, q?.land, tag)])}</div>` : ""}
         <div class="pop-pinhint">${esc(t("hover.dauer_details"))}</div>`;
     } else if (f.layer.id === "datenlage-kreis") {
       const p = f.properties;
-      html = `<div class="pop-eyebrow">${esc(t("hover.datenlage", { land: p.land ?? "" }))}</div>
+      const dauer = gibZustand().familie === "d";
+      html = `<div class="pop-eyebrow">${esc(t(dauer ? "hover.datenlage_d" : "hover.datenlage", { land: p.land ?? "" }))}</div>
         <div class="pop-title">${esc(p.kommune)}</div>
-        <div class="pop-meta">${esc(standText(manifest, p.stand))}</div>
+        <div class="pop-meta">${esc(dauer ? standTextDauer(p.dauer_stand) : standText(manifest, p.stand))}</div>
         <div class="pinhint pop-pinhint">${esc(t("hover.belege"))}</div>`;
     } else {
       const z = gibZustand();

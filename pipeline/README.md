@@ -60,6 +60,8 @@ uv sync
 uv run zaehlkarte fetch            # ~450 MB Download (MobiData-ZIPs samt PDFs)
 uv run zaehlkarte build            # Bericht ohne zu schreiben
 uv run zaehlkarte site             # Kartendaten schreiben (~1,5 min)
+uv run zaehlkarte datenlage        # nur datenlage.json und docs/DATENLAGE.md (aus sources.yaml
+                                   # und der vorhandenen index.json, ohne neuen Bau)
 uv run zaehlkarte dauer fetch      # Dauerzählstellen: ~330 MB (Berliner Monatsarchive), Hamburg
                                    # über SensorThings (erster Abruf ohne Gedächtnis: einige Minuten)
 uv run zaehlkarte dauer site       # public/data/dauer/ schreiben (~30 MB, ~5 min)

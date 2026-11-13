@@ -7,6 +7,7 @@ from __future__ import annotations
 import csv
 import io
 import json
+import shutil
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 
@@ -21,7 +22,8 @@ from zaehlkarte.dauer.modell import tagessummen
 Q = {
     "code": "ettlingen", "name": "Ettlingen (automatische Zählstellen)", "land": "BW",
     "adapter": "readi_urbanpulse", "dump": "https://readi.example/datastore/dump/abc",
-    "klassen": {"kfz": ["PKW", "Leichtes Nutzfahrzeug", "LKW", "LKW+Anhänger", "Motorrad"]},
+    "klassen": {"kfz": ["PKW", "Leichtes Nutzfahrzeug", "LKW", "LKW+Anhänger", "Motorrad"],
+                "lkw": ["LKW", "LKW+Anhänger"]},
     "frisch_tage": 2, "lizenz": "CC BY-NC 4.0",
     "lizenz_url": "https://creativecommons.org/licenses/by-nc/4.0/deed.de",
     "stellen": {"1263": {"name": "Rastatter Straße"},
@@ -133,7 +135,7 @@ def test_hole_und_lese(pfade, monkeypatch):
     assert s1.richtung == "Richtung Innenstadt"  # Tippfehler der Quelle
     assert (s0.lon, s0.lat) == (s1.lon, s1.lat) == (8.403476, 48.940203)  # dieselbe Lage
     assert (s2.name, s2.abschnitt) == ("Pforzheimer Straße", "Höhe Hausnummer 14")
-    assert s0.id == "ettlingen:1263-2" and set(r.werte) == {"kfz"}
+    assert s0.id == "ettlingen:1263-2" and set(r.werte) == {"kfz", "lkw"}
 
     summe, n = tagessummen(r, "kfz")
     i24, i25, i26 = (r.index(date(2026, 10, x)) for x in (24, 25, 26))
@@ -143,6 +145,9 @@ def test_hole_und_lese(pfade, monkeypatch):
     assert r.doppelt[2, i25] and n[2, i25] == 24 and summe[2, i25] == 25 * 31
     assert summe[1, i26] == -1 and n[1, i26] == 23  # 6 Uhr fehlt
     assert summe[1, i24] == 24 * 22
+    # Lkw: nur Lkw und Lkw mit Anhänger; Stunden ohne Lkw zählen 0, wenn die Stunde gezählt ist
+    lkw, _ = tagessummen(r, "lkw")
+    assert lkw[0, i24] == 19 * 3 and lkw[2, i25] == 25 * 1 and lkw[1, i24] == 0
     assert b.stunden["kfz"] > 0 and b.frisch == 0
 
 
@@ -171,12 +176,14 @@ def test_site_mit_ettlingen(pfade, monkeypatch):
     ett.hole(Q, pfade)
     abgerufen(pfade, "2026-11-10T00:00:00Z")
     r = ett.lese(Q, pfade, ett.Bericht())
-    site.schreibe([(Q, r)], pfade, date(2026, 11, 12))
+    ferien = "schulferien_baden-wuerttemberg.csv"
+    shutil.copyfile(Pfade().config / ferien, pfade.config / ferien)
+    site.schreibe([(Q | {"ferien": ferien}, r)], pfade, date(2026, 11, 12))
     index = json.loads((pfade.karte / "dauer" / "index.json").read_text())
-    assert index["gruppen"] == ["kfz"]
+    assert index["gruppen"] == ["kfz", "lkw"] and index["version"] == site.VERSION
     q = index["quellen"][0]
-    assert q["lizenzen"][0]["lizenz"] == "CC BY-NC 4.0" and q["gruppen"] == ["kfz"]
-    assert q["zeitraeume"] == {"kfz": ["2026-11-02", "2026-11-04"]}
+    assert q["lizenzen"][0]["lizenz"] == "CC BY-NC 4.0" and q["gruppen"] == ["kfz", "lkw"]
+    assert q["zeitraeume"]["kfz"] == ["2026-11-02", "2026-11-04"]
     felder = index["stellen"]["felder"]
     stellen = [dict(zip(felder, w, strict=True)) for w in index["stellen"]["werte"]]
     assert [s["id"] for s in stellen] == ["ettlingen:1263-2", "ettlingen:1263-3"]
@@ -184,3 +191,6 @@ def test_site_mit_ettlingen(pfade, monkeypatch):
     assert index["kalender"]["BW"][0] in "swhfu"
     chunk = json.loads((pfade.karte / "dauer" / "0.json").read_text())
     assert chunk["stellen"]["ettlingen:1263-3"]["tage"]["kfz"] == [480, 480, 480]
+    # jüngster vollständig gezählter Schultag je Stelle (02.–04.11.2026 sind Schultage in BW)
+    assert index["juengster"]["kfz"] == [["2026-11-04", 240], ["2026-11-04", 480]]
+    assert index["juengster"]["lkw"] == [["2026-11-04", 0], ["2026-11-04", 0]]

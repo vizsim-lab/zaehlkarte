@@ -238,6 +238,7 @@ def test_site_mit_hamburg(api, pfade):
     d = chunk["stellen"]["hamburg_kfz:0248931"]
     assert d["tage"]["sv"] == [24, 24, 24] and d["n"]["kfz"] == [24, 24, 24]
     assert "kalender" in index and index["kalender"]["HH"][0] in "swhfu"
+    assert {g: len(v) for g, v in index["juengster"].items()} == {"kfz": 1, "sv": 1}
 
 
 def test_strassennamen_und_knotenpunkt(api, pfade, tmp_path, monkeypatch):
