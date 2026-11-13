@@ -50,6 +50,18 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run test:unit
+      # Dauerzählstellen: nicht im Git, sondern als Release-Asset (Workflow „Dauerzählstellen
+      # bauen“). Fehlt es, zeigt die Karte nur die Kurzzeitzählungen.
+      - name: Dauerzählstellen holen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release download dauerzaehlstellen --repo "${{ github.repository }}" --pattern dauer.tar.gz --dir "$RUNNER_TEMP"; then
+            tar -xzf "$RUNNER_TEMP/dauer.tar.gz" -C public/data
+            echo "Dauerzählstellen: $(find public/data/dauer -name '*.json' | wc -l) Dateien" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Noch keine Dauerzählstellen veröffentlicht – die Karte zeigt nur die Kurzzeitzählungen." >> "$GITHUB_STEP_SUMMARY"
+          fi
       - run: npx playwright install --with-deps chromium
       - run: npm run test:web
       - uses: actions/upload-artifact@v7

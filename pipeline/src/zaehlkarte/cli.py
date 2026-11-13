@@ -1,4 +1,5 @@
-"""Kommandozeile: `uv run zaehlkarte fetch | build | site` (aus pipeline/)."""
+"""Kommandozeile: `uv run zaehlkarte fetch | build | site` (aus pipeline/), für die
+Dauerzählstellen `uv run zaehlkarte dauer fetch | site` (Kartendaten unter public/data/dauer/)."""
 
 from __future__ import annotations
 
@@ -59,6 +60,31 @@ def site(datum: Datum = None) -> None:
     erzeugt = date.fromisoformat(datum) if datum else None
     for pfad in site_.schreibe(gebaut, erzeugt=erzeugt):
         typer.echo(f"{pfad.relative_to(pfad.parents[2])}: {pfad.stat().st_size // 1024} KB")
+
+
+dauer = typer.Typer(no_args_is_help=True,
+                    help="Dauerzählstellen: eigene Familie, Kartendaten unter public/data/dauer/")
+app.add_typer(dauer, name="dauer")
+
+
+@dauer.command("fetch")
+def dauer_fetch(quelle: Quellen = None) -> None:
+    """Rohdaten der Dauerzählstellen nach pipeline/data/raw/ holen."""
+    from zaehlkarte.dauer import bau
+
+    for zeile in bau.hole(nur=quelle):
+        typer.echo(zeile)
+
+
+@dauer.command("site")
+def dauer_site(datum: Datum = None) -> None:
+    """Kartendaten der Dauerzählstellen nach public/data/dauer/ schreiben."""
+    from zaehlkarte.dauer import bau
+
+    erzeugt = date.fromisoformat(datum) if datum else None
+    _, zeilen = bau.site(erzeugt=erzeugt)
+    for z in zeilen:
+        typer.echo(z)
 
 
 if __name__ == "__main__":

@@ -35,6 +35,29 @@ test("Hin und zurück", () => {
   assert.equal(stelle, "berlin:K10921");
 });
 
+test("Dauerzählstellen: f, t und z hin und zurück; Kurzzeit-Links bleiben gleich", () => {
+  const z = std();
+  z.familie = "d";
+  z.dthema = "lkw";
+  z.tag = "2025-05-19";
+  const hash = kodiere(z, std(), null, "berlin_viz:TE001");
+  assert.equal(hash, "f=d&t=lkw.menge&z=2025-05-19&s=berlin_viz:TE001");
+  const { zustand, stelle } = dekodiere(`#${hash}`, std(), QUELLEN);
+  assert.equal(zustand.familie, "d");
+  assert.equal(zustand.dthema, "lkw");
+  assert.equal(zustand.tag, "2025-05-19");
+  assert.equal(zustand.thema, "kfz"); // die Verkehrsart der Kurzzeitzählungen bleibt
+  assert.equal(stelle, "berlin_viz:TE001");
+  // t=lkw.menge ohne f=d gilt nicht (kein Thema der Kurzzeitzählungen), z ohne f=d auch nicht
+  const alt = dekodiere("#t=lkw.menge&z=2025-05-19", std(), QUELLEN).zustand;
+  assert.equal(alt.familie, "k");
+  assert.equal(alt.thema, "kfz");
+  assert.equal(alt.tag, null);
+  // bei f=d gelten nur die Verkehrsarten der Dauerzählstellen
+  assert.equal(dekodiere("#f=d&t=rad.menge&z=gestern", std(), QUELLEN).zustand.dthema, "kfz");
+  assert.equal(dekodiere("#f=d&z=gestern", std(), QUELLEN).zustand.tag, null);
+});
+
 test("Ungültiges wird ignoriert, Standard bleibt unberührt", () => {
   const s = std();
   const { zustand, karte } = dekodiere("#t=kfz.anteil&a=x&j=2030-1990&q=atlantis&m=99/1/1", s, QUELLEN);

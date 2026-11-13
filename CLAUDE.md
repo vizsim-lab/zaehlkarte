@@ -1,10 +1,12 @@
 # CLAUDE.md — zaehlkarte
 
-Karte kommunaler Verkehrszählungen (Kurzzeitzählungen: Knotenpunkte, Querschnitte) aus
-mehreren Quellen in einem Schema – nur Zählwerte, je Verkehrsart (Kfz, Schwerverkehr, Rad,
-Fuß). Stil und Aufbau des Frontends wie `vizsim/unfallkarte`, ZDA-Leser aus
-`vizsim/berlin-traffic-counts_schulwege`, Quellenverwaltung wie `vizsim/svz`. Auswertungen
-(etwa der Schulweg-Verdacht) gehören NICHT hierher, sondern in die Schulwege-Karte.
+Karte kommunaler Verkehrszählungen aus mehreren Quellen in zwei Familien:
+Kurzzeitzählungen (Knotenpunkte, Querschnitte) und Dauerzählstellen (Stunden- und Tageswerte
+fest eingebauter Zähler) – nur Zählwerte, je Verkehrsart (Kfz, Schwerverkehr, Rad, Fuß; bei
+Dauerzählstellen Kfz und Lkw laut Detektor). Jahresmittel (DTV), Verkehrsmengenkarten und
+Modellwerte gehören nach `vizsim/svz`. Stil und Aufbau des Frontends wie `vizsim/unfallkarte`,
+ZDA-Leser aus `vizsim/berlin-traffic-counts_schulwege`, Quellenverwaltung wie `vizsim/svz`.
+Auswertungen (etwa der Schulweg-Verdacht) gehören NICHT hierher, sondern in die Schulwege-Karte.
 Überblick: `README.md`. Quellenfinden und Sackgassen: `AGENTS.md`.
 Diese Datei = die Regeln, die in jeder Session gelten.
 
@@ -13,6 +15,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Rohdaten gitignored in `pipeline/data/`). CLI aus `pipeline/`: `uv run zaehlkarte fetch|build|site`.
 - **`public/data/`** — die Kartendaten (manifest, index, details/NN, datenlage), erzeugt von
   `zaehlkarte site`, im Git. Vite kopiert `public/` unverändert nach `dist/`.
+- **`public/data/dauer/`** — Dauerzählstellen, erzeugt von `zaehlkarte dauer site`, NICHT im
+  Git (gitignored): Workflow „Dauerzählstellen bauen“ legt sie als Release-Asset
+  `dauerzaehlstellen/dauer.tar.gz` ab, die CI holt es vor dem Build.
 - **Repo-Wurzel** — das Frontend (Vite): `index.html`, `main.js`, `js/`, `style.css`,
   `vite.config.js`. Build -> `dist/` (gitignored). Ungebaut läuft es nicht (nackte Imports).
 - **`tests/`** — `unit/` (node --test, browserlos), `web/` (Playwright gegen den Build).
@@ -30,9 +35,15 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Frontend-Vertrag:** Feldnamen in `index.json` (`stellen.felder`, `zaehlungen.felder`,
   `gruppen`, `quellen`, `lieferungen`), Aufbau von `details/NN.json`, Dateinamen in
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und
-  `tests/web/vertrag.spec.js` im selben Schritt mit.
+  `tests/web/vertrag.spec.js` im selben Schritt mit. Dauerzählstellen: Felder in
+  `dauer/index.json` (`stellen.felder`, `dateien`, `kalender`, `standardtag`), Aufbau von
+  `dauer/tage/JJJJ.json` und `dauer/NN.json` (Kopf von `pipeline/src/zaehlkarte/dauer/site.py`)
+  – mitziehen: `js/data/dauer.js`, `js/ui/dauerdetail.js`, `tests/web/vertrag.spec.js` und die
+  Fixtures `tests/web/fixtures/dauer/`.
 - **Nur Zählwerte, keine Einstufungen.** Je Verkehrsart Menge (und bei Schwerverkehr/Rad der
   Anteil). Kinder/Jugendliche nur als Zählkategorie (Tagesgang Fuß), keine Schwellen.
+  Dauerzählstellen: eine Tagessumme nur aus allen Stunden des Tages (Zeitumstellung beachten),
+  sonst „nicht vollständig gezählt“ – nie auffüllen, keine Mittel über Tage, kein DTV.
 - **Wording:** Quellkategorien Jugend, Kinder, Schüler heißen „Kinder/Jugendliche“.
   `-1`/fehlend heißt „nicht gezählt“, nie 0. Werte aus verschiedenen Zählfenstern nie
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.
@@ -47,8 +58,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   OpenFreeMap nicht erreichbar ist.
 - **`data-tip` nur an Hinweis-Zeichen (ⓘ), nie an Knöpfen oder Links:** der Tooltip fängt
   Klicks darauf ab (Touch). Bedienelemente bekommen `title`/`aria-label`.
-- **REIN halten** (kein DOM, kein window): `js/data/modell.js`, `js/ui/diagramme.js`,
-  `js/utils/permalinkFormat.js`, `js/sprache/texte.js` – browserlos getestet.
+- **REIN halten** (kein DOM, kein window): `js/data/modell.js`, `js/data/dauer.js`,
+  `js/ui/diagramme.js`, `js/utils/permalinkFormat.js`, `js/sprache/texte.js` – browserlos
+  getestet.
   Permalink-Kürzel sind Vertrag mit geteilten Links: nie umdeuten, nur ergänzen (die Sprache
   steht nicht im #-Teil, sondern in `?lang=`).
 - **Fremde Texte** (Namen, Bemerkungen aus den Daten) nur escaped ins HTML (`esc()`).
@@ -73,6 +85,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Daten neu bauen:** Workflow „Kartendaten neu bauen“ (`.github/workflows/daten.yml`) oder
   lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW und die Portale von Münster,
   Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
-  Workflow nutzen.
+  Workflow nutzen. Dauerzählstellen: Workflow „Dauerzählstellen bauen“
+  (`.github/workflows/dauer.yml`) – Ergebnis als Release-Asset, kein PR; danach startet er
+  die CI auf `main` neu. Das Berliner Archiv ist aus der Sandbox ebenfalls nicht erreichbar.
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

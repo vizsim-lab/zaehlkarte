@@ -66,6 +66,9 @@ export function standardZustand(jahre, quellen) {
     quellen: new Set(quellen),
     uebertragen: true,
     datenlage: true,
+    familie: "k", // k Kurzzeitzählungen | d Dauerzählstellen (js/data/dauer.js)
+    dthema: "kfz", // Verkehrsart der Dauerzählstellen
+    tag: null, // gewählter Tag der Dauerzählstellen (null = Standardtag der Daten)
   };
 }
 

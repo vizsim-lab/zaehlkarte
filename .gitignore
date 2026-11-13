@@ -6,6 +6,8 @@ playwright-report/
 
 # Pipeline: Rohdaten und Zwischenstände (abrufbar über `zaehlkarte fetch`)
 pipeline/data/
+# Dauerzählstellen: gebaut vom Workflow „Dauerzählstellen bauen“, ausgeliefert als Release-Asset
+public/data/dauer/
 pipeline/.venv/
 __pycache__/
 *.pyc

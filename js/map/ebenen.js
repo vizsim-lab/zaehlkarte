@@ -4,6 +4,7 @@
 // (features) – der Stil liest sie nur aus (["get", …]). So bleibt die Logik browserlos testbar.
 import { Popup } from "../lib/maplibre.js";
 import { TAGE, formatiere, kennzahlText } from "../data/modell.js";
+import { kennzahlTextDauer, tagtyp } from "../data/dauer.js";
 import { datum, lokal, t, zahl } from "../sprache/texte.js";
 
 const LEER = { type: "FeatureCollection", features: [] };
@@ -27,6 +28,7 @@ export const standText = (manifest, code) => lokal(manifest, "stand")?.[code] ??
 
 export function fuegeEbenenHinzu(map, datenlage) {
   map.addSource("stellen", { type: "geojson", data: LEER });
+  map.addSource("dauer", { type: "geojson", data: LEER });
   map.addSource("auswahl", { type: "geojson", data: LEER });
   map.addSource("datenlage", { type: "geojson", data: datenlage });
 
@@ -46,6 +48,26 @@ export function fuegeEbenenHinzu(map, datenlage) {
       ],
       "circle-stroke-color": ["get", "sc"],
       "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 5, 0.2, 11, 0.8, 14, 1.2],
+    },
+  });
+  // Dauerzählstellen: dieselben Farben und Stufen, etwas größer und mit kräftigerem Rand; die
+  // gewählte Familie zeigt immer nur eine der beiden Ebenen (setzeFamilie).
+  map.addLayer({
+    id: "dauer-kreis",
+    type: "circle",
+    source: "dauer",
+    layout: { "circle-sort-key": ["get", "o"], visibility: "none" },
+    paint: {
+      "circle-color": ["get", "c"],
+      "circle-radius": [
+        "interpolate", ["exponential", 1.5], ["zoom"],
+        5, ["*", ["get", "r"], 0.5],
+        10, ["*", ["get", "r"], 1.0],
+        13, ["*", ["get", "r"], 1.6],
+        16, ["*", ["get", "r"], 2.6],
+      ],
+      "circle-stroke-color": ["get", "sc"],
+      "circle-stroke-width": ["interpolate", ["linear"], ["zoom"], 5, 0.3, 11, 1, 14, 1.5],
     },
   });
   map.addLayer({
@@ -97,6 +119,16 @@ export function setzeStellen(map, featureCollection) {
   map.getSource("stellen")?.setData(featureCollection);
 }
 
+export function setzeDauer(map, featureCollection) {
+  map.getSource("dauer")?.setData(featureCollection);
+}
+
+/** Familie zeigen: k Kurzzeitzählungen | d Dauerzählstellen (immer nur eine Ebene). */
+export function setzeFamilie(map, familie) {
+  if (map.getLayer("stellen-kreis")) map.setLayoutProperty("stellen-kreis", "visibility", familie === "d" ? "none" : "visible");
+  if (map.getLayer("dauer-kreis")) map.setLayoutProperty("dauer-kreis", "visibility", familie === "d" ? "visible" : "none");
+}
+
 export function setzeAuswahl(map, stelle) {
   map.getSource("auswahl")?.setData(stelle
     ? { type: "FeatureCollection", features: [{ type: "Feature", geometry: { type: "Point", coordinates: [stelle.lon, stelle.lat] }, properties: {} }] }
@@ -111,10 +143,10 @@ export function setzeDatenlage(map, sichtbar) {
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-/** EIN Hover-Popup für Zählstellen und Datenlage (wie in der Unfallkarte). */
-export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag }) {
+/** EIN Hover-Popup für Zählstellen, Dauerzählstellen und Datenlage (wie in der Unfallkarte). */
+export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag, gibDauer }) {
   const popup = new Popup({ closeButton: false, closeOnClick: false, maxWidth: "280px", offset: 10 });
-  const ebenen = ["stellen-kreis", "datenlage-kreis"];
+  const ebenen = ["stellen-kreis", "dauer-kreis", "datenlage-kreis"];
   map.on("mousemove", (e) => {
     const f = map.queryRenderedFeatures(e.point, { layers: ebenen.filter((id) => map.getLayer(id)) })[0];
     if (!f) {
@@ -124,7 +156,21 @@ export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag }) {
     }
     map.getCanvas().style.cursor = "pointer";
     let html;
-    if (f.layer.id === "datenlage-kreis") {
+    if (f.layer.id === "dauer-kreis") {
+      const { d, tag, eintrag } = gibDauer();
+      const s = d.stellen[f.properties.i];
+      const e = eintrag(s.index);
+      const q = d.quellenMeta.find((x) => x.code === s.quelle);
+      const z = gibZustand();
+      const hero = e?.wert != null
+        ? `<div class="pop-hero">${formatiere(e.wert, "menge")}</div><div class="pop-meta">${esc(kennzahlTextDauer(z.dthema, datum(tag)))}</div>`
+        : `<div class="pop-meta">${esc(t("dauer.nicht"))} · ${esc(datum(tag))}</div>`;
+      html = `<div class="pop-eyebrow">${esc(t("hover.dauer", { quelle: q?.name ?? s.quelle }))}</div>
+        <div class="pop-title">${esc(s.name)}</div>
+        ${s.richtung ? `<div class="pop-meta" lang="de">${esc(s.richtung)}</div>` : ""}${hero}
+        <div class="pop-meta">${esc(TAGE[tagtyp(d, q?.land, tag)])}</div>
+        <div class="pop-pinhint">${esc(t("hover.dauer_details"))}</div>`;
+    } else if (f.layer.id === "datenlage-kreis") {
       const p = f.properties;
       html = `<div class="pop-eyebrow">${esc(t("hover.datenlage", { land: p.land ?? "" }))}</div>
         <div class="pop-title">${esc(p.kommune)}</div>

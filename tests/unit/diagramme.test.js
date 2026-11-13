@@ -1,6 +1,20 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { achse, pfad, proStunde, tagesgang, verlauf } from "../../js/ui/diagramme.js";
+import { achse, pfad, proStunde, tagesgang, tagesreihe, verlauf } from "../../js/ui/diagramme.js";
+
+test("tagesreihe: ein Pfad je Tagtyp, Lücken bleiben, Jahresachse, Tag unter dem Zeiger", () => {
+  assert.equal(tagesreihe([null, null], "ss", "2024-12-31").svg, "");
+  const werte = [100, null, 300, 200];
+  const { svg, index } = tagesreihe(werte, "swfs", "2024-12-30", 2);
+  assert.match(svg, /^<svg class="tr"/);
+  const pfade = svg.match(/class="tr-tage"[^>]*d="([^"]+)"/g);
+  assert.equal(pfade.length, 2); // Schultag (2 Tage) und Ferien; der Tag ohne Wert fehlt
+  assert.equal((svg.match(/V/g) ?? []).length, 3);
+  assert.match(svg, />2025</); // Jahresanfang 1.1.2025
+  assert.match(svg, /class="tr-gewaehlt"/);
+  assert.equal(index(42), 0);
+  assert.equal(index(330), 3);
+});
 
 test("achse: runde Schritte", () => {
   assert.deepEqual(achse(1473), { max: 1500, schritt: 500 });

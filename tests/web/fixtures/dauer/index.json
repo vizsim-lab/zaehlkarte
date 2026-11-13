@@ -1,0 +1,106 @@
+{
+ "version": 1,
+ "erzeugt": "2026-11-12",
+ "gruppen": [
+  "kfz",
+  "lkw"
+ ],
+ "gruppen_namen": {
+  "kfz": "Kfz",
+  "lkw": "Lkw (Detektor)"
+ },
+ "dateien": {
+  "tage": "dauer/tage/{jahr}.json",
+  "details": "dauer/{n}.json"
+ },
+ "details_anzahl": 1,
+ "von": "2025-06-01",
+ "bis": "2025-06-30",
+ "jahre": [
+  2025
+ ],
+ "kalender": {
+  "BE": "wssssswwhsssswwssssswwssssswws"
+ },
+ "standardtag": "2025-06-26",
+ "quellen": [
+  {
+   "code": "berlin_viz",
+   "name": "Berlin (Verkehrsdetektion)",
+   "land": "BE",
+   "traeger": "Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt",
+   "art": "Infrarot-Detektoren (Testdaten)",
+   "weg": "offen im Archiv",
+   "portal": "https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin",
+   "archiv": "https://api.viz.berlin.de/daten/verkehrsdetektion",
+   "quellenvermerk": "Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin",
+   "lizenzen": [
+    {
+     "code": "berlin_viz",
+     "titel": "Verkehrsdetektion Berlin (verändert: Stundenwerte zu Tagessummen)",
+     "herausgeber": "Digitale Plattform Stadtverkehr Berlin",
+     "lizenz": "dl-de/by-2-0",
+     "lizenz_url": "https://www.govdata.de/dl-de/by-2-0",
+     "herkunft_url": "https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin"
+    }
+   ],
+   "stellen": 2,
+   "von": "2025-06-01",
+   "bis": "2025-06-30",
+   "stunden_von": "2025-06-01",
+   "verfahren": [
+    {
+     "von": "2025-06-01",
+     "bis": "2025-06-30",
+     "text": "neue Qualitätssicherung: Fahrstreifen von der Zählkarte je Messquerschnitt summiert"
+    }
+   ],
+   "hinweise": [
+    "Laut Quelle Rohdaten, die vereinzelt Messfehler enthalten können. Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind."
+   ]
+  }
+ ],
+ "stellen": {
+  "felder": [
+   "id",
+   "quelle",
+   "name",
+   "abschnitt",
+   "richtung",
+   "lon",
+   "lat",
+   "von",
+   "bis",
+   "g",
+   "chunk"
+  ],
+  "werte": [
+   [
+    "berlin_viz:TE001",
+    "berlin_viz",
+    "Clayallee",
+    "zwischen Scharfestraße und Propst-Süssmilch-Weg",
+    "Richtung Potsdamer Chaussee (Süd)",
+    13.2613,
+    52.4366,
+    "2025-06-01",
+    "2025-06-30",
+    3,
+    0
+   ],
+   [
+    "berlin_viz:TE002",
+    "berlin_viz",
+    "Clayallee",
+    "zwischen Scharfestraße und Propst-Süssmilch-Weg",
+    "Richtung Hüttenweg (Nord)",
+    13.2614,
+    52.4367,
+    "2025-06-01",
+    "2025-06-30",
+    3,
+    0
+   ]
+  ]
+ }
+}

@@ -15,13 +15,19 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   die Rohdatei und die Lizenz; Download als CSV.
 - **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen.
+- **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
+  Legende): fest eingebaute Zähler mit Werten über Jahre – die Karte zeigt die Tagessumme
+  an einem wählbaren Tag, je Stelle die Tagessummen aller Jahre und den Tagesgang des Tags.
 - **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
   `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
   Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
 
-Gemeint sind Kurzzeitzählungen der Kommunen, keine Dauerzählstellen und keine
-Verkehrsmengenkarten (dafür: [vizsim/svz](https://github.com/vizsim/svz)). Auswertungen wie
-der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
+Zwei Familien, beide nur mit gezählten Werten im Zeitverlauf: **Kurzzeitzählungen** der
+Kommunen (Werte je Zählung) und **Dauerzählstellen** der Kommunen (Stunden- und Tageswerte).
+Nicht gemeint sind Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür gibt
+es [vizsim/svz](https://github.com/vizsim/svz). Liefert eine Quelle beides, nimmt jedes Repo
+seinen Teil: Hamburgs DTV-Tabelle gehört nach svz, die Stundenwerte der Detektoren hierher.
+Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
 [vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege).
 
 ## Daten
@@ -36,6 +42,12 @@ der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
 | Potsdam (Bereich Verkehrsentwicklung) | rund 470 Knotenpunktzählungen von Hand (7–10 und 15–18 Uhr), je Zählung Früh- und Nachmittagsspitzenstunde und Summe der sechs Stunden, Kfz, Schwerverkehr, Rad | 2010–2023 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/) (ein PDF je Zählung) | [Nutzungsbedingungen der LHP](https://opendata.potsdam.de/terms/terms-of-use/), „© LHP/NB-16-OGD/Datum der Entnahme“ |
 | Xanten (Mobilitätskonzept, büro stadtVerkehr) | 18 Zählungen vom 25.08.2020 per Video: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte (24 h), Viertelstunden nach Fahrzeugart, nur Kfz | 2020 | offen auf [opendata.ruhr](https://opendata.ruhr/dataset/mobilitatskonzept) (PDF) | dl-de/zero-2-0 |
 | Konstanz (Amt für Stadtplanung und Umwelt) | 83 Tageszählungen an sechs Stellen mit mobilen Zählgeräten (ein bis sechs Wochen am Stück), 5- oder 15-Minuten-Werte, Rad, Fuß, an zwei Stellen Kfz | 2020 | offen auf [Offene Daten Konstanz](https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr) | CC0 1.0 |
+
+**Dauerzählstellen:**
+
+| Quelle | Was | Zeitraum | Weg | Lizenz |
+|---|---|---|---|---|
+| Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`. Rund 1.500 Berliner Zählungen haben noch keine
@@ -92,6 +104,26 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Intervalls und wird so zugeordnet. Die Lage nennt die Stadt nur als Straße, Brücke oder
   Hausnummer; die Punkte stammen aus OpenStreetMap, die Genauigkeit steht im Hinweis.
 
+## Dauerzählstellen – was die Karte zeigt
+
+- Eine **Tagessumme** (0–24 Uhr, je Richtung) gibt es nur, wenn jede Stunde des Tages gezählt
+  ist; sonst ist der Tag „nicht vollständig gezählt“ (hohler Punkt) – nie aufgefüllt, nie
+  hochgerechnet, keine Mittelwerte. Am Tag der Umstellung auf Sommerzeit hat der Tag 23
+  Stunden, bei der Rückstellung 25 (Stunde 2–3 Uhr zweimal, mit Hinweis).
+- Gezeigt wird ein Tag (Standard: der jüngste Schultag, an dem die meisten Stellen
+  vollständig sind); Pfeile, Datum und Regler wählen einen anderen. Die Seitenleiste zeigt die
+  Tagessummen über alle Jahre (gefärbt nach Schultag, Ferien, Wochenende/Feiertag) und den
+  Tagesgang des Tags – Stundenwerte für die jüngsten 12 Monate der Quelle.
+- **Lkw (Detektor)** ist die Klasse, die der Detektor von Pkw unterscheidet – nicht dasselbe
+  wie der Schwerverkehr der Kurzzeitzählungen, darum eine eigene Verkehrsart.
+- Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
+  (eine Stunde nur bei mindestens 75 % gültigen Messintervallen und nur, wenn alle Fahrstreifen
+  gültig sind). Ab 2025 gibt es nur die neue Qualitätssicherung je Fahrstreifen; die Zählkarte
+  summiert dann nach derselben Regel. Für 2023–2024 liegen beide vor: 81 % der Stunden stimmen
+  auf ±2 % überein (Median-Abweichung 0 %). Ab 2021 sind deutlich weniger Tage vollständig
+  gezählt als davor. Messquerschnitte, die in den Stammdaten (Stand Juli 2022) fehlen – vor
+  allem neue mit „n“ am Ende der Kennung –, haben keine Lage und fehlen in der Karte.
+
 ## Aufbau
 
 ```
@@ -99,7 +131,9 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
   config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
   src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
                             olpe_radar, konstanz_mobil, potsdam_pdf, xanten_pdf)
+  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz), eigener Bau
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
+public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
   js/sprache/          Texte der Oberfläche DE/EN (texte.js) und der Umschalter
 tests/               unit/ (node --test), web/ (Playwright gegen den Build)
@@ -110,6 +144,7 @@ tests/               unit/ (node --test), web/ (Playwright gegen den Build)
 uv sync
 uv run zaehlkarte fetch      # Rohdaten nach pipeline/data/raw/
 uv run zaehlkarte site       # Kartendaten nach public/data/
+uv run zaehlkarte dauer fetch && uv run zaehlkarte dauer site   # Dauerzählstellen
 uv run pytest && uvx ruff check
 
 # Karte (aus der Wurzel)
@@ -124,7 +159,12 @@ kleinen synthetischen Datei in `pipeline/tests/`. Wie man Quellen findet und was
 funktioniert hat: [AGENTS.md](AGENTS.md).
 
 Die Daten erneuert der Workflow „Kartendaten neu bauen“ (monatlich und von Hand) als Pull
-Request. Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
+Request. Die Dauerzählstellen baut der Workflow „Dauerzählstellen bauen“ (monatlich, von Hand
+und bei Änderungen an `pipeline/src/zaehlkarte/dauer/`) und legt sie als Release-Asset
+`dauerzaehlstellen/dauer.tar.gz` ab – rund 30 MB, die sich laufend ändern, gehören nicht ins
+Git. Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die
+Kurzzeitzählungen. Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages
+ausgeliefert.
 
 ## Lizenz
 

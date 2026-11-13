@@ -16,6 +16,9 @@ fetch  Rohdaten -> data/raw/           Berlin-Archive + Geokodierung (sha256 gep
 build  Adapter -> Zählungen             Zähltag (Ferienkalender je Land), Lage übertragen,
                                          Stellen bilden (je Kennung, 150 m)
 site   -> public/data/                  manifest.json, index.json, details/NN.json, datenlage.json
+
+dauer fetch  -> data/raw/berlin_viz/     Berlin: Monatsarchive der Verkehrsdetektion (Content-MD5)
+dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (nicht im Git)
 ```
 
 | Modul | Aufgabe |
@@ -33,6 +36,9 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 | `kennzahlen.py` | Summen je Zeitfenster, stärkste Stunde |
 | `build.py` | Lage übertragen, Stellen bilden |
 | `site.py` | Kartendaten (Vertrag mit dem Frontend, Kopfkommentar) |
+| `dauer/modell.py` | Dauerzählstellen: Messreihe (Stelle × Tag × Stunde), Tagessummen, Zeitumstellung |
+| `dauer/berlin_viz.py` | Berlin: Verkehrsdetektion, alte und neue Qualitätssicherung, Stammdaten |
+| `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |
 
 Konfiguration: `config/sources.yaml` (Quellen, Datenlage, Rechtslage je Land),
 `config/schulferien_*.csv` (KMK-Ferienkalender für die Einordnung des Zähltags),
@@ -48,5 +54,7 @@ uv sync
 uv run zaehlkarte fetch            # ~450 MB Download (MobiData-ZIPs samt PDFs)
 uv run zaehlkarte build            # Bericht ohne zu schreiben
 uv run zaehlkarte site             # Kartendaten schreiben (~1,5 min)
+uv run zaehlkarte dauer fetch      # Dauerzählstellen: ~330 MB (Berliner Monatsarchive)
+uv run zaehlkarte dauer site       # public/data/dauer/ schreiben (~30 MB, ~5 min)
 uv run pytest && uvx ruff check
 ```

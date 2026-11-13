@@ -10,15 +10,26 @@
 //   u  übertragene Lagen zeigen: 0 | 1
 //   dl Ebene Datenlage: 0 | 1
 //   m  Kartenausschnitt zoom/lat/lon
-//   s  gewählte Stelle (id aus index.json)
+//   s  gewählte Stelle (id aus index.json bzw. dauer/index.json)
+//   f  Familie         k Kurzzeitzählungen (Standard) | d Dauerzählstellen
+//   z  gewählter Tag   JJJJ-MM-TT (Dauerzählstellen; fehlt = Standardtag der Daten)
+// Bei f=d steht in t die Verkehrsart der Dauerzählstellen (kfz.menge | lkw.menge); die übrigen
+// Kürzel behalten ihre Bedeutung für die Kurzzeitzählungen.
+import { DAUER_THEMEN } from "../data/dauer.js";
 import { TAGE, THEMEN } from "../data/modell.js";
 
 const ARTEN = ["w", "w24", "sp"];
 
 export function kodiere(zustand, standard, karte, stelle) {
   const p = new URLSearchParams();
-  const tm = `${zustand.thema}.${zustand.modus[zustand.thema]}`;
-  if (tm !== `${standard.thema}.${standard.modus[standard.thema]}`) p.set("t", tm);
+  if (zustand.familie === "d") {
+    p.set("f", "d");
+    if (zustand.dthema !== standard.dthema) p.set("t", `${zustand.dthema}.menge`);
+    if (zustand.tag) p.set("z", zustand.tag);
+  } else {
+    const tm = `${zustand.thema}.${zustand.modus[zustand.thema]}`;
+    if (tm !== `${standard.thema}.${standard.modus[standard.thema]}`) p.set("t", tm);
+  }
   if (zustand.art !== standard.art) p.set("a", zustand.art);
   if (zustand.jahre[0] !== standard.jahre[0] || zustand.jahre[1] !== standard.jahre[1]) {
     p.set("j", `${zustand.jahre[0]}-${zustand.jahre[1]}`);
@@ -45,8 +56,12 @@ export function dekodiere(hash, standard, bekannteQuellen) {
     tage: new Set(standard.tage),
     quellen: new Set(standard.quellen),
   };
+  if (p.get("f") === "d") z.familie = "d";
   const [thema, modus] = (p.get("t") ?? "").split(".");
-  if (THEMEN[thema]?.modi[modus]) {
+  if (z.familie === "d") {
+    if (DAUER_THEMEN[thema] && modus === "menge") z.dthema = thema;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(p.get("z") ?? "")) z.tag = p.get("z");
+  } else if (THEMEN[thema]?.modi[modus]) {
     z.thema = thema;
     z.modus[thema] = modus;
   }
