@@ -432,5 +432,6 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
   - **Länder:** Schleswig-Holstein (BASt-Dateien je Stelle und Jahr im Landesportal, etwa
     „Automatische Zählstelle Kiel-West“, dl-de/by-2-0), Bayern (BAYSIS), Nordrhein-Westfalen
     (`opendata.strassen.nrw.de/Verkehrsdaten/Dauerzaehlungen/`), Brandenburg
-    (Verkehrsstärkedaten). Bielefeld veröffentlicht die BASt-Zählstelle Ostwestfalendamm
-    (Rohdaten im BASt-Format, Open.NRW).
+    (Verkehrsstärkedaten). Bielefeld: Rohdaten einer Verkehrszählstelle am Ostwestfalendamm im
+    BASt-Format (Open.NRW) – eine Stelle; ob die Stadt sie betreibt oder sie zum Zählnetz von Bund
+    und Land gehört, ist nicht geprüft.
