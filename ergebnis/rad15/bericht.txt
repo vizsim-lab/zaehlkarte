@@ -1,0 +1,247 @@
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .venv
+Resolved 48 packages in 0.88ms
+   Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Downloading numpy (16.0MiB)
+Downloading pygments (1.2MiB)
+Downloading cryptography (4.5MiB)
+Downloading pycryptodomex (2.2MiB)
+Downloading pillow (6.8MiB)
+Downloading ruff (10.1MiB)
+Downloading pdfminer-six (6.3MiB)
+Downloading pandas (11.5MiB)
+Downloading osmium (1.8MiB)
+Downloading brotli (1.4MiB)
+Downloading pypdfium2 (3.8MiB)
+ Downloaded pygments
+ Downloaded brotli
+ Downloaded osmium
+ Downloaded pycryptodomex
+ Downloaded pypdfium2
+ Downloaded cryptography
+ Downloaded pdfminer-six
+ Downloaded pillow
+ Downloaded ruff
+ Downloaded numpy
+ Downloaded pandas
+      Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Prepared 45 packages in 532ms
+Installed 45 packages in 44ms
+ + annotated-doc==0.0.5
+ + backports-zstd==1.8.0
+ + brotli==1.2.1
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + cryptography==50.0.2
+ + et-xmlfile==2.0.0
+ + idna==3.20
+ + inflate64==1.0.4
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + multivolumefile==0.2.3
+ + numpy==2.5.4
+ + openpyxl==3.1.5
+ + osmium==4.3.2
+ + packaging==26.3
+ + pandas==3.1.1
+ + pdfminer-six==20260107
+ + pdfplumber==0.11.10
+ + pillow==13.0.0
+ + pluggy==1.7.0
+ + psutil==7.2.2
+ + py7zr==1.1.4
+ + pybcj==1.0.8
+ + pycparser==3.12
+ + pycryptodomex==3.24.2
+ + pygments==2.21.0
+ + pypdfium2==5.15.1
+ + pyppmd==1.3.1
+ + pytest==9.2.0
+ + python-dateutil==4.0.0
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + rich==15.0.0
+ + ruff==0.17.4
+ + shellingham==1.5.4
+ + texttable==1.7.2
+ + typer==0.28.0
+ + tzdata==2026.6
+ + urllib3==2.8.0
+ + xlrd==2.0.2
+ + xlwt==1.3.0
+ + zaehlkarte==0.1.0 (from file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline)
+wuerzburg_rad: fahrrad-zaehlung-daten: 389506 Zeilen geladen (Stand 2026-11-13T05:15:40.173000+00:00)
+wuerzburg_rad: Lage von 9 Zählstellen
+rhein_kreis_neuss_rad: eco-counter-data: 1915736 Zeilen geladen (Stand 2026-07-05T22:15:28.410000+00:00)
+rhein_kreis_neuss_rad: Lage von 5 Zählstellen
+dortmund_rad: fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke: 308741 Zeilen geladen (Stand 2026-11-13T01:24:11.571000+00:00)
+essen_rad: 22 Quartale mit offener Lizenz, 22 neu geladen; nicht übernommen (geschlossene Lizenz): 2018 Q2, 2018 Q3, 2018 Q4, 2019 Q1, 2019 Q2, 2019 Q3, 2019 Q4, 2020 Q1, 2020 Q2, 2020 Q3, 2020 Q4
+leipzig_rad: 21132 Stunden geholt (verworfen: keine), Gedächtnis 0 -> 21132 Stunden, geändert: stunden_2026-10.csv.gz, stunden_2026-11.csv.gz
+rostock_rad: Daten (202 MB) und Standorte geholt
+bochum_rad: 8 Zählstellen geholt
+	Command being timed: "uv run zaehlkarte dauer fetch --quelle wuerzburg_rad --quelle rhein_kreis_neuss_rad --quelle dortmund_rad --quelle essen_rad --quelle leipzig_rad --quelle rostock_rad --quelle bochum_rad"
+	User time (seconds): 3.88
+	System time (seconds): 0.63
+	Percent of CPU this job got: 0%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:22.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 140132
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 19
+	Minor (reclaiming a frame) page faults: 35447
+	Voluntary context switches: 12181
+	Involuntary context switches: 94
+	Swaps: 0
+	File system inputs: 4632
+	File system outputs: 845248
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+gelesen in 17 s
+wuerzburg_rad: 389506 Zeilen; Status: raw 386677, deleted 2829; ohne Wert 2829; doppelt mit verschiedenen Werten 45 (nicht gezählt)
+wuerzburg_rad: 6 Zählstellen; Stunden in der Karte: rad 385795
+wuerzburg_rad: ohne Lage (nicht in der Karte): 100020242
+rhein_kreis_neuss_rad: 1915736 Zeilen; Status: raw 1824578, leer 91083, modified 75; ohne Wert 91083; doppelt mit verschiedenen Werten 170 (nicht gezählt)
+rhein_kreis_neuss_rad: 5 Zählstellen mit 22 Kanälen; Stunden in der Karte: rad 412025
+dortmund_rad: 308741 Viertelstunden; nicht gezählt: ohne Wert 1445; doppelt mit verschiedenen Werten: 0; Stunden in der Karte: rad 76697
+essen_rad: 22 Quartale (2021 Q1 bis 2026 Q2): 48166 Stunden, 0 Zeilen unlesbar; Stunden mit leerer Richtung (nicht gezählt): grugatrasse 1563, huyssenallee 663; Stunden in der Karte: rad 94092; 2 Uhr am Tag der Sommerzeit verworfen: 4
+essen_rad: Kopf weicht ab (Spalten nach Reihenfolge übernommen): quartal_2026_Q1: Grugatrasse Ruettenscheid_West | Huyssenallee Stadtkern_Nord | Huyssenallee Ruettenscheid_Sued | Huyssenallee Stadtkern_Nord; quartal_2026_Q2: Grugatrasse Ruetenscheid_West | Huyssenallee Stadtkern_Nord | Huyssenallee Ruettenscheid_Sued | Huyssenallee Stadtkern_Nord
+leipzig_rad: 25 Zählstellen; Stunden in der Karte: rad 21107; Gedächtnis: 2 Monate (2026-10 bis 2026-11)
+rostock_rad: 5410496 Viertelstunden; verworfen: keine; doppelt mit verschiedenen Werten: 0; 17 Zählstellen; Stunden in der Karte: rad 1330510
+rostock_rad: nicht in der Karte (sources.yaml `ohne`): 300041920
+bochum_rad: 1099252 Viertelstunden; ohne beide Rad-Richtungen (nicht gezählt): brueckstrasse 15584, universitaetsstrasse 13436, springorumtrasse 10895, lothringentrasse 10418, wittener_strasse 8394, bluecherstrasse 687, erzbahntrasse 204, hofsteder_bach 13; doppelt mit verschiedenen Werten: 0; 8 Zählstellen; Stunden in der Karte: rad 259734
+bochum_rad: nicht in der Karte (sources.yaml `ohne`): springorumtrasse_sued
+wuerzburg_rad: 6 Stellen mit vollständigen Tagen, 0 ohne
+rhein_kreis_neuss_rad: 5 Stellen mit vollständigen Tagen, 0 ohne
+dortmund_rad: 1 Stellen mit vollständigen Tagen, 0 ohne
+essen_rad: 2 Stellen mit vollständigen Tagen, 0 ohne
+leipzig_rad: 25 Stellen mit vollständigen Tagen, 0 ohne
+rostock_rad: 17 Stellen mit vollständigen Tagen, 0 ohne
+bochum_rad: 8 Stellen mit vollständigen Tagen, 0 ohne
+18 Dateien, 2.3 MB, 2 Detail-Dateien
+wuerzburg_rad: vollständige Tage je Jahr (Stellen × Tage) – 2015: 421, 2016: 728, 2017: 728, 2018: 728, 2019: 728, 2020: 734, 2021: 1374, 2022: 2184, 2023: 2163, 2024: 2190, 2025: 2184, 2026: 1817
+wuerzburg_rad: rad-Tagessummen, Quintilgrenzen [290, 560, 800, 1120], Median 679, Maximum 4911
+rhein_kreis_neuss_rad: vollständige Tage je Jahr (Stellen × Tage) – 2015: 118, 2016: 1799, 2017: 1804, 2018: 1789, 2019: 1820, 2020: 1794, 2021: 1736, 2022: 1819, 2023: 1434, 2024: 1535, 2025: 1085, 2026: 253
+rhein_kreis_neuss_rad: rad-Tagessummen, Quintilgrenzen [40, 110, 210, 450], Median 157, Maximum 3153
+dortmund_rad: vollständige Tage je Jahr (Stellen × Tage) – 2018: 342, 2019: 364, 2020: 365, 2021: 364, 2022: 364, 2023: 364, 2024: 346, 2025: 363, 2026: 315
+dortmund_rad: rad-Tagessummen, Quintilgrenzen [470, 750, 1000, 1320], Median 872, Maximum 2412
+essen_rad: vollständige Tage je Jahr (Stellen × Tage) – 2021: 728, 2022: 699, 2023: 723, 2024: 715, 2025: 711, 2026: 318
+essen_rad: rad-Tagessummen, Quintilgrenzen [540, 800, 1140, 1920], Median 956, Maximum 5813
+leipzig_rad: vollständige Tage je Jahr (Stellen × Tage) – 2026: 854
+leipzig_rad: rad-Tagessummen, Quintilgrenzen [500, 900, 1710, 3290], Median 1261, Maximum 11650
+rostock_rad: vollständige Tage je Jahr (Stellen × Tage) – 2012: 320, 2013: 1339, 2014: 2217, 2015: 2745, 2016: 2920, 2017: 3468, 2018: 3558, 2019: 3586, 2020: 3920, 2021: 4024, 2022: 4659, 2023: 5202, 2024: 5768, 2025: 6178, 2026: 5300
+rostock_rad: rad-Tagessummen, Quintilgrenzen [230, 510, 840, 1620], Median 660, Maximum 14028
+bochum_rad: vollständige Tage je Jahr (Stellen × Tage) – 2018: 80, 2019: 728, 2020: 730, 2021: 728, 2022: 682, 2023: 1130, 2024: 2324, 2025: 2468, 2026: 1834
+bochum_rad: rad-Tagessummen, Quintilgrenzen [280, 540, 850, 1270], Median 692, Maximum 4595
+fertig in 17 s, RSS-Spitze 2.01 GB, 18 Dateien
+	Command being timed: "uv run python /home/runner/work/zaehlkarte/zaehlkarte/tools/rad_bau.py /home/runner/work/zaehlkarte/zaehlkarte/app_aus wuerzburg_rad,rhein_kreis_neuss_rad,dortmund_rad,essen_rad,leipzig_rad,rostock_rad,bochum_rad"
+	User time (seconds): 17.38
+	System time (seconds): 1.13
+	Percent of CPU this job got: 105%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.48
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2010864
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 4
+	Minor (reclaiming a frame) page faults: 509840
+	Voluntary context switches: 2168
+	Involuntary context switches: 290
+	Swaps: 0
+	File system inputs: 664
+	File system outputs: 4584
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+2.3M	app_aus/public/data/dauer
+app/pipeline/data/raw/bochum_rad/:
+total 80476
+drwxr-xr-x 2 runner runner     4096 Nov 13 17:11 .
+drwxr-xr-x 9 runner runner     4096 Nov 13 17:11 ..
+-rw-r--r-- 1 runner runner      244 Nov 13 17:11 abruf.json
+-rw-r--r-- 1 runner runner  1912738 Nov 13 17:11 bluecherstrasse.csv
+-rw-r--r-- 1 runner runner  7613363 Nov 13 17:11 brueckstrasse.csv
+-rw-r--r-- 1 runner runner  8706191 Nov 13 17:11 erzbahntrasse.csv
+-rw-r--r-- 1 runner runner  8772627 Nov 13 17:11 hofsteder_bach.csv
+-rw-r--r-- 1 runner runner  5822293 Nov 13 17:11 lothringentrasse.csv
+-rw-r--r-- 1 runner runner 21033246 Nov 13 17:11 springorumtrasse.csv
+-rw-r--r-- 1 runner runner  8369976 Nov 13 17:11 universitaetsstrasse.csv
+-rw-r--r-- 1 runner runner 20152201 Nov 13 17:11 wittener_strasse.csv
+
+app/pipeline/data/raw/dortmund_rad/:
+total 10168
+drwxr-xr-x 2 runner runner     4096 Nov 13 17:10 .
+drwxr-xr-x 9 runner runner     4096 Nov 13 17:11 ..
+-rw-r--r-- 1 runner runner      410 Nov 13 17:10 abruf.json
+-rw-r--r-- 1 runner runner 10398734 Nov 13 17:10 daten.csv
+
+app/pipeline/data/raw/essen_rad/:
+total 1392
+drwxr-xr-x 2 runner runner  4096 Nov 13 17:10 .
+drwxr-xr-x 9 runner runner  4096 Nov 13 17:11 ..
+-rw-r--r-- 1 runner runner  2741 Nov 13 17:10 abruf.json
+-rw-r--r-- 1 runner runner 59852 Nov 13 17:10 quartal_2021_Q1.csv
+-rw-r--r-- 1 runner runner 62644 Nov 13 17:10 quartal_2021_Q2.csv
+-rw-r--r-- 1 runner runner 63722 Nov 13 17:10 quartal_2021_Q3.csv
+-rw-r--r-- 1 runner runner 61987 Nov 13 17:10 quartal_2021_Q4.csv
+-rw-r--r-- 1 runner runner 58836 Nov 13 17:10 quartal_2022_Q1.csv
+-rw-r--r-- 1 runner runner 63192 Nov 13 17:10 quartal_2022_Q2.csv
+-rw-r--r-- 1 runner runner 64183 Nov 13 17:10 quartal_2022_Q3.csv
+-rw-r--r-- 1 runner runner 62288 Nov 13 17:10 quartal_2022_Q4.csv
+-rw-r--r-- 1 runner runner 60458 Nov 13 17:10 quartal_2023_Q1.csv
+-rw-r--r-- 1 runner runner 63186 Nov 13 17:10 quartal_2023_Q2.csv
+-rw-r--r-- 1 runner runner 63976 Nov 13 17:10 quartal_2023_Q3.csv
+-rw-r--r-- 1 runner runner 61601 Nov 13 17:10 quartal_2023_Q4.csv
+-rw-r--r-- 1 runner runner 61258 Nov 13 17:10 quartal_2024_Q1.csv
+-rw-r--r-- 1 runner runner 63006 Nov 13 17:10 quartal_2024_Q2.csv
+-rw-r--r-- 1 runner runner 63240 Nov 13 17:10 quartal_2024_Q3.csv
+-rw-r--r-- 1 runner runner 62012 Nov 13 17:10 quartal_2024_Q4.csv
+-rw-r--r-- 1 runner runner 60893 Nov 13 17:10 quartal_2025_Q1.csv
+-rw-r--r-- 1 runner runner 63468 Nov 13 17:10 quartal_2025_Q2.csv
+-rw-r--r-- 1 runner runner 63622 Nov 13 17:10 quartal_2025_Q3.csv
+-rw-r--r-- 1 runner runner 62039 Nov 13 17:10 quartal_2025_Q4.csv
+-rw-r--r-- 1 runner runner 60197 Nov 13 17:10 quartal_2026_Q1.csv
+-rw-r--r-- 1 runner runner 59583 Nov 13 17:10 quartal_2026_Q2.csv
+
+app/pipeline/data/raw/leipzig_rad/:
+total 24
+drwxr-xr-x 3 runner runner 4096 Nov 13 17:10 .
+drwxr-xr-x 9 runner runner 4096 Nov 13 17:11 ..
+-rw-r--r-- 1 runner runner  152 Nov 13 17:10 abruf.json
+drwxr-xr-x 2 runner runner 4096 Nov 13 17:10 gedaechtnis
+-rw-r--r-- 1 runner runner 4987 Nov 13 17:10 standorte.csv
+
+app/pipeline/data/raw/rhein_kreis_neuss_rad/:
+total 98952
+drwxr-xr-x 2 runner runner      4096 Nov 13 17:09 .
+drwxr-xr-x 9 runner runner      4096 Nov 13 17:11 ..
+-rw-r--r-- 1 runner runner       355 Nov 13 17:09 abruf.json
+-rw-r--r-- 1 runner runner 101307391 Nov 13 17:09 daten.csv
+-rw-r--r-- 1 runner runner       402 Nov 13 17:09 standorte.json
+
+app/pipeline/data/raw/rostock_rad/:
+total 197264
+drwxr-xr-x 2 runner runner      4096 Nov 13 17:11 .
+drwxr-xr-x 9 runner runner      4096 Nov 13 17:11 ..
+-rw-r--r-- 1 runner runner       232 Nov 13 17:11 abruf.json
+-rw-r--r-- 1 runner runner 201974683 Nov 13 17:11 daten.csv
+-rw-r--r-- 1 runner runner      5679 Nov 13 17:11 standorte.json
+
+app/pipeline/data/raw/wuerzburg_rad/:
+total 19676
+drwxr-xr-x 2 runner runner     4096 Nov 13 17:02 .
+drwxr-xr-x 9 runner runner     4096 Nov 13 17:11 ..
+-rw-r--r-- 1 runner runner      339 Nov 13 17:02 abruf.json
+-rw-r--r-- 1 runner runner 20127790 Nov 13 17:02 daten.csv
+-rw-r--r-- 1 runner runner      966 Nov 13 17:02 standorte.json
