@@ -19,5 +19,5 @@ baue() {
 }
 
 # Dauerzählstellen mit dem Branch dauer-rad bauen (Rad-Zählstellen: MobiData BW, Münster, Aachen,
-# Berlin, München; 13.11.2026; zweiter Lauf mit dem sparsamen Leser für MobiData BW)
+# Berlin, München; 13.11.2026; dritter Lauf: MobiData-Zeitstempel ohne Versatz nicht übernommen)
 baue dauer-rad
