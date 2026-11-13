@@ -1,0 +1,156 @@
+# Schulferien Bayern – aus den KMK-Ferienkalendern 2007/2008 bis 2027/2028 (erster und letzter
+# Ferientag; je Datei die Zeile „Bayern“, ausgelesen mit pdftotext -layout und
+# pipeline/werkzeuge/kmk_ferien.py). Stehen unter „Ostern/Frühjahr“ zwei Zeiträume, ist der erste
+# die Frühjahrs- (Faschings-)ferien. Dazu je Schuljahr der Buß- und Bettag: kein gesetzlicher
+# Feiertag, aber an allen Schulen unterrichtsfrei (Art. 4 Nr. 3 BayFTG). Gebraucht für die
+# Rad-Dauerzählstellen in München (ab Juni 2008). Weitere unterrichtsfreie Einzeltage, die die KMK
+# nicht aufführt, fehlen – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen sein.
+von,bis,ferien,schuljahr,gebiet,quelle
+2007-10-29,2007-11-03,Herbstferien,2007/2008,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien07_08.pdf
+2007-11-21,2007-11-21,Buß- und Bettag (unterrichtsfrei),2007/2008,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2007-12-24,2008-01-05,Weihnachtsferien,2007/2008,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien07_08.pdf
+2008-02-04,2008-02-09,Winterferien,2007/2008,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien07_08.pdf
+2008-03-17,2008-03-29,Osterferien,2007/2008,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien07_08.pdf
+2008-05-13,2008-05-24,Pfingstferien,2007/2008,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien07_08.pdf
+2008-08-04,2008-09-15,Sommerferien,2007/2008,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien07_08.pdf
+2008-11-03,2008-11-07,Herbstferien,2008/2009,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien08_09.pdf
+2008-11-19,2008-11-19,Buß- und Bettag (unterrichtsfrei),2008/2009,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2008-12-22,2009-01-05,Weihnachtsferien,2008/2009,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien08_09.pdf
+2009-02-23,2009-02-28,Winterferien,2008/2009,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien08_09.pdf
+2009-04-06,2009-04-18,Osterferien,2008/2009,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien08_09.pdf
+2009-06-02,2009-06-13,Pfingstferien,2008/2009,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien08_09.pdf
+2009-08-03,2009-09-14,Sommerferien,2008/2009,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien08_09.pdf
+2009-11-02,2009-11-07,Herbstferien,2009/2010,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien09_10.pdf
+2009-11-18,2009-11-18,Buß- und Bettag (unterrichtsfrei),2009/2010,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2009-12-24,2010-01-05,Weihnachtsferien,2009/2010,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien09_10.pdf
+2010-02-15,2010-02-20,Winterferien,2009/2010,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien09_10.pdf
+2010-03-29,2010-04-10,Osterferien,2009/2010,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien09_10.pdf
+2010-05-25,2010-06-05,Pfingstferien,2009/2010,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien09_10.pdf
+2010-08-02,2010-09-13,Sommerferien,2009/2010,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien09_10.pdf
+2010-11-02,2010-11-05,Herbstferien,2010/2011,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien2010_11.pdf
+2010-11-17,2010-11-17,Buß- und Bettag (unterrichtsfrei),2010/2011,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2010-12-24,2011-01-07,Weihnachtsferien,2010/2011,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien2010_11.pdf
+2011-03-07,2011-03-11,Winterferien,2010/2011,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien2010_11.pdf
+2011-04-18,2011-04-30,Osterferien,2010/2011,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien2010_11.pdf
+2011-06-14,2011-06-25,Pfingstferien,2010/2011,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien2010_11.pdf
+2011-07-30,2011-09-12,Sommerferien,2010/2011,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien2010_11.pdf
+2011-10-31,2011-11-05,Herbstferien,2011/2012,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2011_12.pdf
+2011-11-16,2011-11-16,Buß- und Bettag (unterrichtsfrei),2011/2012,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2011-12-27,2012-01-05,Weihnachtsferien,2011/2012,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2011_12.pdf
+2012-02-20,2012-02-24,Winterferien,2011/2012,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2011_12.pdf
+2012-04-02,2012-04-14,Osterferien,2011/2012,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2011_12.pdf
+2012-05-29,2012-06-09,Pfingstferien,2011/2012,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2011_12.pdf
+2012-08-01,2012-09-12,Sommerferien,2011/2012,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2011_12.pdf
+2012-10-29,2012-11-03,Herbstferien,2012/2013,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2012_13.pdf
+2012-11-21,2012-11-21,Buß- und Bettag (unterrichtsfrei),2012/2013,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2012-12-24,2013-01-05,Weihnachtsferien,2012/2013,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2012_13.pdf
+2013-02-11,2013-02-15,Winterferien,2012/2013,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2012_13.pdf
+2013-03-25,2013-04-06,Osterferien,2012/2013,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2012_13.pdf
+2013-05-21,2013-05-31,Pfingstferien,2012/2013,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2012_13.pdf
+2013-07-31,2013-09-11,Sommerferien,2012/2013,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2012_13.pdf
+2013-10-28,2013-10-31,Herbstferien,2013/2014,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2013_14.pdf
+2013-11-20,2013-11-20,Buß- und Bettag (unterrichtsfrei),2013/2014,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2013-12-23,2014-01-04,Weihnachtsferien,2013/2014,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2013_14.pdf
+2014-03-03,2014-03-07,Frühjahrsferien,2013/2014,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2013_14.pdf
+2014-04-14,2014-04-26,Osterferien,2013/2014,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2013_14.pdf
+2014-06-10,2014-06-21,Pfingstferien,2013/2014,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2013_14.pdf
+2014-07-30,2014-09-15,Sommerferien,2013/2014,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2013_14.pdf
+2014-10-27,2014-10-31,Herbstferien,2014/2015,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/FER2014_15.pdf
+2014-11-19,2014-11-19,Buß- und Bettag (unterrichtsfrei),2014/2015,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2014-12-24,2015-01-05,Weihnachtsferien,2014/2015,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/FER2014_15.pdf
+2015-02-16,2015-02-20,Winterferien,2014/2015,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/FER2014_15.pdf
+2015-03-30,2015-04-11,Osterferien,2014/2015,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/FER2014_15.pdf
+2015-05-26,2015-06-05,Pfingstferien,2014/2015,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/FER2014_15.pdf
+2015-08-01,2015-09-14,Sommerferien,2014/2015,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Bildung/AllgBildung/FER2014_15.pdf
+2015-11-02,2015-11-07,Herbstferien,2015/2016,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2015_16.pdf
+2015-11-18,2015-11-18,Buß- und Bettag (unterrichtsfrei),2015/2016,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2015-12-24,2016-01-05,Weihnachtsferien,2015/2016,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2015_16.pdf
+2016-02-08,2016-02-12,Winterferien,2015/2016,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2015_16.pdf
+2016-03-21,2016-04-01,Osterferien,2015/2016,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2015_16.pdf
+2016-05-17,2016-05-28,Pfingstferien,2015/2016,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2015_16.pdf
+2016-07-30,2016-09-12,Sommerferien,2015/2016,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2015_16.pdf
+2016-10-31,2016-11-04,Herbstferien,2016/2017,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2016_17_-_NEU.pdf
+2016-11-16,2016-11-16,Buß- und Bettag (unterrichtsfrei),2016/2017,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2016-12-24,2017-01-05,Weihnachtsferien,2016/2017,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2016_17_-_NEU.pdf
+2017-02-27,2017-03-03,Winterferien,2016/2017,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2016_17_-_NEU.pdf
+2017-04-10,2017-04-22,Osterferien,2016/2017,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2016_17_-_NEU.pdf
+2017-06-06,2017-06-16,Pfingstferien,2016/2017,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2016_17_-_NEU.pdf
+2017-07-29,2017-09-11,Sommerferien,2016/2017,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2016_17_-_NEU.pdf
+2017-10-30,2017-11-03,Herbstferien,2017/2018,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER17_18.pdf
+2017-11-22,2017-11-22,Buß- und Bettag (unterrichtsfrei),2017/2018,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2017-12-23,2018-01-05,Weihnachtsferien,2017/2018,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER17_18.pdf
+2018-02-12,2018-02-16,Winterferien,2017/2018,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER17_18.pdf
+2018-03-26,2018-04-07,Osterferien,2017/2018,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER17_18.pdf
+2018-05-22,2018-06-02,Pfingstferien,2017/2018,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER17_18.pdf
+2018-07-30,2018-09-10,Sommerferien,2017/2018,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER17_18.pdf
+2018-10-29,2018-11-02,Herbstferien,2018/2019,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER18_19.pdf
+2018-11-21,2018-11-21,Buß- und Bettag (unterrichtsfrei),2018/2019,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2018-12-22,2019-01-05,Weihnachtsferien,2018/2019,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER18_19.pdf
+2019-03-04,2019-03-08,Frühjahrsferien,2018/2019,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER18_19.pdf
+2019-04-15,2019-04-27,Osterferien,2018/2019,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER18_19.pdf
+2019-06-11,2019-06-21,Pfingstferien,2018/2019,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER18_19.pdf
+2019-07-29,2019-09-09,Sommerferien,2018/2019,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER18_19.pdf
+2019-10-28,2019-10-31,Herbstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2019-11-20,2019-11-20,Buß- und Bettag (unterrichtsfrei),2019/2020,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2019-12-23,2020-01-04,Weihnachtsferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-02-24,2020-02-28,Frühjahrsferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-04-06,2020-04-18,Osterferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-06-02,2020-06-13,Pfingstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-07-27,2020-09-07,Sommerferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-10-31,2020-11-06,Herbstferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2020-11-18,2020-11-18,Buß- und Bettag (unterrichtsfrei),2020/2021,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2020-12-23,2021-01-09,Weihnachtsferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-02-15,2021-02-19,Frühjahrsferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-03-29,2021-04-10,Osterferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-05-25,2021-06-04,Pfingstferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-07-30,2021-09-13,Sommerferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-11-02,2021-11-05,Herbstferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2021-11-17,2021-11-17,Buß- und Bettag (unterrichtsfrei),2021/2022,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2021-12-24,2022-01-08,Weihnachtsferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-02-28,2022-03-04,Frühjahrsferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-04-11,2022-04-23,Osterferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-06-07,2022-06-18,Pfingstferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-08-01,2022-09-12,Sommerferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-10-31,2022-11-04,Herbstferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2022-11-16,2022-11-16,Buß- und Bettag (unterrichtsfrei),2022/2023,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2022-12-24,2023-01-07,Weihnachtsferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-02-20,2023-02-24,Frühjahrsferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-04-03,2023-04-15,Osterferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-05-30,2023-06-09,Pfingstferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-07-31,2023-09-11,Sommerferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-10-30,2023-11-03,Herbstferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2023-11-22,2023-11-22,Buß- und Bettag (unterrichtsfrei),2023/2024,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2023-12-23,2024-01-05,Weihnachtsferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-02-12,2024-02-16,Frühjahrsferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-03-25,2024-04-06,Osterferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-05-21,2024-06-01,Pfingstferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-07-29,2024-09-09,Sommerferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-10-28,2024-10-31,Herbstferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2024-11-20,2024-11-20,Buß- und Bettag (unterrichtsfrei),2024/2025,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2024-12-23,2025-01-03,Weihnachtsferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-03-03,2025-03-07,Frühjahrsferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-04-14,2025-04-25,Osterferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-06-10,2025-06-20,Pfingstferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-08-01,2025-08-01,Sommerferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-08-04,2025-09-15,Sommerferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-11-03,2025-11-07,Herbstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2025-11-19,2025-11-19,Buß- und Bettag (unterrichtsfrei),2025/2026,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2025-12-22,2026-01-05,Weihnachtsferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-02-16,2026-02-20,Frühjahrsferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-03-30,2026-04-10,Osterferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-05-26,2026-06-05,Pfingstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-08-03,2026-09-14,Sommerferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-11-02,2026-11-06,Herbstferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2026-11-18,2026-11-18,Buß- und Bettag (unterrichtsfrei),2026/2027,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2026-12-24,2027-01-08,Weihnachtsferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-02-08,2027-02-12,Frühjahrsferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-03-22,2027-04-02,Osterferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-05-18,2027-05-28,Pfingstferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-08-02,2027-09-13,Sommerferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-11-02,2027-11-05,Herbstferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2027-11-17,2027-11-17,Buß- und Bettag (unterrichtsfrei),2027/2028,alle,https://www.gesetze-bayern.de/Content/Document/BayFTG-4
+2027-12-24,2028-01-07,Weihnachtsferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-02-28,2028-03-03,Frühjahrsferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-04-10,2028-04-21,Osterferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-06-06,2028-06-16,Pfingstferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-07-31,2028-09-11,Sommerferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf

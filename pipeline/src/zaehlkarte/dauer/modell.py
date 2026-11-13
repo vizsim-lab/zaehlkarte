@@ -128,6 +128,57 @@ def setze_utc(reihe: Messreihe, gruppe: str, stelle: np.ndarray, utc: np.ndarray
     return int(voll.sum())
 
 
+def setze_lokal(reihe: Messreihe, gruppe: str, stelle: np.ndarray, tag: np.ndarray,
+                stunde: np.ndarray, werte: np.ndarray, anzahl: int = 1,
+                rueck: str = "zusammen") -> tuple[int, int]:
+    """Werte mit Zeitstempel in Ortszeit (Tag als datetime64[D], Stunde 0–23) in die Reihe legen.
+
+    `anzahl`: Einträge je Stunde (1 = Stundenwerte, 4 = Viertelstunden). Eine Stunde ist gezählt,
+    wenn alle ihre Einträge da sind und keiner nicht gezählt ist (Wert < 0) – sonst bleibt sie
+    leer, nie aufgefüllt. Am Tag der Umstellung auf Sommerzeit gibt es 2 Uhr nicht: Einträge dort
+    werden verworfen (manche Quellen führen die Stunde mit Nullen). Am Tag der Rückstellung gibt
+    es 2 Uhr zweimal:
+    - `rueck="zusammen"`: Die Quelle fasst beide Stunden unter einer Uhrzeit zusammen (je Quelle
+      belegt) oder liefert beide getrennt – beides ergibt die Summe und `doppelt`.
+    - `rueck="einfach"`: Unter einer Uhrzeit steht nur eine der beiden Stunden – gezählt ist die
+      Stunde nur, wenn beide getrennt kommen (doppelt so viele Einträge).
+    -> (gesetzte Stunden, verworfene Einträge um 2 Uhr am Tag der Sommerzeit)."""
+    import pandas as pd
+
+    if not len(stelle):
+        return 0, 0
+    d = pd.DataFrame({
+        "s": stelle.astype(np.int64),
+        "t": (tag.astype("datetime64[D]") - np.datetime64(reihe.von, "D")).astype(np.int64),
+        "h": stunde.astype(np.int64),
+        "w": werte.astype(np.int64),
+    })
+    d = d[(d["t"] >= 0) & (d["t"] < reihe.tage)]
+    jahre = range(reihe.von.year, reihe.tag(reihe.tage - 1).year + 1)
+    sommer = {(umstellungen(j)[0] - reihe.von).days for j in jahre}
+    rueck_tage = {(umstellungen(j)[1] - reihe.von).days for j in jahre}
+    fehlt = d["t"].isin(sommer) & (d["h"] == 2)
+    verworfen = int(fehlt.sum())
+    d = d[~fehlt]
+    g = d.groupby(["s", "t", "h"], sort=False)["w"].agg(["sum", "count", "min"]).reset_index()
+    am_rueck = (g["t"].isin(rueck_tage) & (g["h"] == 2)).to_numpy()
+    n = g["count"].to_numpy()
+    gueltig = g["min"].to_numpy() >= 0
+    if rueck == "zusammen":
+        voll_rueck = (n == anzahl) | (n == 2 * anzahl)
+    elif rueck == "einfach":
+        voll_rueck = n == 2 * anzahl
+    else:
+        raise ValueError(f"rueck: {rueck!r}")
+    voll = gueltig & np.where(am_rueck, voll_rueck, n == anzahl)
+    w = reihe.werte[gruppe]
+    s, t, h = (g[k].to_numpy() for k in ("s", "t", "h"))
+    w[s, t, h] = np.where(voll, g["sum"].to_numpy(), LEER).astype(np.int32)
+    dop = am_rueck & voll
+    reihe.doppelt[s[dop], t[dop]] = True
+    return int(voll.sum()), verworfen
+
+
 def tagessummen(reihe: Messreihe, gruppe: str) -> tuple[np.ndarray, np.ndarray]:
     """(Summe [Stellen, Tage] mit -1 = nicht vollständig gezählt, gezählte Stunden [Stellen, Tage]).
 

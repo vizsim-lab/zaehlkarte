@@ -591,6 +591,178 @@ dauer:
       - >-
         Die Zählkarte prüft nur, ob jede Stunde geliefert ist – nicht, ob die Werte plausibel sind.
 
+  # Rad-Zählstellen (Zählschleifen und -säulen, meist Eco-Counter) – seit November 2026
+  # (Konzept, Entscheidung 1). Nur gezählte Werte: Was die Quelle als rekonstruiert, unplausibel
+  # oder geändert markiert (Berlin: Zellfarbe, Münster: Status), kommt nicht in die Karte.
+  # MobiData BW kennzeichnet rekonstruierte Werte nicht – aufgenommen mit Hinweis (Entscheidung des
+  # Nutzers, 13.11.2026). Aufbau und Fallen je Adapter und in AGENTS.md.
+  mobidata_rad:
+    status: live
+    adapter: mobidata_eco
+    name: Baden-Württemberg (Rad-Zählstellen, MobiData BW)
+    land: BW
+    traeger: Städte und Landkreise in Baden-Württemberg; gebündelt von MobiData BW
+    art: >-
+      Rad-Zählstellen (Zählschleifen und -säulen von Eco-Counter) der Städte und Landkreise;
+      Stundenwerte je Zählstelle, beide Richtungen zusammen
+    weg: offen bei MobiData BW (Monatsdateien seit 2013)
+    ferien: schulferien_baden-wuerttemberg.csv
+    portal: https://mobidata-bw.de/dataset/eco-counter-fahrradzahler
+    archiv_seite: https://mobidata-bw.de/fahrradzaehldaten/v2/
+    monate: https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_{monat}.csv.gz
+    ab: 2013-01
+    nachladen_monate: 2  # so viele jüngste Monate holt jeder Lauf neu (Werte ändern sich noch)
+    frisch_tage: 3  # jüngere Stunden kommen noch nicht in die Karte
+    ohne:  # Zählstellen, die nicht in die Karte kommen, mit Grund
+      "100003358": >-
+        Fuß- & Radtunnel Südportal (Tübingen) – ob nur Räder gezählt sind, ist nicht erkennbar
+      "300069828": >-
+        Wilhelm-Leuschner-Straße (Heilbronn), Kamera für Fuß- und Radverkehr – ob nur Räder
+        gezählt sind, ist nicht erkennbar
+    titel: >-
+      Gebündelte Daten Eco-Counter Fahrradzählstellen Baden-Württemberg (verändert: Stundenwerte zu
+      Tagessummen zusammengefasst)
+    herausgeber: MobiData BW
+    quellenvermerk: MobiData BW; Rad-Zählstellen der Städte und Landkreise in Baden-Württemberg
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Eco-Counter füllt Ausfälle teils rechnerisch auf („rekonstruiert“). MobiData BW kennzeichnet
+        solche Werte nicht – im älteren Format mit Status (Juni 2025) stecken sie mit drin. Die
+        Zählkarte kann sie deshalb nicht erkennen: An einzelnen Stellen kann ein Ausfall als
+        vollständig gezählter Tag erscheinen.
+      - >-
+        Je Zählstelle beide Richtungen zusammen. Zwei Zählstellen, deren Name Fuß- und Radverkehr
+        nennt, sind nicht in der Karte.
+      - >-
+        Laut Quelle können sich Aufbau und Zusammensetzung der Zählstellen ohne Ankündigung ändern;
+        Umleitungen und Baustellen beeinflussen die Werte.
+      - >-
+        Die Zählkarte übernimmt Stunden erst nach drei Tagen und prüft nur, ob jede Stunde gezählt
+        ist – nicht, ob die Werte plausibel sind.
+  muenster_rad:
+    status: live
+    adapter: muenster_rad
+    name: Münster (Rad-Zählstellen)
+    land: NW
+    traeger: Stadt Münster, Amt für Mobilität und Tiefbau
+    art: >-
+      Rad-Zählstellen (Zählschleifen von Eco-Counter); 15-Minuten-Werte je Zählstelle, beide
+      Richtungen zusammen
+    weg: offen im GitHub-Repository der Stadt (nächtlich aktualisiert)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten
+    archiv_seite: https://github.com/od-ms/radverkehr-zaehlstellen
+    archiv: https://codeload.github.com/od-ms/radverkehr-zaehlstellen/tar.gz/refs/heads/main
+    standorte: https://opendata.stadt-muenster.de/sites/default/files/fahrradzaehl-standorte_0.geojson
+    titel: >-
+      Radverkehr-Zählstellen Münster, tagesaktuelle Daten (verändert: 15-Minuten-Werte zu Stunden
+      und Tagessummen zusammengefasst)
+    herausgeber: Stadt Münster
+    quellenvermerk: Stadt Münster
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Laut Quelle Rohdaten, nicht bereinigt. Werte, die die Quelle als rekonstruiert (Status 4)
+        oder geändert („modified“) führt, gelten in der Karte als nicht gezählt.
+      - >-
+        Je Zählstelle die Summe ihrer Kanäle (beide Richtungen). Die Zählkarte prüft nur, ob jede
+        Viertelstunde gezählt ist – nicht, ob die Werte plausibel sind.
+  aachen_rad:
+    status: live
+    adapter: aachen_rad
+    name: Aachen (Rad-Zählstellen)
+    land: NW
+    traeger: Stadt Aachen
+    art: Rad-Zählstellen der Stadt; Stundenwerte je Zählstelle, Summe ihrer Richtungen
+    weg: offen im Open-Data-Portal der Stadt (täglich aktualisiert)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen
+    api: https://offenedaten.aachen.de/api/3/action/package_show
+    paket: radzaehlstellen-der-stadt-aachen
+    lage:  # Korrekturen offenbarer Tippfehler im PDF der Standorte
+      "447917": {lat: 50.776281, lon: 6.080208, grund: "im PDF Länge 6.80208"}
+    titel: >-
+      Radzählstellen der Stadt Aachen (verändert: Richtungen und Stundenwerte zu Tagessummen
+      zusammengefasst)
+    herausgeber: Stadt Aachen
+    quellenvermerk: Stadt Aachen
+    lizenz: dl-de/zero-2-0
+    lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+    hinweise:
+      - >-
+        Je Zählstelle die Summe ihrer Richtungen; an der Hohenstaufenallee zählen die Radfahrenden
+        gegen die Fahrtrichtung mit. Fehlt ein Wert einer Richtung, ist die Stunde nicht gezählt.
+      - >-
+        Die Lage steht in einem PDF der Stadt; bei der Zählstelle Annuntiatenbach ist die Länge dort
+        offenbar vertippt (6,80208 statt 6,080208) und in der Karte korrigiert.
+      - >-
+        Die Quelle sagt nicht, ob Werte nachträglich ergänzt wurden. Die Zählkarte prüft nur, ob
+        jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  berlin_rad:
+    status: live
+    adapter: berlin_rad
+    name: Berlin (Rad-Zählstellen)
+    land: BE
+    traeger: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt, Abt. VI – Verkehrsmanagement
+    art: >-
+      Dauerzählstellen für den Radverkehr (Zählschleifen); Stundenwerte je Zählstelle, meist je
+      Richtung
+    weg: offen auf berlin.de (eine Excel-Datei, einmal im Jahr ergänzt)
+    ferien: schulferien_berlin.csv
+    portal: https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/
+    datei: https://www.berlin.de/sen/uvk/_assets/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/gesamtdatei-stundenwerte.xlsx
+    titel: >-
+      Radzähldaten in Berlin, Gesamtdatei Stundenwerte (verändert: Stundenwerte zu Tagessummen
+      zusammengefasst)
+    herausgeber: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt
+    quellenvermerk: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt
+    lizenz: dl-de/zero-2-0
+    lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+    hinweise:
+      - >-
+        Laut Quelle Rohdaten aus den Zählgeräten. Werte, die die Quelle farbig als rekonstruiert,
+        unplausibel oder fehlend markiert, gelten in der Karte als nicht gezählt.
+      - >-
+        Die Datei wird einmal im Jahr nach Abschluss des Zähljahres ergänzt. Zählstellen ohne Lage im
+        Blatt „Standortdaten“ (frühere Kennungen) sind nicht in der Karte.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  muenchen_rad:
+    status: live
+    adapter: muenchen_rad
+    name: München (Rad-Zählstellen)
+    land: BY
+    traeger: Landeshauptstadt München
+    art: >-
+      Raddauerzählstellen (Zählschleifen); 15-Minuten-Werte je Zählstelle, beide Richtungen
+      zusammen
+    weg: offen im Open-Data-Portal der Stadt (Jahres- und Monatsdateien)
+    ferien: schulferien_bayern.csv
+    portal: https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen
+    api: https://opendata.muenchen.de/api/3/action/
+    suche: raddauerzählstellen
+    wfs: >-
+      https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=application/json
+    titel: >-
+      Daten der Raddauerzählstellen München (verändert: 15-Minuten-Werte zu Stunden und
+      Tagessummen zusammengefasst)
+    herausgeber: Landeshauptstadt München
+    quellenvermerk: Landeshauptstadt München
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Je Zählstelle die Summe beider Richtungen. Viertelstunden, die die Quelle ohne Wert führt
+        (Baustelle, Ausfall, Austausch), gelten als nicht gezählt.
+      - >-
+        Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+        dieser Tag gilt als nicht vollständig gezählt.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+
 # Rechtslage je Land (kurz; Stand 2026, keine Rechtsberatung). Das UIG gilt überall – weil
 # Zählungen in die Lärmkartierung eingehen, lohnt es sich, es mit anzuführen.
 recht:
