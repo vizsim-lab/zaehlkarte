@@ -1000,6 +1000,10 @@ body {
 .legend-chip.is-active { border-color: var(--ui-accent); background: rgba(29, 78, 216, .12); color: var(--ui-text-strong); font-weight: 600; }
 .legend-chip:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 2px; }
 
+/* Seitenleiste der Dauerzählstellen: Stellen am selben Punkt (Richtungen eines Sensors) */
+.dd-punkt { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; }
+.dd-punkt > span { color: var(--ui-text-muted); font-size: 11.5px; }
+
 .legend-row-label { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; color: var(--ui-text-muted); }
 .legend-row-label > span { font-weight: 600; }
 .legend-row-label .legend-chips { margin: 0; }

@@ -72,6 +72,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Permalink-Kürzel sind Vertrag mit geteilten Links: nie umdeuten, nur ergänzen (die Sprache
   steht nicht im #-Teil, sondern in `?lang=`).
 - **Fremde Texte** (Namen, Bemerkungen aus den Daten) nur escaped ins HTML (`esc()`).
+- **Lizenzen mit Einschränkung** (Ettlingen: CC BY-NC 4.0, nur nicht kommerziell) nur mit
+  Hinweis an der Quelle (`hinweise` in sources.yaml); die Lizenz steht in der Seitenleiste und in
+  jeder Zeile des CSV-Exports – nie eine Quelle ohne Lizenzangabe aufnehmen.
 - **Lizenz:** AGPL-3.0-or-later. Aus dem Schulwege-Projekt (MIT) übernommene Dateien tragen
   einen Herkunftsvermerk.
 
@@ -95,7 +98,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
   Workflow nutzen. Dauerzählstellen: Workflow „Dauerzählstellen bauen“
   (`.github/workflows/dauer.yml`, wöchentlich) – Ergebnis als Release-Asset, kein PR; danach
-  startet er die CI auf `main` neu. Das Berliner Archiv und `iot.hamburg.de` sind aus der
-  Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch `werkzeug/dauer`, `tools/lauf.sh`).
+  startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de` und
+  `opendata.readi.de` (Ettlingen) sind aus der Sandbox ebenfalls nicht erreichbar
+  (Werkzeug-Branch `werkzeug/dauer`, `tools/lauf.sh`).
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

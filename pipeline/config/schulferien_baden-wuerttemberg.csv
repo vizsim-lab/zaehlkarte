@@ -1,8 +1,10 @@
 # Schulferien Baden-Württemberg – aus den KMK-Ferienkalendern (erster und letzter Ferientag).
-# Bewegliche Ferientage (2019/20 5, 2020/21 4, 2023/24 und 2024/25 je 5, 2025/26 3) legen die
-# Schulen selbst fest; sie fehlen hier – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen
-# sein. 2019/20 und 2020/21: mehrzeilige Zellen der KMK-Tabelle (Herbst 28.–30.10. und 31.10.)
-# zusammengefasst. Nicht abgebildet: die pandemiebedingten Schulschließungen 2020/21.
+# Bewegliche Ferientage (2019/20 5, 2020/21 4, 2023/24 und 2024/25 je 5, 2025/26 3, 2026/27 und
+# 2027/28 je 4) legen die Schulen selbst fest; sie fehlen hier – ein „Schultag“ kann vor Ort also
+# unterrichtsfrei gewesen sein. 2019/20 und 2020/21: mehrzeilige Zellen der KMK-Tabelle (Herbst
+# 28.–30.10. und 31.10.) zusammengefasst; ab 2026/27 die Osterferien in zwei Zeilen (Gründonnerstag
+# und die Woche nach Ostern, wie in der KMK-Tabelle). Nicht abgebildet: die pandemiebedingten
+# Schulschließungen 2020/21.
 von,bis,ferien,schuljahr,gebiet,quelle
 2019-10-28,2019-10-31,Herbstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
 2019-12-23,2020-01-04,Weihnachtsferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
@@ -32,3 +34,16 @@ von,bis,ferien,schuljahr,gebiet,quelle
 2026-03-30,2026-04-11,Osterferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
 2026-05-26,2026-06-05,Pfingstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
 2026-07-30,2026-09-12,Sommerferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-10-26,2026-10-30,Herbstferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2026-10-31,2026-10-31,unterrichtsfreier Tag,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2026-12-23,2027-01-09,Weihnachtsferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-03-25,2027-03-25,Osterferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-03-30,2027-04-03,Osterferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-05-18,2027-05-29,Pfingstferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-07-29,2027-09-11,Sommerferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-11-02,2027-11-06,Herbstferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2027-12-23,2028-01-08,Weihnachtsferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-04-13,2028-04-13,Osterferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-04-18,2028-04-22,Osterferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-06-06,2028-06-17,Pfingstferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-07-27,2028-09-09,Sommerferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf

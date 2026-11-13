@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  DAUER_STUFEN, DAUER_THEMEN, ansichtDauer, csvDauer, entpackeDauer, featuresDauer, hatGruppe, plusTage,
+  DAUER_STUFEN, DAUER_THEMEN, amSelbenPunkt, ansichtDauer, csvDauer, entpackeDauer, featuresDauer, hatGruppe, plusTage,
   quellenOhneTag, stundenAm, stundenDesTags, tagAusDetail, tagImZeitraum, tageZwischen, tagtyp, tagtypen,
   themaIn, wertAm, zaehleDauer,
 } from "../../js/data/dauer.js";
@@ -163,4 +163,27 @@ test("Zeitraum je Gruppe: vor dem Kfz-Beginn fehlt die Stelle beim Kfz, beim Sch
   // Hinweis: Kfz am 3.1. ohne Werte, Sprung ans Ende des Kfz-Zeitraums (Standardtag liegt davor)
   const [o] = quellenOhneTag(e, "kfz", "2025-01-03");
   assert.deepEqual([o.von, o.bis, o.sprung], ["2025-01-06", "2025-01-10", "2025-01-10"]);
+});
+
+test("amSelbenPunkt: Stellen derselben Quelle mit gleicher Lage (Richtungen eines Sensors)", () => {
+  const felder = INDEX.stellen.felder;
+  const zeile = (id, quelle, richtung, lon, lat) => [id, quelle, "Rastatter Straße", null, richtung, lon, lat, "2025-01-01", "2025-01-05", 1, 0];
+  const e = entpackeDauer({
+    ...INDEX,
+    quellen: [...INDEX.quellen, { code: "ettlingen", name: "Ettlingen", land: "BW", lizenzen: [{ lizenz: "CC BY-NC 4.0" }] }],
+    stellen: {
+      felder,
+      werte: [
+        ...INDEX.stellen.werte,
+        zeile("ettlingen:1263-1", "ettlingen", "Richtung Schloßgartenstraße", 8.403476, 48.940203),
+        zeile("ettlingen:1263-2", "ettlingen", "Richtung Bruchhausen", 8.403476, 48.940203),
+        zeile("ettlingen:395842-1", "ettlingen", "Karlsruhe Richtung Ettlingen", 8.406437, 48.956261),
+        zeile("berlin_viz:X", "berlin_viz", "gleiche Lage, andere Quelle", 8.403476, 48.940203),
+      ],
+    },
+  });
+  const ids = (s) => amSelbenPunkt(e, e.jeId.get(s)).map((x) => x.id);
+  assert.deepEqual(ids("ettlingen:1263-2"), ["ettlingen:1263-1", "ettlingen:1263-2"]);
+  assert.deepEqual(ids("ettlingen:395842-1"), ["ettlingen:395842-1"]);
+  assert.deepEqual(ids("berlin_viz:TE001"), ["berlin_viz:TE001"]);
 });

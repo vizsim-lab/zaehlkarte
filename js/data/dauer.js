@@ -78,6 +78,15 @@ export function tagtyp(d, land, iso) {
 
 export const hatGruppe = (s, g) => s.gruppen.includes(g);
 
+/**
+ * Stellen derselben Quelle am selben Punkt, die Stelle selbst eingeschlossen (Ettlingen: alle
+ * Fahrtrichtungen eines Sensors haben eine Lage). In der Karte liegen sie übereinander – die
+ * Seitenleiste schaltet zwischen ihnen um. Nur eine Stelle -> [stelle].
+ */
+export function amSelbenPunkt(d, stelle) {
+  return d.stellen.filter((s) => s.quelle === stelle.quelle && s.lon === stelle.lon && s.lat === stelle.lat);
+}
+
 /** Gruppe, die die Karte zeigt: die gewählte, wenn es sie gibt, sonst die erste der Daten. */
 export const themaIn = (d, g) => (d.gruppen.includes(g) ? g : d.gruppen[0]);
 

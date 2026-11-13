@@ -6,8 +6,8 @@
 // Hinweise der Stammdaten) sind fremd: immer über esc() ins HTML, lang="de".
 import { ladeDauer } from "../data/laden.js";
 import {
-  DAUER_GRUPPEN, DAUER_THEMEN, hatGruppe, plusTage, stundenAm, stundenDesTags, tagAusDetail, tageZwischen, tagtyp,
-  zeitraumText,
+  DAUER_GRUPPEN, DAUER_THEMEN, amSelbenPunkt, hatGruppe, plusTage, stundenAm, stundenDesTags, tagAusDetail, tageZwischen,
+  tagtyp, zeitraumText,
 } from "../data/dauer.js";
 import { TAGE } from "../data/modell.js";
 import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
@@ -18,7 +18,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 // Kurzzeitzählungen: erste Reihe blau, zweite orange)
 const FARBEN = ["#2a78d6", "#eb6834", "#1f9e6e", "#8a5cd1"];
 
-export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiSchliessen }) {
+export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiStelle, beiSchliessen }) {
   const el = document.getElementById("dauer-detail");
   let stelle = null;
   let detail = null;
@@ -27,6 +27,12 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
 
   el.addEventListener("click", (e) => {
     if (e.target.closest("[data-schliessen]")) { schliesse(); return; }
+    const andere = e.target.closest("[data-stelle]");
+    if (andere) {
+      const s = gibDauer()?.jeId.get(andere.dataset.stelle);
+      if (s && s.id !== stelle?.id) beiStelle?.(s);
+      return;
+    }
     if (e.target.closest("[data-csv-tage]")) { csvTage(); return; }
     if (e.target.closest("[data-csv-stunden]")) csvStunden();
   });
@@ -67,12 +73,20 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const z = gibZustand();
     const tag = gibTag();
     const q = quelle(d);
+    // mehrere Stellen am selben Punkt (alle Richtungen eines Sensors): hier umschalten, in der
+    // Karte liegen sie übereinander
+    const punkt = amSelbenPunkt(d, stelle);
+    const umschalter = punkt.length > 1 ? `
+          <div class="dd-punkt" role="group" aria-label="${esc(t("dd.am_punkt"))}">
+            <span>${esc(t("dd.am_punkt"))}</span>
+            ${punkt.map((s) => `<button type="button" class="legend-chip${s.id === stelle.id ? " is-active" : ""}" data-stelle="${esc(s.id)}" aria-pressed="${s.id === stelle.id}" lang="de">${esc(s.richtung || s.id.split(":").slice(1).join(":"))}</button>`).join("")}
+          </div>` : "";
     const kopf = `
       <header class="detail-kopf">
         <div>
           <div class="pop-eyebrow">${esc(t("dd.typ"))} · ${esc(q?.name ?? stelle.quelle)} · ${esc(stelle.id.split(":").slice(1).join(":"))}</div>
           <h2 class="detail-titel">${esc(stelle.name)}</h2>
-          <div class="pop-meta" lang="de">${esc([stelle.abschnitt, stelle.richtung].filter(Boolean).join(" · "))}</div>
+          <div class="pop-meta" lang="de">${esc([stelle.abschnitt, stelle.richtung].filter(Boolean).join(" · "))}</div>${umschalter}
         </div>
         <button class="detail-zu" data-schliessen aria-label="${esc(t("schliessen"))}" type="button">×</button>
       </header>`;

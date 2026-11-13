@@ -32,7 +32,9 @@ concurrency:
 jobs:
   dauer:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
+    # Ein Lauf ohne Cache und ohne Gedächtnis (Berlin und Hamburg ganz) brauchte im
+    # Werkzeug-Branch zwischen 15 und 59 Minuten, je nach Antwortzeit der Quellen.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
