@@ -7,8 +7,8 @@
 // Hinweise der Stammdaten) sind fremd: immer über esc() ins HTML, lang="de".
 import { ladeDauer } from "../data/laden.js";
 import {
-  DAUER_GRUPPEN, amSelbenPunkt, gruppeFuer, gruppenName, hatGruppe, imJuengsten, plusTage, stundenAm, stundenDesTags,
-  tagAusDetail, tageZwischen, tagtyp, zeitraumText,
+  DAUER_GRUPPEN, amSelbenPunkt, gruppeFuer, gruppenName, hatGruppe, imJuengsten, juengsterVon, plusTage, stundenAm,
+  stundenDesTags, tagAusDetail, tageZwischen, tagtyp, zeitraumText,
 } from "../data/dauer.js";
 import { TAGE } from "../data/modell.js";
 import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
@@ -73,7 +73,9 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const d = gibDauer();
     const z = gibZustand();
     const tag = gibTag(stelle);
-    const juengster = imJuengsten(d, z);
+    // Standardansicht: der Tag ist der jüngste vollständig gezählte Schultag der Stelle (ohne
+    // einen solchen ihr letzter vollständiger Tag – dann ohne den Hinweis)
+    const juengster = imJuengsten(d, z) && stelle.gruppen.some((x) => juengsterVon(d, stelle, x)?.[0] === tag);
     const q = quelle(d);
     // mehrere Stellen am selben Punkt (alle Richtungen eines Sensors): hier umschalten, in der
     // Karte liegen sie übereinander
