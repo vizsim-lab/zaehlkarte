@@ -1,0 +1,530 @@
+
+# Paket standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d: Standorte der Dauerzählstellen Radverkehr in Düsseldorf
+  Lizenz: http://dcat-ap.de/def/licenses/dl-zero-de/2.0 / Datenlizenz Deutschland – Zero – Version 2.0 / https://www.govdata.de/dl-de/zero-2-0
+  Herausgeber: Düsseldorf · geändert 2026-11-12T23:33:10.227380
+  Beschreibung: <p>Der Datensatz enthält die Standorte und weitere Angaben zu den Dauerzählstellen für Fahrräder in Düsseldorf.</p>  <p>In Düsseldorf gibt es 19 Dauerzählstellen für den Radverkehr. Im Herbst 2014 wurde die Zählstelle am Mannesmannufer mit einer Informationstafel verknüpft. Sie zeigt den Tages- und Jahreswert an dieser Messstelle an.</p>  <p>Weitergehende Informationen zum Thema Radfahren in Düsseldorf finden Sie auf der Seite <a href="https://www.duesseldorf.de/radschlag.html" target="_blank" title="RADschlag - Düsseldorf tritt an!">RADschlag – Düsseldorf tritt an!</a></p>  <p>Die Datei „Standorte der Dauerzählstellen“ enthält folgende Spalteninformationen:</p>  <ul> 	<li>Standort: Standort der Zählstelle</li> 	<li>Installation: Tag der Inbetriebnahme</li> 	<li>Latitude: Geographische Breite</li> 	<li>Longitude: Geographische Länge</li> 	<li>Kommentar: Installationsart</li> </ul> 
+  extra access_rights: öffentlich 
+  extra contributorID: ["https://opendata.duesseldorf.de/", "http://dcat-ap.de/def/contributors/openNRW"]
+  extra documentation: ["https://opendata.duesseldorf.de/dataset/standorte-der-dauerz%C3%A4hlstellen-radverkehr-d%C3%BCsseldorf"]
+  extra guid: https://opendata.duesseldorf.de/dataset/standorte-der-dauerz%C3%A4hlstellen-radverkehr-d%C3%BCsseldorf
+  extra identifier: d0236028-bc46-4749-81a1-61666defba81
+  extra issued: 2026-11-13T00:30:07+01:00
+  extra issued_ts: 1794526207
+  extra metadata_harvested_portal: https://opendata.duesseldorf.de
+  extra metadata_original_html: http://data.eco-counter.com/ParcPublic/?id=857#
+  extra metadata_original_portal: https://opendata.duesseldorf.de
+  extra modified: 2026-06-08T14:34:21+02:00
+  extra modified_ts: 1780922061
+  extra non_open: true
+  extra opennrw_data_services_check: false
+  extra opennrw_dataprovider: Open Data Düsseldorf
+  extra opennrw_datapublisher: Landeshauptstadt Düsseldorf – Amt für Verkehrsmanagement
+  extra opennrw_extras_counter: 0
+  extra opennrw_geodata: true
+  extra opennrw_groups: []
+  extra opennrw_openness_score: 3
+  extra opennrw_spatial: Stadt Düsseldorf
+  extra original_tags: ["Kultur", "Freizeit", "Sport und Tourismus", "Transport und Verkehr", ""]
+  extra uri: https://opendata.duesseldorf.de/dataset/standorte-der-dauerz%C3%A4hlstellen-radverkehr-d%C3%BCsseldorf
+  extra harvest_object_id: 739c7d60-1dcb-46bc-b75b-a85c029b66ee
+  extra harvest_source_id: 04d82f79-a282-43e8-9fd1-63badd23fb57
+  extra harvest_source_title: Düsseldorf
+   - Standorte der Dauerzählstellen | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Z%C3%A4hlstellen_2.csv | Lizenz http://dcat-ap.de/def/licenses/dl-zero-de/2.0
+   - Standorte der Dauerzählstellen - WGS84 | http://publications.europa.eu/resource/authority/file-type/GEOJSON | https://opendata.duesseldorf.de/sites/default/files/Z%C3%A4hlstellen_1.geojson | Lizenz http://dcat-ap.de/def/licenses/dl-zero-de/2.0
+   - Standorte der Dauerzählstellen | http://publications.europa.eu/resource/authority/file-type/KML | https://opendata.duesseldorf.de/sites/default/files/Z%C3%A4hlstellen_1.kml | Lizenz http://dcat-ap.de/def/licenses/dl-zero-de/2.0
+   - Standorte der Dauerzählstellen | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/d0236028-bc46-4749-81a1-61666defba81/resource/54cd4253-644b-442e-8a79-d42e3ae103d3 | Lizenz http://dcat-ap.de/def/licenses/other-closed
+  ! https://opendata.duesseldorf.de/sites/default/files/Z%C3%A4hlstellen_2.csv: URLError(ConnectionRefusedError(111, 'Connection refused'))
+  ! https://opendata.duesseldorf.de/sites/default/files/Z%C3%A4hlstellen_1.geojson: URLError(ConnectionRefusedError(111, 'Connection refused'))
+
+# Paket wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d: Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr 2025
+  Lizenz: http://dcat-ap.de/def/licenses/dl-by-de/2.0 / Datenlizenz Deutschland Namensnennung 2.0 / https://www.govdata.de/dl-de/by-2-0
+  Herausgeber: Düsseldorf · geändert 2026-11-12T23:31:34.113380
+  Beschreibung: <p>Der Datensatz enthält die Daten der Zählstellen für den Radverkehr in Düsseldorf in Abhängigkeit zum Wetter für 2025. Die Messergebnisse werden im Stunden-Takt erfasst.</p>  <p>Die erfassten Daten können im Jahresvergleich abweichen, da bei den Zahlen der Radfahrer auch immer das entsprechende Wetter am Messtag berücksichtigt werden muss. Sofern in der Darstellung Angaben fehlen, war die entsprechende Dauerzählstelle zum Messzeitpunkt außer Betrieb.</p>  <p>Daten der Dauerzählstellen im 15-Minuten-Takt können im Datensatz Jahresübersicht der Dauerzählstellen Radverkehr seit 2012 abgerufen werden. Die Daten erhalten jedoch keine Angaben zum Wetter.</p>  <p>Die Tagesaktuellen Zählwerte können auf der Seite des <a href="https://data.eco-counter.com/ParcPublic/?id=857">EcoCounter</a> abgerufen werden.</p>  <p>Weitergehende Informationen zum Thema Radfahren in Düsseldorf finden Sie auf der Seite  <a href="https://www.duesseldorf.de/radschlag.html">RADschlag – Düsseldorf tritt an!</a></p>  <p>Die Datei „Wetterabhängige Jahresübersicht der Dauerzählstellen“ enthält folgende Spalteninformationen:</p>  <ul> 	<li>Zeit (Tag + Stunde)</li> 	<li>Zählstelle Stadteinwärts</li> 	<li>Zählstelle Stadtauswärts</li> 	<li>Symbol Wetter</li> 	<li>Temperatur ( °C)</li> 	<li>Regen (mm)</li> </ul> 
+  extra access_rights: öffentlich 
+  extra contributorID: ["https://opendata.duesseldorf.de/", "http://dcat-ap.de/def/contributors/openNRW"]
+  extra documentation: ["https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2025"]
+  extra frequency: http://publications.europa.eu/resource/authority/frequency/ANNUAL
+  extra granularity: http://publications.europa.eu/resource/authority/frequency/ANNUAL
+  extra guid: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2025
+  extra identifier: 62b18d65-9c98-476e-b43b-9db9b0198142
+  extra issued: 2026-11-13T00:30:07+01:00
+  extra issued_ts: 1794526207
+  extra metadata_harvested_portal: https://opendata.duesseldorf.de
+  extra metadata_original_portal: https://opendata.duesseldorf.de
+  extra modified: 2026-06-12T12:30:25+02:00
+  extra modified_ts: 1781260225
+  extra non_open: true
+  extra opennrw_data_services_check: false
+  extra opennrw_dataprovider: Open Data Düsseldorf
+  extra opennrw_datapublisher: Landeshauptstadt Düsseldorf – Amt für Verkehrsmanagement
+  extra opennrw_extras_counter: 0
+  extra opennrw_geodata: false
+  extra opennrw_groups: ['Verkehr']
+  extra opennrw_openness_score: 3
+  extra opennrw_spatial: Stadt Düsseldorf
+  extra original_tags: ["Kultur", "Freizeit", "Sport und Tourismus", "Transport und Verkehr", ""]
+  extra politicalGeocodingLevelURI: http://dcat-ap.de/def/politicalGeocoding/Level/municipality
+  extra politicalGeocodingURI: ["http://dcat-ap.de/def/politicalGeocoding/districtKey/05111"]
+  extra spatial_uri: http://publications.europa.eu/resource/authority/place/DEU_DUS
+  extra theme: ["http://publications.europa.eu/resource/authority/data-theme/TRAN"]
+  extra uri: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2025
+  extra harvest_object_id: e2111dcf-11e4-48d5-ad37-3a77600f1d15
+  extra harvest_source_id: 04d82f79-a282-43e8-9fd1-63badd23fb57
+  extra harvest_source_title: Düsseldorf
+   - Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2025_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/42ff7f64-98eb-4aa0-9e50-b1379c9d1d1d | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/29debc65-11df-4ec1-8dad-5ed6006b6bb4 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/53bd1d27-1c9b-4b01-9075-f900473e380f | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/a50b1ce0-0c99-4eda-938e-83089cec03f5 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich ost stromaufwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich ost stromaufwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/c5aa826a-2275-49ea-8c0a-be76d52a30e7 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_Rampe_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/087c5658-8852-459c-a156-190f727f1261 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich west stromabwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_west_stromabw%C3%A4rts_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich west stromabwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/5169bd92-8c65-43ec-a4ed-bbff669c0cea | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/0639a6f0-9b0c-44bb-8f26-fa412893db34 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/055ef481-8d5b-4d61-b2ce-4337a5bef520 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/0ed29768-f011-4cd3-92fd-facf90bae3af | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/5fbe0c40-311a-4565-af23-f6e83918d4cd | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/145a39e2-d509-4d73-9f00-1d5dbac87bdf | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/65761f9f-665b-4598-b0bc-8f901a5fd513 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/14a7a01f-c9f3-4bce-afe7-268911271352 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kölner Straße 186 Radweg IN OUT 2025 - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/f477644f-93d6-4b2b-9253-7e4b97b70204 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/74000f98-44f9-4bdf-8fa6-0d0de17d45ec | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/1c3f38ef-8d6d-482c-8831-2a8178142451 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/35a9c559-2eec-4602-8613-09d5ff014e70 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/60322644-5c8a-41d3-b2d4-c6a11a6c2d28 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/7b0795ac-26fb-4be6-93d4-65fa86655d36 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2025_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/2785d21b-8460-4fde-9792-26cc83ac88e4 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/9311d510-3e09-48c2-9957-beffd6f643ea | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Pempelforter Straße 42 Mischverkehr IN OUT 2025 - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2025.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Pempelforter Straße 42 Mischverkehr IN OUT 2025 - Wetterabhängige Jahresübersicht Dauerzählstelle 2025 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/62b18d65-9c98-476e-b43b-9db9b0198142/resource/ffb8399d-a4db-4a6b-b582-0a4ae14ee5af | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+  Lizenzen der Ressourcen 2025: {'http://dcat-ap.de/def/licenses/dl-by-de/2.0': 46}
+  ! https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2025_0.csv: URLError(ConnectionRefusedError(111, 'Connection refused'))
+  > https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2025.csv: 385848 Bytes
+    8760 Zeilen; erste 8:
+     | Zeit;Christophstraße Stadtauswaerts;Christophstraße Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)
+     | 01-01-2025 00:00:00;1;1;Sonnig;6;0
+     | 01-01-2025 01:00:00;0;1;Leicht bewoelkt;6;0
+     | 01-01-2025 02:00:00;5;2;Leicht bewoelkt;6;0
+     | 01-01-2025 03:00:00;0;2;Sonnig;6;0
+     | 01-01-2025 04:00:00;2;3;Sonnig;6;0
+     | 01-01-2025 05:00:00;1;2;Sonnig;6;0
+     | 01-01-2025 06:00:00;2;1;Bedeckt;7;0
+    letzte: 31-12-2025 21:00:00;0;1;Stellenweiser Regenfall;3;0 || 31-12-2025 22:00:00;0;4;Sonnig;2;0 || 31-12-2025 23:00:00;0;0;Leicht bewoelkt;2;0
+  ! https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2025.csv: URLError(ConnectionRefusedError(111, 'Connection refused'))
+
+# Paket wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2024-d: Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr 2024
+  Lizenz: http://dcat-ap.de/def/licenses/dl-by-de/2.0 / Datenlizenz Deutschland Namensnennung 2.0 / https://www.govdata.de/dl-de/by-2-0
+  Herausgeber: Düsseldorf · geändert 2026-11-12T23:31:33.706967
+  Beschreibung: <p>Der Datensatz enthält die Daten der Zählstellen für den Radverkehr in Düsseldorf in Abhängigkeit zum Wetter für 2024. Die Messergebnisse werden im Stunden-Takt erfasst.</p>  <p>Die erfassten Daten können im Jahresvergleich abweichen, da bei den Zahlen der Radfahrer auch immer das entsprechende Wetter am Messtag berücksichtigt werden muss. Sofern in der Darstellung Angaben fehlen, war die entsprechende Dauerzählstelle zum Messzeitpunkt außer Betrieb.</p>  <p>Daten der Dauerzählstellen im 15-Minuten-Takt können im Datensatz Jahresübersicht der Dauerzählstellen Radverkehr seit 2012 abgerufen werden. Die Daten erhalten jedoch keine Angaben zum Wetter.</p>  <p>Die Tagesaktuellen Zählwerte können auf der Seite des <a href="https://data.eco-counter.com/ParcPublic/?id=857">EcoCounter</a> abgerufen werden.</p>  <p>Weitergehende Informationen zum Thema Radfahren in Düsseldorf finden Sie auf der Seite  <a href="https://www.duesseldorf.de/radschlag.html">RADschlag – Düsseldorf tritt an!</a></p>  <p>Die Datei „Wetterabhängige Jahresübersicht der Dauerzählstellen“ enthält folgende</p>  <p>Spalteninformationen:</p>  <ul> 	<li>Zeit (Tag + Stunde)</li> 	<li>Zählstelle Stadteinwärts</li> 	<li>Zählstelle Stadtauswärts</li> 	<li>Symbol Wetter</li> 	<li>Temperatur ( °C)</li> 	<li>Regen (mm)</li> </ul> 
+  extra access_rights: öffentlich 
+  extra contributorID: ["https://opendata.duesseldorf.de/", "http://dcat-ap.de/def/contributors/openNRW"]
+  extra documentation: ["https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2024"]
+  extra frequency: http://publications.europa.eu/resource/authority/frequency/ANNUAL
+  extra guid: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2024
+  extra identifier: c7b30e47-465d-4127-9e83-68c4eb4e220e
+  extra issued: 2026-11-13T00:30:07+01:00
+  extra issued_ts: 1794526207
+  extra metadata_harvested_portal: https://opendata.duesseldorf.de
+  extra metadata_original_portal: https://opendata.duesseldorf.de
+  extra modified: 2026-06-12T11:52:10+02:00
+  extra modified_ts: 1781257930
+  extra non_open: true
+  extra opennrw_data_services_check: false
+  extra opennrw_dataprovider: Open Data Düsseldorf
+  extra opennrw_datapublisher: Landeshauptstadt Düsseldorf – Amt für Verkehrsmanagement
+  extra opennrw_extras_counter: 0
+  extra opennrw_geodata: false
+  extra opennrw_groups: ['Verkehr']
+  extra opennrw_openness_score: 3
+  extra opennrw_spatial: Stadt Düsseldorf
+  extra original_tags: ["Kultur", "Freizeit", "Sport und Tourismus", "Transport und Verkehr", ""]
+  extra politicalGeocodingLevelURI: http://dcat-ap.de/def/politicalGeocoding/Level/municipality
+  extra politicalGeocodingURI: ["http://dcat-ap.de/def/politicalGeocoding/districtKey/05111"]
+  extra spatial_uri: http://publications.europa.eu/resource/authority/place/DEU_DUS
+  extra theme: ["http://publications.europa.eu/resource/authority/data-theme/TRAN"]
+  extra uri: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2024
+  extra harvest_object_id: 2fdcdb41-e84b-428e-a202-76f0ff40042d
+  extra harvest_source_id: 04d82f79-a282-43e8-9fd1-63badd23fb57
+  extra harvest_source_title: Düsseldorf
+   - Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/232a3115-e549-4d0a-8000-124c6627ceab | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/c49dddf7-73a3-450a-a6ad-292fc3d3c821 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2024_1.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/76b31f11-2981-4915-8cdf-2a7433e0a619 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/dbf6a422-6687-45c9-adf8-002bb7b35cec | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/27f2e709-ea29-4f98-a8fd-407cbf762266 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/aa00a25d-45f7-434a-b0b8-c959ba0447bc | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/a6bdce2f-0d1d-4e9c-bcbc-801410d96189 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/b305b5ff-7be7-4539-9f0a-034ed5b6fbd4 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/349d7942-7d84-463a-815c-bff532688a2c | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/8f3811b6-38a6-4a4c-8673-df3426d3212b | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2024.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/7baeb7ee-fb89-49ee-8623-efcb33595a9e | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer stadtauswärts 2024 - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer stadtauswärts 2024 - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/8f1c5a84-51f2-4c87-9252-e2f20f40bd60 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2024.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/48d19d7d-4453-4271-af14-93c47454de46 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/1f4f16af-bfda-4c12-852d-066bbd8ab67b | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/d6b1902e-4b15-4d50-90ed-b91dc1de791f | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/7acc264f-e4d9-4cd3-820e-73d27598f65b | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/45b86d1f-927f-4a3b-aeae-be5597f39ffb | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2024_1.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/d416805f-d620-4e4f-a20c-885279622097 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/31b92df0-bb9f-461e-bbb3-dddc20eed354 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/33f7b3ca-7b56-475b-b864-58b1a3cb5e0e | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2024_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/c7b30e47-465d-4127-9e83-68c4eb4e220e/resource/9ed38882-19a3-451f-be7c-5298ee432c20 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+  Lizenzen der Ressourcen 2024: {'http://dcat-ap.de/def/licenses/dl-by-de/2.0': 42}
+  ! https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2024_0.csv: URLError(ConnectionRefusedError(111, 'Connection refused'))
+  > https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2024_0.csv: 398375 Bytes
+    8784 Zeilen; erste 8:
+     | Zeit;Christophstrasse Stadtauswaerts;Christophstrasse Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)
+     | 01-01-2024 00:00:00;5;3;Stellenweiser Regenfall;8;0,1
+     | 01-01-2024 01:00:00;6;7;Stellenweiser Regenfall;8;0,1
+     | 01-01-2024 02:00:00;2;0;Stellenweiser Regenfall;8;0
+     | 01-01-2024 03:00:00;3;1;Stellenweiser Regenfall;8;0
+     | 01-01-2024 04:00:00;1;2;Bedeckt;8;0
+     | 01-01-2024 05:00:00;1;0;Bewoelkt;8;0
+     | 01-01-2024 06:00:00;1;2;Stellenweiser Regenfall;7;0
+    letzte: 31-12-2024 21:00:00;1;0;Sonnig;6;0 || 31-12-2024 22:00:00;0;0;Sonnig;6;0 || 31-12-2024 23:00:00;1;0;Leicht bewoelkt;6;0
+  ! https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2024_0.csv: URLError(ConnectionRefusedError(111, 'Connection refused'))
+
+# Paket wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2023-d: Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr 2023
+  Lizenz: http://dcat-ap.de/def/licenses/dl-by-de/2.0 / Datenlizenz Deutschland Namensnennung 2.0 / https://www.govdata.de/dl-de/by-2-0
+  Herausgeber: Düsseldorf · geändert 2026-11-12T23:31:33.234618
+  Beschreibung: <p>Der Datensatz enthält die Daten der Zählstellen für den Radverkehr in Düsseldorf in Abhängigkeit zum Wetter für 2023. Die Messergebnisse werden im Stunden-Takt erfasst.</p>  <p>Die erfassten Daten können im Jahresvergleich abweichen, da bei den Zahlen der Radfahrer auch immer das entsprechende Wetter am Messtag berücksichtigt werden muss. Sofern in der Darstellung Angaben fehlen, war die entsprechende Dauerzählstelle zum Messzeitpunkt außer Betrieb.</p>  <p>Daten der Dauerzählstellen im 15-Minuten-Takt können im Datensatz Jahresübersicht der Dauerzählstellen Radverkehr seit 2012 abgerufen werden. Die Daten erhalten jedoch keine Angaben zum Wetter.</p>  <p>Die Tagesaktuellen Zählwerte können auf der Seite des <a href="https://data.eco-counter.com/ParcPublic/?id=857">EcoCounter</a> abgerufen werden.</p>  <p>Weitergehende Informationen zum Thema Radfahren in Düsseldorf finden Sie auf der Seite  <a href="https://www.duesseldorf.de/radschlag.html">RADschlag – Düsseldorf tritt an!</a></p>  <p>Die Datei „Wetterabhängige Jahresübersicht der Dauerzählstellen“ enthält folgende</p>  <p>Spalteninformationen:</p>  <ul> 	<li>Zeit (Tag + Stunde)</li> 	<li>Zählstelle Stadteinwärts</li> 	<li>Zählstelle Stadtauswärts</li> 	<li>Symbol Wetter</li> 	<li>Temperatur ( °C)</li> 	<li>Regen (mm)</li> </ul> 
+  extra access_rights: öffentlich 
+  extra contributorID: ["https://opendata.duesseldorf.de/", "http://dcat-ap.de/def/contributors/openNRW"]
+  extra documentation: ["https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2023"]
+  extra frequency: http://publications.europa.eu/resource/authority/frequency/ANNUAL
+  extra guid: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2023
+  extra identifier: 8142ef6e-47cb-405f-aa3e-c588c9f52f7c
+  extra issued: 2026-11-13T00:30:07+01:00
+  extra issued_ts: 1794526207
+  extra metadata_harvested_portal: https://opendata.duesseldorf.de
+  extra metadata_original_portal: https://opendata.duesseldorf.de
+  extra modified: 2026-06-12T11:57:33+02:00
+  extra modified_ts: 1781258253
+  extra non_open: true
+  extra opennrw_data_services_check: false
+  extra opennrw_dataprovider: Open Data Düsseldorf
+  extra opennrw_datapublisher: Landeshauptstadt Düsseldorf – Amt für Verkehrsmanagement
+  extra opennrw_extras_counter: 0
+  extra opennrw_geodata: false
+  extra opennrw_groups: ['Verkehr']
+  extra opennrw_openness_score: 3
+  extra opennrw_spatial: Stadt Düsseldorf
+  extra original_tags: ["Kultur", "Freizeit", "Sport und Tourismus", "Transport und Verkehr", ""]
+  extra politicalGeocodingLevelURI: http://dcat-ap.de/def/politicalGeocoding/Level/municipality
+  extra politicalGeocodingURI: ["http://dcat-ap.de/def/politicalGeocoding/districtKey/05111"]
+  extra spatial_uri: http://publications.europa.eu/resource/authority/place/DEU_DUS
+  extra theme: ["http://publications.europa.eu/resource/authority/data-theme/TRAN"]
+  extra uri: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2023
+  extra harvest_object_id: 9c6bce28-5b3d-4f26-a1b0-ed9325c4a9d3
+  extra harvest_source_id: 04d82f79-a282-43e8-9fd1-63badd23fb57
+  extra harvest_source_title: Düsseldorf
+   - Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/b056b788-2c8a-44b7-b5e3-61c16d4f632a | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/d042bf21-3a75-4381-aaca-d0d433e6d10e | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/8a5d702f-d7b6-42cc-a7c5-7ed1d250cc24 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/c4161361-64eb-40f1-b75d-b8b061343378 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/a5000748-c262-4846-b5c6-e0799e19bb76 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_Rampe_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/fc09f354-bad3-4a17-9cea-63b578e7c500 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_west_stromabw%C3%A4rts_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/e1a5ea69-1e72-4cd9-93c1-d3cf68d8f9ff | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/eede5029-512c-401a-91e3-b96939a974a1 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/45c27180-2863-44b2-956f-9d9db789d60c | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/0b019fb0-c152-42ca-9ac9-e010e3ed5dd8 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2023_1.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/c8dd2f21-cf74-4419-a410-c60ffc3d1590 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/bbdac900-d6fb-41d8-93ef-42f31f140514 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/e294ce8e-936c-415a-8f98-766fd3d0d283 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2023.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/e43cca0f-937b-4987-a837-56349acb4204 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer_Stra%C3%9Fe_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/3bdf55fb-ca20-4867-b37a-5ca4443f3616 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/c465915f-138c-4f57-b849-53f4a657cdf4 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/7efb7969-1f8e-45cc-a372-69d5829410b3 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/4cd05ffc-7c2f-4bc3-ad9f-9d253d5b9931 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/43e44942-6388-499c-b181-a2ceb92496af | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2023_1.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/7b559cce-9ab8-4b92-9b0f-aff1515391de | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/2eb42ca3-8403-4bd2-ba1b-a320cd033ae8 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/7240253b-4a15-4462-bd6f-b6fbbf4ba62a | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/e553bc07-2107-48d3-8c38-71921e33ee87 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2023_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8142ef6e-47cb-405f-aa3e-c588c9f52f7c/resource/d3fa5357-c468-46c7-9be1-6d56b55dc285 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+  Lizenzen der Ressourcen 2023: {'http://dcat-ap.de/def/licenses/dl-by-de/2.0': 48}
+  > https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2023_0.csv: 390766 Bytes
+    8760 Zeilen; erste 8:
+     | Zeit;Bilker Allee Stadteinwaerts;Bilker Allee Stadtauswaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)
+     | 01-01-2023 00:00:00;4;0;Sonnig;15;0
+     | 01-01-2023 01:00:00;5;7;Sonnig;15;0
+     | 01-01-2023 02:00:00;9;3;Sonnig;15;0
+     | 01-01-2023 03:00:00;3;2;Sonnig;15;0
+     | 01-01-2023 04:00:00;3;1;Sonnig;15;0
+     | 01-01-2023 05:00:00;1;2;Bedeckt;14;0
+     | 01-01-2023 06:00:00;3;1;Bedeckt;14;0
+    letzte: 31-12-2023 21:00:00;6;4;Stellenweiser Regenfall;8;0 || 31-12-2023 22:00:00;5;1;Bedeckt;8;0 || 31-12-2023 23:00:00;1;3;Nieselregen;8;0,5
+  > https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2023_0.csv: 391004 Bytes
+    8760 Zeilen; erste 8:
+     | Zeit;Christophstrasse Stadtauswaerts;Christophstrasse Stadteinwaerts;Symbol Wetter;Temperatur ( °C);Regen (mm)
+     | 01-01-2023 00:00:00;0;3;Sonnig;15;0
+     | 01-01-2023 01:00:00;4;3;Sonnig;15;0
+     | 01-01-2023 02:00:00;7;4;Sonnig;15;0
+     | 01-01-2023 03:00:00;2;3;Sonnig;15;0
+     | 01-01-2023 04:00:00;0;1;Sonnig;15;0
+     | 01-01-2023 05:00:00;0;3;Bedeckt;14;0
+     | 01-01-2023 06:00:00;3;0;Bedeckt;14;0
+    letzte: 31-12-2023 21:00:00;3;2;Stellenweiser Regenfall;8;0 || 31-12-2023 22:00:00;4;3;Bedeckt;8;0 || 31-12-2023 23:00:00;1;0;Nieselregen;8;0,5
+  > https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2023_0.csv: 363374 Bytes
+    8760 Zeilen; erste 8:
+     | Zeit;Pempelforter Strasse 42 (Mischverkehr) IN;Pempelforter Strasse 42 (Mischverkehr) OUT;Symbol Wetter;Temperatur ( °C);Regen (mm)
+     | 01-01-2023 00:00:00;;;Sonnig;15;0
+     | 01-01-2023 01:00:00;;;Sonnig;15;0
+     | 01-01-2023 02:00:00;;;Sonnig;15;0
+     | 01-01-2023 03:00:00;;;Sonnig;15;0
+     | 01-01-2023 04:00:00;;;Sonnig;15;0
+     | 01-01-2023 05:00:00;;;Bedeckt;14;0
+     | 01-01-2023 06:00:00;;;Bedeckt;14;0
+    letzte: 31-12-2023 21:00:00;;;Stellenweiser Regenfall;8;0 || 31-12-2023 22:00:00;;;Bedeckt;8;0 || 31-12-2023 23:00:00;;;Nieselregen;8;0,5
+
+# Paket wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2021-d: Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr 2021
+  Lizenz: http://dcat-ap.de/def/licenses/dl-by-de/2.0 / Datenlizenz Deutschland Namensnennung 2.0 / https://www.govdata.de/dl-de/by-2-0
+  Herausgeber: Düsseldorf · geändert 2026-11-12T23:31:42.313956
+  Beschreibung: <p>Der Datensatz enthält die Daten der Zählstellen für den Radverkehr in Düsseldorf in Abhängigkeit zum Wetter für 2021. Die Messergebnisse werden im Stunden-Takt erfasst.</p>  <p>Die erfassten Daten können im Jahresvergleich abweichen, da bei den Zahlen der Radfahrer auch immer das entsprechende Wetter am Messtag berücksichtigt werden muss. Sofern in der Darstellung Angaben fehlen, war die entsprechende Dauerzählstelle zum Messzeitpunkt außer Betrieb.</p>  <p>Daten der Dauerzählstellen im 15-Minuten-Takt können im Datensatz Jahresübersicht der Dauerzählstellen Radverkehr seit 2012 abgerufen werden. Die Daten erhalten jedoch keine Angaben zum Wetter.</p>  <p>Die Tagesaktuellen Zählwerte können auf der Seite des <a href="https://data.eco-counter.com/ParcPublic/?id=857">EcoCounter</a> abgerufen werden.</p>  <p>Weitergehende Informationen zum Thema Radfahren in Düsseldorf finden Sie auf der Seite  <a href="https://www.duesseldorf.de/radschlag.html">RADschlag – Düsseldorf tritt an!</a></p>  <p>Die Datei „Wetterabhängige Jahresübersicht der Dauerzählstellen“ enthält folgende Spalteninformationen:</p>  <ul> 	<li>Datum: Tag der Messung</li> 	<li>Stunde: Uhrzeit der Messung</li> 	<li>Anzahl: Anzahl der gezählten Räder im Zeitintervall an der Zählstelle</li> 	<li>Wetter: Wetter zum Messzeitpunkt</li> 	<li>Temperatur: aktuelle Temperatur zum Messzeitpunkt in °C</li> 	<li>Luftfeuchtigkeit: Luftfeuchtigkeit zum Messzeitpunkt in %</li> 	<li>Wolken: Wolkendecke zum Messzeitpunkt in %</li> 
+  extra access_rights: öffentlich 
+  extra contributorID: ["https://opendata.duesseldorf.de/", "http://dcat-ap.de/def/contributors/openNRW"]
+  extra documentation: ["https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2021-0"]
+  extra frequency: http://publications.europa.eu/resource/authority/frequency/ANNUAL
+  extra granularity: http://publications.europa.eu/resource/authority/frequency/ANNUAL
+  extra guid: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2021-0
+  extra identifier: 13b5e883-b6d2-4772-8cae-6f85f4bad14c
+  extra issued: 2026-11-13T00:30:07+01:00
+  extra issued_ts: 1794526207
+  extra metadata_harvested_portal: https://opendata.duesseldorf.de
+  extra metadata_original_portal: https://opendata.duesseldorf.de
+  extra modified: 2026-06-12T12:30:46+02:00
+  extra modified_ts: 1781260246
+  extra non_open: true
+  extra opennrw_data_services_check: false
+  extra opennrw_dataprovider: Open Data Düsseldorf
+  extra opennrw_datapublisher: Landeshauptstadt Düsseldorf – Amt für Verkehrsmanagement
+  extra opennrw_extras_counter: 0
+  extra opennrw_geodata: false
+  extra opennrw_groups: ['Verkehr']
+  extra opennrw_openness_score: 3
+  extra opennrw_spatial: Stadt Düsseldorf
+  extra original_tags: ["Transport und Verkehr", ""]
+  extra politicalGeocodingLevelURI: http://dcat-ap.de/def/politicalGeocoding/Level/municipality
+  extra politicalGeocodingURI: ["http://dcat-ap.de/def/politicalGeocoding/districtKey/05111"]
+  extra spatial_uri: http://publications.europa.eu/resource/authority/place/DEU_DUS
+  extra theme: ["http://publications.europa.eu/resource/authority/data-theme/TRAN"]
+  extra uri: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2021-0
+  extra harvest_object_id: e6d9a60f-6b99-491a-b9d4-56ef33331516
+  extra harvest_source_id: 04d82f79-a282-43e8-9fd1-63badd23fb57
+  extra harvest_source_title: Düsseldorf
+   - Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20IN%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/fa10ada0-4040-4187-b0e9-84458a26952e | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20OUT%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/8bdc12cf-de50-4d1c-b290-9ac60f4f1f42 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Christophstra%C3%9Fe%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/911f51d5-6fb0-493b-8290-acf1738d0212 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Elisabethstra%C3%9Fe%202021_5.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/9e107f99-82b6-45a6-a69f-5e2134df48a8 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%202021_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich- Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/f36d4ec5-9c06-46a2-8148-c47e31cf584e | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich O stromauf - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20O%20stromauf%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich O stromauf - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/7978a1ab-16ee-49d9-83c8-1e200ae28299 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20Rampe%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe- Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/fae1de7d-791d-4a41-b49b-f5200b935daa | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich W stromab - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20W%20stromab%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich W stromab - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/85411839-c3ae-48cc-bcd5-ad94f0a4d628 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Friedrichstra%C3%9Fe%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/4e1badda-4833-468f-8978-ec8ab11c4e17 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Kirchfeldstr%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/bd6f19b8-559e-48a6-afdd-e58cb9755e91 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20K%C3%B6%20Steinstrasse%202021_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/a43e477c-b780-4259-b30a-cb167695556d | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße einwärts nach TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20einw%C3%A4rts%20vor%20TL%20S%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße einwärts nach TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/d6834225-fd43-4741-b6f1-c282b6784b4f | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße einwärts vor TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20einw%C3%A4rts%20vor%20TL%20S%202021_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße einwärts vor TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/16980047-0094-4faf-9de8-60f1fc754f25 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße stadtauswärts  - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20stadtausw%C3%A4rts%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer Straße stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/ee1b0ed5-4f15-48e6-b483-e510841cc067 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Lohauser%20Deich%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/7efd9f54-d73e-4696-a815-613a8a4f2c48 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer - Totem 01 - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Mannesmann%20Ufer-Totem%2001%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmannufer - Totem 01 - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/66db9a4a-c148-49c5-b184-5b8c4003ef35 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchener Straße Ickerswarder Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20M%C3%BCnchener_Ickerswarder%20Str%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchener Straße Ickerswarder Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/9eaaf3f9-7db2-421e-b155-37dd55d556c0 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20OKB%20Nord%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/3a7f817c-f3b3-4fea-9a57-a1bcc5b584f2 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20OKB%20S%C3%BCd%202021.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2021 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/13b5e883-b6d2-4772-8cae-6f85f4bad14c/resource/290ef4f9-754f-442d-ac94-ce64e8154708 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+  Lizenzen der Ressourcen 2021: {'http://dcat-ap.de/def/licenses/dl-by-de/2.0': 38}
+  > https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20IN%202021.csv: 443890 Bytes
+    8761 Zeilen; erste 8:
+     | datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind
+     | 01.01.2021;0:00;2;Leichter Regenfall;0;96;100;-1;1;8
+     | 01.01.2021;1:00;1;Leichter Regenfall;1;96;100;-1;0.5;8
+     | 01.01.2021;2:00;4;Leichter Eisregen;2;95;100;0;0.5;8
+     | 01.01.2021;3:00;1;Leichter Eisregen;3;95;100;1;0.7;8
+     | 01.01.2021;4:00;2;Leichter Eisregen;3;93;100;1;0.3;8
+     | 01.01.2021;5:00;0;Leichter Eisregen;3;92;100;0;0.2;8
+     | 01.01.2021;6:00;0;Leichter Eisregen;3;90;100;0;0.2;8
+    letzte: 31.12.2021;21:00;2;Leicht bewoelkt;12;78;48;10;0;15 || 31.12.2021;22:00;2;Leicht bewoelkt;12;80;65;10;0;16 || 31.12.2021;23:00;2;Bedeckt;12;82;83;10;0;17
+   31.10.2021: 24 Zeilen, z. B. ['31.10.2021;0:00;5;Stellenweiser Regenfall;12;88;82;10;0.1;15', '31.10.2021;1:00;2;Stellenweiser Regenfall;12;89;71;10;0;15', '31.10.2021;2:00;3;Leicht bewoelkt;11;90;59;9;0;14', '31.10.2021;3:00;0;Leicht bewoelkt;11;91;48;9;0;13']
+  > https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20OUT%202021.csv: 447358 Bytes
+    8761 Zeilen; erste 8:
+     | datum;stunde;anzahl;wetter;temperatur;luftfeuchtigkeit;wolken;gefuehlte temperatur;regen;wind
+     | 01.01.2021;0:00;2;Leichter Regenfall;0;96;100;-1;1;8
+     | 01.01.2021;1:00;5;Leichter Regenfall;1;96;100;-1;0.5;8
+     | 01.01.2021;2:00;1;Leichter Eisregen;2;95;100;0;0.5;8
+     | 01.01.2021;3:00;0;Leichter Eisregen;3;95;100;1;0.7;8
+     | 01.01.2021;4:00;0;Leichter Eisregen;3;93;100;1;0.3;8
+     | 01.01.2021;5:00;0;Leichter Eisregen;3;92;100;0;0.2;8
+     | 01.01.2021;6:00;2;Leichter Eisregen;3;90;100;0;0.2;8
+    letzte: 31.12.2021;21:00;1;Leicht bewoelkt;12;78;48;10;0;15 || 31.12.2021;22:00;1;Leicht bewoelkt;12;80;65;10;0;16 || 31.12.2021;23:00;1;Bedeckt;12;82;83;10;0;17
+   31.10.2021: 24 Zeilen, z. B. ['31.10.2021;0:00;0;Stellenweiser Regenfall;12;88;82;10;0.1;15', '31.10.2021;1:00;2;Stellenweiser Regenfall;12;89;71;10;0;15', '31.10.2021;2:00;2;Leicht bewoelkt;11;90;59;9;0;14', '31.10.2021;3:00;0;Leicht bewoelkt;11;91;48;9;0;13']
+
+# Paket wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2020-d: Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr 2020
+  Lizenz: http://dcat-ap.de/def/licenses/dl-by-de/2.0 / Datenlizenz Deutschland Namensnennung 2.0 / https://www.govdata.de/dl-de/by-2-0
+  Herausgeber: Düsseldorf · geändert 2026-11-12T23:32:56.893134
+  Beschreibung: <p>Der Datensatz enthält die Daten der Zählstellen für den Radverkehr in Düsseldorf in Abhängigkeit zum Wetter für 2020. Die Messergebnisse werden im Stunden-Takt erfasst.</p>  <p>Die erfassten Daten können im Jahresvergleich abweichen, da bei den Zahlen der Radfahrer auch immer das entsprechende Wetter am Messtag berücksichtigt werden muss. Sofern in der Darstellung Angaben fehlen, war die entsprechende Dauerzählstelle zum Messzeitpunkt außer Betrieb.</p>  <p>Daten der Dauerzählstellen im 15-Minuten-Takt können im Datensatz <a href="https://opendata.duesseldorf.de/dataset/jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-seit-2012" target="_blank" title="Jahresübersicht der Dauerzählstellen Radverkehr seit 2012">Jahresübersicht der Dauerzählstellen Radverkehr seit 2012</a> abgerufen werden. Die Daten erhalten jedoch keine Angaben zum Wetter.</p>  <p>Die Tagesaktuellen Zählwerte können auf der Seite des <a href="http://data.eco-counter.com/ParcPublic/?id=857#" target="_blank" title="EcoCounter">EcoCounter</a> abgerufen werden.</p>  <p>Weitergehende Informationen zum Thema Radfahren in Düsseldorf finden Sie auf der Seite  <a href="https://www.duesseldorf.de/radschlag.html" target="_blank" title="RADschlag – Düsseldorf tritt an!">RADschlag – Düsseldorf tritt an!</a></p>  <p>Die Datei „Wetterabhängige Jahresübersicht der Dauerzählstellen“ enthält folgende Spalteninformationen:</p>  <ul> 	<li>Datum: Tag der Messung</li> 	<li>Stunde: Uhrzeit der Messung</li> 	<li>Anzahl: A
+  extra access_rights: öffentlich 
+  extra contributorID: ["https://opendata.duesseldorf.de/", "http://dcat-ap.de/def/contributors/openNRW"]
+  extra documentation: ["https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2020"]
+  extra frequency: http://publications.europa.eu/resource/authority/frequency/ANNUAL
+  extra guid: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2020
+  extra identifier: 8609402d-5a94-4a77-9308-f8436d8a9098
+  extra issued: 2026-11-13T00:30:07+01:00
+  extra issued_ts: 1794526207
+  extra metadata_harvested_portal: https://opendata.duesseldorf.de
+  extra metadata_original_html: http://data.eco-counter.com/ParcPublic/?id=857
+  extra metadata_original_portal: https://opendata.duesseldorf.de
+  extra modified: 2026-06-18T13:58:26+02:00
+  extra modified_ts: 1781783906
+  extra non_open: true
+  extra opennrw_data_services_check: false
+  extra opennrw_dataprovider: Open Data Düsseldorf
+  extra opennrw_datapublisher: Landeshauptstadt Düsseldorf – Amt für Verkehrsmanagement
+  extra opennrw_extras_counter: 0
+  extra opennrw_geodata: false
+  extra opennrw_groups: ['Verkehr']
+  extra opennrw_openness_score: 3
+  extra opennrw_spatial: Stadt Düsseldorf
+  extra original_tags: ["Kultur", "Freizeit", "Sport und Tourismus", "Transport und Verkehr", ""]
+  extra politicalGeocodingLevelURI: http://dcat-ap.de/def/politicalGeocoding/Level/municipality
+  extra politicalGeocodingURI: ["http://dcat-ap.de/def/politicalGeocoding/districtKey/05111"]
+  extra spatial_uri: http://publications.europa.eu/resource/authority/place/DEU_DUS
+  extra theme: ["http://publications.europa.eu/resource/authority/data-theme/TRAN"]
+  extra uri: https://opendata.duesseldorf.de/dataset/wetterabh%C3%A4ngige-jahres%C3%BCbersicht-der-dauerz%C3%A4hlstellen-radverkehr-2020
+  extra harvest_object_id: 131ebec9-e04d-411b-8991-7ae2ff4bc3c9
+  extra harvest_source_id: 04d82f79-a282-43e8-9fd1-63badd23fb57
+  extra harvest_source_title: Düsseldorf
+   - Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020_0.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/0051d3af-79a9-4fb7-97ed-d354505277f9 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/d1e31268-c5d0-446a-984c-c5d25eeacd1e | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/cafd76c5-7732-4d8d-a652-c392708b81d1 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/819a4734-80c9-4d93-b221-33b87599d2de | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/3fa3a7a3-e21a-4121-8700-99d49bda13cd | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/e45c3d14-0775-4502-9e7c-03e00c4f344c | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Rampe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/fa36213c-911f-440a-9f77-1c7344e1162b | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/6ee1b44f-ceb2-422f-9d49-715f105740cd | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/ef83c1c2-9e87-4ed9-82f4-f6fa13709969 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/404d3cbf-9b98-4fd2-9323-e8a527a036a4 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/K%C3%96%20Steinstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/4c68ecab-52a2-4918-a916-54ad7e44cd8e | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts nach TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/0a729ce4-53b0-40c7-a729-d413e3b357de | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer einwärts vor TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/7008fef5-7179-4bdc-8f8c-735e02c3e3e4 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20stadtausw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/other-closed
+   - Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/4cb38b36-9eea-4019-a4e1-d581e3bce3b6 | Lizenz http://dcat-ap.de/def/licenses/other-closed
+   - Koblenzer Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20Stra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/other-closed
+   - Koblenzer Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/4af557c1-0b6f-4822-9968-2028cbf5b6e7 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/cc384035-c27b-48ba-ab9a-34e708754293 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmann Ufer - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Mannesmann Ufer - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/ad820de3-fb8c-467d-849d-c80139c8dcac | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchener_Ickeswarder Str - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchener_Ickeswarder%20Str%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - Münchener_Ickeswarder Str - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/793ae1fb-e9ac-40c3-8275-0b18934bf8bc | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/b93ee76e-f08c-41e6-86ac-394bf0248b2c | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+   - OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2020 | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.duesseldorf.de/dataset/8609402d-5a94-4a77-9308-f8436d8a9098/resource/beea2af9-4ed7-4d4c-b6da-3e7a99bb11f1 | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0
+  Lizenzen der Ressourcen 2020: {'http://dcat-ap.de/def/licenses/dl-by-de/2.0': 37, 'http://dcat-ap.de/def/licenses/other-closed': 3}
+  > https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020_0.csv: 486163 Bytes
+    8785 Zeilen; erste 8:
+     | Zeit;Stunde;Anzahl;Wetter;Temperatur;Luftfeuchtigkeit;Wolken;Gefuehlte Temperatur;Regen;Wind
+     | 01.01.2020;00:00:00;2;Sonnig;4;81;0;3;0;7
+     | 01.01.2020;01:00:00;1;Sonnig;4;82;2;2;0;8
+     | 01.01.2020;02:00:00;0;Sonnig;3;84;4;1;0;8
+     | 01.01.2020;03:00:00;0;Sonnig;3;86;6;0;0;9
+     | 01.01.2020;04:00:00;1;Sonnig;2;86;5;0;0;9
+     | 01.01.2020;05:00:00;1;Leicht bewölkt;2;86;4;-1;0;10
+     | 01.01.2020;06:00:00;1;Leicht bewölkt;2;86;3;-1;0;10
+    letzte: 31.12.2020;21:00:00;3;Bedeckt;3;92;100;0;0,2;12 || 31.12.2020;22:00:00;3;Bedeckt;2;93;100;0;0,1;11 || 31.12.2020;23:00:00;1;Leichter Regenfall;1;95;100;-1;0,7;9
+   25.10.2020: 24 Zeilen, z. B. ['25.10.2020;00:00:00;3;Leicht bewölkt;14;71;61;13;0;22', '25.10.2020;01:00:00;3;Leicht bewölkt;14;71;60;13;0;22', '25.10.2020;02:00:00;3;Bewölkt;14;70;59;13;0;23', '25.10.2020;03:00:00;1;Bewölkt;14;70;58;13;0;23']
+  ! https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv: URLError(ConnectionRefusedError(111, 'Connection refused'))

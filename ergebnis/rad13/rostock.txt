@@ -1,0 +1,49 @@
+
+# Paket radmonitore: Radmonitore
+  Lizenz: cc-zero / CC0 1.0 / https://creativecommons.org/publicdomain/zero/1.0/
+  Herausgeber: Hanse- und Universitätsstadt Rostock · geändert 2026-11-13T05:15:46.155384
+  Beschreibung: Standorte der Radmonitore in der Hanse- und Universitätsstadt Rostock
+  extra dates: [{"role": "veroeffentlicht", "date": "2013-12-13"}, {"role": "aktualisiert", "date": "2026-11-13"}]
+  extra sector: oeffentlich
+  extra spatial: {"type":"Polygon", "coordinates":[[[11.99143, 54.03856], [11.99143, 54.26196], [12.31306, 54.26196], [12.31306, 54.03856], [11.99143, 54.03856]]]}
+  extra contacts: [{"role": "vertrieb", "name": "Hanse- und Universitätsstadt Rostock", "email": "geodienste@rostock.de" }, {"role": "autor", "name": "Hanse- und Universitätsstadt Rostock", "email": "geodienste@rostock.de"}]
+  extra date_updated: 2026-11-13
+  extra hvd_category: 
+  extra spatial_text: Rostock
+  extra terms_of_use: {"license_id": "cc-zero", "other": "", "license_url": "http://dcat-ap.de/def/licenses/cc-zero", "is_free_to_use": true}
+  extra date_released: 2013-12-13
+  extra spatial_reference: {"ags": "13003", "nuts": "DE803", "uri": "https://dbpedia.org/page/Rostock", "text": "Rostock"}
+   - Standorte der Radmonitore | CSV | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.csv | Lizenz 
+   - Standorte der Radmonitore | XLSX | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.xlsx | Lizenz 
+   - Standorte der Radmonitore | GeoJSON | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.json | Lizenz 
+   - Standorte der Radmonitore | KML | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.kml | Lizenz 
+   - Standorte der Radmonitore | GML | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.gml | Lizenz 
+   - Daten der Radmonitore | CSV | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.csv | Lizenz 
+   - Daten der Radmonitore | XLSX | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.xlsx | Lizenz 
+   - Daten der Radmonitore | JSON | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.json | Lizenz 
+   - Radmonitore in der Hanse- und Universitätsstadt Rostock | WMS | https://geo.sv.rostock.de/geodienste/radmonitore/wms | Lizenz 
+   - Radmonitore in der Hanse- und Universitätsstadt Rostock | WFS | https://geo.sv.rostock.de/geodienste/radmonitore/wfs | Lizenz 
+    5410497 Zeilen; erste 12:
+     | standort_id,zeitpunkt,summe
+     | "100005392",2013/07/15 22:15:00+02,6
+     | "100005392",2018/11/23 02:30:00+01,0
+     | "100005392",2016/07/22 20:45:00+02,19
+     | "100005392",2018/11/09 22:30:00+01,1
+     | "100005392",2024/04/01 14:15:00+02,6
+     | "100005392",2013/03/14 17:00:00+01,5
+     | "100005392",2018/03/08 09:30:00+01,1
+     | "100005392",2024/04/15 21:30:00+02,1
+     | "100005392",2017/09/17 21:15:00+02,0
+     | "100005392",2025/10/28 18:15:00+01,8
+     | "100005392",2013/11/28 00:45:00+01,0
+    letzte: "100005395",2026/11/11 00:00:00+01,4 || "100005393",2026/11/11 03:15:00+01,0 || "300026703",2026/11/11 10:15:00+01,28
+Kopf: ['standort_id', 'zeitpunkt', 'summe']
+       standort_id               zeitpunkt    summe
+count      5410496                 5410496  5410496
+unique          18                  496631      316
+top      300026703  2025/10/28 18:15:00+01        0
+freq        496497                      18  1516192
+   standort_id: {'300026703': 496497, '100005393': 492147, '100005392': 488079, '100005395': 469410, '100011605': 448047, '100034893': 438178, '100017341': 417551, '100037012': 387763, '100037010': 325615, '100037011': 325601, '100056900': 233401, '300019746': 182144, '300023257': 161510, '300026702': 150758, '300027769': 143885, '300041920': 87306, '300043633': 82590, '300066029': 80014}
+Zeitspalten: ['zeitpunkt'] {'zeitpunkt': ('2012/09/12 00:00:00+02', '2026/11/11 23:45:00+01')}
+  > https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.json: 4000 Bytes
+    JSON: [   {     "standort_id": "100005392",     "zeitpunkt": "2013-07-15T22:15:00+02:00",     "summe": 6   },   {     "standort_id": "100005392",     "zeitpunkt": "2018-11-23T02:30:00+01:00",     "summe": 0   },   {     "standort_id": "100005392",     "zeitpunkt": "2016-07-22T20:45:00+02:00",     "summe": 19   },   {     "standort_id": "100005392",     "zeitpunkt": "2018-11-09T22:30:00+01:00",     "summe": 1   },   {     "standort_id": "100005392",     "zeitpunkt": "2024-04-01T14:15:00+02:00",     "summe": 6   },   {     "standort_id": "100005392",     "zeitpunkt": "2013-03-14T17:00:00+01:00",     "summe": 5   },   {     "standort_id": "100005392",     "zeitpunkt": "2018-03-08T09:30:00+01:00",     "summe": 1   },   {     "standort_id": "100005392",     "zeitpunkt": "2024-04-15T21:30:00+02:00",     "summe": 1   },   {     "standort_id": "100005392",     "zeitpunkt": "2017-09-17T21:15:00+02:00",     "summe": 0   },   {     "standort_id": "100005392",     "zeitpunkt": "2025-10-28T18:15:00+01:00",     "summe": 8   },   {     "standort_id": "100005392",     "zeitpunkt": "2013-11-28T00:45:00+01:00",     "summe": 0   },   {     "standort_id": "100005392",     "zeitpunkt": "2017-08-15T09:00:00+02:00",     "summe": 10   },   {     "standort_id": "100005392",     "zeitpunkt": "2019-03-03T21:15:00+01:00",     "summe": 0   },   {     "standort_id": "100005392",     "zeitpunkt": "2023-06-27T08:30:00+02:00",     "summe": 8   },   {     "standort_id": "100005392",     "zeitpunkt": "2012-11-19T16:00:00+01:00",     "summe": 13   },   {     "standort_id": "100005392",     "zeitpunkt": "2016-01-02T02:15:00+01:00",     "summe": 0   },   {     "standort_id": "100005392",     "zeitpunkt": "2025-12-24T16:00:00+01:00",     "summe": 0   },   {     "standort_id": "100005392",     "zeitpunkt": "2019-11-18T18:15:00+01:00",     "summe": 2   },   {     "standort_id": "100005392",     "zeitpunkt": "2015-06-06T00:00:00+02:00",     "summe": 7   },   {     "standort_id": "100005392",     "zeitpunkt": "2018-04-18T08:30:00+02:00",     "summe": 8   },   {     "standort_id": "100005392",     "zeitpunkt": "2020-01-28T19:30:00+01:00",     "summe": 1   },   {     "standort_id": "100005392",     "zeitpunkt": "2019-06-24T23:45:00+02:00",     "summe": 1   },   {     "standort_id": "100005392",     "zeitpunkt": "2019-01-24T15:15:00+01:00",     "summe": 3   },   {     "standort_id": "100005392",     "zeitpunkt": "2013-08-18T04:30:00+02:00",     "summe": 1   },   {     "standort_id": "100005392",     "zeitpu

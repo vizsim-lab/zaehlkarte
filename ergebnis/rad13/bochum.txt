@@ -1,0 +1,283 @@
+--- README.md (ganz) ---
+# Rad- und Fußverkehr - Zählstellen Eco-Counter
+
+<p align="center">
+  <img src="images/ecocounter-icon.svg" width="128" height="128" alt="Eco-Counter Logo" />
+</p>
+
+
+Dieses Repository enthält Rohdaten zu Zählstellen für Rad- und Fußverkehr der Firma **Eco-Counter** in [Bochum](https://data.eco-counter.com/ParcPublic/?id=6603#). Die Daten werden täglich automatisiert über die Eco-Counter-API abgerufen, gespeichert und aggregiert. Die Daten sind in 15-Minuten-Intervallen aufgezeichnet.
+
+**Hinweis**: Alle Daten in diesem Repository sind Rohdaten und werden ohne Gewähr bereitgestellt. Die Stadt Bochum übernimmt keine Verantwortung für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen.
+
+## Zählstellen
+
+| #   | Name               | Latitude   | Longitude   | Radfahrende (seit)  | Passanten (seit)   |
+|-----|--------------------|------------|-------------|---------------------|-------------------|
+| 1   | Brückstraße        | 51.485022  | 7.215437    | 14.09.2023 | /             |
+| 2   | Erzbahntrasse      | 51.487049  | 7.184623    | 14.09.2023 | 24.08.2023 |
+| 3   | Hofsteder Bach     | 51.501092  | 7.186044    | 24.08.2023 | 24.08.2023 |
+| 4   | Lothringentrasse   | 51.510388  | 7.261104    | 21.05.2024 | 21.05.2024 |
+| 5   | Springorumtrasse   | 51.468826  | 7.229204    | 22.11.2018 | 01.11.2023 |
+| 6   | Springorumtrasse Süd | 51.442427 | 7.182626   | 24.08.2023 | 24.08.2023 |
+| 7   | Universitätsstraße | 51.457704  | 7.238026    | 14.09.2023 | /              |
+| 8   | Wittener Straße    | 51.479338  | 7.225140    | 22.11.2018 | /              |
+| 9   | Blücherstraße      | 51.491676  | 7.160200    | 01.03.2026 | 01.03.2026 |
+
+## Automatisierter Datenprozess
+
+### Ablauf
+
+1. **Täglicher Abruf**: Jede Nacht werden die Daten des Vortags über die [Eco-Counter API](https://developers.eco-counter.com/) für jede Zählstelle abgerufen.
+2. **Speicherung**: Die abgerufenen Daten werden in Tages-CSV-Dateien gespeichert. Der Speicherort ist:
+   - `data/<street_name>/daily/bochum_ecocounter_<street_name>_YYYY-MM-DD.csv`
+3. **Aggregation**: 
+   - Die Tages-CSV wird automatisch zu den monatlichen, jährlichen und Gesamtdatensätzen hinzugefügt.
+   - Aggregierte Daten werden unter folgenden Pfaden gespeichert:
+     - `data/<street_name>/monthly/bochum_ecocounter_<street_name>_YYYY-MM.csv`
+     - `data/<street_name>/yearly/bochum_ecocounter_<street_name>_YYYY.csv`
+     - `data/<street_name>/bochum_ecocounter_<street_name>.csv`
+
+### Datenstruktur
+
+Die Daten werden in **15-Minuten-Intervallen** erfasst und enthalten folgende Spalten:
+
+```csv
+timestamp,timestamp_utc,name,radfahrende_in,radfahrende_out,passanten_in,passanten_out
+2025-01-12T00:00:00+01:00,2025-01-11T23:00:00Z,Brückstraße,3,5,2,4
+2025-01-12T00:15:00+01:00,2025-01-11T23:15:00Z,Brückstraße,2,4,1,3
+...
+```
+
+## Datenquelle und API
+
+Die Daten stammen aus den Zählstellen von **Eco-Counter**. Der Zugriff auf die Daten erfolgt über die [Eco-Counter API](https://developers.eco-counter.com/).
+
+## Öffentliche Links
+
+- openCode.de Dashboard: [Radverkehr-Zählstellen Bochum](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/)
+- Eco-Counter Bochum (gesamt): [ParcPublic](https://data.eco-counter.com/ParcPublic/?id=6603#)
+- Springorumtrasse: [public2](https://data.eco-counter.com/public2/?id=100048863)
+- Brückstraße: [public2](https://data.eco-counter.com/public2/?id=300037477)
+- Wittener Str.: [public2](https://data.eco-counter.com/public2/?id=100049071)
+- Erzbahntrasse: [public2](https://data.eco-counter.com/public2/?id=300035154)
+- Universitätsstraße: [public2](https://data.eco-counter.com/public2/?id=300037478)
+- Hofsteder Bach: [public2](https://data.eco-counter.com/public2/?id=300035157)
+- Lothringentrasse: [public2](https://data.eco-counter.com/public2/?id=300042053)
+
+## Datenkorrekturen
+
+### 14.07.2026 — Springorumtrasse Radverkehr 2018–2023
+
+**Problem:** Radverkehrsdaten für 2018-11 bis 2023-10 zeigten fälschlich ~88% IN / ~12% OUT.
+
+**Ursache:** Der alte Sensor (ZLT...) verteilte seine Zählwerte auf vier Kanäle:
+
+| EcoVisio-Kanal | Zugeordnete Richtung | Tatsächliche Zählung |
+|---|---|---|
+| 101048863 | stadteinwärts (IN) | ~88% der Fahrräder |
+| 102048863 | stadtauswärts (OUT) | ~12% der Fahrräder |
+| 103048863 | stadteinwärts (IN) | ~12% der Fahrräder |
+| 104048863 | stadtauswärts (OUT) | ~88% der Fahrräder |
+
+Kanäle 101 und 103 (beide "stadteinwärts") sowie 102 und 104 (beide "stadtauswärts") hatten entgegengesetzte Richtungsverzerrung von ~88/12. Die Pipeline nutzte nur 101/102 → 88/12.  
+**Korrektur:** Summe aller vier Kanäle → korrekte ~50/50.
+
+### 14.07.2026 — Blücherstraße
+
+Gleiches Muster: vier Kanäle pro Verkehrsart. Für Fußgänger zeigt sich ein ähnlicher Bias wie bei Springorumtrasse:
+
+| Kanalpaar | IN | OUT | IN% |
+|---|---|---|---|
+| 611 (IN) + 612 (OUT) — "pick best" | 2.052 | 1.140 | **64,3%** |
+| 611+613 (IN) / 612+614 (OUT) — summiert | 2.432 | 2.064 | **54,1%** |
+
+Fahrräder: Nur 615/616 aktiv, 679086/679090 ohne Daten → kein Korrekturbedarf.
+
+**Status:** Erkenntnis dokumentiert, aber keine Code-Änderung. Korrektur erst nach Verifikation durch EcoCounter (offizielles Channel-Mapping).
+
+### Brückstraße — Keine Korrektur nötig
+
+Brückstraße hat "Formel"-Kanäle, die bereits Summen der Einzelzähler sind:
+- `353410273` = Brückstraße gesamt Stadteinwärts (Formel aus alten Zählern)
+- `353410274` = Brückstraße gesamt Stadtauswärts (Formel aus alten Zählern)
+
+Alte Einzelzähler (`353396194` stadteinwärts, `353396221` stadtauswärts) hatten "Ohne Richtungserkennung" — sie zählten jeweils nur den Verkehr am eigenen Standort. Die neuen Formel-Kanäle summieren beide Standorte mit korrekter Richtungszuordnung.
+
+## EcoCounter V2 API Migration (14.07.2026)
+
+Die EcoCounter V1 API (`apieco.eco-counter-tools.com/api/1.0`) wurde abgeschaltet.  
+Neue Basis: `https://api.eco-counter.com/api/v2`  
+Authentifizierung: `X-API-KEY` (Header, kein OAuth2)  
+Rate Limit: 50/Minute, 2 concurrent, max 31 Tage pro Request
+
+### Wichtige Unterschiede V1→V2
+
+| Aspekt | V1 | V2 |
+|---|---|---|
+| Endpunkt | `GET /data/site/{channelId}` | `GET /history/traffic/raw?siteId={}&travelModes={}&directions={}` |
+| Auth | OAuth2 Client Credentials | X-API-KEY Header |
+| IDs | Channel-basiert (channelId) | Site-basiert (siteId) + Flow-IDs |
+| Response | Flach: `[{date, isoDate, counts}]` | Verschachtelt: `[{travelMode, direction, flowID, data:[{timestamp, counts}]}]` |
+| Timestamps | isoDate (UTC) | timestamp (lokale Zeit + Offset) |
+
+### Mapping-Strategie
+
+Die V2 API liefert für Springorumtrasse und Blücherstraße mehrere Bike-Flows (Duplikate).  
+Unsere `flatten_history_response` in `eco_api_v2.py` verwendet **"pick best block"**:  
+pro (travelMode, direction) wird der Block mit den meisten non-null Werten ausgewählt.
+
+### Wichtiger Hinweis: EcoVisio vs. API-Richtungsbezeichnung
+
+Bei mehreren Stationen verwendet EcoVisio **vertauschte Richtungslabel** im Vergleich zur V2-API:
+
+| Station | EcoVisio IN | EcoVisio OUT | V2-API direction | Status | Kanäle |
+|---|---|---|---|---|---|
+| Erzbahntrasse | **Stadtauswärts** | **Stadteinwärts** | gegenteilig | aktiv | 1 Paar pro Modus |
+| Hofsteder Bach | **Stadtauswärts** | **Stadteinwärts** | gegenteilig | aktiv | 1 Paar pro Modus |
+| Springorumtrasse Süd | **Stadtauswärts** | **Stadteinwärts** | gegenteilig | aktiv | 4 Bike-, 1 Ped-Paar |
+| Lothringentrasse ALT | **Stadtauswärts** | **Stadteinwärts** | gegenteilig | offline seit 2024 | 1 Paar pro Modus |
+| Lothringentrasse NEU | **Stadteinwärts** | **Stadtauswärts** | stimmt überein | offline seit 04/2026 | 1 Paar pro Modus |
+
+Es gibt **keine unabhängige Verifikation**, welche Richtungszuordnung die physikalisch korrekte ist.  
+Das Mapping in `site_mapping.json` folgt der V2-API (`direction`-Feld), nicht der EcoVisio-Beschriftung — aber ob die API selbst korrekt ist, ist nicht geprüft.
+
+### Stationen ohne Bias-Problem
+
+Diese Stationen haben nur ein Kanalpaar pro Verkehrsart (keine Duplikate, keine Bias-Korrektur nötig):
+
+| Station | Gerät | Bike (IN/OUT) | Pedestrian (IN/OUT) | Typ |
+|---|---|---|---|---|
+| **Brückstraße** | Formel | 353410273 / 353410274 | – | Alte Einzelzähler (ZLT23070242, ZLT25021738) werden summiert |
+| **Universitätsstraße** | ZLT24101304, ZLT25021739 | 353410276 / 353410277 | – | Alte Einzelzähler werden summiert |
+| **Wittener Straße** | Y2H22022268, Y2H18116961 | 101049071 / 102049071 | – | Formel-Kanäle |
+| **Erzbahntrasse** | Y2H23070943 | 353391102 / 353391103 | 353391100 / 353391101 | Sauber, 1 Paar pro Modus |
+| **Hofsteder Bach** | Y2H25012901 | 353391127 / 353391128 | 353391125 / 353391126 | Sauber, 1 Paar pro Modus |
+| **Lothringentrasse NEU** | Y2H23070945 | 353448253 / 353448254 | 353448251 / 353448252 | Sauber, offline seit 04/2026 |
+
+### Stationen mit potenziellem Bias (Duplikatkanäle)
+
+Diese Stationen haben vier statt zwei Kanäle pro Verkehrsart — einer der beiden Blöcke zeigt vermutlich einen Richtungs-Bias:
+
+| Station | Verkehr | Primär (IN/OUT) | Sekundär (IN/OUT) | Status |
+|---|---|---|---|---|
+| **Springorumtrasse** | Bike | 101 / 102 | 103 / 104 | ✅ **Korrigiert** (summiert) |
+| **Blücherstraße** | Pedestrian | 611 / 612 | 613 / 614 | ⏳ Erkannt, wartet auf EcoCounter |
+| **Springorumtrasse Süd** | Bike | 113 / 114 | 676+678 / 679+681 | ⏳ Erkannt, wartet auf EcoCounter |
+
+**Faustregel:** Hat eine Station in EcoVisio mehr als 2 Kanäle pro Verkehrsart, besteht Bias-Verdacht. Unsere `flatten_history_response` verwendet derzeit "pick best block" — bei Bestätigung durch EcoCounter muss auf Summe umgestellt werden.
+
+Dies funktioniert für:
+- **Springorumtrasse Bike (ab Nov 2023)**: Neuer Zähler, nur 101/102 aktiv → ✅
+- **Springorumtrasse Pedestrian**: Nur ein Paar → ✅
+- **Brückstraße**: "Formel"-Kanäle, keine Duplikate → ✅
+- **Blücherstraße Bike**: Sekundärkanäle haben keine Daten → ✅
+- **Blücherstraße Pedestrian**: Leichter Bias prüfbar
+
+**Nicht geeignet für historische Springorumtrasse-Daten (vor Nov 2023):** Hier muss summiert werden (101+103, 102+104) → Korrektur durchgeführt.
+
+## Doku (spezielle Berichte)
+
+- Datenprüfung/Backfill-Report: [docs/data-audit-2026-02-25.md](docs/data-audit-2026-02-25.md)
+
+## Lizenz
+
+Die Inhalte und Daten in diesem Repository stehen unter der [Datenlizenz Deutschland – Namensnennung – Version 2.0](https://www.govdata.de/dl-de/by-2-0) zur Verfügung.
+
+## Autor und Kontakt
+
+- **Autor**: Philipp Zuber
+- **E-Mail**: opendata@bochum.de
+
+Baum: 3900 Einträge; Verzeichnisse/Dateien oben: ['data', 'data/bluecherstrasse', 'data/bluecherstrasse/daily', 'data/bluecherstrasse/monthly', 'data/bluecherstrasse/yearly', 'data/brueckstrasse', 'data/brueckstrasse/daily', 'data/brueckstrasse/monthly', 'data/brueckstrasse/yearly', 'data/erzbahntrasse', 'data/erzbahntrasse/daily', 'data/erzbahntrasse/monthly', 'data/erzbahntrasse/yearly', 'data/hofsteder_bach', 'data/hofsteder_bach/daily', 'data/hofsteder_bach/monthly', 'data/hofsteder_bach/yearly', 'data/lothringentrasse', 'data/lothringentrasse/daily', 'data/lothringentrasse/monthly', 'data/lothringentrasse/yearly', 'data/springorumtrasse', 'data/springorumtrasse/daily', 'data/springorumtrasse/monthly', 'data/springorumtrasse/yearly', 'data/springorumtrasse_sued', 'data/springorumtrasse_sued/daily', 'data/springorumtrasse_sued/monthly', 'data/springorumtrasse_sued/yearly', 'data/universitaetsstrasse', 'data/universitaetsstrasse/daily', 'data/universitaetsstrasse/monthly', 'data/universitaetsstrasse/yearly', 'data/wittener_strasse', 'data/wittener_strasse/daily', 'data/wittener_strasse/monthly', 'data/wittener_strasse/yearly', 'docs', 'images', 'metadata', 'scripts', 'site', '.gitignore', '.gitlab-ci.yml', 'LICENSE', 'README.md']
+Gesamtdateien: ['data/bluecherstrasse/bochum_ecocounter_bluecherstrasse.csv', 'data/brueckstrasse/bochum_ecocounter_brueckstrasse.csv', 'data/erzbahntrasse/bochum_ecocounter_erzbahntrasse.csv', 'data/hofsteder_bach/bochum_ecocounter_hofsteder_bach.csv']
+
+data/bluecherstrasse/bochum_ecocounter_bluecherstrasse.csv: (24288, 8), Spalten ['timestamp', 'timestamp_utc', 'name', 'passanten_in', 'passanten_out', 'radfahrende_in', 'radfahrende_out', 't'], 2026-02-28 23:00:00+00:00 – 2026-11-12 22:45:00+00:00
+   Minuten mit Werten: {0: 6054, 15: 5849, 30: 5849, 45: 5849} · ohne Werte: {15: 223, 30: 223, 45: 223, 0: 18}
+   Doppelte Zeitpunkte: 4
+   passanten_in: leer 687, Nullen 14037, Nachkomma ≠ 0: 0
+   passanten_out: leer 687, Nullen 17452, Nachkomma ≠ 0: 0
+   radfahrende_in: leer 687, Nullen 8070, Nachkomma ≠ 0: 0
+   radfahrende_out: leer 687, Nullen 8200, Nachkomma ≠ 0: 0
+   Zeilen, in denen genau eine Rad-Richtung fehlt: 0
+   Zeilen mit Werten je Ortstag: {24: 8, 57: 1, 60: 1, 64: 1, 92: 1, 96: 241}
+
+data/brueckstrasse/bochum_ecocounter_brueckstrasse.csv: (110496, 6), Spalten ['timestamp', 'name', 'radfahrende_in', 'radfahrende_out', 'timestamp_utc', 't'], 2023-09-13 22:00:00+00:00 – 2026-11-12 22:45:00+00:00
+   Minuten mit Werten: {30: 27607, 45: 27607, 0: 27606, 15: 27606} · ohne Werte: {0: 18, 15: 18, 30: 17, 45: 17}
+   Doppelte Zeitpunkte: 20
+   radfahrende_in: leer 15310, Nullen 17965, Nachkomma ≠ 0: 0
+   radfahrende_out: leer 344, Nullen 28605, Nachkomma ≠ 0: 0
+   Zeilen, in denen genau eine Rad-Richtung fehlt: 15514
+   Zeilen mit Werten je Ortstag: {42: 1, 92: 4, 96: 1146}
+                       timestamp         timestamp_utc radfahrende_in radfahrende_out
+74212  2025-10-26T01:00:00+02:00  2025-10-25T23:00:00Z                            0.0
+74213  2025-10-26T01:15:00+02:00  2025-10-25T23:15:00Z                            2.0
+74214  2025-10-26T01:30:00+02:00  2025-10-25T23:30:00Z                            0.0
+74215  2025-10-26T01:45:00+02:00  2025-10-25T23:45:00Z                            2.0
+74216  2025-10-26T02:00:00+02:00  2025-10-26T00:00:00Z                            0.0
+74217  2025-10-26T02:15:00+02:00  2025-10-26T00:15:00Z                            0.0
+74218  2025-10-26T02:30:00+02:00  2025-10-26T00:30:00Z                            0.0
+74219  2025-10-26T02:45:00+02:00  2025-10-26T00:45:00Z                            1.0
+74220  2025-10-26T03:00:00+01:00  2025-10-26T02:00:00Z                            0.0
+74221  2025-10-26T03:15:00+01:00  2025-10-26T02:15:00Z                            0.0
+74222  2025-10-26T03:30:00+01:00  2025-10-26T02:30:00Z                            0.0
+
+data/erzbahntrasse/bochum_ecocounter_erzbahntrasse.csv: (112512, 8), Spalten ['timestamp', 'name', 'passanten_out', 'passanten_in', 'radfahrende_out', 'radfahrende_in', 'timestamp_utc', 't'], 2023-08-23 22:00:00+00:00 – 2026-11-12 22:45:00+00:00
+   Minuten mit Werten: {0: 28077, 15: 28077, 30: 28077, 45: 28077} · ohne Werte: {0: 51, 15: 51, 30: 51, 45: 51}
+   Doppelte Zeitpunkte: 12
+   passanten_out: leer 204, Nullen 57837, Nachkomma ≠ 0: 0
+   passanten_in: leer 204, Nullen 57284, Nachkomma ≠ 0: 0
+   radfahrende_out: leer 204, Nullen 44496, Nachkomma ≠ 0: 0
+   radfahrende_in: leer 204, Nullen 44676, Nachkomma ≠ 0: 0
+   Zeilen, in denen genau eine Rad-Richtung fehlt: 0
+   Zeilen mit Werten je Ortstag: {5: 2, 91: 2, 92: 3, 96: 1165}
+                       timestamp         timestamp_utc passanten_out passanten_in radfahrende_out radfahrende_in
+76228  2025-10-26T01:00:00+02:00  2025-10-25T23:00:00Z           0.0          0.0             0.0            1.0
+76229  2025-10-26T01:15:00+02:00  2025-10-25T23:15:00Z           0.0          0.0             0.0            0.0
+76230  2025-10-26T01:30:00+02:00  2025-10-25T23:30:00Z           0.0          0.0             0.0            0.0
+76231  2025-10-26T01:45:00+02:00  2025-10-25T23:45:00Z           0.0          0.0             0.0            0.0
+76232  2025-10-26T02:00:00+02:00  2025-10-26T00:00:00Z           0.0          0.0             0.0            0.0
+76233  2025-10-26T02:15:00+02:00  2025-10-26T00:15:00Z           1.0          0.0             0.0            0.0
+76234  2025-10-26T02:30:00+02:00  2025-10-26T00:30:00Z           0.0          0.0             1.0            0.0
+76235  2025-10-26T02:45:00+02:00  2025-10-26T00:45:00Z           0.0          0.0             0.0            0.0
+76236  2025-10-26T03:00:00+01:00  2025-10-26T02:00:00Z           0.0          0.0             0.0            0.0
+76237  2025-10-26T03:15:00+01:00  2025-10-26T02:15:00Z           0.0          0.0             0.0            0.0
+76238  2025-10-26T03:30:00+01:00  2025-10-26T02:30:00Z           0.0          0.0             0.0            0.0
+
+data/hofsteder_bach/bochum_ecocounter_hofsteder_bach.csv: (112418, 8), Spalten ['timestamp', 'name', 'passanten_out', 'passanten_in', 'radfahrende_out', 'radfahrende_in', 'timestamp_utc', 't'], 2023-08-23 22:00:00+00:00 – 2026-11-12 22:45:00+00:00
+   Minuten mit Werten: {15: 28102, 30: 28102, 0: 28101, 45: 28100} · ohne Werte: {0: 4, 15: 3, 30: 3, 45: 3}
+   Doppelte Zeitpunkte: 12
+   passanten_out: leer 13, Nullen 56112, Nachkomma ≠ 0: 0
+   passanten_in: leer 13, Nullen 74425, Nachkomma ≠ 0: 0
+   radfahrende_out: leer 13, Nullen 63544, Nachkomma ≠ 0: 0
+   radfahrende_in: leer 13, Nullen 64748, Nachkomma ≠ 0: 0
+   Zeilen, in denen genau eine Rad-Richtung fehlt: 0
+   Zeilen mit Werten je Ortstag: {3: 1, 92: 3, 95: 2, 96: 1166}
+                       timestamp         timestamp_utc passanten_out passanten_in radfahrende_out radfahrende_in
+76228  2025-10-26T01:00:00+02:00  2025-10-25T23:00:00Z           2.0          1.0             4.0            2.0
+76229  2025-10-26T01:15:00+02:00  2025-10-25T23:15:00Z           2.0          5.0             2.0            1.0
+76230  2025-10-26T01:30:00+02:00  2025-10-25T23:30:00Z           2.0          1.0             2.0            2.0
+76231  2025-10-26T01:45:00+02:00  2025-10-25T23:45:00Z           0.0          3.0             0.0            2.0
+76232  2025-10-26T02:00:00+02:00  2025-10-26T00:00:00Z           5.0          5.0             8.0            7.0
+76233  2025-10-26T02:15:00+02:00  2025-10-26T00:15:00Z          10.0          1.0             2.0            8.0
+76234  2025-10-26T02:30:00+02:00  2025-10-26T00:30:00Z           1.0          5.0             5.0            8.0
+76235  2025-10-26T02:45:00+02:00  2025-10-26T00:45:00Z           5.0          5.0             4.0            3.0
+76236  2025-10-26T03:00:00+01:00  2025-10-26T02:00:00Z          10.0          8.0             0.0            4.0
+76237  2025-10-26T03:15:00+01:00  2025-10-26T02:15:00Z           1.0          5.0             7.0            8.0
+76238  2025-10-26T03:30:00+01:00  2025-10-26T02:30:00Z           1.0          4.0             6.0            2.0
+
+open.nrw Wittener Straße, Beschreibung ganz: Radverkehr-Zählstelle an der Wittener Straße in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.  Direktlink zur Zählstelle: [Wittener Str.](https://data.eco-counter.com/public2/?id=100049071)  ---  Die Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.  ---  **Nutzungsbeschränkung:**   Die Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet. 
+   Lizenz: http://dcat-ap.de/def/licenses/other-closed Andere geschlossene Lizenz
+
+https://bochum.opendata.ruhr: 10 Treffer
+  bochum-radverkehr-erzbahntrasse | Lizenz cc-zero / Creative Commons CC Zero License (cc-zero) | 2026-06-09T09:07:19.922994
+  bochum-radverkehr-brueckstrasse | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:15:47.531270
+  bochum-radverkehr-universitaetsstrasse | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:15:42.702004
+  bochum-radverkehr-wittener-strasse | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:15:49.598166
+  bochum-radundfussverkehr-springorumtrasse | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:16:48.199569
+  bochum-radundfussverkehr-lothringentrasse | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:15:50.458698
+  bochum-radundfussverkehr-springorumtrasse-sued | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:15:45.371438
+  bochum-radundfussverkehr-erzbahntrasse | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:15:44.502612
+  bochum-radundfussverkehr-hofsteder-bach | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:16:13.403098
+  bochum-radundfussverkehr-bluecherstrasse | Lizenz dl-de/by-2-0 / dl-de/by-2-0 | 2026-11-13T04:15:48.382720
+  erstes Paket, ganz: {"name": "bochum-radverkehr-erzbahntrasse", "license_id": "cc-zero", "license_title": "Creative Commons CC Zero License (cc-zero)", "license_url": "https://opendefinition.org/licenses/cc-zero/", "notes": "Radverkehr-Zählstelle (Eco-Counter) an der Erzbahntrasse in Bochum.", "extras": [{"key": "availability", "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"}, {"key": "dcatde:geocodingText", "value": "Bochum"}, {"key": "dcatde:musterdatensatzURI", "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/radwegUndRadroute"}, {"key": "dcatde:politicalGeocodingLevelURI", "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"}, {"key": "dcatde:politicalGeocodingURI", "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"}, {"key": "language", "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"}]}

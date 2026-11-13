@@ -1,0 +1,90 @@
+Zählstellen: 9
+   {"id": "3233343063306c17", "name": "Brose", "description": null, "location": {"lon": 9.975934, "lat": 49.799084}, "firstdata": "2023-01-12T00:00:00+00:00", "lastdata": null, "granularity": "10", "travelmodes": "bike", "directional": null, "sens": "ltr-richtg-lengfeld, rtl_richtg_wuerzburg"}
+   {"id": "3233343068306c17", "name": "Zeller Berg", "description": null, "location": {"lon": 9.9182812, "lat": 49.7939091}, "firstdata": "2024-07-29T00:00:00+00:00", "lastdata": null, "granularity": "10", "travelmodes": "bike", "directional": null, "sens": "rtl-richtg-wuerzburg, ltr_richtg_zellerau"}
+   {"id": "3932303161307512", "name": "Bayernstrasse", "description": null, "location": {"lon": 9.882358, "lat": 49.787784}, "firstdata": "2024-03-21T00:00:00+00:00", "lastdata": null, "granularity": "10", "travelmodes": "bike", "directional": null, "sens": "rtl-rtl_richtg_wuerzburg, ltr_richtg_waldbuettelbrunn"}
+   {"id": "100020240", "name": "Heidingsfeld in Verlängerung Wiesenweg", "description": null, "location": {"lon": 9.939424, "lat": 49.769577}, "firstdata": "2015-06-02T22:00:00+00:00", "lastdata": "2026-10-30T14:30:00+01:00", "granularity": "PT15M", "travelmodes": "bike", "directional": 1, "sens": null}
+   {"id": "100020241", "name": "Heidingsfeld Überquerung Mergentheimer Str.", "description": null, "location": {"lon": 9.939413, "lat": 49.768993}, "firstdata": "2015-06-02T22:00:00+00:00", "lastdata": "2026-11-12T04:45:00+01:00", "granularity": "PT15M", "travelmodes": "bike", "directional": 1, "sens": null}
+   {"id": "300014875", "name": "Röntgenring", "description": null, "location": {"lon": 9.933093489744351, "lat": 49.80042442278335}, "firstdata": "2020-12-18T06:00:00+00:00", "lastdata": "2026-11-12T00:30:00+01:00", "granularity": "PT15M", "travelmodes": "bike", "directional": 1, "sens": null}
+   {"id": "300020348", "name": "Greinberg Richtung Innenstadt", "description": null, "location": {"lon": 9.961032271385195, "lat": 49.80049150638411}, "firstdata": "2021-09-27T22:00:00+00:00", "lastdata": "2026-11-12T04:45:00+01:00", "granularity": "PT15M", "travelmodes": "bike", "directional": 1, "sens": null}
+   {"id": "300020349", "name": "Greinberg Richtung Lindleinsmühle, Versbach", "description": null, "location": {"lon": 9.961311221122743, "lat": 49.80063692989351}, "firstdata": "2021-09-27T22:00:00+00:00", "lastdata": "2026-11-12T04:45:00+01:00", "granularity": "PT15M", "travelmodes": "bike", "directional": 1, "sens": null}
+   {"id": "300020350", "name": "Greinberg Richtung Lengfeld", "description": null, "location": {"lon": 9.96138095855713, "lat": 49.800512281197925}, "firstdata": "2021-09-27T22:00:00+00:00", "lastdata": "2026-11-12T04:45:00+01:00", "granularity": "PT15M", "travelmodes": "bike", "directional": 1, "sens": null}
+Daten: (389506, 5), Spalten ['id', 'date', 'counts', 'status', 'name']
+          id                       date counts   status         name
+0  300014875  2026-08-25T22:00:00+00:00      4  ["raw"]  Röntgenring
+1  300014875  2026-08-25T23:00:00+00:00      0  ["raw"]  Röntgenring
+2  300014875  2026-08-26T00:00:00+00:00      2  ["raw"]  Röntgenring
+Status: {'["raw"]': 386677, '["deleted"]': 2829}
+Minuten: {0: 389506}
+Doppelte (id, Zeit): 1022
+               id                       date counts   status                                         name                         t
+377480  100020240  2026-07-16T10:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-07-16 10:00:00+00:00
+377831  100020240  2026-07-16T10:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-07-16 10:00:00+00:00
+381064  100020240  2026-08-31T14:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-08-31 14:00:00+00:00
+384327  100020240  2026-08-31T14:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-08-31 14:00:00+00:00
+381826  100020240  2026-10-02T08:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-10-02 08:00:00+00:00
+387328  100020240  2026-10-02T08:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-10-02 08:00:00+00:00
+385578  100020240  2026-10-02T09:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-10-02 09:00:00+00:00
+387329  100020240  2026-10-02T09:00:00+00:00      0  ["raw"]       Heidingsfeld in Verlängerung Wiesenweg 2026-10-02 09:00:00+00:00
+124     100020241  2026-08-01T02:00:00+00:00      3  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-01 02:00:00+00:00
+225     100020241  2026-08-01T02:00:00+00:00      3  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-01 02:00:00+00:00
+249     100020241  2026-08-02T02:00:00+00:00      1  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-02 02:00:00+00:00
+17110   100020241  2026-08-02T02:00:00+00:00      1  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-02 02:00:00+00:00
+486     100020241  2026-08-03T02:00:00+00:00      2  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-03 02:00:00+00:00
+17134   100020241  2026-08-03T02:00:00+00:00      2  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-03 02:00:00+00:00
+510     100020241  2026-08-04T02:00:00+00:00      2  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-04 02:00:00+00:00
+76859   100020241  2026-08-04T02:00:00+00:00      2  ["raw"]  Heidingsfeld Überquerung Mergentheimer Str. 2026-08-04 02:00:00+00:00
+   davon mit verschiedenen Werten: 45
+leere counts: 2829 negative: 0
+Stelle 100020240 Heidingsfeld in Verlängerung Wiesenweg: 99817 Zeilen, 2015-06-02 22:00:00+00:00 – 2026-10-30 13:00:00+00:00, 4161 Ortstage; Stunden je Ortstag {5: 1, 15: 1, 17: 1, 19: 1, 23: 11, 24: 4143, 25: 2, 26: 1}
+   Status {'["raw"]': 99807, '["deleted"]': 10}; Nullstunden 17705; Tage mit 24 Stunden und Summe 0: 222
+   je Jahr: {2015: 5089, 2016: 8776, 2017: 8759, 2018: 8759, 2019: 8759, 2020: 8591, 2021: 8759, 2022: 8759, 2023: 8759, 2024: 8783, 2025: 8759, 2026: 7265}
+Stelle 100020241 Heidingsfeld Überquerung Mergentheimer Str.: 100131 Zeilen, 2015-06-02 22:00:00+00:00 – 2026-11-13 03:00:00+00:00, 4172 Ortstage; Stunden je Ortstag {5: 1, 6: 2, 17: 1, 19: 2, 20: 1, 23: 11, 24: 4065, 25: 88, 26: 1}
+   Status {'["raw"]': 100121, '["deleted"]': 10}; Nullstunden 21901; Tage mit 24 Stunden und Summe 0: 397
+   je Jahr: {2015: 5085, 2016: 8776, 2017: 8759, 2018: 8759, 2019: 8759, 2020: 8783, 2021: 8759, 2022: 8759, 2023: 8759, 2024: 8783, 2025: 8759, 2026: 7391}
+Stelle 100020242 : 3072 Zeilen, 2015-04-25 03:00:00+00:00 – 2021-07-27 02:00:00+00:00, 131 Ortstage; Stunden je Ortstag {5: 3, 19: 3, 24: 125}
+   Status {'["deleted"]': 2794, '["raw"]': 278}; Nullstunden 278; Tage mit 24 Stunden und Summe 0: 125
+   je Jahr: {2015: 2784, 2021: 288}
+Stelle 300014875 Röntgenring: 51835 Zeilen, 2020-12-18 06:00:00+00:00 – 2026-11-12 23:00:00+00:00, 2157 Ortstage; Stunden je Ortstag {1: 1, 17: 1, 23: 6, 24: 2047, 25: 101, 26: 1}
+   Status {'["raw"]': 51835}; Nullstunden 2096; Tage mit 24 Stunden und Summe 0: 0
+   je Jahr: {2020: 330, 2021: 8759, 2022: 8759, 2023: 8759, 2024: 8783, 2025: 8759, 2026: 7686}
+Stelle 300020348 Greinberg Richtung Innenstadt: 44884 Zeilen, 2021-09-27 22:00:00+00:00 – 2026-11-13 03:00:00+00:00, 1868 Ortstage; Stunden je Ortstag {5: 2, 15: 1, 23: 5, 24: 1757, 25: 102, 26: 1}
+   Status {'["raw"]': 44879, '["deleted"]': 5}; Nullstunden 1102; Tage mit 24 Stunden und Summe 0: 0
+   je Jahr: {2021: 2281, 2022: 8759, 2023: 8611, 2024: 8783, 2025: 8759, 2026: 7691}
+Stelle 300020349 Greinberg Richtung Lindleinsmühle, Versbach: 44884 Zeilen, 2021-09-27 22:00:00+00:00 – 2026-11-13 03:00:00+00:00, 1868 Ortstage; Stunden je Ortstag {5: 2, 15: 1, 23: 5, 24: 1757, 25: 102, 26: 1}
+   Status {'["raw"]': 44879, '["deleted"]': 5}; Nullstunden 6030; Tage mit 24 Stunden und Summe 0: 55
+   je Jahr: {2021: 2281, 2022: 8759, 2023: 8611, 2024: 8783, 2025: 8759, 2026: 7691}
+Stelle 300020350 Greinberg Richtung Lengfeld: 44883 Zeilen, 2021-09-27 22:00:00+00:00 – 2026-11-13 03:00:00+00:00, 1868 Ortstage; Stunden je Ortstag {5: 2, 14: 1, 23: 5, 24: 1757, 25: 102, 26: 1}
+   Status {'["raw"]': 44878, '["deleted"]': 5}; Nullstunden 2295; Tage mit 24 Stunden und Summe 0: 0
+   je Jahr: {2021: 2281, 2022: 8759, 2023: 8610, 2024: 8783, 2025: 8759, 2026: 7691}
+Rückstellung 2025 (UTC):
+               id                       date counts   status
+18178   100020240  2025-10-25T22:00:00+00:00      4  ["raw"]
+18179   100020240  2025-10-25T23:00:00+00:00      8  ["raw"]
+18180   100020240  2025-10-26T01:00:00+00:00      4  ["raw"]
+18181   100020240  2025-10-26T02:00:00+00:00      0  ["raw"]
+18182   100020240  2025-10-26T03:00:00+00:00      3  ["raw"]
+18183   100020240  2025-10-26T04:00:00+00:00     21  ["raw"]
+103007  100020241  2025-10-25T22:00:00+00:00      2  ["raw"]
+103008  100020241  2025-10-25T23:00:00+00:00      3  ["raw"]
+103009  100020241  2025-10-26T01:00:00+00:00      1  ["raw"]
+103010  100020241  2025-10-26T02:00:00+00:00      2  ["raw"]
+103011  100020241  2025-10-26T03:00:00+00:00      1  ["raw"]
+103012  100020241  2025-10-26T04:00:00+00:00      3  ["raw"]
+211529  300014875  2025-10-25T22:00:00+00:00      5  ["raw"]
+211530  300014875  2025-10-25T23:00:00+00:00      7  ["raw"]
+211531  300014875  2025-10-26T01:00:00+00:00      3  ["raw"]
+211532  300014875  2025-10-26T02:00:00+00:00      2  ["raw"]
+211533  300014875  2025-10-26T03:00:00+00:00      1  ["raw"]
+211534  300014875  2025-10-26T04:00:00+00:00      8  ["raw"]
+126626  300020348  2025-10-25T22:00:00+00:00     12  ["raw"]
+126627  300020348  2025-10-25T23:00:00+00:00      7  ["raw"]
+126628  300020348  2025-10-26T01:00:00+00:00      3  ["raw"]
+126629  300020348  2025-10-26T02:00:00+00:00      0  ["raw"]
+126630  300020348  2025-10-26T03:00:00+00:00      2  ["raw"]
+126631  300020348  2025-10-26T04:00:00+00:00      8  ["raw"]
+164886  300020349  2025-10-25T22:00:00+00:00      4  ["raw"]
+164887  300020349  2025-10-25T23:00:00+00:00      6  ["raw"]
+164888  300020349  2025-10-26T01:00:00+00:00      3  ["raw"]
+164889  300020349  2025-10-26T02:00:00+00:00      0  ["raw"]
+164890  300020349  2025-10-26T03:00:00+00:00      1  ["raw"]
+164891  300020349  2025-10-26T04:00:00+00:00      2  ["raw"]

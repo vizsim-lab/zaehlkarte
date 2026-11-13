@@ -1,0 +1,37 @@
+https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025: 24558 Zeichen; Links mit Daten: ['/dataset/6aabe7a9-0be6-47f2-9482-245de3af972a/resource/64a3d4cc-5b2b-4323-9a73-dba4426d6547', 'https://opendata.bonn.de/api/3/action/package_show?id=6aabe7a9-0be6-47f2-9482-245de3af972a', 'https://opendata.bonn.de/dcatapde/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025.json', 'https://opendata.bonn.de/sites/default/files/fahrradzaehldatenbonn2025.csv']
+! https://opendata.bonn.de/search/field_topic/verkehr-3101?query=fahrrad: <HTTPError 404: 'Not Found'>
+https://opendata.bonn.de/data.json: 286 Datensätze, 11 mit „Fahrrad“
+   Fahrradmessstellen Ergebnisse Radzählungen 2025 | http://www.opendefinition.org/licenses/cc-zero | [('Fahrradmesstellen Ergebnisse Radzählungen Stundenauswertung', 'https://opendata.bonn.de/sites/default/files/fahrradzaehldatenbonn2025.csv')]
+   Fahrradmessstellen Ergebnisse Radzählungen 2024 | http://www.opendefinition.org/licenses/cc-zero | [('Fahrradmesstellen Ergebnisse Radzählungen 15 Minutenauswertung 2024', 'https://opendata.bonn.de/sites/default/files/MessergebnisseFahrradzaehlstationen2024.csv'), ('Fahrradmesstellen Ergebnisse Radzählungen Stundenauswertung', 'https://opendata.bonn.de/sites/default/files/MessergebnisseFahrradzaehlstationenStundenauswertung2024.csv')]
+   Fahrradmessstellen Ergebnisse Radzählungen 2023 | http://www.opendefinition.org/licenses/cc-zero | [('Messergebnisse Fahrrad Dauerzählstellen Stundenauswertung 2023', 'https://opendata.bonn.de/sites/default/files/Fahrradzaehlstellen2023_stuendlich.csv'), ('Fahrradmessstellen Ergebnisse Radzählungen 15 Minutenauswertung 2023', 'https://opendata.bonn.de/sites/default/files/Fahrradzaehlstellen2023_15minutenauswertung_0.csv')]
+   Fahrradmessstellen Ergebnisse Radzählungen 2022 | http://www.opendefinition.org/licenses/cc-zero | [('Messergebnisse Fahrrad Dauerzählstellen 2022', 'https://opendata.bonn.de/sites/default/files/FahrradBonn2022.csv')]
+   Fahrradmessstellen Ergebnisse Radzählungen 2021 | http://www.opendefinition.org/licenses/cc-zero | [('Messergebnisse Fahrrad Dauerzählstellen 2021', 'https://opendata.bonn.de/sites/default/files/ergebnissefahrradzaehlungen2021.csv')]
+   Fahrradmessstellen Ergebnisse Radzählungen 2020 | http://www.opendefinition.org/licenses/cc-zero | [('Messergebnisse Fahrrad Dauerzählstellen 15 Minutenauswertung 2020', 'https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2020_15MinAuswertung.csv'), ('Messergebnisse Fahrrad Dauerzählstellen Stundenauswertung 2020', 'https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2020_1hAuswertung.csv')]
+   Fahrradmessstellen Ergebnisse Radzählungen 2019 | http://www.opendefinition.org/licenses/cc-zero | [('Messergebnisse Fahrrad Dauerzählstellen', 'https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2019.csv')]
+   Fahrradmessstellen Ergebnisse Radzählungen Vortag  | http://www.opendefinition.org/licenses/cc-zero | [('Ergebnisse Radzählungen vom Vortag', 'https://stadtplan.bonn.de/csv?OD=4285')]
+   Fahrradmessstellen Ergebnisse Radzählungen 2018 | http://www.opendefinition.org/licenses/cc-zero | []
+   Standorte der Fahrradstellplätze | http://www.opendefinition.org/licenses/cc-zero | [('Standorte der Fahrradstellplätze', 'https://stadtplan.bonn.de/geojson?Thema=24840')]
+   Standorte der Fahrradmessstellen Radzählungen | http://www.opendefinition.org/licenses/cc-zero | [('Radwege Zählstellen', 'https://stadtplan.bonn.de/geojson?Thema=22640')]
+! https://opendata.bonn.de/api/1/metastore/schemas/dataset/items: <HTTPError 404: 'Not Found'>
+open.nrw „Fahrradmessstellen“: 9 Treffer
+  fahrradmessstellen-ergebnisse-radzahlungen-vortag-bn | http://dcat-ap.de/def/licenses/other-closed | Bonn | 2026-11-12T23:21:17.777137
+     - Ergebnisse Radzählungen vom Vortag | https://opendata.bonn.de/dataset/cfc2a3cf-e585-472a-b70d-679aa3070f41/resource/053f5572-7f88-4156-b456-21c573750d32 | http://dcat-ap.de/def/licenses/other-closed
+  fahrradmessstellen-ergebnisse-radzahlungen-2025-bn | http://dcat-ap.de/def/licenses/cc-zero | Bonn | 2026-11-12T23:20:52.488465
+     - Fahrradmesstellen Ergebnisse Radzählungen Stundenauswertung | https://opendata.bonn.de/sites/default/files/fahrradzaehldatenbonn2025.csv | http://dcat-ap.de/def/licenses/cc-zero
+  fahrradmessstellen-ergebnisse-radzahlungen-2024-bn | http://dcat-ap.de/def/licenses/cc-zero | Bonn | 2026-11-12T23:20:54.954131
+     - Fahrradmesstellen Ergebnisse Radzählungen 15 Minutenauswertung 2024 | https://opendata.bonn.de/sites/default/files/MessergebnisseFahrradzaehlstationen2024.csv | http://dcat-ap.de/def/licenses/cc-zero
+     - Fahrradmesstellen Ergebnisse Radzählungen Stundenauswertung | https://opendata.bonn.de/sites/default/files/MessergebnisseFahrradzaehlstationenStundenauswertung2024.csv | http://dcat-ap.de/def/licenses/cc-zero
+  fahrradmessstellen-ergebnisse-radzahlungen-2023-bn | http://dcat-ap.de/def/licenses/cc-zero | Bonn | 2026-11-12T23:20:58.234816
+     - Messergebnisse Fahrrad Dauerzählstellen Stundenauswertung 2023 | https://opendata.bonn.de/sites/default/files/Fahrradzaehlstellen2023_stuendlich.csv | http://dcat-ap.de/def/licenses/cc-zero
+     - Fahrradmessstellen Ergebnisse Radzählungen 15 Minutenauswertung 2023 | https://opendata.bonn.de/sites/default/files/Fahrradzaehlstellen2023_15minutenauswertung_0.csv | http://dcat-ap.de/def/licenses/cc-zero
+  standorte-der-fahrradmessstellen-radzahlungen-bn | http://dcat-ap.de/def/licenses/cc-zero | Bonn | 2026-11-12T23:21:31.649445
+     - Radwege Zählstellen | https://opendata.bonn.de/dataset/2d764fc9-120f-4de8-bf2c-936abc4c6739/resource/2d764fc9-120f-4de8-bf2c-936abc4c6739 | http://dcat-ap.de/def/licenses/cc-zero
+  fahrradmessstellen-ergebnisse-radzahlungen-2022-bn | http://dcat-ap.de/def/licenses/cc-zero | Bonn | 2026-11-12T23:21:00.114350
+     - Messergebnisse Fahrrad Dauerzählstellen 2022 | https://opendata.bonn.de/sites/default/files/FahrradBonn2022.csv | http://dcat-ap.de/def/licenses/cc-zero
+  fahrradmessstellen-ergebnisse-radzahlungen-2019-bn | http://dcat-ap.de/def/licenses/other-closed | Bonn | 2026-11-12T23:21:13.235772
+     - Messergebnisse Fahrrad Dauerzählstellen | https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2019.csv | http://dcat-ap.de/def/licenses/other-closed
+  fahrradmessstellen-ergebnisse-radzahlungen-2020-bn | http://dcat-ap.de/def/licenses/cc-zero | Bonn | 2026-11-12T23:21:12.909393
+     - Messergebnisse Fahrrad Dauerzählstellen 15 Minutenauswertung 2020 | https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2020_15MinAuswertung.csv | http://dcat-ap.de/def/licenses/cc-zero
+     - Messergebnisse Fahrrad Dauerzählstellen Stundenauswertung 2020 | https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2020_1hAuswertung.csv | http://dcat-ap.de/def/licenses/cc-zero
+  fahrradmessstellen-ergebnisse-radzahlungen-2021-bn | http://dcat-ap.de/def/licenses/cc-zero | Bonn | 2026-11-12T23:21:06.897909
+     - Messergebnisse Fahrrad Dauerzählstellen 2021 | https://opendata.bonn.de/sites/default/files/ergebnissefahrradzaehlungen2021.csv | http://dcat-ap.de/def/licenses/cc-zero
