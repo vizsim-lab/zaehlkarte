@@ -1,20 +1,20 @@
 Using CPython 3.12.3 interpreter at: /usr/bin/python3
 Creating virtual environment at: .venv
-Resolved 48 packages in 1ms
+Resolved 48 packages in 0.90ms
    Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
-Downloading cryptography (4.5MiB)
 Downloading brotli (1.4MiB)
-Downloading pandas (11.5MiB)
-Downloading numpy (16.0MiB)
-Downloading pdfminer-six (6.3MiB)
-Downloading pillow (6.8MiB)
-Downloading pygments (1.2MiB)
 Downloading ruff (10.1MiB)
+Downloading pillow (6.8MiB)
+Downloading cryptography (4.5MiB)
+Downloading numpy (16.0MiB)
+Downloading pandas (11.5MiB)
+Downloading pygments (1.2MiB)
+Downloading pdfminer-six (6.3MiB)
+Downloading pypdfium2 (3.8MiB)
 Downloading pycryptodomex (2.2MiB)
 Downloading osmium (1.8MiB)
-Downloading pypdfium2 (3.8MiB)
- Downloaded brotli
  Downloaded pygments
+ Downloaded brotli
  Downloaded osmium
  Downloaded pycryptodomex
  Downloaded pypdfium2
@@ -22,11 +22,11 @@ Downloading pypdfium2 (3.8MiB)
  Downloaded pdfminer-six
  Downloaded pillow
  Downloaded ruff
- Downloaded pandas
  Downloaded numpy
       Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
-Prepared 43 packages in 716ms
-Installed 45 packages in 57ms
+ Downloaded pandas
+Prepared 43 packages in 650ms
+Installed 45 packages in 55ms
  + annotated-doc==0.0.5
  + backports-zstd==1.8.0
  + brotli==1.2.1
@@ -84,20 +84,20 @@ aachen_rad: 2 Jahresdateien (2025, 2026) und Standorte geholt
 berlin_rad: Gesamtdatei geholt (17.8 MB)
 muenchen_rad: 27 Dateien, davon 27 neu geladen
 	Command being timed: "uv run zaehlkarte dauer fetch"
-	User time (seconds): 34.46
-	System time (seconds): 2.94
+	User time (seconds): 27.37
+	System time (seconds): 2.92
 	Percent of CPU this job got: 2%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 25:38.66
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 17:43.07
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 823276
+	Maximum resident set size (kbytes): 823968
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 19
-	Minor (reclaiming a frame) page faults: 366556
-	Voluntary context switches: 56233
-	Involuntary context switches: 502
+	Minor (reclaiming a frame) page faults: 464984
+	Voluntary context switches: 85134
+	Involuntary context switches: 530
 	Swaps: 0
 	File system inputs: 109080
 	File system outputs: 1709776
@@ -106,203 +106,93 @@ muenchen_rad: 27 Dateien, davon 27 neu geladen
 	Signals delivered: 0
 	Page size (bytes): 4096
 	Exit status: 0
-[31m╭─[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m─╮[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/[0m[1mcli.py[0m:1 [31m│[0m
-[31m│[0m 00 in dauer_site                                                             [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m 97 [0m[2m│   [0m[94mfrom[0m[90m [0m[4;96mzaehlkarte[0m[4;96m.[0m[4;96mdauer[0m[90m [0m[94mimport[0m bau                                   [31m│[0m
-[31m│[0m   [2m 98 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m 99 [0m[2m│   [0merzeugt = date.fromisoformat(datum) [94mif[0m datum [94melse[0m [94mNone[0m             [31m│[0m
-[31m│[0m [31m❱ [0m100 [2m│   [0m_, zeilen = [1;4mbau.site(erzeugt=erzeugt)[0m                              [31m│[0m
-[31m│[0m   [2m101 [0m[2m│   [0m[94mfor[0m z [95min[0m zeilen:                                                   [31m│[0m
-[31m│[0m   [2m102 [0m[2m│   │   [0mtyper.echo(z)                                                  [31m│[0m
-[31m│[0m   [2m103 [0m                                                                       [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mba[0m [31m│[0m
-[31m│[0m [1mu.py[0m:64 in site                                                              [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m61 [0m                                                                        [31m│[0m
-[31m│[0m   [2m62 [0m                                                                        [31m│[0m
-[31m│[0m   [2m63 [0m[94mdef[0m[90m [0m[92msite[0m(pfade: Pfade | [94mNone[0m = [94mNone[0m, erzeugt: date | [94mNone[0m = [94mNone[0m) ->    [31m│[0m
-[31m│[0m      [96mtuple[0m[[96mlist[0m[Path], [96mlist[0m[[96mstr[0m]]:                                           [31m│[0m
-[31m│[0m [31m❱ [0m64 [2m│   [0mgelesen, berichte = [1;4mbaue(pfade)[0m                                     [31m│[0m
-[31m│[0m   [2m65 [0m[2m│   [0mdateien, zeilen = site_.schreibe(gelesen, pfade, erzeugt)           [31m│[0m
-[31m│[0m   [2m66 [0m[2m│   [0malle = [[33mf[0m[33m"[0m[33m{[0mc[33m}[0m[33m: [0m[33m{[0mz[33m}[0m[33m"[0m [94mfor[0m c, zs [95min[0m berichte.items() [94mfor[0m z [95min[0m zs]      [31m│[0m
-[31m│[0m   [2m67 [0m[2m│   [0m[94mreturn[0m dateien, [*alle, *zeilen, *site_.statistik(gelesen)]         [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mba[0m [31m│[0m
-[31m│[0m [1mu.py[0m:58 in baue                                                              [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m55 [0m[2m│   │   │   [0m[94mcontinue[0m                                                    [31m│[0m
-[31m│[0m   [2m56 [0m[2m│   │   [0mmodul = ADAPTER[q[[33m"[0m[33madapter[0m[33m"[0m]]                                   [31m│[0m
-[31m│[0m   [2m57 [0m[2m│   │   [0mbericht = modul.Bericht()                                       [31m│[0m
-[31m│[0m [31m❱ [0m58 [2m│   │   [0mgelesen.append((q, [1;4mmodul.lese(q, pfade, bericht)[0m))              [31m│[0m
-[31m│[0m   [2m59 [0m[2m│   │   [0mberichte[code] = bericht.zeilen()                               [31m│[0m
-[31m│[0m   [2m60 [0m[2m│   [0m[94mreturn[0m gelesen, berichte                                            [31m│[0m
-[31m│[0m   [2m61 [0m                                                                        [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mmo[0m [31m│[0m
-[31m│[0m [1mbidata_eco.py[0m:179 in lese                                                    [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m176 [0m[2m│   │   [0mbericht.anzahl += [96mlen[0m(df)                                      [31m│[0m
-[31m│[0m   [2m177 [0m[2m│   │   [0m[94mfor[0m _, z [95min[0m df.drop_duplicates([33m"[0m[33mcounter_site_id[0m[33m"[0m,              [31m│[0m
-[31m│[0m       keep=[33m"[0m[33mlast[0m[33m"[0m).iterrows():                                               [31m│[0m
-[31m│[0m   [2m178 [0m[2m│   │   │   [0mmeta[[96mint[0m(z[[33m"[0m[33mcounter_site_id[0m[33m"[0m])] = z  [2m# die jüngste Angabe [0m [31m│[0m
-[31m│[0m       [2mje Zählstelle gilt[0m                                                     [31m│[0m
-[31m│[0m [31m❱ [0m179 [2m│   │   [0m[94mfor[0m liste, x [95min[0m [96mzip[0m(felder, [1;4mkompakt(df)[0m, strict=[94mTrue[0m):         [31m│[0m
-[31m│[0m   [2m180 [0m[2m│   │   │   [0mliste.append(x)                                            [31m│[0m
-[31m│[0m   [2m181 [0m[2m│   │   [0m[94mdel[0m df                                                         [31m│[0m
-[31m│[0m   [2m182 [0m[2m│   [0mgesammelt = []                                                     [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/src/zaehlkarte/dauer/[0m[1mmo[0m [31m│[0m
-[31m│[0m [1mbidata_eco.py[0m:128 in kompakt                                                 [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m125 [0m[2m│   [0m[94mif[0m np.isnat(tag).any():                                            [31m│[0m
-[31m│[0m   [2m126 [0m[2m│   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33miso_timestamp ohne Datum[0m[33m"[0m)                   [31m│[0m
-[31m│[0m   [2m127 [0m[2m│   [0mstunde = ts.slice([94m11[0m, [94m13[0m).astype(np.int64).to_numpy()              [31m│[0m
-[31m│[0m [31m❱ [0m128 [2m│   [0mversatz = [1;4mts.slice([0m[1;4;94m19[0m[1;4m, [0m[1;4;94m22[0m[1;4m).astype(np.int64)[0m.to_numpy()  [2m# „+02:00“[0m [31m│[0m
-[31m│[0m       [2m-> 2[0m                                                                   [31m│[0m
-[31m│[0m   [2m129 [0m[2m│   [0mtage = tag.view(np.int64)                                          [31m│[0m
-[31m│[0m   [2m130 [0m[2m│   [0mutc = tage * [94m24[0m + stunde - versatz                                 [31m│[0m
-[31m│[0m   [2m131 [0m[2m│   [0mroh = df[[33m"[0m[33mchannels_all[0m[33m"[0m].str.strip()                               [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/[0m[1mgeneric.py[0m:6781 in astype                            [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m 6778 [0m[2m│   │   [0m                                                             [31m│[0m
-[31m│[0m   [2m 6779 [0m[2m│   │   [0m[94melse[0m:                                                        [31m│[0m
-[31m│[0m   [2m 6780 [0m[2m│   │   │   [0m[2m# else, only a single dtype is given[0m                     [31m│[0m
-[31m│[0m [31m❱ [0m 6781 [2m│   │   │   [0mnew_data = [1;4;96mself[0m[1;4m._mgr.astype(dtype=dtype, errors=errors)[0m  [31m│[0m
-[31m│[0m   [2m 6782 [0m[2m│   │   │   [0mres = [96mself[0m._constructor_from_mgr(new_data,               [31m│[0m
-[31m│[0m         axes=new_data.axes)                                                  [31m│[0m
-[31m│[0m   [2m 6783 [0m[2m│   │   │   [0m[94mreturn[0m res.__finalize__([96mself[0m, method=[33m"[0m[33mastype[0m[33m"[0m)           [31m│[0m
-[31m│[0m   [2m 6784 [0m                                                                     [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/internals/[0m[1mmanagers.py[0m:632 in astype                  [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m 629 [0m[2m│   │   [0m[94mreturn[0m [96mself[0m.apply([33m"[0m[33mdiff[0m[33m"[0m, n=n)                                [31m│[0m
-[31m│[0m   [2m 630 [0m[2m│   [0m                                                                  [31m│[0m
-[31m│[0m   [2m 631 [0m[2m│   [0m[94mdef[0m[90m [0m[92mastype[0m([96mself[0m, dtype, errors: [96mstr[0m = [33m"[0m[33mraise[0m[33m"[0m) -> Self:           [31m│[0m
-[31m│[0m [31m❱ [0m 632 [2m│   │   [0m[94mreturn[0m [1;4;96mself[0m[1;4m.apply([0m[1;4;33m"[0m[1;4;33mastype[0m[1;4;33m"[0m[1;4m, dtype=dtype, errors=errors)[0m       [31m│[0m
-[31m│[0m   [2m 633 [0m[2m│   [0m                                                                  [31m│[0m
-[31m│[0m   [2m 634 [0m[2m│   [0m[94mdef[0m[90m [0m[92mconvert[0m([96mself[0m) -> Self:                                        [31m│[0m
-[31m│[0m   [2m 635 [0m[2m│   │   [0m[94mreturn[0m [96mself[0m.apply([33m"[0m[33mconvert[0m[33m"[0m)                                  [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/internals/[0m[1mmanagers.py[0m:456 in apply                   [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m 453 [0m[2m│   │   │   [0m[94mif[0m [96mcallable[0m(f):                                           [31m│[0m
-[31m│[0m   [2m 454 [0m[2m│   │   │   │   [0mapplied = b.apply(f, **kwargs)                        [31m│[0m
-[31m│[0m   [2m 455 [0m[2m│   │   │   [0m[94melse[0m:                                                     [31m│[0m
-[31m│[0m [31m❱ [0m 456 [2m│   │   │   │   [0mapplied = [1;4;96mgetattr[0m[1;4m(b, f)(**kwargs)[0m                     [31m│[0m
-[31m│[0m   [2m 457 [0m[2m│   │   │   [0mresult_blocks = extend_blocks(applied, result_blocks)     [31m│[0m
-[31m│[0m   [2m 458 [0m[2m│   │   [0m                                                              [31m│[0m
-[31m│[0m   [2m 459 [0m[2m│   │   [0mout = [96mtype[0m([96mself[0m).from_blocks(result_blocks, [ax.view() [94mfor[0m ax [31m│[0m
-[31m│[0m        [95min[0m [96mself[0m.axes])                                                        [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/internals/[0m[1mblocks.py[0m:623 in astype                    [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m 620 [0m[2m│   │   │   │   [0m[94mraise[0m [96mValueError[0m([33m"[0m[33mCan not squeeze with more than one [0m [31m│[0m
-[31m│[0m        [33mcolumn.[0m[33m"[0m)                                                             [31m│[0m
-[31m│[0m   [2m 621 [0m[2m│   │   │   [0mvalues = values[[94m0[0m, :]  [2m# type: ignore[call-overload][0m      [31m│[0m
-[31m│[0m   [2m 622 [0m[2m│   │   [0m                                                              [31m│[0m
-[31m│[0m [31m❱ [0m 623 [2m│   │   [0mnew_values = [1;4mastype_array_safe(values, dtype, errors=errors)[0m  [31m│[0m
-[31m│[0m   [2m 624 [0m[2m│   │   [0m                                                              [31m│[0m
-[31m│[0m   [2m 625 [0m[2m│   │   [0mnew_values = maybe_coerce_values(new_values)                  [31m│[0m
-[31m│[0m   [2m 626 [0m                                                                      [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:245 in astype_array_safe            [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m242 [0m[2m│   │   [0mdtype = dtype.numpy_dtype                                      [31m│[0m
-[31m│[0m   [2m243 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m244 [0m[2m│   [0m[94mtry[0m:                                                               [31m│[0m
-[31m│[0m [31m❱ [0m245 [2m│   │   [0mnew_values = astype_array(values, dtype, copy=copy)            [31m│[0m
-[31m│[0m   [2m246 [0m[2m│   [0m[94mexcept[0m ([96mValueError[0m, [96mTypeError[0m):                                    [31m│[0m
-[31m│[0m   [2m247 [0m[2m│   │   [0m[2m# e.g. _astype_nansafe can fail on object-dtype of strings[0m     [31m│[0m
-[31m│[0m   [2m248 [0m[2m│   │   [0m[2m#  trying to convert to float[0m                                  [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:187 in astype_array                 [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m184 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m185 [0m[2m│   [0m[94mif[0m [95mnot[0m [96misinstance[0m(values, np.ndarray):                             [31m│[0m
-[31m│[0m   [2m186 [0m[2m│   │   [0m[2m# i.e. ExtensionArray[0m                                          [31m│[0m
-[31m│[0m [31m❱ [0m187 [2m│   │   [0mvalues = [1;4mvalues.astype(dtype, copy=copy)[0m                       [31m│[0m
-[31m│[0m   [2m188 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m189 [0m[2m│   [0m[94melse[0m:                                                              [31m│[0m
-[31m│[0m   [2m190 [0m[2m│   │   [0mvalues = _astype_nansafe(values, dtype, copy=copy)             [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/arrays/[0m[1mstring_.py[0m:957 in astype                      [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m 954 [0m[2m│   │   │   [0mvalues[mask] = np.nan                                     [31m│[0m
-[31m│[0m   [2m 955 [0m[2m│   │   │   [0m[94mreturn[0m values                                             [31m│[0m
-[31m│[0m   [2m 956 [0m[2m│   │   [0m                                                              [31m│[0m
-[31m│[0m [31m❱ [0m 957 [2m│   │   [0m[94mreturn[0m [1;4;96msuper[0m[1;4m().astype(dtype, copy)[0m                            [31m│[0m
-[31m│[0m   [2m 958 [0m[2m│   [0m                                                                  [31m│[0m
-[31m│[0m   [2m 959 [0m[2m│   [0m[94mdef[0m[90m [0m[92m_reduce[0m(                                                      [31m│[0m
-[31m│[0m   [2m 960 [0m[2m│   │   [0m[96mself[0m,                                                         [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/arrays/[0m[1mnumpy_.py[0m:334 in astype                       [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m331 [0m[2m│   │   │   │   [0m[94mreturn[0m [96mself[0m.copy()                                     [31m│[0m
-[31m│[0m   [2m332 [0m[2m│   │   │   [0m[94mreturn[0m [96mself[0m                                                [31m│[0m
-[31m│[0m   [2m333 [0m[2m│   │   [0m                                                               [31m│[0m
-[31m│[0m [31m❱ [0m334 [2m│   │   [0mresult = [1;4mastype_array([0m[1;4;96mself[0m[1;4m._ndarray, dtype=dtype, copy=copy)[0m   [31m│[0m
-[31m│[0m   [2m335 [0m[2m│   │   [0m[94mreturn[0m result                                                  [31m│[0m
-[31m│[0m   [2m336 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m337 [0m[2m│   [0m[94mdef[0m[90m [0m[92misna[0m([96mself[0m) -> np.ndarray:                                      [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:190 in astype_array                 [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m187 [0m[2m│   │   [0mvalues = values.astype(dtype, copy=copy)                       [31m│[0m
-[31m│[0m   [2m188 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m189 [0m[2m│   [0m[94melse[0m:                                                              [31m│[0m
-[31m│[0m [31m❱ [0m190 [2m│   │   [0mvalues = [1;4m_astype_nansafe(values, dtype, copy=copy)[0m             [31m│[0m
-[31m│[0m   [2m191 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m192 [0m[2m│   [0m[2m# in pandas we don't store numpy str dtypes, so convert to object[0m  [31m│[0m
-[31m│[0m   [2m193 [0m[2m│   [0m[94mif[0m [96misinstance[0m(dtype, np.dtype) [95mand[0m [96missubclass[0m(values.dtype.type,   [31m│[0m
-[31m│[0m       [96mstr[0m):                                                                  [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m [2m/home/runner/work/zaehlkarte/zaehlkarte/app/pipeline/.venv/lib/python3.12/si[0m [31m│[0m
-[31m│[0m [2mte-packages/pandas/core/dtypes/[0m[1mastype.py[0m:139 in _astype_nansafe              [31m│[0m
-[31m│[0m                                                                              [31m│[0m
-[31m│[0m   [2m136 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m137 [0m[2m│   [0m[94mif[0m copy [95mor[0m [96mobject[0m [95min[0m (arr.dtype, dtype):                           [31m│[0m
-[31m│[0m   [2m138 [0m[2m│   │   [0m[2m# Explicit copy, or required since NumPy can't view from / to [0m [31m│[0m
-[31m│[0m       [2mobject.[0m                                                                [31m│[0m
-[31m│[0m [31m❱ [0m139 [2m│   │   [0m[94mreturn[0m [1;4marr.astype(dtype, copy=[0m[1;4;94mTrue[0m[1;4m)[0m                            [31m│[0m
-[31m│[0m   [2m140 [0m[2m│   [0m                                                                   [31m│[0m
-[31m│[0m   [2m141 [0m[2m│   [0m[94mreturn[0m arr.astype(dtype, copy=copy)                                [31m│[0m
-[31m│[0m   [2m142 [0m                                                                       [31m│[0m
-[31m╰──────────────────────────────────────────────────────────────────────────────╯[0m
-[1;91mValueError: [0minvalid literal for [1;35mint[0m[1m([0m[1m)[0m with base [1;36m10[0m: [32m''[0m
-Command exited with non-zero status 1
+berlin_viz: 120 Monate alte QS (2015-01 bis 2024-12), 6 Monate neue QS (2025-01 bis 2025-06), 19240240 Stunden je Messquerschnitt
+berlin_viz: ohne Stammdaten (nicht in der Karte): TE424n (8331 Std.), TE507n (8256 Std.), TE530n (8169 Std.), TE334n (8052 Std.), TE471n (8037 Std.), TE523n (7636 Std.), TE349n (7619 Std.), TE477n (7273 Std.), TE425n (6929 Std.), TE202n (6714 Std.)
+berlin_viz: neue QS: Detektor-Stunden unter der Vollständigkeitsgrenze: 62996
+berlin_viz: neue QS: Stunden mit Wert von laut Stammdaten deinstallierten Detektoren (nicht gezählt): 34270
+berlin_viz: 2025-01: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-02: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-03: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-04: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-05: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: 2025-06: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
+berlin_viz: Vergleich alte/neue QS: 2417461 Stunden in beiden, 80.9 % gleich (±2 %), Median-Abweichung 0.0 %; nur alte QS 198808, nur neue QS 537288
+hamburg_kfz: kfz: 829 Datastreams, sv: 341 Datastreams; 829 Zählstellen
+hamburg_kfz: Stunden in der Karte: kfz 1120011, sv 1856702; noch nicht übernommen (jünger als frisch_tage): 179423
+hamburg_kfz: Gedächtnis: 10 Monate (2026-02 bis 2026-11)
+hamburg_kfz: Straßennamen aus OSM: 826, nach Kennung benannt: 3
+hamburg_rad: rad: 312 Datastreams; 312 Zählstellen
+hamburg_rad: Stunden in der Karte: rad 448713; noch nicht übernommen (jünger als frisch_tage): 51371
+hamburg_rad: Gedächtnis: 4 Monate (2026-08 bis 2026-11)
+hamburg_rad: Straßennamen aus OSM: 309, nach Kennung benannt: 3
+ettlingen: 203060 Zeilen, davon 59502 aus UrbanPulse-Strömen (0 nicht zur vollen Stunde, verworfen); 14 Ströme, 14 Zählstellen
+ettlingen: Stunden in der Karte: kfz 17018, lkw 17018; noch nicht übernommen (jünger als frisch_tage): 421
+mobidata_rad: 167 Monatsdateien, 8249927 Zeilen (0 ohne Wert, 0 doppelt verworfen, 0 widersprüchlich = nicht gezählt); 178 Zählstellen
+mobidata_rad: je Kommune/Kreis: Landratsamt Rems-Murr-Kreis 25, Stadt Ludwigsburg 22, Stadt Freiburg 17, Stadt Mannheim 17, Landeshauptstadt Stuttgart 17, Stadt Heidelberg 15, Landratsamt Ostalbkreis 11, Stadt Heilbronn 8, Stadt Reutlingen 8, Stadt Konstanz 6, Landratsamt Heilbronn 5, Stadt Tübingen 4, Ravensburg Tws Gmbh & Co. Kg 4, Stadt Ravensburg 3, Stadt Lörrach 2, Landkreis Böblingen 2, Stadt Bad Säckingen 2, Stadt Karlsruhe 1, Stadt Kirchheim Unter Teck 1, Stadt Offenburg 1, Stadt Ulm 1, Stadtverwaltung Aalen 1, Stadt Singen 1, Stadt Baden-Baden 1, Stadt Emmendingen 1, Stadt Pforzheim 1, Stadt Neckarsulm 1
+mobidata_rad: Stunden in der Karte: rad 8028687; noch nicht übernommen (jünger als frisch_tage): 0; Zeilen um 2 Uhr am Tag der Sommerzeit verworfen: 0; Zeitstempel ohne Versatz (nicht gezählt): 2
+mobidata_rad: nicht in der Karte: Fuß- & Radtunnel Südportal - Derendinger Allee (100003358): Fuß- & Radtunnel Südportal (Tübingen) – ob nur Räder gezählt sind, ist nicht erkennbar; Hardware für Waiblinger-/ Taubenheimstr. (100037408): „Hardware für Waiblinger-/ Taubenheimstr.“ (Stuttgart) – das Gerät der Zählstellen Waiblinger Straße und Taubenheimstraße (gleiche Seriennummer), sonst doppelt in der Karte; Bad Wimpfen (300048165): Bad Wimpfen – Zählstelle des Regierungspräsidiums Stuttgart, also des Landes (die Karte bleibt bei kommunalen Zählstellen); 1 Wilhelm-Leuschner-Straße (CITIX AI) - Hardware - Fuß- und Radverkehr (300069828): Wilhelm-Leuschner-Straße (Heilbronn), Kamera für Fuß- und Radverkehr – ob nur Räder gezählt sind, ist nicht erkennbar
+muenster_rad: 1338 Monatsdateien, 3705899 Viertelstunden; Status: 0 3630004, validated 57294, 4 10170, modified 8335, leer 96; Gesamtspalte ≠ Summe der Kanäle: 86 (nicht gezählt)
+muenster_rad: 23 Zählstellen; Stunden in der Karte: rad 919122
+aachen_rad: Dateien 2025, 2026: 16305 Stunden; 26 Zählstellen mit 50 Kanälen; Stunden in der Karte: rad 411392
+aachen_rad: Stunden mit leerem Kanal (nicht gezählt): 418426 1520, 418428 1028, 402607 563, 448507 474, 447911 233, 448498 227, 448501 188, 448506 182
+aachen_rad: Lage aus sources.yaml statt PDF: 447917 (im PDF Länge 6.80208)
+berlin_rad: Blätter 2012–2025: 3699406 Zellen, davon 1135214 leer; markiert (nicht gezählt): 0/unplausibel 92937, rekonstruiert 17005, keine Daten 16856, Sommerzeit 226
+berlin_rad: doppelte Stunden: 227760 gleich (einmal gezählt), 0 verschieden (nicht gezählt); 33 Zählstellen; Stunden in der Karte: rad 2257104
+berlin_rad: ohne Lage (nicht in der Karte): 02-MI-AL-W, 02-PA-SE-N, 03-SP-NO-O, 03-SP-NO-W, 17-SZ-BRE-O, 17-SZ-BRE-W
+muenchen_rad: 27 Dateien (2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026_01, 2026_02, 2026_03, 2026_04, 2026_05, 2026_06, 2026_07, 2026_08, 2026_09): 3442934 Viertelstunden, 180500 ohne Wert, 0 mit gesamt ≠ Summe der Richtungen (nicht gezählt); 6 Zählstellen; Stunden in der Karte: rad 815221; Zeilen um 2 Uhr am Tag der Sommerzeit verworfen: 392
+muenchen_rad: Kommentare der Quelle: Zählstelle noch nicht in Betrieb (98688), Baustelle (56928), Ausfall nach Beschädigung (19066), Radweg vereist / nach Schneefall nicht geräumt / keine Messung möglich (4608), Ausfall, baustellenbedingte Demontage (1018), Austausch Sensor (192)
+berlin_viz: 288 Stellen mit vollständigen Tagen, 4 ohne
+hamburg_kfz: 812 Stellen mit vollständigen Tagen, 17 ohne
+hamburg_rad: 312 Stellen mit vollständigen Tagen, 0 ohne
+ettlingen: 10 Stellen mit vollständigen Tagen, 4 ohne
+mobidata_rad: 178 Stellen mit vollständigen Tagen, 0 ohne
+muenster_rad: 23 Stellen mit vollständigen Tagen, 0 ohne
+aachen_rad: 26 Stellen mit vollständigen Tagen, 0 ohne
+berlin_rad: 33 Stellen mit vollständigen Tagen, 0 ohne
+muenchen_rad: 6 Stellen mit vollständigen Tagen, 0 ohne
+77 Dateien, 65.1 MB, 57 Detail-Dateien
+berlin_viz: vollständige Tage je Jahr (Stellen × Tage) – 2015: 87554, 2016: 84301, 2017: 85938, 2018: 90551, 2019: 90872, 2020: 90732, 2021: 29952, 2022: 27750, 2023: 41447, 2024: 34745, 2025: 12678
+berlin_viz: kfz-Tagessummen, Quintilgrenzen [6350, 9760, 12820, 16820], Median 11262, Maximum 75466
+berlin_viz: lkw-Tagessummen, Quintilgrenzen [190, 360, 590, 990], Median 466, Maximum 53396
+hamburg_kfz: vollständige Tage je Jahr (Stellen × Tage) – 2026: 101766
+hamburg_kfz: kfz-Tagessummen, Quintilgrenzen [5010, 8170, 11980, 18220], Median 9773, Maximum 80204
+hamburg_kfz: sv-Tagessummen, Quintilgrenzen [170, 350, 600, 990], Median 463, Maximum 5784
+hamburg_rad: vollständige Tage je Jahr (Stellen × Tage) – 2026: 17593
+hamburg_rad: rad-Tagessummen, Quintilgrenzen [360, 670, 1100, 1960], Median 864, Maximum 10873
+ettlingen: vollständige Tage je Jahr (Stellen × Tage) – 2026: 400
+ettlingen: kfz-Tagessummen, Quintilgrenzen [1640, 2690, 3640, 4730], Median 3190, Maximum 8241
+ettlingen: lkw-Tagessummen, Quintilgrenzen [90, 140, 210, 280], Median 180, Maximum 787
+mobidata_rad: vollständige Tage je Jahr (Stellen × Tage) – 2013: 1535, 2014: 3687, 2015: 4928, 2016: 6959, 2017: 9318, 2018: 11785, 2019: 15502, 2020: 21024, 2021: 31548, 2022: 33273, 2023: 39689, 2024: 48792, 2025: 56271, 2026: 49873
+mobidata_rad: rad-Tagessummen, Quintilgrenzen [200, 500, 1020, 2450], Median 710, Maximum 21219
+muenster_rad: vollständige Tage je Jahr (Stellen × Tage) – 2019: 2706, 2020: 3283, 2021: 3117, 2022: 3144, 2023: 3888, 2024: 7896, 2025: 7441, 2026: 6733
+muenster_rad: rad-Tagessummen, Quintilgrenzen [1520, 3050, 5300, 8400], Median 3890, Maximum 24693
+aachen_rad: vollständige Tage je Jahr (Stellen × Tage) – 2025: 9246, 2026: 7551
+aachen_rad: rad-Tagessummen, Quintilgrenzen [240, 540, 920, 1490], Median 702, Maximum 5039
+berlin_rad: vollständige Tage je Jahr (Stellen × Tage) – 2012: 305, 2013: 365, 2014: 365, 2015: 3483, 2016: 7478, 2017: 8650, 2018: 8493, 2019: 7622, 2020: 7896, 2021: 8237, 2022: 8228, 2023: 10015, 2024: 11429, 2025: 11238
+berlin_rad: rad-Tagessummen, Quintilgrenzen [780, 1530, 2470, 3680], Median 1990, Maximum 10495
+muenchen_rad: vollständige Tage je Jahr (Stellen × Tage) – 2008: 407, 2009: 875, 2010: 1427, 2011: 1791, 2012: 2190, 2013: 1954, 2014: 2184, 2015: 2168, 2016: 2188, 2017: 2182, 2018: 2182, 2019: 2115, 2020: 2189, 2021: 1851, 2022: 2106, 2023: 1872, 2024: 1379, 2025: 1546, 2026: 1269
+muenchen_rad: rad-Tagessummen, Quintilgrenzen [430, 930, 1610, 2830], Median 1226, Maximum 15009
 	Command being timed: "uv run zaehlkarte dauer site"
-	User time (seconds): 122.87
-	System time (seconds): 2.78
-	Percent of CPU this job got: 100%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:05.35
+	User time (seconds): 166.83
+	System time (seconds): 4.70
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:51.57
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 876896
+	Maximum resident set size (kbytes): 2972600
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 1173664
-	Voluntary context switches: 274
-	Involuntary context switches: 998
+	Minor (reclaiming a frame) page faults: 2171376
+	Voluntary context switches: 878
+	Involuntary context switches: 1145
 	Swaps: 0
-	File system inputs: 216
-	File system outputs: 6912
+	File system inputs: 224
+	File system outputs: 133768
 	Socket messages sent: 0
 	Socket messages received: 0
 	Signals delivered: 0
 	Page size (bytes): 4096
-	Exit status: 1
+	Exit status: 0
+63M	app/public/data/dauer
