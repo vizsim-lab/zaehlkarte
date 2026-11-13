@@ -1,0 +1,663 @@
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .venv
+Resolved 48 packages in 0.86ms
+   Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Downloading numpy (16.0MiB)
+Downloading pycryptodomex (2.2MiB)
+Downloading cryptography (4.5MiB)
+Downloading pypdfium2 (3.8MiB)
+Downloading pdfminer-six (6.3MiB)
+Downloading pygments (1.2MiB)
+Downloading pandas (11.5MiB)
+Downloading brotli (1.4MiB)
+Downloading pillow (6.8MiB)
+Downloading ruff (10.1MiB)
+Downloading osmium (1.8MiB)
+ Downloaded pygments
+ Downloaded brotli
+ Downloaded osmium
+ Downloaded pycryptodomex
+ Downloaded pypdfium2
+ Downloaded cryptography
+ Downloaded pdfminer-six
+ Downloaded pillow
+ Downloaded ruff
+ Downloaded pandas
+ Downloaded numpy
+      Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Prepared 45 packages in 673ms
+Installed 45 packages in 32ms
+ + annotated-doc==0.0.5
+ + backports-zstd==1.8.0
+ + brotli==1.2.1
+ + certifi==2026.10.23
+ + cffi==2.1.1
+ + charset-normalizer==3.5.2
+ + cryptography==50.0.2
+ + et-xmlfile==2.0.0
+ + idna==3.20
+ + inflate64==1.0.4
+ + iniconfig==2.3.1
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + multivolumefile==0.2.3
+ + numpy==2.5.4
+ + openpyxl==3.1.5
+ + osmium==4.3.2
+ + packaging==26.3
+ + pandas==3.1.1
+ + pdfminer-six==20260107
+ + pdfplumber==0.11.10
+ + pillow==13.0.0
+ + pluggy==1.7.0
+ + psutil==7.2.2
+ + py7zr==1.1.4
+ + pybcj==1.0.8
+ + pycparser==3.12
+ + pycryptodomex==3.24.2
+ + pygments==2.21.0
+ + pypdfium2==5.15.1
+ + pyppmd==1.3.1
+ + pytest==9.2.0
+ + python-dateutil==4.0.0
+ + pyyaml==6.0.3
+ + requests==2.34.2
+ + rich==15.0.0
+ + ruff==0.17.4
+ + shellingham==1.5.4
+ + texttable==1.7.2
+ + typer==0.28.0
+ + tzdata==2026.6
+ + urllib3==2.8.0
+ + xlrd==2.0.2
+ + xlwt==1.3.0
+ + zaehlkarte==0.1.0 (from file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline)
+bonn_rad: 5 Jahresdateien geholt
+duesseldorf_rad: 105 Dateien mit offener Lizenz, 99 neu geladen; Fehler: 2021/Jahresübersicht - Wetter - Elisabethstraße 2021_5.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'opendata.duesseldorf.de\', port=443): Max retries exceeded with url: /sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Elisabethstra%C3%9Fe%202021_5.csv (Caused by NewConnectionError("HTTPSConnection(host=\'opendata.duesseldorf.de\', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))'))), 2021/Jahresübersicht - Wetter - OKB Nord 2021.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'opendata.duesseldorf.de\', port=443): Max retries exceeded with url: /sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20OKB%20Nord%202021.csv (Caused by NewConnectionError("HTTPSConnection(host=\'opendata.duesseldorf.de\', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))'))), 2023/Koblenzer_Straße_2023_0.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'opendata.duesseldorf.de\', port=443): Max retries exceeded with url: /sites/default/files/Koblenzer_Stra%C3%9Fe_2023_0.csv (Caused by NewConnectionError("HTTPSConnection(host=\'opendata.duesseldorf.de\', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))'))), 2024/Fleher_Deich_ost_stromaufwärts_2024_0.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'opendata.duesseldorf.de\', port=443): Max retries exceeded with url: /sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2024_0.csv (Caused by NewConnectionError("HTTPSConnection(host=\'opendata.duesseldorf.de\', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))'))), 2025/Fleher_Deich_IN_OUT_2025.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'opendata.duesseldorf.de\', port=443): Max retries exceeded with url: /sites/default/files/Fleher_Deich_IN_OUT_2025.csv (Caused by NewConnectionError("HTTPSConnection(host=\'opendata.duesseldorf.de\', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))'))), 2025/Mannesmannufer_IN_OUT_2025.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\'opendata.duesseldorf.de\', port=443): Max retries exceeded with url: /sites/default/files/Mannesmannufer_IN_OUT_2025.csv (Caused by NewConnectionError("HTTPSConnection(host=\'opendata.duesseldorf.de\', port=443): Failed to establish a new connection: [Errno 111] Connection refused"))'))); nicht übernommen (geschlossene Lizenz): 2020 Koblenzer stadtauswärts, 2020 Koblenzer Straße
+	Command being timed: "uv run zaehlkarte dauer fetch --quelle bonn_rad --quelle duesseldorf_rad"
+	User time (seconds): 4.13
+	System time (seconds): 0.30
+	Percent of CPU this job got: 0%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:47.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 107336
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 19
+	Minor (reclaiming a frame) page faults: 25330
+	Voluntary context switches: 9321
+	Involuntary context switches: 74
+	Swaps: 0
+	File system inputs: 4632
+	File system outputs: 115528
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+gelesen in 5 s
+bonn_rad: 5 Jahresdateien (2020, 2021, 2023, 2024, 2025): 43824 Stunden, leere Zellen (nicht gezählt) 41487; 14 Zählstellen; Stunden in der Karte: rad 571985; 2 Uhr am Tag der Sommerzeit verworfen: 0
+bonn_rad: Spalten ohne Lage (nicht in der Karte): 5.12 Straßburger Weg
+duesseldorf_rad: 85 Dateien (2020: 17, 2021: 15, 2023: 19, 2024: 17, 2025: 17); 19 Zählstellen; Stunden in der Karte: rad 684947; doppelte Stunden mit Wert (nicht gezählt): 4533; 2 Uhr am Tag der Sommerzeit verworfen: 1
+duesseldorf_rad: Summenspalte weggelassen: 2024 fleher_deich: „Fleher Deich“; 2024 okb_sued: „OKB Sued“
+duesseldorf_rad: Zeilen ohne lesbare Zeit: 2020/Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv 3, 2020/Mannesmann Ufer - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv 2
+duesseldorf_rad: nicht in der Karte (sources.yaml `ohne`): fleher_deich_rampe, koblenzer_nach_tls 2021, oberkasseler_bruecke
+duesseldorf_rad: ohne Lage (nicht in der Karte): koelner_strasse_186, pempelforter_42
+bonn_rad: 14 Stellen mit vollständigen Tagen, 0 ohne
+duesseldorf_rad: 19 Stellen mit vollständigen Tagen, 0 ohne
+9 Dateien, 1.5 MB, 2 Detail-Dateien
+bonn_rad: vollständige Tage je Jahr (Stellen × Tage) – 2020: 5049, 2021: 4950, 2022: 0, 2023: 4682, 2024: 4047, 2025: 5033
+bonn_rad: rad-Tagessummen, Quintilgrenzen [500, 930, 1510, 2720], Median 1187, Maximum 52101
+duesseldorf_rad: vollständige Tage je Jahr (Stellen × Tage) – 2020: 5443, 2021: 4992, 2022: 0, 2023: 6459, 2024: 5734, 2025: 5823
+duesseldorf_rad: rad-Tagessummen, Quintilgrenzen [380, 650, 940, 1410], Median 784, Maximum 7522
+fertig in 5 s, RSS-Spitze 0.27 GB, 9 Dateien
+	Command being timed: "uv run python /home/runner/work/zaehlkarte/zaehlkarte/tools/rad_bau.py /home/runner/work/zaehlkarte/zaehlkarte/app_aus bonn_rad,duesseldorf_rad"
+	User time (seconds): 5.43
+	System time (seconds): 0.20
+	Percent of CPU this job got: 105%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 272932
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 87868
+	Voluntary context switches: 26
+	Involuntary context switches: 122
+	Swaps: 0
+	File system inputs: 568
+	File system outputs: 3008
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+1.5M	app_aus/public/data/dauer
+{
+ "abgerufen": "2026-11-13T19:09:29Z",
+ "dateien": {
+  "2020/Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2020_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20IN%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020_0.csv",
+   "name": "Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Bilker%20Allee%20OUT%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Fleher Deich Ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Ost%20stromaufw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Fleher Deich Ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20Rampe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher%20Deich%20west%20stromabw%C3%A4rts%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Koblenzer einwärts nach TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20nach%20TLS%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Koblenzer einwärts nach TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Koblenzer einwärts vor TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer%20einw%C3%A4rts%20vor%20TLS%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Koblenzer einwärts vor TLS - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/K%C3%96%20Steinstra%C3%9Fe%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Lohauser%20Deich%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Mannesmann Ufer - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Mannesmann%20Ufer%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Mannesmann Ufer - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/Münchener_Ickeswarder Str - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchener_Ickeswarder%20Str%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "Münchener_Ickeswarder Str - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB%20Nord%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "OKB Nord - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2020/OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2020.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB%20S%C3%BCd%20-%20Wetterabh%C3%A4ngige%20Jahres%C3%BCbersicht%20Dauerz%C3%A4hlstelle%202020.csv",
+   "name": "OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2020",
+   "jahr": 2020
+  },
+  "2021/Jahresübersicht - Wetter - Bilker Allee IN 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20IN%202021.csv",
+   "name": "Bilker Allee IN - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Bilker Allee OUT 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Bilker%20Allee%20OUT%202021.csv",
+   "name": "Bilker Allee OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Christophstraße 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Christophstra%C3%9Fe%202021.csv",
+   "name": "Christophstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Fleher Deich 2021_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%202021_0.csv",
+   "name": "Fleher Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Fleher Deich O stromauf 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20O%20stromauf%202021.csv",
+   "name": "Fleher Deich O stromauf - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Fleher Deich Rampe 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20Rampe%202021.csv",
+   "name": "Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Fleher Deich W stromab 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Fleher%20Deich%20W%20stromab%202021.csv",
+   "name": "Fleher Deich W stromab - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Friedrichstraße 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Friedrichstra%C3%9Fe%202021.csv",
+   "name": "Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Kirchfeldstr 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Kirchfeldstr%202021.csv",
+   "name": "Kirchfeldstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Koblenzer einwärts vor TL S 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20einw%C3%A4rts%20vor%20TL%20S%202021.csv",
+   "name": "Koblenzer Straße einwärts nach TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Koblenzer einwärts vor TL S 2021_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20einw%C3%A4rts%20vor%20TL%20S%202021_0.csv",
+   "name": "Koblenzer Straße einwärts vor TL S - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Koblenzer stadtauswärts 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Koblenzer%20stadtausw%C3%A4rts%202021.csv",
+   "name": "Koblenzer Straße stadtauswärts  - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Kö Steinstrasse 2021_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20K%C3%B6%20Steinstrasse%202021_0.csv",
+   "name": "KÖ Steinstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Lohauser Deich 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Lohauser%20Deich%202021.csv",
+   "name": "Lohauser Deich - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Mannesmann Ufer-Totem 01 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Mannesmann%20Ufer-Totem%2001%202021.csv",
+   "name": "Mannesmannufer - Totem 01 - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - Münchener_Ickerswarder Str 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20M%C3%BCnchener_Ickerswarder%20Str%202021.csv",
+   "name": "Münchener Straße Ickerswarder Straße - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2021/Jahresübersicht - Wetter - OKB Süd 2021.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20OKB%20S%C3%BCd%202021.csv",
+   "name": "OKB Süd - Wetterabhängige Jahresübersicht Dauerzählstelle 2021",
+   "jahr": 2021
+  },
+  "2023/Bilker_Allee_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2023_0.csv",
+   "name": "Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Christophstraße_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2023_0.csv",
+   "name": "Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Elisabethstraße_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2023_0.csv",
+   "name": "Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Fleher_Deich_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2023_0.csv",
+   "name": "Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Fleher_Deich_Rampe_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_Rampe_2023_0.csv",
+   "name": "Fleher Deich Rampe - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Fleher_Deich_ost_stromaufwärts_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2023_0.csv",
+   "name": "Fleher Deich ost stromaufwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Fleher_Deich_west_stromabwärts_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_west_stromabw%C3%A4rts_2023_0.csv",
+   "name": "Fleher Deich west stromabwärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Friedrichstraße_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2023_0.csv",
+   "name": "Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Hofgartenrampe_Oederallee_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2023_0.csv",
+   "name": "Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Kirchfeldstraße_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2023_0.csv",
+   "name": "Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Koblenzer_einwärts_nach_TLS_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2023_0.csv",
+   "name": "Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Koblenzer_einwärts_vor_TLS_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2023_0.csv",
+   "name": "Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Koblenzer_stadtauswärts_2023.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2023.csv",
+   "name": "Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/KÖ_Steinstraße_IN_OUT_2023_1.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2023_1.csv",
+   "name": "KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Kölner_Straße_186_Radweg_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2023_0.csv",
+   "name": "Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Lohauser_Deich_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2023_0.csv",
+   "name": "Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Luegallee_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2023_0.csv",
+   "name": "Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Mannesmannufer_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2023_0.csv",
+   "name": "Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Münchner_Ickerswarder_Straße_IN_OUT_2023_1.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2023_1.csv",
+   "name": "Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/OKB_Nord_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2023_0.csv",
+   "name": "OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/OKB_Süd_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2023_0.csv",
+   "name": "OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Oberkasseler_Brücke_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2023_0.csv",
+   "name": "Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2023/Pempelforter_Straße_42_Mischverkehr_IN_OUT_2023_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2023_0.csv",
+   "name": "Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2023
+  },
+  "2024/Bilker_Allee_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2024_0.csv",
+   "name": "Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Christophstraße_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2024_0.csv",
+   "name": "Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Elisabethstraße_2024_1.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2024_1.csv",
+   "name": "Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Fleher_Deich_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_IN_OUT_2024_0.csv",
+   "name": "Fleher Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Friedrichstraße_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2024_0.csv",
+   "name": "Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Hofgartenrampe_Oederallee_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2024_0.csv",
+   "name": "Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Kirchfeldstraße_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2024_0.csv",
+   "name": "Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Koblenzer_einwärts_nach_TLS_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2024_0.csv",
+   "name": "Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Koblenzer_einwärts_vor_TLS_IN_OUT_2024.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2024.csv",
+   "name": "Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Koblenzer_stadtauswärts_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2024_0.csv",
+   "name": "Koblenzer stadtauswärts 2024 - Wetterabhängige Jahresübersicht Dauerzählstelle 2023",
+   "jahr": 2024
+  },
+  "2024/KÖ_Steinstraße_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2024_0.csv",
+   "name": "KÖ Steinstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Kölner_Straße_186_Radweg_IN_OUT_2024.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2024.csv",
+   "name": "Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Lohauser_Deich_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2024_0.csv",
+   "name": "Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Luegallee_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2024_0.csv",
+   "name": "Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Mannesmannufer_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Mannesmannufer_IN_OUT_2024_0.csv",
+   "name": "Mannesmannufer IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Münchner_Ickerswarder_Straße_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2024_0.csv",
+   "name": "Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/OKB_Nord_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2024_0.csv",
+   "name": "OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/OKB_Süd_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2024_0.csv",
+   "name": "OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Oberkasseler_Brücke_IN_OUT_2024_1.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2024_1.csv",
+   "name": "Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2024/Pempelforter_Straße_42_Mischverkehr_IN_OUT_2024_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2024_0.csv",
+   "name": "Pempelforter Straße 42 Mischverkehr IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2024",
+   "jahr": 2024
+  },
+  "2025/Bilker_Allee_IN_OUT_2025_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Bilker_Allee_IN_OUT_2025_0.csv",
+   "name": "Bilker Allee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Christophstraße_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Christophstra%C3%9Fe_IN_OUT_2025.csv",
+   "name": "Christophstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Elisabethstraße_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Elisabethstra%C3%9Fe_2025.csv",
+   "name": "Elisabethstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Fleher_Deich_Rampe_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_Rampe_IN_OUT_2025.csv",
+   "name": "Fleher Deich Rampe IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Fleher_Deich_ost_stromaufwärts_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2025.csv",
+   "name": "Fleher Deich ost stromaufwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Fleher_Deich_west_stromabwärts_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Fleher_Deich_west_stromabw%C3%A4rts_2025.csv",
+   "name": "Fleher Deich west stromabwärts IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Friedrichstraße_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Friedrichstra%C3%9Fe_2025.csv",
+   "name": "Friedrichstraße - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Hofgartenrampe_Oederallee_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Hofgartenrampe_Oederallee_IN_OUT_2025.csv",
+   "name": "Hofgartenrampe Oederallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Kirchfeldstraße_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Kirchfeldstra%C3%9Fe_IN_OUT_2025.csv",
+   "name": "Kirchfeldstraße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Koblenzer_einwärts_nach_TLS_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_nach_TLS_IN_OUT_2025.csv",
+   "name": "Koblenzer einwärts nach TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Koblenzer_einwärts_vor_TLS_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_einw%C3%A4rts_vor_TLS_IN_OUT_2025.csv",
+   "name": "Koblenzer einwärts vor TLS IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Koblenzer_stadtauswärts_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Koblenzer_stadtausw%C3%A4rts_2025.csv",
+   "name": "Koblenzer stadtauswärts - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/KÖ_Steinstraße_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/K%C3%96_Steinstra%C3%9Fe_IN_OUT_2025.csv",
+   "name": "KÖ IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Kölner_Straße_186_Radweg_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/K%C3%B6lner_Stra%C3%9Fe_186_Radweg_IN_OUT_2025.csv",
+   "name": "Kölner Straße 186 Radweg IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Lohauser_Deich_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Lohauser_Deich_IN_OUT_2025.csv",
+   "name": "Lohauser Deich IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Luegallee_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Luegallee_IN_OUT_2025.csv",
+   "name": "Luegallee IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Münchner_Ickerswarder_Straße_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/M%C3%BCnchner_Ickerswarder_Stra%C3%9Fe_IN_OUT_2025.csv",
+   "name": "Münchner Ickerswarder Straße IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/OKB_Nord_IN_OUT_2025_0.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB_Nord_IN_OUT_2025_0.csv",
+   "name": "OKB Nord IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/OKB_Süd_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/OKB_S%C3%BCd_IN_OUT_2025.csv",
+   "name": "OKB Süd IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Oberkasseler_Brücke_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Oberkasseler_Br%C3%BCcke_IN_OUT_2025.csv",
+   "name": "Oberkasseler Brücke IN OUT - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  },
+  "2025/Pempelforter_Straße_42_Mischverkehr_IN_OUT_2025.csv": {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/Pempelforter_Stra%C3%9Fe_42_Mischverkehr_IN_OUT_2025.csv",
+   "name": "Pempelforter Straße 42 Mischverkehr IN OUT 2025 - Wetterabhängige Jahresübersicht Dauerzählstelle 2025",
+   "jahr": 2025
+  }
+ },
+ "ohne_offene_lizenz": [
+  "2020 Koblenzer Straße",
+  "2020 Koblenzer stadtauswärts"
+ ],
+ "fehler": [
+  "2021/Jahresübersicht - Wetter - Elisabethstraße 2021_5.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'opendata.duesseldorf.de\\', port=443): Max retries exceeded with url: /sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20Elisabethstra%C3%9Fe%202021_5.csv (Caused by NewConnectionError(\"HTTPSConnection(host=\\'opendata.duesseldorf.de\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))')))",
+  "2021/Jahresübersicht - Wetter - OKB Nord 2021.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'opendata.duesseldorf.de\\', port=443): Max retries exceeded with url: /sites/default/files/Jahres%C3%BCbersicht%20-%20Wetter%20-%20OKB%20Nord%202021.csv (Caused by NewConnectionError(\"HTTPSConnection(host=\\'opendata.duesseldorf.de\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))')))",
+  "2023/Koblenzer_Straße_2023_0.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'opendata.duesseldorf.de\\', port=443): Max retries exceeded with url: /sites/default/files/Koblenzer_Stra%C3%9Fe_2023_0.csv (Caused by NewConnectionError(\"HTTPSConnection(host=\\'opendata.duesseldorf.de\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))')))",
+  "2024/Fleher_Deich_ost_stromaufwärts_2024_0.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'opendata.duesseldorf.de\\', port=443): Max retries exceeded with url: /sites/default/files/Fleher_Deich_ost_stromaufw%C3%A4rts_2024_0.csv (Caused by NewConnectionError(\"HTTPSConnection(host=\\'opendata.duesseldorf.de\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))')))",
+  "2025/Fleher_Deich_IN_OUT_2025.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'opendata.duesseldorf.de\\', port=443): Max retries exceeded with url: /sites/default/files/Fleher_Deich_IN_OUT_2025.csv (Caused by NewConnectionError(\"HTTPSConnection(host=\\'opendata.duesseldorf.de\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))')))",
+  "2025/Mannesmannufer_IN_OUT_2025.csv (ConnectionError(MaxRetryError('HTTPSConnectionPool(host=\\'opendata.duesseldorf.de\\', port=443): Max retries exceeded with url: /sites/default/files/Mannesmannufer_IN_OUT_2025.csv (Caused by NewConnectionError(\"HTTPSConnection(host=\\'opendata.duesseldorf.de\\', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))')))"
+ ]
+}
+{
+ "abgerufen": "2026-11-13T18:52:50Z",
+ "dateien": {
+  "2020": "https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2020_1hAuswertung.csv",
+  "2021": "https://opendata.bonn.de/sites/default/files/ergebnissefahrradzaehlungen2021.csv",
+  "2023": "https://opendata.bonn.de/sites/default/files/Fahrradzaehlstellen2023_stuendlich.csv",
+  "2024": "https://opendata.bonn.de/sites/default/files/MessergebnisseFahrradzaehlstationenStundenauswertung2024.csv",
+  "2025": "https://opendata.bonn.de/sites/default/files/fahrradzaehldatenbonn2025.csv"
+ },
+ "fehler": [],
+ "uebersprungen": []
+}
