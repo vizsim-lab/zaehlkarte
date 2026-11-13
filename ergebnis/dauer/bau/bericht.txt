@@ -1,32 +1,32 @@
 Using CPython 3.12.3 interpreter at: /usr/bin/python3
 Creating virtual environment at: .venv
-Resolved 48 packages in 0.96ms
+Resolved 48 packages in 0.78ms
    Building zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
+Downloading pandas (11.5MiB)
+Downloading pypdfium2 (3.8MiB)
 Downloading numpy (16.0MiB)
 Downloading cryptography (4.5MiB)
-Downloading pycryptodomex (2.2MiB)
 Downloading pygments (1.2MiB)
-Downloading brotli (1.4MiB)
-Downloading ruff (10.1MiB)
-Downloading pillow (6.8MiB)
 Downloading pdfminer-six (6.3MiB)
-Downloading pandas (11.5MiB)
+Downloading pillow (6.8MiB)
+Downloading ruff (10.1MiB)
+Downloading pycryptodomex (2.2MiB)
+Downloading brotli (1.4MiB)
 Downloading osmium (1.8MiB)
-Downloading pypdfium2 (3.8MiB)
  Downloaded pygments
  Downloaded brotli
  Downloaded osmium
  Downloaded pycryptodomex
  Downloaded pypdfium2
+      Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
  Downloaded cryptography
  Downloaded pdfminer-six
  Downloaded pillow
  Downloaded ruff
  Downloaded pandas
  Downloaded numpy
-      Built zaehlkarte @ file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline
-Prepared 43 packages in 808ms
-Installed 45 packages in 46ms
+Prepared 43 packages in 828ms
+Installed 45 packages in 30ms
  + annotated-doc==0.0.5
  + backports-zstd==1.8.0
  + brotli==1.2.1
@@ -73,11 +73,11 @@ Installed 45 packages in 46ms
  + xlwt==1.3.0
  + zaehlkarte==0.1.0 (from file:///home/runner/work/zaehlkarte/zaehlkarte/app/pipeline)
 berlin_viz: 152 Dateien (152 neu geladen)
-hamburg_kfz: 1170 Datastreams, 3149924 Stunden geholt ab Beginn (0 verworfen), Gedächtnis geändert: stunden_2026-02.csv.gz, stunden_2026-03.csv.gz, stunden_2026-04.csv.gz, stunden_2026-05.csv.gz, stunden_2026-06.csv.gz, stunden_2026-07.csv.gz, stunden_2026-08.csv.gz, stunden_2026-09.csv.gz, stunden_2026-10.csv.gz, stunden_2026-11.csv.gz
+hamburg_kfz: 1170 Datastreams, 3153450 Stunden geholt ab Beginn (0 verworfen), Gedächtnis geändert: stunden_2026-02.csv.gz, stunden_2026-03.csv.gz, stunden_2026-04.csv.gz, stunden_2026-05.csv.gz, stunden_2026-06.csv.gz, stunden_2026-07.csv.gz, stunden_2026-08.csv.gz, stunden_2026-09.csv.gz, stunden_2026-10.csv.gz, stunden_2026-11.csv.gz
 hamburg_kfz: Straßennamen für 829 neue Stellen (826 gefunden)
-hamburg_rad: 312 Datastreams, 498364 Stunden geholt ab Beginn (0 verworfen), Gedächtnis geändert: stunden_2026-08.csv.gz, stunden_2026-09.csv.gz, stunden_2026-10.csv.gz, stunden_2026-11.csv.gz
+hamburg_rad: 312 Datastreams, 499525 Stunden geholt ab Beginn (0 verworfen), Gedächtnis geändert: stunden_2026-08.csv.gz, stunden_2026-09.csv.gz, stunden_2026-10.csv.gz, stunden_2026-11.csv.gz
 hamburg_rad: Straßennamen für 312 neue Stellen (309 gefunden)
-ettlingen: Datastore geholt (38.3 MB)
+ettlingen: Datastore geholt (38.4 MB)
 berlin_viz: 120 Monate alte QS (2015-01 bis 2024-12), 6 Monate neue QS (2025-01 bis 2025-06), 19240240 Stunden je Messquerschnitt
 berlin_viz: ohne Stammdaten (nicht in der Karte): TE424n (8331 Std.), TE507n (8256 Std.), TE530n (8169 Std.), TE334n (8052 Std.), TE471n (8037 Std.), TE523n (7636 Std.), TE349n (7619 Std.), TE477n (7273 Std.), TE425n (6929 Std.), TE202n (6714 Std.)
 berlin_viz: neue QS: Detektor-Stunden unter der Vollständigkeitsgrenze: 62996
@@ -90,20 +90,20 @@ berlin_viz: 2025-05: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
 berlin_viz: 2025-06: 11 Messquerschnitte ohne Datei für einen ihrer Detektoren
 berlin_viz: Vergleich alte/neue QS: 2417461 Stunden in beiden, 80.9 % gleich (±2 %), Median-Abweichung 0.0 %; nur alte QS 198808, nur neue QS 537288
 hamburg_kfz: kfz: 829 Datastreams, sv: 341 Datastreams; 829 Zählstellen
-hamburg_kfz: Stunden in der Karte: kfz 1114672, sv 1854595; noch nicht übernommen (jünger als frisch_tage): 179355
+hamburg_kfz: Stunden in der Karte: kfz 1116955, sv 1855498; noch nicht übernommen (jünger als frisch_tage): 179695
 hamburg_kfz: Gedächtnis: 10 Monate (2026-02 bis 2026-11)
 hamburg_kfz: Straßennamen aus OSM: 826, nach Kennung benannt: 3
 hamburg_rad: rad: 312 Datastreams; 312 Zählstellen
-hamburg_rad: Stunden in der Karte: rad 446557; noch nicht übernommen (jünger als frisch_tage): 51498
+hamburg_rad: Stunden in der Karte: rad 447481; noch nicht übernommen (jünger als frisch_tage): 51735
 hamburg_rad: Gedächtnis: 4 Monate (2026-08 bis 2026-11)
 hamburg_rad: Straßennamen aus OSM: 309, nach Kennung benannt: 3
-ettlingen: 202881 Zeilen, davon 59323 aus UrbanPulse-Strömen (0 nicht zur vollen Stunde, verworfen); 14 Ströme, 14 Zählstellen
-ettlingen: Stunden in der Karte: kfz 16946; noch nicht übernommen (jünger als frisch_tage): 447
+ettlingen: 202942 Zeilen, davon 59384 aus UrbanPulse-Strömen (0 nicht zur vollen Stunde, verworfen); 14 Ströme, 14 Zählstellen
+ettlingen: Stunden in der Karte: kfz 16977, lkw 16977; noch nicht übernommen (jünger als frisch_tage): 433
 berlin_viz: 288 Stellen mit vollständigen Tagen, 4 ohne
 hamburg_kfz: 812 Stellen mit vollständigen Tagen, 17 ohne
 hamburg_rad: 312 Stellen mit vollständigen Tagen, 0 ohne
 ettlingen: 10 Stellen mit vollständigen Tagen, 4 ohne
-58 Dateien, 51.6 MB, 45 Detail-Dateien
+58 Dateien, 51.7 MB, 45 Detail-Dateien
 berlin_viz: vollständige Tage je Jahr (Stellen × Tage) – 2015: 87554, 2016: 84301, 2017: 85938, 2018: 90551, 2019: 90872, 2020: 90732, 2021: 29952, 2022: 27750, 2023: 41447, 2024: 34745, 2025: 12678
 berlin_viz: kfz-Tagessummen, Quintilgrenzen [6350, 9760, 12820, 16820], Median 11262, Maximum 75466
 berlin_viz: lkw-Tagessummen, Quintilgrenzen [190, 360, 590, 990], Median 466, Maximum 53396
@@ -114,4 +114,5 @@ hamburg_rad: vollständige Tage je Jahr (Stellen × Tage) – 2026: 17593
 hamburg_rad: rad-Tagessummen, Quintilgrenzen [360, 670, 1100, 1960], Median 864, Maximum 10873
 ettlingen: vollständige Tage je Jahr (Stellen × Tage) – 2026: 400
 ettlingen: kfz-Tagessummen, Quintilgrenzen [1640, 2690, 3640, 4730], Median 3190, Maximum 8241
+ettlingen: lkw-Tagessummen, Quintilgrenzen [90, 140, 210, 280], Median 180, Maximum 787
 50M	app/public/data/dauer
