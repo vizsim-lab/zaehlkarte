@@ -3,21 +3,8 @@
 # dieses Branches; Ergebnisse nach ergebnis/ (werden danach committet).
 set -u
 
-# Dauerzählstellen mit dem Code eines App-Branches bauen: baue <branch>
-baue() {
-  local ziel="$GITHUB_WORKSPACE/ergebnis/dauer/bau"
-  mkdir -p "$ziel"
-  rm -rf app && git clone -q --depth 1 -b "$1" https://github.com/vizsim-lab/zaehlkarte app
-  local zeit=""
-  [ -x /usr/bin/time ] && zeit="/usr/bin/time -v"  # Spitze des Speichers (Maximum resident set size)
-  ( cd app/pipeline && uv sync --locked && $zeit uv run zaehlkarte dauer fetch && $zeit uv run zaehlkarte dauer site ) 2>&1 | tail -400 > "$ziel/bericht.txt" || true
-  git -C app rev-parse HEAD > "$ziel/stand.txt"
-  if [ -d app/public/data/dauer ]; then
-    tar -czf "$ziel/dauer.tar.gz" -C app/public/data dauer
-    du -sh app/public/data/dauer >> "$ziel/bericht.txt"
-  fi
-}
+# Erkundung 13.11.2026, Teil 15: Bonn und Düsseldorf im Detail (tools/rad_erkunden15.py,
+# ergebnis/rad15/)
 
-# Dauerzählstellen mit dem Branch dauer-rad bauen (Rad-Zählstellen: MobiData BW, Münster, Aachen,
-# Berlin, München; 13.11.2026; dritter Lauf: MobiData-Zeitstempel ohne Versatz nicht übernommen)
-baue dauer-rad
+mkdir -p ergebnis
+uv run --no-project python tools/rad_erkunden15.py 2>&1 | tail -80 > ergebnis/rad15_lauf.txt || true
