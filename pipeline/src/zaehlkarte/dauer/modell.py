@@ -5,9 +5,14 @@ nie 0. Eine Tagessumme gibt es nur, wenn jede Stunde des Tages gezählt ist – 
 Umstellung auf Sommerzeit hat der Tag 23 Stunden (2–3 Uhr gibt es nicht), am Tag der
 Rückstellung steht in Stunde 2 die Summe beider Stunden 2–3 Uhr (`doppelt`).
 
-Gruppen (wie die Quelle sie zählt, nicht umgerechnet):
-- kfz  alle Kraftfahrzeuge
-- lkw  Lkw laut Detektor (Klasse des Detektors, nicht der Schwerverkehr der Kurzzeitzählungen)
+Gruppen (wie die Quelle sie zählt, nicht umgerechnet und nicht ineinander gemischt):
+- kfz   alle Kraftfahrzeuge
+- lkw   Lkw laut Detektor (Berlin: Klasse des Detektors, nicht der Schwerverkehr der
+        Kurzzeitzählungen)
+- sv    Schwerverkehr laut Detektor (Hamburg: Klasse der Wärmebildkamera)
+- rad   Fahrräder
+- fuss  zu Fuß Gehende
+Jede Quelle nennt in ihrer Messreihe nur die Gruppen, die sie zählt (`Messreihe.werte`).
 """
 
 from __future__ import annotations
@@ -17,7 +22,7 @@ from datetime import date, timedelta
 
 import numpy as np
 
-GRUPPEN = ("kfz", "lkw")
+GRUPPEN = ("kfz", "lkw", "sv", "rad", "fuss")  # Reihenfolge = Bits der Stellen im Frontend
 LEER = -1
 
 
@@ -55,7 +60,9 @@ class Messreihe:
 
     @classmethod
     def leer(cls, quelle: str, von: date, bis: date, stellen: list[Dauerstelle],
-             gruppen: tuple[str, ...] = GRUPPEN) -> Messreihe:
+             gruppen: tuple[str, ...]) -> Messreihe:
+        if unbekannt := set(gruppen) - set(GRUPPEN):
+            raise ValueError(f"{quelle}: unbekannte Gruppen {sorted(unbekannt)}")
         tage = (bis - von).days + 1
         form = (len(stellen), tage, 24)
         return cls(quelle, von, tage, stellen,
@@ -88,6 +95,37 @@ def erwartete_stunden(von: date, tage: int) -> np.ndarray:
         if 0 <= i < tage:
             erwartet[i, 2] = False
     return erwartet
+
+
+def setze_utc(reihe: Messreihe, gruppe: str, stelle: np.ndarray, utc: np.ndarray,
+              werte: np.ndarray) -> int:
+    """Stundenwerte mit UTC-Beginn (datetime64, volle Stunden) in Ortszeit in die Reihe legen.
+
+    Am Tag der Rückstellung fallen zwei UTC-Stunden auf 2 Uhr Ortszeit: beide da -> Summe und
+    `doppelt`, nur eine -> die Stunde gilt als nicht gezählt. -> Anzahl gesetzter Stunden."""
+    import pandas as pd
+
+    if not len(utc):
+        return 0
+    lokal = pd.DatetimeIndex(utc).tz_localize("UTC").tz_convert("Europe/Berlin")
+    d = pd.DataFrame({
+        "s": stelle,
+        "t": (lokal.tz_localize(None).normalize() - pd.Timestamp(reihe.von)).days,
+        "h": lokal.hour,
+        "w": werte.astype(np.int64),
+    })
+    d = d[(d["t"] >= 0) & (d["t"] < reihe.tage) & (d["w"] >= 0)]
+    g = d.groupby(["s", "t", "h"], sort=False)["w"].agg(["sum", "count"]).reset_index()
+    jahre = range(reihe.von.year, reihe.tag(reihe.tage - 1).year + 1)
+    rueck = {(umstellungen(j)[1] - reihe.von).days for j in jahre}
+    am_rueck = g["t"].isin(rueck) & (g["h"] == 2)
+    voll = np.where(am_rueck, g["count"] == 2, g["count"] == 1)
+    w = reihe.werte[gruppe]
+    s, t, h = (g[k].to_numpy() for k in ("s", "t", "h"))
+    w[s, t, h] = np.where(voll, g["sum"].to_numpy(), LEER).astype(np.int32)
+    dop = (am_rueck & voll).to_numpy()
+    reihe.doppelt[s[dop], t[dop]] = True
+    return int(voll.sum())
 
 
 def tagessummen(reihe: Messreihe, gruppe: str) -> tuple[np.ndarray, np.ndarray]:

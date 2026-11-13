@@ -7,20 +7,31 @@ from datetime import date
 from pathlib import Path
 
 from zaehlkarte.config import Pfade, dauerquellen
-from zaehlkarte.dauer import berlin_viz
+from zaehlkarte.dauer import berlin_viz, hamburg_sta
 from zaehlkarte.dauer import site as site_
 from zaehlkarte.dauer.modell import Messreihe
 
-ADAPTER = {"berlin_viz": berlin_viz}
+ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta}
 
 
-def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
+def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list[str], list[str]]:
+    """-> (Log, Quellen mit Fehler). Scheitert eine Quelle, laufen die anderen weiter – gebaut
+    wird dann mit dem, was schon da ist (Rohdaten im Cache, Gedächtnis aus dem Release)."""
+    import traceback
+
     pfade = pfade or Pfade()
     log: list[str] = []
+    fehler: list[str] = []
     for code, q in dauerquellen(pfade).items():
-        if not nur or code in nur:
+        if nur and code not in nur:
+            continue
+        try:
             log += ADAPTER[q["adapter"]].hole(q, pfade)
-    return log
+        except Exception as e:  # noqa: BLE001 – eine Quelle darf die anderen nicht aufhalten
+            fehler.append(code)
+            log.append(f"FEHLER {code}: {e!r}")
+            log += [f"  {z}" for z in traceback.format_exc().splitlines()[-6:]]
+    return log, fehler
 
 
 def baue(pfade: Pfade | None = None, nur: list[str] | None = None

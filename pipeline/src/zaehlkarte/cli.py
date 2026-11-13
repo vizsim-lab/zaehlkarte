@@ -69,11 +69,17 @@ app.add_typer(dauer, name="dauer")
 
 @dauer.command("fetch")
 def dauer_fetch(quelle: Quellen = None) -> None:
-    """Rohdaten der Dauerzählstellen nach pipeline/data/raw/ holen."""
+    """Rohdaten der Dauerzählstellen nach pipeline/data/raw/ holen (eine Quelle, die scheitert,
+    hält die anderen nicht auf; Exit-Code 1 nur, wenn alle scheitern)."""
+    from zaehlkarte.config import Pfade, dauerquellen
     from zaehlkarte.dauer import bau
 
-    for zeile in bau.hole(nur=quelle):
+    log, fehler = bau.hole(nur=quelle)
+    for zeile in log:
         typer.echo(zeile)
+    versucht = [c for c in dauerquellen(Pfade()) if not quelle or c in quelle]
+    if fehler and len(fehler) == len(versucht):
+        raise typer.Exit(1)
 
 
 @dauer.command("site")

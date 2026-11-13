@@ -45,10 +45,10 @@
         <div class="legend-section-title"><span data-i18n="thema.titel">Verkehrsart</span></div>
         <div class="legend-chips" id="thema-chips" role="radiogroup" aria-label="Verkehrsart" data-i18n-attr="aria-label:thema.titel">
           <button type="button" class="legend-chip" data-thema="kfz" role="radio" data-i18n="gruppe.kfz">Kfz</button>
+          <button type="button" class="legend-chip" data-thema="lkw" role="radio" title="Lkw, wie der Detektor sie von Pkw unterscheidet – nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen" data-i18n="gruppe.lkw" data-i18n-attr="title:thema.lkw_tip" hidden>Lkw (Detektor)</button>
           <button type="button" class="legend-chip" data-thema="sv" role="radio" title="Lkw über 3,5 t, Lastzüge und Busse (wie die Quelle sie zählt)" data-i18n="gruppe.sv" data-i18n-attr="title:thema.sv_tip">Schwerverkehr</button>
           <button type="button" class="legend-chip" data-thema="rad" role="radio" data-i18n="gruppe.rad">Rad</button>
           <button type="button" class="legend-chip" data-thema="fuss" role="radio" data-i18n="gruppe.fuss">Fuß</button>
-          <button type="button" class="legend-chip" data-thema="lkw" role="radio" title="Lkw, wie der Detektor sie von Pkw unterscheidet – nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen" data-i18n="gruppe.lkw" data-i18n-attr="title:thema.lkw_tip" hidden>Lkw (Detektor)</button>
         </div>
         <div class="legend-chips legend-chips--klein" id="modus-chips" role="radiogroup" aria-label="Darstellung" data-i18n-attr="aria-label:modus.gruppe"></div>
         <div class="legend-row-label" id="art-wahl">
@@ -67,7 +67,8 @@
             <button type="button" class="dauer-schritt" data-schritt="1" aria-label="Einen Tag vor" title="Einen Tag vor" data-i18n-attr="aria-label:dauer.vor;title:dauer.vor">›</button>
           </div>
           <input type="range" id="dauer-regler" class="dauer-regler" aria-label="Tag im Zeitraum" data-i18n-attr="aria-label:dauer.regler">
-          <div class="legend-hint" data-i18n="dauer.hinweis">Tagessumme 0–24 Uhr je Richtung – nur, wo jede Stunde des Tages gezählt ist.</div>
+          <div class="legend-hint" data-i18n="dauer.hinweis">Tagessumme 0–24 Uhr je Zählstelle (meist eine Fahrtrichtung) – nur, wo jede Stunde des Tages gezählt ist.</div>
+          <div class="dauer-quellen" id="dauer-quellen" hidden></div>
         </div>
         <div class="legend-items" id="klassen-legende"></div>
       </div>

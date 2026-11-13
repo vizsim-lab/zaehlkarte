@@ -7,13 +7,16 @@
 import { ladeDauer } from "../data/laden.js";
 import {
   DAUER_GRUPPEN, DAUER_THEMEN, hatGruppe, plusTage, stundenAm, stundenDesTags, tagAusDetail, tageZwischen, tagtyp,
+  zeitraumText,
 } from "../data/dauer.js";
 import { TAGE } from "../data/modell.js";
 import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
 import { TG, TR_FARBEN, tagesgang, tagesreihe } from "./diagramme.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const FARBE = { kfz: "#2a78d6", lkw: "#eb6834" };
+// Farben der Reihen im Tagesgang nach Reihenfolge der Gruppen der Stelle (wie bei den
+// Kurzzeitzählungen: erste Reihe blau, zweite orange)
+const FARBEN = ["#2a78d6", "#eb6834", "#1f9e6e", "#8a5cd1"];
 
 export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiSchliessen }) {
   const el = document.getElementById("dauer-detail");
@@ -77,15 +80,21 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       el.innerHTML = `${kopf}<div class="pop-meta">${esc(fehler ? t("detail.ladefehler", { fehler }) : t("detail.lade"))}</div>`;
       return;
     }
-    const g = hatGruppe(stelle, z.dthema) ? z.dthema : DAUER_GRUPPEN.find((x) => hatGruppe(stelle, x));
-    const werte = detail.tage[g] ?? [];
+    const g = hatGruppe(stelle, z.dthema) ? z.dthema : stelle.gruppen[0];
+    // Reihe der gewählten Gruppe von ihrem ersten bis zum letzten vollständigen Tag (Hamburg:
+    // Schwerverkehr seit März, Kfz erst seit September – sonst stünde vorn eine lange Lücke)
+    const alle = detail.tage[g] ?? [];
+    const erster = Math.max(0, alle.findIndex((v) => v != null));
+    const letzter = Math.max(erster, alle.findLastIndex((v) => v != null));
+    const werte = alle.slice(erster, letzter + 1);
+    const reiheVon = plusTage(detail.von, erster);
     const kal = d.kalender?.[q?.land] ?? "";
-    const ab = tageZwischen(d.von, detail.von);
+    const ab = tageZwischen(d.von, reiheVon);
     const typen = kal.slice(ab, ab + werte.length);
-    const gewaehlt = tageZwischen(detail.von, tag);
-    const tr = tagesreihe(werte, typen, detail.von, gewaehlt);
+    const gewaehlt = tageZwischen(reiheVon, tag);
+    const tr = tagesreihe(werte, typen, reiheVon, gewaehlt);
     const reihe = tr.svg ? `
-      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: DAUER_THEMEN[g].name, von: stelle.von.slice(0, 4), bis: stelle.bis.slice(0, 4) }))}</div>
+      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: DAUER_THEMEN[g].name, zeitraum: zeitraumText(reiheVon, plusTage(detail.von, letzter)) }))}</div>
       <div class="tr-wrap">${tr.svg}<div class="tg-tooltip" hidden></div></div>
       <div class="tr-legende">
         <span><i style="background:${TR_FARBEN.s}"></i>${esc(TAGE.s)}</span>
@@ -102,7 +111,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       tagTeil = `<div class="pop-meta">${esc(t("dd.ausserhalb", { datum: datum(tag), von: datum(stelle.von), bis: datum(stelle.bis) }))}</div>`;
     } else {
       const gruppen = DAUER_GRUPPEN.filter((x) => hatGruppe(stelle, x));
-      const reihen = gruppen.map((x) => ({ id: x, name: DAUER_THEMEN[x].name, farbe: FARBE[x], stunden: stundenAm(detail, x, tag) }))
+      const reihen = gruppen.map((x, i) => ({ id: x, name: DAUER_THEMEN[x].name, farbe: FARBEN[i], stunden: stundenAm(detail, x, tag) }))
         .filter((r) => r.stunden);
       const tg = reihen.length ? tagesgang(reihen) : null;
       const soll = stundenDesTags(tag);
@@ -151,12 +160,12 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
         <button type="button" class="link-knopf" data-csv-tage>${esc(t("dd.csv_tage"))}</button>
         ${stunden ? `<button type="button" class="link-knopf" data-csv-stunden>${esc(t("dd.csv_stunden"))}</button>` : ""}
       </div>`;
-    if (tr.svg) bindeReihe(el.querySelector(".tr-wrap"), werte, typen, tr);
+    if (tr.svg) bindeReihe(el.querySelector(".tr-wrap"), werte, typen, tr, reiheVon);
     if (stunden) bindeTagesgang(el.querySelector(".detail-tag .tg-wrap"), stunden.reihen, stunden.tg);
   }
 
   /** Hover und Klick auf der Tagesreihe: Wert des Tags zeigen, Klick wählt den Tag. */
-  function bindeReihe(wrap, werte, typen, tr) {
+  function bindeReihe(wrap, werte, typen, tr, von) {
     const svg = wrap.querySelector("svg");
     const kreuz = svg.querySelector(".tg-kreuz");
     const tip = wrap.querySelector(".tg-tooltip");
@@ -167,7 +176,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     };
     svg.addEventListener("pointermove", (e) => {
       const i = position(e.clientX);
-      const iso = plusTage(detail.von, i);
+      const iso = plusTage(von, i);
       const box = svg.getBoundingClientRect();
       const xx = tr.x(i);
       kreuz.setAttribute("x1", xx);
@@ -188,7 +197,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       kreuz.setAttribute("visibility", "hidden");
       tip.hidden = true;
     });
-    svg.addEventListener("click", (e) => beiTag?.(plusTage(detail.von, position(e.clientX))));
+    svg.addEventListener("click", (e) => beiTag?.(plusTage(von, position(e.clientX))));
   }
 
   function bindeTagesgang(wrap, reihen, tg) {
@@ -247,11 +256,12 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const d = gibDauer();
     const q = quelle(d);
     const gruppen = DAUER_GRUPPEN.filter((x) => detail.tage[x]);
-    const zeilen = [["datum", "tagtyp", ...gruppen.map((x) => `${x}_tagessumme`), "gezaehlte_stunden"].join(";")];
-    const n = detail.n.length;
+    const zeilen = [["datum", "tagtyp", ...gruppen.flatMap((x) => [`${x}_tagessumme`, `${x}_gezaehlte_stunden`])].join(";")];
+    const n = detail.tage[gruppen[0]]?.length ?? 0;
     for (let i = 0; i < n; i += 1) {
       const iso = plusTage(detail.von, i);
-      zeilen.push([iso, t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"), ...gruppen.map((x) => detail.tage[x][i] ?? ""), detail.n[i]].join(";"));
+      zeilen.push([iso, t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"),
+        ...gruppen.flatMap((x) => [detail.tage[x][i] ?? "", detail.n?.[x]?.[i] ?? 0])].join(";"));
     }
     zeilen.push("", quellzeile());
     lade(`${zeilen.join("\n")}\n`, `dauerzaehlstelle_${detail.kennung}_tage.csv`);

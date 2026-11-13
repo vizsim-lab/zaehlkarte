@@ -18,6 +18,8 @@ build  Adapter -> Zählungen             Zähltag (Ferienkalender je Land), Lage
 site   -> public/data/                  manifest.json, index.json, details/NN.json, datenlage.json
 
 dauer fetch  -> data/raw/berlin_viz/     Berlin: Monatsarchive der Verkehrsdetektion (Content-MD5)
+             -> data/raw/hamburg_*/      Hamburg: Stellen (stellen.json) und gedaechtnis/ (Stunden
+                                         je UTC-Monat, Straßennamen aus OSM)
 dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (nicht im Git)
 ```
 
@@ -38,6 +40,9 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `site.py` | Kartendaten (Vertrag mit dem Frontend, Kopfkommentar) |
 | `dauer/modell.py` | Dauerzählstellen: Messreihe (Stelle × Tag × Stunde), Tagessummen, Zeitumstellung |
 | `dauer/berlin_viz.py` | Berlin: Verkehrsdetektion, alte und neue Qualitätssicherung, Stammdaten |
+| `dauer/hamburg_sta.py` | Hamburg: Wärmebildkameras über SensorThings, Gedächtnis (Monatsdateien), UTC -> Ortszeit |
+| `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen) |
+| `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen (Workflow) |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |
 
 Konfiguration: `config/sources.yaml` (Quellen, Datenlage, Rechtslage je Land),
@@ -54,7 +59,8 @@ uv sync
 uv run zaehlkarte fetch            # ~450 MB Download (MobiData-ZIPs samt PDFs)
 uv run zaehlkarte build            # Bericht ohne zu schreiben
 uv run zaehlkarte site             # Kartendaten schreiben (~1,5 min)
-uv run zaehlkarte dauer fetch      # Dauerzählstellen: ~330 MB (Berliner Monatsarchive)
+uv run zaehlkarte dauer fetch      # Dauerzählstellen: ~330 MB (Berliner Monatsarchive), Hamburg
+                                   # über SensorThings (erster Abruf ohne Gedächtnis: einige Minuten)
 uv run zaehlkarte dauer site       # public/data/dauer/ schreiben (~30 MB, ~5 min)
 uv run pytest && uvx ruff check
 ```

@@ -53,8 +53,10 @@ test("Dauerzählstellen: f, t und z hin und zurück; Kurzzeit-Links bleiben glei
   assert.equal(alt.familie, "k");
   assert.equal(alt.thema, "kfz");
   assert.equal(alt.tag, null);
-  // bei f=d gelten nur die Verkehrsarten der Dauerzählstellen
-  assert.equal(dekodiere("#f=d&t=rad.menge&z=gestern", std(), QUELLEN).zustand.dthema, "kfz");
+  // bei f=d gelten nur die Verkehrsarten der Dauerzählstellen (Rad, Schwerverkehr laut Detektor …)
+  assert.equal(dekodiere("#f=d&t=rad.menge", std(), QUELLEN).zustand.dthema, "rad");
+  assert.equal(dekodiere("#f=d&t=sv.menge", std(), QUELLEN).zustand.dthema, "sv");
+  assert.equal(dekodiere("#f=d&t=kind.menge&z=gestern", std(), QUELLEN).zustand.dthema, "kfz");
   assert.equal(dekodiere("#f=d&z=gestern", std(), QUELLEN).zustand.tag, null);
 });
 

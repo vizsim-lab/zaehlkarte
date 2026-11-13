@@ -1,20 +1,25 @@
-# Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion), Kartendaten
-# nach public/data/dauer/ schreiben und als Release-Asset „dauerzaehlstellen/dauer.tar.gz“
-# ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach startet der Workflow die CI auf
-# main neu: Der Deploy-Job holt das Asset und liefert es mit der Seite aus.
+# Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
+# SensorThings API), Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
+# „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach
+# startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
 #
-# Läuft am 5. jedes Monats, von Hand und wenn sich Pipeline-Code oder dieser Workflow ändern.
-# Die Rohdaten liegen zwischen den Läufen im Actions-Cache; geladen wird nur, was sich laut
-# Prüfsumme (Content-MD5 des Archivs) geändert hat.
+# Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code oder dieser Workflow ändern.
+# - Berlin: Rohdaten zwischen den Läufen im Actions-Cache; geladen wird nur, was sich laut
+#   Prüfsumme (Content-MD5 des Archivs) geändert hat.
+# - Hamburg hält Stundenwerte nur einige Monate vor. Die Zählkarte hebt sie selbst auf
+#   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
+#   (Assets `<code>__<datei>`): vor dem Abruf holen, danach ablegen, was sich geändert hat –
+#   nie mit weniger Werten (pipeline/werkzeuge/gedaechtnis.py). Scheitert das Holen, bricht der
+#   Lauf ab, bevor etwas überschrieben wird.
 name: Dauerzählstellen bauen
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "41 5 5 * *"
+    - cron: "41 5 * * 1"
   push:
     branches: [main]
-    paths: [pipeline/src/zaehlkarte/dauer/**, .github/workflows/dauer.yml]
+    paths: [pipeline/src/zaehlkarte/dauer/**, pipeline/werkzeuge/gedaechtnis.py, .github/workflows/dauer.yml]
 
 permissions:
   contents: write
@@ -39,26 +44,42 @@ jobs:
           path: pipeline/data/raw/berlin_viz
           key: dauer-roh-${{ github.run_id }}
           restore-keys: dauer-roh-
+      - name: Release anlegen (beim ersten Lauf)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view dauerzaehlstellen > /dev/null 2>&1; then
+            gh release create dauerzaehlstellen --latest=false --title "Daten: Dauerzählstellen" \
+              --notes "Kartendaten der Familie Dauerzählstellen (dauer.tar.gz, public/data/dauer/) und das Gedächtnis der Quellen, die ihre Stundenwerte nur einige Monate vorhalten (Assets <code>__<datei>; Hamburg: Monatsdateien mit den Stundenwerten wie geliefert, dl-de/by-2-0, Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende; strassen.json: © OpenStreetMap-Mitwirkende, ODbL). Gebaut vom Workflow „Dauerzählstellen bauen“."
+          fi
+      - name: Gedächtnis holen
+        working-directory: pipeline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: uv sync --locked && uv run python werkzeuge/gedaechtnis.py holen
       - name: Rohdaten holen
         working-directory: pipeline
-        run: uv sync --locked && uv run zaehlkarte dauer fetch
+        run: uv run zaehlkarte dauer fetch | tee "$RUNNER_TEMP/abruf.txt"
+      - name: Gedächtnis ablegen
+        working-directory: pipeline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: uv run python werkzeuge/gedaechtnis.py ablegen | tee -a "$RUNNER_TEMP/abruf.txt"
       - name: Kartendaten bauen
         working-directory: pipeline
-        run: uv run zaehlkarte dauer site | tee "$RUNNER_TEMP/bericht.txt"
+        run: |
+          uv run zaehlkarte dauer site > "$RUNNER_TEMP/site.txt"
+          cat "$RUNNER_TEMP/abruf.txt" "$RUNNER_TEMP/site.txt" | tee "$RUNNER_TEMP/bericht.txt"
       - name: Als Release-Asset ablegen
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           tar -czf "$RUNNER_TEMP/dauer.tar.gz" -C public/data dauer
-          if ! gh release view dauerzaehlstellen > /dev/null 2>&1; then
-            gh release create dauerzaehlstellen --latest=false --title "Daten: Dauerzählstellen" \
-              --notes "Kartendaten der Familie Dauerzählstellen (public/data/dauer/), gebaut vom Workflow „Dauerzählstellen bauen“. Wird bei jedem Lauf ersetzt."
-          fi
           gh release upload dauerzaehlstellen "$RUNNER_TEMP/dauer.tar.gz" "$RUNNER_TEMP/bericht.txt" --clobber
           {
             echo "Dauerzählstellen gebaut ($(du -h "$RUNNER_TEMP/dauer.tar.gz" | cut -f1) gepackt)."
             echo '```'
-            head -60 "$RUNNER_TEMP/bericht.txt"
+            head -80 "$RUNNER_TEMP/bericht.txt"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
       - name: Seite neu ausliefern
