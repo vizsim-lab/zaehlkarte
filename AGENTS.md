@@ -368,8 +368,7 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
   - **Konstanz, Gelsenkirchen:** laut svz (AGENTS.md § 3) nur Echtzeit-Zähler (DATEX II) – nicht
     weiter geprüft.
 - **Rad-Zählstellen (in der Karte seit November 2026,** Werkzeug-Branch `werkzeug/dauer2`,
-  `tools/rad_erkunden*.py`, Ergebnisse `ergebnis/rad*/`; Recherche
-  `claude/recherche-dauerzaehlstellen-rad-2026-11.md` im Projekt):
+  `tools/rad_erkunden*.py`, Ergebnisse `ergebnis/rad*/`):
   - **Was als gezählt gilt:** Eco-Counter führt je Wert einen Status – `0` (Rohwert) und
     `validated` (geprüft) gelten als gezählt, `4` (rekonstruiert: in Münster Läufe bis zu fünf
     Wochen, das Muster der Auffüllung bei Ausfällen) und `modified` (von Hand geändert) nicht.
@@ -411,7 +410,10 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     und Fuß getrennt), Dortmund (Schnettkerbrücke, dl-de/zero-2.0), Würzburg und Rhein-Kreis
     Neuss (Opendatasoft, Status „raw“; Neuss zuletzt 05.07.2026), Leipzig (Gedächtnis nötig),
     Bonn (CC0, aktuelle Dateien nicht gefunden), Köln (Jahresdateien bis 2022, Inhalt ungeprüft).
-    Anfragen zu Hessen Mobil und Bielefeld: `claude/anfragen-rad-dauerzaehlstellen-2026-11.md`.
+    Nicht offen als Stundenwerte: Hessen Mobil (Eco-Counter-Portal mit Export der
+    Diagrammwerte je Stelle – Tage, Wochen, Monate; `hessen-mobil.eco-counter.com` sperrt
+    Abruf-Werkzeuge per robots.txt) und Bielefeld – dort hilft eine Anfrage (Eco-Counter-Kunden
+    haben in Eco-Visio einen Export).
     Nur Summen (nicht nutzbar): Oldenburg (Monate), Mannheims Portal (Summe je Zähler),
     Stuttgarts Portal (Saisons), Düsseldorf (Jahre).
 - **Nicht kommunal (dokumentiert, nicht in der Karte):**

@@ -8,7 +8,8 @@
 # - Berlin: Rohdaten zwischen den Läufen im Actions-Cache; geladen wird nur, was sich laut
 #   Prüfsumme (Content-MD5 des Archivs) geändert hat. Ebenso im Cache: die Monatsdateien von
 #   MobiData BW (neu geholt werden fehlende und die jüngsten zwei) und die Dateien Münchens (neu
-#   nur bei geänderter URL).
+#   nur bei geänderter URL); Münster, Aachen und Berlin (Rad) holt jeder Lauf ganz neu – der Cache
+#   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
 # - Hamburg hält Stundenwerte nur einige Monate vor. Die Zählkarte hebt sie selbst auf
 #   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
 #   (Assets `<code>__<datei>`): vor dem Abruf holen, danach ablegen, was sich geändert hat –
@@ -54,6 +55,9 @@ jobs:
           path: |
             pipeline/data/raw/mobidata_rad
             pipeline/data/raw/muenchen_rad
+            pipeline/data/raw/muenster_rad
+            pipeline/data/raw/aachen_rad
+            pipeline/data/raw/berlin_rad
           key: dauer-rad-roh-${{ github.run_id }}
           restore-keys: dauer-rad-roh-
       - name: Release anlegen (beim ersten Lauf)

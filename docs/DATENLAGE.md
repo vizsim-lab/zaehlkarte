@@ -55,8 +55,8 @@ FragDenStaat.
 | Münster | NW | in der Karte | in der Karte | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
 | Olpe | NW | in der Karte |  | Keine Anfrage nötig |
 | Potsdam | BB | in der Karte |  | Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und Informationszugangsgesetz Brandenburg. |
-| Ravensburg | BW | in der Karte |  | in der Karte |
-| Weingarten | BW | in der Karte |  | in der Karte |
+| Ravensburg | BW | in der Karte | in der Karte | in der Karte |
+| Weingarten | BW | in der Karte | in der Karte | in der Karte |
 | Xanten | NW | in der Karte |  | Keine Anfrage nötig |
 
 ## Amberg (BY) – auf Anfrage herausgegeben
@@ -1276,3 +1276,17 @@ sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerz�
 Rad-Zählstellen der Stadt: 15-Minuten-Werte seit 2019, nächtlich aktualisiert, in der Karte als Dauerzählstellen
 
 **Belege:** [GitHub: od-ms/radverkehr-zaehlstellen](https://github.com/od-ms/radverkehr-zaehlstellen) · [Open Data Münster: Fahrradverkehr, tagesaktuelle Daten](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten)
+
+
+## Ravensburg – Dauerzählstellen in der Karte
+
+Rad-Zählstellen (Eco-Counter) über MobiData BW – im Datensatz unter „Stadt Ravensburg“ und „Ravensburg Tws Gmbh & Co. Kg“ (dort auch die Stellen in Weingarten), in der Karte als Dauerzählstellen
+
+**Belege:** [MobiData BW: Rad-Zählstellen (Eco-Counter)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
+
+
+## Weingarten – Dauerzählstellen in der Karte
+
+Rad-Zählstellen (Eco-Counter) über MobiData BW – im Datensatz unter „Ravensburg Tws Gmbh & Co. Kg“ (Stellen mit „WGT“ im Namen), in der Karte als Dauerzählstellen
+
+**Belege:** [MobiData BW: Rad-Zählstellen (Eco-Counter)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)

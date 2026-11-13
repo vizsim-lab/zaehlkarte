@@ -838,6 +838,14 @@ datenlage:
   - kommune: Ravensburg
     quelle: ravensburg
     stand: in_karte
+    dauer:
+      stand: in_karte
+      was: >-
+        Rad-Zählstellen (Eco-Counter) über MobiData BW – im Datensatz unter „Stadt Ravensburg“ und
+        „Ravensburg Tws Gmbh & Co. Kg“ (dort auch die Stellen in Weingarten), in der Karte als
+        Dauerzählstellen
+      links:
+        - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
     was: >-
       24-Stunden-Zählungen mit Kfz, Lkw, Rad und Fuß, Excel und PDF je Zählung
     links:
@@ -845,6 +853,13 @@ datenlage:
   - kommune: Weingarten
     quelle: weingarten
     stand: in_karte
+    dauer:
+      stand: in_karte
+      was: >-
+        Rad-Zählstellen (Eco-Counter) über MobiData BW – im Datensatz unter „Ravensburg Tws Gmbh &
+        Co. Kg“ (Stellen mit „WGT“ im Namen), in der Karte als Dauerzählstellen
+      links:
+        - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
     was: >-
       wie Ravensburg
     links:
