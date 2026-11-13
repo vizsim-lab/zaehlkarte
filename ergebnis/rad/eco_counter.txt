@@ -1,0 +1,158 @@
+Datensatz: Gebündelte Daten Eco-Counter Fahrradzählstellen Baden-Württemberg | Lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | 2026-11-13T02:33:47.797994
+Beschreibung: <p>Bei den aufgelisteten Daten handelt es sich um gebündelte Fahrradzähldaten der aktuellen Eco-Counter Fahrradzählstellen in Städten und Gemeinden aus Baden-Württemberg. Über die Eco Visio Domain und den API-Store des Fahrradzählstellenbetreibers EcoCounter werden die lokal erhobenen Fahrradzähldaten abgerufen und in die hier genannten Ausgabeformate überführt.</p>
+
+<h3 id="aktuell-enthaltene-anbieter">Fahrradzählstellen</h3>
+<p>In der Übersichtskarte sind alle Fahrradzählstellen dargestellt, deren Daten hier gebündelt verfügbar sind. Die Zählstellen sind mit einer jährlichen Gesamtsumme hinterlegt und farblich eingeordnet. Neu in Betrieb genommene Zählstellen von 2025 bieten gegenwärtig noch keine ganzjährige Datengrundlage und sind daher nur positionsgetreu dargestellt.</p>
+<p><iframe src="https://www.mobidata-bw.de/karten/count_bicycle/" width="100%" height="900px"></iframe></p>
+
+<p>Hier geht es zur <strong> <a href="https://www.mobidata-bw.de/karten/count_bicycle/" target="_blank">Vollbildansicht</a></strong> der Karte.</span></p>
+<hr>
+<p>Derzeit stellen die unten aufgeführten Städte die Fahrradzähldaten über die EcoCounter Schnittstelle bereit. MobiData BW bündelt diese und seit Juni 2024 werden die Daten gebündelt nach Richtungen (IN/OUT/ALL) sowie als Stunden- und Tageswerte angeboten. Hierbei sind immer die Zähldaten der letzten 7 Tage verfügbar, mit einer täglichen Aktualisierung. 
+Zusätzlich können diese Werte für beliebige Monate abgerufen werden, die Tageswerte des Weiteren in einer jährlichen Bündelung. Die Datensätze liegen in verschiedenen Formaten (CSV, JSON) vor.</p>
+
+<p>Die Download-Links für alle historischen Daten (seit 2013) sind in einer separaten Ressource verfügbar gemacht. </p>
+<p>Die Daten enthalten zusätzlich Wetter-Informationen, wie z.B. Temperaturen.</p>
+<p><strong>Die Daten der Radzählstellen kommen direkt vom Zählstellenbetreiber zu MobiData BW. Für detaillierte Auswertungen über längere Zeiträume hinweg ist ein Abgleich mit den Gegebenheiten vor Ort erforderlich, da sich die Konfiguration der Zählstellen oder die Zusammensetzung der Ergebnisse ohne Ankündigung ändern können. Veränderte Streckenführungen oder Baustellen können die Zähldaten beeinflussen.</strong></p>
+<hr>
+<p>Bis Juni 2024 wurden die Zähldaten gebündelt, jedoch nicht aggregiert. Diese Ressourcen sind noch verfügbar, werden jedoch nicht mehr um neue Zählstellen ergänzt. Auf lange Sicht wird diese Art der Bereitstellung nicht mehr fortgeführt. Nachfolgend sind diese Daten noch als CSV, JSON und EXCEL verfügbar:</p>
+<ul>
+<li><a href="https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.csv">Fahrradzählstellen (CSV)</a></li>
+<li><a href="https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.json">Fahrradzählstellen (JSON)</a></li>
+<li><a href="https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.xlsx">Fahrradzählstellen (EXCEL)</a></li>
+</ul>
+<hr>
+
+
+<h3 id="verf-gbare-daten">Verfügbare Daten</h3>
+<ul>
+<li>Stadt Freiburg im Breisgau</li>
+<li>Stadt Heidelberg</li>
+<li><a href="https://www.mobidata-bw.de/dataset/fahrrad-dauerz-hlstellen">Stadt Konstanz</a></li>
+<li>Stadt Offenburg (aktuell keine Daten)</li>
+<li>Stadt Ludwigsburg</li>
+<li><a href="https://www.mobidata-bw.de/dataset/fahrradzahler_lupferbruecke">Stadt Ulm</a></li>
+<li>Stadt Lörrach</li>
+<li>Landkreis Böblingen</li>
+<li>Stadt Tübingen</li>
+<li>Stadt Reutlingen</li>
+<li>Stadt Heilbronn</li>
+<li>Landkreis Heilbronn</li>
+<li>Stadt Singen</li>
+<li>Stadt Stuttgart</li>
+<li>Rems-Murr-Kreis</li>
+<li>Stadt Aalen</li>
+<li>Stadt Kirchheim unter Teck</li>
+<li>Stadt Ravensburg</li>
+<li>Stadt Mannheim</li>
+<li>Stadt Karlsruhe</li>
+<li>Ostalbkreis</li>
+<li>Stadt Bad Säckingen</li>
+<li>Stadt Emmendingen</li>
+<li>Stadt Bad Wimpfen</li>
+<li>Stadt Pforzheim</li>
+<li>Stadt Baden-Baden</li>
+</ul>
+<p><strong>Datenquellen</strong></p>
+<ul>
+<li><a href="https://www.eco-visio.net/">Eco-Visio</a></li>
+<li><a href="https://apiadmin.eco-counter-tools.com/store/site/pages/list-apis.jag">Eco-Counter API Store</a></li>
+</ul>
+<hr>
+<h4 id="daten&ressourcen"></h4>
+
+
+- Anleitung zur Nutzung der Fahrradzähldaten | PDF | https://www.mobidata-bw.de/data/Tutorial_EcoCounter-Daten.pdf | Anleitung wie Daten der EcoCounter-Fahrradzählstellen aus Baden-Württemberg abgerufen und analysiert werden können. 
+- Gebündelte Fahrradzähldaten - Stundenwerte (CSV) | CSV | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten.csv | Fahrradzähldaten der letzten 7 Tage, gebündelt nach Richtungen (IN/OUT/ALL) und als Stundenwerte
+- Gebündelte Fahrradzähldaten - Stundenwerte (JSON) | JSON | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten.json | Fahrradzähldaten der letzten 7 Tage, gebündelt nach Richtungen (IN/OUT/ALL) und als Stundenwerte
+- Gebündelte Fahrradzähldaten - Tageswerte (CSV) | CSV | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten.csv | Fahrradzähldaten der letzten 7 Tage, gebündelt nach Richtungen (IN/OUT/ALL) und als Tageswerte
+- Gebündelte Fahrradzähldaten - Tageswerte (JSON) | JSON | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten.json | Fahrradzähldaten der letzten 7 Tage, gebündelt nach Richtungen (IN/OUT/ALL) und als Tageswerte
+- Monatl. gebündelte Zähldaten - Stundenwerte (CSV) | CSV | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_{yyyymm}.csv.gz | Fahrradzähldaten aus beliebigen Monaten, gebündelt nach Richtungen (IN/OUT/ALL) und als Stundenwerte. 
+
+__Bitte in der obigen URL den jeweiligen Monat eintragen, zum Beispiel so: __
+https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_202303.csv.gz
+
+- Monatl. gebündelte Zähldaten - Stundenwerte (JSON) | JSON | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_{yyyymm}.json.gz | Fahrradzähldaten aus beliebigen Monaten, gebündelt nach Richtungen (IN/OUT/ALL) und als Stundenwerte. 
+
+__Bitte in der obigen URL den jeweiligen Monat eintragen, zum Beispiel so: __
+https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_202303.csv.gz
+- Monatl. gebündelte Zähldaten - Tageswerte (CSV) | CSV | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_{yyyymm}.csv.gz | Fahrradzähldaten aus beliebigen Monaten, gebündelt nach Richtungen (IN/OUT/ALL) und als Tageswerte. 
+
+__Bitte in der obigen URL den jeweiligen Monat eintragen, zum Beispiel so: __
+https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_202303.csv.gz
+- Monatl. gebündelte Zähldaten - Tageswerte (JSON) | JSON | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_{yyyymm}.json.gz | Fahrradzähldaten aus beliebigen Monaten, gebündelt nach Richtungen (IN/OUT/ALL)  und als Tageswerte. 
+
+__Bitte in der obigen URL den jeweiligen Monat eintragen, zum Beispiel so: __ 
+https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_202303.csv.gz
+- Jährl. gebündelte Zähldaten - Tageswerte (JSON) | JSON | https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_yyyy.json.gz | Fahrradzähldaten aus beliebigen Jahren, gebündelt nach Richtungen (IN/OUT/ALL) und als Tageswerte.
+
+__Bitte in der obigen URL das jeweilige Jahr eintragen, zum Beispiel so: __ https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_tageswerten_2013.json.gz
+
+- Historische Fahrradzähldaten (Januar 2013 - heute) | XLSX | https://mobidata-bw.de/fahrradzaehldaten/ | Verzeichnis für den Zugriff auf alle Daten seit 2013 in allen angebotenen Aggregationen.
+- Historische Fahrradzähldaten (Januar 2013 - Dezember 2024)  | XLSX | https://mobidata-bw.de/daten/eco-counter/gebundelte_eco_counter_fahrradzaehler_bw.xlsx | In der Datei finden Sie die Download-Links für die historischen Fahrradzähldaten bis einschließlich Dezember 2024. Für alle Daten kann das Verzeichnis aller historischen Daten genutzt werden: https://mobidata-bw.de/fahrradzaehldaten/v2/
+
+- Fahrradzähldaten (CSV) | CSV | https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.csv | Fahrradzähldaten der letzten 7 Tagen, gebündelt, nicht aggregiert, seit Juni 2024 keine neuen Zähler integriert, entfällt zeitnah. 
+- Fahrradzähldaten (JSON) | GeoJSON | https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.json | Fahrradzähldaten der letzten 7 Tagen, gebündelt, nicht aggregiert, seit Juni 2024 keine neuen Zähler integriert, entfällt zeitnah. 
+- Fahrradzähldaten (EXCEL) | XLSX | https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.xlsx | Fahrradzähldaten der letzten 7 Tagen, gebündelt, nicht aggregiert, seit Juni 2024 keine neuen Zähler integriert, entfällt zeitnah. 
+- Daten-API für historische Daten (Stundenwerte) | API |  | <p>Diese Datenschnittstelle ermöglicht den gezielten Abruf von Eco-Counter-Fahrradzähldaten durch die Filterung nach einzelnen Attributen.</p>
+
+<p>Im <strong>Viewer (unten)</strong> lassen sich die historischen Stundenwerte nach den verschiedenen Kriterien der ersten Zeile filtern und als <strong>csv, tsv, json und xml</strong> herunterladen. Dazu müssen die Suchbegriffe in das Suchfeld der zweiten Zeile kopiert werden.</p>
+<p>Zusätzlich können Nutzende ihre Abfragen nach verschiedenen Kriterien selbst und individuell zusammenstellen. Dazu können die Queries flexibel miteinander in der URL kombiniert werden.
+<p>Mögliche Abfrageparameter sind: Zeitpunkte, Tage, Monate, Wochentage, Kommunen, Zählstellen usw. 
+<p>Als Beispiel, die Abfrage der Zählstellen aus Heidelberg im Januar 2025:
+
+<p><a href="https://mobidata-bw.de/api/3/action/datastore_search?resource_id=3efeb12d-b485-444a-a8a3-70e746baa334&q=100012161&q=2025-10-01&limit=24" target="_blank">https://mobidata-bw.de/api/3/action/datastore_search?resource_id=3efeb12d-b485-444a-a8a3-70e746baa334&q=100012161&q=2025-10-01&limit=24</a>
+
+<p>Der Link auf <strong>"Daten-API" (oben rechts)</strong> führt zu weiterführenden Erläuterungen rund um den Abruf historischer Stundenwerte. Die Dokumentation zeigt verschiedene Abfragebeispiele, daneben sind hier die Dokumentation der CKAN API und des zugehörigen Datastore verlinkt. 
+- Daten-API für historische Daten (Tageswerte) | API |  | <p>Diese Datenschnittstelle ermöglicht den gezielten Abruf von Eco-Counter-Fahrradzähldaten durch die Filterung nach einzelnen Attributen.</p>
+
+<p>Im <strong>Viewer (unten)</strong> lassen sich die historischen Tageswerte nach den verschiedenen Kriterien der ersten Zeile filtern und als <strong>csv, tsv, json und xml</strong> herunterladen. Dazu müssen die Suchbegriffe in das Suchfeld der zweiten Zeile kopiert werden.</p>
+<p>Zusätzlich können Nutzende ihre Abfragen nach verschiedenen Kriterien selbst und individuell zusammenstellen. Dazu können die Queries flexibel miteinander in der URL kombiniert werden.
+<p>Mögliche Abfrageparameter sind: Zeitpunkte, Tage, Monate, Wochentage, Kommunen, Zählstellen usw. 
+<p>Als Beispiel, die Abfrage der Zählstellen aus Heidelberg im Januar 2025:
+
+<p><a href="https://mobidata-bw.de/api/3/action/datastore_search?resource_id=bbb274af-580d-4228-851e-c8daf32d3c6e&q=100012161&q=2025-10&limit=30" target="_blank">https://mobidata-bw.de/api/3/action/datastore_search?resource_id=bbb274af-580d-4228-851e-c8daf32d3c6e&q=100012161&q=2025-10&limit=30</a>
+
+<p>Der Link auf <strong>"Daten-API" (oben rechts)</strong> führt zu weiterführenden Erläuterungen rund um den Abruf historischer Stundenwerte. Die Dokumentation zeigt verschiedene Abfragebeispiele, daneben sind hier die Dokumentation der CKAN API und des zugehörigen Datastore verlinkt. 
+
+Monat 202610: 24.1 MB, 124694 Zeilen
+Kopf: ['operator_name', 'domain_name', 'domain_id', 'counter_site', 'counter_site_id', 'counter_serial', 'longitude', 'latitude', 'timezone', 'iso_timestamp', 'channels_in', 'channels_out', 'channels_unknown', 'channels_all', 'site_temperature', 'site_rain_accumulation', 'site_snow_accumulation']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T00:00:00+02:00', '13', '9', 'na', '22', '18.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T01:00:00+02:00', '4', '4', 'na', '8', '16.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T02:00:00+02:00', '3', '2', 'na', '5', '16.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T03:00:00+02:00', '1', '0', 'na', '1', '15.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T04:00:00+02:00', '4', '4', 'na', '8', '15.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T05:00:00+02:00', '21', '19', 'na', '40', '16.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T06:00:00+02:00', '75', '87', 'na', '162', '16.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T07:00:00+02:00', '289', '408', 'na', '697', '16.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T08:00:00+02:00', '216', '168', 'na', '384', '16.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T09:00:00+02:00', '179', '139', 'na', '318', '17.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T10:00:00+02:00', '132', '100', 'na', '232', '19.0', '0.0', 'na']
+  ['Eco Counter GmbH', 'Stadt Tübingen', '667', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'YTH24052174', '9.04806', '48.518', '(UTC+01:00) Europe/Paris DST', '2026-10-01T11:00:00+02:00', '162', '120', 'na', '282', '20.0', '0.0', 'na']
+  Spalte operator_name: 1 Werte, z. B. ['Eco Counter GmbH']
+  Spalte domain_name: 24 Werte, z. B. ['Landeshauptstadt Stuttgart', 'Landkreis Böblingen', 'Landratsamt Heilbronn', 'Landratsamt Ostalbkreis', 'Landratsamt Rems-Murr-Kreis', 'Ravensburg Tws Gmbh & Co. Kg', 'Regierungspräsidium Stuttgart Aussenstelle Heilbronn', 'Stadt Emmendingen', 'Stadt Freiburg', 'Stadt Heidelberg', 'Stadt Heilbronn', 'Stadt Karlsruhe', 'Stadt Kirchheim Unter Teck', 'Stadt Konstanz', 'Stadt Ludwigsburg', 'Stadt Lörrach', 'Stadt Mannheim', 'Stadt Neckarsulm', 'Stadt Pforzheim', 'Stadt Ravensburg', 'Stadt Reutlingen', 'Stadt Tübingen', 'Stadt Ulm', 'Stadtverwaltung Aalen']
+  Spalte domain_id: 24 Werte, z. B. ['3938', '4100', '4138', '4197', '4206', '6011', '607', '6456', '667', '6811', '7116', '7152', '751', '752', '7555', '7581', '7802', '7959', '9187', '9375', '9407', '9723', '9785', '9931']
+  Spalte counter_site: 171 Werte, z. B. ['01 / 02 WGT Doggenriedstraße', '03 WGT Krankenhaus Ost', '04 WGT Krankenhaus West', '05 RV Eissporthalle', '06 Meersburger Brücke abwärts', '07 Meersburger Brücke aufwärts', '08 RV Bahnhofstr.', '1 Wilhelm-Leuschner-Straße (CITIX AI) - Hardware - Fuß- und Radverkehr', '2 Bismarckstraße - Nur Radverkehr', '3 Neckarsulmer str.', '4 Klingenberger Steg - Nordheim', '5 Im Haselter', 'Aldinger Straße', 'Alleenstraße', 'Alte Rheinbrücke', 'Am Kräherwald', 'B38. RI. AUS', 'B38. Ri. IN', 'Backnang (Plattenwald) - Oppenweiler Straße (K1897)', 'Bad Wimpfen', 'Bahnhaltepunkt Fürstenberg', 'Bahnhaltepunkt Petershausen', 'Barometer Kirchheim u. Teck', 'Basler Landstr. / Schallstadt', 'Beethovenstraße']
+  Spalte counter_site_id: 171 Werte, z. B. ['100003358', '100003359', '100004165', '100004595', '100008949', '100012161', '100013034', '100013246', '100013457', '100017862', '100025372', '100026408', '100026599', '100027946', '100027947', '100034882', '100034894', '100035363', '100037257', '100037408', '100038858', '100041999', '100042486', '100042487', '100042618']
+  Spalte counter_serial: 162 Werte, z. B. ['', 'CAQ26030459', 'COM20040282', 'COM20060296', 'COM20060298', 'COM20060299', 'COM20060300', 'COM20070301', 'COM20070302', 'COM20070307', 'COM20070308', 'COM20110507', 'COM21020459', 'COM21020460', 'COM24090261', 'COM24100274', 'COM25060405', 'COM25070406', 'COM25090448', 'COM26010526', 'COM26090649', 'MLT24050327', 'WVX25110029', 'WVX25110030', 'Y2G14014962']
+  Spalte longitude: 171 Werte, z. B. ['10.09872078895569', '10.117155', '10.123725682497026', '10.1474782', '10.159574', '10.2689743', '10.384351909160616', '7.65936', '7.672214845402785', '7.7802444', '7.7822676', '7.79201361', '7.79678518', '7.81607508659363', '7.835136', '7.836176', '7.83709', '7.8407526', '7.84333169460297', '7.846005856990815', '7.846815', '7.862408310537608', '7.864787', '7.86753803', '7.87144']
+  Spalte latitude: 170 Werte, z. B. ['47.61852887926996', '47.61974', '47.6670175692813', '47.66936', '47.67087', '47.673801', '47.6741409', '47.677375', '47.78236168083926', '47.78255792377975', '47.78530891015364', '47.7933', '47.80081747027417', '47.80105', '47.81064893394001', '47.97290815', '47.986279', '47.9872415154146', '47.988126', '47.990553030002445', '47.992873', '47.995213', '47.99559925236635', '47.9994769907659', '47.999683']
+  Spalte timezone: 1 Werte, z. B. ['(UTC+01:00) Europe/Paris DST']
+  Spalte iso_timestamp: 1374 Werte
+  Spalte channels_in: 585 Werte
+  Spalte channels_out: 534 Werte
+  Spalte channels_unknown: 952 Werte
+  Spalte channels_all: 1068 Werte
+  Spalte site_temperature: 38 Werte, z. B. ['0.0', '1.0', '10.0', '11.0', '12.0', '13.0', '14.0', '15.0', '16.0', '17.0', '18.0', '19.0', '2.0', '20.0', '21.0', '22.0', '23.0', '24.0', '25.0', '26.0', '27.0', '28.0', '29.0', '3.0', '30.0']
+  Spalte site_rain_accumulation: 52 Werte, z. B. ['0.0', '0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9', '1.0', '1.1', '1.2', '1.3', '1.4', '1.5', '1.6', '1.7', '1.8', '1.9', '2.0', '2.1', '2.2', '2.3', '2.4']
+  Spalte site_snow_accumulation: 1 Werte, z. B. ['na']
+
+Stellenliste https://mobidata-bw.de/daten/eco-counter/eco_counter_fahrradzaehler.csv: 63145 Zeilen
+Kopf: ['timestamp', 'iso_timestamp', 'zählstand', 'stand', 'standort', 'channel_name', 'channel_id', 'counter_site', 'counter_site_id', 'domain_name', 'domain_id', 'longitude', 'latitude', 'timezone', 'interval', 'counter_serial']
+  ['2025-06-16T00:00:00+0000', '2025-06-16T00:00:00+0200', '8', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']
+  ['2025-06-16T01:00:00+0000', '2025-06-16T01:00:00+0200', '5', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']
+  ['2025-06-16T02:00:00+0000', '2025-06-16T02:00:00+0200', '2', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']
+  ['2025-06-16T03:00:00+0000', '2025-06-16T03:00:00+0200', '0', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']
+  ['2025-06-16T04:00:00+0000', '2025-06-16T04:00:00+0200', '5', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']
+  ['2025-06-16T05:00:00+0000', '2025-06-16T05:00:00+0200', '12', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']
+  ['2025-06-16T06:00:00+0000', '2025-06-16T06:00:00+0200', '82', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']
+  ['2025-06-16T07:00:00+0000', '2025-06-16T07:00:00+0200', '169', '0', 'Stadt Tübingen', 'Richtung Altstadt', '101003358', 'Fuß- & Radtunnel Südportal - Derendinger Allee', '100003358', 'Stadt Tübingen', '667', '9.04806', '48.518', '(UTC+01:00) Europe/Paris;DST', '15', 'YAH24052174']

@@ -1,0 +1,50 @@
+München: 67 Datensätze
+- Raddauerzählstellen | dl-by-de/2.0 | 2026-11-13T06:45:12.906889
+    WFS (CSV) | CSV | https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=csv
+    WFS (GeoJSON) | GeoJSON | https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=application/json
+    WFS (Shape) | WFS | https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=shape-zip
+    WFS (GML) | GML | https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen
+    Open Geodata Portal des Geoportals | HTML | https://geoportal.muenchen.de/portal/opendata/
+    Metadaten (XML) | XML | https://geoportal.muenchen.de/csw?service=CSW&request=GetRecordById&version=2.0.2&elementsetname=full&id=f9cf2cab-10a2-4f13-a4eb-0148faa368f7
+- Daten der Raddauerzählstellen München - Jahreszahlen | dl-by-de/2.0 | 2026-11-03T15:05:49.817858
+    15 Minuten Werte 2008 | CSV | https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/66be7619-a672-4382-bf88-e3688c5abc2b/download/rad_2008_15min_06_06_23_r.csv
+    Tageswerte Wetter 2008 | CSV | https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/53ef8c4b-d411-477f-9cf3-b044a4c1aaaa/download/rad_2008_tage_19_06_23_r.csv
+    15 Minuten Werte 2009 | CSV | https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/3ef8aad9-a6b0-4c97-a6b7-8c3a63226b37/download/rad_2009_15min_06_06_23_r.csv
+    Tageswerte Wetter 2009 | CSV | https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/89dbef6c-c6cb-4bfc-8729-93049e91223d/download/rad_2009_tage_19_06_23_r.csv
+    15 Minuten Werte 2010 | CSV | https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/6558a5f9-2c96-4e4b-985d-8eb99b7b73b1/download/rad_2010_15min_06_06_23_r.csv
+    Tageswerte Wetter 2010 | CSV | https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/cb720004-bcde-4c0e-babf-64ee995c5232/download/rad_2010_tage_19_06_23_r.csv
+- Daten der Raddauerzählstellen München 2026 | dl-by-de/2.0 | 2026-10-08T08:19:47.755460
+    15 Minuten-Werte - Januar 2026 - Daten der Raddauerzählstellen | CSV | https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/1b099f15-85fb-4481-b10f-da0e59357099/download/rad_2026_01_15min.csv
+    Tageswerte und Wetter - Januar 2026 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/77d30ce3-ecea-4e9f-a30f-bfdf13bc23a9/download/rad_2026_01_tage.csv
+    15 Minuten-Werte - Februar 2026 - Daten der Raddauerzählstellen | CSV | https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/939517ef-6448-4f2f-b493-70b57d5cfcba/download/rad_2026_02_15min.csv
+    Tageswerte und Wetter - Februar 2026 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/0d5abff4-97c8-4679-be23-72bdbd32cd96/download/rad_2026_02_tage.csv
+    15 Minuten-Werte - März 2026 - Daten der Raddauerzählstellen | CSV | https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/190070c2-adec-43b9-bde9-b368d7d4f355/download/rad_2026_03_15min.csv
+    Tageswerte und Wetter - März 2026 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/20d08df2-203a-4f99-968f-add90f86818a/resource/052a399a-8d9d-454e-b733-a989bdbe28f7/download/rad_2026_03_tage.csv
+- Daten der Raddauerzählstellen München 2025 | dl-by-de/2.0 | 2026-01-12T15:15:45.330564
+    15 Minuten-Werte - Januar 2025 - Daten der Raddauerzählstellen | CSV | https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/635835ae-10cd-49d3-8b83-8ddffe65022c/download/rad_2025_01_15min.csv
+    Tageswerte und Wetter - Januar 2025 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/c585f025-c3d0-4b62-87b0-46164f2a1873/download/rad_2025_01_tage.csv
+    15 Minuten-Werte - Februar 2025 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/d2744606-9aed-43b4-8e20-981113b797fc/download/rad_2025_02_15min.csv
+    Tageswerte und Wetter - Februar 2025 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/bcacf6fe-345b-498f-ac5a-f4cc81b0d347/download/rad_2025_02_tage.csv
+    15 Minuten-Werte - März 2025 - Daten der Raddauerzählstellen | CSV | https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/cd3160f0-44ea-415b-a672-f2e8f9967f9b/download/rad_2025_03_15min.csv
+    Tageswerte und Wetter - März 2025 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/69307443-8de6-4f48-93ac-8cd410998d49/resource/6d3b172f-171b-463a-9495-bd27b730c539/download/rad_2025_03_tage.csv
+- Daten der Raddauerzählstellen München 2023 | dl-by-de/2.0 | 2025-09-26T08:18:43.609560
+    15 Minuten-Werte - Januar 2023 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/63899327-2f90-42f8-8953-9344a158129b/download/rad_2023_01_15min.csv
+    Tageswerte und Wetter - Januar 2023 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/c2d22114-8ca0-44d5-895a-39b422977cff/download/rad_2023_01_tage.csv
+    15 Minuten-Werte - Februar 2023 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/6f9f934a-d70c-4deb-b365-de79c21f5e44/download/rad_2023_02_15min.csv
+    Tageswerte und Wetter - Februar 2023 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/5506ca79-edb7-4241-90eb-e8406430fab4/download/rad_2023_02_tage.csv
+    15 Minuten-Werte - März 2023 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/e8536f7f-d03a-4dce-8b9e-81907fdff40f/download/rad_2023_03_15min.csv
+    Tageswerte und Wetter - März 2023 - Daten der Raddauerzählstellen München | CSV | https://opendata.muenchen.de/dataset/780d7f77-e5de-47bb-8b34-9bc321c567a1/resource/51898d07-2aa5-4ee7-977d-c0b80f8910a3/download/rad_2023_03_tage.csv
+- Daten der Raddauerzählstellen München Februar 2019 | dl-by-de/2.0 | 2025-09-26T08:18:43.195451
+    15 Minuten-Werte - Daten der Raddauerzählstellen München Februar 2019 | CSV | https://opendata.muenchen.de/dataset/ef88638f-dd93-49a4-8c14-df237fe2c43d/resource/b1b09617-e613-4bcf-809d-6ac92fcd0d1b/download/rad20190215min.csv
+    Tageswerte und Wetter - Daten der Raddauerzählstellen München Februar 2019 | CSV | https://opendata.muenchen.de/dataset/ef88638f-dd93-49a4-8c14-df237fe2c43d/resource/e454af57-76ca-4e59-960c-ce2490b030d6/download/rad201902tage.csv
+Datei https://opendata.muenchen.de/dataset/022a11ff-4dcb-4f03-b7dd-a6c94a094587/resource/66be7619-a672-4382-bf88-e3688c5abc2b/download/rad_2008_15min_06_06_23_r.csv: 82176 Zeilen
+Kopf: ['datum', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt', 'kommentar']
+  ['2008-06-01', '00:00:00', '00:15:00', 'Arnulf', '0', '0', '0', 'NA']
+  ['2008-06-01', '00:15:00', '00:30:00', 'Arnulf', '1', '0', '1', 'NA']
+  ['2008-06-01', '00:30:00', '00:45:00', 'Arnulf', '3', '0', '3', 'NA']
+  ['2008-06-01', '00:45:00', '01:00:00', 'Arnulf', '1', '0', '1', 'NA']
+  ['2008-06-01', '01:00:00', '01:15:00', 'Arnulf', '5', '1', '6', 'NA']
+  ['2008-06-01', '01:15:00', '01:30:00', 'Arnulf', '0', '0', '0', 'NA']
+  ['2008-06-01', '01:30:00', '01:45:00', 'Arnulf', '1', '0', '1', 'NA']
+  ['2008-06-01', '01:45:00', '02:00:00', 'Arnulf', '0', '0', '0', 'NA']
+Bonn: <urlopen error timed out>
