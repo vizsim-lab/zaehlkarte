@@ -35,7 +35,7 @@
     "anfrage": null,
     "dauer": {
      "stand": "in_karte",
-     "was": "Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 2025 (Kfz und Lkw laut Detektor), in der Karte als Dauerzählstellen",
+     "was": "Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 2025 (Kfz und Lkw laut Detektor); dazu die Rad-Zählstellen der Senatsverwaltung, Stundenwerte 2012–2025 – beides in der Karte als Dauerzählstellen",
      "situation": null,
      "links": [
       {
@@ -45,6 +45,10 @@
       {
        "titel": "Archiv der Verkehrsdetektion",
        "url": "https://api.viz.berlin.de/daten/verkehrsdetektion"
+      },
+      {
+       "titel": "Rad-Zählstellen (Senatsverwaltung)",
+       "url": "https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/"
       }
      ]
     }
@@ -334,7 +338,21 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Münster seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf Ihrem Open-Data-Portal stehen die manuellen Verkehrszählungen bis 2020 mit den Spitzenstunden. Ich bitte zusätzlich um die Zählungen ab 2021, um die Werte aller gezählten Intervalle (nicht nur der Spitzenstunden) und um eine kurze Erläuterung, ob die Spalte „Rad“ alle Radfahrenden am Knoten erfasst oder nur die auf der Fahrbahn.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Rad-Zählstellen der Stadt: 15-Minuten-Werte seit 2019, nächtlich aktualisiert, in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "GitHub: od-ms/radverkehr-zaehlstellen",
+       "url": "https://github.com/od-ms/radverkehr-zaehlstellen"
+      },
+      {
+       "titel": "Open Data Münster: Fahrradverkehr, tagesaktuelle Daten",
+       "url": "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten"
+      }
+     ]
+    }
    }
   },
   {
@@ -422,7 +440,7 @@
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": "konstanz",
     "zaehlungen": 83,
-    "situation": "Die Stadt veröffentlicht ihre mobilen Zählungen von 2020 offen (CC0): je Standort eine CSV mit 5- oder 15-Minuten-Werten je Richtung – Rad, zu Fuß und an zwei Stellen Kfz. Die Lage steht nur als Straße, Brücke oder Hausnummer dabei; die Karte setzt sie aus OpenStreetMap. Zählungen nach 2020 enthält der Datensatz nicht; die Fahrrad-Dauerzählstellen der Stadt stehen in einem eigenen Datensatz (nicht in der Karte).",
+    "situation": "Die Stadt veröffentlicht ihre mobilen Zählungen von 2020 offen (CC0): je Standort eine CSV mit 5- oder 15-Minuten-Werten je Richtung – Rad, zu Fuß und an zwei Stellen Kfz. Die Lage steht nur als Straße, Brücke oder Hausnummer dabei; die Karte setzt sie aus OpenStreetMap. Zählungen nach 2020 enthält der Datensatz nicht; die Fahrrad-Dauerzählstellen der Stadt stehen als Dauerzählstellen in der Karte (über MobiData BW).",
     "empfehlung": "Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg.",
     "weg": "offen; ergänzend FragDenStaat, LIFG BW",
     "kontakt": {
@@ -433,7 +451,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Konstanz seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nAuf Ihrem Open-Data-Portal stehen die mobilen Zählungen des Rad- und Fußverkehrs von 2020. Ich bitte zusätzlich um die mobilen Zählungen ab 2021, um die Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und um die genaue Lage der Zählgeräte (Koordinaten).\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "MobiData BW: Rad-Zählstellen (Eco-Counter)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      }
+     ]
+    }
    }
   },
   {
@@ -614,7 +642,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Stuttgart seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind die Ergebnisse Ihrer Kordonzählungen an der Markungsgrenze und am Kesselrand als Summen über alle Zählstellen. Ich bitte um dieselben Zählungen je Zählstelle (Lage, Datum, Werte je Stunde, Richtung und Fahrzeugart) und um die Knotenpunkt- und Querschnittszählungen im Stadtgebiet.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "MobiData BW: Rad-Zählstellen (Eco-Counter)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      }
+     ]
+    }
    }
   },
   {
@@ -652,7 +690,7 @@
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": null,
     "zaehlungen": null,
-    "situation": "Offen sind die Stundenwerte der Rad-Zählstellen seit 2015 (FR.ITZ, Datenlizenz Deutschland – Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte mit Werten vom Mai 2024. Beides sind Dauerzählstellen, nicht in der Karte. Die Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.",
+    "situation": "Offen sind die Stundenwerte der Rad-Zählstellen seit 2015 (FR.ITZ, Datenlizenz Deutschland – Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte mit Werten vom Mai 2024. Die Rad-Zählstellen stehen als Dauerzählstellen in der Karte (über MobiData BW), die Sensoren noch nicht. Die Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.",
     "empfehlung": "Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch nach denen, die für Verkehrsuntersuchungen erhoben wurden. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.",
     "weg": "FragDenStaat, LIFG BW",
     "kontakt": {
@@ -665,10 +703,14 @@
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Freiburg im Breisgau seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind die Kurzzeitzählungen an Knotenpunkten und Querschnitten, auch die für Verkehrsuntersuchungen erhobenen (etwa die Stichprobenzählungen im Mai bis Juli 2022 zur Verkehrsuntersuchung Schlossbergring) – nicht die Rad-Zählstellen und die Verkehrssensoren.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
     "dauer": {
-     "stand": "offen",
-     "was": "Rad-Zählstellen seit 2015 offen (Rad-Zählsäulen kommen als eigener Schritt), 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte",
+     "stand": "in_karte",
+     "was": "Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte",
      "situation": null,
      "links": [
+      {
+       "titel": "MobiData BW: Rad-Zählstellen (Eco-Counter)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      },
       {
        "titel": "FR.ITZ: Fahrrad-Zählstellen",
        "url": "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"
@@ -723,7 +765,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Karlsruhe seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2023 haben Sie die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb als Excel-Datei herausgegeben. Ich bitte in derselben Form um alle Zählungen, auch um die für Verkehrsuntersuchungen erhobenen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "eine Rad-Zählstelle (Erbprinzenstraße, Eco-Counter) über MobiData BW, in der Karte als Dauerzählstelle",
+     "situation": null,
+     "links": [
+      {
+       "titel": "MobiData BW: Rad-Zählstellen (Eco-Counter)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      }
+     ]
+    }
    }
   },
   {
@@ -801,7 +853,7 @@
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": null,
     "zaehlungen": null,
-    "situation": "Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch. Dazu kommt die Rad-Dauerzählstelle am Blautalradweg. Beides ist nicht in der Karte; Knotenpunkt- und Querschnittszählungen stehen nicht online.",
+    "situation": "Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch, in der Karte sind sie nicht. Die Rad-Dauerzählstelle am Blautalradweg (Lupferbrücke) steht über MobiData BW als Dauerzählstelle in der Karte. Knotenpunkt- und Querschnittszählungen stehen nicht online.",
     "empfehlung": "Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.",
     "weg": "FragDenStaat, LIFG BW",
     "kontakt": {
@@ -813,8 +865,8 @@
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Ulm seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nZu den Kamerazählungen im Datenhub (Datensatz „vgv_ulm“) bitte ich nur um die Standorte der Kameras (Koordinaten zu den Kürzeln wie „Cam-1-01“) und ihre Zählzeiträume.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
     "dauer": {
-     "stand": "offen",
-     "was": "fünf Zählkameras seit Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als Kürzel und ohne Betriebszeiten – nicht in der Karte, weil eine Stunde ohne Zeile nicht von einem Ausfall zu unterscheiden ist; dazu eine Rad-Zählstelle",
+     "stand": "in_karte",
+     "was": "Rad-Zählstelle Blautal Lupferbrücke über MobiData BW in der Karte; fünf Zählkameras seit Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als Kürzel und ohne Betriebszeiten – nicht in der Karte, weil eine Stunde ohne Zeile nicht von einem Ausfall zu unterscheiden ist",
      "situation": null,
      "links": [
       {
@@ -993,7 +1045,17 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt München seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nDie Zählungen liegen in Ihrer Software DAVe vor, die Exporte in offene Formate erlaubt. Ein solcher Export aller Zählungen genügt.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "in_karte",
+     "was": "sechs Raddauerzählstellen der Stadt: 15-Minuten-Werte seit 2008, in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Open Data München: Raddauerzählstellen",
+       "url": "https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen"
+      }
+     ]
+    }
    }
   },
   {
@@ -1352,7 +1414,7 @@
     "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
     "quelle": null,
     "zaehlungen": null,
-    "situation": "Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved, 15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte ist davon nichts.",
+    "situation": "Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved, 15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind davon nur die Rad-Zählstellen (über MobiData BW).",
     "empfehlung": "Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden- Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.",
     "weg": "FragDenStaat, LIFG BW",
     "kontakt": {
@@ -1365,8 +1427,8 @@
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Heidelberg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
     "dauer": {
-     "stand": "offen",
-     "was": "12 Zählkameras im Katalog der Datenplattform (CC0), dessen Schnittstelle im November 2026 nicht antwortete; Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte",
+     "stand": "in_karte",
+     "was": "Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 12 Zählkameras im Katalog der Datenplattform (CC0), dessen Schnittstelle im November 2026 nicht antwortete, und Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte",
      "situation": null,
      "links": [
       {
@@ -1739,7 +1801,25 @@
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Kiel seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2025 haben Sie auf eine Anfrage zur Werftstraße Zählberichte als PDF geschickt. Ich bitte um alle Zählungen mit den gezählten Werten je Intervall statt der Hochrechnung auf 24 Stunden.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "kandidat",
+     "was": "87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Mobilithek: Angebot seit Oktober 2026",
+       "url": "https://mobilithek.info/offers/1045322209798569984"
+      },
+      {
+       "titel": "Mobilithek: älteres Angebot (CC BY 4.0)",
+       "url": "https://mobilithek.info/offers/995318989663924224"
+      },
+      {
+       "titel": "DatenDock der KielRegion (Dashboard)",
+       "url": "https://datendock.civora.org/app/dashboards/30"
+      }
+     ]
+    }
    }
   },
   {

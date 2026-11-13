@@ -2,8 +2,10 @@
 
 Karte kommunaler Verkehrszählungen aus mehreren Quellen in zwei Familien:
 Kurzzeitzählungen (Knotenpunkte, Querschnitte) und Dauerzählstellen (Stunden- und Tageswerte
-fest eingebauter Zähler) – nur Zählwerte, je Verkehrsart (Kfz, Schwerverkehr, Rad, Fuß; bei
-Dauerzählstellen die Klassen der Detektoren: Kfz, Lkw bzw. Schwerverkehr laut Detektor, Rad).
+fest eingebauter Zähler: Detektoren, Kameras, Rad-Zählstellen) – nur Zählwerte, je Verkehrsart
+(Kfz, Schwerverkehr, Rad, Fuß; bei Dauerzählstellen die Klassen der Detektoren: Kfz, Lkw bzw.
+Schwerverkehr laut Detektor, Rad). Nur kommunale Zählstellen; die Dauerzählstellen von Bund und
+Ländern (BASt, Landesstraßen) nicht – sie stehen dokumentiert in `AGENTS.md`.
 Jahresmittel (DTV), Verkehrsmengenkarten und Modellwerte gehören nach `vizsim/svz`. Stil und
 Aufbau des Frontends wie `vizsim/unfallkarte`,
 ZDA-Leser aus `vizsim/berlin-traffic-counts_schulwege`, Quellenverwaltung wie `vizsim/svz`.
@@ -57,7 +59,11 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Nur Zählwerte, keine Einstufungen.** Je Verkehrsart Menge (und bei Schwerverkehr/Rad der
   Anteil). Kinder/Jugendliche nur als Zählkategorie (Tagesgang Fuß), keine Schwellen.
   Dauerzählstellen: eine Tagessumme nur aus allen Stunden des Tages (Zeitumstellung beachten),
-  sonst „nicht vollständig gezählt“ – nie auffüllen, keine Mittel über Tage, kein DTV. Klassen
+  sonst „nicht vollständig gezählt“ – nie auffüllen, keine Mittel über Tage, kein DTV. Was die
+  Quelle als rekonstruiert, unplausibel oder geändert kennzeichnet (Berlins Rad-Datei: Zellfarbe;
+  Eco-Counter: Status 4, „modified“), gilt als nicht gezählt; kennzeichnet sie es nicht (MobiData
+  BW), steht das als Hinweis an der Quelle. Zählt eine Stelle Rad und Fuß oder Pkw gemeinsam,
+  kommt sie nicht als Rad in die Karte (`ohne` in sources.yaml). Klassen
   der Detektoren nie zusammenzählen oder ineinander umrechnen: Berlins und Ettlingens „Lkw“ und
   Hamburgs „Schwerverkehr“ bleiben eigene Gruppen der Daten, keine ist der Schwerverkehr der
   Kurzzeitzählungen. Die Karte zeigt sie unter einem Chip „Lkw/Schwerverkehr“ – jede Stelle in
@@ -69,7 +75,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.
 - **Rohdaten bleiben unverändert**; Berlin-Archive und Geokodierung sind auf Commits gepinnt,
   Münster-ZIP und -Positionen, die Konstanzer CSVs und die Xantener PDFs über ihre Prüfsumme
-  (sha256 in sources.yaml).
+  (sha256 in sources.yaml). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
+  sources.yaml mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
 - **Keyless:** Hintergrund OpenFreeMap (Positron, lokale `public/style.json` ohne Sprite),
   Relief Mapterhorn, Suche Photon. Keine API-Keys, keine Secrets im Repo.
 - **MapLibre (ESM, v6):** nur über `js/lib/maplibre.js` importieren; wird NICHT gebündelt
@@ -110,8 +117,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
   Workflow nutzen. Dauerzählstellen: Workflow „Dauerzählstellen bauen“
   (`.github/workflows/dauer.yml`, wöchentlich) – Ergebnis als Release-Asset, kein PR; danach
-  startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de` und
-  `opendata.readi.de` (Ettlingen) sind aus der Sandbox ebenfalls nicht erreichbar
-  (Werkzeug-Branch `werkzeug/dauer`, `tools/lauf.sh`).
+  startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de`,
+  `opendata.readi.de` (Ettlingen) und die Rad-Quellen (MobiData BW, berlin.de, die Portale von
+  Münster, Aachen und München) sind aus der Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch
+  `werkzeug/dauer`, `tools/lauf.sh`); GitHub geht (Münsters Repository).
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

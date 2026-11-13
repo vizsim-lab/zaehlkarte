@@ -619,6 +619,12 @@ dauer:
       "300069828": >-
         Wilhelm-Leuschner-Straße (Heilbronn), Kamera für Fuß- und Radverkehr – ob nur Räder
         gezählt sind, ist nicht erkennbar
+      "100037408": >-
+        „Hardware für Waiblinger-/ Taubenheimstr.“ (Stuttgart) – das Gerät der Zählstellen Waiblinger
+        Straße und Taubenheimstraße (gleiche Seriennummer), sonst doppelt in der Karte
+      "300048165": >-
+        Bad Wimpfen – Zählstelle des Regierungspräsidiums Stuttgart, also des Landes (die Karte
+        bleibt bei kommunalen Zählstellen)
     titel: >-
       Gebündelte Daten Eco-Counter Fahrradzählstellen Baden-Württemberg (verändert: Stundenwerte zu
       Tagessummen zusammengefasst)
@@ -633,8 +639,9 @@ dauer:
         Zählkarte kann sie deshalb nicht erkennen: An einzelnen Stellen kann ein Ausfall als
         vollständig gezählter Tag erscheinen.
       - >-
-        Je Zählstelle beide Richtungen zusammen. Zwei Zählstellen, deren Name Fuß- und Radverkehr
-        nennt, sind nicht in der Karte.
+        Je Zählstelle beide Richtungen zusammen; Kanäle für Pkw und Personen zählt MobiData BW nicht
+        mit. Nicht in der Karte: zwei Zählstellen, deren Name Fuß- und Radverkehr nennt, ein Gerät,
+        dessen Zählstellen schon einzeln darin stehen, und eine Zählstelle des Landes.
       - >-
         Laut Quelle können sich Aufbau und Zusammensetzung der Zählstellen ohne Ankündigung ändern;
         Umleitungen und Baustellen beeinflussen die Werte.
@@ -817,10 +824,12 @@ datenlage:
       stand: in_karte
       was: >-
         Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 2025 (Kfz und
-        Lkw laut Detektor), in der Karte als Dauerzählstellen
+        Lkw laut Detektor); dazu die Rad-Zählstellen der Senatsverwaltung, Stundenwerte 2012–2025 –
+        beides in der Karte als Dauerzählstellen
       links:
         - ["Verkehrsdetektion Berlin (Datensatz)", "https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin"]
         - ["Archiv der Verkehrsdetektion", "https://api.viz.berlin.de/daten/verkehrsdetektion"]
+        - ["Rad-Zählstellen (Senatsverwaltung)", "https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/"]
     was: >-
       rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter
     links:
@@ -919,6 +928,14 @@ datenlage:
   - kommune: Münster
     quelle: muenster
     stand: in_karte
+    dauer:
+      stand: in_karte
+      was: >-
+        Rad-Zählstellen der Stadt: 15-Minuten-Werte seit 2019, nächtlich aktualisiert, in der Karte
+        als Dauerzählstellen
+      links:
+        - ["GitHub: od-ms/radverkehr-zaehlstellen", "https://github.com/od-ms/radverkehr-zaehlstellen"]
+        - ["Open Data Münster: Fahrradverkehr, tagesaktuelle Daten", "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten"]
     was: >-
       rund 1.160 Kfz-Knotenpunktzählungen 2000–2020 (XLS und PDF), je meist zwei Stunden (7–8 und
       16–17 Uhr)
@@ -979,6 +996,12 @@ datenlage:
   - kommune: Konstanz
     quelle: konstanz
     stand: in_karte
+    dauer:
+      stand: in_karte
+      was: >-
+        sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen
+      links:
+        - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
     was: >-
       mobile Zählungen 2020 an sechs Stellen (Rad, zu Fuß, an zwei Stellen Kfz), 5- oder
       15-Minuten-Werte über ein bis sechs Wochen
@@ -987,7 +1010,7 @@ datenlage:
       mit 5- oder 15-Minuten-Werten je Richtung – Rad, zu Fuß und an zwei Stellen Kfz. Die Lage
       steht nur als Straße, Brücke oder Hausnummer dabei; die Karte setzt sie aus OpenStreetMap.
       Zählungen nach 2020 enthält der Datensatz nicht; die Fahrrad-Dauerzählstellen der Stadt
-      stehen in einem eigenen Datensatz (nicht in der Karte).
+      stehen als Dauerzählstellen in der Karte (über MobiData BW).
     empfehlung: >-
       Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und
       die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz
@@ -1087,6 +1110,12 @@ datenlage:
     lon: 9.1829
     lat: 48.7758
     stand: aggregiert
+    dauer:
+      stand: in_karte
+      was: >-
+        Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen
+      links:
+        - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
     was: >-
       Kordonzählungen 1980–2024 an der Markungsgrenze und am Kesselrand – offen nur als Summe über
       alle Zählstellen je Jahr (CSV, CC BY 4.0)
@@ -1117,12 +1146,12 @@ datenlage:
     lat: 47.9948
     stand: automatisch
     dauer:
-      stand: offen
+      stand: in_karte
       was: >-
-        Rad-Zählstellen seit 2015 offen (Rad-Zählsäulen kommen als eigener Schritt), 25
-        Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht
-        in der Karte
+        Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im
+        Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte
       links:
+        - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
         - ["FR.ITZ: Fahrrad-Zählstellen", "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"]
         - ["Meldung Sensoren (24.7.2025)", "https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg"]
         - ["Geoportal: Verkehrssensoren (WFS)", "https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS"]
@@ -1134,7 +1163,8 @@ datenlage:
       Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach
       zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die
       Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte
-      mit Werten vom Mai 2024. Beides sind Dauerzählstellen, nicht in der Karte. Die
+      mit Werten vom Mai 2024. Die Rad-Zählstellen stehen als Dauerzählstellen in der Karte (über
+      MobiData BW), die Sensoren noch nicht. Die
       Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen
       der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und
       Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.
@@ -1159,6 +1189,13 @@ datenlage:
     lon: 8.4037
     lat: 49.0093
     stand: geliefert
+    dauer:
+      stand: in_karte
+      was: >-
+        eine Rad-Zählstelle (Erbprinzenstraße, Eco-Counter) über MobiData BW, in der Karte als
+        Dauerzählstelle
+      links:
+        - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
     was: >-
       2023 auf Anfrage die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb herausgegeben
       (Excel); sonst Zählwerte nur in Verkehrsuntersuchungen im Ratsinformationssystem
@@ -1224,11 +1261,12 @@ datenlage:
     lat: 48.3985
     stand: automatisch
     dauer:
-      stand: offen
+      stand: in_karte
       was: >-
-        fünf Zählkameras seit Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als
-        Kürzel und ohne Betriebszeiten – nicht in der Karte, weil eine Stunde ohne Zeile nicht von
-        einem Ausfall zu unterscheiden ist; dazu eine Rad-Zählstelle
+        Rad-Zählstelle Blautal Lupferbrücke über MobiData BW in der Karte; fünf Zählkameras seit
+        Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als Kürzel und ohne
+        Betriebszeiten – nicht in der Karte, weil eine Stunde ohne Zeile nicht von einem Ausfall zu
+        unterscheiden ist
       links:
         - ["Datenhub Ulm: vgv_ulm", "https://datenhub.ulm.de/ckan/dataset/vgv_ulm"]
         - ["Datenhub Ulm: Fahrradzählstelle", "https://datenhub.ulm.de/ckan/dataset/fahrradzahler_lupferbruecke"]
@@ -1239,9 +1277,9 @@ datenlage:
       Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit
       Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und
       Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa
-      „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch. Dazu kommt die Rad-Dauerzählstelle am
-      Blautalradweg. Beides ist nicht in der Karte; Knotenpunkt- und Querschnittszählungen stehen
-      nicht online.
+      „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch, in der Karte sind sie nicht. Die
+      Rad-Dauerzählstelle am Blautalradweg (Lupferbrücke) steht über MobiData BW als Dauerzählstelle
+      in der Karte. Knotenpunkt- und Querschnittszählungen stehen nicht online.
     empfehlung: >-
       Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras.
       Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
@@ -1340,6 +1378,13 @@ datenlage:
     lon: 11.582
     lat: 48.1351
     stand: kandidat
+    dauer:
+      stand: in_karte
+      was: >-
+        sechs Raddauerzählstellen der Stadt: 15-Minuten-Werte seit 2008, in der Karte als
+        Dauerzählstellen
+      links:
+        - ["Open Data München: Raddauerzählstellen", "https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen"]
     was: >-
       über 5.000 Kfz- und Radzählungen von Hand in der stadteigenen Software DAVe (Viertelstunden),
       Export in offene Formate möglich; online nur Karten
@@ -1579,10 +1624,11 @@ datenlage:
     lat: 49.3988
     stand: automatisch
     dauer:
-      stand: offen
+      stand: in_karte
       was: >-
-        12 Zählkameras im Katalog der Datenplattform (CC0), dessen Schnittstelle im November 2026
-        nicht antwortete; Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte
+        Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 12 Zählkameras im Katalog der
+        Datenplattform (CC0), dessen Schnittstelle im November 2026 nicht antwortete, und
+        Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte
       links:
         - ["Datenplattform: Kamera (Beispiel)", "https://ckan.datenplattform.heidelberg.de/en/dataset/mobility_main_trafficcamera/resource/b95871b2-7de0-46b1-b377-db497250f8a0"]
         - ["MobiData BW: Verkehrsrechnerdaten", "https://mobidata-bw.de/en/dataset/verkehrsleitrechnerdaten-in-heidelberg/resource/18936b7b-af96-45c5-ad05-f7f09ef6d9a3"]
@@ -1593,8 +1639,8 @@ datenlage:
       Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved,
       15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht
       (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es
-      nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte ist
-      davon nichts.
+      nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind
+      davon nur die Rad-Zählstellen (über MobiData BW).
     empfehlung: >-
       Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden-
       Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
@@ -1804,6 +1850,16 @@ datenlage:
     lon: 10.1228
     lat: 54.3233
     stand: geliefert
+    dauer:
+      stand: kandidat
+      was: >-
+        87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der
+        Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das
+        ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte
+      links:
+        - ["Mobilithek: Angebot seit Oktober 2026", "https://mobilithek.info/offers/1045322209798569984"]
+        - ["Mobilithek: älteres Angebot (CC BY 4.0)", "https://mobilithek.info/offers/995318989663924224"]
+        - ["DatenDock der KielRegion (Dashboard)", "https://datendock.civora.org/app/dashboards/30"]
     was: >-
       Knotenpunkt- und Querschnittszählungen (meist Spitzenstunden); 2025 auf Anfrage Zählberichte
       2016–2019 als PDF herausgegeben, auf FragDenStaat nicht öffentlich

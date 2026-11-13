@@ -17,7 +17,11 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
   sie nicht – im eingefrorenen älteren Format (Juni 2025) mit Status je Kanal stecken Stunden mit
   Status 4 (rekonstruiert) unverändert in `channels_all`. Die Zählkarte kann sie nicht erkennen;
   der Hinweis steht an der Quelle (Entscheidung des Nutzers, 13.11.2026).
-- `ohne` in sources.yaml: Zählstellen, die nicht in die Karte kommen (Fuß und Rad zusammen gezählt).
+- Kanäle: `channels_all` enthält nur die Rad-Kanäle – Pkw- und Personen-Kanäle derselben Geräte
+  (Ludwigsburg, Reutlingen, Böblingen) zählt MobiData nicht mit (Abgleich mit dem älteren Format
+  je Kanal, Juni 2025, rad_erkunden9.py).
+- `ohne` in sources.yaml: Zählstellen, die nicht in die Karte kommen – Name nennt Fuß- und
+  Radverkehr, ein Gerät („Hardware …“) neben seinen eigenen Zählstellen, eine Stelle des Landes.
 """
 
 from __future__ import annotations

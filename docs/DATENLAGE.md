@@ -20,39 +20,39 @@ FragDenStaat.
 | Ettlingen | BW | automatische Zählungen offen | in der Karte | Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder erheben lässt |
 | Falkensee | BB | nur Summen oder Mittelwerte offen |  | Anfrage nach den Messungen der Liste mit Datum, Lage und Werten je Stunde und Richtung, am besten als Export der Messgeräte |
 | Frankfurt am Main | HE | nur Summen oder Mittelwerte offen |  | Anfrage nach den Einzelzählungen |
-| Freiburg im Breisgau | BW | automatische Zählungen offen | offen, nicht in der Karte | Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch nach denen, die für Verkehrsuntersuchungen erhoben wurden |
+| Freiburg im Breisgau | BW | automatische Zählungen offen | in der Karte | Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch nach denen, die für Verkehrsuntersuchungen erhoben wurden |
 | Gera | TH | erhoben – Anfrage aussichtsreich |  | Anfrage nach allen Knotenpunktzählungen seit 2015 als Tabelle |
 | Göttingen | NI | nur als Karte |  | Neu anfragen, gezielt nach den gezählten Werten je Zählstelle (die zweimal vier Stunden), nicht nach der Karte |
 | Halle (Saale) | ST | erhoben – Anfrage aussichtsreich |  | Anfrage nach allen Zählungen seit 2015 als Tabelle (je Intervall, Strom und Fahrzeugart), vorab mit Kostenschätzung |
 | Hamburg | HH | nur Summen oder Mittelwerte offen | in der Karte | Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt. |
-| Heidelberg | BW | automatische Zählungen offen | offen, nicht in der Karte | Manuelle Knotenpunktzählungen anfragen |
-| Karlsruhe | BW | auf Anfrage herausgegeben |  | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023 |
+| Heidelberg | BW | automatische Zählungen offen | in der Karte | Manuelle Knotenpunktzählungen anfragen |
+| Karlsruhe | BW | auf Anfrage herausgegeben | in der Karte | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023 |
 | Kassel | HE | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz |
-| Kiel | SH | auf Anfrage herausgegeben |  | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je Intervall (nicht der Hochrechnung), maschinenlesbar |
+| Kiel | SH | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je Intervall (nicht der Hochrechnung), maschinenlesbar |
 | Köln | NW | nur Summen oder Mittelwerte offen |  | Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement |
 | Leipzig | SN | Anfrage gescheitert |  | Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte |
 | Lingen (Ems) | NI | auf Anfrage herausgegeben |  | Anfrage nach allen Verkehrserhebungen seit 2015, am besten als Export der Messgeräte statt als PDF |
 | Lübeck | SH | erhoben – Anfrage aussichtsreich |  | Anfrage nach allen Zählungen seit 2015, am besten als Export aus der Zählplattform (CSV/XLSX) |
 | Magdeburg | ST | auf Anfrage herausgegeben |  | Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen |
 | Mönchengladbach | NW | erhoben – Anfrage aussichtsreich |  | Anfrage nach den gezählten Werten der Knotenpunktzählungen (nicht der Hochrechnung) und nach den Querschnitts-Ganglinien |
-| München | BY | erhoben – Anfrage aussichtsreich |  | Anfrage nach einem DAVe-Export aller Zählungen |
+| München | BY | erhoben – Anfrage aussichtsreich | in der Karte | Anfrage nach einem DAVe-Export aller Zählungen |
 | Neubrandenburg | MV | erhoben – Anfrage aussichtsreich |  | Anfrage nach der Videozählung 2020 und den Zählungen seither |
 | Nürnberg | BY | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt |
 | Osnabrück | NI | auf Anfrage herausgegeben | offen, nicht in der Karte | Anfrage nach allen Seitenradar-Messungen und Zählungen seit 2015 in derselben Form, mit Lage der Messstellen und einer Lizenz |
 | Paderborn | NW | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 an die Stadt Paderborn |
 | Rostock | MV | auf Anfrage herausgegeben |  | Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz für die Veröffentlichung |
 | Saarbrücken | SL | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen für den Mobilitätsplan 2040 und nach älteren Zählungen |
-| Stuttgart | BW | nur Summen oder Mittelwerte offen |  | Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet |
-| Ulm | BW | automatische Zählungen offen | offen, nicht in der Karte | Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras |
+| Stuttgart | BW | nur Summen oder Mittelwerte offen | in der Karte | Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und Querschnittszählungen im Stadtgebiet |
+| Ulm | BW | automatische Zählungen offen | in der Karte | Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras |
 | Wolfsburg | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach einem DAVe-Export und den älteren Zählungen |
 | Wuppertal | NW | auf Anfrage herausgegeben |  | Anfrage nach einem Export aller Zählungen seit 2015 aus der Verkehrsdatenbank (je Intervall, Richtung und Fahrzeugart) |
 | Baienfurt | BW | in der Karte |  | in der Karte |
 | Baindt | BW | in der Karte |  | in der Karte |
 | Berg | BW | in der Karte |  | in der Karte |
 | Berlin | BE | in der Karte | in der Karte | in der Karte |
-| Konstanz | BW | in der Karte |  | Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg. |
+| Konstanz | BW | in der Karte | in der Karte | Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg. |
 | Moers | NW | in der Karte |  | Keine Anfrage nötig |
-| Münster | NW | in der Karte |  | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
+| Münster | NW | in der Karte | in der Karte | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
 | Olpe | NW | in der Karte |  | Keine Anfrage nötig |
 | Potsdam | BB | in der Karte |  | Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und Informationszugangsgesetz Brandenburg. |
 | Ravensburg | BW | in der Karte |  | in der Karte |
@@ -437,13 +437,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Freiburg im Breisgau (BW) – automatische Zählungen offen
 
-**Lage:** Offen sind die Stundenwerte der Rad-Zählstellen seit 2015 (FR.ITZ, Datenlizenz Deutschland – Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte mit Werten vom Mai 2024. Beides sind Dauerzählstellen, nicht in der Karte. Die Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.
+**Lage:** Offen sind die Stundenwerte der Rad-Zählstellen seit 2015 (FR.ITZ, Datenlizenz Deutschland – Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte mit Werten vom Mai 2024. Die Rad-Zählstellen stehen als Dauerzählstellen in der Karte (über MobiData BW), die Sensoren noch nicht. Die Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.
 
 **Empfehlung:** Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch nach denen, die für Verkehrsuntersuchungen erhoben wurden. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
 
 **Weg:** FragDenStaat, LIFG BW
 
-**Dauerzählstellen (offen, nicht in der Karte):** Rad-Zählstellen seit 2015 offen (Rad-Zählsäulen kommen als eigener Schritt), 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte
+**Dauerzählstellen (in der Karte):** Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte
 
 **Kontakt:** Stadt Freiburg im Breisgau · <buergerberatung@stadt.freiburg.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/9204/stadt-freiburg-im-breisgau/)
 
@@ -465,7 +465,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FR.ITZ: Fahrrad-Zählstellen](https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html) · [Meldung Sensoren (24.7.2025)](https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg) · [Geoportal: Verkehrssensoren (WFS)](https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS) · [VU Schlossbergring 2023 (PDF)](https://www.freiburg.de/pb/site/Freiburg/get/params_E-138366714/2151489/231205_Bericht_VU%20Schlossberring.pdf)
+**Belege:** [FR.ITZ: Fahrrad-Zählstellen](https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html) · [Meldung Sensoren (24.7.2025)](https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg) · [Geoportal: Verkehrssensoren (WFS)](https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS) · [VU Schlossbergring 2023 (PDF)](https://www.freiburg.de/pb/site/Freiburg/get/params_E-138366714/2151489/231205_Bericht_VU%20Schlossberring.pdf) · [MobiData BW: Rad-Zählstellen (Eco-Counter)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
 
 
 ## Gera (TH) – erhoben – Anfrage aussichtsreich
@@ -596,13 +596,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Heidelberg (BW) – automatische Zählungen offen
 
-**Lage:** Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved, 15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte ist davon nichts.
+**Lage:** Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved, 15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind davon nur die Rad-Zählstellen (über MobiData BW).
 
 **Empfehlung:** Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden- Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
 
 **Weg:** FragDenStaat, LIFG BW
 
-**Dauerzählstellen (offen, nicht in der Karte):** 12 Zählkameras im Katalog der Datenplattform (CC0), dessen Schnittstelle im November 2026 nicht antwortete; Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte
+**Dauerzählstellen (in der Karte):** Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 12 Zählkameras im Katalog der Datenplattform (CC0), dessen Schnittstelle im November 2026 nicht antwortete, und Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte
 
 **Kontakt:** Stadt Heidelberg · <Koordinierungsstelle-LIFG@Heidelberg.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/9232/stadt-heidelberg/)
 
@@ -633,6 +633,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, LIFG BW
 
+**Dauerzählstellen (in der Karte):** eine Rad-Zählstelle (Erbprinzenstraße, Eco-Counter) über MobiData BW, in der Karte als Dauerzählstelle
+
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Karlsruhe)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -653,7 +655,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/) · [FragDenStaat 2025](https://fragdenstaat.de/anfrage/kreuzung-kriegs-brauer-reinhold-frank-strasse-massgebliches-verkehrsaufkommen/)
+**Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/) · [FragDenStaat 2025](https://fragdenstaat.de/anfrage/kreuzung-kriegs-brauer-reinhold-frank-strasse-massgebliches-verkehrsaufkommen/) · [MobiData BW: Rad-Zählstellen (Eco-Counter)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
 
 
 ## Kassel (HE) – auf Anfrage herausgegeben
@@ -697,6 +699,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, IZG-SH
 
+**Dauerzählstellen (vorhanden, Werte nicht offen):** 87 Kfz-Dauerzählstellen mit Minuten- und Stundenwerten im DatenDock der KielRegion; in der Mobilithek seit Oktober 2026 nur mit Freigabe des Anbieters und eingeschränkter Nutzung (das ältere Angebot unter CC BY 4.0 trägt den Vermerk „[alt]“) – nicht in der Karte
+
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+Kiel)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -717,7 +721,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [kiel.de](https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php) · [FragDenStaat 2025](https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/) · [IZG-SH (ULD)](https://datenschutzzentrum.de/uploads/IZGFolien.pdf)
+**Belege:** [kiel.de](https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php) · [FragDenStaat 2025](https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/) · [IZG-SH (ULD)](https://datenschutzzentrum.de/uploads/IZGFolien.pdf) · [Mobilithek: Angebot seit Oktober 2026](https://mobilithek.info/offers/1045322209798569984) · [Mobilithek: älteres Angebot (CC BY 4.0)](https://mobilithek.info/offers/995318989663924224) · [DatenDock der KielRegion (Dashboard)](https://datendock.civora.org/app/dashboards/30)
 
 
 ## Köln (NW) – nur Summen oder Mittelwerte offen
@@ -914,6 +918,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Bayerisches UIG / Informationsfreiheitssatzung München
 
+**Dauerzählstellen (in der Karte):** sechs Raddauerzählstellen der Stadt: 15-Minuten-Werte seit 2008, in der Karte als Dauerzählstellen
+
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+M%C3%BCnchen+Mobilit%C3%A4tsreferat)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -934,7 +940,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [stadt.muenchen.de](https://stadt.muenchen.de/infos/verkehrsdaten.html) · [DAVe](https://stadt.muenchen.de/news/open-source-anwendung-dave.html)
+**Belege:** [stadt.muenchen.de](https://stadt.muenchen.de/infos/verkehrsdaten.html) · [DAVe](https://stadt.muenchen.de/news/open-source-anwendung-dave.html) · [Open Data München: Raddauerzählstellen](https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen)
 
 
 ## Neubrandenburg (MV) – erhoben – Anfrage aussichtsreich
@@ -1131,6 +1137,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, LIFG BW
 
+**Dauerzählstellen (in der Karte):** Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen
+
 **Kontakt:** Landeshauptstadt Stuttgart · <post@stuttgart.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/9384/stadt-stuttgart/)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -1151,18 +1159,18 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Open Data Stuttgart](https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855)
+**Belege:** [Open Data Stuttgart](https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855) · [MobiData BW: Rad-Zählstellen (Eco-Counter)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
 
 
 ## Ulm (BW) – automatische Zählungen offen
 
-**Lage:** Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch. Dazu kommt die Rad-Dauerzählstelle am Blautalradweg. Beides ist nicht in der Karte; Knotenpunkt- und Querschnittszählungen stehen nicht online.
+**Lage:** Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch, in der Karte sind sie nicht. Die Rad-Dauerzählstelle am Blautalradweg (Lupferbrücke) steht über MobiData BW als Dauerzählstelle in der Karte. Knotenpunkt- und Querschnittszählungen stehen nicht online.
 
 **Empfehlung:** Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
 
 **Weg:** FragDenStaat, LIFG BW
 
-**Dauerzählstellen (offen, nicht in der Karte):** fünf Zählkameras seit Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als Kürzel und ohne Betriebszeiten – nicht in der Karte, weil eine Stunde ohne Zeile nicht von einem Ausfall zu unterscheiden ist; dazu eine Rad-Zählstelle
+**Dauerzählstellen (in der Karte):** Rad-Zählstelle Blautal Lupferbrücke über MobiData BW in der Karte; fünf Zählkameras seit Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als Kürzel und ohne Betriebszeiten – nicht in der Karte, weil eine Stunde ohne Zeile nicht von einem Ausfall zu unterscheiden ist
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Ulm)
 
@@ -1251,6 +1259,20 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Berlin – Dauerzählstellen in der Karte
 
-Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 2025 (Kfz und Lkw laut Detektor), in der Karte als Dauerzählstellen
+Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 2025 (Kfz und Lkw laut Detektor); dazu die Rad-Zählstellen der Senatsverwaltung, Stundenwerte 2012–2025 – beides in der Karte als Dauerzählstellen
 
-**Belege:** [Verkehrsdetektion Berlin (Datensatz)](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin) · [Archiv der Verkehrsdetektion](https://api.viz.berlin.de/daten/verkehrsdetektion)
+**Belege:** [Verkehrsdetektion Berlin (Datensatz)](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin) · [Archiv der Verkehrsdetektion](https://api.viz.berlin.de/daten/verkehrsdetektion) · [Rad-Zählstellen (Senatsverwaltung)](https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/)
+
+
+## Konstanz – Dauerzählstellen in der Karte
+
+sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen
+
+**Belege:** [MobiData BW: Rad-Zählstellen (Eco-Counter)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
+
+
+## Münster – Dauerzählstellen in der Karte
+
+Rad-Zählstellen der Stadt: 15-Minuten-Werte seit 2019, nächtlich aktualisiert, in der Karte als Dauerzählstellen
+
+**Belege:** [GitHub: od-ms/radverkehr-zaehlstellen](https://github.com/od-ms/radverkehr-zaehlstellen) · [Open Data Münster: Fahrradverkehr, tagesaktuelle Daten](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten)
