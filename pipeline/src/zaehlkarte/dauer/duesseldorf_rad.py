@@ -168,7 +168,7 @@ def lies_datei(t: str) -> tuple[list[str], dict[datetime, int], int, int, str | 
     return [kopf[i] for i in spalten], stunden, weg, doppelt, summe
 
 
-def hole(q: dict, pfade: Pfade) -> list[str]:
+def hole(q: dict, pfade: Pfade, pause: float = 60) -> list[str]:
     """Die Jahrespakete ab `ab_jahr` über die Katalog-API von Open.NRW suchen und die CSV-Dateien
     mit offener Lizenz holen – nur neue oder geänderte (der Server lehnt Abrufe oft ab: je Datei
     mehrere Versuche, sonst bleibt der letzte Stand)."""
@@ -200,19 +200,26 @@ def hole(q: dict, pfade: Pfade) -> list[str]:
     abruf = ordner / "abruf.json"
     vorher = (json.loads(abruf.read_text(encoding="utf-8")).get("dateien", {})
               if abruf.exists() else {})
-    neu, fehler = 0, []
-    for datei, info in sorted(gewaehlt.items()):
-        if vorher.get(datei, {}).get("url") == info["url"] and (ordner / datei).exists():
-            continue
-        for versuch in range(4):
-            try:
-                lade(info["url"], ordner / datei)
-                neu += 1
-                break
-            except Exception as e:  # noqa: BLE001 – der Server lehnt oft ab, dann später erneut
-                if versuch == 3:
-                    fehler.append(f"{datei} ({e!r})")
-                time.sleep(5 * (versuch + 1))
+    offen = [d for d, info in sorted(gewaehlt.items())
+             if vorher.get(d, {}).get("url") != info["url"] or not (ordner / d).exists()]
+    neu, fehler = 0, {}
+    # Der Server lehnt Abrufe zeitweise ab („Connection refused“): je Datei drei Versuche, danach
+    # ein zweiter Durchgang für die gescheiterten nach einer Minute; sonst bleibt der letzte Stand
+    for durchgang in range(2):
+        if durchgang and offen:
+            time.sleep(pause)
+        for datei in offen:
+            for versuch in range(3):
+                try:
+                    lade(gewaehlt[datei]["url"], ordner / datei)
+                    neu += 1
+                    fehler.pop(datei, None)
+                    break
+                except Exception as e:  # noqa: BLE001 – gezählt wird, was am Ende fehlt
+                    fehler[datei] = repr(e)
+                    time.sleep(pause / 12 * (versuch + 1))
+        offen = list(fehler)
+    fehler = [f"{d} ({e})" for d, e in fehler.items()]
     abruf.write_text(json.dumps({
         "abgerufen": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "dateien": {k: v for k, v in sorted(gewaehlt.items()) if (ordner / k).exists()},

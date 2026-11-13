@@ -48,7 +48,8 @@ export const hatThema = (d, thema) => DAUER_THEMEN[thema]?.gruppen.some((g) => d
 // München, MobiData BW) die Quintile der jüngsten Schultage aller 578 Rad-Stellen
 // 330 / 720 / 1.290 / 2.460 (je Stufe 18–21 % der Stellen); mit der zweiten Runde (Würzburg,
 // Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum) 642 Stellen: 330 / 720 / 1.290 /
-// 2.420, die Stufen bleiben (je Stufe 18–21 %). Fuß: noch keine Quelle (Platzhalter).
+// 2.420, mit Bonn und Düsseldorf 675 Stellen: 330 / 700 / 1.250 / 2.330 – die Stufen bleiben (je
+// Stufe 18–22 %). Fuß: noch keine Quelle (Platzhalter).
 export const DAUER_STUFEN = {
   kfz: [6000, 10000, 13000, 17000],
   sv: [200, 350, 600, 1000],

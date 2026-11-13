@@ -463,7 +463,9 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
       „other-closed“, Mac-Roman mit CR – nicht übernommen. Der Datensatz „Vortag“ (Stadtplan-CSV)
       ist nur ein Tag. Lage: Der Stadtplan (`stadtplan.bonn.de/geojson?Thema=22640`) antwortete in
       zwei Läufen nur mit 502; OSM hat alle Zählstellen der Stadt als `monitoring_station` mit
-      `ref` = Kennung (5.12 Straßburger Weg ohne Werte, 5.16/5.17 noch ohne Jahresdatei).
+      `ref` = Kennung (5.12 Straßburger Weg ohne Werte, 5.16/5.17 noch ohne Jahresdatei). Auffällig:
+      Mc Cloy Weg Juni–August 2025 mit 10.000–52.000 am Tag (sonst 1.500–4.000), Südbrücke 2020
+      mit 125 bzw. 169 Nulltagen – Hinweis an der Quelle, Werte wie geliefert.
     - **Düsseldorf** (`duesseldorf_rad`, dl-de/by-2-0 ab 2020; 2012–2019 „other-closed“): Pakete
       `wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-JJJJ-d` auf Open.NRW, kein
       Paket 2022; Lizenz je Ressource (2020 Koblenzer stadtauswärts und Koblenzer Straße
@@ -474,8 +476,9 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
       Stellen; 2024 steht bei Fleher Deich und OKB Süd vorn eine Summenspalte. 2021 ist „Koblenzer
       einwärts nach TLS“ eine Kopie von „vor TLS“. Sommerzeit 2020/2021: 3 Uhr zweimal, eine Zeile
       leer („weather_condition_null“); ab 2023 fehlt 2 Uhr; Rückstellung: 2 Uhr einmal. Luegallee
-      2025 und Friedrichstraße 2023 nur mit 0. Kaputte Zeilen (Fleher Deich, Mannesmannufer 2020)
-      gelten als nicht gezählt. Lage: „Standorte der Dauerzählstellen Radverkehr“ (dl-de/zero-2-0,
+      2025 und Friedrichstraße 2023 nur mit 0 (Luegallee 2024 meist). Kaputte Zeilen (Fleher Deich,
+      Mannesmannufer 2020) gelten als nicht gezählt; am Mannesmannufer 2020 stehen viele Stunden
+      doppelt (rund 4.500) – nur 42 Tage vollständig. Lage: „Standorte der Dauerzählstellen Radverkehr“ (dl-de/zero-2-0,
       `Zählstellen_2.csv`), Hofgartenrampe und Luegallee aus OSM; Kölner Straße 186 und
       Pempelforter Straße 42 (ab 2025 mit Werten) ohne Lage. Der Server lehnt Abrufe zeitweise ab
       („Connection refused“) – Wiederholungen und Cache im Workflow.

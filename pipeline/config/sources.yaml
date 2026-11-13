@@ -1129,7 +1129,10 @@ dauer:
         nicht vollständig gezählt. Am Tag der Sommerzeit führt sie 3 Uhr zweimal, einmal leer; die
         leere Zeile zählt nicht.
       - >-
-        Die Quelle führt keinen Status – ob Werte rekonstruiert sind, ist nicht erkennbar.
+        Die Quelle führt keinen Status – ob Werte rekonstruiert sind, ist nicht erkennbar. Ganze
+        Tage mit 0 kommen vor (etwa an der Südbrücke 2020) und erscheinen als gezählte Tage; am Mc
+        Cloy Weg stehen von Juni bis August 2025 Tageswerte von 10.000 bis über 50.000, ein
+        Vielfaches der übrigen Monate – in der Karte wie geliefert.
       - >-
         Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
   duesseldorf_rad:
@@ -1223,9 +1226,10 @@ dauer:
         laut Daten die Summen anderer Zählstellen; Kölner Straße 186 und Pempelforter Straße 42 –
         keine Lage gefunden.
       - >-
-        Die Quelle unterscheidet nicht immer zwischen einem Ausfall und null Rädern: Luegallee 2025
-        und Friedrichstraße 2023 führen jede gezählte Stunde mit 0 – in der Karte als gezählte
-        Tage.
+        Die Quelle unterscheidet nicht immer zwischen einem Ausfall und null Rädern: Friedrichstraße
+        2023 und Luegallee 2025 führen jede gezählte Stunde mit 0, Luegallee schon 2024 die meisten
+        Tage – in der Karte als gezählte Tage. Am Mannesmannufer stehen 2020 viele Stunden doppelt;
+        sie gelten als nicht gezählt.
       - >-
         Lage laut den Standorten der Stadt (dl-de/zero-2-0); Hofgartenrampe und Luegallee fehlen
         dort und stammen aus OpenStreetMap (© OpenStreetMap-Mitwirkende, ODbL).

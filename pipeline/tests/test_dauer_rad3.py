@@ -273,18 +273,22 @@ def test_duesseldorf_hole_und_lese(pfade, monkeypatch):
         "NEU%202020.csv": dd_2020(tage, 1),
         "FD_2024.csv": dd_2024([date(2024, 3, 31), date(2024, 6, 3)], summe_vorn=True),
     }
-    geladen = []
+    geladen, abgelehnt = [], []
 
     def lade(url: str, ziel: Path) -> Path:
+        if url.endswith("FD_2024.csv") and len(abgelehnt) < 3:  # erster Durchgang: abgelehnt
+            abgelehnt.append(url)
+            raise ConnectionError("Connection refused")
         geladen.append(url)
         ziel.parent.mkdir(parents=True, exist_ok=True)
         ziel.write_bytes(inhalt[url.removeprefix("https://dd.example/")].encode("utf-8"))
         return ziel
 
     monkeypatch.setattr(zaehlkarte.fetch, "lade", lade)
-    log = duesseldorf_rad.hole(DD_Q, pfade)
-    assert len(geladen) == 6 and "2020 Koblenzer Straße" in log[0]
-    duesseldorf_rad.hole(DD_Q, pfade)  # unverändert: nichts neu
+    log = duesseldorf_rad.hole(DD_Q, pfade, pause=0)
+    assert len(geladen) == 6 and len(abgelehnt) == 3 and "Fehler" not in log[0]
+    assert "2020 Koblenzer Straße" in log[0]
+    duesseldorf_rad.hole(DD_Q, pfade, pause=0)  # unverändert: nichts neu
     assert len(geladen) == 6
     assert (pfade.roh / "duesseldorf_rad" / "2020" / "BA IN 2020.csv").exists()
     b = duesseldorf_rad.Bericht()

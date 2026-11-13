@@ -17,8 +17,9 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen.
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
   Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen und die Rad-Zählstellen von
-  Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Leipzig, Rostock, dem
-  Rhein-Kreis Neuss und 27 Städten und Landkreisen in Baden-Württemberg – die Karte zeigt die
+  Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
+  Leipzig, Rostock, dem Rhein-Kreis Neuss und 27 Städten und Landkreisen in Baden-Württemberg –
+  die Karte zeigt die
   Tagessumme an einem wählbaren Tag, je Stelle die Tagessummen der ganzen Reihe und den
   Tagesgang des Tags.
 - **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
@@ -65,6 +66,8 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Bochum (Stadt Bochum) | Zählstellen für Rad- und Fußverkehr (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte nur Rad als Stundenwerte je Zählstelle; 8 Zählstellen | 2018–2026; wöchentlich ergänzt | offen im [GitLab der Stadt auf openCode.de](https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter) (eine CSV je Zählstelle) | dl-de/by-2-0, „Stadt Bochum“ – laut Stadt nicht für Produkte oder Services im direkten Wettbewerb zu Eco-Counter |
 | Leipzig (Verkehrs- und Tiefbauamt) | Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte je Zählstelle; die Quelle hält nur 31 Tage vor, die Zählkarte hebt sie auf (Gedächtnis); 25 Zählstellen | ab dem ersten Abruf (31 Tage zurück, Oktober 2026); wöchentlich ergänzt | offen im WFS des Geoportals ([Datensatz](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei)) | dl-de/by-2-0, „Stadt Leipzig“ |
 | Rostock (Hanse- und Universitätsstadt Rostock) | Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle, beide Richtungen zusammen, in der Karte Stundenwerte; 17 Zählstellen | 2012–2026; wöchentlich ergänzt | offen auf [OpenData.HRO](https://www.opendata-hro.de/dataset/radmonitore) (eine CSV) | CC0 1.0 |
+| Bonn (Bundesstadt Bonn) | Fahrradmessstellen (Eco-Counter): Stundenwerte je Zählstelle, die Brücken je Seite; Summen der Brücken nicht übernommen; 14 Zählstellen, Lage aus OpenStreetMap | 2020–2025 ohne 2022 (nur je Kanal); einmal im Jahr ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025) (eine CSV je Jahr) | CC0 1.0 |
+| Düsseldorf (Landeshauptstadt Düsseldorf) | Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung, in der Karte die Summe je Zählstelle; Stellen, die nur Summen anderer sind, nicht übernommen; 19 Zählstellen | 2020–2025 ohne 2022 (nicht veröffentlicht); einmal im Jahr ergänzt | offen über [Open.NRW](https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d) (eine CSV je Zählstelle und Jahr), Lage aus den [Standorten der Stadt](https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d) | dl-de/by-2-0, „Landeshauptstadt Düsseldorf“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`. Rund 1.500 Berliner Zählungen haben noch keine
@@ -130,8 +133,9 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
 - Standard: je Stelle die Tagessumme ihres **jüngsten vollständig gezählten Schultags** – so
   stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume sich nicht überschneiden
   (Berlins Detektoren enden im Juni 2025, seine Rad-Zählstellen im Dezember 2025, der
-  Rhein-Kreis Neuss im Juli 2026; Essen liefert vierteljährlich, die übrigen Quellen sind
-  aktuell). Der Tag steht bei jedem Wert
+  Rhein-Kreis Neuss im Juli 2026, Bonn und Düsseldorf im Dezember 2025 – sie liefern einmal im
+  Jahr; Essen liefert vierteljährlich, die übrigen Quellen sind aktuell). Der Tag steht bei jedem
+  Wert
   (Hover, Seitenleiste, CSV), die Legende nennt die Tage je Quelle – Stellen, die nicht mehr
   zählen, zeigen ihren letzten Schultag, in Berlin auch Jahre zurück. Schultag und Ferien gelten
   je Land.
@@ -173,19 +177,21 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   sind nicht übernommen. Lizenz CC BY-NC 4.0: Weiterverwendung nur nicht kommerziell; die
   Lizenz steht an der Quelle, in der Seitenleiste und in jeder Zeile des CSV-Exports.
 - Rad-Zählstellen (Berlin, Münster, Aachen, München, Baden-Württemberg über MobiData BW,
-  Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Bochum, Leipzig, Rostock):
+  Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Bochum, Bonn, Düsseldorf, Leipzig, Rostock):
   Zählschleifen oder -säulen, meist von Eco-Counter; in der Karte je Zählstelle beide
   Richtungen zusammen. Gezählt ist nur, was die Quelle als Rohwert oder geprüften Wert führt –
   Werte, die sie als rekonstruiert (Ausfall rechnerisch aufgefüllt), unplausibel, gelöscht oder
   von Hand geändert kennzeichnet, gelten als nicht gezählt (Münster und Würzburg: Status je
   Wert, Rhein-Kreis Neuss: „modified“, Berlin: Zellfarbe). MobiData BW, Dortmund, Essen, Bochum,
-  Leipzig und Rostock führen keinen Status; rekonstruierte Werte können in den Stundenwerten
-  stecken, und wo die Quelle einen Ausfall als 0 führt (Würzburg-Heidingsfeld, Rhein-Kreis
-  Neuss, Rostock), erscheint der Tag als gezählt (Hinweis an der Quelle). Zählstellen, die Rad
+  Bonn, Düsseldorf, Leipzig und Rostock führen keinen Status; rekonstruierte Werte können in den
+  Stundenwerten stecken, und wo die Quelle einen Ausfall als 0 führt (Würzburg-Heidingsfeld,
+  Rhein-Kreis Neuss, Rostock, Bonn, Düsseldorf), erscheint der Tag als gezählt (Hinweis an der
+  Quelle). Zählstellen, die Rad
   und Fuß zusammen zählen, fehlen, ebenso eine Zählstelle des Landes; Bochum zählt Fuß getrennt,
   in der Karte steht nur Rad. Bei der Rückstellung der Uhr fassen MobiData BW, Münster und
   Berlin beide Stunden 2–3 Uhr unter einer Uhrzeit zusammen; in München, Würzburg, Dortmund,
-  Essen, Bochum, Rostock und im Rhein-Kreis Neuss fehlt eine davon oder ist unvollständig – der
+  Essen, Bochum, Bonn, Düsseldorf, Rostock und im Rhein-Kreis Neuss fehlt eine davon oder ist
+  unvollständig – der
   Tag gilt als nicht vollständig gezählt. Leipzig führt beide Stunden, Aachen liefert UTC.
 
 ## Aufbau
@@ -198,7 +204,7 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
   src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta, readi_urbanpulse;
                             Rad: mobidata_eco, muenster_rad, aachen_rad, berlin_rad,
                             muenchen_rad, ods_eco, dortmund_rad, essen_rad, bochum_rad,
-                            leipzig_rad, rostock_rad), eigener Bau
+                            bonn_rad, duesseldorf_rad, leipzig_rad, rostock_rad), eigener Bau
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
