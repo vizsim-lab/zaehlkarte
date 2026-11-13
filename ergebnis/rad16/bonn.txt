@@ -1,0 +1,706 @@
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2025 | http://www.opendefinition.org/licenses/cc-zero | geändert 2026-07-10
+
+  - Fahrradmesstellen Ergebnisse Radzählungen Stundenauswertung | https://opendata.bonn.de/sites/default/files/fahrradzaehldatenbonn2025.csv | 601156 Bytes
+    Spalten (17): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', 'Kennedybrücke', 'Nordbrücke', 'Südbrücke']
+    Zeilen mit Zeit: 8760; übrige: {}
+    Abstände (Minuten): {60.0: 8757, 120.0: 1, 0.0: 1}; von 2025-01-01 00:00:00 bis 2025-12-31 23:00:00
+    Zeilen je Tag: {24: 365}
+    doppelte Zeitpunkte: 1 ['2025-03-30 03:00:00']
+    30.03.2025 00:00 [30.0, 66.0, 0.0, 0.0, 11.0, 4.0, 0.0, 2.0, 9.0, 0.0, 9.0, 8.0, 0.0, 2.0, 96.0, 0.0, 15.0]
+    30.03.2025 01:00 [13.0, 28.0, 0.0, 0.0, 4.0, 1.0, 0.0, 0.0, 4.0, 0.0, 2.0, 5.0, 0.0, 0.0, 41.0, 0.0, 5.0]
+    30.03.2025 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    30.03.2025 03:00 [4.0, 34.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 38.0, 0.0, 0.0]
+    30.03.2025 04:00 [8.0, 14.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 22.0, 0.0, 0.0]
+    26.10.2025 00:00 [19.0, 32.0, 0.0, 1.0, 2.0, 5.0, 0.0, 1.0, 7.0, 1.0, 3.0, 3.0, 0.0, 9.0, 51.0, 1.0, 7.0]
+    26.10.2025 01:00 [15.0, 39.0, 1.0, 0.0, 5.0, 5.0, 0.0, 1.0, 3.0, 1.0, 3.0, 10.0, 1.0, 1.0, 54.0, 1.0, 10.0]
+    26.10.2025 02:00 [9.0, 19.0, 0.0, 0.0, 5.0, 1.0, 1.0, 0.0, 2.0, 0.0, 4.0, 2.0, 0.0, 3.0, 28.0, 0.0, 6.0]
+    26.10.2025 03:00 [3.0, 10.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 13.0, 0.0, 0.0]
+    26.10.2025 04:00 [2.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 5.0, 0.0, 0.0]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 1063013, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 1593021, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 325790, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 164845, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 566031, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 459423, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 216279, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 599945, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 801633, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 180452, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 351453, nicht ganzzahlig 0
+    [11] 5.13 BN - Wilhelm-Spiritus-Ufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 986027, nicht ganzzahlig 0
+    [12] 5.14 BN - Mc Cloy Weg: 7249 Werte, 1511 leer, 0 unlesbar, 01.01.2025 – 30.10.2025, Summe 1878110, nicht ganzzahlig 0
+    [13] 5.15 BN - Weg auf Damm Neil: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 748310, nicht ganzzahlig 0
+    [14] Kennedybrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 2656034, nicht ganzzahlig 0
+    [15] Nordbrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 490635, nicht ganzzahlig 0
+    [16] Südbrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2025 – 31.12.2025, Summe 1025454, nicht ganzzahlig 0
+    Summe: [14] Kennedybrücke = [0] 5.01 BN - Kennedybrücke (Nordseite) + [1] 5.02 BN - Kennedybrücke (Südseite) Barometer an 100.0% von 8759
+    Summe: [15] Nordbrücke = [2] 5.03 BN - Nordbrücke (Südseite) + [3] 5.04 BN - Nordbrücke (Nordseite) an 100.0% von 8759
+    Summe: [16] Südbrücke = [4] 5.05 BN - Südbrücke (Südseite) + [5] 5.06 BN - Südbrücke (Nordseite) an 100.0% von 8759
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2024 | http://www.opendefinition.org/licenses/cc-zero | geändert 2025-06-06
+
+  - Fahrradmesstellen Ergebnisse Radzählungen 15 Minutenauswertung 2024 | https://opendata.bonn.de/sites/default/files/MessergebnisseFahrradzaehlstationen2024.csv | 1968022 Bytes
+    Spalten (17): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.12 BN - Straßburger Weg', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', ' Summe', '']
+    Zeilen mit Zeit: 35136; übrige: {'Summe': 1}
+    Abstände (Minuten): {15.0: 35133, 75.0: 1, -45.0: 1}; von 2024-01-01 00:00:00 bis 2024-12-31 23:45:00
+    Zeilen je Tag: {96: 366}
+    doppelte Zeitpunkte: 4 ['2024-03-31 03:00:00', '2024-03-31 03:15:00', '2024-03-31 03:30:00', '2024-03-31 03:45:00']
+    31.03.2024 00:00 [1.0, 6.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, None, 2.0, None, None, None, 3.0, 0.0, 14.0, None]
+    31.03.2024 00:15 [4.0, 5.0, 0.0, 1.0, 2.0, 1.0, 0.0, 3.0, None, 1.0, None, None, None, 0.0, 0.0, 17.0, None]
+    31.03.2024 00:30 [2.0, 10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, None, 0.0, None, None, None, 0.0, 0.0, 16.0, None]
+    31.03.2024 00:45 [1.0, 7.0, 0.0, 0.0, 1.0, 1.0, 0.0, 2.0, None, 1.0, None, None, None, 0.0, 0.0, 13.0, None]
+    31.03.2024 01:00 [3.0, 7.0, 0.0, 0.0, 2.0, 1.0, 0.0, 1.0, None, 0.0, None, None, None, 0.0, 0.0, 14.0, None]
+    31.03.2024 01:15 [4.0, 7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.0, None, 0.0, None, None, None, 0.0, 0.0, 17.0, None]
+    31.03.2024 01:30 [5.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 0.0, 8.0, None]
+    31.03.2024 01:45 [2.0, 5.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 3.0, 11.0, None]
+    31.03.2024 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    31.03.2024 03:15 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    31.03.2024 03:30 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    31.03.2024 03:45 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    31.03.2024 03:00 [2.0, 3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 0.0, 6.0, None]
+    31.03.2024 03:15 [0.0, 8.0, 1.0, 0.0, 0.0, 2.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 0.0, 11.0, None]
+    31.03.2024 03:30 [0.0, 2.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 0.0, 5.0, None]
+    31.03.2024 03:45 [2.0, 6.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 0.0, 9.0, None]
+    31.03.2024 04:00 [1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, None, 0.0, None, None, None, 0.0, 0.0, 4.0, None]
+    31.03.2024 04:15 [0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 2.0, 4.0, None]
+    31.03.2024 04:30 [9.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, 0.0, None, None, None, 0.0, 0.0, 13.0, None]
+    31.03.2024 04:45 [1.0, 2.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, None, 0.0, None, None, None, 1.0, 0.0, 6.0, None]
+    27.10.2024 00:00 [10.0, 17.0, 1.0, 0.0, 6.0, 2.0, 0.0, 0.0, 2.0, None, None, None, None, 0.0, 3.0, 41.0, None]
+    27.10.2024 00:15 [12.0, 23.0, 4.0, 0.0, 7.0, 1.0, 0.0, 2.0, 6.0, None, None, None, None, 0.0, 1.0, 56.0, None]
+    27.10.2024 00:30 [6.0, 12.0, 2.0, 0.0, 3.0, 0.0, 2.0, 2.0, 1.0, None, None, None, None, 0.0, 0.0, 28.0, None]
+    27.10.2024 00:45 [10.0, 17.0, 1.0, 0.0, 2.0, 1.0, 2.0, 8.0, 0.0, None, None, None, None, 1.0, 0.0, 42.0, None]
+    27.10.2024 01:00 [6.0, 9.0, 3.0, 0.0, 1.0, 3.0, 1.0, 0.0, 2.0, None, None, None, None, 0.0, 5.0, 30.0, None]
+    27.10.2024 01:15 [2.0, 8.0, 2.0, 0.0, 2.0, 1.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 1.0, 16.0, None]
+    27.10.2024 01:30 [9.0, 13.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 24.0, None]
+    27.10.2024 01:45 [2.0, 3.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 8.0, None]
+    27.10.2024 02:00 [13.0, 13.0, 3.0, 0.0, 3.0, 1.0, 1.0, 1.0, 1.0, None, None, None, None, 0.0, 1.0, 37.0, None]
+    27.10.2024 02:15 [7.0, 10.0, 1.0, 0.0, 4.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 22.0, None]
+    27.10.2024 02:30 [7.0, 10.0, 3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, None, None, None, None, 1.0, 0.0, 22.0, None]
+    27.10.2024 02:45 [4.0, 9.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, None, None, None, None, 0.0, 1.0, 16.0, None]
+    27.10.2024 03:00 [0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, 0.0, None, None, None, None, 0.0, 0.0, 5.0, None]
+    27.10.2024 03:15 [2.0, 1.0, 2.0, 0.0, 2.0, 0.0, 2.0, 1.0, 0.0, None, None, None, None, 0.0, 0.0, 10.0, None]
+    27.10.2024 03:30 [1.0, 3.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, None, None, None, None, 1.0, 0.0, 7.0, None]
+    27.10.2024 03:45 [2.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 5.0, None]
+    27.10.2024 04:00 [0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 2.0, None]
+    27.10.2024 04:15 [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 4.0, None]
+    27.10.2024 04:30 [2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 3.0, None]
+    27.10.2024 04:45 [0.0, 1.0, 0.0, 0.0, 3.0, 0.0, 1.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 5.0, None]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 1040309, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 1605109, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 289784, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 153706, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 509760, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 428330, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 217341, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 594577, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 13378 Werte, 21758 leer, 0 unlesbar, 14.08.2024 – 31.12.2024, Summe 250236, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 25318 Werte, 9818 leer, 0 unlesbar, 01.01.2024 – 12.11.2024, Summe 148961, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 0 Werte, 35136 leer, 0 unlesbar
+    [11] 5.12 BN - Straßburger Weg: 0 Werte, 35136 leer, 0 unlesbar
+    [12] 5.13 BN - Wilhelm-Spiritus-Ufer: 2057 Werte, 33079 leer, 0 unlesbar, 01.01.2024 – 28.02.2024, Summe 14550, nicht ganzzahlig 0
+    [13] 5.14 BN - Mc Cloy Weg: 33071 Werte, 2065 leer, 0 unlesbar, 01.01.2024 – 10.12.2024, Summe 378763, nicht ganzzahlig 0
+    [14] 5.15 BN - Weg auf Damm Neil: 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 666529, nicht ganzzahlig 0
+    [15]  Summe: 35132 Werte, 4 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 6297955, nicht ganzzahlig 0
+    [16] : 0 Werte, 35136 leer, 0 unlesbar
+
+  - Fahrradmesstellen Ergebnisse Radzählungen Stundenauswertung | https://opendata.bonn.de/sites/default/files/MessergebnisseFahrradzaehlstationenStundenauswertung2024.csv | 537867 Bytes
+    Spalten (17): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.12 BN - Straßburger Weg', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', ' Summe', '']
+    Zeilen mit Zeit: 8784; übrige: {'Summe': 1}
+    Abstände (Minuten): {60.0: 8781, 120.0: 1, 0.0: 1}; von 2024-01-01 00:00:00 bis 2024-12-31 23:00:00
+    Zeilen je Tag: {24: 366}
+    doppelte Zeitpunkte: 1 ['2024-03-31 03:00:00']
+    31.03.2024 00:00 [8.0, 28.0, 0.0, 1.0, 4.0, 2.0, 0.0, 10.0, None, 4.0, None, None, None, 3.0, 0.0, 60.0, None]
+    31.03.2024 01:00 [14.0, 22.0, 0.0, 0.0, 3.0, 1.0, 0.0, 7.0, None, 0.0, None, None, None, 0.0, 3.0, 50.0, None]
+    31.03.2024 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    31.03.2024 03:00 [4.0, 19.0, 3.0, 1.0, 1.0, 3.0, 0.0, 0.0, None, 0.0, None, None, None, 0.0, 0.0, 31.0, None]
+    31.03.2024 04:00 [11.0, 8.0, 0.0, 0.0, 1.0, 2.0, 0.0, 2.0, None, 0.0, None, None, None, 1.0, 2.0, 27.0, None]
+    27.10.2024 00:00 [38.0, 69.0, 8.0, 0.0, 18.0, 4.0, 4.0, 12.0, 9.0, None, None, None, None, 1.0, 4.0, 167.0, None]
+    27.10.2024 01:00 [19.0, 33.0, 8.0, 0.0, 4.0, 5.0, 1.0, 0.0, 2.0, None, None, None, None, 0.0, 6.0, 78.0, None]
+    27.10.2024 02:00 [31.0, 42.0, 7.0, 0.0, 8.0, 1.0, 1.0, 2.0, 2.0, None, None, None, None, 1.0, 2.0, 97.0, None]
+    27.10.2024 03:00 [5.0, 9.0, 2.0, 0.0, 3.0, 1.0, 3.0, 3.0, 0.0, None, None, None, None, 1.0, 0.0, 27.0, None]
+    27.10.2024 04:00 [3.0, 4.0, 0.0, 0.0, 3.0, 1.0, 3.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 14.0, None]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 1040309, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 1605109, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 289784, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 153706, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 509760, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 428330, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 217341, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 594577, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 3345 Werte, 5439 leer, 0 unlesbar, 14.08.2024 – 31.12.2024, Summe 250236, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 6333 Werte, 2451 leer, 0 unlesbar, 01.01.2024 – 12.11.2024, Summe 148961, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 0 Werte, 8784 leer, 0 unlesbar
+    [11] 5.12 BN - Straßburger Weg: 0 Werte, 8784 leer, 0 unlesbar
+    [12] 5.13 BN - Wilhelm-Spiritus-Ufer: 515 Werte, 8269 leer, 0 unlesbar, 01.01.2024 – 28.02.2024, Summe 14550, nicht ganzzahlig 0
+    [13] 5.14 BN - Mc Cloy Weg: 8268 Werte, 516 leer, 0 unlesbar, 01.01.2024 – 10.12.2024, Summe 378763, nicht ganzzahlig 0
+    [14] 5.15 BN - Weg auf Damm Neil: 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 666529, nicht ganzzahlig 0
+    [15]  Summe: 8783 Werte, 1 leer, 0 unlesbar, 01.01.2024 – 31.12.2024, Summe 6297955, nicht ganzzahlig 0
+    [16] : 0 Werte, 8784 leer, 0 unlesbar
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2023 | http://www.opendefinition.org/licenses/cc-zero | geändert 2024-01-19
+
+  - Messergebnisse Fahrrad Dauerzählstellen Stundenauswertung 2023 | https://opendata.bonn.de/sites/default/files/Fahrradzaehlstellen2023_stuendlich.csv | 578023 Bytes
+    Spalten (17): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', 'Kennedybrücke', 'Nordbrücke', 'Südbrücke']
+    Zeilen mit Zeit: 8760; übrige: {}
+    Abstände (Minuten): {60.0: 8757, 120.0: 1, 0.0: 1}; von 2023-01-01 00:00:00 bis 2023-12-31 23:00:00
+    Zeilen je Tag: {24: 365}
+    doppelte Zeitpunkte: 1 ['2023-03-26 03:00:00']
+    26.03.2023 00:00 [0.0, 46.0, 6.0, 5.0, 14.0, 7.0, 1.0, 6.0, 7.0, 5.0, 6.0, 6.0, 4.0, 7.0, 46.0, 11.0, 21.0]
+    26.03.2023 01:00 [0.0, 38.0, 1.0, 2.0, 8.0, 5.0, 0.0, 4.0, 3.0, 1.0, 3.0, 3.0, 3.0, 4.0, 38.0, 3.0, 13.0]
+    26.03.2023 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    26.03.2023 03:00 [0.0, 47.0, 1.0, 0.0, 0.0, 4.0, 0.0, 1.0, 2.0, 3.0, 1.0, 9.0, 0.0, 2.0, 47.0, 1.0, 4.0]
+    26.03.2023 04:00 [0.0, 18.0, 3.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 4.0, 4.0, 0.0, 1.0, 1.0, 18.0, 3.0, 1.0]
+    29.10.2023 00:00 [27.0, 43.0, 3.0, 1.0, 10.0, 7.0, 0.0, 2.0, None, 5.0, None, 6.0, 3.0, 4.0, 70.0, 4.0, 17.0]
+    29.10.2023 01:00 [26.0, 54.0, 6.0, 0.0, 9.0, 4.0, 0.0, 3.0, None, 2.0, None, 9.0, 1.0, 7.0, 80.0, 6.0, 13.0]
+    29.10.2023 02:00 [14.0, 40.0, 3.0, 6.0, 8.0, 1.0, 0.0, 2.0, None, 1.0, None, 2.0, 3.0, 2.0, 54.0, 9.0, 9.0]
+    29.10.2023 03:00 [3.0, 11.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, 1.0, 0.0, 0.0, 14.0, 3.0, 0.0]
+    29.10.2023 04:00 [4.0, 1.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, None, 0.0, None, 4.0, 1.0, 0.0, 5.0, 0.0, 3.0]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 7343 Werte, 1417 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 683090, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 1672505, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 309820, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 176488, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 559627, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 456247, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 244163, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 600395, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 5255 Werte, 3505 leer, 0 unlesbar, 01.01.2023 – 07.08.2023, Summe 412148, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 231005, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 3803 Werte, 4957 leer, 0 unlesbar, 01.01.2023 – 11.06.2023, Summe 146940, nicht ganzzahlig 0
+    [11] 5.13 BN - Wilhelm-Spiritus-Ufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 944633, nicht ganzzahlig 0
+    [12] 5.14 BN - Mc Cloy Weg: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 416594, nicht ganzzahlig 0
+    [13] 5.15 BN - Weg auf Damm Neil: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 749770, nicht ganzzahlig 0
+    [14] Kennedybrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 2355595, nicht ganzzahlig 0
+    [15] Nordbrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 486308, nicht ganzzahlig 0
+    [16] Südbrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 1015874, nicht ganzzahlig 0
+    Summe: [14] Kennedybrücke = [0] 5.01 BN - Kennedybrücke (Nordseite) + [1] 5.02 BN - Kennedybrücke (Südseite) Barometer an 100.0% von 7343
+    Summe: [15] Nordbrücke = [2] 5.03 BN - Nordbrücke (Südseite) + [3] 5.04 BN - Nordbrücke (Nordseite) an 100.0% von 8759
+    Summe: [16] Südbrücke = [4] 5.05 BN - Südbrücke (Südseite) + [5] 5.06 BN - Südbrücke (Nordseite) an 100.0% von 8759
+
+  - Fahrradmessstellen Ergebnisse Radzählungen 15 Minutenauswertung 2023 | https://opendata.bonn.de/sites/default/files/Fahrradzaehlstellen2023_15minutenauswertung_0.csv | 2062376 Bytes
+    Spalten (17): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', 'Kennedybrücke', 'Nordbrücke', 'Südbrücke']
+    Zeilen mit Zeit: 35040; übrige: {}
+    Abstände (Minuten): {15.0: 35037, 75.0: 1, -45.0: 1}; von 2023-01-01 00:00:00 bis 2023-12-31 23:45:00
+    Zeilen je Tag: {96: 365}
+    doppelte Zeitpunkte: 4 ['2023-03-26 03:00:00', '2023-03-26 03:15:00', '2023-03-26 03:30:00', '2023-03-26 03:45:00']
+    26.03.2023 00:00 [0.0, 9.0, 0.0, 0.0, 2.0, 2.0, 0.0, 1.0, 1.0, 0.0, 1.0, 2.0, 2.0, 2.0, 9.0, 0.0, 4.0]
+    26.03.2023 00:15 [0.0, 12.0, 3.0, 0.0, 2.0, 0.0, 0.0, 4.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 12.0, 3.0, 2.0]
+    26.03.2023 00:30 [0.0, 10.0, 2.0, 4.0, 4.0, 3.0, 1.0, 0.0, 3.0, 2.0, 4.0, 2.0, 0.0, 2.0, 10.0, 6.0, 7.0]
+    26.03.2023 00:45 [0.0, 15.0, 1.0, 1.0, 6.0, 2.0, 0.0, 1.0, 3.0, 2.0, 1.0, 1.0, 2.0, 3.0, 15.0, 2.0, 8.0]
+    26.03.2023 01:00 [0.0, 8.0, 0.0, 0.0, 1.0, 2.0, 0.0, 2.0, 0.0, 0.0, 2.0, 1.0, 2.0, 0.0, 8.0, 0.0, 3.0]
+    26.03.2023 01:15 [0.0, 18.0, 1.0, 1.0, 2.0, 1.0, 0.0, 0.0, 3.0, 1.0, 0.0, 0.0, 1.0, 3.0, 18.0, 2.0, 3.0]
+    26.03.2023 01:30 [0.0, 8.0, 0.0, 0.0, 4.0, 2.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 8.0, 0.0, 6.0]
+    26.03.2023 01:45 [0.0, 4.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 0.0, 4.0, 1.0, 1.0]
+    26.03.2023 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    26.03.2023 03:15 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    26.03.2023 03:30 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    26.03.2023 03:45 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    26.03.2023 03:00 [0.0, 15.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 4.0, 0.0, 0.0, 15.0, 0.0, 2.0]
+    26.03.2023 03:15 [0.0, 18.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 4.0, 0.0, 1.0, 18.0, 0.0, 0.0]
+    26.03.2023 03:30 [0.0, 9.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 9.0, 1.0, 0.0]
+    26.03.2023 03:45 [0.0, 5.0, 0.0, 0.0, 0.0, 2.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 5.0, 0.0, 2.0]
+    26.03.2023 04:00 [0.0, 8.0, 2.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 8.0, 2.0, 1.0]
+    26.03.2023 04:15 [0.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 4.0, 0.0, 0.0]
+    26.03.2023 04:30 [0.0, 3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 3.0, 1.0, 0.0]
+    26.03.2023 04:45 [0.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0]
+    29.10.2023 00:00 [9.0, 8.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, None, 0.0, None, 1.0, 2.0, 2.0, 17.0, 1.0, 2.0]
+    29.10.2023 00:15 [12.0, 14.0, 0.0, 0.0, 2.0, 2.0, 0.0, 1.0, None, 4.0, None, 0.0, 0.0, 1.0, 26.0, 0.0, 4.0]
+    29.10.2023 00:30 [4.0, 13.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, None, 1.0, None, 4.0, 1.0, 1.0, 17.0, 0.0, 2.0]
+    29.10.2023 00:45 [2.0, 8.0, 2.0, 1.0, 7.0, 2.0, 0.0, 1.0, None, 0.0, None, 1.0, 0.0, 0.0, 10.0, 3.0, 9.0]
+    29.10.2023 01:00 [6.0, 12.0, 2.0, 0.0, 3.0, 0.0, 0.0, 1.0, None, 1.0, None, 2.0, 0.0, 3.0, 18.0, 2.0, 3.0]
+    29.10.2023 01:15 [7.0, 16.0, 2.0, 0.0, 0.0, 0.0, 0.0, 2.0, None, 0.0, None, 1.0, 0.0, 4.0, 23.0, 2.0, 0.0]
+    29.10.2023 01:30 [9.0, 12.0, 2.0, 0.0, 3.0, 2.0, 0.0, 0.0, None, 0.0, None, 4.0, 0.0, 0.0, 21.0, 2.0, 5.0]
+    29.10.2023 01:45 [4.0, 14.0, 0.0, 0.0, 3.0, 2.0, 0.0, 0.0, None, 1.0, None, 2.0, 1.0, 0.0, 18.0, 0.0, 5.0]
+    29.10.2023 02:00 [6.0, 18.0, 0.0, 3.0, 3.0, 0.0, 0.0, 0.0, None, 1.0, None, 0.0, 0.0, 1.0, 24.0, 3.0, 3.0]
+    29.10.2023 02:15 [1.0, 9.0, 0.0, 0.0, 3.0, 0.0, 0.0, 2.0, None, 0.0, None, 1.0, 1.0, 0.0, 10.0, 0.0, 3.0]
+    29.10.2023 02:30 [4.0, 9.0, 1.0, 3.0, 2.0, 0.0, 0.0, 0.0, None, 0.0, None, 1.0, 2.0, 1.0, 13.0, 4.0, 2.0]
+    29.10.2023 02:45 [3.0, 4.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, None, 0.0, None, 0.0, 0.0, 0.0, 7.0, 2.0, 1.0]
+    29.10.2023 03:00 [1.0, 3.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, 0.0, 0.0, 0.0, 4.0, 1.0, 0.0]
+    29.10.2023 03:15 [2.0, 2.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, 1.0, 0.0, 0.0, 4.0, 2.0, 0.0]
+    29.10.2023 03:30 [0.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, 0.0, 0.0, 0.0, 4.0, 0.0, 0.0]
+    29.10.2023 03:45 [0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0]
+    29.10.2023 04:00 [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+    29.10.2023 04:15 [2.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, None, 0.0, None, 2.0, 0.0, 0.0, 3.0, 0.0, 1.0]
+    29.10.2023 04:30 [0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, None, 0.0, None, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0]
+    29.10.2023 04:45 [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, None, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 29371 Werte, 5669 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 683090, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 1672505, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 309820, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 176488, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 559627, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 456247, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 244163, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 600395, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 21020 Werte, 14020 leer, 0 unlesbar, 01.01.2023 – 07.08.2023, Summe 412148, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 231005, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 15199 Werte, 19841 leer, 0 unlesbar, 01.01.2023 – 11.06.2023, Summe 146940, nicht ganzzahlig 0
+    [11] 5.13 BN - Wilhelm-Spiritus-Ufer: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 944633, nicht ganzzahlig 0
+    [12] 5.14 BN - Mc Cloy Weg: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 416594, nicht ganzzahlig 0
+    [13] 5.15 BN - Weg auf Damm Neil: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 749770, nicht ganzzahlig 0
+    [14] Kennedybrücke: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 2355595, nicht ganzzahlig 0
+    [15] Nordbrücke: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 486308, nicht ganzzahlig 0
+    [16] Südbrücke: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2023 – 31.12.2023, Summe 1015874, nicht ganzzahlig 0
+    Summe: [14] Kennedybrücke = [0] 5.01 BN - Kennedybrücke (Nordseite) + [1] 5.02 BN - Kennedybrücke (Südseite) Barometer an 100.0% von 29371
+    Summe: [15] Nordbrücke = [2] 5.03 BN - Nordbrücke (Südseite) + [3] 5.04 BN - Nordbrücke (Nordseite) an 100.0% von 35036
+    Summe: [16] Südbrücke = [4] 5.05 BN - Südbrücke (Südseite) + [5] 5.06 BN - Südbrücke (Nordseite) an 100.0% von 35036
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2022 | http://www.opendefinition.org/licenses/cc-zero | geändert 2023-03-15
+
+  - Messergebnisse Fahrrad Dauerzählstellen 2022 | https://opendata.bonn.de/sites/default/files/FahrradBonn2022.csv | 6031140 Bytes
+    Spalten (76): ['5.03 BN - Nordbrücke (Südseite)', '5.03 BN - Nordbrücke (Südseite)', '5.03 BN - Nordbrücke (Südseite)', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.05 BN - Südbrücke (Südseite)', '5.05 BN - Südbrücke (Südseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.06 BN - Südbrücke (Nordseite)', '5.06 BN - Südbrücke (Nordseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.07 BN - Estermannufer', '5.07 BN - Estermannufer', '5.07 BN - Estermannufer', '5.10 BN - Bröhltalweg', '5.10 BN - Bröhltalweg', '5.10 BN - Bröhltalweg', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.11 BN - Brühler Straße', '5.11 BN - Brühler Straße', '5.11 BN - Brühler Straße', '5.12 BN - Straßburger Weg', '5.12 BN - Straßburger Weg', '5.08 BN - Von-Sandt-Ufer', '5.08 BN - Von-Sandt-Ufer', '5.08 BN - Von-Sandt-Ufer', '5.08 BN - Von-Sandt-Ufer', '5.08 BN - Von-Sandt-Ufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.09 BN - Rhenusallee', '5.09 BN - Rhenusallee', '5.09 BN - Rhenusallee', '5.09 BN - Rhenusallee', '5.09 BN - Rhenusallee', '5.01 BN - Kennedybrücke (Nordseite)', '5.01 BN - Kennedybrücke (Nordseite)', '5.01 BN - Kennedybrücke (Nordseite)', '5.01 BN - Kennedybrücke (Nordseite)', '5.01 BN - Kennedybrücke (Nordseite)', '5.01 BN - Kennedybrücke (Nordseite)', '5.01 BN - Kennedybrücke (Nordseite)', '5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.02 BN - Kennedybrücke (Südseite) Barometer', 'Kennedybrücke', 'Kennedybrücke', '5.14 BN - Mc Cloy Weg', '5.14 BN - Mc Cloy Weg', '5.14 BN - Mc Cloy Weg', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', '5.15 BN - Weg auf Damm Neil', '5.15 BN - Weg auf Damm Neil', '5.15 BN - Weg auf Damm Neil', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.13 BN - Wilhelm-Spiritus-Ufer', 'Südbrücke', 'Südbrücke', 'Nordbrücke', 'Nordbrücke']
+    Zeilen mit Zeit: 35040; übrige: {}
+    Abstände (Minuten): {15.0: 35039}; von 2022-01-01 00:00:00 bis 2022-12-31 23:45:00
+    Zeilen je Tag: {96: 365}
+    doppelte Zeitpunkte: 0 []
+    27.03.2022 00:00 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 1.0, 0.0, 1.0, None, None, 0.0, 0.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 2.0, 1.0, 15.0, 2.0, 6.0, 21.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 0.0]
+    27.03.2022 00:15 [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 1.0, 1.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 2.0, 0.0, 4.0, 5.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 4.0, 5.0, 0.0, 15.0, 2.0, 21.0, 19.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0]
+    27.03.2022 00:30 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 1.0, 0.0, None, None, 0.0, 2.0, 1.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 6.0, 2.0, 5.0, 9.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 2.0, 1.0, 1.0, 0.0, 2.0, 0.0, 2.0]
+    27.03.2022 00:45 [0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, None, None, None, 0.0, 2.0, 1.0, 3.0, None, None, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 5.0, 0.0, 0.0, 1.0, 3.0, 0.0, 0.0, 0.0, 1.0, 2.0, 2.0, 9.0, 2.0, 9.0, 17.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 4.0]
+    27.03.2022 01:00 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 4.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 5.0, 0.0, 7.0, 7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+    27.03.2022 01:15 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, None, None, None, None, 0.0, 1.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 6.0, 0.0, 3.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 7.0, 3.0, 7.0, 15.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    27.03.2022 01:30 [0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 2.0, 1.0, 3.0, 2.0, 6.0, 8.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0]
+    27.03.2022 01:45 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 2.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 5.0, 3.0, 2.0, 10.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 0.0]
+    27.03.2022 02:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    27.03.2022 02:15 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    27.03.2022 02:30 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    27.03.2022 02:45 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    27.03.2022 03:00 [0.0, 2.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.0, 4.0, 2.0, 17.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 3.0]
+    27.03.2022 03:15 [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 4.0, 1.0, 10.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 4.0, 2.0, 1.0, 0.0]
+    27.03.2022 03:30 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 2.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 4.0, 3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    27.03.2022 03:45 [0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, 2.0, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0]
+    27.03.2022 04:00 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 1.0, 0.0, None, None, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 4.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 3.0, 2.0, 7.0, 7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+    27.03.2022 04:15 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 2.0, 0.0, 1.0, 0.0, 2.0, 1.0, 1.0, 0.0, 0.0, 6.0, 4.0, 0.0, 3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    27.03.2022 04:30 [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0, 0.0, 4.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0]
+    27.03.2022 04:45 [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 2.0, 1.0, 1.0, 0.0]
+    30.10.2022 00:00 [0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0, None, None, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 1.0, 0.0, 1.0, 3.0, 1.0, 17.0, 4.0, 4.0, 23.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 2.0, 1.0, 0.0, 2.0, 0.0, 1.0, 1.0, 0.0]
+    30.10.2022 00:15 [0.0, 1.0, 0.0, 4.0, 0.0, 1.0, 0.0, 0.0, None, None, None, None, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, 0.0, None, None, 0.0, 3.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 1.0, 0.0, 2.0, 2.0, 0.0, 16.0, 3.0, 4.0, 20.0, 0.0, 0.0, 0.0, 0.0, 1.0, 2.0, 1.0, 1.0, 0.0, 1.0, 0.0, 3.0, 1.0, 1.0, 0.0, 6.0]
+    30.10.2022 00:30 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, None, None, None, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 2.0, None, None, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 13.0, 2.0, 3.0, 15.0, 1.0, 0.0, 0.0, 0.0, 1.0, 2.0, 0.0, 1.0, 1.0, 0.0, 1.0, 2.0, 1.0, 0.0, 0.0, 1.0]
+    30.10.2022 00:45 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 7.0, 2.0, 1.0, 9.0, 1.0, 2.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0]
+    30.10.2022 01:00 [0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, None, None, None, None, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 11.0, 4.0, 1.0, 15.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 2.0, 0.0, 1.0, 1.0, 0.0, 3.0, 0.0, 2.0, 0.0, 2.0]
+    30.10.2022 01:15 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0, 1.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 2.0, 0.0, 0.0, 1.0, 11.0, 3.0, 2.0, 15.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+    30.10.2022 01:30 [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 2.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 2.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 11.0, 2.0, 0.0, 15.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 2.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0]
+    30.10.2022 01:45 [0.0, 1.0, 0.0, 3.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 1.0, 0.0, 0.0, 2.0, 2.0, 0.0, 16.0, 4.0, 5.0, 20.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 3.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 4.0]
+    30.10.2022 02:00 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 4.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 1.0, 0.0, 1.0, 2.0, 3.0, 3.0, 10.0, 6.0, 7.0, 19.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 1.0, 1.0, 2.0, 2.0, 0.0, 0.0]
+    30.10.2022 02:15 [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, None, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 1.0, 0.0, 1.0, 3.0, 1.0, 10.0, 0.0, 4.0, 12.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 2.0, 0.0, 1.0, 3.0, 0.0, 0.0, 1.0, 0.0]
+    30.10.2022 02:30 [0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 11.0, 2.0, 2.0, 14.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0]
+    30.10.2022 02:45 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, None, None, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+    30.10.2022 03:00 [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+    30.10.2022 03:15 [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    30.10.2022 03:30 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 2.0, 1.0, 2.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    30.10.2022 03:45 [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0, 0.0, 1.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+    30.10.2022 04:00 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 3.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    30.10.2022 04:15 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    30.10.2022 04:30 [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, None, None, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, 0.0, 1.0, 0.0, 1.0]
+    30.10.2022 04:45 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, None, None, None, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, None, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0]
+    [0] 5.03 BN - Nordbrücke (Südseite) / 5.03 BN - Nordbrücke (Südseite) Radfahrer Ri. Beuel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 69022, nicht ganzzahlig 0
+    [1] 5.03 BN - Nordbrücke (Südseite) / 5.03 BN - Nordbrücke (Südseite) Radfahrer Ri. Auerberg: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 17243, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite) / 5.03 BN - Nordbrücke (Südseite) [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 26593, nicht ganzzahlig 0
+    [3] 5.03 BN - Nordbrücke (Südseite) / 5.03 BN - Nordbrücke (Südseite) [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 200775, nicht ganzzahlig 0
+    [4] 5.04 BN - Nordbrücke (Nordseite) / 5.04 BN - Nordbrücke (Nordseite) Radfahrer Ri. Beuel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 26115, nicht ganzzahlig 0
+    [5] 5.04 BN - Nordbrücke (Nordseite) / 5.04 BN - Nordbrücke (Nordseite) Radfahrer Ri. Auerberg: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 39666, nicht ganzzahlig 0
+    [6] 5.04 BN - Nordbrücke (Nordseite) / 5.04 BN - Nordbrücke (Nordseite) [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 6196, nicht ganzzahlig 0
+    [7] 5.04 BN - Nordbrücke (Nordseite) / 5.04 BN - Nordbrücke (Nordseite) [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 116057, nicht ganzzahlig 0
+    [8] 5.05 BN - Südbrücke (Südseite) / 5.05 BN - Südbrücke (Südseite) Radfahrer Ri. Gronau: 22632 Werte, 12408 leer, 0 unlesbar, 01.01.2022 – 25.08.2022, Summe 195211, nicht ganzzahlig 0
+    [9] 5.05 BN - Südbrücke (Südseite) / 5.05 BN - Südbrücke (Südseite) Radfahrer Ri. Ramersdorf: 22632 Werte, 12408 leer, 0 unlesbar, 01.01.2022 – 25.08.2022, Summe 18264, nicht ganzzahlig 0
+    [10] 5.05 BN - Südbrücke (Südseite) / 5.05 BN - Südbrücke (Südseite) [Bike IN]: 22632 Werte, 12408 leer, 0 unlesbar, 01.01.2022 – 25.08.2022, Summe 22520, nicht ganzzahlig 0
+    [11] 5.05 BN - Südbrücke (Südseite) / 5.05 BN - Südbrücke (Südseite) [Bike OUT]: 22632 Werte, 12408 leer, 0 unlesbar, 01.01.2022 – 25.08.2022, Summe 159759, nicht ganzzahlig 0
+    [12] 5.06 BN - Südbrücke (Nordseite) / 5.06 BN - Südbrücke (Nordseite) Radfahrer Ri. Gronau: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 218720, nicht ganzzahlig 0
+    [13] 5.06 BN - Südbrücke (Nordseite) / 5.06 BN - Südbrücke (Nordseite) Radfahrer Ri. Ri. Ramersdorf: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 18763, nicht ganzzahlig 0
+    [14] 5.06 BN - Südbrücke (Nordseite) / 5.06 BN - Südbrücke (Nordseite) [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 42949, nicht ganzzahlig 0
+    [15] 5.06 BN - Südbrücke (Nordseite) / 5.06 BN - Südbrücke (Nordseite) [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 174413, nicht ganzzahlig 0
+    [16] 5.07 BN - Estermannufer / 5.07 BN - Estermannufer Radfahrer Ri. Bonn: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 99474, nicht ganzzahlig 0
+    [17] 5.07 BN - Estermannufer / 5.07 BN - Estermannufer Radfahrer Ri. Köln: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 26246, nicht ganzzahlig 0
+    [18] 5.07 BN - Estermannufer / 5.07 BN - Estermannufer [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 29868, nicht ganzzahlig 0
+    [19] 5.07 BN - Estermannufer / 5.07 BN - Estermannufer [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 109670, nicht ganzzahlig 0
+    [20] 5.10 BN - Bröhltalweg / 5.10 BN - Bröhltalweg Radfahrer Ri. Villich: 22604 Werte, 12436 leer, 0 unlesbar, 10.05.2022 – 31.12.2022, Summe 69084, nicht ganzzahlig 0
+    [21] 5.10 BN - Bröhltalweg / 5.10 BN - Bröhltalweg Radfahrer Ri. Beuel: 22604 Werte, 12436 leer, 0 unlesbar, 10.05.2022 – 31.12.2022, Summe 15371, nicht ganzzahlig 0
+    [22] 5.10 BN - Bröhltalweg / 5.10 BN - Bröhltalweg [Bike IN]: 22604 Werte, 12436 leer, 0 unlesbar, 10.05.2022 – 31.12.2022, Summe 11417, nicht ganzzahlig 0
+    [23] 5.10 BN - Bröhltalweg / 5.10 BN - Bröhltalweg [Bike OUT]: 22604 Werte, 12436 leer, 0 unlesbar, 10.05.2022 – 31.12.2022, Summe 65712, nicht ganzzahlig 0
+    [24] 5.11 BN - Brühler Straße / 5.11 BN - Brühler Straße Radfahrer Ri. Süden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 34800, nicht ganzzahlig 0
+    [25] 5.11 BN - Brühler Straße / 5.11 BN - Brühler Straße Radfahrer Ri. Norden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 119650, nicht ganzzahlig 0
+    [26] 5.11 BN - Brühler Straße / 5.11 BN - Brühler Straße [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 140608, nicht ganzzahlig 0
+    [27] 5.11 BN - Brühler Straße / 5.11 BN - Brühler Straße [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 53805, nicht ganzzahlig 0
+    [28] 5.12 BN - Straßburger Weg / 5.12 BN - Straßenburger Weg Radfahrer Ri. Süden: 0 Werte, 35040 leer, 0 unlesbar
+    [29] 5.12 BN - Straßburger Weg / 5.12 BN - Straßenburger Weg Radfahrer Ri. Norden: 0 Werte, 35040 leer, 0 unlesbar
+    [30] 5.08 BN - Von-Sandt-Ufer / 5.08 BN - Von-Sandt-Ufer Radfahrer Ri. Bad Godesberg: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 53124, nicht ganzzahlig 0
+    [31] 5.08 BN - Von-Sandt-Ufer / 5.08 BN - Von-Sandt-Ufer Radfahrer Ri. Bonn: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 244911, nicht ganzzahlig 0
+    [32] 5.08 BN - Von-Sandt-Ufer / 5.08 BN - Von-Sandt-Ufer [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 208916, nicht ganzzahlig 0
+    [33] 5.08 BN - Von-Sandt-Ufer / 5.08 BN - Von-Sandt-Ufer [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 92259, nicht ganzzahlig 0
+    [34] 5.08 BN - Von-Sandt-Ufer / 5.08 BN - Von-Sandt-Ufer [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 50636, nicht ganzzahlig 0
+    [35] 5.08 BN - Von-Sandt-Ufer / 5.08 BN - Von-Sandt-Ufer [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 4539, nicht ganzzahlig 0
+    [36] 5.09 BN - Rhenusallee / 5.09 BN - Rhenusallee Radfahrer Ri. Beuel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 9464, nicht ganzzahlig 0
+    [37] 5.09 BN - Rhenusallee / 5.09 BN - Rhenusallee Radfahrer Ri. Oberkassel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 79864, nicht ganzzahlig 0
+    [38] 5.09 BN - Rhenusallee / 5.09 BN - Rhenusallee [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 64092, nicht ganzzahlig 0
+    [39] 5.09 BN - Rhenusallee / 5.09 BN - Rhenusallee [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 49823, nicht ganzzahlig 0
+    [40] 5.09 BN - Rhenusallee / 5.09 BN - Rhenusallee [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 35466, nicht ganzzahlig 0
+    [41] 5.09 BN - Rhenusallee / 5.09 BN - Rhenusallee [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 4154, nicht ganzzahlig 0
+    [42] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) Radfahrer Ri. Innenstadt: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 15162, nicht ganzzahlig 0
+    [43] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) Radfahrer Ri. Beuel: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 2197, nicht ganzzahlig 0
+    [44] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) [Bike IN]: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 56675, nicht ganzzahlig 0
+    [45] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) [Bike IN]: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 477732, nicht ganzzahlig 0
+    [46] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) [Bike IN]: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 0, nicht ganzzahlig 0
+    [47] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) [Bike OUT]: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 6289, nicht ganzzahlig 0
+    [48] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) [Bike OUT]: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 27637, nicht ganzzahlig 0
+    [49] 5.01 BN - Kennedybrücke (Nordseite) / 5.01 BN - Kennedybrücke (Nordseite) [Bike OUT]: 23952 Werte, 11088 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 125915, nicht ganzzahlig 0
+    [50] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) IN: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 4071, nicht ganzzahlig 0
+    [51] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) Barometer Radfahrer Ri. Beuel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 19003, nicht ganzzahlig 0
+    [52] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) Barometer [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 10214, nicht ganzzahlig 0
+    [53] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) Barometer [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 68724, nicht ganzzahlig 0
+    [54] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) Barometer [Bike IN]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 385484, nicht ganzzahlig 0
+    [55] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) Barometer [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 59600, nicht ganzzahlig 0
+    [56] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) Barometer [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 1046641, nicht ganzzahlig 0
+    [57] 5.02 BN - Kennedybrücke (Südseite) Barometer / 5.02 BN - Kennedybrücke (Südseite) Barometer [Bike OUT]: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 133370, nicht ganzzahlig 0
+    [58] Kennedybrücke / Kennedybrücke Radfahrer Ri. Innenstadt: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 1018062, nicht ganzzahlig 0
+    [59] Kennedybrücke / Kennedybrücke Radfahrer Ri. Beuel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 1420652, nicht ganzzahlig 0
+    [60] 5.14 BN - Mc Cloy Weg / 5.14 BN - Mc Cloy Weg Radfahrer Ri. Remagen: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 216588, nicht ganzzahlig 0
+    [61] 5.14 BN - Mc Cloy Weg / 5.14 BN - Mc Cloy Weg Radfahrer Ri. Bonn: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 62255, nicht ganzzahlig 0
+    [62] 5.14 BN - Mc Cloy Weg / 5.14 BN - Mc Cloy Weg Radfahrer Ri. Remagen: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 23725, nicht ganzzahlig 0
+    [63] 5.14 BN - Mc Cloy Weg / 5.14 BN - Mc Cloy Weg Radfahrer Ri. Bonn: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 165268, nicht ganzzahlig 0
+    [64] 5.15 BN - Weg auf Damm Neil / 5.15 BN - Weg auf Damm Neil Radfahrer Ri. Norden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 349170, nicht ganzzahlig 0
+    [65] 5.15 BN - Weg auf Damm Neil / 5.15 BN - Weg auf Damm Neil Radfahrer Ri. Süden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 28235, nicht ganzzahlig 0
+    [66] 5.15 BN - Weg auf Damm Neil / 5.15 BN - Weg auf Damm Neil Radfahrer Ri. Norden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 48015, nicht ganzzahlig 0
+    [67] 5.15 BN - Weg auf Damm Neil / 5.15 BN - Weg auf Damm Neil Radfahrer Ri. Süden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 347679, nicht ganzzahlig 0
+    [68] 5.13 BN - Wilhelm-Spiritus-Ufer / 5.13 BN - Wilhelm-Spiritus-Ufer Radfahrer Ri. Süden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 446792, nicht ganzzahlig 0
+    [69] 5.13 BN - Wilhelm-Spiritus-Ufer / 5.13 BN - Wilhelm-Spiritus-Ufer Radfahrer Ri. Norden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 41341, nicht ganzzahlig 0
+    [70] 5.13 BN - Wilhelm-Spiritus-Ufer / 5.13 BN - Wilhelm-Spiritus-Ufer Radfahrer Ri. Süden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 39275, nicht ganzzahlig 0
+    [71] 5.13 BN - Wilhelm-Spiritus-Ufer / 5.13 BN - Wilhelm-Spiritus-Ufer Radfahrer Ri. Norden: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 445891, nicht ganzzahlig 0
+    [72] Südbrücke / Südbrücke Radfahrer Ri. Oberkassel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 410907, nicht ganzzahlig 0
+    [73] Südbrücke / Südbrücke Radfahrer Ri. Rheinaue: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 439692, nicht ganzzahlig 0
+    [74] Nordbrücke / Nordbrücke Radfahrer Ri. Beuel: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 127926, nicht ganzzahlig 0
+    [75] Nordbrücke / Nordbrücke Radfahrer Ri. Auerberg: 35036 Werte, 4 leer, 0 unlesbar, 01.01.2022 – 31.12.2022, Summe 373741, nicht ganzzahlig 0
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2021 | http://www.opendefinition.org/licenses/cc-zero | geändert 2022-04-25
+
+  - Messergebnisse Fahrrad Dauerzählstellen 2021 | https://opendata.bonn.de/sites/default/files/ergebnissefahrradzaehlungen2021.csv | 668840 Bytes
+    Spalten (20): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.12 BN - Straßburger Weg', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', 'Kennedybrücke', 'Nordbrücke', 'Südbrücke', ' Summe', '']
+    Zeilen mit Zeit: 8088; übrige: {'1. Febr. 2021 00:00': 1, '1. Febr. 2021 01:00': 1, '1. Febr. 2021 02:00': 1, '1. Febr. 2021 03:00': 1, '1. Febr. 2021 04:00': 1}
+    Abstände (Minuten): {60.0: 8084, 40380.0: 1, 120.0: 1, 0.0: 1}; von 2021-01-01 00:00:00 bis 2021-12-31 23:00:00
+    Zeilen je Tag: {24: 337}
+    doppelte Zeitpunkte: 1 ['2021-03-28 03:00:00']
+    28.03.2021 00:00 [14.0, 28.0, 4.0, 1.0, 7.0, 3.0, 0.0, 2.0, 2.0, 2.0, 3.0, None, 7.0, 0.0, 1.0, 42.0, 5.0, 10.0, 131.0, None]
+    28.03.2021 01:00 [18.0, 9.0, 5.0, 0.0, 2.0, 2.0, 0.0, 3.0, 5.0, 5.0, 2.0, None, 0.0, 1.0, 2.0, 27.0, 5.0, 4.0, 90.0, None]
+    28.03.2021 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    28.03.2021 03:00 [4.0, 14.0, 2.0, 2.0, 1.0, 0.0, 0.0, 2.0, 2.0, 0.0, 2.0, None, 1.0, 0.0, 3.0, 18.0, 4.0, 1.0, 56.0, None]
+    28.03.2021 04:00 [7.0, 7.0, 3.0, 0.0, 1.0, 2.0, 0.0, 0.0, 1.0, 0.0, 1.0, None, 2.0, 0.0, 2.0, 14.0, 3.0, 3.0, 46.0, None]
+    31.10.2021 00:00 [24.0, 48.0, 5.0, 0.0, 5.0, 6.0, 1.0, 5.0, 6.0, None, 5.0, None, 6.0, 6.0, 6.0, 72.0, 5.0, 11.0, 211.0, None]
+    31.10.2021 01:00 [28.0, 37.0, 2.0, 3.0, 2.0, 2.0, 0.0, 1.0, 2.0, None, 3.0, None, 6.0, 0.0, 9.0, 65.0, 5.0, 4.0, 169.0, None]
+    31.10.2021 02:00 [17.0, 62.0, 2.0, 0.0, 7.0, 1.0, 3.0, 4.0, 4.0, None, 6.0, None, 10.0, 1.0, 4.0, 79.0, 2.0, 8.0, 210.0, None]
+    31.10.2021 03:00 [1.0, 10.0, 1.0, 0.0, 2.0, 0.0, 0.0, 0.0, 1.0, None, 0.0, None, 0.0, 0.0, 1.0, 11.0, 1.0, 2.0, 30.0, None]
+    31.10.2021 04:00 [2.0, 8.0, 0.0, 0.0, 2.0, 0.0, 0.0, 1.0, 1.0, None, 3.0, None, 2.0, 0.0, 2.0, 10.0, 0.0, 2.0, 33.0, None]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 876740, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 1396891, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 279547, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 163265, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 450873, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 393446, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 8039 Werte, 49 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 234919, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 568025, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 720198, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 6191 Werte, 1897 leer, 0 unlesbar, 01.01.2021 – 13.10.2021, Summe 166720, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 8058 Werte, 30 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 272481, nicht ganzzahlig 0
+    [11] 5.12 BN - Straßburger Weg: 0 Werte, 8088 leer, 0 unlesbar
+    [12] 5.13 BN - Wilhelm-Spiritus-Ufer: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 832822, nicht ganzzahlig 0
+    [13] 5.14 BN - Mc Cloy Weg: 7343 Werte, 745 leer, 0 unlesbar, 01.03.2021 – 31.12.2021, Summe 386941, nicht ganzzahlig 0
+    [14] 5.15 BN - Weg auf Damm Neil: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 719308, nicht ganzzahlig 0
+    [15] Kennedybrücke: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 2273631, nicht ganzzahlig 0
+    [16] Nordbrücke: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 442812, nicht ganzzahlig 0
+    [17] Südbrücke: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 844319, nicht ganzzahlig 0
+    [18]  Summe: 8087 Werte, 1 leer, 0 unlesbar, 01.01.2021 – 31.12.2021, Summe 11022938, nicht ganzzahlig 0
+    [19] : 0 Werte, 8088 leer, 0 unlesbar
+    Summe: [15] Kennedybrücke = [0] 5.01 BN - Kennedybrücke (Nordseite) + [1] 5.02 BN - Kennedybrücke (Südseite) Barometer an 100.0% von 8087
+    Summe: [16] Nordbrücke = [2] 5.03 BN - Nordbrücke (Südseite) + [3] 5.04 BN - Nordbrücke (Nordseite) an 100.0% von 8087
+    Summe: [17] Südbrücke = [4] 5.05 BN - Südbrücke (Südseite) + [5] 5.06 BN - Südbrücke (Nordseite) an 100.0% von 8087
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2020 | http://www.opendefinition.org/licenses/cc-zero | geändert 2024-08-23
+
+  - Messergebnisse Fahrrad Dauerzählstellen 15 Minutenauswertung 2020 | https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2020_15MinAuswertung.csv | 2148470 Bytes
+    Spalten (18): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.12 BN - Straßburger Weg', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', 'Kennedybrücke', 'Nordbrücke', 'Südbrücke']
+    Zeilen mit Zeit: 35041; übrige: {}
+    Abstände (Minuten): {15.0: 35038, 75.0: 1, -45.0: 1}; von 2020-01-01 00:00:00 bis 2020-12-31 00:00:00
+    Zeilen je Tag: {96: 365, 1: 1}
+    2020-12-31: 1 Zeilen
+    doppelte Zeitpunkte: 4 ['2020-03-29 03:00:00', '2020-03-29 03:15:00', '2020-03-29 03:30:00', '2020-03-29 03:45:00']
+    29.03.2020 00:00 [3.0, 2.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, None, 0.0, 0.0, 0.0, 5.0, 2.0, 0.0]
+    29.03.2020 00:15 [1.0, 7.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, None, 2.0, 0.0, 0.0, 8.0, 0.0, 0.0]
+    29.03.2020 00:30 [0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 5.0, 0.0, 0.0]
+    29.03.2020 00:45 [1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0]
+    29.03.2020 01:00 [1.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, 0.0, 0.0, 0.0, 2.0, 1.0, 0.0]
+    29.03.2020 01:15 [0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, None, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0]
+    29.03.2020 01:30 [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 1.0, 0.0, 0.0, 2.0, 0.0, 0.0]
+    29.03.2020 01:45 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    29.03.2020 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    29.03.2020 03:15 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    29.03.2020 03:30 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    29.03.2020 03:45 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    29.03.2020 03:00 [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+    29.03.2020 03:15 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0]
+    29.03.2020 03:30 [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+    29.03.2020 03:45 [1.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 1.0, 0.0, 0.0, 4.0, 0.0, 0.0]
+    29.03.2020 04:00 [1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0]
+    29.03.2020 04:15 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    29.03.2020 04:30 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    29.03.2020 04:45 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, None, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    25.10.2020 00:00 [8.0, 8.0, 0.0, 0.0, 2.0, 5.0, 0.0, 0.0, 3.0, 0.0, 1.0, None, 3.0, 0.0, 1.0, 16.0, 0.0, 7.0]
+    25.10.2020 00:15 [6.0, 14.0, 0.0, 0.0, 3.0, 4.0, 0.0, 0.0, 0.0, 0.0, 4.0, None, 2.0, 1.0, 1.0, 20.0, 0.0, 7.0]
+    25.10.2020 00:30 [6.0, 17.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 4.0, 1.0, 2.0, None, 3.0, 0.0, 1.0, 23.0, 1.0, 2.0]
+    25.10.2020 00:45 [2.0, 7.0, 1.0, 1.0, 6.0, 4.0, 0.0, 3.0, 2.0, 0.0, 1.0, None, 0.0, 0.0, 0.0, 9.0, 2.0, 10.0]
+    25.10.2020 01:00 [9.0, 9.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 2.0, 1.0, 6.0, None, 5.0, 1.0, 2.0, 18.0, 0.0, 1.0]
+    25.10.2020 01:15 [13.0, 3.0, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 2.0, None, 0.0, 0.0, 0.0, 16.0, 5.0, 0.0]
+    25.10.2020 01:30 [3.0, 9.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 7.0, None, 1.0, 0.0, 1.0, 12.0, 3.0, 0.0]
+    25.10.2020 01:45 [6.0, 7.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 2.0, None, 0.0, 1.0, 1.0, 13.0, 1.0, 0.0]
+    25.10.2020 02:00 [4.0, 11.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 3.0, 1.0, 3.0, None, 0.0, 0.0, 5.0, 15.0, 0.0, 1.0]
+    25.10.2020 02:15 [9.0, 7.0, 4.0, 0.0, 0.0, 0.0, 0.0, 1.0, 3.0, 0.0, 2.0, None, 1.0, 0.0, 4.0, 16.0, 4.0, 0.0]
+    25.10.2020 02:30 [13.0, 4.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 3.0, None, 1.0, 0.0, 2.0, 17.0, 0.0, 2.0]
+    25.10.2020 02:45 [5.0, 4.0, 0.0, 0.0, 2.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, None, 2.0, 0.0, 0.0, 9.0, 0.0, 2.0]
+    25.10.2020 03:00 [1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, None, 1.0, 0.0, 0.0, 3.0, 0.0, 0.0]
+    25.10.2020 03:15 [0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, None, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0]
+    25.10.2020 03:30 [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0]
+    25.10.2020 03:45 [0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 2.0, 0.0, 1.0, 1.0, 0.0, 0.0]
+    25.10.2020 04:00 [1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0]
+    25.10.2020 04:15 [0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0]
+    25.10.2020 04:30 [1.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0]
+    25.10.2020 04:45 [0.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 3.0, 0.0, 0.0]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 1053943, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 1633261, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 346254, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 198375, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 34921 Werte, 120 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 353957, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 241663, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 323562, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 765083, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 905321, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 268166, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 335743, nicht ganzzahlig 0
+    [11] 5.12 BN - Straßburger Weg: 0 Werte, 35041 leer, 0 unlesbar
+    [12] 5.13 BN - Wilhelm-Spiritus-Ufer: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 1071977, nicht ganzzahlig 0
+    [13] 5.14 BN - Mc Cloy Weg: 30766 Werte, 4275 leer, 0 unlesbar, 01.01.2020 – 16.11.2020, Summe 523648, nicht ganzzahlig 0
+    [14] 5.15 BN - Weg auf Damm Neil: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 897934, nicht ganzzahlig 0
+    [15] Kennedybrücke: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 2687204, nicht ganzzahlig 0
+    [16] Nordbrücke: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 544629, nicht ganzzahlig 0
+    [17] Südbrücke: 35037 Werte, 4 leer, 0 unlesbar, 01.01.2020 – 31.12.2020, Summe 595620, nicht ganzzahlig 0
+    Summe: [15] Kennedybrücke = [0] 5.01 BN - Kennedybrücke (Nordseite) + [1] 5.02 BN - Kennedybrücke (Südseite) Barometer an 100.0% von 35037
+    Summe: [16] Nordbrücke = [2] 5.03 BN - Nordbrücke (Südseite) + [3] 5.04 BN - Nordbrücke (Nordseite) an 100.0% von 35037
+    Summe: [17] Südbrücke = [4] 5.05 BN - Südbrücke (Südseite) + [5] 5.06 BN - Südbrücke (Nordseite) an 100.0% von 34921
+
+  - Messergebnisse Fahrrad Dauerzählstellen Stundenauswertung 2020 | https://opendata.bonn.de/sites/default/files/ErgebnisseFahrradmessstellenBonn2020_1hAuswertung.csv | 599215 Bytes
+    Spalten (18): ['5.01 BN - Kennedybrücke (Nordseite)', '5.02 BN - Kennedybrücke (Südseite) Barometer', '5.03 BN - Nordbrücke (Südseite)', '5.04 BN - Nordbrücke (Nordseite)', '5.05 BN - Südbrücke (Südseite)', '5.06 BN - Südbrücke (Nordseite)', '5.07 BN - Estermannufer', '5.08 BN - Von-Sandt-Ufer', '5.09 BN - Rhenusallee', '5.10 BN - Bröhltalweg', '5.11 BN - Brühler Straße', '5.12 BN - Straßburger Weg', '5.13 BN - Wilhelm-Spiritus-Ufer', '5.14 BN - Mc Cloy Weg', '5.15 BN - Weg auf Damm Neil', 'Kennedybrücke', 'Nordbrücke', 'Südbrücke']
+    Zeilen mit Zeit: 8760; übrige: {}
+    Abstände (Minuten): {60.0: 8757, 120.0: 1, 0.0: 1}; von 2020-01-01 00:00:00 bis 2020-12-30 23:00:00
+    Zeilen je Tag: {24: 365}
+    doppelte Zeitpunkte: 1 ['2020-03-29 03:00:00']
+    29.03.2020 00:00 [5.0, 14.0, 3.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 3.0, None, 2.0, 0.0, 0.0, 19.0, 3.0, 0.0]
+    29.03.2020 01:00 [2.0, 2.0, 1.0, 2.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 2.0, None, 1.0, 0.0, 0.0, 4.0, 3.0, 0.0]
+    29.03.2020 03:00 [None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None, None]
+    29.03.2020 03:00 [2.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, None, 1.0, 0.0, 1.0, 6.0, 0.0, 0.0]
+    29.03.2020 04:00 [1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, None, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0]
+    25.10.2020 00:00 [22.0, 46.0, 2.0, 1.0, 12.0, 14.0, 0.0, 4.0, 9.0, 1.0, 8.0, None, 8.0, 1.0, 3.0, 68.0, 3.0, 26.0]
+    25.10.2020 01:00 [31.0, 28.0, 9.0, 0.0, 1.0, 0.0, 1.0, 0.0, 3.0, 5.0, 17.0, None, 6.0, 2.0, 4.0, 59.0, 9.0, 1.0]
+    25.10.2020 02:00 [31.0, 26.0, 4.0, 0.0, 5.0, 0.0, 0.0, 4.0, 6.0, 1.0, 8.0, None, 4.0, 0.0, 11.0, 57.0, 4.0, 5.0]
+    25.10.2020 03:00 [2.0, 5.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, None, 3.0, 0.0, 1.0, 7.0, 0.0, 1.0]
+    25.10.2020 04:00 [2.0, 6.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, None, 0.0, 0.0, 0.0, 8.0, 1.0, 1.0]
+    [0] 5.01 BN - Kennedybrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 1053941, nicht ganzzahlig 0
+    [1] 5.02 BN - Kennedybrücke (Südseite) Barometer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 1633258, nicht ganzzahlig 0
+    [2] 5.03 BN - Nordbrücke (Südseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 346253, nicht ganzzahlig 0
+    [3] 5.04 BN - Nordbrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 198375, nicht ganzzahlig 0
+    [4] 5.05 BN - Südbrücke (Südseite): 8730 Werte, 30 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 353955, nicht ganzzahlig 0
+    [5] 5.06 BN - Südbrücke (Nordseite): 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 241663, nicht ganzzahlig 0
+    [6] 5.07 BN - Estermannufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 323562, nicht ganzzahlig 0
+    [7] 5.08 BN - Von-Sandt-Ufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 765083, nicht ganzzahlig 0
+    [8] 5.09 BN - Rhenusallee: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 905321, nicht ganzzahlig 0
+    [9] 5.10 BN - Bröhltalweg: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 268166, nicht ganzzahlig 0
+    [10] 5.11 BN - Brühler Straße: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 335741, nicht ganzzahlig 0
+    [11] 5.12 BN - Straßburger Weg: 0 Werte, 8760 leer, 0 unlesbar
+    [12] 5.13 BN - Wilhelm-Spiritus-Ufer: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 1071975, nicht ganzzahlig 0
+    [13] 5.14 BN - Mc Cloy Weg: 7692 Werte, 1068 leer, 0 unlesbar, 01.01.2020 – 16.11.2020, Summe 523648, nicht ganzzahlig 0
+    [14] 5.15 BN - Weg auf Damm Neil: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 897934, nicht ganzzahlig 0
+    [15] Kennedybrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 2687199, nicht ganzzahlig 0
+    [16] Nordbrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 544628, nicht ganzzahlig 0
+    [17] Südbrücke: 8759 Werte, 1 leer, 0 unlesbar, 01.01.2020 – 30.12.2020, Summe 595618, nicht ganzzahlig 0
+    Summe: [15] Kennedybrücke = [0] 5.01 BN - Kennedybrücke (Nordseite) + [1] 5.02 BN - Kennedybrücke (Südseite) Barometer an 100.0% von 8759
+    Summe: [16] Nordbrücke = [2] 5.03 BN - Nordbrücke (Südseite) + [3] 5.04 BN - Nordbrücke (Nordseite) an 100.0% von 8759
+    Summe: [17] Südbrücke = [4] 5.05 BN - Südbrücke (Südseite) + [5] 5.06 BN - Südbrücke (Nordseite) an 100.0% von 8730
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2019 | http://www.opendefinition.org/licenses/cc-zero | geändert 2021-04-09
+
+# Fahrradmessstellen Ergebnisse Radzählungen 2018 | http://www.opendefinition.org/licenses/cc-zero | geändert 2026-10-01
+
+unbekannte Monatsnamen: {'Febr': 672}
+
+2020: Stundenwert = Summe der vier Viertelstunden: 147789 gleich, 0 verschieden []
+
+2023: Stundenwert = Summe der vier Viertelstunden: 139002 gleich, 0 verschieden []
+
+2024: Stundenwert = Summe der vier Viertelstunden: 106268 gleich, 0 verschieden []
+
+2022 (Messergebnisse Fahrrad Dauerzählstellen 2022): Kanäle, die gleichzeitig zählen (Viertelstunden mit beiden Werten)
+   5.03 BN - Nordbrücke (Südseite):  Radfahrer Ri. Beuel &  Radfahrer Ri. Auerberg: 35036
+   5.03 BN - Nordbrücke (Südseite):  Radfahrer Ri. Beuel &  [Bike IN]: 35036
+   5.03 BN - Nordbrücke (Südseite):  Radfahrer Ri. Beuel &  [Bike OUT]: 35036
+   5.03 BN - Nordbrücke (Südseite):  Radfahrer Ri. Auerberg &  [Bike IN]: 35036
+   5.03 BN - Nordbrücke (Südseite):  Radfahrer Ri. Auerberg &  [Bike OUT]: 35036
+   5.03 BN - Nordbrücke (Südseite):  [Bike IN] &  [Bike OUT]: 35036
+   5.04 BN - Nordbrücke (Nordseite):  Radfahrer Ri. Beuel &  Radfahrer Ri. Auerberg: 35036
+   5.04 BN - Nordbrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike IN]: 35036
+   5.04 BN - Nordbrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike OUT]: 35036
+   5.04 BN - Nordbrücke (Nordseite):  Radfahrer Ri. Auerberg &  [Bike IN]: 35036
+   5.04 BN - Nordbrücke (Nordseite):  Radfahrer Ri. Auerberg &  [Bike OUT]: 35036
+   5.04 BN - Nordbrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 35036
+   5.05 BN - Südbrücke (Südseite):  Radfahrer Ri. Gronau &  Radfahrer Ri. Ramersdorf: 22632
+   5.05 BN - Südbrücke (Südseite):  Radfahrer Ri. Gronau &  [Bike IN]: 22632
+   5.05 BN - Südbrücke (Südseite):  Radfahrer Ri. Gronau &  [Bike OUT]: 22632
+   5.05 BN - Südbrücke (Südseite):  Radfahrer Ri. Ramersdorf &  [Bike IN]: 22632
+   5.05 BN - Südbrücke (Südseite):  Radfahrer Ri. Ramersdorf &  [Bike OUT]: 22632
+   5.05 BN - Südbrücke (Südseite):  [Bike IN] &  [Bike OUT]: 22632
+   5.06 BN - Südbrücke (Nordseite):  Radfahrer Ri. Gronau &  Radfahrer Ri. Ri. Ramersdorf: 35036
+   5.06 BN - Südbrücke (Nordseite):  Radfahrer Ri. Gronau &  [Bike IN]: 35036
+   5.06 BN - Südbrücke (Nordseite):  Radfahrer Ri. Gronau &  [Bike OUT]: 35036
+   5.06 BN - Südbrücke (Nordseite):  Radfahrer Ri. Ri. Ramersdorf &  [Bike IN]: 35036
+   5.06 BN - Südbrücke (Nordseite):  Radfahrer Ri. Ri. Ramersdorf &  [Bike OUT]: 35036
+   5.06 BN - Südbrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 35036
+   5.07 BN - Estermannufer:  Radfahrer Ri. Bonn &  Radfahrer Ri. Köln: 35036
+   5.07 BN - Estermannufer:  Radfahrer Ri. Bonn &  [Bike IN]: 35036
+   5.07 BN - Estermannufer:  Radfahrer Ri. Bonn &  [Bike OUT]: 35036
+   5.07 BN - Estermannufer:  Radfahrer Ri. Köln &  [Bike IN]: 35036
+   5.07 BN - Estermannufer:  Radfahrer Ri. Köln &  [Bike OUT]: 35036
+   5.07 BN - Estermannufer:  [Bike IN] &  [Bike OUT]: 35036
+   5.10 BN - Bröhltalweg:  Radfahrer Ri. Villich &  Radfahrer Ri. Beuel: 22604
+   5.10 BN - Bröhltalweg:  Radfahrer Ri. Villich &  [Bike IN]: 22604
+   5.10 BN - Bröhltalweg:  Radfahrer Ri. Villich &  [Bike OUT]: 22604
+   5.10 BN - Bröhltalweg:  Radfahrer Ri. Beuel &  [Bike IN]: 22604
+   5.10 BN - Bröhltalweg:  Radfahrer Ri. Beuel &  [Bike OUT]: 22604
+   5.10 BN - Bröhltalweg:  [Bike IN] &  [Bike OUT]: 22604
+   5.11 BN - Brühler Straße:  Radfahrer Ri. Süden &  Radfahrer Ri. Norden: 35036
+   5.11 BN - Brühler Straße:  Radfahrer Ri. Süden &  [Bike IN]: 35036
+   5.11 BN - Brühler Straße:  Radfahrer Ri. Süden &  [Bike OUT]: 35036
+   5.11 BN - Brühler Straße:  Radfahrer Ri. Norden &  [Bike IN]: 35036
+   5.11 BN - Brühler Straße:  Radfahrer Ri. Norden &  [Bike OUT]: 35036
+   5.11 BN - Brühler Straße:  [Bike IN] &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bad Godesberg &  Radfahrer Ri. Bonn: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bad Godesberg &  [Bike IN]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bad Godesberg &  [Bike IN]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bad Godesberg &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bad Godesberg &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bonn &  [Bike IN]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bonn &  [Bike IN]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bonn &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  Radfahrer Ri. Bonn &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  [Bike IN] &  [Bike IN]: 35036
+   5.08 BN - Von-Sandt-Ufer:  [Bike IN] &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  [Bike IN] &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  [Bike IN] &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  [Bike IN] &  [Bike OUT]: 35036
+   5.08 BN - Von-Sandt-Ufer:  [Bike OUT] &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Beuel &  Radfahrer Ri. Oberkassel: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Beuel &  [Bike IN]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Beuel &  [Bike IN]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Beuel &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Beuel &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Oberkassel &  [Bike IN]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Oberkassel &  [Bike IN]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Oberkassel &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  Radfahrer Ri. Oberkassel &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  [Bike IN] &  [Bike IN]: 35036
+   5.09 BN - Rhenusallee:  [Bike IN] &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  [Bike IN] &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  [Bike IN] &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  [Bike IN] &  [Bike OUT]: 35036
+   5.09 BN - Rhenusallee:  [Bike OUT] &  [Bike OUT]: 35036
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Innenstadt &  Radfahrer Ri. Beuel: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Innenstadt &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Innenstadt &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Innenstadt &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Innenstadt &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Innenstadt &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Innenstadt &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  Radfahrer Ri. Beuel &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike IN]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike IN] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike OUT] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike OUT] &  [Bike OUT]: 23952
+   5.01 BN - Kennedybrücke (Nordseite):  [Bike OUT] &  [Bike OUT]: 23952
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  &  Radfahrer Ri. Beuel: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  Radfahrer Ri. Beuel &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  Radfahrer Ri. Beuel &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  Radfahrer Ri. Beuel &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  Radfahrer Ri. Beuel &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  Radfahrer Ri. Beuel &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  Radfahrer Ri. Beuel &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike IN]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike IN] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike OUT] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike OUT] &  [Bike OUT]: 35036
+   5.02 BN - Kennedybrücke (Südseite) Barometer:  [Bike OUT] &  [Bike OUT]: 35036
+   Kennedybrücke:  Radfahrer Ri. Innenstadt &  Radfahrer Ri. Beuel: 35036
+   5.14 BN - Mc Cloy Weg:  Radfahrer Ri. Remagen &  Radfahrer Ri. Bonn: 35036
+   5.14 BN - Mc Cloy Weg:  Radfahrer Ri. Remagen &  Radfahrer Ri. Remagen: 35036
+   5.14 BN - Mc Cloy Weg:  Radfahrer Ri. Remagen &  Radfahrer Ri. Bonn: 35036
+   5.14 BN - Mc Cloy Weg:  Radfahrer Ri. Bonn &  Radfahrer Ri. Remagen: 35036
+   5.14 BN - Mc Cloy Weg:  Radfahrer Ri. Bonn &  Radfahrer Ri. Bonn: 35036
+   5.14 BN - Mc Cloy Weg:  Radfahrer Ri. Remagen &  Radfahrer Ri. Bonn: 35036
+   5.15 BN - Weg auf Damm Neil:  Radfahrer Ri. Norden &  Radfahrer Ri. Süden: 35036
+   5.15 BN - Weg auf Damm Neil:  Radfahrer Ri. Norden &  Radfahrer Ri. Norden: 35036
+   5.15 BN - Weg auf Damm Neil:  Radfahrer Ri. Norden &  Radfahrer Ri. Süden: 35036
+   5.15 BN - Weg auf Damm Neil:  Radfahrer Ri. Süden &  Radfahrer Ri. Norden: 35036
+   5.15 BN - Weg auf Damm Neil:  Radfahrer Ri. Süden &  Radfahrer Ri. Süden: 35036
+   5.15 BN - Weg auf Damm Neil:  Radfahrer Ri. Norden &  Radfahrer Ri. Süden: 35036
+   5.13 BN - Wilhelm-Spiritus-Ufer:  Radfahrer Ri. Süden &  Radfahrer Ri. Norden: 35036
+   5.13 BN - Wilhelm-Spiritus-Ufer:  Radfahrer Ri. Süden &  Radfahrer Ri. Süden: 35036
+   5.13 BN - Wilhelm-Spiritus-Ufer:  Radfahrer Ri. Süden &  Radfahrer Ri. Norden: 35036
+   5.13 BN - Wilhelm-Spiritus-Ufer:  Radfahrer Ri. Norden &  Radfahrer Ri. Süden: 35036
+   5.13 BN - Wilhelm-Spiritus-Ufer:  Radfahrer Ri. Norden &  Radfahrer Ri. Norden: 35036
+   5.13 BN - Wilhelm-Spiritus-Ufer:  Radfahrer Ri. Süden &  Radfahrer Ri. Norden: 35036
+   Südbrücke:  Radfahrer Ri. Oberkassel &  Radfahrer Ri. Rheinaue: 35036
+   Nordbrücke:  Radfahrer Ri. Beuel &  Radfahrer Ri. Auerberg: 35036
+
+! https://stadtplan.bonn.de/geojson?Thema=22640: <HTTPError 502: 'Bad Gateway'>
+
+OSM Bonn: 18 Knoten
+    103962861 50.719957 7.1445905 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.06", "website": "http://www.eco-public.com/public2/?id=100019723"}
+    259666370 50.7281461 7.1120659 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.13", "website": "http://www.eco-public.com/public2/?id=100027077"}
+    1378698849 50.7334463 7.1150416 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.15", "website": "http://www.eco-public.com/public2/?id=100027076"}
+    1768253188 50.722268 7.133602 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.09", "website": "http://www.eco-public.com/public2/?id=100019729"}
+    2988598302 50.7404288 7.0694228 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.11", "website": "http://www.eco-public.com/public2/?id=100019726"}
+    3573295193 50.7118515 7.1399808 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.05", "website": "http://www.eco-public.com/public2/?id=100019722"}
+    3573295196 50.7374655 7.1059825 {"display": "digital", "display:digital": "yes", "man_made": "monitoring_station", "manufacturer": "Eco Counter", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.02", "website": "http://www.eco-public.com/public2/?id=100019810"}
+    3573295199 50.7390439 7.1153456 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.01", "website": "http://www.eco-public.com/public2/?id=100019809"}
+    3573295202 50.7425392 7.1136306 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.10", "website": "http://www.eco-public.com/public2/?id=100019725"}
+    3573295209 50.7585954 7.1041407 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.03", "website": "http://www.eco-public.com/public2/?id=100019720"}
+    3573295210 50.759051 7.1037437 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.04", "website": "http://www.eco-public.com/public2/?id=100019721"}
+    6270681304 50.7680908 7.0688168 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.07", "website": "http://www.eco-public.com/public2/?id=100019724"}
+    6270681305 50.6710472 7.1878972 {"check_date": "2023-10-26", "display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.14", "website": "http://www.eco-public.com/public2/?id=100027075"}
+    6270681306 50.7008234 7.1668793 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.08", "website": "http://www.eco-public.com/public2/?id=100019728"}
+    8281273729 50.6737997 7.1915824 {"man_made": "monitoring_station", "manufacturer": "Eco Counter", "monitoring:bicycle": "induction_loop", "monitoring:traffic": "yes", "name": "2.05 RSK - Königswinter", "operator": "Rhein-Sieg-Kreis", "recording:automated": "yes", "recording:remote": "yes", "ref": "2.05", "website": "http://www.eco-public.com/public2/?id=100019738"}
+    8282706723 50.6447714 7.0993996 {"man_made": "monitoring_station", "manufacturer": "Eco Counter", "monitoring:bicycle": "induction_loop", "monitoring:traffic": "yes", "name": "2.10 RSK - Wachtberg", "operator": "Rhein-Sieg-Kreis", "recording:automated": "yes", "recording:remote": "yes", "ref": "2.10", "website": "http://www.eco-public.com/public2/?id=100019740"}
+    9856060192 50.7153292 7.1174484 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.16", "website": "https://data.eco-counter.com/public2/?id=100053563"}
+    9856060193 50.7158645 7.1163657 {"display": "no", "man_made": "monitoring_station", "monitoring:bicycle": "induction_loop", "operator": "Stadt Bonn", "operator:wikidata": "Q586", "recording:automated": "yes", "recording:remote": "yes", "ref": "5.17", "website": "https://data.eco-counter.com/public2/?id=100053256"}
