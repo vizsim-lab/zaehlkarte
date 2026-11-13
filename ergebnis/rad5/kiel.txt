@@ -1,0 +1,13 @@
+title: "MIV-Verkehrsdaten Dauerzählstellen Kiel - stündliche Langzeitdaten"
+rights: "https://w3id.org/mdp/schema/license#LICENSE_RESTRICTED_USE_FREE_OF_CHARGE"
+standardLicense: null
+customLicenseAsResource: null
+conditionForUse: "Ein Dashboard der Daten findet sich unter https://datendock.civora.org/app/dashboards/30"
+contractOffer: {"contractStart": null, "contractEnd": null, "providerApprovalRequired": true, "napApprovalRequired": null, "providerApprovalAnonymousAccessRequired": false}
+accessRights: "http://publications.europa.eu/resource/authority/access-right/PUBLIC"
+mdpBrokering: true
+temporalCoverage: {"begin": null, "end": null}
+accrualPeriodicity: "https://w3id.org/idsa/code/HOURLY"
+created: "2026-10-09T09:27:26.395Z"
+modified: "2026-10-09T09:27:26.395Z"
+contentData: [{"accessUrl": null, "endpointDocumentation": null, "accessProtocol": null, "mediaType": "https://www.iana.org/assignments/media-types/application/json", "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER", "dataFormatAdditionalDescription": null, "description": null, "byteSize": null, "fileName": null, "creationDate": null, "commMethod": null, "retentionPeriod": null, "deltaDelivery": false, "masterSchema": null, "schema": [], "schemaProfileName": null}]
