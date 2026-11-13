@@ -548,13 +548,14 @@ dauer:
     traeger: Stadt Ettlingen
     art: >-
       automatische Zählstellen der Stadt; Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der
-      Karte als Kfz (Summe der Klassen)
+      Karte als Kfz (Summe der Klassen) und Lkw (Lkw und Lkw mit Anhänger)
     weg: offen im Datastore des Open-Data-Portals re@di (TechnologieRegion Karlsruhe)
     ferien: schulferien_baden-wuerttemberg.csv
     portal: https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen
     dump: https://opendata.readi.de/datastore/dump/a903967d-9177-4db6-977c-267fd745a390
     klassen:  # Gruppe -> Klassen der Quelle (series_name), deren Summe sie ist
       kfz: [PKW, Leichtes Nutzfahrzeug, LKW, LKW+Anhänger, Motorrad]
+      lkw: [LKW, LKW+Anhänger]
     frisch_tage: 2  # jüngere Stunden kommen noch nicht in die Karte
     stellen:  # Straße und Abschnitt je Sensor – die Quelle schreibt sie uneinheitlich
       "1263": {name: Rastatter Straße}
@@ -564,7 +565,7 @@ dauer:
       "395387": {name: Pforzheimer Straße, abschnitt: Höhe Hausnummer 14}
       "395842": {name: Karlsruher Straße}
     titel: >-
-      Automatisierte Verkehrszählung in Ettlingen (verändert: Fahrzeugklassen zu Kfz und
+      Automatisierte Verkehrszählung in Ettlingen (verändert: Fahrzeugklassen zu Kfz und Lkw,
       Stundenwerte zu Tagessummen zusammengefasst)
     herausgeber: Stadt Ettlingen
     quellenvermerk: Stadt Ettlingen
@@ -576,8 +577,10 @@ dauer:
         Ettlingen) weiterverwendet werden.
       - >-
         Kfz ist die Summe der Fahrzeugklassen der Quelle (Pkw, leichte Nutzfahrzeuge, Lkw, Lkw mit
-        Anhänger, Motorrad). Klassen ohne Fahrzeug fehlen in einer Stunde; fehlt die ganze Stunde,
-        gilt sie als nicht gezählt – nachts kann das auch eine Stunde ohne Fahrzeug sein.
+        Anhänger, Motorrad), Lkw die Summe von Lkw und Lkw mit Anhänger – so, wie der Sensor sie
+        unterscheidet, nicht der Schwerverkehr der Kurzzeitzählungen. Klassen ohne Fahrzeug fehlen
+        in einer Stunde; fehlt die ganze Stunde, gilt sie als nicht gezählt – nachts kann das auch
+        eine Stunde ohne Fahrzeug sein.
       - >-
         Alle Richtungen einer Zählstelle haben in der Quelle dieselbe Lage; in der Seitenleiste
         lässt sich zwischen ihnen wechseln.
@@ -638,6 +641,14 @@ datenlage:
   - kommune: Berlin
     quelle: berlin
     stand: in_karte
+    dauer:  # Datenlage der Dauerzählstellen (Stand: in_karte | offen | kandidat)
+      stand: in_karte
+      was: >-
+        Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 2025 (Kfz und
+        Lkw laut Detektor), in der Karte als Dauerzählstellen
+      links:
+        - ["Verkehrsdetektion Berlin (Datensatz)", "https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin"]
+        - ["Archiv der Verkehrsdetektion", "https://api.viz.berlin.de/daten/verkehrsdetektion"]
     was: >-
       rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter
     links:
@@ -933,6 +944,16 @@ datenlage:
     lon: 7.8499
     lat: 47.9948
     stand: automatisch
+    dauer:
+      stand: offen
+      was: >-
+        Rad-Zählstellen seit 2015 offen (Rad-Zählsäulen kommen als eigener Schritt), 25
+        Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht
+        in der Karte
+      links:
+        - ["FR.ITZ: Fahrrad-Zählstellen", "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"]
+        - ["Meldung Sensoren (24.7.2025)", "https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg"]
+        - ["Geoportal: Verkehrssensoren (WFS)", "https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS"]
     was: >-
       offen nur automatische Zählungen: Rad-Zählstellen (Stundenwerte seit 2015), dazu 25
       Verkehrssensoren im Testbetrieb; Knotenpunkt- und Querschnittszählungen nicht online
@@ -993,6 +1014,15 @@ datenlage:
     lon: 8.4078
     lat: 48.9406
     stand: automatisch
+    dauer:
+      stand: in_karte
+      was: >-
+        automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und
+        Fahrzeugklasse ab 20.08.2026 (CC BY-NC 4.0, nur nicht kommerziell), in der Karte als
+        Dauerzählstellen; die älteren Werte ab Mai 2025 sind laufende Tageszähler ohne
+        Fahrtrichtung und nicht übernommen
+      links:
+        - ["Open-Data-Portal (re@di)", "https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen"]
     was: >-
       automatische Zählstellen an sechs Stellen, Stundenwerte je Fahrzeugklasse (CC BY-NC 4.0) –
       in der Karte als Dauerzählstellen; Kurzzeitzählungen nicht online
@@ -1021,6 +1051,15 @@ datenlage:
     lon: 9.9916
     lat: 48.3985
     stand: automatisch
+    dauer:
+      stand: offen
+      was: >-
+        fünf Zählkameras seit Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als
+        Kürzel und ohne Betriebszeiten – nicht in der Karte, weil eine Stunde ohne Zeile nicht von
+        einem Ausfall zu unterscheiden ist; dazu eine Rad-Zählstelle
+      links:
+        - ["Datenhub Ulm: vgv_ulm", "https://datenhub.ulm.de/ckan/dataset/vgv_ulm"]
+        - ["Datenhub Ulm: Fahrradzählstelle", "https://datenhub.ulm.de/ckan/dataset/fahrradzahler_lupferbruecke"]
     was: >-
       fünf Zählkameras seit Juli 2024, je Verkehrsteilnehmer eine Zeile, Standorte nur als Kürzel;
       dazu eine Rad-Dauerzählstelle; Kurzzeitzählungen nicht online
@@ -1094,6 +1133,13 @@ datenlage:
     lon: 13.7373
     lat: 51.0504
     stand: kandidat
+    dauer:
+      stand: kandidat
+      was: >-
+        Dauerzählstellen; offen nur ihre Mittelwerte in der Verkehrsmengenkarte, nicht die
+        Zählwerte
+      links:
+        - ["Antwort AF0915/25 (18.11.2025)", "https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf"]
     was: >-
       Zählt an Knotenpunkten (Abbiegeströme für die Ampelplanung) und im Nebennetz, meist per Video
       oder Radar durch städtische Mitarbeitende; offen sind nur Mittelwerte der Dauerzählstellen
@@ -1317,6 +1363,15 @@ datenlage:
     lon: 9.9937
     lat: 53.5511
     stand: aggregiert
+    dauer:
+      stand: in_karte
+      was: >-
+        Wärmebildkameras an über 400 Kreuzungen: Stundenwerte je Zählstelle für Kfz,
+        Schwerverkehr und Rad über die SensorThings API (dl-de/by-2-0), in der Karte als
+        Dauerzählstellen
+      links:
+        - ["Verkehrsdaten Kfz Infrarotdetektoren", "https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14"]
+        - ["Verkehrsdaten Rad Infrarotdetektoren", "https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20"]
     was: >-
       Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je
       Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch, in der
@@ -1351,6 +1406,14 @@ datenlage:
     lon: 8.6724
     lat: 49.3988
     stand: automatisch
+    dauer:
+      stand: offen
+      was: >-
+        12 Zählkameras im Katalog der Datenplattform (CC0), dessen Schnittstelle im November 2026
+        nicht antwortete; Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte
+      links:
+        - ["Datenplattform: Kamera (Beispiel)", "https://ckan.datenplattform.heidelberg.de/en/dataset/mobility_main_trafficcamera/resource/b95871b2-7de0-46b1-b377-db497250f8a0"]
+        - ["MobiData BW: Verkehrsrechnerdaten", "https://mobidata-bw.de/en/dataset/verkehrsleitrechnerdaten-in-heidelberg/resource/18936b7b-af96-45c5-ad05-f7f09ef6d9a3"]
     was: >-
       Zählkameras und Verkehrsrechnerdaten im Katalog der Datenplattform, zurzeit nicht frei
       abrufbar
@@ -1647,6 +1710,14 @@ datenlage:
     lon: 9.4797
     lat: 51.3127
     stand: geliefert
+    dauer:
+      stand: kandidat
+      was: >-
+        Dauerzählstellen mit Induktionsschleifen; offen nur die Verkehrsmengenkarten 2022–2024 als
+        PDF (Mittel Mo–Fr), nicht die Zählwerte
+      links:
+        - ["kassel.de", "https://www.kassel.de/buerger/verkehr_und_mobilitaet/verkehrsprojekte/verkehrszaehlungen.php"]
+        - ["FragDenStaat 2021", "https://fragdenstaat.de/anfrage/ifg-anfrage-radverkehrszahlung/"]
     was: >-
       2021 auf Anfrage fünf 24-Stunden-Knotenstromzählungen (2018–2020), vier als Excel mit allen
       Verkehrsarten in 15-Minuten-Werten; offen nur Verkehrsmengenkarten 2022–2024
@@ -1703,6 +1774,13 @@ datenlage:
     lon: 7.0116
     lat: 51.4556
     stand: automatisch
+    dauer:
+      stand: kandidat
+      was: >-
+        Dauerzählstellen; offen nur ihre Auswertungen 2017 als 57 PDFs, nicht die Zählwerte
+      links:
+        - ["essen.de Verkehrserhebung", "https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html"]
+        - ["Zähldaten 2017", "https://www.essen.de/leben/mobilitaet/zaehldaten_2017.de.html"]
     was: >-
       offen nur die Auswertungen der Dauerzählstellen 2017 (57 PDFs); Knotenpunkt- und
       Querschnittszählungen von Hand nicht online
@@ -1727,6 +1805,15 @@ datenlage:
     lon: 8.0472
     lat: 52.2799
     stand: geliefert
+    dauer:
+      stand: offen
+      was: >-
+        KI-Sensoren an rund zehn Kreuzungen, 15-Minuten-Werte seit 2023 über die
+        SensorThings-Schnittstelle – ohne Lizenzangabe, daher nicht in der Karte (die Anfrage bei
+        den Kurzzeitzählungen fragt auch nach der Lizenz)
+      links:
+        - ["Datenplattform Osnabrück", "https://datenplattform.osnabrueck.de/verkehrszaehlung/"]
+        - ["SensorThings-Schnittstelle", "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"]
     was: >-
       2021 auf Anfrage alle Seitenradar-Messungen in verkehrsberuhigten Bereichen seit 2011 als
       Textdateien (eine Zeile je Fahrzeug); offen ein KI-Sensor an der Bramscher Straße

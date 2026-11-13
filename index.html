@@ -45,7 +45,6 @@
         <div class="legend-section-title"><span data-i18n="thema.titel">Verkehrsart</span></div>
         <div class="legend-chips" id="thema-chips" role="radiogroup" aria-label="Verkehrsart" data-i18n-attr="aria-label:thema.titel">
           <button type="button" class="legend-chip" data-thema="kfz" role="radio" data-i18n="gruppe.kfz">Kfz</button>
-          <button type="button" class="legend-chip" data-thema="lkw" role="radio" title="Lkw, wie der Detektor sie von Pkw unterscheidet – nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen" data-i18n="gruppe.lkw" data-i18n-attr="title:thema.lkw_tip" hidden>Lkw (Detektor)</button>
           <button type="button" class="legend-chip" data-thema="sv" role="radio" title="Lkw über 3,5 t, Lastzüge und Busse (wie die Quelle sie zählt)" data-i18n="gruppe.sv" data-i18n-attr="title:thema.sv_tip">Schwerverkehr</button>
           <button type="button" class="legend-chip" data-thema="rad" role="radio" data-i18n="gruppe.rad">Rad</button>
           <button type="button" class="legend-chip" data-thema="fuss" role="radio" data-i18n="gruppe.fuss">Fuß</button>
@@ -60,13 +59,20 @@
           </div>
         </div>
         <div class="dauer-tag" id="dauer-tag" hidden>
-          <div class="row row--between"><span data-i18n="dauer.tag">Tag</span><strong id="dauer-tag-wert"></strong></div>
-          <div class="dauer-tag-wahl">
-            <button type="button" class="dauer-schritt" data-schritt="-1" aria-label="Einen Tag zurück" title="Einen Tag zurück" data-i18n-attr="aria-label:dauer.zurueck;title:dauer.zurueck">‹</button>
-            <input type="date" id="dauer-datum" aria-label="Datum wählen" data-i18n-attr="aria-label:dauer.datum">
-            <button type="button" class="dauer-schritt" data-schritt="1" aria-label="Einen Tag vor" title="Einen Tag vor" data-i18n-attr="aria-label:dauer.vor;title:dauer.vor">›</button>
+          <!-- Standard: je Stelle ihr jüngster Schultag (alle Quellen zugleich); „Tag wählen“: alle am selben Tag -->
+          <div class="legend-chips legend-chips--klein" id="dauer-modus" role="radiogroup" aria-label="Tag" data-i18n-attr="aria-label:dauer.tag" hidden>
+            <button type="button" class="legend-chip" data-dmodus="j" role="radio" title="Je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags – so stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume verschieden sind" data-i18n="dauer.modus.j" data-i18n-attr="title:dauer.modus.j_tip">jüngster Schultag</button>
+            <button type="button" class="legend-chip" data-dmodus="t" role="radio" title="Alle Stellen am selben Tag" data-i18n="dauer.modus.t" data-i18n-attr="title:dauer.modus.t_tip">Tag wählen</button>
           </div>
-          <input type="range" id="dauer-regler" class="dauer-regler" aria-label="Tag im Zeitraum" data-i18n-attr="aria-label:dauer.regler">
+          <div id="dauer-tag-einzeln">
+            <div class="row row--between"><span data-i18n="dauer.tag">Tag</span><strong id="dauer-tag-wert"></strong></div>
+            <div class="dauer-tag-wahl">
+              <button type="button" class="dauer-schritt" data-schritt="-1" aria-label="Einen Tag zurück" title="Einen Tag zurück" data-i18n-attr="aria-label:dauer.zurueck;title:dauer.zurueck">‹</button>
+              <input type="date" id="dauer-datum" aria-label="Datum wählen" data-i18n-attr="aria-label:dauer.datum">
+              <button type="button" class="dauer-schritt" data-schritt="1" aria-label="Einen Tag vor" title="Einen Tag vor" data-i18n-attr="aria-label:dauer.vor;title:dauer.vor">›</button>
+            </div>
+            <input type="range" id="dauer-regler" class="dauer-regler" aria-label="Tag im Zeitraum" data-i18n-attr="aria-label:dauer.regler">
+          </div>
           <div class="legend-hint" data-i18n="dauer.hinweis">Tagessumme 0–24 Uhr je Zählstelle (meist eine Fahrtrichtung) – nur, wo jede Stunde des Tages gezählt ist.</div>
           <div class="dauer-quellen" id="dauer-quellen" hidden></div>
         </div>
@@ -102,7 +108,7 @@
       <div class="legend-section" data-section="datenlage">
         <div class="legend-section-title">
           <label><input type="checkbox" class="section-checkbox" id="toggle-datenlage"> <span data-i18n="datenlage.titel">Datenlage je Kommune</span></label>
-          <span class="info-icon" data-tip="Wo es solche Zählungen gibt: offen, auf Anfrage herausgegeben oder aussichtsreich für eine IFG-/UIG-Anfrage. Recherche Stand November 2026, unvollständig – Hinweise gern als Issue." data-i18n-attr="data-tip:datenlage.tip">i</span>
+          <span class="info-icon" id="datenlage-tip" data-tip="Wo es solche Zählungen gibt: offen, auf Anfrage herausgegeben oder aussichtsreich für eine IFG-/UIG-Anfrage. Recherche Stand November 2026, unvollständig – Hinweise gern als Issue." data-i18n-attr="data-tip:datenlage.tip">i</span>
         </div>
         <div class="legend-items" id="datenlage-legende"></div>
       </div>

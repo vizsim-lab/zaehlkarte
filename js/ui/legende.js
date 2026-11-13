@@ -1,6 +1,7 @@
 // legende.js — die Legende rechts: Verkehrsart, Darstellung, Kennzahl, Klassen mit Zählern,
 // Filter, Datenlage, Quellen. Setzt nur ZUSTAND und ruft `geaendert()`; was die Karte daraus
-// macht, entscheidet main.js.
+// macht, entscheidet main.js. Alles unter dem Familien-Umschalter folgt der Familie – auch die
+// Datenlage (je Kommune ein Stand für Kurzzeitzählungen und einer für Dauerzählstellen).
 //
 // data-tip nur an reinen Hinweis-Zeichen (ⓘ), nie an Bedienelementen: der Tooltip fängt
 // Klicks darauf ab (Touch-Bedienung, js/ui/tooltip.js). Knöpfe tragen `title`.
@@ -8,9 +9,10 @@
 // `uebersetze()` die erzeugten Listen neu.
 import { ARTEN, STUFENFARBEN, TAGE, THEMEN, kennzahlText, stufenFuer, stufenText } from "../data/modell.js";
 import {
-  DAUER_STUFEN, DAUER_THEMEN, kennzahlTextDauer, plusTage, quellenOhneTag, tageZwischen, tagtypen, zeitraumText,
+  DAUER_STUFEN, DAUER_THEMEN, gruppenName, hatThema, imJuengsten, kennzahlTextDauer, kennzahlTextJuengster,
+  klassenDerQuellen, plusTage, quellenOhneTag, tageJeQuelle, tageZwischen, tagtypen, zeitraumText,
 } from "../data/dauer.js";
-import { DATENLAGE_KLASSEN } from "../map/ebenen.js";
+import { datenlageKlassen, datenlageStand } from "../map/ebenen.js";
 import { datum, t, wochentag, zahl } from "../sprache/texte.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -26,7 +28,7 @@ function setzeChips(container, attr, wert) {
   });
 }
 
-export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage, familieWechseln, tagWechseln }) {
+export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage, familieWechseln, tagWechseln, dauerModus }) {
   const legende = $("legend");
   let dauer = null; // entpackte dauer/index.json, sobald geladen
   let dauerDa = false; // gibt es Dauerzählstellen (HEAD auf dauer/index.json)?
@@ -65,7 +67,12 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     familieWechseln?.(b.dataset.familie);
   });
 
-  // Tag der Dauerzählstellen: Pfeile, Datumsfeld, Regler über den ganzen Zeitraum
+  // Tag der Dauerzählstellen: je Stelle der jüngste Schultag (j) oder ein Tag für alle (t) –
+  // dann Pfeile, Datumsfeld, Regler über den ganzen Zeitraum
+  $("dauer-modus").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-dmodus]");
+    if (b) dauerModus?.(b.dataset.dmodus);
+  });
   legende.querySelectorAll("[data-schritt]").forEach((b) => b.addEventListener("click", () => {
     if (dauer && tagJetzt) tagWechseln?.(plusTage(tagJetzt, Number(b.dataset.schritt)));
   }));
@@ -139,12 +146,6 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
       <label class="legend-item legend-item--check"><span class="label-wrapper">
         <input type="checkbox" data-quelle="${esc(q.code)}"> ${esc(q.name)}</span><span class="count-badge" id="quelle-n-${esc(q.code)}">0</span></label>`).join("");
 
-    // Datenlage
-    const anzahl = Object.fromEntries(DATENLAGE_KLASSEN.map((k) => [k.id, datenlage.features.filter((f) => k.stand.includes(f.properties.stand)).length]));
-    $("datenlage-legende").innerHTML = DATENLAGE_KLASSEN.map((k) => `
-      <div class="legend-item"><span class="label-wrapper"><span class="punkt" style="background:${k.farbe}"></span>${esc(k.name)}</span>
-      <span class="count-badge">${zahl(anzahl[k.id])}</span></div>`).join("");
-
     // Quellen & Lizenzen aus dem Manifest (Beschreibungen der Quellen bleiben deutsch)
     const deutsch = t("quellen.deutsch");
     $("quellen-text").innerHTML = (deutsch ? `<div class="pop-meta">${esc(deutsch)}</div>` : "") + manifest.quellen.map((q) => `
@@ -169,34 +170,61 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
       ? String(zustand.jahre[0]) : `${zustand.jahre[0]}–${zustand.jahre[1]}`;
   }
 
+  /** Text und Tooltip-Schlüssel setzen (data-i18n-attr, damit der Sprachumschalter sie mitnimmt). */
+  function setzeTip(el, schluessel) {
+    el.dataset.tip = t(schluessel);
+    el.dataset.i18nAttr = `data-tip:${schluessel}`;
+  }
+
+  /** Datenlage der gewählten Familie: Klassen mit Zählern und Erklärung. */
+  function zeichneDatenlage() {
+    const familie = zustand.familie;
+    const klassen = datenlageKlassen(familie);
+    $("datenlage-legende").innerHTML = klassen.map((k) => {
+      const n = datenlage.features.filter((f) => k.stand.includes(datenlageStand(f.properties, familie))).length;
+      return `
+      <div class="legend-item"><span class="label-wrapper"><span class="punkt" style="background:${k.farbe}"></span>${esc(k.name)}</span>
+      <span class="count-badge">${zahl(n)}</span></div>`;
+    }).join("");
+    setzeTip($("datenlage-tip"), familie === "d" ? "datenlage.tip_d" : "datenlage.tip");
+  }
+
   /** Statische Teile nach Zustand (Chips, Regler, Häkchen). */
   function zeichne() {
     const d = zustand.familie === "d";
+    // Dauerzählstellen im Standard: je Stelle ihr jüngster Schultag (ohne Tagwahl)
+    const j = d && dauer != null && imJuengsten(dauer, zustand);
     setzeChips($("familie-chips"), "familie", zustand.familie);
     $("familie-chips").querySelector('[data-familie="d"]').disabled = !dauerDa;
     $("thema-chips").querySelectorAll("[data-thema]").forEach((b) => {
-      b.hidden = d ? !(b.dataset.thema in DAUER_THEMEN) || (dauer != null && !dauer.gruppen.includes(b.dataset.thema))
+      b.hidden = d ? !(b.dataset.thema in DAUER_THEMEN) || (dauer != null && !hatThema(dauer, b.dataset.thema))
         : !(b.dataset.thema in THEMEN);
     });
-    // Schwerverkehr: bei den Dauerzählstellen die Klasse der Kamera, nicht der gezählte der Kurzzeitzählungen
+    // Schwerverkehr: bei den Dauerzählstellen EIN Chip für die Klassen der Detektoren – Lkw oder
+    // Schwerverkehr, je Stelle ihre – nicht der gezählte Schwerverkehr der Kurzzeitzählungen
     const sv = $("thema-chips").querySelector('[data-thema="sv"]');
-    sv.dataset.i18n = d ? "gruppe.sv_detektor" : "gruppe.sv";
-    sv.dataset.i18nAttr = `title:${d ? "thema.sv_detektor_tip" : "thema.sv_tip"}`;
+    sv.dataset.i18n = d ? "gruppe.schwer" : "gruppe.sv";
+    sv.dataset.i18nAttr = `title:${d ? "thema.schwer_tip" : "thema.sv_tip"}`;
     sv.textContent = t(sv.dataset.i18n);
-    sv.title = t(d ? "thema.sv_detektor_tip" : "thema.sv_tip");
+    sv.title = t(d ? "thema.schwer_tip" : "thema.sv_tip");
     $("art-wahl").hidden = d;
     $("dauer-tag").hidden = !d;
+    $("dauer-modus").hidden = !dauer?.juengster;
+    setzeChips($("dauer-modus"), "dmodus", j ? "j" : "t");
+    $("dauer-tag-einzeln").hidden = j;
     legende.querySelector('[data-section="filter"]').hidden = d;
     $("fc-zaehlungen-name").dataset.i18n = d ? "dauer.zaehler.voll" : "zaehler.zaehlungen";
     $("fc-zaehlungen-name").textContent = t($("fc-zaehlungen-name").dataset.i18n);
-    $("fc-stellen-stat").dataset.tip = t(d ? "dauer.zaehler.stellen_tip" : "zaehler.stellen_tip");
-    $("fc-zaehlungen-stat").dataset.tip = t(d ? "dauer.zaehler.voll_tip" : "zaehler.zaehlungen_tip");
-    $("fc-stellen-stat").dataset.i18nAttr = `data-tip:${d ? "dauer.zaehler.stellen_tip" : "zaehler.stellen_tip"}`;
-    $("fc-zaehlungen-stat").dataset.i18nAttr = `data-tip:${d ? "dauer.zaehler.voll_tip" : "zaehler.zaehlungen_tip"}`;
+    const zj = j ? "_j" : "";
+    setzeTip($("fc-stellen-stat"), d ? `dauer.zaehler.stellen_tip${zj}` : "zaehler.stellen_tip");
+    setzeTip($("fc-zaehlungen-stat"), d ? `dauer.zaehler.voll_tip${zj}` : "zaehler.zaehlungen_tip");
     const knopf = $("export-csv");
-    knopf.title = t(d ? "dauer.export.titel" : "export.titel");
-    knopf.setAttribute("aria-label", t(d ? "dauer.export.label" : "export.label"));
-    knopf.dataset.i18nAttr = d ? "aria-label:dauer.export.label;title:dauer.export.titel" : "aria-label:export.label;title:export.titel";
+    const [label, titel] = d ? [`dauer.export.label${zj}`, `dauer.export.titel${zj}`] : ["export.label", "export.titel"];
+    knopf.title = t(titel);
+    knopf.setAttribute("aria-label", t(label));
+    knopf.dataset.i18nAttr = `aria-label:${label};title:${titel}`;
+    zeichneDatenlage();
+    $("toggle-datenlage").checked = zustand.datenlage;
     if (d) {
       setzeChips($("thema-chips"), "thema", zustand.dthema);
       $("modus-chips").hidden = true;
@@ -217,7 +245,6 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     legende.querySelectorAll("[data-tag]").forEach((c) => { c.checked = zustand.tage.has(c.dataset.tag); });
     legende.querySelectorAll("[data-quelle]").forEach((c) => { c.checked = zustand.quellen.has(c.dataset.quelle); });
     $("toggle-uebertragen").checked = zustand.uebertragen;
-    $("toggle-datenlage").checked = zustand.datenlage;
   }
 
   /** Klassenzeilen mit Zählern (nach jedem Filterwechsel). */
@@ -249,30 +276,49 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     }
   }
 
-  /** Klassenzeilen und Zähler der Dauerzählstellen am gezeigten Tag. */
-  function zeichneDauer(iso, zahlen) {
+  /**
+   * Klassenzeilen und Zähler der Dauerzählstellen: am gewählten Tag (`iso`) oder – iso null – je
+   * Stelle am jüngsten Schultag (`eintraege` mit dem Tag je Stelle).
+   */
+  function zeichneDauer(iso, zahlen, eintraege = []) {
     tagJetzt = iso;
-    const g = zustand.dthema;
-    const grenzen = DAUER_STUFEN[g];
+    const j = iso == null;
+    const thema = zustand.dthema;
+    const grenzen = DAUER_STUFEN[thema];
     const zeilen = stufenText(grenzen, "menge").map((name, i) => ({ farbe: STUFENFARBEN[i], name, n: zahlen.klassen[String(i)] ?? 0, groesse: i }));
     zeilen.reverse();
-    zeilen.push({ name: t("dauer.nicht"), n: zahlen.klassen["-1"] ?? 0, hohl: true, tip: t("dauer.nicht_tip") });
-    $("klassen-legende").innerHTML = `<div class="legend-hint legend-hint--titel">${esc(kennzahlTextDauer(g, datum(iso)))}</div>` + zeilen.map((z) => `
+    zeilen.push({ name: t(j ? "dauer.nicht_j" : "dauer.nicht"), n: zahlen.klassen["-1"] ?? 0, hohl: true, tip: t(j ? "dauer.nicht_j_tip" : "dauer.nicht_tip") });
+    const name = DAUER_THEMEN[thema].name;
+    // Lkw/Schwerverkehr: welche Stadt welche Klasse zählt (je Stelle ihre, nie zusammengezählt)
+    const klassen = klassenDerQuellen(dauer, thema);
+    const klassenText = klassen.map((k) => `${gruppenName(k.gruppe)}: ${k.orte.join(", ")}`).join(" · ");
+    $("klassen-legende").innerHTML = `<div class="legend-hint legend-hint--titel">${esc(j ? kennzahlTextJuengster(name) : kennzahlTextDauer(name, datum(iso)))}</div>`
+      + (klassen.length ? `<div class="legend-hint dauer-klassen">${esc(t("dauer.klassen", { klassen: klassenText }))} <span class="info-icon" data-tip="${esc(t("dauer.klassen_tip"))}">i</span></div>` : "")
+      + zeilen.map((z) => `
       <div class="legend-item"><span class="label-wrapper">
         <span class="punkt${z.hohl ? " punkt--hohl" : ""}" style="${z.farbe ? `background:${z.farbe};` : ""}${z.groesse != null ? `--g:${z.groesse}` : ""}"></span>
         ${esc(z.name)}${z.tip ? ` <span class="info-icon" data-tip="${esc(z.tip)}">i</span>` : ""}</span>
         <span class="count-badge">${zahl(z.n)}</span></div>`).join("");
-    $("dauer-tag-wert").textContent = tagText(iso);
-    $("dauer-datum").value = iso;
-    $("dauer-regler").value = String(tageZwischen(dauer.von, iso));
-    legende.querySelector('[data-schritt="-1"]').disabled = iso <= dauer.von;
-    legende.querySelector('[data-schritt="1"]').disabled = iso >= dauer.bis;
-    // Quellen mit dieser Verkehrsart, die an dem Tag keine Werte haben: Zeitraum und Sprung
-    const ohne = quellenOhneTag(dauer, g, iso);
-    $("dauer-quellen").hidden = !ohne.length;
-    $("dauer-quellen").innerHTML = ohne.map((o) => `
+    if (j) {
+      // je Quelle die gezeigten Tage (bei alten Stellen auch Jahre zurück) und der Sprung zu ihrem jüngsten
+      const tage = tageJeQuelle(dauer, eintraege);
+      $("dauer-quellen").hidden = !tage.length;
+      $("dauer-quellen").innerHTML = (tage.length ? `<div class="dauer-quellen-titel">${esc(t("dauer.j_tage"))}</div>` : "") + tage.map((o) => `
+      <div class="dauer-quelle"><span>${esc(t("dauer.j_quelle", { quelle: o.quelle.name, tage: o.von === o.bis ? datum(o.bis) : zeitraumText(o.von, o.bis) }))}</span>
+        <button type="button" class="link-knopf" data-sprung="${esc(o.bis)}">${esc(t("dauer.springen", { datum: datum(o.bis) }))}</button></div>`).join("");
+    } else {
+      $("dauer-tag-wert").textContent = tagText(iso);
+      $("dauer-datum").value = iso;
+      $("dauer-regler").value = String(tageZwischen(dauer.von, iso));
+      legende.querySelector('[data-schritt="-1"]').disabled = iso <= dauer.von;
+      legende.querySelector('[data-schritt="1"]').disabled = iso >= dauer.bis;
+      // Quellen mit dieser Verkehrsart, die an dem Tag keine Werte haben: Zeitraum und Sprung
+      const ohne = quellenOhneTag(dauer, thema, iso);
+      $("dauer-quellen").hidden = !ohne.length;
+      $("dauer-quellen").innerHTML = ohne.map((o) => `
       <div class="dauer-quelle"><span>${esc(t("dauer.ohne_tag", { quelle: o.quelle.name, von: datum(o.von), bis: datum(o.bis) }))}</span>
         <button type="button" class="link-knopf" data-sprung="${esc(o.sprung)}">${esc(t("dauer.springen", { datum: datum(o.sprung) }))}</button></div>`).join("");
+    }
     $("fc-stellen").textContent = zahl(zahlen.stellen);
     $("fc-zaehlungen").textContent = zahl(zahlen.vollstaendig);
   }

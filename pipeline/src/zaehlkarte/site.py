@@ -1,5 +1,9 @@
 """Kartendaten schreiben: public/data/{manifest,index,datenlage}.json und details/NN.json.
 
+`schreibe_datenlage()` (`zaehlkarte datenlage`) erneuert nur datenlage.json und
+docs/DATENLAGE.md – aus sources.yaml und der vorhandenen index.json (Lage und Zahl der Zählungen
+der Kommunen in der Karte), also ohne neuen Bau, wenn sich nur Datenlage-Texte ändern.
+
 Vertrag mit dem Frontend (js/data/laden.js, js/data/modell.js): Feldnamen in `index.json`
 (`stellen.felder`, `zaehlungen.felder`), Aufbau von `details/NN.json` und die Dateinamen in
 `manifest.dateien`. Wer sie ändert, zieht das Frontend und tests/ im selben Schritt mit.
@@ -174,13 +178,36 @@ def kontakt(roh: dict | None) -> dict | None:
     return out
 
 
-def datenlage(gebaut: Gebaut, pfade: Pfade) -> dict:
+DAUER_STAND = {  # Datenlage der Dauerzählstellen je Kommune (`dauer:` in sources.yaml)
+    "in_karte": "in der Karte",
+    "offen": "offen, nicht in der Karte",
+    "kandidat": "vorhanden, Werte nicht offen",
+}
+
+
+def _dauer(e: dict) -> dict | None:
+    d = e.get("dauer")
+    if not d:
+        return None
+    if d.get("stand") not in DAUER_STAND:
+        raise ValueError(f"{e['kommune']}: dauer.stand {d.get('stand')!r} unbekannt")
+    return {
+        "stand": d["stand"],
+        "was": " ".join((d.get("was") or "").split()) or None,
+        "situation": " ".join((d.get("situation") or "").split()) or None,
+        "links": [{"titel": t, "url": u} for t, u in d.get("links", [])],
+    }
+
+
+def datenlage(stellen, pfade: Pfade) -> dict:
+    """GeoJSON der Datenlage je Kommune. `stellen`: die gebauten Stellen (oder ihr Abbild aus
+    index.json) – Lage und Zahl der Zählungen der Kommunen, die in der Karte sind."""
     cfg = lade_yaml("sources.yaml", pfade)
     vorlage = cfg["anfrage_vorlage"]
     recht = cfg.get("recht", {})
     alle = quellen(pfade, nur_live=False)
     je_quelle: dict[str, list[Stelle]] = {}
-    for s in gebaut.stellen:
+    for s in stellen:
         je_quelle.setdefault(s.quelle, []).append(s)
     features = []
     for e in cfg["datenlage"]:
@@ -215,6 +242,7 @@ def datenlage(gebaut: Gebaut, pfade: Pfade) -> dict:
                     "anfrage": anfrage(vorlage, e["kommune"], e.get("anfrage_zusatz"))
                     if e.get("anfrage")
                     else None,
+                    "dauer": _dauer(e),
                 },
             }
         )
@@ -226,13 +254,14 @@ def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
     zeilen = [
         "# Datenlage: kommunale Verkehrszählungen",
         "",
-        f"Erzeugt von `zaehlkarte site` am {erzeugt} aus `pipeline/config/sources.yaml` –",
-        "nicht von Hand ändern. Dieselben Angaben zeigt die Karte unter „Datenlage je Kommune“.",
+        f"Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am {erzeugt} aus",
+        "`pipeline/config/sources.yaml` – nicht von Hand ändern. Dieselben Angaben zeigt die Karte",
+        "unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw. Dauerzählstellen).",
         "Rechtliche Hinweise sind keine Rechtsberatung; Kontakte aus der Behördendatenbank von",
         "FragDenStaat.",
         "",
-        "| Kommune | Land | Stand | Empfehlung |",
-        "|---|---|---|---|",
+        "| Kommune | Land | Stand | Dauerzählstellen | Empfehlung |",
+        "|---|---|---|---|---|",
     ]
     eintraege = sorted(
         fc["features"],
@@ -241,10 +270,19 @@ def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
     for f in eintraege:
         p = f["properties"]
         emp = (p.get("empfehlung") or ("in der Karte" if p.get("quelle") else "")).split(". ")[0]
-        zeilen.append(f"| {p['kommune']} | {p['land'] or ''} | {stand[p['stand']]} | {emp} |")
+        dauer = DAUER_STAND[p["dauer"]["stand"]] if p.get("dauer") else ""
+        zeilen.append(f"| {p['kommune']} | {p['land'] or ''} | {stand[p['stand']]} | {dauer} "
+                      f"| {emp} |")
     for f in eintraege:
         p = f["properties"]
         if p.get("quelle"):
+            if p.get("dauer"):  # in der Karte (Kurzzeitzählungen): nur die Dauerzählstellen
+                d = p["dauer"]
+                zeilen += ["", f"## {p['kommune']} – Dauerzählstellen {DAUER_STAND[d['stand']]}",
+                           "", d.get("situation") or d.get("was") or "", ""]
+                if d.get("links"):
+                    zeilen += ["**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})"
+                                                         for x in d["links"]), ""]
             continue
         zeilen += ["", f"## {p['kommune']} ({p['land']}) – {stand[p['stand']]}", ""]
         zeilen += [f"**Lage:** {p.get('situation') or p.get('was')}", ""]
@@ -252,6 +290,10 @@ def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
             zeilen += [f"**Empfehlung:** {p['empfehlung']}", ""]
         if p.get("weg"):
             zeilen += [f"**Weg:** {p['weg']}", ""]
+        if p.get("dauer"):
+            d = p["dauer"]
+            zeilen += [f"**Dauerzählstellen ({DAUER_STAND[d['stand']]}):** "
+                       f"{d.get('situation') or d.get('was')}", ""]
         k = p.get("kontakt") or {}
         if k:
             teile = [
@@ -269,12 +311,43 @@ def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
                 "```",
                 "",
             ]
-        if p.get("links"):
+        belege = p.get("links", []) + [x for x in (p.get("dauer") or {}).get("links", [])
+                                       if x not in p.get("links", [])]
+        if belege:
             zeilen += [
-                "**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})" for x in p["links"]),
+                "**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})" for x in belege),
                 "",
             ]
     return "\n".join(zeilen).rstrip() + "\n"
+
+
+def _schreibe_json(pfad: Path, inhalt: dict, eingerueckt: bool) -> None:
+    text = json.dumps(inhalt, ensure_ascii=False, indent=1 if eingerueckt else None,
+                      separators=None if eingerueckt else (",", ":"))
+    pfad.write_text(text + "\n", encoding="utf-8")
+
+
+def schreibe_datenlage(pfade: Pfade | None = None, erzeugt: date | None = None) -> list[Path]:
+    """Nur datenlage.json und docs/DATENLAGE.md erneuern – Lage und Zahl der Zählungen der
+    Kommunen in der Karte aus der vorhandenen index.json, alles andere aus sources.yaml."""
+    from types import SimpleNamespace
+
+    pfade = pfade or Pfade()
+    index = json.loads((pfade.karte / "index.json").read_text(encoding="utf-8"))
+    f = index["stellen"]["felder"]
+    iq, ilon, ilat = f.index("quelle"), f.index("lon"), f.index("lat")
+    n = Counter(z[0] for z in index["zaehlungen"]["werte"])
+    stellen = [SimpleNamespace(quelle=index["quellen"][w[iq]], lon=w[ilon], lat=w[ilat],
+                               zaehlungen=range(n[i]))
+               for i, w in enumerate(index["stellen"]["werte"])]
+    dl = datenlage(stellen, pfade)
+    ziel = pfade.karte / "datenlage.json"
+    _schreibe_json(ziel, dl, eingerueckt=True)
+    doku = pfade.repo / "docs" / "DATENLAGE.md"
+    doku.parent.mkdir(exist_ok=True)
+    doku.write_text(datenlage_md(dl, STAND, (erzeugt or date.today()).isoformat()),
+                    encoding="utf-8")
+    return [ziel, doku]
 
 
 def _statistik(stellen: list[Stelle], ohne: list[Zaehlung]) -> dict:
@@ -358,7 +431,7 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
         ],
         "statistik": _statistik(stellen, gebaut.ohne_lage),
     }
-    dl = datenlage(gebaut, pfade)
+    dl = datenlage(gebaut.stellen, pfade)
     dateien = {
         ziel / "index.json": index,
         ziel / "manifest.json": manifest,
@@ -373,8 +446,5 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
         if alt not in dateien:
             alt.unlink()
     for pfad, inhalt in dateien.items():
-        einrueck = 1 if pfad.name in ("manifest.json", "datenlage.json") else None
-        trenner = None if einrueck else (",", ":")
-        text = json.dumps(inhalt, ensure_ascii=False, indent=einrueck, separators=trenner)
-        pfad.write_text(text + "\n", encoding="utf-8")
+        _schreibe_json(pfad, inhalt, eingerueckt=pfad.name in ("manifest.json", "datenlage.json"))
     return list(dateien)

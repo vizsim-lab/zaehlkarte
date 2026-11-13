@@ -7,7 +7,13 @@ beide im selben Schritt mit:
   Reihenfolge von `gruppen`), Quellen mit Lizenzen, ihren Gruppen, dem Zeitraum je Gruppe
   (`zeitraeume`: erster und letzter vollständig gezählter Tag) und ihrem eigenen Standardtag,
   Zeitraum (`von`, `bis`), Kalender je Land (ein Zeichen je Tag ab `von`: s Schultag, f Ferien,
-  h Feiertag, w Wochenende, u unbekannt) und die Namen der übrigen Dateien (`dateien`).
+  h Feiertag, w Wochenende, u unbekannt), die Namen der übrigen Dateien (`dateien`) und
+  `juengster`: je Gruppe und Stelle (Reihenfolge der Stellen) [Datum, Tagessumme] des jüngsten
+  vollständig gezählten Schultags im Land der Stelle, sonst null – damit die Karte alle Quellen
+  zugleich zeigen kann, auch wenn ihre Zeiträume sich nicht überschneiden.
+- `version` (VERSION) zählt den Vertrag; wer ihn ändert, erhöht sie und DAUER_VERSION in
+  js/data/dauer.js. Ein älteres Release-Asset überspringt der Vertragstest dann im PR, auf main
+  hält er die Auslieferung an, bis „Dauerzählstellen bauen“ das Asset neu gebaut hat.
 - dauer/tage/JJJJ.json: Tagessummen aller Stellen eines Jahres je Gruppe, in der Reihenfolge der
   Stellen; null = an dem Tag nicht vollständig gezählt (nie 0), null statt Liste = im Jahr kein
   vollständiger Tag. Das braucht die Karte für den gewählten Tag.
@@ -29,7 +35,7 @@ from zaehlkarte.config import Pfade
 from zaehlkarte.dauer.modell import GRUPPEN, Messreihe, tagessummen
 from zaehlkarte.kalender import Ferienkalender, tagtyp
 
-VERSION = 1
+VERSION = 2  # 2: `juengster` (November 2026)
 CHUNK_BYTES = 900_000
 STUNDEN_TAGE = 365  # Stundenwerte: die jüngsten 12 Monate je Quelle
 STELLEN_FELDER = ["id", "quelle", "name", "abschnitt", "richtung", "lon", "lat", "von", "bis", "g",
@@ -74,12 +80,17 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
 
     # je Quelle: Tagessummen, Stellen mit mindestens einem vollständigen Tag
     stellen_werte, details, quellen_meta = [], [], []
+    juengster: dict[str, list] = {g: [] for g in gruppen}
     jahreswerte: dict[int, dict[str, list]] = {
         j: {g: [] for g in gruppen} for j in range(von.year, bis.year + 1)}
     for q, r in gelesen:
         tagesweise = {g: tagessummen(r, g) for g in gruppen if g in r.werte}
         summen = {g: s for g, (s, _) in tagesweise.items()}
         stunden_ab = max(0, r.tage - STUNDEN_TAGE)
+        land_kal = kalender(q["land"], pfade.config / q["ferien"] if q.get("ferien") else None,
+                            von, tage_gesamt)
+        ab = (r.von - von).days
+        schultag = np.array([c == "s" for c in land_kal[ab:ab + r.tage]], dtype=bool)
         anzahl, ohne = 0, 0
         for i, st in enumerate(r.stellen):
             voll = np.zeros(r.tage, dtype=bool)
@@ -93,6 +104,11 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
                         if g in summen and (summen[g][i] >= 0).any())
             stellen_werte.append([st.id, q["code"], st.name, st.abschnitt, st.richtung, st.lon,
                                   st.lat, r.tag(a).isoformat(), r.tag(b).isoformat(), maske])
+            for g in gruppen:  # jüngster vollständig gezählter Schultag je Gruppe
+                tage_s = (np.flatnonzero((summen[g][i] >= 0) & schultag) if g in summen
+                          else np.array([], dtype=int))
+                juengster[g].append([r.tag(int(tage_s[-1])).isoformat(),
+                                     int(summen[g][i, tage_s[-1]])] if tage_s.size else None)
             stunden = {}
             for g, w in r.werte.items():
                 feld = w[i, stunden_ab:]
@@ -129,8 +145,6 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
             if tage_mit.size:
                 zeitraeume[g] = [r.tag(int(tage_mit[0])).isoformat(),
                                  r.tag(int(tage_mit[-1])).isoformat()]
-        land_kal = kalender(q["land"], pfade.config / q["ferien"] if q.get("ferien") else None,
-                            von, tage_gesamt)
         quellen_meta.append({
             "code": q["code"], "name": q["name"], "land": q["land"], "traeger": q.get("traeger"),
             "art": q.get("art"), "weg": q.get("weg"), "portal": q.get("portal"),
@@ -175,6 +189,7 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
         "standardtag": standardtag(gelesen, kal, von).isoformat(),
         "quellen": quellen_meta,
         "stellen": {"felder": STELLEN_FELDER, "werte": stellen_werte},
+        "juengster": juengster,
     }
     dateien: dict[Path, dict] = {ziel / "index.json": index}
     for j, werte in jahreswerte.items():

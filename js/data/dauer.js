@@ -1,34 +1,52 @@
-// dauer.js — Familie Dauerzählstellen: Stellen, Tagessumme am gewählten Tag, Klassen, CSV.
+// dauer.js — Familie Dauerzählstellen: Stellen, Tagessummen (je Stelle am jüngsten Schultag oder
+// alle am gewählten Tag), Themen und Klassen, CSV.
 //
 // REIN halten (kein DOM, kein window): tests/unit/dauer.test.js prüft es browserlos.
 // Daten aus public/data/dauer/ (pipeline/src/zaehlkarte/dauer/site.py): index.json beim
-// Umschalten, tage/JJJJ.json für das Jahr des gewählten Tags, NN.json erst beim Klick.
+// Umschalten (darin je Stelle der jüngste vollständig gezählte Schultag), tage/JJJJ.json erst,
+// wenn ein Tag gewählt ist, NN.json erst beim Klick.
 //
 // Eine Tagessumme gibt es nur, wenn jede Stunde des Tages gezählt ist – null heißt „nicht
-// vollständig gezählt“, nie 0. Keine Mittelwerte, keine Hochrechnung: gezeigt wird der Tag.
+// vollständig gezählt“, nie 0. Keine Mittelwerte, keine Hochrechnung: gezeigt wird ein Tag.
 import { datum, t } from "../sprache/texte.js";
 import { STUFENFARBEN, stufe } from "./modell.js";
 
-// Gruppen, wie die Quellen sie zählen – nie ineinander gemischt: Berlins „Lkw“ und Hamburgs
-// „Schwerverkehr“ sind je eine Klasse des Detektors, keiner der Schwerverkehr der
-// Kurzzeitzählungen. Welche es gibt, steht in dauer/index.json (`gruppen`, Bits der Stellen).
-export const DAUER_GRUPPEN = ["kfz", "lkw", "sv", "rad", "fuss"];
-export const DAUER_THEMEN = {
-  kfz: { get name() { return t("gruppe.kfz"); } },
-  lkw: { get name() { return t("gruppe.lkw"); } },
-  sv: { get name() { return t("gruppe.sv_detektor"); } },
-  rad: { get name() { return t("gruppe.rad"); } },
-  fuss: { get name() { return t("gruppe.fuss"); } },
-};
+/** Vertrag mit dauer/index.json (`version`, VERSION in pipeline/src/zaehlkarte/dauer/site.py). */
+export const DAUER_VERSION = 2;
 
-// Klassengrenzen der Tagessummen je Zählstelle (4 Grenzen -> 5 Stufen), an den Quintilen der
+// Gruppen, wie die Quellen sie zählen – in den Daten nie ineinander gemischt: Berlins und
+// Ettlingens „Lkw“ und Hamburgs „Schwerverkehr“ sind je eine Klasse des Detektors, keine der
+// Schwerverkehr der Kurzzeitzählungen. Welche es gibt, steht in dauer/index.json (`gruppen`,
+// Bits der Stellen).
+export const DAUER_GRUPPEN = ["kfz", "lkw", "sv", "rad", "fuss"];
+const GRUPPEN_TEXTE = { kfz: "gruppe.kfz", lkw: "gruppe.lkw", sv: "gruppe.sv_detektor", rad: "gruppe.rad", fuss: "gruppe.fuss" };
+/** Name einer Gruppe der Daten („Lkw (Detektor)“). */
+export const gruppenName = (g) => (GRUPPEN_TEXTE[g] ? t(GRUPPEN_TEXTE[g]) : g);
+
+// Themen der Karte (die Chips) und die Gruppen, die jedes zeigt. Lkw und Schwerverkehr stehen
+// unter einem Chip: jede Stelle zeigt die Klasse ihres Detektors und nennt sie, zusammengezählt
+// oder umgerechnet wird nichts (hätte eine Stelle beide Klassen, zeigte die Karte die erste).
+export const DAUER_THEMEN = {
+  kfz: { gruppen: ["kfz"], get name() { return t("gruppe.kfz"); } },
+  sv: { gruppen: ["lkw", "sv"], get name() { return t("gruppe.schwer"); } },
+  rad: { gruppen: ["rad"], get name() { return t("gruppe.rad"); } },
+  fuss: { gruppen: ["fuss"], get name() { return t("gruppe.fuss"); } },
+};
+/** Thema einer Gruppe (lkw -> sv) – so gelten auch alte Links mit t=lkw.menge. */
+export const themaVon = (g) => Object.keys(DAUER_THEMEN).find((k) => DAUER_THEMEN[k].gruppen.includes(g)) ?? g;
+/** Gruppe, die eine Stelle im Thema zeigt (null: die Stelle zählt keine seiner Gruppen). */
+export const gruppeFuer = (s, thema) => DAUER_THEMEN[thema]?.gruppen.find((g) => s.gruppen.includes(g)) ?? null;
+/** Hat die Daten eine Gruppe des Themas? */
+export const hatThema = (d, thema) => DAUER_THEMEN[thema]?.gruppen.some((g) => d.gruppen.includes(g)) ?? false;
+
+// Klassengrenzen der Tagessummen je Thema (4 Grenzen -> 5 Stufen), an den Quintilen der
 // Quellen ausgerichtet (Bericht von `zaehlkarte dauer site`, November 2026):
 // Kfz Berlin 6.350 / 9.760 / 12.820 / 16.820, Hamburg 5.000 / 8.140 / 11.950 / 18.190;
-// Lkw Berlin 190 / 360 / 590 / 990; Schwerverkehr Hamburg 170 / 350 / 600 / 990;
+// Lkw Berlin 190 / 360 / 590 / 990, Schwerverkehr Hamburg 170 / 350 / 600 / 990 – eine Skala für
+// beide Klassen (nur die Farbstufen; die Werte bleiben je Klasse, wie die Quelle sie zählt);
 // Rad Hamburg 360 / 660 / 1.100 / 1.950. Fuß: noch keine Quelle (Platzhalter).
 export const DAUER_STUFEN = {
   kfz: [6000, 10000, 13000, 17000],
-  lkw: [200, 350, 600, 1000],
   sv: [200, 350, 600, 1000],
   rad: [350, 700, 1100, 2000],
   fuss: [500, 1000, 2500, 5000],
@@ -87,18 +105,38 @@ export function amSelbenPunkt(d, stelle) {
   return d.stellen.filter((s) => s.quelle === stelle.quelle && s.lon === stelle.lon && s.lat === stelle.lat);
 }
 
-/** Gruppe, die die Karte zeigt: die gewählte, wenn es sie gibt, sonst die erste der Daten. */
-export const themaIn = (d, g) => (d.gruppen.includes(g) ? g : d.gruppen[0]);
+/** Thema, das die Karte zeigt: das gewählte, wenn es in den Daten vorkommt, sonst das der ersten Gruppe. */
+export function themaIn(d, thema) {
+  const th = themaVon(thema);
+  return hatThema(d, th) ? th : themaVon(d.gruppen[0]);
+}
+
+/** Ortsname einer Quelle: „Hamburg (Kfz, Wärmebildkameras)“ -> „Hamburg“. */
+const ort = (q) => q.name.replace(/\s*\(.*\)\s*$/, "");
 
 /**
- * Quellen, die die Gruppe zählen, aber am Tag keine Werte haben (ihr Zeitraum für die Gruppe
+ * Themen mit mehreren Klassen (Lkw/Schwerverkehr): je Gruppe der Daten die Orte, deren Quellen
+ * sie zählen – [{ gruppe, orte }] für den Hinweis in der Legende; sonst [].
+ */
+export function klassenDerQuellen(d, thema) {
+  const gruppen = DAUER_THEMEN[thema]?.gruppen ?? [];
+  if (gruppen.length < 2) return [];
+  return gruppen.filter((g) => d.gruppen.includes(g)).map((g) => ({
+    gruppe: g,
+    orte: [...new Set(d.quellenMeta.filter((q) => (q.gruppen ?? d.gruppen).includes(g)).map(ort))],
+  })).filter((x) => x.orte.length);
+}
+
+/**
+ * Quellen, die das Thema zählen, aber am Tag keine Werte haben (ihr Zeitraum für die Gruppe
  * endet vorher oder beginnt später): [{ quelle, von, bis, sprung }] – `sprung` ist der
  * Standardtag der Quelle, liegt er außerhalb, das Ende ihres Zeitraums.
  */
-export function quellenOhneTag(d, g, iso) {
+export function quellenOhneTag(d, thema, iso) {
   const out = [];
   for (const q of d.quellenMeta) {
-    if (!(q.gruppen ?? d.gruppen).includes(g)) continue;
+    const g = (DAUER_THEMEN[thema]?.gruppen ?? []).find((x) => (q.gruppen ?? d.gruppen).includes(x));
+    if (!g) continue;
     const [von, bis] = q.zeitraeume?.[g] ?? [q.von, q.bis];
     if (iso >= von && iso <= bis) continue;
     const sprung = q.standardtag && q.standardtag >= von && q.standardtag <= bis ? q.standardtag : bis;
@@ -121,19 +159,71 @@ export function wertAm(jahr, stelle, g, iso) {
   return reihe[tageZwischen(`${iso.slice(0, 4)}-01-01`, iso)] ?? null;
 }
 
-/** Je Stelle, die an dem Tag besteht und die Gruppe zählt: Wert und Stufe (-1 = nicht vollständig). */
+/**
+ * Je Stelle, die an dem Tag besteht und das Thema zählt: ihre Gruppe, Wert und Stufe
+ * (-1 = nicht vollständig gezählt).
+ */
 export function ansichtDauer(d, zustand, jahr, iso) {
-  const g = zustand.dthema;
-  const grenzen = DAUER_STUFEN[g];
+  const grenzen = DAUER_STUFEN[zustand.dthema];
   const out = [];
   for (const s of d.stellen) {
-    if (iso < s.von || iso > s.bis || !hatGruppe(s, g)) continue;
+    const g = gruppeFuer(s, zustand.dthema);
+    if (!g || iso < s.von || iso > s.bis) continue;
     const z = d.zeitraeume?.get(s.quelle)?.[g];
     if (z && (iso < z[0] || iso > z[1])) continue;
     const v = wertAm(jahr, s, g, iso);
-    out.push({ stelle: s, wert: v, stufe: v == null ? -1 : stufe(v, grenzen) });
+    out.push({ stelle: s, gruppe: g, tag: iso, wert: v, stufe: v == null ? -1 : stufe(v, grenzen) });
   }
   return out;
+}
+
+/** Jüngster vollständig gezählter Schultag einer Stelle in einer Gruppe: [Tag, Tagessumme] oder null. */
+export const juengsterVon = (d, s, g) => d.juengster?.[g]?.[s.index] ?? null;
+
+/**
+ * Standardansicht: je Stelle ihr jüngster vollständig gezählter Schultag – solange kein Tag
+ * gewählt ist und die Daten ihn kennen (eine dauer/index.json ohne `juengster`: der Standardtag).
+ * So stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume sich nicht überschneiden.
+ */
+export const imJuengsten = (d, zustand) => zustand.tag == null && d?.juengster != null;
+
+/** Je Stelle mit dem Thema: Gruppe, Tag, Wert und Stufe am jüngsten Schultag (-1 = an keinem vollständig). */
+export function ansichtJuengster(d, zustand) {
+  const grenzen = DAUER_STUFEN[zustand.dthema];
+  const out = [];
+  for (const s of d.stellen) {
+    const g = gruppeFuer(s, zustand.dthema);
+    if (!g) continue;
+    const j = juengsterVon(d, s, g);
+    out.push({ stelle: s, gruppe: g, tag: j?.[0] ?? null, wert: j?.[1] ?? null, stufe: j ? stufe(j[1], grenzen) : -1 });
+  }
+  return out;
+}
+
+/** Je Quelle der Einträge mit Wert: frühester und jüngster gezeigter Tag – [{ quelle, von, bis }]. */
+export function tageJeQuelle(d, eintraege) {
+  const je = new Map();
+  for (const e of eintraege) {
+    if (e.wert == null || !e.tag) continue;
+    const x = je.get(e.stelle.quelle);
+    if (!x) je.set(e.stelle.quelle, { von: e.tag, bis: e.tag });
+    else if (e.tag < x.von) x.von = e.tag;
+    else if (e.tag > x.bis) x.bis = e.tag;
+  }
+  return d.quellenMeta.filter((q) => je.has(q.code)).map((q) => ({ quelle: q, ...je.get(q.code) }));
+}
+
+/**
+ * Tag, den Hover und Seitenleiste einer Stelle zeigen: der gewählte; ohne gewählten Tag ihr
+ * jüngster Schultag in der Gruppe des Themas (sonst der jüngste in einer anderen Gruppe, sonst
+ * ihr letzter vollständig gezählter Tag).
+ */
+export function tagDerStelle(d, zustand, s) {
+  if (!imJuengsten(d, zustand)) return tagImZeitraum(d, zustand.tag);
+  const g = gruppeFuer(s, zustand.dthema);
+  const j = (g && juengsterVon(d, s, g))
+    || s.gruppen.map((x) => juengsterVon(d, s, x)).filter(Boolean).sort((a, b) => b[0].localeCompare(a[0]))[0];
+  return j?.[0] ?? s.bis;
 }
 
 export function zaehleDauer(eintraege) {
@@ -170,9 +260,14 @@ export function zeitraumText(von, bis) {
   return `${datum(von)} – ${datum(bis)}`;
 }
 
-/** Bezeichnung der gezeigten Kennzahl: „Kfz, Tagessumme am 26.06.2025“. */
-export function kennzahlTextDauer(g, datumText) {
-  return t("dauer.kennzahl", { gruppe: DAUER_THEMEN[g].name, datum: datumText });
+/** Bezeichnung der gezeigten Kennzahl: „Kfz, Tagessumme am 26.06.2025“ (Name des Themas oder der Gruppe). */
+export function kennzahlTextDauer(name, datumText) {
+  return t("dauer.kennzahl", { gruppe: name, datum: datumText });
+}
+
+/** „Kfz, Tagessumme am jüngsten Schultag je Stelle“. */
+export function kennzahlTextJuengster(name) {
+  return t("dauer.kennzahl_j", { gruppe: name });
 }
 
 function csvFeld(v) {
@@ -196,6 +291,25 @@ export function csvDauer(d, jahr, iso, lizenzVon) {
       s.quelle, s.id, s.name, s.abschnitt, s.richtung, s.lon, s.lat, iso,
       t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"),
       ...d.gruppen.map((g) => (hatGruppe(s, g) ? wertAm(jahr, s, g, iso) : null)),
+      lizenzVon(s.quelle),
+    ].map(csvFeld).join(";"));
+  }
+  return `﻿${zeilen.join("\n")}\n`;
+}
+
+/**
+ * CSV (Semikolon, UTF-8) aller Stellen in der Standardansicht: je Gruppe der jüngste vollständig
+ * gezählte Schultag und seine Tagessumme – leer, wo die Stelle die Gruppe nicht zählt oder an
+ * keinem Schultag vollständig. Spalten und Werte deutsch, in jeder Sprache gleich.
+ */
+export function csvDauerJuengster(d, lizenzVon) {
+  const kopf = ["quelle", "stelle", "name", "abschnitt", "richtung", "lon", "lat",
+    ...d.gruppen.flatMap((g) => [`${g}_juengster_schultag`, `${g}_tagessumme`]), "lizenz"];
+  const zeilen = [kopf.join(";")];
+  for (const s of d.stellen) {
+    zeilen.push([
+      s.quelle, s.id, s.name, s.abschnitt, s.richtung, s.lon, s.lat,
+      ...d.gruppen.flatMap((g) => juengsterVon(d, s, g) ?? [null, null]),
       lizenzVon(s.quelle),
     ].map(csvFeld).join(";"));
   }

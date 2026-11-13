@@ -12,10 +12,13 @@
 //   m  Kartenausschnitt zoom/lat/lon
 //   s  gewählte Stelle (id aus index.json bzw. dauer/index.json)
 //   f  Familie         k Kurzzeitzählungen (Standard) | d Dauerzählstellen
-//   z  gewählter Tag   JJJJ-MM-TT (Dauerzählstellen; fehlt = Standardtag der Daten)
-// Bei f=d steht in t die Verkehrsart der Dauerzählstellen (kfz.menge | lkw.menge); die übrigen
-// Kürzel behalten ihre Bedeutung für die Kurzzeitzählungen.
-import { DAUER_THEMEN } from "../data/dauer.js";
+//   z  gewählter Tag   JJJJ-MM-TT (Dauerzählstellen; fehlt = je Stelle ihr jüngster vollständig
+//                      gezählter Schultag – bis November 2026: der Standardtag der Daten, der
+//                      sich mit jedem Bau verschob)
+// Bei f=d steht in t die Verkehrsart der Dauerzählstellen (kfz.menge | sv.menge = Lkw/Schwerverkehr
+// | rad.menge | fuss.menge); lkw.menge (bis November 2026 ein eigener Chip) gilt als sv.menge. Die
+// übrigen Kürzel behalten ihre Bedeutung für die Kurzzeitzählungen.
+import { DAUER_THEMEN, themaVon } from "../data/dauer.js";
 import { TAGE, THEMEN } from "../data/modell.js";
 
 const ARTEN = ["w", "w24", "sp"];
@@ -59,7 +62,8 @@ export function dekodiere(hash, standard, bekannteQuellen) {
   if (p.get("f") === "d") z.familie = "d";
   const [thema, modus] = (p.get("t") ?? "").split(".");
   if (z.familie === "d") {
-    if (DAUER_THEMEN[thema] && modus === "menge") z.dthema = thema;
+    const dthema = themaVon(thema); // lkw -> sv
+    if (DAUER_THEMEN[dthema] && modus === "menge") z.dthema = dthema;
     if (/^\d{4}-\d{2}-\d{2}$/.test(p.get("z") ?? "")) z.tag = p.get("z");
   } else if (THEMEN[thema]?.modi[modus]) {
     z.thema = thema;

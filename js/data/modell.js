@@ -68,7 +68,7 @@ export function standardZustand(jahre, quellen) {
     datenlage: true,
     familie: "k", // k Kurzzeitzählungen | d Dauerzählstellen (js/data/dauer.js)
     dthema: "kfz", // Verkehrsart der Dauerzählstellen
-    tag: null, // gewählter Tag der Dauerzählstellen (null = Standardtag der Daten)
+    tag: null, // gewählter Tag der Dauerzählstellen (null = je Stelle ihr jüngster Schultag)
   };
 }
 

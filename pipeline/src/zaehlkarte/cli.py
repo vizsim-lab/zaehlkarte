@@ -62,6 +62,15 @@ def site(datum: Datum = None) -> None:
         typer.echo(f"{pfad.relative_to(pfad.parents[2])}: {pfad.stat().st_size // 1024} KB")
 
 
+@app.command()
+def datenlage(datum: Datum = None) -> None:
+    """Nur datenlage.json und docs/DATENLAGE.md erneuern (aus sources.yaml und der vorhandenen
+    index.json) – für geänderte Datenlage-Texte ohne neuen Bau."""
+    erzeugt = date.fromisoformat(datum) if datum else None
+    for pfad in site_.schreibe_datenlage(erzeugt=erzeugt):
+        typer.echo(f"{pfad}: {pfad.stat().st_size // 1024} KB")
+
+
 dauer = typer.Typer(no_args_is_help=True,
                     help="Dauerzählstellen: eigene Familie, Kartendaten unter public/data/dauer/")
 app.add_typer(dauer, name="dauer")

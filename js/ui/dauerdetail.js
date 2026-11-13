@@ -1,13 +1,14 @@
 // dauerdetail.js — Seitenleiste einer Dauerzählstelle: Tagessummen über die ganze Reihe,
-// Tagesgang des gewählten Tags, Herkunft, Lizenz und CSV.
+// Tagesgang des gezeigten Tags (im Standard ihr jüngster Schultag, sonst der gewählte), Herkunft,
+// Lizenz und CSV.
 //
 // Nur gezählte Werte: eine Tagessumme gibt es nur, wenn jede Stunde des Tages gezählt ist;
 // sonst steht da, wie viele Stunden fehlen. Texte aus den Daten (Straßen, Richtungen,
 // Hinweise der Stammdaten) sind fremd: immer über esc() ins HTML, lang="de".
 import { ladeDauer } from "../data/laden.js";
 import {
-  DAUER_GRUPPEN, DAUER_THEMEN, amSelbenPunkt, hatGruppe, plusTage, stundenAm, stundenDesTags, tagAusDetail, tageZwischen,
-  tagtyp, zeitraumText,
+  DAUER_GRUPPEN, amSelbenPunkt, gruppeFuer, gruppenName, hatGruppe, imJuengsten, plusTage, stundenAm, stundenDesTags,
+  tagAusDetail, tageZwischen, tagtyp, zeitraumText,
 } from "../data/dauer.js";
 import { TAGE } from "../data/modell.js";
 import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
@@ -71,7 +72,8 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     if (!stelle) return;
     const d = gibDauer();
     const z = gibZustand();
-    const tag = gibTag();
+    const tag = gibTag(stelle);
+    const juengster = imJuengsten(d, z);
     const q = quelle(d);
     // mehrere Stellen am selben Punkt (alle Richtungen eines Sensors): hier umschalten, in der
     // Karte liegen sie übereinander
@@ -94,7 +96,8 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       el.innerHTML = `${kopf}<div class="pop-meta">${esc(fehler ? t("detail.ladefehler", { fehler }) : t("detail.lade"))}</div>`;
       return;
     }
-    const g = hatGruppe(stelle, z.dthema) ? z.dthema : stelle.gruppen[0];
+    // Gruppe der Reihe: die Klasse der Stelle im gezeigten Thema (Lkw oder Schwerverkehr), sonst ihre erste
+    const g = gruppeFuer(stelle, z.dthema) ?? stelle.gruppen[0];
     // Reihe der gewählten Gruppe von ihrem ersten bis zum letzten vollständigen Tag (Hamburg:
     // Schwerverkehr seit März, Kfz erst seit September – sonst stünde vorn eine lange Lücke)
     const alle = detail.tage[g] ?? [];
@@ -108,7 +111,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const gewaehlt = tageZwischen(reiheVon, tag);
     const tr = tagesreihe(werte, typen, reiheVon, gewaehlt);
     const reihe = tr.svg ? `
-      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: DAUER_THEMEN[g].name, zeitraum: zeitraumText(reiheVon, plusTage(detail.von, letzter)) }))}</div>
+      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: gruppenName(g), zeitraum: zeitraumText(reiheVon, plusTage(detail.von, letzter)) }))}</div>
       <div class="tr-wrap">${tr.svg}<div class="tg-tooltip" hidden></div></div>
       <div class="tr-legende">
         <span><i style="background:${TR_FARBEN.s}"></i>${esc(TAGE.s)}</span>
@@ -125,14 +128,14 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       tagTeil = `<div class="pop-meta">${esc(t("dd.ausserhalb", { datum: datum(tag), von: datum(stelle.von), bis: datum(stelle.bis) }))}</div>`;
     } else {
       const gruppen = DAUER_GRUPPEN.filter((x) => hatGruppe(stelle, x));
-      const reihen = gruppen.map((x, i) => ({ id: x, name: DAUER_THEMEN[x].name, farbe: FARBEN[i], stunden: stundenAm(detail, x, tag) }))
+      const reihen = gruppen.map((x, i) => ({ id: x, name: gruppenName(x), farbe: FARBEN[i], stunden: stundenAm(detail, x, tag) }))
         .filter((r) => r.stunden);
       const tg = reihen.length ? tagesgang(reihen) : null;
       const soll = stundenDesTags(tag);
       const zeilen = gruppen.map((x) => {
         const { wert, stunden } = tagAusDetail(detail, x, tag);
         const text = wert != null ? zahl(wert) : t(stunden ? "dd.unvollstaendig" : "dd.nicht_gezaehlt", { n: zahl(stunden), soll });
-        return `<tr><td>${esc(DAUER_THEMEN[x].name)}</td><td${wert == null ? ' class="is-leer"' : ""}>${esc(text)}</td></tr>`;
+        return `<tr><td>${esc(gruppenName(x))}</td><td${wert == null ? ' class="is-leer"' : ""}>${esc(text)}</td></tr>`;
       }).join("");
       const hinweise = [
         detail.doppelt?.includes(tag) ? t("dd.doppelt") : null,
@@ -155,6 +158,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       ${reihe}
       <section class="detail-tag" aria-live="polite">
         <div class="detail-abschnitt">${esc(t("dd.tag", { wochentag: wochentag(tag), datum: datum(tag), tag: TAGE[typ] }))}</div>
+        ${juengster ? `<div class="pop-meta dd-juengster">${esc(t("dd.juengster"))}</div>` : ""}
         ${tagTeil}
       </section>
       ${hinweise ? `<div class="detail-abschnitt">${esc(t("detail.hinweise"))}</div><ul class="detail-hinweise" lang="de">${hinweise}</ul>` : ""}
@@ -283,7 +287,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
 
   function csvStunden() {
     if (!detail) return;
-    const tag = gibTag();
+    const tag = gibTag(stelle);
     const gruppen = DAUER_GRUPPEN.filter((x) => stundenAm(detail, x, tag));
     const reihen = gruppen.map((x) => stundenAm(detail, x, tag));
     const zeilen = [["stunde", ...gruppen].join(";")];

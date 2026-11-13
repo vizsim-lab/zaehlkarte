@@ -18,6 +18,11 @@ export async function ladeStart() {
     json(manifest.dateien.index),
     json(manifest.dateien.datenlage),
   ]);
+  // Datenlage der Dauerzählstellen (`dauer` je Kommune): den Stand flach daneben, damit die
+  // Kartenebene ihn in Ausdrücken lesen kann (verschachtelte Werte kommen dort nur als Text an)
+  for (const f of datenlage.features) {
+    if (f.properties.dauer) f.properties.dauer_stand = f.properties.dauer.stand;
+  }
   return { manifest, index, datenlage };
 }
 

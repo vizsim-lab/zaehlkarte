@@ -224,3 +224,16 @@ def test_messreihe_leer():
     r = Messreihe.leer("x", date(2025, 1, 1), date(2025, 1, 31), [], ("kfz", "lkw"))
     assert r.werte["kfz"].shape == (0, 31, 24)
     assert set(r.werte) == {"kfz", "lkw"}
+
+
+def test_vertragsversion_gleich_im_frontend():
+    """VERSION in dauer/site.py und DAUER_VERSION in js/data/dauer.js gehen nur zusammen."""
+    import re
+
+    from zaehlkarte.config import Pfade
+    from zaehlkarte.dauer import site as dsite
+
+    js = (Pfade().repo / "js" / "data" / "dauer.js").read_text(encoding="utf-8")
+    m = re.search(r"export const DAUER_VERSION = (\d+);", js)
+    assert m and int(m[1]) == dsite.VERSION
+

@@ -3,16 +3,21 @@
 // Ablauf: manifest.json + index.json + datenlage.json laden (parallel zur Karte), Zustand aus
 // dem Permalink (#…) lesen, Layer anlegen, bei jeder Änderung `zeichne()`. Details einer
 // Stelle lädt detail.js erst beim Klick. Test-Hook: window.__app (tests/web/).
-// Familie Dauerzählstellen (f=d): dauer/index.json erst beim Umschalten, dazu die Jahresdatei
-// des gewählten Tags; Details einer Dauerstelle lädt dauerdetail.js beim Klick.
+// Familie Dauerzählstellen (f=d): dauer/index.json erst beim Umschalten – im Standard zeigt sie je
+// Stelle ihren jüngsten Schultag (alle Quellen zugleich); erst mit einem gewählten Tag (z=) kommt
+// dessen Jahresdatei dazu. Details einer Dauerstelle lädt dauerdetail.js beim Klick.
 // Sprache (DE Standard, EN wählbar): js/sprache/ – nach einem Wechsel wird neu gezeichnet.
 import { Map as Karte } from "./js/lib/maplibre.js";
 import { gibtDauer, ladeDauer, ladeStart } from "./js/data/laden.js";
 import { ansicht, csv, entpacke, features, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
-import { ansichtDauer, csvDauer, entpackeDauer, featuresDauer, tagImZeitraum, themaIn, zaehleDauer } from "./js/data/dauer.js";
+import {
+  ansichtDauer, ansichtJuengster, csvDauer, csvDauerJuengster, entpackeDauer, featuresDauer, imJuengsten, tagDerStelle,
+  tagImZeitraum, themaIn, zaehleDauer,
+} from "./js/data/dauer.js";
 import { addBasemapTerrain } from "./js/map/basemapTerrain.js";
 import {
   bindeHover, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeDauer, setzeFamilie, setzeStellen, standText,
+  standTextDauer,
 } from "./js/map/ebenen.js";
 import { t, zahl } from "./js/sprache/texte.js";
 import { bindeUmschalter, ersteSprache, wendeAn } from "./js/sprache/umschalter.js";
@@ -70,7 +75,8 @@ async function start() {
   let dauerJahr = null;
   let dauerEintraege = [];
   let jeDauer = new Map();
-  const tagJetzt = () => (dauer ? tagImZeitraum(dauer, zustand.tag) : null);
+  // gewählter Tag (null im Standard: je Stelle ihr jüngster Schultag)
+  const tagJetzt = () => (dauer && !imJuengsten(dauer, zustand) ? tagImZeitraum(dauer, zustand.tag) : null);
 
   const detail = erstelleDetail({
     manifest,
@@ -82,7 +88,7 @@ async function start() {
   const dauerDetail = erstelleDauerDetail({
     gibDauer: () => dauer,
     gibZustand: () => zustand,
-    gibTag: () => tagJetzt(),
+    gibTag: (s) => (dauer ? tagDerStelle(dauer, zustand, s) : null),
     beiTag: (iso) => tagWechseln(iso),
     beiStelle: (s) => oeffneDauer(s),
     beiSchliessen: () => { setzeAuswahl(karte, null); merkeLink(); },
@@ -91,6 +97,7 @@ async function start() {
     manifest, daten, zustand, datenlage, geaendert: () => zeichne(),
     familieWechseln: (f) => familieWechseln(f),
     tagWechseln: (iso) => tagWechseln(iso),
+    dauerModus: (m) => dauerModus(m),
   });
 
   async function holeDauer() {
@@ -116,35 +123,60 @@ async function start() {
     detail.schliesse();
     dauerDetail.schliesse();
     setzeAuswahl(karte, null);
+    // offene Datenlage einer Kommune: in der neuen Familie zeigen (ohne Eintrag dort: schließen)
+    if (!dlPanel.hidden && dlPanel.dataset.kommune) {
+      const p = datenlage.features.find((x) => x.properties.kommune === dlPanel.dataset.kommune)?.properties;
+      if (f === "d" && !p?.dauer) schliesseDatenlage(); else zeigeDatenlage(dlPanel.dataset.kommune);
+    }
     legende.zeichne();
     await zeichne();
   }
 
+  /** Ein Tag für alle Stellen (auch aus der Standardansicht heraus: Tagesreihe, Sprung, Tag wählen). */
   async function tagWechseln(iso) {
     if (!dauer) return;
     zustand.tag = tagImZeitraum(dauer, iso);
+    legende.zeichne();
     await zeichne();
+  }
+
+  /** j: je Stelle ihr jüngster Schultag (Standard) | t: Tag wählen (zuerst der Standardtag der Daten). */
+  async function dauerModus(m) {
+    if (!dauer) return;
+    if (m === "j" && zustand.tag != null) {
+      zustand.tag = null;
+      legende.zeichne();
+      await zeichne();
+    } else if (m === "t" && imJuengsten(dauer, zustand)) {
+      await tagWechseln(dauer.standardtag);
+    }
   }
 
   let zeichneNr = 0;
   async function zeichne() {
     const nr = ++zeichneNr;
     setzeFamilie(karte, zustand.familie);
-    setzeDatenlage(karte, zustand.datenlage);
+    setzeDatenlage(karte, zustand.datenlage, zustand.familie);
     if (zustand.familie === "d" && dauer) {
       const tag = tagJetzt();
-      let jahr = null;
-      try {
-        jahr = await ladeDauer(dauer.dateien.tage.replace("{jahr}", tag.slice(0, 4)));
-      } catch (err) {
-        legende.hinweis(t("familie.d_fehlt", { fehler: err.message }));
+      if (tag == null) {
+        // Standard: je Stelle ihr jüngster Schultag – steht in dauer/index.json, keine Jahresdatei
+        dauerJahr = null;
+        dauerEintraege = ansichtJuengster(dauer, zustand);
+      } else {
+        let jahr = null;
+        try {
+          jahr = await ladeDauer(dauer.dateien.tage.replace("{jahr}", tag.slice(0, 4)));
+        } catch (err) {
+          legende.hinweis(t("familie.d_fehlt", { fehler: err.message }));
+        }
+        if (nr !== zeichneNr) return;
+        dauerJahr = jahr;
+        dauerEintraege = ansichtDauer(dauer, zustand, jahr, tag);
       }
-      if (nr !== zeichneNr) return;
-      dauerJahr = jahr;
-      dauerEintraege = ansichtDauer(dauer, zustand, jahr, tag);
       jeDauer = new Map(dauerEintraege.map((e) => [e.stelle.index, e]));
       setzeDauer(karte, featuresDauer(dauerEintraege));
-      legende.zeichneDauer(tag, zaehleDauer(dauerEintraege));
+      legende.zeichneDauer(tag, zaehleDauer(dauerEintraege), dauerEintraege);
       dauerDetail.aktualisiere();
     } else {
       eintraege = ansicht(daten, zustand);
@@ -189,28 +221,30 @@ async function start() {
     merkeLink();
   }
 
-  // Datenlage einer Kommune: Oberfläche in der gewählten Sprache, die Recherche-Texte deutsch
+  // Datenlage einer Kommune in der gewählten Familie: Oberfläche in der gewählten Sprache, die
+  // Recherche-Texte deutsch. Dauerzählstellen: ihr eigener Stand mit Text und Belegen (`dauer`),
+  // ohne Anfragetext – der gilt den Kurzzeitzählungen.
   function zeigeDatenlage(kommune, { behalteScroll = false } = {}) {
     const f = datenlage.features.find((x) => x.properties.kommune === kommune);
     if (!f) return;
     const p = f.properties;
+    const dl = zustand.familie === "d" ? p.dauer : null;
     const el = dlPanel;
     const scroll = el.scrollTop;
-    const links = p.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");
+    const links = (dl ? dl.links : p.links).map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");
     const k = p.kontakt;
     const kontakt = k ? `<div class="detail-abschnitt">${esc(t("dl.kontakt"))}</div><p class="detail-text">
         ${k.name ? `<span lang="de">${esc(k.name)}</span><br>` : ""}${k.email ? `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a><br>` : ""}
         ${k.fds ? `<a href="${esc(k.fds)}" target="_blank" rel="noopener">${esc(t(k.fds_suche ? "dl.fds_suche" : "dl.fds"))} →</a>` : ""}</p>` : "";
-    const a = p.anfrage;
+    const a = dl ? null : p.anfrage;
     const deutsch = t("dl.deutsch");
-    el.innerHTML = `
-      <header class="detail-kopf">
-        <div><div class="pop-eyebrow">${esc(t("hover.datenlage", { land: p.land ?? "" }))}</div>
-        <h2 class="detail-titel">${esc(p.kommune)}</h2>
-        <div class="pop-meta">${esc(standText(manifest, p.stand))}</div></div>
-        <button class="detail-zu" type="button" data-schliessen aria-label="${esc(t("schliessen"))}">×</button>
-      </header>
-      ${deutsch ? `<p class="pop-meta dl-sprache">${esc(deutsch)}</p>` : ""}
+    const recht = p.recht ? `<div class="detail-abschnitt">${esc(t("dl.recht"))}</div><p class="detail-text"><span lang="de">${esc(p.recht)}.</span> ${esc(t("dl.keine_beratung"))}</p>` : "";
+    const inhalt = dl ? `
+      <p class="detail-text" lang="de">${esc(dl.was ?? "")}</p>
+      ${dl.stand === "in_karte" ? `<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.d.in_karte"))}</button></p>` : ""}
+      ${dl.situation ? `<div class="detail-abschnitt">${esc(t("dl.lage"))}</div><p class="detail-text" lang="de">${esc(dl.situation)}</p>` : ""}
+      ${dl.stand === "in_karte" ? "" : kontakt}
+      ${dl.stand === "in_karte" ? "" : recht}` : `
       ${p.zaehlungen ? `<p class="detail-text" lang="de">${esc(p.was ?? "")}</p><p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.in_karte", { n: zahl(p.zaehlungen) }))}</button></p>` : ""}
       ${p.situation ? `<div class="detail-abschnitt">${esc(t("dl.lage"))}</div><p class="detail-text" lang="de">${esc(p.situation)}</p>` : (p.zaehlungen ? "" : `<p class="detail-text" lang="de">${esc(p.was ?? "")}</p>`)}
       ${p.empfehlung ? `<div class="detail-abschnitt">${esc(t("dl.empfehlung"))}</div><p class="detail-text" lang="de">${esc(p.empfehlung)}</p>` : ""}
@@ -221,7 +255,16 @@ async function start() {
         <textarea class="anfrage-text" readonly rows="9" lang="de" aria-label="${esc(t("dl.anfrage"))}">${esc(a.text)}</textarea>
         <p class="detail-links"><button type="button" class="link-knopf" data-kopieren>${esc(t("dl.kopieren"))}</button>
         ${k?.fds ? `<a href="${esc(k.fds)}" target="_blank" rel="noopener">${esc(t("dl.stellen"))}</a>` : ""}</p>` : ""}
-      ${p.recht ? `<div class="detail-abschnitt">${esc(t("dl.recht"))}</div><p class="detail-text"><span lang="de">${esc(p.recht)}.</span> ${esc(t("dl.keine_beratung"))}</p>` : ""}
+      ${recht}`;
+    el.innerHTML = `
+      <header class="detail-kopf">
+        <div><div class="pop-eyebrow">${esc(t(dl ? "hover.datenlage_d" : "hover.datenlage", { land: p.land ?? "" }))}</div>
+        <h2 class="detail-titel">${esc(p.kommune)}</h2>
+        <div class="pop-meta">${esc(dl ? standTextDauer(dl.stand) : standText(manifest, p.stand))}</div></div>
+        <button class="detail-zu" type="button" data-schliessen aria-label="${esc(t("schliessen"))}">×</button>
+      </header>
+      ${deutsch ? `<p class="pop-meta dl-sprache">${esc(deutsch)}</p>` : ""}
+      ${inhalt}
       ${links ? `<div class="detail-abschnitt">${esc(t("dl.belege"))}</div><ul class="detail-hinweise" lang="de">${links}</ul>` : ""}
       <div class="pop-foot"><a href="https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml" target="_blank" rel="noopener">${esc(t("dl.melden", { kommune: p.kommune }))}</a></div>`;
     el.hidden = false;
@@ -248,7 +291,7 @@ async function start() {
 
   const popup = bindeHover(karte, {
     daten, manifest, gibZustand: () => zustand, gibEintrag: (i) => jeStelle.get(i),
-    gibDauer: () => ({ d: dauer, tag: tagJetzt(), eintrag: (i) => jeDauer.get(i) }),
+    gibDauer: () => ({ d: dauer, juengster: imJuengsten(dauer, zustand), eintrag: (i) => jeDauer.get(i) }),
   });
   karte.on("click", (e) => {
     const treffer = karte.queryRenderedFeatures(e.point, { layers: ["stellen-kreis", "dauer-kreis", "datenlage-kreis"] });
@@ -265,12 +308,14 @@ async function start() {
 
   document.getElementById("export-csv").addEventListener("click", () => {
     if (zustand.familie === "d" && dauer) {
+      // gewählter Tag: alle Stellen an dem Tag; im Standard je Stelle ihr jüngster Schultag
       const tag = tagJetzt();
       const lizenz = (quelle) => dauer.quellenMeta.find((q) => q.code === quelle)?.lizenzen[0]?.lizenz ?? "";
-      const blob = new Blob([csvDauer(dauer, dauerJahr, tag, lizenz)], { type: "text/csv;charset=utf-8" });
+      const text = tag == null ? csvDauerJuengster(dauer, lizenz) : csvDauer(dauer, dauerJahr, tag, lizenz);
+      const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
       const a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = `dauerzaehlstellen_${tag}.csv`;
+      a.download = tag == null ? `dauerzaehlstellen_juengster_schultag_${dauer.erzeugt}.csv` : `dauerzaehlstellen_${tag}.csv`;
       a.click();
       setTimeout(() => URL.revokeObjectURL(a.href), 1000);
       return;
@@ -324,8 +369,8 @@ async function start() {
     }
   }
   window.__app = {
-    karte, daten, zustand, manifest, zeichne, oeffneStelle, zeigeDatenlage, detail, eintraege: () => eintraege,
-    dauer: () => dauer, dauerDetail, oeffneDauer, familieWechseln, tagWechseln, dauerEintraege: () => dauerEintraege,
+    karte, daten, zustand, manifest, datenlage, zeichne, oeffneStelle, zeigeDatenlage, detail, eintraege: () => eintraege,
+    dauer: () => dauer, dauerDetail, oeffneDauer, familieWechseln, tagWechseln, dauerModus, dauerEintraege: () => dauerEintraege,
   };
   document.documentElement.dataset.bereit = "1";
 }

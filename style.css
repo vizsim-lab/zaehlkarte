@@ -1163,7 +1163,12 @@ body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px)
 .dauer-regler { width: 100%; }
 .dauer-quellen { margin: 4px 0 0; display: grid; gap: 3px; }
 .dauer-quelle { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; color: var(--ui-text-muted); font-size: 11px; line-height: 1.35; }
-.dauer-quellen[hidden] { display: none; }
+.dauer-quellen-titel { color: var(--ui-text-muted); font-size: 11px; font-weight: 600; }
+.dauer-quellen[hidden], #dauer-modus[hidden], #dauer-tag-einzeln[hidden] { display: none; }
+#dauer-modus { margin: 0 0 6px; }
+/* Lkw/Schwerverkehr: welche Quelle welche Klasse zählt */
+.dauer-klassen { margin-top: -2px; }
+.dd-juengster { margin: -2px 0 6px; }
 
 /* ───── Tagesreihe einer Dauerzählstelle (js/ui/dauerdetail.js) ───── */
 .tr-wrap { position: relative; margin-top: 6px; }

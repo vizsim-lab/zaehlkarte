@@ -14,8 +14,9 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer`, tools/dauer_ettli
   laufende Tageszähler ohne Richtung und Lage, deren Zeitstempel sich nicht sicher einer Stunde
   zuordnen lassen –, Testimporte vom 05.08.2026 (Zeitstempel minutengenau) und Übergangszeilen
   vom 20.08.2026 (Bezeichnung „Straße | …“).
-- Gruppen aus `klassen` in sources.yaml (Gruppe -> Klassen der Quelle, deren Summe sie ist);
-  andere Klassen zählen nicht mit und stehen im Bericht.
+- Gruppen aus `klassen` in sources.yaml (Gruppe -> Klassen der Quelle, deren Summe sie ist; eine
+  Klasse darf in mehreren Gruppen stehen, Lkw etwa bei Kfz und bei Lkw); andere Klassen zählen
+  nicht mit und stehen im Bericht.
 - Namen: die Quelle schreibt sie uneinheitlich („Strasse“, „Pforzheimer-Str-14“) – `stellen` in
   sources.yaml nennt je Sensor Straße und Abschnitt; ohne Eintrag gilt die Bezeichnung der Quelle.
 """
@@ -146,8 +147,9 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
     df["y"] = pd.to_numeric(df["y"], errors="raise").astype(np.int64)
     bericht.stroeme = int(df["sid"].nunique())
     stellen, idx = _stellen(q, df, bericht)
-    gruppe_von = {k: g for g, ks in q["klassen"].items() for k in ks}
-    bericht.andere_klassen.update(df.loc[~df["series_name"].isin(gruppe_von), "series_name"])
+    # eine Klasse kann in mehreren Gruppen stehen (Lkw zählt bei Kfz und bei Lkw mit)
+    bekannt = {k for ks in q["klassen"].values() for k in ks}
+    bericht.andere_klassen.update(df.loc[~df["series_name"].isin(bekannt), "series_name"])
 
     abgerufen = datetime.fromisoformat(abruf["abgerufen"].replace("Z", "+00:00"))
     grenze = np.datetime64((abgerufen - timedelta(days=int(q.get("frisch_tage", 2))))
@@ -159,8 +161,8 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
     # fehlende Klassen sind 0. Je Gruppe die Summe ihrer Klassen.
     stunden = df.groupby(["sid", "t"], sort=False).size().index.to_frame(index=False)
     je = {}
-    for gruppe in q["klassen"]:
-        summe = (df[df["series_name"].map(gruppe_von) == gruppe].groupby(["sid", "t"])["y"].sum())
+    for gruppe, klassen in q["klassen"].items():
+        summe = df[df["series_name"].isin(klassen)].groupby(["sid", "t"])["y"].sum()
         w = stunden.join(summe, on=["sid", "t"])["y"].fillna(0).astype(np.int64).to_numpy()
         je[gruppe] = w
     s_ = stunden["sid"].map(idx).to_numpy(dtype=np.int64)
