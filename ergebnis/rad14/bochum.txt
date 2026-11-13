@@ -1,0 +1,1305 @@
+wittener_strasse: (279168, 6), 2018-11-21 23:00:00+00:00 – 2026-11-12 22:45:00+00:00, Spalten ['timestamp', 'name', 'radfahrende_in', 'radfahrende_out', 'timestamp_utc', 't'], Viertelstunden mit beiden Rad-Richtungen je Tag {76: np.int64(5), 86: np.int64(1), 92: np.int64(8), 93: np.int64(1), 94: np.int64(2), 96: np.int64(2801)}, Doppelte 32
+   je Jahr: {2018: {'radfahrende_in': 7857.0, 'radfahrende_out': 8094.0}, 2019: {'radfahrende_in': 125983.0, 'radfahrende_out': 125065.0}, 2020: {'radfahrende_in': 147512.0, 'radfahrende_out': 143461.0}, 2021: {'radfahrende_in': 139948.0, 'radfahrende_out': 141199.0}, 2022: {'radfahrende_in': 165772.0, 'radfahrende_out': 167671.0}, 2023: {'radfahrende_in': 132152.0, 'radfahrende_out': 131726.0}, 2024: {'radfahrende_in': 162579.0, 'radfahrende_out': 158116.0}, 2025: {'radfahrende_in': 170699.0, 'radfahrende_out': 161248.0}, 2026: {'radfahrende_in': 160944.0, 'radfahrende_out': 138664.0}}
+universitaetsstrasse: (110496, 6), 2023-09-13 22:00:00+00:00 – 2026-11-12 22:45:00+00:00, Spalten ['timestamp', 'name', 'radfahrende_in', 'radfahrende_out', 'timestamp_utc', 't'], Viertelstunden mit beiden Rad-Richtungen je Tag {58: np.int64(1), 72: np.int64(2), 92: np.int64(3), 93: np.int64(17), 94: np.int64(1), 96: np.int64(986)}, Doppelte 12
+   je Jahr: {2023: {'radfahrende_in': 19694.0, 'radfahrende_out': 16702.0}, 2024: {'radfahrende_in': 81981.0, 'radfahrende_out': 68221.0}, 2025: {'radfahrende_in': 117758.0, 'radfahrende_out': 89258.0}, 2026: {'radfahrende_in': 82845.0, 'radfahrende_out': 76762.0}}
+springorumtrasse: (275548, 8), 2018-11-21 23:00:00+00:00 – 2026-11-12 04:00:00+00:00, Spalten ['timestamp', 'timestamp_utc', 'name', 'passanten_in', 'passanten_out', 'radfahrende_in', 'radfahrende_out', 't'], Viertelstunden mit beiden Rad-Richtungen je Tag {45: np.int64(1), 87: np.int64(1), 90: np.int64(1), 92: np.int64(7), 94: np.int64(1), 96: np.int64(2718)}, Doppelte 12
+   je Jahr: {2018: {'radfahrende_in': 7815.0, 'radfahrende_out': 8172.0}, 2019: {'radfahrende_in': 172172.0, 'radfahrende_out': 186418.0}, 2020: {'radfahrende_in': 245915.0, 'radfahrende_out': 268574.0}, 2021: {'radfahrende_in': 213783.0, 'radfahrende_out': 233613.0}, 2022: {'radfahrende_in': 186634.0, 'radfahrende_out': 202292.0}, 2023: {'radfahrende_in': 195876.0, 'radfahrende_out': 211575.0}, 2024: {'radfahrende_in': 208104.0, 'radfahrende_out': 207881.0}, 2025: {'radfahrende_in': 210413.0, 'radfahrende_out': 216015.0}, 2026: {'radfahrende_in': 116359.0, 'radfahrende_out': 120954.0}}
+springorumtrasse_sued: (112512, 8), 2023-08-23 22:00:00+00:00 – 2026-11-12 22:45:00+00:00, Spalten ['timestamp', 'name', 'passanten_out', 'passanten_in', 'radfahrende_out', 'radfahrende_in', 'timestamp_utc', 't'], Viertelstunden mit beiden Rad-Richtungen je Tag {43: np.int64(1), 64: np.int64(1), 92: np.int64(3), 95: np.int64(1), 96: np.int64(1166)}, Doppelte 12
+   je Jahr: {2023: {'radfahrende_out': 38823.0, 'radfahrende_in': 39582.0}, 2024: {'radfahrende_out': 108031.0, 'radfahrende_in': 135900.0}, 2025: {'radfahrende_out': 113755.0, 'radfahrende_in': 109559.0}, 2026: {'radfahrende_out': 109478.0, 'radfahrende_in': 107955.0}}
+lothringentrasse: (74326, 8), 2024-05-21 16:30:00+00:00 – 2026-07-05 21:45:00+00:00, Spalten ['timestamp', 'name', 'passanten_in', 'passanten_out', 'radfahrende_in', 'radfahrende_out', 'timestamp_utc', 't'], Viertelstunden mit beiden Rad-Richtungen je Tag {51: np.int64(1), 54: np.int64(1), 67: np.int64(1), 72: np.int64(1), 92: np.int64(1), 96: np.int64(661)}, Doppelte 8
+   je Jahr: {2024: {'radfahrende_in': 22303.0, 'radfahrende_out': 25378.0}, 2025: {'radfahrende_in': 34318.0, 'radfahrende_out': 39408.0}, 2026: {'radfahrende_in': 4195.0, 'radfahrende_out': 4727.0}}
+metadata/: ['metadata/bochum-radverkehr-bluecherstrasse.json', 'metadata/bochum-radverkehr-brueckstrasse.json', 'metadata/bochum-radverkehr-erzbahntrasse.json', 'metadata/bochum-radverkehr-hofsteder_bach.json', 'metadata/bochum-radverkehr-lothringentrasse.json', 'metadata/bochum-radverkehr-springorumtrasse.json', 'metadata/bochum-radverkehr-springorumtrasse_sued.json', 'metadata/bochum-radverkehr-universitaetsstrasse.json', 'metadata/bochum-radverkehr-wittener_strasse.json']
+--- metadata/bochum-radverkehr-bluecherstrasse.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "9d75cb7d-b3d3-4417-817c-bbc077e66c8b",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2026-07-14T12:00:00",
+  "metadata_modified": "2026-07-14T12:00:00",
+  "name": "bochum-radundfussverkehr-bluecherstrasse",
+  "notes": "Rad- und Fußverkehr-Zählstelle an der Blücherstraße in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 12,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Rad- und Fußverkehr - Blücherstraße",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "modified",
+      "value": "2026-07-14"
+    },
+    {
+      "key": "temporal_end",
+      "value": "2026-07-12"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2026-03-01"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_bluecherstrasse.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/bluecherstrasse/bochum_ecocounter_bluecherstrasse.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fußverkehr",
+      "id": "ed5c4946-eed3-466a-b7f4-17b48e714505",
+      "name": "Fußverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Passanten",
+      "id": "ec430f48-4839-4ced-993a-8309d6da5f8b",
+      "name": "Passanten",
+      "state": "active",
+      
+--- metadata/bochum-radverkehr-brueckstrasse.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "1d4385d8-9dff-4ae6-a393-e11c52978471",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T10:44:28.656135",
+  "metadata_modified": "2026-06-07T17:32:24.794282",
+  "name": "bochum-radverkehr-brueckstrasse",
+  "notes": "Radverkehr-Zählstelle an der Brückstraße in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Brückstraße](https://data.eco-counter.com/public2/?id=300037477)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 9,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Radverkehr - Brückstraße",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2024-01-01"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_brueckstrasse.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/brueckstrasse/bochum_ecocounter_brueckstrasse.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Rad",
+      "id": "4c30365f-051f-4004-815e-145070e77f02",
+      "name": "Rad",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Radverkehr",
+      "id": "47062c85-de5d-4f32-bc42-5c13fab60272",
+      "name": "Radverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Verkehr",
+      "i
+--- metadata/bochum-radverkehr-erzbahntrasse.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "fcfe11c6-5690-4738-aded-2d5caaaffc77",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T13:16:17.600058",
+  "metadata_modified": "2026-06-07T17:32:19.805706",
+  "name": "bochum-radundfussverkehr-erzbahntrasse",
+  "notes": "Rad- und Fußverkehr-Zählstelle an der Erzbahntrasse in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Erzbahntrasse](https://data.eco-counter.com/public2/?id=300035154)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 12,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Rad- und Fußverkehr - Erzbahntrasse",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "modified",
+      "value": "2026-06-07"
+    },
+    {
+      "key": "temporal_end",
+      "value": "2026-06-06"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2023-08-24"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_erzbahntrasse.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/erzbahntrasse/bochum_ecocounter_erzbahntrasse.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fußverkehr",
+      "id": "ed5c4946-eed3-466a-b7f4-17b48e714505",
+      "name": "Fußverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Passanten",
+      
+--- metadata/bochum-radverkehr-hofsteder_bach.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "2f539897-991a-435e-8387-1bce07944529",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T13:41:55.436708",
+  "metadata_modified": "2026-06-07T17:32:53.358337",
+  "name": "bochum-radundfussverkehr-hofsteder-bach",
+  "notes": "Rad- und Fußverkehr-Zählstelle an der Hofsteder Bach in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Hofsteder Bach](https://data.eco-counter.com/public2/?id=300035157)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 12,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Rad- und Fußverkehr - Hofsteder Bach",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "modified",
+      "value": "2026-06-07"
+    },
+    {
+      "key": "temporal_end",
+      "value": "2026-06-06"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2023-08-24"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_hofsteder_bach.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/hofsteder_bach/bochum_ecocounter_hofsteder_bach.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fußverkehr",
+      "id": "ed5c4946-eed3-466a-b7f4-17b48e714505",
+      "name": "Fußverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Passanten",
+--- metadata/bochum-radverkehr-lothringentrasse.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "507247db-864c-4576-b2f4-0da89ebb1d6d",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T13:41:56.711644",
+  "metadata_modified": "2026-06-07T17:32:43.956664",
+  "name": "bochum-radundfussverkehr-lothringentrasse",
+  "notes": "Rad- und Fußverkehr-Zählstelle an der Lothringentrasse in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Lothringentrasse](https://data.eco-counter.com/public2/?id=300042053)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 12,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Rad- und Fußverkehr - Lothringentrasse",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "modified",
+      "value": "2026-06-07"
+    },
+    {
+      "key": "temporal_end",
+      "value": "2026-06-06"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2024-05-21"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_lothringentrasse.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/lothringentrasse/bochum_ecocounter_lothringentrasse.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fußverkehr",
+      "id": "ed5c4946-eed3-466a-b7f4-17b48e714505",
+      "name": "Fußverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name"
+--- metadata/bochum-radverkehr-springorumtrasse.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "f4abb484-a0c9-4466-bf6b-48f4336fc719",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T13:41:59.541659",
+  "metadata_modified": "2026-06-07T17:32:14.475724",
+  "name": "bochum-radundfussverkehr-springorumtrasse",
+  "notes": "Rad- und Fußverkehr-Zählstelle an der Springorumtrasse in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Springorumtrasse](https://data.eco-counter.com/public2/?id=100048863)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 12,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Rad- und Fußverkehr - Springorumtrasse",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "modified",
+      "value": "2026-06-07"
+    },
+    {
+      "key": "temporal_end",
+      "value": "2026-06-06"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2018-11-22"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_springorumtrasse.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/springorumtrasse/bochum_ecocounter_springorumtrasse.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fußverkehr",
+      "id": "ed5c4946-eed3-466a-b7f4-17b48e714505",
+      "name": "Fußverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name"
+--- metadata/bochum-radverkehr-springorumtrasse_sued.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "c4623ca2-97eb-410a-bf0d-abc5a2cc4b79",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T13:41:56.097433",
+  "metadata_modified": "2026-06-07T17:32:49.193519",
+  "name": "bochum-radundfussverkehr-springorumtrasse-sued",
+  "notes": "Rad- und Fußverkehr-Zählstelle an der Springorumtrasse Süd in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Springorumtrasse Süd](https://data.eco-counter.com/public2/?id=300035155)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 12,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Rad- und Fußverkehr - Springorumtrasse Süd",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2024-01-01"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_springorumtrasse_sued.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/springorumtrasse_sued/bochum_ecocounter_springorumtrasse_sued.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fußverkehr",
+      "id": "ed5c4946-eed3-466a-b7f4-17b48e714505",
+      "name": "Fußverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Passanten",
+      "id": "ec430f48-4839-4ced-993a-8309d6da5f8b",
+      "name": "Passanten",
+      "sta
+--- metadata/bochum-radverkehr-universitaetsstrasse.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "0986b240-e139-4bde-a6e5-a391817924d2",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T13:41:57.876315",
+  "metadata_modified": "2026-06-07T17:32:30.313753",
+  "name": "bochum-radverkehr-universitaetsstrasse",
+  "notes": "Radverkehr-Zählstelle an der Universitätsstraße in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Universitätsstraße](https://data.eco-counter.com/public2/?id=300037478)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 9,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Radverkehr - Universitätsstraße",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2024-01-01"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_universitaetsstrasse.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/universitaetsstrasse/bochum_ecocounter_universitaetsstrasse.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Rad",
+      "id": "4c30365f-051f-4004-815e-145070e77f02",
+      "name": "Rad",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Radverkehr",
+      "id": "47062c85-de5d-4f32-bc42-5c13fab60272",
+      "name": "Radverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    }
+--- metadata/bochum-radverkehr-wittener_strasse.json ---
+{
+  "author": "Stabsstelle Digitalisierung",
+  "author_email": "opendata@bochum.de",
+  "creator_user_id": "b324c42c-8311-430d-a66e-213ba017236d",
+  "id": "1d6af5ce-f17d-4d14-9d26-72abff7a539b",
+  "isopen": true,
+  "license_id": "dl-de/by-2-0",
+  "license_title": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+  "maintainer": "Stabsstelle Digitalisierung",
+  "maintainer_email": "opendata@bochum.de",
+  "metadata_created": "2025-01-10T12:15:35.300471",
+  "metadata_modified": "2026-06-07T17:32:37.825237",
+  "name": "bochum-radverkehr-wittener-strasse",
+  "notes": "Radverkehr-Zählstelle an der Wittener Straße in Bochum. Weitere Informationen sowie Visualisierungen sind auf der Seite des Dienstleisters [Eco-Counter](https://data.eco-counter.com/ParcPublic/?id=6603) zu finden. Zusätzlich ist das [openCode.de Dashboard](https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/) verfügbar.\n\nDirektlink zur Zählstelle: [Wittener Str.](https://data.eco-counter.com/public2/?id=100049071)\n\n---\n\nDie Stadt Bochum übernimmt keine Gewähr für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der dargestellten Informationen. Haftungsansprüche sind grundsätzlich ausgeschlossen.\n\n---\n\n**Nutzungsbeschränkung:**  \nDie Daten stammen aus dem Eco-Visio-System von Eco-Counter und gehören der Stadt Bochum. Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.\n",
+  "num_resources": 1,
+  "num_tags": 9,
+  "organization": {
+    "id": "88c33094-1cb4-484d-b2b7-c743af023079",
+    "name": "66-tiefbauamt",
+    "title": "66 Tiefbauamt",
+    "type": "organization",
+    "description": "",
+    "image_url": "2023-08-21-122459.988508whitespace119200.png",
+    "created": "2023-08-15T15:08:55.406179",
+    "is_organization": true,
+    "approval_status": "approved",
+    "state": "active"
+  },
+  "owner_org": "88c33094-1cb4-484d-b2b7-c743af023079",
+  "private": false,
+  "spatial": "{\"type\": \"Polygon\", \"coordinates\": [[[7.1189, 51.4241], [7.1189, 51.5317], [7.3182, 51.5317], [7.3182, 51.4241], [7.1189, 51.4241]]]}",
+  "state": "active",
+  "title": "Bochum - Radverkehr - Wittener Straße",
+  "type": "dataset",
+  "url": "https://data.eco-counter.com/ParcPublic/?id=6603",
+  "version": null,
+  "extras": [
+    {
+      "key": "availability",
+      "value": "http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE"
+    },
+    {
+      "key": "dcatde:geocodingText",
+      "value": "Bochum"
+    },
+    {
+      "key": "dcatde:musterdatensatzURI",
+      "value": "https://musterdatenkatalog.de/def/musterdatensatz/verkehr/radverkehr/messung"
+    },
+    {
+      "key": "dcatde:politicalGeocodingLevelURI",
+      "value": "http://dcat-ap.de/def/politicalGeocodingLevel/municipality"
+    },
+    {
+      "key": "dcatde:politicalGeocodingURI",
+      "value": "http://dcat-ap.de/def/politicalGeocoding/municipalityKey/05911000"
+    },
+    {
+      "key": "language",
+      "value": "[\"http://publications.europa.eu/resource/authority/language/DEU\"]"
+    },
+    {
+      "key": "temporal_start",
+      "value": "2024-01-01"
+    },
+    {
+      "key": "license_url",
+      "value": "https://www.govdata.de/dl-de/by-2-0"
+    }
+  ],
+  "groups": [
+    {
+      "description": "",
+      "display_name": "Verkehr",
+      "id": "83c6b66f-3126-409f-af72-8c7916d76f95",
+      "image_display_url": "https://bochum.opendata.ruhr/uploads/group/2023-08-21-125141.414720whitespace119200.png",
+      "name": "tran",
+      "title": "Verkehr"
+    }
+  ],
+  "resources": [
+    {
+      "name": "bochum_ecocounter_wittener_strasse.csv",
+      "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/wittener_strasse/bochum_ecocounter_wittener_strasse.csv",
+      "format": "CSV",
+      "resource_type": "link"
+    }
+  ],
+  "tags": [
+    {
+      "display_name": "Bochum",
+      "id": "ca3fbad4-d514-4f72-aabd-22b93f1031fa",
+      "name": "Bochum",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Eco-Counter",
+      "id": "2d17dd4e-c520-4666-b6f8-69df1d8a5502",
+      "name": "Eco-Counter",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Fahrradverkehr",
+      "id": "1bb5bd7a-9339-4bb6-9428-725cf442ea08",
+      "name": "Fahrradverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Mobilität",
+      "id": "eeeb8654-e3ad-4279-ae09-843f51fe373b",
+      "name": "Mobilität",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Rad",
+      "id": "4c30365f-051f-4004-815e-145070e77f02",
+      "name": "Rad",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name": "Radverkehr",
+      "id": "47062c85-de5d-4f32-bc42-5c13fab60272",
+      "name": "Radverkehr",
+      "state": "active",
+      "vocabulary_id": null
+    },
+    {
+      "display_name
+docs/: ['docs/data-audit-2026-02-25.md']
+--- docs/data-audit-2026-02-25.md ---
+# Datenpruefung und API-Backfill (2026-02-25)
+
+## Kontext
+- Allgemeine Projekt- und Link-Informationen stehen im Root-README: [README.md](../README.md)
+- openCode.de Dashboard: https://stadtbochum.usercontent.opencode.de/open-data/radverkehr-zaehlstellen-eco-counter/
+
+## Umfang der Pruefung
+- Projektstruktur, `data/`, `metadata/` und API-Skripte geprueft.
+- Verfuegbare Tagesdateien je Zaehlstelle auf Luecken geprueft.
+- Fehlende/inkonsistente Daten gezielt ueber die Eco-Counter-API nachgeladen.
+- Metadaten-`notes` geprueft und um den Dashboard-Hinweis ergaenzt.
+
+## Verfuegbare Daten nach Backfill
+
+| Station | Ordner | Von | Bis | Tagesdateien | Tagesdatei-Luecken | Kanaele |
+|---|---|---|---|---:|---:|---|
+| Springorumtrasse | `springorumtrasse` | 2018-11-22 | 2026-02-23 | 2651 | 0 | `radfahrende_in`, `radfahrende_out`, `passanten_in`, `passanten_out` |
+| Wittener Strasse | `wittener_strasse` | 2018-11-22 | 2026-02-23 | 2651 | 0 | `radfahrende_in`, `radfahrende_out` |
+| Erzbahntrasse | `erzbahntrasse` | 2023-08-24 | 2026-02-23 | 915 | 0 | `radfahrende_in`, `radfahrende_out`, `passanten_in`, `passanten_out` |
+| Springorumtrasse Sued | `springorumtrasse_sued` | 2023-08-24 | 2026-02-23 | 915 | 0 | `radfahrende_in`, `radfahrende_out`, `passanten_in`, `passanten_out` |
+| Hofsteder Bach | `hofsteder_bach` | 2023-08-24 | 2026-02-23 | 915 | 0 | `radfahrende_in`, `radfahrende_out`, `passanten_in`, `passanten_out` |
+| Brueckstrasse | `brueckstrasse` | 2023-09-14 | 2026-02-23 | 894 | 0 | `radfahrende_in`, `radfahrende_out` |
+| Universitaetsstrasse | `universitaetsstrasse` | 2023-09-14 | 2026-02-23 | 894 | 0 | `radfahrende_in`, `radfahrende_out` |
+| Lothringentrasse | `lothringentrasse` | 2024-05-21 | 2026-02-23 | 644 | 0 | `radfahrende_in`, `radfahrende_out`, `passanten_in`, `passanten_out` |
+
+## API-Nachladungen
+
+1. Fehlende Tagesdateien nachgeladen:
+- Zeitraum `2026-02-09` bis `2026-02-23` fuer alle 8 Stationen.
+- Zusaetzlich einzelne historische Tage: `2024-07-31` (4 Stationen) und `2024-08-21` (Springorumtrasse Sued).
+- Ergebnis: `125` neue Tagesdateien, `40` API-Aufrufe, keine API-Fehler.
+
+2. Tage mit `NaN` in aktiven Kanaelen erneut aus API geladen:
+- Ergebnis: `361` Tagesdateien neu geschrieben, `156` API-Aufrufe, keine API-Fehler.
+
+## Verbleibende Luecken (API-seitig)
+
+Trotz Backfill bleiben fuer einige Kanaele komplette Tagesluecken bestehen, weil die API zwar Zeitstempel liefert, aber `counts = null` zurueckgibt.
+
+| Station | Kanal | Vollstaendig fehlende Tage |
+|---|---|---|
+| Springorumtrasse | `radfahrende_in`, `radfahrende_out` | 2022-08-28 bis 2022-10-10 |
+| Wittener Strasse | `radfahrende_in` | 2023-09-22 bis 2023-11-22, 2024-12-12, 2026-01-08 bis 2026-01-18 |
+| Wittener Strasse | `radfahrende_out` | 2023-10-18 bis 2023-10-22, 2023-11-01 bis 2023-11-22, 2024-12-12 bis 2024-12-13, 2024-12-31, 2025-01-02, 2025-01-04, 2025-01-10 bis 2025-01-11 |
+| Brueckstrasse | `radfahrende_in` | 2025-10-25 bis 2026-01-18 |
+| Universitaetsstrasse | `radfahrende_out` | 2024-08-15 bis 2024-11-04, 2026-02-14 bis 2026-02-23 |
+
+Zusatz: Es gibt weiterhin einzelne partielle Tage (vor allem rund um Zeitumstellungen), bei denen nur ein Teil der 15-Minuten-Werte fehlt.
+
+## API-Belege (Stichprobe)
+
+- Kanal `353396194` (Brueckstrasse, `radfahrende_in`), Datum `2025-11-15`: `96` Datensaetze, davon `96`x `counts = null`.
+- Kanal `353397320` (Universitaetsstrasse, `radfahrende_out`), Datum `2026-02-20`: `96` Datensaetze, davon `96`x `counts = null`.
+- Kanal `353396283` (Springorumtrasse, `passanten_in`), Datum `2022-09-15`: `96` Datensaetze, davon `96`x `counts = null` (vor Start der Passantenzaehlung).
+
+## Meta-JSON-Pruefung
+
+- `metadata/*.json` geprueft.
+- In allen 8 Dateien wurde `notes` um den Dashboard-Hinweis sowie Eco-Counter-Links (gesamt + stationsspezifisch) ergaenzt.
+- Der bestehende Haftungshinweis aus den `notes` bleibt unveraendert enthalten.
+
+## EcoCounter API-Modellwechsel (2026-05-05)
+
+EcoCounter hat bei einem Firmware-Update / einer Standort-Reorganisation das API-Modell fuer zwei Stationen geaendert:
+
+**Brueckstrasse** und **Universitaetsstrasse** waren frueher als *zwei getrennte `idPdc` pro Strassenseite* modelliert. Heute liefert die API nur noch eine aggregierte Station mit zwei Channels (`in`/`out`).
+
+| Station | Alte idPdc (einzeln) | Neue idPdc (aggregiert) |
+|---|---|---|
+| Brueckstrasse | `300035815` (in), `300035818` (out) | `300037477` |
+| Universitaetsstrasse | `300035945` (in), `300035946` (out) | `300037478` |
+
+Die alten `idPdc` existieren noch als leere Huellen (`lat:0, lon:0, channels:[]`), liefern aber keine Daten mehr.
+
+Die Channel-IDs aenderten sich dadurch ebenfalls:
+| Station | Alte Channel-IDs (obsolet) | Neue Channel-IDs |
+|---|---|---|
+| Brueckstrasse | `353396194` (in), `353396221` (out) | `353410273` (in), `353410274` (out) |
+| Universitaetsstrasse | `353397319` (in), `353397320` (out) | `353410276` (in), `353410277` (out) |
+
+`channel_mapping.json` wurde entsprechend aktualisiert. Die uebri
