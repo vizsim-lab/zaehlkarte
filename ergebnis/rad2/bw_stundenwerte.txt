@@ -1,0 +1,29 @@
+https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202610.zip: HTTP 404
+https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202609.zip: HTTP 404
+https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202608.zip: 200 3667365 application/zip Mon, 19 Oct 2026 12:55:05 GMT
+  161 Dateien, z. B.: Stundenwerte_202608/ (0), Stundenwerte_202608/BW_62221202_2608.csv (80670), Stundenwerte_202608/BW_63231101_2608.csv (81832), Stundenwerte_202608/BW_64221203_2608.csv (79074), Stundenwerte_202608/BW_64241100_2608.csv (82818), Stundenwerte_202608/BW_65171009_2608.csv (162344), Stundenwerte_202608/BW_65171010_2608.csv (169300), Stundenwerte_202608/BW_65211100_2608.csv (81879), Stundenwerte_202608/BW_65211103_2608.csv (81267), Stundenwerte_202608/BW_66171025_2608.csv (315683), Stundenwerte_202608/BW_66171214_2608.csv (156146), Stundenwerte_202608/BW_66171219_2608.csv (84805)
+  == Stundenwerte_202608/: erste Zeilen
+  == Stundenwerte_202608/BW_62221202_2608.csv: erste Zeilen
+   6222;8202;8;L;2310;Rosenmühle               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   1;1;Wertheim            ;N;Miltenberg          ;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   2;9;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;Son;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+   Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SonFS1;K_SonFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SonFS2;K_SonFS2
+   260801;01:00;16;-;0;-;12;-;1;-;0;-;14;-;1;-;1;-;0;-;0;-;0;-;0;-;0;-;0;-;9;-;2;-;0;-;0;-;0;-;0;-;1;-;0;-
+   260801;02:00;12;-;1;-;6;-;2;-;1;-;9;-;1;-;0;-;0;-;0;-;0;-;1;-;0;-;0;-;4;-;0;-;0;-;1;-;1;-;0;-;0;-;0;-
+   260801;03:00;3;-;0;-;2;-;0;-;0;-;1;-;2;-;0;-;0;-;0;-;0;-;0;-;0;-;0;-;1;-;1;-;0;-;0;-;0;-;0;-;0;-;0;-
+   260801;04:00;9;-;0;-;3;-;1;-;0;-;6;-;1;-;2;-;0;-;0;-;0;-;0;-;0;-;0;-;1;-;1;-;0;-;0;-;1;-;0;-;0;-;0;-
+   260801;05:00;15;-;0;-;5;-;1;-;0;-;12;-;3;-;0;-;0;-;0;-;0;-;0;-;0;-;0;-;2;-;2;-;0;-;0;-;0;-;0;-;1;-;0;-
+   260801;06:00;27;-;1;-;4;-;0;-;1;-;24;-;1;-;0;-;0;-;0;-;1;-;0;-;0;-;0;-;4;-;0;-;0;-;0;-;0;-;0;-;0;-;0;-
+   260801;07:00;20;-;2;-;11;-;2;-;0;-;13;-;4;-;1;-;0;-;1;-;0;-;1;-;0;-;0;-;7;-;2;-;0;-;0;-;1;-;0;-;1;-;0;-
+   260801;08:00;38;-;4;-;31;-;4;-;0;-;30;-;3;-;1;-;1;-;1;-;0;-;2;-;0;-;0;-;23;-;2;-;2;-;0;-;3;-;1;-;0;-;0;-
+Monat 2026-01: 200 3554816 application/zip Wed, 08 Jul 2026 12:26:20 GMT
+Monat 2025-01: 200 4225314 application/zip Wed, 05 Mar 2025 13:23:18 GMT
+Monat 2015-01: HTTP 404
+Monat 2010-01: HTTP 404
+MobiData: Stundenwerte der Dauerzählstellen in Baden-Württemberg | http://dcat-ap.de/def/licenses/dl-by-de/2.0 | stundenwerte_dauerzaehlstellen | <p>Die in den Ergebnistabellen aufgelisteten erfassten Fahrzeugarten richten sich nach der Grundklassifizierung gem. TLS (Technische Lieferbedingungen der Streckenstationen). Bei den aufgeführten Zählgeräten wird mit TLS-gerechter Erfassung von 8+1-Fahrzeugarten nach ausgewiesener Grundklassifizierung erfasst.</p>
+<p>Aus den der BASt (Bundesanstalt für Straßenwesen) zu übermittelnden Dateien sind die bereitgestellten csv-Dateien abgeleitet. Die Stundendateien enthalten eine allgemeine Beschreibung zur Identifizierung und Lage der Dauerzählstellen, sowie die Angaben zur Fahrstreifenanzahl. Neben der Grundklassifizierung (Mot, Pkw, Lfw, PmA, Bus, LoA, LmA, Sat, Son) je Fahrstreifen werden Fahrzeuggruppen gebildet: Die Gesamtmenge der <strong>Kraftfahrzeuge Kfz</strong> und zusätzlich die des
+MobiData: Ergebnisse und Ganglinien der Dauerzählstellen in Baden-Württemberg | http://dcat-ap.de/def/licenses/dl-by-de/2.0 | ergebnisse_ganglinien_dauerzaehlstellen | <p><strong>Ergebnisse der Dauerzählstellen in BW</strong>: Das Zählstellennetz der Dauerzählstellen (DZ) umfasst rd. 150 Zählstellen auf Bundesautobahnen, Bundes- und Landstraßen in Baden-Württemberg. Erfasst werden an den Dauerzählstellen alle Kraftfahrzeuge (Kfz). Es werden hierbei 8 + 1 = 9 Fahrzeugarten unterschieden.</p>
+
+<h3>Zählstellen-Karte</h3>
+<p>Die Karte zeigt die temporären, dauerhaften und manuellen Zählstellen in Baden-Württemberg. Eingeblendet sind zunächst die Zählstellen an Autobahnen, welche bei hoher Zoomstufe durch die übrigen Zählstellen an Bundes-, Land- und Kreisstraßen ergänzt werden. Durch Klick auf eine Zählstelle lassen sich in einem Popup die jeweilige Straße und Zählstellennummer anzeigen. 
+<p>Der folgende Link führt zum <strong> <a href="https://www.mobidata-

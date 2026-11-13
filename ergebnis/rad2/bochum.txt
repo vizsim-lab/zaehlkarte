@@ -1,0 +1,63 @@
+Projekt: Stadt Bochum / Open Data / Mobilität - Rad- und Fußverkehr - Zählstellen Eco-Counter |  | zuletzt 2026-11-13T04:16:06.506Z
+Dateien: data, data/bluecherstrasse, data/bluecherstrasse/daily, data/bluecherstrasse/monthly, data/bluecherstrasse/yearly, data/brueckstrasse, data/brueckstrasse/daily, data/brueckstrasse/monthly, data/brueckstrasse/yearly, data/erzbahntrasse, data/erzbahntrasse/daily, data/erzbahntrasse/monthly, data/erzbahntrasse/yearly, data/hofsteder_bach, data/hofsteder_bach/daily, data/hofsteder_bach/monthly, data/hofsteder_bach/yearly, data/lothringentrasse, data/lothringentrasse/daily, data/lothringentrasse/monthly, data/lothringentrasse/yearly, data/springorumtrasse, data/springorumtrasse/daily, data/springorumtrasse/monthly, data/springorumtrasse/yearly, data/springorumtrasse_sued, data/springorumtrasse_sued/daily, data/springorumtrasse_sued/monthly, data/springorumtrasse_sued/yearly, data/universitaetsstrasse, data/universitaetsstrasse/daily, data/universitaetsstrasse/monthly, data/universitaetsstrasse/yearly, data/wittener_strasse, data/wittener_strasse/daily, data/wittener_strasse/monthly, data/wittener_strasse/yearly, docs, images, metadata, scripts, site, .gitignore, .gitlab-ci.yml, LICENSE, README.md, data/bluecherstrasse/bochum_ecocounter_bluecherstrasse.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-01.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-02.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-03.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-04.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-05.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-06.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-07.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-08.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-09.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-10.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-11.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-12.csv, data/bluecherstrasse/daily/bochum_ecocounter_bluecherstrasse_2026-03-13.csv
+== LICENSE
+Creative Commons Legal Code
+
+CC0 1.0 Universal
+
+    CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
+    LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+    ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
+    INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
+    REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+    PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
+    THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
+    HEREUNDER.
+
+Statement of Purpose
+
+The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator
+and subsequent owner(s) (each and all, an "owner") of an original work of
+authorship and/or a database (each, a "Work").
+
+Certain owners wish to permanently relinquish those rights to a Work for
+the purpose of contributing to a commons of creative, cultural and
+scientific works ("Commons") that the public can reliably and without fear
+of later claims of infringement build upon, modify, incorporate in other
+works, reuse and redistribute as freely as possible in any form whatsoever
+and for any purposes, including without limitation commercial purposes.
+These owners may contribute to the Commons to promote the ideal of a free
+culture and the further production of creative, cultural and scientific
+works, or to gain reputation or greater distribution for their Work in
+part th
+== README.md
+# Rad- und Fußverkehr - Zählstellen Eco-Counter
+
+<p align="center">
+  <img src="images/ecocounter-icon.svg" width="128" height="128" alt="Eco-Counter Logo" />
+</p>
+
+
+Dieses Repository enthält Rohdaten zu Zählstellen für Rad- und Fußverkehr der Firma **Eco-Counter** in [Bochum](https://data.eco-counter.com/ParcPublic/?id=6603#). Die Daten werden täglich automatisiert über die Eco-Counter-API abgerufen, gespeichert und aggregiert. Die Daten sind in 15-Minuten-Intervallen aufgezeichnet.
+
+**Hinweis**: Alle Daten in diesem Repository sind Rohdaten und werden ohne Gewähr bereitgestellt. Die Stadt Bochum übernimmt keine Verantwortung für die Aktualität, Korrektheit, Vollständigkeit oder Qualität der bereitgestellten Informationen.
+
+## Zählstellen
+
+| #   | Name               | Latitude   | Longitude   | Radfahrende (seit)  | Passanten (seit)   |
+|-----|--------------------|------------|-------------|---------------------|-------------------|
+| 1   | Brückstraße        | 51.485022  | 7.215437    | 14.09.2023 | /             |
+| 2   | Erzbahntrasse      | 51.487049  | 7.184623    | 14.09.2023 | 24.08.2023 |
+| 3   | Hofsteder Bach     | 51.501092  | 7.186044    | 24.08.2023 | 24.08.2023 |
+| 4   | Lothringentrasse   | 51.510388  | 7.261104    | 21.05.2024 | 21.05.2024 |
+| 5   | Springorumtrasse   | 51.468826  | 7.229204    | 22.11.2018 | 01.11.2023 |
+| 6   | Springorumtrasse Süd | 51.442427 | 7.182626   | 24.08.2023 | 24.08.2023 |
+| 7   | Universitätsstraße | 51.457704  | 7.238026    | 1
+  110496 Zeilen; Kopf: ['timestamp', 'name', 'radfahrende_in', 'radfahrende_out', 'timestamp_utc']
+  ['2023-09-14T00:00:00+02:00', 'Universitätsstraße', '', '', '2023-09-13T22:00:00Z']
+  ['2023-09-14T00:15:00+02:00', 'Universitätsstraße', '', '', '2023-09-13T22:15:00Z']
+  ['2023-09-14T00:30:00+02:00', 'Universitätsstraße', '', '', '2023-09-13T22:30:00Z']
+  ['2023-09-14T00:45:00+02:00', 'Universitätsstraße', '', '', '2023-09-13T22:45:00Z']
+  Spalte 'radfahrende_in': ['', '0.0', '1.0', '10.0', '11.0', '12.0', '13.0', '14.0', '15.0', '16.0', '17.0', '18.0', '19.0', '2.0', '20.0', '21.0', '22.0', '23.0', '24.0', '25.0', '26.0', '27.0', '28.0', '29.0', '3.0', '30.0', '31.0', '32.0', '33.0', '34.0', '36.0', '37.0', '4.0', '46.0', '5.0', '6.0', '7.0', '8.0', '9.0']
+  letzte Zeilen: [['2026-11-12T23:30:00+01:00', 'Universitätsstraße', '', '1.0', '2026-11-12T22:30:00Z'], ['2026-11-12T23:45:00+01:00', 'Universitätsstraße', '', '0.0', '2026-11-12T22:45:00Z']]

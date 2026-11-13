@@ -1,0 +1,44 @@
+  11904 Zeilen; Kopf: ['datum     ', 'uhrzeit_start', 'uhrzeit_ende', 'zaehlstelle', 'richtung_1', 'richtung_2', 'gesamt']
+  ['2026.07.01', '00:00        ', '00:15       ', 'Kreuther   ', '         0', '         2', '     2']
+  ['2026.07.01', '00:15        ', '00:30       ', 'Kreuther   ', '         0', '         6', '     6']
+  ['2026.07.01', '00:30        ', '00:45       ', 'Kreuther   ', '         0', '         0', '     0']
+  ['2026.07.01', '00:45        ', '01:00       ', 'Kreuther   ', '         0', '         1', '     1']
+  ['2026.07.01', '01:00        ', '01:15       ', 'Kreuther   ', '         0', '         1', '     1']
+  ['2026.07.01', '01:15        ', '01:30       ', 'Kreuther   ', '         1', '         0', '     1']
+  Spalte 'datum     ': ['2026.07.01', '2026.07.02', '2026.07.03', '2026.07.04', '2026.07.05', '2026.07.06', '2026.07.07', '2026.07.08', '2026.07.09', '2026.07.10', '2026.07.11', '2026.07.12', '2026.07.13', '2026.07.14', '2026.07.15', '2026.07.16', '2026.07.17', '2026.07.18', '2026.07.19', '2026.07.20', '2026.07.21', '2026.07.22', '2026.07.23', '2026.07.24', '2026.07.25', '2026.07.26', '2026.07.27', '2026.07.28', '2026.07.29', '2026.07.30', '2026.07.31']
+  Spalte 'zaehlstelle': ['Erhardt    ', 'Hirsch     ', 'Kreuther   ', 'Olympia    ']
+Stellen (WFS): 6; Felder ['zaehlstelle', 'zaehlstelle_lang', 'latitude', 'longitude', 'richtung_1', 'richtung_2', 'zaehler_kaputt_sum_monat', 'zaehler_kaputt_sum_year', 'info', 'gesamt_sum_year', 'gesamt_sum_monat']
+  {'zaehlstelle': 'Arnulf', 'zaehlstelle_lang': 'Arnulfstr. 9 - 11 Südseite', 'latitude': 48.14205, 'longitude': 11.55534, 'richtung_1': 'Ost', 'richtung_2': 'West', 'zaehler_kaputt_sum_monat': None, 'zaehler_kaputt_sum_year': None, 'info': '<p><a href="https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen" target="_blank">Zu den Rohdaten (Open Data Portal)</a></p>', 'gesamt_sum_year': '432000', 'gesamt_sum_monat': 'September: 56.000'}
+  {'zaehlstelle': 'Kreuther', 'zaehlstelle_lang': 'Bad-Kreuther-Str.', 'latitude': 48.12194, 'longitude': 11.62417, 'richtung_1': 'West', 'richtung_2': 'Ost', 'zaehler_kaputt_sum_monat': None, 'zaehler_kaputt_sum_year': None, 'info': '<p><a href="https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen" target="_blank">Zu den Rohdaten (Open Data Portal)</a></p>', 'gesamt_sum_year': '42000', 'gesamt_sum_monat': 'September: 26.000'}
+  {'zaehlstelle': 'Olympia', 'zaehlstelle_lang': 'Rudolf-Harbig-Weg (Olympiapark)', 'latitude': 48.16887, 'longitude': 11.55005, 'richtung_1': 'Nord', 'richtung_2': 'Süd', 'zaehler_kaputt_sum_monat': None, 'zaehler_kaputt_sum_year': None, 'info': '<p><a href="https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen" target="_blank">Zu den Rohdaten (Open Data Portal)</a></p>', 'gesamt_sum_year': '831000', 'gesamt_sum_monat': 'September: 83.000'}
+  {'zaehlstelle': 'Hirsch', 'zaehlstelle_lang': 'Birketweg HLP (Hirschgarten)', 'latitude': 48.14438, 'longitude': 11.51794, 'richtung_1': 'West', 'richtung_2': 'Ost', 'zaehler_kaputt_sum_monat': None, 'zaehler_kaputt_sum_year': None, 'info': '<p><a href="https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen" target="_blank">Zu den Rohdaten (Open Data Portal)</a></p>', 'gesamt_sum_year': '558000', 'gesamt_sum_monat': 'September: 68.000'}
+  {'zaehlstelle': 'Margareten', 'zaehlstelle_lang': 'Margaretenstr. (Harras)', 'latitude': 48.12032, 'longitude': 11.53599, 'richtung_1': 'West', 'richtung_2': 'Ost', 'zaehler_kaputt_sum_monat': 'Derzeit keine Daten', 'zaehler_kaputt_sum_year': 'Derzeit keine Daten', 'info': '<p><a href="https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen" target="_blank">Zu den Rohdaten (Open Data Portal)</a></p>', 'gesamt_sum_year': None, 'gesamt_sum_monat': None}
+  {'zaehlstelle': 'Erhardt', 'zaehlstelle_lang': 'Erhardtstr. (Deutsches Museum)', 'latitude': 48.13192, 'longitude': 11.58469, 'richtung_1': 'Süd', 'richtung_2': 'Nord', 'zaehler_kaputt_sum_monat': None, 'zaehler_kaputt_sum_year': None, 'info': '<p><a href="https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen" target="_blank">Zu den Rohdaten (Open Data Portal)</a></p>', 'gesamt_sum_year': '1415000', 'gesamt_sum_monat': 'September: 173.000'}
+Traceback (most recent call last):
+  File "/home/runner/work/zaehlkarte/zaehlkarte/tools/rad_erkunden2.py", line 81, in lauf
+    f(aus)
+  File "/home/runner/work/zaehlkarte/zaehlkarte/tools/rad_erkunden2.py", line 205, in muenchen
+    p = json.loads(hole("https://opendata.muenchen.de/api/3/action/package_show?id=daten-der-raddauerzahlstellen-munchen-2026", 60))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/zaehlkarte/zaehlkarte/tools/rad_erkunden2.py", line 35, in hole
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: NOT FOUND
+
