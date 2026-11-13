@@ -16,6 +16,6 @@ baue() {
   fi
 }
 
-# Dauerzählstellen mit dem Branch dauer-integration bauen (Vertrag v2: jüngster Schultag je Stelle,
-# Ettlingen mit Lkw)
-baue dauer-integration
+# Dauerzählstellen mit dem Branch dauer-rad bauen (Rad-Zählstellen: MobiData BW, Münster, Aachen,
+# Berlin, München; 13.11.2026)
+baue dauer-rad
