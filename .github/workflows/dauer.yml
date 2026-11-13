@@ -1,7 +1,7 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
 # SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
-# München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock und Bochum), Kartendaten nach
-# public/data/dauer/ schreiben und als Release-Asset
+# München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock und Bochum),
+# Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
 # „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach
 # startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
 #
