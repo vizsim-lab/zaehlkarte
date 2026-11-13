@@ -1,0 +1,65 @@
+## Verkehrsdaten im Rohformat 2025 | license_id  | 
+   Herausgeber Mobilithek | Wissenschaftsstadt Darmstadt | ["http://dcat-ap.de/def/contributors/hessen", "http://dcat-ap.de/def/contributors/mobilithek"]
+   <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+<div class="field-items">
+<div class="field-item even">
+<p>In diesem Datensatz stehen die Verkehrsdaten aus dem Verkehrsleitrechner im Rohformat (Open Traffic Data) für das Jahr 2025 zur Verfügung. Pro Kreuzung wird ein Ordner als ZIP-Datei mit CSV-Dateien bereitgestellt. Die zeitliche Auflösung der Daten beträgt eine Minute, wobei jede CSV-Datei die Daten eines Monats enthält.</p>
+
+<p>Die Daten aus den Induktionsschleifen lassen sich am <strong>D</strong>xx identifizieren. Für Zählwerte wird Dxx<strong>Z</strong> und für den Belegungsgrad Dxx<strong>B </strong>verwendet. Der Belegungsgrad gibt die Zeit in Millisekunden an, in der die Induktionsschleife belegt war.</p>
+
+<p><strong>Hinweis:</strong></p>
+
+<p>Es handelt sich um Rohdaten, die nicht geprüft sind und unter anderem Lücken sowie Ausreißer enthalt
+   temporal_start: 2025-01-01T00:00:00+01:00
+   temporal_end: 2025-12-31T00:00:00+01:00
+   - A084 | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://opendata.darmstadt.de/sites/default/files/A084_3.zip
+   - A076 | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://opendata.darmstadt.de/sites/default/files/A076_3.zip
+   - A155 | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://opendata.darmstadt.de/sites/default/files/A155_3.zip
+   - A082 | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://opendata.darmstadt.de/sites/default/files/A082_3.zip
+## Verkehrszählungsdatensatz Osnabrück 01.01.2022-09.11.2023 | license_id  | 
+   Herausgeber Mobilithek | Stadt Osnabrück | ["http://dcat-ap.de/def/contributors/mobilithek"]
+   Der Datensatz enthält Zeitreihendaten von 66 Traffic Eye Universal (TEU) Verkehrssensoren, die den Verkehrsfluss und die Geschwindigkeit messen. Die Sensoren sind paarweise an Straßen der Stadt Osnabrück installiert. Ein Sensor des Paares misst in eine Fahrtrichtung, der zweite Sensor in die Gegenrichtung. Der Verkehr wird in die Kategorien Pkw, Lkw, Lkw mit Anhänger und nicht klassifiziert unterteilt. Die Daten werden roh ohne Vorverarbeitung bereitgestellt.
+   spatial: {"type": "GeometryCollection", "geometries": [{"type": "Polygon", "coordinates": [[[7.95647, 52.27249], [7.96463, 52.32486], [8.16604, 52.28412], [8.10262, 52.23062], [8.01159, 52.23256], [7.95647, 52.27249]]]}]}
+   temporal_start: 2022-01-01T00:00:00
+   temporal_end: 2023-09-11T23:59:59.999000
+   frequency: http://publications.europa.eu/resource/authority/frequency/NEVER
+   - None | lizenz http://dcat-ap.de/def/licenses/other-closed | https://mobilithek.info//mdp-api/files/aux/903287344194932736/teu_dataset.zip
+## [alt] MIV-Verkehrsdaten Dauerzählstellen Kiel - Langzeitdaten stündlich mit Abfragemöglichkeit historischer Daten | license_id  | 
+   Herausgeber Mobilithek | KielRegion GmbH | ["http://dcat-ap.de/def/contributors/mobilithek"]
+   Die Landeshauptstadt Kiel verfügt über 87 sogenannte Dauerzählstellen (DZS), die als fest installierte Zählpunkte die Menge, Art und Fahrtrichtung des Motorisierten-Individual-Verkehrs (MIV) auf dem jeweiligen Zählabschnitt erfassen. Die MIV-Verkehrsdaten dieser Dauerzählstellen werden in einem minütlichen Kurzzeitintervall und einem stündlichen Langzeitintervall bereitgestellt und an das DatenDock der KielRegion übertragen. 
+   spatial: {"type": "GeometryCollection", "geometries": [{"type": "Polygon", "coordinates": [[[10.17416, 54.34575], [10.19552, 54.27397], [10.12343, 54.25551], [10.07123, 54.30116], [10.10572, 54.33205], [10.10981, 54.38434], [10.16852, 54.43284], [10.17416, 54.34575]]]}]}
+   temporal_start: 2026-05-24T00:00:00
+   frequency: http://publications.europa.eu/resource/authority/frequency/DAILY
+   - None | lizenz http://dcat-ap.de/def/licenses/cc-by/4.0 | https://mobilithek.info//offers/995318989663924224#accessURL
+## Radzähldaten in Berlin | license_id  | 
+   Herausgeber Mobilithek | None | ["http://dcat-ap.de/def/contributors/berlinOpenData", "http://dcat-ap.de/def/contributors/mobilithek"]
+   An den Dauerzählstellen werden alle Fahrräder, welche die Erfassungsquerschnitte der Zählstellen überfahren, gezählt. Ziel ist die dauerhafte Erfassung des Radverkehrs an bestimmten Straßenquerschnitten. Mit den Dauerzählstellen wird es möglich, neben Erkenntnissen zum Tagesgang, auch Daten zum Wochen- und Jahresgang zu erfassen und die langfristige Entwicklung des Radverkehrs über mehrere Jahre zu bestimmen.
+   - Radzähldaten in Berlin | lizenz http://dcat-ap.de/def/licenses/dl-zero-de/2.0 | https://www.berlin.de/sen/uvk/_assets/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/gesamtdatei-stundenwerte.xlsx?ts=1737968619
+## Stundenwerte der Dauerzählstellen in Baden-Württemberg | license_id  | 
+   Herausgeber Mobilithek | Verkehrsministerium Baden-Württemberg | ["http://dcat-ap.de/def/contributors/mobilithek"]
+   <p>Die in den Ergebnistabellen aufgelisteten erfassten Fahrzeugarten richten sich nach der Grundklassifizierung gem. TLS (Technische Lieferbedingungen der Streckenstationen). Bei den aufgeführten Zählgeräten wird mit TLS-gerechter Erfassung von 8+1-Fahrzeugarten nach ausgewiesener Grundklassifizierung erfasst.</p><p>Aus den der BASt (Bundesanstalt für Straßenwesen) zu übermittelnden Dateien sind die bereitgestellten csv-Dateien abgeleitet. Die Stundendateien enthalten eine allgemeine Beschreibung zur Identifizierung und Lage der Dauerzählstellen, sowie die Angaben zur Fahrstreifenanzahl. Neben der Grundklassifizierung (Mot, Pkw, Lfw, PmA, Bus, LoA, LmA, Sat, Son) je Fahrstreifen werden Fahrzeuggruppen gebildet: Die Gesamtmenge der <strong>Kraftfahrzeuge Kfz</strong> und zusätzlich die des <strong>Schwerverkehrs SV</strong> (LoA + LmA + Sat + Bus).</p><p>Die ausführliche Beschreibung des 
+   spatial: {"type": "Polygon", "coordinates": [[[9.64874, 49.79148], [9.63811, 49.70177], [9.81397, 49.70894], [9.86067, 49.6147], [9.83953, 49.56227], [9.90825, 49.56429], [9.92211, 49.50029], [9.95493, 49.48229], [10.0188, 49.4908], [10.08372, 49.54356], [10.11833, 49.47317], [10.13416, 49.41223], [10.11197,
+   frequency: http://publications.europa.eu/resource/authority/frequency/OTHER
+   - None | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202508.zip
+   - None | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202501.zip
+   - None | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202601.zip
+   - None | lizenz http://dcat-ap.de/def/licenses/dl-by-de/2.0 | https://mobidata-bw.de/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_202608.zip
+## hochfein Verkehrsstärken Müllerstraße | license_id  | 
+   Herausgeber Mobilithek | VMZ Berlin Betreibergesellschaft mbH | ["http://dcat-ap.de/def/contributors/mobilithek"]
+   Verkehrsstärken am Messquerschnitt Müllerstraße vor Fennstraße (beide Fahrtrichtungen), Tageswerte für 2019 bis 2022
+   spatial: {"type": "GeometryCollection", "geometries": [{"type": "Polygon", "coordinates": [[[6.098034, 47.23942], [15.578555, 47.23942], [15.578555, 55.054344], [6.098034, 55.054344], [6.098034, 47.23942]]]}]}
+   temporal_start: 2019-01-01T00:00:00
+   temporal_end: 2020-03-15T23:59:59.999000
+   frequency: http://publications.europa.eu/resource/authority/frequency/IRREG
+   - None | lizenz http://dcat-ap.de/def/licenses/other-closed | https://mobilithek.info//mdp-api/files/aux/607968025523412992/Verkehrsstaerken_2019_2020.xlsx
+   - None | lizenz http://dcat-ap.de/def/licenses/other-closed | https://mobilithek.info//mdp-api/files/aux/607968025523412992/Verkehrsstaerken_2019_2020_2021_2022.xlsx
+## NUErLast: Fahrradverkehr in Münster- Schleifendetektor-Zählungen mit Zeitstempeln | license_id  | 
+   Herausgeber Mobilithek | Bergische Universität Wuppertal | ["http://dcat-ap.de/def/contributors/mobilithek"]
+   Dieser Datensatz enthält Fahrradzähldaten, die im Rahmen des Projekts NUErLast von Induktionsschleifen der Firma Eco-Counter GmbH erfasst wurden. Die Detektoren sind an vier Standorten an Radwegen in der Stadt Münster installiert. Die Daten werden im CSV-Format gespeichert, wobei jede Datei nach einem bestimmten Standort benannt ist und die entsprechenden Induktionsschleifendaten repräsentiert. Die Daten umfassen den Zeitraum vom 6. Mai 2024 bis zum 27. Juni 2024, mit Ausnahme des Promenade-Detektors, der Daten vom 6. Mai 2024 bis zum 19. Juni 2024 liefert.
+   spatial: {"type": "GeometryCollection", "geometries": [{"type": "Polygon", "coordinates": [[[7.70412, 52.03442], [7.7632, 51.91291], [7.61323, 51.84061], [7.51316, 51.90805], [7.49093, 51.95386], [7.51239, 51.99967], [7.5893, 52.05305], [7.70412, 52.03442]]]}]}
+   temporal_start: 2024-05-06T00:00:00
+   temporal_end: 2024-06-27T23:59:59.999000
+   - None | lizenz http://dcat-ap.de/def/licenses/cc-by/4.0 | https://mobilithek.info//offers/765943466858295296#accessURL
+## Suche 'Kiel Dauerzählstellen': [alt] MIV-Verkehrsdaten Dauerzählstellen Kiel - Langzeitdaten stündlich mit Abfragemöglichkeit historischer Daten (miv-verkehrsdaten-dauerzahlstellen-kiel-langzeitdaten-stundlich-mit-abfragemoglichkeit-historis, )
+## Suche 'KielRegion Verkehr': Verkehr - Stadtwerke Augsburg Verkehrs-GmbH (verkehr-stadtwerke-augsburg-verkehrs-gmbh48922, ) | Trassenfestlegung Verkehr (trassenfestlegung-verkehr550a9, ) | Verkehr - Kraftfahrzeugbestand (verkehr-kraftfahrzeugbestand08b3c, ) | Regional- und Großstadtvergleich Mobilität (regional-und-grossstadtvergleich-mobilitat, ) | Verkehr - Augsburger Localbahn (verkehr-augsburger-localbahn14ccb, ) | Punktuelle Festlegung Verkehr (punktuelle-festlegung-verkehrdbb53, ) | Verkehrszählung Osnabrück (verkehrszahlung-osnabruck, None) | Regionalplanung Sachsen - Verkehr (regionalplanung-sachsen-verkehr, ) | Verkehr - Straßenverkehrsunfälle nach Wochentag (verkehr-strassenverkehrsunfalle-nach-wochentag8e7fc, ) | Verkehr - Straßenverkehrsunfälle nach Uhrzeit (verkehr-strassenverkehrsunfalle-nach-uhrzeitbfb20, ) | Verkehr - Straßenverkehrsunfälle nach Jahr (verkehr-strassenverkehrsunfalle-nach-jahrdf4a0, ) | Verkehr - Straßenverkehrsunfälle nach Verunglückten (verkehr-strassenverkehrsunfalle-nach-verungluckten14414, ) | Verkehr - Augsburger Verkehrsverbund (AVV) (verkehr-augsburger-verkehrsverbund-avv0cad9, ) | Verkehr - Straßenverkehrsunfälle nach Unfallursachen (verkehr-strassenverkehrsunfalle-nach-unfallursachen5fbe2, ) | Verkehr - Straßenverkehrsunfälle nach Monat (verkehr-strassenverkehrsunfalle-nach-monate07bf, )
+## Suche 'Darmstadt Verkehrsdaten Rohformat': Verkehrsdaten im Rohformat 2026 (verkehrsdaten-im-rohformat-2026, ) | Verkehrsdaten im Rohformat 2024 (verkehrsdaten-im-rohformat-2024, ) | Verkehrsdaten im Rohformat 2025 (verkehrsdaten-im-rohformat-2025, ) | Verkehrsdaten im Rohformat 2023 (verkehrsdaten-im-rohformat-2023, ) | Verkehrsdaten im Rohformat 2022 (verkehrsdaten-im-rohformat-2022, ) | Kreuzungspläne Stadt Darmstadt (kreuzungsplane-stadt-darmstadt, ) | Gebündelte Daten E-Scooter-Sharing Baden-Württemberg (gebundelte-daten-e-scooter-sharing-baden-wurttemberg3f93e, ) | Gebündelte Daten Bikesharing Baden-Württemberg (gebundelte-daten-bikesharing-baden-wurttembergd25a8, )
