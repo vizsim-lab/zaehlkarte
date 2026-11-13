@@ -142,38 +142,53 @@ def setze_lokal(reihe: Messreihe, gruppe: str, stelle: np.ndarray, tag: np.ndarr
       belegt) oder liefert beide getrennt – beides ergibt die Summe und `doppelt`.
     - `rueck="einfach"`: Unter einer Uhrzeit steht nur eine der beiden Stunden – gezählt ist die
       Stunde nur, wenn beide getrennt kommen (doppelt so viele Einträge).
-    -> (gesetzte Stunden, verworfene Einträge um 2 Uhr am Tag der Sommerzeit)."""
-    import pandas as pd
+    -> (gesetzte Stunden, verworfene Einträge um 2 Uhr am Tag der Sommerzeit).
 
+    Gezählt wird je Zelle (Stelle, Tag, Stunde) mit `np.bincount` – auch bei zig Millionen
+    Einträgen (MobiData BW seit 2013) ohne Tabelle je Eintrag; große Quellen rufen die Funktion
+    je Block von Stellen auf (die Zellen reichen nur über die Stellen der Einträge)."""
+    if rueck not in ("zusammen", "einfach"):
+        raise ValueError(f"rueck: {rueck!r}")
     if not len(stelle):
         return 0, 0
-    d = pd.DataFrame({
-        "s": stelle.astype(np.int64),
-        "t": (tag.astype("datetime64[D]") - np.datetime64(reihe.von, "D")).astype(np.int64),
-        "h": stunde.astype(np.int64),
-        "w": werte.astype(np.int64),
-    })
-    d = d[(d["t"] >= 0) & (d["t"] < reihe.tage)]
+    stelle, stunde = np.asarray(stelle), np.asarray(stunde)
+    if ((stunde < 0) | (stunde > 23)).any():
+        raise ValueError(f"{reihe.quelle}: Stunde außerhalb 0–23")
+    t = (tag.astype("datetime64[D]", copy=False) - np.datetime64(reihe.von, "D")).view(np.int64)
     jahre = range(reihe.von.year, reihe.tag(reihe.tage - 1).year + 1)
-    sommer = {(umstellungen(j)[0] - reihe.von).days for j in jahre}
-    rueck_tage = {(umstellungen(j)[1] - reihe.von).days for j in jahre}
-    fehlt = d["t"].isin(sommer) & (d["h"] == 2)
+    sommer = np.array([(umstellungen(j)[0] - reihe.von).days for j in jahre])
+    rueck_tage = np.array([(umstellungen(j)[1] - reihe.von).days for j in jahre])
+    drin = (t >= 0) & (t < reihe.tage)
+    fehlt = drin & np.isin(t, sommer) & (stunde == 2)
     verworfen = int(fehlt.sum())
-    d = d[~fehlt]
-    g = d.groupby(["s", "t", "h"], sort=False)["w"].agg(["sum", "count", "min"]).reset_index()
-    am_rueck = (g["t"].isin(rueck_tage) & (g["h"] == 2)).to_numpy()
-    n = g["count"].to_numpy()
-    gueltig = g["min"].to_numpy() >= 0
+    drin &= ~fehlt
+    s0 = int(stelle.min())
+    k = stelle[drin].astype(np.int64) - s0
+    k *= reihe.tage
+    k += t[drin]
+    del t
+    k *= 24
+    k += stunde[drin]
+    w = np.asarray(werte)[drin]
+    feld = reihe.werte[gruppe]
+    n_zellen = (int(stelle.max()) - s0 + 1) * reihe.tage * 24
+    anz = np.bincount(k, minlength=n_zellen)
+    neg = np.bincount(k[w < 0], minlength=n_zellen)  # Einträge „nicht gezählt“ je Zelle
+    summe = np.bincount(k, weights=np.maximum(w, 0), minlength=n_zellen)
+    del k, w
+    zellen = np.flatnonzero(anz)
+    n, gueltig, summe = anz[zellen], neg[zellen] == 0, summe[zellen]
+    del anz, neg
+    s, rest = np.divmod(zellen, reihe.tage * 24)
+    s += s0
+    t, h = np.divmod(rest, 24)
+    am_rueck = np.isin(t, rueck_tage) & (h == 2)
     if rueck == "zusammen":
         voll_rueck = (n == anzahl) | (n == 2 * anzahl)
-    elif rueck == "einfach":
-        voll_rueck = n == 2 * anzahl
     else:
-        raise ValueError(f"rueck: {rueck!r}")
+        voll_rueck = n == 2 * anzahl
     voll = gueltig & np.where(am_rueck, voll_rueck, n == anzahl)
-    w = reihe.werte[gruppe]
-    s, t, h = (g[k].to_numpy() for k in ("s", "t", "h"))
-    w[s, t, h] = np.where(voll, g["sum"].to_numpy(), LEER).astype(np.int32)
+    feld[s, t, h] = np.where(voll, summe, LEER).astype(np.int32)
     dop = am_rueck & voll
     reihe.doppelt[s[dop], t[dop]] = True
     return int(voll.sum()), verworfen

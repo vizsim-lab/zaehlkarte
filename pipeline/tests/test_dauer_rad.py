@@ -103,7 +103,8 @@ MD_KOPF = ["operator_name", "domain_name", "domain_id", "counter_site", "counter
            "site_rain_accumulation", "site_snow_accumulation"]
 MD_STELLEN = {"100004595": ("Stadt Freiburg", "Wiwilibrücke", "7.8407526", "47.995213"),
               "100013034": ("Stadt Heidelberg", "Mannheimer Straße", "8.65914", "49.4118"),
-              "100003358": ("Stadt Tübingen", "Fuß- & Radtunnel Südportal", "9.04806", "48.518")}
+              "100003358": ("Stadt Tübingen", "Fuß- & Radtunnel Südportal", "9.04806", "48.518"),
+              "100020000": ("Stadt Konstanz", "Fahrradbrücke", "9.17", "47.67")}
 MD_Q = {"code": "mobidata_rad", "land": "BW", "ab": "2026-09", "nachladen_monate": 2,
         "frisch_tage": 3, "monate": "https://md.example/stunden_{monat}.csv.gz",
         "ohne": {"100003358": "Fuß und Rad zusammen"}}
@@ -189,6 +190,39 @@ def test_mobidata_hole_und_lese(pfade, monkeypatch):
     assert summe[0, i(date(2026, 10, 28))] == 240
     assert summe[1, i(date(2026, 10, 28))] == LEER  # 23 Uhr widersprüchlich
     assert r.tag(r.tage - 1) == date(2026, 10, 28)
+
+
+def test_mobidata_widerspruch_bei_rueckstellung_und_bloecke(pfade, monkeypatch):
+    """Zwei verschiedene Werte für dieselbe Zeile um 2 Uhr am Rückstelltag sind nicht gezählt
+    (nicht als „beide Stunden getrennt“ summiert); das Ergebnis hängt nicht von der Blockgröße
+    ab."""
+    zeilen = []
+    for sid, wert in (("100004595", "10"), ("100013034", "5"), ("100020000", "3")):
+        for h in range(24):
+            v = "+02:00" if h < 2 else "+01:00"
+            zeilen.append((sid, f"{RUECK.isoformat()}T{h:02d}:00:00{v}", wert))
+        zeilen += md_stunden(sid, date(2026, 10, 26), wert, "+01:00")
+    zeilen.append(("100020000", f"{RUECK.isoformat()}T02:00:00+01:00", "4"))  # widersprüchlich
+    ordner = pfade.roh / "mobidata_rad"
+    ordner.mkdir(parents=True)
+    (ordner / "stunden_202610.csv.gz").write_bytes(md_monat(zeilen))
+    (ordner / "abruf.json").write_text(json.dumps({"abgerufen": "2026-11-02T08:00:00Z"}))
+    ergebnisse = []
+    for block in (64, 1, 2):
+        monkeypatch.setattr(mobidata_eco, "BLOCK", block)
+        b = mobidata_eco.Bericht()
+        r = mobidata_eco.lese(MD_Q, pfade, b)
+        assert b.doppelt_anders == 2 and b.stunden == 3 * 48 - 1
+        ergebnisse.append(r)
+    r = ergebnisse[0]
+    summe, _ = tagessummen(r, "rad")
+    i = r.index(RUECK)
+    assert summe[0, i] == 240 and summe[1, i] == 120 and r.doppelt[0, i]
+    assert summe[2, i] == LEER and not r.doppelt[2, i]
+    assert r.werte["rad"][2, i, 2] == LEER and summe[2, i + 1] == 72
+    for andere in ergebnisse[1:]:
+        assert np.array_equal(andere.werte["rad"], r.werte["rad"])
+        assert np.array_equal(andere.doppelt, r.doppelt)
 
 
 # ----------------------------------------------------------------------------------- Münster

@@ -39,6 +39,7 @@ from zaehlkarte.dauer.modell import LEER, Dauerstelle, Messreihe, kuerze, setze_
 
 SPALTEN = ["domain_name", "counter_site", "counter_site_id", "longitude", "latitude",
            "iso_timestamp", "channels_all"]
+BLOCK = 64  # Zählstellen je Durchgang beim Setzen der Stunden
 
 
 @dataclass
@@ -114,9 +115,48 @@ def lies_monat(pfad: Path):
                        compression="gzip", encoding="utf-8-sig")
 
 
-def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
+def kompakt(df) -> tuple[np.ndarray, ...]:
+    """Zeilen eines Monats -> (Kennung, Tag in Ortszeit als Tage seit 1970, Stunde, UTC-Stunde,
+    Wert mit -1 = nicht gezählt) als schmale Zahlenfelder (17 Byte je Zeile)."""
     import pandas as pd
 
+    ts = df["iso_timestamp"].str
+    tag = ts.slice(0, 10).to_numpy().astype("datetime64[D]")
+    if np.isnat(tag).any():
+        raise ValueError("iso_timestamp ohne Datum")
+    stunde = ts.slice(11, 13).astype(np.int64).to_numpy()
+    versatz = ts.slice(19, 22).astype(np.int64).to_numpy()  # „+02:00“ -> 2
+    tage = tag.view(np.int64)
+    utc = tage * 24 + stunde - versatz
+    roh = df["channels_all"].str.strip()
+    leer = roh.isin(["", "na", "NA", "nan"]).to_numpy()
+    zahl = pd.to_numeric(roh.where(~leer, "-1"), errors="raise").to_numpy()
+    werte = np.where(leer, LEER, zahl).astype(np.int32)
+    sid = pd.to_numeric(df["counter_site_id"], errors="raise").to_numpy().astype(np.int32)
+    return (sid, tage.astype(np.int32), stunde.astype(np.int8), utc.astype(np.int32), werte)
+
+
+def _block(i, tag, stunde, utc, werte, bericht: Bericht):
+    """Zeilen eines Blocks von Zählstellen: gleiche Stunde (UTC) mehrfach mit gleichem Wert ->
+    einmal; mit verschiedenen Werten -> einmal als nicht gezählt. -> Felder ohne Doppelte und
+    Maske „ohne Wert in der Quelle“."""
+    o = np.lexsort((werte, utc, i))
+    i, tag, stunde, utc, werte = i[o], tag[o], stunde[o], utc[o], werte[o]
+    folge = np.r_[False, (i[1:] == i[:-1]) & (utc[1:] == utc[:-1])]
+    gleich = folge & np.r_[False, werte[1:] == werte[:-1]]
+    bericht.doppelt_gleich += int(gleich.sum())
+    i, tag, stunde, utc, werte = (x[~gleich] for x in (i, tag, stunde, utc, werte))
+    folge = np.r_[False, (i[1:] == i[:-1]) & (utc[1:] == utc[:-1])]
+    widerspruch = folge | np.r_[folge[1:], False]
+    bericht.doppelt_anders += int(widerspruch.sum())
+    na = werte == LEER
+    werte = np.where(widerspruch, LEER, werte).astype(np.int32)
+    return tuple(x[~folge] for x in (i, tag, stunde, werte, na))
+
+
+def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
+    """Alle Monate als schmale Felder sammeln, dann je Block von Zählstellen Doppelte klären und
+    die Stunden setzen – so bleiben auch 66 Mio. Zeilen (2013–2026) bei rund 1,5 GB Speicher."""
     ordner = pfade.roh / q["code"]
     dateien = sorted(ordner.glob("stunden_*.csv.gz"))
     if not dateien:
@@ -124,55 +164,64 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
                          "`zaehlkarte dauer fetch`")
     abruf = json.loads((ordner / "abruf.json").read_text(encoding="utf-8"))
     abgerufen = datetime.fromisoformat(abruf["abgerufen"].replace("Z", "+00:00"))
-    grenze = np.datetime64((abgerufen - timedelta(days=int(q.get("frisch_tage", 3)))).date(), "D")
-    ohne = {str(k): v for k, v in (q.get("ohne") or {}).items()}
-    teile, meta = [], {}
+    frisch = int(q.get("frisch_tage", 3))
+    grenze = (abgerufen - timedelta(days=frisch)).date()
+    grenze_tag = (grenze - date(1970, 1, 1)).days
+    ohne = {int(k): v for k, v in (q.get("ohne") or {}).items()}
+    felder: list[list[np.ndarray]] = [[] for _ in range(5)]
+    meta = {}
     for p in dateien:
         df = lies_monat(p)
         bericht.monate += 1
         bericht.anzahl += len(df)
         for _, z in df.drop_duplicates("counter_site_id", keep="last").iterrows():
-            meta[z["counter_site_id"]] = z  # die jüngste Angabe je Zählstelle gilt
-        teile.append(df[["counter_site_id", "iso_timestamp", "channels_all"]])
-    df = pd.concat(teile, ignore_index=True)
-    vorher = len(df)
-    df = df.drop_duplicates()
-    bericht.doppelt_gleich = vorher - len(df)
-    bericht.doppelt_anders = int(
-        df.duplicated(["counter_site_id", "iso_timestamp"], keep=False).sum())
-    for sid in sorted(set(df["counter_site_id"]) & set(ohne)):
-        bericht.ohne.append(f"{meta[sid]['counter_site']} ({sid}): {ohne[sid]}")
-    df = df[~df["counter_site_id"].isin(ohne)]
-    ids = sorted(set(df["counter_site_id"]), key=int)
+            meta[int(z["counter_site_id"])] = z  # die jüngste Angabe je Zählstelle gilt
+        for liste, x in zip(felder, kompakt(df), strict=True):
+            liste.append(x)
+        del df
+    gesammelt = []
+    for liste in felder:  # Feld für Feld, damit nie alles doppelt im Speicher liegt
+        gesammelt.append(np.concatenate(liste))
+        liste.clear()
+    sid, tage, stunde, utc, werte = gesammelt
+    del gesammelt
+    ids = np.array(sorted(meta), dtype=np.int64)
+    idx = np.searchsorted(ids, sid).astype(np.int32)
+    del sid
+    ist_ohne = np.isin(ids, list(ohne))
+    for k in ids[ist_ohne].tolist():
+        bericht.ohne.append(f"{meta[k]['counter_site']} ({k}): {ohne[k]}")
+    neu_index = (np.cumsum(~ist_ohne) - 1).astype(np.int32)
     stellen = []
-    for sid in ids:
-        z = meta[sid]
+    for k in ids[~ist_ohne].tolist():
+        z = meta[k]
         bericht.je_kommune[z["domain_name"]] += 1
         stellen.append(Dauerstelle(
-            quelle=q["code"], kennung=sid, name=" ".join(z["counter_site"].split()),
+            quelle=q["code"], kennung=str(k), name=" ".join(z["counter_site"].split()),
             abschnitt=z["domain_name"].strip() or None, richtung=None,
             lon=round(float(z["longitude"]), 6), lat=round(float(z["latitude"]), 6),
             land=q["land"]))
     bericht.stellen = len(stellen)
-    idx = {sid: i for i, sid in enumerate(ids)}
-    ts = df["iso_timestamp"].str
-    tag = ts.slice(0, 10).to_numpy().astype("datetime64[D]")
-    stunde = ts.slice(11, 13).astype(int).to_numpy()
-    roh = df["channels_all"].str.strip()
-    leer = roh.isin(["", "na", "NA", "nan"])
-    bericht.na = int(leer.sum())
-    zahl = pd.to_numeric(roh.where(~leer, "-1"), errors="raise")
-    werte = np.where(leer, LEER, zahl).astype(np.int64)
-    alt = tag < grenze
-    bericht.frisch = int((~alt).sum())
-    s_ = df["counter_site_id"].map(idx).to_numpy(dtype=np.int64)[alt]
-    tag, stunde, werte = tag[alt], stunde[alt], werte[alt]
-    von, bis = tag.min().astype(date), tag.max().astype(date)
+    von = np.datetime64(int(tage.min()), "D").astype(date)
+    bis = min(np.datetime64(int(tage.max()), "D").astype(date), grenze - timedelta(days=1))
+    if not stellen or bis < von:
+        raise ValueError(f"{q['code']}: keine Stunden vor {grenze}")
     reihe = Messreihe.leer(q["code"], von, bis, stellen, ("rad",))
-    bericht.stunden, bericht.sommerzeit = setze_lokal(reihe, "rad", s_, tag, stunde, werte,
-                                                      anzahl=1, rueck="zusammen")
+    for a in range(0, len(ids), BLOCK):
+        zeilen = np.flatnonzero((idx >= a) & (idx < a + BLOCK))
+        i, tg, st, w, na = _block(idx[zeilen], tage[zeilen], stunde[zeilen], utc[zeilen],
+                                  werte[zeilen], bericht)
+        del zeilen
+        behalten = ~ist_ohne[i]
+        bericht.na += int((na & behalten).sum())
+        alt = tg < grenze_tag
+        bericht.frisch += int((behalten & ~alt).sum())
+        m = behalten & alt
+        gesetzt, sommer = setze_lokal(reihe, "rad", neu_index[i[m]], tg[m].astype("datetime64[D]"),
+                                      st[m], w[m], anzahl=1, rueck="zusammen")
+        bericht.stunden += gesetzt
+        bericht.sommerzeit += sommer
     kuerze(reihe)
-    frisch = int(q.get("frisch_tage", 3))
     reihe.verfahren = [(reihe.von, reihe.tag(reihe.tage - 1),
                         "Stundenwerte je Zählstelle (beide Richtungen zusammen), wie MobiData "
                         f"BW sie bündelt; die jüngsten {frisch} Tage noch nicht übernommen")]
