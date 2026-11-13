@@ -6,7 +6,11 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
   Stunde: `iso_timestamp` (Beginn der Stunde in Ortszeit mit Versatz, etwa
   `2026-10-01T08:00:00+02:00`), `channels_in`, `channels_out`, `channels_unknown`, `channels_all`
   (Summe der drei; `na` = nicht gezählt), dazu Kommune bzw. Landkreis (`domain_name`), Name und Lage
-  der Zählstelle.
+  der Zählstelle. Zusammen rund 8,2 Mio. Zeilen (2013-01 bis 2026-11, rad_erkunden10.py).
+- Viele Monatsdateien enthalten auch Zeilen früherer Monate (nachgelieferte Stunden, bis zu einem
+  Jahr zurück): Dieselbe Stunde einer Zählstelle in zwei Dateien mit gleichem Wert zählt einmal, mit
+  verschiedenen Werten gar nicht. Zwei Zeilen (Dezember 2020) haben keinen Versatz – sie gelten als
+  nicht gezählt (die Stunde fehlt dann).
 - In der Karte: `channels_all` je Zählstelle (beide Richtungen zusammen). Fehlt eine Stunde oder
   steht dort `na`, ist sie nicht gezählt.
 - Rückstellung der Uhr: Fast alle Stellen haben am Rückstelltag nur eine Zeile um 2 Uhr
@@ -40,6 +44,7 @@ from zaehlkarte.dauer.modell import LEER, Dauerstelle, Messreihe, kuerze, setze_
 SPALTEN = ["domain_name", "counter_site", "counter_site_id", "longitude", "latitude",
            "iso_timestamp", "channels_all"]
 BLOCK = 64  # Zählstellen je Durchgang beim Setzen der Stunden
+ZEIT = r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}[+-]\d{2}:\d{2}"  # Beginn der Stunde mit Versatz
 
 
 @dataclass
@@ -54,6 +59,7 @@ class Bericht:
     stunden: int = 0
     frisch: int = 0
     sommerzeit: int = 0
+    ohne_versatz: int = 0  # Zeitstempel ohne Versatz (nicht übernommen)
     je_kommune: Counter = field(default_factory=Counter)
 
     def zeilen(self) -> list[str]:
@@ -64,7 +70,7 @@ class Bericht:
                 + ", ".join(f"{k} {n}" for k, n in self.je_kommune.most_common()),
                 f"Stunden in der Karte: rad {self.stunden}; noch nicht übernommen (jünger als "
                 f"frisch_tage): {self.frisch}; Zeilen um 2 Uhr am Tag der Sommerzeit verworfen: "
-                f"{self.sommerzeit}",
+                f"{self.sommerzeit}; Zeitstempel ohne Versatz (nicht gezählt): {self.ohne_versatz}",
                 *([f"nicht in der Karte: {'; '.join(self.ohne)}"] if self.ohne else [])]
 
 
@@ -156,7 +162,7 @@ def _block(i, tag, stunde, utc, werte, bericht: Bericht):
 
 def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
     """Alle Monate als schmale Felder sammeln, dann je Block von Zählstellen Doppelte klären und
-    die Stunden setzen – so bleiben auch 66 Mio. Zeilen (2013–2026) bei rund 1,5 GB Speicher."""
+    die Stunden setzen (Lasttest: 67 Mio. Zeilen in 2,9 GB – das Achtfache der heutigen Menge)."""
     ordner = pfade.roh / q["code"]
     dateien = sorted(ordner.glob("stunden_*.csv.gz"))
     if not dateien:
@@ -174,6 +180,10 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
         df = lies_monat(p)
         bericht.monate += 1
         bericht.anzahl += len(df)
+        df["iso_timestamp"] = df["iso_timestamp"].str.strip()
+        gueltig = df["iso_timestamp"].str.fullmatch(ZEIT)
+        bericht.ohne_versatz += int((~gueltig).sum())
+        df = df[gueltig]
         for _, z in df.drop_duplicates("counter_site_id", keep="last").iterrows():
             meta[int(z["counter_site_id"])] = z  # die jüngste Angabe je Zählstelle gilt
         for liste, x in zip(felder, kompakt(df), strict=True):

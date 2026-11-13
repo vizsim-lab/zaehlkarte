@@ -203,6 +203,9 @@ def test_mobidata_widerspruch_bei_rueckstellung_und_bloecke(pfade, monkeypatch):
             zeilen.append((sid, f"{RUECK.isoformat()}T{h:02d}:00:00{v}", wert))
         zeilen += md_stunden(sid, date(2026, 10, 26), wert, "+01:00")
     zeilen.append(("100020000", f"{RUECK.isoformat()}T02:00:00+01:00", "4"))  # widersprüchlich
+    # ohne Versatz: nicht übernommen – die Stunde fehlt dann
+    zeilen = [("100004595", "2026-10-26T07:00:00", "10") if z == ("100004595",
+              "2026-10-26T07:00:00+01:00", "10") else z for z in zeilen]
     ordner = pfade.roh / "mobidata_rad"
     ordner.mkdir(parents=True)
     (ordner / "stunden_202610.csv.gz").write_bytes(md_monat(zeilen))
@@ -212,7 +215,7 @@ def test_mobidata_widerspruch_bei_rueckstellung_und_bloecke(pfade, monkeypatch):
         monkeypatch.setattr(mobidata_eco, "BLOCK", block)
         b = mobidata_eco.Bericht()
         r = mobidata_eco.lese(MD_Q, pfade, b)
-        assert b.doppelt_anders == 2 and b.stunden == 3 * 48 - 1
+        assert b.doppelt_anders == 2 and b.ohne_versatz == 1 and b.stunden == 3 * 48 - 2
         ergebnisse.append(r)
     r = ergebnisse[0]
     summe, _ = tagessummen(r, "rad")
@@ -220,6 +223,7 @@ def test_mobidata_widerspruch_bei_rueckstellung_und_bloecke(pfade, monkeypatch):
     assert summe[0, i] == 240 and summe[1, i] == 120 and r.doppelt[0, i]
     assert summe[2, i] == LEER and not r.doppelt[2, i]
     assert r.werte["rad"][2, i, 2] == LEER and summe[2, i + 1] == 72
+    assert summe[0, i + 1] == LEER and r.werte["rad"][0, i + 1, 7] == LEER
     for andere in ergebnisse[1:]:
         assert np.array_equal(andere.werte["rad"], r.werte["rad"])
         assert np.array_equal(andere.doppelt, r.doppelt)

@@ -144,9 +144,9 @@ def setze_lokal(reihe: Messreihe, gruppe: str, stelle: np.ndarray, tag: np.ndarr
       Stunde nur, wenn beide getrennt kommen (doppelt so viele Einträge).
     -> (gesetzte Stunden, verworfene Einträge um 2 Uhr am Tag der Sommerzeit).
 
-    Gezählt wird je Zelle (Stelle, Tag, Stunde) mit `np.bincount` – auch bei zig Millionen
-    Einträgen (MobiData BW seit 2013) ohne Tabelle je Eintrag; große Quellen rufen die Funktion
-    je Block von Stellen auf (die Zellen reichen nur über die Stellen der Einträge)."""
+    Gezählt wird je Zelle (Stelle, Tag, Stunde) mit `np.bincount` – auch bei Millionen Einträgen
+    ohne Tabelle je Eintrag; große Quellen rufen die Funktion je Block von Stellen auf (die Zellen
+    reichen nur über die Stellen der Einträge)."""
     if rueck not in ("zusammen", "einfach"):
         raise ValueError(f"rueck: {rueck!r}")
     if not len(stelle):
