@@ -1,0 +1,53 @@
+
+# Paket radmonitore: Radmonitore
+  Lizenz: cc-zero / CC0 1.0 / https://creativecommons.org/publicdomain/zero/1.0/
+  Herausgeber: Hanse- und Universitätsstadt Rostock · geändert 2026-11-13T05:15:46.155384
+  Beschreibung: Standorte der Radmonitore in der Hanse- und Universitätsstadt Rostock
+  extra contacts: [{"role": "vertrieb", "name": "Hanse- und Universitätsstadt Rostock", "email": "geodienste@rostock.de" }, {"role": "autor", "name": "Hanse- und Universitätsstadt Rostock", "email": "geodienste@rostock
+  10 Ressourcen:
+   - Standorte der Radmonitore | CSV | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.csv | geändert 2026-11-13T05:07:45 | Lizenz 
+   - Standorte der Radmonitore | XLSX | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.xlsx | geändert 2026-11-13T05:07:46 | Lizenz 
+   - Standorte der Radmonitore | GeoJSON | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.json | geändert 2026-11-13T05:07:47 | Lizenz 
+   - Standorte der Radmonitore | KML | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.kml | geändert 2026-11-13T05:07:47 | Lizenz 
+   - Standorte der Radmonitore | GML | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.gml | geändert 2026-11-13T05:07:48 | Lizenz 
+   - Daten der Radmonitore | CSV | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.csv | geändert 2026-11-13T05:07:48 | Lizenz 
+   - Daten der Radmonitore | XLSX | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.xlsx | geändert 2026-11-13T05:07:49 | Lizenz 
+   - Daten der Radmonitore | JSON | https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.json | geändert 2026-11-13T05:07:50 | Lizenz 
+   - Radmonitore in der Hanse- und Universitätsstadt Rostock | WMS | https://geo.sv.rostock.de/geodienste/radmonitore/wms | geändert 2026-11-13T05:07:50 | Lizenz 
+   - Radmonitore in der Hanse- und Universitätsstadt Rostock | WFS | https://geo.sv.rostock.de/geodienste/radmonitore/wfs | geändert 2026-11-13T05:07:51 | Lizenz 
+  > https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.csv: HTTP 200, text/x-comma-separated-values, Länge 2321, gelesen 2321
+    20 Zeilen in der Probe; erste 8:
+     | uuid,id,bezeichnung,beschreibung,website
+     | 29137f48-9a7f-11e5-948e-0050569b7e95,"100005392",Hamburger Straße/Liningweg,,https://rostock.eco-counter.com/?siteId=100005392
+     | 29120528-9a7f-11e5-948d-0050569b7e95,"100005393",Hamburger Straße/Braesigplatz,,https://rostock.eco-counter.com/?siteId=100005393
+     | 290ef568-9a7f-11e5-948b-0050569b7e95,"100005395",Am Strande/Holzhalbinsel,,https://rostock.eco-counter.com/?siteId=100005395
+     | 290b9422-9a7f-11e5-9489-0050569b7e95,"100011605",Mühlendamm Flussbad,,https://rostock.eco-counter.com/?siteId=100011605
+     | 2913fbe4-9a7f-11e5-948f-0050569b7e95,"100017341",Warnemünde Wetterwarte,,https://rostock.eco-counter.com/?siteId=100017341
+     | 290d71fc-9a7f-11e5-948a-0050569b7e95,"100034893",Hundertmännerstraße,,https://rostock.eco-counter.com/?siteId=100034893
+     | 291473d0-9a7f-11e5-9490-0050569b7e95,"100037012",Graal-Müritz,,https://rostock.eco-counter.com/?siteId=100037012
+    letzte: 5b93466f-d244-4c55-8480-68a01706f076,"300041920",Saarplatz Lindenpark,Steuergerät,https://rostock.eco-counter.com/?siteId=300041920 || e703867f-0d0c-42e8-9207-6e7de985f64a,"300043633",August-Bebel-Str.,,https://rostock.eco-counter.com/?siteId=300043633 || 3e3fecd8-3914-4c39-94c6-5b583b18a2c0,"300066029",Saarplatz Nord,,https://rostock.eco-counter.com/?siteId=300066029
+  > https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.xlsx: HTTP 200, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, Länge 4476, gelesen 4476
+    ZIP mit 9 Dateien: ['[Content_Types].xml', 'docProps/app.xml', 'docProps/core.xml', 'xl/workbook.xml', 'xl/worksheets/sheet1.xml', 'xl/sharedStrings.xml', 'xl/styles.xml', 'xl/_rels/workbook.xml.rels', '_rels/.rels']
+    (XLSX)
+    Blatt sql_statement:
+     | ['uuid', 'id', 'bezeichnung', 'beschreibung', 'website']
+     | ['29137f48-9a7f-11e5-948e-005056', '100005392', 'Hamburger Straße/Liningweg', 'None', 'https://rostock.eco-counter.co']
+     | ['29120528-9a7f-11e5-948d-005056', '100005393', 'Hamburger Straße/Braesigplatz', 'None', 'https://rostock.eco-counter.co']
+     | ['290ef568-9a7f-11e5-948b-005056', '100005395', 'Am Strande/Holzhalbinsel', 'None', 'https://rostock.eco-counter.co']
+     | ['290b9422-9a7f-11e5-9489-005056', '100011605', 'Mühlendamm Flussbad', 'None', 'https://rostock.eco-counter.co']
+     | ['2913fbe4-9a7f-11e5-948f-005056', '100017341', 'Warnemünde Wetterwarte', 'None', 'https://rostock.eco-counter.co']
+     | ['290d71fc-9a7f-11e5-948a-005056', '100034893', 'Hundertmännerstraße', 'None', 'https://rostock.eco-counter.co']
+     | ['291473d0-9a7f-11e5-9490-005056', '100037012', 'Graal-Müritz', 'None', 'https://rostock.eco-counter.co']
+  > https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.json: HTTP 200, application/json, Länge 5679, gelesen 5679
+    JSON: { "type": "FeatureCollection", "features": [ { "type": "Feature", "properties": { "uuid": "29137f48-9a7f-11e5-948e-0050569b7e95", "id": "100005392", "bezeichnung": "Hamburger Straße/Liningweg", "beschreibung": null, "website": "https://rostock.eco-counter.com/?siteId=100005392" }, "geometry": { "type": "Point", "coordinates": [ 12.07412, 54.10296 ] } }, { "type": "Feature", "properties": { "uuid": "29120528-9a7f-11e5-948d-0050569b7e95", "id": "100005393", "bezeichnung": "Hamburger Straße/Braesigplatz", "beschreibung": null, "website": "https://rostock.eco-counter.com/?siteId=100005393" }, "geometry": { "type": "Point", "coordinates": [ 12.0749855, 54.102818 ] } }, { "type": "Feature", "properties": { "uuid": "290ef568-9a7f-11e5-948b-0050569b7e95", "id": "100005395", "bezeichnung": "Am Strande/Holzhalbinsel", "beschreibung": null, "website": "https://rostock.eco-counter.com/?siteId=100005395" }, "geometry": { "type": "Point", "coordinates": [ 12.1494215, 54.0915228 ] } }, { "type": "Feature", "properties": { "uuid": "290b9422-9a7f-11e5-9489-0050569b7e95", "id": "100011605", "bezeichnung": "Mühlendamm Flussbad", "beschreibung": null, "website": "https://rostock.eco-counter.com/?siteId=100011605" }, "geometry": { "type": "Point", "coordinates": [ 12.153115, 54.083782 ] } }, { "type": "Feature", "properties": { "uuid": "2913fbe4-9a7f-11e5-948f-0050569b7e95", "id": "100017341", "bezeichnung": "Warnemünde Wetterwarte", "beschreibung": null, "website": "https://rostock.eco-counter.c
+  > https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.kml: HTTP 200, application/vnd.google-earth.kml+xml, Länge 8959, gelesen 8959
+    179 Zeilen in der Probe; erste 8:
+     | <?xml version="1.0" encoding="utf-8" ?>
+     | <kml xmlns="http://www.opengis.net/kml/2.2">
+     | <Document id="root_doc">
+     | <Schema name="radmonitore_standorte" id="radmonitore_standorte">
+     | 	<SimpleField name="Name" type="string"></SimpleField>
+     | 	<SimpleField name="id" type="string"></SimpleField>
+     | 	<SimpleField name="bezeichnung" type="string"></SimpleField>
+     | 	<SimpleField name="beschreibung" type="string"></SimpleField>
+    letzte:   </Placemark> || </Folder> || </Document></kml>

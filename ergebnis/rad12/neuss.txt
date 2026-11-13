@@ -1,0 +1,52 @@
+
+# ODS https://opendata.rhein-kreis-neuss.de eco-counter-sites: Rhein-Kreis Neuss: Radzählstationen
+  Lizenz: Datenlizenz Deutschland – Zero – Version 2.0 / http://dcat-ap.de/def/licenses/dl-zero-de/2.0 · Herausgeber Rhein-Kreis Neuss · geändert 2026-11-12T23:00:09.614000+00:00 · Daten geändert 2026-11-12T23:00:09.614000+00:00 · Datensätze 0
+  Beschreibung: <p class="MsoNormal" style="font-family: sans-serif; margin-bottom: 2pt; line-height: 18pt;"><span style="font-size: 12pt; font-family: Tahoma, sans-serif;">Radfahren in Zahlen – Fünf Zählstationen dokumentieren seit 2016 dauerhaft den Radverkehr auf zentralen Radwegen im Rhein-Kreis Neuss. Die tagesaktuelle Messung des Radverkehrsaufkommens erfolgt mit Hilfe von im Boden verlegten Induktionsschleifen.<o:p></o:p></span></p><p class="MsoNormal" style="font-family: sans-serif; margin-bottom: 2pt; line-height: 18pt;"><span style="font-size: 12pt; font-family: Tahoma, sans-serif;"> </span></p><p class="MsoNormal" style="font-family: sans-serif; margin-bottom: 2pt; line-height: 18pt;"><span style="font-size: 12pt; font-family: Tahoma, sans-serif;">Mit der dauerhaften Datenerfassung können Erkenntnisse zum Tages-, Wochen- und Jahresgang gewonnen und darauf aufbauend langfristige Radverkehrs-Entwicklungen über mehrere Jahre beobachtet werden.<o:p></o:p></span></p><p class="MsoNormal" style="font-family: sans-serif; margin-bottom: 2pt; line-height: 18pt;"><span style="font-size: 12pt; font-family: Tahoma, sans-serif;"> </span></p><p style="font-family: sans-serif;"></p><p class="MsoNormal"
+  Felder: [('id', 'text', 'ID'), ('name', 'text', 'Name'), ('coordinates', 'geo_point_2d', 'Coordinates'), ('user_type', 'text', 'User Type'), ('timezone', 'text', 'TimeZone'), ('interval', 'int', 'Interval'), ('sens', 'text', 'Sens'), ('installation_date', 'date', 'Installation Date'), ('counter', 'text', 'Counter'), ('photo1', 'text', 'Foto'), ('counter_name', 'text', 'Zählstelle')]
+  total_count 0
+  order_by installation_date: []
+  order_by -installation_date: []
+
+# ODS https://opendata.rhein-kreis-neuss.de eco-counter-data: Rhein-Kreis Neuss: Radzählstationen Auswertung
+  Lizenz: Creative Commons CC Zero License (cc-zero) / http://dcat-ap.de/def/licenses/cc-zero · Herausgeber Rhein-Kreis Neuss · geändert 2026-07-05T22:15:28.410000+00:00 · Daten geändert 2026-07-05T22:15:28.410000+00:00 · Datensätze 1915736
+  Beschreibung: <p class="MsoNormal" style="margin-bottom:2.0pt;line-height:18.0pt"><span style='font-size:12.0pt;font-family:"Tahoma",sans-serif;mso-fareast-font-family:
+"Times New Roman";mso-fareast-language:DE'>Radfahren in Zahlen – Fünf
+Zählstationen dokumentieren seit 2016 dauerhaft den Radverkehr auf zentralen
+Radwegen im Rhein-Kreis Neuss. Die tagesaktuelle Messung des Radverkehrsaufkommens
+erfolgt mit Hilfe von im Boden verlegten Induktionsschleifen. <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:2.0pt;line-height:18.0pt"><span style='font-size:12.0pt;font-family:"Tahoma",sans-serif;mso-fareast-font-family:
+"Times New Roman";mso-fareast-language:DE'> </span></p><p class="MsoNormal" style="margin-bottom:2.0pt;line-height:18.0pt"><span style='font-size:12.0pt;font-family:"Tahoma",sans-serif;mso-fareast-font-family:
+"Times New Roman";mso-fareast-language:DE'>Mit der dauerhaften Datenerfassung
+können Erkenntnisse zum Tages-, Wochen- und Jahresgang gewonnen und darauf
+aufbauend langfristige Radverkehrs-Entwicklungen über mehrere Jahre beobachtet
+werden. <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:2.0pt;line-height:18.0pt"><span style='font-size:12.0pt;font-f
+  Felder: [('id', 'text', 'Id'), ('date', 'datetime', 'Datum'), ('counts', 'int', 'Anzahl'), ('status', 'text', 'Status'), ('channel_id', 'text', 'Channel Id'), ('coordinates', 'geo_point_2d', 'Koordinaten'), ('counter_name', 'text', 'Zählstelle')]
+  total_count 1915736
+    {"id": "100019715", "date": "2017-03-17T16:00:00+00:00", "counts": 7, "status": "raw", "channel_id": "101019715", "coordinates": {"lon": 6.705018, "lat": 51.261012}, "counter_name": "Meerbusch"}
+    {"id": "100019715", "date": "2017-03-17T18:00:00+00:00", "counts": 3, "status": "raw", "channel_id": "101019715", "coordinates": {"lon": 6.705018, "lat": 51.261012}, "counter_name": "Meerbusch"}
+    {"id": "100019715", "date": "2017-03-17T19:00:00+00:00", "counts": 1, "status": "raw", "channel_id": "101019715", "coordinates": {"lon": 6.705018, "lat": 51.261012}, "counter_name": "Meerbusch"}
+    {"id": "100019715", "date": "2017-03-18T02:00:00+00:00", "counts": 1, "status": "raw", "channel_id": "101019715", "coordinates": {"lon": 6.705018, "lat": 51.261012}, "counter_name": "Meerbusch"}
+    {"id": "100019715", "date": "2017-03-18T08:00:00+00:00", "counts": 1, "status": "raw", "channel_id": "101019715", "coordinates": {"lon": 6.705018, "lat": 51.261012}, "counter_name": "Meerbusch"}
+    {"id": "100019715", "date": "2017-03-18T11:00:00+00:00", "counts": 2, "status": "raw", "channel_id": "101019715", "coordinates": {"lon": 6.705018, "lat": 51.261012}, "counter_name": "Meerbusch"}
+  order_by date: ['2015-11-16T23:00:00+00:00', '2015-11-16T23:00:00+00:00']
+  order_by -date: ['2026-07-05T02:00:00+00:00', '2026-07-05T02:00:00+00:00']
+
+# Paket rhein-kreis-neuss-radzahlstationen-auswertung-ne: Rhein-Kreis Neuss: Radzählstationen Auswertung
+  Lizenz: http://dcat-ap.de/def/licenses/cc-zero / Creative Commons CC Zero License (cc-zero) / http://www.opendefinition.org/licenses/cc-zero
+  Herausgeber: Neuss · geändert 2026-11-13T00:21:12.481361
+  Beschreibung: Radfahren in Zahlen – Fünf Zählstationen dokumentieren seit 2016 dauerhaft den Radverkehr auf zentralen Radwegen im Rhein-Kreis Neuss. Die tagesaktuelle Messung des Radverkehrsaufkommens erfolgt mit Hilfe von im Boden verlegten Induktionsschleifen.  Mit der dauerhaften Datenerfassung können Erkenntnisse zum Tages-, Wochen- und Jahresgang gewonnen und darauf aufbauend langfristige Radverkehrs-Entwicklungen über mehrere Jahre beobachtet werden.   Zwei Zählstellen befinden sich auf dem Rhein-Radweg in Meerbusch-Büderich und Dormagen-Zons. Auf dem Erft-Radweg zählen zwei Stationen in Neuss-Reuschenberg und Grevenbroich-Wevelinghoven passierende Radfahrende. Und eine fünfte Zählstelle erfasst Radfahrende in der Stadt Jüchen auf einem Radweg zwischen Schloss Dyck und Nikolauskloster.
+  15 Ressourcen:
+   - csv | http://publications.europa.eu/resource/authority/file-type/CSV | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/csv?use_labels=true | geändert 2026-09-17T23:27:46.281369 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - json | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/json | geändert 2026-09-17T23:27:46.281371 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - fgb | http://publications.europa.eu/resource/authority/file-type/OCTET | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/fgb | geändert 2026-09-17T23:27:46.281372 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - geojson | http://publications.europa.eu/resource/authority/file-type/GEOJSON | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/geojson | geändert 2026-09-17T23:27:46.281373 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - gpx | http://publications.europa.eu/resource/authority/file-type/GPX | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/gpx | geändert 2026-09-17T23:27:46.281374 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - jsonl | http://publications.europa.eu/resource/authority/file-type/JSON | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/jsonl | geändert 2026-09-17T23:27:46.281375 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - kml | http://publications.europa.eu/resource/authority/file-type/KML | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/kml | geändert 2026-09-17T23:27:46.281375 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - ov2 | http://publications.europa.eu/resource/authority/file-type/OCTET | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/ov2 | geändert 2026-09-17T23:27:46.281376 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - parquet | http://publications.europa.eu/resource/authority/file-type/PARQUET | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/parquet | geändert 2026-09-17T23:27:46.281377 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - rdfxml | http://publications.europa.eu/resource/authority/file-type/RDF_XML | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/rdfxml | geändert 2026-09-17T23:27:46.281378 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - jsonld | http://publications.europa.eu/resource/authority/file-type/JSON_LD | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/jsonld | geändert 2026-09-17T23:27:46.281378 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - turtle | http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/turtle | geändert 2026-09-17T23:27:46.281379 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - n3 | http://publications.europa.eu/resource/authority/file-type/N3 | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/n3 | geändert 2026-09-17T23:27:46.281380 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - shp | http://publications.europa.eu/resource/authority/file-type/SHP | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/shp | geändert 2026-09-17T23:27:46.281381 | Lizenz http://dcat-ap.de/def/licenses/cc-zero
+   - xls | http://publications.europa.eu/resource/authority/file-type/XLS | https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/eco-counter-data/exports/xls?use_labels=true | geändert 2026-09-17T23:27:46.281381 | Lizenz http://dcat-ap.de/def/licenses/cc-zero

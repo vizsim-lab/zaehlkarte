@@ -1,0 +1,19 @@
+! CKAN https://wissensallmende.jena.de (Fahrrad): JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+! CKAN https://wissensallmende.jena.de (Radverkehr): JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+! CKAN https://wissensallmende.jena.de (Zählstelle): JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+  > https://wissensallmende.jena.de/: HTTP 200, text/html, Länge 625, gelesen 625
+    25 Zeilen in der Probe; erste 5:
+     | <!DOCTYPE html>
+     | <html lang="en">
+     |   <head>
+     |     <meta charset="utf-8">
+     |     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    letzte:     </div> ||   </body> || </html>
+  > https://wissensallmende.jena.de/api/3/action/status_show: HTTP 200, text/html, Länge 625, gelesen 625
+    25 Zeilen in der Probe; erste 5:
+     | <!DOCTYPE html>
+     | <html lang="en">
+     |   <head>
+     |     <meta charset="utf-8">
+     |     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    letzte:     </div> ||   </body> || </html>
