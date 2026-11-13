@@ -44,11 +44,13 @@ export const hatThema = (d, thema) => DAUER_THEMEN[thema]?.gruppen.some((g) => d
 // Kfz Berlin 6.350 / 9.760 / 12.820 / 16.820, Hamburg 5.000 / 8.140 / 11.950 / 18.190;
 // Lkw Berlin 190 / 360 / 590 / 990, Schwerverkehr Hamburg 170 / 350 / 600 / 990 – eine Skala für
 // beide Klassen (nur die Farbstufen; die Werte bleiben je Klasse, wie die Quelle sie zählt);
-// Rad Hamburg 360 / 660 / 1.100 / 1.950. Fuß: noch keine Quelle (Platzhalter).
+// Rad Hamburg 360 / 660 / 1.100 / 1.950; seit den Rad-Zählstellen (Berlin, Münster, Aachen,
+// München, MobiData BW) die Quintile der jüngsten Schultage aller 578 Rad-Stellen
+// 330 / 720 / 1.290 / 2.460 (je Stufe 18–21 % der Stellen). Fuß: noch keine Quelle (Platzhalter).
 export const DAUER_STUFEN = {
   kfz: [6000, 10000, 13000, 17000],
   sv: [200, 350, 600, 1000],
-  rad: [350, 700, 1100, 2000],
+  rad: [350, 700, 1300, 2500],
   fuss: [500, 1000, 2500, 5000],
 };
 

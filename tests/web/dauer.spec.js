@@ -267,6 +267,9 @@ test("Mehrere Quellen: Lkw/Schwerverkehr je Stelle in ihrer Klasse, Rad aus Hamb
 
   await page.locator('#thema-chips [data-thema="rad"]').click();
   await expect(page).toHaveURL(/t=rad\.menge/);
+  // Rad-Klassen nach den Quintilen aller Rad-Stellen (Hamburg, Berlin, Münster, Aachen, München, BW)
+  await expect(legende).toContainText("1.300 bis unter 2.500");
+  await expect(legende).toContainText("ab 2.500");
   await klickeDauer(page, "hamburg_rad:7433952");
   const detail = page.locator("#dauer-detail");
   await expect(detail.locator(".detail-titel")).toHaveText("Alsterufer");

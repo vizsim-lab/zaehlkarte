@@ -16,9 +16,10 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
 - **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen.
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
-  Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen – die Karte zeigt die
-  Tagessumme an einem wählbaren Tag, je Stelle die Tagessummen der ganzen Reihe und den
-  Tagesgang des Tags.
+  Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen und die Rad-Zählstellen von
+  Berlin, Münster, Aachen, München und 27 Städten und Landkreisen in Baden-Württemberg – die
+  Karte zeigt die Tagessumme an einem wählbaren Tag, je Stelle die Tagessummen der ganzen Reihe
+  und den Tagesgang des Tags.
 - **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
   `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
   Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
@@ -51,6 +52,11 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
 | Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; in der Karte rund 1.120 Zählstellen, Straßennamen aus OpenStreetMap | vollständig gezählte Tage: Kfz und Rad ab 09.09.2026, Schwerverkehr ab 01.03.2026; wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
 | Ettlingen (Stadt Ettlingen) | automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der Karte als Kfz (Summe der Klassen) und Lkw (Lkw und Lkw mit Anhänger); 10 Richtungen an 5 Stellen mit vollständigen Tagen | ab 20.08.2026 (ältere Werte ab Mai 2025 nicht übernommen); wöchentlich ergänzt | offen im [Open-Data-Portal re@di](https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen) (Datastore) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.de) – nur nicht kommerziell, „Stadt Ettlingen“ |
+| Baden-Württemberg: 27 Städte und Landkreise (gebündelt von MobiData BW) | Rad-Zählstellen, meist Eco-Counter: Stundenwerte je Zählstelle, beide Richtungen zusammen; in der Karte 178 Zählstellen | 2013 – Anfang November 2026; wöchentlich ergänzt (die jüngsten drei Tage erst beim nächsten Bau) | offen auf [MobiData BW](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler) (Monatsdateien) | dl-de/by-2-0, „MobiData BW“ |
+| Münster (Stadt Münster) | Rad-Zählstellen (Eco-Counter): 15-Minuten-Werte je Kanal mit Status, in der Karte Stundenwerte je Zählstelle aus Rohwerten und geprüften Werten; 23 Zählstellen | 2019–2026; wöchentlich ergänzt | offen im [GitHub-Repository der Stadt](https://github.com/od-ms/radverkehr-zaehlstellen) (nächtlich aktualisiert), Lage im [Open-Data-Portal](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten) | dl-de/by-2-0, „Stadt Münster“ |
+| Aachen (Stadt Aachen) | Radzählstellen: Stundenwerte je Richtung (UTC), in der Karte die Summe je Zählstelle; 26 Zählstellen | 2025–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen) (CSV je Jahr, Standorte als PDF) | dl-de/zero-2-0 |
+| Berlin (Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt) | Rad-Zählstellen: Stundenwerte, meist je Richtung; farbig markierte Werte (rekonstruiert, unplausibel, keine Daten) nicht übernommen; 33 Zählstellen | 2012–2025; einmal im Jahr ergänzt | offen auf [berlin.de](https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/) (eine Excel-Datei) | dl-de/zero-2-0 |
+| München (Landeshauptstadt München) | Raddauerzählstellen: 15-Minuten-Werte je Richtung, in der Karte Stundenwerte je Zählstelle; 6 Zählstellen | Juni 2008 – September 2026; monatlich ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen) (Jahres- und Monatsdateien), Lage im Geoportal | dl-de/by-2-0 |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`. Rund 1.500 Berliner Zählungen haben noch keine
@@ -115,7 +121,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Stunden, bei der Rückstellung 25 (Stunde 2–3 Uhr zweimal, mit Hinweis).
 - Standard: je Stelle die Tagessumme ihres **jüngsten vollständig gezählten Schultags** – so
   stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume sich nicht überschneiden
-  (Berlin endet im Juni 2025, Hamburg und Ettlingen sind aktuell). Der Tag steht bei jedem Wert
+  (Berlins Detektoren enden im Juni 2025, seine Rad-Zählstellen im Dezember 2025; die übrigen
+  Quellen sind aktuell). Der Tag steht bei jedem Wert
   (Hover, Seitenleiste, CSV), die Legende nennt die Tage je Quelle – Stellen, die nicht mehr
   zählen, zeigen ihren letzten Schultag, in Berlin auch Jahre zurück. Schultag und Ferien gelten
   je Land.
@@ -156,6 +163,16 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   zwischen ihnen um. Die Werte vor dem 20.08.2026 (laufende Tageszähler ohne Fahrtrichtung)
   sind nicht übernommen. Lizenz CC BY-NC 4.0: Weiterverwendung nur nicht kommerziell; die
   Lizenz steht an der Quelle, in der Seitenleiste und in jeder Zeile des CSV-Exports.
+- Rad-Zählstellen (Berlin, Münster, Aachen, München, Baden-Württemberg über MobiData BW):
+  Zählschleifen oder -säulen, meist von Eco-Counter; in der Karte je Zählstelle beide
+  Richtungen zusammen. Gezählt ist nur, was die Quelle als Rohwert oder geprüften Wert führt –
+  Werte, die sie als rekonstruiert (Ausfall rechnerisch aufgefüllt), unplausibel oder von Hand
+  geändert kennzeichnet, gelten als nicht gezählt (Münster: Status je Viertelstunde, Berlin:
+  Zellfarbe). MobiData BW kennzeichnet rekonstruierte Werte nicht; sie können in den
+  Stundenwerten stecken (Hinweis an der Quelle). Zählstellen, die Rad und Fuß zusammen zählen,
+  fehlen, ebenso eine Zählstelle des Landes. Bei der Rückstellung der Uhr fassen MobiData BW,
+  Münster und Berlin beide Stunden 2–3 Uhr unter einer Uhrzeit zusammen; in München fehlt eine
+  davon – der Tag gilt als nicht vollständig gezählt. Aachen liefert UTC.
 
 ## Aufbau
 
@@ -164,8 +181,9 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
   config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
   src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
                             olpe_radar, konstanz_mobil, potsdam_pdf, xanten_pdf)
-  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta, readi_urbanpulse),
-                            eigener Bau
+  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta, readi_urbanpulse;
+                            Rad: mobidata_eco, muenster_rad, aachen_rad, berlin_rad,
+                            muenchen_rad), eigener Bau
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
