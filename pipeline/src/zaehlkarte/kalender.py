@@ -113,7 +113,7 @@ def ostersonntag(jahr: int) -> date:
 
 @cache
 def feiertage(land: str, jahr: int) -> dict[date, str]:
-    """Gesetzliche Feiertage (bundesweit + Land BB, BE, BW, NW; HB, HH, NI, SH)."""
+    """Gesetzliche Feiertage (bundesweit + Land BB, BE, BW, BY, NW; HB, HH, NI, SH)."""
     ostern = ostersonntag(jahr)
     tage = {
         date(jahr, 1, 1): "Neujahr",
@@ -142,6 +142,13 @@ def feiertage(land: str, jahr: int) -> dict[date, str]:
     elif land == "BW":
         tage[date(jahr, 1, 6)] = "Heilige Drei Könige"
         tage[ostern + timedelta(days=60)] = "Fronleichnam"
+        tage[date(jahr, 11, 1)] = "Allerheiligen"
+    elif land == "BY":
+        tage[date(jahr, 1, 6)] = "Heilige Drei Könige"
+        tage[ostern + timedelta(days=60)] = "Fronleichnam"
+        # Mariä Himmelfahrt: Feiertag in Gemeinden mit überwiegend katholischer Bevölkerung
+        # (Art. 1 Abs. 1 Nr. 2 BayFTG) – so in München, nicht überall in Bayern
+        tage[date(jahr, 8, 15)] = "Mariä Himmelfahrt"
         tage[date(jahr, 11, 1)] = "Allerheiligen"
     elif land == "NW":
         tage[ostern + timedelta(days=60)] = "Fronleichnam"

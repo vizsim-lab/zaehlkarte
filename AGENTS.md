@@ -6,15 +6,16 @@ Learnings aus dem Aufbau (November 2026). Ergänzen, wenn etwas Neues auffällt.
 Zwei Familien, beide mit gezählten Werten im Zeitverlauf:
 - **Kurzzeitzählungen** der Kommunen mit **Werten je Zählung** – am besten je Intervall (15/60
   Minuten) und Richtung, mindestens Tagessummen je Verkehrsart.
-- **Dauerzählstellen** der Kommunen (fest eingebaute Detektoren, Kameras) mit Stunden- oder
+- **Dauerzählstellen** der Kommunen (fest eingebaute Detektoren, Kameras, Rad-Zählstellen) mit Stunden- oder
   Tageswerten über Monate und Jahre – Abschnitt `dauer:` in sources.yaml, Code in
   `src/zaehlkarte/dauer/`.
 
 Nicht gemeint: Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür
 `vizsim/svz`. Prüffrage: Ein Wert je Stelle und Jahr → svz; Werte je Intervall oder Tag →
 hier; beides → jedes Repo seinen Teil (Hamburg: DTV-Tabelle svz, Detektor-Stunden hier).
-Klassische Rad-Zählsäulen (Eco-Counter u. a.) sind vorerst nicht dabei; Stundenwerte der BASt
-auch nicht (nicht kommunal).
+Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 dazu. Nicht dabei:
+Dauerzählstellen von Bund und Ländern (BASt, Landes-Dauerzählstellen) – nicht kommunal; was es
+davon offen gibt, steht unten unter „Nicht kommunal“.
 
 ## Wo suchen
 - **Open-Data-Portale der Städte und Länder:** MobiData BW (CKAN, Gruppe
@@ -141,7 +142,12 @@ auch nicht (nicht kommunal).
 - **Ferien:** bewegliche Ferientage legen die Schulen selbst fest (BW: 3–5 je Schuljahr) –
   ein „Schultag“ kann vor Ort frei gewesen sein. Die KMK-Kalender ab 1999/2000 stehen im
   Archiv auf kmk.org (`Ferien99_00.pdf` … `FER19_20.pdf`); `pdftotext -layout` und die
-  Spaltenköpfe (Herbst, Weihnachten, …) reichen zum Auslesen.
+  Spaltenköpfe (Herbst, Weihnachten, …) reichen zum Auslesen – das macht
+  `pipeline/werkzeuge/kmk_ferien.py` (mit `--pruefe` gegen eine vorhandene CSV; deckt sich mit
+  NW 19, HH 3 und BB 17 Schuljahren). Kursiv gesetzte unterrichtsfreie Tage (Bayern: Buß- und
+  Bettag, Art. 4 Nr. 3 BayFTG) unterscheidet der Text nicht – von Hand nachtragen. Bayerns
+  Frühjahrsferien (Fasching) stehen unter Ostern/Frühjahr vor den Osterferien. kmk.org ist aus
+  der Sandbox nicht erreichbar (Workflow).
 - **Münster:** Formelfehler in den Zählblättern lassen Ströme aus – mal in der Kfz-Zelle
   (Kfz 26 bei 315 Pkw), mal in den Fahrzeugarten (S-Zeile ohne den zweiten Strom) -> je Arm
   den größeren der beiden Werte. Leere Vorlagen stehen auf 0 -> eine Stunde mit
@@ -333,14 +339,99 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     über eine API mit Schlüssel (`api-key` im MobiData-Eintrag) → nicht keyless.
   - **Freiburg:** WFS `digit_verkehrszaehl` nur mit der Ebene `zaehl_co2_aktuell` (letzte
     Werte vom Mai 2024, keine Reihe) – weiter Testbetrieb.
-  - **Leipzig, Mannheim, Aachen, Ulm (Blautalradweg):** offen nur Rad-Zählsäulen (Eco-Counter)
-    – eigener späterer Schritt (Konzept, Entscheidung 1). Leipzigs 24 Kfz-Dauerzählstellen nur
-    im Dashboard, nicht als Daten.
-  - **Darmstadt, Wiesbaden, Kaiserslautern:** keine offenen kommunalen Zeitreihen gefunden (in
-    Darmstadt sind die „Verkehrssensoren“ bei sensoto.io die BASt-Zählstellen; das Portal
+  - **Leipzig:** Rad-Zählstellen nur mit den Stundenwerten der letzten 31 Tage (WFS), dazu
+    Tageswerte zweier Jahre – bräuchte ein Gedächtnis wie Hamburg. Die 24 Kfz-Dauerzählstellen
+    nur im Dashboard, nicht als Daten. (Mannheim, Aachen, Ulm: seit November 2026 mit ihren
+    Rad-Zählstellen in der Karte, siehe unten.)
+  - **Darmstadt:** „Verkehrsdaten im Rohformat“ 2022–2026 (ein Datensatz je Jahr,
+    dl-de/by-2-0) aus dem Verkehrsleitrechner: je Kreuzung ein ZIP mit Monats-CSV im
+    Minutentakt, je Detektor Belegungen und Verweilzeit (Schleifen `D…`, Taster `TBS…`), laut
+    Quelle ungeprüft mit Lücken und Ausreißern. Ein Querschnitt ergäbe sich erst, wenn jede
+    Schleife ihrer Zufahrt und ihrem Fahrstreifen zugeordnet ist (Datensatz „Kreuzungspläne Stadt
+    Darmstadt“, je Kreuzung von Hand) – zurückgestellt. Die „Verkehrssensoren“ bei sensoto.io
+    sind die BASt-Zählstellen.
+  - **Wiesbaden, Kaiserslautern:** keine offenen kommunalen Zeitreihen gefunden (das Portal
     `opendata.cloud.wiesbaden.de` war aus dem Workflow nicht erreichbar).
+  - **Kiel:** 87 Kfz-Dauerzählstellen (Menge, Art, Fahrtrichtung; Minuten- und Stundenwerte) im
+    DatenDock der KielRegion (Civora-Plattform, Dashboards über eingebettete Superset-Ansichten,
+    keine offene Schnittstelle gefunden). In der Mobilithek das Angebot 995318989663924224
+    („[alt]“, CC BY 4.0, seit 24.05.2026) und seit 09.10.2026 1045322209798569984 mit
+    „LICENSE_RESTRICTED_USE_FREE_OF_CHARGE“, Freigabe durch den Anbieter nötig und Abruf über die
+    Vermittlung der Mobilithek (Konto) → nicht keyless, nicht offen. Die Metadaten liefert
+    `https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/<id>`, die Suche
+    `POST …/v2/offers/search` mit `{"searchString": "…"}`.
+  - **Osnabrück, TEU-Datensatz der Mobilithek** (903287344194932736): 66 Sensoren paarweise je
+    Richtung (Pkw, Lkw, Lkw mit Anhänger), 01.01.2022–11.09.2023, Lizenz „other-closed“ → nicht
+    nutzbar. Ebenso **Berlin Müllerstraße** (VMZ, Tageswerte 2019–2022, „other-closed“).
+  - **Köln, Rüsselsheim, Gelsenkirchen:** nur Echtzeit (DATEX II) – bräuchte ein eigenes
+    Archiv; Kölns „KFZ Zählstellen und Werte“ sind DTVw (svz).
   - **Konstanz, Gelsenkirchen:** laut svz (AGENTS.md § 3) nur Echtzeit-Zähler (DATEX II) – nicht
     weiter geprüft.
-  - **Nicht kommunal** (wie BASt, vorerst nicht): „Stundenwerte der Dauerzählstellen in
-    Baden-Württemberg“ (Mobilithek). Kandidat mit einer Stelle: Bielefeld,
-    Verkehrszählstelle Ostwestfalendamm (Rohdaten im BASt-Format, Open.NRW).
+- **Rad-Zählstellen (in der Karte seit November 2026,** Werkzeug-Branch `werkzeug/dauer2`,
+  `tools/rad_erkunden*.py`, Ergebnisse `ergebnis/rad*/`):
+  - **Was als gezählt gilt:** Eco-Counter führt je Wert einen Status – `0` (Rohwert) und
+    `validated` (geprüft) gelten als gezählt, `4` (rekonstruiert: in Münster Läufe bis zu fünf
+    Wochen, das Muster der Auffüllung bei Ausfällen) und `modified` (von Hand geändert) nicht.
+    Berlins Excel markiert per Zellfarbe (Blatt „Legende“: orange 0/unplausibel, hellgelb keine
+    Daten, Theme-Farbe 5 rekonstruiert; Theme-Farbe 7 an der fehlenden Stunde der Sommerzeit) –
+    openpyxl nur ohne `read_only`, die Theme-Farben haben kein RGB. MobiData BW, Aachen und
+    München liefern keinen Status: MobiData nachweislich mit rekonstruierten Werten (Abgleich mit
+    dem eingefrorenen älteren Format, Juni 2025, Status 4 in `channels_all` enthalten) → Hinweis
+    an der Quelle; Aachen und München lassen Ausfälle leer bzw. `NA`.
+  - **Zeitumstellung je Quelle prüfen** (Verhältnis 2 Uhr / Mittel aus 1 und 3 Uhr am
+    Rückstelltag gegen andere Sonntage): MobiData (1,3–1,7 gegen 0,8–0,9), Münster (1,8 gegen
+    0,9) und Berlin (1,7 gegen 0,9) fassen beide Stunden unter einer Uhrzeit zusammen →
+    `setze_lokal(rueck="zusammen")`; München nicht (1,0–1,2) – eine Stunde fehlt, der Tag ist
+    nicht vollständig (`rueck="einfach"`). München führt die fehlende Stunde der Sommerzeit mit
+    Nullen (verworfen). Aachen liefert UTC (`setze_utc`).
+  - **Kanäle:** Münsters Gesamtspalte ist die Summe der Kanäle (bis auf 86 von 3,7 Mio.
+    Viertelstunden – dann nicht gezählt); alte und neue Schleifen und Formel-Kanäle stehen
+    nebeneinander, Pkw-Kanäle (Bohlweg) sind leer. MobiData zählt in `channels_all` nur
+    Rad-Kanäle (Pkw- und Personen-Kanäle in Ludwigsburg, Reutlingen, Böblingen nicht). Aachen:
+    eigene Kanäle für Falschfahrer (Hohenstaufenallee) – gehören zur Zählstelle. Zählstellen,
+    deren Name Fuß- und Radverkehr nennt, ein Gerät neben seinen eigenen Zählstellen („Hardware
+    für …“, gleiche Seriennummer) und eine Stelle des Regierungspräsidiums (Land) stehen in
+    `ohne`. Offen: Tübingens Unterführung Steinlach hat dieselbe Kanalstruktur wie der
+    Fuß- & Radtunnel („Fahrräder IN/OUT“ und „Richtung …“), der Name nennt aber keinen Fuß.
+  - **Lage:** MobiData, Berlin (Blatt „Standortdaten“) und München (WFS) mit Koordinaten,
+    Münster über das GeoJSON der Stadt (`fahrradzaehl-standorte_0.geojson`, gleiche Kennungen),
+    Aachen nur im PDF „Standorte Radzählstellen“ (pdfplumber; Annuntiatenbach dort mit Länge
+    6,80208 statt 6,080208 – korrigiert über `lage`). Berlin: sechs frühere Kennungen ohne
+    Standortdaten (02-MI-AL-W, 02-PA-SE-N, 03-SP-NO-O/-W, 17-SZ-BRE-O/-W) fehlen in der Karte.
+  - **Formate:** MobiData je Monat `fahrradzaehler_stundenwerten_JJJJMM.csv.gz` seit 2013-01
+    (Verzeichnis `mobidata-bw.de/fahrradzaehldaten/v2/`), Zeitstempel mit Versatz, `na` = nicht
+    gezählt. Münster: GitHub `od-ms/radverkehr-zaehlstellen`, je Zählstelle Monats-CSV seit 2019
+    (Archiv über `codeload.github.com`). Aachen: CKAN, eine CSV je Jahr (laufendes und voriges),
+    zwei Ressourcen für dasselbe Jahr möglich → die jüngste. Berlin: eine Excel-Datei, ein Blatt
+    je Jahr (das Blatt 2012 reicht bis Ende 2013). München: Jahresdateien „15 Minuten Werte JJJJ“
+    (2008–2025, Paket „…Jahreszahlen“), fürs laufende Jahr Monatsdateien; Datum als 2008-06-01,
+    20230101 oder 2024.01.01, 2022 mit einer Spalte `t` vorn, bis 2024 `kommentar`.
+  - **Kandidaten für den nächsten Schritt:** Bochum (GitLab opencode.de, CC0, 15 Minuten, Rad
+    und Fuß getrennt), Dortmund (Schnettkerbrücke, dl-de/zero-2.0), Würzburg und Rhein-Kreis
+    Neuss (Opendatasoft, Status „raw“; Neuss zuletzt 05.07.2026), Leipzig (Gedächtnis nötig),
+    Bonn (CC0, aktuelle Dateien nicht gefunden), Köln (Jahresdateien bis 2022, Inhalt ungeprüft).
+    Nicht offen als Stundenwerte: Hessen Mobil (Eco-Counter-Portal mit Export der
+    Diagrammwerte je Stelle – Tage, Wochen, Monate; `hessen-mobil.eco-counter.com` sperrt
+    Abruf-Werkzeuge per robots.txt) und Bielefeld – dort hilft eine Anfrage (Eco-Counter-Kunden
+    haben in Eco-Visio einen Export).
+    Nur Summen (nicht nutzbar): Oldenburg (Monate), Mannheims Portal (Summe je Zähler),
+    Stuttgarts Portal (Saisons), Düsseldorf (Jahre).
+- **Nicht kommunal (dokumentiert, nicht in der Karte):**
+  - **Baden-Württemberg, Verkehrsministerium:** „Stundenwerte der Dauerzählstellen in
+    Baden-Württemberg“ (MobiData `stundenwerte_dauerzaehlstellen`, dl-de/by-2-0): ein ZIP je
+    Monat (`…/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_JJJJMM.zip`, mindestens
+    2025-01 bis 2026-08, rund zwei Monate Verzug), darin je Stelle eine CSV mit Kopf (Nummer,
+    Straße, Name, Richtungen, Fahrstreifen) und je Stunde und Fahrstreifen KFZ, SV und die
+    TLS-Klassen Mot, Pkw, Lfw, PmA, Bus, LoA, LmA, Sat, Son mit Kennung `K_…`; 161 Stellen an
+    Autobahnen, Bundes- und Landesstraßen (je eine an einer Kreis- und einer Gemeindestraße).
+    Daneben „Ergebnisse und Ganglinien“: Monats- und Jahres-DTV seit 2002 als Excel (Kandidat für
+    `vizsim/svz`) und Ganglinien nur als PDF-Grafik.
+  - **BASt:** Stundenwerte 2003–2024 je Jahr und Straßenart, Rohdaten je Monat
+    (`DZ_JJJJ_MM_Rohdaten.zip`, rund 80 MB) – ohne formale Lizenz, nur die Bitte um
+    Quellenangabe.
+  - **Länder:** Schleswig-Holstein (BASt-Dateien je Stelle und Jahr im Landesportal, etwa
+    „Automatische Zählstelle Kiel-West“, dl-de/by-2-0), Bayern (BAYSIS), Nordrhein-Westfalen
+    (`opendata.strassen.nrw.de/Verkehrsdaten/Dauerzaehlungen/`), Brandenburg
+    (Verkehrsstärkedaten). Bielefeld: Rohdaten einer Verkehrszählstelle am Ostwestfalendamm im
+    BASt-Format (Open.NRW) – eine Stelle; ob die Stadt sie betreibt oder sie zum Zählnetz von Bund
+    und Land gehört, ist nicht geprüft.

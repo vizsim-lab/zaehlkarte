@@ -1,11 +1,15 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
-# SensorThings API), Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
+# SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin
+# und München), Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
 # „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach
 # startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
 #
 # Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code oder dieser Workflow ändern.
 # - Berlin: Rohdaten zwischen den Läufen im Actions-Cache; geladen wird nur, was sich laut
-#   Prüfsumme (Content-MD5 des Archivs) geändert hat.
+#   Prüfsumme (Content-MD5 des Archivs) geändert hat. Ebenso im Cache: die Monatsdateien von
+#   MobiData BW (neu geholt werden fehlende und die jüngsten zwei) und die Dateien Münchens (neu
+#   nur bei geänderter URL); Münster, Aachen und Berlin (Rad) holt jeder Lauf ganz neu – der Cache
+#   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
 # - Hamburg hält Stundenwerte nur einige Monate vor. Die Zählkarte hebt sie selbst auf
 #   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
 #   (Assets `<code>__<datei>`): vor dem Abruf holen, danach ablegen, was sich geändert hat –
@@ -46,6 +50,16 @@ jobs:
           path: pipeline/data/raw/berlin_viz
           key: dauer-roh-${{ github.run_id }}
           restore-keys: dauer-roh-
+      - uses: actions/cache@v6  # eigener Cache, damit der von Berlin gültig bleibt
+        with:
+          path: |
+            pipeline/data/raw/mobidata_rad
+            pipeline/data/raw/muenchen_rad
+            pipeline/data/raw/muenster_rad
+            pipeline/data/raw/aachen_rad
+            pipeline/data/raw/berlin_rad
+          key: dauer-rad-roh-${{ github.run_id }}
+          restore-keys: dauer-rad-roh-
       - name: Release anlegen (beim ersten Lauf)
         env:
           GH_TOKEN: ${{ github.token }}

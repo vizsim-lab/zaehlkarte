@@ -20,6 +20,11 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 dauer fetch  -> data/raw/berlin_viz/     Berlin: Monatsarchive der Verkehrsdetektion (Content-MD5)
              -> data/raw/hamburg_*/      Hamburg: Stellen (stellen.json) und gedaechtnis/ (Stunden
                                          je UTC-Monat, Straßennamen aus OSM)
+             -> data/raw/ettlingen/      Ettlingen: Datastore von re@di
+             -> data/raw/*_rad/          Rad-Zählstellen: MobiData BW (Monatsdateien, fehlende und
+                                         die jüngsten zwei), Münster (Archiv des GitHub-Repositorys,
+                                         sha256), Aachen (Jahres-CSV, PDF der Standorte), Berlin
+                                         (Excel, sha256), München (Jahres- und Monatsdateien, WFS)
 dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (nicht im Git)
 ```
 
@@ -42,8 +47,14 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/berlin_viz.py` | Berlin: Verkehrsdetektion, alte und neue Qualitätssicherung, Stammdaten |
 | `dauer/hamburg_sta.py` | Hamburg: Wärmebildkameras über SensorThings, Gedächtnis (Monatsdateien), UTC -> Ortszeit |
 | `dauer/readi_urbanpulse.py` | Ettlingen: Datastore von re@di (UrbanPulse-Ströme je Fahrtrichtung), Kfz als Summe der Klassen |
+| `dauer/mobidata_eco.py` | Rad-Zählstellen in Baden-Württemberg (Eco-Counter, gebündelt von MobiData BW), Stundenwerte in Ortszeit |
+| `dauer/muenster_rad.py` | Münster: Rad-Zählstellen (Eco-Counter) aus dem GitHub-Repository der Stadt, Status je Viertelstunde |
+| `dauer/aachen_rad.py` | Aachen: Radzählstellen je Kanal (UTC), Standorte aus dem PDF |
+| `dauer/berlin_rad.py` | Berlin: Rad-Zählstellen aus der Excel-Datei der Senatsverwaltung, Markierungen per Zellfarbe |
+| `dauer/muenchen_rad.py` | München: Raddauerzählstellen, 15-Minuten-Werte (drei Datumsformate), Lage aus dem WFS |
 | `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen) |
 | `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen (Workflow) |
+| `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Text von `pdftotext -layout`), mit Abgleich gegen eine vorhandene CSV |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |
 
 Konfiguration: `config/sources.yaml` (Quellen, Datenlage, Rechtslage je Land),

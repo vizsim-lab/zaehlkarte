@@ -7,12 +7,23 @@ from datetime import date
 from pathlib import Path
 
 from zaehlkarte.config import Pfade, dauerquellen
-from zaehlkarte.dauer import berlin_viz, hamburg_sta, readi_urbanpulse
+from zaehlkarte.dauer import (
+    aachen_rad,
+    berlin_rad,
+    berlin_viz,
+    hamburg_sta,
+    mobidata_eco,
+    muenchen_rad,
+    muenster_rad,
+    readi_urbanpulse,
+)
 from zaehlkarte.dauer import site as site_
 from zaehlkarte.dauer.modell import Messreihe
 
 ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta,
-           "readi_urbanpulse": readi_urbanpulse}
+           "readi_urbanpulse": readi_urbanpulse, "mobidata_eco": mobidata_eco,
+           "muenster_rad": muenster_rad, "aachen_rad": aachen_rad, "berlin_rad": berlin_rad,
+           "muenchen_rad": muenchen_rad}
 
 
 def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list[str], list[str]]:

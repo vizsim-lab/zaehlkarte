@@ -1,8 +1,9 @@
-# Schulferien Nordrhein-Westfalen – aus den KMK-Ferienkalendern 1999/2000 bis 2025/2026 (erster und
-# letzter Ferientag; je Datei die Spalte „Nordrhein-Westfalen“, ausgelesen mit pdftotext -layout).
-# Bewegliche Ferientage (je Schuljahr 3 oder 4) legen die Schulen bzw. Schulträger selbst fest; sie
-# fehlen hier – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen sein. Nicht abgebildet: die
-# pandemiebedingten Schulschließungen ab 16.03.2020.
+# Schulferien Nordrhein-Westfalen – aus den KMK-Ferienkalendern 1999/2000 bis 2027/2028 (erster und
+# letzter Ferientag; je Datei die Spalte „Nordrhein-Westfalen“, ausgelesen mit pdftotext -layout,
+# ab 2026/27 mit pipeline/werkzeuge/kmk_ferien.py). Bewegliche Ferientage (je Schuljahr 3 oder 4)
+# legen die Schulen bzw. Schulträger selbst fest; sie fehlen hier – ein „Schultag“ kann vor Ort also
+# unterrichtsfrei gewesen sein. Nicht abgebildet: die pandemiebedingten Schulschließungen ab
+# 16.03.2020.
 von,bis,ferien,schuljahr,gebiet,quelle
 1999-06-17,1999-07-31,Sommerferien,1999/2000,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien99_00.pdf
 1999-10-04,1999-10-15,Herbstferien,1999/2000,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/Ferien99_00.pdf
@@ -134,3 +135,12 @@ von,bis,ferien,schuljahr,gebiet,quelle
 2026-03-30,2026-04-11,Osterferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
 2026-05-26,2026-05-26,Pfingstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
 2026-07-20,2026-09-01,Sommerferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
+2026-10-17,2026-10-31,Herbstferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2026-12-23,2027-01-06,Weihnachtsferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-03-22,2027-04-03,Osterferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-05-18,2027-05-18,Pfingstferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-07-19,2027-08-31,Sommerferien,2026/2027,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2026_27.pdf
+2027-10-23,2027-11-06,Herbstferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2027-12-24,2028-01-08,Weihnachtsferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-04-10,2028-04-22,Osterferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf
+2028-07-10,2028-08-22,Sommerferien,2027/2028,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2027_28.pdf

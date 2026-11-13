@@ -128,6 +128,72 @@ def setze_utc(reihe: Messreihe, gruppe: str, stelle: np.ndarray, utc: np.ndarray
     return int(voll.sum())
 
 
+def setze_lokal(reihe: Messreihe, gruppe: str, stelle: np.ndarray, tag: np.ndarray,
+                stunde: np.ndarray, werte: np.ndarray, anzahl: int = 1,
+                rueck: str = "zusammen") -> tuple[int, int]:
+    """Werte mit Zeitstempel in Ortszeit (Tag als datetime64[D], Stunde 0–23) in die Reihe legen.
+
+    `anzahl`: Einträge je Stunde (1 = Stundenwerte, 4 = Viertelstunden). Eine Stunde ist gezählt,
+    wenn alle ihre Einträge da sind und keiner nicht gezählt ist (Wert < 0) – sonst bleibt sie
+    leer, nie aufgefüllt. Am Tag der Umstellung auf Sommerzeit gibt es 2 Uhr nicht: Einträge dort
+    werden verworfen (manche Quellen führen die Stunde mit Nullen). Am Tag der Rückstellung gibt
+    es 2 Uhr zweimal:
+    - `rueck="zusammen"`: Die Quelle fasst beide Stunden unter einer Uhrzeit zusammen (je Quelle
+      belegt) oder liefert beide getrennt – beides ergibt die Summe und `doppelt`.
+    - `rueck="einfach"`: Unter einer Uhrzeit steht nur eine der beiden Stunden – gezählt ist die
+      Stunde nur, wenn beide getrennt kommen (doppelt so viele Einträge).
+    -> (gesetzte Stunden, verworfene Einträge um 2 Uhr am Tag der Sommerzeit).
+
+    Gezählt wird je Zelle (Stelle, Tag, Stunde) mit `np.bincount` – auch bei Millionen Einträgen
+    ohne Tabelle je Eintrag; große Quellen rufen die Funktion je Block von Stellen auf (die Zellen
+    reichen nur über die Stellen der Einträge)."""
+    if rueck not in ("zusammen", "einfach"):
+        raise ValueError(f"rueck: {rueck!r}")
+    if not len(stelle):
+        return 0, 0
+    stelle, stunde = np.asarray(stelle), np.asarray(stunde)
+    if ((stunde < 0) | (stunde > 23)).any():
+        raise ValueError(f"{reihe.quelle}: Stunde außerhalb 0–23")
+    t = (tag.astype("datetime64[D]", copy=False) - np.datetime64(reihe.von, "D")).view(np.int64)
+    jahre = range(reihe.von.year, reihe.tag(reihe.tage - 1).year + 1)
+    sommer = np.array([(umstellungen(j)[0] - reihe.von).days for j in jahre])
+    rueck_tage = np.array([(umstellungen(j)[1] - reihe.von).days for j in jahre])
+    drin = (t >= 0) & (t < reihe.tage)
+    fehlt = drin & np.isin(t, sommer) & (stunde == 2)
+    verworfen = int(fehlt.sum())
+    drin &= ~fehlt
+    s0 = int(stelle.min())
+    k = stelle[drin].astype(np.int64) - s0
+    k *= reihe.tage
+    k += t[drin]
+    del t
+    k *= 24
+    k += stunde[drin]
+    w = np.asarray(werte)[drin]
+    feld = reihe.werte[gruppe]
+    n_zellen = (int(stelle.max()) - s0 + 1) * reihe.tage * 24
+    anz = np.bincount(k, minlength=n_zellen)
+    neg = np.bincount(k[w < 0], minlength=n_zellen)  # Einträge „nicht gezählt“ je Zelle
+    summe = np.bincount(k, weights=np.maximum(w, 0), minlength=n_zellen)
+    del k, w
+    zellen = np.flatnonzero(anz)
+    n, gueltig, summe = anz[zellen], neg[zellen] == 0, summe[zellen]
+    del anz, neg
+    s, rest = np.divmod(zellen, reihe.tage * 24)
+    s += s0
+    t, h = np.divmod(rest, 24)
+    am_rueck = np.isin(t, rueck_tage) & (h == 2)
+    if rueck == "zusammen":
+        voll_rueck = (n == anzahl) | (n == 2 * anzahl)
+    else:
+        voll_rueck = n == 2 * anzahl
+    voll = gueltig & np.where(am_rueck, voll_rueck, n == anzahl)
+    feld[s, t, h] = np.where(voll, summe, LEER).astype(np.int32)
+    dop = am_rueck & voll
+    reihe.doppelt[s[dop], t[dop]] = True
+    return int(voll.sum()), verworfen
+
+
 def tagessummen(reihe: Messreihe, gruppe: str) -> tuple[np.ndarray, np.ndarray]:
     """(Summe [Stellen, Tage] mit -1 = nicht vollständig gezählt, gezählte Stunden [Stellen, Tage]).
 

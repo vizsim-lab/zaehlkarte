@@ -20,7 +20,21 @@ def test_bw_ferien_und_schultage():
     assert tagtyp(date(2024, 7, 25), "BW", k) == ("ferien", "Sommerferien")
     assert tagtyp(date(2025, 10, 31), "BW", k)[0] == "ferien"  # unterrichtsfreier Tag
     assert tagtyp(date(2024, 2, 24), "BW", k) == ("wochenende", "Samstag")
-    assert tagtyp(date(2022, 11, 15), "BW", k) == (None, None)  # Schuljahr fehlt
+    assert tagtyp(date(2022, 11, 15), "BW", k) == ("schule", None)
+    assert tagtyp(date(2011, 11, 15), "BW", k) == (None, None)  # Schuljahr fehlt
+    assert tagtyp(date(2013, 9, 6), "BW", k) == ("ferien", "Sommerferien")  # aus kmk_ferien.py
+
+
+def test_bayern_feiertage_und_ferien():
+    assert date(2025, 8, 15) in feiertage("BY", 2025)  # Mariä Himmelfahrt (München)
+    assert date(2025, 1, 6) in feiertage("BY", 2025) and date(2025, 11, 1) in feiertage("BY", 2025)
+    assert date(2025, 8, 15) not in feiertage("BW", 2025)
+    k = Ferienkalender.lade(Pfade().config / "schulferien_bayern.csv")
+    assert tagtyp(date(2025, 11, 19), "BY", k) == ("ferien", "Buß- und Bettag (unterrichtsfrei)")
+    assert tagtyp(date(2026, 2, 17), "BY", k) == ("ferien", "Frühjahrsferien")
+    assert tagtyp(date(2026, 4, 1), "BY", k) == ("ferien", "Osterferien")
+    assert tagtyp(date(2008, 6, 3), "BY", k) == ("schule", None)
+    assert tagtyp(date(2026, 11, 12), "BY", k) == ("schule", None)
 
 
 def test_berlin_west_ost_vor_1991():
@@ -38,6 +52,8 @@ def test_nrw_feiertage_und_ferien():
     assert date(2009, 1, 6) not in feiertage("NW", 2009)
     k = Ferienkalender.lade(Pfade().config / "schulferien_nordrhein-westfalen.csv")
     assert tagtyp(date(2009, 4, 23), "NW", k) == ("schule", None)
+    assert tagtyp(date(2026, 11, 12), "NW", k) == ("schule", None)  # 2026/27 aus kmk_ferien.py
+    assert tagtyp(date(2026, 10, 20), "NW", k) == ("ferien", "Herbstferien")
     assert tagtyp(date(2009, 10, 15), "NW", k) == ("ferien", "Herbstferien")
     assert tagtyp(date(2000, 1, 6), "NW", k) == ("ferien", "Weihnachtsferien")
     assert tagtyp(date(2003, 9, 11), "NW", k) == ("ferien", "Sommerferien")  # bis 13.09.
