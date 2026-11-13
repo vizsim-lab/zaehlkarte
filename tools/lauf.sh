@@ -3,7 +3,7 @@
 # dieses Branches; Ergebnisse nach ergebnis/ (werden danach committet).
 set -u
 
-# Erkundung 13.11.2026, Teil 3: Lizenzen und Formate der letzten Kandidaten
-# (tools/rad_erkunden3.py, Ergebnisse in ergebnis/rad3/)
+# Erkundung 13.11.2026, Teil 4: Stichproben für die Rad-Adapter und der Kieler Zugang
+# (tools/rad_erkunden4.py, Ergebnisse in ergebnis/rad4/, Stichproben in ergebnis/rad4/daten/)
 mkdir -p ergebnis
-uv run --no-project --with openpyxl python tools/rad_erkunden3.py 2>&1 | tail -50 > ergebnis/rad3_lauf.txt || true
+uv run --no-project python tools/rad_erkunden4.py 2>&1 | tail -50 > ergebnis/rad4_lauf.txt || true
