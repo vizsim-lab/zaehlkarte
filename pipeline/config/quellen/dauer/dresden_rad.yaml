@@ -1,0 +1,43 @@
+# Rad-Dauerzählstellen der Landeshauptstadt Dresden (Hinweis der Projektleitung, 14.11.2026;
+# Werkzeug-Branch `werkzeug/erkundung`, tools/holen.py Runden 4–8). Aufbau und Fallen im Adapter
+# und in AGENTS.md. Ohne Lizenz (CLAUDE.md, „Quellen ohne Lizenz“): Die Schnittstelle nennt
+# keine; ob das Open-Data-Portal eine nennt, ist nicht geprüft (Entscheidung der Projektleitung
+# am 14.11.2026: erst einmal ohne Lizenz zeigen). Nennt das Portal eine, `ohne_lizenz` durch
+# `lizenz` und `lizenz_url` ersetzen und die Datenlage auf „in der Karte“ stellen.
+nr: 20
+status: live
+adapter: dresden_rad
+name: Dresden (Rad-Zählstellen)
+land: SN
+traeger: Landeshauptstadt Dresden
+art: >-
+  Rad-Dauerzählstellen: Stundenwerte je Richtung seit Oktober 2017, in der Karte die Summe je
+  Zählstelle; auch drei nicht mehr betriebene Zählstellen (darunter die Carolabrücke)
+weg: offen über die OGC-API-Schnittstelle des Themenstadtplans, ohne Lizenzangabe
+portal: https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////
+api: https://kommisdd.dresden.de/net4/public/ogcapi/collections/
+werte: L1780  # Radverkehr – Dauerzählstellen – alle Zählwerte (veröffentlicht)
+aktuell: L1781  # Radverkehr – Dauerzählstellen – aktuelle Zählwerte (veröffentlicht), mit Lage
+ab_jahr: 2017  # die ersten Werte: 10.10.2017
+rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal (seit 2025 dazu eine Zeile mit krummer Minute)
+titel: >-
+  Landeshauptstadt Dresden: Radverkehr – Dauerzählstellen – alle Zählwerte (veröffentlicht)
+  (verändert: Richtungen summiert, Stundenwerte zu Tagessummen zusammengefasst)
+herausgeber: Landeshauptstadt Dresden
+ohne_lizenz:
+  herausgegeben: >-
+    über die OGC-API-Schnittstelle des Themenstadtplans veröffentlicht (Ebene L1780), dort ohne
+    Lizenzangabe; die Lizenz im Open-Data-Portal ist nicht geprüft
+  geprueft: 2026-11-14
+hinweise:
+  - >-
+    Zeiten in Ortszeit, wie die Schnittstelle sie in der CSV-Ausgabe liefert; die Uhrzeit gilt als
+    Beginn der Stunde. Zeilen mit krummen Minuten (an den Tagen der Zeitumstellung, vereinzelt an
+    anderen Tagen) sind keine Stundenwerte – ihre Stunde und damit der Tag gelten als nicht
+    vollständig gezählt. Am Tag der Rückstellung der Uhr steht 2 Uhr nur einmal – dieser Tag gilt
+    als nicht vollständig gezählt.
+  - >-
+    Eine Stunde ist nur gezählt, wenn beide Richtungen einen Wert haben (an Zählstellen mit nur
+    einer Richtung: diese).
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
