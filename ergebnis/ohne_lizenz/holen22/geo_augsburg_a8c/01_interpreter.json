@@ -1,0 +1,820 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-01T08:52:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 27126750,
+  "bounds": {
+    "minlat": 48.4142457,
+    "minlon": 10.8790431,
+    "maxlat": 48.4143641,
+    "maxlon": 10.8842820
+  },
+  "geometry": [
+    { "lat": 48.4143641, "lon": 10.8790431 },
+    { "lat": 48.4143010, "lon": 10.8815896 },
+    { "lat": 48.4142457, "lon": 10.8842820 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "change:lanes": "yes|yes|not_right|yes|yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "5",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "placement": "middle_of:2",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555",
+    "turn:lanes": "none|none|none|none|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 27126888,
+  "bounds": {
+    "minlat": 48.4088208,
+    "minlon": 10.9168351,
+    "maxlat": 48.4104754,
+    "maxlon": 10.9268308
+  },
+  "geometry": [
+    { "lat": 48.4088208, "lon": 10.9268308 },
+    { "lat": 48.4089704, "lon": 10.9259348 },
+    { "lat": 48.4095190, "lon": 10.9226226 },
+    { "lat": 48.4100123, "lon": 10.9196259 },
+    { "lat": 48.4104754, "lon": 10.9168351 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "operator": "autobahnplus A8 GmbH",
+    "operator:type": "private",
+    "ref": "A 8",
+    "shoulder:right": "yes",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12556"
+  }
+},
+{
+  "type": "way",
+  "id": 27126890,
+  "bounds": {
+    "minlat": 48.4085277,
+    "minlon": 10.9126258,
+    "maxlat": 48.4110188,
+    "maxlon": 10.9277055
+  },
+  "geometry": [
+    { "lat": 48.4110188, "lon": 10.9126258 },
+    { "lat": 48.4106542, "lon": 10.9148443 },
+    { "lat": 48.4105299, "lon": 10.9156006 },
+    { "lat": 48.4103319, "lon": 10.9167840 },
+    { "lat": 48.4098629, "lon": 10.9195865 },
+    { "lat": 48.4093752, "lon": 10.9225599 },
+    { "lat": 48.4088239, "lon": 10.9258721 },
+    { "lat": 48.4085277, "lon": 10.9277055 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "destination": "München;Friedberg (Bayern)",
+    "destination:ref": "A 8",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "operator": "autobahnplus A8 GmbH",
+    "operator:type": "private",
+    "ref": "A 8",
+    "source:lit": "http://www.autobahn-bilder.de",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12556"
+  }
+},
+{
+  "type": "way",
+  "id": 27126891,
+  "bounds": {
+    "minlat": 48.4123300,
+    "minlon": 10.9039443,
+    "maxlat": 48.4126072,
+    "maxlon": 10.9056057
+  },
+  "geometry": [
+    { "lat": 48.4123300, "lon": 10.9056057 },
+    { "lat": 48.4126072, "lon": 10.9039443 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "4",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "placement": "middle_of:2",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555",
+    "turn:lanes": "none|none|none|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 27394066,
+  "bounds": {
+    "minlat": 48.4142339,
+    "minlon": 10.8882426,
+    "maxlat": 48.4142974,
+    "maxlon": 10.8897666
+  },
+  "geometry": [
+    { "lat": 48.4142339, "lon": 10.8897666 },
+    { "lat": 48.4142974, "lon": 10.8882426 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "bridge": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "layer": "1",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "noise_barrier": "yes",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555"
+  }
+},
+{
+  "type": "way",
+  "id": 27394068,
+  "bounds": {
+    "minlat": 48.4127042,
+    "minlon": 10.8897511,
+    "maxlat": 48.4140709,
+    "maxlon": 10.9024020
+  },
+  "geometry": [
+    { "lat": 48.4140709, "lon": 10.8897511 },
+    { "lat": 48.4138974, "lon": 10.8924511 },
+    { "lat": 48.4137991, "lon": 10.8937015 },
+    { "lat": 48.4136532, "lon": 10.8953492 },
+    { "lat": 48.4135015, "lon": 10.8967467 },
+    { "lat": 48.4133342, "lon": 10.8981520 },
+    { "lat": 48.4131176, "lon": 10.8997303 },
+    { "lat": 48.4128700, "lon": 10.9013883 },
+    { "lat": 48.4127042, "lon": 10.9024020 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:lit": "http://www.autobahn-bilder.de",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555"
+  }
+},
+{
+  "type": "way",
+  "id": 27394069,
+  "bounds": {
+    "minlat": 48.4140709,
+    "minlon": 10.8882272,
+    "maxlat": 48.4141345,
+    "maxlon": 10.8897511
+  },
+  "geometry": [
+    { "lat": 48.4141345, "lon": 10.8882272 },
+    { "lat": 48.4140709, "lon": 10.8897511 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "bridge": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "layer": "1",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555"
+  }
+},
+{
+  "type": "way",
+  "id": 27394070,
+  "bounds": {
+    "minlat": 48.4142974,
+    "minlon": 10.8841503,
+    "maxlat": 48.4144025,
+    "maxlon": 10.8882426
+  },
+  "geometry": [
+    { "lat": 48.4142974, "lon": 10.8882426 },
+    { "lat": 48.4143327, "lon": 10.8872407 },
+    { "lat": 48.4143801, "lon": 10.8851907 },
+    { "lat": 48.4144025, "lon": 10.8841503 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555"
+  }
+},
+{
+  "type": "way",
+  "id": 101184069,
+  "bounds": {
+    "minlat": 48.4146091,
+    "minlon": 10.8683474,
+    "maxlat": 48.4147728,
+    "maxlon": 10.8754584
+  },
+  "geometry": [
+    { "lat": 48.4146091, "lon": 10.8754584 },
+    { "lat": 48.4146119, "lon": 10.8753477 },
+    { "lat": 48.4146613, "lon": 10.8736939 },
+    { "lat": 48.4146956, "lon": 10.8720695 },
+    { "lat": 48.4147403, "lon": 10.8694455 },
+    { "lat": 48.4147728, "lon": 10.8683474 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554"
+  }
+},
+{
+  "type": "way",
+  "id": 251505074,
+  "bounds": {
+    "minlat": 48.4104754,
+    "minlon": 10.9156465,
+    "maxlat": 48.4106727,
+    "maxlon": 10.9168351
+  },
+  "geometry": [
+    { "lat": 48.4104754, "lon": 10.9168351 },
+    { "lat": 48.4106727, "lon": 10.9156465 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "operator": "autobahnplus A8 GmbH",
+    "operator:type": "private",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12555/12556"
+  }
+},
+{
+  "type": "way",
+  "id": 251505080,
+  "bounds": {
+    "minlat": 48.4110188,
+    "minlon": 10.9083531,
+    "maxlat": 48.4117344,
+    "maxlon": 10.9126258
+  },
+  "geometry": [
+    { "lat": 48.4117344, "lon": 10.9083531 },
+    { "lat": 48.4115603, "lon": 10.9093728 },
+    { "lat": 48.4110188, "lon": 10.9126258 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "destination:colour:lanes": "|||none;none;none;white|none;none;none;white",
+    "destination:lanes": "München;Friedberg (Bayern)|München;Friedberg (Bayern)|München;Friedberg (Bayern)|Augsburg-Ost;Neuburg an der Donau;Pöttmes;Augsburg|Augsburg-Ost;Neuburg an der Donau;Pöttmes;Augsburg",
+    "destination:ref:lanes": "A 8|A 8|A 8||",
+    "destination:symbol:lanes": "|||none;none;none;airport|none;none;none;airport",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "5",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "operator": "autobahnplus A8 GmbH",
+    "operator:type": "private",
+    "placement": "middle_of:2",
+    "ref": "A 8",
+    "source:lit": "http://www.autobahn-bilder.de",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12555/12556",
+    "turn:lanes": "none|none|none|slight_right|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 251505088,
+  "bounds": {
+    "minlat": 48.4106727,
+    "minlon": 10.9056057,
+    "maxlat": 48.4123300,
+    "maxlon": 10.9156465
+  },
+  "geometry": [
+    { "lat": 48.4106727, "lon": 10.9156465 },
+    { "lat": 48.4107963, "lon": 10.9148870 },
+    { "lat": 48.4110624, "lon": 10.9132456 },
+    { "lat": 48.4112781, "lon": 10.9119887 },
+    { "lat": 48.4114603, "lon": 10.9108626 },
+    { "lat": 48.4123300, "lon": 10.9056057 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "operator": "autobahnplus A8 GmbH",
+    "operator:type": "private",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12555"
+  }
+},
+{
+  "type": "way",
+  "id": 280726822,
+  "bounds": {
+    "minlat": 48.4126072,
+    "minlon": 10.8897666,
+    "maxlat": 48.4142339,
+    "maxlon": 10.9039443
+  },
+  "geometry": [
+    { "lat": 48.4126072, "lon": 10.9039443 },
+    { "lat": 48.4130224, "lon": 10.9014498 },
+    { "lat": 48.4132648, "lon": 10.8997900 },
+    { "lat": 48.4134843, "lon": 10.8981721 },
+    { "lat": 48.4136496, "lon": 10.8968267 },
+    { "lat": 48.4138013, "lon": 10.8954187 },
+    { "lat": 48.4139570, "lon": 10.8937665 },
+    { "lat": 48.4140715, "lon": 10.8924500 },
+    { "lat": 48.4142339, "lon": 10.8897666 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555"
+  }
+},
+{
+  "type": "way",
+  "id": 280732481,
+  "bounds": {
+    "minlat": 48.4144753,
+    "minlon": 10.8783046,
+    "maxlat": 48.4145420,
+    "maxlon": 10.8812555
+  },
+  "geometry": [
+    { "lat": 48.4144753, "lon": 10.8812555 },
+    { "lat": 48.4145420, "lon": 10.8783046 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "destination:colour:lanes": "|||none;none;none;white;none;none",
+    "destination:lanes": "Stuttgart;Ulm;Neusäß|Stuttgart;Ulm;Neusäß|Stuttgart;Ulm;Neusäß|Augsburg-West;Landsberg am Lech;Gersthofen-Süd;Messe;Donauwörth;Gersthofen",
+    "destination:ref:lanes": "A 8|A 8|A 8|B 2;B 17",
+    "destination:symbol:lanes": "|||none;none;none;none;none;none;soccer_stadium",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "4",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "placement": "middle_of:2",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555",
+    "turn:lanes": "none|none|none|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 295617775,
+  "bounds": {
+    "minlat": 48.4144567,
+    "minlon": 10.8678740,
+    "maxlat": 48.4146361,
+    "maxlon": 10.8754471
+  },
+  "geometry": [
+    { "lat": 48.4146361, "lon": 10.8678740 },
+    { "lat": 48.4146072, "lon": 10.8688229 },
+    { "lat": 48.4145944, "lon": 10.8694457 },
+    { "lat": 48.4145869, "lon": 10.8698135 },
+    { "lat": 48.4145334, "lon": 10.8721264 },
+    { "lat": 48.4144952, "lon": 10.8738261 },
+    { "lat": 48.4144567, "lon": 10.8754471 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554"
+  }
+},
+{
+  "type": "way",
+  "id": 300908996,
+  "bounds": {
+    "minlat": 48.4141345,
+    "minlon": 10.8875990,
+    "maxlat": 48.4141586,
+    "maxlon": 10.8882272
+  },
+  "geometry": [
+    { "lat": 48.4141586, "lon": 10.8875990 },
+    { "lat": 48.4141345, "lon": 10.8882272 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555"
+  }
+},
+{
+  "type": "way",
+  "id": 300908997,
+  "bounds": {
+    "minlat": 48.4141586,
+    "minlon": 10.8842820,
+    "maxlat": 48.4142457,
+    "maxlon": 10.8875990
+  },
+  "geometry": [
+    { "lat": 48.4142457, "lon": 10.8842820 },
+    { "lat": 48.4142262, "lon": 10.8851827 },
+    { "lat": 48.4141586, "lon": 10.8875990 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "4",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "placement": "middle_of:2",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555",
+    "turn:lanes": "none|none|none|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 300908998,
+  "bounds": {
+    "minlat": 48.4144025,
+    "minlon": 10.8812555,
+    "maxlat": 48.4144753,
+    "maxlon": 10.8841503
+  },
+  "geometry": [
+    { "lat": 48.4144025, "lon": 10.8841503 },
+    { "lat": 48.4144705, "lon": 10.8814477 },
+    { "lat": 48.4144753, "lon": 10.8812555 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555"
+  }
+},
+{
+  "type": "way",
+  "id": 327500292,
+  "bounds": {
+    "minlat": 48.4117344,
+    "minlon": 10.9075690,
+    "maxlat": 48.4118564,
+    "maxlon": 10.9083531
+  },
+  "geometry": [
+    { "lat": 48.4118564, "lon": 10.9075690 },
+    { "lat": 48.4117344, "lon": 10.9083531 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "destination:colour:lanes": "|||none;none;none;white",
+    "destination:lanes": "München;Friedberg (Bayern)|München;Friedberg (Bayern)|München;Friedberg (Bayern)|Augsburg-Ost;Neuburg an der Donau;Pöttmes;Augsburg",
+    "destination:ref:lanes": "A 8|A 8|A 8|",
+    "destination:symbol:lanes": "|||none;none;none;airport",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "4",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "placement": "middle_of:2",
+    "ref": "A 8",
+    "source:lit": "http://www.autobahn-bilder.de",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555",
+    "turn:lanes": "none|none|none|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 403304740,
+  "bounds": {
+    "minlat": 48.4145943,
+    "minlon": 10.8754584,
+    "maxlat": 48.4146091,
+    "maxlon": 10.8760484
+  },
+  "geometry": [
+    { "lat": 48.4145943, "lon": 10.8760484 },
+    { "lat": 48.4146091, "lon": 10.8754584 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "bridge": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "layer": "1",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554"
+  }
+},
+{
+  "type": "way",
+  "id": 403304742,
+  "bounds": {
+    "minlat": 48.4144426,
+    "minlon": 10.8754471,
+    "maxlat": 48.4144567,
+    "maxlon": 10.8760378
+  },
+  "geometry": [
+    { "lat": 48.4144567, "lon": 10.8754471 },
+    { "lat": 48.4144426, "lon": 10.8760378 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "bridge": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "layer": "1",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554"
+  }
+},
+{
+  "type": "way",
+  "id": 403304743,
+  "bounds": {
+    "minlat": 48.4143641,
+    "minlon": 10.8760378,
+    "maxlat": 48.4144426,
+    "maxlon": 10.8790431
+  },
+  "geometry": [
+    { "lat": 48.4144426, "lon": 10.8760378 },
+    { "lat": 48.4144326, "lon": 10.8764587 },
+    { "lat": 48.4143641, "lon": 10.8790431 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554"
+  }
+},
+{
+  "type": "way",
+  "id": 403304744,
+  "bounds": {
+    "minlat": 48.4145420,
+    "minlon": 10.8760484,
+    "maxlat": 48.4145943,
+    "maxlon": 10.8783046
+  },
+  "geometry": [
+    { "lat": 48.4145420, "lon": 10.8783046 },
+    { "lat": 48.4145671, "lon": 10.8771652 },
+    { "lat": 48.4145847, "lon": 10.8764333 },
+    { "lat": 48.4145943, "lon": 10.8760484 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "destination": "Stuttgart;Ulm;Neusäß",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554"
+  }
+},
+{
+  "type": "way",
+  "id": 1169734327,
+  "bounds": {
+    "minlat": 48.4118564,
+    "minlon": 10.9024020,
+    "maxlat": 48.4127042,
+    "maxlon": 10.9075690
+  },
+  "geometry": [
+    { "lat": 48.4127042, "lon": 10.9024020 },
+    { "lat": 48.4121569, "lon": 10.9057478 },
+    { "lat": 48.4118564, "lon": 10.9075690 }
+  ],
+  "tags": {
+    "bdouble": "yes",
+    "cycleway:both": "no",
+    "destination:colour:lanes": "||;;;;;white",
+    "destination:lanes": "München;Friedberg (Bayern)|München;Friedberg (Bayern)|München;Friedberg (Bayern);Augsburg-Ost;Neuburg an der Donau;Pöttmes;Augsburg",
+    "destination:ref:lanes": "A 8|A 8|A 8",
+    "destination:symbol:lanes": "||;;;;;airport",
+    "highway": "motorway",
+    "int_ref": "E 52",
+    "lanes": "3",
+    "lit": "no",
+    "maxheight": "default",
+    "maxspeed": "none",
+    "maxspeed:conditional": "120 @ (06:00-20:00)",
+    "oneway": "yes",
+    "ref": "A 8",
+    "source:lit": "http://www.autobahn-bilder.de",
+    "source:maxspeed": "DE:motorway",
+    "surface": "asphalt",
+    "tmc": "DE:12554/12555",
+    "turn:lanes": "through|through|through;slight_right"
+  }
+}
+
+  ]
+}
