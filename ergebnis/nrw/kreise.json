@@ -1,0 +1,532 @@
+[
+ {
+  "ks": "05111",
+  "name": "Düsseldorf",
+  "osm": "relation/62539",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.duesseldorf.de"
+  ]
+ },
+ {
+  "ks": "05112",
+  "name": "Duisburg",
+  "osm": "relation/62456",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.duisburg.de"
+  ]
+ },
+ {
+  "ks": "05113",
+  "name": "Essen",
+  "osm": "relation/62713",
+  "einw": 569884,
+  "einw_datum": "",
+  "web": [
+   "https://www.essen.de/"
+  ]
+ },
+ {
+  "ks": "05114",
+  "name": "Krefeld",
+  "osm": "relation/62748",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.krefeld.de/"
+  ]
+ },
+ {
+  "ks": "05116",
+  "name": "Mönchengladbach",
+  "osm": "relation/62410",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.moenchengladbach.de/"
+  ]
+ },
+ {
+  "ks": "05117",
+  "name": "Mülheim an der Ruhr",
+  "osm": "relation/62385",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.muelheim-ruhr.de"
+  ]
+ },
+ {
+  "ks": "05119",
+  "name": "Oberhausen",
+  "osm": "relation/62734",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.oberhausen.de"
+  ]
+ },
+ {
+  "ks": "05120",
+  "name": "Remscheid",
+  "osm": "relation/62455",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.remscheid.de/"
+  ]
+ },
+ {
+  "ks": "05122",
+  "name": "Solingen",
+  "osm": "relation/62699",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.solingen.de"
+  ]
+ },
+ {
+  "ks": "05124",
+  "name": "Wuppertal",
+  "osm": "relation/62478",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.wuppertal.de"
+  ]
+ },
+ {
+  "ks": "05154",
+  "name": "Kreis Kleve",
+  "osm": "relation/62476",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-kleve.de/"
+  ]
+ },
+ {
+  "ks": "05158",
+  "name": "Kreis Mettmann",
+  "osm": "relation/62423",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-mettmann.de/"
+  ]
+ },
+ {
+  "ks": "05162",
+  "name": "Rhein-Kreis Neuss",
+  "osm": "relation/62535",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.rhein-kreis-neuss.de/"
+  ]
+ },
+ {
+  "ks": "05166",
+  "name": "Kreis Viersen",
+  "osm": "relation/62489",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-viersen.de"
+  ]
+ },
+ {
+  "ks": "05170",
+  "name": "Kreis Wesel",
+  "osm": "relation/58745",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-wesel.de"
+  ]
+ },
+ {
+  "ks": "05314",
+  "name": "Bonn",
+  "osm": "relation/62508",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.bonn.de"
+  ]
+ },
+ {
+  "ks": "05315",
+  "name": "Köln",
+  "osm": "relation/62578",
+  "einw": 1097519,
+  "einw_datum": "",
+  "web": [
+   "https://www.stadt-koeln.de"
+  ]
+ },
+ {
+  "ks": "05316",
+  "name": "Leverkusen",
+  "osm": "relation/62449",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.leverkusen.de"
+  ]
+ },
+ {
+  "ks": "05334",
+  "name": "Städteregion Aachen",
+  "osm": "relation/62665",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.staedteregion-aachen.de"
+  ]
+ },
+ {
+  "ks": "05358",
+  "name": "Kreis Düren",
+  "osm": "relation/62452",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-dueren.de"
+  ]
+ },
+ {
+  "ks": "05362",
+  "name": "Rhein-Erft-Kreis",
+  "osm": "relation/62661",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.rhein-erft-kreis.de"
+  ]
+ },
+ {
+  "ks": "05366",
+  "name": "Kreis Euskirchen",
+  "osm": "relation/62555",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-euskirchen.de"
+  ]
+ },
+ {
+  "ks": "05370",
+  "name": "Kreis Heinsberg",
+  "osm": "relation/62767",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-heinsberg.de"
+  ]
+ },
+ {
+  "ks": "05374",
+  "name": "Oberbergischer Kreis",
+  "osm": "relation/62373",
+  "einw": 273452,
+  "einw_datum": "",
+  "web": [
+   "https://www.obk.de/"
+  ]
+ },
+ {
+  "ks": "05378",
+  "name": "Rheinisch-Bergischer Kreis",
+  "osm": "relation/62343",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.rbk-direkt.de"
+  ]
+ },
+ {
+  "ks": "05382",
+  "name": "Rhein-Sieg-Kreis",
+  "osm": "relation/62544",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.rhein-sieg-kreis.de"
+  ]
+ },
+ {
+  "ks": "05512",
+  "name": "Bottrop",
+  "osm": "relation/62634",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.bottrop.de"
+  ]
+ },
+ {
+  "ks": "05513",
+  "name": "Gelsenkirchen",
+  "osm": "relation/62522",
+  "einw": 270107,
+  "einw_datum": "",
+  "web": [
+   "https://www.gelsenkirchen.de"
+  ]
+ },
+ {
+  "ks": "05515",
+  "name": "Münster",
+  "osm": "relation/62591",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://stadt-muenster.de"
+  ]
+ },
+ {
+  "ks": "05554",
+  "name": "Kreis Borken",
+  "osm": "relation/62606",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-borken.de"
+  ]
+ },
+ {
+  "ks": "05558",
+  "name": "Kreis Coesfeld",
+  "osm": "relation/62779",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-coesfeld.de"
+  ]
+ },
+ {
+  "ks": "05562",
+  "name": "Kreis Recklinghausen",
+  "osm": "relation/62770",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-re.de"
+  ]
+ },
+ {
+  "ks": "05566",
+  "name": "Kreis Steinfurt",
+  "osm": "relation/62442",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-steinfurt.de"
+  ]
+ },
+ {
+  "ks": "05570",
+  "name": "Kreis Warendorf",
+  "osm": "relation/62706",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-warendorf.de"
+  ]
+ },
+ {
+  "ks": "05711",
+  "name": "Bielefeld",
+  "osm": "relation/62646",
+  "einw": 328012,
+  "einw_datum": "",
+  "web": [
+   "https://www.bielefeld.de/"
+  ]
+ },
+ {
+  "ks": "05754",
+  "name": "Kreis Gütersloh",
+  "osm": "relation/62379",
+  "einw": 373622,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-guetersloh.de"
+  ]
+ },
+ {
+  "ks": "05758",
+  "name": "Kreis Herford",
+  "osm": "relation/62480",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-herford.de"
+  ]
+ },
+ {
+  "ks": "05762",
+  "name": "Kreis Höxter",
+  "osm": "relation/62524",
+  "einw": 140000,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-hoexter.de"
+  ]
+ },
+ {
+  "ks": "05766",
+  "name": "Kreis Lippe",
+  "osm": "relation/62483",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-lippe.de"
+  ]
+ },
+ {
+  "ks": "05770",
+  "name": "Kreis Minden-Lübbecke",
+  "osm": "relation/62358",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.minden-luebbecke.de"
+  ]
+ },
+ {
+  "ks": "05774",
+  "name": "Kreis Paderborn",
+  "osm": "relation/62417",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-paderborn.de"
+  ]
+ },
+ {
+  "ks": "05911",
+  "name": "Bochum",
+  "osm": "relation/62644",
+  "einw": 371075,
+  "einw_datum": "",
+  "web": [
+   "https://www.bochum.de"
+  ]
+ },
+ {
+  "ks": "05913",
+  "name": "Dortmund",
+  "osm": "relation/1829065",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.dortmund.de/"
+  ]
+ },
+ {
+  "ks": "05914",
+  "name": "Hagen",
+  "osm": "relation/1800297",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.hagen.de"
+  ]
+ },
+ {
+  "ks": "05915",
+  "name": "Hamm",
+  "osm": "relation/62499",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.hamm.de"
+  ]
+ },
+ {
+  "ks": "05916",
+  "name": "Herne",
+  "osm": "relation/62396",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.herne.de/"
+  ]
+ },
+ {
+  "ks": "05954",
+  "name": "Ennepe-Ruhr-Kreis",
+  "osm": "relation/1829066",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.enkreis.de"
+  ]
+ },
+ {
+  "ks": "05958",
+  "name": "Hochsauerlandkreis",
+  "osm": "relation/62402",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://hochsauerlandkreis.de"
+  ]
+ },
+ {
+  "ks": "05962",
+  "name": "Märkischer Kreis",
+  "osm": "relation/1831015",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.maerkischer-kreis.de"
+  ]
+ },
+ {
+  "ks": "05966",
+  "name": "Kreis Olpe",
+  "osm": "relation/1891506",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://kreis-olpe.de/"
+  ]
+ },
+ {
+  "ks": "05970",
+  "name": "Kreis Siegen-Wittgenstein",
+  "osm": "relation/62437",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.siegen-wittgenstein.de"
+  ]
+ },
+ {
+  "ks": "05974",
+  "name": "Kreis Soest",
+  "osm": "relation/62440",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-soest.de"
+  ]
+ },
+ {
+  "ks": "05978",
+  "name": "Kreis Unna",
+  "osm": "relation/62420",
+  "einw": null,
+  "einw_datum": "",
+  "web": [
+   "https://www.kreis-unna.de"
+  ]
+ }
+]
