@@ -8,9 +8,10 @@
 
 Jeder Abruf (auch APIs) nur, wenn robots.txt ihn erlaubt – auch für die Kennungen von Claude.
 Nur Standardbibliothek (+ pdftotext).
-Aufruf: python3 tools/nrw2.py ergebnis/nrw2 tools/nrw2_seiten.txt [ckan,mobilithek,seiten]
+Aufruf: python3 tools/nrw2.py ergebnis/nrw2 tools/nrw2_seiten.txt [ckan,mobilithek,seiten,mdk]
 """
 
+import gzip
 import json
 import pathlib
 import re
@@ -104,6 +105,40 @@ def mobilithek():
     protokoll["mobilithek"] = {k: ("fehler" if "fehler" in v else "ok") for k, v in aus.items()}
 
 
+MDK_PROJEKT = "fitko/govdata/tools/musterdatenkatalog-pipeline"
+
+
+def mdk():
+    """Musterdatenkatalog (GovData/FITKO): Rohdaten (CSV/XLSX) aus dem Repository auf openCode –
+    ordnet die offenen Datensätze der Kommunen Themen zu (etwa Verkehrszählung)."""
+    api = "https://gitlab.opencode.de/api/v4/projects/" + urllib.parse.quote(MDK_PROJEKT, safe="")
+    aus = {}
+    try:
+        baum = json.loads(h.seite(api + "/repository/tree?" + urllib.parse.urlencode(
+            {"path": "musterdatenkatalog", "ref": "main", "per_page": 100, "recursive": "true"}), zeit=60)[0])
+    except h.Gesperrt:
+        protokoll["mdk"] = "robots.txt"
+        return
+    aus["baum"] = baum
+    (ZIEL / "mdk").mkdir(exist_ok=True)
+    for b in baum:
+        if b.get("type") != "blob" or not b["path"].lower().endswith((".csv", ".xlsx", ".json")):
+            continue
+        url = (f"https://gitlab.opencode.de/{MDK_PROJEKT}/-/raw/main/"
+               + urllib.parse.quote(b["path"]))
+        try:
+            inhalt = h.seite(url, zeit=120, grenze=200_000_000)[0]
+            # gepackt, damit der Branch klein bleibt
+            (ZIEL / "mdk" / (pathlib.Path(b["path"]).name + ".gz")).write_bytes(gzip.compress(inhalt))
+            aus.setdefault("dateien", {})[b["path"]] = len(inhalt)
+        except h.Gesperrt:
+            aus.setdefault("dateien", {})[b["path"]] = "robots.txt"
+        except Exception as e:  # noqa: BLE001
+            aus.setdefault("dateien", {})[b["path"]] = repr(e)[:200]
+    h.schreibe("mdk.json", aus)
+    protokoll["mdk"] = aus.get("dateien")
+
+
 def seiten():
     sys.argv = [sys.argv[0], str(ZIEL), LISTE]
     h.protokoll = protokoll
@@ -112,7 +147,7 @@ def seiten():
 
 if __name__ == "__main__":
     for name in TEILE:
-        f = {"ckan": ckan, "mobilithek": mobilithek, "seiten": seiten}[name]
+        f = {"ckan": ckan, "mobilithek": mobilithek, "seiten": seiten, "mdk": mdk}[name]
         t0 = time.time()
         try:
             f()
