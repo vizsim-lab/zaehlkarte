@@ -1,0 +1,32 @@
+{
+ "grenzen_osm": {
+  "server": "https://overpass.private.coffee/api/interpreter"
+ },
+ "liste": {
+  "gemeinden": 726,
+  "mit_web": 27,
+  "verbaende": 84,
+  "verbaende_mit_web": 7,
+  "kreise": 6,
+  "kreise_mit_web": 1,
+  "osm_elemente": 834,
+  "osm_ohne_gemeinde": [
+   "Uckerland",
+   "Randowtal",
+   "Mescherin",
+   "Casekow",
+   "Lanze",
+   "Hollenbek",
+   "Damnatz",
+   "Langendorf",
+   "Gusborn",
+   "Bleckede",
+   "Amt Neuhaus",
+   "Hittbergen",
+   "Hohnstorf (Elbe)",
+   "Świnoujście"
+  ],
+  "ok": true,
+  "sekunden": 88
+ }
+}
