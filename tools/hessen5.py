@@ -11,22 +11,18 @@ import hessen2 as h  # noqa: E402
 
 aus = {}
 for name in ("dauerzahlstellen-fur-den-radverkehr-in-hessen", "wfs-verkehrsmengen-frankfurt-am-main"):
-    url = "https://www.govdata.de/ckan/api/3/action/package_show?id=" + name
+    # package_show sperrt robots.txt, package_search nicht (Teil 1)
+    url = ("https://www.govdata.de/ckan/api/3/action/package_search?rows=1&q="
+           + urllib.parse.quote(f'name:"{name}"'))
     try:
         inhalt, _, _ = h.seite(url)
-        p = json.loads(inhalt)["result"]
+        p = json.loads(inhalt)["result"]["results"][0]
         aus[name] = {
             "license_id": p.get("license_id"), "license_title": p.get("license_title"),
             "extras": {e["key"]: e["value"] for e in p.get("extras", [])},
-            "ressourcen": [{k: r.get(k) for k in ("name", "url", "format", "license", "license_id",
-                                                  "licenseAttributionByText", "rights", "access_url")}
+            "ressourcen": [{k: v for k, v in r.items() if v not in (None, "", [])}
                            for r in p.get("resources", [])],
         }
     except Exception as e:  # noqa: BLE001
         aus[name] = {"fehler": repr(e)[:300]}
-for q in ("Dauerzählstellen Radverkehr", "Radverkehr Hessen Zählstellen"):
-    url = "https://opendata.hessen.de/search?query=" + urllib.parse.quote(q)
-    aus["suche " + q] = h.lies("Land", url, 1)
-for slug in ("dauerzaehlstellen-fuer-den-radverkehr-in-hessen", "dauerzahlstellen-fur-den-radverkehr-in-hessen-0"):
-    aus[slug] = h.lies("Land", "https://opendata.hessen.de/dataset/" + slug, 1)
 h.schreibe("lizenzen.json", aus)
