@@ -1,0 +1,67 @@
+[kurzzeit] moers: 2 Datensätze, 47 Messungen (47 geladen)
+[kurzzeit] olpe: 9 Datensätze, 13 Messungen
+[kurzzeit] moers/verkehrszahlung-in-moers-2021: 'Verkehrszählungen 2021 (Stadt Moers)' Lizenz None 46 Ressourcen
+[kurzzeit] moers/verkehrszahlung-kirschenallee: 'Verkehrszählungen 2010 (Stadt Moers)' Lizenz None 1 Ressourcen
+[kurzzeit] olpe/verkehrsmessung-alte-landstrabe: 'Verkehrsmessungen Alte Landstraße' Lizenz https://www.govdata.de/dl-de/by-2-0 1 Ressourcen
+[kurzzeit] olpe/verkehrsmessung-standort-zum-honigsack-35: 'Verkehrsmessung Standort "Zum Honigsack 35"' Lizenz http://creativecommons.org/licenses/by/4.0/ 3 Ressourcen
+[kurzzeit] olpe/verkehrsmessung-weite-schluppe: 'Verkehrsmessungen Weite Schlüppe' Lizenz https://www.govdata.de/dl-de/by-2-0 1 Ressourcen
+[kurzzeit] olpe/verkehrsmessungen-gunsestrabe: 'Verkehrsmessungen Günsestraße' Lizenz https://www.govdata.de/dl-de/by-2-0 2 Ressourcen
+[kurzzeit] olpe/verkehrsmessungen-hatzenbergstrabe: 'Verkehrsmessungen Hatzenbergstraße' Lizenz https://www.govdata.de/dl-de/by-2-0 2 Ressourcen
+[kurzzeit] olpe/verkehrsmessungen-in-der-wuste: 'Verkehrsmessungen In der Wüste' Lizenz https://www.govdata.de/dl-de/by-2-0 2 Ressourcen
+[kurzzeit] olpe/verkehrsmessungen-k18: 'Verkehrsmessungen K18' Lizenz https://www.govdata.de/dl-de/by-2-0 1 Ressourcen
+[kurzzeit] olpe/verkehrsmessungen-oberveischede: 'Verkehrsmessungen Oberveischede' Lizenz https://www.govdata.de/dl-de/by-2-0 2 Ressourcen
+[kurzzeit] olpe/verkehrsmessungen-rochusstrabe: 'Verkehrsmessungen Rochusstraße' Lizenz https://www.govdata.de/dl-de/by-2-0 1 Ressourcen
+[kurzzeit] 660 s
+[bauen] moers: 181 Zählungen
+[bauen] moers: 47 Dateien, 250820 Fahrzeuge
+[bauen] moers: Lage je Datei: 40 hausnummer, 2 kreuzung, 5 strasse
+[bauen] moers: Jahr korrigiert (Uhr des Geräts): –
+[bauen] olpe: 128 Zählungen
+[bauen] olpe: 13 Messungen, 404745 Fahrzeuge (12 geraet, 1 tabelle)
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_alte-landstr_1_20250519-20250615.json: 29.05. 06 bis 02.06. 15 Uhr
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_weite_schluppe-20250626-20250709.json: 08.07. 14 bis 09.07. 07 Uhr
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_hatzenbergstr-ggue-17-20250715-20250804.json: 16.07. 21 bis 17.07. 05 Uhr
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_hatzenbergstr-ggue-17-20250715-20250804.json: 18.07. 16 bis 19.07. 15 Uhr
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_hatzenbergstr-ggue-17-20250715-20250804.json: 19.07. 19 bis 20.07. 07 Uhr
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_hatzenbergstr-ggue-17-20250715-20250804.json: 25.07. 15 bis 18 Uhr
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_In-der-Wüste-26_20251112-20251119.json: 17.11. 03 bis 09 Uhr
+[bauen] olpe: Lücke (nicht gezählt): verkehrsdaten_feuerwehrhaus_oberveischede_20250709-20250715.json: 11.07. 20 bis 23 Uhr
+[bauen] lage: Lage übertragen: 0
+[bauen] lage: nicht verortet: 0 von 309
+[bauen] Stellen: 57
+[bauen] 2 s
+[aachen] aachen_rad: 2 Jahresdateien (2025, 2026) und Standorte geholt
+[aachen] Fehler: []
+[aachen] {
+ "abgerufen": "2026-11-14T09:08:17Z",
+ "dateien": {
+  "2025": "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/74c6bb97-6969-4c09-9f4b-79c5e14b11ab/download/radzaehlstellen_2025.csv",
+  "2026": "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/272d2483-0a19-40d1-ad42-cbf17b8f7d2b/download/radzaehlstellen_2026.csv"
+ },
+ "standorte": "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/773b5644-2a28-45d6-abc7-19b899fff1ba/download/standorte_radzahlstellen.pdf"
+}
+
+[aachen] 53 s
+[hamburg] FEHLER ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='overpass.private.coffee', port=443): Read timed out. (read timeout=180)"))
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/zaehlkarte/zk/pipeline/src/zaehlkarte/abruf.py", line 213, in hole
+    r = weg.post(url, params=params, data=daten, headers=kopf, timeout=timeout,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/zaehlkarte/zk/pipeline/.venv/lib/python3.12/site-packages/requests/api.py", line 134, in post
+    return request("post", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/zaehlkarte/zk/pipeline/.venv/lib/python3.12/site-packages/requests/api.py", line 71, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/zaehlkarte/zk/pipeline/.venv/lib/python3.12/site-packages/requests/sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/zaehlkarte/zk/pipeline/.venv/lib/python3.12/site-packages/requests/sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/zaehlkarte/zk/pipeline/.venv/lib/python3.12/site-packages/requests/adapters.py", line 742, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='overpass.private.coffee', port=443): Read timed out. (read timeout=180)
+
+[hamburg] 363 s
+[bericht] Crawl-delay eingehalten: www.offenesdatenportal.de 27 s, opendata.olpe.de 13 s, offenedaten.aachen.de 4 s

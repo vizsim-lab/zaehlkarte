@@ -1,0 +1,8 @@
+{
+ "https://www.offenesdatenportal.de": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+ "https://opendata.olpe.de": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+ "https://nbg1.your-objectstorage.com": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><ListBucketResult xmlns=\"http://s3.amazonaws.com/doc/2006-03-01/\"><Name>robots.txt</Name><Prefix></Prefix><MaxKeys>1000</MaxKeys><IsTruncated>false</IsTruncated><Marker></Marker></ListBucketResult>",
+ "https://offenedaten.aachen.de": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+ "https://overpass.kumi.systems": "(HTTP 404)",
+ "https://overpass.private.coffee": "(HTTP 404)"
+}
