@@ -1,0 +1,222 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-743795680",
+ "publicationId": "-6042365511594508563",
+ "title": "Verkehrszählung Osnabrück",
+ "description": "Mittels eines KI- basierten Sensors werden am August-Bebel-Platz Verkehrsdaten erfasst und über LoRaWAN datenschutzkonform übertragen. Bei der Verkehrserfassung wird in die Objektklassen PKW, LKW, Motorrad, Fahrrad und Fußgänger unterschieden. Anhand der gewonnenen Erkenntnisse soll eine Neuplanung der Kreuzung inkl. Optimierung des Fahrradverkehrs vorgenommen werden.\n\nDas Datenmodell kann unter dem folgenden Link abgerufen werden:\nhttps://datenplattform.osnabrueck.de/wp-content/uploads/2022/12/Verkehr_Modell.pdf",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#CAT_OTHER",
+ "dataCategoryDetail": [],
+ "keyword": [
+  "GovData – das Datenportal für Deutschland",
+  "Straße",
+  "Messung",
+  "Verkehr"
+ ],
+ "temporalCoverage": {
+  "begin": null,
+  "end": null
+ },
+ "language": [],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": null,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": null
+ },
+ "accrualPeriodicity": null,
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "SWO Netz GmbH",
+   "emailAddress": null
+  },
+  "sovereign": {
+   "id": null,
+   "name": null,
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+ "standardLicense": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [],
+  "polygon": "POLYGON ((8.0344 52.2665, 8.0599 52.2665, 8.0599 52.2828, 8.0344 52.2828, 8.0344 52.2665))"
+ },
+ "created": "2022-11-17T00:00:00Z",
+ "modified": "2023-11-22T00:00:00Z",
+ "geoReferenceMethod": [],
+ "networkCoverage": [],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [],
+ "mdpBrokering": false,
+ "deltaDelivery": null,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "",
+ "contentData": [
+  {
+   "accessUrl": "https://daten-api.osnabrueck.de",
+   "endpointDocumentation": "https://daten-api.osnabrueck.de",
+   "accessProtocol": null,
+   "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+   "dataFormatAdditionalDescription": null,
+   "description": "Über die API des FROST-Servers kann auf die Daten zugegriffen werden.",
+   "byteSize": null,
+   "fileName": "Urbane Datenplattform Osnabrück",
+   "creationDate": "2023-11-22T10:59:26.946Z",
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": null,
+   "masterSchema": null,
+   "schema": [],
+   "schemaProfileName": null
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": null,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": "867c6b92-02be-46a8-bdcb-04357efd967c",
+ "originatedFrom": "https://w3id.org/mdp/schema/portal#GOVDATA",
+ "originatedFromUri": "https://ckan.govdata.de/dataset/867c6b92-02be-46a8-bdcb-04357efd967c",
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": "VISIBLE",
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": "VISIBLE",
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": true,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}
