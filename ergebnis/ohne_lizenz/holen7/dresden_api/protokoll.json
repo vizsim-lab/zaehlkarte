@@ -1,0 +1,66 @@
+[
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=ids%3D%3D1077&format=csv&delimiter=Semicolon&propertynames=id,ids,w1,w2,messzeit,status,parameter",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=ids%3D%3D1077&format=csv&delimiter=Semicolon&propertynames=id,ids,w1,w2,messzeit,status,parameter",
+  "typ": "text/csv",
+  "bytes": 4928218,
+  "datei": "01_items.csv",
+  "sha256": "bd75420ed1b1e5ac7c87d195942334d3c6f8b0bbbd995f58d15240d22ad68d46"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=ids%3D%3D1104&format=csv&delimiter=Semicolon",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=ids%3D%3D1104&format=csv&delimiter=Semicolon",
+  "typ": "text/csv",
+  "bytes": 4092487,
+  "datei": "02_items.csv",
+  "sha256": "bb7f3c6f98eaec52e188b27cfd4e537b9f3e94477f19e63cfeb5b894c0c74ab0"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=id%3C6&format=csv&delimiter=Semicolon",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=id%3C6&format=csv&delimiter=Semicolon",
+  "typ": "text/csv",
+  "bytes": 1087,
+  "datei": "03_items.csv",
+  "sha256": "2c25169a40918ba4c36940f843f30cf8f156938ee461fdd3f41ffa23c29b4fda"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=id%3E%3D2000000%20and%20id%3C2000006&format=csv&delimiter=Semicolon",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=id%3E%3D2000000%20and%20id%3C2000006&format=csv&delimiter=Semicolon",
+  "typ": "text/csv",
+  "bytes": 102,
+  "datei": "04_items.csv",
+  "sha256": "c17f56527324407672a02fa6ae80ce5dd81dbbf3214b9f37a8992275efeb9eec"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3D%3D%2214.11.2026%2012%3A00%3A00%22&format=csv&delimiter=Semicolon",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3D%3D%2214.11.2026%2012%3A00%3A00%22&format=csv&delimiter=Semicolon",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 278,
+  "datei": "05_items.csv",
+  "sha256": "9dff524ce8d28da9c17f819cde81e88a3c69fbd8619ddc459ccc0f7085fa7d0b"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2226.10.2025%2001%3A00%3A00%22%2C%2226.10.2025%2002%3A00%3A00%22%2C%2226.10.2025%2003%3A00%3A00%22%29&format=csv&delimiter=Semicolon",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2226.10.2025%2001%3A00%3A00%22%2C%2226.10.2025%2002%3A00%3A00%22%2C%2226.10.2025%2003%3A00%3A00%22%29&format=csv&delimiter=Semicolon",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 278,
+  "datei": "06_items.csv",
+  "sha256": "041c08801a12f90789b819f041a6a1a2a8403eecde9af8fc619b1e6727698d51"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2230.03.2025%2001%3A00%3A00%22%2C%2230.03.2025%2002%3A00%3A00%22%2C%2230.03.2025%2003%3A00%3A00%22%29&format=csv&delimiter=Semicolon",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2230.03.2025%2001%3A00%3A00%22%2C%2230.03.2025%2002%3A00%3A00%22%2C%2230.03.2025%2003%3A00%3A00%22%29&format=csv&delimiter=Semicolon",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 278,
+  "datei": "07_items.csv",
+  "sha256": "0d9cb7055e6b259d160438ef6ca0ce69befe3afa3b36095a7c0c9523d66fa90b"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2231.12.2024%2023%3A00%3A00%22%2C%2201.01.2025%2000%3A00%3A00%22%2C%2201.01.2025%2001%3A00%3A00%22%29&format=csv&delimiter=Semicolon",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2231.12.2024%2023%3A00%3A00%22%2C%2201.01.2025%2000%3A00%3A00%22%2C%2201.01.2025%2001%3A00%3A00%22%29&format=csv&delimiter=Semicolon",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 278,
+  "datei": "08_items.csv",
+  "sha256": "31423db452a81a6293b306d3e389ca4d1e68309d061614ed81772447c1b2ae68"
+ }
+]
