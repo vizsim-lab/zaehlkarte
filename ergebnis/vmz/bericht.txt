@@ -1,0 +1,130 @@
+== Abruf
+vmz_rad: 74 Zählstellen, 740 Jahresdateien geholt
+Fehler: []
+Dauer: 117 s
+Rohdaten: 740 Dateien, 75.0 MB
+{
+ "abgerufen": "2026-11-14T19:47:04Z",
+ "stellen": 74,
+ "dateien": 740,
+ "fehler": []
+}
+
+== Lesen
+74 Zählstellen, 2400162 Stunden in der Karte (leere Zellen: 0, Störungen der Quelle: 2467 Zeiträume, 2 Uhr am Tag der Sommerzeit verworfen: 3); jüngster Wert 2026-11-13
+Reihe 2017-01-01 – 2026-11-13, 74 Stellen
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+300047417 | B 210 | Hinte, LK Aurich | 2024-11-19 – 2026-10-24 | 702 | 2026-10-24 | 285
+300038133 | B 403 | Nordhorn, LK Grafschaft Bentheim | 2023-12-12 – 2026-10-24 | 993 | 2026-10-24 | 132
+300047428 | B 438 | Ostrhauderfehn, LK Leer | 2024-11-19 – 2026-10-24 | 687 | 2026-10-24 | 743
+300047403 | L 39 | SG Schüttorf, LK Grafschaft Bentheim | 2024-11-18 – 2026-10-24 | 694 | 2026-10-24 | 55
+300038085 | L 7 | Aurich, LK Aurich | 2023-12-08 – 2026-10-24 | 1028 | 2026-10-24 | 566
+300047475 | L 815 | Bad Zwischenahn, LK Ammerland | 2024-11-21 – 2026-10-24 | 699 | 2026-10-24 | 296
+300038096 | L 826 | Rastede, LK Ammerland | 2023-12-09 – 2026-10-24 | 1015 | 2026-10-24 | 194
+300038095 | L 828 | Edewecht, LK Ammerland | 2023-12-09 – 2026-10-24 | 998 | 2026-10-24 | 304
+300038102 | L 836 | Cloppenburg, LK Cloppenburg | 2023-12-11 – 2026-10-24 | 1026 | 2026-10-24 | 220
+300038117 | L 845 | Quakenbrück, LK Osnabrück | 2023-12-11 – 2026-10-24 | 1012 | 2026-10-24 | 124
+300038141 | L 89 | Hellern, KfS Osnabrück | 2023-12-12 – 2026-10-24 | 1043 | 2026-10-24 | 409
+300047481 | L 90 | Melle, LK Osnabrück | 2024-11-21 – 2026-10-24 | 699 | 2026-10-24 | 211
+300037961 | B 248 | Lüchow, LK Lüchow-Dannenberg | 2023-12-04 – 2026-10-24 | 1051 | 2026-10-24 | 53
+300037844 | B 71 | Bremervörde, LK Rotenburg | 2023-11-28 – 2026-10-24 | 1039 | 2026-10-24 | 78
+300037850 | B 73 | Stade, LK Stade | 2023-11-28 – 2026-10-24 | 1056 | 2026-10-24 | 88
+300037864 | B 75 | Buchholz i.d.N, LK Harburg | 2023-11-29 – 2026-10-24 | 1044 | 2026-10-24 | 79
+300037896 | B 75 | Rotenburg (Wümme), LK Rotenburg | 2023-11-30 – 2026-10-24 | 905 | 2026-10-24 | 44
+300047444 | L 143 | Loxstedt, LK Cuxhaven | 2024-11-20 – 2026-10-24 | 702 | 2026-10-24 | 154
+300038006 | L 180 | Celle, LK Celle | 2023-12-05 – 2026-10-24 | 599 | 2026-10-24 | 83
+300037872 | L 216 | Lüneburg, LK Lüneburg | 2023-11-29 – 2026-10-24 | 1040 | 2026-10-24 | 436
+300047294 | L 281 | Bergen, LK Celle | 2024-11-13 – 2026-10-24 | 702 | 2026-10-24 | 66
+300047332 | B 494 | Harsum, LK Hildesheim | 2024-11-14 – 2026-10-24 | 708 | 2026-10-24 | 227
+300037918 | L 202 | Sulingen, LK Diepholz | 2023-12-01 – 2026-10-24 | 1019 | 2026-10-24 | 51
+300047459 | L 333 | Bassum, LK Diepholz | 2024-11-20 – 2026-10-24 | 667 | 2026-10-24 | 68
+300037908 | L 336 | Stuhr, LK Diepholz | 2023-11-30 – 2026-10-24 | 698 | 2026-10-24 | 213
+300037934 | L 372 | Stadthagen, LK Schaumburg | 2023-12-01 – 2026-10-24 | 1056 | 2026-10-24 | 168
+300047346 | L 421 | Bad Münder, LK Hameln-Pyrmont | 2024-11-14 – 2026-10-24 | 707 | 2026-10-24 | 63
+300038018 | L 584 | Holzminden, LK Holzminden | 2023-12-06 – 2026-10-24 | 1047 | 2026-10-24 | 241
+300047224 | B 247 | Duderstadt, LK Göttingen | 2024-11-11 – 2026-10-24 | 708 | 2026-10-24 | 112
+300047268 | B 79 | Braunschweig, KfS Braunschweig | 2024-11-12 – 2026-10-24 | 710 | 2026-10-24 | 333
+300047260 | B 82 | Goslar, LK Goslar | 2024-11-12 – 2026-10-24 | 706 | 2026-10-24 | 122
+300037978 | L 286 | Wittingen, LK Gifhorn | 2023-12-04 – 2026-10-24 | 1053 | 2026-10-24 | 91
+300037997 | L 321 | Fallersleben, KfS Wolfsburg | 2023-12-05 – 2026-10-24 | 1043 | 2026-10-24 | 233
+300038033 | L 523 | Osterode am Harz, LK Göttingen | 2023-12-07 – 2026-10-24 | 1049 | 2026-10-24 | 45
+300038012 | L 548 | Uslar, LK Northeim | 2023-12-06 – 2026-10-24 | 1030 | 2026-10-24 | 66
+300047218 | L 573 | Göttingen, LK Göttingen | 2024-11-11 – 2026-10-24 | 711 | 2026-10-24 | 720
+300037945 | B 217 | Ronnenberg | 2023-12-02 – 2026-10-24 | 1055 | 2026-10-24 | 48
+100044789 | K 117 OD Großburgwedel | Region Hannover | 2018-07-27 – 2026-10-24 | 2973 | 2026-10-24 | 301
+100044790 | K 139 OD Ilten | Region Hannover | 2018-07-25 – 2026-10-24 | 2981 | 2026-10-24 | 140
+100044791 | K 221 OD Hemmingen | Region Hannover | 2018-07-25 – 2026-10-24 | 2879 | 2026-10-24 | 233
+100044788 | K 251 OD Harenberg | Region Hannover | 2018-07-25 – 2026-10-24 | 2997 | 2026-10-24 | 182
+300047304 | B 6 | Garbsen-Berenbostel | 2024-11-13 – 2026-10-24 | 684 | 2026-10-24 | 664
+100030017 | Friedrichswall Nord | Hannover | 2017-01-01 – 2026-10-24 | 3555 | 2026-10-24 | 1580
+100030786 | Friedrichswall Süd | Hannover | 2017-01-01 – 2026-10-24 | 3491 | 2026-10-24 | 1929
+100030009 | Hildesheimer Str. Ost | Hannover | 2017-01-01 – 2026-10-24 | 3560 | 2026-10-24 | 2892
+100030008 | Hildesheimer Str. West | Hannover | 2017-01-01 – 2026-10-24 | 3555 | 2026-10-24 | 1832
+100051391 | Justus-Garten-Brücke | Hannover | 2019-04-12 – 2026-10-24 | 2734 | 2026-10-24 | 4081
+100030007 | Klagesmarkt | Hannover | 2017-01-01 – 2026-10-24 | 3515 | 2026-10-24 | 2154
+300041719 | Kleefelder Straße | Hannover | 2024-04-22 – 2026-10-24 | 913 | 2026-10-24 | 1291
+300037948 | L 389 | Hannover-Wülfel | 2023-12-02 – 2026-10-24 | 1050 | 2026-10-24 | 544
+100029988 | Lange Laube | Hannover | 2022-01-01 – 2026-10-24 | 1027 | 2026-10-24 | 1982
+100030021 | Lister Meile | Hannover | 2017-01-01 – 2026-10-24 | 3550 | 2026-10-24 | 3034
+100030018 | Rudolf-von-Bennigsen-Ufer Ost | Hannover | 2017-01-01 – 2026-10-24 | 3554 | 2026-10-24 | 558
+100030582 | Rudolf-von-Bennigsen-Ufer West | Hannover | 2017-01-01 – 2026-09-18 | 3516 | 2026-09-18 | 2855
+100032318 | Schwarzer Bär Nord | Hannover | 2017-01-01 – 2026-10-24 | 3540 | 2026-10-24 | 2492
+100032392 | Schwarzer Bär Süd | Hannover | 2017-01-01 – 2026-10-24 | 3532 | 2026-10-24 | 1241
+NeoCount1870 | Oldendorp | Jemgum | 2025-12-14 – 2026-11-13 | 265 | 2026-11-13 | 70
+300039699 | Brockwinkel | Gellersen | 2024-02-26 – 2026-10-24 | 969 | 2026-10-24 | 239
+300039706 | Oedeme | Gellersen | 2024-02-26 – 2026-10-24 | 757 | 2026-10-24 | 419
+300052271 | Reppenstedt Ort Auswärts | Gellersen | 2025-05-12 – 2026-10-24 | 529 | 2026-10-24 | 256
+300052285 | Reppenstedt Orts Einwärts | Gellersen | 2025-05-12 – 2026-10-24 | 399 | 2026-10-24 | 725
+300026962 | Bültenweg | Braunschweig | 2024-01-01 – 2026-10-24 | 1025 | 2026-10-24 | 2603
+300030746 | Ferdinandbrücke | Braunschweig | 2024-01-01 – 2026-10-24 | 1026 | 2026-10-24 | 1810
+300061071 | Helmstedter Strasse | Braunschweig | 2025-09-25 – 2026-10-24 | 385 | 2026-10-24 | 689
+300026963 | Jasperallee | Braunschweig | 2024-01-01 – 2026-10-24 | 1026 | 2026-10-24 | 3008
+300026961 | Kurt-Schumacher-Str. | Braunschweig | 2024-01-01 – 2026-10-24 | 1026 | 2026-10-24 | 800
+300061067 | Pockelsstraße | Braunschweig | 2025-09-25 – 2026-10-24 | 394 | 2026-10-24 | 2066
+300030787 | Ringgleis Kälberwiese | Braunschweig | 2024-01-01 – 2026-10-24 | 1016 | 2026-10-24 | 1766
+300030766 | Wendenstraße | Braunschweig | 2024-01-01 – 2026-10-24 | 1026 | 2026-10-24 | 1181
+NeoCount1862 | Rotenburg (Wümme) | None | 2025-12-01 – 2026-11-13 | 317 | 2026-11-13 | 154
+300048636 | Am Stadtwald | Verden | 2025-01-13 – 2026-10-24 | 647 | 2026-10-24 | 412
+300048319 | Berliner Ring | Verden | 2024-12-20 – 2026-10-24 | 617 | 2026-10-24 | 295
+100047629 | Brückenschlag | Verden | 2024-01-01 – 2026-10-24 | 1005 | 2026-10-24 | 328
+300026472 | Ostertorstraße | Johanniswall nördlich | 2024-01-01 – 2026-10-24 | 1026 | 2026-10-24 | 583
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2017: 2017-01-01: 10/10, 2017-12-31: 10/10
+2018: 2018-01-01: 10/10, 2018-12-31: 14/14
+2019: 2019-01-01: 14/14, 2019-12-31: 15/15
+2020: 2020-01-01: 15/15, 2020-12-31: 15/15
+2021: 2021-01-01: 15/15, 2021-12-31: 15/15
+2022: 2022-01-01: 16/16, 2022-12-31: 14/14
+2023: 2023-01-01: 15/15, 2023-12-31: 39/39
+2024: 2024-01-01: 48/48, 2024-12-31: 64/64
+2025: 2025-01-01: 64/64, 2025-12-31: 71/71
+2026: 2026-01-01: 71/71
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2017: 2017-03-26: voll 10/10, gezählte Stunden [23]; 2017-10-29: voll 0/10, gezählte Stunden [23]
+2018: 2018-03-25: voll 10/10, gezählte Stunden [23]; 2018-10-28: voll 0/14, gezählte Stunden [23]
+2019: 2019-03-31: voll 14/14, gezählte Stunden [23]; 2019-10-27: voll 0/15, gezählte Stunden [23]
+2020: 2020-03-29: voll 15/15, gezählte Stunden [23]; 2020-10-25: voll 0/15, gezählte Stunden [23]
+2021: 2021-03-28: voll 15/15, gezählte Stunden [23]; 2021-10-31: voll 0/15, gezählte Stunden [23]
+2022: 2022-03-27: voll 15/15, gezählte Stunden [23]; 2022-10-30: voll 0/15, gezählte Stunden [23]
+2023: 2023-03-26: voll 15/15, gezählte Stunden [23]; 2023-10-29: voll 0/14, gezählte Stunden [23]
+2024: 2024-03-31: voll 50/50, gezählte Stunden [23]; 2024-10-27: voll 0/49, gezählte Stunden [23]
+2025: 2025-03-30: voll 65/65, gezählte Stunden [23]; 2025-10-26: voll 0/69, gezählte Stunden [23]
+2026: 2026-03-29: voll 73/73, gezählte Stunden [23]; 2026-10-25: voll 0/2, gezählte Stunden [23]
+== Vollständige Tage je Jahr (alle Stellen)
+2017: 3640 von 3650 Tagen mit Werten
+2018: 4274 von 4288 Tagen mit Werten
+2019: 5357 von 5374 Tagen mit Werten
+2020: 5472 von 5490 Tagen mit Werten
+2021: 5438 von 5453 Tagen mit Werten
+2022: 5342 von 5357 Tagen mit Werten
+2023: 5884 von 5928 Tagen mit Werten
+2024: 18796 von 18864 Tagen mit Werten
+2025: 24030 von 24108 Tagen mit Werten
+2026: 21529 von 21547 Tagen mit Werten
+== Kartendaten (nur vmz_rad)
+vmz_rad: 74 Stellen mit vollständigen Tagen, 0 ohne
+14 Dateien, 2.9 MB, 3 Detail-Dateien
+vmz_rad: vollständige Tage je Jahr (Stellen × Tage) – 2017: 3640, 2018: 4274, 2019: 5357, 2020: 5472, 2021: 5438, 2022: 5342, 2023: 5884, 2024: 18796, 2025: 24030, 2026: 21529
+vmz_rad: rad-Tagessummen, Quintilgrenzen [120, 320, 890, 2180], Median 508, Maximum 20908
+index.json quellen: [{"code": "vmz_rad", "name": "VMZ Niedersachsen (Rad-Zählstellen)", "land": "NI", "traeger": "Land Niedersachsen (Landesbehörde für Straßenbau und Verkehr), Landeshauptstadt Hannover, Region Hannover, Stadt Braunschweig, Stadt Verden (Aller), Samtgemeinde Gellersen, Stadt Rotenburg (Wümme), Gemeinde Jemgum", "art": "Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten (Schleifen im Boden); Stundenwerte je Zählstelle seit 2017, Richtungen und Straßenseiten als eigene Zählstellen, wie die Quelle sie führt", "weg": "offen auf vmz-niedersachsen.de (Zählerabfrage mit Download), ohne Lizenz", "portal": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/", "archiv": null, "quellenvermerk": null, "lizenzen": [{"code": "vmz_rad", "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr (verändert: Stundenwerte zu Tagessummen zusammengefasst)", "herausgeber": "Verkehrsmanagementzentrale Niedersachsen und Region Hannover", "lizenz": null, "lizenz_url": null, "herkunft_url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/", "ohne_lizenz": {"herausgegeben": "auf vmz-niedersachsen.de veröffentlicht (Zählstellenübersicht und Zählerabfrage mit Download), ohne Lizenzangabe", "geprueft": "2026-11-14"}}], "hinweise": ["Die Zählstellen an Bundes- und Landesstraßen betreibt die Landesbehörde für Straßenbau und Verkehr, die übrigen die Kommunen (Gruppen der Zählstellenübersicht).", "Stunden in Zeiträumen, die die Quelle als Störung führt (fehlende Daten),
+index.json lizenzen: null
