@@ -1,0 +1,34 @@
+[
+ {
+  "url": "https://datenplattform.osnabrueck.de/verkehrszaehlung/",
+  "ende": "https://datenplattform.osnabrueck.de/verkehrszaehlung/",
+  "typ": "text/html; charset=UTF-8",
+  "bytes": 118320,
+  "datei": "10_datei.html",
+  "sha256": "f2d682a27a5822bc2b2a0d0d8ecf4790064703de8297ca2b794e938d3e3fedd1"
+ },
+ {
+  "url": "https://daten-api.osnabrueck.de/v1.1/Things(673)/Datastreams",
+  "ende": "https://daten-api.osnabrueck.de/v1.1/Things(673)/Datastreams",
+  "typ": "application/json;charset=UTF-8",
+  "bytes": 6934,
+  "datei": "11_Datastreams.json",
+  "sha256": "7043ba9095f3992a04d3b392561efed00ed73676ecee0a7d3c079125dbb45bbf"
+ },
+ {
+  "url": "https://daten-api.osnabrueck.de/v1.1/Things(673)/Datastreams?$expand=Observations($top=300;$orderby=phenomenonTime%20desc)",
+  "ende": "https://daten-api.osnabrueck.de/v1.1/Things(673)/Datastreams?$expand=Observations($top=300;$orderby=phenomenonTime%20desc)",
+  "typ": "application/json;charset=UTF-8",
+  "bytes": 367630,
+  "datei": "12_Datastreams.json",
+  "sha256": "64edd7c2737c9377aaba7d49a7788f9d8845b3042a5bace25641d6dcf25d329e"
+ },
+ {
+  "url": "https://daten-api.osnabrueck.de/v1.1/Things(1578)/Datastreams?$expand=Observations($top=300;$orderby=phenomenonTime%20desc)",
+  "ende": "https://daten-api.osnabrueck.de/v1.1/Things(1578)/Datastreams?$expand=Observations($top=300;$orderby=phenomenonTime%20desc)",
+  "typ": "application/json;charset=UTF-8",
+  "bytes": 362649,
+  "datei": "13_Datastreams.json",
+  "sha256": "32a0310be31845bb6d7152a7aef034c759650c4fc37b9dfbf163030dcc8a6585"
+ }
+]
