@@ -1,0 +1,154 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-01T08:52:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 64799706,
+  "center": {
+    "lat": 48.3669548,
+    "lon": 10.8949514
+  },
+  "tags": {
+    "bicycle": "no",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Annastraße",
+    "smoothness": "intermediate",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 68527373,
+  "center": {
+    "lat": 48.3700136,
+    "lon": 10.8958202
+  },
+  "tags": {
+    "highway": "pedestrian",
+    "lit": "yes",
+    "motor_vehicle:conditional": "delivery @ (Mo-Su 07:00-11:00)",
+    "name": "Annastraße",
+    "oneway:conditional": "yes @ delivery",
+    "oneway:taxi": "yes",
+    "smoothness": "excellent",
+    "surface": "paving_stones",
+    "taxi": "yes",
+    "vehicle": "delivery"
+  }
+},
+{
+  "type": "way",
+  "id": 68527375,
+  "center": {
+    "lat": 48.3699992,
+    "lon": 10.8957486
+  },
+  "tags": {
+    "bicycle": "no",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Annastraße",
+    "smoothness": "intermediate",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 68527385,
+  "center": {
+    "lat": 48.3699782,
+    "lon": 10.8955408
+  },
+  "tags": {
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Annastraße",
+    "smoothness": "excellent",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 68900049,
+  "center": {
+    "lat": 48.3680473,
+    "lon": 10.8959889
+  },
+  "tags": {
+    "bicycle": "no",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Annastraße",
+    "smoothness": "intermediate",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 243814310,
+  "center": {
+    "lat": 48.3670772,
+    "lon": 10.8949582
+  },
+  "tags": {
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Annastraße",
+    "smoothness": "good",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 265870758,
+  "center": {
+    "lat": 48.3683757,
+    "lon": 10.8955966
+  },
+  "tags": {
+    "bicycle": "yes",
+    "bicycle:conditional": "no @ (11:00-20:30)",
+    "delivery": "yes",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "motor_vehicle:conditional": "delivery @ (Mo-Su 07:00-11:00)",
+    "name": "Annastraße",
+    "oneway:delivery": "yes",
+    "smoothness": "excellent",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 589530815,
+  "center": {
+    "lat": 48.3701112,
+    "lon": 10.8958199
+  },
+  "tags": {
+    "bicycle": "designated",
+    "cycleway:surface": "asphalt",
+    "cycleway:width": "1",
+    "foot": "designated",
+    "footway:surface": "asphalt",
+    "highway": "path",
+    "lit": "yes",
+    "name": "Annastraße",
+    "oneway:conditional": "yes @ delivery",
+    "oneway:taxi": "yes",
+    "segregated": "yes",
+    "surface": "paving_stones",
+    "taxi": "yes",
+    "vehicle": "delivery"
+  }
+}
+
+  ]
+}
