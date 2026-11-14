@@ -1,0 +1,44 @@
+[
+ {
+  "osm": "node/4453963414",
+  "lat": 52.4457745,
+  "lon": 12.7511229,
+  "tags": {
+   "check_date": "2026-07-25",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/8022908717",
+  "lat": 52.3684865,
+  "lon": 12.430414,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/8730392738",
+  "lat": 52.3568757,
+  "lon": 12.9601582,
+  "tags": {
+   "check_date": "2026-07",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/12747713256",
+  "lat": 53.191738,
+  "lon": 13.1731034,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ }
+]
