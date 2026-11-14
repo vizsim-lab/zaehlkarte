@@ -369,6 +369,24 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     einzelne Ergebnisse in Pressemitteilungen (Geeste: Radzählung an der Fährbrücke 2026,
     Bienenbüttel: Verkehrsmessung Wichmannsburg 2024). Geratene Adressen treffen
     gelegentlich die falsche Gemeinde (www.gronau.de ist Gronau in Westfalen).
+- Bayern (November 2026, Kommune für Kommune, Runde 3 wie Niedersachsen: 1.489 Websites der
+  Gemeinden, Verwaltungsgemeinschaften und Landkreise, 1.177 erreicht; Ergebnisse
+  `ergebnis/runde3*/BY`): keine offene Kurzzeitzählung mit Lizenz.
+  - **Rauschen:** Fast jede Gemeinde bindet den Text „Straßenverkehrszählungen; Durchführung“ aus
+    dem BayernPortal ein (Zählungen des Landes, BAYSIS); auch „aktuelle Daten“ kleiner Gemeinden
+    verweisen meist auf BAYSIS (Möhrendorf). Landkreise veröffentlichen SVZ-Datenblätter je
+    Zählstelle (Deggendorf, DTV) – das gehört nach `vizsim/svz`.
+  - **Veröffentlichte Messberichte kleiner Gemeinden:** Buchloe (PDF je Messung: Fahrzeuge und
+    mittlere Geschwindigkeit je Tag) und Moorenweis (Auswertungen als PDF) – nur Tageswerte,
+    Anfrage nach den Exporten der Geräte.
+  - **Rad-Dauerzählstellen ohne offene Werte:** Landshut (zwei), Bayreuth (Mainradweg), Bamberg,
+    Landkreis Bamberg (Pettstadt, 2026), Schwabach (drei Zählsäulen); Planegg veröffentlicht je
+    Jahr eine Excel-Datei mit Tageswerten je Richtung, ohne Lizenz.
+  - **Mobilithek:** Detektordaten Regensburg (eingeschränkte Lizenz, nur vermittelt), Stadtwerke
+    Schweinfurt (ohne Lizenz), Kfz-Dauerzählstellen München (nur mit Vertrag); Fußverkehr stündlich
+    offen in Augsburg (Annastraße, CC BY 4.0) und Würzburg (dl-de/by-2-0).
+  - **Gezählt, nicht offen:** Regensburg (eigene Zählungen März–Oktober, 6–10 und 15–19 Uhr);
+    nur als Plan: Erlangen (Verkehrsbelastungsplan 2017).
 - Übrige Länder (November 2026, GovData je Land, Landes- und Stadtportale, alle
   FragDenStaat-Anfragen samt Anhängen, Stadtseiten): neu offen nur Olpe (in der Karte). Neu in der
   Datenlage: Bremen, Augsburg, Amberg, Wuppertal, Falkensee, Lingen (Ems); präzisiert: Kassel

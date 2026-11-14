@@ -938,12 +938,16 @@
      "quellen": [
       "muenchen_rad"
      ],
-     "was": "sechs Raddauerzählstellen der Stadt: 15-Minuten-Werte seit 2008, in der Karte als Dauerzählstellen",
+     "was": "sechs Raddauerzählstellen der Stadt: 15-Minuten-Werte seit 2008, in der Karte als Dauerzählstellen; die Kfz-Dauerzählstellen (Induktionsschleifen, Stunden- und Viertelstundenwerte) gibt es über die Mobilithek nur mit Vertrag, nicht in der Karte",
      "situation": null,
      "links": [
       {
        "titel": "Open Data München: Raddauerzählstellen",
        "url": "https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen"
+      },
+      {
+       "titel": "Mobilithek: Verkehrszählstellen München (Stundenwerte)",
+       "url": "https://mobilithek.info/offers/110000000003145002"
       }
      ]
     },
@@ -989,6 +993,10 @@
       {
        "titel": "Bericht Verkehrszählung 2018",
        "url": "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf"
+      },
+      {
+       "titel": "Verkehrszählungen (Berichte bis 2025)",
+       "url": "https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html"
       }
      ]
     },
@@ -1036,12 +1044,16 @@
     "dauer": {
      "stand": "aggregiert",
      "quellen": [],
-     "was": "Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte",
+     "was": "Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte; offen dazu eine Passantenzählung in der Annastraße mit Stundenwerten seit Dezember 2020 (CC BY 4.0) – Fußverkehr ist noch keine Gruppe der Karte",
      "situation": null,
      "links": [
       {
        "titel": "Radzählstationen (Stadt Augsburg)",
        "url": "https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen"
+      },
+      {
+       "titel": "Mobilithek: Passanten Annastraße",
+       "url": "https://mobilithek.info/offers/-1747083335311792689"
       }
      ]
     },
@@ -1111,16 +1123,417 @@
      "quellen": [
       "wuerzburg_rad"
      ],
-     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als Dauerzählstellen",
+     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als Dauerzählstellen; offen dazu eine Passantenzählung mit Stundenwerten (Lasersensoren, dl-de/by-2-0) – Fußverkehr ist noch keine Gruppe der Karte",
      "situation": null,
      "links": [
       {
        "titel": "Fahrradzählung Würzburg",
        "url": "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"
+      },
+      {
+       "titel": "Mobilithek: Passantenzählung Würzburg (Stundendaten)",
+       "url": "https://mobilithek.info/offers/-8264466313321172654"
       }
      ]
     },
     "stand_d": "in_karte"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.4246,
+     48.1058
+    ]
+   },
+   "properties": {
+    "ags": "09184138",
+    "name": "Planegg",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "aggregiert",
+     "quellen": [],
+     "was": "Rad-Zählstelle Amtmannstraße seit Mai 2021: je Jahr eine Excel-Datei mit Tageswerten je Richtung, ohne Lizenzangabe",
+     "situation": "Die Gemeinde zählt den Radverkehr in der Amtmannstraße und stellt je Jahr eine Excel-Datei ein (ein Blatt je Monat, je Tag die Räder Richtung Krailling und Richtung Planegg). Stundenwerte und eine Lizenz fehlen – ob ein Tag vollständig gezählt ist, lässt sich so nicht prüfen.",
+     "links": [
+      {
+       "titel": "Fahrradzählstelle Amtmannstraße",
+       "url": "https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse"
+      }
+     ]
+    },
+    "stand_d": "aggregiert"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.1017,
+     49.0152
+    ]
+   },
+   "properties": {
+    "ags": "09362000",
+    "name": "Regensburg",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Regensburg",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "eigene Zählungen der Stadt, meist März bis Oktober von 6 bis 10 und 15 bis 19 Uhr, dazu Querschnittszählungen mit Geräten",
+     "situation": "Das Amt für Stadtplanung und Mobilität zählt selbst, mit studentischen Hilfskräften, hauptsächlich von März bis Oktober außerhalb der Schulferien jeweils von 6 bis 10 und von 15 bis 19 Uhr; an zweistreifigen Straßen auch mit Zählgeräten. Werte sind nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach allen Zählungen seit 2015 (Werte je Intervall, Strom bzw. Richtung und Fahrzeugart), mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Bayerisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Regensburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhr Amt für Stadtplanung und Mobilität zählt regelmäßig selbst (6 bis 10 und 15 bis 19 Uhr) und mit Zählgeräten. Ich bitte um diese Zählungen seit 2015.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrszählungen (Stadt Regensburg)",
+       "url": "https://www.regensburg.de/rathaus/aemteruebersicht/planungs-u-baureferat/amt-fuer-stadtplanung-und-mobilitaet/informationen-verkehrsplanung/verkehrszaehlungen"
+      }
+     ]
+    },
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Detektordaten der Stadt über die Mobilithek, nur nach Vermittlung und mit eingeschränkter Lizenz (kostenlos)",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Mobilithek: Dynamische Verkehrsdaten Regensburg",
+       "url": "https://mobilithek.info/offers/837297127089401856"
+      }
+     ]
+    },
+    "stand_k": "kandidat",
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.0033,
+     49.5951
+    ]
+   },
+   "properties": {
+    "ags": "09562000",
+    "name": "Erlangen",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Erlangen",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "nur_karte",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Verkehrsbelastungsplan 2017 als PDF; Zählwerte selbst nicht veröffentlicht",
+     "situation": "Die Stadt veröffentlicht einen Verkehrsbelastungsplan (Stand 2017) als PDF, dazu den Verkehrsentwicklungs- und Mobilitätsplan 2030. Die Zählungen dahinter sind nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach den Zählungen hinter dem Belastungsplan und späteren Zählungen (Werte je Intervall und Richtung), mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Bayerisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Erlangen seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIch bitte um die Zählungen, auf denen Ihr Verkehrsbelastungsplan 2017 beruht, und um die Zählungen seither – nicht um den Plan.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrsbelastungsplan",
+       "url": "https://erlangen.de/aktuelles/verkehrsbelastungsplan"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "nur_karte"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.1521,
+     48.537
+    ]
+   },
+   "properties": {
+    "ags": "09261000",
+    "name": "Landshut",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "zwei Fahrrad-Dauerzählstellen der Stadt; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radverkehr (Stadt Landshut)",
+       "url": "https://landshut.de/umwelt/mobilitaet/radverkehr"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.5753,
+     49.9438
+    ]
+   },
+   "properties": {
+    "ags": "09462000",
+    "name": "Bayreuth",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Rad-Dauerzählstelle am Mainradweg (Schulstraße) mit Anzeige der Tages- und Jahreswerte; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählstelle am Mainradweg",
+       "url": "https://www.bayreuth.de/radzaehlstelle-am-mainradweg-in-betrieb-genommen/"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.8868,
+     49.8934
+    ]
+   },
+   "properties": {
+    "ags": "09461000",
+    "name": "Bamberg",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Radzählanlage der Stadt; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählanlage (Stadt Bamberg)",
+       "url": "https://www.stadt.bamberg.de/Schnellnavigation/Suche/Radz%C3%A4hlanlage.php?object=tx,2730.3571.1"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.9327,
+     49.8319
+    ]
+   },
+   "properties": {
+    "ags": "09471",
+    "name": "Landkreis Bamberg",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "erste Fahrrad-Dauerzählstelle des Landkreises, mit der Gemeinde Pettstadt in Neuhaus (seit Mai 2026); Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Erste Fahrraddauerzählstelle im Landkreis",
+       "url": "https://www.landkreis-bamberg.de/Landratsamt/%C3%96ffentlichkeitsarbeit/Pressemitteilungen/Erste-Fahrraddauerz%C3%A4hlstelle-im-Landkreis-Bamberg-er%C3%B6ffnet.php?ModID=255&FID=4261.722.1"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.0245,
+     49.3289
+    ]
+   },
+   "properties": {
+    "ags": "09565000",
+    "name": "Schwabach",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "drei Radzählsäulen seit Dezember 2024 (Förderprojekt „Digitalisierung kommunaler Verkehrssysteme“); Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Drei Radzählsäulen in Schwabach",
+       "url": "https://www.schwabach.de/de/politik/referate/referat-fuer-umwelt-und-gebaeudemanagement/amt-fuer-mobilitaet-klimaschutz/12779-drei-radzaehlsaeulen-in-schwabach-installiert.html"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.2303,
+     50.0455
+    ]
+   },
+   "properties": {
+    "ags": "09662000",
+    "name": "Schweinfurt",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Verkehrsdaten aus eigener Detektion der Stadtwerke über die Mobilithek, ohne Lizenz und nur nach Vermittlung",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Mobilithek: Verkehrsdaten Stadtwerke Schweinfurt",
+       "url": "https://mobilithek.info/offers/973579563426357248"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.7296,
+     48.0369
+    ]
+   },
+   "properties": {
+    "ags": "09777121",
+    "name": "Buchloe",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Buchloe",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "aggregiert",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Berichte der eigenen Verkehrsmessungen seit 2025 als PDF (je Tag Anzahl und mittlere Geschwindigkeit), dazu der Verkehrsentwicklungsplan 2016 mit Knotenstromzählungen",
+     "situation": "Die Stadt veröffentlicht ihre Verkehrsmessungen (Buchloe und Lindenberg) als PDF – etwa Martin-Luther-Straße 11.–20.06.2026: je Tag die Zahl der Fahrzeuge und die mittlere Geschwindigkeit, keine Stunden- oder Richtungswerte, ohne Lizenzangabe. Auf derselben Seite steht der Verkehrsentwicklungsplan 2016 mit Zählstellenplan und Knotenstromzählungen.",
+     "empfehlung": "Anfrage nach den Exporten der Messgeräte (Werte je Stunde und Richtung) für die veröffentlichten Messungen, mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Bayerisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Buchloe seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nSie veröffentlichen Ihre Verkehrsmessungen als PDF mit Tageswerten. Ich bitte um die Exporte der Messgeräte mit den Werten je Stunde und Richtung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrsmessungen (Stadt Buchloe)",
+       "url": "https://www.buchloe.de/rathaus-verwaltung/verkehrsmessungen/"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "aggregiert"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.0793,
+     48.1546
+    ]
+   },
+   "properties": {
+    "ags": "09179138",
+    "name": "Moorenweis",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Gemeinde+Moorenweis",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "aggregiert",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "zählt regelmäßig selbst und veröffentlicht die Auswertungen der Messungen als PDF (2026 etwa Grottenstraße und Ringstraße)",
+     "situation": "Die Gemeinde führt regelmäßig Verkehrszählungen durch und veröffentlicht die Auswertungen dauerhaft auf ihrer Website (PDF, ohne Lizenzangabe).",
+     "empfehlung": "Anfrage nach den Exporten der Messgeräte (Werte je Stunde und Richtung) für die veröffentlichten Messungen, mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Bayerisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Gemeinde Moorenweis seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nSie veröffentlichen die Auswertungen Ihrer Verkehrsmessungen. Ich bitte um die Exporte der Messgeräte mit den Werten je Stunde und Richtung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Kommunale Verkehrsmessungen",
+       "url": "https://www.moorenweis.de/kommunale-verkehrsmessungen/"
+      },
+      {
+       "titel": "Verkehrsmessungen (Ergebnisse)",
+       "url": "https://www.moorenweis.de/verkehrsmessungen/"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "aggregiert"
    }
   },
   {

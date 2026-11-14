@@ -29,9 +29,11 @@
     quellen: [muenchen_rad]
     was: >-
       sechs Raddauerzählstellen der Stadt: 15-Minuten-Werte seit 2008, in der Karte als
-      Dauerzählstellen
+      Dauerzählstellen; die Kfz-Dauerzählstellen (Induktionsschleifen, Stunden- und
+      Viertelstundenwerte) gibt es über die Mobilithek nur mit Vertrag, nicht in der Karte
     links:
       - ["Open Data München: Raddauerzählstellen", "https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen"]
+      - ["Mobilithek: Verkehrszählstellen München (Stundenwerte)", "https://mobilithek.info/offers/110000000003145002"]
 - ags: "09564000"
   name: Nürnberg
   lage: [11.0767, 49.4521]
@@ -56,6 +58,7 @@
     links:
       - ["FragDenStaat 2025/26", "https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/"]
       - ["Bericht Verkehrszählung 2018", "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf"]
+      - ["Verkehrszählungen (Berichte bis 2025)", "https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html"]
 - ags: "09761000"
   name: Augsburg
   lage: [10.8978, 48.3689]
@@ -89,9 +92,12 @@
     stand: aggregiert
     was: >-
       Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden
-      lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte
+      lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte; offen dazu
+      eine Passantenzählung in der Annastraße mit Stundenwerten seit Dezember 2020 (CC BY 4.0) –
+      Fußverkehr ist noch keine Gruppe der Karte
     links:
       - ["Radzählstationen (Stadt Augsburg)", "https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen"]
+      - ["Mobilithek: Passanten Annastraße", "https://mobilithek.info/offers/-1747083335311792689"]
 - ags: "09361000"
   name: Amberg
   lage: [11.8583, 49.4447]
@@ -126,6 +132,180 @@
     quellen: [wuerzburg_rad]
     was: >-
       sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als
-      Dauerzählstellen
+      Dauerzählstellen; offen dazu eine Passantenzählung mit Stundenwerten (Lasersensoren,
+      dl-de/by-2-0) – Fußverkehr ist noch keine Gruppe der Karte
     links:
       - ["Fahrradzählung Würzburg", "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"]
+      - ["Mobilithek: Passantenzählung Würzburg (Stundendaten)", "https://mobilithek.info/offers/-8264466313321172654"]
+- ags: "09184138"
+  name: Planegg
+  lage: [11.4246, 48.1058]
+  dauer:
+    stand: aggregiert
+    was: >-
+      Rad-Zählstelle Amtmannstraße seit Mai 2021: je Jahr eine Excel-Datei mit Tageswerten je
+      Richtung, ohne Lizenzangabe
+    situation: >-
+      Die Gemeinde zählt den Radverkehr in der Amtmannstraße und stellt je Jahr eine Excel-Datei
+      ein (ein Blatt je Monat, je Tag die Räder Richtung Krailling und Richtung Planegg). Stundenwerte
+      und eine Lizenz fehlen – ob ein Tag vollständig gezählt ist, lässt sich so nicht prüfen.
+    links:
+      - ["Fahrradzählstelle Amtmannstraße", "https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse"]
+- ags: "09362000"
+  name: Regensburg
+  lage: [12.1017, 49.0152]
+  kontakt: {fds_suche: "Stadt Regensburg"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      eigene Zählungen der Stadt, meist März bis Oktober von 6 bis 10 und 15 bis 19 Uhr, dazu
+      Querschnittszählungen mit Geräten
+    situation: >-
+      Das Amt für Stadtplanung und Mobilität zählt selbst, mit studentischen Hilfskräften,
+      hauptsächlich von März bis Oktober außerhalb der Schulferien jeweils von 6 bis 10 und von 15
+      bis 19 Uhr; an zweistreifigen Straßen auch mit Zählgeräten. Werte sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach allen Zählungen seit 2015 (Werte je Intervall, Strom bzw. Richtung und
+      Fahrzeugart), mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Bayerisches UIG"
+    anfrage:
+      zusatz: >-
+        Ihr Amt für Stadtplanung und Mobilität zählt regelmäßig selbst (6 bis 10 und 15 bis 19 Uhr)
+        und mit Zählgeräten. Ich bitte um diese Zählungen seit 2015.
+    links:
+      - ["Verkehrszählungen (Stadt Regensburg)", "https://www.regensburg.de/rathaus/aemteruebersicht/planungs-u-baureferat/amt-fuer-stadtplanung-und-mobilitaet/informationen-verkehrsplanung/verkehrszaehlungen"]
+  dauer:
+    stand: kandidat
+    was: >-
+      Detektordaten der Stadt über die Mobilithek, nur nach Vermittlung und mit eingeschränkter
+      Lizenz (kostenlos)
+    links:
+      - ["Mobilithek: Dynamische Verkehrsdaten Regensburg", "https://mobilithek.info/offers/837297127089401856"]
+- ags: "09562000"
+  name: Erlangen
+  lage: [11.0033, 49.5951]
+  kontakt: {fds_suche: "Stadt Erlangen"}
+  kurzzeit:
+    stand: nur_karte
+    was: >-
+      Verkehrsbelastungsplan 2017 als PDF; Zählwerte selbst nicht veröffentlicht
+    situation: >-
+      Die Stadt veröffentlicht einen Verkehrsbelastungsplan (Stand 2017) als PDF, dazu den
+      Verkehrsentwicklungs- und Mobilitätsplan 2030. Die Zählungen dahinter sind nicht
+      veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen hinter dem Belastungsplan und späteren Zählungen (Werte je
+      Intervall und Richtung), mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Bayerisches UIG"
+    anfrage:
+      zusatz: >-
+        Ich bitte um die Zählungen, auf denen Ihr Verkehrsbelastungsplan 2017 beruht, und um die
+        Zählungen seither – nicht um den Plan.
+    links:
+      - ["Verkehrsbelastungsplan", "https://erlangen.de/aktuelles/verkehrsbelastungsplan"]
+- ags: "09261000"
+  name: Landshut
+  lage: [12.1521, 48.537]
+  dauer:
+    stand: kandidat
+    was: >-
+      zwei Fahrrad-Dauerzählstellen der Stadt; Werte nicht als Daten veröffentlicht
+    links:
+      - ["Radverkehr (Stadt Landshut)", "https://landshut.de/umwelt/mobilitaet/radverkehr"]
+- ags: "09462000"
+  name: Bayreuth
+  lage: [11.5753, 49.9438]
+  dauer:
+    stand: kandidat
+    was: >-
+      Rad-Dauerzählstelle am Mainradweg (Schulstraße) mit Anzeige der Tages- und Jahreswerte;
+      Werte nicht als Daten veröffentlicht
+    links:
+      - ["Radzählstelle am Mainradweg", "https://www.bayreuth.de/radzaehlstelle-am-mainradweg-in-betrieb-genommen/"]
+- ags: "09461000"
+  name: Bamberg
+  lage: [10.8868, 49.8934]
+  dauer:
+    stand: kandidat
+    was: >-
+      Radzählanlage der Stadt; Werte nicht als Daten veröffentlicht
+    links:
+      - ["Radzählanlage (Stadt Bamberg)", "https://www.stadt.bamberg.de/Schnellnavigation/Suche/Radz%C3%A4hlanlage.php?object=tx,2730.3571.1"]
+- ags: "09471"
+  name: Landkreis Bamberg
+  lage: [10.9327, 49.8319]
+  dauer:
+    stand: kandidat
+    was: >-
+      erste Fahrrad-Dauerzählstelle des Landkreises, mit der Gemeinde Pettstadt in Neuhaus (seit Mai
+      2026); Werte nicht als Daten veröffentlicht
+    links:
+      - ["Erste Fahrraddauerzählstelle im Landkreis", "https://www.landkreis-bamberg.de/Landratsamt/%C3%96ffentlichkeitsarbeit/Pressemitteilungen/Erste-Fahrraddauerz%C3%A4hlstelle-im-Landkreis-Bamberg-er%C3%B6ffnet.php?ModID=255&FID=4261.722.1"]
+- ags: "09565000"
+  name: Schwabach
+  lage: [11.0245, 49.3289]
+  dauer:
+    stand: kandidat
+    was: >-
+      drei Radzählsäulen seit Dezember 2024 (Förderprojekt „Digitalisierung kommunaler
+      Verkehrssysteme“); Werte nicht als Daten veröffentlicht
+    links:
+      - ["Drei Radzählsäulen in Schwabach", "https://www.schwabach.de/de/politik/referate/referat-fuer-umwelt-und-gebaeudemanagement/amt-fuer-mobilitaet-klimaschutz/12779-drei-radzaehlsaeulen-in-schwabach-installiert.html"]
+- ags: "09662000"
+  name: Schweinfurt
+  lage: [10.2303, 50.0455]
+  dauer:
+    stand: kandidat
+    was: >-
+      Verkehrsdaten aus eigener Detektion der Stadtwerke über die Mobilithek, ohne Lizenz und nur
+      nach Vermittlung
+    links:
+      - ["Mobilithek: Verkehrsdaten Stadtwerke Schweinfurt", "https://mobilithek.info/offers/973579563426357248"]
+- ags: "09777121"
+  name: Buchloe
+  lage: [10.7296, 48.0369]
+  kontakt: {fds_suche: "Stadt Buchloe"}
+  kurzzeit:
+    stand: aggregiert
+    was: >-
+      Berichte der eigenen Verkehrsmessungen seit 2025 als PDF (je Tag Anzahl und mittlere
+      Geschwindigkeit), dazu der Verkehrsentwicklungsplan 2016 mit Knotenstromzählungen
+    situation: >-
+      Die Stadt veröffentlicht ihre Verkehrsmessungen (Buchloe und Lindenberg) als PDF – etwa
+      Martin-Luther-Straße 11.–20.06.2026: je Tag die Zahl der Fahrzeuge und die mittlere
+      Geschwindigkeit, keine Stunden- oder Richtungswerte, ohne Lizenzangabe. Auf derselben Seite
+      steht der Verkehrsentwicklungsplan 2016 mit Zählstellenplan und Knotenstromzählungen.
+    empfehlung: >-
+      Anfrage nach den Exporten der Messgeräte (Werte je Stunde und Richtung) für die
+      veröffentlichten Messungen, mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Bayerisches UIG"
+    anfrage:
+      zusatz: >-
+        Sie veröffentlichen Ihre Verkehrsmessungen als PDF mit Tageswerten. Ich bitte um die Exporte
+        der Messgeräte mit den Werten je Stunde und Richtung.
+    links:
+      - ["Verkehrsmessungen (Stadt Buchloe)", "https://www.buchloe.de/rathaus-verwaltung/verkehrsmessungen/"]
+- ags: "09179138"
+  name: Moorenweis
+  lage: [11.0793, 48.1546]
+  kontakt: {fds_suche: "Gemeinde Moorenweis"}
+  kurzzeit:
+    stand: aggregiert
+    was: >-
+      zählt regelmäßig selbst und veröffentlicht die Auswertungen der Messungen als PDF (2026 etwa
+      Grottenstraße und Ringstraße)
+    situation: >-
+      Die Gemeinde führt regelmäßig Verkehrszählungen durch und veröffentlicht die Auswertungen
+      dauerhaft auf ihrer Website (PDF, ohne Lizenzangabe).
+    empfehlung: >-
+      Anfrage nach den Exporten der Messgeräte (Werte je Stunde und Richtung) für die
+      veröffentlichten Messungen, mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Bayerisches UIG"
+    anfrage:
+      an: "Gemeinde Moorenweis"
+      zusatz: >-
+        Sie veröffentlichen die Auswertungen Ihrer Verkehrsmessungen. Ich bitte um die Exporte der
+        Messgeräte mit den Werten je Stunde und Richtung.
+    links:
+      - ["Kommunale Verkehrsmessungen", "https://www.moorenweis.de/kommunale-verkehrsmessungen/"]
+      - ["Verkehrsmessungen (Ergebnisse)", "https://www.moorenweis.de/verkehrsmessungen/"]
