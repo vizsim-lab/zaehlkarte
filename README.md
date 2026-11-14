@@ -167,7 +167,7 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   welche Stadt welche Klasse zählt. Welche Verkehrsarten es gibt, richtet sich nach den Quellen
   (Kfz, Lkw/Schwerverkehr, Rad, Fuß); die Karte öffnet mit Kfz. Die Stufen für Fuß trennen Rad-
   und Fußwege (Bochum: meist 100 bis 500 am Tag) von Fußgängerzonen (Augsburg: rund 17.600,
-  Würzburg: MEDIANE).
+  Würzburg: im Median 14.000 bis 25.000 je Standort).
 - **Datenlage:** Die Ebene „Datenlage je Kommune“ folgt der Familie – bei den Dauerzählstellen
   mit eigenem Stand je Kommune und eigenen Belegen; beide Familien nutzen dieselben Stände (in der
   Karte, offen, herausgegeben, aussichtsreich, ohne Lizenz, nur Summen, nichts offen …).

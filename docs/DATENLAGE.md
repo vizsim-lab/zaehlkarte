@@ -1,4 +1,4 @@
-# Datenlage: kommunale Verkehrszählungen
+# Datenlage: Verkehrszählungen je Kommune
 
 Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am 2026-11-14 aus
 `pipeline/config/kommunen/` (je Land eine Datei) – nicht von Hand ändern. Dieselben
@@ -20,6 +20,7 @@ FragDenStaat.
 | Bad Honnef | NW | nur Summen oder Mittelwerte offen |  | Anfrage nach den ausgelesenen Rohdaten (je Fahrzeug oder je Stunde und Richtung) aller Zählungen seit 2015 |
 | Bad Säckingen | BW | – | in der Karte |  |
 | Bad Vilbel | HE | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen für den Gesamtverkehrsplan |
+| Bad Wimpfen | BW | – | in der Karte |  |
 | Baden-Baden | BW | – | in der Karte |  |
 | Bamberg | BY | – | vorhanden, Werte nicht offen |  |
 | Bargteheide | SH | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Exporten der beiden Zählgeräte und der Kamerazählung (Werte je Intervall und Richtung), mit Lizenz |
@@ -111,7 +112,7 @@ FragDenStaat.
 | Neckarsulm | BW | – | in der Karte |  |
 | Neubrandenburg | MV | erhoben – Anfrage aussichtsreich |  | Anfrage nach der Videozählung 2020 und den Zählungen seither |
 | Neubulach | BW | vorhanden, aber ohne Lizenz |  | Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw |
-| Neuss | NW | – | vorhanden, aber ohne Lizenz |  |
+| Neuss | NW | – | in der Karte |  |
 | Neustadt am Rübenberge | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen 2021 (Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz |
 | Nürnberg | BY | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt |
 | Oberursel (Taunus) | HE | nur als Karte | vorhanden, Werte nicht offen | Anfrage nach den gezählten Werten dieser und aller späteren Zählungen |
@@ -386,6 +387,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [Pressemitteilung Juni 2026](https://www.bad-vilbel.de/rathaus-politik/aktuelles/pressemitteilungen/2026/juni/masten-fuer-verkehrszaehlungen-im-gebiet-der-kernstadt/)
+
+
+## Bad Wimpfen (BW) – Dauerzählstellen in der Karte
+
+**Lage:** eine Rad-Zählstelle des Landes (Regierungspräsidium Stuttgart) über das Bündel von MobiData BW (dl-de/by-2-0) – in der Karte als Dauerzählstelle
+
+**Belege:** [Eco-Counter-Fahrradzähler (MobiData BW)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
 
 
 ## Baden-Baden (BW) – Dauerzählstellen in der Karte
@@ -2545,11 +2553,11 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Belege:** [Kurzbericht Verkehrszählungen (PDF)](https://www.neubulach.de/ceasy/resource/?download=1&id=3956)
 
 
-## Neuss (NW) – Dauerzählstellen vorhanden, aber ohne Lizenz
+## Neuss (NW) – Dauerzählstellen in der Karte
 
-**Lage:** Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte je Richtung im Portal des Rhein-Kreises Neuss, seit November 2026 auch in der Mobilithek – dort „keine Lizenz“; ohne Lizenzangabe nicht in der Karte
+**Lage:** Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte seit Juli 2026 im Open-Data-Portal des Rhein-Kreises Neuss (CC BY-SA 4.0; die Mobilithek führt den Datensatz ohne Lizenz) – in der Karte als Dauerzählstelle
 
-**Belege:** [Mobilithek: Radverkehrszählstelle RS5](https://mobilithek.info/offers/-1611162702897177411)
+**Belege:** [Radverkehrszählstelle RS5 (Open Data Rhein-Kreis Neuss)](https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/) · [Mobilithek: Radverkehrszählstelle RS5](https://mobilithek.info/offers/-1611162702897177411)
 
 
 ## Neustadt am Rübenberge (NI) – erhoben – Anfrage aussichtsreich
@@ -3403,9 +3411,9 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Würzburg (BY) – Dauerzählstellen in der Karte
 
-**Lage:** sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als Dauerzählstellen; offen dazu eine Passantenzählung mit Stundenwerten (Lasersensoren, dl-de/by-2-0) – Fußverkehr ist noch keine Gruppe der Karte
+**Lage:** sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 und die Passantenzählung an drei Standorten der Innenstadt (Laserscanner von hystreet.com, Stundenwerte Januar 2024 bis Mai 2026), beide dl-de/by-2-0 – in der Karte als Dauerzählstellen. Ältere Stundenwerte der Passantenzählung (Schönbornstraße seit April 2019, Kaiser- und Spiegelstraße seit Oktober 2022) stehen in eigenen Datensätzen je Standort, noch nicht in der Karte
 
-**Belege:** [Fahrradzählung Würzburg](https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/) · [Mobilithek: Passantenzählung Würzburg (Stundendaten)](https://mobilithek.info/offers/-8264466313321172654)
+**Belege:** [Fahrradzählung Würzburg](https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/) · [Passantenzählung – Stundendaten](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/) · [Mobilithek: Passantenzählung Würzburg (Stundendaten)](https://mobilithek.info/offers/-8264466313321172654)
 
 
 ## Zweibrücken (RP) – erhoben – Anfrage aussichtsreich

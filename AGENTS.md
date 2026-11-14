@@ -901,9 +901,13 @@ robots.txt für alle Robots sperrt. Seitdem:
       `pedestrians_count`, `location_id`; Lage aus `geo_point_2d`, als Zahlen in der Quelldatei).
       Drei Standorte (Schönbornstraße 135, Spiegelstraße 470, Kaiserstraße 476), 01.01.2024 bis
       17.05.2026 – seither nicht fortgeschrieben (`data_processed` 18.05.2026, Stand 14.11.2026).
-      Keine Doppelten. **`unverified`:** 79 % der Zeilen, nach Ortszeit 0–20 Uhr zu 92 %, 20–24 Uhr
-      zu 0–7 %, an allen drei Standorten gleich – vermutlich übernimmt das Portal die Stunden eines
-      Tages gegen 20 Uhr, solange hystreet sie noch nicht geprüft hat, und zieht sie nicht nach.
+      Keine Doppelten; am Rückstelltag fehlt eine der beiden Stunden 2–3 Uhr, um den Jahreswechsel
+      2025/26 fehlen ganze Tage. Volle Tage: 1.765 (Stellen × Tage), im Median Schönbornstraße
+      25.105, Kaiserstraße 21.822, Spiegelstraße 14.335, höchster 67.169. **`unverified`:** 79 %
+      der Zeilen, nach Ortszeit 0–20 Uhr zu 92 %, 20–24 Uhr zu 0–7 %, an allen drei Standorten
+      gleich – vermutlich übernimmt das Portal die Stunden eines Tages gegen 20 Uhr, solange
+      hystreet sie noch nicht geprüft hat, und zieht sie nicht nach. Als „nicht gezählt“ blieben
+      nur 180 volle Tage (Stellen × Tage), der jüngste im Januar 2025.
       Das Kennzeichen sagt also nicht, dass ein Wert falsch ist: gezählt wie Rohwerte (Münster,
       Würzburg Rad); Ausfälle stehen teils als 0 (Schönbornstraße 15.05.2026, 12 Uhr: 0 zwischen
       3.822 und 4.790) – Hinweis an der Quelle. Die Verteilung des Kennzeichens zeigt

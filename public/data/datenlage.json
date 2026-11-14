@@ -1185,6 +1185,39 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     9.1633,
+     49.2282
+    ]
+   },
+   "properties": {
+    "ags": "08125007",
+    "name": "Bad Wimpfen",
+    "land": "BW",
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "in_karte",
+     "quellen": [
+      "mobidata_rad"
+     ],
+     "was": "eine Rad-Zählstelle des Landes (Regierungspräsidium Stuttgart) über das Bündel von MobiData BW (dl-de/by-2-0) – in der Karte als Dauerzählstelle",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Eco-Counter-Fahrradzähler (MobiData BW)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      }
+     ]
+    },
+    "stand_d": "in_karte"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      9.0599,
      48.5166
     ]
@@ -1874,14 +1907,19 @@
     "dauer": {
      "stand": "in_karte",
      "quellen": [
-      "wuerzburg_rad"
+      "wuerzburg_rad",
+      "wuerzburg_fuss"
      ],
-     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als Dauerzählstellen; offen dazu eine Passantenzählung mit Stundenwerten (Lasersensoren, dl-de/by-2-0) – Fußverkehr ist noch keine Gruppe der Karte",
+     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 und die Passantenzählung an drei Standorten der Innenstadt (Laserscanner von hystreet.com, Stundenwerte Januar 2024 bis Mai 2026), beide dl-de/by-2-0 – in der Karte als Dauerzählstellen. Ältere Stundenwerte der Passantenzählung (Schönbornstraße seit April 2019, Kaiser- und Spiegelstraße seit Oktober 2022) stehen in eigenen Datensätzen je Standort, noch nicht in der Karte",
      "situation": null,
      "links": [
       {
        "titel": "Fahrradzählung Würzburg",
        "url": "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"
+      },
+      {
+       "titel": "Passantenzählung – Stundendaten",
+       "url": "https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/"
       },
       {
        "titel": "Mobilithek: Passantenzählung Würzburg (Stundendaten)",
@@ -6018,18 +6056,24 @@
     "kontakt": null,
     "kurzzeit": null,
     "dauer": {
-     "stand": "ohne_lizenz",
-     "quellen": [],
-     "was": "Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte je Richtung im Portal des Rhein-Kreises Neuss, seit November 2026 auch in der Mobilithek – dort „keine Lizenz“; ohne Lizenzangabe nicht in der Karte",
+     "stand": "in_karte",
+     "quellen": [
+      "neuss_rad"
+     ],
+     "was": "Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte seit Juli 2026 im Open-Data-Portal des Rhein-Kreises Neuss (CC BY-SA 4.0; die Mobilithek führt den Datensatz ohne Lizenz) – in der Karte als Dauerzählstelle",
      "situation": null,
      "links": [
+      {
+       "titel": "Radverkehrszählstelle RS5 (Open Data Rhein-Kreis Neuss)",
+       "url": "https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/"
+      },
       {
        "titel": "Mobilithek: Radverkehrszählstelle RS5",
        "url": "https://mobilithek.info/offers/-1611162702897177411"
       }
      ]
     },
-    "stand_d": "ohne_lizenz"
+    "stand_d": "in_karte"
    }
   },
   {
