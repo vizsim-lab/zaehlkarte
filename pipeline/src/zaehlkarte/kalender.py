@@ -1,9 +1,11 @@
 """Zähltag einordnen: Schultag, Ferien, Feiertag oder Wochenende – je Bundesland.
 
 Schulferien kommen aus `config/schulferien_<land>.csv` (Spalten von, bis, ferien,
-schuljahr, gebiet, quelle). Ein Schuljahr gilt als abgedeckt, wenn es in der Spalte
-`schuljahr` vorkommt; fehlt es, ist ein Werktag „unbekannt“ statt „Schultag“.
-Berlin hatte bis Sommer 1991 getrennte Ferien für West und Ost (Spalte `gebiet`).
+schuljahr, gebiet, quelle); das Land wählt die Datei (`FERIEN`), für alle 16 Länder aus den
+KMK-Ferienkalendern. Ein Schuljahr gilt als abgedeckt, wenn es in der Spalte `schuljahr`
+vorkommt; fehlt es, ist ein Werktag „unbekannt“ statt „Schultag“. Berlin hatte bis Sommer 1991
+getrennte Ferien für West und Ost (Spalte `gebiet`). Feiertage: `feiertage()`, ebenfalls für alle
+16 Länder; `zaehlkarte kalender` meldet Länder, deren Ferien bald enden.
 
 Kalender-Logik portiert aus vizsim/berlin-traffic-counts_schulwege (ferien.py, MIT).
 """
@@ -18,11 +20,21 @@ from pathlib import Path
 
 GEBIETE = ("west", "ost")
 TAGTYPEN = ("schule", "ferien", "feiertag", "wochenende")
-# Länder, deren eigene Feiertage `feiertage()` kennt – für die übrigen liefert sie nur die
-# bundesweiten (tests/test_konfiguration.py: jede Quelle liegt in einem dieser Länder)
-FEIERTAGE_LAENDER = frozenset({"BB", "BE", "BW", "BY", "HB", "HH", "MV", "NI", "NW", "SH", "SN"})
 LAENDER = ("BB", "BE", "BW", "BY", "HB", "HE", "HH", "MV", "NI", "NW", "RP", "SH", "SL", "SN",
            "ST", "TH")
+# Länder, deren eigene Feiertage `feiertage()` kennt (tests/test_kalender.py hält das gleich)
+FEIERTAGE_LAENDER = frozenset(LAENDER)
+# Schulferien je Land (config/), aus den KMK-Ferienkalendern (werkzeuge/kmk_ferien.py)
+FERIEN = {
+    "BB": "schulferien_brandenburg.csv", "BE": "schulferien_berlin.csv",
+    "BW": "schulferien_baden-wuerttemberg.csv", "BY": "schulferien_bayern.csv",
+    "HB": "schulferien_bremen.csv", "HE": "schulferien_hessen.csv",
+    "HH": "schulferien_hamburg.csv", "MV": "schulferien_mecklenburg-vorpommern.csv",
+    "NI": "schulferien_niedersachsen.csv", "NW": "schulferien_nordrhein-westfalen.csv",
+    "RP": "schulferien_rheinland-pfalz.csv", "SH": "schulferien_schleswig-holstein.csv",
+    "SL": "schulferien_saarland.csv", "SN": "schulferien_sachsen.csv",
+    "ST": "schulferien_sachsen-anhalt.csv", "TH": "schulferien_thueringen.csv",
+}
 
 
 @dataclass(frozen=True)
@@ -100,6 +112,39 @@ class Ferienkalender:
         sj = schuljahr(tag)
         return sj not in self.abgedeckt["alle"] and any(sj in self.abgedeckt[g] for g in GEBIETE)
 
+    def letztes_schuljahr(self) -> str | None:
+        """Jüngstes abgedecktes Schuljahr („2027/2028“) – danach ist jeder Werktag unbekannt."""
+        return max(self.abgedeckt["alle"], default=None)
+
+
+def abdeckung(config: Path, stichtag: date) -> tuple[list[str], list[str]]:
+    """Ferien je Land: erstes und letztes Schuljahr -> (Zeilen für den Bericht, Länder, deren
+    Kalender vor dem Schuljahr des Stichtags endet). Der Stichtag liegt ein paar Monate voraus –
+    so meldet sich ein fehlender KMK-Kalender, bevor Werktage „unbekannt“ werden."""
+    noetig = schuljahr(stichtag)
+    zeilen, fehlt = [], []
+    for land in LAENDER:
+        kal = ferienkalender(land, config)
+        jahre = sorted(kal.abgedeckt["alle"] | kal.abgedeckt["west"]) if kal else []
+        if not jahre:
+            zeilen.append(f"Kalender {land}: keine Ferien ({FERIEN[land]})")
+            fehlt.append(land)
+            continue
+        z = f"Kalender {land}: {jahre[0]} – {jahre[-1]}"
+        if jahre[-1] < noetig:
+            z += f" – endet vor {noetig}: KMK-Kalender nachtragen (werkzeuge/kmk_ferien.py)"
+            fehlt.append(land)
+        zeilen.append(z)
+    return zeilen, fehlt
+
+
+@cache
+def ferienkalender(land: str, config: Path) -> Ferienkalender | None:
+    """Der Ferienkalender des Landes aus `config/` (FERIEN); None, wenn die Datei fehlt – dann ist
+    jeder Werktag unbekannt (tests/test_konfiguration.py prüft, dass alle 16 da sind)."""
+    pfad = config / FERIEN[land] if land in FERIEN else None
+    return Ferienkalender.lade(pfad) if pfad and pfad.is_file() else None
+
 
 def ostersonntag(jahr: int) -> date:
     """Gregorianischer Ostersonntag (anonymer Algorithmus nach Meeus/Jones/Butcher)."""
@@ -118,7 +163,9 @@ def ostersonntag(jahr: int) -> date:
 
 @cache
 def feiertage(land: str, jahr: int) -> dict[date, str]:
-    """Gesetzliche Feiertage (bundesweit + Land BB, BE, BW, BY, MV, NW, SN; HB, HH, NI, SH)."""
+    """Gesetzliche Feiertage: bundesweite und die des Landes (alle 16 Länder). Nur landesweite –
+    Fronleichnam in Teilen Sachsens und Thüringens und das Augsburger Friedensfest fehlen,
+    Mariä Himmelfahrt gilt für ganz Bayern."""
     ostern = ostersonntag(jahr)
     tage = {
         date(jahr, 1, 1): "Neujahr",
@@ -172,6 +219,23 @@ def feiertage(land: str, jahr: int) -> dict[date, str]:
         # nicht in Leipzig, hier nicht abgebildet
     elif land in ("HB", "HH", "NI", "SH") and jahr >= 2018:  # seit 2018 gesetzlicher Feiertag
         tage[date(jahr, 10, 31)] = "Reformationstag"
+    elif land == "HE":  # § 1 Hessisches Feiertagsgesetz
+        tage[ostern + timedelta(days=60)] = "Fronleichnam"
+    elif land == "RP":  # Landesgesetz über den Schutz der Sonn- und Feiertage (LFtG)
+        tage[ostern + timedelta(days=60)] = "Fronleichnam"
+        tage[date(jahr, 11, 1)] = "Allerheiligen"
+    elif land == "SL":  # § 2 Saarländisches Feiertagsgesetz (SFG)
+        tage[ostern + timedelta(days=60)] = "Fronleichnam"
+        tage[date(jahr, 8, 15)] = "Mariä Himmelfahrt"
+        tage[date(jahr, 11, 1)] = "Allerheiligen"
+    elif land == "ST":  # § 2 FeiertG LSA; Heilige Drei Könige seit 1993
+        if jahr >= 1993:
+            tage[date(jahr, 1, 6)] = "Heilige Drei Könige"
+        tage[date(jahr, 10, 31)] = "Reformationstag"
+    elif land == "TH":  # § 2 ThürFGtG; Weltkindertag seit 2019 (Drittes Änderungsgesetz)
+        tage[date(jahr, 10, 31)] = "Reformationstag"
+        if jahr >= 2019:
+            tage[date(jahr, 9, 20)] = "Weltkindertag"
     return tage
 
 

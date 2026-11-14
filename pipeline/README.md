@@ -78,11 +78,12 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/gedaechtnis.py` | Gedächtnis der Quellen mit kurzer Vorhaltezeit (Hamburg, Leipzig): Monatsdateien je UTC-Tag |
 | `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen; Geofabrik, einmal geladen) |
 | `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen, zweite Kopie je Jahr in `gedaechtnis-kopie-JJJJ` (Workflow) |
-| `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Text von `pdftotext -layout`), mit Abgleich gegen eine vorhandene CSV |
+| `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Tabelle des PDFs mit pdfplumber; Text von `pdftotext -layout` nur ohne PDF), mit Abgleich gegen eine vorhandene CSV |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |
 
 Konfiguration: `config/sources.yaml` (Quellen, Datenlage, Rechtslage je Land),
-`config/schulferien_*.csv` (KMK-Ferienkalender für die Einordnung des Zähltags),
+`config/schulferien_*.csv` (KMK-Ferienkalender aller 16 Länder für die Einordnung des Zähltags; das Land
+der Quelle wählt die Datei, `kalender.FERIEN`),
 `config/berlin_rohdateien_2019-2025.txt` (welche Berliner Rohdateien einzeln online liegen).
 `geokodierung/berlin_ergaenzung.csv`: Lage der Berliner Zählungen, die weder GPS noch einen
 Eintrag im Schulwege-Cache haben – erzeugt vom Workflow „Berlin geokodieren“
@@ -96,6 +97,7 @@ uv run zaehlkarte fetch            # ~450 MB Download (MobiData-ZIPs samt PDFs);
                                    # Quelle, laufen die anderen weiter (Exit-Code 1)
 uv run zaehlkarte build            # Bericht ohne zu schreiben
 uv run zaehlkarte site             # Kartendaten schreiben (~1,5 min)
+uv run zaehlkarte kalender         # Ferien je Land: Exit-Code 1, wenn sie in drei Monaten enden
 uv run zaehlkarte datenlage        # nur datenlage.json und docs/DATENLAGE.md (aus sources.yaml
                                    # und der vorhandenen index.json, ohne neuen Bau)
 uv run zaehlkarte dauer fetch      # Dauerzählstellen: Berliner Monatsarchive (~330 MB), Rostock

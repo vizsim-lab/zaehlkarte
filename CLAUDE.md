@@ -125,8 +125,10 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Neue Quelle:** Eintrag in `sources.yaml` (`status: research` bis der Adapter steht),
   Adapter mit `lese(quelle, pfade, bericht)` und `Bericht`, Test mit synthetischer Datei.
   Mehrere Kommunen mit gleichem Format teilen sich einen Adapter (`adapter:`). Kurzzeit: der
-  Abruf des Formats steht in `fetch.ABRUF`. Eine Quelle aus einem Land ohne Ferien oder
-  Feiertage braucht zuerst den Kalender (`kalender.FEIERTAGE_LAENDER`, `config/schulferien_*`).
+  Abruf des Formats steht in `fetch.ABRUF`. Ferien und Feiertage gibt es für alle 16 Länder;
+  das Land der Quelle wählt den Kalender (`kalender.FERIEN`, `config/schulferien_*`). Meldet
+  `zaehlkarte kalender`, dass Ferien bald enden: nächsten KMK-Kalender mit
+  `werkzeuge/kmk_ferien.py` aus dem PDF nachtragen.
 - **Frontend:** `npm run dev`; vor jedem Push `npm run test:unit` und `npm run test:web`
   (Playwright sperrt das Netz außer dem Testserver – die Karte muss ohne Hintergrund laufen).
   Neues Verhalten = neuer Test in `tests/web/`.

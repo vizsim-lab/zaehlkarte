@@ -1,19 +1,29 @@
-"""Schulferien eines Landes aus den KMK-Ferienkalendern lesen (PDF -> Text mit `pdftotext -layout`).
+"""Schulferien eines Landes aus den KMK-Ferienkalendern lesen – aus dem PDF (bevorzugt) oder aus
+dessen Text (`pdftotext -layout`).
 
-    pdftotext -layout FER2012_13.pdf FER2012_13.txt
-    uv run python werkzeuge/kmk_ferien.py Bayern FER*.txt > schulferien.csv
-    uv run python werkzeuge/kmk_ferien.py --pruefe config/schulferien_nordrhein-westfalen.csv \
-        Nordrhein-Westfalen FER*.txt
+    uv run python werkzeuge/kmk_ferien.py --urls urls.txt Hessen FER*.pdf > schulferien_hessen.csv
+    uv run python werkzeuge/kmk_ferien.py --pruefe config/schulferien_bayern.csv Bayern FER*.pdf
 
-Die Tabelle hat je Land eine Zeile und sechs Spalten (Herbst, Weihnachten, Winter,
-Ostern/Frühjahr, Himmelfahrt/Pfingsten, Sommer); mehrzeilige Zellen setzt pdftotext über und unter
-die Zeile des Landes. Jede Zeile zwischen zwei Ländern gehört zum näheren, jedes Datum zur Spalte,
-deren Überschrift ihm am nächsten steht. Die Jahre ergeben sich aus dem Schuljahr: Herbst im
-ersten, Weihnachten im ersten bzw. (Januar) zweiten, alle übrigen im zweiten Jahr.
+PDF: pdfplumber liest die Tabelle an ihren Linien – je Land eine Zeile, je Spalte eine Zelle,
+mehrzeilige Zellen bleiben beisammen. Name und Jahr einer Spalte stehen in ihrem Kopf („Herbst
+2024“, „Weihnachten 2024/2025“; Daten ab August im ersten, sonst im zweiten Jahr). Bis 2001/02
+stehen die Sommerferien vorn und gehören zum ersten Jahr des Schuljahres, 2001/02 hat zwei
+Sommerspalten – beides folgt aus dem Kopf.
+
+Text (nur, wo das PDF fehlt): Die Tabelle hat je Land eine Zeile und sechs Spalten (Herbst,
+Weihnachten, Winter, Ostern/Frühjahr, Himmelfahrt/Pfingsten, Sommer); mehrzeilige Zellen setzt
+pdftotext über und unter die Zeile des Landes. Jede Zeile zwischen zwei Ländern gehört zum näheren,
+jedes Datum zur Spalte, deren Überschrift ihm am nächsten steht. Die Jahre ergeben sich aus dem
+Schuljahr: Herbst im ersten, Weihnachten im ersten bzw. (Januar) zweiten, alle übrigen im zweiten
+Jahr. Zwischen zwei Ländern ist die Zuordnung unsicher: 2024/25 gab sie zwei Tage
+Mecklenburg-Vorpommerns an die Nachbarn.
+
+Eine Zelle kann mehrere Einträge haben: „04.10. - 19.10. / 01.11.“, „30.04. und 02.05.“,
+„16. - 30.10.“ (Tag ohne Monat). Kursiv gesetzte schul- und unterrichtsfreie Tage stehen wie Ferien
+unter dem Namen ihrer Spalte. Gleiche Einträge eines Schuljahres zählen einmal.
 
 Ausgabe wie `config/schulferien_*.csv` (von, bis, ferien, schuljahr, gebiet, quelle); die Quelle
-ist die URL je Schuljahr (`--urls` mit Zeilen „2012_13 https://…“). Das Ergebnis vor dem Einchecken
-gegen die PDFs prüfen – kursiv gesetzte unterrichtsfreie Tage unterscheidet der Text nicht.
+ist die URL je Schuljahr (`--urls` mit Zeilen „2012_13 https://…“).
 """
 
 from __future__ import annotations
@@ -31,9 +41,28 @@ SPALTEN = [("Herbst", "Herbstferien"), ("Weihnachten", "Weihnachtsferien"),
 LAENDER = ["Baden-Württemberg", "Bayern", "Berlin", "Brandenburg", "Bremen", "Hamburg", "Hessen",
            "Mecklenburg-Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz",
            "Saarland", "Sachsen-Anhalt", "Sachsen", "Schleswig-Holstein", "Thüringen"]
+NAMEN = [("Sommer", "Sommerferien"), ("Herbst", "Herbstferien"), ("Weihnacht", "Weihnachtsferien"),
+         ("Winter", "Winterferien"), ("Ostern", "Osterferien"), ("Frühjahr", "Osterferien"),
+         ("Pfingst", "Pfingstferien"), ("Himmelf", "Pfingstferien")]
 DATUM = r"(\d{1,2})\s?\.\s?(\d{1,2})\.?(?:\s?\d{4})?"
-EINTRAG = re.compile(DATUM + r"(?:\s*[-–]\s*" + DATUM + r")?")
+TAG = r"(\d{1,2})\."  # Tag ohne Monat vor einem Bis-Datum: „16. - 30.10.“
+# eng um den Strich: ein Strich mit viel Abstand ist eine leere Nachbarzelle („22.04.   -   30.06.“)
+BIS = r"\s{0,3}[-–]\s{0,3}"
+EINTRAG = re.compile(rf"(?:{DATUM}|{TAG}(?={BIS}\d))(?:{BIS}{DATUM})?")
 STRICH = re.compile(r"(?<!\S)(?:--?|–)(?!\S)")  # Zelle ohne Ferien
+KLAMMER = re.compile(r"\(\s*[-\d]*\s*\)")  # „(3)“: Zahl der beweglichen Ferientage
+
+
+def _paar(m: re.Match) -> tuple[int, int, int, int] | None:
+    """(Tag, Monat) des ersten und letzten Tages; „16. - 30.10.“ nimmt den Monat des Bis-Datums."""
+    if m.group(1):
+        t1, m1 = int(m.group(1)), int(m.group(2))
+    elif m.group(4):
+        t1, m1 = int(m.group(3)), int(m.group(5))
+    else:
+        return None
+    t2, m2 = (int(m.group(4)), int(m.group(5))) if m.group(4) else (t1, m1)
+    return t1, m1, t2, m2
 
 
 def _land(zeile: str) -> str | None:
@@ -68,7 +97,7 @@ def _kopf(zeilen: list[str]) -> tuple[int, list[float]]:
 
 def _treffer(zeile: str, mitten: list[float]) -> list[tuple[int, re.Match]]:
     """Daten einer Zeile mit ihrer Spalte (nächste Überschrift)."""
-    z = re.sub(r"\(\s*[-\d]*\s*\)", lambda m: " " * len(m.group(0)), zeile)  # „(3)“ bewegliche Tage
+    z = KLAMMER.sub(lambda m: " " * len(m.group(0)), zeile)
     out = []
     for m in EINTRAG.finditer(z):
         mitte = (m.start() + m.end()) / 2
@@ -79,7 +108,7 @@ def _treffer(zeile: str, mitten: list[float]) -> list[tuple[int, re.Match]]:
 def _belegt(zeile: str, mitten: list[float]) -> set[int]:
     """Spalten, in denen die Zeile etwas einträgt: ein Datum oder einen Strich („-“, „--“ heißt
     keine Ferien – die Zelle ist belegt, eine mehrzeilige Zelle daneben gehört nicht dazu)."""
-    z = re.sub(r"\(\s*[-\d]*\s*\)", lambda m: " " * len(m.group(0)), zeile)
+    z = KLAMMER.sub(lambda m: " " * len(m.group(0)), zeile)
     spalten = {k for k, _ in _treffer(zeile, mitten)}
     rest = EINTRAG.sub(lambda m: " " * len(m.group(0)), z)
     for m in STRICH.finditer(rest):
@@ -136,8 +165,9 @@ def lies(text: str, land: str, schuljahr: str) -> list[tuple[date, date, str]]:
     out = []
     for k, (_, name) in enumerate(SPALTEN):
         for _, m in sorted(zellen[k], key=lambda x: (x[0], x[1].start())):
-            t1, m1 = int(m.group(1)), int(m.group(2))
-            t2, m2 = (int(m.group(3)), int(m.group(4))) if m.group(3) else (t1, m1)
+            if (paar := _paar(m)) is None:
+                continue
+            t1, m1, t2, m2 = paar
 
             def jahr(monat: int, spalte: int = k) -> int:
                 if spalte == 0:
@@ -158,10 +188,71 @@ def lies(text: str, land: str, schuljahr: str) -> list[tuple[date, date, str]]:
     return out
 
 
+def _spalten(kopf: list[str | None]) -> list[tuple[str, str | None] | None]:
+    """Je Spalte des Tabellenkopfs (Ferienname, Jahresangabe „2024“ bzw. „2024/2025“); None für
+    die Spalte der Länder."""
+    out: list[tuple[str, str | None] | None] = []
+    for zelle in kopf:
+        text = " ".join((zelle or "").split())
+        name = next((n for wort, n in NAMEN if wort in text), None)
+        jahr = re.search(r"\d{4}(?:\s*/\s*\d{4})?", text)
+        out.append((name, jahr.group(0).replace(" ", "") if jahr else None) if name else None)
+    return out
+
+
+def _jahr(angabe: str | None, monat: int, y1: int, name: str) -> int:
+    if angabe and "/" in angabe:
+        erstes, zweites = angabe.split("/")
+        return int(erstes) if monat >= 8 else int(zweites)
+    if angabe:
+        return int(angabe)
+    return y1 if monat >= 8 and name in ("Herbstferien", "Weihnachtsferien") else y1 + 1
+
+
+def _landzelle(text: str) -> str:
+    """„2\nSchleswig-Holstein (1)“, „Mecklenburg-\nVorpommern“ -> Name am Anfang, eine Zeile."""
+    text = re.sub(r"-\s*\n\s*", "-", text).replace("\n", " ")
+    return re.sub(r"^[^A-Za-zÄÖÜäöü]+", "", text)
+
+
+def lies_pdf(pfad: Path, land: str, schuljahr: str) -> list[tuple[date, date, str]]:
+    """-> [(von, bis, Name)] des Landes aus der Tabelle des PDFs (pdfplumber)."""
+    import pdfplumber
+
+    with pdfplumber.open(pfad) as pdf:
+        tabellen = [t for s in pdf.pages for t in s.extract_tables()]
+    if not tabellen:
+        raise ValueError(f"{pfad.name}: keine Tabelle")
+    tabelle = max(tabellen, key=len)
+    spalten = _spalten(tabelle[0])
+    if sum(s is not None for s in spalten) < 6:
+        raise ValueError(f"{pfad.name}: Tabellenkopf nicht erkannt: {tabelle[0]}")
+    zeile = next((z for z in tabelle[1:] if z and z[0] and _land(_landzelle(z[0])) == land), None)
+    if zeile is None:
+        raise ValueError(f"{land} nicht in der Tabelle {schuljahr}")
+    y1 = int(schuljahr[:4])
+    out = []
+    for spalte, zelle in zip(spalten, zeile, strict=True):
+        if spalte is None or not zelle:
+            continue
+        name, angabe = spalte
+        paare = [p for m in EINTRAG.finditer(KLAMMER.sub(" ", zelle)) if (p := _paar(m))]
+        for i, (t1, m1, t2, m2) in enumerate(paare):
+            von = date(_jahr(angabe, m1, y1, name), m1, t1)
+            bis = date(_jahr(angabe, m2, y1, name), m2, t2)
+            if bis < von:
+                raise ValueError(f"{land} {schuljahr} {name}: {von} > {bis}")
+            # Bayern: zwei Einträge unter Ostern/Frühjahr = Frühjahrs- (Fasching) und Osterferien
+            nam = "Frühjahrsferien" if (land == "Bayern" and name == "Osterferien"
+                                        and len(paare) > 1 and i == 0) else name
+            out.append((von, bis, nam))
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("land")
-    ap.add_argument("dateien", nargs="+", type=Path)
+    ap.add_argument("dateien", nargs="+", type=Path, help="FER2012_13.pdf (oder .txt) …")
     ap.add_argument("--urls", type=Path, help="Zeilen „2012_13 https://…“")
     ap.add_argument("--pruefe", type=Path, help="vorhandene CSV zum Vergleich")
     a = ap.parse_args()
@@ -171,21 +262,23 @@ def main() -> None:
             if z.strip():
                 k, u = z.split()
                 urls[k] = u
-    alle = []
+    alle: list[tuple[date, date, str, str, str]] = []
     for p in sorted(a.dateien):
         m = re.search(r"(\d{4})_(\d{2})", p.name)
         sj = f"{m.group(1)}/{int(m.group(1)) + 1}"
-        for von, bis, name in lies(p.read_text(encoding="utf-8"), a.land, sj):
+        eintraege = (lies_pdf(p, a.land, sj) if p.suffix.lower() == ".pdf"
+                     else lies(p.read_text(encoding="utf-8"), a.land, sj))
+        for von, bis, name in dict.fromkeys(eintraege):  # gleiche Einträge einmal
             alle.append((von, bis, name, sj, urls.get(f"{m.group(1)}_{m.group(2)}", "")))
     if a.pruefe:
         zeilen = csv.DictReader(z for z in a.pruefe.open(encoding="utf-8") if not z.startswith("#"))
         soll = {(r["von"], r["bis"], r["schuljahr"]) for r in zeilen
-                if r.get("gebiet", "alle") in ("alle", "")}
+                if r.get("gebiet", "alle") in ("alle", "berlin", "")}
         ist = {(v.isoformat(), b.isoformat(), sj) for v, b, _, sj, _ in alle}
         jahre = {sj for *_, sj, _ in alle} & {s for *_, s in soll}
         soll = {x for x in soll if x[2] in jahre}
         ist = {x for x in ist if x[2] in jahre}
-        print(f"Schuljahre verglichen: {len(jahre)}; nur im Text: {sorted(ist - soll)}; "
+        print(f"Schuljahre verglichen: {len(jahre)}; nur im Kalender: {sorted(ist - soll)}; "
               f"nur in der CSV: {sorted(soll - ist)}")
         return
     w = csv.writer(sys.stdout, lineterminator="\n")

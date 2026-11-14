@@ -2,9 +2,8 @@
 Tippfehler oder eine vergessene Angabe fällt im PR auf – nicht erst beim Bau, in der Karte oder
 gar nicht (ein unbekannter optionaler Schlüssel würde sonst still zu `None`).
 
-Neue Regeln kommen hierher. Noch nicht geprüft, weil es heute noch nicht gilt: Ferien und
-Feiertage für das Land jeder Kommune (nur für das Land jeder Quelle) und die Verknüpfung einer
-Kommune mit ihren Dauer-Quellen (die Karte sucht sie über den Namen und die Nähe).
+Neue Regeln kommen hierher. Noch nicht geprüft, weil es heute noch nicht gilt: die Verknüpfung
+einer Kommune mit ihren Dauer-Quellen (die Karte sucht sie über den Namen und die Nähe).
 """
 
 from __future__ import annotations
@@ -18,7 +17,7 @@ import pytest
 from zaehlkarte import adapters, fetch, site
 from zaehlkarte.config import Pfade, lade_yaml
 from zaehlkarte.dauer import bau
-from zaehlkarte.kalender import FEIERTAGE_LAENDER, LAENDER
+from zaehlkarte.kalender import FEIERTAGE_LAENDER, FERIEN, LAENDER, ferienkalender
 
 CFG = lade_yaml("sources.yaml")
 KURZZEIT = CFG["quellen"]
@@ -92,26 +91,27 @@ def test_lizenz_mit_einschraenkung_nur_mit_hinweis(quelle):
         assert any("Lizenz" in h for h in q.get("hinweise", [])), f"{code}: Hinweis zur Lizenz"
 
 
-@pytest.mark.parametrize("quelle", LIVE, ids=_id)
-def test_land_mit_recht_ferien_und_feiertagen(quelle):
-    """Ohne Ferien oder Feiertage wäre jeder Werktag „unbekannt“ bzw. ein Feiertag ein Schultag –
-    ohne Warnung. Neue Länder brauchen zuerst ihren Kalender (kalender.py, config/)."""
+@pytest.mark.parametrize("quelle", QUELLEN, ids=_id)
+def test_land_jeder_quelle(quelle):
+    """Das Land wählt Rechtslage, Ferien und Feiertage (kalender.FERIEN) – ein eigenes `ferien:`
+    an der Quelle gibt es nicht mehr."""
     _, code, q = quelle
     assert q["land"] in LAENDER, f"{code}: Land {q['land']!r}"
-    assert q["land"] in CFG["recht"], f"{code}: Rechtslage für {q['land']} fehlt"
-    assert q["land"] in FEIERTAGE_LAENDER, f"{code}: Feiertage für {q['land']} fehlen"
-    assert (Pfade().config / q["ferien"]).is_file(), f"{code}: {q['ferien']} fehlt"
+    assert "ferien" not in q, f"{code}: `ferien:` entfällt, das Land wählt den Kalender"
 
 
-def test_ferien_je_land_eine_datei():
-    """Alle Quellen eines Landes nutzen dieselbe Ferien-Datei, verschiedene Länder verschiedene
-    – fängt ein kopiertes `ferien:` aus einem anderen Land ab."""
-    je_land: dict[str, set[str]] = {}
-    for _, _, q in QUELLEN:
-        je_land.setdefault(q["land"], set()).add(q["ferien"])
-    assert all(len(d) == 1 for d in je_land.values()), je_land
-    dateien = [next(iter(d)) for d in je_land.values()]
-    assert len(dateien) == len(set(dateien)), je_land
+@pytest.mark.parametrize("land", LAENDER)
+def test_kalender_je_land(land):
+    """Ohne Ferien oder Feiertage wäre jeder Werktag „unbekannt“ bzw. ein Feiertag ein Schultag –
+    ohne Warnung. Alle 16 Länder haben Rechtslage, Feiertage und Ferien bis mindestens 2027/28;
+    dass sie rechtzeitig fortgeschrieben werden, prüft `zaehlkarte kalender` im Wochenlauf."""
+    assert land in CFG["recht"], f"Rechtslage für {land} fehlt"
+    assert land in FEIERTAGE_LAENDER, f"Feiertage für {land} fehlen"
+    kal = ferienkalender(land, Pfade().config)
+    assert kal is not None, f"{FERIEN[land]} fehlt"
+    assert (kal.letztes_schuljahr() or "") >= "2027/2028", f"{land}: {kal.letztes_schuljahr()}"
+    dateien = list(FERIEN.values())
+    assert len(dateien) == len(set(dateien)) == len(LAENDER)
 
 
 def test_robots_ausnahmen():

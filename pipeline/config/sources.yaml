@@ -18,7 +18,6 @@ quellen:
     traeger: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU)
     art: manuelle Knotenstrom- und Querschnittszählungen, 15- oder 60-Minuten-Werte
     weg: zwei IFG-Anfragen auf FragDenStaat (2019 und 2025)
-    ferien: schulferien_berlin.csv
     # Lieferungen in Vorrangfolge: dieselbe Zählung in beiden -> die erste gilt (die neuere)
     lieferungen:
       - code: 2019-2025
@@ -77,7 +76,6 @@ quellen:
     traeger: Stadt Ravensburg, Stadtplanungsamt (Sachgebiet Verkehrsplanung)
     art: 24-Stunden-Zählungen an Kreuzungen (Video), 15-Minuten-Werte, Di/Do
     weg: offen auf MobiData BW
-    ferien: schulferien_baden-wuerttemberg.csv
     lizenz: dl-de/by-2-0
     lizenz_url: https://www.govdata.de/dl-de/by-2-0
     paket: zaehldaten-ravensburg
@@ -133,7 +131,6 @@ quellen:
       Querschnittszählungen mit Seitenradar-Messgeräten, meist zwei Tage am Stück, beide
       Fahrspuren; Kfz je Fahrzeug, Schwerverkehr über die Fahrzeuglänge (ab 8 m)
     weg: offen auf offenesdatenportal.de (2010–2022)
-    ferien: schulferien_nordrhein-westfalen.csv
     lizenz: dl-de/zero-2-0
     lizenz_url: https://www.govdata.de/dl-de/zero-2-0
     portal: https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021
@@ -171,7 +168,6 @@ quellen:
       Querschnittsmessungen mit Radar-Messgeräten, meist ein bis zwei Wochen am Stück; je
       Fahrzeug Zeit, Richtung und Fahrzeugklasse (Kfz, Schwerverkehr, als Radfahrer erkannt)
     weg: offen auf opendata.olpe.de (ab 2025)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://opendata.olpe.de/dataset/?q=Verkehrsmessung
     # alle Datensätze „Verkehrsmessung(en) …“ – neue Messungen kommen beim nächsten fetch dazu.
     # Über die Suche und die Seite je Datensatz (die CKAN-API sperrt das Portal per robots.txt,
@@ -243,7 +239,6 @@ quellen:
       Zählung nur die beiden Spitzenstunden und die Summe der sechs Stunden, nach Kfz,
       Schwerverkehr und Rad
     weg: offen auf dem Open-Data-Portal der Stadt (ein PDF je Zählung, 2010–2023)
-    ferien: schulferien_brandenburg.csv
     lizenz: Nutzungsbedingungen der LHP (NB-16-OGD) – Weiterverwendung nur nach diesen
     lizenz_url: https://opendata.potsdam.de/terms/terms-of-use/
     portal: https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/
@@ -274,7 +269,6 @@ quellen:
       Kfz-Knotenpunktzählungen von Hand, meist 7–8 und 16–17 Uhr, nach Fahrzeugart (die
       Rad-Spalte der Kfz-Zählung ist keine vollständige Radzählung und fehlt in der Karte)
     weg: offen auf dem Open-Data-Portal der Stadt (XLS 2000–2012, PDF 2010–2020)
-    ferien: schulferien_nordrhein-westfalen.csv
     # Lizenz laut Datensatzseite und Nutzungsbedingungen des Portals (Namensnennung „Datenquelle:
     # Stadt Münster“). GovData führt dieselben Ressourcen als „other-closed“ – ein Fehler der
     # Übernahme über Open.NRW; maßgeblich ist das Portal der Stadt (lizenz_beleg).
@@ -300,7 +294,6 @@ quellen:
       mobile Querschnittszählungen 2020 an sechs Stellen über ein bis sechs Wochen, je Richtung
       Rad, zu Fuß und an zwei Stellen Kfz, 5- oder 15-Minuten-Werte
     weg: offen auf dem Open-Data-Portal der Stadt (2020)
-    ferien: schulferien_baden-wuerttemberg.csv
     # Lizenz laut Datensatzseite des Portals der Stadt (CC0 1.0). MobiData BW führt denselben
     # Datensatz als CC BY 4.0 – maßgeblich ist das Portal der Stadt (lizenz_beleg); die Karte
     # nennt die Stadt ohnehin.
@@ -423,7 +416,6 @@ quellen:
       Videozählung am 25.08.2020: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte
       (24 Stunden), Viertelstundenwerte nach Fahrzeugart, nur Kfz
     weg: offen auf opendata.ruhr (PDF)
-    ferien: schulferien_nordrhein-westfalen.csv
     lizenz: dl-de/zero-2-0
     lizenz_url: https://www.govdata.de/dl-de/zero-2-0
     portal: https://opendata.ruhr/dataset/mobilitatskonzept
@@ -480,7 +472,6 @@ dauer:
       Infrarot-Detektoren (TEU) über den Fahrstreifen an rund 250 Standorten; Stundenwerte je
       Richtung (Messquerschnitt) für Kfz und Lkw, wie die Detektoren sie unterscheiden
     weg: offen im Archiv der Digitalen Plattform Stadtverkehr Berlin
-    ferien: schulferien_berlin.csv
     portal: https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin
     archiv: https://mdhopendata.blob.core.windows.net/verkehrsdetektion
     archiv_seite: https://api.viz.berlin.de/daten/verkehrsdetektion
@@ -515,7 +506,6 @@ dauer:
       Richtung an einem Knotenarm) für Kfz, an einem Teil der Stellen auch Schwerverkehr, wie die
       Kamera ihn erkennt
     weg: offen über die SensorThings API der Urban Data Platform Hamburg
-    ferien: schulferien_hamburg.csv
     portal: https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14
     api: https://iot.hamburg.de/v1.1
     dienst: HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren
@@ -568,7 +558,6 @@ dauer:
       Wärmebildkameras (Infrarot-Detektoren) des Hamburger Radzählnetzes; Stundenwerte je
       Zählstelle (eine Richtung an einem Knotenarm oder ein Querschnitt ohne Richtung)
     weg: offen über die SensorThings API der Urban Data Platform Hamburg
-    ferien: schulferien_hamburg.csv
     portal: https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20
     api: https://iot.hamburg.de/v1.1
     dienst: HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren
@@ -624,7 +613,6 @@ dauer:
       automatische Zählstellen der Stadt; Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der
       Karte als Kfz (Summe der Klassen) und Lkw (Lkw und Lkw mit Anhänger)
     weg: offen im Datastore des Open-Data-Portals re@di (TechnologieRegion Karlsruhe)
-    ferien: schulferien_baden-wuerttemberg.csv
     portal: https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen
     dump: https://opendata.readi.de/datastore/dump/a903967d-9177-4db6-977c-267fd745a390
     klassen:  # Gruppe -> Klassen der Quelle (series_name), deren Summe sie ist
@@ -680,7 +668,6 @@ dauer:
       Rad-Zählstellen (Zählschleifen und -säulen von Eco-Counter) der Städte und Landkreise;
       Stundenwerte je Zählstelle, beide Richtungen zusammen
     weg: offen bei MobiData BW (Monatsdateien seit 2013)
-    ferien: schulferien_baden-wuerttemberg.csv
     portal: https://mobidata-bw.de/dataset/eco-counter-fahrradzahler
     archiv_seite: https://mobidata-bw.de/fahrradzaehldaten/v2/
     monate: https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_{monat}.csv.gz
@@ -732,7 +719,6 @@ dauer:
       Rad-Zählstellen (Zählschleifen von Eco-Counter); 15-Minuten-Werte je Zählstelle, beide
       Richtungen zusammen
     weg: offen im GitHub-Repository der Stadt (nächtlich aktualisiert)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten
     archiv_seite: https://github.com/od-ms/radverkehr-zaehlstellen
     archiv: https://codeload.github.com/od-ms/radverkehr-zaehlstellen/tar.gz/refs/heads/main
@@ -759,7 +745,6 @@ dauer:
     traeger: Stadt Aachen
     art: Rad-Zählstellen der Stadt; Stundenwerte je Zählstelle, Summe ihrer Richtungen
     weg: offen im Open-Data-Portal der Stadt (täglich aktualisiert)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen
     # Ressourcen von der Seite des Datensatzes (die CKAN-API sperrt das Portal per robots.txt,
     # ein DCAT-Dokument gibt es nicht), Crawl-delay 10 s
@@ -794,7 +779,6 @@ dauer:
       Dauerzählstellen für den Radverkehr (Zählschleifen); Stundenwerte je Zählstelle, meist je
       Richtung
     weg: offen auf berlin.de (eine Excel-Datei, einmal im Jahr ergänzt)
-    ferien: schulferien_berlin.csv
     portal: https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/
     datei: https://www.berlin.de/sen/uvk/_assets/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/gesamtdatei-stundenwerte.xlsx
     titel: >-
@@ -823,7 +807,6 @@ dauer:
       Raddauerzählstellen (Zählschleifen); 15-Minuten-Werte je Zählstelle, beide Richtungen
       zusammen
     weg: offen im Open-Data-Portal der Stadt (Jahres- und Monatsdateien)
-    ferien: schulferien_bayern.csv
     portal: https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen
     # Pakete über die Suche des Portals, Ressourcen aus dem DCAT-Dokument oder der Seite des
     # Pakets (die CKAN-API sperrt das Portal per robots.txt), Crawl-delay 10 s
@@ -861,7 +844,6 @@ dauer:
       Rad-Zählstellen der Stadt (Eco-Counter); Stundenwerte je Zählstelle, am Greinberg je
       Richtung eine Stelle
     weg: offen im Open-Data-Portal der Stadt (Opendatasoft, täglich aktualisiert)
-    ferien: schulferien_bayern.csv
     portal: https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/
     basis: https://opendata.wuerzburg.de
     # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
@@ -911,7 +893,6 @@ dauer:
       fünf Rad-Zählstationen des Kreises auf Rhein- und Erft-Radweg (Induktionsschleifen,
       Eco-Counter); Stundenwerte je Kanal, in der Karte je Station die Summe
     weg: offen im Open-Data-Portal des Kreises (Opendatasoft)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/
     basis: https://opendata.rhein-kreis-neuss.de
     # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
@@ -967,7 +948,6 @@ dauer:
       Dauerzählstelle Radverkehr auf dem Fuß- und Radweg nördlich der B 1 (Eco-Counter);
       15-Minuten-Werte je Richtung, in der Karte beide Richtungen zusammen
     weg: offen im Open-Data-Portal der Stadt (Opendatasoft, täglich aktualisiert)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/
     basis: https://open-data.dortmund.de
     # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
@@ -1021,7 +1001,6 @@ dauer:
       automatische Radverkehrszählungen an der Grugatrasse und der Huyssenallee; Stundenwerte je
       Richtung, in der Karte beide Richtungen zusammen
     weg: offen im Open-Data-Portal der Stadt (eine CSV je Quartal)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://open.nrw/dataset/radverkehrszahlungen-e
     api: https://open.nrw/api/3/action/package_show
     paket: radverkehrszahlungen-e
@@ -1064,7 +1043,6 @@ dauer:
     traeger: Stadt Leipzig, Verkehrs- und Tiefbauamt
     art: Dauerzählstellen Radverkehr der Stadt (Eco-Counter); Stundenwerte je Zählstelle
     weg: offen im WFS des Geoportals (nur die letzten 31 Tage; die Zählkarte hebt sie auf)
-    ferien: schulferien_sachsen.csv
     portal: https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei
     wfs: https://geodienste.leipzig.de/l3/OpenData/wfs
     ebenen:
@@ -1097,7 +1075,6 @@ dauer:
       Radmonitore der Stadt (Eco-Counter); 15-Minuten-Werte je Zählstelle, beide Richtungen
       zusammen
     weg: offen im Open-Data-Portal OpenData.HRO (täglich aktualisiert)
-    ferien: schulferien_mecklenburg-vorpommern.csv
     portal: https://www.opendata-hro.de/dataset/radmonitore
     daten: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.csv
     standorte: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.json
@@ -1150,7 +1127,6 @@ dauer:
       Zählstellen für Rad- und Fußverkehr (Eco-Counter); 15-Minuten-Werte je Richtung, in der Karte
       Rad, beide Richtungen zusammen
     weg: offen im GitLab der Stadt auf openCode.de (täglich aktualisiert)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter
     api: https://gitlab.opencode.de/api/v4
     projekt: StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter
@@ -1220,7 +1196,6 @@ dauer:
       Fahrradmessstellen der Stadt (Eco-Counter, Induktionsschleifen); Stundenwerte je Zählstelle,
       eine Datei je Jahr
     weg: offen im Open-Data-Portal der Stadt (eine CSV je Jahr, nach Ende des Jahres)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025
     katalog: https://opendata.bonn.de/data.json
     ab_jahr: 2020  # 2019: bei Open.NRW unter geschlossener Lizenz (und Mac-Roman)
@@ -1286,7 +1261,6 @@ dauer:
       Zählstelle und Richtung, eine Datei je Zählstelle und Jahr, in der Karte beide Richtungen
       zusammen
     weg: offen über Open.NRW (eine CSV je Zählstelle und Jahr, nach Ende des Jahres)
-    ferien: schulferien_nordrhein-westfalen.csv
     portal: https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d
     api: https://open.nrw/api/3/action/package_search
     suche: Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr

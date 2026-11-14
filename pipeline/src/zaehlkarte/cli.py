@@ -91,6 +91,25 @@ def site(datum: Datum = None) -> None:
 
 
 @app.command()
+def kalender(
+    monate: Annotated[int, typer.Option(help="so weit voraus müssen die Ferien reichen")] = 3,
+) -> None:
+    """Ferienkalender je Land (erstes und letztes Schuljahr): Exit-Code 1, wenn der Kalender
+    eines Landes vor dem Schuljahr endet, das in `--monate` Monaten läuft – sonst wäre danach
+    jeder Werktag „unbekannt“."""
+    from datetime import timedelta
+
+    from zaehlkarte.config import Pfade
+    from zaehlkarte.kalender import abdeckung
+
+    zeilen, fehlt = abdeckung(Pfade().config, date.today() + timedelta(days=round(30.5 * monate)))
+    for z in zeilen:
+        typer.echo(z)
+    if fehlt:
+        raise typer.Exit(1)
+
+
+@app.command()
 def datenlage(datum: Datum = None) -> None:
     """Nur datenlage.json und docs/DATENLAGE.md erneuern (aus sources.yaml und der vorhandenen
     index.json) – für geänderte Datenlage-Texte ohne neuen Bau."""
