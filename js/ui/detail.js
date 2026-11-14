@@ -9,6 +9,7 @@ import {
 } from "../data/modell.js";
 import { datum, name, t, uhr, wochentag, zahl } from "../sprache/texte.js";
 import { proStunde, tagesgang, TG, verlauf } from "./diagramme.js";
+import { lizenzHtml, ohneLizenzHtml } from "./lizenz.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const SERIE_1 = "#2a78d6";
@@ -217,12 +218,14 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
         ${d.richtungen ? `<tr><td>${esc(t("detail.richtungen"))}</td><td>${d.richtungen}</td></tr>` : ""}
         ${d.intervall ? `<tr><td>${esc(t("detail.intervall"))}</td><td>${esc(t("detail.minuten", { n: d.intervall }))}</td></tr>` : ""}
         <tr><td>${esc(t("detail.quelle"))}</td><td lang="de">${esc(lz.titel ?? "")}${lz.herausgeber ? `, ${esc(lz.herausgeber)}` : ""}</td></tr>
-        <tr><td>${esc(t("detail.lizenz"))}</td><td>${lz.lizenz_url ? `<a href="${esc(lz.lizenz_url)}" target="_blank" rel="noopener">${esc(lz.lizenz)}</a>` : esc(lz.lizenz ?? "")}</td></tr>
+        <tr><td>${esc(t("detail.lizenz"))}</td><td>${lizenzHtml(lz)}</td></tr>
       </table>
+      ${ohneLizenzHtml(lz)}
       <div class="pop-foot detail-links">
         ${d.rohdatei ? `<a href="${esc(d.rohdatei)}" target="_blank" rel="noopener">${esc(t("detail.rohdatei"))}</a>` : ""}
         ${lz.herkunft_url ? `<a href="${esc(lz.herkunft_url)}" target="_blank" rel="noopener">${esc(t("detail.herkunft_link"))}</a>` : ""}
-        ${d.stunden ? `<button type="button" class="link-knopf" data-csv>${esc(t("detail.csv"))}</button>` : ""}
+        ${d.stunden && lz.ohne_lizenz ? `<span class="pop-meta">${esc(t("lizenz.kein_export"))}</span>` : ""}
+        ${d.stunden && !lz.ohne_lizenz ? `<button type="button" class="link-knopf" data-csv>${esc(t("detail.csv"))}</button>` : ""}
       </div>`;
     if (tg) bindeHover(ziel.querySelector(".tg-wrap"), reihen, tg);
   }
@@ -266,6 +269,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
 
   async function ladeCsv() {
     const x = daten.zaehlungen[gewaehlt];
+    if (lizenz(x).ohne_lizenz) return; // ohne Lizenz: kein CSV
     const d = (await ladeDetails(manifest, stelle.chunk)).zaehlungen[String(gewaehlt)];
     const gruppen = GRUPPEN.filter((g) => d.stunden?.[g]);
     const kopf = ["stunde", ...gruppen];

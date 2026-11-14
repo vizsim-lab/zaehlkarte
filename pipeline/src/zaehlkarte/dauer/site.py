@@ -4,7 +4,9 @@ Workflow „Dauerzählstellen bauen“ und mit der Seite ausgeliefert).
 Vertrag mit dem Frontend (js/data/dauer.js, tests/web/vertrag.spec.js) – wer ihn ändert, zieht
 beide im selben Schritt mit:
 - dauer/index.json: Stellen spaltenweise (`stellen.felder`; `g` = Bitmaske der Gruppen in der
-  Reihenfolge von `gruppen`), Quellen mit Lizenzen, ihren Gruppen, dem Zeitraum je Gruppe
+  Reihenfolge von `gruppen`), Quellen mit Lizenzen (eine Quelle ohne Lizenz mit
+  `lizenzen[].ohne_lizenz` = {herausgegeben, geprueft}: in der Karte „ohne Lizenz“, nicht im
+  CSV-Export), ihren Gruppen, dem Zeitraum je Gruppe
   (`zeitraeume`: erster und letzter vollständig gezählter Tag) und ihrem eigenen Standardtag,
   Zeitraum (`von`, `bis`), Kalender je Land (ein Zeichen je Tag ab `von`: s Schultag, f Ferien,
   h Feiertag, w Wochenende, u unbekannt), die Namen der übrigen Dateien (`dateien`) und
@@ -34,8 +36,9 @@ import numpy as np
 from zaehlkarte.config import Pfade
 from zaehlkarte.dauer.modell import GRUPPEN, Messreihe, tagessummen
 from zaehlkarte.kalender import ferienkalender, tagtyp
+from zaehlkarte.lizenz import ohne_lizenz
 
-VERSION = 2  # 2: `juengster` (November 2026)
+VERSION = 3  # 2: `juengster`; 3: `lizenzen[].ohne_lizenz` (beide November 2026)
 CHUNK_BYTES = 900_000
 STUNDEN_TAGE = 365  # Stundenwerte: die jüngsten 12 Monate je Quelle
 STELLEN_FELDER = ["id", "quelle", "name", "abschnitt", "richtung", "lon", "lat", "von", "bis", "g",
@@ -64,6 +67,7 @@ def _lizenzen(q: dict) -> list[dict]:
         "lizenz": q.get("lizenz"),
         "lizenz_url": q.get("lizenz_url"),
         "herkunft_url": q.get("portal"),
+        **ohne_lizenz(q),
     }]
 
 

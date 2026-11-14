@@ -12,7 +12,7 @@ import { datum, sprache, t } from "../sprache/texte.js";
 import { STUFENFARBEN, stufe } from "./modell.js";
 
 /** Vertrag mit dauer/index.json (`version`, VERSION in pipeline/src/zaehlkarte/dauer/site.py). */
-export const DAUER_VERSION = 2;
+export const DAUER_VERSION = 3;
 
 // Gruppen, wie die Quellen sie zählen – in den Daten nie ineinander gemischt: Berlins und
 // Ettlingens „Lkw“ und Hamburgs „Schwerverkehr“ sind je eine Klasse des Detektors, keine der
@@ -304,6 +304,7 @@ function csvFeld(v) {
 /**
  * CSV (Semikolon, UTF-8) aller Stellen, die am Tag bestehen: Tagessummen je Gruppe, leer =
  * nicht vollständig gezählt. Spalten und Werte deutsch, in jeder Sprache gleich.
+ * `lizenzVon(quelle)`: die Lizenz der Zeile (lizenzFuerCsv) – null: Quelle ohne Lizenz, weglassen.
  */
 export function csvDauer(d, jahr, iso, lizenzVon) {
   const kopf = ["quelle", "stelle", "name", "abschnitt", "richtung", "lon", "lat", "datum", "tagtyp",
@@ -311,12 +312,14 @@ export function csvDauer(d, jahr, iso, lizenzVon) {
   const zeilen = [kopf.join(";")];
   for (const s of d.stellen) {
     if (iso < s.von || iso > s.bis) continue;
+    const lizenz = lizenzVon(s.quelle);
+    if (lizenz === null) continue; // ohne Lizenz: nicht im Export
     const q = d.quellenMeta.find((x) => x.code === s.quelle);
     zeilen.push([
       s.quelle, s.id, s.name, s.abschnitt, s.richtung, s.lon, s.lat, iso,
       t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"),
       ...d.gruppen.map((g) => (hatGruppe(s, g) ? wertAm(jahr, s, g, iso) : null)),
-      lizenzVon(s.quelle),
+      lizenz,
     ].map(csvFeld).join(";"));
   }
   return `﻿${zeilen.join("\n")}\n`;
@@ -326,16 +329,19 @@ export function csvDauer(d, jahr, iso, lizenzVon) {
  * CSV (Semikolon, UTF-8) aller Stellen in der Standardansicht: je Gruppe der jüngste vollständig
  * gezählte Schultag und seine Tagessumme – leer, wo die Stelle die Gruppe nicht zählt oder an
  * keinem Schultag vollständig. Spalten und Werte deutsch, in jeder Sprache gleich.
+ * `lizenzVon(quelle)` wie bei csvDauer – Stellen ohne Lizenz bleiben weg.
  */
 export function csvDauerJuengster(d, lizenzVon) {
   const kopf = ["quelle", "stelle", "name", "abschnitt", "richtung", "lon", "lat",
     ...d.gruppen.flatMap((g) => [`${g}_juengster_schultag`, `${g}_tagessumme`]), "lizenz"];
   const zeilen = [kopf.join(";")];
   for (const s of d.stellen) {
+    const lizenz = lizenzVon(s.quelle);
+    if (lizenz === null) continue; // ohne Lizenz: nicht im Export
     zeilen.push([
       s.quelle, s.id, s.name, s.abschnitt, s.richtung, s.lon, s.lat,
       ...d.gruppen.flatMap((g) => juengsterVon(d, s, g) ?? [null, null]),
-      lizenzVon(s.quelle),
+      lizenz,
     ].map(csvFeld).join(";"));
   }
   return `﻿${zeilen.join("\n")}\n`;

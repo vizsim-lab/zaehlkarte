@@ -66,7 +66,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `tests/web/vertrag.spec.js` und die Fixture `tests/web/fixtures/datenlage.json` (die
   Browser-Tests lesen nur sie). Dauerzählstellen: Felder in
   `dauer/index.json` (`stellen.felder`, `gruppen` = Bits von `g`, `dateien`, `kalender`,
-  `standardtag`, `juengster`, `quellen[].gruppen`/`zeitraeume`/`standardtag`), Aufbau von
+  `standardtag`, `juengster`, `quellen[].gruppen`/`zeitraeume`/`standardtag`/`lizenzen`), Aufbau von
   `dauer/tage/JJJJ.json` und `dauer/NN.json` (Kopf von `pipeline/src/zaehlkarte/dauer/site.py`)
   – mitziehen: `js/data/dauer.js`, `js/ui/dauerdetail.js`, `tests/web/vertrag.spec.js` und die
   Fixtures `tests/web/fixtures/dauer/`, und die Vertragsversion erhöhen (`VERSION` in
@@ -117,7 +117,17 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Lizenzen mit Einschränkung** (Ettlingen: CC BY-NC 4.0, nur nicht kommerziell; Bochum:
   dl-de/by-2-0, aber nicht für Produkte im Wettbewerb zu Eco-Counter) nur mit Hinweis an der
   Quelle (`hinweise` in der Quelldatei); die Lizenz – samt Einschränkung – steht in der
-  Seitenleiste und in jeder Zeile des CSV-Exports – nie eine Quelle ohne Lizenzangabe aufnehmen.
+  Seitenleiste und in jeder Zeile des CSV-Exports.
+- **Quellen ohne Lizenz** (Beschluss der Projektleitung, 14.11.2026; Abwägung in AGENTS.md,
+  „Rechtliches“): Zählwerte, die eine Kommune ohne Lizenz veröffentlicht oder auf Anfrage
+  herausgegeben hat, kommen nur so in die Karte: Block `ohne_lizenz` statt `lizenz` in der
+  Quelldatei (wie herausgegeben, Tag der Prüfung), Link zum Original (`portal` bzw.
+  `herkunft_url`), in der Karte „ohne Lizenz“ mit Hinweis und Link „Entfernen lassen“, nie im
+  CSV-Export; die Kommune steht in der Datenlage auf `ohne_lizenz`. Nur die Zahlen übernehmen,
+  keine Berichte, Grafiken oder Karten spiegeln. Nie, wenn die Kommune Bedingungen gestellt hat
+  (Nutzungserklärung wie Amberg, Entgelt für die Weitergabe wie Magdeburg) oder die
+  Veröffentlichung untersagt; auf Bitte der Rechteinhaber sofort entfernen. Jede andere Quelle
+  braucht eine Lizenzangabe.
 - **Lizenz:** AGPL-3.0-or-later. Aus dem Schulwege-Projekt (MIT) übernommene Dateien tragen
   einen Herkunftsvermerk.
 

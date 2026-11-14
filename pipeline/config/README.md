@@ -31,7 +31,22 @@ Datei am falschen Ort liegt.
   nicht nutzbar (Grund in `notiz`).
 - **`land`** wählt Rechtslage, Ferien und Feiertage. Welche weiteren Schlüssel eine Quelle hat,
   bestimmt ihr Adapter (Kopfkommentar des Adapters); Lizenz und Lizenz-URL stehen an der Quelle oder
-  je Lieferung, eine Einschränkung mit Hinweis (`hinweise`).
+  je Lieferung, eine Einschränkung mit Hinweis (`hinweise`) – oder, wo es keine Lizenz gibt, der
+  Block `ohne_lizenz` (unten).
+- **Ohne Lizenz** (CLAUDE.md, „Quellen ohne Lizenz“): Hat die Kommune die Werte ohne Lizenz
+  veröffentlicht oder auf Anfrage herausgegeben und keine Bedingungen gestellt, steht statt
+  `lizenz`/`lizenz_url` (an der Quelle oder je Lieferung):
+
+  ```yaml
+  ohne_lizenz:
+    herausgegeben: >-          # wie die Werte öffentlich wurden – erscheint in der Karte
+      als Anlage zur Vorlage 242/2022 im Ratsinformationssystem, ohne Lizenzangabe
+    geprueft: 2026-11-14       # an dem Tag weder Lizenz noch Bedingungen gefunden
+  ```
+
+  Dazu der Link zum Original (`portal`, je Lieferung `herkunft_url`). Die Karte zeigt die Werte mit
+  „ohne Lizenz“ und dem Link „Entfernen lassen“, der CSV-Export lässt sie weg; die Kommune steht in
+  der Datenlage auf `ohne_lizenz`.
 - **Dauerzählstellen:** fest eingebaute Zähler mit Stunden- oder Tageswerten über Jahre. Abgrenzung
   zu vizsim/svz: hier die gezählten Werte im Zeitverlauf (Stunden, Tage) – keine Jahresmittel, kein
   DTV. Eine Tagessumme nur aus allen Stunden des Tages. Bau `zaehlkarte dauer`, Kartendaten unter
@@ -84,10 +99,11 @@ Hinweise kommen über das Issue-Formular „Zählung melden“.
   `geliefert` | `kandidat` | `ohne_lizenz` (Werte da, aber ohne Lizenz) | `aggregiert` (nur
   Summen oder Mittelwerte) | `nur_karte` | `abgelehnt` | `nichts_offen`. Die Karte fasst sie in
   vier Farben zusammen.
-- **`quellen`:** die Quellen der Familie, die die Kommune in die Karte bringen – genau dann, wenn
-  `stand: in_karte`. Jede Kurzzeit-Quelle gehört zu genau einer Kommune, eine Dauer-Quelle zu
-  mindestens einer (Bündel wie MobiData BW zu mehreren). Die Karte findet so die Quellen einer
-  Kommune („hinzoomen“) ohne Abgleich über den Namen.
+- **`quellen`:** die Quellen der Familie, die die Kommune in die Karte bringen – bei
+  `stand: in_karte` immer (nur Quellen mit Lizenz), bei `ohne_lizenz`, sobald die Werte in der
+  Karte sind (nur Quellen ohne Lizenz), sonst nie. Jede Kurzzeit-Quelle gehört zu genau einer
+  Kommune, eine Dauer-Quelle zu mindestens einer (Bündel wie MobiData BW zu mehreren). Die Karte
+  findet so die Quellen einer Kommune („hinzoomen“) ohne Abgleich über den Namen.
 - **Texte:** `was` (kurz), `situation` (die Lage ausführlich), `links` (`[Titel, URL]`);
   rechtliche Aussagen nur mit Beleg. Bei den Kurzzeitzählungen außerhalb der Karte dazu
   `empfehlung` und `weg`.

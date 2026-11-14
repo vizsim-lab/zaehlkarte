@@ -31,7 +31,9 @@ VERSION = 2
 FAMILIEN = ("kurzzeit", "dauer")
 
 # Eine Liste von Ständen für beide Familien; die Namen weichen bei den Dauerzählstellen ab, wo sie
-# dort etwas anderes meinen (keine Anfragevorlage für Dauerzählstellen)
+# dort etwas anderes meinen (keine Anfragevorlage für Dauerzählstellen). Mit `quellen` in der Karte:
+# `in_karte` (Quellen mit Lizenz) und `ohne_lizenz` (Quellen ohne Lizenz, sobald ihr Adapter steht –
+# in der Karte gekennzeichnet, nicht im CSV-Export; CLAUDE.md, „Quellen ohne Lizenz“).
 STAND = {
     "in_karte": "in der Karte",
     "offen": "offen, noch nicht in der Karte",

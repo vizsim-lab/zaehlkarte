@@ -90,19 +90,55 @@ def _lizenz_ok(x: dict) -> bool:
     return bool(x.get("lizenz")) and bool(URL.match(x.get("lizenz_url") or ""))
 
 
+def _ohne_lizenz_ok(x: dict, herkunft: str | None) -> bool:
+    """Quelle bzw. Lieferung ohne Lizenz (CLAUDE.md, „Quellen ohne Lizenz“): wie die Kommune die
+    Werte herausgegeben hat, der Tag der Prüfung (weder Lizenz noch Bedingungen) und der Link zum
+    Original – und keine Lizenzangabe daneben."""
+    o = x.get("ohne_lizenz")
+    return (isinstance(o, dict) and set(o) == {"herausgegeben", "geprueft"}
+            and bool(str(o["herausgegeben"] or "").strip()) and _datum_bis_heute(o["geprueft"])
+            and "lizenz" not in x and "lizenz_url" not in x and bool(URL.match(herkunft or "")))
+
+
+def ohne_lizenz(q: dict) -> bool:
+    """Die Quelle oder eine ihrer Lieferungen hat keine Lizenz."""
+    return "ohne_lizenz" in q or any("ohne_lizenz" in lf for lf in q.get("lieferungen", []))
+
+
 @pytest.mark.parametrize("quelle", LIVE, ids=_id)
 def test_lizenz_je_quelle(quelle):
-    """Nie eine Quelle ohne Lizenzangabe: an der Quelle oder je Lieferung, dazu die Lizenz der
+    """Eine Lizenzangabe an der Quelle oder je Lieferung – oder, wo die Kommune keine Lizenz
+    genannt hat, der Block `ohne_lizenz` mit Link zum Original (nie beides); dazu die Lizenz der
     Lage, wo sie aus OpenStreetMap kommt."""
     _, code, q = quelle
     if "lieferungen" in q:
         assert q["lieferungen"], f"{code}: keine Lieferung"
         for lf in q["lieferungen"]:
-            assert _lizenz_ok(lf), f"{code}/{lf.get('code')}: Lizenz und Lizenz-URL"
+            assert _lizenz_ok(lf) or _ohne_lizenz_ok(lf, lf.get("herkunft_url")), (
+                f"{code}/{lf.get('code')}: Lizenz und Lizenz-URL oder ohne_lizenz mit herkunft_url")
+        assert "ohne_lizenz" not in q, f"{code}: ohne_lizenz je Lieferung"
     else:
-        assert _lizenz_ok(q), f"{code}: Lizenz und Lizenz-URL"
+        assert _lizenz_ok(q) or _ohne_lizenz_ok(q, q.get("portal")), (
+            f"{code}: Lizenz und Lizenz-URL oder ohne_lizenz mit portal")
     if "geokodierung" in q:
         assert _lizenz_ok(q["geokodierung"]), f"{code}: Lizenz der Geokodierung"
+
+
+def test_ohne_lizenz_pruefung():
+    """Die Prüfung selbst an Beispielen: vollständig und mit Link zum Original, nie neben einer
+    Lizenz, der Tag der Prüfung nicht in der Zukunft."""
+    gut = {"ohne_lizenz": {"herausgegeben": "PDF auf der Website der Stadt",
+                           "geprueft": date(2026, 11, 14)}}
+    link = "https://example.org/zaehlung.pdf"
+    assert _ohne_lizenz_ok(gut, link)
+    assert not _ohne_lizenz_ok(gut, None), "ohne Link zum Original"
+    assert not _ohne_lizenz_ok({**gut, "lizenz": "CC BY 4.0"}, link), "neben einer Lizenz"
+    for o in ({"herausgegeben": " ", "geprueft": date(2026, 11, 14)},
+              {"herausgegeben": "PDF", "geprueft": date(2999, 1, 1)},
+              {"herausgegeben": "PDF"}):
+        assert not _ohne_lizenz_ok({"ohne_lizenz": o}, link), o
+    assert ohne_lizenz({"lieferungen": [{"lizenz": "CC0 1.0"}, gut]})
+    assert not ohne_lizenz({"lizenz": "CC0 1.0"})
 
 
 @pytest.mark.parametrize("quelle", [x for x in LIVE if x[0] == "dauer"], ids=_id)
@@ -110,7 +146,7 @@ def test_lizenz_mit_einschraenkung_nur_mit_hinweis(quelle):
     """Lizenzen mit Einschränkung (nicht kommerziell, Nutzungsbeschränkung) stehen mit einem
     Hinweis an der Quelle, der die Lizenz erklärt (Seitenleiste der Dauerzählstellen)."""
     _, code, q = quelle
-    lizenz = q["lizenz"]
+    lizenz = q.get("lizenz") or ""
     if re.search(r"\bNC\b|beschränk|nicht kommerziell|nicht für", lizenz, re.IGNORECASE):
         assert any("Lizenz" in h for h in q.get("hinweise", [])), f"{code}: Hinweis zur Lizenz"
 
@@ -262,18 +298,27 @@ def test_datenlage_lage():
 
 
 def test_quellen_der_kommunen():
-    """Kommune und Quelle sind ausdrücklich verknüpft (`quellen` je Familie): „in der Karte“
-    genau dann, wenn Quellen genannt sind, und nur Quellen der Familie, die in der Karte sind.
-    Jede Kurzzeit-Quelle gehört zu genau einer Kommune, jede Dauer-Quelle zu mindestens einer
-    (Bündel wie MobiData BW zu mehreren)."""
-    live = {"kurzzeit": {c for c, q in KURZZEIT.items() if q["status"] == "live"},
-            "dauer": {c for c, q in DAUER.items() if q["status"] == "live"}}
+    """Kommune und Quelle sind ausdrücklich verknüpft (`quellen` je Familie), nur Quellen der
+    Familie, die in der Karte sind: „in der Karte“ immer mit Quellen, und nur mit solchen mit
+    Lizenz; „ohne Lizenz“ mit Quellen, sobald die Werte in der Karte sind, und nur mit solchen ohne
+    Lizenz; jeder andere Stand ohne Quellen. Jede Kurzzeit-Quelle gehört zu genau einer Kommune,
+    jede Dauer-Quelle zu mindestens einer (Bündel wie MobiData BW zu mehreren)."""
+    alle = {"kurzzeit": KURZZEIT, "dauer": DAUER}
+    live = {f: {c for c, q in qs.items() if q["status"] == "live"} for f, qs in alle.items()}
     verknuepft: dict[str, list[str]] = {"kurzzeit": [], "dauer": []}
     for e in DATENLAGE:
         for f, b in _bloecke(e):
             qs = b.get("quellen") or []
             assert set(qs) <= live[f], f"{_name(e)}: {f}.quellen {set(qs) - live[f]}"
-            assert bool(qs) == (b["stand"] == "in_karte"), f"{_name(e)}: {f} in_karte ⇔ quellen"
+            ohne = [c for c in qs if ohne_lizenz(alle[f][c])]
+            if b["stand"] == "in_karte":
+                assert qs, f"{_name(e)}: {f} in_karte ohne quellen"
+                assert not ohne, f"{_name(e)}: {f} in_karte, aber ohne Lizenz: {ohne} (ohne_lizenz)"
+            elif b["stand"] == "ohne_lizenz":
+                mit = set(qs) - set(ohne)
+                assert not mit, f"{_name(e)}: {f} ohne_lizenz, aber mit Lizenz: {mit}"
+            else:
+                assert not qs, f"{_name(e)}: {f}.quellen nur bei in_karte oder ohne_lizenz"
             verknuepft[f] += qs
     k = verknuepft["kurzzeit"]
     assert len(k) == len(set(k)), "eine Kurzzeit-Quelle an mehreren Kommunen"

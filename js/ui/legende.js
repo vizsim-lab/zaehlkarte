@@ -14,8 +14,14 @@ import {
 } from "../data/dauer.js";
 import { datenlageKlassen, datenlageStand } from "../map/ebenen.js";
 import { datum, t, wochentag, zahl } from "../sprache/texte.js";
+import { lizenzHtml, ohneLizenzHtml } from "./lizenz.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+
+/** Ein Eintrag unter „Quellen & Lizenzen“: Titel (Link zur Herkunft), Herausgeber, Lizenz – bei einer
+ *  Quelle ohne Lizenz dazu, wie die Kommune die Werte herausgegeben hat, und „Entfernen lassen“. */
+const lizenzEintrag = (l) => `<li>${l.herkunft_url ? `<a href="${esc(l.herkunft_url)}" target="_blank" rel="noopener">${esc(l.titel)}</a>` : esc(l.titel)}${l.herausgeber ? `, ${esc(l.herausgeber)}` : ""} – ${lizenzHtml(l)}${ohneLizenzHtml(l)}</li>`;
+
 const $ = (id) => document.getElementById(id);
 
 const MODUS_TIPS = { "sv.anteil": "modus.sv.anteil_tip", "rad.anteil": "modus.rad.anteil_tip" };
@@ -153,7 +159,7 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
         <div class="quelle-name">${esc(q.name)} <span class="pop-meta">${esc(t("quellen.umfang", { zaehlungen: zahl(q.zaehlungen), stellen: zahl(q.stellen) }))}${q.von ? `, ${q.von === q.bis ? q.von : `${q.von}–${q.bis}`}` : ""}</span></div>
         <div class="pop-meta" lang="de">${esc(q.art ?? "")}${q.weg ? ` · ${esc(q.weg)}` : ""}</div>
         ${q.ohne_lage ? `<div class="pop-meta">${esc(t("quellen.ohne_lage", { n: zahl(q.ohne_lage) }))}</div>` : ""}
-        <ul lang="de">${q.lizenzen.map((l) => `<li>${l.herkunft_url ? `<a href="${esc(l.herkunft_url)}" target="_blank" rel="noopener">${esc(l.titel)}</a>` : esc(l.titel)}${l.herausgeber ? `, ${esc(l.herausgeber)}` : ""} – ${l.lizenz_url ? `<a href="${esc(l.lizenz_url)}" target="_blank" rel="noopener">${esc(l.lizenz)}</a>` : esc(l.lizenz ?? "")}</li>`).join("")}</ul>
+        <ul lang="de">${q.lizenzen.map(lizenzEintrag).join("")}</ul>
       </div>`).join("") + `<div class="pop-meta">${esc(t("quellen.karte", { datum: datum(manifest.erzeugt) }))}</div>`;
     zeichne();
   }
@@ -349,7 +355,7 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
       <div class="quelle-eintrag">
         <div class="quelle-name">${esc(q.name)} <span class="pop-meta">${esc(t("quellen.dauer_umfang", { stellen: zahl(q.stellen), zeitraum: zeitraumText(q.von, q.bis) }))}</span></div>
         <div class="pop-meta" lang="de">${esc(q.art ?? "")}${q.weg ? ` · ${esc(q.weg)}` : ""}</div>
-        <ul lang="de">${q.lizenzen.map((l) => `<li>${l.herkunft_url ? `<a href="${esc(l.herkunft_url)}" target="_blank" rel="noopener">${esc(l.titel)}</a>` : esc(l.titel)}${l.herausgeber ? `, ${esc(l.herausgeber)}` : ""} – ${l.lizenz_url ? `<a href="${esc(l.lizenz_url)}" target="_blank" rel="noopener">${esc(l.lizenz)}</a>` : esc(l.lizenz ?? "")}</li>`).join("")}</ul>
+        <ul lang="de">${q.lizenzen.map(lizenzEintrag).join("")}</ul>
       </div>`).join("");
     const ziel = $("quellen-text");
     ziel.insertBefore(block, ziel.lastElementChild);

@@ -27,6 +27,7 @@ from zaehlkarte import datenlage as datenlage_
 from zaehlkarte import kennzahlen as kz
 from zaehlkarte.build import Gebaut, Stelle
 from zaehlkarte.config import Pfade, quellen
+from zaehlkarte.lizenz import ohne_lizenz
 from zaehlkarte.modell import GRUPPEN, Zaehlung
 
 VERSION = 1
@@ -104,7 +105,7 @@ def _abruf(q: dict, pfade: Pfade) -> str | None:
 def _lizenzen(q: dict, pfade: Pfade) -> list[dict]:
     if "lieferungen" in q:
         felder = ("code", "titel", "herausgeber", "lizenz", "lizenz_url", "herkunft_url")
-        out = [{k: lf.get(k) for k in felder} for lf in q["lieferungen"]]
+        out = [{**{k: lf.get(k) for k in felder}, **ohne_lizenz(lf)} for lf in q["lieferungen"]]
         if "geokodierung" in q:
             g = q["geokodierung"]
             out.append({"code": "lage", **{k: g.get(k) for k in felder[1:]}})
@@ -121,6 +122,7 @@ def _lizenzen(q: dict, pfade: Pfade) -> list[dict]:
             "lizenz": q.get("lizenz"),
             "lizenz_url": q.get("lizenz_url"),
             "herkunft_url": q.get("portal"),
+            **ohne_lizenz(q),
         }
     ]
     if "geokodierung" in q:

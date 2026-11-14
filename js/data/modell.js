@@ -243,8 +243,16 @@ function csvFeld(v) {
 }
 
 /**
+ * Lizenz einer Quelle (Eintrag aus `lizenzen` in manifest.json bzw. dauer/index.json) für eine
+ * Zeile des CSV-Exports – null bei einer Quelle ohne Lizenz: deren Zeilen bleiben weg (CLAUDE.md,
+ * „Quellen ohne Lizenz“).
+ */
+export const lizenzFuerCsv = (l) => (l?.ohne_lizenz ? null : l?.lizenz ?? "");
+
+/**
  * CSV (Semikolon, UTF-8) aller Zählungen im Filter – nicht nur der gezeigten je Stelle.
  * Spalten und Werte bleiben in jeder Sprache gleich (deutsch), damit Auswertungen nicht brechen.
+ * `lizenzVon(quelle, lieferung)`: die Lizenz der Zeile (lizenzFuerCsv) – null: Zeile weglassen.
  */
 export function csv(daten, zustand, lizenzVon) {
   const kopf = [
@@ -257,10 +265,12 @@ export function csv(daten, zustand, lizenzVon) {
     if (!stelleSichtbar(s, zustand)) continue;
     for (const z of s.zaehlungen) {
       if (!imFilter(z, zustand, [])) continue;
+      const lizenz = lizenzVon(s.quelle, z.lieferung);
+      if (lizenz === null) continue; // ohne Lizenz: nicht im Export
       zeilen.push([
         s.quelle, s.id, s.name, s.typ, s.lon, s.lat, s.lage, z.datum, t(`tag.${z.tag ?? "u"}`, {}, "de"), z.fenster,
         ...GRUPPEN.map((g) => wert(z, g, "w")), ...GRUPPEN.map((g) => wert(z, g, "w24")),
-        ...GRUPPEN.map((g) => wert(z, g, "sp")), lizenzVon(s.quelle, z.lieferung),
+        ...GRUPPEN.map((g) => wert(z, g, "sp")), lizenz,
       ].map(csvFeld).join(";"));
     }
   }

@@ -201,7 +201,7 @@ test("CSV der Dauerzählstellen: Tagessummen des Tags, leer statt 0", async ({ p
 test("CSV am jüngsten Schultag: je Gruppe Tag und Tagessumme jeder Stelle", async ({ page }) => {
   await dauer(page);
   await oeffne(page, "#f=d");
-  await expect(page.locator("#export-csv")).toHaveAttribute("title", "Tagessummen am jüngsten Schultag als CSV");
+  await expect(page.locator("#export-csv")).toHaveAttribute("title", "Tagessummen am jüngsten Schultag als CSV (nur Quellen mit Lizenz)");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);
   expect(download.suggestedFilename()).toBe("dauerzaehlstellen_juengster_schultag_2026-11-12.csv");
   const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
@@ -426,5 +426,57 @@ test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstell
   await page.evaluate(() => window.__app.zeigeDatenlage("05170052")); // Xanten
   await page.locator('[data-familie="d"]').click();
   await expect(el).toBeHidden();
+  expect(fehler).toEqual([]);
+});
+
+test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export", async ({ page }) => {
+  await dauer(page);
+  // Hamburg (Rad) so, wie eine Quelldatei mit `ohne_lizenz` in dauer/index.json ankäme
+  await page.route(/\/data\/dauer\/index\.json$/, (route) => {
+    const index = JSON.parse(readFileSync(new URL("dauer/index.json", FIXTURES)));
+    const q = index.quellen.find((x) => x.code === "hamburg_rad");
+    q.lizenzen = [{
+      ...q.lizenzen[0], lizenz: null, lizenz_url: null,
+      ohne_lizenz: { herausgegeben: "auf Anfrage herausgegeben, ohne Lizenzangabe", geprueft: "2026-11-14" },
+    }];
+    return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(index) });
+  });
+  const fehler = await oeffne(page, "#f=d&s=hamburg_rad:7433952");
+  const detail = page.locator("#dauer-detail");
+  await expect(detail.locator(".detail-titel")).toHaveText("Alsterufer");
+  await expect(detail.locator(".ohne-lizenz")).toHaveText("ohne Lizenz");
+  await expect(detail).toContainText("auf Anfrage herausgegeben, ohne Lizenzangabe (geprüft am 14.11.2026)");
+  await expect(detail.getByRole("link", { name: "Entfernen lassen" })).toHaveAttribute("href", /template=daten-entfernen\.yml$/);
+  await expect(detail.locator("[data-csv-tage], [data-csv-stunden]")).toHaveCount(0);
+  await expect(detail).toContainText("ohne Lizenz – kein CSV");
+  // „Quellen & Lizenzen“: nur Hamburg (Rad) ohne Lizenz, Ettlingen weiter mit seiner
+  await expect(page.locator("#quellen-dauer .ohne-lizenz")).toHaveCount(1);
+  await expect(page.locator('#quellen-dauer a[href*="by-nc/4.0"]')).toHaveCount(1);
+  // CSV am jüngsten Schultag: ohne die Stelle aus Hamburg (Rad)
+  const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);
+  const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
+  const zeilen = text.replace(/^﻿/, "").trim().split("\n");
+  expect(zeilen).toHaveLength(6); // fünf von sechs Stellen
+  expect(zeilen.some((z) => z.startsWith("hamburg_rad;"))).toBe(false);
+  expect(fehler).toEqual([]);
+});
+
+test("Datenlage: Kommune ohne Lizenz mit Werten in der Karte – hinzoomen, Kontakt bleibt", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page, "#f=d&dl=1");
+  // Osnabrück (Stand ohne_lizenz) so, als stünden seine Werte schon in der Karte (hier: Hamburg Rad)
+  await page.evaluate(() => {
+    const f = window.__app.datenlage.features.find((x) => x.properties.ags === "03404000");
+    f.properties.dauer.quellen = ["hamburg_rad"];
+    window.__app.zeigeDatenlage("03404000");
+  });
+  const el = page.locator("#datenlage-detail");
+  await expect(el.locator(".detail-kopf .pop-meta")).toHaveText("vorhanden, aber ohne Lizenz");
+  await expect(el.locator("[data-hinzoomen]")).toBeVisible();
+  // eine Anfrage nach einer Lizenz lohnt weiter: Kontakt und Rechtslage bleiben
+  await expect(el.locator(".detail-abschnitt", { hasText: "Kontakt" })).toBeVisible();
+  await expect(el.locator(".detail-abschnitt", { hasText: "Rechtslage im Land" })).toBeVisible();
+  await el.locator("[data-hinzoomen]").click();
+  await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
   expect(fehler).toEqual([]);
 });

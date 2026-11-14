@@ -125,6 +125,8 @@ test("Jüngster Schultag je Stelle: Standardansicht ohne gewählten Tag, Tag je 
   assert.equal(zeilen[0], "quelle;stelle;name;abschnitt;richtung;lon;lat;kfz_juengster_schultag;kfz_tagessumme;lkw_juengster_schultag;lkw_tagessumme;lizenz");
   assert.match(zeilen[1], /^berlin_viz;berlin_viz:TE001;Clayallee;in Höhe 343;Richtung Süd;13\.26;52\.43;2025-01-03;30000;2025-01-02;2;dl-de\/by-2-0$/);
   assert.match(zeilen[2], /;2025-01-03;8000;;;dl-de\/by-2-0$/);
+  // Quelle ohne Lizenz (lizenzVon -> null): nicht im Export
+  assert.equal(csvDauerJuengster(e, () => null).replace(/^﻿/, "").trim().split("\n").length, 1);
 });
 
 test("featuresDauer: hohl ohne vollständigen Tag, sonst Farbe und Größe der Stufe", () => {
@@ -144,6 +146,8 @@ test("csvDauer: deutsche Spalten, leer statt 0, Lizenz", () => {
   assert.equal(zeilen.length, 3);
   assert.match(zeilen[1], /;2025-01-04;Ferien;;4;dl-de\/by-2-0$/);
   assert.match(zeilen[2], /"A115; „Brücke“"/); // Semikolon im Namen -> in Anführungszeichen
+  // Quelle ohne Lizenz (lizenzVon -> null): ihre Stellen bleiben weg
+  assert.equal(csvDauer(d, JAHR, "2025-01-04", () => null).trim().split("\n").length, 1);
 });
 
 test("Details: Tagessumme, gezählte Stunden und Stundenwerte am Tag", () => {
