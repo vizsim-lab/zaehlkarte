@@ -1,0 +1,15 @@
+{
+ "wikidata_fehler": "Gesperrt('https://query.wikidata.org/sparql?query=%0ASELECT+%3Fitem+%3Fname+%3Fags+%3Feinw+%3Fdatum+%3Fweb+%3Fcoord+%3Fkreis+%3FkreisName+WHERE+%7B%0A++%3Fitem+wdt%3AP439+%3Fags+.+FILTER%28STRSTARTS%2",
+ "grenzen_osm": {
+  "https://overpass-api.de/api/interpreter": "Gesperrt('https://overpass-api.de/api/interpreter')",
+  "https://overpass.kumi.systems/api/interpreter": "<HTTPError 502: 'Bad Gateway'>"
+ },
+ "wikidata": {
+  "quelle": "osm",
+  "gemeinden": 0,
+  "kreise": 0,
+  "ok": true,
+  "sekunden": 252
+ },
+ "gesamt_sekunden_webseiten": 252
+}
