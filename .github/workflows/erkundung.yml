@@ -1,6 +1,6 @@
 # Entwicklungswerkzeug: Open-Data-Portale und Gemeindeseiten nach Verkehrszählungen durchsuchen
 # (tools/*.py) und das Ergebnis in denselben Branch legen (Pushes mit GITHUB_TOKEN starten keinen
-# neuen Lauf).
+# neuen Lauf). Teile: portale, webseiten (tools/hessen.py), lesen (tools/hessen2.py).
 name: Erkundung Zähldaten
 on:
   push:
@@ -16,10 +16,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [portale, webseiten]
+        teil: [lesen]
     steps:
       - uses: actions/checkout@v7
-      - run: timeout 52m python3 tools/hessen.py ergebnis/hessen ${{ matrix.teil }} || true
+      - run: sudo apt-get install -y -qq poppler-utils > /dev/null
+      - run: |
+          case "${{ matrix.teil }}" in
+            lesen) timeout 52m python3 tools/hessen2.py ergebnis/hessen2 || true ;;
+            *) timeout 52m python3 tools/hessen.py ergebnis/hessen ${{ matrix.teil }} || true ;;
+          esac
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
