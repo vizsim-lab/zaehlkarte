@@ -18,7 +18,7 @@
 | berlin_viz | mdhopendata.blob.core.windows.net/verkehrsdetektion?… | ja | ja | 1.0 (alles erlaubt) |
 | berlin_viz | api.viz.berlin.de/daten/verkehrsdetektion | ja | ja | 1.0 (alles erlaubt) |
 | hamburg_kfz/rad | iot.hamburg.de/v1.1/Datastreams?… | ja | ja | 1.0 (alles erlaubt) |
-| hamburg_kfz/rad | download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf | NEIN | NEIN | 1.0 (Regeln) |
+| hamburg_kfz/rad | download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf | ja | ja | 1.0 (alles erlaubt) |
 | ettlingen | opendata.readi.de/datastore/dump/a903967d-9177-4db6-977c-267fd745a390 | ja | ja | 10.0 (Regeln) |
 | mobidata_rad | mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_202601.cs | ja | ja | 10.0 (Regeln) |
 | muenster_rad | codeload.github.com/od-ms/radverkehr-zaehlstellen/tar.gz/refs/heads/main | ja | ja | 1.0 (alles erlaubt) |
@@ -26,7 +26,7 @@
 | aachen_rad | offenedaten.aachen.de/api/3/action/package_show?… | NEIN | NEIN | 10.0 (Regeln) |
 | aachen_rad | offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen | ja | ja | 10.0 (Regeln) |
 | aachen_rad | offenedaten.aachen.de/dataset/x/resource/y/download/z.csv | ja | ja | 10.0 (Regeln) |
-| berlin_rad | www.berlin.de/sen/uvk/_assets/verkehr/verkehrsplanung/radverkehr/weitere- | ja | ja | 1.0 (Regeln) |
+| berlin_rad | www.berlin.de/sen/uvk/_assets/verkehr/verkehrsplanung/radverkehr/weitere- | ja | ja | 1.0 (alles erlaubt) |
 | muenchen_rad | opendata.muenchen.de/api/3/action/package_show?… | NEIN | NEIN | 10.0 (Regeln) |
 | muenchen_rad | opendata.muenchen.de/dataset/x/resource/y/download/z.csv | ja | ja | 10.0 (Regeln) |
 | muenchen_rad | geoportal.muenchen.de/geoserver/mor_wfs/ows?… | ja | ja | 1.0 (alles erlaubt) |
@@ -44,3 +44,37 @@
 | bonn_rad | opendata.bonn.de/data.json | ja | ja | 10.0 (Regeln) |
 | bonn_rad | opendata.bonn.de/sites/default/files/x.csv | ja | ja | 10.0 (Regeln) |
 | mannheim/ulm/… (MobiData) | mobidata-bw.de/fahrradzaehldaten/v2/ | ja | ja | 10.0 (Regeln) |
+
+## Abrufe der Werkzeuge (Kennungen der Werkzeuge samt Claude)
+
+| Abruf | erlaubt |
+|---|---|
+| https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsz%C3%A4hlung&rows=1000 | NEIN |
+| https://www.govdata.de/ckan/api/3/action/package_show?id=x | NEIN |
+| https://fragdenstaat.de/api/v1/request/search/?q=Verkehrsz%C3%A4hlung | NEIN |
+| https://fragdenstaat.de/api/v1/request/?jurisdiction=6 | NEIN |
+| https://fragdenstaat.de/api/v1/request/29243/ | NEIN |
+| https://fragdenstaat.de/api/v1/publicbody/?q=Stadt | NEIN |
+| https://fragdenstaat.de/api/v1/law/?q=Satzung | NEIN |
+| https://media.frag-den-staat.de/files/foi/123/x.pdf | ja |
+| https://www.geoportal.hessen.de/mapbender/php/mod_callMetadata.php?searchText=Verkehrsz%C3%A4hlung | ja |
+| https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/search | ja |
+| https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/110000000003182000 | ja |
+| https://overpass-api.de/api/interpreter | NEIN |
+| https://overpass.kumi.systems/api/interpreter | ja |
+| https://overpass.private.coffee/api/interpreter | ja |
+| https://maps.mail.ru/osm/tools/overpass/api/interpreter | ja |
+| https://query.wikidata.org/sparql?query=x | NEIN |
+| https://offenedaten.frankfurt.de/api/3/action/package_search?q=Z%C3%A4hlung | ja |
+| https://opendata.darmstadt.de/api/3/action/package_search?q=Z%C3%A4hlung | ja |
+| https://data.fid-move.de/api/3/action/package_show?id=x | NEIN |
+| https://hessen-mobil.eco-counter.com/ | NEIN |
+| https://www.eco-visio.net/api/aladdin/1.0.0/pbl/publicwebpageplus/8080?withNull=true | ja |
+| https://data.eco-counter.com/ParcPublic/?id=8080 | NEIN |
+| https://www.offenedaten-koeln.de/api/3/action/package_search?q=x | ja |
+| https://opendata.stadt-muenster.de/api/3/action/package_search?q=x | ja |
+| https://www.offenedaten-wuppertal.de/api/3/action/package_search?q=x | ja |
+| https://gitlab.opencode.de/api/v4/projects/x | NEIN |
+| https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstra | ja |
+| https://open-data.bielefeld.de/dataset/radverkehrsz%C3%A4hlstellen | ja |
+| https://opendata.ruhr/dataset/verkehrszahlung-boschheideweg | ja |

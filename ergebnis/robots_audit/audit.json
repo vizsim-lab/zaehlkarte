@@ -146,10 +146,10 @@
   },
   {
    "url": "https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf",
-   "zaehlkarte-pipeline": false,
-   "*": false,
+   "zaehlkarte-pipeline": true,
+   "*": true,
    "crawl_delay": 1.0,
-   "robots": "Regeln"
+   "robots": "alles erlaubt"
   }
  ],
  "ettlingen": [
@@ -215,7 +215,7 @@
    "zaehlkarte-pipeline": true,
    "*": true,
    "crawl_delay": 1.0,
-   "robots": "Regeln"
+   "robots": "alles erlaubt"
   }
  ],
  "muenchen_rad": [
@@ -356,5 +356,36 @@
    "crawl_delay": 10.0,
    "robots": "Regeln"
   }
- ]
+ ],
+ "_werkzeuge": {
+  "https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsz%C3%A4hlung&rows=1000": false,
+  "https://www.govdata.de/ckan/api/3/action/package_show?id=x": false,
+  "https://fragdenstaat.de/api/v1/request/search/?q=Verkehrsz%C3%A4hlung": false,
+  "https://fragdenstaat.de/api/v1/request/?jurisdiction=6": false,
+  "https://fragdenstaat.de/api/v1/request/29243/": false,
+  "https://fragdenstaat.de/api/v1/publicbody/?q=Stadt": false,
+  "https://fragdenstaat.de/api/v1/law/?q=Satzung": false,
+  "https://media.frag-den-staat.de/files/foi/123/x.pdf": true,
+  "https://www.geoportal.hessen.de/mapbender/php/mod_callMetadata.php?searchText=Verkehrsz%C3%A4hlung": true,
+  "https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/search": true,
+  "https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/110000000003182000": true,
+  "https://overpass-api.de/api/interpreter": false,
+  "https://overpass.kumi.systems/api/interpreter": true,
+  "https://overpass.private.coffee/api/interpreter": true,
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter": true,
+  "https://query.wikidata.org/sparql?query=x": false,
+  "https://offenedaten.frankfurt.de/api/3/action/package_search?q=Z%C3%A4hlung": true,
+  "https://opendata.darmstadt.de/api/3/action/package_search?q=Z%C3%A4hlung": true,
+  "https://data.fid-move.de/api/3/action/package_show?id=x": false,
+  "https://hessen-mobil.eco-counter.com/": false,
+  "https://www.eco-visio.net/api/aladdin/1.0.0/pbl/publicwebpageplus/8080?withNull=true": true,
+  "https://data.eco-counter.com/ParcPublic/?id=8080": false,
+  "https://www.offenedaten-koeln.de/api/3/action/package_search?q=x": true,
+  "https://opendata.stadt-muenster.de/api/3/action/package_search?q=x": true,
+  "https://www.offenedaten-wuppertal.de/api/3/action/package_search?q=x": true,
+  "https://gitlab.opencode.de/api/v4/projects/x": false,
+  "https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/information/": true,
+  "https://open-data.bielefeld.de/dataset/radverkehrsz%C3%A4hlstellen": true,
+  "https://opendata.ruhr/dataset/verkehrszahlung-boschheideweg": true
+ }
 }
