@@ -2720,7 +2720,7 @@
     "dauer": {
      "stand": "ohne_lizenz",
      "quellen": [],
-     "was": "KI-Sensoren an rund zehn Kreuzungen, 15-Minuten-Werte seit 2023 über die SensorThings-Schnittstelle – ohne Lizenzangabe, daher nicht in der Karte (die Anfrage bei den Kurzzeitzählungen fragt auch nach der Lizenz)",
+     "was": "KI-Sensoren an rund zehn Kreuzungen, 15-Minuten-Werte seit 2023 über die SensorThings-Schnittstelle – ohne Lizenzangabe, daher nicht in der Karte (die Anfrage bei den Kurzzeitzählungen fragt auch nach der Lizenz); in der Mobilithek seit September 2025 der Datensatz der 66 Sensoren vom 01.01.2022 bis 09.11.2023 als ZIP, eingestuft als freie Nutzung, aber ohne genannte Lizenz",
      "situation": null,
      "links": [
       {
@@ -2730,6 +2730,10 @@
       {
        "titel": "SensorThings-Schnittstelle",
        "url": "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"
+      },
+      {
+       "titel": "Mobilithek: Verkehrszählungsdatensatz 2022–2023",
+       "url": "https://mobilithek.info/offers/903287344194932736"
       }
      ]
     },
@@ -2780,6 +2784,469 @@
     },
     "dauer": null,
     "stand_k": "geliefert"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.5205,
+     52.2625
+    ]
+   },
+   "properties": {
+    "ags": "03101000",
+    "name": "Braunschweig",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "aggregiert",
+     "quellen": [],
+     "was": "acht Rad-Dauerzählstellen (Zählschleifen, seit 2022); offen nur ein Tageswert je Zählstelle, vierteljährlich als CSV (CC BY 4.0)",
+     "situation": "Die Stadt zählt den Radverkehr an acht Standorten mit Schleifen im Boden, drei davon mit Zählsäule. Im Datenportal stehen seit 2023 vierteljährlich CSV-Dateien mit einem Tageswert je Zählstelle (CC BY 4.0) und die Standorte; tagesaktuelle Werte zeigt ein Dashboard. Stundenwerte sind nicht veröffentlicht, ob ein Tag vollständig gezählt ist, lässt sich so nicht prüfen.",
+     "links": [
+      {
+       "titel": "Datenportal: Automatische Radverkehrszählung",
+       "url": "https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung"
+      },
+      {
+       "titel": "Stadt: Automatische Radverkehrszählungen",
+       "url": "https://www.braunschweig.de/leben/stadtplan_verkehr/radverkehr/automatische-radverkehrszaehlung.php"
+      }
+     ]
+    },
+    "stand_d": "aggregiert"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.4293,
+     51.9065
+    ]
+   },
+   "properties": {
+    "ags": "03153017",
+    "name": "Goslar",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Goslar",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "mobile Verkehrsdatenerfassung mit Videodetektion (zehn Fahrzeugklassen samt Rad)",
+     "situation": "Die Stadt erfasst den Verkehr auch mobil mit Videodetektion: KI-basierte Erkennung von zehn Fahrzeugklassen samt Fahrrädern, ohne dass Video gespeichert wird. Ergebnisse sind nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach den Zählungen der mobilen Videodetektion als Export (Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Goslar seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nSie erfassen den Verkehr mobil mit Videodetektion. Ich bitte um die Zählungen dieser Geräte als Export (Werte je Intervall, Richtung und Fahrzeugklasse).\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Mobile Verkehrsdatenerfassung",
+       "url": "https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung"
+      }
+     ]
+    },
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "drei Rad-Dauerzählstellen seit Frühjahr 2018 (unter anderem Okerstraße und Arcachon-Brücke); Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Stationäre Zählstellen",
+       "url": "https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen"
+      }
+     ]
+    },
+    "stand_k": "kandidat",
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.213,
+     53.14
+    ]
+   },
+   "properties": {
+    "ags": "03403000",
+    "name": "Oldenburg (Oldb)",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Oldenburg",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "automatische Zählungen an den Bahnübergängen in Ofenerdiek (Seitenradar, Zählplatten, Zählkameras); frühere Zählungen etwa am Pophankenweg 2017",
+     "situation": "Für die Bahnübergänge in Ofenerdiek hat die Stadt an mehreren Knotenpunkten automatisch gezählt, mit Seitenradar, Zählplatten und Zählkameras an Teleskopmasten. Am Pophankenweg nennt sie eine Zählung vom August 2017 (9.654 Kfz und 264 Räder am Tag). Werte je Zählung sind nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach den Zählungen in Ofenerdiek und den übrigen Zählungen seit 2017 als Export (Werte je Intervall und Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Oldenburg (Oldb) seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nFür die Bahnübergänge in Ofenerdiek haben Sie mit Seitenradar, Zählplatten und Zählkameras gezählt. Ich bitte um diese Zählungen und die übrigen seit 2017 als Export der Geräte.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrszählung Ofenerdiek",
+       "url": "https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn/bahnuebergang-am-stadtrand/verkehrszaehlung-ofenerdiek.html"
+      }
+     ]
+    },
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Rad-Zählsäule am Pophankenweg seit Februar 2023; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Zählsäule am Pophankenweg",
+       "url": "https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/radverkehr/woran-wir-noch-arbeiten/konkretes-aus-dem-rad-und-fussverkehrsprogramm/fahrradzaehlstation/radzaehlsaeule-am-pophankenweg-1.html"
+      }
+     ]
+    },
+    "stand_k": "kandidat",
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.4514,
+     53.2295
+    ]
+   },
+   "properties": {
+    "ags": "03457013",
+    "name": "Leer (Ostfriesland)",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "aggregiert",
+     "quellen": [],
+     "was": "drei Rad-Zählstellen; die Stadt veröffentlicht regelmäßig aktualisierte Auswertungen (Gesamtnutzung, Vergleich der Standorte), keine Werte je Stunde oder Tag",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Auswertung Fahrradzählstellen",
+       "url": "https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/"
+      }
+     ]
+    },
+    "stand_d": "aggregiert"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.2092,
+     53.3624
+    ]
+   },
+   "properties": {
+    "ags": "03353",
+    "name": "Landkreis Harburg",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landkreis+Harburg",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "landkreisweite Zählung an den Kreisstraßen, je Abschnitt eine Zählstelle",
+     "situation": "Der Landkreis zählt landkreisweit auf seinem Kreisstraßennetz, das dafür in Abschnitte mit möglichst gleicher Verkehrsstärke geteilt ist – je Abschnitt eine Zählstelle. Gezählte Werte sind nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach den gezählten Werten je Zählstelle (vor der Hochrechnung, je Intervall und Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Landkreis Harburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nSie zählen landkreisweit an den Kreisstraßen und rechnen die Ergebnisse auf den DTV hoch. Ich bitte um die gezählten Werte selbst, je Zählstelle, Intervall und Richtung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrszählung und Verkehrsmodell",
+       "url": "https://www.landkreis-harburg.de/verkehr-ordnung/kreisstrassen-radverkehr/verkehrszaehlung-verkehrsmodell/"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.5469,
+     52.4844
+    ]
+   },
+   "properties": {
+    "ags": "03151",
+    "name": "Landkreis Gifhorn",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landkreis+Gifhorn",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Zählung an 138 Stellen der Kreisstraßen, je 24 Stunden, vermehrt mit Videokameras (2025)",
+     "situation": "Der Landkreis lässt an 138 Stellen seiner Kreisstraßen nacheinander zählen, je 24 Stunden, vermehrt mit Videokameras. Die Ergebnisse dienen laut Mitteilung auch Ämtern, Forschungsinstituten und Verbänden für Lärm- und Emissionsberechnungen; veröffentlicht sind die Zählungen nicht.",
+     "empfehlung": "Anfrage nach den Zählungen 2025 (je Zählstelle 24 Stunden, Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Landkreis Gifhorn seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nSie haben 2025 an 138 Stellen der Kreisstraßen je 24 Stunden gezählt. Ich bitte um diese Zählungen mit den Werten je Intervall, Richtung und Fahrzeugklasse.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrszählungen an Kreisstraßen",
+       "url": "https://www.landkreis-gifhorn.de/Service/Verkehrsz%C3%A4hlungen-an-Kreisstra%C3%9Fen-im-Landkreis-Gifhorn.php?object=tx,4083.6271.1"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4575,
+     52.5048
+    ]
+   },
+   "properties": {
+    "ags": "03241012",
+    "name": "Neustadt am Rübenberge",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Neustadt+am+R%C3%BCbenberge",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Zählung 2021 in der Kernstadt an 20 Standorten (Video, Seitenradar; beide Richtungen, nach Fahrzeugklassen)",
+     "situation": "Im Mai 2021 hat die Stadt an 20 Standorten in der Kernstadt mit Video und Seitenradar gezählt, in beiden Richtungen und nach Fahrzeugklassen, dazu eine Erfassung der Wege über verschlüsselte Kennzeichen. Die Zählwerte sind nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach den Zählungen 2021 (Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Neustadt am Rübenberge seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIm Mai 2021 haben Sie an 20 Standorten in der Kernstadt mit Video und Seitenradar gezählt. Ich bitte um diese Zählungen (nicht die Kennzeichenauswertung).\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrszählung in der Kernstadt (2021)",
+       "url": "https://www.neustadt-a-rbge.de/rathaus/pressestelle/presse-archiv/2021/mai/verkehrszaehlung-in-der-kernstadt/"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.3292,
+     52.1536
+    ]
+   },
+   "properties": {
+    "ags": "03102000",
+    "name": "Salzgitter",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Salzgitter",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Radverkehrszählung in Salzgitter-Bad (Radweg Nord-Süd-Straße, 2.–29. Juni 2025)",
+     "situation": "Die Stadt hat im Juni 2025 vier Wochen lang den Radverkehr auf dem Radweg an der Nord-Süd-Straße in Salzgitter-Bad gezählt, als Grundlage der Radverkehrsplanung. Ergebnisse sind nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach dieser Zählung und weiteren Zählungen der Stadt (Werte je Stunde und Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Salzgitter seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIm Juni 2025 haben Sie den Radverkehr an der Nord-Süd-Straße in Salzgitter-Bad gezählt. Ich bitte um diese Zählung und weitere Zählungen der Stadt seit 2020.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Radverkehrszählung in Salzgitter-Bad",
+       "url": "https://www.salzgitter.de/pressemeldungen/2025/radverkehrszaehlung-sz-bad"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.6986,
+     53.4759
+    ]
+   },
+   "properties": {
+    "ags": "03359010",
+    "name": "Buxtehude",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Hansestadt+Buxtehude",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "nur_karte",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Zählungen an rund 40 Stellen für den Verkehrsentwicklungsplan, veröffentlicht nur als Belastungsplan (Bild, Analyse 2017)",
+     "situation": "Für den Verkehrsentwicklungsplan hat die Stadt an rund 40 Stellen gezählt und daraus ein Verkehrsmodell gebaut. Veröffentlicht sind nur Belastungspläne als Bild (Analyse 2017, Prognose).",
+     "empfehlung": "Anfrage nach den Zählungen für den Verkehrsentwicklungsplan (Werte je Zählstelle, Intervall und Richtung), mit Lizenz – nicht nach den Plänen. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Hansestadt Buxtehude seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nFür Ihren Verkehrsentwicklungsplan haben Sie an rund 40 Stellen gezählt. Ich bitte um diese Zählungen selbst, nicht um die Belastungspläne.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrszahlen",
+       "url": "https://www.buxtehude.de/bauen-verkehr-umwelt/verkehrsplanung/verkehrszahlen/"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "nur_karte"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.8646,
+     52.795
+    ]
+   },
+   "properties": {
+    "ags": "03453009",
+    "name": "Lastrup",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Gemeinde+Lastrup",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "zählt auf Antrag von Bürgerinnen und Bürgern je eine Woche mit eigenem Gerät (Bauhof)",
+     "situation": "Wer in Lastrup eine Verkehrszählung beantragt, bekommt sie nach Prüfung: Der Bauhof stellt das Zählgerät der Gemeinde jeweils eine Woche auf. Ergebnisse sind nicht als Daten veröffentlicht.",
+     "empfehlung": "Anfrage nach den Zählungen der letzten Jahre als Export des Geräts (Werte je Stunde und Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Gemeinde Lastrup seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhr Bauhof stellt auf Antrag Ihr Zählgerät jeweils eine Woche auf. Ich bitte um die Exporte dieser Zählungen seit 2020.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Verkehrserhebungen",
+       "url": "https://www.lastrup.de/verwaltung-politik/buergerservice/verkehrszaehldaten/"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.4088,
+     53.2492
+    ]
+   },
+   "properties": {
+    "ags": "03355",
+    "name": "Landkreis Lüneburg",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landkreis+L%C3%BCneburg",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "kandidat",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "verleiht mobile Rad-Zählgeräte an die Gemeinden; die Zähldaten werden online gespeichert",
+     "situation": "Der Landkreis hat mobile Rad-Zählgeräte (Eco-Counter) gekauft und verleiht sie an Gemeinden, etwa für eine Zählung in Dahlenburg. Die Zähldaten werden online beim Hersteller gespeichert, veröffentlicht sind sie nicht.",
+     "empfehlung": "Anfrage nach einem Export aller Zählungen mit den Leihgeräten (Werte je Stunde und Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.",
+     "weg": "FragDenStaat, Niedersächsisches UIG",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Landkreis Lüneburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nSie verleihen mobile Rad-Zählgeräte an die Gemeinden; die Daten liegen im Online-Konto. Ich bitte um einen Export aller Zählungen dieser Geräte.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Radverkehrszählgeräte zur Ausleihe",
+       "url": "https://www.landkreis-lueneburg.de/fuer-unsere-buergerinnen-und-buerger/mobil-im-landkreis/radfahren/radverkehrszaehlgeraete-zur-ausleihe.html"
+      },
+      {
+       "titel": "Radverkehrszählung in Dahlenburg",
+       "url": "https://www.landkreis-lueneburg.de/das-wichtigste-auf-einen-blick/aktuelle-informationen/presse/pressemitteilungen/praezise-zahlen-fuer-den-radverkehr"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "kandidat"
    }
   },
   {
