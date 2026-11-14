@@ -1,0 +1,15 @@
+{
+ "seiten": {
+  "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/_inhalt.html": {
+   "abgerufen_von": "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/_inhalt.html",
+   "xlsx": []
+  }
+ },
+ "dateien": {},
+ "fehler": {
+  "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/_inhalt.html": "<HTTPError 404: 'Not Found'>"
+ },
+ "robots.txt": {
+  "https://www.destatis.de": "User-agent: *\nDisallow: /SiteGlobals/\nDisallow: /GPStatistik/servlets/MCRSearchServlet\nAllow: /SiteGlobals/Frontend/JavaScript/\nAllow: /SiteGlobals/Modules/\nAllow: /SiteGlobals/StyleBundles/\nAllow: /SiteGlobals/Frontend/\nAllow: /SiteGlobals/Forms/Suche/*_Formular.*\nAllow: /SiteGlobals/Functions/RSSFeed/DE/\nCrawl-delay: 30\nSitemap: https://www.destatis.de/Sitemap_Index.xml\n"
+ }
+}
