@@ -78,8 +78,11 @@ stationen:
     kennung: a8-unterfuehrung-ost
     strasse: Geh- und Radweg am Lech (Ostufer)
     abschnitt: südlich der Unterführung der A8
-    lon: 10.8985  # vorläufig
-    lat: 48.4175
+    lon: 10.889200
+    lat: 48.413400
+    hinweise:
+      - >-
+        Lage ungefähr: Geh- und Radweg am Ostufer des Lechs, rund 100 m südlich der Brücke der A8.
   - name: Ulrichsbrücke
     kennung: ulrichsbruecke
     strasse: Ulrichsbrücke
@@ -110,3 +113,6 @@ hinweise:
   - >-
     Lage nach der Beschreibung der Station über die Straßen in OpenStreetMap (© OpenStreetMap-
     Mitwirkende, ODbL) – die Quelle nennt keine Koordinaten.
+  - >-
+    Die Quelle unterscheidet nicht zwischen einem Ausfall und null Rädern: An der Dieselbrücke
+    stehen 19 Tage mit 0 – in der Karte als Tageswerte, wie geliefert.

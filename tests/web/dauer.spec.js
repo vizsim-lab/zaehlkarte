@@ -383,6 +383,8 @@ test("Tageswerte der Quelle: Hinweis in der Legende, im Hover und in der Seitenl
   const detail = page.locator("#dauer-detail");
   await expect(detail.locator(".detail-titel")).toHaveText("Alsterufer");
   await expect(detail.locator(".dd-tw")).toHaveText("Tageswerte der Quelle (ohne Stunden, Vollständigkeit nicht prüfbar).");
+  await expect(detail).toContainText("Tageswerte Rad · 15.06.2025 – 10.07.2025");
+  await expect(detail.locator(".dd-juengster")).toContainText("Jüngster Schultag der Stelle mit einem Tageswert der Quelle");
   await expect(detail.locator(".detail-kennwerte thead")).toContainText("Tageswert der Quelle");
   await expect(detail.locator(".detail-kennwerte")).toContainText("2.040");
   await expect(detail).toContainText("Für diesen Tag liefert die Quelle nur einen Tageswert, keine Stunden.");

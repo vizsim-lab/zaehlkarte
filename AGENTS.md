@@ -896,10 +896,21 @@ robots.txt für alle Robots sperrt. Seitdem:
     der Reihenfolge der Spalten, der Kopf muss genau passen. Je Tag eine Zeile, leer = nicht
     gezählt. Der letzte Tag ist der Tag der Erstellung, nur zum Teil gezählt (11.08.2026: 3 bis 556)
     → nicht übernommen. Die Datei endet am 11.08.2026 (wie die Annastraße), obwohl die Mobilithek
-    tägliche Aktualisierung nennt. Lage: keine Koordinaten in der Quelle und keine Zähler in OSM →
+    tägliche Aktualisierung nennt. Stand 14.11.2026 (`tools/quelle_pruefen.py`,
+    `ergebnis/augsburg_rad/` auf `werkzeug/dauer`): 3.617 Zeilen, 30.308 Tageswerte, im Median 536
+    (Postillionstraße) bis 2.450 (Konrad-Adenauer-Allee) am Tag, höchster 6.291; Tage mit 0 fast nur
+    an der Dieselbrücke (19, vermutlich Ausfälle – Hinweis). Lage: keine Koordinaten in der Quelle und keine Zähler in OSM →
     Punkte nach der Beschreibung der Station über die OSM-Straßen (Overpass,
-    `ergebnis/ohne_lizenz/holen17–18/` auf `werkzeug/erkundung`); „Südlich A8-Unterführung,
-    Ostseite“ ist der Geh- und Radweg am Ostufer des Lechs (Radverkehrsmaßnahmen 2020 der Stadt).
+    `ergebnis/ohne_lizenz/holen17–22/` auf `werkzeug/erkundung`); „Südlich A8-Unterführung,
+    Ostseite“ ist der Geh- und Radweg am Ostufer des Lechs (Radverkehrsmaßnahmen 2020 der Stadt):
+    A8-Brücke bei 48,4142° N (OSM-Wege 27394066/27394069), der Weg am Ostufer (24859272) endet
+    nördlich davon – Punkt rund 100 m südlich der Brücke, „Lage ungefähr“. Ebenso ungefähr die
+    Friedrich-Ebert-Straße: „östlich Haltestelle Messe“ passt zu „Messe DB“ wie zu „Messe Süd“ –
+    Punkt dazwischen. Die übrigen Punkte: Brückenmitte (Diesel-, Ulrichsbrücke), Einmündung
+    (Färber-/Gollwitzerstraße), 60 m von der genannten Kreuzung in die genannte Richtung, Mitte
+    der Fahrradstraße Konrad-Adenauer-Allee bzw. des Wegs Wagenhalsstraße (laut Stadt „hinter der
+    City-Galerie“), Haunstetter Straße am nächsten zur Mitte des Protestantischen Friedhofs.
+    Overpass antwortete abends oft nicht (Zeitgrenze, 504) – kleine Abfragen gingen eher durch.
   - **Fuß (seit November 2026, Entscheidung der Projektleitung):**
     - **Augsburg** (`augsburg_fuss`, CC BY 4.0, Mobilithek-Angebot `-1747083335311792689` der
       Wirtschaftsförderung): eine CSV auf augsburg.de

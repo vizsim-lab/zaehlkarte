@@ -7,7 +7,7 @@
 // Hinweise der Stammdaten) sind fremd: immer über esc() ins HTML, lang="de".
 import { ladeDauer } from "../data/laden.js";
 import {
-  DAUER_GRUPPEN, amSelbenPunkt, gruppeFuer, gruppenName, hatGruppe, imJuengsten, juengsterVon, plusTage, stundenAm,
+  DAUER_GRUPPEN, amSelbenPunkt, ausTageswert, gruppeFuer, gruppenName, hatGruppe, imJuengsten, juengsterVon, plusTage, stundenAm,
   stundenDesTags, tagAusDetail, tageZwischen, tagtyp, zeitraumText,
 } from "../data/dauer.js";
 import { TAGE } from "../data/modell.js";
@@ -77,6 +77,8 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     // Standardansicht: der Tag ist der jüngste vollständig gezählte Schultag der Stelle (ohne
     // einen solchen ihr letzter vollständiger Tag – dann ohne den Hinweis)
     const juengster = imJuengsten(d, z) && stelle.gruppen.some((x) => juengsterVon(d, stelle, x)?.[0] === tag);
+    // der jüngste Schultag mit einem Tageswert der Quelle: „vollständig gezählt“ lässt sich nicht prüfen
+    const juengsterTw = juengster && stelle.gruppen.some((x) => juengsterVon(d, stelle, x)?.[0] === tag && ausTageswert(d, stelle, x, tag));
     const q = quelle(d);
     // mehrere Stellen am selben Punkt (alle Richtungen eines Sensors): hier umschalten, in der
     // Karte liegen sie übereinander
@@ -119,7 +121,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const twHinweis = twBis && twBis >= reiheVon
       ? t(twBis >= reiheBis ? "dd.reihe_tw_alle" : "dd.reihe_tw", { datum: datum(twBis) }) : null;
     const reihe = tr.svg ? `
-      <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: gruppenName(g), zeitraum: zeitraumText(reiheVon, plusTage(detail.von, letzter)) }))}</div>
+      <div class="detail-abschnitt">${esc(t(twBis && twBis >= reiheBis ? "dd.reihe_tageswerte" : "dd.reihe", { gruppe: gruppenName(g), zeitraum: zeitraumText(reiheVon, reiheBis) }))}</div>
       <div class="tr-wrap">${tr.svg}<div class="tg-tooltip" hidden></div></div>
       <div class="tr-legende">
         <span><i style="background:${TR_FARBEN.s}"></i>${esc(TAGE.s)}</span>
@@ -172,7 +174,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
       ${reihe}
       <section class="detail-tag" aria-live="polite">
         <div class="detail-abschnitt">${esc(t("dd.tag", { wochentag: wochentag(tag), datum: datum(tag), tag: TAGE[typ] }))}</div>
-        ${juengster ? `<div class="pop-meta dd-juengster">${esc(t("dd.juengster"))}</div>` : ""}
+        ${juengster ? `<div class="pop-meta dd-juengster">${esc(t(juengsterTw ? "dd.juengster_tw" : "dd.juengster"))}</div>` : ""}
         ${tagTeil}
       </section>
       ${hinweise ? `<div class="detail-abschnitt">${esc(t("detail.hinweise"))}</div><ul class="detail-hinweise" lang="de">${hinweise}</ul>` : ""}
