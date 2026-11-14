@@ -238,27 +238,37 @@ def _punkte(ds: dict[str, list[dict]]) -> dict[str, tuple[float, float]]:
 
 
 def _strassen(q: dict, pfade: Pfade, ds: dict[str, list[dict]], gordner: Path) -> list[str]:
-    """Straßennamen für Stellen ohne Eintrag in gedaechtnis/strassen.json – über Overpass
-    (`overpass` in sources.yaml: Server in der Reihenfolge, in der sie versucht werden)."""
-    from zaehlkarte.dauer.strassen import LIZENZ, naechste_strassen_overpass
+    """Straßennamen für Stellen ohne Eintrag in gedaechtnis/strassen.json – aus dem OSM-Abzug
+    (`osm` in sources.yaml). Der Abzug wird nur geladen, wenn noch keiner da ist, und dann
+    behalten (Cache im Workflow): Straßen ändern sich selten, und Geofabrik bittet, nicht dieselbe
+    Datei immer wieder zu laden."""
+    from zaehlkarte.dauer.strassen import LIZENZ, naechste_strassen
 
     pfad = gordner / "strassen.json"
     alt = json.loads(pfad.read_text(encoding="utf-8")) if pfad.exists() else {}
     stellen = alt.get("stellen", {})
     fehlt = {k: p for k, p in _punkte(ds).items() if k not in stellen}
-    if not fehlt or not q.get("overpass"):
+    if not fehlt or not q.get("osm"):
         return []
+    from zaehlkarte.fetch import lade
+
+    # ein Abzug für alle Quellen derselben Gegend (Hamburg Kfz und Rad)
+    osm = pfade.roh / "osm" / Path(urllib.parse.urlparse(q["osm"]).path).name
     try:
-        treffer, server = naechste_strassen_overpass(q["overpass"], fehlt)
+        if not osm.exists():
+            lade(q["osm"], osm)
+        treffer = naechste_strassen(osm, fehlt)
     except Exception as e:  # noqa: BLE001 – die Stellen bleiben ohne Namen, der nächste Lauf fragt neu
-        return [f"{q['code']}: Straßennamen für {len(fehlt)} neue Stellen nicht geholt (Overpass: "
+        return [f"{q['code']}: Straßennamen für {len(fehlt)} neue Stellen nicht geholt (OSM-Abzug: "
                 f"{type(e).__name__}) – der nächste Lauf versucht es wieder"]
     for k in fehlt:
         stellen[k] = treffer.get(k) or {"name": None}
-    neu = {"lizenz": LIZENZ, "osm": server or alt.get("osm"),
+    abzug = datetime.fromtimestamp(osm.stat().st_mtime, UTC).date().isoformat()
+    neu = {"lizenz": LIZENZ, "osm": q["osm"], "abzug": abzug,
            "stand": datetime.now(UTC).date().isoformat(), "stellen": dict(sorted(stellen.items()))}
     pfad.write_text(json.dumps(neu, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    return [f"{q['code']}: Straßennamen für {len(fehlt)} neue Stellen ({len(treffer)} gefunden)"]
+    return [f"{q['code']}: Straßennamen für {len(fehlt)} neue Stellen ({len(treffer)} gefunden, "
+            f"OSM-Abzug vom {abzug})"]
 
 
 # ---------------------------------------------------------------- Lesen

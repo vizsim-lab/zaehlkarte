@@ -3,10 +3,12 @@
 # von Geofabrik. Ergebnis: pipeline/geokodierung/berlin_ergaenzung.csv als Pull Request
 # (darf Actions keine PRs anlegen, bleibt der Branch stehen – Link in der Zusammenfassung).
 #
-# Achtung: Geofabrik sperrt `*.osm.pbf` per robots.txt für alle Robots (Prüfung November 2026).
-# Der Abzug geht darum über die Pipeline (`zaehlkarte lade`, robots.txt) – und bricht ab, solange
-# sources.yaml keine Ausnahme dafür nennt. Das Ergebnis des letzten Laufs liegt im Git. Darum
-# läuft der Workflow nur noch von Hand (vorher auch bei Änderungen an Werkzeug oder Workflow).
+# Geofabrik sperrt `*.osm.pbf` per robots.txt für alle Robots. Der Abzug geht darum über die
+# Pipeline (`zaehlkarte lade`, robots.txt) mit der Ausnahme an der Quelle `berlin` in
+# sources.yaml (Beschluss vom 14.11.2026) – und möglichst nur einmal: Er bleibt im Actions-Cache,
+# ein weiterer Lauf nimmt ihn von dort (Straßen ändern sich selten; neu laden: Schlüssel erhöhen).
+# GitHub löscht Caches, die sieben Tage niemand genutzt hat – dann lädt der nächste Lauf neu.
+# Läuft nur von Hand – das Ergebnis liegt im Git und wird selten gebraucht.
 name: Berlin geokodieren
 
 on:
@@ -34,15 +36,22 @@ jobs:
           uv sync --locked
           uv run zaehlkarte fetch --quelle berlin
           uv run zaehlkarte geokodier-liste "$RUNNER_TEMP/liste.csv"
+      - uses: actions/cache@v6  # OSM-Abzug: einmal laden, dann behalten
+        with:
+          path: pipeline/data/raw/osm
+          key: osm-berlin-1
       - name: OSM-Abzug Berlin (Geofabrik, ODbL)
         working-directory: pipeline
-        run: uv run zaehlkarte lade https://download.geofabrik.de/europe/germany/berlin-latest.osm.pbf "$RUNNER_TEMP/berlin.osm.pbf"
+        run: |
+          ziel=data/raw/osm/berlin-latest.osm.pbf
+          test -f "$ziel" || uv run zaehlkarte lade https://download.geofabrik.de/europe/germany/berlin-latest.osm.pbf "$ziel"
+          ls -l "$ziel"
       - name: Geokodieren
         working-directory: schulwege/pipeline
         run: |
           uv sync --locked
           uv run python "$GITHUB_WORKSPACE/pipeline/werkzeuge/geokodiere_berlin.py" \
-            "$RUNNER_TEMP/liste.csv" "$RUNNER_TEMP/berlin.osm.pbf" ../data/berlin_plz.gpkg \
+            "$RUNNER_TEMP/liste.csv" "$GITHUB_WORKSPACE/pipeline/data/raw/osm/berlin-latest.osm.pbf" ../data/berlin_plz.gpkg \
             "$GITHUB_WORKSPACE/pipeline/geokodierung/berlin_ergaenzung.csv" | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Pull Request
         env:
