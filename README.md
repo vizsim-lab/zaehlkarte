@@ -261,6 +261,8 @@ Quelle nicht mehr hat. Darum liegt jede Fassung zusätzlich im Release
 `gedaechtnis-kopie-JJJJ` (eins je Jahr, nie überschrieben). Ist die jüngste Stunde einer Quelle
 älter als 10 Tage, wird der Wochenlauf rot (`zaehlkarte dauer frische`): Dann scheitert ihr Abruf
 seit mindestens einer Woche, und Leipzig etwa bleiben noch gut zwei Wochen bis zum Verlust.
+Ebenso, wenn die Schulferien eines Landes in drei Monaten enden (`zaehlkarte kalender`): Ferien
+und Feiertage gibt es für alle 16 Länder, aus den KMK-Ferienkalendern bis 2027/28.
 
 Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
 

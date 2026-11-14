@@ -157,13 +157,19 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
   Fußwege der Kreuzung.
 - **Ferien:** bewegliche Ferientage legen die Schulen selbst fest (BW: 3–5 je Schuljahr) –
   ein „Schultag“ kann vor Ort frei gewesen sein. Die KMK-Kalender ab 1999/2000 stehen im
-  Archiv auf kmk.org (`Ferien99_00.pdf` … `FER19_20.pdf`); `pdftotext -layout` und die
-  Spaltenköpfe (Herbst, Weihnachten, …) reichen zum Auslesen – das macht
-  `pipeline/werkzeuge/kmk_ferien.py` (mit `--pruefe` gegen eine vorhandene CSV; deckt sich mit
-  NW 19, HH 3 und BB 17 Schuljahren). Kursiv gesetzte unterrichtsfreie Tage (Bayern: Buß- und
-  Bettag, Art. 4 Nr. 3 BayFTG) unterscheidet der Text nicht – von Hand nachtragen. Bayerns
-  Frühjahrsferien (Fasching) stehen unter Ostern/Frühjahr vor den Osterferien. kmk.org ist aus
-  der Sandbox nicht erreichbar (Workflow).
+  Archiv auf kmk.org (`Ferien99_00.pdf` … `FER2027_28.pdf`; PDFs 1999/2000–2027/28 auf
+  `werkzeug/erkundung`, `ergebnis/ferien/`). `pipeline/werkzeuge/kmk_ferien.py` liest die Tabelle
+  mit pdfplumber aus dem PDF – Zelle für Zelle, Name und Jahr je Spalte aus dem Kopf (bis
+  2001/02 stehen die Sommerferien vorn, 2001/02 hat zwei Sommerspalten). Abgleich mit `--pruefe`:
+  deckt sich mit NW 29, SN 21, BB 17 und HH 3 Schuljahren. Der frühere Weg über den Text von
+  `pdftotext -layout` ordnete mehrzeilige Zellen über die Nähe zur Landeszeile zu und gab so
+  Einzeltage an Nachbarländer (Mecklenburg-Vorpommern 2024/25 und 2025/26 – berichtigt im
+  November 2026); er bleibt nur für Kalender ohne PDF. Kursiv gesetzte schul- und
+  unterrichtsfreie Tage stehen unter dem Namen ihrer Spalte; den Buß- und Bettag in Bayern (Art. 4
+  Nr. 3 BayFTG) führt die KMK nicht – von Hand nachtragen. Bayerns Frühjahrsferien (Fasching)
+  stehen unter Ostern/Frühjahr vor den Osterferien. kmk.org ist aus der Sandbox nicht erreichbar
+  (Werkzeug-Branch, `tools/kmk_pdf.py`). `zaehlkarte kalender` meldet im Wochenlauf, wenn die
+  Ferien eines Landes in drei Monaten enden.
 - **Münster:** Formelfehler in den Zählblättern lassen Ströme aus – mal in der Kfz-Zelle
   (Kfz 26 bei 315 Pkw), mal in den Fahrzeugarten (S-Zeile ohne den zweiten Strom) -> je Arm
   den größeren der beiden Werte. Leere Vorlagen stehen auf 0 -> eine Stunde mit
