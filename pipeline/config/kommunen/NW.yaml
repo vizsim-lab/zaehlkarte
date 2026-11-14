@@ -664,12 +664,14 @@
   name: Neuss
   lage: [6.7066, 51.1762]
   dauer:
-    stand: ohne_lizenz
+    stand: in_karte
+    quellen: [neuss_rad]
     was: >-
-      Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte je Richtung
-      im Portal des Rhein-Kreises Neuss, seit November 2026 auch in der Mobilithek – dort „keine
-      Lizenz“; ohne Lizenzangabe nicht in der Karte
+      Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte seit Juli
+      2026 im Open-Data-Portal des Rhein-Kreises Neuss (CC BY-SA 4.0; die Mobilithek führt den
+      Datensatz ohne Lizenz) – in der Karte als Dauerzählstelle
     links:
+      - ["Radverkehrszählstelle RS5 (Open Data Rhein-Kreis Neuss)", "https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/"]
       - ["Mobilithek: Radverkehrszählstelle RS5", "https://mobilithek.info/offers/-1611162702897177411"]
 - ags: "05382020"
   name: Hennef (Sieg)

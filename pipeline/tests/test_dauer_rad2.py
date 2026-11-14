@@ -440,7 +440,7 @@ def test_rostock_viertelstunden_mit_versatz_und_ohne(pfade):
 
 
 # --------------------------------------------------------------------------------- Bochum
-def test_bochum_rad_ohne_fuss_und_richtungen(pfade):
+def test_bochum_rad_und_fuss_je_richtung(pfade):
     from zaehlkarte.dauer import bochum_rad
 
     o = pfade.roh / "bochum_rad"
@@ -465,8 +465,11 @@ def test_bochum_rad_ohne_fuss_und_richtungen(pfade):
     assert [s.kennung for s in r.stellen] == ["erzbahntrasse"]
     assert b.ohne == ["springorumtrasse_sued"]
     summe, _ = tagessummen(r, "rad")
-    assert summe[0, r.index(date(2026, 10, 24))] == 96 * 3  # nur Rad, nicht Fuß
-    assert summe[0, r.index(RUECK)] == LEER and b.unvollstaendig["erzbahntrasse"] == 1
+    assert summe[0, r.index(date(2026, 10, 24))] == 96 * 3  # Rad: beide Richtungen
+    assert summe[0, r.index(RUECK)] == LEER and b.unvollstaendig["erzbahntrasse rad"] == 1
+    fuss, _ = tagessummen(r, "fuss")  # Fuß: eigene Kanäle, eigene Gruppe
+    assert fuss[0, r.index(date(2026, 10, 24))] == 96 * 18
+    assert b.mit_fuss == ["erzbahntrasse"] and "erzbahntrasse fuss" not in b.unvollstaendig
     url = bochum_rad.datei_url({"api": "https://gitlab.example/api/v4", "projekt": "Stadt/rad"},
                                "erzbahntrasse")
     assert url == ("https://gitlab.example/api/v4/projects/Stadt%2Frad/repository/files/"

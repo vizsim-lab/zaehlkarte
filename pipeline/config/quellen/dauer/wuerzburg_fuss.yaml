@@ -1,0 +1,45 @@
+# Fußverkehr: Passantenzählung der Stadt Würzburg (Laserscanner von hystreet.com in der
+# Innenstadt), Stundendaten im Open-Data-Portal der Stadt (Opendatasoft; Mobilithek-Angebot
+# -8264466313321172654, dl-de/by-2-0). Der Abruf braucht die robots-Ausnahme des Portals
+# (Beschluss der Projektleitung, 14.11.2026; config/robots.yaml). Ältere Stundenwerte stehen in
+# eigenen Datensätzen je Standort (AGENTS.md, „Würzburg“) – noch nicht übernommen.
+nr: 23
+status: live
+adapter: ods_stunden
+name: Würzburg (Passantenzählung)
+land: BY
+traeger: Stadt Würzburg
+art: >-
+  Passantenzählung in der Innenstadt (Laserscanner): Personen je Stunde und Standort, beide
+  Richtungen zusammen; Januar 2024 bis Mai 2026
+weg: offen im Open-Data-Portal der Stadt (Opendatasoft)
+portal: https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/
+basis: https://opendata.wuerzburg.de
+datensatz: passantenzaehlung_stundendaten
+gruppe: fuss
+zeit: timestamp
+werte: [pedestrians_count]  # alle Passanten (beide Richtungen, Erwachsene und Kinder)
+stelle: location_id
+stellen:  # Lage: Mittelpunkt der Zählfläche laut Datensatz (`geo_point_2d`)
+  "135": {kennung: "135", name: Schönbornstraße, lon: 9.931060, lat: 49.795490}
+  "470": {kennung: "470", name: Spiegelstraße, lon: 9.934114, lat: 49.795127}
+  "476": {kennung: "476", name: Kaiserstraße, lon: 9.933888, lat: 49.798499}
+titel: >-
+  Passantenzählung – Stundendaten, Stadt Würzburg (verändert: Stundenwerte zu Tagessummen
+  zusammengefasst)
+herausgeber: Stadt Würzburg
+quellenvermerk: Stadt Würzburg; hystreet.com GmbH
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Gemessen von hystreet.com (Laserscanner); die Stadt veröffentlicht die Werte unter
+    dl-de/by-2-0 und nennt hystreet.com GmbH als Quelle.
+  - >-
+    Der Datensatz endet am 17.05.2026; seither ist er nicht fortgeschrieben (Stand 14.11.2026).
+  - >-
+    Die Quelle kennzeichnet die Stunden von 0 bis 20 Uhr fast durchweg als „unverifiziert“, die
+    Abendstunden fast nie. Die Zählkarte zählt beide – ungeprüfte Rohwerte wie bei anderen
+    Quellen. Ausfälle stehen darin teils als 0 (etwa eine Stunde mit 0 Passanten am Mittag).
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

@@ -7,12 +7,12 @@
 nr: 16
 status: live
 adapter: bochum_rad
-name: Bochum (Rad-Zählstellen)
+name: Bochum (Rad- und Fuß-Zählstellen)
 land: NW
 traeger: Stadt Bochum
 art: >-
   Zählstellen für Rad- und Fußverkehr (Eco-Counter); 15-Minuten-Werte je Richtung, in der Karte
-  Rad, beide Richtungen zusammen
+  Rad und – wo eigene Kanäle zählen – Fuß, je Verkehrsart beide Richtungen zusammen
 weg: offen im GitLab der Stadt auf openCode.de (täglich aktualisiert)
 portal: https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter
 api: https://gitlab.opencode.de/api/v4
@@ -22,7 +22,15 @@ stellen:  # Ordner im Repository; Name und Lage laut Tabelle im README
   springorumtrasse: {name: Springorumtrasse, lat: 51.468826, lon: 7.229204}
   brueckstrasse: {name: Brückstraße, lat: 51.485022, lon: 7.215437}
   universitaetsstrasse: {name: Universitätsstraße, lat: 51.457704, lon: 7.238026}
-  erzbahntrasse: {name: Erzbahntrasse, lat: 51.487049, lon: 7.184623}
+  erzbahntrasse:
+    name: Erzbahntrasse
+    lat: 51.487049
+    lon: 7.184623
+    hinweise:
+      - >-
+        Fuß: seit Juni 2026 schwanken die Tagessummen stark (von 0 bis über 100.000 an einem Tag,
+        sonst rund 250 bis 300) – vermutlich ein Fehler des Zählers, den die Quelle nicht
+        kennzeichnet. Werte wie geliefert.
   hofsteder_bach: {name: Hofsteder Bach, lat: 51.501092, lon: 7.186044}
   lothringentrasse: {name: Lothringentrasse, lat: 51.510388, lon: 7.261104}
   springorumtrasse_sued: {name: Springorumtrasse Süd, lat: 51.442427, lon: 7.182626}
@@ -32,8 +40,8 @@ ohne:
     laut README der Stadt Verdacht auf fehlende Rad-Kanäle („Bias“, Korrektur wartet auf
     Eco-Counter) – die Summe wäre zu klein
 titel: >-
-  Rad- und Fußverkehr – Zählstellen Eco-Counter, Stadt Bochum (verändert: nur Rad,
-  15-Minuten-Werte zu Stunden und Tagessummen zusammengefasst)
+  Rad- und Fußverkehr – Zählstellen Eco-Counter, Stadt Bochum (verändert: 15-Minuten-Werte zu
+  Stunden und Tagessummen zusammengefasst)
 herausgeber: Stadt Bochum
 quellenvermerk: Stadt Bochum
 lizenz: >-
@@ -51,7 +59,8 @@ hinweise:
   - >-
     Laut Stadt Rohdaten ohne Gewähr; die Stadt fasst die Kanäle der Eco-Counter-API selbst
     zusammen. Die Springorumtrasse Süd fehlt, weil die Stadt dort fehlende Rad-Kanäle vermutet.
-    In der Karte nur Rad (beide Richtungen), nicht Fuß.
+    Rad und Fuß zählen eigene Kanäle (Spalten „radfahrende_…“ und „passanten_…“); Fuß steht
+    nur an den Stellen in der Karte, die Passanten zählen.
   - >-
     Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
     dieser Tag gilt als nicht vollständig gezählt.

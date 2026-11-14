@@ -4,18 +4,26 @@ Learnings aus dem Aufbau (November 2026). Ergänzen, wenn etwas Neues auffällt.
 
 ## Was gesucht ist
 Zwei Familien, beide mit gezählten Werten im Zeitverlauf:
-- **Kurzzeitzählungen** der Kommunen mit **Werten je Zählung** – am besten je Intervall (15/60
-  Minuten) und Richtung, mindestens Tagessummen je Verkehrsart.
-- **Dauerzählstellen** der Kommunen (fest eingebaute Detektoren, Kameras, Rad-Zählstellen) mit Stunden- oder
+- **Kurzzeitzählungen** mit **Werten je Zählung** – am besten je Intervall (15/60 Minuten) und
+  Richtung, mindestens Tagessummen je Verkehrsart.
+- **Dauerzählstellen** (fest eingebaute Detektoren, Kameras, Rad-Zählstellen) mit Stunden- oder
   Tageswerten über Monate und Jahre – Quellen in `pipeline/config/quellen/dauer/`, Code in
   `src/zaehlkarte/dauer/`.
+
+Alle Zählungen mit Werten je Stunde (oder feiner) oder je Tag an einer bestimmten Stelle, gleich,
+wer zählt (Beschluss der Projektleitung, 14.11.2026: „ich will gerne alle Zählungen … also muss es
+nur in Abgrenzung zum svz Projekt sein“): Kommunen, Kreise, Länder, der Bund (BASt), gemeinsame
+Plattformen wie die VMZ Niedersachsen. Bis dahin galten nur kommunale Zählstellen; was unten
+unter „Nicht kommunal“ steht, ist seitdem Kandidat. Ebenso Quellen mit nur Tageswerten je Stelle
+und Datum (in der Datenlage bisher „nur Summen“, etwa Augsburgs Radzählstationen oder Planegg):
+ihr Tageswert gilt wie geliefert – dafür braucht das Modell der Dauerzählstellen noch einen Weg
+ohne Stunden. Ohne Lizenz nur, was eine öffentliche Stelle veröffentlicht oder herausgegeben hat
+(CLAUDE.md, „Quellen ohne Lizenz“).
 
 Nicht gemeint: Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür
 `vizsim/svz`. Prüffrage: Ein Wert je Stelle und Jahr → svz; Werte je Intervall oder Tag →
 hier; beides → jedes Repo seinen Teil (Hamburg: DTV-Tabelle svz, Detektor-Stunden hier).
-Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 dazu. Nicht dabei:
-Dauerzählstellen von Bund und Ländern (BASt, Landes-Dauerzählstellen) – nicht kommunal; was es
-davon offen gibt, steht unten unter „Nicht kommunal“.
+Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 dazu.
 
 ## Wo suchen
 - **Zuerst robots.txt.** Jeder Abruf eines Werkzeugs nur, wenn robots.txt ihn erlaubt – für die
@@ -384,7 +392,8 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     Jahr eine Excel-Datei mit Tageswerten je Richtung, ohne Lizenz.
   - **Mobilithek:** Detektordaten Regensburg (eingeschränkte Lizenz, nur vermittelt), Stadtwerke
     Schweinfurt (ohne Lizenz), Kfz-Dauerzählstellen München (nur mit Vertrag); Fußverkehr stündlich
-    offen in Augsburg (Annastraße, CC BY 4.0) und Würzburg (dl-de/by-2-0).
+    offen in Augsburg (Annastraße, CC BY 4.0) und Würzburg (dl-de/by-2-0) – beide seit November
+    2026 in der Karte.
   - **Gezählt, nicht offen:** Regensburg (eigene Zählungen März–Oktober, 6–10 und 15–19 Uhr);
     nur als Plan: Erlangen (Verkehrsbelastungsplan 2017).
 - Übrige Länder, Runde 3 (November 2026, Kommune für Kommune wie Niedersachsen; Websites je Land:
@@ -536,7 +545,8 @@ robots.txt für alle Robots sperrt. Seitdem:
 - **Ausnahmen** (die Projektleitung will die Quellen nicht verlieren; bis die Betreiber
   antworten): Potsdam (Opendatasoft-API, Zählpläne auf de.ftp.opendatasoft.com – ganz gesperrt),
   Würzburg, Rhein-Kreis Neuss, Dortmund (Opendatasoft `/api/explore/`; auch
-  `/explore/dataset/*/download` ist gesperrt), Rostock (geo.sv.rostock.de und opendata-hro.de
+  `/explore/dataset/*/download` ist gesperrt; seit 14.11.2026 auch für Würzburgs
+  Passantenzählung und den RS5 der Stadt Neuss im Portal des Kreises), Rostock (geo.sv.rostock.de und opendata-hro.de
   ganz), Bochum (openCode-GitLab: API, `/*/raw`, Archive und git über HTTPS; opendata.ruhr
   verweist auf genau diese Wege). Viele Betreiber sperren ihre API gegen Suchmaschinen und bieten
   sie zugleich für Programme an – die Anfrage klärt, ob ein wöchentlicher Abruf bekannter Dateien
@@ -623,9 +633,12 @@ robots.txt für alle Robots sperrt. Seitdem:
   - **Osnabrück:** SensorThings `https://daten-api.osnabrueck.de/v1.1` mit KI-Sensoren an
     rund zehn Kreuzungen (Things „Verkehrszaehlung …“ je Fahrstreifen bzw. Abbiegestrom; PKWs,
     LKWs, Busse, Motorräder, Fahrräder, Personen; 15-Minuten-Werte seit 2023, Zeitstempel
-    unregelmäßig zum Zeitpunkt der Übertragung). Keine Lizenzangabe (GovData-Eintrag ohne
-    Lizenz) → erst nach Klärung; die Stunden müssten aus 15-Minuten-Meldungen ohne festes
-    Raster gebildet werden.
+    unregelmäßig zum Zeitpunkt der Übertragung). Lizenz: laut Mobilithek dl-de/by-2-0,
+    Herausgeber SWO Netz GmbH (Angebot `-6042365511594508563`, aus GovData übernommen; am
+    12.11.2026 zeigte der GovData-Eintrag keine Lizenz). Nicht aufgenommen, weil die Meldungen
+    kein festes Raster haben: Abstände von gut 15 Minuten (rund 15:23), die Zeitstempel wandern
+    durch die Stunde – volle Stunden lassen sich daraus nicht sauber bilden (Werkzeug-Branch
+    `werkzeug/erkundung`, Runde `holen3`, 14.11.2026).
   - **Ulm** (`vgv_ulm`, CKAN-Datastore `datenhub.ulm.de`): eine Zeile je erkanntem
     Verkehrsteilnehmer (Zeit, Klasse, Kamera-Kürzel, Richtung), Millionen Zeilen. Keine
     Standorte, und ohne Betriebszeiten ist eine Stunde ohne Zeile nicht von einem Ausfall zu
@@ -685,9 +698,10 @@ robots.txt für alle Robots sperrt. Seitdem:
     nebeneinander, Pkw-Kanäle (Bohlweg) sind leer. MobiData zählt in `channels_all` nur
     Rad-Kanäle (Pkw- und Personen-Kanäle in Ludwigsburg, Reutlingen, Böblingen nicht). Aachen:
     eigene Kanäle für Falschfahrer (Hohenstaufenallee) – gehören zur Zählstelle. Zählstellen,
-    deren Name Fuß- und Radverkehr nennt, ein Gerät neben seinen eigenen Zählstellen („Hardware
-    für …“, gleiche Seriennummer) und eine Stelle des Regierungspräsidiums (Land) stehen in
-    `ohne`. Offen: Tübingens Unterführung Steinlach hat dieselbe Kanalstruktur wie der
+    deren Name Fuß- und Radverkehr nennt, und ein Gerät neben seinen eigenen Zählstellen
+    („Hardware für …“, gleiche Seriennummer) stehen in `ohne`. Die Stelle des
+    Regierungspräsidiums Stuttgart in Bad Wimpfen (Land) ist seit dem 14.11.2026 in der Karte
+    (alle Zählungen, gleich, wer zählt). Offen: Tübingens Unterführung Steinlach hat dieselbe Kanalstruktur wie der
     Fuß- & Radtunnel („Fahrräder IN/OUT“ und „Richtung …“), der Name nennt aber keinen Fuß.
   - **Lage:** MobiData, Berlin (Blatt „Standortdaten“) und München (WFS) mit Koordinaten,
     Münster über das GeoJSON der Stadt (`fahrradzaehl-standorte_0.geojson`, gleiche Kennungen),
@@ -780,6 +794,131 @@ robots.txt für alle Robots sperrt. Seitdem:
       Radverkehr“ (dl-de/zero-2-0, `Zählstellen_2.csv`), Hofgartenrampe und Luegallee aus OSM;
       Kölner Straße 186 und Pempelforter Straße 42 (ab 2025 mit Werten) ohne Lage. Der Server
       lehnt Abrufe zeitweise ab („Connection refused“) – Wiederholungen und Cache im Workflow.
+  - **VMZ Niedersachsen** (`vmz_rad`, ohne Lizenz – nur „© VMZ Niedersachsen“ in der Fußzeile;
+    Hinweis der Projektleitung 14.11.2026; Werkzeug-Branches `werkzeug/erkundung`, `tools/holen.py`
+    Runden 4–6, und `werkzeug/dauer`, `tools/vmz_pruefen.py`, Ergebnis `ergebnis/vmz/`):
+    - **Zählstellen:** Die Seite `/niedersachsen/radzaehler/` trägt die Karte als Startzustand
+      (`JSON.parse('…')`, darin `reHydratedState.featureSources["niedersachsen-radzaehler"].data`,
+      eine FeatureCollection mit `externalId`, `name`, `group`, `source`). Dieselbe Liste unter
+      `/geojson/` sperrt robots.txt (dazu `/typo3`, `/nachricht`; kein Crawl-delay). 74 Zählstellen
+      in Gruppen: die Regionen der Landesbehörde (NLStBV) `20_Nordwest` 12, `30_Nordost` 9,
+      `40_West` 7, `50_Südost` 8 an Bundes- und Landesstraßen; `60_Region Hannover` (vier an
+      Kreisstraßen, dazu B 217); `70_Stadt Hannover` (13 der Stadt, dazu B 6 Garbsen und L 389
+      Wülfel; Schwarzer Bär Süd steht doppelt); `zzz_…` für Braunschweig 8, Verden 4, Gellersen 4,
+      Rotenburg (Wümme) 1, Jemgum 1 (die letzten beiden NeoCount). `source` nennt den Lieferweg,
+      nicht den Betreiber („NLSTBV“ auch bei Braunschweigs Stadtstraßen).
+    - **Werte:** `https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/`
+      `values/<von>/<bis>/<hourly|daily|weekly|monthly|yearly>?stationIds=<id>,…` – JSON je
+      `externalId` mit `values: [{datetime: "2025-10-25 00:00:00", value: "30"}]` (Ortszeit, Wert
+      als Text); mit `format=csv` eine Tabelle `"Zeitpunkt ('Y-m-d H:i:s')";"<Name>";…`, leere
+      Zelle = kein Wert. Vom Endtag kommt nur die Stunde ab 0 Uhr (`toDateTime` = Beginn des
+      Endtags) – je Jahr bis zum 1.1. des Folgejahrs abrufen, sonst fehlt der 31.12. Ein Jahr für
+      zehn Zählstellen sind rund 4 MB; alle Jahre seit 2017 für alle Stellen: 740 Dateien, 75 MB,
+      knapp zwei Minuten. Daneben `problems/<von>/<bis>?stationIds=…` (bisher nur
+      `missing_data`, ganze Tage), `last-values/`, `last-problems/`.
+    - **Zeit:** Sommerzeit: 2 Uhr fehlt (drei Einträge um 2 Uhr in zehn Jahren); Rückstellung:
+      2 Uhr steht einmal (`rueck: einfach`, der Tag gilt als nicht vollständig).
+    - **Stand 14.11.2026:** 2,4 Mio. Stunden, alle 74 Zählstellen mit vollständigen Tagen; Hannover
+      seit 2017, Region Hannover seit Juli 2018, die Landesbehörde seit Ende 2023 bzw. 2024,
+      Braunschweig seit 2024. Seit dem 25.10.2026 keine neuen Werte außer Jemgum und Rotenburg.
+      Lange Folgen von Tagen mit lauter Nullen, die die Quelle nicht als Störung führt (Kleefelder
+      Straße 2024: 93 Tage, L 826 Rastede 2026: 81, K 139 Ilten 2024: 61) – Werte wie geliefert,
+      Hinweis an der Quelle. Braunschweigs Datenportal hat dieselben Zählstellen nur als
+      Tageswerte (CC BY 4.0).
+  - **Dresden** (`dresden_rad`, ohne Lizenz – die Schnittstelle nennt keine, das Open-Data-Portal
+    ist nicht geprüft; Entscheidung der Projektleitung 14.11.2026: erst einmal ohne Lizenz zeigen;
+    Werkzeug-Branch `werkzeug/erkundung`, `tools/holen.py` Runden 4–8):
+    - **Schnittstelle:** OGC API des Themenstadtplans (cardo,
+      `https://kommisdd.dresden.de/net4/public/ogcapi/collections/`). Ebene `L1780` „Radverkehr –
+      Dauerzählstellen – alle Zählwerte (veröffentlicht)“: eine Zeile je Zählstelle und Stunde mit
+      `ids`, `fremd_id`, `bezeichnung`, `lage`, `status`, `r1`/`w1`, `r2`/`w2`, `messzeit`, Punkt.
+      `L1781`: je aktiver Zählstelle der jüngste Wert mit Lage (Objekt-ID = `ids`). Der Pfad
+      braucht `collections/` (`/ogcapi/L1780/items` antwortet „NotSupportedException“).
+      robots.txt sperrt nur Spatineo; aus der Sandbox nicht erreichbar. Der Server braucht je
+      Jahresabfrage ein bis zwei Minuten (alle 18 Jahre seit 2009: 27 Minuten, 48 MB; danach je
+      Woche nur das laufende Jahr und das Vorjahr).
+    - **Abfragen** (Doku: cardogis.com/WFS3Server): `limit` ohne Obergrenze, kein `offset`, keine
+      Folgeseiten; `filter` in der Syntax des Servers (`ids==1077 and
+      messzeit>="2025-01-01T00:00:00"`, `In(...)`, Zeichenketten in doppelten Anführungszeichen,
+      Zeiten nur als ISO – „14.11.2026 12:00:00“ ergibt einen Fehler); `format=csv`,
+      `delimiter=Semicolon`, `propertynames=…`. Leerzeichen als `%20` kodieren. Ein Jahr aller
+      Stellen mit vier Spalten: 270.000 Zeilen, 8 MB. Die Zeilen-ID `id` vergibt der Server bei
+      jedem Aufbau der Ebene neu (je Zählstelle ein Block, Lennéstraße 1–77.223) – kein Schlüssel,
+      kein Weiterlesen ab der letzten ID.
+    - **Zeit:** CSV und Filter in Ortszeit, 0 Uhr nur als Datum („2025-10-26“); GeoJSON zeigt
+      dieselbe Zeile in UTC und deutscher Schreibweise (CSV „2017-10-10 12:00:00“ = GeoJSON
+      „10.10.2017 10:00:00“). Sommerzeit: 2 Uhr fehlt; Rückstellung: 2 Uhr einmal (2018–2024).
+      Seit 2025 an den Umstelltagen zusätzliche Zeilen mit krummer Minute (Lennéstraße
+      „2025-10-26 02:13:00“, „2026-03-29 03:11:00“, Löbtauer Straße „2025-03-30 03:05:00“) und
+      vereinzelt sonst („2026-05-19 04:09:00“; 2009–2026 zusammen 107) – keine Stundenwerte, ihre
+      Stunde gilt als nicht gezählt. Ob die Uhrzeit Beginn oder Ende der Stunde ist, sagt die Quelle nicht: an Werktagen
+      ist die Stunde ab 8 Uhr die stärkste am Morgen (126 gegen 49 ab 7 Uhr an der Lennéstraße) –
+      das passte auch zu Endzeiten. Die Karte nimmt die Uhrzeit wie geliefert als Beginn.
+    - **Stand 14.11.2026:** 38 Zählstellen, die ersten seit 25.09.2009 (2009 zwei, 2017–2023 rund
+      neun, Mitte 2024 schon 23; vor dem 25.09.2009 keine Zeile), 35 in Betrieb; nicht mehr: St. Petersburger Straße („Historisch“), Carolabrücke (nur eine Richtung,
+      „Inaktiv“), Rathenauplatz Ost („Inaktiv“). Keine leeren Werte, keine Doppelten; Lücken von
+      Stunden bis Monaten (Lennéstraße Januar bis April 2023). Jüngster Wert rund eine Stunde alt.
+    - Die Kfz-Dauerzählstellen der Stadt sind nur als Mittelwerte in der Verkehrsmengenkarte offen
+      (Ebenen „Kfz/Tag HIN/RÜCK“) – Fall für `vizsim/svz`.
+  - **Neuss, Radschnellweg RS5** (`neuss_rad`, Stadt Neuss, CC BY-SA 4.0 laut Portal – die
+    Mobilithek, Angebot `-1611162702897177411`, führt den Datensatz ohne Lizenz; Hinweis und
+    Beschluss der Projektleitung, 14.11.2026): Opendatasoft-Datensatz
+    `stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse` im Portal des Rhein-Kreises
+    Neuss (robots-Ausnahme wie `rhein_kreis_neuss_rad`), Adapter `ods_stunden` (Felder `date`,
+    `counts`). Ein Wert je Stunde seit dem 03.07.2026, keine Doppelten, keine Richtung (die
+    Beschreibung nennt „Querungen … nach Fahrtrichtung“); Rückstellung: eine der beiden Stunden
+    2–3 Uhr fehlt. Median eines vollen Tags 787, höchster 1.255 (bis 13.11.2026). **Lage:** nicht
+    im Datensatz (nur der Gemeindeschlüssel), keine Zählstelle in OSM (Overpass, Ausschnitt
+    Hammer Landstraße, `ergebnis/ohne_lizenz/holen15–16/` auf `werkzeug/erkundung`). Der RS5 läuft
+    in Neuss an der Hammer Landstraße zwischen den Einmündungen Industriestraße und
+    Langemarck-/Danziger Straße (OSM-Knoten 266565345 und 1692302391, rund 500 m; Pressemitteilungen
+    der Stadt 2022–2025) und biegt dort in die Langemarckstraße – in der Karte die Mitte dieses
+    Abschnitts, mit Hinweis „Lage ungefähr“. Die genaue Lage weiß die Stadt (Funktionsadresse
+    opendata@stadt.neuss.de laut Portal).
+  - **Fuß (seit November 2026, Entscheidung der Projektleitung):**
+    - **Augsburg** (`augsburg_fuss`, CC BY 4.0, Mobilithek-Angebot `-1747083335311792689` der
+      Wirtschaftsförderung): eine CSV auf augsburg.de
+      (`…/Smart_City/opendata/240429/Annastraße_Frequenzdaten.csv` – das Datum im Pfad täuscht,
+      die Datei wird fortgeschrieben, zuletzt 11.08.2026), `Standort;Jahr;Datum;Stunde;Passanten`
+      („Annastraße;2020;Mi., 16.12.2020;13 Uhr;521“), UTF-8 mit BOM, Ortszeit, ein Standort.
+      Keine Stunde hat 0, es fehlen Stunden fast nur nachts (2–4 Uhr, sonst Werte 1–3): vermutlich
+      Stunden ohne Passanten – nicht aufgefüllt, 2021 ist so fast jeder zweite Tag nicht
+      vollständig. Rückstellung: 2 Uhr einmal, mal mit beiden Stunden (2023, 2024: rund das
+      Doppelte von 1 und 3 Uhr), mal nicht – `rueck: einfach`. Eine Stunde doppelt (09.10.2025, 13
+      Uhr). Lage: Mitte der Fußgängerzone laut OSM (Weg 265870758; Overpass über kumi.systems mit
+      Ausschnitt – die Abfrage über die Fläche „Augsburg“ lief bei allen drei Servern in die
+      Zeitgrenze; Photon sperrt per robots.txt alles). Median eines vollen Tags 17.600, höchster
+      50.495.
+    - **Bochum** (`bochum_rad`): die Spalten `passanten_in`/`passanten_out` an fünf Stellen
+      (Springorumtrasse, Erzbahntrasse, Hofsteder Bach, Lothringentrasse, Blücherstraße) als
+      Gruppe `fuss`, je Richtung wie Rad. An der Springorumtrasse sind die Passanten-Spalten bis
+      Oktober 2023 leer. Erzbahntrasse: seit Juni 2026 Tagessummen von 0 bis über 100.000 (sonst
+      rund 250–300) – Hinweis an der Stelle, Werte wie geliefert.
+    - **Würzburg** (`wuerzburg_fuss`, Passantenzählung von hystreet.com, dl-de/by-2-0, im Portal
+      „hystreet.com GmbH“ als Quelle genannt → Quellenvermerk; robots-Ausnahme wie `wuerzburg_rad`,
+      Beschluss der Projektleitung 14.11.2026): Opendatasoft-Datensatz
+      `passantenzaehlung_stundendaten`, generischer Adapter `ods_stunden` (Felder `timestamp`,
+      `pedestrians_count`, `location_id`; Lage aus `geo_point_2d`, als Zahlen in der Quelldatei).
+      Drei Standorte (Schönbornstraße 135, Spiegelstraße 470, Kaiserstraße 476), 01.01.2024 bis
+      17.05.2026 – seither nicht fortgeschrieben (`data_processed` 18.05.2026, Stand 14.11.2026).
+      Keine Doppelten; am Rückstelltag fehlt eine der beiden Stunden 2–3 Uhr, um den Jahreswechsel
+      2025/26 fehlen ganze Tage. Volle Tage: 1.765 (Stellen × Tage), im Median Schönbornstraße
+      25.105, Kaiserstraße 21.822, Spiegelstraße 14.335, höchster 67.169. **`unverified`:** 79 %
+      der Zeilen, nach Ortszeit 0–20 Uhr zu 92 %, 20–24 Uhr zu 0–7 %, an allen drei Standorten
+      gleich – vermutlich übernimmt das Portal die Stunden eines Tages gegen 20 Uhr, solange
+      hystreet sie noch nicht geprüft hat, und zieht sie nicht nach. Als „nicht gezählt“ blieben
+      nur 180 volle Tage (Stellen × Tage), der jüngste im Januar 2025.
+      Das Kennzeichen sagt also nicht, dass ein Wert falsch ist: gezählt wie Rohwerte (Münster,
+      Würzburg Rad); Ausfälle stehen teils als 0 (Schönbornstraße 15.05.2026, 12 Uhr: 0 zwischen
+      3.822 und 4.790) – Hinweis an der Quelle. Die Verteilung des Kennzeichens zeigt
+      `tools/quelle_pruefen.py` (Abschnitt „Kennzeichen“, Branch `werkzeug/dauer`).
+      Nicht übernommen: ältere Stundenwerte je Standort in eigenen Datensätzen
+      (`passantenzaehlung_schoenbornstrasse` seit April 2019, `passantenzaehlung_kaiserstrasse`
+      und `passantenzaehlung_spiegelstrasse` seit Oktober 2022; Felder unbekannt, Überschneidung
+      mit den Stundendaten klären), Tageswerte seit 2020 (`passantenzaehlung_tagesdaten`) und eine
+      Monatsübersicht (`passantenzaehlung_wuerzburg`).
+    - Weitere Kandidaten: Freiburg (FR.ITZ, Rad und Fuß getrennt), die Personen-Kanäle im Bündel
+      von MobiData BW (Ludwigsburg, Reutlingen, Böblingen).
   - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue
@@ -794,14 +933,15 @@ robots.txt für alle Robots sperrt. Seitdem:
     `hessen-mobil.eco-counter.com` sperrt Abruf-Werkzeuge per robots.txt) und Bielefeld – dort
     hilft eine Anfrage (Eco-Counter-Kunden haben in Eco-Visio einen Export). Nur Summen:
     Mannheims Portal (Summe je Zähler), Stuttgarts Portal (Saisons).
-- **Nicht kommunal (dokumentiert, nicht in der Karte):**
+- **Nicht kommunal (dokumentiert, nicht in der Karte; seit 14.11.2026 Kandidaten):**
   - **Baden-Württemberg, Verkehrsministerium:** „Stundenwerte der Dauerzählstellen in
     Baden-Württemberg“ (MobiData `stundenwerte_dauerzaehlstellen`, dl-de/by-2-0): ein ZIP je
     Monat (`…/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_JJJJMM.zip`, mindestens
     2025-01 bis 2026-08, rund zwei Monate Verzug), darin je Stelle eine CSV mit Kopf (Nummer,
     Straße, Name, Richtungen, Fahrstreifen) und je Stunde und Fahrstreifen KFZ, SV und die
     TLS-Klassen Mot, Pkw, Lfw, PmA, Bus, LoA, LmA, Sat, Son mit Kennung `K_…`; 161 Stellen an
-    Autobahnen, Bundes- und Landesstraßen (je eine an einer Kreis- und einer Gemeindestraße).
+    Autobahnen, Bundes- und Landesstraßen (je eine an einer Kreis- und einer Gemeindestraße) –
+    an Autobahnen und Bundesstraßen vermutlich dieselben Stellen wie bei der BASt (nicht geprüft).
     Daneben „Ergebnisse und Ganglinien“: Monats- und Jahres-DTV seit 2002 als Excel (Kandidat für
     `vizsim/svz`) und Ganglinien nur als PDF-Grafik.
   - **BASt:** Stundenwerte 2003–2024 je Jahr und Straßenart, Rohdaten je Monat

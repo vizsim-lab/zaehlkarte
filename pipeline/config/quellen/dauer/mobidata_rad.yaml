@@ -7,10 +7,10 @@ status: live
 adapter: mobidata_eco
 name: Baden-Württemberg (Rad-Zählstellen, MobiData BW)
 land: BW
-traeger: Städte und Landkreise in Baden-Württemberg; gebündelt von MobiData BW
+traeger: Städte, Landkreise und das Land Baden-Württemberg; gebündelt von MobiData BW
 art: >-
-  Rad-Zählstellen (Zählschleifen und -säulen von Eco-Counter) der Städte und Landkreise;
-  Stundenwerte je Zählstelle, beide Richtungen zusammen
+  Rad-Zählstellen (Zählschleifen und -säulen von Eco-Counter) der Städte und Landkreise, eine
+  des Landes; Stundenwerte je Zählstelle, beide Richtungen zusammen
 weg: offen bei MobiData BW (Monatsdateien seit 2013)
 portal: https://mobidata-bw.de/dataset/eco-counter-fahrradzahler
 archiv_seite: https://mobidata-bw.de/fahrradzaehldaten/v2/
@@ -27,14 +27,11 @@ ohne:  # Zählstellen, die nicht in die Karte kommen, mit Grund
   "100037408": >-
     „Hardware für Waiblinger-/ Taubenheimstr.“ (Stuttgart) – das Gerät der Zählstellen Waiblinger
     Straße und Taubenheimstraße (gleiche Seriennummer), sonst doppelt in der Karte
-  "300048165": >-
-    Bad Wimpfen – Zählstelle des Regierungspräsidiums Stuttgart, also des Landes (die Karte
-    bleibt bei kommunalen Zählstellen)
 titel: >-
   Gebündelte Daten Eco-Counter Fahrradzählstellen Baden-Württemberg (verändert: Stundenwerte zu
   Tagessummen zusammengefasst)
 herausgeber: MobiData BW
-quellenvermerk: MobiData BW; Rad-Zählstellen der Städte und Landkreise in Baden-Württemberg
+quellenvermerk: MobiData BW; Rad-Zählstellen der Städte, Landkreise und des Landes Baden-Württemberg
 lizenz: dl-de/by-2-0
 lizenz_url: https://www.govdata.de/dl-de/by-2-0
 hinweise:
@@ -45,8 +42,8 @@ hinweise:
     vollständig gezählter Tag erscheinen.
   - >-
     Je Zählstelle beide Richtungen zusammen; Kanäle für Pkw und Personen zählt MobiData BW nicht
-    mit. Nicht in der Karte: zwei Zählstellen, deren Name Fuß- und Radverkehr nennt, ein Gerät,
-    dessen Zählstellen schon einzeln darin stehen, und eine Zählstelle des Landes.
+    mit. Nicht in der Karte: zwei Zählstellen, deren Name Fuß- und Radverkehr nennt, und ein
+    Gerät, dessen Zählstellen schon einzeln darin stehen.
   - >-
     Laut Quelle können sich Aufbau und Zusammensetzung der Zählstellen ohne Ankündigung ändern;
     Umleitungen und Baustellen beeinflussen die Werte.

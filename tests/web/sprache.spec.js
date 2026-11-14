@@ -14,7 +14,7 @@ test("Sprache: Deutsch ist Standard, EN schaltet um und bleibt gemerkt", async (
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await expect(page.locator('#sprachwahl [data-sprache="en"]')).toHaveAttribute("aria-pressed", "true");
   await expect(page).toHaveURL(/\?lang=en/);
-  await expect(page).toHaveTitle(/municipal traffic counts/);
+  await expect(page).toHaveTitle(/traffic counts by hour and day/);
   await expect(page.locator('[data-section="thema"] .legend-section-title')).toHaveText("Mode");
   await expect(page.locator('#thema-chips [data-thema="kfz"]')).toHaveText("Motor vehicles");
   await expect(page.locator("#klassen-legende")).toContainText("Motor vehicles, total 7–19 h");

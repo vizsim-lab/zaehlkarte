@@ -1185,6 +1185,39 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     9.1633,
+     49.2282
+    ]
+   },
+   "properties": {
+    "ags": "08125007",
+    "name": "Bad Wimpfen",
+    "land": "BW",
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "in_karte",
+     "quellen": [
+      "mobidata_rad"
+     ],
+     "was": "eine Rad-Zählstelle des Landes (Regierungspräsidium Stuttgart) über das Bündel von MobiData BW (dl-de/by-2-0) – in der Karte als Dauerzählstelle",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Eco-Counter-Fahrradzähler (MobiData BW)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      }
+     ]
+    },
+    "stand_d": "in_karte"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      9.0599,
      48.5166
     ]
@@ -1793,9 +1826,11 @@
      ]
     },
     "dauer": {
-     "stand": "aggregiert",
-     "quellen": [],
-     "was": "Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte; offen dazu eine Passantenzählung in der Annastraße mit Stundenwerten seit Dezember 2020 (CC BY 4.0) – Fußverkehr ist noch keine Gruppe der Karte",
+     "stand": "in_karte",
+     "quellen": [
+      "augsburg_fuss"
+     ],
+     "was": "Passantenzählung in der Annastraße: Stundenwerte seit Dezember 2020 (CC BY 4.0), in der Karte unter Fuß seit November 2026. Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte",
      "situation": null,
      "links": [
       {
@@ -1809,7 +1844,7 @@
      ]
     },
     "stand_k": "geliefert",
-    "stand_d": "aggregiert"
+    "stand_d": "in_karte"
    }
   },
   {
@@ -1872,14 +1907,19 @@
     "dauer": {
      "stand": "in_karte",
      "quellen": [
-      "wuerzburg_rad"
+      "wuerzburg_rad",
+      "wuerzburg_fuss"
      ],
-     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als Dauerzählstellen; offen dazu eine Passantenzählung mit Stundenwerten (Lasersensoren, dl-de/by-2-0) – Fußverkehr ist noch keine Gruppe der Karte",
+     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 und die Passantenzählung an drei Standorten der Innenstadt (Laserscanner von hystreet.com, Stundenwerte Januar 2024 bis Mai 2026), beide dl-de/by-2-0 – in der Karte als Dauerzählstellen. Ältere Stundenwerte der Passantenzählung (Schönbornstraße seit April 2019, Kaiser- und Spiegelstraße seit Oktober 2022) stehen in eigenen Datensätzen je Standort, noch nicht in der Karte",
      "situation": null,
      "links": [
       {
        "titel": "Fahrradzählung Würzburg",
        "url": "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"
+      },
+      {
+       "titel": "Passantenzählung – Stundendaten",
+       "url": "https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/"
       },
       {
        "titel": "Mobilithek: Passantenzählung Würzburg (Stundendaten)",
@@ -3980,9 +4020,9 @@
      ]
     },
     "dauer": {
-     "stand": "ohne_lizenz",
+     "stand": "offen",
      "quellen": [],
-     "was": "KI-Sensoren an rund zehn Kreuzungen, 15-Minuten-Werte seit 2023 über die SensorThings-Schnittstelle – ohne Lizenzangabe, daher nicht in der Karte (die Anfrage bei den Kurzzeitzählungen fragt auch nach der Lizenz); in der Mobilithek seit September 2025 der Datensatz der 66 Sensoren vom 01.01.2022 bis 09.11.2023 als ZIP, eingestuft als freie Nutzung, aber ohne genannte Lizenz",
+     "was": "KI-Sensoren an rund zehn Kreuzungen (Pkw, Lkw, Bus, Motorrad, Rad, Fuß) seit 2022 über die SensorThings-Schnittstelle der Stadtwerke, laut Mobilithek unter dl-de/by-2-0 (SWO Netz GmbH); nicht in der Karte: die Werte kommen in Abständen von gut 15 Minuten mit wandernden Zeitstempeln, volle Stunden lassen sich daraus nicht bilden. In der Mobilithek seit September 2025 auch der Datensatz der 66 Sensoren vom 01.01.2022 bis 09.11.2023 als ZIP, eingestuft als freie Nutzung, aber ohne genannte Lizenz",
      "situation": null,
      "links": [
       {
@@ -3994,13 +4034,17 @@
        "url": "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"
       },
       {
+       "titel": "Mobilithek: Verkehrszählung Osnabrück (dl-de/by-2-0)",
+       "url": "https://mobilithek.info/offers/-6042365511594508563"
+      },
+      {
        "titel": "Mobilithek: Verkehrszählungsdatensatz 2022–2023",
        "url": "https://mobilithek.info/offers/903287344194932736"
       }
      ]
     },
     "stand_k": "ohne_lizenz",
-    "stand_d": "ohne_lizenz"
+    "stand_d": "offen"
    }
   },
   {
@@ -4062,14 +4106,23 @@
     "name": "Braunschweig",
     "land": "NI",
     "recht": "kein Landes-IFG – Niedersächsisches UIG",
-    "kontakt": null,
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Braunschweig",
+     "fds_suche": true
+    },
     "kurzzeit": null,
     "dauer": {
-     "stand": "aggregiert",
-     "quellen": [],
-     "was": "acht Rad-Dauerzählstellen (Zählschleifen, seit 2022); offen nur ein Tageswert je Zählstelle, vierteljährlich als CSV (CC BY 4.0)",
-     "situation": "Die Stadt zählt den Radverkehr an acht Standorten mit Schleifen im Boden, drei davon mit Zählsäule. Im Datenportal stehen seit 2023 vierteljährlich CSV-Dateien mit einem Tageswert je Zählstelle (CC BY 4.0) und die Standorte; tagesaktuelle Werte zeigt ein Dashboard. Stundenwerte sind nicht veröffentlicht, ob ein Tag vollständig gezählt ist, lässt sich so nicht prüfen.",
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "vmz_rad"
+     ],
+     "was": "acht Rad-Dauerzählstellen (Zählschleifen, seit 2022): Stundenwerte seit 2024 in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis; im Datenportal der Stadt nur ein Tageswert je Zählstelle, vierteljährlich als CSV (CC BY 4.0)",
+     "situation": "Die Stadt zählt den Radverkehr an acht Standorten mit Schleifen im Boden, drei davon mit Zählsäule. Im Datenportal stehen seit 2023 vierteljährlich CSV-Dateien mit einem Tageswert je Zählstelle (CC BY 4.0) und die Standorte; ob ein Tag vollständig gezählt ist, lässt sich daran nicht prüfen. Stundenwerte derselben Zählstellen zeigt die Zählstellenübersicht der VMZ Niedersachsen (mit Download), dort ohne Lizenzangabe.",
      "links": [
+      {
+       "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr",
+       "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"
+      },
       {
        "titel": "Datenportal: Automatische Radverkehrszählung",
        "url": "https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung"
@@ -4080,7 +4133,231 @@
       }
      ]
     },
-    "stand_d": "aggregiert"
+    "stand_d": "ohne_lizenz"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.7381,
+     52.3745
+    ]
+   },
+   "properties": {
+    "ags": "03241001",
+    "name": "Hannover",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+Hannover",
+     "fds_suche": true
+    },
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "vmz_rad"
+     ],
+     "was": "13 Rad-Dauerzählstellen der Stadt (teils je Straßenseite, die ersten seit 2016): Stundenwerte seit 2017 in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis",
+     "situation": null,
+     "links": [
+      {
+       "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr",
+       "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"
+      },
+      {
+       "titel": "VMZ: Radverkehr – Zähler-Auswertungen",
+       "url": "https://www.vmz-niedersachsen.de/radverkehr/zaehler-auswertungen/"
+      },
+      {
+       "titel": "Stadt: Lust auf Fahrrad (Dauerzählstellen)",
+       "url": "https://www.hannover.de/Leben-in-der-Region-Hannover/Verwaltungen-Kommunen/Die-Verwaltung-der-Landeshauptstadt-Hannover/Dezernate-und-Fachbereiche-der-LHH/Stadtentwicklung-und-Bauen/Fachbereich-Planen-und-Stadtentwicklung/Stadtentwicklung-und-Mobilit%C3%A4tsplanung/Lust-auf-Fahrrad"
+      }
+     ]
+    },
+    "stand_d": "ohne_lizenz"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.8,
+     52.44
+    ]
+   },
+   "properties": {
+    "ags": "03241",
+    "name": "Region Hannover",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Region+Hannover",
+     "fds_suche": true
+    },
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "vmz_rad"
+     ],
+     "was": "vier Rad-Dauerzählstellen an Kreisstraßen (Ortsdurchfahrten Großburgwedel, Ilten, Hemmingen, Harenberg): Stundenwerte seit Juli 2018 in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis",
+     "situation": null,
+     "links": [
+      {
+       "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr",
+       "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"
+      }
+     ]
+    },
+    "stand_d": "ohne_lizenz"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.2311,
+     52.9234
+    ]
+   },
+   "properties": {
+    "ags": "03361012",
+    "name": "Verden (Aller)",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Verden",
+     "fds_suche": true
+    },
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "vmz_rad"
+     ],
+     "was": "vier Rad-Dauerzählstellen der Stadt: Stundenwerte in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis",
+     "situation": null,
+     "links": [
+      {
+       "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr",
+       "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"
+      }
+     ]
+    },
+    "stand_d": "ohne_lizenz"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.3647,
+     53.2475
+    ]
+   },
+   "properties": {
+    "ags": "03355031",
+    "name": "Samtgemeinde Gellersen",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Samtgemeinde+Gellersen",
+     "fds_suche": true
+    },
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "vmz_rad"
+     ],
+     "was": "vier Rad-Dauerzählstellen (Brockwinkel, Oedeme, Reppenstedt je Richtung): Stundenwerte in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis",
+     "situation": null,
+     "links": [
+      {
+       "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr",
+       "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"
+      }
+     ]
+    },
+    "stand_d": "ohne_lizenz"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4037,
+     53.1104
+    ]
+   },
+   "properties": {
+    "ags": "03357039",
+    "name": "Rotenburg (Wümme)",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Rotenburg+%28W%C3%BCmme%29",
+     "fds_suche": true
+    },
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "vmz_rad"
+     ],
+     "was": "eine Rad-Dauerzählstelle: Stundenwerte in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis",
+     "situation": null,
+     "links": [
+      {
+       "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr",
+       "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"
+      }
+     ]
+    },
+    "stand_d": "ohne_lizenz"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.3827,
+     53.2651
+    ]
+   },
+   "properties": {
+    "ags": "03457012",
+    "name": "Jemgum",
+    "land": "NI",
+    "recht": "kein Landes-IFG – Niedersächsisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Gemeinde+Jemgum",
+     "fds_suche": true
+    },
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "vmz_rad"
+     ],
+     "was": "eine Rad-Dauerzählstelle in Oldendorp: Stundenwerte in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis",
+     "situation": null,
+     "links": [
+      {
+       "titel": "VMZ Niedersachsen: Zählstellenübersicht Radverkehr",
+       "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"
+      }
+     ]
+    },
+    "stand_d": "ohne_lizenz"
    }
   },
   {
@@ -5779,18 +6056,24 @@
     "kontakt": null,
     "kurzzeit": null,
     "dauer": {
-     "stand": "ohne_lizenz",
-     "quellen": [],
-     "was": "Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte je Richtung im Portal des Rhein-Kreises Neuss, seit November 2026 auch in der Mobilithek – dort „keine Lizenz“; ohne Lizenzangabe nicht in der Karte",
+     "stand": "in_karte",
+     "quellen": [
+      "neuss_rad"
+     ],
+     "was": "Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte seit Juli 2026 im Open-Data-Portal des Rhein-Kreises Neuss (CC BY-SA 4.0; die Mobilithek führt den Datensatz ohne Lizenz) – in der Karte als Dauerzählstelle",
      "situation": null,
      "links": [
+      {
+       "titel": "Radverkehrszählstelle RS5 (Open Data Rhein-Kreis Neuss)",
+       "url": "https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/"
+      },
       {
        "titel": "Mobilithek: Radverkehrszählstelle RS5",
        "url": "https://mobilithek.info/offers/-1611162702897177411"
       }
      ]
     },
-    "stand_d": "ohne_lizenz"
+    "stand_d": "in_karte"
    }
   },
   {
@@ -6385,8 +6668,8 @@
      "stand": "kandidat",
      "quellen": [],
      "zaehlungen": null,
-     "was": "Zählt an Knotenpunkten (Abbiegeströme für die Ampelplanung) und im Nebennetz, meist per Video oder Radar durch städtische Mitarbeitende; offen sind nur Mittelwerte der Dauerzählstellen (Verkehrsmengenkarte). Laut Antwort auf die Anfrage AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
-     "situation": "Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene Mitarbeitende. Offen sind nur Mittelwerte der Dauerzählstellen (Verkehrsmengenkarte). Laut Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
+     "was": "Zählt an Knotenpunkten (Abbiegeströme für die Ampelplanung) und im Nebennetz, meist per Video oder Radar durch städtische Mitarbeitende; offen sind nur Mittelwerte der Kfz-Dauerzählstellen (Verkehrsmengenkarte) und die Stundenwerte der Rad-Dauerzählstellen. Laut Antwort auf die Anfrage AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
+     "situation": "Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene Mitarbeitende. Offen sind nur Mittelwerte der Kfz-Dauerzählstellen (Verkehrsmengenkarte) und die Stundenwerte der Rad-Dauerzählstellen. Laut Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
      "empfehlung": "Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25. Grundlage: Sächsisches Umweltinformationsgesetz – das Transparenzgesetz gilt für Kommunen nur, wenn sie es per Satzung einführen.",
      "weg": "FragDenStaat, Sächsisches Umweltinformationsgesetz",
      "anfrage": {
@@ -6401,11 +6684,21 @@
      ]
     },
     "dauer": {
-     "stand": "kandidat",
-     "quellen": [],
-     "was": "Dauerzählstellen; offen nur ihre Mittelwerte in der Verkehrsmengenkarte, nicht die Zählwerte",
-     "situation": null,
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "dresden_rad"
+     ],
+     "was": "38 Rad-Dauerzählstellen (35 in Betrieb): Stundenwerte je Richtung seit September 2009 über die OGC-API-Schnittstelle des Themenstadtplans, ohne Lizenzangabe – in der Karte mit Hinweis. Die Kfz-Dauerzählstellen nur als Mittelwerte in der Verkehrsmengenkarte, nicht die Zählwerte",
+     "situation": "Die Stadt veröffentlicht die Stundenwerte ihrer Rad-Dauerzählstellen je Richtung als Ebene „Radverkehr – Dauerzählstellen – alle Zählwerte“ des Themenstadtplans, abrufbar über die OGC-API-Schnittstelle; eine Lizenz nennt die Schnittstelle nicht. Von den Kfz-Dauerzählstellen sind laut Antwort AF0915/25 nur Mittelwerte offen.",
      "links": [
+      {
+       "titel": "Open-Data-Portal: Radverkehr – Dauerzählstellen",
+       "url": "https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////"
+      },
+      {
+       "titel": "OGC-API: Radverkehr – Dauerzählstellen – alle Zählwerte",
+       "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780"
+      },
       {
        "titel": "Antwort AF0915/25 (18.11.2025)",
        "url": "https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf"
@@ -6413,7 +6706,7 @@
      ]
     },
     "stand_k": "kandidat",
-    "stand_d": "kandidat"
+    "stand_d": "ohne_lizenz"
    }
   },
   {

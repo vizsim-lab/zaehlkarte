@@ -20,16 +20,16 @@ export function setzeSprache(s) {
 
 export const TEXTE = {
   de: {
-    "dokument.titel": "Zählkarte – kommunale Verkehrszählungen",
-    "dokument.beschreibung": "Verkehrszählungen der Kommunen auf einer Karte: Kurzzeitzählungen (Kfz, Schwerverkehr, Rad, Fuß) mit dem Tagesgang jeder Zählung, Dauerzählstellen mit Tagessummen und Stundenwerten – und wo es solche Daten gibt.",
+    "dokument.titel": "Zählkarte – Verkehrszählungen je Stunde und Tag",
+    "dokument.beschreibung": "Verkehrszählungen je Stunde und Tag auf einer Karte, gleich, wer zählt: Kurzzeitzählungen (Kfz, Schwerverkehr, Rad, Fuß) mit dem Tagesgang jeder Zählung, Dauerzählstellen mit Tagessummen und Stundenwerten – und wo es solche Daten gibt.",
     "karte": "Karte",
     "fehler.laden": "Die Karte konnte nicht geladen werden: {fehler}",
     "sprache.wahl": "Sprache wählen",
     "schliessen": "Schließen",
 
-    "legende.untertitel": "Kommunale Verkehrszählungen",
+    "legende.untertitel": "Verkehrszählungen je Stunde und Tag",
     "legende.arten": "Kfz · Rad · Fuß",
-    "legende.info": "Zwei Familien: Kurzzeitzählungen der Kommunen an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre). Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten.",
+    "legende.info": "Zwei Familien: Kurzzeitzählungen an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre) – gleich, wer zählt. Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten.",
     "legende.klappen": "Legende ein-/ausklappen",
 
     "thema.titel": "Verkehrsart",
@@ -184,7 +184,7 @@ export const TEXTE = {
     "detail.nicht_gezaehlt": "nicht gezählt",
     "csv.quelle": "Quelle: {von} ({lizenz}) – über vizsim-lab/zaehlkarte",
     "lizenz.ohne": "ohne Lizenz",
-    "lizenz.ohne_tip": "Die Kommune hat diese Zählwerte ohne Lizenz veröffentlicht oder auf Anfrage herausgegeben. Die Zählkarte zeigt sie mit Quelle und Link zum Original, aber nicht im CSV-Export; wer sie weiterverwenden möchte, fragt die Kommune.",
+    "lizenz.ohne_tip": "Diese Zählwerte hat eine öffentliche Stelle ohne Lizenz veröffentlicht oder auf Anfrage herausgegeben. Die Zählkarte zeigt sie mit Quelle und Link zum Original, aber nicht im CSV-Export; wer sie weiterverwenden möchte, fragt den Herausgeber.",
     "lizenz.geprueft": "geprüft am {datum}",
     "lizenz.entfernen": "Entfernen lassen",
     "lizenz.entfernen_titel": "Als Rechteinhaber die Entfernung dieser Werte beantragen (Formular auf GitHub)",
@@ -284,16 +284,16 @@ export const TEXTE = {
   },
 
   en: {
-    "dokument.titel": "Zählkarte – municipal traffic counts",
-    "dokument.beschreibung": "Traffic counts of German municipalities on one map: short-term counts (motor vehicles, heavy vehicles, cycling, pedestrians) with the daily profile of each count, permanent counters with daily totals and hourly values – and where such data exist.",
+    "dokument.titel": "Zählkarte – traffic counts by hour and day",
+    "dokument.beschreibung": "Traffic counts by hour and day on one map, whoever counts: short-term counts (motor vehicles, heavy vehicles, cycling, pedestrians) with the daily profile of each count, permanent counters with daily totals and hourly values – and where such data exist.",
     "karte": "Map",
     "fehler.laden": "The map could not be loaded: {fehler}",
     "sprache.wahl": "Choose language",
     "schliessen": "Close",
 
-    "legende.untertitel": "Municipal traffic counts",
+    "legende.untertitel": "Traffic counts by hour and day",
     "legende.arten": "Vehicles · Bikes · Pedestrians",
-    "legende.info": "Two families: short-term counts by German municipalities at junctions and cross-sections (by hand, on video or with counting devices) and permanent counters (permanently installed, hourly and daily values over years). Counted values only, no annual averages (AADT). Sources and licences below.",
+    "legende.info": "Two families: short-term counts at junctions and cross-sections (by hand, on video or with counting devices) and permanent counters (permanently installed, hourly and daily values over years) – whoever counts. Counted values only, no annual averages (AADT). Sources and licences below.",
     "legende.klappen": "Expand or collapse the legend",
 
     "thema.titel": "Mode",
@@ -448,7 +448,7 @@ export const TEXTE = {
     "detail.nicht_gezaehlt": "not counted",
     "csv.quelle": "Source: {von} ({lizenz}) – via vizsim-lab/zaehlkarte",
     "lizenz.ohne": "no licence",
-    "lizenz.ohne_tip": "The municipality published or released these counts without a licence. The map shows them with their source and a link to the original, but not in the CSV export; to reuse them, ask the municipality.",
+    "lizenz.ohne_tip": "A public body published or released these counts without a licence. The map shows them with their source and a link to the original, but not in the CSV export; to reuse them, ask the publisher.",
     "lizenz.geprueft": "checked on {datum}",
     "lizenz.entfernen": "Request removal",
     "lizenz.entfernen_titel": "As the rights holder, request the removal of these values (form on GitHub)",

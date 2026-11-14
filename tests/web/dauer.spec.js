@@ -289,6 +289,59 @@ test("Mehrere Quellen: Lkw/Schwerverkehr je Stelle in ihrer Klasse, Rad aus Hamb
   expect(fehler).toEqual([]);
 });
 
+/** Wie `dauer`, aber die Gruppe Rad der Fixture heißt Fuß – so prüft der Test die Gruppe Fuß
+ *  (Chip, Stufen, Seitenleiste) an denselben Werten, ohne eigene Fixture-Dateien. */
+async function dauerMitFuss(page) {
+  const umbenennen = (o) => (o && typeof o === "object" && !Array.isArray(o) && "rad" in o
+    ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k === "rad" ? "fuss" : k, v])) : o);
+  await page.route(/\/data\/dauer\/.*\.json$/, (route) => {
+    const pfad = new URL(route.request().url()).pathname.replace(/^.*\/data\//, "");
+    let d;
+    try {
+      d = JSON.parse(readFileSync(new URL(pfad, FIXTURES), "utf8"));
+    } catch {
+      return route.fulfill({ status: 404, body: "" });
+    }
+    if (pfad.endsWith("dauer/index.json")) {
+      d.gruppen = d.gruppen.map((g) => (g === "rad" ? "fuss" : g));
+      d.gruppen_namen = umbenennen(d.gruppen_namen);
+      d.juengster = umbenennen(d.juengster);
+      for (const q of d.quellen) {
+        q.gruppen = q.gruppen.map((g) => (g === "rad" ? "fuss" : g));
+        q.zeitraeume = umbenennen(q.zeitraeume);
+      }
+    } else if (d.werte) {
+      d.werte = umbenennen(d.werte);
+    } else if (d.stellen) {
+      for (const s of Object.values(d.stellen)) {
+        for (const k of ["tage", "n", "stunden"]) s[k] = umbenennen(s[k]);
+      }
+    }
+    return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(d) });
+  });
+}
+
+test("Fuß: eigener Chip, eigene Stufen, Seitenleiste mit Fuß", async ({ page }) => {
+  await dauerMitFuss(page);
+  const fehler = await oeffne(page, "#f=d&t=fuss.menge");
+  const fuss = page.locator('#thema-chips [data-thema="fuss"]');
+  await expect(fuss).toBeVisible();
+  await expect(fuss).toHaveClass(/is-active/);
+  await expect(page.locator('#thema-chips [data-thema="rad"]')).toBeHidden(); // keine Quelle mit Rad
+  const legende = page.locator("#klassen-legende");
+  await expect(legende).toContainText("Fuß, Tagessumme am jüngsten Schultag je Stelle");
+  // Stufen für Fuß: Rad- und Fußwege (Bochum) unten, Fußgängerzonen (Augsburg) oben
+  await expect(legende).toContainText("5.000 bis unter 15.000");
+  await expect(legende).toContainText("ab 15.000");
+  expect(await zahl(page.locator("#fc-stellen"))).toBe(1);
+  await klickeDauer(page, "hamburg_rad:7433952");
+  const detail = page.locator("#dauer-detail");
+  await expect(detail.locator(".detail-titel")).toHaveText("Alsterufer");
+  await expect(detail).toContainText("Tagessummen Fuß");
+  await expect(detail.locator(".detail-kennwerte")).toContainText("Fuß");
+  expect(fehler).toEqual([]);
+});
+
 test("Stellen am selben Punkt: Umschalter in der Seitenleiste, Lizenz CC BY-NC", async ({ page }) => {
   await dauer(page);
   const fehler = await oeffne(page, "#f=d&z=2025-06-26&s=ettlingen:1263-2");

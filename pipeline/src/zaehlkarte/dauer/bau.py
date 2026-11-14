@@ -9,11 +9,13 @@ from pathlib import Path
 from zaehlkarte.config import Pfade, dauerquellen
 from zaehlkarte.dauer import (
     aachen_rad,
+    augsburg_fuss,
     berlin_rad,
     berlin_viz,
     bochum_rad,
     bonn_rad,
     dortmund_rad,
+    dresden_rad,
     duesseldorf_rad,
     essen_rad,
     hamburg_sta,
@@ -22,8 +24,10 @@ from zaehlkarte.dauer import (
     muenchen_rad,
     muenster_rad,
     ods_eco,
+    ods_stunden,
     readi_urbanpulse,
     rostock_rad,
+    vmz_rad,
 )
 from zaehlkarte.dauer import site as site_
 from zaehlkarte.dauer.modell import Messreihe
@@ -33,7 +37,9 @@ ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta,
            "muenster_rad": muenster_rad, "aachen_rad": aachen_rad, "berlin_rad": berlin_rad,
            "muenchen_rad": muenchen_rad, "ods_eco": ods_eco, "dortmund_rad": dortmund_rad,
            "essen_rad": essen_rad, "leipzig_rad": leipzig_rad, "rostock_rad": rostock_rad,
-           "bochum_rad": bochum_rad, "bonn_rad": bonn_rad, "duesseldorf_rad": duesseldorf_rad}
+           "bochum_rad": bochum_rad, "bonn_rad": bonn_rad, "duesseldorf_rad": duesseldorf_rad,
+           "vmz_rad": vmz_rad, "dresden_rad": dresden_rad, "augsburg_fuss": augsburg_fuss,
+           "ods_stunden": ods_stunden}
 
 
 def mit_gedaechtnis(pfade: Pfade | None = None) -> list[str]:

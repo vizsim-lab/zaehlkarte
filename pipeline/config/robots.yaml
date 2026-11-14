@@ -49,8 +49,10 @@
     an: Landeshauptstadt Potsdam (Kontakt am Datensatz „Verkehrszählungen“)
     gestellt: null
     antwort: null
+# Würzburg: seit 14.11.2026 auch für die Passantenzählung (wuerzburg_fuss) – Beschluss der
+# Projektleitung, derselbe Weg wie für die Rad-Zählstellen.
 - urls: [https://opendata.wuerzburg.de/api/explore/]
-  quellen: [wuerzburg_rad]
+  quellen: [wuerzburg_rad, wuerzburg_fuss]
   grund: >-
     Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
     es nur über diese Wege
@@ -59,8 +61,10 @@
     an: Stadt Würzburg (wws@stadt.wuerzburg.de, laut Nutzungsbedingungen des Portals)
     gestellt: null
     antwort: null
+# Rhein-Kreis Neuss: seit 14.11.2026 auch für die RS5-Zählstelle der Stadt Neuss (neuss_rad), die
+# im Portal des Kreises liegt – Beschluss der Projektleitung.
 - urls: [https://opendata.rhein-kreis-neuss.de/api/explore/]
-  quellen: [rhein_kreis_neuss_rad]
+  quellen: [rhein_kreis_neuss_rad, neuss_rad]
   grund: >-
     Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
     es nur über diese Wege

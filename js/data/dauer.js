@@ -49,12 +49,15 @@ export const hatThema = (d, thema) => DAUER_THEMEN[thema]?.gruppen.some((g) => d
 // 330 / 720 / 1.290 / 2.460 (je Stufe 18–21 % der Stellen); mit der zweiten Runde (Würzburg,
 // Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum) 642 Stellen: 330 / 720 / 1.290 /
 // 2.420, mit Bonn und Düsseldorf 675 Stellen: 330 / 700 / 1.250 / 2.330 – die Stufen bleiben (je
-// Stufe 18–22 %). Fuß: noch keine Quelle (Platzhalter).
+// Stufe 18–22 %). Fuß (seit November 2026: Augsburg, Annastraße; Bochum, fünf Trassen und
+// Straßen): zu wenige Stellen für Quintile, und zwei Welten – Fußgängerzone (Annastraße: Median
+// 17.600, Quintile 10.090 / 16.160 / 18.900 / 22.690) und Rad- und Fußwege (Bochum: Median 250,
+// Quintile 160 / 220 / 300 / 460). Die Stufen trennen beide: 250 / 1.000 / 5.000 / 15.000.
 export const DAUER_STUFEN = {
   kfz: [6000, 10000, 13000, 17000],
   sv: [200, 350, 600, 1000],
   rad: [350, 700, 1300, 2500],
-  fuss: [500, 1000, 2500, 5000],
+  fuss: [250, 1000, 5000, 15000],
 };
 
 const TAG_MS = 86_400_000;
