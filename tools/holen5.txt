@@ -1,0 +1,11 @@
+# Quellen, Runde 5 (November 2026): Stichproben der Schnittstellen – VMZ Niedersachsen (count-aggregator),
+# Dresden (OGC API L1780/L1781), Erfurt (robots.txt erneut)
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-10-20/2026-10-27/hourly?stationIds=300026962,100030021,100047629,300039699,100044789&format=csv
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-10-20/2026-10-27/hourly?stationIds=300026962,100030021,100047629,300039699,100044789
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/problems/2026-01-01/2026-11-13?stationIds=300026962,100030021,100047629,300039699,100044789
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2017-01-01/2017-01-03/hourly?stationIds=100030021,300026962&format=csv
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-03-28/2026-03-30/hourly?stationIds=100030021&format=csv
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/L1780?f=json
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/L1780/items?limit=200&f=json
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/L1781/items?limit=50&f=json
+erfurt | https://www.erfurt.de/robots.txt

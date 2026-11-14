@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [holen4]
+        teil: [holen5]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
