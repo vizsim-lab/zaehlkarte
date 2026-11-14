@@ -1,5 +1,6 @@
-# Entwicklungswerkzeug: Open-Data-Portale nach Verkehrszählungen durchsuchen (tools/erkunden.py)
-# und das Ergebnis in denselben Branch legen (Pushes mit GITHUB_TOKEN starten keinen neuen Lauf).
+# Entwicklungswerkzeug: Open-Data-Portale und Gemeindeseiten nach Verkehrszählungen durchsuchen
+# (tools/*.py) und das Ergebnis in denselben Branch legen (Pushes mit GITHUB_TOKEN starten keinen
+# neuen Lauf).
 name: Erkundung Zähldaten
 on:
   push:
@@ -11,14 +12,14 @@ permissions:
 jobs:
   erkunden:
     runs-on: ubuntu-24.04
-    timeout-minutes: 55
+    timeout-minutes: 58
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
-      - run: timeout 5m python3 tools/olpe_orte.py ergebnis/olpe_orte.json || true
+      - run: timeout 52m python3 tools/hessen.py ergebnis/hessen || true
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add ergebnis
-          git commit -q -m "Erkundung $(date -u +%F)" && git push origin HEAD:werkzeug/erkundung
+          git commit -q -m "Erkundung $(date -u +%F) Hessen" && git push origin HEAD:werkzeug/erkundung
