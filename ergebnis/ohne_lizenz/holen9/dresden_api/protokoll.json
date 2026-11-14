@@ -1,0 +1,58 @@
+[
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222017-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222017-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "typ": "text/csv",
+  "bytes": 158,
+  "datei": "01_items.csv",
+  "sha256": "d47a6a65700fc239c33e52637ad13a7f7f17d65ec45450492de90aa6130a5367"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222016-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222016-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "typ": "text/csv",
+  "bytes": 191,
+  "datei": "02_items.csv",
+  "sha256": "ca4336bfc25d3147a7a37b372fc2858f1ecc556de3154060c6c0fbe891881086"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222015-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222015-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "typ": "text/csv",
+  "bytes": 191,
+  "datei": "03_items.csv",
+  "sha256": "ca4336bfc25d3147a7a37b372fc2858f1ecc556de3154060c6c0fbe891881086"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222014-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222014-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "typ": "text/csv",
+  "bytes": 191,
+  "datei": "04_items.csv",
+  "sha256": "ca4336bfc25d3147a7a37b372fc2858f1ecc556de3154060c6c0fbe891881086"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222013-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222013-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "typ": "text/csv",
+  "bytes": 191,
+  "datei": "05_items.csv",
+  "sha256": "ca4336bfc25d3147a7a37b372fc2858f1ecc556de3154060c6c0fbe891881086"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222012-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222012-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "typ": "text/csv",
+  "bytes": 191,
+  "datei": "06_items.csv",
+  "sha256": "ca4336bfc25d3147a7a37b372fc2858f1ecc556de3154060c6c0fbe891881086"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222010-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222010-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit",
+  "typ": "text/csv",
+  "bytes": 191,
+  "datei": "07_items.csv",
+  "sha256": "ca4336bfc25d3147a7a37b372fc2858f1ecc556de3154060c6c0fbe891881086"
+ }
+]
