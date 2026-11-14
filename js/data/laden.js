@@ -22,6 +22,9 @@ export async function ladeStart() {
   // Kartenebene ihn in Ausdrücken lesen kann (verschachtelte Werte kommen dort nur als Text an)
   for (const f of datenlage.features) {
     if (f.properties.dauer) f.properties.dauer_stand = f.properties.dauer.stand;
+    // Kommunen nur mit Dauerzählstellen haben keinen Stand der Kurzzeitzählungen: ohne den
+    // Schlüssel lässt der Filter der Ebene ("has") sie bei den Kurzzeitzählungen weg
+    if (f.properties.stand == null) delete f.properties.stand;
   }
   return { manifest, index, datenlage };
 }

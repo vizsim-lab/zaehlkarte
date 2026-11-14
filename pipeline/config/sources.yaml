@@ -3067,3 +3067,196 @@ datenlage:
       Umweltinformationsgesetz gilt aber für alle Kommunen.
     links:
       - ["FragDenStaat 2018", "https://fragdenstaat.de/anfrage/automatisierte-verkehrszahlungen-in-rosbach-vdhohe-1/"]
+  # Kommunen, von denen nur Dauerzählstellen bekannt sind: kein `stand` der Kurzzeitzählungen –
+  # die Karte zeigt sie nur bei den Dauerzählstellen (Recherche November 2026)
+  - kommune: Gießen
+    land: HE
+    lon: 8.6667
+    lat: 50.5833
+    dauer:
+      stand: kandidat
+      was: >-
+        mehrere Rad-Dauerzählstellen von Land und Stadt (Goethestraße, Heuchelheimer Straße,
+        Christoph-Rübsamen-Steg, Lahnufer am Wehr, R7 Wieseck), Induktionsschleifen je Richtung –
+        Werte seit Herbst 2024 nur im Zählportal des Landes, ohne Lizenzangabe
+      links:
+        - ["Pressemitteilung 2026", "https://www.giessen.de/Rathaus/Newsroom/Aktuelle-Meldungen/Dauerz%C3%A4hlstellen-f%C3%BCr-den-Radverkehr-Erste-Daten-f%C3%BCr-Gie%C3%9Fen-online.php?ModID=255&FID=2874.75293.1"]
+        - ["Zählportal des Landes", "https://hessen-mobil.eco-counter.com/"]
+  - kommune: Wiesbaden
+    land: HE
+    lon: 8.24
+    lat: 50.0825
+    dauer:
+      stand: kandidat
+      was: >-
+        Daten zur Fahrradnutzung nur im Dashboard „Datenwelt Fahrradnutzung“ (ohne Download);
+        Detektordaten der Stadt über die Mobilithek nur nach Freigabe einer Subskription
+      links:
+        - ["Datenwelt Fahrradnutzung", "https://www.wiesbaden.de/leben-in-wiesbaden/mobilitaet/radverkehr/Datenwelt-Fahrradnutzung-in-Wiesbaden"]
+        - ["Detektordaten (Mobilithek)", "https://mobilithek.info/offers/110000000003165001"]
+  - kommune: Dreieich
+    land: HE
+    lon: 8.6961
+    lat: 50.0189
+    dauer:
+      stand: kandidat
+      was: >-
+        sechs Rad-Zählstellen des Landesnetzes (Bau ab März 2022) – Werte nur im Zählportal des
+        Landes, ohne Lizenzangabe
+      links:
+        - ["Pressemitteilung 2023 (PDF)", "https://www.dreieich.de/rathaus-service/presse-medien/pressemitteilungen/radverkehr-zaehlstellen-erfassen-die-nutzung-der-dreieicher-radwege-es-wird-ueberdurchschnittlich-viel-geradelt/046-radzaehlmessstellen.pdf?cid=1dhz"]
+  - kommune: Rödermark
+    land: HE
+    lon: 8.8281
+    lat: 49.9775
+    dauer:
+      stand: kandidat
+      was: >-
+        fünf Rad-Dauerzählstellen des Landesnetzes (beantragt 2023, Inbetriebnahme für Anfang 2025
+        angekündigt) – Werte nur im Zählportal des Landes, ohne Lizenzangabe
+      links:
+        - ["Dauerzählstellen (roedermark.de)", "https://roedermark.de/bauen-umwelt/stadtplanung/dauerzaehlstellen.html"]
+  - kommune: Rodgau
+    land: HE
+    lon: 8.8841
+    lat: 50.0256
+    dauer:
+      stand: kandidat
+      was: >-
+        Rad-Zählstellen des Landesnetzes (Pilotprojekt „Daten für den Radverkehr“, Ratsvorlage 2022)
+        – Werte nur im Zählportal des Landes, ohne Lizenzangabe
+      links:
+        - ["Ratsvorlage 2022", "https://www.rodgau.de/de/ratsinfo-views/vorlage/0vGKj91ScAIDJdKt/pilotprojekt-daten-fuer-den-radverkehr-bereitstellung-von-zaehlstellen-fuer-den-radverkehr-durch-das-land-hessen/"]
+  - kommune: Altenstadt
+    land: HE
+    lon: 8.945
+    lat: 50.2856
+    dauer:
+      stand: kandidat
+      was: >-
+        Rad-Zählstellen des Landesnetzes – Werte nur im Zählportal des Landes, ohne Lizenzangabe
+      links:
+        - ["Zählstellen Radverkehr (altenstadt.de)", "https://www.altenstadt.de/KulTour/rad-und-wanderwege/zaehlstellen-radverkehr/"]
+  - kommune: Baunatal
+    land: HE
+    lon: 9.4183
+    lat: 51.2589
+    dauer:
+      stand: kandidat
+      was: >-
+        eine Rad-Dauerzählstelle des Landesnetzes seit 2022 – Tageswerte im Zählportal des Landes,
+        ohne Lizenzangabe
+      links:
+        - ["Dauerzählstelle (baunatal.de)", "https://www.baunatal.de/de/freizeit/sport-und-freizeit/radfahren-in-baunatal/dauerzaehlstelle.php"]
+  - kommune: Landkreis Marburg-Biedenkopf
+    land: HE
+    lon: 8.7235
+    lat: 50.8284
+    dauer:
+      stand: kandidat
+      was: >-
+        kreiseigene Rad-Dauerzählstellen (Eco-Counter), 2024 um 17 Standorte erweitert, etwa am
+        Lahnradweg in Sterzhausen und am Salzböderadweg – Werte nur im Zählportal des Landes, ohne
+        Lizenzangabe
+      links:
+        - ["Radzählstellen (Landkreis)", "https://www.marburg-biedenkopf.de/microsites/klimaschutz/team-radverkehr/radinfrastruktur/index.php"]
+        - ["Radverkehrsbericht 2024 (PDF)", "https://www.marburg-biedenkopf.de/auto-und-verkehr/radverkehr/20250228_Bericht_2024_final_komprimiert.pdf"]
+  - kommune: Landkreis Waldeck-Frankenberg
+    land: HE
+    lon: 8.872
+    lat: 51.1665
+    dauer:
+      stand: kandidat
+      was: >-
+        sechs Rad-Dauerzählstellen des Kreises im Landesnetz (2026) – Werte nur im Zählportal des
+        Landes, ohne Lizenzangabe
+      links:
+        - ["Pressemitteilung 2026", "https://www.landkreis-waldeck-frankenberg.de/informieren-beantragen/verwaltung-verstehen/fachdienste/oeffentlichkeitsarbeit-kultur-paten-und-partnerschaften/presse/pressearchiv/2026/april/landkreis-errichtet-sechs-radverkehrsdauerzaehlstellen/"]
+  - kommune: Main-Kinzig-Kreis
+    land: HE
+    lon: 9.1731
+    lat: 50.2142
+    dauer:
+      stand: kandidat
+      was: >-
+        Rad-Zählstellen an 13 Standorten im Kreis (von Bad Orb bis Sinntal) – Werte nur im
+        Zählportal des Landes, ohne Lizenzangabe
+      links:
+        - ["Radverkehr (mkk.de)", "https://www.mkk.de/aktuelles/themen_1/radverkehr/radverkehr.html"]
+  - kommune: Odenwaldkreis
+    land: HE
+    lon: 8.9571
+    lat: 49.7046
+    dauer:
+      stand: kandidat
+      was: >-
+        Rad-Dauerzählstellen des Landesnetzes im Kreis (Inbetriebnahme Anfang 2025 angekündigt) –
+        Werte nur im Zählportal des Landes, ohne Lizenzangabe
+      links:
+        - ["Dauerzählstellen Radverkehr (Kreis)", "https://www.odenwaldkreis.de/de/projekte/fuss-und-radverkehr/dauerzaehlstellen-radverkehr/"]
+  - kommune: Aachen
+    land: NW
+    lon: 6.0808
+    lat: 50.7754
+    dauer:
+      stand: in_karte
+      was: >-
+        26 Rad-Zählstellen der Stadt, Stundenwerte seit 2025 (dl-de/zero-2-0) – in der Karte als
+        Dauerzählstellen
+      links:
+        - ["Radzählstellen der Stadt Aachen", "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen"]
+  - kommune: Bonn
+    land: NW
+    lon: 7.1143
+    lat: 50.7355
+    dauer:
+      stand: in_karte
+      was: >-
+        14 Rad-Zählstellen, Stundenwerte 2020, 2021 und ab 2023 als Jahresdateien (CC0) – in der
+        Karte als Dauerzählstellen
+      links:
+        - ["Fahrradmessstellen Bonn", "https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025"]
+  - kommune: Bochum
+    land: NW
+    lon: 7.2203
+    lat: 51.486
+    dauer:
+      stand: in_karte
+      was: >-
+        acht Rad-Zählstellen der Stadt (Eco-Counter) seit 2018 – in der Karte als Dauerzählstellen;
+        Lizenz dl-de/by-2-0 mit Nutzungsbeschränkung der Stadt (nicht im Wettbewerb zu Eco-Counter)
+      links:
+        - ["Zählstellen Eco-Counter (Stadt Bochum)", "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter"]
+  - kommune: Rhein-Kreis Neuss
+    land: NW
+    lon: 6.705
+    lat: 51.1453
+    dauer:
+      stand: in_karte
+      was: >-
+        fünf Rad-Zählstationen des Kreises (Eco-Counter), 2015 bis Juli 2026 (CC0) – in der Karte als
+        Dauerzählstellen
+      links:
+        - ["Eco-Counter-Daten (Rhein-Kreis Neuss)", "https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/"]
+  - kommune: Würzburg
+    land: BY
+    lon: 9.9502
+    lat: 49.8005
+    dauer:
+      stand: in_karte
+      was: >-
+        sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als
+        Dauerzählstellen
+      links:
+        - ["Fahrradzählung Würzburg", "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"]
+  - kommune: Mannheim
+    land: BW
+    lon: 8.4669
+    lat: 49.4875
+    dauer:
+      stand: in_karte
+      was: >-
+        Rad-Zählstellen der Stadt (rund 17) über das Bündel von MobiData BW (dl-de/by-2-0) – in der
+        Karte als Dauerzählstellen
+      links:
+        - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]

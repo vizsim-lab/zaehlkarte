@@ -126,7 +126,8 @@ async function start() {
     // offene Datenlage einer Kommune: in der neuen Familie zeigen (ohne Eintrag dort: schließen)
     if (!dlPanel.hidden && dlPanel.dataset.kommune) {
       const p = datenlage.features.find((x) => x.properties.kommune === dlPanel.dataset.kommune)?.properties;
-      if (f === "d" && !p?.dauer) schliesseDatenlage(); else zeigeDatenlage(dlPanel.dataset.kommune);
+      if ((f === "d" && !p?.dauer) || (f !== "d" && !p?.stand)) schliesseDatenlage();
+      else zeigeDatenlage(dlPanel.dataset.kommune);
     }
     legende.zeichne();
     await zeichne();
@@ -228,7 +229,8 @@ async function start() {
     const f = datenlage.features.find((x) => x.properties.kommune === kommune);
     if (!f) return;
     const p = f.properties;
-    const dl = zustand.familie === "d" ? p.dauer : null;
+    // Dauerzählstellen – oder eine Kommune, von der nur sie bekannt sind
+    const dl = zustand.familie === "d" || !p.stand ? p.dauer : null;
     const el = dlPanel;
     const scroll = el.scrollTop;
     const links = (dl ? dl.links : p.links).map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");

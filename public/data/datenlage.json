@@ -2901,6 +2901,630 @@
     },
     "dauer": null
    }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6667,
+     50.5833
+    ]
+   },
+   "properties": {
+    "kommune": "Gießen",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "mehrere Rad-Dauerzählstellen von Land und Stadt (Goethestraße, Heuchelheimer Straße, Christoph-Rübsamen-Steg, Lahnufer am Wehr, R7 Wieseck), Induktionsschleifen je Richtung – Werte seit Herbst 2024 nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2026",
+       "url": "https://www.giessen.de/Rathaus/Newsroom/Aktuelle-Meldungen/Dauerz%C3%A4hlstellen-f%C3%BCr-den-Radverkehr-Erste-Daten-f%C3%BCr-Gie%C3%9Fen-online.php?ModID=255&FID=2874.75293.1"
+      },
+      {
+       "titel": "Zählportal des Landes",
+       "url": "https://hessen-mobil.eco-counter.com/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.24,
+     50.0825
+    ]
+   },
+   "properties": {
+    "kommune": "Wiesbaden",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Daten zur Fahrradnutzung nur im Dashboard „Datenwelt Fahrradnutzung“ (ohne Download); Detektordaten der Stadt über die Mobilithek nur nach Freigabe einer Subskription",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Datenwelt Fahrradnutzung",
+       "url": "https://www.wiesbaden.de/leben-in-wiesbaden/mobilitaet/radverkehr/Datenwelt-Fahrradnutzung-in-Wiesbaden"
+      },
+      {
+       "titel": "Detektordaten (Mobilithek)",
+       "url": "https://mobilithek.info/offers/110000000003165001"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6961,
+     50.0189
+    ]
+   },
+   "properties": {
+    "kommune": "Dreieich",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "sechs Rad-Zählstellen des Landesnetzes (Bau ab März 2022) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2023 (PDF)",
+       "url": "https://www.dreieich.de/rathaus-service/presse-medien/pressemitteilungen/radverkehr-zaehlstellen-erfassen-die-nutzung-der-dreieicher-radwege-es-wird-ueberdurchschnittlich-viel-geradelt/046-radzaehlmessstellen.pdf?cid=1dhz"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.8281,
+     49.9775
+    ]
+   },
+   "properties": {
+    "kommune": "Rödermark",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "fünf Rad-Dauerzählstellen des Landesnetzes (beantragt 2023, Inbetriebnahme für Anfang 2025 angekündigt) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Dauerzählstellen (roedermark.de)",
+       "url": "https://roedermark.de/bauen-umwelt/stadtplanung/dauerzaehlstellen.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.8841,
+     50.0256
+    ]
+   },
+   "properties": {
+    "kommune": "Rodgau",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Zählstellen des Landesnetzes (Pilotprojekt „Daten für den Radverkehr“, Ratsvorlage 2022) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Ratsvorlage 2022",
+       "url": "https://www.rodgau.de/de/ratsinfo-views/vorlage/0vGKj91ScAIDJdKt/pilotprojekt-daten-fuer-den-radverkehr-bereitstellung-von-zaehlstellen-fuer-den-radverkehr-durch-das-land-hessen/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.945,
+     50.2856
+    ]
+   },
+   "properties": {
+    "kommune": "Altenstadt",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Zählstellen des Landesnetzes – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Zählstellen Radverkehr (altenstadt.de)",
+       "url": "https://www.altenstadt.de/KulTour/rad-und-wanderwege/zaehlstellen-radverkehr/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4183,
+     51.2589
+    ]
+   },
+   "properties": {
+    "kommune": "Baunatal",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "eine Rad-Dauerzählstelle des Landesnetzes seit 2022 – Tageswerte im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Dauerzählstelle (baunatal.de)",
+       "url": "https://www.baunatal.de/de/freizeit/sport-und-freizeit/radfahren-in-baunatal/dauerzaehlstelle.php"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7235,
+     50.8284
+    ]
+   },
+   "properties": {
+    "kommune": "Landkreis Marburg-Biedenkopf",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "kreiseigene Rad-Dauerzählstellen (Eco-Counter), 2024 um 17 Standorte erweitert, etwa am Lahnradweg in Sterzhausen und am Salzböderadweg – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählstellen (Landkreis)",
+       "url": "https://www.marburg-biedenkopf.de/microsites/klimaschutz/team-radverkehr/radinfrastruktur/index.php"
+      },
+      {
+       "titel": "Radverkehrsbericht 2024 (PDF)",
+       "url": "https://www.marburg-biedenkopf.de/auto-und-verkehr/radverkehr/20250228_Bericht_2024_final_komprimiert.pdf"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.872,
+     51.1665
+    ]
+   },
+   "properties": {
+    "kommune": "Landkreis Waldeck-Frankenberg",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "sechs Rad-Dauerzählstellen des Kreises im Landesnetz (2026) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2026",
+       "url": "https://www.landkreis-waldeck-frankenberg.de/informieren-beantragen/verwaltung-verstehen/fachdienste/oeffentlichkeitsarbeit-kultur-paten-und-partnerschaften/presse/pressearchiv/2026/april/landkreis-errichtet-sechs-radverkehrsdauerzaehlstellen/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1731,
+     50.2142
+    ]
+   },
+   "properties": {
+    "kommune": "Main-Kinzig-Kreis",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Zählstellen an 13 Standorten im Kreis (von Bad Orb bis Sinntal) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radverkehr (mkk.de)",
+       "url": "https://www.mkk.de/aktuelles/themen_1/radverkehr/radverkehr.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.9571,
+     49.7046
+    ]
+   },
+   "properties": {
+    "kommune": "Odenwaldkreis",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Dauerzählstellen des Landesnetzes im Kreis (Inbetriebnahme Anfang 2025 angekündigt) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Dauerzählstellen Radverkehr (Kreis)",
+       "url": "https://www.odenwaldkreis.de/de/projekte/fuss-und-radverkehr/dauerzaehlstellen-radverkehr/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.0808,
+     50.7754
+    ]
+   },
+   "properties": {
+    "kommune": "Aachen",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "26 Rad-Zählstellen der Stadt, Stundenwerte seit 2025 (dl-de/zero-2-0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählstellen der Stadt Aachen",
+       "url": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.1143,
+     50.7355
+    ]
+   },
+   "properties": {
+    "kommune": "Bonn",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "14 Rad-Zählstellen, Stundenwerte 2020, 2021 und ab 2023 als Jahresdateien (CC0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradmessstellen Bonn",
+       "url": "https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.2203,
+     51.486
+    ]
+   },
+   "properties": {
+    "kommune": "Bochum",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "acht Rad-Zählstellen der Stadt (Eco-Counter) seit 2018 – in der Karte als Dauerzählstellen; Lizenz dl-de/by-2-0 mit Nutzungsbeschränkung der Stadt (nicht im Wettbewerb zu Eco-Counter)",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Zählstellen Eco-Counter (Stadt Bochum)",
+       "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.705,
+     51.1453
+    ]
+   },
+   "properties": {
+    "kommune": "Rhein-Kreis Neuss",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "fünf Rad-Zählstationen des Kreises (Eco-Counter), 2015 bis Juli 2026 (CC0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Eco-Counter-Daten (Rhein-Kreis Neuss)",
+       "url": "https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.9502,
+     49.8005
+    ]
+   },
+   "properties": {
+    "kommune": "Würzburg",
+    "land": "BY",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradzählung Würzburg",
+       "url": "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.4669,
+     49.4875
+    ]
+   },
+   "properties": {
+    "kommune": "Mannheim",
+    "land": "BW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Rad-Zählstellen der Stadt (rund 17) über das Bündel von MobiData BW (dl-de/by-2-0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Eco-Counter-Fahrradzähler (MobiData BW)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      }
+     ]
+    }
+   }
   }
  ]
 }

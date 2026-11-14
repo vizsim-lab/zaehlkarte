@@ -41,10 +41,13 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   (`werkzeuge/geokodiere_moers.py`).
 - **Datenlage-Texte** (Lage, Empfehlung, Anfragezusatz, Kontakt) stehen in `sources.yaml`.
   Kontakte nur als Funktionsadressen (keine Namen einzelner Beschäftigter), aus der
-  FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage`) ist für alle gleich.
+  FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage`) ist für alle gleich –
+  nur die angefragte Stelle ist „Stadt {kommune}“ oder `anfrage_an` (etwa „Gemeinde Mühltal“).
   Die Datenlage folgt der Familie: je Kommune `stand` für die Kurzzeitzählungen und, wo
   recherchiert, ein Block `dauer:` (`stand` in_karte | offen | kandidat, `was`, `links`) für die
   Dauerzählstellen – die Karte zeigt bei ihnen nur Kommunen mit diesem Block, ohne Anfragetext.
+  Kommunen, von denen nur Dauerzählstellen bekannt sind, haben keinen `stand` (nur `dauer:`);
+  die Kurzzeit-Ebene lässt sie weg.
 - **Frontend-Vertrag:** Feldnamen in `index.json` (`stellen.felder`, `zaehlungen.felder`,
   `gruppen`, `quellen`, `lieferungen`), Aufbau von `details/NN.json`, Dateinamen in
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und

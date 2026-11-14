@@ -205,7 +205,10 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
   (Ampelschleifen, siehe Dauerzählstellen), Rüsselsheim (Detektoren, nur Echtzeit) – und
   Frankfurts 24-Stunden-Mittel (WFS, in `vizsim/svz`). Neu in der Datenlage: Darmstadt,
   Rüsselsheim, Marburg, Bad Homburg, Oberursel, Idstein, Dietzenbach, Bad Vilbel, Pfungstadt,
-  Groß-Gerau, Bad Hersfeld, Karben, Mühltal, Rosbach; präzisiert: Frankfurt, Kassel.
+  Groß-Gerau, Bad Hersfeld, Karben, Mühltal, Rosbach; präzisiert: Frankfurt, Kassel. Nur mit
+  Dauerzählstellen (ohne Stand der Kurzzeitzählungen): Gießen, Wiesbaden, Dreieich, Rödermark,
+  Rodgau, Altenstadt, Baunatal und die Kreise Marburg-Biedenkopf, Waldeck-Frankenberg,
+  Main-Kinzig und Odenwald; Offenbach fehlt noch (Beleg zu den acht Rad-Zählstellen gesucht).
   - **Rad-Zählnetz des Landes** (wichtigster Fund): seit 2022 Induktionsschleifen je Richtung,
     Stufe 1 (2022) 270 Stellen, etwa die Hälfte in Zuständigkeit von Kreisen, Städten und
     Gemeinden, Stufe 2 (ab 2024) 301 weitere, davon 148 kommunal; Ziel Ende 2026: 571

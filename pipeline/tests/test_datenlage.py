@@ -29,6 +29,10 @@ QUELLEN = {
                    "links": [["Karte", "https://example.org/karte"]]}},
         {"kommune": "Dorf", "land": "HH", "lon": 9.9, "lat": 53.4, "stand": "abgelehnt",
          "was": "Anfrage abgelehnt"},
+        # nur Dauerzählstellen bekannt: kein Stand der Kurzzeitzählungen
+        {"kommune": "Radstadt", "land": "HH", "lon": 10.1, "lat": 53.6,
+         "dauer": {"stand": "kandidat", "was": "Rad-Dauerzählstellen; Werte nur im Portal",
+                   "links": [["Portal", "https://example.org/portal"]]}},
     ],
 }
 
@@ -54,8 +58,11 @@ def pfade(tmp_path: Path) -> Pfade:
 
 def test_dauer_stand_je_kommune(pfade):
     fc = site.datenlage([], pfade)  # ohne gebaute Stellen: die Kommune der Quelle fehlt
-    assert [f["properties"]["kommune"] for f in fc["features"]] == ["Hafenstadt", "Dorf"]
-    hafen, dorf = (f["properties"] for f in fc["features"])
+    namen = [f["properties"]["kommune"] for f in fc["features"]]
+    assert namen == ["Hafenstadt", "Dorf", "Radstadt"]
+    hafen, dorf, radstadt = (f["properties"] for f in fc["features"])
+    assert radstadt["stand"] is None and radstadt["dauer"]["stand"] == "kandidat"
+    assert radstadt["anfrage"] is None
     assert hafen["dauer"] == {"stand": "kandidat", "was": "Dauerzählstellen; offen nur Mittelwerte",
                               "situation": None,
                               "links": [{"titel": "Karte", "url": "https://example.org/karte"}]}
@@ -77,6 +84,21 @@ def test_dauer_stand_unbekannt(pfade):
         site._dauer({"kommune": "X", "dauer": {"stand": "geliefert"}})
 
 
+@pytest.mark.parametrize("eintrag, meldung", [
+    ({"kommune": "Leer", "land": "HH", "lon": 9.0, "lat": 53.0}, "weder stand noch dauer"),
+    ({"kommune": "Falsch", "land": "HH", "lon": 9.0, "lat": 53.0, "stand": "irgendwie"},
+     "stand 'irgendwie' unbekannt"),
+])
+def test_stand_pflicht_ausser_nur_dauer(pfade, eintrag, meldung):
+    """Ein Eintrag braucht einen Stand der Kurzzeitzählungen oder einen der Dauerzählstellen."""
+    cfg = yaml.safe_load((pfade.config / "sources.yaml").read_text(encoding="utf-8"))
+    cfg["datenlage"].append(eintrag)
+    (pfade.config / "sources.yaml").write_text(yaml.safe_dump(cfg, allow_unicode=True),
+                                               encoding="utf-8")
+    with pytest.raises(ValueError, match=meldung):
+        site.datenlage([], pfade)
+
+
 def test_zaehlkarte_datenlage_aus_index(pfade):
     ziele = site.schreibe_datenlage(pfade, date(2026, 11, 13))
     assert ziele == [pfade.karte / "datenlage.json", pfade.repo / "docs" / "DATENLAGE.md"]
@@ -91,6 +113,11 @@ def test_zaehlkarte_datenlage_aus_index(pfade):
     assert ("| Hafenstadt | HH | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen |"
             in md)
     assert "| Dorf | HH | Anfrage gescheitert |  |" in md
+    # nur Dauerzählstellen: „–“ in der Tabelle, Abschnitt mit deren Stand und Belegen
+    assert "| Radstadt | HH | – | vorhanden, Werte nicht offen |" in md
+    assert "## Radstadt (HH) – Dauerzählstellen vorhanden, Werte nicht offen" in md
+    assert "**Lage:** Rad-Dauerzählstellen; Werte nur im Portal" in md
+    assert "[Portal](https://example.org/portal)" in md
     assert "## Teststadt – Dauerzählstellen in der Karte" in md
     assert "**Dauerzählstellen (vorhanden, Werte nicht offen):** Dauerzählstellen; offen nur" in md
     # Belege: die der Kurzzeitzählungen und die der Dauerzählstellen
