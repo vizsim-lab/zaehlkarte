@@ -128,9 +128,9 @@ def dateiname(url, endung):
 
 def pdf_text(pfad):
     try:
-        subprocess.run(["pdftotext", "-layout", "-l", "40", str(pfad), str(pfad) + ".txt"], check=False,
-                       timeout=120, capture_output=True)
-        return (pathlib.Path(str(pfad) + ".txt").read_text(errors="replace"))[:80000]
+        subprocess.run(["pdftotext", "-layout", "-l", "90", str(pfad), str(pfad) + ".txt"], check=False,
+                       timeout=180, capture_output=True)
+        return (pathlib.Path(str(pfad) + ".txt").read_text(errors="replace"))[:200000]
     except Exception as e:  # noqa: BLE001
         return f"(pdftotext: {e!r})"
 
@@ -171,7 +171,8 @@ def lies(kommune, url, tiefe=0):
 
 def seiten():
     ziele = []
-    for z in (pathlib.Path(__file__).parent / "hessen2_seiten.txt").read_text().splitlines():
+    liste = sys.argv[2] if len(sys.argv) > 2 else str(pathlib.Path(__file__).parent / "hessen2_seiten.txt")
+    for z in pathlib.Path(liste).read_text().splitlines():
         if " | " in z and not z.startswith("#"):
             k, u = z.split(" | ", 1)
             ziele.append((k.strip(), u.strip()))
@@ -296,7 +297,8 @@ def portale():
 
 
 if __name__ == "__main__":
-    for f in (seiten, fds, eco_counter, portale):
+    nur_seiten = len(sys.argv) > 3 and sys.argv[3] == "nur_seiten"
+    for f in (seiten,) if nur_seiten else (seiten, fds, eco_counter, portale):
         t0 = time.time()
         try:
             f()
