@@ -1,0 +1,37 @@
+{
+ "grenzen_osm": {
+  "server": "https://overpass.private.coffee/api/interpreter"
+ },
+ "liste": {
+  "gemeinden": 53,
+  "mit_web": 0,
+  "verbaende": 0,
+  "verbaende_mit_web": 0,
+  "kreise": 6,
+  "kreise_mit_web": 0,
+  "osm_elemente": 0,
+  "osm_ohne_gemeinde": [],
+  "ok": true,
+  "sekunden": 81
+ },
+ "osm": {
+  "server": "https://overpass.private.coffee/api/interpreter",
+  "anzahl": 0,
+  "ok": true,
+  "sekunden": 78
+ },
+ "webseiten_ziele": {
+  "ziele": 46,
+  "geraten": 45
+ },
+ "webseiten": {
+  "seiten": 46,
+  "erreicht": 38,
+  "mit_sitemap": 26,
+  "mit_suche": 7,
+  "mit_treffern": 20,
+  "ok": true,
+  "sekunden": 71
+ },
+ "gesamt_sekunden_webseiten_osm": 230
+}
