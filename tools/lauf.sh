@@ -15,4 +15,4 @@ pruefe() {  # pruefe <branch> <code>
   ( cd app/pipeline && uv sync --locked -q && timeout 40m uv run python "$GITHUB_WORKSPACE/tools/quelle_pruefen.py" "$2" "$ziel" ) 2>&1 | tail -80 > "$ziel/lauf.txt" || true
 }
 # Neuss RS5: geprüft (ergebnis/neuss_rad)
-pruefe neuss-wuerzburg wuerzburg_fuss
+pruefe neuss-wuerzburg wuerzburg_fuss  # zweiter Lauf: „unverifiziert“ gezählt
