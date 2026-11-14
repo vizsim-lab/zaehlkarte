@@ -18,21 +18,35 @@ from robots import TEXTE, oeffne
 ZIEL = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "ergebnis/ags")
 SEITEN = [
     "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/_inhalt.html",
-    "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/_inhalt.html",
+    "https://www.destatis.de/EN/Themes/Countries-Regions/Regional-Statistics/OnlineListMunicipalities/"
+    "list-municipalities-information-system.html",
 ]
+# Unterseiten des Gemeindeverzeichnisses, auf denen die Excel-Auszüge liegen können (höchstens so
+# viele Seiten – Crawl-delay 30 s)
+UNTER = re.compile(r"/(Gemeindeverzeichnis|OnlineListMunicipalities)/")
+HOECHSTENS = 10
 
 ZIEL.mkdir(parents=True, exist_ok=True)
 protokoll: dict = {"seiten": {}, "dateien": {}, "fehler": {}}
 links: list[str] = []
-for seite in SEITEN:
+offen, besucht = list(SEITEN), set()
+while offen and len(besucht) < HOECHSTENS:
+    seite = offen.pop(0)
+    if seite in besucht:
+        continue
+    besucht.add(seite)
     try:
         html, url, art = oeffne(seite, zeit=60)
         text = html.decode("utf-8", "replace")
-        gefunden = sorted({urllib.parse.urljoin(url, h.replace("&amp;", "&"))
-                           for h in re.findall(r'href="([^"]+?\.xlsx[^"]*)"', text)})
-        protokoll["seiten"][seite] = {"abgerufen_von": url, "xlsx": gefunden}
-        links += [g for g in gefunden if g not in links]
-        print("ok", seite, len(gefunden), flush=True)
+        hrefs = {urllib.parse.urljoin(url, h.replace("&amp;", "&"))
+                 for h in re.findall(r'href="([^"#]+)', text)}
+        xlsx = sorted(h for h in hrefs if ".xlsx" in h.lower())
+        unter = sorted(h for h in hrefs if h.startswith("https://www.destatis.de/") and UNTER.search(h)
+                       and h.split("?")[0].endswith(".html") and h not in besucht)
+        protokoll["seiten"][seite] = {"abgerufen_von": url, "xlsx": xlsx, "unterseiten": unter}
+        links += [g for g in xlsx if g not in links]
+        offen += [u for u in unter if u not in offen]
+        print("ok", seite, len(xlsx), len(unter), flush=True)
     except Exception as e:  # noqa: BLE001 – im Protokoll festhalten
         protokoll["fehler"][seite] = repr(e)
         print("fehler", seite, repr(e), flush=True)
