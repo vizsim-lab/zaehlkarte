@@ -1,0 +1,18 @@
+== Abruf
+stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse: 3222 Zeilen geladen (Stand 2026-11-14T05:10:28.031000+00:00)
+Fehler: []
+Dauer: 2 s
+robots.txt: 3 Abrufe für rhein_kreis_neuss_rad, neuss_rad trotz Sperre (https://opendata.rhein-kreis-neuss.de/api/explore/) – Ausnahme laut robots.yaml: Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt es nur über diese Wege (Anfrage: noch nicht gestellt)
+Rohdaten: 3 Dateien, 0.1 MB
+{
+ "export.csv": {
+  "url": "https://opendata.rhein-kreis-neuss.de/api/explore/v2.1/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/csv?delimiter=%3B&timezone=UTC",
+  "stand": "2026-11-14T05:10:28.031000+00:00|2026-11-14T05:10:28.031000+00:00",
+  "datensaetze": 3222,
+  "abgerufen": "2026-11-14T21:32:39Z"
+ }
+}
+
+Felder: [{"name": "date", "type": "datetime", "label": "Date"}, {"name": "counts", "type": "int", "label": "Counts"}]
+Metadaten: {"title": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss", "records_count": 3222, "modified": "2026-11-14T05:10:28.031000+00:00", "data_processed": "2026-11-14T05:10:28.031000+00:00", "timezone": "Europe/Berlin", "license": "Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International"}
+Kopf export.csv: ﻿date;counts | 2026-11-14T04:00:00+00:00;9 | 2026-11-14T03:00:00+00:00;2 | 2026-11-14T02:00:00+00:00;0 | 2026-11-14T01:00:00+00:00;2 | 2026-11-14T00:00:00+00:00;2
