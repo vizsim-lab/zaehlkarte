@@ -1,0 +1,5 @@
+# Quellen, Runde 22 (14.11.2026): Augsburg – Lage der A8 am Lech (zweiter Versuch; dazu der Kartenausschnitt der OSM-API).
+geo_augsburg_a8c | https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3Bway%5B%22highway%22%3D%22motorway%22%5D%2848.40%2C10.87%2C48.43%2C10.92%29%3Bout%20tags%20geom%3B
+geo_augsburg_a8c | https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3Bway%5B%22highway%22%3D%22motorway%22%5D%2848.40%2C10.87%2C48.43%2C10.92%29%3Bout%20tags%20geom%3B
+geo_augsburg_a8c | https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3Bway%5B%22highway%22%3D%22motorway%22%5D%2848.40%2C10.87%2C48.43%2C10.92%29%3Bout%20tags%20geom%3B
+osm_api_a8 | https://api.openstreetmap.org/api/0.6/map?bbox=10.878,48.404,10.896,48.416
