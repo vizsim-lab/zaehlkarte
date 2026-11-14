@@ -1,0 +1,43 @@
+{
+ "grenzen_osm": {
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter#0": "<HTTPError 504: 'Gateway Timeout'>",
+  "server": "https://overpass.kumi.systems/api/interpreter"
+ },
+ "orte_osm": {
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "knoten": 45,
+  "zugeordnet": 24
+ },
+ "liste": {
+  "gemeinden": 1104,
+  "mit_web": 115,
+  "verbaende": 86,
+  "verbaende_mit_web": 3,
+  "kreise": 11,
+  "kreise_mit_web": 5,
+  "osm_elemente": 1199,
+  "osm_ohne_gemeinde": [],
+  "ok": true,
+  "sekunden": 296
+ },
+ "osm": {
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "anzahl": 21,
+  "ok": true,
+  "sekunden": 23
+ },
+ "webseiten_ziele": {
+  "ziele": 334,
+  "geraten": 211
+ },
+ "webseiten": {
+  "seiten": 334,
+  "erreicht": 290,
+  "mit_sitemap": 152,
+  "mit_suche": 127,
+  "mit_treffern": 80,
+  "ok": true,
+  "sekunden": 275
+ },
+ "gesamt_sekunden_webseiten_osm": 594
+}
