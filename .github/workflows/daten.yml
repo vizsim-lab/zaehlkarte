@@ -7,6 +7,12 @@
 # eine gute halbe Stunde länger als früher. Der Bericht im PR nennt die Wartezeit und jeden
 # Abruf, der nur dank einer Ausnahme in sources.yaml ging.
 #
+# Scheitert der Abruf einer Quelle, holt der Lauf die übrigen trotzdem und endet dann rot, ohne
+# PR: Er hat keine Rohdaten früherer Läufe (ein Cache verfiele nach sieben Tagen), und ein Bau
+# ohne die Quelle nähme ihre Zählungen aus der Karte. Die Zusammenfassung nennt die Quellen –
+# später von Hand neu starten. Die Schritte laufen mit `shell: bash` (set -eo pipefail): Ohne
+# pipefail zählte vor `| tee` nur der Exit-Code von tee, und ein gescheiterter Lauf blieb grün.
+#
 # Hinweis: Ein PR, den dieser Workflow anlegt, startet die CI nicht von selbst (GitHub-Regel
 # für GITHUB_TOKEN) – darum laufen die Tests hier mit. Darf Actions in der Organisation keine
 # PRs anlegen, bleibt der Branch stehen und die Zusammenfassung nennt den Vergleichs-Link.
@@ -21,6 +27,10 @@ permissions:
   contents: write
   pull-requests: write
 
+defaults:
+  run:
+    shell: bash
+
 jobs:
   daten:
     runs-on: ubuntu-24.04
@@ -34,6 +44,16 @@ jobs:
       - name: Rohdaten holen
         working-directory: pipeline
         run: uv sync --locked && uv run zaehlkarte fetch | tee "$RUNNER_TEMP/abruf.txt"
+      - name: Gescheiterte Quellen nennen
+        if: failure()
+        run: |
+          {
+            echo "Abruf gescheitert – kein PR. Später von Hand neu starten."
+            echo '```'
+            grep -E '^(FEHLER|Abruf gescheitert)' "$RUNNER_TEMP/abruf.txt" || echo "(kein Abruf-Bericht)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          grep '^FEHLER' "$RUNNER_TEMP/abruf.txt" | sed 's/^/::error title=Abruf gescheitert::/' || true
       - name: Kartendaten bauen
         working-directory: pipeline
         run: uv run zaehlkarte site | tee "$RUNNER_TEMP/bericht.txt"
@@ -63,7 +83,7 @@ jobs:
             echo '```'
             echo "Bericht der Pipeline:"
             echo '```'
-            grep -v "details/" "$RUNNER_TEMP/bericht.txt" | head -80
+            grep -v "details/" "$RUNNER_TEMP/bericht.txt" | sed -n '1,80p'  # liest alles: kein SIGPIPE unter pipefail
             echo '```'
           } > "$RUNNER_TEMP/pr.md"
           if ! gh pr create --base main --head "$zweig" --title "Kartendaten neu gebaut ($(date -u +%F))" --body-file "$RUNNER_TEMP/pr.md"; then

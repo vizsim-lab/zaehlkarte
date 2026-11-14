@@ -77,7 +77,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/duesseldorf_rad.py` | Düsseldorf: Jahresdateien je Zählstelle, Zuordnung über den Namen, vier Formate, Summen weg |
 | `dauer/gedaechtnis.py` | Gedächtnis der Quellen mit kurzer Vorhaltezeit (Hamburg, Leipzig): Monatsdateien je UTC-Tag |
 | `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen; Geofabrik, einmal geladen) |
-| `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen (Workflow) |
+| `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen, zweite Kopie je Jahr in `gedaechtnis-kopie-JJJJ` (Workflow) |
 | `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Text von `pdftotext -layout`), mit Abgleich gegen eine vorhandene CSV |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |
 
@@ -92,7 +92,8 @@ Eintrag im Schulwege-Cache haben – erzeugt vom Workflow „Berlin geokodieren�
 
 ```bash
 uv sync
-uv run zaehlkarte fetch            # ~450 MB Download (MobiData-ZIPs samt PDFs)
+uv run zaehlkarte fetch            # ~450 MB Download (MobiData-ZIPs samt PDFs); scheitert eine
+                                   # Quelle, laufen die anderen weiter (Exit-Code 1)
 uv run zaehlkarte build            # Bericht ohne zu schreiben
 uv run zaehlkarte site             # Kartendaten schreiben (~1,5 min)
 uv run zaehlkarte datenlage        # nur datenlage.json und docs/DATENLAGE.md (aus sources.yaml
@@ -102,5 +103,7 @@ uv run zaehlkarte dauer fetch      # Dauerzählstellen: Berliner Monatsarchive (
                                    # Rad-Quellen; Hamburg und Leipzig über ihre Schnittstellen (erster
                                    # Abruf ohne Gedächtnis: einige Minuten)
 uv run zaehlkarte dauer site       # public/data/dauer/ schreiben (~70 MB, gepackt ~20 MB, ~5 min)
+uv run zaehlkarte dauer frische    # Gedächtnis (Hamburg, Leipzig): Exit-Code 1, wenn die jüngste
+                                   # Stunde einer Quelle älter als 10 Tage ist
 uv run pytest && uvx ruff check
 ```
