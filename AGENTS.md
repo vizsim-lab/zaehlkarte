@@ -213,8 +213,10 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     Hessen Mobil beschafft und baut, das Land zahlt, die Kommunen wählen die Standorte und tragen
     teils den Betrieb (Bad Homburg: 300–500 Euro je Stelle und Jahr). Werte (Tag, Monat, Jahr,
     „ohne vorherige Plausibilisierung“) nur im Eco-Counter-Portal `hessen-mobil.eco-counter.com`
-    (= `data.eco-counter.com/ParcPublic/?id=8080`), ohne Lizenz; der GovData-Eintrag
-    „Dauerzählstellen für den Radverkehr in Hessen“ hat keine Lizenz und verlinkt nur das Portal.
+    (= `data.eco-counter.com/ParcPublic/?id=8080`), ohne Lizenzangabe; der GovData-Eintrag
+    „Dauerzählstellen für den Radverkehr in Hessen“ verlinkt nur das Portal – seine Lizenz ließ sich
+    nicht abrufen (die GovData-API sperrt Einzelabfragen per robots.txt, und die Suche führt die
+    Lizenz nicht am Datensatz, auch nicht beim WFS Frankfurt, der dl-de/by-2-0 hat).
     Hebel: eine Anfrage bei Hessen Mobil (als Landesbehörde unter dem HDSIG) nach den Stundenwerten
     aller Stellen samt Lizenz – sie brächte die kommunalen Stellen mit. Kommunen mit Stellen laut
     eigener Meldung: Frankfurt (10), Oberursel (9), Offenbach (8, sieben städtisch), Rödermark (5),
@@ -555,7 +557,7 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     und Petershausen, Alte Rheinbrücke, Friedrichstraße), Heidelberg (CKAN-API 404), Ulm
     (Lupferbrücke, eingestellt), Mannheims Portal (ohne Lizenzangabe). Nicht offen als
     Stundenwerte: Hessen Mobil (Rad-Zählnetz des Landes, etwa die Hälfte der Stellen kommunal –
-    siehe Sackgassen, Hessen; ohne Lizenz; Export der Diagrammwerte je Stelle – Tage, Wochen,
+    siehe Sackgassen, Hessen; ohne Lizenzangabe; Export der Diagrammwerte je Stelle – Tage, Wochen,
     Monate;
     `hessen-mobil.eco-counter.com` sperrt Abruf-Werkzeuge per robots.txt) und Bielefeld – dort
     hilft eine Anfrage (Eco-Counter-Kunden haben in Eco-Visio einen Export). Nur Summen:

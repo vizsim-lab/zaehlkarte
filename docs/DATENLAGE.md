@@ -176,7 +176,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Hessisches UIG
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** vier Rad-Dauerzählstellen des Landesnetzes (Friedberger Straße, Wirtschaftsweg nach Oberursel, Frölingstraße, Weinbergsweg) – Werte nur im Zählportal des Landes, ohne Lizenz
+**Dauerzählstellen (vorhanden, Werte nicht offen):** vier Rad-Dauerzählstellen des Landesnetzes (Friedberger Straße, Wirtschaftsweg nach Oberursel, Frölingstraße, Weinbergsweg) – Werte nur im Zählportal des Landes, ohne Lizenzangabe
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Bad+Homburg)
 
@@ -593,7 +593,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Hessisches UIG
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** zehn Rad-Dauerzählstellen des Landesnetzes (fünf an Standorten der Stadt, fünf von Hessen Mobil) und eine Zählsäule der Stadt – Werte nur im Zählportal des Landes, ohne Lizenz; Detektordaten der Messstellen der Stadt über die Mobilithek nur nach Freigabe einer Subskription
+**Dauerzählstellen (vorhanden, Werte nicht offen):** zehn Rad-Dauerzählstellen des Landesnetzes (fünf an Standorten der Stadt, fünf von Hessen Mobil) und eine Zählsäule der Stadt – Werte nur im Zählportal des Landes, ohne Lizenzangabe; Detektordaten der Messstellen der Stadt über die Mobilithek nur nach Freigabe einer Subskription
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Frankfurt+am+Main+Verkehr)
 
@@ -1357,7 +1357,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Hessisches UIG
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** neun Rad-Dauerzählstellen des Landesnetzes (drei seit April 2022, sechs seit 2024) – Werte nur im Zählportal des Landes, ohne Lizenz
+**Dauerzählstellen (vorhanden, Werte nicht offen):** neun Rad-Dauerzählstellen des Landesnetzes (drei seit April 2022, sechs seit 2024) – Werte nur im Zählportal des Landes, ohne Lizenzangabe
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Oberursel)
 
