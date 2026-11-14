@@ -199,15 +199,65 @@ def robots():
                                for u, v in x["urls"].items()} for b, x in aus.items()}
 
 
+def nachpruefen():
+    """Frühere Abrufe gegen robots.txt nach RFC 9309 prüfen (urllib.robotparser in Python 3.12
+    kannte * und $ nicht): welche abgerufenen Seiten wären gesperrt gewesen?"""
+    import glob
+
+    import robots as R
+    urls = set()
+    for f in glob.glob("ergebnis/*/webseiten.json"):
+        for e in json.load(open(f)):
+            if e.get("web"):
+                urls.add(e["web"] if isinstance(e["web"], str) else e["web"][0])
+            if (e.get("suche") or {}).get("url"):
+                urls.add(e["suche"]["url"])
+    for f in glob.glob("ergebnis/*/seiten.json"):
+        for e in json.load(open(f)):
+            if "fehler" not in e:
+                urls.add(e["url"])
+            for u in e.get("unter") or []:
+                if "fehler" not in u:
+                    urls.add(u["url"])
+    gesperrt = []
+    for u in sorted(urls):
+        try:
+            if not R.erlaubt(u):
+                gesperrt.append(u)
+        except Exception as e:  # noqa: BLE001
+            gesperrt.append(f"{u} (Prüfung: {e!r})"[:300])
+    h.schreibe("nachpruefen.json", {"geprueft": len(urls), "gesperrt": gesperrt})
+    protokoll["nachpruefen"] = {"geprueft": len(urls), "gesperrt": len(gesperrt)}
+
+
 def seiten():
-    sys.argv = [sys.argv[0], str(ZIEL), LISTE]
-    h.protokoll = protokoll
-    h.seiten()
+    """Wie hessen2.seiten; „Kommune | URL | pdf“ holt zusätzlich bis zu vier verlinkte PDFs."""
+    import concurrent.futures as cf
+    ziele = []
+    for z in pathlib.Path(LISTE).read_text().splitlines():
+        if " | " in z and not z.startswith("#"):
+            teile = [x.strip() for x in z.split(" | ")]
+            ziele.append((teile[0], teile[1], len(teile) > 2 and teile[2] == "pdf"))
+
+    def lies(k, u, pdf):
+        e = h.lies(k, u)
+        if pdf and "fehler" not in e:
+            schon = {x["url"] for x in e.get("unter") or []}
+            pdfs = [lk[0] for lk in e.get("links") or [] if re.search(r"\.pdf(\?|$)", lk[0], re.I)
+                    and lk[0] not in schon][:4]
+            e["unter"] = (e.get("unter") or []) + [h.lies(k, x, 1) for x in pdfs]
+        return e
+
+    with cf.ThreadPoolExecutor(max_workers=8) as pool:
+        aus = list(pool.map(lambda z: lies(*z), ziele))
+    h.schreibe("seiten.json", aus)
+    protokoll["seiten"] = {"ziele": len(ziele), "gelesen": sum(1 for e in aus if "fehler" not in e),
+                           "robots": sum(1 for e in aus if e.get("fehler") == "robots.txt")}
 
 
 if __name__ == "__main__":
     for name in TEILE:
-        f = {"ckan": ckan, "mobilithek": mobilithek, "seiten": seiten, "mdk": mdk, "robots": robots}[name]
+        f = {"ckan": ckan, "mobilithek": mobilithek, "seiten": seiten, "mdk": mdk, "robots": robots, "nachpruefen": nachpruefen}[name]
         t0 = time.time()
         try:
             f()

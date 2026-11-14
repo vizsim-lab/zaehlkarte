@@ -25,9 +25,10 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-import urllib.robotparser
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
+
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 ZIEL = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "ergebnis/hessen")
 ZIEL.mkdir(parents=True, exist_ok=True)
@@ -78,26 +79,9 @@ def schreibe(name, obj):
 
 
 def erlaubt(url):
-    """robots.txt des Hosts für alle ROBOT_KENNUNGEN; ohne robots.txt (404) ist alles erlaubt."""
-    t = urllib.parse.urlsplit(url)
-    basis = f"{t.scheme}://{t.netloc}"
-    with _ROBOTS_SPERRE:
-        rp = _ROBOTS.get(basis)
-    if rp is None:
-        rp = urllib.robotparser.RobotFileParser()
-        try:
-            inhalt, _, _ = hole(basis + "/robots.txt", roh=True, zeit=15)
-            rp.parse(inhalt.decode("utf-8", "replace").splitlines())
-        except urllib.error.HTTPError as e:
-            if e.code in (401, 403):
-                rp.disallow_all = True
-            else:
-                rp.allow_all = True
-        except Exception:  # noqa: BLE001
-            rp.allow_all = True
-        with _ROBOTS_SPERRE:
-            _ROBOTS[basis] = rp
-    return all(rp.can_fetch(k, url) for k in ROBOT_KENNUNGEN)
+    """robots.txt nach RFC 9309 (tools/robots.py, auch * und $)."""
+    import robots as _robots  # noqa: PLC0415
+    return _robots.erlaubt(url, ROBOT_KENNUNGEN)
 
 
 def schritt(name):

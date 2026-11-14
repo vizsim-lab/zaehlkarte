@@ -22,8 +22,9 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-import urllib.robotparser
 from html.parser import HTMLParser
+
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
 ZIEL = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "ergebnis/hessen2")
 ZIEL.mkdir(parents=True, exist_ok=True)
@@ -39,11 +40,13 @@ ZAEHL = re.compile(
     r"|messung|messtafel|geschwindigkeit|auswertung|ergebnis|querschnitt|knotenpunkt", re.I)
 
 
-class Gesperrt(Exception):
-    pass
+import robots as _robots  # noqa: E402  (RFC 9309 samt * und $, Crawl-delay, Weiterleitungen)
+
+Gesperrt = _robots.Gesperrt
 
 
 def roh(url, *, daten=None, kopf=None, zeit=90, grenze=GRENZE):
+    """Ungeprüft – nur für robots.txt selbst."""
     k = {"User-Agent": UA, "Accept-Language": "de"} | (kopf or {})
     if daten is not None and not isinstance(daten, bytes):
         daten = json.dumps(daten).encode()
@@ -56,31 +59,15 @@ def roh(url, *, daten=None, kopf=None, zeit=90, grenze=GRENZE):
 
 
 def erlaubt(url):
-    t = urllib.parse.urlsplit(url)
-    basis = f"{t.scheme}://{t.netloc}"
-    with _SPERRE:
-        rp = _ROBOTS.get(basis)
-    if rp is None:
-        rp = urllib.robotparser.RobotFileParser()
-        try:
-            inhalt, _, _ = roh(basis + "/robots.txt", zeit=20)
-            rp.parse(inhalt.decode("utf-8", "replace").splitlines())
-        except urllib.error.HTTPError as e:
-            if e.code in (401, 403):
-                rp.disallow_all = True
-            else:
-                rp.allow_all = True
-        except Exception:  # noqa: BLE001
-            rp.allow_all = True
-        with _SPERRE:
-            _ROBOTS[basis] = rp
-    return all(rp.can_fetch(k, url) for k in ROBOT_KENNUNGEN)
+    return _robots.erlaubt(url)
 
 
-def seite(url, **kw):
-    if not erlaubt(url):
-        raise Gesperrt(url)
-    return roh(url, **kw)
+def seite(url, *, daten=None, kopf=None, zeit=90, grenze=GRENZE):
+    k = dict(kopf or {})
+    if daten is not None and not isinstance(daten, bytes):
+        daten = json.dumps(daten).encode()
+        k.setdefault("Content-Type", "application/json")
+    return _robots.oeffne(url, daten=daten, kopf=k, zeit=zeit, grenze=grenze)
 
 
 def schreibe(name, obj):
@@ -194,7 +181,7 @@ def fds():
     aus = {}
     for i in FDS_IDS:
         try:
-            d = json.loads(roh(f"https://fragdenstaat.de/api/v1/request/{i}/")[0])
+            d = json.loads(seite(f"https://fragdenstaat.de/api/v1/request/{i}/")[0])
         except Exception as e:  # noqa: BLE001
             aus[i] = {"fehler": repr(e)[:200]}
             continue
@@ -202,14 +189,14 @@ def fds():
         for m in d.get("messages", []):
             if isinstance(m, str):
                 try:
-                    m = json.loads(roh(m)[0])
+                    m = json.loads(seite(m)[0])
                 except Exception:  # noqa: BLE001
                     continue
             anh = []
             for a in m.get("attachments", []) or []:
                 if isinstance(a, str):
                     try:
-                        a = json.loads(roh(a)[0])
+                        a = json.loads(seite(a)[0])
                     except Exception:  # noqa: BLE001
                         continue
                 eintrag = {k: a.get(k) for k in ("name", "filetype", "size", "file_url", "site_url", "approved",
@@ -217,7 +204,7 @@ def fds():
                 url = a.get("file_url")
                 if url and (a.get("size") or 0) < 15_000_000 and re.search(r"\.(pdf|xlsx?|csv|zip|ods)$", a.get("name") or "", re.I):
                     try:
-                        inhalt = roh(url)[0]
+                        inhalt = seite(url)[0]
                         endung = "." + (a.get("name") or "x.bin").rsplit(".", 1)[-1].lower()
                         p = ZIEL / "dateien" / f"fds_{i}_{hashlib.sha1(url.encode()).hexdigest()[:8]}{endung}"
                         p.write_bytes(inhalt)
@@ -265,7 +252,7 @@ def portale():
     for name, api in ckan.items():
         for q in ("Zählung", "Zählstelle", "Verkehr", "Radverkehr", "Verkehrsmengen", "Detektor", "Fußverkehr"):
             try:
-                r = json.loads(roh(api + "package_search?" + urllib.parse.urlencode({"q": q, "rows": 100}))[0])["result"]
+                r = json.loads(seite(api + "package_search?" + urllib.parse.urlencode({"q": q, "rows": 100}))[0])["result"]
                 for p in r["results"]:
                     aus.setdefault(name, {})[p["name"]] = {
                         "titel": p.get("title"), "lizenz": p.get("license_id"), "geaendert": p.get("metadata_modified"),
@@ -275,13 +262,13 @@ def portale():
                 aus.setdefault(name + "_fehler", {})[q] = repr(e)[:200]
             time.sleep(0.4)
     try:
-        aus["fid_move_r3"] = json.loads(roh("https://data.fid-move.de/api/3/action/package_show?id=9b2b839e-441b-44a5-9dc1-64c0408f2b91")[0])["result"]
+        aus["fid_move_r3"] = json.loads(seite("https://data.fid-move.de/api/3/action/package_show?id=9b2b839e-441b-44a5-9dc1-64c0408f2b91")[0])["result"]
     except Exception as e:  # noqa: BLE001
         aus["fid_move_r3"] = repr(e)[:200]
     for oid in ("842371963004272640", "110000000003182000", "110000000003181000", "-8060510244121701904",
                 "-2949871930131753119"):
         try:
-            aus.setdefault("mobilithek", {})[oid] = json.loads(roh(
+            aus.setdefault("mobilithek", {})[oid] = json.loads(seite(
                 f"https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/{oid}")[0])
         except Exception as e:  # noqa: BLE001
             aus.setdefault("mobilithek", {})[oid] = repr(e)[:200]
@@ -292,7 +279,7 @@ def portale():
                    + urllib.parse.urlencode({"searchText": b, "searchResources": res, "outputFormat": "json",
                                              "resultTarget": "web", "maxResults": 50, "searchPages": 1}))
             try:
-                inhalt = roh(url)[0]
+                inhalt = seite(url)[0]
                 aus.setdefault("geoportal", {})[f"{b}|{res}"] = json.loads(inhalt)
             except Exception as e:  # noqa: BLE001
                 aus.setdefault("geoportal", {})[f"{b}|{res}"] = repr(e)[:200]

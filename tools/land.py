@@ -26,7 +26,6 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-import urllib.robotparser
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
@@ -70,23 +69,27 @@ STARK = re.compile(  # enger: was wirklich nach Zählwerten klingt
 )
 
 
-class Gesperrt(Exception):
-    """robots.txt verbietet den Abruf."""
+sys.path.insert(0, str(pathlib.Path(__file__).parent))
+import robots as _robots  # noqa: E402  (RFC 9309 samt * und $, Crawl-delay, Weiterleitungen)
+
+Gesperrt = _robots.Gesperrt
 
 
 def hole(url, *, daten=None, kopf=None, roh=False, zeit=60, ua=UA):
     if not erlaubt(url):
         raise Gesperrt(url)
-    return _roh(url, daten=daten, kopf=kopf, roh=roh, zeit=zeit, ua=ua)
+    _robots.warte(url)
+    return _roh(url, daten=daten, kopf=kopf, roh=roh, zeit=zeit, ua=ua, opener=_robots.OPENER)
 
 
-def _roh(url, *, daten=None, kopf=None, roh=False, zeit=60, ua=UA):
+def _roh(url, *, daten=None, kopf=None, roh=False, zeit=60, ua=UA, opener=None):
     k = {"User-Agent": ua, "Accept-Language": "de"}
     k.update(kopf or {})
     if daten is not None and not isinstance(daten, bytes):
         daten = json.dumps(daten).encode()
         k.setdefault("Content-Type", "application/json")
-    with urllib.request.urlopen(urllib.request.Request(url, data=daten, headers=k), timeout=zeit) as a:
+    oeffne = opener.open if opener else urllib.request.urlopen
+    with oeffne(urllib.request.Request(url, data=daten, headers=k), timeout=zeit) as a:
         inhalt = a.read()
         if a.headers.get("Content-Encoding") == "gzip" or inhalt[:2] == b"\x1f\x8b":
             try:
@@ -101,26 +104,8 @@ def schreibe(name, obj):
 
 
 def erlaubt(url):
-    """robots.txt des Hosts für alle ROBOT_KENNUNGEN; ohne robots.txt (404) ist alles erlaubt."""
-    t = urllib.parse.urlsplit(url)
-    basis = f"{t.scheme}://{t.netloc}"
-    with _ROBOTS_SPERRE:
-        rp = _ROBOTS.get(basis)
-    if rp is None:
-        rp = urllib.robotparser.RobotFileParser()
-        try:
-            inhalt, _, _ = _roh(basis + "/robots.txt", roh=True, zeit=15)
-            rp.parse(inhalt.decode("utf-8", "replace").splitlines())
-        except urllib.error.HTTPError as e:
-            if e.code in (401, 403):
-                rp.disallow_all = True
-            else:
-                rp.allow_all = True
-        except Exception:  # noqa: BLE001
-            rp.allow_all = True
-        with _ROBOTS_SPERRE:
-            _ROBOTS[basis] = rp
-    return all(rp.can_fetch(k, url) for k in ROBOT_KENNUNGEN)
+    """robots.txt des Hosts für alle ROBOT_KENNUNGEN (tools/robots.py)."""
+    return _robots.erlaubt(url, ROBOT_KENNUNGEN)
 
 
 def schritt(name):
