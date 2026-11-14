@@ -35,6 +35,8 @@
 #   überschrieben, nie gelöscht). Zuletzt prüft er, ob das Gedächtnis noch wächst: Ist die
 #   jüngste Stunde einer Quelle älter als 10 Tage, wird der Lauf rot – die Karte ist dann schon
 #   ausgeliefert, aber der Abruf scheitert seit mindestens einer Woche, und bald fehlen Stunden.
+#   Ebenso, wenn die Ferien eines Landes in drei Monaten enden (`zaehlkarte kalender`): Dann den
+#   nächsten KMK-Kalender nachtragen (pipeline/werkzeuge/kmk_ferien.py).
 name: Dauerzählstellen bauen
 
 on:
@@ -156,15 +158,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run ci.yml --ref main
-      - name: Abruf und Gedächtnis prüfen
+      - name: Abruf, Gedächtnis und Kalender prüfen
         working-directory: pipeline
         run: |
           grep '^FEHLER' "$RUNNER_TEMP/abruf.txt" | sed 's/^/::warning title=Abruf gescheitert::/' || true
           status=0
-          uv run zaehlkarte dauer frische --tage 10 > "$RUNNER_TEMP/frische.txt" || status=$?
-          cat "$RUNNER_TEMP/frische.txt"
-          { echo; echo "Gedächtnis:"; echo '```'; cat "$RUNNER_TEMP/frische.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          uv run zaehlkarte dauer frische --tage 10 > "$RUNNER_TEMP/pruefung.txt" || status=1
+          uv run zaehlkarte kalender --monate 3 >> "$RUNNER_TEMP/pruefung.txt" || status=1
+          cat "$RUNNER_TEMP/pruefung.txt"
+          { echo; echo "Gedächtnis und Ferienkalender:"; echo '```'; cat "$RUNNER_TEMP/pruefung.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
           if [ "$status" -ne 0 ]; then
-            grep -E 'älter als|keine Stunden' "$RUNNER_TEMP/frische.txt" | sed 's/^/::error title=Gedächtnis wächst nicht::/' || true
-            exit "$status"
+            grep -E 'älter als|keine Stunden|keine Ferien|endet vor' "$RUNNER_TEMP/pruefung.txt" | sed 's/^/::error title=Prüfung::/' || true
+            exit 1
           fi

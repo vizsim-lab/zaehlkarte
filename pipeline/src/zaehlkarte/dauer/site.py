@@ -33,7 +33,7 @@ import numpy as np
 
 from zaehlkarte.config import Pfade
 from zaehlkarte.dauer.modell import GRUPPEN, Messreihe, tagessummen
-from zaehlkarte.kalender import Ferienkalender, tagtyp
+from zaehlkarte.kalender import ferienkalender, tagtyp
 
 VERSION = 2  # 2: `juengster` (November 2026)
 CHUNK_BYTES = 900_000
@@ -49,8 +49,9 @@ def _liste(werte: np.ndarray) -> list[int | None]:
     return [None if v < 0 else int(v) for v in werte.tolist()]
 
 
-def kalender(land: str, ferien: Path | None, von: date, tage: int) -> str:
-    kal = Ferienkalender.lade(ferien) if ferien else None
+def kalender(land: str, config: Path, von: date, tage: int) -> str:
+    """Tagtyp je Tag ab `von` als Zeichen (s, f, h, w; u = unbekannt) – Ferien aus `config/`."""
+    kal = ferienkalender(land, config)
     return "".join(TAG.get(tagtyp(von + timedelta(days=i), land, kal)[0] or "", "u")
                    for i in range(tage))
 
@@ -87,8 +88,7 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
         tagesweise = {g: tagessummen(r, g) for g in gruppen if g in r.werte}
         summen = {g: s for g, (s, _) in tagesweise.items()}
         stunden_ab = max(0, r.tage - STUNDEN_TAGE)
-        land_kal = kalender(q["land"], pfade.config / q["ferien"] if q.get("ferien") else None,
-                            von, tage_gesamt)
+        land_kal = kalender(q["land"], pfade.config, von, tage_gesamt)
         ab = (r.von - von).days
         schultag = np.array([c == "s" for c in land_kal[ab:ab + r.tage]], dtype=bool)
         anzahl, ohne = 0, 0
@@ -173,8 +173,7 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
         zeile.append(len(chunks) - 1)
 
     laender = sorted({q["land"] for q, _ in gelesen})
-    ferien = {q["land"]: pfade.config / q["ferien"] for q, _ in gelesen if q.get("ferien")}
-    kal = {land: kalender(land, ferien.get(land), von, tage_gesamt) for land in laender}
+    kal = {land: kalender(land, pfade.config, von, tage_gesamt) for land in laender}
     index = {
         "version": VERSION,
         "erzeugt": (erzeugt or date.today()).isoformat(),
