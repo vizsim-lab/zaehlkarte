@@ -1793,9 +1793,11 @@
      ]
     },
     "dauer": {
-     "stand": "aggregiert",
-     "quellen": [],
-     "was": "Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte; offen dazu eine Passantenzählung in der Annastraße mit Stundenwerten seit Dezember 2020 (CC BY 4.0) – Fußverkehr ist noch keine Gruppe der Karte",
+     "stand": "in_karte",
+     "quellen": [
+      "augsburg_fuss"
+     ],
+     "was": "Passantenzählung in der Annastraße: Stundenwerte seit Dezember 2020 (CC BY 4.0), in der Karte unter Fuß seit November 2026. Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte",
      "situation": null,
      "links": [
       {
@@ -1809,7 +1811,7 @@
      ]
     },
     "stand_k": "geliefert",
-    "stand_d": "aggregiert"
+    "stand_d": "in_karte"
    }
   },
   {

@@ -14,7 +14,7 @@ FragDenStaat.
 | Aalen | BW | – | in der Karte |  |
 | Altenstadt | HE | – | vorhanden, Werte nicht offen |  |
 | Amberg | BY | auf Anfrage herausgegeben |  | Bei der Anfrage gleich nach den Bedingungen der Nutzungserklärung fragen und um eine offene Lizenz bitten |
-| Augsburg | BY | auf Anfrage herausgegeben | nur Summen oder Mittelwerte offen | Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den Zählstellen erlaubt die Liste von 2017 |
+| Augsburg | BY | auf Anfrage herausgegeben | in der Karte | Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den Zählstellen erlaubt die Liste von 2017 |
 | Bad Hersfeld | HE | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Messungen der Seitenradar-Geräte seit 2015, am besten als Export der Geräte |
 | Bad Homburg vor der Höhe | HE | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage nach beiden Zählungen mit den gezählten Werten (vor jeder Hochrechnung) |
 | Bad Honnef | NW | nur Summen oder Mittelwerte offen |  | Anfrage nach den ausgelesenen Rohdaten (je Fahrzeug oder je Stunde und Richtung) aller Zählungen seit 2015 |
@@ -230,7 +230,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Bayerisches UIG
 
-**Dauerzählstellen (nur Summen oder Mittelwerte offen):** Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte; offen dazu eine Passantenzählung in der Annastraße mit Stundenwerten seit Dezember 2020 (CC BY 4.0) – Fußverkehr ist noch keine Gruppe der Karte
+**Dauerzählstellen (in der Karte):** Passantenzählung in der Annastraße: Stundenwerte seit Dezember 2020 (CC BY 4.0), in der Karte unter Fuß seit November 2026. Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Augsburg)
 

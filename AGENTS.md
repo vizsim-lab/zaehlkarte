@@ -854,6 +854,31 @@ robots.txt für alle Robots sperrt. Seitdem:
       Stunden bis Monaten (Lennéstraße Januar bis April 2023). Jüngster Wert rund eine Stunde alt.
     - Die Kfz-Dauerzählstellen der Stadt sind nur als Mittelwerte in der Verkehrsmengenkarte offen
       (Ebenen „Kfz/Tag HIN/RÜCK“) – Fall für `vizsim/svz`.
+  - **Fuß (seit November 2026, Entscheidung der Projektleitung):**
+    - **Augsburg** (`augsburg_fuss`, CC BY 4.0, Mobilithek-Angebot `-1747083335311792689` der
+      Wirtschaftsförderung): eine CSV auf augsburg.de
+      (`…/Smart_City/opendata/240429/Annastraße_Frequenzdaten.csv` – das Datum im Pfad täuscht,
+      die Datei wird fortgeschrieben, zuletzt 11.08.2026), `Standort;Jahr;Datum;Stunde;Passanten`
+      („Annastraße;2020;Mi., 16.12.2020;13 Uhr;521“), UTF-8 mit BOM, Ortszeit, ein Standort.
+      Keine Stunde hat 0, es fehlen Stunden fast nur nachts (2–4 Uhr, sonst Werte 1–3): vermutlich
+      Stunden ohne Passanten – nicht aufgefüllt, 2021 ist so fast jeder zweite Tag nicht
+      vollständig. Rückstellung: 2 Uhr einmal, mal mit beiden Stunden (2023, 2024: rund das
+      Doppelte von 1 und 3 Uhr), mal nicht – `rueck: einfach`. Eine Stunde doppelt (09.10.2025, 13
+      Uhr). Lage: Mitte der Fußgängerzone laut OSM (Weg 265870758; Overpass über kumi.systems mit
+      Ausschnitt – die Abfrage über die Fläche „Augsburg“ lief bei allen drei Servern in die
+      Zeitgrenze; Photon sperrt per robots.txt alles). Median eines vollen Tags 17.600, höchster
+      50.495.
+    - **Bochum** (`bochum_rad`): die Spalten `passanten_in`/`passanten_out` an fünf Stellen
+      (Springorumtrasse, Erzbahntrasse, Hofsteder Bach, Lothringentrasse, Blücherstraße) als
+      Gruppe `fuss`, je Richtung wie Rad. An der Springorumtrasse sind die Passanten-Spalten bis
+      Oktober 2023 leer. Erzbahntrasse: seit Juni 2026 Tagessummen von 0 bis über 100.000 (sonst
+      rund 250–300) – Hinweis an der Stelle, Werte wie geliefert.
+    - **Würzburg** (Passantenzählung, Stundendaten, dl-de/by-2-0, Opendatasoft-Datensatz
+      `passantenzaehlung_stundendaten`): bräuchte die robots-Ausnahme für
+      `opendata.wuerzburg.de/api/explore/` auch für eine neue Quelle – Entscheidung der
+      Projektleitung offen.
+    - Weitere Kandidaten: Freiburg (FR.ITZ, Rad und Fuß getrennt), die Personen-Kanäle im Bündel
+      von MobiData BW (Ludwigsburg, Reutlingen, Böblingen).
   - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue

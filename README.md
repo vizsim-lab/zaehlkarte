@@ -21,9 +21,10 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
   Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen in
   Baden-Württemberg und in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau
-  und Verkehr, Hannover, Region Hannover, Braunschweig und vier weitere Kommunen).
+  und Verkehr, Hannover, Region Hannover, Braunschweig und vier weitere Kommunen); Fuß in Augsburg
+  (Passantenzählung Annastraße) und Bochum (fünf Rad- und Fuß-Zählstellen).
   Die Karte zeigt je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags oder
-  eines wählbaren Tags (Kfz zuerst, Rad und Lkw/Schwerverkehr über die Chips), die
+  eines wählbaren Tags (Kfz zuerst, Rad, Fuß und Lkw/Schwerverkehr über die Chips), die
   Seitenleiste die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
 - **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
   `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
@@ -68,13 +69,14 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Rhein-Kreis Neuss | Radzählstationen auf Rhein- und Erft-Radweg (Eco-Counter): Stundenwerte je Kanal mit Status, in der Karte die Summe je Station; 5 Stationen | 2015 – Juli 2026 (seitdem nicht aktualisiert) | offen im [Open-Data-Portal des Kreises](https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/) (Opendatasoft) | CC0 1.0 |
 | Dortmund (Stadtplanungs- und Bauordnungsamt) | Dauerzählstelle Radverkehr Schnettkerbrücke (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte Stundenwerte; Lage aus OpenStreetMap | 2018–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/) (Opendatasoft) | dl-de/zero-2-0 |
 | Essen (Amt für Stadtplanung und Bauordnung) | automatische Radverkehrszählungen an Grugatrasse und Huyssenallee: Stundenwerte je Richtung, in der Karte die Summe je Zählstelle; 2 Zählstellen | 2021 – Juni 2026 (2018–2020 unter geschlossener Lizenz, nicht übernommen); vierteljährlich ergänzt | offen auf [Open.NRW](https://open.nrw/dataset/radverkehrszahlungen-e) (eine CSV je Quartal) | dl-de/by-2-0, „Stadt Essen“ |
-| Bochum (Stadt Bochum) | Zählstellen für Rad- und Fußverkehr (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte nur Rad als Stundenwerte je Zählstelle; 8 Zählstellen | 2018–2026; wöchentlich ergänzt | offen im [GitLab der Stadt auf openCode.de](https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter) (eine CSV je Zählstelle) | dl-de/by-2-0, „Stadt Bochum“ – laut Stadt nicht für Produkte oder Services im direkten Wettbewerb zu Eco-Counter |
+| Bochum (Stadt Bochum) | Zählstellen für Rad- und Fußverkehr (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte Rad und Fuß (eigene Kanäle) als Stundenwerte je Zählstelle; 8 Zählstellen, 5 davon mit Fuß | 2018–2026; wöchentlich ergänzt | offen im [GitLab der Stadt auf openCode.de](https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter) (eine CSV je Zählstelle) | dl-de/by-2-0, „Stadt Bochum“ – laut Stadt nicht für Produkte oder Services im direkten Wettbewerb zu Eco-Counter |
 | Leipzig (Verkehrs- und Tiefbauamt) | Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte je Zählstelle; die Quelle hält nur 31 Tage vor, die Zählkarte hebt sie auf (Gedächtnis); 25 Zählstellen | vollständig gezählte Tage ab 09.10.2026 (der erste Abruf reichte 31 Tage zurück); wöchentlich ergänzt | offen im WFS des Geoportals ([Datensatz](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei)) | dl-de/by-2-0, „Stadt Leipzig“ |
 | Rostock (Hanse- und Universitätsstadt Rostock) | Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle, beide Richtungen zusammen, in der Karte Stundenwerte; 17 Zählstellen | 2012–2026; wöchentlich ergänzt | offen auf [OpenData.HRO](https://www.opendata-hro.de/dataset/radmonitore) (eine CSV) | CC0 1.0 |
 | Bonn (Bundesstadt Bonn) | Fahrradmessstellen (Eco-Counter): Stundenwerte je Zählstelle, die Brücken je Seite; Summen der Brücken nicht übernommen; 14 Zählstellen, Lage aus OpenStreetMap | 2020–2025 ohne 2022 (nur je Kanal); einmal im Jahr ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025) (eine CSV je Jahr) | CC0 1.0 |
 | Düsseldorf (Landeshauptstadt Düsseldorf) | Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung, in der Karte die Summe je Zählstelle; Stellen, die nur Summen anderer sind, nicht übernommen; 19 Zählstellen | 2020–2025 ohne 2022 (nicht veröffentlicht); einmal im Jahr ergänzt | offen über [Open.NRW](https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d) (eine CSV je Zählstelle und Jahr), Lage aus den [Standorten der Stadt](https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d) | dl-de/by-2-0, „Landeshauptstadt Düsseldorf“ |
 | Niedersachsen: Landesbehörde für Straßenbau und Verkehr, Hannover, Region Hannover, Braunschweig, Verden (Aller), Samtgemeinde Gellersen, Rotenburg (Wümme), Jemgum (VMZ Niedersachsen) | Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten: Stundenwerte je Zählstelle, Richtungen und Straßenseiten wie die Quelle sie führt; Störungen der Quelle als nicht gezählt; 74 Zählstellen | 2017–2026 (Hannover seit 2017, die Landesbehörde seit Ende 2023); seit dem 25.10.2026 keine neuen Werte außer Jemgum und Rotenburg; wöchentlich ergänzt | offen in der [Zählstellenübersicht der VMZ Niedersachsen](https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/) (Zählerabfrage) | ohne Lizenz (siehe unten) |
 | Dresden (Landeshauptstadt Dresden) | Rad-Dauerzählstellen: Stundenwerte je Richtung, in der Karte die Summe je Zählstelle; Zeilen mit krummen Minuten an den Umstelltagen nicht übernommen; 38 Zählstellen, 35 in Betrieb | September 2009 – 2026; wöchentlich ergänzt | offen über die [OGC-API des Themenstadtplans](https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780) (je Jahr eine CSV), [Open-Data-Portal](https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////) | ohne Lizenz (siehe unten) |
+| Augsburg (Stadt Augsburg, Wirtschaftsförderung) | Passantenzählung in der Fußgängerzone Annastraße: Personen je Stunde, beide Richtungen zusammen; fehlende Stunden (fast nur nachts) bleiben nicht gezählt; 1 Zählstelle, Lage aus OpenStreetMap | Dezember 2020 – 2026; laufend ergänzt | offen als CSV auf augsburg.de, verzeichnet in der [Mobilithek](https://mobilithek.info/offers/-1747083335311792689) | CC BY 4.0, „Stadt Augsburg“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`, die der Dauerzählstellen in
@@ -160,7 +162,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   abgegrenzt und nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen. Ein Chip zeigt
   beide: jede Stelle in ihrer Klasse und mit deren Namen, nie zusammengezählt; die Legende nennt,
   welche Stadt welche Klasse zählt. Welche Verkehrsarten es gibt, richtet sich nach den Quellen
-  (Kfz, Lkw/Schwerverkehr, Rad); die Karte öffnet mit Kfz.
+  (Kfz, Lkw/Schwerverkehr, Rad, Fuß); die Karte öffnet mit Kfz. Die Stufen für Fuß trennen Rad-
+  und Fußwege (Bochum: meist 100 bis 500 am Tag) von Fußgängerzonen (Augsburg: rund 17.600).
 - **Datenlage:** Die Ebene „Datenlage je Kommune“ folgt der Familie – bei den Dauerzählstellen
   mit eigenem Stand je Kommune und eigenen Belegen; beide Familien nutzen dieselben Stände (in der
   Karte, offen, herausgegeben, aussichtsreich, ohne Lizenz, nur Summen, nichts offen …).
@@ -206,7 +209,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   zusammen zählen, eine Zählstelle des Landes, und Stellen, die nur die Summe anderer sind oder
   deren Gerät schon unter anderen Stellen zählt (sonst doppelt: die Brücken-Summen in Bonn, drei
   Stellen in Düsseldorf, je eine in Stuttgart und Rostock). Bochum zählt Fuß getrennt – in der
-  Karte steht nur Rad, ohne die Springorumtrasse Süd, an der laut Stadt Rad-Kanäle fehlen.
+  Karte stehen Rad und Fuß als eigene Verkehrsarten, ohne die Springorumtrasse Süd, an der laut
+  Stadt Rad-Kanäle fehlen.
 - Zeitumstellung bei den Rad-Zählstellen: Bei der Rückstellung der Uhr fassen MobiData BW,
   Münster und Berlin beide Stunden 2–3 Uhr unter einer Uhrzeit zusammen; in München, Würzburg,
   Dortmund, Essen, Bochum, Bonn, Düsseldorf, Rostock und im Rhein-Kreis Neuss fehlt eine davon

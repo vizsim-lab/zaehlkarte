@@ -4,7 +4,7 @@ Karte öffentlicher Verkehrszählungen aus mehreren Quellen in zwei Familien:
 Kurzzeitzählungen (Knotenpunkte, Querschnitte) und Dauerzählstellen (Stunden- und Tageswerte
 fest eingebauter Zähler: Detektoren, Kameras, Rad-Zählstellen) – nur Zählwerte, je Verkehrsart
 (Kfz, Schwerverkehr, Rad, Fuß; bei Dauerzählstellen die Klassen der Detektoren: Kfz, Lkw bzw.
-Schwerverkehr laut Detektor, Rad). Gleich, wer zählt – Kommune, Kreis, Land oder eine gemeinsame
+Schwerverkehr laut Detektor, Rad, Fuß). Gleich, wer zählt – Kommune, Kreis, Land oder eine gemeinsame
 Plattform wie die VMZ Niedersachsen (Beschluss der Projektleitung, 14.11.2026; bis dahin nur
 kommunale Zählstellen); nur die Dauerzählstellen der BASt (Autobahnen, Bundesstraßen) vorerst
 nicht – sie stehen dokumentiert in `AGENTS.md`.

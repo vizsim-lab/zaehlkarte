@@ -22,7 +22,15 @@ stellen:  # Ordner im Repository; Name und Lage laut Tabelle im README
   springorumtrasse: {name: Springorumtrasse, lat: 51.468826, lon: 7.229204}
   brueckstrasse: {name: Brückstraße, lat: 51.485022, lon: 7.215437}
   universitaetsstrasse: {name: Universitätsstraße, lat: 51.457704, lon: 7.238026}
-  erzbahntrasse: {name: Erzbahntrasse, lat: 51.487049, lon: 7.184623}
+  erzbahntrasse:
+    name: Erzbahntrasse
+    lat: 51.487049
+    lon: 7.184623
+    hinweise:
+      - >-
+        Fuß: seit Juni 2026 schwanken die Tagessummen stark (von 0 bis über 100.000 an einem Tag,
+        sonst rund 250 bis 300) – vermutlich ein Fehler des Zählers, den die Quelle nicht
+        kennzeichnet. Werte wie geliefert.
   hofsteder_bach: {name: Hofsteder Bach, lat: 51.501092, lon: 7.186044}
   lothringentrasse: {name: Lothringentrasse, lat: 51.510388, lon: 7.261104}
   springorumtrasse_sued: {name: Springorumtrasse Süd, lat: 51.442427, lon: 7.182626}

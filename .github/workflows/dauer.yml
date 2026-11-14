@@ -1,10 +1,10 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
 # SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
 # München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum, Bonn,
-# Düsseldorf, Dresden und der VMZ Niedersachsen), Kartendaten nach public/data/dauer/ schreiben
-# und als Release-Asset „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert
-# sich laufend). Danach startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset
-# und liefert es aus.
+# Düsseldorf, Dresden und der VMZ Niedersachsen; Fuß in Augsburg), Kartendaten nach
+# public/data/dauer/ schreiben und als Release-Asset „dauerzaehlstellen/dauer.tar.gz“ ablegen –
+# nicht ins Git (zu groß, ändert sich laufend). Danach startet der Workflow die CI auf main neu:
+# Der Deploy-Job holt das Asset und liefert es aus.
 #
 # Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code, die Konfiguration
 # (pipeline/config/: Quellen, Ferien, robots.yaml), der Kalender oder dieser Workflow ändern.
@@ -113,11 +113,16 @@ jobs:
           path: pipeline/data/raw/vmz_rad
           key: dauer-vmz-roh-${{ github.run_id }}
           restore-keys: dauer-vmz-roh-
-      - uses: actions/cache@v6  # Dresden: Jahresdateien seit 2017, neu nur die jüngsten zwei Jahre
+      - uses: actions/cache@v6  # Dresden: Jahresdateien seit 2009, neu nur die jüngsten zwei Jahre
         with:
           path: pipeline/data/raw/dresden_rad
           key: dauer-dresden-roh-${{ github.run_id }}
           restore-keys: dauer-dresden-roh-
+      - uses: actions/cache@v6  # Fuß, Augsburg: jeder Lauf holt die Datei neu, der Cache ist der Rückfall
+        with:
+          path: pipeline/data/raw/augsburg_fuss
+          key: dauer-fuss-roh-${{ github.run_id }}
+          restore-keys: dauer-fuss-roh-
       - uses: actions/cache@v6  # OSM-Abzug Hamburg (Straßennamen neuer Stellen): einmal laden, dann behalten
         with:
           path: pipeline/data/raw/osm
