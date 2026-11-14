@@ -1,0 +1,105 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatap": "http://data.europa.eu/r5r/",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "schema1": "http://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "time1": "http://www.w3.org/2006/time",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "void": "http://rdfs.org/ns/void#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.offenesdatenportal.de/organization/20a7743d-057b-4e0e-a341-cf0adaf1502a",
+      "@type": "foaf:Organization",
+      "foaf:name": "Stadt Moers"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/510894dc-9d64-4c40-9dff-8a4fd0f0d209",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": {
+        "@id": "_:Nbed3fa6de6ce4ff683002bb0a56b975c"
+      },
+      "dcat:distribution": {
+        "@id": "https://www.offenesdatenportal.de/dataset/510894dc-9d64-4c40-9dff-8a4fd0f0d209/resource/cab73363-8a64-4583-b815-98ee3c749e7c"
+      },
+      "dcat:keyword": [
+        "Verkehrszählung",
+        "Kirschenallee"
+      ],
+      "dcat:landingPage": {
+        "@id": "http://www.offenedaten.moers.de"
+      },
+      "dct:description": "Der Fachdienst 8.2 - Verkehr/ Straße führt regelmäßig Geschwindigkeitsmessungen auf öffentlichen Straßen im Stadtgebiet Moers durch. Für die Verkehrsmessungen wird ein Messgerät (Impactor der Firma Impact systems GmbH) verwendet, das sich in einem kleinen grauen Kasten befindet und unauffällig für die Verkehrsteilnehmer an Schilder- oder Laternenmasten befestigt wird. Das Messgerät kann durchgängig mehrtägige Zählungen und Geschwindigkeitsmessungen vornehmen, so dass sich die Verkehrssituation bewerten lässt.\r\n\r\nDas Messgerät führt die Messungen mittels Radar durch. Die Daten die aufgezeichnet werden sind:\r\n\r\nDatum, Uhrzeit, Platzhalter (00), Geschwindigkeit, Fahrzeuglänge und Fahrtrichtung\r\n\r\n17.12.14 07:19:30;00;024;01;0\r\n17.12.14 07:19:49;00;025;01;0\r\n17.12.14 07:20:42;00;024;01;1\r\n17.12.14 07:21:14;00;031;01;1\r\n17.12.14 07:22:19;00;025;01;0\r\n17.12.14 07:22:22;00;023;01;0\r\n17.12.14 07:23:16;00;028;01;0\r\n\r\nHier gibt es 2 Besonderheiten:\r\n\r\nÜber die Fahrzeuglänge im Messstrahl wird über ein gesondertes Programm die Unterscheidung zwischen Pkw und Lkw getroffen.\r\n\r\nMindestlänge Pkw 1 m\r\nMindestlänge Lkw 8 m\r\nMindestlänge Lastzüge 12 m\r\n\r\nBei der Fahrtrichtung wird die dem Messgerät am nächsten liegende Fahrspur zuerst genannt, die im Ascii-Format mit 0 und die gerätfernere Fahrspur mit 1 bezeichnet werden.\r\n\r\nDem jeweiligen Dateinamen (z.B. Landwehrstraße57_T30_15122014) sind der Straßenname, Haus-Nr., die dort zulässige Höchstgeschwindigkeit (T 30-30 km/h; T50-50 km/h usw.) und das Anfangsdatum der Messung zu entnehmen.",
+      "dct:identifier": "510894dc-9d64-4c40-9dff-8a4fd0f0d209",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2015-10-08T12:46:41.391082"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-10-20T17:48:38.804169"
+      },
+      "dct:publisher": {
+        "@id": "https://www.offenesdatenportal.de/organization/20a7743d-057b-4e0e-a341-cf0adaf1502a"
+      },
+      "dct:title": "Verkehrszählungen 2010 (Stadt Moers)",
+      "owl:versionInfo": "v2015.1"
+    },
+    {
+      "@id": "_:Nbed3fa6de6ce4ff683002bb0a56b975c",
+      "@type": "vcard:Organization",
+      "vcard:fn": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung",
+      "vcard:hasEmail": {
+        "@id": "mailto:verkehrsplanung@moers.de"
+      }
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/510894dc-9d64-4c40-9dff-8a4fd0f0d209/resource/cab73363-8a64-4583-b815-98ee3c749e7c",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/510894dc-9d64-4c40-9dff-8a4fd0f0d209/resource/cab73363-8a64-4583-b815-98ee3c749e7c/download/kirschenallee33t3028082014.txt"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Kirschenallee vom 08. bis 10.12.2010",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2015-10-08T14:47:54.867574"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-10-20T17:48:38.809227"
+      },
+      "dct:title": "Verkehrszählung Kirschenallee"
+    }
+  ]
+}

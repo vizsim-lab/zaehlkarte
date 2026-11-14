@@ -1,0 +1,6 @@
+{
+ "https://opendata.olpe.de": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+ "https://www.offenesdatenportal.de": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+ "https://offenedaten.aachen.de": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+ "https://download.geofabrik.de": "User-agent: *\nDisallow: *.osm.pbf\nDisallow: *.osm.bz2\nDisallow: *.osc.gz\nDisallow: *.shp.zip\nDisallow: state.txt\nDisallow: *.state.txt\nDisallow: *updates*\nDisallow: *.md5\n"
+}

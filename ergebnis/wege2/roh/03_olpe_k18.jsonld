@@ -1,0 +1,134 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "cnt": "http://www.w3.org/2011/content#",
+    "cr": "http://mlcommons.org/croissant/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatap": "http://data.europa.eu/r5r/",
+    "dcatde": "http://dcat-ap.de/def/dcatde/",
+    "dcatus": "http://resources.data.gov/ontology/dcat-us#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dct": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "schema1": "http://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "time1": "http://www.w3.org/2006/time",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a/download/verkehrsdaten_k18-20250806-20250813.json"
+      },
+      "dcat:byteSize": [
+        {
+          "@type": "xsd:decimal",
+          "@value": "2585003"
+        },
+        {
+          "@type": "xsd:nonNegativeInteger",
+          "@value": "2585003"
+        }
+      ],
+      "dcat:mediaType": "application/json",
+      "dct:description": "Verkehrsmessungen vom 06.08.2025 - 13.08.2025",
+      "dct:format": "JSON",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-04-09T08:42:20.091446"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-04-09T08:42:20.075597"
+      },
+      "dct:title": "verkehrsdaten_K18-20250806-20250813.json"
+    },
+    {
+      "@id": "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": [
+        {
+          "@id": "_:N13086ae1c64943a08df5291d1f713edf"
+        },
+        {
+          "@id": "_:N3c2e323657dc4bd5b6fe7e19f4939f12"
+        }
+      ],
+      "dcat:distribution": {
+        "@id": "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a"
+      },
+      "dcat:keyword": [
+        "Verkehr",
+        "2025",
+        "Mobilität"
+      ],
+      "dcat:theme": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      },
+      "dcatde:maintainer": {
+        "@id": "_:N91b33287298f4fc3afc9ccba30db01e9"
+      },
+      "dct:description": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.",
+      "dct:identifier": "d6eea81c-bbb0-43ab-a46e-c03adfa10f42",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-04-09T08:41:34.436807"
+      },
+      "dct:language": "deutsch",
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-04-09T08:43:08.416813"
+      },
+      "dct:spatial": {
+        "@id": "_:N578a50ce57114f22a7df23d15e63c605"
+      },
+      "dct:title": "Verkehrsmessungen K18"
+    },
+    {
+      "@id": "_:N13086ae1c64943a08df5291d1f713edf",
+      "@type": "vcard:Organization",
+      "vcard:fn": "Kreisstadt Olpe, Ordnungsamt"
+    },
+    {
+      "@id": "_:N3c2e323657dc4bd5b6fe7e19f4939f12",
+      "@type": "vcard:Organization",
+      "vcard:fn": "Kreisstadt Olpe, Ordnungsamt"
+    },
+    {
+      "@id": "_:N578a50ce57114f22a7df23d15e63c605",
+      "@type": "dct:Location"
+    },
+    {
+      "@id": "_:N91b33287298f4fc3afc9ccba30db01e9",
+      "@type": "foaf:Organization",
+      "foaf:name": "Kreisstadt Olpe, Ordnungsamt"
+    }
+  ]
+}

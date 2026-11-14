@@ -1,0 +1,1096 @@
+[
+  {
+    "@id": "https://opendata.olpe.de/dataset/d67399e8-949d-4ff3-a57a-0111ad456c16",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://dcat-ap.de/def/dcatde/maintainer": [
+      {
+        "@id": "_:N28bb3a33659f4911bf00f23caf9f6be6"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten."
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "d67399e8-949d-4ff3-a57a-0111ad456c16"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-08T06:39:07.308719"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@value": "deutsch"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T08:47:56.600685"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "_:Ndd8edac7f457487fb4ba1dc1efcc5072"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Verkehrsmessungen Rochusstraße"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+        "@id": "_:N91bc9e33f46b4a91978ac27982aba5e4"
+      },
+      {
+        "@id": "_:N19ff0f5dd634464497a221bb7d6f0161"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/d67399e8-949d-4ff3-a57a-0111ad456c16/resource/a1f401ba-9843-4224-9053-676871c66a77"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@value": "Verkehr"
+      },
+      {
+        "@value": "Mobilität"
+      },
+      {
+        "@value": "Geschwindigkeiten"
+      },
+      {
+        "@value": "Lärm"
+      },
+      {
+        "@value": "2025"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      }
+    ]
+  },
+  {
+    "@id": "_:N91bc9e33f46b4a91978ac27982aba5e4",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:smartcity@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:N19ff0f5dd634464497a221bb7d6f0161",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:smartcity@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndd8edac7f457487fb4ba1dc1efcc5072",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ]
+  },
+  {
+    "@id": "_:N28bb3a33659f4911bf00f23caf9f6be6",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/7fac9b9c-171e-4aef-98c2-9081e22ab1f2",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "TXT"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:40:44.064116"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:41:17.151818"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Datensatzbeschreibung"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung.txt"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "text/plain"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/0dd5f1a4-dde4-4882-9efd-eca72f5bb878",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "CSV"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:41:17.163285"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:41:42.426256"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.csv"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "text/csv"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66/resource/0be79701-c088-490f-9a3a-d6fbb1861ae1",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "JSON"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T09:08:22.893983"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T09:08:23.183179"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Ortseingang Oberveischede 26.06.2025 - 08.07.2025"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Oberveischede-20250626-20250708.json"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "application/json"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://dcat-ap.de/def/dcatde/maintainer": [
+      {
+        "@id": "_:Nc1c1b464a955423cb0f215246d55b764"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Der Datensatz enthält anonymisierte Einzelmessungen des Straßenverkehrs am Messstandort „Zum Honigsack 35“ in Olpe. Für jedes erkannte Verkehrsobjekt werden unter anderem Messzeitpunkt, Fahrtrichtung, Geschwindigkeit, Fahrzeugklasse, Fahrzeuglänge sowie weitere technische Messwerte bereitgestellt. Personenbezogene Daten und Fahrzeugkennzeichen sind nicht enthalten.\r\n"
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "389c8738-d205-4d17-babe-53f55085d2bf"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:40:02.859394"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@value": "deutsch"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:41:42.661835"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "_:N274fecc53ab34c4b9fc211465bbfbac9"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Verkehrsmessung Standort \"Zum Honigsack 35\""
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+        "@id": "_:Na59dcae134f54c959fffb3fb26113082"
+      },
+      {
+        "@id": "_:N459dd5c9e2264c78a2bab20f55f7b27c"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/5a7281cc-b4fb-42bc-a463-d0046b8425fc"
+      },
+      {
+        "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/0dd5f1a4-dde4-4882-9efd-eca72f5bb878"
+      },
+      {
+        "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/7fac9b9c-171e-4aef-98c2-9081e22ab1f2"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@value": "Sicherheit"
+      },
+      {
+        "@value": "Radverkehr"
+      },
+      {
+        "@value": "Geschwindigkeit"
+      },
+      {
+        "@value": "Mobilität"
+      },
+      {
+        "@value": "Verkehrsaufkommen"
+      },
+      {
+        "@value": "Straßenverkehr"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      }
+    ]
+  },
+  {
+    "@id": "_:N274fecc53ab34c4b9fc211465bbfbac9",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ]
+  },
+  {
+    "@id": "_:Na59dcae134f54c959fffb3fb26113082",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:rathaus@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:N459dd5c9e2264c78a2bab20f55f7b27c",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:rathaus@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc1c1b464a955423cb0f215246d55b764",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@value": "rathaus@olpe.de"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/d67399e8-949d-4ff3-a57a-0111ad456c16/resource/a1f401ba-9843-4224-9053-676871c66a77",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "JSON"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T08:47:56.625491"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T08:47:56.613407"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Verkehrsmessung 27.08.2025 - 08.09.2025"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/verkehrsdaten_Rochusstr-20250827-20250908.json"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "application/json"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Catalog"
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@value": "de"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-22T10:23:37.722218"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Kreisstadt Olpe"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#dataset": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/d67399e8-949d-4ff3-a57a-0111ad456c16"
+      },
+      {
+        "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf"
+      },
+      {
+        "@id": "https://opendata.olpe.de/dataset/ddbee83a-7987-4b57-9786-c2227725ccb3"
+      },
+      {
+        "@id": "https://opendata.olpe.de/dataset/367f474c-68bc-40c3-b759-b08d7b4be80e"
+      },
+      {
+        "@id": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/homepage": [
+      {
+        "@id": "https://opendata.olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/5a7281cc-b4fb-42bc-a463-d0046b8425fc",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "JSON"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:41:42.437801"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-07-15T04:41:42.666508"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.json"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "application/json"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://dcat-ap.de/def/dcatde/maintainer": [
+      {
+        "@id": "_:Na1d7910d08664e219aff153b338f4092"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten.\r\n"
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "82a9f13b-57c0-4a53-8b9c-49b82a040b66"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T09:06:43.576693"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@value": "deutsch"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T09:08:23.178331"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "_:N03981e8bbd234c94a8c86770b6dd694a"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Verkehrsmessungen Oberveischede"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+        "@id": "_:N50663326fbae4002aebbd530cd37d99e"
+      },
+      {
+        "@id": "_:Nb0056656ff4047f28fe6dfc210743b12"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66/resource/3caedc6a-4498-42a6-8a54-95ff132d45f4"
+      },
+      {
+        "@id": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66/resource/0be79701-c088-490f-9a3a-d6fbb1861ae1"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@value": "Verkehr"
+      },
+      {
+        "@value": "Mobilität"
+      },
+      {
+        "@value": "2025"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      }
+    ]
+  },
+  {
+    "@id": "_:N03981e8bbd234c94a8c86770b6dd694a",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ]
+  },
+  {
+    "@id": "_:Na1d7910d08664e219aff153b338f4092",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ]
+  },
+  {
+    "@id": "_:N50663326fbae4002aebbd530cd37d99e",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:smartcity@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb0056656ff4047f28fe6dfc210743b12",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:smartcity@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/ddbee83a-7987-4b57-9786-c2227725ccb3/resource/ae3230eb-cc99-4102-9e73-c3bfc2d1407e",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "JSON"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-02-19T12:22:05.822053"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-02-19T12:22:05.801751"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Verkehrsdaten Alte Landstraße 1"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/ddbee83a-7987-4b57-9786-c2227725ccb3/resource/ae3230eb-cc99-4102-9e73-c3bfc2d1407e/download/verkehrsdaten_alte-landstr_1_20250519-20250615.json"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#byteSize": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "3659488"
+      },
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+        "@value": "3659488"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "application/json"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/367f474c-68bc-40c3-b759-b08d7b4be80e",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://dcat-ap.de/def/dcatde/maintainer": [
+      {
+        "@id": "_:N03df7db111bc46d18a534fd4b2ced422"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Messungen des täglichen Verkehrs, unter anderem Verkehrsstärken, Aufkommen und Geschwindigkeiten."
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "367f474c-68bc-40c3-b759-b08d7b4be80e"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-08T06:30:57.775730"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@value": "deutsch"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-08T09:19:15.030809"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "_:N4140f3ea1bf243d9816765884d0f0eff"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Verkehrsmessungen Weite Schlüppe"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+        "@id": "_:Nd3e565ded85d4e3fa3a309a576d9d8ae"
+      },
+      {
+        "@id": "_:Na8bd0b1b01ce4ae0bbdcdcc406cc6e8a"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/367f474c-68bc-40c3-b759-b08d7b4be80e/resource/41fe33e6-3dad-4131-8016-ae8d57f98d32"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      }
+    ]
+  },
+  {
+    "@id": "_:N03df7db111bc46d18a534fd4b2ced422",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@value": "ordnungsamt@olpe,de"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd3e565ded85d4e3fa3a309a576d9d8ae",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:ordnungsamt@olpe%2Cde"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na8bd0b1b01ce4ae0bbdcdcc406cc6e8a",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "Kreisstadt Olpe, Ordnungsamt"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:ordnungsamt@olpe%2Cde"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4140f3ea1bf243d9816765884d0f0eff",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66/resource/3caedc6a-4498-42a6-8a54-95ff132d45f4",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Verkehrsmessung am Feuerwehrhaus 09.07.- 15.07.2025"
+      }
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "JSON"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T09:07:34.343710"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-09T09:07:34.324247"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Feuerwehrhaus_Oberveischede_20250709-20250715"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/82a9f13b-57c0-4a53-8b9c-49b82a040b66/resource/3caedc6a-4498-42a6-8a54-95ff132d45f4/download/verkehrsdaten_feuerwehrhaus_oberveischede_20250709-20250715.json"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#byteSize": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1124300"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "application/json"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung&page=1",
+    "@type": [
+      "http://www.w3.org/ns/hydra/core#PagedCollection"
+    ],
+    "http://www.w3.org/ns/hydra/core#first": [
+      {
+        "@value": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung&page=1"
+      }
+    ],
+    "http://www.w3.org/ns/hydra/core#firstPage": [
+      {
+        "@value": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung&page=1"
+      }
+    ],
+    "http://www.w3.org/ns/hydra/core#itemsPerPage": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 100
+      }
+    ],
+    "http://www.w3.org/ns/hydra/core#last": [
+      {
+        "@value": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung&page=1"
+      }
+    ],
+    "http://www.w3.org/ns/hydra/core#lastPage": [
+      {
+        "@value": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung&page=1"
+      }
+    ],
+    "http://www.w3.org/ns/hydra/core#totalItems": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": 5
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/367f474c-68bc-40c3-b759-b08d7b4be80e/resource/41fe33e6-3dad-4131-8016-ae8d57f98d32",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+        "@value": "JSON"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-08T06:31:21.467459"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-08T06:31:21.457214"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "verkehrsdaten_weite_schlüppe-20250626-20250709.json"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/367f474c-68bc-40c3-b759-b08d7b4be80e/resource/41fe33e6-3dad-4131-8016-ae8d57f98d32/download/verkehrsdaten_weite_schluppe-20250626-20250709.json"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#byteSize": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "480978"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+        "@value": "application/json"
+      }
+    ]
+  },
+  {
+    "@id": "https://opendata.olpe.de/dataset/ddbee83a-7987-4b57-9786-c2227725ccb3",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Dataset"
+    ],
+    "http://data.europa.eu/r5r/hvdCategory": [
+      {
+        "@value": "False"
+      }
+    ],
+    "http://dcat-ap.de/def/dcatde/maintainer": [
+      {
+        "@id": "_:Ne4b953e7c5a14e81a0f354f6f462afe7"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "Verkehrsmessung Olpe-Rhode, Alte Landstraße 1, 57462 Olpe im Zeitraum 19.05. - 15.06.2025 "
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+        "@value": "ddbee83a-7987-4b57-9786-c2227725ccb3"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-02-19T12:21:25.389390"
+      }
+    ],
+    "http://purl.org/dc/terms/language": [
+      {
+        "@value": "deutsch"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-04-08T06:24:50.984503"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "_:N8e3881a5826f448d8da4a49d1a507f7e"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "Verkehrsmessungen Alte Landstraße"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+        "@id": "_:N7e9b566631ce464da86138a6b25671a2"
+      },
+      {
+        "@id": "_:N0e10384934df4d88b1de2316e8f23ec5"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#distribution": [
+      {
+        "@id": "https://opendata.olpe.de/dataset/ddbee83a-7987-4b57-9786-c2227725ccb3/resource/ae3230eb-cc99-4102-9e73-c3bfc2d1407e"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@value": "Lärm"
+      },
+      {
+        "@value": "2025"
+      },
+      {
+        "@value": "Verkehr"
+      },
+      {
+        "@value": "Mobilität"
+      },
+      {
+        "@value": "Rhode"
+      },
+      {
+        "@value": "Verkehrsaufkommen"
+      },
+      {
+        "@value": "Geschwindigkeiten"
+      },
+      {
+        "@value": "Verkehrsstärken"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7e9b566631ce464da86138a6b25671a2",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "smartcity@olpe.de"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:smartcity@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0e10384934df4d88b1de2316e8f23ec5",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+        "@value": "smartcity@olpe.de"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+        "@id": "mailto:smartcity@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne4b953e7c5a14e81a0f354f6f462afe7",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@value": "smartcity@olpe.de"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@value": "smartcity@olpe.de"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8e3881a5826f448d8da4a49d1a507f7e",
+    "@type": [
+      "http://purl.org/dc/terms/Location"
+    ]
+  }
+]

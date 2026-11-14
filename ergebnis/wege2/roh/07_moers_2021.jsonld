@@ -1,0 +1,1281 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatap": "http://data.europa.eu/r5r/",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dct": "http://purl.org/dc/terms/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "schema1": "http://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "time1": "http://www.w3.org/2006/time",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "void": "http://rdfs.org/ns/void#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/180ca488-0a7d-4d14-8282-2d6f2b2eeb45",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/180ca488-0a7d-4d14-8282-2d6f2b2eeb45/download/essenberger-strasse-kv-bergstrasse-144_t50_17.11.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "328576.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Essenberger Straße Kv Bergstraße 144 vom 15. bis 17.11.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:04:55.618688"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:04:55.618688"
+      },
+      "dct:title": "Essenberger Straße Kv Bergstraße 144"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/979609be-46f5-45de-a3a9-8e1cd709ec61",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/979609be-46f5-45de-a3a9-8e1cd709ec61/download/siedweg-ggu.-30_t30_17.03.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "35072.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Siedweg ggü. 30 vom 15. bis 17.03.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:39:15.047555"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:39:15.047555"
+      },
+      "dct:title": "Siedweg ggü. 30"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/6ad38901-5c0b-4f81-92c3-f6f69e634f9d",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/6ad38901-5c0b-4f81-92c3-f6f69e634f9d/download/ackerstrasse-ggu.-178_t30_11.06.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "17728.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Ackerstraße ggü. 178 vom 09. bis 11.06.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:34:49.502866"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:34:49.502866"
+      },
+      "dct:title": "Ackerstraße ggü. 178"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2cf17482-8b43-4f13-9073-9351ce0b6453",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2cf17482-8b43-4f13-9073-9351ce0b6453/download/holderbergerstrasse-54_t50_56_t50_25.03.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "417632.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Holderbergerstraße 54 vom 22. bis 25.03.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:14:26.288505"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:14:26.288505"
+      },
+      "dct:title": "Holderbergerstraße 54"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/65f51368-0d5e-431b-9f64-5fbf3076af63",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/65f51368-0d5e-431b-9f64-5fbf3076af63/download/jockenstrasse-27_vb_08.09.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "5184.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Jockenstraße 27 vom 06. bis 08.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:16:53.513825"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:16:53.513825"
+      },
+      "dct:title": "Jockenstraße 27"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/361232c2-d96d-4536-8d9a-62b766f45113",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/361232c2-d96d-4536-8d9a-62b766f45113/download/asternstrasse-11_t30_19.02.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "87520.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Asternstraße 11 vom 17. bis 19.02.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:41:46.403365"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:41:46.403365"
+      },
+      "dct:title": "Asternstraße 11"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/3dd0745b-c2b1-4ca4-bc86-7808374b53f2",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/3dd0745b-c2b1-4ca4-bc86-7808374b53f2/download/frienersheimer-strasse-12_t30_24.09.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "130816.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Friemersheimer Straße 12 vom 22. bis 24.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:08:09.025166"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:08:09.025166"
+      },
+      "dct:title": "Friemersheimer Straße 12"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b8b99242-3a78-49fb-8179-b1d7d3b8f577",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b8b99242-3a78-49fb-8179-b1d7d3b8f577/download/bismarckstrasse-43_t50_26.07.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "876288.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Bismarckstraße 43 vom 21. bis 26.07.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:43:42.690908"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:43:42.690908"
+      },
+      "dct:title": "Bismarckstraße 43"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fb93869a-60aa-4bdf-8515-15ad649b064e",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fb93869a-60aa-4bdf-8515-15ad649b064e/download/bruchstrasse-ecke-max-beckmann-strasse_t30_09.06.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "9280.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Bruchstraße Ecke Max-Beckmann-Straße vom 07.06. bis 09.06.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:53:14.493265"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:53:14.493265"
+      },
+      "dct:title": "Bruchstraße Ecke Max-Beckmann-Straße"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/9c939220-34df-4e08-8d18-863da01166eb",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/9c939220-34df-4e08-8d18-863da01166eb/download/drususstrasse-16_t30_15.01.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "42144.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Drususstraße 16 vom 13. bis 15.01.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:59:43.782253"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:59:43.782253"
+      },
+      "dct:title": "Drususstraße 16"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": {
+        "@id": "_:N332f7bb13a6244b1ae8d1a4329699c39"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/d7aff716-ca2d-4ec8-bdbb-f40504501302"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/18a6fc08-93db-4254-8bbd-808faf0c0f2c"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/65f51368-0d5e-431b-9f64-5fbf3076af63"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e909eb-1852-4ee5-8253-c44a8a1e1021"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/aa87e9cc-7eb4-4e38-a5d5-5e47379215c9"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a670b574-966c-4b3a-81ac-b53e81084b00"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2cf17482-8b43-4f13-9073-9351ce0b6453"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/96320d01-715b-44c2-8eb2-0ff525177f42"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fb93869a-60aa-4bdf-8515-15ad649b064e"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7fbc6488-972c-4d7e-a0f7-fc0f52f5556e"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4fa9feb3-41fd-4e62-a683-0aa6176986a4"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/9c939220-34df-4e08-8d18-863da01166eb"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5529076e-5150-4c52-9314-48a68bfe9979"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/54cb225d-c786-4a67-98dc-10f339845be6"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fcd3e481-ab60-4789-a772-fbb761de593f"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b8b99242-3a78-49fb-8179-b1d7d3b8f577"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5019fe45-5fd4-431a-884c-7e11928d5dbc"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/835cde6f-17c5-456f-bf94-f9b0df5ef14d"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2288161e-e55e-41f7-a06c-8bc73f36fb9a"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/180ca488-0a7d-4d14-8282-2d6f2b2eeb45"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/eab74664-ddb7-4e78-ab40-59eb8184e0e4"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/1d455611-31f9-4cea-be28-4a801d589305"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a9f284fa-636c-46db-8b47-c9269de7bf00"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4bcf5776-2fa3-48c9-970f-b2428b583475"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/f27ba289-a8cd-498b-b371-bf892a1843dc"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7444c421-5ace-4c17-acd4-3d1a594c8b0a"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7a80cf37-ca6f-49bb-99b2-2d2108bed712"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/c87ec98c-8943-47bd-a2c9-2505f3c96dee"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/454bfd69-5659-4fbd-a389-a55198d08279"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ff3e1a13-1c89-44f7-b8b4-40a4f75fc0b7"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/34552d1e-8324-4ebe-a82a-f456db10f2dd"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e33e7d-fde1-4023-ad84-403a5a7d7c0d"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b5aa9dd5-5c7c-4ee3-aeb4-34083ec0aae2"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/8494f4f2-1acd-46dc-9ac0-50b4ebbdd0b7"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a2657493-7be3-48c6-94f7-74547f45c665"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/3dd0745b-c2b1-4ca4-bc86-7808374b53f2"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/361232c2-d96d-4536-8d9a-62b766f45113"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ce250b9d-5ab9-4cd6-9e29-d548a9db0e15"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cdba79c3-12af-4290-be71-178a07427cd6"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/80e11e31-eed2-4ed5-8bd9-bdab7f425e00"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/edcaf64e-f6e5-4171-8d9d-fd2f1cdeb2d3"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cffdcb51-ac16-4b44-9e1e-16493de1bb33"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/979609be-46f5-45de-a3a9-8e1cd709ec61"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/6ad38901-5c0b-4f81-92c3-f6f69e634f9d"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/81e34600-37fd-42d7-bbc5-f268bc49f03a"
+        },
+        {
+          "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/46dbe24a-e8ce-4e76-9592-c853779fbd64"
+        }
+      ],
+      "dcat:keyword": [
+        "Fließender Verkehr",
+        "Verkehrszählung"
+      ],
+      "dcat:landingPage": {
+        "@id": "http://www.offenedaten.moers.de"
+      },
+      "dct:description": "Der Fachdienst 8.2 - Verkehr/ Straße führt regelmäßig Geschwindigkeitsmessungen auf öffentlichen Straßen im Stadtgebiet Moers durch. Für die Verkehrsmessungen wird ein Messgerät (Impactor der Firma Impact systems GmbH) verwendet, das sich in einem kleinen grauen Kasten befindet und unauffällig für die Verkehrsteilnehmer an Schilder- oder Laternenmasten befestigt wird. Das Messgerät kann durchgängig mehrtägige Zählungen und Geschwindigkeitsmessungen vornehmen, so dass sich die Verkehrssituation bewerten lässt.\r\n\r\nDas Messgerät führt die Messungen mittels Radar durch. Die Daten die aufgezeichnet werden sind:\r\n\r\nDatum, Uhrzeit, Platzhalter (00), Geschwindigkeit, Fahrzeuglänge und Fahrtrichtung Beispiel: 26.02.16 10:05:46;00;034;02;1 26.02.16 10:07:06;00;043;01;0 26.02.16 10:07:22;00;018;01;1 26.02.16 10:07:27;00;047;01;0\r\n\r\nHier gibt es 2 Besonderheiten:\r\n\r\nÜber die Fahrzeuglänge im Messstrahl wird über ein gesondertes Programm die Unterscheidung zwischen Pkw und Lkw getroffen.\r\n\r\nMindestlänge Pkw 1 m Mindestlänge Lkw 8 m Mindestlänge Lastzüge 12 m\r\n\r\nBei der Fahrtrichtung wird die dem Messgerät am nächsten liegende Fahrspur zuerst genannt, die im Ascii-Format mit 0 und die gerätfernere Fahrspur mit 1 bezeichnet werden.\r\n\r\nDem jeweiligen Dateinamen (z.B. Landwehrstraße57_T30_15122014) sind der Straßenname, Haus-Nr., die dort zulässige Höchstgeschwindigkeit (T 30-30 km/h; T50-50 km/h usw.) und das Anfangsdatum der Messung zu entnehmen.\r\n\r\nSeit März 2020 sind die Messungen bezüglich der Verkehrsmengen nicht mehr repräsentativ, da durch die Lockdowns und die gestiegene Zahl an Homeoffice-Plätzen die Anzahl der Fahrten stark zurückgegangen ist.",
+      "dct:identifier": "d487b8fc-480f-42bc-a4f1-b075ccdb1546",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-15T10:20:17.527079"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-10-20T18:10:58.318594"
+      },
+      "dct:publisher": {
+        "@id": "https://www.offenesdatenportal.de/organization/20a7743d-057b-4e0e-a341-cf0adaf1502a"
+      },
+      "dct:title": "Verkehrszählungen 2021 (Stadt Moers)",
+      "owl:versionInfo": "v2022.01"
+    },
+    {
+      "@id": "_:N332f7bb13a6244b1ae8d1a4329699c39",
+      "@type": "vcard:Organization",
+      "vcard:fn": "Stadt Moers - Fachdienst 8.2 - Straßen - und Verkehrsplanung",
+      "vcard:hasEmail": {
+        "@id": "mailto:verkehrsplanung@moers.de"
+      }
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2288161e-e55e-41f7-a06c-8bc73f36fb9a",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2288161e-e55e-41f7-a06c-8bc73f36fb9a/download/galmesweg-27_t30_03.03.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "175936.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Galmesweg 27 vom 15. bis 17.03.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:10:45.384086"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:10:45.384086"
+      },
+      "dct:title": "Galmesweg 27"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/81e34600-37fd-42d7-bbc5-f268bc49f03a",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/81e34600-37fd-42d7-bbc5-f268bc49f03a/download/erlenweg-9_vb_24.02.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "9408.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Erlenweg 9 vom 22. bis 24.02.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:00:51.450566"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:00:51.450566"
+      },
+      "dct:title": "Erlenweg 9"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/eab74664-ddb7-4e78-ab40-59eb8184e0e4",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/eab74664-ddb7-4e78-ab40-59eb8184e0e4/download/dietrichstrasse-27_t30_29.11.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "36800.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Dietrichstraße 27 vom 24. bis 29.11.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:58:31.167514"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:58:31.167514"
+      },
+      "dct:title": "Dietrichstraße 27"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/f27ba289-a8cd-498b-b371-bf892a1843dc",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/f27ba289-a8cd-498b-b371-bf892a1843dc/download/asberger-strasse-129_01.10.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "317376.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Asberger Straße 129 vom 27.09. bis 01.10.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:40:18.744539"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:40:18.744539"
+      },
+      "dct:title": "Asberger Straße 129"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/80e11e31-eed2-4ed5-8bd9-bdab7f425e00",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/80e11e31-eed2-4ed5-8bd9-bdab7f425e00/download/moerser-strasse-ecke-bruchstrasse_t50_09.06.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "255904.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Moerser Straße Ecke Bruchstraße vom 07. bis 09.06.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:30:08.760374"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:30:08.760374"
+      },
+      "dct:title": "Moerser Straße Ecke Bruchstraße"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e909eb-1852-4ee5-8253-c44a8a1e1021",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e909eb-1852-4ee5-8253-c44a8a1e1021/download/orsoyer-allee-an-vz-274_t30_15.11.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "45440.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Orsoyer Allee an VZ 274 vom 08. bis 15.11.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:35:43.334173"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:35:43.334173"
+      },
+      "dct:title": "Orsoyer Allee an VZ 274"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7444c421-5ace-4c17-acd4-3d1a594c8b0a",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7444c421-5ace-4c17-acd4-3d1a594c8b0a/download/oderstrasse-74_t50_22.092021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "352704.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung  Oderstraße 74 vom 17. bis 22.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:31:34.482510"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:31:34.482510"
+      },
+      "dct:title": "Oderstraße 74"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ce250b9d-5ab9-4cd6-9e29-d548a9db0e15",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ce250b9d-5ab9-4cd6-9e29-d548a9db0e15/download/mercatorstrasse_7_t30_16.12.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "15840.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Mercatorstraße 7 vom 13. bis 16.12.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:27:51.211136"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:27:51.211136"
+      },
+      "dct:title": "Mercatorstraße_7"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a9f284fa-636c-46db-8b47-c9269de7bf00",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a9f284fa-636c-46db-8b47-c9269de7bf00/download/langlingsweg-41-c_t50_27.08.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "377088.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Länglingsweg 41 c vom 23. bis 27.08.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:21:28.096206"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:21:28.096206"
+      },
+      "dct:title": "Länglingsweg 41 c"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/34552d1e-8324-4ebe-a82a-f456db10f2dd",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/34552d1e-8324-4ebe-a82a-f456db10f2dd/download/langlingsweg-ggu.-78_t50_10.09.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "140640.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Länglingsweg ggü. 78 vom 08. bis 10.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:22:42.980952"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:22:42.980952"
+      },
+      "dct:title": "Länglingsweg ggü. 78"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ff3e1a13-1c89-44f7-b8b4-40a4f75fc0b7",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/ff3e1a13-1c89-44f7-b8b4-40a4f75fc0b7/download/geldernsche-strasse-hohe-friedhof_t30_22.12.21.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "87232.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Geldernsche Straße Höhe Friedhof vom 20. bis 22.12.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:11:57.103995"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:11:57.103995"
+      },
+      "dct:title": "Geldernsche Straße Höhe Friedhof"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cdba79c3-12af-4290-be71-178a07427cd6",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cdba79c3-12af-4290-be71-178a07427cd6/download/bruchstrasse-66f_t30_02.07.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "21888.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Bruchstraße 66 f vom 30.06. bis 02.07.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:51:55.995776"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:51:55.995776"
+      },
+      "dct:title": "Bruchstraße 66f"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cffdcb51-ac16-4b44-9e1e-16493de1bb33",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/cffdcb51-ac16-4b44-9e1e-16493de1bb33/download/bismarckstrasse-99_t50_19.07.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "754656.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Bismarckstraße 99 vom 14. bis 19.07.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:45:44.265339"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:45:44.265339"
+      },
+      "dct:title": "Bismarckstraße 99"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4bcf5776-2fa3-48c9-970f-b2428b583475",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4bcf5776-2fa3-48c9-970f-b2428b583475/download/ackerstrasse-nach-165-2.laterne_t30_11.06.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "29600.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Ackerstraße nach 165, 2. Laterne, vom 09. bis 11.06.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:37:19.506971"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:37:19.506971"
+      },
+      "dct:title": "Ackerstraße nach 165 2.Laterne"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7fbc6488-972c-4d7e-a0f7-fc0f52f5556e",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7fbc6488-972c-4d7e-a0f7-fc0f52f5556e/download/kressenstrasse-13_vb_01.07.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "40256.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Kressenstraße 13 vom 28. bis 30.06.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:20:19.293922"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:20:19.293922"
+      },
+      "dct:title": "Kressenstraße 13"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/54cb225d-c786-4a67-98dc-10f339845be6",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/54cb225d-c786-4a67-98dc-10f339845be6/download/robinienweg-32_vb_28.05.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "3424.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Robinienweg 32 vom 26. bis 28.05.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:38:08.126789"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:38:08.126789"
+      },
+      "dct:title": "Robinienweg 32"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fcd3e481-ab60-4789-a772-fbb761de593f",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/fcd3e481-ab60-4789-a772-fbb761de593f/download/vereinsstrasse-6_t30_13.01.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "6624.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Vereinsstraße 6 vom 11. bis 13.01.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:40:23.681953"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:40:23.681953"
+      },
+      "dct:title": "Vereinsstraße 6"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a2657493-7be3-48c6-94f7-74547f45c665",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a2657493-7be3-48c6-94f7-74547f45c665/download/buchenweg-laterne-an-grundstuck-43_vb_02.06.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "36992.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Buchenweg Laterne an Grundstück 43 vom 19. bis 26.05.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:55:01.231558"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:55:01.231558"
+      },
+      "dct:title": "Buchenweg Laterne an Grundstück 43"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/96320d01-715b-44c2-8eb2-0ff525177f42",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/96320d01-715b-44c2-8eb2-0ff525177f42/download/jupiterweg-4_vb_16.06.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "24352.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Jupiterweg 4 vom 14. bis 17.06.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:18:02.268713"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:18:02.268713"
+      },
+      "dct:title": "Jupiterweg 4"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/1d455611-31f9-4cea-be28-4a801d589305",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/1d455611-31f9-4cea-be28-4a801d589305/download/essenberger-strasse-125_t50_05.11.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "437504.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Essenberger Straße 125 vom 02. bis 05.11.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:02:15.900824"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:02:15.900824"
+      },
+      "dct:title": "Essenberger Straße 125"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/d7aff716-ca2d-4ec8-bdbb-f40504501302",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/d7aff716-ca2d-4ec8-bdbb-f40504501302/download/humboldstrasse-19_t50_08.12.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "259520.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Humboldstraße 19 vom 06. bis 08.12.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:15:41.846721"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:15:41.846721"
+      },
+      "dct:title": "Humboldstraße 19"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/aa87e9cc-7eb4-4e38-a5d5-5e47379215c9",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/aa87e9cc-7eb4-4e38-a5d5-5e47379215c9/download/gallierring-32_vb_03.09.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "2528.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Gallierring 32 vom 01. bis 03.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:09:20.314082"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:09:20.314082"
+      },
+      "dct:title": "Gallierring 32"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/8494f4f2-1acd-46dc-9ac0-50b4ebbdd0b7",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/8494f4f2-1acd-46dc-9ac0-50b4ebbdd0b7/download/bonifatiusstrasse_53_t30_06.10.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "115520.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Bonifatiusstraße 53 vom 04. bis 06.10.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:47:01.725785"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:47:01.725785"
+      },
+      "dct:title": "Bonifatiusstraße_53"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5529076e-5150-4c52-9314-48a68bfe9979",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5529076e-5150-4c52-9314-48a68bfe9979/download/orsoyer-allee-37b_t30_15.11.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "70048.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung  Orsoyer Allee 37 b vom 08. bis 14.11.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:33:50.771377"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:33:50.771377"
+      },
+      "dct:title": "Orsoyer Allee 37b"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/454bfd69-5659-4fbd-a389-a55198d08279",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/454bfd69-5659-4fbd-a389-a55198d08279/download/oderstrasse-88_t50_17.11.21.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "162848.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung  Oderstraße 88 vom 15. bis 17.11.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:32:37.662613"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:32:37.662613"
+      },
+      "dct:title": "Oderstraße 88"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/organization/20a7743d-057b-4e0e-a341-cf0adaf1502a",
+      "@type": "foaf:Organization",
+      "foaf:name": "Stadt Moers"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7a80cf37-ca6f-49bb-99b2-2d2108bed712",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/7a80cf37-ca6f-49bb-99b2-2d2108bed712/download/dietrichstrasse-27_t30_08.11.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "15776.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Dietrichstraße 27 vom 03. bis 07.11.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:56:52.666994"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:56:52.666994"
+      },
+      "dct:title": "Dietrichstraße 27"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/18a6fc08-93db-4254-8bbd-808faf0c0f2c",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/18a6fc08-93db-4254-8bbd-808faf0c0f2c/download/rheinbergerstrasse_6_t30_04.08.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "510016.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Rheinberger Straße 6 vom 02. bis 04.08.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:36:47.760047"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:36:47.760047"
+      },
+      "dct:title": "Rheinberger Straße_6"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/46dbe24a-e8ce-4e76-9592-c853779fbd64",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/46dbe24a-e8ce-4e76-9592-c853779fbd64/download/langlingsweg_75_t20_01.09.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "98496.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Länglingsweg 75 vom 03.08. bis 01.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:25:34.713064"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:25:34.713064"
+      },
+      "dct:title": "Länglingsweg_75"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b5aa9dd5-5c7c-4ee3-aeb4-34083ec0aae2",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b5aa9dd5-5c7c-4ee3-aeb4-34083ec0aae2/download/essenberger-strasse-ggu.-96_t50_29.09.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "355840.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Essenberger Straße ggü. 96 vom 27. bis 29.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:03:31.299874"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:03:31.299874"
+      },
+      "dct:title": "Essenberger Straße ggü. 96"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/edcaf64e-f6e5-4171-8d9d-fd2f1cdeb2d3",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/edcaf64e-f6e5-4171-8d9d-fd2f1cdeb2d3/download/herderstrasse-4_t30_10.12.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "88160.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Herderstraße 4 vom 08. bis 10.12.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:13:17.602828"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:13:17.602828"
+      },
+      "dct:title": "Herderstraße 4"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4fa9feb3-41fd-4e62-a683-0aa6176986a4",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4fa9feb3-41fd-4e62-a683-0aa6176986a4/download/liebrechtstrasse-ggu.-27_vb_19.05.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "6816.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Liebrechtstraße ggü. 27 vom 17. bis 19.05.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:26:44.378069"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:26:44.378069"
+      },
+      "dct:title": "Liebrechtstraße ggü. 27"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e33e7d-fde1-4023-ad84-403a5a7d7c0d",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e33e7d-fde1-4023-ad84-403a5a7d7c0d/download/mercatorstrasse_t30_16.12.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "26816.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Mercatorstraße vom 10. bis 12.01.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:28:55.313796"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:28:55.313796"
+      },
+      "dct:title": "Mercatorstraße"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a670b574-966c-4b3a-81ac-b53e81084b00",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/a670b574-966c-4b3a-81ac-b53e81084b00/download/kornstrasse_t30_19.02.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "152672.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Kornstraße vom 17. bis 19.02.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:19:11.986868"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:19:11.986868"
+      },
+      "dct:title": "Kornstraße"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/835cde6f-17c5-456f-bf94-f9b0df5ef14d",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/835cde6f-17c5-456f-bf94-f9b0df5ef14d/download/langlingsweg-zufahrt-parkplatz_t10_16.06.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "40288.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Länglingsweg Zufahrt Parkplatz vom 14. bis 17.06.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:24:25.017042"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:24:25.017042"
+      },
+      "dct:title": "Länglingsweg Zufahrt Parkplatz"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/c87ec98c-8943-47bd-a2c9-2505f3c96dee",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/c87ec98c-8943-47bd-a2c9-2505f3c96dee/download/essenbergerstrasse-129_t50_27.09.2021.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "796736.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Essenbergerstraße 129 vom 22. bis 27.09.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:06:28.385167"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T09:06:28.385167"
+      },
+      "dct:title": "Essenbergerstraße 129"
+    },
+    {
+      "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5019fe45-5fd4-431a-884c-7e11928d5dbc",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5019fe45-5fd4-431a-884c-7e11928d5dbc/download/bonifatiusstrasse53_t30_25.05.2022.txt"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "123392.0"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:description": "Der Datensatz enthält die Daten zur Verkehrszählung Bonifatiusstraße 53 vom 23. bis 25.05.2021",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:48:24.709094"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2022-08-16T08:48:24.709094"
+      },
+      "dct:title": "Bonifatiusstraße 53"
+    }
+  ]
+}

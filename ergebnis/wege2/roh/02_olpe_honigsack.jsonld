@@ -1,0 +1,177 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "cnt": "http://www.w3.org/2011/content#",
+    "cr": "http://mlcommons.org/croissant/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatap": "http://data.europa.eu/r5r/",
+    "dcatde": "http://dcat-ap.de/def/dcatde/",
+    "dcatus": "http://resources.data.gov/ontology/dcat-us#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dct": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "schema1": "http://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "time1": "http://www.w3.org/2006/time",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/7fac9b9c-171e-4aef-98c2-9081e22ab1f2",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/datensatzbeschreibung.txt"
+      },
+      "dcat:mediaType": "text/plain",
+      "dct:format": "TXT",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:40:44.064116"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:41:17.151818"
+      },
+      "dct:title": "Datensatzbeschreibung"
+    },
+    {
+      "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/0dd5f1a4-dde4-4882-9efd-eca72f5bb878",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.csv"
+      },
+      "dcat:mediaType": "text/csv",
+      "dct:format": "CSV",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:41:17.163285"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:41:42.426256"
+      },
+      "dct:title": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41"
+    },
+    {
+      "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": [
+        {
+          "@id": "_:N70798ed363ae4f3bbd206bc0edc00483"
+        },
+        {
+          "@id": "_:Nb0b3c751f3814900b8d580629fec5865"
+        }
+      ],
+      "dcat:distribution": [
+        {
+          "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/5a7281cc-b4fb-42bc-a463-d0046b8425fc"
+        },
+        {
+          "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/0dd5f1a4-dde4-4882-9efd-eca72f5bb878"
+        },
+        {
+          "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/7fac9b9c-171e-4aef-98c2-9081e22ab1f2"
+        }
+      ],
+      "dcat:keyword": [
+        "Radverkehr",
+        "Verkehrsaufkommen",
+        "Sicherheit",
+        "Straßenverkehr",
+        "Geschwindigkeit",
+        "Mobilität"
+      ],
+      "dcat:theme": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      },
+      "dcatde:maintainer": {
+        "@id": "_:N7bc5c1b92bee43cfa46746f9cf5952de"
+      },
+      "dct:description": "Der Datensatz enthält anonymisierte Einzelmessungen des Straßenverkehrs am Messstandort „Zum Honigsack 35“ in Olpe. Für jedes erkannte Verkehrsobjekt werden unter anderem Messzeitpunkt, Fahrtrichtung, Geschwindigkeit, Fahrzeugklasse, Fahrzeuglänge sowie weitere technische Messwerte bereitgestellt. Personenbezogene Daten und Fahrzeugkennzeichen sind nicht enthalten.\r\n",
+      "dct:identifier": "389c8738-d205-4d17-babe-53f55085d2bf",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:40:02.859394"
+      },
+      "dct:language": "deutsch",
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:41:42.661835"
+      },
+      "dct:spatial": {
+        "@id": "_:N2dc950f17be645b6b25984dce6d50103"
+      },
+      "dct:title": "Verkehrsmessung Standort \"Zum Honigsack 35\""
+    },
+    {
+      "@id": "_:N2dc950f17be645b6b25984dce6d50103",
+      "@type": "dct:Location"
+    },
+    {
+      "@id": "_:N70798ed363ae4f3bbd206bc0edc00483",
+      "@type": "vcard:Organization",
+      "vcard:fn": "Kreisstadt Olpe, Ordnungsamt",
+      "vcard:hasEmail": {
+        "@id": "mailto:rathaus@olpe.de"
+      }
+    },
+    {
+      "@id": "_:Nb0b3c751f3814900b8d580629fec5865",
+      "@type": "vcard:Organization",
+      "vcard:fn": "Kreisstadt Olpe, Ordnungsamt",
+      "vcard:hasEmail": {
+        "@id": "mailto:rathaus@olpe.de"
+      }
+    },
+    {
+      "@id": "_:N7bc5c1b92bee43cfa46746f9cf5952de",
+      "@type": "foaf:Organization",
+      "foaf:mbox": "rathaus@olpe.de",
+      "foaf:name": "Kreisstadt Olpe, Ordnungsamt"
+    },
+    {
+      "@id": "https://opendata.olpe.de/dataset/389c8738-d205-4d17-babe-53f55085d2bf/resource/5a7281cc-b4fb-42bc-a463-d0046b8425fc",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://nbg1.your-objectstorage.com/opendatascoe/Open%20Data/Datens%C3%A4tze/Zum%20Honigsack%2035.json"
+      },
+      "dcat:mediaType": "application/json",
+      "dct:format": "JSON",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:41:42.437801"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-15T04:41:42.666508"
+      },
+      "dct:title": "25.03.2026 01:14:11 bis 31.03.2026 23:42:41"
+    }
+  ]
+}

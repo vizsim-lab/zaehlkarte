@@ -1,0 +1,141 @@
+[
+ {
+  "name": "olpe_suche.html",
+  "url": "https://opendata.olpe.de/dataset/?q=Verkehrsmessung",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/?q=Verkehrsmessung",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 30892,
+  "dataset_links": [
+   "/dataset/verkehrsmessung-alte-landstrabe",
+   "/dataset/verkehrsmessung-standort-zum-honigsack-35",
+   "/dataset/verkehrsmessung-weite-schluppe",
+   "/dataset/verkehrsmessungen-oberveischede",
+   "/dataset/verkehrsmessungen-rochusstrabe"
+  ]
+ },
+ {
+  "name": "olpe_suche_plural.html",
+  "url": "https://opendata.olpe.de/dataset/?q=Verkehrsmessungen",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/?q=Verkehrsmessungen",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 31452,
+  "dataset_links": [
+   "/dataset/verkehrsmessung-alte-landstrabe",
+   "/dataset/verkehrsmessung-weite-schluppe",
+   "/dataset/verkehrsmessungen-gunsestrabe",
+   "/dataset/verkehrsmessungen-hatzenbergstrabe",
+   "/dataset/verkehrsmessungen-in-der-wuste",
+   "/dataset/verkehrsmessungen-k18",
+   "/dataset/verkehrsmessungen-oberveischede",
+   "/dataset/verkehrsmessungen-rochusstrabe"
+  ]
+ },
+ {
+  "name": "olpe_honigsack.jsonld",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35.jsonld",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35.jsonld",
+  "typ": "application/ld+json",
+  "bytes": 6685,
+  "dataset_links": []
+ },
+ {
+  "name": "olpe_k18.jsonld",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18.jsonld",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18.jsonld",
+  "typ": "application/ld+json",
+  "bytes": 4760,
+  "dataset_links": []
+ },
+ {
+  "name": "olpe_k18.html",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 25272,
+  "dataset_links": [
+   "/dataset/verkehrsmessungen-k18"
+  ]
+ },
+ {
+  "name": "olpe_katalog_q.jsonld",
+  "url": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung",
+  "typ": "application/ld+json",
+  "bytes": 28748,
+  "dataset_links": []
+ },
+ {
+  "name": "moers_kirschenallee.jsonld",
+  "url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-kirschenallee.jsonld",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-kirschenallee.jsonld",
+  "typ": "application/ld+json",
+  "bytes": 5667,
+  "dataset_links": []
+ },
+ {
+  "name": "moers_2021.jsonld",
+  "url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021.jsonld",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021.jsonld",
+  "typ": "application/ld+json",
+  "bytes": 56896,
+  "dataset_links": []
+ },
+ {
+  "name": "aachen.html",
+  "url": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 29070,
+  "dataset_links": [
+   "/dataset/radzaehlstellen-der-stadt-aachen"
+  ]
+ },
+ {
+  "name": "aachen_res_272d.html",
+  "url": "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/272d2483-0a19-40d1-ad42-cbf17b8f7d2b",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/272d2483-0a19-40d1-ad42-cbf17b8f7d2b",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 26747,
+  "dataset_links": [
+   "/dataset/radzaehlstellen-der-stadt-aachen"
+  ]
+ },
+ {
+  "name": "aachen_res_b591.html",
+  "url": "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/b5915bec-4dda-4063-8df3-0dd0cd6ec8c9",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/b5915bec-4dda-4063-8df3-0dd0cd6ec8c9",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 26747,
+  "dataset_links": [
+   "/dataset/radzaehlstellen-der-stadt-aachen"
+  ]
+ },
+ {
+  "url": "https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf",
+  "pipeline": false,
+  "werkzeug": false,
+  "robots": "User-agent: *\nDisallow: *.osm.pbf\nDisallow: *.osm.bz2\nDisallow: *.osc.gz\nDisallow: *.shp.zip\nDisallow: state.txt\nDisallow: *.state.txt\nDisallow: *updates*\nDisallow: *.md5\n"
+ }
+]
