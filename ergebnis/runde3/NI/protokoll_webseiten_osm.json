@@ -1,0 +1,46 @@
+{
+ "grenzen_osm": {
+  "https://overpass.private.coffee/api/interpreter#0": "<HTTPError 502: 'Bad Gateway'>",
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
+ },
+ "liste": {
+  "gemeinden": 964,
+  "mit_web": 24,
+  "verbaende": 115,
+  "verbaende_mit_web": 1,
+  "kreise": 37,
+  "kreise_mit_web": 1,
+  "osm_elemente": 1114,
+  "osm_ohne_gemeinde": [
+   "Nordkehdingen",
+   "Stemwede",
+   "Oldambt",
+   "Het Hogeland",
+   "Eemsdelta"
+  ],
+  "ok": true,
+  "sekunden": 279
+ },
+ "osm": {
+  "https://overpass.private.coffee/api/interpreter#0": "TimeoutError('The read operation timed out')",
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter#0": "<HTTPError 504: 'Gateway Time-out'>",
+  "server": "https://overpass.kumi.systems/api/interpreter",
+  "anzahl": 0,
+  "ok": true,
+  "sekunden": 463
+ },
+ "webseiten_ziele": {
+  "ziele": 326,
+  "geraten": 299
+ },
+ "webseiten": {
+  "seiten": 326,
+  "erreicht": 286,
+  "mit_sitemap": 108,
+  "mit_suche": 36,
+  "mit_treffern": 105,
+  "ok": true,
+  "sekunden": 194
+ },
+ "gesamt_sekunden_webseiten_osm": 936
+}
