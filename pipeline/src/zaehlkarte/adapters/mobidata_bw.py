@@ -1,7 +1,7 @@
 """MobiData BW: 24-Stunden-Zählungen im Schussental (Ravensburg, Weingarten, Berg, Baienfurt,
 Baindt), alle vom Stadtplanungsamt Ravensburg aufbereitet, per Video an Kreuzungen gezählt.
 
-Ein Adapter für alle fünf Kommunen (sources.yaml verweist per `adapter: mobidata_bw`); je
+Ein Adapter für alle fünf Kommunen (ihre Quelldateien verweisen per `adapter: mobidata_bw`); je
 Kommune zwei Dateien:
 - Übersichts-Excel: je Zählstelle ID, NAME, Lage und bis zu vier Zählungen als Spaltenblöcke
   KFZ_n / RAD_n / FUSSGAENGER_n / SV_n / DATUM_n (24-Stunden-Summen; ein Kopf heißt `Datum_4`).

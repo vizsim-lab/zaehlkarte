@@ -1,7 +1,7 @@
 """Hamburg: Infrarot-Detektoren (Wärmebildkameras) der automatisierten Verkehrsmengenerfassung –
 Stundenwerte je Zählstelle aus der SensorThings API der Urban Data Platform (iot.hamburg.de).
 
-Eine Quelle je Dienst (sources.yaml: `dienst`, `layer` je Gruppe), beide mit diesem Adapter:
+Eine Quelle je Dienst (Quelldatei: `dienst`, `layer` je Gruppe), beide mit diesem Adapter:
 - HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren: Kfz und Schwerverkehr je Zählstelle
   (Layer Anzahl_Kfz_Zaehlstelle_1-Stunde, Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde)
 - HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren: Fahrräder je Zählstelle
@@ -240,7 +240,7 @@ def _punkte(ds: dict[str, list[dict]]) -> dict[str, tuple[float, float]]:
 
 def _strassen(q: dict, pfade: Pfade, ds: dict[str, list[dict]], gordner: Path) -> list[str]:
     """Straßennamen für Stellen ohne Eintrag in gedaechtnis/strassen.json – aus dem OSM-Abzug
-    (`osm` in sources.yaml). Der Abzug wird nur geladen, wenn noch keiner da ist, und dann
+    (`osm` in der Quelldatei). Der Abzug wird nur geladen, wenn noch keiner da ist, und dann
     behalten (Cache im Workflow): Straßen ändern sich selten, und Geofabrik bittet, nicht dieselbe
     Datei immer wieder zu laden."""
     from zaehlkarte.dauer.strassen import LIZENZ, naechste_strassen

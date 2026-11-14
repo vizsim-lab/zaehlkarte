@@ -1,15 +1,16 @@
-"""Datenlage je Kommune: der Stand der Dauerzählstellen je Kommune (`dauer:` in sources.yaml)
-neben dem der Kurzzeitzählungen, und `zaehlkarte datenlage` – datenlage.json und
-docs/DATENLAGE.md aus sources.yaml und der vorhandenen index.json, ohne neuen Bau."""
+"""Datenlage je Kommune: der Stand der Dauerzählstellen je Kommune (`dauer:` in
+config/kommunen/<LAND>.yaml) neben dem der Kurzzeitzählungen, und `zaehlkarte datenlage` –
+datenlage.json und docs/DATENLAGE.md aus der Konfiguration und der vorhandenen index.json, ohne
+neuen Bau."""
 
 from __future__ import annotations
 
+import copy
 import json
 from datetime import date
 from pathlib import Path
 
 import pytest
-import yaml
 
 from zaehlkarte import site
 from zaehlkarte.config import Pfade
@@ -38,11 +39,9 @@ QUELLEN = {
 
 
 @pytest.fixture
-def pfade(tmp_path: Path) -> Pfade:
+def pfade(tmp_path: Path, schreibe_konfiguration) -> Pfade:
     p = Pfade(pipeline=tmp_path / "pipeline", repo=tmp_path)
-    p.config.mkdir(parents=True)
-    (p.config / "sources.yaml").write_text(yaml.safe_dump(QUELLEN, allow_unicode=True),
-                                          encoding="utf-8")
+    schreibe_konfiguration(p.config, QUELLEN)
     p.karte.mkdir(parents=True)
     # zwei Stellen in der Teststadt mit drei Zählungen (Abbild einer gebauten index.json)
     (p.karte / "index.json").write_text(json.dumps({
@@ -89,12 +88,11 @@ def test_dauer_stand_unbekannt(pfade):
     ({"kommune": "Falsch", "land": "HH", "lon": 9.0, "lat": 53.0, "stand": "irgendwie"},
      "stand 'irgendwie' unbekannt"),
 ])
-def test_stand_pflicht_ausser_nur_dauer(pfade, eintrag, meldung):
+def test_stand_pflicht_ausser_nur_dauer(pfade, eintrag, meldung, schreibe_konfiguration):
     """Ein Eintrag braucht einen Stand der Kurzzeitzählungen oder einen der Dauerzählstellen."""
-    cfg = yaml.safe_load((pfade.config / "sources.yaml").read_text(encoding="utf-8"))
+    cfg = copy.deepcopy(QUELLEN)
     cfg["datenlage"].append(eintrag)
-    (pfade.config / "sources.yaml").write_text(yaml.safe_dump(cfg, allow_unicode=True),
-                                               encoding="utf-8")
+    schreibe_konfiguration(pfade.config, cfg)
     with pytest.raises(ValueError, match=meldung):
         site.datenlage([], pfade)
 

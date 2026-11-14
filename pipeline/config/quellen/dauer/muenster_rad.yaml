@@ -1,0 +1,30 @@
+# Rad-Zählstellen, erste Runde (November 2026; Konzept, Entscheidung 1). Aufbau und
+# Fallen im Adapter und in AGENTS.md.
+nr: 6
+status: live
+adapter: muenster_rad
+name: Münster (Rad-Zählstellen)
+land: NW
+traeger: Stadt Münster, Amt für Mobilität und Tiefbau
+art: >-
+  Rad-Zählstellen (Zählschleifen von Eco-Counter); 15-Minuten-Werte je Zählstelle, beide
+  Richtungen zusammen
+weg: offen im GitHub-Repository der Stadt (nächtlich aktualisiert)
+portal: https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten
+archiv_seite: https://github.com/od-ms/radverkehr-zaehlstellen
+archiv: https://codeload.github.com/od-ms/radverkehr-zaehlstellen/tar.gz/refs/heads/main
+standorte: https://opendata.stadt-muenster.de/sites/default/files/fahrradzaehl-standorte_0.geojson
+titel: >-
+  Radverkehr-Zählstellen Münster, tagesaktuelle Daten (verändert: 15-Minuten-Werte zu Stunden
+  und Tagessummen zusammengefasst)
+herausgeber: Stadt Münster
+quellenvermerk: Stadt Münster
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Laut Quelle Rohdaten, nicht bereinigt. Werte, die die Quelle als rekonstruiert (Status 4)
+    oder geändert („modified“) führt, gelten in der Karte als nicht gezählt.
+  - >-
+    Je Zählstelle die Summe ihrer Kanäle (beide Richtungen). Die Zählkarte prüft nur, ob jede
+    Viertelstunde gezählt ist – nicht, ob die Werte plausibel sind.

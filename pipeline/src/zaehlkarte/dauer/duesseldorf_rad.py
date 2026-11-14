@@ -10,7 +10,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer`, tools/rad_erkunde
   `datum;stunde;anzahl` (das Datum auch ohne Punkte: „1012021“), teils `Zeit;<Stelle>;Wetter;…`,
   ab 2023 `Zeit;<Stelle> IN;<Stelle> OUT;Symbol Wetter;…` („26-03-2023 01:00:00“). Zählwerte
   stehen vor der ersten Wetter-Spalte; Ortszeit; leere Zelle = nicht gezählt.
-- Zuordnung Ressource -> Zählstelle über den Namen der Ressource (`muster` in sources.yaml); eine
+- Zuordnung Ressource -> Zählstelle über den Namen der Ressource (`muster` in der Quelldatei); eine
   Stunde ist gezählt, wenn jede Datei und jede Spalte der Stelle im Jahr einen Wert hat.
 - Summen anderer Stellen stehen unter `ohne` (Fleher Deich Rampe = Ost + West, Oberkasseler
   Brücke = OKB Nord + Süd, Koblenzer Straße = die drei Koblenzer Stellen). In einer Datei mit
@@ -68,7 +68,7 @@ class Bericht:
             z.append("Zeilen ohne lesbare Zeit: "
                      + ", ".join(f"{k} {n}" for k, n in self.unlesbar.items() if n))
         if self.ohne:
-            z.append("nicht in der Karte (sources.yaml `ohne`): "
+            z.append("nicht in der Karte (`ohne` in der Quelldatei): "
                      + ", ".join(sorted(set(self.ohne))))
         if self.ohne_lage:
             z.append(f"ohne Lage (nicht in der Karte): {', '.join(sorted(set(self.ohne_lage)))}")

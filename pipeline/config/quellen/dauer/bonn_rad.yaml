@@ -1,0 +1,67 @@
+# Rad-Zählstellen, dritte Runde (November 2026): Bonn und Düsseldorf (Werkzeug-Branch
+# `werkzeug/dauer`, tools/rad_erkunden15–16.py). Aufbau und Fallen im Adapter und in
+# AGENTS.md.
+nr: 17
+status: live
+adapter: bonn_rad
+name: Bonn (Rad-Zählstellen)
+land: NW
+traeger: Bundesstadt Bonn
+art: >-
+  Fahrradmessstellen der Stadt (Eco-Counter, Induktionsschleifen); Stundenwerte je Zählstelle,
+  eine Datei je Jahr
+weg: offen im Open-Data-Portal der Stadt (eine CSV je Jahr, nach Ende des Jahres)
+portal: https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025
+katalog: https://opendata.bonn.de/data.json
+ab_jahr: 2020  # 2019: bei Open.NRW unter geschlossener Lizenz (und Mac-Roman)
+ohne_jahre: [2022]  # nur je Kanal; Kanäle derselben Stelle zählen gleichzeitig
+rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal
+stellen:  # Kennung der Datei („5.01 BN - …“); Lage aus OpenStreetMap (Knoten mit `ref` und
+  # operator=Stadt Bonn, © OpenStreetMap-Mitwirkende, ODbL; Abfrage über Overpass, 13.11.2026)
+  "5.01": {name: Kennedybrücke, abschnitt: Nordseite, lat: 50.739044, lon: 7.115346}  # 3573295199
+  "5.02": {name: Kennedybrücke, abschnitt: Südseite, lat: 50.737466, lon: 7.105983}  # 3573295196
+  "5.03": {name: Nordbrücke, abschnitt: Südseite, lat: 50.758595, lon: 7.104141}  # 3573295209
+  "5.04": {name: Nordbrücke, abschnitt: Nordseite, lat: 50.759051, lon: 7.103744}  # 3573295210
+  "5.05": {name: Südbrücke, abschnitt: Südseite, lat: 50.711852, lon: 7.139981}  # 3573295193
+  "5.06": {name: Südbrücke, abschnitt: Nordseite, lat: 50.719957, lon: 7.144591}  # 103962861
+  "5.07": {name: Estermannufer, lat: 50.768091, lon: 7.068817}  # 6270681304
+  "5.08": {name: Von-Sandt-Ufer, lat: 50.700823, lon: 7.166879}  # 6270681306
+  "5.09": {name: Rhenusallee, lat: 50.722268, lon: 7.133602}  # 1768253188
+  "5.10": {name: Bröhltalweg, lat: 50.742539, lon: 7.113631}  # 3573295202
+  "5.11": {name: Brühler Straße, lat: 50.740429, lon: 7.069423}  # 2988598302
+  "5.13": {name: Wilhelm-Spiritus-Ufer, lat: 50.728146, lon: 7.112066}  # 259666370
+  "5.14": {name: Mc Cloy Weg, lat: 50.671047, lon: 7.187897}  # 6270681305
+  "5.15": {name: Weg auf Damm Neil, lat: 50.733446, lon: 7.115042}  # 1378698849
+  "5.16": {lat: 50.715329, lon: 7.117448}  # 9856060192 – noch in keiner Jahresdatei
+  "5.17": {lat: 50.715865, lon: 7.116366}  # 9856060193 – noch in keiner Jahresdatei
+titel: >-
+  Fahrradmessstellen Ergebnisse Radzählungen (verändert: Stundenwerte je Zählstelle zu
+  Tagessummen zusammengefasst)
+herausgeber: Bundesstadt Bonn
+quellenvermerk: Bundesstadt Bonn
+lizenz: CC0 1.0
+lizenz_url: https://creativecommons.org/publicdomain/zero/1.0/deed.de
+hinweise:
+  - >-
+    Die Stadt veröffentlicht die Stundenwerte einmal im Jahr als Jahresdatei; in der Karte 2020,
+    2021 und ab 2023. Es fehlen 2019 (bei Open.NRW unter einer geschlossenen Lizenz geführt) und
+    2022: Die Datei 2022 nennt nur Kanäle, und die Kanäle einer Zählstelle zählen dort
+    gleichzeitig – welche zusammen die Stelle ergeben, sagt die Datei nicht.
+  - >-
+    Die Summen je Brücke (Kennedy-, Nord- und Südbrücke) sind nicht übernommen – ihre beiden
+    Seiten stehen als eigene Zählstellen in der Karte (Namen wie in der Quelle).
+  - >-
+    Die Daten nennen keine Lage; sie stammt aus OpenStreetMap (© OpenStreetMap-Mitwirkende,
+    ODbL), wo die Zählstellen der Stadt mit ihrer Kennung eingetragen sind. Der Stadtplan der
+    Stadt mit den Standorten war beim Abruf nicht erreichbar.
+  - >-
+    Am Tag der Rückstellung der Uhr steht 2 Uhr in der Quelle nur einmal – dieser Tag gilt als
+    nicht vollständig gezählt. Am Tag der Sommerzeit führt sie 3 Uhr zweimal, einmal leer; die
+    leere Zeile zählt nicht.
+  - >-
+    Die Quelle führt keinen Status – ob Werte rekonstruiert sind, ist nicht erkennbar. Ganze
+    Tage mit 0 kommen vor (etwa an der Südbrücke 2020) und erscheinen als gezählte Tage; am Mc
+    Cloy Weg stehen von Juni bis August 2025 Tageswerte von 10.000 bis über 50.000, ein
+    Vielfaches der übrigen Monate – in der Karte wie geliefert.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

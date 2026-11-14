@@ -7,7 +7,7 @@ Zwei Familien, beide mit gezählten Werten im Zeitverlauf:
 - **Kurzzeitzählungen** der Kommunen mit **Werten je Zählung** – am besten je Intervall (15/60
   Minuten) und Richtung, mindestens Tagessummen je Verkehrsart.
 - **Dauerzählstellen** der Kommunen (fest eingebaute Detektoren, Kameras, Rad-Zählstellen) mit Stunden- oder
-  Tageswerten über Monate und Jahre – Abschnitt `dauer:` in sources.yaml, Code in
+  Tageswerten über Monate und Jahre – Quellen in `pipeline/config/quellen/dauer/`, Code in
   `src/zaehlkarte/dauer/`.
 
 Nicht gemeint: Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür
@@ -187,7 +187,7 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
   Karte setzt das in `titel`/`lizenz` der Quelle um; das Datum schreibt `fetch` (`abruf.txt`).
 - **Ein Gerät kann wochenlang zu wenig zählen, ohne dass die Datei es sagt:** Z-Brücke Konstanz
   ab 3. Oktober 2020 unter einem Zehntel der Tage davor. Die Karte zeigt die Werte und einen
-  Hinweis (`hinweise_zeitraum` in sources.yaml), sortiert nichts aus.
+  Hinweis (`hinweise_zeitraum` in der Quelldatei), sortiert nichts aus.
 
 ## Sackgassen
 - mobidata-bw.de, GovData, opendata.potsdam.de (auch de.ftp.opendatasoft.com),
@@ -396,7 +396,7 @@ Thüringen und Schleswig-Holstein gibt es Pläne, die Informationsfreiheit einzu
 Anfragen nur mit Wohnsitz im Land) – vor Anfragen dort den Stand prüfen
 ([heise, 2026](https://heise.de/-11242410)). Das UIG gilt überall – Zählungen gehen in die Lärmkartierung ein, darum mit
 anführen. Sachsen: LfULG-Handlungsempfehlung (Mai 2026) verlangt Intervallwerte als CSV/XLSX
-von beauftragten Büros. Kurzfassung je Land: `recht:` in `pipeline/config/sources.yaml`
+von beauftragten Büros. Kurzfassung je Land: `pipeline/config/recht.yaml`
 (RP LTranspG, SH IZG-SH, SL SIFG, TH ThürTG gelten auch für Gemeinden; Belege dort).
 
 Neue Gesetze ändern daran nichts (Stand November 2026): Das IVSG 2026 (Mobilithek) meint
@@ -415,9 +415,11 @@ hat die Abrufe der Pipeline gegen robots.txt geprüft; zehn Quellen holten über
 robots.txt für alle Robots sperrt. Seitdem:
 - **Die Pipeline prüft jeden Abruf selbst** (`pipeline/src/zaehlkarte/abruf.py`): robots.txt nach
   RFC 9309 für ihre Kennung `zaehlkarte-pipeline` (sonst die Gruppe `*`), Crawl-delay je Host
-  (höchstens 60 s), jedes Weiterleitungsziel. Gesperrtes nur mit `robots_ausnahme` an der Quelle in
-  sources.yaml (URL-Anfänge, Grund, seit, Stand der Anfrage beim Betreiber); das Protokoll von
-  `fetch` und `dauer fetch` nennt jeden Abruf, der nur dank einer Ausnahme ging, und die Wartezeit.
+  (höchstens 60 s), jedes Weiterleitungsziel. Gesperrtes nur mit einer Ausnahme in
+  `pipeline/config/robots.yaml` (je Host oder Pfad eine: URL-Anfänge, die Quellen, die sie
+  brauchen, Grund, seit, Anfrage beim Betreiber mit `an`, `gestellt`, `antwort` oder `verzicht`);
+  das Protokoll von `fetch` und `dauer fetch` nennt jeden Abruf, der nur dank einer Ausnahme
+  ging, mit dem Stand der Anfrage, und die Wartezeit.
   Neue Quellen: ohne erlaubten Weg keine Aufnahme, außer die Projektleitung beschließt eine
   Ausnahme. GitHub (Checkout, Releases, API mit dem Token des Workflows) ist kein Crawlen und
   bleibt außen vor.
@@ -452,7 +454,8 @@ robots.txt für alle Robots sperrt. Seitdem:
   ganz), Bochum (openCode-GitLab: API, `/*/raw`, Archive und git über HTTPS; opendata.ruhr
   verweist auf genau diese Wege). Viele Betreiber sperren ihre API gegen Suchmaschinen und bieten
   sie zugleich für Programme an – die Anfrage klärt, ob ein wöchentlicher Abruf bekannter Dateien
-  gemeint ist. Entwürfe: Projekt-Dokument `claude/anfragen-robots-2026-11.md`.
+  gemeint ist. Entwürfe: Projekt-Dokument `claude/anfragen-robots-2026-11.md`; Empfänger und Stand
+  je Ausnahme in `pipeline/config/robots.yaml` (`anfrage`).
 - **Geofabrik** (Beschluss der Projektleitung, 14.11.2026): Geofabrik sperrt `*.osm.pbf` per
   robots.txt für alle Robots (ebenso openstreetmap.fr ganz und BBBike `*.pbf`). Der Abzug ist aber
   der übliche Weg zu den OSM-Daten einer Stadt; das OSM-Wiki rät für größere Datenmengen zu
@@ -494,7 +497,7 @@ robots.txt für alle Robots sperrt. Seitdem:
   - UTC (laut Quelle). Die Rückstellung legt zwei UTC-Stunden auf 2 Uhr Ortszeit.
   - Keine Straßennamen, nur Kennung (`assetID` = Knotenpunkt, 9, Arm, Richtung) und Punkt →
     nächste benannte Straße aus dem Geofabrik-Abzug (OSM, ODbL; einmal geladen, Ausnahme zu
-    robots.txt in sources.yaml), Kreuzungsname aus den übrigen Armen desselben Knotenpunkts.
+    robots.txt in robots.yaml), Kreuzungsname aus den übrigen Armen desselben Knotenpunkts.
   - Verschachteltes `$expand=Observations(…;$filter=phenomenonTime ge …;$top=10000)` über eine
     Seite Datastreams spart Abfragen; `$top` bis 20.000 geht.
   - Die alten Dienste `HH_STA_AutomatisierteVerkehrsmengenerfassung` und
@@ -527,7 +530,7 @@ robots.txt für alle Robots sperrt. Seitdem:
     Seitenleiste schaltet um (`amSelbenPunkt` in `js/data/dauer.js`).
   - `timestamp` ohne Zonenangabe, laut Datenbeschreibung UTC (der Tagesgang passt dazu).
   - Namen uneinheitlich („Strasse“, „Pforzheimer-Str-14“, „Rcihtung“) → Straße und Abschnitt je
-    Sensor in `sources.yaml` (`stellen`), die Richtung ohne den vorangestellten Straßennamen.
+    Sensor in der Quelldatei (`stellen`), die Richtung ohne den vorangestellten Straßennamen.
   - `classification` und `amount` sind unbrauchbar (fast überall „LKW+Anhänger“ bzw. 0).
 - **Geprüft, nicht aufgenommen (Stand 12.11.2026,** Werkzeug-Branch `werkzeug/dauer`,
   `tools/dauer_staedte1.py`, `dauer_staedte2.py`):
@@ -641,7 +644,7 @@ robots.txt für alle Robots sperrt. Seitdem:
       2018–2020 „other-closed“, ab 2021 dl-de/by-2-0. Spalten 1+2 Grugatrasse, 3+4 Huyssenallee
       (belegt durch die kumulierten Jahresdateien); 2026 heißt Spalte 2 fälschlich „Huyssenallee
       Stadtkern_Nord“, 2023 Q4 mit Tab. Lage als Gauß-Krüger in der Beschreibung (umgerechnet mit
-      pyproj, EPSG:31466 → 4326, Werte in sources.yaml).
+      pyproj, EPSG:31466 → 4326, Werte in der Quelldatei).
     - **Leipzig:** WFS `radverkehr_dauerzaehlstelle_anzahl_stunde_zeitreihe` (31 Tage, Ortszeit
       ohne Versatz) → Gedächtnis wie Hamburg (`dauer/gedaechtnis.py`). Am Rückstelltag 2 Uhr
       zweimal (objectid folgt der Zeit); 0 Uhr des Folgetags kommt mit der nächsten Lieferung

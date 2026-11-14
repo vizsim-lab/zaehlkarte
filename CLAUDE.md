@@ -33,17 +33,21 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **`tests/`** — `unit/` (node --test, browserlos), `web/` (Playwright gegen den Build).
 
 ## Harte Regeln
-- **`pipeline/config/sources.yaml` ist die einzige Quellenliste** – Quellen, Lizenzen und die
-  Datenlage-Einträge. Das Frontend bekommt alles über `manifest.json`/`datenlage.json`; nie im
+- **`pipeline/config/` ist die einzige Quellenliste** – je Quelle eine Datei
+  (`quellen/kurzzeit|dauer/<code>.yaml`, der Dateiname ist der Code), die Datenlage je Land
+  (`kommunen/<LAND>.yaml`), Rechtslage, Anfragevorlage, robots-Ausnahmen, Ferien
+  (`kalender/ferien/<LAND>.csv`); Aufbau in `pipeline/config/README.md`. `nr` legt die
+  Reihenfolge der Quellen in den Kartendaten fest: eine neue Quelle bekommt die nächste Nummer,
+  nie umnummerieren. Das Frontend bekommt alles über `manifest.json`/`datenlage.json`; nie im
   Frontend nachtragen. Rechtliche Aussagen in der Datenlage nur mit Beleg (Link).
 - **Erzeugte Dateien nicht von Hand ändern:** `public/data/*`, `docs/DATENLAGE.md` (beide
   `uv run zaehlkarte site`; nur `datenlage.json` und `DATENLAGE.md` nach geänderten
   Datenlage-Texten: `uv run zaehlkarte datenlage`), `pipeline/geokodierung/berlin_ergaenzung.csv`
   (Workflow „Berlin geokodieren“), `pipeline/geokodierung/moers.csv`
   (`werkzeuge/geokodiere_moers.py`).
-- **Datenlage-Texte** (Lage, Empfehlung, Anfragezusatz, Kontakt) stehen in `sources.yaml`.
+- **Datenlage-Texte** (Lage, Empfehlung, Anfragezusatz, Kontakt) stehen in `config/kommunen/`.
   Kontakte nur als Funktionsadressen (keine Namen einzelner Beschäftigter), aus der
-  FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage`) ist für alle gleich –
+  FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage.yaml`) ist für alle gleich –
   nur die angefragte Stelle ist „Stadt {kommune}“ oder `anfrage_an` (etwa „Gemeinde Mühltal“).
   Die Datenlage folgt der Familie: je Kommune `stand` für die Kurzzeitzählungen und, wo
   recherchiert, ein Block `dauer:` (`stand` in_karte | offen | kandidat, `was`, `links`) für die
@@ -69,7 +73,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Quelle als rekonstruiert, unplausibel oder geändert kennzeichnet (Berlins Rad-Datei: Zellfarbe;
   Eco-Counter: Status 4, „modified“), gilt als nicht gezählt; kennzeichnet sie es nicht (MobiData
   BW), steht das als Hinweis an der Quelle. Zählt eine Stelle Rad und Fuß oder Pkw gemeinsam,
-  kommt sie nicht als Rad in die Karte (`ohne` in sources.yaml). Klassen
+  kommt sie nicht als Rad in die Karte (`ohne` in der Quelldatei). Klassen
   der Detektoren nie zusammenzählen oder ineinander umrechnen: Berlins und Ettlingens „Lkw“ und
   Hamburgs „Schwerverkehr“ bleiben eigene Gruppen der Daten, keine ist der Schwerverkehr der
   Kurzzeitzählungen. Die Karte zeigt sie unter einem Chip „Lkw/Schwerverkehr“ – jede Stelle in
@@ -81,13 +85,14 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.
 - **Rohdaten bleiben unverändert**; Berlin-Archive und Geokodierung sind auf Commits gepinnt,
   Münster-ZIP und -Positionen, die Konstanzer CSVs und die Xantener PDFs über ihre Prüfsumme
-  (sha256 in sources.yaml). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
-  sources.yaml mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
+  (sha256 in der Quelldatei). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
+  die Quelldatei mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
 - **Abrufe der Pipeline nur über `zaehlkarte.abruf`** (robots.txt nach RFC 9309 für die Kennung
   `zaehlkarte-pipeline`, Crawl-delay, Weiterleitungen), nie `requests` direkt; CKAN-Portale ohne
-  ihre API über `zaehlkarte.ckan`. Was robots.txt sperrt, holt die Pipeline nur mit
-  `robots_ausnahme` an der Quelle in sources.yaml (URL-Anfänge, Grund, seit, Stand der Anfrage) –
-  eine neue Ausnahme beschließt die Projektleitung (AGENTS.md, „robots.txt und die Pipeline“).
+  ihre API über `zaehlkarte.ckan`. Was robots.txt sperrt, holt die Pipeline nur mit einer
+  Ausnahme in `pipeline/config/robots.yaml` (URL-Anfänge, Quellen, Grund, seit, Anfrage beim
+  Betreiber) – eine neue Ausnahme beschließt die Projektleitung (AGENTS.md, „robots.txt und die
+  Pipeline“).
 - **Keyless:** Hintergrund OpenFreeMap (Positron, lokale `public/style.json` ohne Sprite),
   Relief Mapterhorn, Suche Photon. Keine API-Keys, keine Secrets im Repo.
 - **MapLibre (ESM, v6):** nur über `js/lib/maplibre.js` importieren; wird NICHT gebündelt
@@ -104,7 +109,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Fremde Texte** (Namen, Bemerkungen aus den Daten) nur escaped ins HTML (`esc()`).
 - **Lizenzen mit Einschränkung** (Ettlingen: CC BY-NC 4.0, nur nicht kommerziell; Bochum:
   dl-de/by-2-0, aber nicht für Produkte im Wettbewerb zu Eco-Counter) nur mit Hinweis an der
-  Quelle (`hinweise` in sources.yaml); die Lizenz – samt Einschränkung – steht in der
+  Quelle (`hinweise` in der Quelldatei); die Lizenz – samt Einschränkung – steht in der
   Seitenleiste und in jeder Zeile des CSV-Exports – nie eine Quelle ohne Lizenzangabe aufnehmen.
 - **Lizenz:** AGPL-3.0-or-later. Aus dem Schulwege-Projekt (MIT) übernommene Dateien tragen
   einen Herkunftsvermerk.
@@ -112,7 +117,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 ## Konventionen
 - **uv**, nie `pip install`. Lint `uvx ruff check`, Tests `uv run pytest` (aus `pipeline/`).
   Die harten Regeln zur Konfiguration prüft `tests/test_konfiguration.py` an der echten
-  sources.yaml (Lizenzen, Land mit Ferien und Feiertagen, robots-Ausnahmen, Datenlage-Felder),
+  Konfiguration (Ordner, Lizenzen, Land mit Ferien und Feiertagen, robots-Ausnahmen,
+  Datenlage-Felder, jede Kommune in der Datei ihres Landes),
   `tests/test_abruf.py`, dass kein Modul das Netz an `abruf` vorbei ruft – eine neue Regel
   bekommt dort ihre Prüfung.
 - **Sprache:** Deutsch in Doku, Kommentaren und Bezeichnern. Die UI ist zweisprachig
@@ -122,11 +128,12 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   (Hinweise, Quellenbeschreibungen, Datenlage- und Anfragetexte) bleiben deutsch und tragen
   `lang="de"`; englische Stand-Namen kommen als `manifest.stand_en` aus `site.py`. CSV-Exporte
   bleiben in beiden Sprachen gleich (deutsche Spalten und Werte).
-- **Neue Quelle:** Eintrag in `sources.yaml` (`status: research` bis der Adapter steht),
+- **Neue Quelle:** eine Datei `pipeline/config/quellen/<familie>/<code>.yaml` mit der nächsten
+  `nr` (`status: research` bis der Adapter steht),
   Adapter mit `lese(quelle, pfade, bericht)` und `Bericht`, Test mit synthetischer Datei.
   Mehrere Kommunen mit gleichem Format teilen sich einen Adapter (`adapter:`). Kurzzeit: der
   Abruf des Formats steht in `fetch.ABRUF`. Ferien und Feiertage gibt es für alle 16 Länder;
-  das Land der Quelle wählt den Kalender (`kalender.FERIEN`, `config/schulferien_*`). Meldet
+  das Land der Quelle wählt den Kalender (`config/kalender/ferien/<LAND>.csv`). Meldet
   `zaehlkarte kalender`, dass Ferien bald enden: nächsten KMK-Kalender mit
   `werkzeuge/kmk_ferien.py` aus dem PDF nachtragen.
 - **Frontend:** `npm run dev`; vor jedem Push `npm run test:unit` und `npm run test:web`

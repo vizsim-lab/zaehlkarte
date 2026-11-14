@@ -16,7 +16,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
   der beiden Stunden 2–3 Uhr Ortszeit); 2 Uhr ist dann nicht vollständig, der Tag auch nicht.
 - Lage: Würzburg im eigenen Datensatz der Zählstellen (`standorte`), Neuss im Feld
   `coordinates` jeder Zeile (der Datensatz der Zählstellen ist leer) – Namen und Abschnitte dort
-  aus der Datensatzbeschreibung (`stellen` in sources.yaml).
+  aus der Datensatzbeschreibung (`stellen` in der Quelldatei).
 """
 
 from __future__ import annotations

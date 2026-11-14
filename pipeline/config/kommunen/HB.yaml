@@ -1,0 +1,53 @@
+# Datenlage Bremen – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: Bremen
+  land: HB
+  lon: 8.8072
+  lat: 53.0758
+  stand: kandidat
+  was: >-
+    zählt an Knoten und Querschnitten, auch Rad; 2017 auf Anfrage eine Liste der Erhebungen 2016
+    mit Übersichtsplänen – Werte nur gegen Aufbereitung (rund 5 Euro je Zählstelle und Tag)
+  situation: >-
+    Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online
+    stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen
+    Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit
+    Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der
+    gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag.
+  empfehlung: >-
+    Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung).
+    Grundlage: Bremer Informationsfreiheitsgesetz.
+  weg: "FragDenStaat, BremIFG"
+  kontakt: {fds_suche: "Senatorin für Bau, Mobilität und Stadtentwicklung"}
+  anfrage: true
+  anfrage_zusatz: >-
+    2017 haben Sie auf eine Anfrage eine Liste der 2016 durchgeführten Verkehrserhebungen mit
+    Übersichtsplänen geschickt. Ich bitte um die Ergebnisse der Zählungen seit 2015 in der Form, in
+    der sie bei Ihnen vorliegen; eine Aufbereitung ist nicht nötig.
+  links:
+    - ["FragDenStaat 2017", "https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-bremen/"]
+    - ["bau.bremen.de: Verkehrsdaten", "https://bau.bremen.de/mobilitaet/verkehrsdaten-3841"]
+- kommune: Bremerhaven
+  land: HB
+  lon: 8.5809
+  lat: 53.5396
+  stand: geliefert
+  was: >-
+    24-Stunden-Querschnittszählungen des Stadtplanungsamts; 2024 auf Anfrage Tageswerte zweier
+    Stellen (31.08.2023) per E-Mail
+  situation: >-
+    Das Stadtplanungsamt zählt über 24 Stunden im Querschnitt. Auf eine Anfrage 2024 hat die Stadt
+    die Tageswerte zweier Stellen vom 31. August 2023 per E-Mail genannt; die Anfrage war vorab als
+    gebührenfrei eingestuft.
+  empfehlung: >-
+    Anfrage nach allen Zählungen seit 2015 mit den Werten je Intervall. Grundlage: Bremer
+    Informationsfreiheitsgesetz.
+  weg: "FragDenStaat, BremIFG"
+  kontakt: {fds_suche: "Magistrat der Stadt Bremerhaven"}
+  anfrage: true
+  anfrage_zusatz: >-
+    2024 haben Sie auf eine Anfrage die Tageswerte der Zählung vom 31. August 2023 an der
+    Barkhausenstraße und der Lloydstraße genannt. Ich bitte um alle Zählungen mit den Werten je
+    Intervall.
+  links:
+    - ["FragDenStaat 2024", "https://fragdenstaat.de/anfrage/verkehrszaehlung-barkhausenstrasse-und-lloydstrasse-bremerhaven/"]

@@ -5,7 +5,7 @@
 # Die Pipeline hält robots.txt und den Crawl-delay der Portale ein (pipeline/src/zaehlkarte/
 # abruf.py): bei Moers (rund 200 Dateien) und Olpe 10 Sekunden je Abruf – ein Lauf dauert darum
 # eine gute halbe Stunde länger als früher. Der Bericht im PR nennt die Wartezeit und jeden
-# Abruf, der nur dank einer Ausnahme in sources.yaml ging.
+# Abruf, der nur dank einer Ausnahme in pipeline/config/robots.yaml ging.
 #
 # Scheitert der Abruf einer Quelle, holt der Lauf die übrigen trotzdem und endet dann rot, ohne
 # PR: Er hat keine Rohdaten früherer Läufe (ein Cache verfiele nach sieben Tagen), und ein Bau

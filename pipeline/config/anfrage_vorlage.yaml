@@ -1,0 +1,16 @@
+# Vorlage für Anfragen (Text für das Feld „Anfrage“ auf FragDenStaat – Anrede, Rechtsgrundlage
+# und Gebührenhinweis ergänzt FragDenStaat). {stelle} ist „Stadt {kommune}“ oder `anfrage_an`
+# des Eintrags (etwa „Gemeinde Mühltal“), {zusatz} dessen `anfrage_zusatz`.
+betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+text: |-
+  Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die {stelle} seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+  1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+  2. Datum und gezählte Uhrzeiten,
+  3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+  Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+  {zusatz}
+  Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+  Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.

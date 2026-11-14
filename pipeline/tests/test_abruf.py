@@ -4,12 +4,14 @@ from __future__ import annotations
 
 import ast
 import re
+from datetime import date
 from pathlib import Path
 
 import pytest
 import requests
 
 from zaehlkarte import abruf
+from zaehlkarte.config import Pfade
 
 ROBOTS_TEXT = abruf._robots_text  # das echte (conftest ersetzt es je Test)
 
@@ -153,19 +155,57 @@ def test_gesperrt_ohne_anfrage(monkeypatch, netz):
     assert anfragen == []
 
 
-def test_ausnahme_aus_sources_yaml(monkeypatch, netz):
+AUSNAHMEN = [
+    {"urls": ["https://portal.example/api/explore/"], "quellen": ["potsdam"],
+     "grund": "kein anderer\n  Weg zu den Daten", "anfrage": {"an": "Stadt", "gestellt": None,
+                                                           "antwort": None}},
+    {"urls": ["https://anderes.example/"], "quellen": ["andere", "dritte"], "grund": "nur dort",
+     "anfrage": {"an": "X", "gestellt": None, "antwort": None, "verzicht": "Beschluss"}},
+]
+
+
+def test_ausnahme_aus_robots_yaml(monkeypatch, netz):
     antworten, anfragen = netz
     robots(monkeypatch, portal="User-agent: *\nDisallow: /api/\n")
     antworten["https://portal.example/api/explore/x?limit=1"] = Antwort(200, b"[]")
-    abruf.ausnahmen_setzen({"potsdam": {"robots_ausnahme": {
-        "urls": ["https://portal.example/api/explore/"],
-        "grund": "kein anderer\n  Weg zu den Daten"}}, "andere": {}})
+    abruf.ausnahmen_setzen(["potsdam", "moers"], eintraege=AUSNAHMEN)
     assert abruf.hole("https://portal.example/api/explore/x", params={"limit": 1}).content == b"[]"
     with pytest.raises(abruf.Gesperrt):  # nur die genannten URL-Anfänge
         abruf.hole("https://portal.example/api/3/action/package_show")
     assert abruf.bericht() == [
         "robots.txt: 1 Abrufe für potsdam trotz Sperre (https://portal.example/api/explore/) – "
-        "Ausnahme laut sources.yaml: kein anderer Weg zu den Daten"]
+        "Ausnahme laut robots.yaml: kein anderer Weg zu den Daten (Anfrage: noch nicht gestellt)"]
+
+
+def test_ausnahme_nur_fuer_ihre_quellen(monkeypatch, netz, tmp_path, schreibe_konfiguration):
+    """Eine Ausnahme gilt nur für die Abrufe der Quellen, die sie nennt – ohne `codes` für alle.
+    Aus config/robots.yaml gelesen, wenn keine `eintraege` kommen."""
+    antworten, _ = netz
+    robots(monkeypatch, portal="User-agent: *\nDisallow: /api/\n")
+    antworten["https://portal.example/api/explore/x"] = Antwort(200, b"[]")
+    pfade = Pfade(pipeline=tmp_path / "p", repo=tmp_path)
+    schreibe_konfiguration(pfade.config, {"robots": AUSNAHMEN})
+    abruf.ausnahmen_setzen(["moers"], pfade=pfade)
+    with pytest.raises(abruf.Gesperrt, match="keine Ausnahme in robots.yaml"):
+        abruf.hole("https://portal.example/api/explore/x")
+    abruf.ausnahmen_setzen(pfade=pfade)
+    assert abruf.hole("https://portal.example/api/explore/x").content == b"[]"
+    assert [a.quellen for a in abruf._AUSNAHMEN] == ["potsdam", "andere, dritte"]
+    assert abruf._AUSNAHMEN[1].anfrage == "keine – Beschluss"
+
+
+@pytest.mark.parametrize("anfrage, stand", [
+    (None, "noch nicht gestellt"),
+    ({"an": "X", "gestellt": None, "antwort": None}, "noch nicht gestellt"),
+    ({"an": "X", "gestellt": date(2026, 11, 20), "antwort": None},
+     "gestellt am 2026-11-20, noch keine Antwort"),
+    ({"an": "X", "gestellt": date(2026, 11, 20), "antwort": "2026-11-25: ja,\n  in Ordnung"},
+     "Antwort: 2026-11-25: ja, in Ordnung"),
+    ({"an": "X", "gestellt": None, "antwort": None, "verzicht": "Beschluss der Projektleitung"},
+     "keine – Beschluss der Projektleitung"),
+])
+def test_stand_der_anfrage(anfrage, stand):
+    assert abruf.anfrage_stand(anfrage) == stand
 
 
 def test_weiterleitung_wird_geprueft(monkeypatch, netz):

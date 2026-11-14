@@ -1,0 +1,40 @@
+# Rad-Zählstellen, zweite Runde (November 2026): die übrigen Quellen des Artefakts
+# „Offene Radzähldaten“, gegen die nichts spricht (Werkzeug-Branch `werkzeug/dauer2`,
+# tools/rad_erkunden12–14.py). Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 15
+status: live
+adapter: rostock_rad
+name: Rostock (Radmonitore)
+land: MV
+traeger: Hanse- und Universitätsstadt Rostock
+art: >-
+  Radmonitore der Stadt (Eco-Counter); 15-Minuten-Werte je Zählstelle, beide Richtungen
+  zusammen
+weg: offen im Open-Data-Portal OpenData.HRO (täglich aktualisiert)
+portal: https://www.opendata-hro.de/dataset/radmonitore
+daten: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.csv
+standorte: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.json
+ohne:  # Zählstellen, die nicht in die Karte kommen, mit Grund
+  "300041920": >-
+    Saarplatz Lindenpark – laut Quelle „Steuergerät“; seine Tageswerte liegen stets etwas über
+    denen der Zählstelle Saarplatz Nord (100 m entfernt), vermutlich die Summe mehrerer
+    Querschnitte – sonst doppelt in der Karte
+titel: >-
+  Radmonitore (verändert: 15-Minuten-Werte zu Stunden und Tagessummen zusammengefasst)
+herausgeber: Hanse- und Universitätsstadt Rostock
+quellenvermerk: Hanse- und Universitätsstadt Rostock
+lizenz: CC0 1.0
+lizenz_url: https://creativecommons.org/publicdomain/zero/1.0/deed.de
+hinweise:
+  - >-
+    Die Quelle führt keinen Status – ob Werte rekonstruiert sind, ist nicht erkennbar. Ganze Tage
+    mit 0 kommen vor (etwa an der Zählstelle Graal-Müritz) und erscheinen als gezählte Tage.
+  - >-
+    Holbeinplatz und Lange Straße sind laut Quelle die Summe zweier Messquerschnitte (Nord und
+    Süd). Saarplatz Lindenpark (laut Quelle „Steuergerät“) fehlt, weil seine Werte die der
+    Zählstelle Saarplatz Nord einschließen dürften.
+  - >-
+    Am Tag der Rückstellung der Uhr ist die Stunde 2–3 Uhr in der Quelle unvollständig – dieser
+    Tag gilt als nicht vollständig gezählt.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

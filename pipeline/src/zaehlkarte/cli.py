@@ -35,8 +35,8 @@ def fetch(quelle: Quellen = None) -> None:
 
 @app.command()
 def lade(url: str, ziel: str) -> None:
-    """Eine Datei holen wie die Pipeline (robots.txt, Crawl-delay, Ausnahmen aus sources.yaml) –
-    für Workflows, die sonst curl nähmen."""
+    """Eine Datei holen wie die Pipeline (robots.txt, Crawl-delay, Ausnahmen aus
+    config/robots.yaml für alle Quellen in der Karte) – für Workflows, die sonst curl nähmen."""
     from pathlib import Path
 
     from zaehlkarte import abruf
@@ -111,7 +111,7 @@ def kalender(
 
 @app.command()
 def datenlage(datum: Datum = None) -> None:
-    """Nur datenlage.json und docs/DATENLAGE.md erneuern (aus sources.yaml und der vorhandenen
+    """Nur datenlage.json und docs/DATENLAGE.md erneuern (aus config/kommunen/ und der vorhandenen
     index.json) – für geänderte Datenlage-Texte ohne neuen Bau."""
     erzeugt = date.fromisoformat(datum) if datum else None
     for pfad in site_.schreibe_datenlage(erzeugt=erzeugt):

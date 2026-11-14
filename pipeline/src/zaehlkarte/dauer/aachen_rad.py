@@ -9,7 +9,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
   einen Wert hat. An der Hohenstaufenallee zählen eigene Kanäle Radfahrende gegen die
   Fahrtrichtung („Falschfahrer“) – sie gehören zur Zählstelle.
 - Standorte: PDF „Standorte Radzählstellen“ (Kennung, Name, „Breite, Länge“, Daten seit). Offenbare
-  Tippfehler darin korrigiert `lage` in sources.yaml (mit Vermerk), statt die Rohdatei zu ändern.
+  Tippfehler darin korrigiert `lage` in der Quelldatei (mit Vermerk), statt die Rohdatei zu ändern.
 - Mehrere Ressourcen für dasselbe Jahr: die jüngste gilt (Datum auf der Seite der Ressource).
 """
 
@@ -50,7 +50,7 @@ class Bericht:
              "Stunden mit leerem Kanal (nicht gezählt): "
              + ", ".join(f"{k} {n}" for k, n in self.leer.most_common(8))]
         if self.lage_korrigiert:
-            z.append(f"Lage aus sources.yaml statt PDF: {', '.join(self.lage_korrigiert)}")
+            z.append(f"Lage aus der Quelldatei statt PDF: {', '.join(self.lage_korrigiert)}")
         if self.ohne_lage:
             z.append(f"ohne Lage (nicht in der Karte): {', '.join(self.ohne_lage)}")
         return z

@@ -4,9 +4,10 @@
 # (darf Actions keine PRs anlegen, bleibt der Branch stehen – Link in der Zusammenfassung).
 #
 # Geofabrik sperrt `*.osm.pbf` per robots.txt für alle Robots. Der Abzug geht darum über die
-# Pipeline (`zaehlkarte lade`, robots.txt) mit der Ausnahme an der Quelle `berlin` in
-# sources.yaml (Beschluss vom 14.11.2026) – und möglichst nur einmal: Er bleibt im Actions-Cache,
-# ein weiterer Lauf nimmt ihn von dort (Straßen ändern sich selten; neu laden: Schlüssel erhöhen).
+# Pipeline (`zaehlkarte lade`, robots.txt) mit der Ausnahme für die Quelle `berlin` in
+# pipeline/config/robots.yaml (Beschluss vom 14.11.2026) – und möglichst nur einmal: Er bleibt im
+# Actions-Cache, ein weiterer Lauf nimmt ihn von dort (Straßen ändern sich selten; neu laden:
+# Schlüssel erhöhen).
 # GitHub löscht Caches, die sieben Tage niemand genutzt hat – dann lädt der nächste Lauf neu.
 # Läuft nur von Hand – das Ergebnis liegt im Git und wird selten gebraucht.
 name: Berlin geokodieren

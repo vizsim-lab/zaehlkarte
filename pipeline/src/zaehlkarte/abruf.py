@@ -12,10 +12,10 @@ sonst die Gruppe `*`:
   (höchstens 60); ohne Angabe kein zusätzlicher Abstand.
 - Weiterleitungen: jedes Ziel wird ebenso geprüft.
 
-Einen gesperrten Abruf macht die Pipeline nicht (`Gesperrt`) – außer eine Quelle nennt ihn in
-sources.yaml als Ausnahme (`robots_ausnahme`: URL-Anfänge, Grund, seit wann, Stand der Anfrage
-beim Betreiber). Solche Abrufe zählt `bericht()` für das Protokoll. Hintergrund: AGENTS.md,
-„robots.txt und die Pipeline“.
+Einen gesperrten Abruf macht die Pipeline nicht (`Gesperrt`) – außer `config/robots.yaml` nennt
+ihn als Ausnahme für eine der Quellen, die der Lauf holt (URL-Anfänge, Quellen, Grund, seit wann,
+Stand der Anfrage beim Betreiber). Solche Abrufe zählt `bericht()` für das Protokoll, mit dem
+Stand der Anfrage. Hintergrund: AGENTS.md, „robots.txt und die Pipeline“.
 """
 
 from __future__ import annotations
@@ -24,10 +24,13 @@ import re
 import time
 import urllib.parse
 from collections import Counter
+from collections.abc import Iterable
 from dataclasses import dataclass
 from pathlib import Path
 
 import requests
+
+from zaehlkarte.config import Pfade, konfiguration
 
 KENNUNG = "zaehlkarte-pipeline"
 UA = {"User-Agent": f"{KENNUNG} (+https://github.com/vizsim-lab/zaehlkarte)"}
@@ -36,7 +39,7 @@ MAX_WEITERLEITUNGEN = 10
 
 
 class Gesperrt(Exception):
-    """robots.txt verbietet den Abruf, und sources.yaml nennt dafür keine Ausnahme."""
+    """robots.txt verbietet den Abruf, und config/robots.yaml nennt dafür keine Ausnahme."""
 
 
 def _norm(pfad: str) -> str:
@@ -118,9 +121,10 @@ class Regeln:
 
 @dataclass(frozen=True)
 class Ausnahme:
-    quelle: str
+    quellen: str  # Codes, mit Komma getrennt
     praefix: str
     grund: str
+    anfrage: str  # Stand der Anfrage beim Betreiber, für das Protokoll
 
 
 _REGELN: dict[str, Regeln] = {}
@@ -161,14 +165,33 @@ def regeln(url: str) -> Regeln:
     return _REGELN[basis]
 
 
-def ausnahmen_setzen(quellen: dict[str, dict]) -> None:
-    """Ausnahmen aus sources.yaml übernehmen (je Quelle `robots_ausnahme`)."""
-    for code, q in quellen.items():
-        if a := q.get("robots_ausnahme"):
-            for praefix in a["urls"]:
-                ausnahme = Ausnahme(code, praefix, " ".join(a["grund"].split()))
-                if ausnahme not in _AUSNAHMEN:
-                    _AUSNAHMEN.append(ausnahme)
+def anfrage_stand(anfrage: dict | None) -> str:
+    """Stand der Anfrage beim Betreiber (`anfrage` einer Ausnahme in robots.yaml), kurz."""
+    a = anfrage or {}
+    if a.get("antwort"):
+        return f"Antwort: {' '.join(str(a['antwort']).split())}"
+    if a.get("gestellt"):
+        return f"gestellt am {a['gestellt']}, noch keine Antwort"
+    if a.get("verzicht"):
+        return f"keine – {' '.join(a['verzicht'].split())}"
+    return "noch nicht gestellt"
+
+
+def ausnahmen_setzen(codes: Iterable[str] | None = None, *, pfade: Pfade | None = None,
+                     eintraege: list[dict] | None = None) -> None:
+    """Ausnahmen aus config/robots.yaml übernehmen (oder `eintraege` in derselben Gestalt) – nur
+    die für die Quellen `codes`, die der Lauf holt (None: alle)."""
+    if eintraege is None:
+        eintraege = konfiguration(pfade)["robots"]
+    codes = None if codes is None else set(codes)
+    for e in eintraege:
+        if codes is not None and not codes & set(e["quellen"]):
+            continue
+        for praefix in e["urls"]:
+            ausnahme = Ausnahme(", ".join(e["quellen"]), praefix, " ".join(e["grund"].split()),
+                                anfrage_stand(e.get("anfrage")))
+            if ausnahme not in _AUSNAHMEN:
+                _AUSNAHMEN.append(ausnahme)
 
 
 def pruefe(url: str) -> None:
@@ -179,7 +202,7 @@ def pruefe(url: str) -> None:
         if url.startswith(a.praefix):
             GENUTZT[a] += 1
             return
-    raise Gesperrt(f"robots.txt sperrt {url} für {KENNUNG} (keine Ausnahme in sources.yaml)")
+    raise Gesperrt(f"robots.txt sperrt {url} für {KENNUNG} (keine Ausnahme in robots.yaml)")
 
 
 def _warte(url: str) -> None:
@@ -238,8 +261,8 @@ def lade(url: str, ziel: Path, *, timeout: float = 600) -> Path:
 
 def bericht() -> list[str]:
     """Für das Protokoll: Abrufe, die nur dank einer Ausnahme gingen, und die Wartezeiten."""
-    z = [f"robots.txt: {n} Abrufe für {a.quelle} trotz Sperre ({a.praefix}) – Ausnahme laut "
-         f"sources.yaml: {a.grund}" for a, n in GENUTZT.items()]
+    z = [f"robots.txt: {n} Abrufe für {a.quellen} trotz Sperre ({a.praefix}) – Ausnahme laut "
+         f"robots.yaml: {a.grund} (Anfrage: {a.anfrage})" for a, n in GENUTZT.items()]
     if GEWARTET:
         z.append("Crawl-delay eingehalten: " + ", ".join(
             f"{host} {s:.0f} s" if s < 120 else f"{host} {s / 60:.0f} min"

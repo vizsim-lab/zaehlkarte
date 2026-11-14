@@ -1,0 +1,55 @@
+# Rad-Zählstellen, erste Runde (November 2026; Konzept, Entscheidung 1). Aufbau und
+# Fallen im Adapter und in AGENTS.md.
+# MobiData BW kennzeichnet rekonstruierte Werte nicht – aufgenommen mit Hinweis
+# (Entscheidung des Nutzers, 13.11.2026).
+nr: 5
+status: live
+adapter: mobidata_eco
+name: Baden-Württemberg (Rad-Zählstellen, MobiData BW)
+land: BW
+traeger: Städte und Landkreise in Baden-Württemberg; gebündelt von MobiData BW
+art: >-
+  Rad-Zählstellen (Zählschleifen und -säulen von Eco-Counter) der Städte und Landkreise;
+  Stundenwerte je Zählstelle, beide Richtungen zusammen
+weg: offen bei MobiData BW (Monatsdateien seit 2013)
+portal: https://mobidata-bw.de/dataset/eco-counter-fahrradzahler
+archiv_seite: https://mobidata-bw.de/fahrradzaehldaten/v2/
+monate: https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_{monat}.csv.gz
+ab: 2013-01
+nachladen_monate: 2  # so viele jüngste Monate holt jeder Lauf neu (Werte ändern sich noch)
+frisch_tage: 3  # jüngere Stunden kommen noch nicht in die Karte
+ohne:  # Zählstellen, die nicht in die Karte kommen, mit Grund
+  "100003358": >-
+    Fuß- & Radtunnel Südportal (Tübingen) – ob nur Räder gezählt sind, ist nicht erkennbar
+  "300069828": >-
+    Wilhelm-Leuschner-Straße (Heilbronn), Kamera für Fuß- und Radverkehr – ob nur Räder
+    gezählt sind, ist nicht erkennbar
+  "100037408": >-
+    „Hardware für Waiblinger-/ Taubenheimstr.“ (Stuttgart) – das Gerät der Zählstellen Waiblinger
+    Straße und Taubenheimstraße (gleiche Seriennummer), sonst doppelt in der Karte
+  "300048165": >-
+    Bad Wimpfen – Zählstelle des Regierungspräsidiums Stuttgart, also des Landes (die Karte
+    bleibt bei kommunalen Zählstellen)
+titel: >-
+  Gebündelte Daten Eco-Counter Fahrradzählstellen Baden-Württemberg (verändert: Stundenwerte zu
+  Tagessummen zusammengefasst)
+herausgeber: MobiData BW
+quellenvermerk: MobiData BW; Rad-Zählstellen der Städte und Landkreise in Baden-Württemberg
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Eco-Counter füllt Ausfälle teils rechnerisch auf („rekonstruiert“). MobiData BW kennzeichnet
+    solche Werte nicht – im älteren Format mit Status (Juni 2025) stecken sie mit drin. Die
+    Zählkarte kann sie deshalb nicht erkennen: An einzelnen Stellen kann ein Ausfall als
+    vollständig gezählter Tag erscheinen.
+  - >-
+    Je Zählstelle beide Richtungen zusammen; Kanäle für Pkw und Personen zählt MobiData BW nicht
+    mit. Nicht in der Karte: zwei Zählstellen, deren Name Fuß- und Radverkehr nennt, ein Gerät,
+    dessen Zählstellen schon einzeln darin stehen, und eine Zählstelle des Landes.
+  - >-
+    Laut Quelle können sich Aufbau und Zusammensetzung der Zählstellen ohne Ankündigung ändern;
+    Umleitungen und Baustellen beeinflussen die Werte.
+  - >-
+    Die Zählkarte übernimmt Stunden erst nach drei Tagen und prüft nur, ob jede Stunde gezählt
+    ist – nicht, ob die Werte plausibel sind.

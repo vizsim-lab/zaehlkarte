@@ -1,0 +1,102 @@
+# Ausnahmen von robots.txt für die Pipeline (AGENTS.md, „robots.txt und die Pipeline“).
+#
+# Die Pipeline holt nur, was robots.txt für ihre Kennung `zaehlkarte-pipeline` erlaubt
+# (src/zaehlkarte/abruf.py). Sperrt robots.txt den einzigen Weg zu offenen Daten, holt sie diese
+# Wege nur mit einer Ausnahme hier: je Host oder Pfad eine, gültig für die Abrufe der genannten
+# Quellen. Eine neue Ausnahme beschließt die Projektleitung. Jeder Abruf, der nur dank einer
+# Ausnahme geht, steht im Protokoll von `fetch`, `dauer fetch` und `lade`.
+#
+# urls:     URL-Anfänge (https://…/), für die die Ausnahme gilt
+# quellen:  Codes der Quellen (beider Familien), deren Abrufe sie braucht
+# grund:    warum es keinen erlaubten Weg gibt
+# seit:     Datum der Ausnahme
+# anfrage:  an – wer gefragt wird; gestellt – Datum (null: noch nicht); antwort – null oder Datum
+#           und Kern der Antwort; verzicht – statt einer Anfrage: warum keine gestellt wird.
+#           Antwort „ja“: eintragen, die Ausnahme bleibt. „Nein“: die Ausnahme löschen – die
+#           Quelle fällt beim nächsten Abruf weg, die Datenlage bekommt einen Vermerk.
+#           Entwürfe der Anfragen: Projekt-Notiz claude/anfragen-robots-2026-11.md.
+
+# Geofabrik sperrt *.osm.pbf per robots.txt für alle Robots – vermutlich gegen Crawler, die den
+# ganzen Server abgrasen. Ausnahme auf Beschluss der Projektleitung (14.11.2026): Der Abzug ist der
+# übliche Weg zu den OSM-Daten einer Stadt; Overpass war die erlaubte Alternative, aber
+# unzuverlässig (am 14.11. antwortete aus GitHub Actions nur ein Server). Hamburg: Straßennamen
+# neuer Stellen (`osm` der Quellen, Cache im Workflow). Berlin: Workflow „Berlin geokodieren“
+# (`zaehlkarte lade`, läuft nur von Hand und lädt den Abzug einmal).
+- urls: [https://download.geofabrik.de/europe/germany/]
+  quellen: [berlin, hamburg_kfz, hamburg_rad]
+  grund: >-
+    Geofabrik sperrt *.osm.pbf für alle Robots; der Abzug ist der übliche Weg zu den
+    OSM-Daten einer Stadt und wird nur einmal geladen
+  seit: 2026-11-14
+  anfrage:
+    an: Geofabrik GmbH
+    gestellt: null
+    antwort: null
+    verzicht: Beschluss der Projektleitung (14.11.2026)
+
+# Die übrigen: robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten
+# Weg zu den Daten gibt es nicht. Bis der Betreiber antwortet, holt die Pipeline nur diese URLs
+# weiter (wöchentlich bzw. monatlich) – die Projektleitung will die Quellen nicht verlieren.
+- urls:
+    - https://opendata.potsdam.de/api/explore/
+    - https://de.ftp.opendatasoft.com/potsdam/
+  quellen: [potsdam]
+  grund: >-
+    Opendatasoft sperrt /api/ und die Downloads (de.ftp.opendatasoft.com ganz); die Zählpläne
+    gibt es nur dort
+  seit: 2026-11-14
+  anfrage:
+    an: Landeshauptstadt Potsdam (Kontakt am Datensatz „Verkehrszählungen“)
+    gestellt: null
+    antwort: null
+- urls: [https://opendata.wuerzburg.de/api/explore/]
+  quellen: [wuerzburg_rad]
+  grund: >-
+    Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
+    es nur über diese Wege
+  seit: 2026-11-14
+  anfrage:
+    an: Stadt Würzburg (wws@stadt.wuerzburg.de, laut Nutzungsbedingungen des Portals)
+    gestellt: null
+    antwort: null
+- urls: [https://opendata.rhein-kreis-neuss.de/api/explore/]
+  quellen: [rhein_kreis_neuss_rad]
+  grund: >-
+    Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
+    es nur über diese Wege
+  seit: 2026-11-14
+  anfrage:
+    an: Rhein-Kreis Neuss (Open Data der Kreisverwaltung)
+    gestellt: null
+    antwort: null
+- urls: [https://open-data.dortmund.de/api/explore/]
+  quellen: [dortmund_rad]
+  grund: >-
+    Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
+    es nur über diese Wege
+  seit: 2026-11-14
+  anfrage:
+    an: Stadt Dortmund (Kontaktformular der Open-Data-Seite auf dortmund.de)
+    gestellt: null
+    antwort: null
+- urls: [https://geo.sv.rostock.de/download/opendata/radmonitore/]
+  quellen: [rostock_rad]
+  grund: >-
+    geo.sv.rostock.de sperrt alles für alle Robots (ebenso opendata-hro.de); die Dateien gibt
+    es nur dort
+  seit: 2026-11-14
+  anfrage:
+    an: Hanse- und Universitätsstadt Rostock (Herausgeber von opendata-hro.de)
+    gestellt: null
+    antwort: null
+- urls:
+    - https://gitlab.opencode.de/api/v4/projects/StadtBochum%2Fopen-data%2Fradverkehr-zaehlstellen-eco-counter/
+  quellen: [bochum_rad]
+  grund: >-
+    openCode sperrt die GitLab-API, /*/raw, Archive und git über HTTPS für alle Robots;
+    opendata.ruhr verweist für die Dateien auf genau diese Wege
+  seit: 2026-11-14
+  anfrage:
+    an: openCode (ZenDiS GmbH, info@opencode.de), Kopie an die Stadt Bochum
+    gestellt: null
+    antwort: null

@@ -1,0 +1,94 @@
+# Datenlage Sachsen – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: Leipzig
+  land: SN
+  lon: 12.3731
+  lat: 51.3397
+  stand: abgelehnt
+  dauer:
+    stand: in_karte
+    was: >-
+      Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS – die
+      Zählkarte hebt sie selbst auf, in der Karte seit November 2026; Tageswerte zweier Jahre ohne
+      Stunden. Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten
+    links:
+      - ["Radverkehr: Stundenwerte der letzten 31 Tage", "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei"]
+      - ["Radverkehr: Standorte", "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-stationen-stadt-leipzig"]
+  was: >-
+    50–100 Zählungen im Jahr, seit 2022 als Tabellen der Büros; nur Karten online. 2023 abgelehnt
+    – aber nur der Export aus der Karte. Besser nach den gelieferten Zählauswertungen fragen.
+  situation: >-
+    Leipzig zählt 50–100-mal im Jahr; seit 2022 liefern die beauftragten Büros Tabellen. Online
+    gibt es nur die Verkehrsmengenkarte. Eine Anfrage 2023 nach den Daten der Karte wurde
+    abgelehnt, weil es keinen Export gibt; eine Anfrage 2020 wurde wegen Kosten zurückgezogen.
+  empfehlung: >-
+    Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den
+    eigenen Zählungen – nicht nach einem Export der Karte. An das Verkehrs- und Tiefbauamt.
+    Grundlage: Informationsfreiheitssatzung der Stadt Leipzig und Sächsisches
+    Umweltinformationsgesetz.
+  weg: "FragDenStaat, Informationsfreiheitssatzung Leipzig / Sächsisches UIG"
+  kontakt: {name: "Verkehrs- und Tiefbauamt Leipzig", email: "vta@leipzig.de", fds: "https://fragdenstaat.de/behoerde/49250/verkehrs-und-tiefbauamt-leipzig/"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind die Zählauswertungen, die Ihnen die beauftragten Büros liefern (seit 2022 als
+    Tabellen), und Ihre eigenen Zählungen – nicht ein Export aus der Verkehrsmengenkarte.
+  links:
+    - ["FragDenStaat 2023", "https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/"]
+    - ["Informationsfreiheitssatzung (L-IZ 2021)", "https://www.l-iz.de/politik/leipzig/2021/10/evaluierungsbericht-zur-informationsfreiheitssatzung-warten-auf-das-saechsische-transparenzgesetz-417215"]
+- kommune: Dresden
+  land: SN
+  lon: 13.7373
+  lat: 51.0504
+  stand: kandidat
+  dauer:
+    stand: kandidat
+    was: >-
+      Dauerzählstellen; offen nur ihre Mittelwerte in der Verkehrsmengenkarte, nicht die
+      Zählwerte
+    links:
+      - ["Antwort AF0915/25 (18.11.2025)", "https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf"]
+  was: >-
+    Zählt an Knotenpunkten (Abbiegeströme für die Ampelplanung) und im Nebennetz, meist per Video
+    oder Radar durch städtische Mitarbeitende; offen sind nur Mittelwerte der Dauerzählstellen
+    (Verkehrsmengenkarte). Laut Antwort auf die Anfrage AF0915/25 vom 18.11.2025 bereitet die
+    Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.
+  situation: >-
+    Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene
+    Mitarbeitende. Offen sind nur Mittelwerte der Dauerzählstellen (Verkehrsmengenkarte). Laut
+    Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach
+    Kapazität.
+  empfehlung: >-
+    Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015,
+    mit Verweis auf AF0915/25. Grundlage: Sächsisches Umweltinformationsgesetz – das
+    Transparenzgesetz gilt für Kommunen nur, wenn sie es per Satzung einführen.
+  weg: "FragDenStaat, Sächsisches Umweltinformationsgesetz"
+  kontakt: {fds_suche: "Landeshauptstadt Dresden"}
+  anfrage: true
+  anfrage_zusatz: >-
+    In Ihrer Antwort auf die Anfrage AF0915/25 vom 18. November 2025 schreiben Sie, dass
+    Verkehrsdaten auf Anfrage aufbereitet und bereitgestellt werden. Gemeint sind hier die
+    Knotenpunkt- und Querschnittszählungen, nicht die Mittelwerte der Dauerzählstellen.
+  links:
+    - ["Antwort AF0915/25 (18.11.2025)", "https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf"]
+- kommune: Chemnitz
+  land: SN
+  lon: 12.9214
+  lat: 50.8322
+  stand: kandidat
+  was: >-
+    Videozählungen an Kreuzungen durch ein beauftragtes Büro (April 2025: elf Kreuzungen,
+    ganztägig); online nichts
+  situation: >-
+    Chemnitz lässt Kreuzungen per Video zählen, durch ein beauftragtes Ingenieurbüro und ganztägig –
+    im April 2025 etwa an elf Kreuzungen. Die Ergebnisse stehen nicht online.
+  empfehlung: >-
+    Anfrage nach den Zählungen seit 2015, ausdrücklich nach den Auswertungen der Büros. Grundlage:
+    Sächsisches Umweltinformationsgesetz – das Transparenzgesetz gilt für Kommunen nur per Satzung.
+  weg: "FragDenStaat, Sächsisches Umweltinformationsgesetz"
+  kontakt: {fds_suche: "Stadt Chemnitz"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind auch die Videozählungen an elf Kreuzungen vom April 2025 (Pressemitteilung vom
+    7. April 2025) und die Auswertungen, die Ihnen beauftragte Büros liefern.
+  links:
+    - ["Pressemitteilung 7.4.2025", "https://www.chemnitz.de/de/aktuell/presse/pressemitteilungen/detail/verkehrszaehlungen-im-stadtgebiet"]

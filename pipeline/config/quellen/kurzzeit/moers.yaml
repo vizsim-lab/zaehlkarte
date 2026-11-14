@@ -1,0 +1,36 @@
+nr: 7
+status: live
+adapter: moers_radar
+name: Moers
+land: NW
+traeger: Stadt Moers, Fachdienst Verkehr/Straße
+titel: Verkehrszählungen (Seitenradar-Messgeräte)
+art: >-
+  Querschnittszählungen mit Seitenradar-Messgeräten, meist zwei Tage am Stück, beide
+  Fahrspuren; Kfz je Fahrzeug, Schwerverkehr über die Fahrzeuglänge (ab 8 m)
+weg: offen auf offenesdatenportal.de (2010–2022)
+lizenz: dl-de/zero-2-0
+lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+portal: https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021
+# Metadaten aus dem DCAT-Dokument je Datensatz (die CKAN-API sperrt das Portal per robots.txt;
+# die HTML-Seite zeigt nicht alle Ressourcen), Crawl-delay 10 s
+ckan: https://www.offenesdatenportal.de
+# je Jahr ein Datensatz (Namen wie im Portal, teils nach der ersten Messung benannt)
+pakete:
+  - verkehrszahlung-kirschenallee
+  - verkehrszahlung-friedenstrabe
+  - verkehrszahlung-ackerstrabe
+  - verkehrszahlungen-2015
+  - verkehrszahlungen-2016
+  - verkehrszaehlungen-2017
+  - verkehrszahlungen-2018
+  - verkehrszahlung-in-moers-2019
+  - verkehrszahlung-in-moers-2020
+  - verkehrszahlung-in-moers-2021
+# Lage aus der Adresse der Messung (werkzeuge/geokodiere_moers.py), im Git; nicht von Hand
+geokodierung:
+  titel: Geokodierung der Messstellen (Nominatim und Overpass, OpenStreetMap)
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  herkunft_url: https://www.openstreetmap.org/copyright
+  datei: geokodierung/moers.csv

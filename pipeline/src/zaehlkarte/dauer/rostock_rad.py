@@ -10,7 +10,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
   die Zeitumstellung ist damit eindeutig). Dieselbe Viertelstunde zweimal: gleicher Wert zählt
   einmal, verschiedene gar nicht.
 - `radmonitore_standorte.json`: `id`, `bezeichnung`, `beschreibung`, Lage als Punkt (WGS84).
-- Zählstellen, die nicht in die Karte kommen, stehen mit Grund unter `ohne` in sources.yaml.
+- Zählstellen, die nicht in die Karte kommen, stehen mit Grund unter `ohne` in der Quelldatei.
 """
 
 from __future__ import annotations
@@ -42,7 +42,7 @@ class Bericht:
              + f"; doppelt mit verschiedenen Werten: {self.doppelt_verschieden}; "
              f"{self.stellen} Zählstellen; Stunden in der Karte: rad {self.stunden}"]
         if self.ohne:
-            z.append(f"nicht in der Karte (sources.yaml `ohne`): {', '.join(self.ohne)}")
+            z.append(f"nicht in der Karte (`ohne` in der Quelldatei): {', '.join(self.ohne)}")
         if self.ohne_lage:
             z.append(f"ohne Lage (nicht in der Karte): {', '.join(self.ohne_lage)}")
         return z

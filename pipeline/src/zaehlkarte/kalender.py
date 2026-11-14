@@ -1,7 +1,7 @@
 """Zähltag einordnen: Schultag, Ferien, Feiertag oder Wochenende – je Bundesland.
 
-Schulferien kommen aus `config/schulferien_<land>.csv` (Spalten von, bis, ferien,
-schuljahr, gebiet, quelle); das Land wählt die Datei (`FERIEN`), für alle 16 Länder aus den
+Schulferien kommen aus `config/kalender/ferien/<LAND>.csv` (Spalten von, bis, ferien,
+schuljahr, gebiet, quelle); das Land wählt die Datei, für alle 16 Länder aus den
 KMK-Ferienkalendern. Ein Schuljahr gilt als abgedeckt, wenn es in der Spalte `schuljahr`
 vorkommt; fehlt es, ist ein Werktag „unbekannt“ statt „Schultag“. Berlin hatte bis Sommer 1991
 getrennte Ferien für West und Ost (Spalte `gebiet`). Feiertage: `feiertage()`, ebenfalls für alle
@@ -24,17 +24,9 @@ LAENDER = ("BB", "BE", "BW", "BY", "HB", "HE", "HH", "MV", "NI", "NW", "RP", "SH
            "ST", "TH")
 # Länder, deren eigene Feiertage `feiertage()` kennt (tests/test_kalender.py hält das gleich)
 FEIERTAGE_LAENDER = frozenset(LAENDER)
-# Schulferien je Land (config/), aus den KMK-Ferienkalendern (werkzeuge/kmk_ferien.py)
-FERIEN = {
-    "BB": "schulferien_brandenburg.csv", "BE": "schulferien_berlin.csv",
-    "BW": "schulferien_baden-wuerttemberg.csv", "BY": "schulferien_bayern.csv",
-    "HB": "schulferien_bremen.csv", "HE": "schulferien_hessen.csv",
-    "HH": "schulferien_hamburg.csv", "MV": "schulferien_mecklenburg-vorpommern.csv",
-    "NI": "schulferien_niedersachsen.csv", "NW": "schulferien_nordrhein-westfalen.csv",
-    "RP": "schulferien_rheinland-pfalz.csv", "SH": "schulferien_schleswig-holstein.csv",
-    "SL": "schulferien_saarland.csv", "SN": "schulferien_sachsen.csv",
-    "ST": "schulferien_sachsen-anhalt.csv", "TH": "schulferien_thueringen.csv",
-}
+# Schulferien je Land: config/kalender/ferien/<LAND>.csv, aus den KMK-Ferienkalendern
+# (werkzeuge/kmk_ferien.py)
+FERIEN = Path("kalender", "ferien")
 
 
 @dataclass(frozen=True)
@@ -127,7 +119,7 @@ def abdeckung(config: Path, stichtag: date) -> tuple[list[str], list[str]]:
         kal = ferienkalender(land, config)
         jahre = sorted(kal.abgedeckt["alle"] | kal.abgedeckt["west"]) if kal else []
         if not jahre:
-            zeilen.append(f"Kalender {land}: keine Ferien ({FERIEN[land]})")
+            zeilen.append(f"Kalender {land}: keine Ferien ({FERIEN / land}.csv)")
             fehlt.append(land)
             continue
         z = f"Kalender {land}: {jahre[0]} – {jahre[-1]}"
@@ -140,10 +132,11 @@ def abdeckung(config: Path, stichtag: date) -> tuple[list[str], list[str]]:
 
 @cache
 def ferienkalender(land: str, config: Path) -> Ferienkalender | None:
-    """Der Ferienkalender des Landes aus `config/` (FERIEN); None, wenn die Datei fehlt – dann ist
-    jeder Werktag unbekannt (tests/test_konfiguration.py prüft, dass alle 16 da sind)."""
-    pfad = config / FERIEN[land] if land in FERIEN else None
-    return Ferienkalender.lade(pfad) if pfad and pfad.is_file() else None
+    """Der Ferienkalender des Landes (`config/kalender/ferien/<LAND>.csv`); None, wenn die Datei
+    fehlt – dann ist jeder Werktag unbekannt (tests/test_konfiguration.py prüft, dass alle 16 da
+    sind)."""
+    pfad = config / FERIEN / f"{land}.csv"
+    return Ferienkalender.lade(pfad) if land in LAENDER and pfad.is_file() else None
 
 
 def ostersonntag(jahr: int) -> date:

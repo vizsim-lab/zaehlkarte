@@ -18,6 +18,7 @@ from zaehlkarte.config import Pfade
 from zaehlkarte.dauer import readi_urbanpulse as ett
 from zaehlkarte.dauer import site
 from zaehlkarte.dauer.modell import tagessummen
+from zaehlkarte.kalender import FERIEN
 
 Q = {
     "code": "ettlingen", "name": "Ettlingen (automatische Zählstellen)", "land": "BW",
@@ -176,9 +177,9 @@ def test_site_mit_ettlingen(pfade, monkeypatch):
     ett.hole(Q, pfade)
     abgerufen(pfade, "2026-11-10T00:00:00Z")
     r = ett.lese(Q, pfade, ett.Bericht())
-    ferien = "schulferien_baden-wuerttemberg.csv"
-    shutil.copyfile(Pfade().config / ferien, pfade.config / ferien)
-    site.schreibe([(Q | {"ferien": ferien}, r)], pfade, date(2026, 11, 12))
+    (pfade.config / FERIEN).mkdir(parents=True)
+    shutil.copyfile(Pfade().config / FERIEN / "BW.csv", pfade.config / FERIEN / "BW.csv")
+    site.schreibe([(Q, r)], pfade, date(2026, 11, 12))
     index = json.loads((pfade.karte / "dauer" / "index.json").read_text())
     assert index["gruppen"] == ["kfz", "lkw"] and index["version"] == site.VERSION
     q = index["quellen"][0]

@@ -1,0 +1,26 @@
+# Datenlage Saarland – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: Saarbrücken
+  land: SL
+  lon: 6.9965
+  lat: 49.2354
+  stand: kandidat
+  was: >-
+    für den Mobilitätsplan 2040 im Jahr 2025 an rund 65 Knotenpunkten (Spitzenstunden) und
+    20 Querschnitten (24 h) gezählt, ausgewertet im Januar 2026; online nichts
+  situation: >-
+    Für den Mobilitätsplan 2040 hat Saarbrücken im Frühsommer 2025 (teils nach den Sommerferien) an
+    rund 65 Knotenpunkten in der Morgen- und Nachmittagsspitze und an 20 Querschnitten über
+    24 Stunden gezählt; die Auswertung lag im Januar 2026 vor. Die Zählwerte stehen nicht online.
+  empfehlung: >-
+    Anfrage nach den Zählungen für den Mobilitätsplan 2040 und nach älteren Zählungen. Grundlage:
+    Saarländisches Informationsfreiheitsgesetz (gilt auch für Gemeinden).
+  weg: "FragDenStaat, SIFG"
+  kontakt: {fds_suche: "Landeshauptstadt Saarbrücken"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind insbesondere die Zählungen an rund 65 Knotenpunkten und 20 Querschnitten, die 2025
+    für den Mobilitätsplan Saarbrücken 2040 erhoben wurden.
+  links:
+    - ["Mobilitätsplan 2040", "https://mobilitaetsplan.saarbruecken.de/analyse_grundlagen/verkehrserhebungen"]
+    - ["SIFG (Datenschutz Saarland)", "https://www.datenschutz.saarland.de/fileadmin/user_upload/uds/informationsfreiheit/IFG_Flyer_web.pdf"]

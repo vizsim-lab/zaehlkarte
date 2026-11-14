@@ -1,0 +1,34 @@
+# Rad-Zählstellen, erste Runde (November 2026; Konzept, Entscheidung 1). Aufbau und
+# Fallen im Adapter und in AGENTS.md.
+nr: 7
+status: live
+adapter: aachen_rad
+name: Aachen (Rad-Zählstellen)
+land: NW
+traeger: Stadt Aachen
+art: Rad-Zählstellen der Stadt; Stundenwerte je Zählstelle, Summe ihrer Richtungen
+weg: offen im Open-Data-Portal der Stadt (täglich aktualisiert)
+portal: https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen
+# Ressourcen von der Seite des Datensatzes (die CKAN-API sperrt das Portal per robots.txt,
+# ein DCAT-Dokument gibt es nicht), Crawl-delay 10 s
+ckan: https://offenedaten.aachen.de
+paket: radzaehlstellen-der-stadt-aachen
+lage:  # Korrekturen offenbarer Tippfehler im PDF der Standorte
+  "447917": {lat: 50.776281, lon: 6.080208, grund: "im PDF Länge 6.80208"}
+titel: >-
+  Radzählstellen der Stadt Aachen (verändert: Richtungen und Stundenwerte zu Tagessummen
+  zusammengefasst)
+herausgeber: Stadt Aachen
+quellenvermerk: Stadt Aachen
+lizenz: dl-de/zero-2-0
+lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+hinweise:
+  - >-
+    Je Zählstelle die Summe ihrer Richtungen; an der Hohenstaufenallee zählen die Radfahrenden
+    gegen die Fahrtrichtung mit. Fehlt ein Wert einer Richtung, ist die Stunde nicht gezählt.
+  - >-
+    Die Lage steht in einem PDF der Stadt; bei der Zählstelle Annuntiatenbach ist die Länge dort
+    offenbar vertippt (6,80208 statt 6,080208) und in der Karte korrigiert.
+  - >-
+    Die Quelle sagt nicht, ob Werte nachträglich ergänzt wurden. Die Zählkarte prüft nur, ob
+    jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

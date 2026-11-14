@@ -1,0 +1,46 @@
+nr: 1
+status: live
+adapter: berlin_zda
+name: Berlin
+land: BE
+traeger: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt (SenMVKU)
+art: manuelle Knotenstrom- und Querschnittszählungen, 15- oder 60-Minuten-Werte
+weg: zwei IFG-Anfragen auf FragDenStaat (2019 und 2025)
+# Lieferungen in Vorrangfolge: dieselbe Zählung in beiden -> die erste gilt (die neuere)
+lieferungen:
+  - code: 2019-2025
+    titel: unplausibilisierte Rohdaten Verkehrszählungen 2019–2025
+    herausgeber: SenMVKU Berlin
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    herkunft_url: https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/
+    datei: rohdaten-2019-2025.7z
+    url: https://raw.githubusercontent.com/vizsim/berlin-traffic-counts_schulwege/d09e6f06aaa84dd339a6e9ea91dfbf25b642c1a0/data/rohdaten-2019-2025.7z
+    sha256: 363ff2772c5e3a61b92b69970cd4b24881dd98c6e3876515a7ef5d1cfcd129b0
+    # Einzeln online liegen nur die Fuß- (f) und Radzählungen (r) – Liste: rohdatei_liste
+    rohdatei_url_liste:
+      f: https://vizsim.github.io/berlin-traffic-counts_schulwege/data/rohdaten-fuss-2019-2025/{datei}
+      r: https://vizsim.github.io/berlin-traffic-counts_schulwege/data/rohdaten-rad-2019-2025/{datei}
+  - code: 1990-2019
+    titel: Verkehrszähldaten 1990–2019 (IFG-Anfrage 2019)
+    herausgeber: Senatsverwaltung für Umwelt, Verkehr und Klimaschutz Berlin – Verkehrslenkung Berlin
+    lizenz: CC BY-SA 3.0 DE
+    lizenz_url: https://creativecommons.org/licenses/by-sa/3.0/de/
+    herkunft_url: https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/
+    datei: Rohdaten_Berlin_1992-2019.zip
+    url: https://raw.githubusercontent.com/vizsim/BerlinTrafficCounts/ea048c8f9bff4d454b756f8f0d2ebf91dc910e13/Rohdaten_Berlin_1992-2019.zip
+    sha256: b826001f17a0b441038ceef179102c96d42482f3e0fab224dada9c3b2f4851db
+    rohdatei_url: https://vizsim.github.io/BerlinTrafficCounts/Rohdaten_Berlin_1992-2019/{datei}
+rohdatei_liste: berlin_rohdateien_2019-2025.txt
+geokodierung:
+  titel: Geokodierung der Fuß- und Radzählungen (OSM-Straßenkreuzungen)
+  herkunft_url: https://github.com/vizsim/berlin-traffic-counts_schulwege
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  datei: geokodierung_berlin.csv
+  url: https://raw.githubusercontent.com/vizsim/berlin-traffic-counts_schulwege/d09e6f06aaa84dd339a6e9ea91dfbf25b642c1a0/pipeline/data/geokodierung.csv
+  sha256: 111e03bd6e7b6e910e176987b2d26508242c167b45b5d385bd014f8b4b566bfe
+# Ergänzung für die übrigen Zählungen (Kfz vor 2021 ohne GPS): derselbe Geocoder, gerechnet
+# vom Workflow „Berlin geokodieren“, im Git (relativ zu pipeline/). Nicht von Hand ändern.
+geokodierung_ergaenzung:
+  datei: geokodierung/berlin_ergaenzung.csv

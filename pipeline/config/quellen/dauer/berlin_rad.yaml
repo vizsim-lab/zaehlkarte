@@ -1,0 +1,30 @@
+# Rad-Zählstellen, erste Runde (November 2026; Konzept, Entscheidung 1). Aufbau und
+# Fallen im Adapter und in AGENTS.md.
+nr: 8
+status: live
+adapter: berlin_rad
+name: Berlin (Rad-Zählstellen)
+land: BE
+traeger: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt, Abt. VI – Verkehrsmanagement
+art: >-
+  Dauerzählstellen für den Radverkehr (Zählschleifen); Stundenwerte je Zählstelle, meist je
+  Richtung
+weg: offen auf berlin.de (eine Excel-Datei, einmal im Jahr ergänzt)
+portal: https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/
+datei: https://www.berlin.de/sen/uvk/_assets/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/gesamtdatei-stundenwerte.xlsx
+titel: >-
+  Radzähldaten in Berlin, Gesamtdatei Stundenwerte (verändert: Stundenwerte zu Tagessummen
+  zusammengefasst)
+herausgeber: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt
+quellenvermerk: Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt
+lizenz: dl-de/zero-2-0
+lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+hinweise:
+  - >-
+    Laut Quelle Rohdaten aus den Zählgeräten. Werte, die die Quelle farbig als rekonstruiert,
+    unplausibel oder fehlend markiert, gelten in der Karte als nicht gezählt.
+  - >-
+    Die Datei wird einmal im Jahr nach Abschluss des Zähljahres ergänzt. Zählstellen ohne Lage im
+    Blatt „Standortdaten“ (frühere Kennungen) sind nicht in der Karte.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

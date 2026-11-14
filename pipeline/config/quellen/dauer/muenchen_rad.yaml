@@ -1,0 +1,35 @@
+# Rad-Zählstellen, erste Runde (November 2026; Konzept, Entscheidung 1). Aufbau und
+# Fallen im Adapter und in AGENTS.md.
+nr: 9
+status: live
+adapter: muenchen_rad
+name: München (Rad-Zählstellen)
+land: BY
+traeger: Landeshauptstadt München
+art: >-
+  Raddauerzählstellen (Zählschleifen); 15-Minuten-Werte je Zählstelle, beide Richtungen
+  zusammen
+weg: offen im Open-Data-Portal der Stadt (Jahres- und Monatsdateien)
+portal: https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen
+# Pakete über die Suche des Portals, Ressourcen aus dem DCAT-Dokument oder der Seite des
+# Pakets (die CKAN-API sperrt das Portal per robots.txt), Crawl-delay 10 s
+ckan: https://opendata.muenchen.de
+suche: [raddauerzählstellen]
+wfs: >-
+  https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=application/json
+titel: >-
+  Daten der Raddauerzählstellen München (verändert: 15-Minuten-Werte zu Stunden und
+  Tagessummen zusammengefasst)
+herausgeber: Landeshauptstadt München
+quellenvermerk: Landeshauptstadt München
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Je Zählstelle die Summe beider Richtungen. Viertelstunden, die die Quelle ohne Wert führt
+    (Baustelle, Ausfall, Austausch), gelten als nicht gezählt.
+  - >-
+    Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+    dieser Tag gilt als nicht vollständig gezählt.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
