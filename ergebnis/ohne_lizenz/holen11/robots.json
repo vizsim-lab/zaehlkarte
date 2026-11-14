@@ -1,0 +1,3 @@
+{
+ "https://www.augsburg.de": "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
+}
