@@ -322,27 +322,27 @@ test("Datenlage: Kommunen nur mit Dauerzählstellen stehen nur bei den Dauerzäh
   const gezeigt = () => page.evaluate(async () => {
     const k = window.__app.karte;
     await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
-    return [...new Set(k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).map((f) => f.properties.kommune))].sort();
+    return [...new Set(k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).map((f) => f.properties.ags))].sort();
   });
   const { mitStand, nurDauer } = await page.evaluate(() => {
     const fs = window.__app.datenlage.features.map((f) => f.properties);
     return {
-      mitStand: fs.filter((p) => p.stand).map((p) => p.kommune).sort(),
-      nurDauer: fs.filter((p) => !p.stand).map((p) => ({ kommune: p.kommune, land: p.land, dauer: !!p.dauer })),
+      mitStand: fs.filter((p) => p.kurzzeit).map((p) => p.ags).sort(),
+      nurDauer: fs.filter((p) => !p.kurzzeit).map((p) => ({ ags: p.ags, land: p.land, dauer: !!p.dauer, stand_k: "stand_k" in p })),
     };
   });
   expect(nurDauer.length).toBeGreaterThan(0);
-  expect(nurDauer.every((x) => x.dauer)).toBe(true);
+  expect(nurDauer.every((x) => x.dauer && !x.stand_k)).toBe(true);
   // Kurzzeitzählungen: nur Kommunen mit deren Stand, die Zähler der Legende passen dazu
   await expect.poll(gezeigt, { timeout: 20000 }).toEqual(mitStand);
   const zaehler = async () => (await page.locator("#datenlage-legende .count-badge").allTextContents()).map(Number).reduce((a, b) => a + b, 0);
   expect(await zaehler()).toBe(mitStand.length);
   // Dauerzählstellen: dort stehen sie, mit ihrem Stand und ohne Anfragetext
   await page.locator('[data-familie="d"]').click();
-  const { kommune, land } = nurDauer[0];
+  const { ags, land } = nurDauer[0];
   // der Wechsel lädt erst die Dauerzählstellen (asynchron) – so lange warten, bis die Karte umgestellt ist
-  await expect.poll(gezeigt, { timeout: 20000 }).toContain(kommune);
-  await page.evaluate((k) => window.__app.zeigeDatenlage(k), kommune);
+  await expect.poll(gezeigt, { timeout: 20000 }).toContain(ags);
+  await page.evaluate((k) => window.__app.zeigeDatenlage(k), ags);
   const el = page.locator("#datenlage-detail");
   await expect(el.locator(".pop-eyebrow")).toHaveText(`Datenlage Dauerzählstellen · ${land}`);
   await expect(el.locator(".anfrage-text")).toHaveCount(0);
@@ -356,15 +356,16 @@ test("Datenlage: „hinzoomen“ wechselt auf die Verkehrsart, die die Kommune z
   await dauer(page);
   const fehler = await oeffne(page, "#f=d&t=rad.menge&dl=1");
   await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
-  // Ettlingen zählt Kfz und Lkw, kein Rad: die Karte wechselt auf Kfz (Standard, ohne t= im Link)
-  await page.evaluate(() => window.__app.zeigeDatenlage("Ettlingen"));
+  // Ettlingen zählt Kfz und Lkw, kein Rad: die Karte wechselt auf Kfz (Standard, ohne t= im Link) –
+  // welche Quellen zur Kommune gehören, sagt die Datenlage (`dauer.quellen`)
+  await page.evaluate(() => window.__app.zeigeDatenlage("08215017"));
   await page.locator("#datenlage-detail [data-hinzoomen]").click();
   await expect(page.locator('#thema-chips [data-thema="kfz"]')).toHaveClass(/is-active/);
   await expect(page).not.toHaveURL(/t=rad/);
   await expect.poll(() => page.evaluate(() => window.__app.dauerEintraege().filter((e) => e.stelle.quelle === "ettlingen").length)).toBeGreaterThan(0);
   // Hamburg zählt beides: die gewählte Verkehrsart bleibt
   await page.locator('#thema-chips [data-thema="rad"]').click();
-  await page.evaluate(() => window.__app.zeigeDatenlage("Hamburg"));
+  await page.evaluate(() => window.__app.zeigeDatenlage("02000000"));
   await page.locator("#datenlage-detail [data-hinzoomen]").click();
   await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
   await expect(page).toHaveURL(/t=rad\.menge/);
@@ -377,14 +378,18 @@ test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstell
   await expect(page.locator("#toggle-datenlage")).toBeChecked();
   const legende = page.locator("#datenlage-legende");
   await expect(legende).toContainText("vorhanden, Werte nicht offen");
-  await expect(legende).not.toContainText("nur Summen, Karten, automatisch oder abgelehnt");
+  await expect(legende).not.toContainText("nur Summen, Karten, nichts offen oder abgelehnt");
+  // eine Stand-Liste für beide Familien: Köln hat bei den Dauerzählstellen nur Summen (grau),
+  // Osnabrück Werte ohne Lizenz (orange, wie „vorhanden, Werte nicht offen“)
+  await expect(legende).toContainText("nur Summen oder Mittelwerte, nichts offen oder abgelehnt");
+  await expect(legende).toContainText("vorhanden, Werte nicht offen oder ohne Lizenz");
   expect(await page.locator("#datenlage-tip").getAttribute("data-tip")).toContain("Dauerzählstellen");
   // die Ebene zeigt nur Kommunen mit einem Stand der Dauerzählstellen, die Zähler passen dazu
   const n = await page.evaluate(async () => {
     const k = window.__app.karte;
     await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
-    const gezeigt = new Set(k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).map((f) => f.properties.kommune));
-    const mit = window.__app.datenlage.features.filter((f) => f.properties.dauer).map((f) => f.properties.kommune);
+    const gezeigt = new Set(k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).map((f) => f.properties.name));
+    const mit = window.__app.datenlage.features.filter((f) => f.properties.dauer).map((f) => f.properties.name);
     return { gezeigt: [...gezeigt].sort(), mit: mit.sort() };
   });
   expect(n.gezeigt).toEqual(n.mit);
@@ -392,8 +397,8 @@ test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstell
   const summe = (await legende.locator(".count-badge").allTextContents()).map(Number).reduce((a, b) => a + b, 0);
   expect(summe).toBe(n.mit.length);
 
-  // Ettlingen: in der Karte (Kurzzeitzählungen: nur automatische Zählungen offen)
-  await page.evaluate(() => window.__app.zeigeDatenlage("Ettlingen"));
+  // Ettlingen: in der Karte (Kurzzeitzählungen: nichts offen)
+  await page.evaluate(() => window.__app.zeigeDatenlage("08215017"));
   const el = page.locator("#datenlage-detail");
   await expect(el.locator(".pop-eyebrow")).toHaveText("Datenlage Dauerzählstellen · BW");
   await expect(el.locator(".pop-meta").first()).toHaveText("in der Karte");
@@ -405,12 +410,12 @@ test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstell
   await page.locator('[data-familie="k"]').click();
   await expect(el).toBeVisible();
   await expect(el.locator(".pop-eyebrow")).toHaveText("Datenlage · BW");
-  await expect(el.locator(".pop-meta").first()).toHaveText("automatische Zählungen offen");
-  await expect(page.locator("#datenlage-legende")).toContainText("nur Summen, Karten, automatisch oder abgelehnt");
+  await expect(el.locator(".pop-meta").first()).toHaveText("nichts offen");
+  await expect(page.locator("#datenlage-legende")).toContainText("nur Summen, Karten, nichts offen oder abgelehnt");
 
   // Kassel bei den Dauerzählstellen: Werte nicht offen – Kontakt und Belege, aber kein Anfragetext
   await page.locator('[data-familie="d"]').click();
-  await page.evaluate(() => window.__app.zeigeDatenlage("Kassel"));
+  await page.evaluate(() => window.__app.zeigeDatenlage("06611000")); // Kassel
   await expect(el.locator(".pop-meta").first()).toHaveText("vorhanden, Werte nicht offen");
   await expect(el).toContainText("Induktionsschleifen");
   await expect(el.locator('a[href^="https://fragdenstaat.de/"]').first()).toBeVisible();
@@ -418,7 +423,7 @@ test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstell
   // eine Kommune ohne Stand der Dauerzählstellen schließt sich beim Wechsel zu ihnen
   // (Xanten: nur Kurzzeitzählungen; Rostock hat seit den Radmonitoren einen Stand)
   await page.locator('[data-familie="k"]').click();
-  await page.evaluate(() => window.__app.zeigeDatenlage("Xanten"));
+  await page.evaluate(() => window.__app.zeigeDatenlage("05170052")); // Xanten
   await page.locator('[data-familie="d"]').click();
   await expect(el).toBeHidden();
   expect(fehler).toEqual([]);

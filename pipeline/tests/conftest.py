@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 import yaml
 
-from zaehlkarte import abruf, ckan
+from zaehlkarte import abruf, ckan, datenlage
 
 REPO = Path(__file__).resolve().parents[2]
 
@@ -26,7 +26,7 @@ def robots_offen(monkeypatch):
 
 def _schreibe_konfiguration(config: Path, cfg: dict) -> None:
     """Eine Konfiguration in der Gestalt von `config.konfiguration()` als Ordner schreiben: je
-    Quelle eine Datei (`nr` nach der Reihenfolge im dict), die Kommunen je Land."""
+    Quelle eine Datei (`nr` nach der Reihenfolge im dict), die Kommunen je Land (aus `ags`)."""
 
     def schreibe(pfad: Path, inhalt) -> None:
         pfad.parent.mkdir(parents=True, exist_ok=True)
@@ -36,10 +36,9 @@ def _schreibe_konfiguration(config: Path, cfg: dict) -> None:
     for schluessel, familie in (("quellen", "kurzzeit"), ("dauer", "dauer")):
         for nr, (code, q) in enumerate((cfg.get(schluessel) or {}).items(), start=1):
             schreibe(config / "quellen" / familie / f"{code}.yaml", {"nr": nr, **q})
-    land_der_quelle = {c: q.get("land") for c, q in (cfg.get("quellen") or {}).items()}
     je_land: dict[str, list[dict]] = {}
-    for e in cfg.get("datenlage") or []:
-        je_land.setdefault(e.get("land") or land_der_quelle[e["quelle"]], []).append(e)
+    for e in cfg.get("datenlage") or []:  # das Land aus dem Gemeindeschlüssel
+        je_land.setdefault(datenlage.LAND[e["ags"][:2]], []).append(e)
     for land, eintraege in je_land.items():
         schreibe(config / "kommunen" / f"{land}.yaml", eintraege)
     for name in ("recht", "anfrage_vorlage", "robots"):

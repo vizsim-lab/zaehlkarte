@@ -1,4 +1,5 @@
-// Vertrag Pipeline <-> Frontend: Felder in index.json und manifest.json, die js/ lesen.
+// Vertrag Pipeline <-> Frontend: Felder in index.json, manifest.json und datenlage.json, die js/ lesen.
+import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
 import { DAUER_VERSION } from "../../js/data/dauer.js";
 
@@ -33,6 +34,39 @@ test("index.json und manifest.json haben die erwarteten Felder", async ({ reques
   }
   expect(manifest.kriterien).toBeUndefined();
   for (const q of manifest.quellen) expect(q.lizenzen.length).toBeGreaterThan(0);
+});
+
+// Datenlage (Version 2, pipeline/src/zaehlkarte/datenlage.py): die echte Datei und die Fixture der
+// Browser-Tests (tests/web/fixtures/datenlage.json) – so kann die Fixture nicht vom Vertrag abweichen.
+test("datenlage.json hat die erwarteten Felder, die Fixture ebenso", async ({ request }) => {
+  const echt = await (await request.get("/data/datenlage.json")).json();
+  const fixture = JSON.parse(readFileSync(new URL("./fixtures/datenlage.json", import.meta.url)));
+  const KURZZEIT = ["stand", "quellen", "zaehlungen", "was", "situation", "empfehlung", "weg", "anfrage", "links"];
+  const DAUER = ["stand", "quellen", "was", "situation", "links"];
+  for (const dl of [echt, fixture]) {
+    expect(dl.version).toBe(2);
+    const staende = Object.keys(dl.stand.kurzzeit);
+    for (const namen of [dl.stand.dauer, dl.stand_en.kurzzeit, dl.stand_en.dauer]) expect(Object.keys(namen)).toEqual(staende);
+    for (const { geometry, properties: p } of dl.features) {
+      expect(geometry.coordinates).toHaveLength(2);
+      expect(p.ags).toMatch(/^(\d{5}|\d{8})$/);
+      for (const k of ["name", "land", "recht", "kontakt", "kurzzeit", "dauer"]) expect(p).toHaveProperty(k);
+      expect(p.kurzzeit || p.dauer).toBeTruthy();
+      // der Stand flach, nur wo die Familie einen Eintrag hat (Filter der Ebene: "has")
+      expect("stand_k" in p).toBe(!!p.kurzzeit);
+      expect("stand_d" in p).toBe(!!p.dauer);
+      if (p.kurzzeit) {
+        expect(Object.keys(p.kurzzeit)).toEqual(KURZZEIT);
+        expect([p.stand_k, staende.includes(p.kurzzeit.stand)]).toEqual([p.kurzzeit.stand, true]);
+      }
+      if (p.dauer) {
+        expect(Object.keys(p.dauer)).toEqual(DAUER);
+        expect([p.stand_d, staende.includes(p.dauer.stand)]).toEqual([p.dauer.stand, true]);
+      }
+    }
+  }
+  expect(fixture.stand).toEqual(echt.stand);
+  expect(fixture.stand_en).toEqual(echt.stand_en);
 });
 
 // Dauerzählstellen (eigener Bau, Release-Asset): Vertrag prüfen, wenn sie im Build liegen.

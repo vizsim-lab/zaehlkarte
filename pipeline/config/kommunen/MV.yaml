@@ -1,64 +1,65 @@
 # Datenlage Mecklenburg-Vorpommern – je Kommune ein Eintrag (Format: pipeline/config/README.md).
 
-- kommune: Rostock
-  land: MV
-  lon: 12.0991
-  lat: 54.0924
-  stand: geliefert
+- ags: "13003000"
+  name: Rostock
+  lage: [12.0991, 54.0924]
+  kontakt: {name: "Amt für Verkehrsanlagen Rostock", fds: "https://fragdenstaat.de/behoerde/15967/amt-fur-verkehrsanlagen-hro/"}
+  kurzzeit:
+    stand: geliefert
+    was: >-
+      zählt jedes Jahr rund 100 Kreuzungen von Hand; 2020 ein Register der Zählungen 2009–2019
+      (ohne Werte) und drei Beispielzählungen herausgegeben, bis 50 Zählungen kostenlos als Excel
+    situation: >-
+      Die Stadt zählt jedes Jahr an rund 100 Kreuzungen von Hand – Kfz nach Fahrzeugart, Rad dort,
+      wo Radfahrende eindeutig auf der Straße fahren, keine Fußgänger –, früh 6:30–8:30 und
+      nachmittags 15–18 Uhr in Viertelstunden je Strom. 2020 hat sie auf FragDenStaat ein Register
+      herausgegeben, welcher Knoten wann gezählt wurde (2009–2019), dazu drei Zählungen mit
+      Viertelstundenwerten (2018, 2020) – als PDF-Umwandlung und ohne Angabe, unter welchen
+      Bedingungen man sie veröffentlichen darf. Bis zu 50 Zählungen gibt sie auf eine genaue
+      Anfrage kostenlos als Excel heraus.
+    empfehlung: >-
+      Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz
+      für die Veröffentlichung. Grundlage: Informationsfreiheitsgesetz M-V; das Register von 2020
+      hilft bei der Auswahl.
+    weg: "FragDenStaat, IFG M-V"
+    anfrage:
+      zusatz: >-
+        2020 haben Sie auf FragDenStaat (Anfrage „Verkehrszählung“) ein Register Ihrer
+        Knotenpunktzählungen 2009–2019 herausgegeben und angeboten, bis zu 50 Zählungen kostenlos
+        als Excel-Dateien zu übermitteln. Ich bitte um die 50 jüngsten Knotenpunktzählungen
+        (Viertelstundenwerte je Strom und Fahrzeugart, einschließlich Rad, wo gezählt) als
+        Excel-Dateien und um die Angabe, unter welcher Lizenz ich sie veröffentlichen darf.
+    links:
+      - ["FragDenStaat 2020", "https://fragdenstaat.de/anfrage/verkehrszahlung-14/"]
+      - ["Antwortschreiben 2020", "https://fragdenstaat.de/anfrage/verkehrszahlung-14/519369/anhang/Anschreiben_konvertiert_geschwaerzt.pdf"]
   dauer:
     stand: in_karte
+    quellen: [rostock_rad]
     was: >-
       Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle seit 2012, CC0 – in der Karte als
       Dauerzählstellen
     links:
       - ["OpenData.HRO: Radmonitore", "https://www.opendata-hro.de/dataset/radmonitore"]
-  was: >-
-    zählt jedes Jahr rund 100 Kreuzungen von Hand; 2020 ein Register der Zählungen 2009–2019
-    (ohne Werte) und drei Beispielzählungen herausgegeben, bis 50 Zählungen kostenlos als Excel
-  situation: >-
-    Die Stadt zählt jedes Jahr an rund 100 Kreuzungen von Hand – Kfz nach Fahrzeugart, Rad dort,
-    wo Radfahrende eindeutig auf der Straße fahren, keine Fußgänger –, früh 6:30–8:30 und
-    nachmittags 15–18 Uhr in Viertelstunden je Strom. 2020 hat sie auf FragDenStaat ein Register
-    herausgegeben, welcher Knoten wann gezählt wurde (2009–2019), dazu drei Zählungen mit
-    Viertelstundenwerten (2018, 2020) – als PDF-Umwandlung und ohne Angabe, unter welchen
-    Bedingungen man sie veröffentlichen darf. Bis zu 50 Zählungen gibt sie auf eine genaue
-    Anfrage kostenlos als Excel heraus.
-  empfehlung: >-
-    Gezielt bis zu 50 Zählungen als Excel anfragen (am besten die jüngsten), dazu eine Lizenz
-    für die Veröffentlichung. Grundlage: Informationsfreiheitsgesetz M-V; das Register von 2020
-    hilft bei der Auswahl.
-  weg: "FragDenStaat, IFG M-V"
-  kontakt: {name: "Amt für Verkehrsanlagen Rostock", fds: "https://fragdenstaat.de/behoerde/15967/amt-fur-verkehrsanlagen-hro/"}
-  anfrage: true
-  anfrage_zusatz: >-
-    2020 haben Sie auf FragDenStaat (Anfrage „Verkehrszählung“) ein Register Ihrer
-    Knotenpunktzählungen 2009–2019 herausgegeben und angeboten, bis zu 50 Zählungen kostenlos
-    als Excel-Dateien zu übermitteln. Ich bitte um die 50 jüngsten Knotenpunktzählungen
-    (Viertelstundenwerte je Strom und Fahrzeugart, einschließlich Rad, wo gezählt) als
-    Excel-Dateien und um die Angabe, unter welcher Lizenz ich sie veröffentlichen darf.
-  links:
-    - ["FragDenStaat 2020", "https://fragdenstaat.de/anfrage/verkehrszahlung-14/"]
-    - ["Antwortschreiben 2020", "https://fragdenstaat.de/anfrage/verkehrszahlung-14/519369/anhang/Anschreiben_konvertiert_geschwaerzt.pdf"]
-- kommune: Neubrandenburg
-  land: MV
-  lon: 13.2611
-  lat: 53.5568
-  stand: kandidat
-  was: >-
-    Videozählung an 24 Stellen am 12.08.2020 (6–18 Uhr; Fahrzeuge, Rad, Fuß) für das
-    Verkehrsmodell; online nichts
-  situation: >-
-    Neubrandenburg hat am 12. August 2020 an 24 Stellen von 6 bis 18 Uhr per Video gezählt –
-    Fahrzeuge, Rad- und Fußverkehr – als Grundlage für das Verkehrsmodell; die Stadt kündigt auch
-    weitere Einzelzählungen an. Ergebnisse stehen nicht online.
-  empfehlung: >-
-    Anfrage nach der Videozählung 2020 und den Zählungen seither. Grundlage:
-    Informationsfreiheitsgesetz M-V.
-  weg: "FragDenStaat, IFG M-V"
+- ags: "13071107"
+  name: Neubrandenburg
+  lage: [13.2611, 53.5568]
   kontakt: {fds_suche: "Stadt Neubrandenburg"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Gemeint ist insbesondere die Videozählung an 24 Stellen vom 12. August 2020 (Fahrzeuge, Rad und
-    Fuß) für Ihr Verkehrsmodell.
-  links:
-    - ["Pressemitteilung 10.8.2020", "https://www.neubrandenburg.de/Quicknavigation/Startseite/Verkehrsz%C3%A4hlung-per-Kamera.php?object=tx%2C3330.5&ModID=7&FID=3330.2750.1"]
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Videozählung an 24 Stellen am 12.08.2020 (6–18 Uhr; Fahrzeuge, Rad, Fuß) für das
+      Verkehrsmodell; online nichts
+    situation: >-
+      Neubrandenburg hat am 12. August 2020 an 24 Stellen von 6 bis 18 Uhr per Video gezählt –
+      Fahrzeuge, Rad- und Fußverkehr – als Grundlage für das Verkehrsmodell; die Stadt kündigt auch
+      weitere Einzelzählungen an. Ergebnisse stehen nicht online.
+    empfehlung: >-
+      Anfrage nach der Videozählung 2020 und den Zählungen seither. Grundlage:
+      Informationsfreiheitsgesetz M-V.
+    weg: "FragDenStaat, IFG M-V"
+    anfrage:
+      zusatz: >-
+        Gemeint ist insbesondere die Videozählung an 24 Stellen vom 12. August 2020 (Fahrzeuge, Rad und
+        Fuß) für Ihr Verkehrsmodell.
+    links:
+      - ["Pressemitteilung 10.8.2020", "https://www.neubrandenburg.de/Quicknavigation/Startseite/Verkehrsz%C3%A4hlung-per-Kamera.php?object=tx%2C3330.5&ModID=7&FID=3330.2750.1"]

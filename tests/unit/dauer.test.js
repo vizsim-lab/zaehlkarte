@@ -269,7 +269,7 @@ test("amSelbenPunkt: Stellen derselben Quelle mit gleicher Lage (Richtungen eine
   assert.deepEqual(ids("berlin_viz:TE001"), ["berlin_viz:TE001"]);
 });
 
-test("Verkehrsart für eine Kommune: was sie zählt, ohne eigene Quelle die nächste Stelle", () => {
+test("Verkehrsart für eine Kommune: was ihre Quellen zählen (aus der Datenlage, kein Namensabgleich)", () => {
   const e = entpackeDauer({
     ...INDEX,
     gruppen: ["kfz", "lkw", "rad"],
@@ -287,10 +287,11 @@ test("Verkehrsart für eine Kommune: was sie zählt, ohne eigene Quelle die näc
       ],
     },
   });
-  assert.equal(themaFuerKommune(e, "Leipzig", 12.373, 51.34, "kfz"), "rad"); // zählt nur Rad
-  assert.equal(themaFuerKommune(e, "Leipzig", 12.373, 51.34, "rad"), "rad");
-  assert.equal(themaFuerKommune(e, "Ettlingen", 8.408, 48.941, "rad"), "kfz"); // Rad aus Karlsruhe zählt nicht
-  assert.equal(themaFuerKommune(e, "Ettlingen", 8.408, 48.941, "sv"), "sv"); // Lkw: im Thema Lkw/Schwerverkehr
-  assert.equal(themaFuerKommune(e, "Karlsruhe", 8.404, 49.009, "kfz"), "rad"); // nächste Stelle: MobiData
-  assert.equal(themaFuerKommune(e, "Kiel", 10.13, 54.32, "kfz"), "kfz"); // nichts im Umkreis: bleibt
+  assert.equal(themaFuerKommune(e, ["leipzig_rad"], "kfz"), "rad"); // zählt nur Rad
+  assert.equal(themaFuerKommune(e, ["leipzig_rad"], "rad"), "rad");
+  assert.equal(themaFuerKommune(e, ["ettlingen"], "rad"), "kfz"); // Rad aus Karlsruhe zählt nicht
+  assert.equal(themaFuerKommune(e, ["ettlingen"], "sv"), "sv"); // Lkw: im Thema Lkw/Schwerverkehr
+  assert.equal(themaFuerKommune(e, ["mobidata_rad"], "kfz"), "rad"); // Karlsruhe: im Bündel MobiData BW
+  assert.equal(themaFuerKommune(e, [], "kfz"), "kfz"); // keine Quelle (Kiel): bleibt
+  assert.equal(themaFuerKommune(e, undefined, "rad"), "rad");
 });

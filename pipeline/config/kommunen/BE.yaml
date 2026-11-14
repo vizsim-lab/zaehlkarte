@@ -1,10 +1,19 @@
 # Datenlage Berlin – je Kommune ein Eintrag (Format: pipeline/config/README.md).
 
-- kommune: Berlin
-  quelle: berlin
-  stand: in_karte
-  dauer:  # Datenlage der Dauerzählstellen (Stand: in_karte | offen | kandidat)
+- ags: "11000000"
+  name: Berlin
+  lage: [13.38979, 52.5076]
+  kurzzeit:
     stand: in_karte
+    quellen: [berlin]
+    was: >-
+      rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter
+    links:
+      - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/"]
+      - ["FragDenStaat 2019", "https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/"]
+  dauer:
+    stand: in_karte
+    quellen: [berlin_viz, berlin_rad]
     was: >-
       Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 2025 (Kfz und
       Lkw laut Detektor); dazu die Rad-Zählstellen der Senatsverwaltung, Stundenwerte 2012–2025 –
@@ -13,8 +22,3 @@
       - ["Verkehrsdetektion Berlin (Datensatz)", "https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin"]
       - ["Archiv der Verkehrsdetektion", "https://api.viz.berlin.de/daten/verkehrsdetektion"]
       - ["Rad-Zählstellen (Senatsverwaltung)", "https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/"]
-  was: >-
-    rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter
-  links:
-    - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/"]
-    - ["FragDenStaat 2019", "https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/"]

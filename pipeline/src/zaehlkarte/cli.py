@@ -113,8 +113,10 @@ def kalender(
 def datenlage(datum: Datum = None) -> None:
     """Nur datenlage.json und docs/DATENLAGE.md erneuern (aus config/kommunen/ und der vorhandenen
     index.json) – für geänderte Datenlage-Texte ohne neuen Bau."""
+    from zaehlkarte import datenlage as datenlage_
+
     erzeugt = date.fromisoformat(datum) if datum else None
-    for pfad in site_.schreibe_datenlage(erzeugt=erzeugt):
+    for pfad in datenlage_.schreibe(erzeugt=erzeugt):
         typer.echo(f"{pfad}: {pfad.stat().st_size // 1024} KB")
 
 

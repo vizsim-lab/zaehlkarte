@@ -8,40 +8,34 @@ import { gruppenName, kennzahlTextDauer, tagtyp } from "../data/dauer.js";
 import { datum, lokal, t, wochentag, zahl } from "../sprache/texte.js";
 
 const LEER = { type: "FeatureCollection", features: [] };
-export const DATENLAGE_FARBEN = {
-  in_karte: "#2a78d6",
-  offen: "#1baf7a",
-  geliefert: "#1baf7a",
-  kandidat: "#eb6834",
-};
 export const DATENLAGE_GRAU = "#9ca3af";
-const klasse = (id, farbe, stand, texte = "datenlage.klasse") => ({ id, farbe, stand, get name() { return t(`${texte}.${id}`); } });
-export const DATENLAGE_KLASSEN = [
-  klasse("in_karte", "#2a78d6", ["in_karte"]),
-  klasse("offen", "#1baf7a", ["offen", "geliefert"]),
-  klasse("kandidat", "#eb6834", ["kandidat"]),
-  klasse("sonst", DATENLAGE_GRAU, ["aggregiert", "nur_karte", "automatisch", "abgelehnt"]),
+const klasse = (id, farbe, stand, texte) => ({ id, farbe, stand, get name() { return t(`${texte}.${id}`); } });
+// Eine Liste von Ständen für beide Familien (datenlage.json, pipeline/src/zaehlkarte/datenlage.py);
+// die Karte fasst sie je Familie in vier Farben zusammen – die Namen der Klassen je Familie
+const klassen = (texte) => [
+  klasse("in_karte", "#2a78d6", ["in_karte"], texte),
+  klasse("offen", "#1baf7a", ["offen", "geliefert"], texte),
+  klasse("kandidat", "#eb6834", ["kandidat", "ohne_lizenz"], texte),
+  klasse("sonst", DATENLAGE_GRAU, ["aggregiert", "nur_karte", "nichts_offen", "abgelehnt"], texte),
 ];
-// Dauerzählstellen: eigener Stand je Kommune (`dauer` in datenlage.json, aus config/kommunen/) – die
-// Ebene zeigt dann nur die Kommunen mit einem solchen Eintrag
-export const DATENLAGE_KLASSEN_D = [
-  klasse("in_karte", "#2a78d6", ["in_karte"], "datenlage.d.klasse"),
-  klasse("offen", "#1baf7a", ["offen"], "datenlage.d.klasse"),
-  klasse("kandidat", "#eb6834", ["kandidat"], "datenlage.d.klasse"),
-];
+export const DATENLAGE_KLASSEN = klassen("datenlage.klasse");
+// Dauerzählstellen: eigener Stand je Kommune – die Ebene zeigt dann nur Kommunen mit einem solchen
+export const DATENLAGE_KLASSEN_D = klassen("datenlage.d.klasse");
 /** Klassen der Datenlage der Familie (k Kurzzeitzählungen | d Dauerzählstellen). */
 export const datenlageKlassen = (familie) => (familie === "d" ? DATENLAGE_KLASSEN_D : DATENLAGE_KLASSEN);
-/** Stand einer Kommune in der Familie (Dauerzählstellen: `dauer_stand`, null ohne Eintrag). */
-export const datenlageStand = (p, familie) => (familie === "d" ? (p.dauer_stand ?? null) : p.stand);
+/** Stand einer Kommune in der Familie (flach: `stand_k`, `stand_d`; null ohne Eintrag). */
+export const datenlageStand = (p, familie) => (familie === "d" ? p.stand_d : p.stand_k) ?? null;
+/** Block einer Kommune in der Familie (`kurzzeit` bzw. `dauer`; null ohne Eintrag). */
+export const datenlageBlock = (p, familie) => (familie === "d" ? p.dauer : p.kurzzeit) ?? null;
 
-/** Bezeichnung eines Datenlage-Stands in der gewählten Sprache (manifest.stand bzw. stand_en). */
-export const standText = (manifest, code) => lokal(manifest, "stand")?.[code] ?? manifest.stand?.[code] ?? code;
-/** Dasselbe für die Dauerzählstellen (Texte der Oberfläche, wie DAUER_STAND in site.py). */
-export const standTextDauer = (code) => t(`datenlage.d.klasse.${code}`);
+/** Name eines Stands in der Familie und der gewählten Sprache (datenlage.stand bzw. stand_en). */
+export const standText = (datenlage, code, familie) =>
+  lokal(datenlage, "stand")?.[familie === "d" ? "dauer" : "kurzzeit"]?.[code] ?? code;
 
-// Farbe der Datenlage je Familie: Stand der Kurzzeitzählungen (`stand`) bzw. der Dauerzählstellen
-const FARBE_K = ["match", ["get", "stand"], ...Object.entries(DATENLAGE_FARBEN).flat(), DATENLAGE_GRAU];
-const FARBE_D = ["match", ["get", "dauer_stand"], ...DATENLAGE_KLASSEN_D.flatMap((k) => [k.stand, k.farbe]), DATENLAGE_GRAU];
+// Farbe der Datenlage je Familie: der flache Stand der Familie, Farbe seiner Klasse
+const farbe = (feld, kl) => ["match", ["get", feld], ...kl.flatMap((k) => [k.stand, k.farbe]), DATENLAGE_GRAU];
+const FARBE_K = farbe("stand_k", DATENLAGE_KLASSEN);
+const FARBE_D = farbe("stand_d", DATENLAGE_KLASSEN_D);
 
 export function fuegeEbenenHinzu(map, datenlage) {
   map.addSource("stellen", { type: "geojson", data: LEER });
@@ -119,7 +113,7 @@ export function fuegeEbenenHinzu(map, datenlage) {
     minzoom: 5,
     maxzoom: 10,
     layout: {
-      "text-field": ["get", "kommune"],
+      "text-field": ["get", "name"],
       "text-font": ["Noto Sans Regular"],
       "text-size": 11,
       "text-anchor": "top",
@@ -156,7 +150,7 @@ export function setzeDatenlage(map, sichtbar, familie = "k") {
   for (const id of ["datenlage-kreis", "datenlage-text"]) {
     if (!map.getLayer(id)) continue;
     map.setLayoutProperty(id, "visibility", sichtbar ? "visible" : "none");
-    map.setFilter(id, ["has", familie === "d" ? "dauer_stand" : "stand"]);
+    map.setFilter(id, ["has", familie === "d" ? "stand_d" : "stand_k"]);
   }
   if (map.getLayer("datenlage-kreis")) map.setPaintProperty("datenlage-kreis", "circle-color", familie === "d" ? FARBE_D : FARBE_K);
 }
@@ -164,7 +158,7 @@ export function setzeDatenlage(map, sichtbar, familie = "k") {
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
 /** EIN Hover-Popup für Zählstellen, Dauerzählstellen und Datenlage (wie in der Unfallkarte). */
-export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag, gibDauer }) {
+export function bindeHover(map, { daten, manifest, datenlage, gibZustand, gibEintrag, gibDauer }) {
   const popup = new Popup({ closeButton: false, closeOnClick: false, maxWidth: "280px", offset: 10 });
   const ebenen = ["stellen-kreis", "dauer-kreis", "datenlage-kreis"];
   map.on("mousemove", (e) => {
@@ -194,10 +188,10 @@ export function bindeHover(map, { daten, manifest, gibZustand, gibEintrag, gibDa
         <div class="pop-pinhint">${esc(t("hover.dauer_details"))}</div>`;
     } else if (f.layer.id === "datenlage-kreis") {
       const p = f.properties;
-      const dauer = gibZustand().familie === "d";
-      html = `<div class="pop-eyebrow">${esc(t(dauer ? "hover.datenlage_d" : "hover.datenlage", { land: p.land ?? "" }))}</div>
-        <div class="pop-title">${esc(p.kommune)}</div>
-        <div class="pop-meta">${esc(dauer ? standTextDauer(p.dauer_stand) : standText(manifest, p.stand))}</div>
+      const familie = gibZustand().familie;
+      html = `<div class="pop-eyebrow">${esc(t(familie === "d" ? "hover.datenlage_d" : "hover.datenlage", { land: p.land ?? "" }))}</div>
+        <div class="pop-title">${esc(p.name)}</div>
+        <div class="pop-meta">${esc(standText(datenlage, datenlageStand(p, familie), familie))}</div>
         <div class="pinhint pop-pinhint">${esc(t("hover.belege"))}</div>`;
     } else {
       const z = gibZustand();
