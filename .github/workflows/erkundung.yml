@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [lesen3]
+        teil: [lesen4]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
@@ -24,6 +24,7 @@ jobs:
           case "${{ matrix.teil }}" in
             lesen) timeout 52m python3 tools/hessen2.py ergebnis/hessen2 || true ;;
             lesen3) timeout 52m python3 tools/hessen2.py ergebnis/hessen3 tools/hessen3_seiten.txt nur_seiten || true ;;
+            lesen4) timeout 52m python3 tools/hessen2.py ergebnis/hessen4 tools/hessen4_seiten.txt nur_seiten || true ;;
             *) timeout 52m python3 tools/hessen.py ergebnis/hessen ${{ matrix.teil }} || true ;;
           esac
       - if: always()

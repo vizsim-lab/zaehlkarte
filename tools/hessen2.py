@@ -148,6 +148,10 @@ def lies(kommune, url, tiefe=0):
         p = ZIEL / "dateien" / dateiname(url, ".pdf")
         p.write_bytes(inhalt)
         return erg | {"datei": p.name, "text": pdf_text(p)}
+    if "json" in typ:
+        p = ZIEL / "dateien" / dateiname(url, ".json")
+        p.write_bytes(inhalt)
+        return erg | {"datei": p.name, "text": inhalt.decode("utf-8", "replace")[:30000]}
     if any(x in typ for x in ("spreadsheet", "excel", "csv", "zip", "octet-stream")) or re.search(
             r"\.(xlsx?|csv|zip)(\?|$)", url, re.I):
         endung = (re.search(r"\.(xlsx?|csv|zip)", url, re.I) or re.search(r"(csv|zip)", typ) or [None, "bin"])[1]
