@@ -43,22 +43,59 @@ Datei am falschen Ort liegt.
 
 ## Kommunen (Datenlage)
 
-Was es außerhalb der Karte gibt – je Kommune ein Punkt mit Stand und Belegen. Die Länder stehen in
-`datenlage.json` nach Kürzel, darin die Kommunen in der Reihenfolge der Datei. Neue Hinweise kommen
-über das Issue-Formular „Zählung melden“.
+Was es gibt, auch außerhalb der Karte – je Kommune ein Punkt, je Familie ein Stand mit Text und
+Belegen. Gelesen von `src/zaehlkarte/datenlage.py` (datenlage.json, docs/DATENLAGE.md). Die Länder
+stehen in `datenlage.json` nach Kürzel, darin die Kommunen in der Reihenfolge der Datei. Neue
+Hinweise kommen über das Issue-Formular „Zählung melden“.
 
-- `kommune`, dazu `quelle` (dann liegt sie in der Karte; Land und Punkt kommen aus der Quelle und
-  ihren Zählstellen) oder `land`, `lon`, `lat`.
-- `stand` der Kurzzeitzählungen: `in_karte` | `offen` | `geliefert` | `kandidat` | `aggregiert` |
-  `nur_karte` | `automatisch` | `abgelehnt`. Kommunen, von denen nur Dauerzählstellen bekannt
-  sind, haben keinen `stand` – die Karte zeigt sie nur bei den Dauerzählstellen.
-- `was`, `situation`, `empfehlung`, `weg`, `links` (`[Titel, URL]`); rechtliche Aussagen nur mit
-  Beleg.
-- `kontakt` (nur Funktionsadressen aus der Behördendatenbank von FragDenStaat), `anfrage: true`,
-  `anfrage_zusatz`, `anfrage_an` (die angefragte Stelle, wo es keine Stadt ist, etwa
-  „Gemeinde Mühltal“).
-- `dauer:` – Datenlage der Dauerzählstellen: `stand` (`in_karte` | `offen` | `kandidat`), `was`,
-  `situation`, `links`.
+```yaml
+- ags: "05913000"              # amtlicher Gemeindeschlüssel, bei Kreisen der Kreisschlüssel (5 Ziffern)
+  name: Dortmund
+  lage: [7.4653, 51.5136]      # [Länge, Breite] – der Punkt in der Karte
+  kontakt: {fds_suche: "Stadt Dortmund"}
+  kurzzeit:                    # Kurzzeitzählungen (Knotenpunkte, Querschnitte)
+    stand: aggregiert
+    was: >-
+      …
+    situation: >-
+      …
+    empfehlung: >-
+      …
+    weg: "FragDenStaat, IFG NRW"
+    anfrage: {zusatz: …}       # Anfragetext aus der Vorlage; `an`, wo es keine Stadt ist
+    links:
+      - [Titel, URL]
+  dauer:                       # Dauerzählstellen
+    stand: in_karte
+    quellen: [dortmund_rad]
+    was: >-
+      …
+    links:
+      - [Titel, URL]
+```
+
+- **`ags`:** der Schlüssel der Kommune – eindeutig, aus dem Gemeindeverzeichnis des Statistischen
+  Bundesamts (GV-ISys); die ersten beiden Ziffern sind das Land, die Datei muss dazu passen. Namen
+  sind bundesweit nicht eindeutig. Regionale Feiertage ließen sich später über ihn zuordnen.
+- **Blöcke je Familie:** `kurzzeit` und `dauer` sind beide optional, mindestens einer ist da. Die
+  Karte zeigt je Familie nur Kommunen mit deren Block – Kommunen, von denen nur Dauerzählstellen
+  bekannt sind, haben keinen Block `kurzzeit`.
+- **`stand`:** eine Liste für beide Familien (`datenlage.STAND`): `in_karte` | `offen` |
+  `geliefert` | `kandidat` | `ohne_lizenz` (Werte da, aber ohne Lizenz) | `aggregiert` (nur
+  Summen oder Mittelwerte) | `nur_karte` | `abgelehnt` | `nichts_offen`. Die Karte fasst sie in
+  vier Farben zusammen.
+- **`quellen`:** die Quellen der Familie, die die Kommune in die Karte bringen – genau dann, wenn
+  `stand: in_karte`. Jede Kurzzeit-Quelle gehört zu genau einer Kommune, eine Dauer-Quelle zu
+  mindestens einer (Bündel wie MobiData BW zu mehreren). Die Karte findet so die Quellen einer
+  Kommune („hinzoomen“) ohne Abgleich über den Namen.
+- **Texte:** `was` (kurz), `situation` (die Lage ausführlich), `links` (`[Titel, URL]`);
+  rechtliche Aussagen nur mit Beleg. Bei den Kurzzeitzählungen außerhalb der Karte dazu
+  `empfehlung` und `weg`.
+- **`kontakt`:** nur Funktionsadressen aus der Behördendatenbank von FragDenStaat (`name`,
+  `email`, `fds`) oder `fds_suche` (Link zur Suche dort).
+- **`anfrage`:** nur bei den Kurzzeitzählungen; der Text kommt aus `anfrage_vorlage.yaml`, mit
+  `zusatz` (eigener Absatz) und `an` (die angefragte Stelle, wo es keine Stadt ist, etwa
+  „Gemeinde Mühltal“). Eine Anfrage braucht einen Kontakt.
 
 ## Ferien
 

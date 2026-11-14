@@ -58,6 +58,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `kennzahlen.py` | Summen je Zeitfenster, stärkste Stunde |
 | `build.py` | Lage übertragen, Stellen bilden |
 | `site.py` | Kartendaten (Vertrag mit dem Frontend, Kopfkommentar) |
+| `datenlage.py` | Datenlage je Kommune: datenlage.json (Vertrag Version 2, Kopfkommentar) und docs/DATENLAGE.md, eine Liste von Ständen für beide Familien |
 | `dauer/modell.py` | Dauerzählstellen: Messreihe (Stelle × Tag × Stunde), Tagessummen, Zeitumstellung |
 | `dauer/berlin_viz.py` | Berlin: Verkehrsdetektion, alte und neue Qualitätssicherung, Stammdaten |
 | `dauer/hamburg_sta.py` | Hamburg: Wärmebildkameras über SensorThings, Gedächtnis (Monatsdateien), UTC -> Ortszeit |
