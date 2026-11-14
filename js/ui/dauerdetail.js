@@ -113,6 +113,11 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const typen = kal.slice(ab, ab + werte.length);
     const gewaehlt = tageZwischen(reiheVon, tag);
     const tr = tagesreihe(werte, typen, reiheVon, gewaehlt);
+    // Tageswerte der Quelle (ohne Stunden): bis zu welchem Tag die Reihe aus ihnen besteht
+    const twBis = detail.tageswerte_bis?.[g];
+    const reiheBis = plusTage(detail.von, letzter);
+    const twHinweis = twBis && twBis >= reiheVon
+      ? t(twBis >= reiheBis ? "dd.reihe_tw_alle" : "dd.reihe_tw", { datum: datum(twBis) }) : null;
     const reihe = tr.svg ? `
       <div class="detail-abschnitt">${esc(t("dd.reihe", { gruppe: gruppenName(g), zeitraum: zeitraumText(reiheVon, plusTage(detail.von, letzter)) }))}</div>
       <div class="tr-wrap">${tr.svg}<div class="tg-tooltip" hidden></div></div>
@@ -121,7 +126,8 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
         <span><i style="background:${TR_FARBEN.f}"></i>${esc(TAGE.f)}</span>
         <span><i style="background:${TR_FARBEN.w}"></i>${esc(t("dd.legende.w"))}</span>
       </div>
-      <div class="pop-meta">${esc(t("dd.reihe_hinweis"))}</div>` : "";
+      <div class="pop-meta">${esc(t("dd.reihe_hinweis"))}</div>
+      ${twHinweis ? `<div class="pop-meta dd-tw">${esc(twHinweis)}</div>` : ""}` : "";
 
     // der gewählte Tag
     const typ = tagtyp(d, q?.land, tag);
@@ -135,12 +141,17 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
         .filter((r) => r.stunden);
       const tg = reihen.length ? tagesgang(reihen) : null;
       const soll = stundenDesTags(tag);
-      const zeilen = gruppen.map((x) => {
-        const { wert, stunden } = tagAusDetail(detail, x, tag);
+      const tage = gruppen.map((x) => ({ x, ...tagAusDetail(detail, x, tag) }));
+      const zeilen = tage.map(({ x, wert, stunden }) => {
         const text = wert != null ? zahl(wert) : t(stunden ? "dd.unvollstaendig" : "dd.nicht_gezaehlt", { n: zahl(stunden), soll });
         return `<tr><td>${esc(gruppenName(x))}</td><td${wert == null ? ' class="is-leer"' : ""}>${esc(text)}</td></tr>`;
       }).join("");
+      // Tageswerte der Quelle: keine Stunden, Vollständigkeit nicht prüfbar
+      const mitWert = tage.filter((x) => x.wert != null);
+      const tw = mitWert.some((x) => x.tw);
+      const kopfSpalte = tw && mitWert.every((x) => x.tw) ? t("dd.tageswert_kopf") : t("dd.summe");
       const hinweise = [
+        tw ? t("dd.tageswert") : null,
         detail.doppelt?.includes(tag) ? t("dd.doppelt") : null,
         soll === 23 ? t("dd.sommerzeit") : null,
       ].filter(Boolean);
@@ -148,8 +159,8 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
         ${tg ? `<div class="tg-wrap">${tg.svg}<div class="tg-tooltip" hidden></div></div>
           ${reihen.length > 1 ? `<div class="tg-legende">${reihen.map((r) => `<span><i style="background:${r.farbe}"></i>${esc(r.name)}</span>`).join("")}</div>` : ""}
           <div class="pop-meta">${esc(t("dd.stunden"))}</div>`
-        : `<div class="pop-meta">${esc(t("dd.ohne_stunden", { datum: datum(detail.stunden_von) }))}</div>`}
-        <table class="pop-table detail-kennwerte"><thead><tr><td></td><td>${esc(t("dd.summe"))}</td></tr></thead><tbody>${zeilen}</tbody></table>
+        : `<div class="pop-meta">${esc(tw ? t("dd.nur_tageswert") : t("dd.ohne_stunden", { datum: datum(detail.stunden_von) }))}</div>`}
+        <table class="pop-table detail-kennwerte"><thead><tr><td></td><td>${esc(kopfSpalte)}</td></tr></thead><tbody>${zeilen}</tbody></table>
         ${hinweise.map((h) => `<div class="pop-meta">${esc(h)}</div>`).join("")}`;
       if (tg) stunden = { reihen, tg };
     }
@@ -282,12 +293,16 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     const d = gibDauer();
     const q = quelle(d);
     const gruppen = DAUER_GRUPPEN.filter((x) => detail.tage[x]);
-    const zeilen = [["datum", "tagtyp", ...gruppen.flatMap((x) => [`${x}_tagessumme`, `${x}_gezaehlte_stunden`])].join(";")];
+    // je Gruppe: Tagessumme (alle Stunden gezählt), gezählte Stunden und Tageswert der Quelle
+    const zeilen = [["datum", "tagtyp", ...gruppen.flatMap((x) => [`${x}_tagessumme`, `${x}_gezaehlte_stunden`, `${x}_tageswert_quelle`])].join(";")];
     const n = detail.tage[gruppen[0]]?.length ?? 0;
     for (let i = 0; i < n; i += 1) {
       const iso = plusTage(detail.von, i);
       zeilen.push([iso, t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"),
-        ...gruppen.flatMap((x) => [detail.tage[x][i] ?? "", detail.n?.[x]?.[i] ?? 0])].join(";"));
+        ...gruppen.flatMap((x) => {
+          const { wert, stunden, tw } = tagAusDetail(detail, x, iso);
+          return tw ? ["", stunden, wert] : [wert ?? "", stunden, ""];
+        })].join(";"));
     }
     zeilen.push("", quellzeile());
     lade(`${zeilen.join("\n")}\n`, `dauerzaehlstelle_${detail.kennung}_tage.csv`);

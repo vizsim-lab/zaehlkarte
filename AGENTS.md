@@ -15,10 +15,10 @@ wer zählt (Beschluss der Projektleitung, 14.11.2026: „ich will gerne alle Zä
 nur in Abgrenzung zum svz Projekt sein“): Kommunen, Kreise, Länder, der Bund (BASt), gemeinsame
 Plattformen wie die VMZ Niedersachsen. Bis dahin galten nur kommunale Zählstellen; was unten
 unter „Nicht kommunal“ steht, ist seitdem Kandidat. Ebenso Quellen mit nur Tageswerten je Stelle
-und Datum (in der Datenlage bisher „nur Summen“, etwa Augsburgs Radzählstationen oder Planegg):
-ihr Tageswert gilt wie geliefert – dafür braucht das Modell der Dauerzählstellen noch einen Weg
-ohne Stunden. Ohne Lizenz nur, was eine öffentliche Stelle veröffentlicht oder herausgegeben hat
-(CLAUDE.md, „Quellen ohne Lizenz“).
+und Datum (in der Datenlage bisher „nur Summen“, etwa Planegg): ihr Tageswert gilt wie geliefert –
+im Modell der Dauerzählstellen als Tageswert der Quelle (unten, „Tageswerte der Quelle“; zuerst
+Augsburgs Radzählstationen). Ohne Lizenz nur, was eine öffentliche Stelle veröffentlicht oder
+herausgegeben hat (CLAUDE.md, „Quellen ohne Lizenz“).
 
 Nicht gemeint: Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür
 `vizsim/svz`. Prüffrage: Ein Wert je Stelle und Jahr → svz; Werte je Intervall oder Tag →
@@ -568,6 +568,19 @@ robots.txt für alle Robots sperrt. Seitdem:
 
 ## Dauerzählstellen (November 2026)
 
+- **Tageswerte der Quelle (seit November 2026, Vertrag 4):** Liefert eine Quelle für eine Stelle
+  nur Tageswerte, legt der Adapter sie mit `modell.setze_tage` in `Messreihe.tageswerte` (Gruppe
+  in `Messreihe.leer(…, tagesgruppen=…)`). `tagessummen` nimmt sie nur an Tagen vor der ersten
+  gezählten Stunde der Stelle in der Gruppe – Quellen ganz ohne Stunden und die Zeit, bevor eine
+  Quelle Stunden liefert; ab dann zählen allein die Stunden (ein Tag mit fehlender Stunde wird nie
+  mit einem Tageswert gefüllt). In den Kartendaten `tageswerte_bis` je Gruppe und Stelle (bis zu
+  diesem Tag ist ein Wert der Tageswert der Quelle), je Quelle `tageswerte`; die Karte schreibt
+  „Tageswert der Quelle“ (Hover, Seitenleiste, Hinweis in der Legende), das CSV hat je Gruppe die
+  Spalte `<gruppe>_tageswert_quelle` neben `<gruppe>_tagessumme`. Nie aus Wochen-, Monats- oder
+  Jahreswerten. Kandidaten: Hamburgs Layer „1-Tag“ (laufendes und letztes Jahr, vor dem
+  Gedächtnis), Leipzigs Tageswerte (zwei Jahre; die Stelle Jahnallee hat nur sie), Würzburgs
+  Passanten-Tagesdaten seit 2020, Planegg (Excel je Jahr, ohne Lizenz). Weichen die Tageswerte
+  einer Quelle von der Summe ihrer Stunden ab (Leipzig), steht das als Hinweis an der Quelle.
 - **Berlin (in der Karte, `berlin_viz`):** öffentlicher Azure-Container
   `https://mdhopendata.blob.core.windows.net/verkehrsdetektion`, Liste per
   `?restype=container&comp=list` (Content-MD5 je Datei; `fetch` lädt nur Geändertes). Aus
@@ -875,6 +888,18 @@ robots.txt für alle Robots sperrt. Seitdem:
     der Stadt 2022–2025) und biegt dort in die Langemarckstraße – in der Karte die Mitte dieses
     Abschnitts, mit Hinweis „Lage ungefähr“. Die genaue Lage weiß die Stadt (Funktionsadresse
     opendata@stadt.neuss.de laut Portal).
+  - **Augsburg, Radzählstationen** (`augsburg_rad`, Stadt Augsburg, Radverkehrsbeauftragter, CC BY
+    4.0 laut Mobilithek, Angebot `-4859503742463304999`; die erste Quelle nur mit Tageswerten):
+    eine CSV auf augsburg.de (`…/Smart_City/opendata/fahrradzaehler_augsburg-seit-start.csv`).
+    Zeile 1 „Zeitraum,16. September 2016 - 11. August 2026“, dann der Kopf – nicht gequotet, „Südlich
+    A8-Unterführung, Ostseite“ zerfällt an seinem Komma: Die Quelldatei nennt die zwölf Stationen in
+    der Reihenfolge der Spalten, der Kopf muss genau passen. Je Tag eine Zeile, leer = nicht
+    gezählt. Der letzte Tag ist der Tag der Erstellung, nur zum Teil gezählt (11.08.2026: 3 bis 556)
+    → nicht übernommen. Die Datei endet am 11.08.2026 (wie die Annastraße), obwohl die Mobilithek
+    tägliche Aktualisierung nennt. Lage: keine Koordinaten in der Quelle und keine Zähler in OSM →
+    Punkte nach der Beschreibung der Station über die OSM-Straßen (Overpass,
+    `ergebnis/ohne_lizenz/holen17–18/` auf `werkzeug/erkundung`); „Südlich A8-Unterführung,
+    Ostseite“ ist der Geh- und Radweg am Ostufer des Lechs (Radverkehrsmaßnahmen 2020 der Stadt).
   - **Fuß (seit November 2026, Entscheidung der Projektleitung):**
     - **Augsburg** (`augsburg_fuss`, CC BY 4.0, Mobilithek-Angebot `-1747083335311792689` der
       Wirtschaftsförderung): eine CSV auf augsburg.de
@@ -919,7 +944,7 @@ robots.txt für alle Robots sperrt. Seitdem:
       Monatsübersicht (`passantenzaehlung_wuerzburg`).
     - Weitere Kandidaten: Freiburg (FR.ITZ, Rad und Fuß getrennt), die Personen-Kanäle im Bündel
       von MobiData BW (Ludwigsburg, Reutlingen, Böblingen).
-  - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
+  - **Nicht aufgenommen (zweite Runde):** Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue
     Angebot „LICENSE_RESTRICTED_USE_FREE_OF_CHARGE“), Jena (keine offene Schnittstelle gefunden),

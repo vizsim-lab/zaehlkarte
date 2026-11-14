@@ -10,7 +10,7 @@
 import { ARTEN, STUFENFARBEN, TAGE, THEMEN, kennzahlText, stufenFuer, stufenText } from "../data/modell.js";
 import {
   DAUER_STUFEN, DAUER_THEMEN, gruppenName, hatThema, imJuengsten, kennzahlTextDauer, kennzahlTextJuengster,
-  klassenDerQuellen, plusTage, quellenOhneTag, tageJeQuelle, tageSpanne, tageZwischen, tagtypen, zeitraumText,
+  klassenDerQuellen, orteMitTageswerten, plusTage, quellenOhneTag, tageJeQuelle, tageSpanne, tageZwischen, tagtypen, zeitraumText,
 } from "../data/dauer.js";
 import { datenlageKlassen, datenlageStand } from "../map/ebenen.js";
 import { datum, t, wochentag, zahl } from "../sprache/texte.js";
@@ -298,8 +298,11 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     // Lkw/Schwerverkehr: welche Stadt welche Klasse zählt (je Stelle ihre, nie zusammengezählt)
     const klassen = klassenDerQuellen(dauer, thema);
     const klassenText = klassen.map((k) => `${gruppenName(k.gruppe)}: ${k.orte.join(", ")}`).join(" · ");
+    // Quellen nur mit Tageswerten (ohne Stunden): Werte wie geliefert, Vollständigkeit nicht prüfbar
+    const twOrte = orteMitTageswerten(dauer, eintraege);
     $("klassen-legende").innerHTML = `<div class="legend-hint legend-hint--titel">${esc(j ? kennzahlTextJuengster(name) : kennzahlTextDauer(name, datum(iso)))}</div>`
       + (klassen.length ? `<div class="legend-hint dauer-klassen">${esc(t("dauer.klassen", { klassen: klassenText }))} <span class="info-icon" data-tip="${esc(t("dauer.klassen_tip"))}">i</span></div>` : "")
+      + (twOrte.length ? `<div class="legend-hint dauer-tw">${esc(t("dauer.tw_hinweis", { orte: twOrte.join(", ") }))} <span class="info-icon" data-tip="${esc(t("dauer.tw_hinweis_tip"))}">i</span></div>` : "")
       + zeilen.map((z) => `
       <div class="legend-item"><span class="label-wrapper">
         <span class="punkt${z.hohl ? " punkt--hohl" : ""}" style="${z.farbe ? `background:${z.farbe};` : ""}${z.groesse != null ? `--g:${z.groesse}` : ""}"></span>

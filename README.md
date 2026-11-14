@@ -22,9 +22,9 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen und dem Land in
   Baden-Württemberg und in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau
   und Verkehr, Hannover, Region Hannover, Braunschweig und vier weitere Kommunen), dazu der
-  Radschnellweg RS5 in Neuss; Fuß in Augsburg (Passantenzählung Annastraße), Würzburg
-  (Passantenzählung an drei Standorten der Innenstadt) und Bochum (fünf Rad- und
-  Fuß-Zählstellen).
+  Radschnellweg RS5 in Neuss und Augsburgs Radzählstationen (nur Tageswerte); Fuß in Augsburg
+  (Passantenzählung Annastraße), Würzburg (Passantenzählung an drei Standorten der Innenstadt)
+  und Bochum (fünf Rad- und Fuß-Zählstellen).
   Die Karte zeigt je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags oder
   eines wählbaren Tags (Kfz zuerst, Rad, Fuß und Lkw/Schwerverkehr über die Chips), die
   Seitenleiste die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
@@ -80,6 +80,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Augsburg (Stadt Augsburg, Wirtschaftsförderung) | Passantenzählung in der Fußgängerzone Annastraße: Personen je Stunde, beide Richtungen zusammen; fehlende Stunden (fast nur nachts) bleiben nicht gezählt; 1 Zählstelle, Lage aus OpenStreetMap | Dezember 2020 – 2026; laufend ergänzt | offen als CSV auf augsburg.de, verzeichnet in der [Mobilithek](https://mobilithek.info/offers/-1747083335311792689) | CC BY 4.0, „Stadt Augsburg“ |
 | Neuss (Stadt Neuss) | Rad-Dauerzählstelle am Radschnellweg RS5 (Hammer Landstraße): ein Wert je Stunde, ohne Richtung; 1 Zählstelle, Lage ungefähr (der Datensatz nennt keine Koordinaten) | Juli 2026 – 2026; wöchentlich ergänzt | offen im [Open-Data-Portal des Rhein-Kreises Neuss](https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/) (Opendatasoft, täglich aktualisiert) | CC BY-SA 4.0, „Stadt Neuss“ (Weitergabe unter gleichen Bedingungen) |
 | Würzburg (Stadt Würzburg, Messung hystreet.com) | Passantenzählung an drei Standorten der Innenstadt (Schönborn-, Spiegel-, Kaiserstraße; Laserscanner): Personen je Stunde, beide Richtungen zusammen; als „unverifiziert“ gekennzeichnete Stunden zählen wie Rohwerte; Lage laut Datensatz | Januar 2024 – Mai 2026 (seitdem nicht fortgeschrieben) | offen im [Open-Data-Portal der Stadt](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/) (Opendatasoft) | dl-de/by-2-0, „Stadt Würzburg; hystreet.com GmbH“ |
+| Augsburg (Stadt Augsburg, Radverkehrsbeauftragter) | Radzählstationen (Induktionsschleifen): nur Tageswerte je Station, in der Karte als Tageswerte der Quelle (Vollständigkeit nicht prüfbar); der Tag der Erstellung der Datei nicht übernommen; 12 Zählstellen, Lage aus OpenStreetMap nach der Beschreibung der Station | September 2016 – August 2026 (seitdem nicht fortgeschrieben) | offen als CSV auf augsburg.de, verzeichnet in der [Mobilithek](https://mobilithek.info/offers/-4859503742463304999) | CC BY 4.0, „Stadt Augsburg“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`, die der Dauerzählstellen in
@@ -146,6 +147,12 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Am Tag der Umstellung auf Sommerzeit hat der Tag 23 Stunden, bei der Rückstellung 25 (Stunde
   2–3 Uhr zweimal, mit Hinweis); führt eine Quelle dann nur eine dieser Stunden, ist der Tag
   nicht vollständig gezählt.
+- **Tageswerte der Quelle:** Liefert eine Quelle für eine Stelle nur Tageswerte (Augsburgs
+  Radzählstationen), zeigt die Karte deren Tageswert wie geliefert – „Tageswert der Quelle“ im
+  Hover, in der Seitenleiste und als Hinweis in der Legende, ohne Tagesgang; ob jede Stunde
+  gezählt ist, lässt sich dort nicht prüfen. Tageswerte gelten nur vor der ersten gezählten
+  Stunde einer Stelle, nie als Ersatz fehlender Stunden, und nie aus Wochen-, Monats- oder
+  Jahreswerten. Im CSV stehen sie in einer eigenen Spalte (`<gruppe>_tageswert_quelle`).
 - Standard: je Stelle die Tagessumme ihres **jüngsten vollständig gezählten Schultags** – so
   stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume sich nicht überschneiden
   (Berlins Detektoren enden im Juni 2025, der Rhein-Kreis Neuss im Juli 2026; Berlins

@@ -5,6 +5,12 @@ nie 0. Eine Tagessumme gibt es nur, wenn jede Stunde des Tages gezählt ist – 
 Umstellung auf Sommerzeit hat der Tag 23 Stunden (2–3 Uhr gibt es nicht), am Tag der
 Rückstellung steht in Stunde 2 die Summe beider Stunden 2–3 Uhr (`doppelt`).
 
+Tageswerte der Quelle (`Messreihe.tageswerte`, CLAUDE.md „Nur Zählwerte“): Liefert eine Quelle
+für eine Stelle nur Tageswerte, gilt ihr Tageswert wie geliefert – ob jede Stunde gezählt ist,
+lässt sich dann nicht prüfen. Er gilt nur an Tagen vor der ersten gezählten Stunde der Stelle in
+der Gruppe (Quellen nur mit Tageswerten; die Zeit, bevor eine Quelle Stunden liefert). Ab dann
+zählen allein die Stunden: Ein Tag mit fehlender Stunde wird nie mit einem Tageswert gefüllt.
+
 Gruppen (wie die Quelle sie zählt, nicht umgerechnet und nicht ineinander gemischt):
 - kfz   alle Kraftfahrzeuge
 - lkw   Lkw laut Detektor (Berlin: Klasse des Detektors, nicht der Schwerverkehr der
@@ -47,7 +53,9 @@ class Dauerstelle:
 @dataclass
 class Messreihe:
     """Stundenwerte einer Quelle. `werte[gruppe]`: int32-Feld [Stellen, Tage, 24], -1 = nicht
-    gezählt; `doppelt`: bool [Stellen, Tage] – Stunde 2 enthält zwei Stunden (Rückstellung)."""
+    gezählt; `doppelt`: bool [Stellen, Tage] – Stunde 2 enthält zwei Stunden (Rückstellung);
+    `tageswerte[gruppe]`: int64-Feld [Stellen, Tage], Tageswerte der Quelle, -1 = keiner (nur für
+    Gruppen, deren Quelle Tageswerte liefert; eine solche Gruppe steht auch in `werte`)."""
 
     quelle: str
     von: date
@@ -57,17 +65,22 @@ class Messreihe:
     doppelt: np.ndarray
     # Abschnitte der Reihe mit eigenem Verfahren, für die Hinweise: [(von, bis, Text)]
     verfahren: list[tuple[date, date, str]] = field(default_factory=list)
+    tageswerte: dict[str, np.ndarray] = field(default_factory=dict)
 
     @classmethod
     def leer(cls, quelle: str, von: date, bis: date, stellen: list[Dauerstelle],
-             gruppen: tuple[str, ...]) -> Messreihe:
+             gruppen: tuple[str, ...], tagesgruppen: tuple[str, ...] = ()) -> Messreihe:
+        """Leere Reihe; `tagesgruppen`: Gruppen, für die die Quelle Tageswerte liefert."""
         if unbekannt := set(gruppen) - set(GRUPPEN):
             raise ValueError(f"{quelle}: unbekannte Gruppen {sorted(unbekannt)}")
+        if fremd := set(tagesgruppen) - set(gruppen):
+            raise ValueError(f"{quelle}: Tageswerte für Gruppen ohne Reihe {sorted(fremd)}")
         tage = (bis - von).days + 1
         form = (len(stellen), tage, 24)
         return cls(quelle, von, tage, stellen,
                    {g: np.full(form, LEER, dtype=np.int32) for g in gruppen},
-                   np.zeros(form[:2], dtype=bool))
+                   np.zeros(form[:2], dtype=bool),
+                   tageswerte={g: np.full(form[:2], LEER, dtype=np.int64) for g in tagesgruppen})
 
     def tag(self, i: int) -> date:
         return self.von + timedelta(days=i)
@@ -230,17 +243,55 @@ def setze_lokal(reihe: Messreihe, gruppe: str, stelle: np.ndarray, tag: np.ndarr
     return int(voll.sum()), verworfen
 
 
+def setze_tage(reihe: Messreihe, gruppe: str, stelle: np.ndarray, tag: np.ndarray,
+               werte: np.ndarray) -> tuple[int, int]:
+    """Tageswerte der Quelle (Tag als datetime64[D] in Ortszeit) in die Reihe legen. Werte < 0
+    sind nicht gezählt; derselbe Tag zweimal: gleicher Wert zählt einmal, verschiedene gar nicht.
+    -> (gesetzte Tage, Tage mit widersprüchlichen Werten)."""
+    feld = reihe.tageswerte[gruppe]
+    stelle = np.asarray(stelle, dtype=np.int64)
+    t = (np.asarray(tag).astype("datetime64[D]") - np.datetime64(reihe.von, "D")).astype(np.int64)
+    w = np.asarray(werte, dtype=np.int64)
+    drin = (t >= 0) & (t < reihe.tage)
+    stelle, t, w = stelle[drin], t[drin], w[drin]
+    gesehen: dict[tuple[int, int], int] = {}
+    widerspruch: set[tuple[int, int]] = set()
+    for s, d, v in zip(stelle.tolist(), t.tolist(), w.tolist(), strict=True):
+        if (s, d) in gesehen and gesehen[(s, d)] != v:
+            widerspruch.add((s, d))
+        gesehen[(s, d)] = v
+    for (s, d), v in gesehen.items():
+        feld[s, d] = LEER if (s, d) in widerspruch or v < 0 else v
+    return sum(1 for k, v in gesehen.items() if v >= 0 and k not in widerspruch), len(widerspruch)
+
+
+def aus_tageswerten(reihe: Messreihe, gruppe: str) -> np.ndarray:
+    """bool [Stellen, Tage]: Tage, deren Wert der Tageswert der Quelle ist – an Tagen vor der
+    ersten gezählten Stunde der Stelle in der Gruppe (danach zählen allein die Stunden)."""
+    tw = reihe.tageswerte.get(gruppe)
+    if tw is None:
+        return np.zeros((len(reihe.stellen), reihe.tage), dtype=bool)
+    stunden = (reihe.werte[gruppe] >= 0).any(axis=2)
+    erste = np.where(stunden.any(axis=1), stunden.argmax(axis=1), reihe.tage)
+    return (tw >= 0) & (np.arange(reihe.tage)[None, :] < erste[:, None])
+
+
 def tagessummen(reihe: Messreihe, gruppe: str) -> tuple[np.ndarray, np.ndarray]:
     """(Summe [Stellen, Tage] mit -1 = nicht vollständig gezählt, gezählte Stunden [Stellen, Tage]).
 
-    Vollständig heißt: jede Stunde, die es an dem Tag gibt, hat einen Wert."""
+    Vollständig heißt: jede Stunde, die es an dem Tag gibt, hat einen Wert. Vor der ersten
+    gezählten Stunde einer Stelle steht der Tageswert der Quelle, wo es einen gibt
+    (`aus_tageswerten`) – mit 0 gezählten Stunden."""
     w = reihe.werte[gruppe]
     erwartet = erwartete_stunden(reihe.von, reihe.tage)[None, :, :]
     gezaehlt = (w >= 0) & erwartet
     n = gezaehlt.sum(axis=2).astype(np.int16)
     summe = np.where(gezaehlt, w, 0).sum(axis=2, dtype=np.int64)
     voll = n == erwartet.sum(axis=2)
-    return np.where(voll, summe, LEER).astype(np.int64), n
+    out = np.where(voll, summe, LEER).astype(np.int64)
+    if gruppe in reihe.tageswerte:
+        out = np.where(aus_tageswerten(reihe, gruppe), reihe.tageswerte[gruppe], out)
+    return out, n
 
 
 def kuerze(reihe: Messreihe) -> None:
@@ -248,10 +299,13 @@ def kuerze(reihe: Messreihe) -> None:
     da = np.zeros(reihe.tage, dtype=bool)
     for w in reihe.werte.values():
         da |= (w >= 0).any(axis=(0, 2))
+    for tw in reihe.tageswerte.values():
+        da |= (tw >= 0).any(axis=0)
     if not da.any():
         return
     a, b = int(np.argmax(da)), int(reihe.tage - 1 - np.argmax(da[::-1]))
     reihe.von = reihe.tag(a)
     reihe.tage = b - a + 1
     reihe.werte = {g: w[:, a:b + 1] for g, w in reihe.werte.items()}
+    reihe.tageswerte = {g: tw[:, a:b + 1] for g, tw in reihe.tageswerte.items()}
     reihe.doppelt = reihe.doppelt[:, a:b + 1]

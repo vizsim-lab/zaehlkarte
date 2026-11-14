@@ -179,7 +179,7 @@ export function bindeHover(map, { daten, manifest, datenlage, gibZustand, gibEin
       const q = d.quellenMeta.find((x) => x.code === s.quelle);
       const tag = e?.tag ?? null;
       const hero = e?.wert != null
-        ? `<div class="pop-hero">${formatiere(e.wert, "menge")}</div><div class="pop-meta">${esc(kennzahlTextDauer(gruppenName(e.gruppe), `${wochentag(tag)} ${datum(tag)}`))}</div>`
+        ? `<div class="pop-hero">${formatiere(e.wert, "menge")}</div><div class="pop-meta">${esc(kennzahlTextDauer(gruppenName(e.gruppe), `${wochentag(tag)} ${datum(tag)}`, e.tw))}</div>`
         : `<div class="pop-meta">${esc(t(juengster ? "dauer.nicht_j" : "dauer.nicht"))}${tag ? ` · ${esc(datum(tag))}` : ""}</div>`;
       html = `<div class="pop-eyebrow">${esc(t("hover.dauer", { quelle: q?.name ?? s.quelle }))}</div>
         <div class="pop-title">${esc(s.name)}</div>

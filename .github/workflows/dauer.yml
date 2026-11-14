@@ -124,6 +124,11 @@ jobs:
           path: pipeline/data/raw/augsburg_fuss
           key: dauer-fuss-roh-${{ github.run_id }}
           restore-keys: dauer-fuss-roh-
+      - uses: actions/cache@v6  # Augsburg Radzählstationen: jeder Lauf holt die Datei neu, der Cache ist der Rückfall
+        with:
+          path: pipeline/data/raw/augsburg_rad
+          key: dauer-augsburg-rad-roh-${{ github.run_id }}
+          restore-keys: dauer-augsburg-rad-roh-
       - uses: actions/cache@v6  # Neuss RS5 und Würzburg Passanten (Opendatasoft, nur bei Änderung)
         with:
           path: |
