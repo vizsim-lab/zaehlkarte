@@ -7,7 +7,7 @@ dann unter allen benannten Wegen (Rad- und Fußwege). Ohne Treffer bleibt der Na
 Adapter nennen die Stelle dann nach ihrer Kennung.
 
 Geofabrik sperrt `*.osm.pbf` per robots.txt für alle Robots; die Pipeline lädt den Abzug mit einer
-Ausnahme in sources.yaml (Beschluss vom 14.11.2026), nur einmal. Overpass war die erlaubte
+Ausnahme in config/robots.yaml (Beschluss vom 14.11.2026), nur einmal. Overpass war die erlaubte
 Alternative, aber unzuverlässig (AGENTS.md, „robots.txt und die Pipeline“).
 """
 

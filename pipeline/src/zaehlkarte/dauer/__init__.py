@@ -1,6 +1,6 @@
 """Familie „Dauerzählstellen“: Stunden- und Tageswerte fest eingebauter Zählstellen.
 
-Getrennt von den Kurzzeitzählungen (eigene Quellen unter `dauer:` in sources.yaml, eigener Bau
+Getrennt von den Kurzzeitzählungen (eigene Quellen in config/quellen/dauer/, eigener Bau
 `zaehlkarte dauer fetch|site`, eigene Kartendaten unter public/data/dauer/, nicht im Git).
 
 Abgrenzung zu vizsim/svz: hier die gezählten Werte im Zeitverlauf (Stunden, Tage) – keine

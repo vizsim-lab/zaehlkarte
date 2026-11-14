@@ -1,6 +1,6 @@
 """Berlin: manuelle Knotenstrom- und Querschnittszählungen (ZDA-Dateien, zwei IFG-Lieferungen).
 
-Archive und Lizenzen stehen in sources.yaml (`lieferungen`, die neuere zuerst). Je Datei eine
+Archive und Lizenzen stehen in der Quelldatei (`lieferungen`, die neuere zuerst). Je Datei eine
 Zählung; Werte je Richtung und Kategorie in 1-, 15- oder 60-Minuten-Intervallen.
 
 Verortung, in dieser Reihenfolge:

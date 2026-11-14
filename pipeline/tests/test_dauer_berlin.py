@@ -16,10 +16,11 @@ from zaehlkarte.config import PIPELINE, Pfade
 from zaehlkarte.dauer import berlin_viz as b
 from zaehlkarte.dauer import site
 from zaehlkarte.dauer.modell import Messreihe, erwartete_stunden, tagessummen, umstellungen
+from zaehlkarte.kalender import FERIEN
 
 QUELLE = {"code": "berlin_viz", "name": "Berlin (Verkehrsdetektion)", "land": "BE",
           "stammdaten": "Stammdaten_Test.xlsx", "neue_qs_ab": "2025-01",
-          "vollstaendig_mindestens": 75, "ferien": "schulferien_berlin.csv",
+          "vollstaendig_mindestens": 75,
           "lizenz": "dl-de/by-2-0", "titel": "Verkehrsdetektion Berlin (verändert)"}
 KOPF = ["MQ_KURZNAME", "DET_NAME_ALT", "DET_NAME_NEU", "DET_ID15", "MQ_ID15", "STRASSE", "POSITION",
         "POS_DETAIL", "RICHTUNG", "SPUR", "annotation", "LÄNGE (WGS84)", "BREITE (WGS84)",
@@ -66,8 +67,8 @@ def _tgz(pfad, glieder: dict[str, str]):
 
 def _pfade(tmp_path) -> Pfade:
     pfade = Pfade(pipeline=tmp_path / "pipeline", repo=tmp_path)
-    pfade.config.mkdir(parents=True)
-    shutil.copy(PIPELINE / "config" / "schulferien_berlin.csv", pfade.config)
+    (pfade.config / FERIEN).mkdir(parents=True)
+    shutil.copy(PIPELINE / "config" / FERIEN / "BE.csv", pfade.config / FERIEN)
     return pfade
 
 

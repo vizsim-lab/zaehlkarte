@@ -12,8 +12,8 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
 - Lizenz je Ressource: die Quartale 2018–2020 „Andere geschlossene Lizenz“, ab 2021 dl-de/by-2-0 –
   übernommen nur Ressourcen mit `lizenz_ressource`.
 - Zeitumstellung: Am Tag der Sommerzeit fehlt 2 Uhr; am Rückstelltag steht 2 Uhr nur einmal
-  (`rueck` in sources.yaml).
-- Lage: nur in der Datensatzbeschreibung, als Gauß-Krüger-Koordinaten (`stellen` in sources.yaml,
+  (`rueck` in der Quelldatei).
+- Lage: nur in der Datensatzbeschreibung, als Gauß-Krüger-Koordinaten (`stellen` in der Quelldatei,
   umgerechnet).
 """
 

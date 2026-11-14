@@ -1,8 +1,8 @@
 """Schulferien eines Landes aus den KMK-Ferienkalendern lesen – aus dem PDF (bevorzugt) oder aus
 dessen Text (`pdftotext -layout`).
 
-    uv run python werkzeuge/kmk_ferien.py --urls urls.txt Hessen FER*.pdf > schulferien_hessen.csv
-    uv run python werkzeuge/kmk_ferien.py --pruefe config/schulferien_bayern.csv Bayern FER*.pdf
+    uv run python werkzeuge/kmk_ferien.py --urls urls.txt Hessen FER*.pdf > HE.csv
+    uv run python werkzeuge/kmk_ferien.py --pruefe config/kalender/ferien/BY.csv Bayern FER*.pdf
 
 PDF: pdfplumber liest die Tabelle an ihren Linien – je Land eine Zeile, je Spalte eine Zelle,
 mehrzeilige Zellen bleiben beisammen. Name und Jahr einer Spalte stehen in ihrem Kopf („Herbst
@@ -22,8 +22,8 @@ Eine Zelle kann mehrere Einträge haben: „04.10. - 19.10. / 01.11.“, „30.0
 „16. - 30.10.“ (Tag ohne Monat). Kursiv gesetzte schul- und unterrichtsfreie Tage stehen wie Ferien
 unter dem Namen ihrer Spalte. Gleiche Einträge eines Schuljahres zählen einmal.
 
-Ausgabe wie `config/schulferien_*.csv` (von, bis, ferien, schuljahr, gebiet, quelle); die Quelle
-ist die URL je Schuljahr (`--urls` mit Zeilen „2012_13 https://…“).
+Ausgabe wie `config/kalender/ferien/<LAND>.csv` (von, bis, ferien, schuljahr, gebiet, quelle);
+die Quelle ist die URL je Schuljahr (`--urls` mit Zeilen „2012_13 https://…“).
 """
 
 from __future__ import annotations

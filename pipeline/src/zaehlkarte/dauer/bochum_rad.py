@@ -12,7 +12,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
 - Laut README verarbeitet die Stadt die Kanäle der API selbst („pick best block“ je Richtung,
   Summe bei der alten Springorumtrasse); an der Springorumtrasse Süd vermutet sie für Rad fehlende
   Kanäle – die Stelle steht unter `ohne`.
-- Lage und Namen: Tabelle im README des Repositories (`stellen` in sources.yaml).
+- Lage und Namen: Tabelle im README des Repositories (`stellen` in der Quelldatei).
 """
 
 from __future__ import annotations
@@ -46,7 +46,7 @@ class Bericht:
              + f"; doppelt mit verschiedenen Werten: {self.doppelt_verschieden}; "
              f"{self.stellen} Zählstellen; Stunden in der Karte: rad {self.stunden}"]
         if self.ohne:
-            z.append(f"nicht in der Karte (sources.yaml `ohne`): {', '.join(self.ohne)}")
+            z.append(f"nicht in der Karte (`ohne` in der Quelldatei): {', '.join(self.ohne)}")
         return z
 
 

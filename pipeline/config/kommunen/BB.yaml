@@ -1,0 +1,57 @@
+# Datenlage Brandenburg – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: Potsdam
+  quelle: potsdam
+  stand: in_karte
+  was: >-
+    rund 470 Knotenpunktzählungen 2010–2023 von Hand (7–10 und 15–18 Uhr), je Zählung die
+    Spitzenstunden und die Summe der sechs Stunden
+  situation: >-
+    Die Stadt veröffentlicht die Lage der gezählten Kreuzungen und je Zählung einen Zählplan als
+    PDF (Nutzungsbedingungen der LHP, NB-16-OGD: Weiterverwendung mit Quellenangabe erlaubt). Der
+    Plan nennt je Zufahrt und Verkehrsart nur die Früh- und die Nachmittagsspitzenstunde und die
+    Summe der sechs gezählten Stunden – keine Stunden- oder Viertelstundenwerte. Die Karte liest
+    die Pläne aus.
+  empfehlung: >-
+    Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne
+    Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und
+    Informationszugangsgesetz Brandenburg.
+  weg: "offen; ergänzend FragDenStaat, AIG Brandenburg"
+  kontakt: {name: "Stadtverwaltung Potsdam", email: "Poststelle@Rathaus.Potsdam.de", fds: "https://fragdenstaat.de/behoerde/4046/stadtverwaltung-potsdam/"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Auf Ihrem Open-Data-Portal stehen je Knotenpunktzählung ein Zählplan als PDF mit den
+    Spitzenstunden und der Summe der sechs Stunden. Ich bitte um dieselben Zählungen mit den Werten
+    je Viertelstunde (oder Stunde), Zufahrt und Verkehrsart in maschinenlesbarer Form (CSV oder
+    XLSX), auch für die Zählungen, die dort nicht veröffentlicht sind (etwa 2020–2022 und ab 2024).
+  links:
+    - ["Open Data Potsdam", "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/"]
+    - ["Nutzungsbedingungen (NB-16-OGD)", "https://opendata.potsdam.de/terms/terms-of-use/"]
+    - ["potsdam.de", "https://www.potsdam.de/de/verkehrszaehlungen-der-landeshauptstadt-potsdam"]
+- kommune: Falkensee
+  land: BB
+  lon: 13.0920
+  lat: 52.5600
+  stand: aggregiert
+  was: >-
+    Liste von rund 600 Messungen seit 2018 (Straßenabschnitt, Monat, Kfz am Tag) als PDF; die
+    Messberichte der Geräte gibt die Stadt auf Anfrage heraus (2024: 22 Berichte)
+  situation: >-
+    Die Stadt veröffentlicht eine Liste „Verkehrszahlen April 2018 bis Juli 2025“: je Messung den
+    Straßenabschnitt, den Monat und die durchschnittliche Zahl der Kfz am Tag – keine Stunden- oder
+    Richtungswerte, kein genaues Datum. Auf eine Anfrage 2024 kamen die Messberichte von 22
+    Messungen an drei Straßen als PDF (mit Stundenwerten als Grafik).
+  empfehlung: >-
+    Anfrage nach den Messungen der Liste mit Datum, Lage und Werten je Stunde und Richtung, am
+    besten als Export der Messgeräte. Grundlage: Akteneinsichts- und Informationszugangsgesetz
+    Brandenburg.
+  weg: "FragDenStaat, AIG Brandenburg"
+  kontakt: {fds_suche: "Stadt Falkensee"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Ihre Liste „Verkehrszahlen April 2018 bis Juli 2025“ nennt je Messung nur den Tagesmittelwert.
+    Ich bitte um die Messungen selbst – Datum, genaue Lage und Werte je Stunde und Richtung – am
+    besten als Export der Messgeräte; 2024 haben Sie auf eine Anfrage 22 Messberichte geschickt.
+  links:
+    - ["Verkehrszahlen 2018–2025 (PDF)", "https://daten2.verwaltungsportal.de/dateien/seitengenerator/3ad0dae377296992aa797d0d2f44217222831/Verkehrszahlen_bis_Juli_25.pdf"]
+    - ["FragDenStaat 2024", "https://fragdenstaat.de/anfrage/verkehrszaehlung-gartenstrasse-elsterstrasse-str-d-einheit/"]

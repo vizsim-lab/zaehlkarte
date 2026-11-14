@@ -8,7 +8,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
 - Gezählt ist eine Viertelstunde mit Zahl in `radfahrer`, gleich der Summe der Richtungen; eine
   Stunde, wenn alle vier Viertelstunden gezählt sind (über den Versatz in UTC – die Zeitumstellung
   ist damit eindeutig).
-- Die Lage steht nicht im Datensatz: `stellen` in sources.yaml.
+- Die Lage steht nicht im Datensatz: `stellen` in der Quelldatei.
 """
 
 from __future__ import annotations

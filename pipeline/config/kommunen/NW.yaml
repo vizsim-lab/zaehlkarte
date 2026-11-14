@@ -1,0 +1,681 @@
+# Datenlage Nordrhein-Westfalen – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+#
+# Nordrhein-Westfalen (November 2026, Kommune für Kommune – siehe AGENTS.md, Sackgassen NRW)
+
+- kommune: Münster
+  quelle: muenster
+  stand: in_karte
+  dauer:
+    stand: in_karte
+    was: >-
+      Rad-Zählstellen der Stadt: 15-Minuten-Werte seit 2019, nächtlich aktualisiert, in der Karte
+      als Dauerzählstellen
+    links:
+      - ["GitHub: od-ms/radverkehr-zaehlstellen", "https://github.com/od-ms/radverkehr-zaehlstellen"]
+      - ["Open Data Münster: Fahrradverkehr, tagesaktuelle Daten", "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten"]
+  was: >-
+    rund 1.160 Kfz-Knotenpunktzählungen 2000–2020 (XLS und PDF), je meist zwei Stunden (7–8 und
+    16–17 Uhr)
+  situation: >-
+    Die Stadt veröffentlicht ihre manuellen Kfz-Zählungen offen (dl-de/by-2-0): ein ZIP mit
+    einer Datei je Zählung – XLS 2000–2012 und PDF 2010–2020, beide in der Karte (außer Scans
+    und Radar-Berichten ohne Knotenstromplan) – und die Lage der Knoten als CSV. Je Zählung
+    stehen nur die Spitzenstunden (meist 7–8 und 16–17 Uhr) nach Fahrzeugart. Die Spalte
+    „Rad“ ist keine vollständige Radzählung; Zählungen ab 2021 fehlen.
+  empfehlung: >-
+    Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt
+    eine Anfrage nach dem IFG NRW.
+  weg: "offen; ergänzend FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Münster"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Auf Ihrem Open-Data-Portal stehen die manuellen Verkehrszählungen bis 2020 mit den
+    Spitzenstunden. Ich bitte zusätzlich um die Zählungen ab 2021, um die Werte aller gezählten
+    Intervalle (nicht nur der Spitzenstunden) und um eine kurze Erläuterung, ob die Spalte „Rad“
+    alle Radfahrenden am Knoten erfasst oder nur die auf der Fahrbahn.
+  links:
+    - ["Open Data Münster", "https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung"]
+    - ["Nutzungsbedingungen", "https://opendata.stadt-muenster.de/nutzungsbedingungen"]
+    - ["stadt-muenster.de", "https://www.stadt-muenster.de/verkehrsplanung/verkehr-in-zahlen/kfz-verkehrszaehlungen"]
+- kommune: Moers
+  quelle: moers
+  stand: in_karte
+  was: >-
+    Querschnittszählungen mit Seitenradar 2010–2022, je Fahrzeug, meist zwei Tage am Stück
+  situation: >-
+    Die Stadt veröffentlicht ihre Messungen mit Seitenradar-Geräten offen (Datenlizenz
+    Deutschland – Zero): je Messstelle eine Textdatei mit einer Zeile je Fahrzeug (Zeit,
+    Geschwindigkeit, Länge, Fahrspur), meist zwei Tage am Stück. Die Lage steht nur als
+    Adresse dabei; die Karte hat sie geokodiert.
+  empfehlung: >-
+    Keine Anfrage nötig. Manuelle Knoten- oder Radzählungen der Stadt sind nicht offen – wer
+    sie braucht, fragt nach dem IFG NRW.
+  weg: "offen"
+  links:
+    - ["offenesdatenportal.de", "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021"]
+- kommune: Olpe
+  quelle: olpe
+  stand: in_karte
+  was: >-
+    13 Radar-Messungen 2025/26 an zwölf Stellen, je Fahrzeug Zeit, Richtung und Klasse (Kfz,
+    Schwerverkehr, Rad)
+  situation: >-
+    Die Stadt (Ordnungsamt) veröffentlicht ihre Messungen mit Radar-Messgeräten offen
+    (Datenlizenz Deutschland – Namensnennung 2.0, eine Messung CC BY 4.0): je Messung eine
+    JSON-Datei mit einer Zeile je Fahrzeug (Zeit, Richtung, Fahrzeugklasse, Länge, Tempo) und der
+    GPS-Lage des Geräts, meist ein bis zwei Wochen am Stück. Die Karte bildet daraus Stundenwerte.
+  empfehlung: >-
+    Keine Anfrage nötig. Messungen vor 2025 stehen nicht im Portal – wer sie braucht, fragt nach
+    dem IFG NRW.
+  weg: "offen"
+  links:
+    - ["Open Data Olpe", "https://opendata.olpe.de/dataset/?q=Verkehrsmessung"]
+- kommune: Xanten
+  quelle: xanten
+  stand: in_karte
+  was: >-
+    Videozählung vom 25.08.2020 für das Mobilitätskonzept: 12 Knotenpunkte (7–9 und 15–18 Uhr)
+    und 6 Querschnitte (24 h), Viertelstundenwerte nach Fahrzeugart
+  situation: >-
+    Für ihr Mobilitätskonzept hat die Stadt am 25. August 2020 an 12 Knotenpunkten (7–9 und
+    15–18 Uhr) und 6 Querschnitten (24 Stunden) per Video gezählt. Offen sind die Zählwerte je
+    Viertelstunde, Strom und Fahrzeugart als PDF (Datenlizenz Deutschland – Zero), dazu der
+    Bericht mit der Karte der Zählstellen. Rad und Fuß sind nicht gezählt.
+  empfehlung: >-
+    Keine Anfrage nötig. Ob es weitere Zählungen gibt (etwa Rad- und Fußverkehr), ließe sich
+    nach dem IFG NRW erfragen.
+  weg: "offen"
+  links:
+    - ["opendata.ruhr", "https://opendata.ruhr/dataset/mobilitatskonzept"]
+- kommune: Köln
+  land: NW
+  lon: 6.9603
+  lat: 50.9375
+  stand: aggregiert
+  dauer:
+    stand: offen
+    was: >-
+      Rad-Dauerzählstellen (Eco-Counter, 2022 schon 17, einige wie an der Hohe Pforte zählen auch
+      Kfz): offen nur Monatssummen je Zählstelle, 2009–2022 (dl-de/zero-2-0) – ohne Stundenwerte
+      nicht in der Karte; jüngere Werte nur auf der Seite von Eco-Counter
+    links:
+      - ["Fahrrad Verkehrsdaten Köln 2022 (Open.NRW)", "https://open.nrw/dataset/fahrrad-verkehrsdaten-koln-2022-k"]
+      - ["Neue Dauerzählstelle an der Hohe Pforte (2022)", "https://www.stadt-koeln.de/politik-und-verwaltung/presse/mitteilungen/24564/index.html"]
+  was: >-
+    Mittelwerte je Zählstelle; Einzelzählungen auf Anfrage (2024 für die Kitschburger Straße
+    herausgegeben)
+  situation: >-
+    Offen sind Mittelwerte je Zählstelle. Einzelzählungen gibt die Stadt auf Anfrage heraus, 2024
+    etwa für die Kitschburger Straße.
+  empfehlung: >-
+    Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement.
+    Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {name: "Amt für Verkehrsmanagement Köln", email: "verkehrsmanagement@stadt-koeln.de", fds: "https://fragdenstaat.de/behoerde/15906/amt-fur-straen-und-verkehrsentwicklung/"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Offen sind Mittelwerte je Zählstelle. Ich bitte um die zugrundeliegenden Einzelzählungen; 2024
+    haben Sie solche Zählungen für die Kitschburger Straße herausgegeben.
+  links:
+    - ["Open.NRW", "https://ckan.open.nrw.de/dataset/kfz-zaehlstellen-und-werte-koeln-k"]
+    - ["FragDenStaat 2024", "https://fragdenstaat.de/anfrage/verkehrszaehlungen-auf-der-kitschburger-str-in-koeln-lindenthal/"]
+- kommune: Düsseldorf
+  land: NW
+  lon: 6.7735
+  lat: 51.2277
+  stand: aggregiert
+  dauer:
+    stand: in_karte
+    was: >-
+      Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung als Jahresdateien,
+      offen ab 2020 (dl-de/by-2-0; 2012–2019 unter geschlossener Lizenz, 2022 nicht
+      veröffentlicht) – in der Karte als Dauerzählstellen
+    links:
+      - ["Jahresübersicht Dauerzählstellen Radverkehr 2025 (Open.NRW)", "https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d"]
+      - ["Standorte der Dauerzählstellen Radverkehr (Open.NRW)", "https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d"]
+  was: >-
+    Mittel der Zählungen der letzten fünf Jahre je Abschnitt (DTV je Fahrzeugart, Stand 2019 und
+    2024) – in vizsim/svz
+  situation: >-
+    Offen sind die gemittelten Verkehrszähldaten der letzten fünf Jahre je Abschnitt, Stand 2019
+    und 2024: Jahresmittel (DTV) je Fahrzeugart (Kfz, Krad, Lieferwagen, Lkw mit Anhänger …) als
+    CSV, GeoJSON und WFS – keine einzelnen Zählungen.
+  empfehlung: >-
+    Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für
+    Verkehrsmanagement. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {name: "Amt für Verkehrsmanagement Düsseldorf", email: "verkehrsmanagement@duesseldorf.de", fds: "https://fragdenstaat.de/behoerde/16786/amt-fur-verkehrsmanagement-der-landeshauptstadt-dusseldorf/"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Offen sind Jahresmittelwerte je Abschnitt; ich bitte um die Einzelzählungen, aus denen sie
+    entstehen.
+  links:
+    - ["Verkehrszähldaten 2024 (Open Data Düsseldorf)", "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60"]
+- kommune: Dortmund
+  land: NW
+  lon: 7.4653
+  lat: 51.5136
+  stand: aggregiert
+  dauer:
+    stand: in_karte
+    was: >-
+      Dauerzählstelle Radverkehr Schnettkerbrücke: 15-Minuten-Werte je Richtung seit Januar 2018
+      (dl-de/zero-2-0) – in der Karte als Dauerzählstelle
+    links:
+      - ["Dauerzählstelle Radverkehr Schnettkerbrücke", "https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/"]
+  was: >-
+    nur der Zählstellenplan; Werte gibt die Stadt auf Anfrage heraus (kostenpflichtig) – der Plan
+    taugt als Grundlage einer Anfrage
+  situation: >-
+    Offen ist nur der Zählstellenplan; Werte gibt die Stadt gegen Gebühr heraus.
+  empfehlung: >-
+    Anfrage nach den Ergebnissen der Zählungen im Zählstellenplan, nach IFG NRW. Gebühren vorab
+    erfragen und gegebenenfalls auf einen Teil (etwa die letzten fünf Jahre) begrenzen.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Dortmund"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Ihr Zählstellenplan ist offen; ich bitte um die Ergebnisse der dort verzeichneten Zählungen.
+  links:
+    - ["opendata.ruhr", "https://opendata.ruhr/dataset/verkehrszahlung-zahlstellenplan1"]
+- kommune: Paderborn
+  land: NW
+  lon: 8.7575
+  lat: 51.7189
+  stand: geliefert
+  dauer:
+    stand: kandidat
+    was: >-
+      Projekt der Smart City: Sensoren an mehreren zentralen Knotenpunkten zählen nach
+      Fahrzeugart (Lkw, Pkw, Rad) – Werte nicht offen
+    links:
+      - ["Smart City: Verkehrsdaten", "https://www.paderborn.de/microsite/digitale_heimat/smart_city/Verkehrsdaten.php"]
+  was: >-
+    Zählung im Juni 2018 an rund 100 Stellen (Knotenpunkte per Video 7–9 und 15–19 Uhr, dazu
+    Querschnitte, Rad und Schwerverkehr) – offen nur als Pläne der Werktagsmittel (DTVw); einzelne
+    Zählungen auf Anfrage herausgegeben
+  situation: >-
+    Im Juni 2018 hat das Stadtplanungsamt an rund 100 Stellen gezählt: Knotenpunkte per Video
+    jeweils 6 Stunden (7–9 und 15–19 Uhr), teils mit Fuß- und Radverkehr, dazu die Schleifen der
+    Ampeln. Offen sind die Methodik, eine Karte der Zählstellen und die Ergebnisse als Pläne der
+    Werktagsmittel (DTVw) – keine Zählwerte je Intervall. Auf eine Anfrage hat die Stadt Zählungen
+    einzelner Straßen herausgegeben.
+  empfehlung: >-
+    Anfrage nach den gezählten Werten der Zählung 2018 (je Intervall und Strom) und allen
+    Zählungen seit 2015 an die Stadt Paderborn. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {name: "Stadt Paderborn", email: "info@paderborn.de", fds: "https://fragdenstaat.de/behoerde/34204/stadt-paderborn/"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind besonders die Zählungen vom Juni 2018 an rund 100 Standorten, deren Ergebnisse
+    Sie als Pläne der Werktagsmittel veröffentlicht haben – ich bitte um die gezählten Werte.
+  links:
+    - ["Verkehrszählungen 2018", "https://www.paderborn.de/wohnen-soziales/mobilitaet/verkehrszaehlungen-2018.php"]
+    - ["FragDenStaat", "https://fragdenstaat.de/anfrage/verkehrszahlungen-bahnhofstrae-neuhauser-strae-rathenaustrae-detmolder-strae/"]
+- kommune: Mönchengladbach
+  land: NW
+  lon: 6.4425
+  lat: 51.1946
+  stand: kandidat
+  was: >-
+    rund 360 Knotenpunkte im Fünf-Jahres-Rhythmus (6:30–9 und 15:30–19 Uhr), dazu knapp 90
+    Querschnitte mit 24-Stunden-Ganglinien; online nichts
+  situation: >-
+    Mönchengladbach zählt seine rund 360 Knotenpunkte reihum im Fünf-Jahres-Rhythmus (6:30–9:00 und
+    15:30–19:00 Uhr) und rechnet auf den Werktag hoch; für knapp 90 Querschnitte liegen
+    24-Stunden-Ganglinien vor. Die Zählungen gehen ins Verkehrsmodell, online steht nichts.
+  empfehlung: >-
+    Anfrage nach den gezählten Werten der Knotenpunktzählungen (nicht der Hochrechnung) und nach den
+    Querschnitts-Ganglinien. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Mönchengladbach"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Laut Ihrer Seite „Verkehrserhebungen“ zählen Sie rund 360 Knotenpunkte im Fünf-Jahres-Rhythmus
+    und haben für knapp 90 Querschnitte 24-Stunden-Ganglinien. Ich bitte um die gezählten Werte,
+    nicht um die Hochrechnung auf den Werktag.
+  links:
+    - ["moenchengladbach.de", "https://www.moenchengladbach.de/rathaus/buergerinfo-a-z/planen-bauen-mobilitaet-umwelt-dezernat-vi/fachbereich-stadtentwicklung-und-planung-61/abteilung-kommunale-verkehrsplanung-und-mobilitaetsplanung/motorisierter-verkehr/verkehrserhebungen"]
+- kommune: Wuppertal
+  land: NW
+  lon: 7.1508
+  lat: 51.2562
+  stand: geliefert
+  was: >-
+    alle Zählungen in einer zentralen Verkehrsdatenbank, Auskünfte daraus auf Anfrage; 2024 die
+    Ergebnisse einer Zählung (Hünefeldstraße) herausgegeben
+  situation: >-
+    Laut den Dienstleistungsseiten der Stadt werden Zählungen an Straßen und Kreuzungen in
+    Zeitintervallen nach Pkw, Lkw, Bus und Krad erhoben und mit den Daten der automatischen
+    Messstellen in einer zentralen Verkehrsdatenbank verwaltet; Anfragen zu Verkehrsmengen
+    beantwortet die Stadt daraus. Auf eine Anfrage nach dem IFG NRW kamen 2024 die Ergebnisse einer
+    Zählung in der Hünefeldstraße (24.05.2023, 7–9 und 15:30–17 Uhr) als Brief. Offen ist nur die
+    modellierte Kfz-Verkehrsbelastung 2013 und 2020 (DTVw) als Kartendienst.
+  empfehlung: >-
+    Anfrage nach einem Export aller Zählungen seit 2015 aus der Verkehrsdatenbank (je Intervall,
+    Richtung und Fahrzeugart). Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Wuppertal"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Laut Ihren Dienstleistungsseiten stehen alle Ergebnisse von Verkehrszählungen in Ihrer
+    zentralen Verkehrsdatenbank. Ein Export der Zählungen seit 2015 daraus genügt.
+  links:
+    - ["wuppertal.de: Verkehrszählung", "https://www.wuppertal.de/vv/produkte/104/104.31_Verkehrszaehlungen.php"]
+    - ["wuppertal.de: Verkehrsbelastungsdaten", "https://www.wuppertal.de/vv/produkte/104/104.31_Verkehrsbelastungsdaten.php"]
+    - ["FragDenStaat 2024", "https://fragdenstaat.de/anfrage/verkehrszaehlung-huenefeldstr/"]
+- kommune: Essen
+  land: NW
+  lon: 7.0116
+  lat: 51.4556
+  stand: automatisch
+  dauer:
+    stand: in_karte
+    was: >-
+      Rad-Zählstellen Grugatrasse und Huyssenallee: Stundenwerte je Richtung als Quartalsdateien,
+      offen ab 2021 (2018–2020 unter geschlossener Lizenz) – in der Karte als Dauerzählstellen.
+      Von den Kfz-Dauerzählstellen offen nur die Auswertungen 2017 als 57 PDFs, nicht die
+      Zählwerte
+    links:
+      - ["Radverkehrszählungen (Open.NRW)", "https://open.nrw/dataset/radverkehrszahlungen-e"]
+      - ["essen.de Verkehrserhebung", "https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html"]
+      - ["Zähldaten 2017", "https://www.essen.de/leben/mobilitaet/zaehldaten_2017.de.html"]
+  was: >-
+    offen nur die Auswertungen der Dauerzählstellen 2017 (57 PDFs); Knotenpunkt- und
+    Querschnittszählungen von Hand nicht online
+  situation: >-
+    Offen sind nur die Auswertungen 2017 der Essener Dauerzählstellen (57 PDFs). Die Stadt zählt
+    außerdem von Hand an Querschnitten und Knotenpunkten, in der Regel dienstags bis donnerstags
+    außerhalb der Ferien; diese Zählungen stehen nicht online.
+  empfehlung: >-
+    Anfrage nach den Knotenpunkt- und Querschnittszählungen beim Amt für Straßen und Verkehr.
+    Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Kommunalverwaltung Essen"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Online sind nur die Auswertungen Ihrer Dauerzählstellen von 2017; gemeint sind hier die
+    Zählungen von Hand an Knotenpunkten und Querschnitten.
+  links:
+    - ["essen.de Verkehrserhebung", "https://www.essen.de/leben/mobilitaet/verkehrserhebung.de.html"]
+    - ["Zähldaten 2017", "https://www.essen.de/leben/mobilitaet/zaehldaten_2017.de.html"]
+- kommune: Aachen
+  land: NW
+  lon: 6.0808
+  lat: 50.7754
+  dauer:
+    stand: in_karte
+    was: >-
+      26 Rad-Zählstellen der Stadt, Stundenwerte seit 2025 (dl-de/zero-2-0) – in der Karte als
+      Dauerzählstellen
+    links:
+      - ["Radzählstellen der Stadt Aachen", "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen"]
+- kommune: Bonn
+  land: NW
+  lon: 7.1143
+  lat: 50.7355
+  dauer:
+    stand: in_karte
+    was: >-
+      14 Rad-Zählstellen, Stundenwerte 2020, 2021 und ab 2023 als Jahresdateien (CC0) – in der
+      Karte als Dauerzählstellen
+    links:
+      - ["Fahrradmessstellen Bonn", "https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025"]
+- kommune: Bochum
+  land: NW
+  lon: 7.2203
+  lat: 51.486
+  dauer:
+    stand: in_karte
+    was: >-
+      acht Rad-Zählstellen der Stadt (Eco-Counter) seit 2018 – in der Karte als Dauerzählstellen;
+      Lizenz dl-de/by-2-0 mit Nutzungsbeschränkung der Stadt (nicht im Wettbewerb zu Eco-Counter)
+    links:
+      - ["Zählstellen Eco-Counter (Stadt Bochum)", "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter"]
+- kommune: Rhein-Kreis Neuss
+  land: NW
+  lon: 6.705
+  lat: 51.1453
+  dauer:
+    stand: in_karte
+    was: >-
+      fünf Rad-Zählstationen des Kreises (Eco-Counter), 2015 bis Juli 2026 (CC0) – in der Karte als
+      Dauerzählstellen
+    links:
+      - ["Eco-Counter-Daten (Rhein-Kreis Neuss)", "https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/"]
+- kommune: Kevelaer
+  land: NW
+  lon: 6.2675
+  lat: 51.59
+  stand: offen
+  was: >-
+    Zählung im September 2019 für die Verkehrsuntersuchung im Kernort: 16 Knotenpunkte (6–10 und
+    15–19 Uhr, Viertelstunden je Strom) und 13 Querschnitte (24 Stunden, Video) als PDF – ohne
+    Lizenzangabe
+  situation: >-
+    Für die Verkehrsuntersuchung im Kernort hat ein Planungsbüro im September 2019 an 16
+    Knotenpunkten (6–10 und 15–19 Uhr) und 13 Querschnitten (24 Stunden, per Video) gezählt. Die
+    „Ergebnisse der Verkehrszählungen“ (74 Seiten) stehen auf kevelaer.de: je Knotenpunkt und
+    Viertelstunde die Ströme nach Pkw, Krad, Lieferwagen und Lkw, je Querschnitt Stundenwerte, dazu
+    DTV und Spitzenstunden. Das ist eine Zählung, wie sie die Karte zeigt (ähnlich der aus Xanten);
+    eine Lizenz nennt die Stadt aber nicht, darum ist sie noch nicht in der Karte.
+  empfehlung: >-
+    Bitte an die Stadt, die Zählung unter eine offene Lizenz zu stellen (etwa Datenlizenz
+    Deutschland – Zero), am besten mit der Tabelle des Büros – dann kommt sie in die Karte. Dazu die
+    Frage nach weiteren Zählungen seit 2015. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Kevelaer"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Die Zählung vom September 2019 (16 Knotenpunkte, 13 Querschnitte) haben Sie als PDF
+    veröffentlicht. Ich bitte um diese Zählung in der Tabellenform des Büros, um die Bedingungen
+    ihrer Weiterverwendung und um alle weiteren Zählungen.
+  links:
+    - ["Ergebnisse der Verkehrszählungen 2019 (PDF)", "https://www.kevelaer.de/dokumente/leben-in-kevelaer/mobilitaet/ergebnisse-der-verkehrszaehlungen-2019.pdf?cid=7j"]
+- kommune: Verl
+  land: NW
+  lon: 8.5238
+  lat: 51.8788
+  stand: aggregiert
+  was: >-
+    Messberichte der Verkehrsmessungen je Messort (gut 60 PDF, meist 2023–2024): Fahrzeuge
+    gesamt, Tagesmittel, Anteil zu schneller Fahrzeuge; die Stundenwerte nur als Diagramm
+  situation: >-
+    Die Stadt misst auf Wunsch von Bürgerinnen und Bürgern (Formular „Anfrage einer
+    Verkehrsmessung“) und veröffentlicht je Messort einen Bericht: Zahl der Fahrzeuge über die
+    Messdauer, Tagesmittel, Tempolimit und Anteil der Überschreitungen je Richtung. Die Werte je
+    Stunde stehen nur als Diagramm im PDF, nicht als Zahlen; laut Impressum ist jede
+    Vervielfältigung von Daten der Website nur mit Zustimmung der Stadt erlaubt.
+  empfehlung: >-
+    Anfrage nach den Messdaten der Geräte (Export je Fahrzeug oder je Stunde) für alle
+    veröffentlichten Messorte. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Verl"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Auf Ihrer Seite „Verkehrsmessungen“ stehen gut 60 Messberichte. Ich bitte um die
+    Messdaten dahinter – den Export der Geräte je Fahrzeug oder je Stunde und Richtung.
+  links:
+    - ["verl.de: Verkehrsmessungen", "https://www.verl.de/stadt-zukunft/mobilitaet/verkehrsmessungen.html"]
+- kommune: Bad Honnef
+  land: NW
+  lon: 7.2817
+  lat: 50.6553
+  stand: aggregiert
+  was: >-
+    Zählungen mit zwei Seitenradar-Geräten: je Zählung eine Zusammenfassung online (Ort,
+    Verkehrsmenge über mehrere Tage, V85, Pkw/Lkw/Lastzug); die Rohdaten liegen bei der Stadt
+  situation: >-
+    Die Stadt zählt mit zwei Seitenradar-Geräten (dazu vier Geschwindigkeitsanzeigen)
+    richtungsbezogen, meist über mehrere Tage oder eine Woche, und veröffentlicht zu jeder Zählung
+    eine Zusammenfassung mit Ort, Verkehrsmenge und V85. Die Rohdaten der Geräte werden nach eigener
+    Angabe ausgelesen und ausgewertet; offen sind sie nicht.
+  empfehlung: >-
+    Anfrage nach den ausgelesenen Rohdaten (je Fahrzeug oder je Stunde und Richtung) aller
+    Zählungen seit 2015. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Bad Honnef"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Zu jeder Zählung Ihrer Seitenradar-Geräte veröffentlichen Sie eine Zusammenfassung. Ich bitte
+    um die ausgelesenen Rohdaten dieser Zählungen (je Fahrzeug oder je Stunde und Richtung).
+  links:
+    - ["meinbadhonnef.de: Verkehrszählungen", "https://meinbadhonnef.de/service-antraege/ordnung-strassenverkehr-gewerbe-und-feuerschutz/aktuelles/verkehrszaehlungen/"]
+- kommune: Emsdetten
+  land: NW
+  lon: 7.5336
+  lat: 52.1797
+  stand: aggregiert
+  was: >-
+    Kamerazählungen an fünf Stellen während der Sperrung der B 481 (2026): online nur Mittelwerte je
+    Woche; seit 2023 ein KI-Kamerasystem am Döring-Kreisverkehr (Fuß, Rad, Pkw, Lkw)
+  situation: >-
+    Seit Beginn der Vollsperrung der B 481 (2026) zählt die Stadt per Kamera an fünf Stellen
+    (Neubrückenstraße, Reckenfelder Straße, Elbersstraße, Im Holtkamp, Hembergen Dorfmitte) und
+    veröffentlicht je Kalenderwoche die mittleren Bewegungen je Werktag. Seit Mai 2023 läuft am
+    Döring-Kreisverkehr als Pilot ein Kamerasystem, das Fuß-, Rad-, Pkw- und Lkw-Verkehr getrennt
+    zählt. Werte je Tag oder Stunde sind nicht offen.
+  empfehlung: >-
+    Anfrage nach den Zählwerten je Stunde und Richtung der fünf Zählstellen (B 481) und des
+    Kamerasystems am Döring-Kreisverkehr. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Emsdetten"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Für die Zählstellen während der Sperrung der B 481 veröffentlichen Sie Wochenmittel. Ich bitte
+    um die Zählwerte je Stunde und Richtung dieser Zählstellen und des Kamerasystems am
+    Döring-Kreisverkehr.
+  links:
+    - ["emsdetten.de: Verkehrsdaten B 481", "https://www.emsdetten.de/bauen-wohnen-umwelt-verkehr/verkehr/vollsperrung-b481/verkehrsdaten-b481/"]
+    - ["Swarm Analytics am Döring-Kreisverkehr (2023)", "https://www.emsdetten.de/bauen-wohnen-umwelt-verkehr/neuigkeiten/2023/swarm-analytics-erfasst-mit-kuenstlicher-intelligenz-verkehrsdaten/"]
+- kommune: Ratingen
+  land: NW
+  lon: 6.8922
+  lat: 51.3182
+  stand: kandidat
+  was: >-
+    Kamerazählung an 33 Kreuzungen am 8. Oktober 2024 für die Rahmenplanung Ratingen-West
+  situation: >-
+    Für die Rahmenplanung Ratingen-West hat die Stadt am 8. Oktober 2024 an 33 Kreuzungen zwischen
+    Ratingen-West und Ratingen-Mitte per Kamera gezählt. Veröffentlicht sind die Zählungen nicht.
+  empfehlung: >-
+    Anfrage nach den Zählungen an 33 Kreuzungen (Oktober 2024) und allen weiteren seit 2015.
+    Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Ratingen"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind besonders die Zählungen an 33 Kreuzungen vom 8. Oktober 2024 für die
+    Rahmenplanung Ratingen-West.
+  links:
+    - ["Verkehrszählung an 33 Kreuzungen (2024)", "https://www.stadt-ratingen.de/zzz-sit-politik-rathaus/pressemeldungen/meldung/verkehrszaehlung-an-33-kreuzungen"]
+- kommune: Marl
+  land: NW
+  lon: 7.1141
+  lat: 51.6676
+  stand: kandidat
+  was: >-
+    eigene Zählungen zur Straßenverkehrszählung 2015, 2021 und 2025 (2025: 67 Zählstellen, Kamera),
+    dazu Knotenpunkte für Verkehrsversuche und Bebauungspläne (2024)
+  situation: >-
+    Marl beteiligt sich seit 2015 mit eigenen Zählstellen an der bundesweiten
+    Straßenverkehrszählung, 2025 mit 67 Zählstellen im Stadtgebiet (Kameras). Dazu kommen
+    Knotenpunktzählungen, etwa 2024 am Reallabor Hervester Straße/Willy-Brandt-Allee, am
+    Loemühlenweg und in Drewer. Veröffentlicht sind die Zählungen nicht.
+  empfehlung: >-
+    Anfrage nach den Zählwerten der städtischen Zählstellen 2015, 2021 und 2025 und den
+    Knotenpunktzählungen seit 2015. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Marl"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind auch die Zählungen Ihrer 67 Zählstellen zur Straßenverkehrszählung 2025 (und 2015,
+    2021) – je Intervall und Fahrzeugart, nicht nur die Jahresmittel.
+  links:
+    - ["Verkehrszählung auf Marler Straßen angelaufen (2025)", "https://marl.de/rathaus-service/aktuelles/news-detailansicht/verkehrszaehlung-auf-marler-strassen-angelaufen"]
+    - ["Verkehrszählung am Reallabor (2024)", "https://marl.de/rathaus-service/aktuelles/news-detailansicht/stadt-fuehrt-verkehrszaehlung-am-reallabor-durch"]
+- kommune: Gronau (Westf.)
+  land: NW
+  lon: 7.0266
+  lat: 52.1889
+  stand: kandidat
+  was: >-
+    Zählungen für das Mobilitätskonzept (2020, Kameras), Radverkehr an drei Stellen (2021), 13
+    Knotenpunkte in Epe (2023), Rad- und Fußverkehr im Stadtpark (2024)
+  situation: >-
+    Für das integrierte Mobilitätskonzept hat ein Büro 2020 den Fahrzeugverkehr per Kamera
+    gezählt; 2021 folgten zwei Wochen Radverkehr an drei Stellen, 2023 13 Knotenpunkte in Epe und
+    2024 Rad- und Fußverkehr im Stadtpark. Veröffentlicht sind nur Ankündigungen und für den
+    Verkehrsversuch in Epe Karten der Zählungen 2023 und 2024 (6–10, 12–14, 15–19 Uhr; Kfz und
+    Schwerverkehr), keine Zählwerte je Intervall.
+  empfehlung: >-
+    Anfrage nach diesen Zählungen mit den Werten je Intervall. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Gronau"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind besonders die Zählungen für das Mobilitätskonzept (2020), die Radverkehrszählungen
+    2021, die Knotenpunktzählungen in Epe (2023) und die Zählung im Stadtpark (2024).
+  links:
+    - ["Verkehrszählungen im Stadtgebiet (2020)", "https://www.gronau.de/rathaus/news/2020/news-august-2020/verkehrszaehlungen-im-stadtgebiet-gronau/"]
+    - ["Verkehrszählungen in Epe (2023)", "https://www.gronau.de/rathaus/news/2023/news-august-2023/verkehrszaehlungen-in-epe/"]
+    - ["Verkehrszählungen im Stadtpark (2024)", "https://www.gronau.de/rathaus/news/2024/news-maerz-2024/verkehrszaehlungen-im-gronauer-stadtpark/"]
+    - ["Verkehrsversuch Epe: Zählungen 2023 und 2024 (PDF)", "https://gronau.de/rathaus/news/2024/news-august-2024/erste-ergebnisse-im-rahmen-des-verkehrsversuchs-in-epe/20240822-pdf-verkehrsversuch-gronauer-strasse.pdf?cid=293s"]
+- kommune: Geseke
+  land: NW
+  lon: 8.4995
+  lat: 51.6286
+  stand: kandidat
+  was: >-
+    Zählung von Schülerinnen und Schülern zu Fuß und mit dem Rad auf Schulwegen (14.–18. September
+    2026, morgens, mittags, nachmittags)
+  situation: >-
+    Die Stadt hat im September 2026 an ausgewählten Straßen in Geseke, Störmede und Eringerfeld zu
+    den Schulwegzeiten gezählt, wie viele Schülerinnen und Schüler zu Fuß oder mit dem Rad
+    unterwegs sind. Veröffentlicht sind die Zählungen nicht.
+  empfehlung: >-
+    Anfrage nach den Zählungen vom September 2026 (je Zählstelle, Uhrzeit und Verkehrsart).
+    Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Geseke"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind besonders die Zählungen auf Schulwegen vom 14. bis 18. September 2026 – bitte mit
+    den Werten je Zählstelle, Zeitfenster und Verkehrsart (zu Fuß, Rad).
+  links:
+    - ["Verkehrszählung auf Schulwegen (2026)", "https://www.geseke.de/aktuelles/pressemeldungen/verkehrszaehlung-auf-schulwegen-im-gebiet-der-stadt-geseke"]
+- kommune: Mülheim an der Ruhr
+  land: NW
+  lon: 6.8831
+  lat: 51.4111
+  stand: kandidat
+  was: >-
+    Zählungen nach Bedarf; für das Vorbehaltsnetz Daten aus verschiedenen Jahren (Tag,
+    Spitzenstunden, Anteil Pkw und Lkw)
+  situation: >-
+    Laut der Seite „Straßenverkehrsdaten“ zählt die Stadt nach Bedarf, vor allem für die Planung;
+    für das Netz der übergeordneten Straßen (Vorbehaltsnetz) liegen Daten aus verschiedenen Jahren
+    vor, meist Verkehrsstärken je Tag und in den Spitzenstunden mit den Anteilen von Pkw und Lkw.
+    Online steht keine Zählung.
+  empfehlung: >-
+    Anfrage nach den Zählungen für das Vorbehaltsnetz und allen weiteren seit 2015, mit den Werten
+    je Intervall. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Mülheim an der Ruhr"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Laut Ihrer Seite „Straßenverkehrsdaten“ liegen für das Vorbehaltsnetz Zählungen aus
+    verschiedenen Jahren vor.
+  links:
+    - ["Straßenverkehrsdaten", "https://cms.muelheim-ruhr.de/stadtraum/mobilitaet/verkehr-meldungen-und-wichtige-informationen/strassenverkehrsdaten"]
+- kommune: Bottrop
+  land: NW
+  lon: 6.9158
+  lat: 51.5709
+  stand: kandidat
+  was: >-
+    Verkehrszählungen des Stadtplanungsamts (Fahrzeugmengen und Geschwindigkeiten), nicht
+    veröffentlicht
+  situation: >-
+    Das Stadtplanungsamt erfasst laut seiner Dienstleistungsbeschreibung Fahrzeugmengen und
+    Geschwindigkeiten und nutzt sie für Planungen, Anwohnerbeschwerden, Umweltberechnungen und neue
+    Baugebiete. Veröffentlicht ist keine Zählung.
+  empfehlung: >-
+    Anfrage nach allen Zählungen seit 2015 an das Stadtplanungsamt. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Bottrop"}
+  anfrage: true
+  links:
+    - ["bottrop.de: Verkehrszählungen", "https://www.bottrop.de/vv/produkte/dezernat4/61/Verkehrszaehlungen.php"]
+- kommune: Herscheid
+  land: NW
+  lon: 7.7514
+  lat: 51.1852
+  stand: kandidat
+  anfrage_an: Gemeinde Herscheid
+  was: >-
+    verdeckte Messungen 2023–2025 an vielen Straßen, je Fahrzeug Zeit, Richtung, Tempo und Länge
+  situation: >-
+    Die Gemeinde misst regelmäßig verdeckt (ein- oder beidseitig) und erfasst dabei je Fahrzeug
+    Datum, Uhrzeit, Richtung, Geschwindigkeit und Länge; Messungen 2023–2025 unter anderem in der
+    Habbeler Straße, Lüdenscheider Straße, Unterdorfstraße und Elsetalstraße. Die Ergebnisse hat die
+    Verwaltung im Planungs- und Bauausschuss vorgestellt; die Messdaten sind nicht offen.
+  empfehlung: >-
+    Anfrage nach den Messdaten (Export je Fahrzeug) der Messungen seit 2023. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Gemeinde Herscheid"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Gemeint sind besonders Ihre verdeckten Messungen 2023–2025 – bitte als Export der Geräte (je
+    Fahrzeug mit Zeit, Richtung, Geschwindigkeit und Länge).
+  links:
+    - ["Verdeckte Geschwindigkeitsmessungen", "https://www.herscheid.de/news/news-detail?tx_news_pi1%5Baction%5D=detail&tx_news_pi1%5Bcontroller%5D=News&tx_news_pi1%5Bnews%5D=14&cHash=9635f6ad892923e7f653e070da4e3e30"]
+- kommune: Datteln
+  land: NW
+  lon: 7.3307
+  lat: 51.6671
+  stand: kandidat
+  was: >-
+    Videozählungen an Knotenpunkten durch ein Büro (2022 Redder Straße/Westring/Holtbredde, später
+    drei Knoten in der Innenstadt, mit Fuß- und Radverkehr)
+  situation: >-
+    Die Stadt lässt Knotenpunkte per Video zählen, etwa 2022 ganztägig an der Kreuzung Redder
+    Straße/Westring/Holtbredde und später an drei Knoten in der Innenstadt (Lohstraße/Türkenort,
+    Hohe Straße/Tigg, Kirchstraße/Heibeckstraße), Fuß- und Radverkehr getrennt erfasst.
+    Veröffentlicht sind nur die Ankündigungen.
+  empfehlung: >-
+    Anfrage nach diesen Zählungen mit den Werten je Intervall und Strom. Grundlage: IFG NRW.
+  weg: "FragDenStaat, IFG NRW"
+  kontakt: {fds_suche: "Stadt Datteln"}
+  anfrage: true
+  links:
+    - ["Verkehrszählung Redder Straße (2022)", "https://www.datteln.de/news/verkehrszaehlung-kreuzung-redder-strassewestringholtbredde-untersuchung-soll-dazu-beitragen"]
+    - ["Verkehrserhebung am Tigg", "https://www.datteln.de/news/verkehrserhebung-am-tigg-am-810"]
+
+# Nordrhein-Westfalen: nur Dauerzählstellen bekannt
+- kommune: Bielefeld
+  land: NW
+  lon: 8.5206
+  lat: 52.0148
+  dauer:
+    stand: kandidat
+    was: >-
+      Rad-Dauerzählstellen (Induktionsschleifen) an fünf Radhauptrouten seit April 2021, am
+      Stadtring Brackwede (2022) und am Jahnplatz (mit Display, 2022), dazu drei mobile Zählstellen
+      seit 2019 – der Eintrag im Open-Data-Portal verlinkt nur Webseite und Karte, keine Werte
+    links:
+      - ["Radverkehrszählstellen (Open Data Bielefeld)", "https://open-data.bielefeld.de/dataset/radverkehrsz%C3%A4hlstellen"]
+- kommune: Neuss
+  land: NW
+  lon: 6.7066
+  lat: 51.1762
+  dauer:
+    stand: offen
+    was: >-
+      Rad-Zählstelle der Stadt am Radschnellweg RS5 (Hammer Landstraße): Stundenwerte je Richtung
+      im Portal des Rhein-Kreises Neuss, seit November 2026 auch in der Mobilithek – dort „keine
+      Lizenz“; ohne Lizenzangabe nicht in der Karte
+    links:
+      - ["Mobilithek: Radverkehrszählstelle RS5", "https://mobilithek.info/offers/-1611162702897177411"]
+- kommune: Hennef (Sieg)
+  land: NW
+  lon: 7.3335
+  lat: 50.7548
+  dauer:
+    stand: kandidat
+    was: >-
+      Fahrradzählstation Horstmannsteg seit Ende 2020 (Schleifen, Rad getrennt vom Fußverkehr) –
+      offen nur Jahresberichte als PDF
+    links:
+      - ["Jahresbericht 2023", "https://www.hennef.de/fahrradzaehlstation-horstmannsteg-jahresbericht-2023/"]
+- kommune: Rhein-Sieg-Kreis
+  land: NW
+  lon: 7.2058
+  lat: 50.7997
+  dauer:
+    stand: kandidat
+    was: >-
+      12 Rad-Zählstellen des Kreises (Zählschleifen, 10 seit Herbst 2015, 2 seit Herbst 2023), etwa
+      am Siegtalradweg und an der B 56 und L 158 – Werte nur in einer interaktiven Karte
+    links:
+      - ["Radverkehrszählungen Rhein-Sieg-Kreis", "https://www.rhein-sieg-kreis.de/mobilitaet-umwelt/verkehr/radverkehrszaehlungen.php"]

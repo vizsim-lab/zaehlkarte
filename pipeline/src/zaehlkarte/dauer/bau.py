@@ -1,4 +1,4 @@
-"""Dauerzählstellen holen und bauen: je Quelle aus `dauer:` in sources.yaml der Adapter
+"""Dauerzählstellen holen und bauen: je Quelle aus config/quellen/dauer/ der Adapter
 (`hole` -> pipeline/data/raw/, `lese` -> Messreihe), dann site.schreibe -> public/data/dauer/."""
 
 from __future__ import annotations
@@ -53,7 +53,7 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list
     pfade = pfade or Pfade()
     log: list[str] = []
     fehler: list[str] = []
-    abruf.ausnahmen_setzen(dauerquellen(pfade))
+    abruf.ausnahmen_setzen(dauerquellen(pfade), pfade=pfade)
     for code, q in dauerquellen(pfade).items():
         if nur and code not in nur:
             continue

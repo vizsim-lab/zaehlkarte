@@ -25,7 +25,7 @@ GRUPPEN = ("kfz", "sv", "rad", "fuss", "kind")
 
 @dataclass
 class Zaehlung:
-    quelle: str  # Code aus sources.yaml
+    quelle: str  # Code der Quelle (Dateiname in config/quellen/kurzzeit/)
     kennung: str  # eindeutig je Quelle, stabil (Dateiname ohne Endung, ID + Datum)
     stelle_roh: str | None  # Zählstellen-Kennung der Quelle („K10921“), None = unbekannt
     name: str

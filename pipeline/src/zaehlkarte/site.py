@@ -1,8 +1,9 @@
 """Kartendaten schreiben: public/data/{manifest,index,datenlage}.json und details/NN.json.
 
 `schreibe_datenlage()` (`zaehlkarte datenlage`) erneuert nur datenlage.json und
-docs/DATENLAGE.md – aus sources.yaml und der vorhandenen index.json (Lage und Zahl der Zählungen
-der Kommunen in der Karte), also ohne neuen Bau, wenn sich nur Datenlage-Texte ändern.
+docs/DATENLAGE.md – aus der Konfiguration (`config/kommunen/`) und der vorhandenen index.json
+(Lage und Zahl der Zählungen der Kommunen in der Karte), also ohne neuen Bau, wenn sich nur
+Datenlage-Texte ändern.
 
 Vertrag mit dem Frontend (js/data/laden.js, js/data/modell.js): Feldnamen in `index.json`
 (`stellen.felder`, `zaehlungen.felder`), Aufbau von `details/NN.json` und die Dateinamen in
@@ -28,7 +29,7 @@ from pathlib import Path
 
 from zaehlkarte import kennzahlen as kz
 from zaehlkarte.build import Gebaut, Stelle
-from zaehlkarte.config import Pfade, lade_yaml, quellen
+from zaehlkarte.config import Pfade, konfiguration, quellen
 from zaehlkarte.modell import GRUPPEN, Zaehlung
 
 VERSION = 1
@@ -159,8 +160,8 @@ FDS_SUCHE = "https://fragdenstaat.de/behoerden/?q="
 
 
 def anfrage(vorlage: dict, kommune: str, zusatz: str | None, an: str | None = None) -> dict:
-    """Anfragetext aus der Vorlage in sources.yaml (Feld „Anfrage“ auf FragDenStaat). `an`: die
-    angefragte Stelle, wo sie keine Stadt ist (`anfrage_an`, etwa „Gemeinde Mühltal“)."""
+    """Anfragetext aus der Vorlage (config/anfrage_vorlage.yaml; Feld „Anfrage“ auf FragDenStaat).
+    `an`: die angefragte Stelle, wo sie keine Stadt ist (`anfrage_an`, etwa „Gemeinde Mühltal“)."""
     zusatz = " ".join((zusatz or "").split())
     text = vorlage["text"].format(kommune=kommune, stelle=an or f"Stadt {kommune}",
                                   zusatz=f"\n{zusatz}\n" if zusatz else "")
@@ -180,7 +181,7 @@ def kontakt(roh: dict | None) -> dict | None:
     return out
 
 
-DAUER_STAND = {  # Datenlage der Dauerzählstellen je Kommune (`dauer:` in sources.yaml)
+DAUER_STAND = {  # Datenlage der Dauerzählstellen je Kommune (`dauer:` in config/kommunen/)
     "in_karte": "in der Karte",
     "offen": "offen, nicht in der Karte",
     "kandidat": "vorhanden, Werte nicht offen",
@@ -204,7 +205,7 @@ def _dauer(e: dict) -> dict | None:
 def datenlage(stellen, pfade: Pfade) -> dict:
     """GeoJSON der Datenlage je Kommune. `stellen`: die gebauten Stellen (oder ihr Abbild aus
     index.json) – Lage und Zahl der Zählungen der Kommunen, die in der Karte sind."""
-    cfg = lade_yaml("sources.yaml", pfade)
+    cfg = konfiguration(pfade)
     vorlage = cfg["anfrage_vorlage"]
     recht = cfg.get("recht", {})
     alle = quellen(pfade, nur_live=False)
@@ -264,9 +265,10 @@ def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
         "# Datenlage: kommunale Verkehrszählungen",
         "",
         f"Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am {erzeugt} aus",
-        "`pipeline/config/sources.yaml` – nicht von Hand ändern. Dieselben Angaben zeigt die Karte",
-        "unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw. Dauerzählstellen). Kommunen, von",
-        "denen nur Dauerzählstellen bekannt sind, haben keinen Stand der Kurzzeitzählungen („–“).",
+        "`pipeline/config/kommunen/` (je Land eine Datei) – nicht von Hand ändern. Dieselben",
+        "Angaben zeigt die Karte unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw.",
+        "Dauerzählstellen). Kommunen, von denen nur Dauerzählstellen bekannt sind, haben keinen",
+        "Stand der Kurzzeitzählungen („–“).",
         "Rechtliche Hinweise sind keine Rechtsberatung; Kontakte aus der Behördendatenbank von",
         "FragDenStaat.",
         "",
@@ -347,7 +349,7 @@ def _schreibe_json(pfad: Path, inhalt: dict, eingerueckt: bool) -> None:
 
 def schreibe_datenlage(pfade: Pfade | None = None, erzeugt: date | None = None) -> list[Path]:
     """Nur datenlage.json und docs/DATENLAGE.md erneuern – Lage und Zahl der Zählungen der
-    Kommunen in der Karte aus der vorhandenen index.json, alles andere aus sources.yaml."""
+    Kommunen in der Karte aus der vorhandenen index.json, alles andere aus der Konfiguration."""
     from types import SimpleNamespace
 
     pfade = pfade or Pfade()

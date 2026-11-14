@@ -24,7 +24,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
 - Kanäle: `channels_all` enthält nur die Rad-Kanäle – Pkw- und Personen-Kanäle derselben Geräte
   (Ludwigsburg, Reutlingen, Böblingen) zählt MobiData nicht mit (Abgleich mit dem älteren Format
   je Kanal, Juni 2025, rad_erkunden9.py).
-- `ohne` in sources.yaml: Zählstellen, die nicht in die Karte kommen – Name nennt Fuß- und
+- `ohne` in der Quelldatei: Zählstellen, die nicht in die Karte kommen – Name nennt Fuß- und
   Radverkehr, ein Gerät („Hardware …“) neben seinen eigenen Zählstellen, eine Stelle des Landes.
 """
 

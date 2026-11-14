@@ -1,0 +1,40 @@
+# Rad-Zählstellen, zweite Runde (November 2026): die übrigen Quellen des Artefakts
+# „Offene Radzähldaten“, gegen die nichts spricht (Werkzeug-Branch `werkzeug/dauer2`,
+# tools/rad_erkunden12–14.py). Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 10
+status: live
+adapter: ods_eco
+name: Würzburg (Rad-Zählstellen)
+land: BY
+traeger: Stadt Würzburg
+art: >-
+  Rad-Zählstellen der Stadt (Eco-Counter); Stundenwerte je Zählstelle, am Greinberg je
+  Richtung eine Stelle
+weg: offen im Open-Data-Portal der Stadt (Opendatasoft, täglich aktualisiert)
+portal: https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/
+basis: https://opendata.wuerzburg.de
+datensatz: fahrrad-zaehlung-daten
+standorte: bicycle_counter_sites
+titel: >-
+  Fahrradzählung Daten – EcoCounter Stationen (verändert: Stundenwerte zu Tagessummen
+  zusammengefasst)
+herausgeber: Stadt Würzburg
+quellenvermerk: Stadt Würzburg
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Übernommen sind nur Rohwerte (Status „raw“); Stunden, die die Quelle als gelöscht führt,
+    gelten als nicht gezählt.
+  - >-
+    Die Quelle unterscheidet nicht immer zwischen einem Ausfall und null Rädern: An den beiden
+    Zählstellen in Heidingsfeld stehen Hunderte ganzer Tage mit 0 – in der Karte als gezählte
+    Tage.
+  - >-
+    Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+    dieser Tag gilt als nicht vollständig gezählt.
+  - >-
+    Die Radar-Sensoren (LoRaWAN) der Smarten Region Würzburg sind nicht in der Karte: Ihre
+    Meldungen haben kein festes Stundenraster.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

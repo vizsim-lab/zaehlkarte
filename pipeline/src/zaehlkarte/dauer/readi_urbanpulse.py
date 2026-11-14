@@ -14,11 +14,11 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer`, tools/dauer_ettli
   laufende Tageszähler ohne Richtung und Lage, deren Zeitstempel sich nicht sicher einer Stunde
   zuordnen lassen –, Testimporte vom 05.08.2026 (Zeitstempel minutengenau) und Übergangszeilen
   vom 20.08.2026 (Bezeichnung „Straße | …“).
-- Gruppen aus `klassen` in sources.yaml (Gruppe -> Klassen der Quelle, deren Summe sie ist; eine
+- Gruppen aus `klassen` in der Quelldatei (Gruppe -> Klassen der Quelle, deren Summe sie ist; eine
   Klasse darf in mehreren Gruppen stehen, Lkw etwa bei Kfz und bei Lkw); andere Klassen zählen
   nicht mit und stehen im Bericht.
 - Namen: die Quelle schreibt sie uneinheitlich („Strasse“, „Pforzheimer-Str-14“) – `stellen` in
-  sources.yaml nennt je Sensor Straße und Abschnitt; ohne Eintrag gilt die Bezeichnung der Quelle.
+  Die Quelldatei nennt je Sensor Straße und Abschnitt; ohne Eintrag gilt die Bezeichnung der Quelle.
 """
 
 from __future__ import annotations

@@ -1,0 +1,130 @@
+# Datenlage Bayern – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: München
+  land: BY
+  lon: 11.582
+  lat: 48.1351
+  stand: kandidat
+  dauer:
+    stand: in_karte
+    was: >-
+      sechs Raddauerzählstellen der Stadt: 15-Minuten-Werte seit 2008, in der Karte als
+      Dauerzählstellen
+    links:
+      - ["Open Data München: Raddauerzählstellen", "https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen"]
+  was: >-
+    über 5.000 Kfz- und Radzählungen von Hand in der stadteigenen Software DAVe (Viertelstunden),
+    Export in offene Formate möglich; online nur Karten
+  situation: >-
+    Über 5.000 von Hand gezählte Kfz- und Radzählungen in der stadteigenen Software DAVe, in
+    Viertelstunden; Fußzählungen kommen dazu. DAVe kann offene Formate exportieren. Online gibt es
+    nur Karten.
+  empfehlung: >-
+    Anfrage nach einem DAVe-Export aller Zählungen. Bayern hat kein Landes-IFG: Grundlage sind das
+    Bayerische Umweltinformationsgesetz und die Informationsfreiheitssatzung der Stadt.
+  weg: "FragDenStaat, Bayerisches UIG / Informationsfreiheitssatzung München"
+  kontakt: {fds_suche: "Landeshauptstadt München Mobilitätsreferat"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Die Zählungen liegen in Ihrer Software DAVe vor, die Exporte in offene Formate erlaubt. Ein
+    solcher Export aller Zählungen genügt.
+  links:
+    - ["stadt.muenchen.de", "https://stadt.muenchen.de/infos/verkehrsdaten.html"]
+    - ["DAVe", "https://stadt.muenchen.de/news/open-source-anwendung-dave.html"]
+- kommune: Nürnberg
+  land: BY
+  lon: 11.0767
+  lat: 49.4521
+  stand: geliefert
+  was: >-
+    zählt seit 1967 jedes Jahr von Hand; 2025/26 eine Zählung in Halbstundenwerten herausgegeben
+    (abgelehnt nur Tempodaten)
+  situation: >-
+    Zählt seit 1967 jedes Jahr von Hand. Eine Anfrage 2025/26 bekam eine Zählung in
+    Halbstundenwerten; abgelehnt wurden nur Geschwindigkeitsdaten der Verkehrsüberwachung.
+  empfehlung: >-
+    Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt. Grundlage:
+    Bayerisches Umweltinformationsgesetz.
+  weg: "FragDenStaat, Bayerisches UIG"
+  kontakt: {name: "Verkehrsplanungsamt Nürnberg", fds: "https://fragdenstaat.de/behoerde/52086/verkehrsplanungsamt-nuernberg/"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Auf eine Anfrage 2025/26 haben Sie eine Zählung in Halbstundenwerten herausgegeben. Ich bitte
+    um alle Zählungen seit 2015 in dieser Form; Geschwindigkeitsdaten der Verkehrsüberwachung sind
+    nicht gemeint.
+  links:
+    - ["FragDenStaat 2025/26", "https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/"]
+    - ["Bericht Verkehrszählung 2018", "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf"]
+- kommune: Augsburg
+  land: BY
+  lon: 10.8978
+  lat: 48.3689
+  stand: geliefert
+  dauer:
+    stand: offen
+    was: >-
+      Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden
+      lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte
+    links:
+      - ["Radzählstationen (Stadt Augsburg)", "https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen"]
+  was: >-
+    2017 auf Anfrage eine Karte der jüngsten Zählung je Zählstelle (Kfz/24 h am Werktag,
+    Lkw-Anteil, Jahr) und eine Liste der Zählstellen mit Koordinaten; Stundenwerte nur gegen
+    Aufbereitung
+  situation: >-
+    Auf eine Anfrage 2017 hat die Stadt eine Karte mit der jeweils jüngsten Zählung je Zählstelle
+    geschickt (Kfz in 24 Stunden an einem durchschnittlichen Werktag, Lkw-Anteil, Zähljahr) und
+    eine Excel-Liste der neueren Zählstellen mit Koordinaten; gezählt wird meist an Kreuzungen. Die
+    stündlichen Zählungen seien nicht geokodiert und ohne Erläuterung schwer verständlich; ihre
+    Aufbereitung würde Wochen dauern und koste Gebühren.
+  empfehlung: >-
+    Anfrage nach den stündlichen Zählungen in der Form, in der sie vorliegen – die Zuordnung zu den
+    Zählstellen erlaubt die Liste von 2017. Bayern hat kein Landes-IFG: Grundlage ist das
+    Bayerische Umweltinformationsgesetz.
+  weg: "FragDenStaat, Bayerisches UIG"
+  kontakt: {fds_suche: "Stadt Augsburg"}
+  anfrage: true
+  anfrage_zusatz: >-
+    2017 haben Sie auf eine Anfrage eine Karte der jüngsten Zählungen und eine Liste der
+    Zählstellen mit Koordinaten geschickt. Ich bitte um die Zählungen selbst (Stunden- oder
+    Viertelstundenwerte) in der Form, in der sie bei Ihnen vorliegen; eine Aufbereitung ist nicht
+    nötig.
+  links:
+    - ["FragDenStaat 2017", "https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/"]
+- kommune: Amberg
+  land: BY
+  lon: 11.8583
+  lat: 49.4447
+  stand: geliefert
+  was: >-
+    städtische Verkehrszählung 2022; 2026 auf Anfrage die Daten als Download – erst nach einer
+    unterschriebenen Nutzungserklärung
+  situation: >-
+    Auf eine Anfrage 2026 schickte die Stabsstelle Mobilität und Verkehr eine Karte aller
+    Messstellen der Zählung 2022 und eine standardisierte Nutzungserklärung; nach deren
+    Unterzeichnung kam ein Link zu den Daten der städtischen Verkehrszählung. Was die Erklärung für
+    die Weiterverwendung erlaubt, ist nicht öffentlich.
+  empfehlung: >-
+    Bei der Anfrage gleich nach den Bedingungen der Nutzungserklärung fragen und um eine offene
+    Lizenz bitten. Bayern hat kein Landes-IFG: Grundlage ist das Bayerische
+    Umweltinformationsgesetz.
+  weg: "FragDenStaat, Bayerisches UIG"
+  kontakt: {fds_suche: "Stadt Amberg"}
+  anfrage: true
+  anfrage_zusatz: >-
+    2026 haben Sie die Daten Ihrer Verkehrszählung 2022 nach einer Nutzungserklärung
+    bereitgestellt. Ich bitte um diese und spätere Zählungen und um die Weiterverwendung unter
+    einer offenen Lizenz ohne gesonderte Erklärung.
+  links:
+    - ["FragDenStaat 2026", "https://fragdenstaat.de/anfrage/verkehrszaehlungsdaten/"]
+- kommune: Würzburg
+  land: BY
+  lon: 9.9502
+  lat: 49.8005
+  dauer:
+    stand: in_karte
+    was: >-
+      sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als
+      Dauerzählstellen
+    links:
+      - ["Fahrradzählung Würzburg", "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"]

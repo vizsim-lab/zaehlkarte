@@ -1,0 +1,35 @@
+# Rad-Zählstellen, zweite Runde (November 2026): die übrigen Quellen des Artefakts
+# „Offene Radzähldaten“, gegen die nichts spricht (Werkzeug-Branch `werkzeug/dauer2`,
+# tools/rad_erkunden12–14.py). Aufbau und Fallen im Adapter und in AGENTS.md.
+# Leipzig hält Stundenwerte nur 31 Tage vor -> die Zählkarte hebt sie selbst auf (gedaechtnis/
+# im Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt, wie Hamburg).
+nr: 14
+status: live
+adapter: leipzig_rad
+name: Leipzig (Rad-Zählstellen)
+land: SN
+traeger: Stadt Leipzig, Verkehrs- und Tiefbauamt
+art: Dauerzählstellen Radverkehr der Stadt (Eco-Counter); Stundenwerte je Zählstelle
+weg: offen im WFS des Geoportals (nur die letzten 31 Tage; die Zählkarte hebt sie auf)
+portal: https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei
+wfs: https://geodienste.leipzig.de/l3/OpenData/wfs
+ebenen:
+  standorte: OpenData:radverkehr_dauerzaehlstelle_standort_statisch
+  stunden: OpenData:radverkehr_dauerzaehlstelle_anzahl_stunde_zeitreihe
+titel: >-
+  Dauerzählstellen Radverkehr – Gesamtanzahl der Fahrräder pro Stunde der letzten 31 Tage, Stadt
+  Leipzig (verändert: Stundenwerte gesammelt und zu Tagessummen zusammengefasst)
+herausgeber: Stadt Leipzig
+quellenvermerk: Stadt Leipzig
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Die Quelle hält die Stundenwerte nur 31 Tage vor; die Zählkarte hebt sie seit ihrem ersten
+    Abruf im November 2026 selbst auf – ältere Stunden fehlen in der Karte.
+  - >-
+    Die Tageswerte der Quelle (zwei Jahre) sind nicht übernommen: Ohne Stunden lässt sich nicht
+    prüfen, ob ein Tag vollständig gezählt ist; sie weichen zudem meist etwas von der Summe der
+    Stundenwerte ab. Die Zählstelle Jahnallee liefert keine Stundenwerte.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

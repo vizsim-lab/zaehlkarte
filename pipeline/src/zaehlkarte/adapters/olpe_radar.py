@@ -9,7 +9,7 @@ einer JSON-Datei je Messung, meist ein bis zwei Wochen am Stück. Zwei Formate:
   Ortszeit um. `measurement_data` ist ein GPS-Punkt je Tag – auch für Tage nach dem Export, als
   das Gerät schon woanders stand; daher zählen nur die Punkte aus der Zeit der Fahrzeuge.
 - Tabelle: `[{"Datum": "TT.MM.JJJJ hh:mm:ss", "Richtung", "Klasse",
-  "Fahrzeugklassen-Bezeichnung", …}]` in Ortszeit, ohne Lage (Lage aus `orte` in sources.yaml).
+  "Fahrzeugklassen-Bezeichnung", …}]` in Ortszeit, ohne Lage (Lage aus `orte` in der Quelldatei).
 
 Klassen (Codes des Geräts, Bezeichnungen aus der Tabelle): 2 PkwA, 3 Lkw, 5 Bus, 7 Pkw, 8 LkwA,
 9 Sattel-Kfz, 10 Krad, 11 Lfw, 230 Radfahrer; 6 und 250 ohne Bezeichnung (nach Länge und Tempo
@@ -23,7 +23,7 @@ als Radfahrer erkannt (nur auf der Fahrbahn).
   Ausfall ergibt keine Zählung); leere Nachtstunden in ruhigen Straßen bleiben echte Nullen.
 - Lizenz je Datensatz: der Lizenz-Link auf seiner Seite (`license_url`; die CKAN-API mit der
   `license_id` sperrt das Portal per robots.txt, das DCAT-Dokument nennt keine Lizenz) →
-  Lieferung in sources.yaml (`lizenz_link`, sonst `lizenz_id`); ein Datensatz mit anderer
+  Lieferung in der Quelldatei (`lizenz_link`, sonst `lizenz_id`); ein Datensatz mit anderer
   Lizenz kommt nicht in die Karte.
 """
 

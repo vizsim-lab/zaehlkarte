@@ -1,0 +1,118 @@
+# Datenlage Niedersachsen – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: Wolfsburg
+  land: NI
+  lon: 10.7865
+  lat: 52.4227
+  stand: kandidat
+  was: >-
+    nutzt seit April 2026 dieselbe Zählsoftware wie München (DAVe)
+  situation: >-
+    Nutzt seit April 2026 dieselbe Zählsoftware wie München (DAVe). Wie viele Zählungen es gibt,
+    ist nicht bekannt.
+  empfehlung: >-
+    Anfrage nach einem DAVe-Export und den älteren Zählungen. Niedersachsen hat kein Landes-IFG:
+    Grundlage ist das Niedersächsische Umweltinformationsgesetz.
+  weg: "FragDenStaat, Niedersächsisches UIG"
+  kontakt: {name: "Stadtverwaltung Wolfsburg", email: "servicecenter@stadt.wolfsburg.de", fds: "https://fragdenstaat.de/behoerde/15210/wolfsburg/"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Sie nutzen seit April 2026 die Zählsoftware DAVe, die Exporte in offene Formate erlaubt. Ein
+    solcher Export genügt; ältere Zählungen bitte in dem Format, in dem sie vorliegen.
+  links:
+    - ["DAVe", "https://stadt.muenchen.de/news/open-source-anwendung-dave.html"]
+- kommune: Göttingen
+  land: NI
+  lon: 9.9158
+  lat: 51.5413
+  stand: nur_karte
+  was: >-
+    stadtweite Zählung 2023/2024 (je Stelle zweimal vier Stunden, auf DTVw hochgerechnet); auf
+    Anfrage 2026 nur die Verkehrsmengenkarte als PDF
+  situation: >-
+    Göttingen hat 2023/2024 stadtweit gezählt – je Stelle zweimal vier Stunden, hochgerechnet auf
+    den Werktag (DTVw). Auf eine Anfrage 2026 nach den Ergebnissen kam nur die Verkehrsmengenkarte
+    2024 als PDF.
+  empfehlung: >-
+    Neu anfragen, gezielt nach den gezählten Werten je Zählstelle (die zweimal vier Stunden), nicht
+    nach der Karte. Grundlage: Niedersächsisches Umweltinformationsgesetz; die Anfrage 2026 nannte
+    zusätzlich die Informationsfreiheitssatzung der Stadt.
+  weg: "FragDenStaat, Niedersächsisches UIG"
+  kontakt: {fds_suche: "Stadt Göttingen"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Auf die Anfrage „Verkehrszählung 2023“ (FragDenStaat, Juni 2026) haben Sie die
+    Verkehrsmengenkarte 2024 geschickt. Ich bitte um die Zählungen selbst: die gezählten Werte je
+    Zählstelle und Intervall, vor der Hochrechnung.
+  links:
+    - ["FragDenStaat 2026", "https://fragdenstaat.de/anfrage/verkehrszaehlung-2023-1/"]
+- kommune: Osnabrück
+  land: NI
+  lon: 8.0472
+  lat: 52.2799
+  stand: geliefert
+  dauer:
+    stand: offen
+    was: >-
+      KI-Sensoren an rund zehn Kreuzungen, 15-Minuten-Werte seit 2023 über die
+      SensorThings-Schnittstelle – ohne Lizenzangabe, daher nicht in der Karte (die Anfrage bei
+      den Kurzzeitzählungen fragt auch nach der Lizenz)
+    links:
+      - ["Datenplattform Osnabrück", "https://datenplattform.osnabrueck.de/verkehrszaehlung/"]
+      - ["SensorThings-Schnittstelle", "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"]
+  was: >-
+    2021 auf Anfrage alle Seitenradar-Messungen in verkehrsberuhigten Bereichen seit 2011 als
+    Textdateien (eine Zeile je Fahrzeug); offen ein KI-Sensor an der Bramscher Straße
+  situation: >-
+    Auf eine Anfrage 2021 hat die Stadt ihre Verkehrserhebungen in verkehrsberuhigten Bereichen
+    seit 2011 als 44 Textdateien geschickt – Messungen mit einem Seitenradar, eine Zeile je Fahrzeug
+    mit Zeit, Richtung, Geschwindigkeit und Länge, ohne Lizenzangabe (daher nicht in der Karte).
+    Offen sind die Werte von KI-Sensoren an rund zehn Kreuzungen (je Fahrstreifen bzw.
+    Abbiegestrom Pkw, Lkw, Bus, Krad, Rad, Fuß; 15-Minuten-Werte seit 2023) über die
+    SensorThings-Schnittstelle der Datenplattform – ohne Lizenzangabe, daher nicht als
+    Dauerzählstellen in der Karte. Laut einer Meldung der Stadt erfassen mobile Zählstellen
+    zusätzlich Rad- und Fußverkehr.
+  empfehlung: >-
+    Anfrage nach allen Seitenradar-Messungen und Zählungen seit 2015 in derselben Form, mit Lage
+    der Messstellen und einer Lizenz. Grundlage: die Informationsfreiheitssatzung der Stadt und das
+    Niedersächsische Umweltinformationsgesetz (Niedersachsen hat kein Landes-IFG).
+  weg: "FragDenStaat, Informationsfreiheitssatzung Osnabrück"
+  kontakt: {fds_suche: "Stadt Osnabrück"}
+  anfrage: true
+  anfrage_zusatz: >-
+    2021 haben Sie die Verkehrserhebungen in verkehrsberuhigten Bereichen seit 2011 als
+    Textdateien geschickt (eine Zeile je Fahrzeug). Ich bitte um alle solchen Messungen seit 2015,
+    auch außerhalb verkehrsberuhigter Bereiche, in derselben Form und mit der Lage der Messstellen,
+    und um die Zählungen Ihrer mobilen Zählstellen für Rad- und Fußverkehr. Bitte nennen Sie
+    außerdem die Lizenz, unter der die Werte der KI-Sensoren auf Ihrer Datenplattform stehen.
+  links:
+    - ["FragDenStaat 2021", "https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen/"]
+    - ["Datenplattform Osnabrück", "https://datenplattform.osnabrueck.de/verkehrszaehlung/"]
+    - ["SensorThings-Schnittstelle", "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"]
+    - ["Meldung mobile Zählstellen", "https://mobil.osnabrueck.de/de/aktuelles/daten-fuer-nachhaltige-mobilitaetsplanung-mobile-zaehlstellen-erfassen-rad-und-fussverkehr-in-osnabrueck/"]
+- kommune: Lingen (Ems)
+  land: NI
+  lon: 7.3172
+  lat: 52.5233
+  stand: geliefert
+  was: >-
+    Verkehrserhebungen mit Messgeräten, nach Straßen abgelegt; 2022 auf Anfrage Berichte als PDF
+    (etwa Kiesbergstraße 2021 an sechs Messstellen)
+  situation: >-
+    Die Stadt legt ihre Verkehrserhebungen nach Straßennamen ab. Auf zwei Anfragen 2022 kamen die
+    Berichte der Messgeräte als PDF – etwa sechs Messstellen in der Kiesbergstraße vom April 2021
+    und Messungen in verkehrsberuhigten Bereichen von 2017 –, gebührenfrei nach der
+    Informationsfreiheitssatzung der Stadt.
+  empfehlung: >-
+    Anfrage nach allen Verkehrserhebungen seit 2015, am besten als Export der Messgeräte statt als
+    PDF. Grundlage: Informationsfreiheitssatzung der Stadt Lingen (Ems).
+  weg: "FragDenStaat, Informationsfreiheitssatzung Lingen"
+  kontakt: {fds_suche: "Stadt Lingen"}
+  anfrage: true
+  anfrage_zusatz: >-
+    2022 haben Sie auf Anfragen Berichte einzelner Verkehrserhebungen als PDF geschickt (etwa
+    Kiesbergstraße, April 2021). Ich bitte um alle Erhebungen seit 2015, am besten als Export der
+    Messgeräte.
+  links:
+    - ["FragDenStaat 2022 (Kiesbergstraße)", "https://fragdenstaat.de/anfrage/verkehrsmengen-kiesbergstrasse/"]
+    - ["FragDenStaat 2022 (verkehrsberuhigte Bereiche)", "https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen-1/"]

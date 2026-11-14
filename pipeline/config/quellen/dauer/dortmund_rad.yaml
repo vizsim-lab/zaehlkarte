@@ -1,0 +1,44 @@
+# Rad-Zählstellen, zweite Runde (November 2026): die übrigen Quellen des Artefakts
+# „Offene Radzähldaten“, gegen die nichts spricht (Werkzeug-Branch `werkzeug/dauer2`,
+# tools/rad_erkunden12–14.py). Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 12
+status: live
+adapter: dortmund_rad
+name: Dortmund (Rad-Zählstelle Schnettkerbrücke)
+land: NW
+traeger: Stadt Dortmund, Stadtplanungs- und Bauordnungsamt
+art: >-
+  Dauerzählstelle Radverkehr auf dem Fuß- und Radweg nördlich der B 1 (Eco-Counter);
+  15-Minuten-Werte je Richtung, in der Karte beide Richtungen zusammen
+weg: offen im Open-Data-Portal der Stadt (Opendatasoft, täglich aktualisiert)
+portal: https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/
+basis: https://open-data.dortmund.de
+datensatz: fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke
+stellen:  # Lage nicht im Datensatz: Knoten 5639350907 in OpenStreetMap
+  # (© OpenStreetMap-Mitwirkende, ODbL), „Dauerzählstelle Radverkehr“ mit Verweis auf die
+  # Eco-Counter-Seite der Stelle (Abfrage über Overpass, 13.11.2026)
+  schnettkerbruecke:
+    name: Schnettkerbrücke
+    abschnitt: Fuß- und Radweg nördlich der B 1, zwischen Wittekindstraße und Dorstfelder Allee
+    lat: 51.499258
+    lon: 7.426735
+titel: >-
+  Dauerzählstelle Radverkehr Schnettkerbrücke (verändert: 15-Minuten-Werte zu Stunden und
+  Tagessummen zusammengefasst)
+herausgeber: Stadt Dortmund
+quellenvermerk: Stadt Dortmund
+lizenz: dl-de/zero-2-0
+lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+hinweise:
+  - >-
+    Je Viertelstunde beide Richtungen zusammen; eine Stunde ist gezählt, wenn alle vier
+    Viertelstunden einen Wert haben.
+  - >-
+    Der Datensatz nennt keine Koordinaten; die Lage stammt aus OpenStreetMap
+    (© OpenStreetMap-Mitwirkende, ODbL), wo die Zählstelle mit ihrer Anzeigetafel eingetragen
+    ist.
+  - >-
+    Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+    dieser Tag gilt als nicht vollständig gezählt.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

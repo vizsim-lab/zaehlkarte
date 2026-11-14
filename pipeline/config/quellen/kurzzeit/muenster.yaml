@@ -1,0 +1,24 @@
+nr: 10
+status: live
+adapter: muenster
+name: Münster
+land: NW
+traeger: Stadt Münster
+titel: Verkehrszählung – Manuelle Verkehrserhebung
+art: >-
+  Kfz-Knotenpunktzählungen von Hand, meist 7–8 und 16–17 Uhr, nach Fahrzeugart (die
+  Rad-Spalte der Kfz-Zählung ist keine vollständige Radzählung und fehlt in der Karte)
+weg: offen auf dem Open-Data-Portal der Stadt (XLS 2000–2012, PDF 2010–2020)
+# Lizenz laut Datensatzseite und Nutzungsbedingungen des Portals (Namensnennung „Datenquelle:
+# Stadt Münster“). GovData führt dieselben Ressourcen als „other-closed“ – ein Fehler der
+# Übernahme über Open.NRW; maßgeblich ist das Portal der Stadt (lizenz_beleg).
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+lizenz_beleg: https://opendata.stadt-muenster.de/nutzungsbedingungen
+portal: https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung
+url_zip: https://opendata.stadt-muenster.de/sites/default/files/Verkehrsz%C3%A4hlung.zip
+sha256_zip: 87296739b1852ba0f219671f154a13bb5668bdcada953b4cab21d10bee7c7a99
+positionen:
+  datei: Zählstellen.csv
+  url: https://opendata.stadt-muenster.de/sites/default/files/Z%C3%A4hlstellen.csv
+  sha256: 6de47c4d510b83f69824add9d9049c612fce7d3caafd3e898c5ee14860672ee0

@@ -28,7 +28,7 @@ LEER = -1
 
 @dataclass
 class Dauerstelle:
-    quelle: str  # Code aus sources.yaml (Abschnitt `dauer:`)
+    quelle: str  # Code der Quelle (Dateiname in config/quellen/dauer/)
     kennung: str  # stabil je Quelle (Berlin: Kurzname des Messquerschnitts, „TE001“)
     name: str  # Straße
     abschnitt: str | None  # Lage auf der Straße („zwischen … und …“)

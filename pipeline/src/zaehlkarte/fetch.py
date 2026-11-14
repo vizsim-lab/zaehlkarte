@@ -2,7 +2,7 @@
 
 Alles landet in pipeline/data/raw/ (gitignored). Jeder Abruf geht über `zaehlkarte.abruf` – nur,
 was robots.txt erlaubt, mit dem verlangten Abstand (Crawl-delay). Berlin-Archive und Geokodierung
-sind auf einen Commit gepinnt (sha256 in sources.yaml); eine abweichende Prüfsumme bricht ab.
+sind auf einen Commit gepinnt (sha256 in der Quelldatei); eine abweichende Prüfsumme bricht ab.
 MobiData BW liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt, aus dem
 ZIP nur die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
 Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz die Metadaten (DCAT-
@@ -202,7 +202,7 @@ def _konstanz_mobil(code: str, q: dict, pfade: Pfade) -> list[str]:
             for st in q["standorte"]]
 
 
-# Adapter (`adapter:` in sources.yaml) -> Abruf; tests/test_konfiguration.py prüft, dass jede
+# Adapter (`adapter:` der Quelle) -> Abruf; tests/test_konfiguration.py prüft, dass jede
 # live-Quelle einen hat
 ABRUF: dict[str, Callable[[str, dict, Pfade], list[str]]] = {
     "berlin_zda": _berlin_zda,
@@ -227,7 +227,7 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list
     pfade = pfade or Pfade()
     log: list[str] = []
     fehler: list[str] = []
-    abruf.ausnahmen_setzen(quellen(pfade))
+    abruf.ausnahmen_setzen(quellen(pfade), pfade=pfade)
     for code, q in quellen(pfade).items():
         if nur and code not in nur:
             continue

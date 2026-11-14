@@ -11,7 +11,7 @@ Mobilitätskonzept, Kap. 3.1).
   „Summe“ nennt die Viertelstunde über alle Arten und Ströme – Prüfung.
 - Kfz = alle Arten; Schwerverkehr = Lkw + Lastzug + Bus. Rad und Fuß sind nicht gezählt.
 - Die Hochrechnungen auf den Tag (DTV) in den PDFs bleiben draußen.
-- Lage aus sources.yaml (OpenStreetMap; Querschnitte nach der Zählstellenkarte des Berichts).
+- Lage aus der Quelldatei (OpenStreetMap; Querschnitte nach der Zählstellenkarte des Berichts).
 """
 
 from __future__ import annotations

@@ -1,0 +1,52 @@
+nr: 12
+status: live
+adapter: xanten_pdf
+name: Xanten
+land: NW
+traeger: Stadt Xanten (Verkehrserhebung zum Mobilitätskonzept, büro stadtVerkehr)
+titel: Mobilitätskonzept – Ergebnisse der Verkehrszählungen
+art: >-
+  Videozählung am 25.08.2020: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte
+  (24 Stunden), Viertelstundenwerte nach Fahrzeugart, nur Kfz
+weg: offen auf opendata.ruhr (PDF)
+lizenz: dl-de/zero-2-0
+lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+portal: https://opendata.ruhr/dataset/mobilitatskonzept
+# Fassung vom Juni 2025 (letzte Änderung im Portal), Prüfsumme wie bei Münster
+dateien:
+  - datei: Gesamtuebersicht_Zaehldaten_Xanten_Knotenpunkte.pdf
+    titel: Gesamtübersicht Zähldaten Knotenpunkte
+    url: https://opendata.ruhr/dataset/dd58836a-5e0c-4b05-97df-d3bd714e702e/resource/fea95307-56ea-425c-9a77-535b88d10598/download/20210104_gesamtubersicht_zahldaten_xanten_knotenpunkte.pdf
+    sha256: bea50918a281897686648162f4933289d1e21fb4c4ee6e4a7a5ec1e5662bff27
+  - datei: Gesamtuebersicht_Zaehldaten_Xanten_Querschnitte.pdf
+    titel: Gesamtübersicht Zähldaten Querschnitte
+    url: https://opendata.ruhr/dataset/dd58836a-5e0c-4b05-97df-d3bd714e702e/resource/2ed3cd21-576f-4174-9db5-dbf32b2a2851/download/20201204-gesamtubersicht_zahldaten_xanten_querschnitte.pdf
+    sha256: a475dfe0d12fbd92a81b048ba76051cdf14c86a3912d14bad6e9548dd21d5617
+# Lage: Knotenpunkte = gemeinsamer Knoten der Straßen in OpenStreetMap (Overpass), an
+# Kreisverkehren (K1, K5, K6) die Mitte der Wegenden; Querschnitte = Lage auf der
+# Zählstellenkarte des Berichts (Abb. 3.-1, S. 61), über die Knotenpunkte auf Koordinaten
+# umgerechnet (Abweichung der Knotenpunkte 4–19 m) und auf die Straße gelegt. November 2026.
+geokodierung:
+  titel: Lage der Zählstellen (OpenStreetMap; Querschnitte nach der Karte im Bericht)
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  herkunft_url: https://www.openstreetmap.org/copyright
+orte:
+  K1: {lon: 6.435211, lat: 51.670692, genauigkeit: kreisverkehr}
+  K2: {lon: 6.454478, lat: 51.668612, genauigkeit: kreuzung}
+  K3: {lon: 6.461153, lat: 51.660725, genauigkeit: kreuzung}
+  K4: {lon: 6.46686, lat: 51.656744, genauigkeit: kreuzung}
+  K5: {lon: 6.450835, lat: 51.66066, genauigkeit: kreisverkehr}
+  K6: {lon: 6.445245, lat: 51.657222, genauigkeit: kreisverkehr}
+  K7: {lon: 6.457925, lat: 51.653787, genauigkeit: kreuzung}
+  K8: {lon: 6.442191, lat: 51.648169, genauigkeit: kreuzung}
+  K9: {lon: 6.456684, lat: 51.65594, genauigkeit: kreuzung}
+  K10: {lon: 6.45952, lat: 51.657995, genauigkeit: kreuzung}
+  K11: {lon: 6.427789, lat: 51.643677, genauigkeit: kreuzung}
+  K12: {lon: 6.429095, lat: 51.650613, genauigkeit: kreuzung}
+  Q1: &karte {lon: 6.436436, lat: 51.661884, genauigkeit: karte, hinweise: ["Lage nach der Zählstellenkarte im Bericht zum Mobilitätskonzept (Abb. 3.-1), auf die Straße gelegt."]}
+  Q2: {<<: *karte, lon: 6.452314, lat: 51.660726}
+  Q3: {<<: *karte, lon: 6.458501, lat: 51.660357}
+  Q4: {<<: *karte, lon: 6.451619, lat: 51.662662}
+  Q5: {<<: *karte, lon: 6.453272, lat: 51.66434}
+  Q6: {<<: *karte, lon: 6.455416, lat: 51.663258}

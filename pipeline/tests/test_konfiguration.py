@@ -1,6 +1,7 @@
-"""Die echte Konfiguration (pipeline/config/sources.yaml) gegen die Regeln aus CLAUDE.md: Ein
-Tippfehler oder eine vergessene Angabe fällt im PR auf – nicht erst beim Bau, in der Karte oder
-gar nicht (ein unbekannter optionaler Schlüssel würde sonst still zu `None`).
+"""Die echte Konfiguration (pipeline/config/, Aufbau in config/README.md) gegen die Regeln aus
+CLAUDE.md: Ein Tippfehler oder eine vergessene Angabe fällt im PR auf – nicht erst beim Bau, in der
+Karte oder gar nicht (ein unbekannter optionaler Schlüssel würde sonst still zu `None`, eine Datei
+am falschen Ort still übergangen).
 
 Neue Regeln kommen hierher. Noch nicht geprüft, weil es heute noch nicht gilt: die Verknüpfung
 einer Kommune mit ihren Dauer-Quellen (die Karte sucht sie über den Namen und die Nähe).
@@ -13,13 +14,15 @@ import string
 from datetime import date
 
 import pytest
+import yaml
 
 from zaehlkarte import adapters, fetch, site
-from zaehlkarte.config import Pfade, lade_yaml
+from zaehlkarte.config import Pfade, konfiguration
 from zaehlkarte.dauer import bau
 from zaehlkarte.kalender import FEIERTAGE_LAENDER, FERIEN, LAENDER, ferienkalender
 
-CFG = lade_yaml("sources.yaml")
+CONFIG = Pfade().config
+CFG = konfiguration()
 KURZZEIT = CFG["quellen"]
 DAUER = CFG["dauer"]
 QUELLEN = [("quellen", c, q) for c, q in KURZZEIT.items()] + [("dauer", c, q)
@@ -45,10 +48,30 @@ def _id(x: tuple) -> str:
 # --- Quellen beider Familien ------------------------------------------------------------------
 
 
+def test_ordner():
+    """Nur, was der Lader liest – eine Datei am falschen Ort oder mit anderer Endung fiele sonst
+    still weg: je Quelle `quellen/<familie>/<code>.yaml`, je Land `kommunen/<LAND>.yaml` und
+    `kalender/ferien/<LAND>.csv`."""
+    oben = {"README.md", "quellen", "kommunen", "kalender", "recht.yaml", "anfrage_vorlage.yaml",
+            "robots.yaml"}
+    oben |= {q["rohdatei_liste"] for q in KURZZEIT.values() if "rohdatei_liste" in q}
+    assert {p.name for p in CONFIG.iterdir()} <= oben, {p.name for p in CONFIG.iterdir()} - oben
+
+    def dateien(ordner: str) -> set[str]:
+        return {p.relative_to(CONFIG / ordner).as_posix()
+                for p in (CONFIG / ordner).rglob("*") if p.is_file()}
+
+    assert dateien("quellen") == ({f"kurzzeit/{c}.yaml" for c in KURZZEIT}
+                                  | {f"dauer/{c}.yaml" for c in DAUER})
+    assert dateien("kommunen") <= {f"{land}.yaml" for land in LAENDER}
+    assert dateien("kalender") == {f"ferien/{land}.csv" for land in LAENDER}
+
+
 def test_codes_eindeutig_und_gueltig():
     assert not set(KURZZEIT) & set(DAUER), "derselbe Code in beiden Familien"
     for familie, code, q in QUELLEN:
         assert CODE.match(code), f"{familie}/{code}: Code nur aus a–z, 0–9 und einfachem _"
+        assert "code" not in q, f"{familie}/{code}: der Code ist der Dateiname"
         assert q["status"] in ("live", "research", "blocked"), f"{familie}/{code}: Status"
 
 
@@ -93,8 +116,8 @@ def test_lizenz_mit_einschraenkung_nur_mit_hinweis(quelle):
 
 @pytest.mark.parametrize("quelle", QUELLEN, ids=_id)
 def test_land_jeder_quelle(quelle):
-    """Das Land wählt Rechtslage, Ferien und Feiertage (kalender.FERIEN) – ein eigenes `ferien:`
-    an der Quelle gibt es nicht mehr."""
+    """Das Land wählt Rechtslage, Ferien (config/kalender/ferien/<LAND>.csv) und Feiertage – ein
+    eigenes `ferien:` an der Quelle gibt es nicht mehr."""
     _, code, q = quelle
     assert q["land"] in LAENDER, f"{code}: Land {q['land']!r}"
     assert "ferien" not in q, f"{code}: `ferien:` entfällt, das Land wählt den Kalender"
@@ -107,26 +130,40 @@ def test_kalender_je_land(land):
     dass sie rechtzeitig fortgeschrieben werden, prüft `zaehlkarte kalender` im Wochenlauf."""
     assert land in CFG["recht"], f"Rechtslage für {land} fehlt"
     assert land in FEIERTAGE_LAENDER, f"Feiertage für {land} fehlen"
-    kal = ferienkalender(land, Pfade().config)
-    assert kal is not None, f"{FERIEN[land]} fehlt"
+    kal = ferienkalender(land, CONFIG)
+    assert kal is not None, f"{FERIEN / land}.csv fehlt"
     assert (kal.letztes_schuljahr() or "") >= "2027/2028", f"{land}: {kal.letztes_schuljahr()}"
-    dateien = list(FERIEN.values())
-    assert len(dateien) == len(set(dateien)) == len(LAENDER)
+
+
+def _datum_bis_heute(x) -> bool:
+    return isinstance(x, date) and x <= date.today()
 
 
 def test_robots_ausnahmen():
-    """Eine Ausnahme von robots.txt nur mit URL-Anfängen, Grund, Datum und dem Stand der Anfrage
-    beim Betreiber (CLAUDE.md, AGENTS.md „robots.txt und die Pipeline“)."""
+    """Eine Ausnahme von robots.txt (config/robots.yaml) nur mit URL-Anfängen, den Quellen, die
+    sie brauchen, Grund, Datum und dem Stand der Anfrage beim Betreiber – je URL-Anfang eine
+    (CLAUDE.md, AGENTS.md „robots.txt und die Pipeline“)."""
+    codes = set(KURZZEIT) | set(DAUER)
+    praefixe = []
+    for e in CFG["robots"]:
+        name = e.get("urls")
+        assert set(e) == {"urls", "quellen", "grund", "seit", "anfrage"}, f"{name}: {set(e)}"
+        assert e["urls"] and e["quellen"], name
+        for u in e["urls"]:
+            assert u.startswith("https://") and u.endswith("/"), u
+        praefixe += e["urls"]
+        assert set(e["quellen"]) <= codes, f"{name}: unbekannt {set(e['quellen']) - codes}"
+        assert e["grund"].strip() and _datum_bis_heute(e["seit"]), name
+        a = e["anfrage"]
+        assert {"an", "gestellt", "antwort"} <= set(a) <= {"an", "gestellt", "antwort",
+                                                           "verzicht"}, f"{name}: {set(a)}"
+        assert a["an"].strip(), name
+        assert a["gestellt"] is None or _datum_bis_heute(a["gestellt"]), f"{name}: gestellt"
+        assert a["antwort"] is None or (str(a["antwort"]).strip() and a["gestellt"]), name
+        assert not (a.get("verzicht") and a["gestellt"]), f"{name}: Verzicht, aber gestellt"
+    assert len(praefixe) == len(set(praefixe)), "derselbe URL-Anfang in zwei Ausnahmen"
     for familie, code, q in QUELLEN:
-        a = q.get("robots_ausnahme")
-        if a is None:
-            continue
-        assert set(a) == {"urls", "grund", "seit", "anfrage"}, f"{familie}/{code}: {set(a)}"
-        assert a["urls"], f"{familie}/{code}: keine URL"
-        for u in a["urls"]:
-            assert u.startswith("https://") and u.endswith("/"), f"{familie}/{code}: {u}"
-        assert a["grund"].strip() and a["anfrage"].strip(), f"{familie}/{code}"
-        assert isinstance(a["seit"], date) and a["seit"] <= date.today(), f"{familie}/{code}"
+        assert "robots_ausnahme" not in q, f"{familie}/{code}: Ausnahmen stehen in robots.yaml"
 
 
 def test_pruefsummen():
@@ -142,7 +179,7 @@ def test_pruefsummen():
             for i, v in enumerate(x):
                 yield from felder(v, f"{pfad}[{i}]")
 
-    alle = list(felder({"quellen": KURZZEIT, "dauer": DAUER}, "sources"))
+    alle = list(felder({"kurzzeit": KURZZEIT, "dauer": DAUER}, "quellen"))
     assert alle
     for pfad, wert in alle:
         assert isinstance(wert, str) and re.fullmatch(r"[0-9a-f]{64}", wert), pfad
@@ -176,6 +213,15 @@ def test_datenlage_schluessel():
         assert set(e) <= EINTRAG, f"{_name(e)}: unbekannt {set(e) - EINTRAG}"
         assert set(e.get("dauer") or {}) <= DAUER_BLOCK, f"{_name(e)}: dauer {set(e['dauer'])}"
         assert set(e.get("kontakt") or {}) <= KONTAKT, f"{_name(e)}: kontakt {set(e['kontakt'])}"
+
+
+def test_kommune_in_der_datei_ihres_landes():
+    """Je Land eine Datei: Jede Kommune steht in der ihres Landes (am Eintrag oder, mit `quelle`,
+    das der Quelle)."""
+    for pfad in sorted((CONFIG / "kommunen").glob("*.yaml")):
+        for e in yaml.safe_load(pfad.read_text(encoding="utf-8")):
+            land = e.get("land") or KURZZEIT[e["quelle"]]["land"]
+            assert land == pfad.stem, f"{_name(e)}: Land {land}, aber in {pfad.name}"
 
 
 def test_datenlage_kommunen_eindeutig():

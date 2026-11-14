@@ -8,8 +8,8 @@ sechs Wochen. Die Spalten heißen je Datei anders („Fahrradfahrer inkl. Lasten
 - Verkehrsart je Spalte aus dem Namen: Fahrrad/Rad -> Rad, Fußgänger -> Fuß, Auto/Pkw/Kfz -> Kfz.
   Summenspalten (Summe, Total, Insgesamt, eine Richtung ohne Verkehrsart) fallen weg, „Andere“
   (weder zu Fuß noch mit dem Rad) auch. Nennt keine Spalte eine Verkehrsart (Alte Rheinbrücke),
-  gilt die Art aus sources.yaml für die Richtungsspalten.
-- Zeitstempel (`zeitstempel` in sources.yaml): Die 15-Minuten-Dateien stehen auf vollen
+  gilt die Art aus der Quelldatei für die Richtungsspalten.
+- Zeitstempel (`zeitstempel` in der Quelldatei): Die 15-Minuten-Dateien stehen auf vollen
   Viertelstunden – Beginn des Intervalls, wie in Exporten von Zählgeräten üblich. Die
   5-Minuten-Dateien sind Protokolle des Geräts: Es schreibt jede Zeile ein paar Sekunden nach
   dem Ende ihres Intervalls, und die erste Zeile nach dem Einschalten ist leer (dort, wo sonst
@@ -20,7 +20,7 @@ sechs Wochen. Die Spalten heißen je Datei anders („Fahrradfahrer inkl. Lasten
   weg.
 - Je Kalendertag eine Zählung (Querschnitt, beide Richtungen). Eine Stunde zählt nur, wenn alle
   ihre Intervalle da sind – die Geräte fielen öfter für Stunden oder Tage aus.
-- Lage: aus sources.yaml (OpenStreetMap, Genauigkeit je Standort); die Daten nennen nur Straße,
+- Lage: aus der Quelldatei (OpenStreetMap, Genauigkeit je Standort); die Daten nennen nur Straße,
   Brücke oder Hausnummer.
 """
 

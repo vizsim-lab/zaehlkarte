@@ -1,0 +1,65 @@
+nr: 8
+status: live
+adapter: olpe_radar
+name: Olpe
+land: NW
+traeger: Kreisstadt Olpe, Ordnungsamt
+titel: Verkehrsmessungen
+art: >-
+  Querschnittsmessungen mit Radar-Messgeräten, meist ein bis zwei Wochen am Stück; je
+  Fahrzeug Zeit, Richtung und Fahrzeugklasse (Kfz, Schwerverkehr, als Radfahrer erkannt)
+weg: offen auf opendata.olpe.de (ab 2025)
+portal: https://opendata.olpe.de/dataset/?q=Verkehrsmessung
+# alle Datensätze „Verkehrsmessung(en) …“ – neue Messungen kommen beim nächsten fetch dazu.
+# Über die Suche und die Seite je Datensatz (die CKAN-API sperrt das Portal per robots.txt,
+# das DCAT-Dokument nennt keine Lizenz), Crawl-delay 10 s. Die Suche findet je nach Wortform
+# andere Datensätze – darum beide Formen und die bekannten Datensätze (`pakete`).
+ckan: https://opendata.olpe.de
+suche: [Verkehrsmessung, Verkehrsmessungen]
+paket_muster: ^verkehrsmess
+pakete:
+  - verkehrsmessung-alte-landstrabe
+  - verkehrsmessung-standort-zum-honigsack-35
+  - verkehrsmessung-weite-schluppe
+  - verkehrsmessungen-gunsestrabe
+  - verkehrsmessungen-hatzenbergstrabe
+  - verkehrsmessungen-in-der-wuste
+  - verkehrsmessungen-k18
+  - verkehrsmessungen-oberveischede
+  - verkehrsmessungen-rochusstrabe
+# Lizenz je Datensatz: der Lizenz-Link auf seiner Seite (`lizenz_link`; `lizenz_id` = die
+# Kennung im Portal); ein Datensatz mit einer anderen Lizenz bleibt draußen
+lieferungen:
+  - code: dl-de-by
+    lizenz_id: http://dcat-ap.de/def/licenses/dl-by-de/2.0
+    lizenz_link: https://www.govdata.de/dl-de/by-2-0
+    titel: "Verkehrsmessungen (verändert: Stundensummen aus den Einzelmessungen)"
+    herausgeber: Kreisstadt Olpe
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    herkunft_url: https://opendata.olpe.de/dataset/?q=Verkehrsmessung
+  - code: cc-by
+    lizenz_id: http://dcat-ap.de/def/licenses/cc-by/4.0
+    lizenz_link: http://creativecommons.org/licenses/by/4.0/
+    titel: "Verkehrsmessung Zum Honigsack 35 (verändert: Stundensummen aus den Einzelmessungen)"
+    herausgeber: Kreisstadt Olpe
+    lizenz: CC BY 4.0
+    lizenz_url: https://creativecommons.org/licenses/by/4.0/deed.de
+    herkunft_url: https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35
+# Lage: GPS des Geräts; „Zum Honigsack 35“ hat keins – Hausnummer laut Nominatim (November 2026)
+geokodierung:
+  titel: Lage der Messstelle Zum Honigsack 35 (Nominatim, OpenStreetMap)
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  herkunft_url: https://www.openstreetmap.org/copyright
+# Namen, wo der Titel des Datensatzes mehrere Messstellen zusammenfasst (je Datei)
+orte:
+  "Zum Honigsack 35.json": {name: "Zum Honigsack 35", lon: 7.851839, lat: 51.003047}
+  verkehrsdaten_guensestr-kindergarten-20250616-20250620.json: {name: "Günsestraße, Höhe Kindergarten"}
+  verkehrsdaten_Guensestr_26-20250620-20250626.json: {name: "Günsestraße 26"}
+  verkehrsdaten_In-der-Wüste-26_20251112-20251119.json: {name: "In der Wüste 26"}
+  verkehrsdaten_In_der_Wueste-20250620-20250626.json: {name: "In der Wüste, Höhe Freizeitbad"}
+  verkehrsdaten_feuerwehrhaus_oberveischede_20250709-20250715.json: {name: "Oberveischede, Feuerwehrhaus"}
+  verkehrsdaten_Oberveischede-20250626-20250708.json: {name: "Oberveischede, Ortseingang"}
+  verkehrsdaten_alte-landstr_1_20250519-20250615.json: {name: "Alte Landstraße 1"}
+  verkehrsdaten_k18-20250806-20250813.json: {name: "K 18"}

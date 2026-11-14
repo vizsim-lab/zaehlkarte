@@ -1,0 +1,26 @@
+# Datenlage Thüringen – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: Gera
+  land: TH
+  lon: 12.0817
+  lat: 50.8806
+  stand: kandidat
+  was: >-
+    Knotenpunktzählungen von Hand einmal im Jahr (Rad, Krad, Pkw, Lkw, Lastzug, Bus) und
+    Zählgeräte; Herausgabe auf Antrag beim Stadtplanungsamt, online nichts
+  situation: >-
+    Gera zählt einmal im Jahr von Hand an Knotenpunkten, getrennt nach Rad, Krad, Pkw, Lkw, Lastzug
+    und Bus, und misst zusätzlich mit Zählgeräten (Pkw, Lkw, Lastzug). Die Daten gibt das
+    Stadtplanungsamt auf Antrag heraus (Formular auf der Stadtseite); online steht nichts.
+  empfehlung: >-
+    Anfrage nach allen Knotenpunktzählungen seit 2015 als Tabelle. Grundlage: Thüringer
+    Transparenzgesetz (gilt für Gemeinden, Gebühren höchstens 500 Euro).
+  weg: "FragDenStaat oder Antragsformular der Stadt, ThürTG"
+  kontakt: {fds_suche: "Stadt Gera"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Laut Ihrer Seite „Bereitstellung von Verkehrsdaten“ zählen Sie einmal im Jahr von Hand an
+    Knotenpunkten, getrennt nach Fahrzeugarten und Rad. Ich bitte um diese Zählungen.
+  links:
+    - ["gera.de", "https://www.gera.de/bauen-stadtentwicklung/stadtplanung-gestaltung/verkehrs-mobilitaetsplanung/bereitstellung-von-verkehrsdaten"]
+    - ["ThürTG (TLfDI)", "https://tlfdi.de/fileadmin/tlfdi/info/Transparenzjahr_2025/Infobroschuere_Transparenzgesetze.pdf"]

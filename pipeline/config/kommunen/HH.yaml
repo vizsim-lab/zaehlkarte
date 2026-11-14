@@ -1,0 +1,45 @@
+# Datenlage Hamburg – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- kommune: Hamburg
+  land: HH
+  lon: 9.9937
+  lat: 53.5511
+  stand: aggregiert
+  dauer:
+    stand: in_karte
+    was: >-
+      Wärmebildkameras an über 400 Kreuzungen: Stundenwerte je Zählstelle für Kfz,
+      Schwerverkehr und Rad über die SensorThings API (dl-de/by-2-0), in der Karte als
+      Dauerzählstellen
+    links:
+      - ["Verkehrsdaten Kfz Infrarotdetektoren", "https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14"]
+      - ["Verkehrsdaten Rad Infrarotdetektoren", "https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20"]
+  was: >-
+    Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je
+    Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch, in der
+    Karte als Dauerzählstellen)
+  situation: >-
+    Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an
+    Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV,
+    DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten
+    Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in
+    15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in
+    die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras
+    an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als
+    Dauerzählstellen.
+  empfehlung: >-
+    Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem
+    Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
+  weg: "FragDenStaat, Hamburgisches Transparenzgesetz"
+  kontakt: {fds_suche: "Behörde für Verkehr und Mobilitätswende"}
+  anfrage: true
+  anfrage_zusatz: >-
+    Im Transparenzportal stehen zu den Bedarfszählstellen nur die hochgerechneten
+    Verkehrsstärken (DTV, DTVw, Schwerverkehrsanteil). Ich bitte um die Ergebnisse der
+    zugrunde liegenden Zählungen selbst, also die gezählten Werte je Intervall (meist 6 bis 19
+    Uhr) mit Zählstelle und Datum. Nach Ihrem Leistungsverzeichnis (Vergabe FB 2022001735) liegen
+    sie in 15-Minuten-Intervallen je Fahrbeziehung in Ihrer Datenbank vor; ein Export genügt.
+  links:
+    - ["Leistungsverzeichnis 2022 (Transparenzportal)", "https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735"]
+    - ["Bedarfszählstellen (Metadaten)", "https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML"]
+    - ["BMV", "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"]

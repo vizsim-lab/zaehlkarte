@@ -1,0 +1,46 @@
+# Rad-Zählstellen, zweite Runde (November 2026): die übrigen Quellen des Artefakts
+# „Offene Radzähldaten“, gegen die nichts spricht (Werkzeug-Branch `werkzeug/dauer2`,
+# tools/rad_erkunden12–14.py). Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 11
+status: live
+adapter: ods_eco
+name: Rhein-Kreis Neuss (Rad-Zählstellen)
+land: NW
+traeger: Rhein-Kreis Neuss
+art: >-
+  fünf Rad-Zählstationen des Kreises auf Rhein- und Erft-Radweg (Induktionsschleifen,
+  Eco-Counter); Stundenwerte je Kanal, in der Karte je Station die Summe
+weg: offen im Open-Data-Portal des Kreises (Opendatasoft)
+portal: https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/
+basis: https://opendata.rhein-kreis-neuss.de
+datensatz: eco-counter-data
+kanaele: true  # eine Zeile je Kanal; eine Stunde ist gezählt, wenn jeder Kanal einen Wert hat
+stellen:  # Lage und Ort laut Datensatzbeschreibung (die Daten nennen nur die Kommune)
+  "100019715": {name: Rhein-Radweg, abschnitt: Meerbusch-Büderich}
+  "100019716": {name: Rhein-Radweg, abschnitt: Dormagen-Zons}
+  "100019717": {name: Erft-Radweg, abschnitt: Neuss-Reuschenberg}
+  "100019718": {name: Erft-Radweg, abschnitt: Grevenbroich-Wevelinghoven}
+  "100019719": {name: Radweg zwischen Schloss Dyck und Nikolauskloster, abschnitt: Jüchen}
+titel: >-
+  Rhein-Kreis Neuss: Radzählstationen Auswertung (verändert: Kanäle und Stundenwerte zu
+  Tagessummen zusammengefasst)
+herausgeber: Rhein-Kreis Neuss
+quellenvermerk: Rhein-Kreis Neuss
+lizenz: CC0 1.0
+lizenz_url: https://creativecommons.org/publicdomain/zero/1.0/deed.de
+hinweise:
+  - >-
+    Der Datensatz ist seit dem 05.07.2026 nicht mehr aktualisiert worden (Stand November 2026);
+    Neuss, Grevenbroich und Jüchen liefern schon seit dem Frühjahr 2025 keine Werte mehr.
+  - >-
+    Je Station die Summe ihrer Kanäle (Zählschleifen); eine Stunde ist gezählt, wenn jeder Kanal
+    einen Wert hat. Werte, die die Quelle als geändert („modified“) führt, gelten als nicht
+    gezählt.
+  - >-
+    Die Quelle unterscheidet nicht immer zwischen einem Ausfall und null Rädern: In Grevenbroich
+    und Jüchen stehen Dutzende ganzer Tage mit 0 – in der Karte als gezählte Tage.
+  - >-
+    Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+    dieser Tag gilt als nicht vollständig gezählt.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

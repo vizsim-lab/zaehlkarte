@@ -1,0 +1,45 @@
+# Rad-Zählstellen, zweite Runde (November 2026): die übrigen Quellen des Artefakts
+# „Offene Radzähldaten“, gegen die nichts spricht (Werkzeug-Branch `werkzeug/dauer2`,
+# tools/rad_erkunden12–14.py). Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 13
+status: live
+adapter: essen_rad
+name: Essen (Rad-Zählstellen)
+land: NW
+traeger: Stadt Essen, Amt für Stadtplanung und Bauordnung
+art: >-
+  automatische Radverkehrszählungen an der Grugatrasse und der Huyssenallee; Stundenwerte je
+  Richtung, in der Karte beide Richtungen zusammen
+weg: offen im Open-Data-Portal der Stadt (eine CSV je Quartal)
+portal: https://open.nrw/dataset/radverkehrszahlungen-e
+api: https://open.nrw/api/3/action/package_show
+paket: radverkehrszahlungen-e
+lizenz_ressource: dl-by-de  # nur Quartale mit dieser Lizenz (2018–2020: geschlossen)
+rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal
+spalten:  # Reihenfolge der Wertespalten jeder Quartalsdatei (die Köpfe wechseln)
+  - [grugatrasse, Richtung Rüttenscheid (West)]
+  - [grugatrasse, Richtung Ruhr (Ost)]
+  - [huyssenallee, Richtung Rüttenscheid (Süd)]
+  - [huyssenallee, Richtung Stadtkern (Nord)]
+stellen:  # Gauß-Krüger (DHDN, Streifen 2) aus der Datensatzbeschreibung, nach WGS84 umgerechnet
+  grugatrasse: {name: Grugatrasse, lat: 51.426592, lon: 7.038219}  # R 2572251, H 5699618
+  huyssenallee: {name: Huyssenallee, lat: 51.446642, lon: 7.009876}  # R 2570249, H 5701821
+titel: >-
+  Radverkehrszählungen der Stadt Essen (verändert: Richtungen und Stundenwerte zu Tagessummen
+  zusammengefasst)
+herausgeber: Stadt Essen
+quellenvermerk: Stadt Essen
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Die Quartalsdateien von Juni 2018 bis Ende 2020 stehen unter einer geschlossenen Lizenz und
+    fehlen deshalb – in der Karte ab Januar 2021.
+  - >-
+    Je Zählstelle beide Richtungen zusammen; fehlt der Wert einer Richtung, ist die Stunde nicht
+    gezählt. Die Lage steht nur als Gauß-Krüger-Koordinate in der Datensatzbeschreibung.
+  - >-
+    Am Tag der Rückstellung der Uhr steht 2 Uhr in der Quelle nur einmal – dieser Tag gilt als
+    nicht vollständig gezählt.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

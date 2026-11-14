@@ -1,0 +1,21 @@
+nr: 9
+status: live
+adapter: potsdam_pdf
+name: Potsdam
+land: BB
+traeger: Landeshauptstadt Potsdam, Bereich Verkehrsentwicklung
+# Quellenangabe nach den Nutzungsbedingungen der LHP (NB-16-OGD, lizenz_url): „Name des
+# Dateninhalts © LHP/NB-16-OGD/Datum der Entnahme“, dazu ein Hinweis auf die Veränderung und
+# darauf, dass Dritte die Inhalte nur nach diesen Bedingungen nutzen dürfen. {abruf} = Datum,
+# an dem `fetch` die Zählpläne geholt hat (data/raw/potsdam/abruf.txt).
+titel: "Verkehrszählungen © LHP/NB-16-OGD/{abruf} (verändert: Werte aus den Zählplänen ausgelesen)"
+art: >-
+  Knotenpunktzählungen von Hand an einem Werktag (April–Oktober), 7–10 und 15–18 Uhr; je
+  Zählung nur die beiden Spitzenstunden und die Summe der sechs Stunden, nach Kfz,
+  Schwerverkehr und Rad
+weg: offen auf dem Open-Data-Portal der Stadt (ein PDF je Zählung, 2010–2023)
+lizenz: Nutzungsbedingungen der LHP (NB-16-OGD) – Weiterverwendung nur nach diesen
+lizenz_url: https://opendata.potsdam.de/terms/terms-of-use/
+portal: https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/
+api: https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets/verkehrszahlungen/exports/json
+abruf: potsdam/abruf.txt

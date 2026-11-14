@@ -12,7 +12,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer`, tools/rad_erkunde
   Brücken stehen schon als ihre zwei Seiten in der Karte.
 - Nicht übernommen: 2019 (Open.NRW führt den Datensatz unter geschlossener Lizenz; Mac-Roman) und
   2022 (nur je Kanal, Kanäle derselben Stelle zählen teils gleichzeitig – `ohne_jahre`).
-- Zeitumstellung: siehe `rueck` in sources.yaml und die Hinweise an der Quelle.
+- Zeitumstellung: siehe `rueck` in der Quelldatei und die Hinweise an der Quelle.
 """
 
 from __future__ import annotations
@@ -179,7 +179,7 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
             if kennung not in lage:
                 bericht.ohne_lage.add(f"{kennung} {name}")
                 continue
-            namen.setdefault(kennung, name)  # Name aus dem Kopf, wenn sources.yaml keinen nennt
+            namen.setdefault(kennung, name)  # Name aus dem Kopf, wenn die Quelldatei keinen nennt
             if kennung not in idx:
                 idx[kennung] = len(idx)
             i = idx[kennung]
@@ -194,7 +194,7 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
                 w_.append(int(v))
     if not s_:
         raise ValueError(f"{q['code']}: keine gezählte Stunde einer Zählstelle mit Lage")
-    for k in idx:  # nur Stellen, die in einer Datei stehen – in sources.yaml stehen auch neue
+    for k in idx:  # nur Stellen, die in einer Datei stehen – in der Quelldatei stehen auch neue
         info = lage[k]
         stellen.append(Dauerstelle(
             quelle=q["code"], kennung=k, name=info.get("name") or namen[k],

@@ -1,6 +1,6 @@
 """Alle Quellen lesen -> Zählungen im gemeinsamen Schema, verortet und zu Stellen gruppiert.
 
-1. Jeder live-Adapter aus sources.yaml liefert Zählungen (`adapters/`).
+1. Jeder live-Adapter aus config/quellen/kurzzeit/ liefert Zählungen (`adapters/`).
 2. Zähltag einordnen (Schultag, Ferien, Feiertag, Wochenende) mit dem Kalender der Quelle.
 3. Lage übertragen: Zählungen ohne Lage bekommen die Lage ihrer Zählstellen-Kennung, wenn alle
    verorteten Zählungen dieser Kennung an einem Ort liegen (oder genau eine Gruppe davon den
