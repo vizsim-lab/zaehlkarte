@@ -1,0 +1,43 @@
+# Fußverkehr (Entscheidung der Projektleitung: Fuß in die Karte, November 2026): Passantenzählung
+# der Stadt Augsburg in der Annastraße, stündlich seit 16.12.2020 – in der Mobilithek als Angebot
+# -1747083335311792689 („Augsburg: Passanten Annastraße“, Stadt Augsburg Wirtschaftsförderung,
+# CC BY 4.0), die Datei liegt auf augsburg.de (Werkzeug-Branch `werkzeug/erkundung`, Runde 11).
+# Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 21
+status: live
+adapter: augsburg_fuss
+name: Augsburg (Passanten Annastraße)
+land: BY
+traeger: Stadt Augsburg (Wirtschaftsförderung)
+art: >-
+  Passantenzählung in der Fußgängerzone Annastraße: Personen je Stunde, beide Richtungen zusammen,
+  seit Dezember 2020
+weg: offen als CSV auf augsburg.de, verzeichnet in der Mobilithek
+portal: https://mobilithek.info/offers/-1747083335311792689
+datei: https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/Smart_City/opendata/240429/Annastra%C3%9Fe_Frequenzdaten.csv
+rueck: einfach  # am Rückstelltag steht 2 Uhr einmal, ob mit beiden Stunden, ist nicht eindeutig
+lage:  # die Datei nennt nur den Standort; Mitte der Fußgängerzone laut OpenStreetMap (Weg 265870758)
+  Annastraße:
+    kennung: annastrasse
+    lon: 10.89560
+    lat: 48.36838
+    hinweise:
+      - >-
+        Lage: Mitte der Fußgängerzone Annastraße laut OpenStreetMap (© OpenStreetMap-Mitwirkende,
+        ODbL) – den genauen Ort des Zählers nennt die Quelle nicht.
+titel: >-
+  Augsburg: Passanten Annastraße (verändert: Stundenwerte zu Tagessummen zusammengefasst)
+herausgeber: Stadt Augsburg
+quellenvermerk: Stadt Augsburg
+lizenz: CC BY 4.0
+lizenz_url: https://creativecommons.org/licenses/by/4.0/
+hinweise:
+  - >-
+    Die Quelle enthält keine Stunde mit dem Wert 0; es fehlen Stunden, fast nur nachts (2 bis 4
+    Uhr), vermutlich Stunden ohne Passanten. Die Zählkarte füllt nichts auf: Ein Tag mit fehlender
+    Stunde gilt als nicht vollständig gezählt (2021 fast jeden zweiten Tag).
+  - >-
+    Am Tag der Rückstellung der Uhr steht 2 Uhr nur einmal – ob mit beiden Stunden, ist nicht
+    eindeutig; dieser Tag gilt als nicht vollständig gezählt.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
