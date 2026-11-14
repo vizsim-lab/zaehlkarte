@@ -1,8 +1,9 @@
-"""VMZ Niedersachsen (Quelle `vmz_rad`) mit dem Adapter eines App-Branches prüfen: holen, lesen,
-Kennzahlen je Zählstelle, Jahresgrenzen und Zeitumstellung, Kartendaten nur dieser Quelle.
+"""Eine Dauer-Quelle mit dem Adapter eines App-Branches prüfen: holen, lesen, Kennzahlen je
+Zählstelle, Jahresgrenzen und Zeitumstellung, Kartendaten nur dieser Quelle (zuerst für die VMZ
+Niedersachsen, `vmz_rad`).
 
 Läuft im Ordner `app/pipeline` des geklonten App-Branches (siehe tools/lauf.sh):
-    uv run python <pfad>/tools/vmz_pruefen.py <zielordner>
+    uv run python <pfad>/tools/quelle_pruefen.py <code> <zielordner>
 """
 
 from __future__ import annotations
@@ -22,7 +23,8 @@ from zaehlkarte.dauer import bau
 from zaehlkarte.dauer import site as site_
 from zaehlkarte.dauer.modell import tagessummen, umstellungen
 
-ziel = Path(sys.argv[1])
+CODE = sys.argv[1]
+ziel = Path(sys.argv[2])
 ziel.mkdir(parents=True, exist_ok=True)
 pfade = Pfade()
 out: list[str] = []
@@ -33,19 +35,19 @@ def schreib() -> None:
 
 
 t0 = time.time()
-log, fehler = bau.hole(pfade, nur=["vmz_rad"])
+log, fehler = bau.hole(pfade, nur=[CODE])
 out += ["== Abruf", *log, f"Fehler: {fehler}", f"Dauer: {time.time() - t0:.0f} s",
         *abruf.bericht()]
-roh = pfade.roh / "vmz_rad"
+roh = pfade.roh / CODE
 groesse = sum(p.stat().st_size for p in roh.rglob("*") if p.is_file())
-out.append(f"Rohdaten: {len(list((roh / 'werte').glob('*.json')))} Dateien, {groesse / 1e6:.1f} MB")
+out.append(f"Rohdaten: {len(list(roh.rglob('*')))} Dateien, {groesse / 1e6:.1f} MB")
 if (roh / "abruf.json").exists():
     out.append((roh / "abruf.json").read_text(encoding="utf-8"))
 schreib()
 
-gelesen, berichte = bau.baue(pfade, nur=["vmz_rad"])
+gelesen, berichte = bau.baue(pfade, nur=[CODE])
 q, r = gelesen[0]
-out += ["== Lesen", *berichte["vmz_rad"], f"Reihe {r.von} – {r.tag(r.tage - 1)}, {len(r.stellen)} Stellen"]
+out += ["== Lesen", *berichte[CODE], f"Reihe {r.von} – {r.tag(r.tage - 1)}, {len(r.stellen)} Stellen"]
 summen, n = tagessummen(r, "rad")
 voll = summen >= 0
 out.append("== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | "
@@ -85,9 +87,9 @@ for jahr in range(r.von.year, r.tag(r.tage - 1).year + 1):
 schreib()
 
 dateien, zeilen = site_.schreibe(gelesen, pfade, date.today())
-out += ["== Kartendaten (nur vmz_rad)", *zeilen, *site_.statistik(gelesen)]
+out += [f"== Kartendaten (nur {CODE})", *zeilen, *site_.statistik(gelesen)]
 dauer = pfade.repo / "public" / "data" / "dauer"
-with tarfile.open(ziel / "dauer_vmz.tar.gz", "w:gz") as tar:
+with tarfile.open(ziel / f"dauer_{CODE}.tar.gz", "w:gz") as tar:
     tar.add(dauer, arcname="dauer")
 index = json.loads((dauer / "index.json").read_text(encoding="utf-8"))
 out.append("index.json quellen: " + json.dumps(index.get("quellen"), ensure_ascii=False)[:1500])
