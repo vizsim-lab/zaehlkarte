@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [pipeline_probe]
+        teil: [overpass_probe]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
@@ -31,6 +31,7 @@ jobs:
             wege) timeout 20m python3 tools/wege.py ergebnis/wege || true ;;
             wege2) timeout 20m python3 tools/wege2.py ergebnis/wege2 || true ;;
             wege2b) timeout 20m python3 tools/wege2.py ergebnis/wege2 20 || true ;;
+            overpass_probe) timeout 15m python3 tools/overpass_probe.py ergebnis/overpass_probe || true ;;
             pipeline_probe)
               git fetch -q origin robots-pipeline && git worktree add -q ../zk FETCH_HEAD
               (cd ../zk/pipeline && uv sync --locked -q && timeout 45m uv run python "$GITHUB_WORKSPACE/tools/pipeline_probe.py" "$GITHUB_WORKSPACE/ergebnis/pipeline_probe") || true ;;

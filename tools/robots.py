@@ -131,7 +131,7 @@ def regeln(url: str) -> Regeln:
     try:
         req = urllib.request.Request(basis + "/robots.txt", headers={"User-Agent": UA})
         with urllib.request.urlopen(req, timeout=20) as a:
-            text = a.read(500_000).decode("utf-8", "replace")
+            text = a.read(500_000).decode("utf-8-sig", "replace")
             TEXTE[basis] = text
             r = Regeln(text)
     except urllib.error.HTTPError as e:
