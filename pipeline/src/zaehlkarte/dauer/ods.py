@@ -30,12 +30,15 @@ def datensaetze(basis: str, datensatz: str, **params: str) -> list[dict]:
     return r.json().get("results", [])
 
 
-def export_url(basis: str, datensatz: str, select: str) -> str:
+def export_url(basis: str, datensatz: str, select: str | None) -> str:
+    """Export als CSV; ohne `select` alle Felder."""
+    params = ({"select": select} if select else {}) | {"delimiter": ";", "timezone": "UTC"}
     return (f"{basis}/api/explore/v2.1/catalog/datasets/{datensatz}/exports/csv?"
-            + urllib.parse.urlencode({"select": select, "delimiter": ";", "timezone": "UTC"}))
+            + urllib.parse.urlencode(params))
 
 
-def hole_export(basis: str, datensatz: str, select: str, ordner: Path, name: str) -> str:
+def hole_export(basis: str, datensatz: str, select: str | None, ordner: Path,
+                name: str) -> str:
     """Export nach `ordner/name` laden, wenn sich der Datensatz geändert hat. -> Logzeile."""
     from zaehlkarte.fetch import lade
 

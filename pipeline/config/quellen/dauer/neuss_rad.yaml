@@ -1,0 +1,34 @@
+# Radschnellweg RS5 – Dauerzählstelle der Stadt Neuss (Hinweis der Projektleitung, 14.11.2026).
+# Die Daten liegen im Open-Data-Portal des Rhein-Kreises Neuss (Opendatasoft); der Abruf braucht
+# dessen robots-Ausnahme (Beschluss der Projektleitung, 14.11.2026; config/robots.yaml). Lizenz
+# laut Portal CC BY-SA 4.0 – die Mobilithek führt den Datensatz fälschlich ohne Lizenz.
+nr: 22
+status: live
+adapter: ods_stunden
+name: Neuss (Radschnellweg RS5)
+land: NW
+traeger: Stadt Neuss
+art: >-
+  Rad-Dauerzählstelle auf der Trasse des Radschnellwegs RS5 (Düsseldorf – Neuss – Langenfeld):
+  Stundenwerte je Fahrtrichtung, in der Karte beide zusammen
+weg: offen im Open-Data-Portal des Rhein-Kreises Neuss (Opendatasoft, täglich aktualisiert)
+portal: https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/
+basis: https://opendata.rhein-kreis-neuss.de
+datensatz: stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse
+gruppe: rad
+zeit: null  # nach dem ersten Abruf festlegen (Felder in raw/neuss_rad/metadaten.json)
+werte: []
+stellen: {}
+titel: >-
+  Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (verändert:
+  Richtungen summiert, Stundenwerte zu Tagessummen zusammengefasst)
+herausgeber: Stadt Neuss
+quellenvermerk: Stadt Neuss
+lizenz: CC BY-SA 4.0
+lizenz_url: https://creativecommons.org/licenses/by-sa/4.0/
+hinweise:
+  - >-
+    Lizenz CC BY-SA 4.0 laut Portal: Wer die Werte weitergibt, gibt sie unter derselben Lizenz
+    weiter.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

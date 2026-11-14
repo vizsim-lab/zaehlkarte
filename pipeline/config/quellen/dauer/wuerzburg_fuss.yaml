@@ -1,0 +1,32 @@
+# Fußverkehr: Passantenzählung der Stadt Würzburg (Laserscanner in der Innenstadt), Stundendaten
+# im Open-Data-Portal der Stadt (Opendatasoft; Mobilithek-Angebot -8264466313321172654,
+# dl-de/by-2-0). Der Abruf braucht die robots-Ausnahme des Portals (Beschluss der Projektleitung,
+# 14.11.2026; config/robots.yaml).
+nr: 23
+status: live
+adapter: ods_stunden
+name: Würzburg (Passantenzählung)
+land: BY
+traeger: Stadt Würzburg
+art: >-
+  Passantenzählung in der Innenstadt (Laserscanner): Personen je Stunde und Standort, beide
+  Richtungen zusammen
+weg: offen im Open-Data-Portal der Stadt (Opendatasoft)
+portal: https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/
+basis: https://opendata.wuerzburg.de
+datensatz: passantenzaehlung_stundendaten
+gruppe: fuss
+zeit: null  # nach dem ersten Abruf festlegen (Felder in raw/wuerzburg_fuss/metadaten.json)
+werte: []
+stelle: null
+stellen: {}
+titel: >-
+  Passantenzählung – Stundendaten, Stadt Würzburg (verändert: Stundenwerte zu Tagessummen
+  zusammengefasst)
+herausgeber: Stadt Würzburg
+quellenvermerk: Stadt Würzburg
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+hinweise:
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
