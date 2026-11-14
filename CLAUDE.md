@@ -117,6 +117,10 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Frontend:** `npm run dev`; vor jedem Push `npm run test:unit` und `npm run test:web`
   (Playwright sperrt das Netz außer dem Testserver – die Karte muss ohne Hintergrund laufen).
   Neues Verhalten = neuer Test in `tests/web/`.
+- **Abrufe der Werkzeuge** (Branches `werkzeug/*`): nur, was robots.txt erlaubt – für die eigene
+  Kennung, für `*` und für die Kennungen von Claude; prüfen mit `tools/robots.py` (RFC 9309 samt
+  `*` und `$`, Crawl-delay), nicht mit `urllib.robotparser`. FragDenStaat und GovData sperren
+  Werkzeuge ganz (AGENTS.md, „Wo suchen“).
 - **Daten neu bauen:** Workflow „Kartendaten neu bauen“ (`.github/workflows/daten.yml`) oder
   lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW und die Portale von Münster,
   Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
