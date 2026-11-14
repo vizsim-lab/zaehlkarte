@@ -6,7 +6,7 @@ set -u
 # Prüfung 14.11.2026: eine Dauer-Quelle mit dem Adapter eines App-Branches holen und lesen –
 # Kennzahlen je Zählstelle, Jahresgrenzen, Zeitumstellung, Kartendaten nur dieser Quelle
 # (tools/quelle_pruefen.py, ergebnis/<code>/). Erst VMZ Niedersachsen (vmz-rad), dann Dresden,
-# jetzt Fuß: Augsburg (Annastraße) und Bochum (Passanten-Kanäle) mit dem Branch fuss.
+# dann Fuß (Augsburg, Bochum), jetzt Neuss RS5 und Würzburg Passanten (Branch neuss-wuerzburg).
 pruefe() {  # pruefe <branch> <code>
   local ziel="$GITHUB_WORKSPACE/ergebnis/$2"
   mkdir -p "$ziel"
@@ -14,5 +14,5 @@ pruefe() {  # pruefe <branch> <code>
   git -C app rev-parse HEAD > "$ziel/stand.txt"
   ( cd app/pipeline && uv sync --locked -q && timeout 40m uv run python "$GITHUB_WORKSPACE/tools/quelle_pruefen.py" "$2" "$ziel" ) 2>&1 | tail -80 > "$ziel/lauf.txt" || true
 }
-pruefe fuss augsburg_fuss
-pruefe fuss bochum_rad
+pruefe neuss-wuerzburg neuss_rad
+pruefe neuss-wuerzburg wuerzburg_fuss

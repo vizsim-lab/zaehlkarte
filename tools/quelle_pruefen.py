@@ -43,6 +43,15 @@ groesse = sum(p.stat().st_size for p in roh.rglob("*") if p.is_file())
 out.append(f"Rohdaten: {len(list(roh.rglob('*')))} Dateien, {groesse / 1e6:.1f} MB")
 if (roh / "abruf.json").exists():
     out.append((roh / "abruf.json").read_text(encoding="utf-8"))
+if (roh / "metadaten.json").exists():  # Opendatasoft: Felder des Datensatzes
+    meta = json.loads((roh / "metadaten.json").read_text(encoding="utf-8"))
+    out.append("Felder: " + json.dumps([{k: f.get(k) for k in ("name", "type", "label")}
+                                        for f in meta.get("fields") or []], ensure_ascii=False))
+    m = (meta.get("metas") or {}).get("default") or {}
+    out.append("Metadaten: " + json.dumps({k: m.get(k) for k in ("title", "records_count", "modified", "data_processed", "timezone", "license")}, ensure_ascii=False))
+for p in sorted(roh.rglob("*.csv"))[:3]:
+    with p.open(encoding="utf-8", errors="replace") as f:
+        out.append(f"Kopf {p.name}: " + " | ".join(next(f, "").rstrip() for _ in range(6)))
 schreib()
 
 gelesen, berichte = bau.baue(pfade, nur=[CODE])
