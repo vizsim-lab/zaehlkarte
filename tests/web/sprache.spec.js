@@ -20,7 +20,7 @@ test("Sprache: Deutsch ist Standard, EN schaltet um und bleibt gemerkt", async (
   await expect(page.locator("#klassen-legende")).toContainText("Motor vehicles, total 7–19 h");
   await expect(page.locator("#klassen-legende")).toContainText("35,000 and more");
   await expect(page.locator("#tage-liste")).toContainText("School holidays");
-  await expect(page.locator("#datenlage-legende")).toContainText("collected – request promising");
+  await expect(page.locator("#datenlage-legende")).toContainText("collected or without a licence – request promising");
   await expect(page.locator("#fc-stellen")).toHaveText(/^\d{1,3}(,\d{3})*$/);
   await expect(page.locator("#search")).toHaveAttribute("placeholder", "Search address...");
   await expect(page.locator(".maplibregl-ctrl-zoom-in")).toHaveAttribute("title", "Zoom in");
@@ -62,7 +62,7 @@ test("Sprache EN: Stelle englisch, Hinweise aus den Daten deutsch; Wechsel zeich
 
 test("Sprache EN: Datenlage mit englischer Oberfläche, Anfragetext deutsch", async ({ page }) => {
   await oeffne(page, "?lang=en");
-  await page.evaluate(() => window.__app.zeigeDatenlage("Dresden"));
+  await page.evaluate(() => window.__app.zeigeDatenlage("14612000")); // Dresden
   const el = page.locator("#datenlage-detail");
   await expect(el).toBeVisible();
   await expect(el).toContainText("Recommendation");

@@ -1,129 +1,181 @@
 # Datenlage Baden-Württemberg – je Kommune ein Eintrag (Format: pipeline/config/README.md).
 
-- kommune: Ravensburg
-  quelle: ravensburg
-  stand: in_karte
+- ags: "08436064"
+  name: Ravensburg
+  lage: [9.60667, 47.78153]
+  kurzzeit:
+    stand: in_karte
+    quellen: [ravensburg]
+    was: >-
+      24-Stunden-Zählungen mit Kfz, Lkw, Rad und Fuß, Excel und PDF je Zählung
+    links:
+      - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-ravensburg"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       Rad-Zählstellen (Eco-Counter) über MobiData BW – im Datensatz unter „Stadt Ravensburg“ und
       „Ravensburg Tws Gmbh & Co. Kg“ (dort auch die Stellen in Weingarten), in der Karte als
       Dauerzählstellen
     links:
       - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
-  was: >-
-    24-Stunden-Zählungen mit Kfz, Lkw, Rad und Fuß, Excel und PDF je Zählung
-  links:
-    - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-ravensburg"]
-- kommune: Weingarten
-  quelle: weingarten
-  stand: in_karte
+- ags: "08436082"
+  name: Weingarten
+  lage: [9.63506, 47.80987]
+  kurzzeit:
+    stand: in_karte
+    quellen: [weingarten]
+    was: >-
+      wie Ravensburg
+    links:
+      - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-stadt-weingarten"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       Rad-Zählstellen (Eco-Counter) über MobiData BW – im Datensatz unter „Ravensburg Tws Gmbh &
       Co. Kg“ (Stellen mit „WGT“ im Namen), in der Karte als Dauerzählstellen
     links:
       - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
-  was: >-
-    wie Ravensburg
-  links:
-    - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-stadt-weingarten"]
-- kommune: Berg
-  quelle: berg
-  stand: in_karte
-  was: >-
-    wie Ravensburg
-  links:
-    - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-berg"]
-- kommune: Baienfurt
-  quelle: baienfurt
-  stand: in_karte
-  was: >-
-    wie Ravensburg
-  links:
-    - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baienfurt"]
-- kommune: Baindt
-  quelle: baindt
-  stand: in_karte
-  was: >-
-    wie Ravensburg
-  links:
-    - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt"]
-- kommune: Konstanz
-  quelle: konstanz
-  stand: in_karte
+- ags: "08436013"
+  name: Berg
+  lage: [9.60595, 47.80473]
+  kurzzeit:
+    stand: in_karte
+    quellen: [berg]
+    was: >-
+      wie Ravensburg
+    links:
+      - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-berg"]
+- ags: "08436011"
+  name: Baienfurt
+  lage: [9.65146, 47.82698]
+  kurzzeit:
+    stand: in_karte
+    quellen: [baienfurt]
+    was: >-
+      wie Ravensburg
+    links:
+      - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baienfurt"]
+- ags: "08436012"
+  name: Baindt
+  lage: [9.6584, 47.84175]
+  kurzzeit:
+    stand: in_karte
+    quellen: [baindt]
+    was: >-
+      wie Ravensburg
+    links:
+      - ["MobiData BW", "https://mobidata-bw.de/dataset/zaehldaten-gemeinde-baindt"]
+- ags: "08335043"
+  name: Konstanz
+  lage: [9.17814, 47.66906]
+  kontakt: {fds_suche: "Stadt Konstanz"}
+  kurzzeit:
+    stand: in_karte
+    quellen: [konstanz]
+    was: >-
+      mobile Zählungen 2020 an sechs Stellen (Rad, zu Fuß, an zwei Stellen Kfz), 5- oder
+      15-Minuten-Werte über ein bis sechs Wochen
+    situation: >-
+      Die Stadt veröffentlicht ihre mobilen Zählungen von 2020 offen (CC0): je Standort eine CSV
+      mit 5- oder 15-Minuten-Werten je Richtung – Rad, zu Fuß und an zwei Stellen Kfz. Die Lage
+      steht nur als Straße, Brücke oder Hausnummer dabei; die Karte setzt sie aus OpenStreetMap.
+      Zählungen nach 2020 enthält der Datensatz nicht; die Fahrrad-Dauerzählstellen der Stadt
+      stehen als Dauerzählstellen in der Karte (über MobiData BW).
+    empfehlung: >-
+      Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und
+      die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz
+      Baden-Württemberg.
+    weg: "offen; ergänzend FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        Auf Ihrem Open-Data-Portal stehen die mobilen Zählungen des Rad- und Fußverkehrs von 2020.
+        Ich bitte zusätzlich um die mobilen Zählungen ab 2021, um die Knotenpunkt- und
+        Querschnittszählungen des Kfz-Verkehrs und um die genaue Lage der Zählgeräte (Koordinaten).
+    links:
+      - ["Offene Daten Konstanz", "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen
     links:
       - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
-  was: >-
-    mobile Zählungen 2020 an sechs Stellen (Rad, zu Fuß, an zwei Stellen Kfz), 5- oder
-    15-Minuten-Werte über ein bis sechs Wochen
-  situation: >-
-    Die Stadt veröffentlicht ihre mobilen Zählungen von 2020 offen (CC0): je Standort eine CSV
-    mit 5- oder 15-Minuten-Werten je Richtung – Rad, zu Fuß und an zwei Stellen Kfz. Die Lage
-    steht nur als Straße, Brücke oder Hausnummer dabei; die Karte setzt sie aus OpenStreetMap.
-    Zählungen nach 2020 enthält der Datensatz nicht; die Fahrrad-Dauerzählstellen der Stadt
-    stehen als Dauerzählstellen in der Karte (über MobiData BW).
-  empfehlung: >-
-    Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und
-    die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz
-    Baden-Württemberg.
-  weg: "offen; ergänzend FragDenStaat, LIFG BW"
-  kontakt: {fds_suche: "Stadt Konstanz"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Auf Ihrem Open-Data-Portal stehen die mobilen Zählungen des Rad- und Fußverkehrs von 2020.
-    Ich bitte zusätzlich um die mobilen Zählungen ab 2021, um die Knotenpunkt- und
-    Querschnittszählungen des Kfz-Verkehrs und um die genaue Lage der Zählgeräte (Koordinaten).
-  links:
-    - ["Offene Daten Konstanz", "https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr"]
-- kommune: Stuttgart
-  land: BW
-  lon: 9.1829
-  lat: 48.7758
-  stand: aggregiert
+- ags: "08111000"
+  name: Stuttgart
+  lage: [9.1829, 48.7758]
+  kontakt: {name: "Landeshauptstadt Stuttgart", email: "post@stuttgart.de", fds: "https://fragdenstaat.de/behoerde/9384/stadt-stuttgart/"}
+  kurzzeit:
+    stand: aggregiert
+    was: >-
+      Kordonzählungen 1980–2024 an der Markungsgrenze und am Kesselrand – offen nur als Summe über
+      alle Zählstellen je Jahr (CSV, CC BY 4.0)
+    situation: >-
+      Die Stadt zählt im jährlichen Wechsel an der Markungsgrenze und am Kesselrand an einem Werktag
+      über 24 Stunden alle Fahrzeuge an den Zählstellen. Offen sind nur die Summen über alle
+      Zählstellen je Jahr, Richtung (stadtein-/stadtauswärts), Zeitraum (6–22 und 22–6 Uhr) und
+      Fahrzeugart (CSV, CC BY 4.0) – keine Werte je Zählstelle, daher nicht in der Karte.
+    empfehlung: >-
+      Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und
+      Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz
+      Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        Offen sind die Ergebnisse Ihrer Kordonzählungen an der Markungsgrenze und am Kesselrand als
+        Summen über alle Zählstellen. Ich bitte um dieselben Zählungen je Zählstelle (Lage, Datum,
+        Werte je Stunde, Richtung und Fahrzeugart) und um die Knotenpunkt- und Querschnittszählungen
+        im Stadtgebiet.
+    links:
+      - ["Open Data Stuttgart", "https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen
     links:
       - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
-  was: >-
-    Kordonzählungen 1980–2024 an der Markungsgrenze und am Kesselrand – offen nur als Summe über
-    alle Zählstellen je Jahr (CSV, CC BY 4.0)
-  situation: >-
-    Die Stadt zählt im jährlichen Wechsel an der Markungsgrenze und am Kesselrand an einem Werktag
-    über 24 Stunden alle Fahrzeuge an den Zählstellen. Offen sind nur die Summen über alle
-    Zählstellen je Jahr, Richtung (stadtein-/stadtauswärts), Zeitraum (6–22 und 22–6 Uhr) und
-    Fahrzeugart (CSV, CC BY 4.0) – keine Werte je Zählstelle, daher nicht in der Karte.
-  empfehlung: >-
-    Anfrage nach denselben Kordonzählungen je Zählstelle und nach den Knotenpunkt- und
-    Querschnittszählungen im Stadtgebiet. Grundlage: Landesinformationsfreiheitsgesetz
-    Baden-Württemberg.
-  weg: "FragDenStaat, LIFG BW"
-  kontakt: {name: "Landeshauptstadt Stuttgart", email: "post@stuttgart.de", fds: "https://fragdenstaat.de/behoerde/9384/stadt-stuttgart/"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Offen sind die Ergebnisse Ihrer Kordonzählungen an der Markungsgrenze und am Kesselrand als
-    Summen über alle Zählstellen. Ich bitte um dieselben Zählungen je Zählstelle (Lage, Datum,
-    Werte je Stunde, Richtung und Fahrzeugart) und um die Knotenpunkt- und Querschnittszählungen
-    im Stadtgebiet.
-  links:
-    - ["Open Data Stuttgart", "https://opendata.stuttgart.de/en/dataset/ergebnisse-der-verkehrszaehlungen/resource/8345d864-0173-483f-adc7-8ded2d7c7855"]
 
 # Freiburg, Karlsruhe, Ettlingen: Recherche November 2026 (GovData/daten.bw, Portale der Städte,
 # FragDenStaat-Volltextsuche; Werkzeug-Branch werkzeug/erkundung, ergebnis/bw2).
-- kommune: Freiburg im Breisgau
-  land: BW
-  lon: 7.8499
-  lat: 47.9948
-  stand: automatisch
+- ags: "08311000"
+  name: Freiburg im Breisgau
+  lage: [7.8499, 47.9948]
+  kontakt: {name: "Stadt Freiburg im Breisgau", email: "buergerberatung@stadt.freiburg.de", fds: "https://fragdenstaat.de/behoerde/9204/stadt-freiburg-im-breisgau/"}
+  kurzzeit:
+    stand: nichts_offen
+    was: >-
+      offen nur automatische Zählungen: Rad-Zählstellen (Stundenwerte seit 2015), dazu 25
+      Verkehrssensoren im Testbetrieb; Knotenpunkt- und Querschnittszählungen nicht online
+    situation: >-
+      Offen sind die Stundenwerte der Rad-Zählstellen seit 2015 (FR.ITZ, Datenlizenz Deutschland –
+      Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach
+      zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die
+      Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte
+      mit Werten vom Mai 2024. Die Rad-Zählstellen stehen als Dauerzählstellen in der Karte (über
+      MobiData BW), die Sensoren noch nicht. Die
+      Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen
+      der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und
+      Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.
+    empfehlung: >-
+      Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch
+      nach denen, die für Verkehrsuntersuchungen erhoben wurden. Grundlage:
+      Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        Gemeint sind die Kurzzeitzählungen an Knotenpunkten und Querschnitten, auch die für
+        Verkehrsuntersuchungen erhobenen (etwa die Stichprobenzählungen im Mai bis Juli 2022 zur
+        Verkehrsuntersuchung Schlossbergring) – nicht die Rad-Zählstellen und die Verkehrssensoren.
+    links:
+      - ["FR.ITZ: Fahrrad-Zählstellen", "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"]
+      - ["Meldung Sensoren (24.7.2025)", "https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg"]
+      - ["Geoportal: Verkehrssensoren (WFS)", "https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS"]
+      - ["VU Schlossbergring 2023 (PDF)", "https://www.freiburg.de/pb/site/Freiburg/get/params_E-138366714/2151489/231205_Bericht_VU%20Schlossberring.pdf"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im
       Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte
@@ -132,76 +184,72 @@
       - ["FR.ITZ: Fahrrad-Zählstellen", "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"]
       - ["Meldung Sensoren (24.7.2025)", "https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg"]
       - ["Geoportal: Verkehrssensoren (WFS)", "https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS"]
-  was: >-
-    offen nur automatische Zählungen: Rad-Zählstellen (Stundenwerte seit 2015), dazu 25
-    Verkehrssensoren im Testbetrieb; Knotenpunkt- und Querschnittszählungen nicht online
-  situation: >-
-    Offen sind die Stundenwerte der Rad-Zählstellen seit 2015 (FR.ITZ, Datenlizenz Deutschland –
-    Namensnennung 2.0). Dazu zählen Sensoren dauerhaft an 25 Standorten in beiden Richtungen nach
-    zehn Fahrzeugklassen in 15-Minuten-Intervallen; laut Stadt (Juli 2025) noch im Testbetrieb, die
-    Daten sollen danach kostenlos ins Geoportal – der Dienst dort zeigt bisher nur drei Standorte
-    mit Werten vom Mai 2024. Die Rad-Zählstellen stehen als Dauerzählstellen in der Karte (über
-    MobiData BW), die Sensoren noch nicht. Die
-    Stadtradeln-Auswertungen sind GPS-Spuren aus der App, keine Zählungen. Kurzzeitzählungen
-    der Stadt kommen nur in Gutachten vor, ohne Zählwerte – etwa stundenweise Rad- und
-    Fußzählungen im Mai bis Juli 2022 für die Verkehrsuntersuchung Schlossbergring.
-  empfehlung: >-
-    Anfrage nach den Knotenpunkt- und Querschnittszählungen des Garten- und Tiefbauamts, auch
-    nach denen, die für Verkehrsuntersuchungen erhoben wurden. Grundlage:
-    Landesinformationsfreiheitsgesetz Baden-Württemberg.
-  weg: "FragDenStaat, LIFG BW"
-  kontakt: {name: "Stadt Freiburg im Breisgau", email: "buergerberatung@stadt.freiburg.de", fds: "https://fragdenstaat.de/behoerde/9204/stadt-freiburg-im-breisgau/"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Gemeint sind die Kurzzeitzählungen an Knotenpunkten und Querschnitten, auch die für
-    Verkehrsuntersuchungen erhobenen (etwa die Stichprobenzählungen im Mai bis Juli 2022 zur
-    Verkehrsuntersuchung Schlossbergring) – nicht die Rad-Zählstellen und die Verkehrssensoren.
-  links:
-    - ["FR.ITZ: Fahrrad-Zählstellen", "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"]
-    - ["Meldung Sensoren (24.7.2025)", "https://digital.freiburg.de/neuigkeiten/detail/moderne-verkehrszaehlung-in-freiburg"]
-    - ["Geoportal: Verkehrssensoren (WFS)", "https://geoportal.freiburg.de/wfs/digit_verkehrszaehl/digit_verkehrszaehl?REQUEST=GetCapabilities&SERVICE=WFS"]
-    - ["VU Schlossbergring 2023 (PDF)", "https://www.freiburg.de/pb/site/Freiburg/get/params_E-138366714/2151489/231205_Bericht_VU%20Schlossberring.pdf"]
-- kommune: Karlsruhe
-  land: BW
-  lon: 8.4037
-  lat: 49.0093
-  stand: geliefert
+- ags: "08212000"
+  name: Karlsruhe
+  lage: [8.4037, 49.0093]
+  kontakt: {fds_suche: "Stadt Karlsruhe"}
+  kurzzeit:
+    stand: geliefert
+    was: >-
+      2023 auf Anfrage die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb herausgegeben
+      (Excel); sonst Zählwerte nur in Verkehrsuntersuchungen im Ratsinformationssystem
+    situation: >-
+      2023 hat die Stadt (Ordnungs- und Bürgeramt) auf eine Anfrage nach dem LIFG die Zählungen
+      zum Verkehrsversuch Fahrradstraße Rechts der Alb herausgegeben – als Excel-Datei, auf
+      FragDenStaat nur als umgewandelte PDF und ohne Lizenzangabe. Auf eine Anfrage 2025 zu einer
+      Kreuzung in der Innenstadt verwies sie auf eine Verkehrsuntersuchung im
+      Ratsinformationssystem. Einen offenen Datensatz mit Zählungen gibt es nicht.
+    empfehlung: >-
+      Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023.
+      Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        2023 haben Sie die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb als Excel-Datei
+        herausgegeben. Ich bitte in derselben Form um alle Zählungen, auch um die für
+        Verkehrsuntersuchungen erhobenen.
+    links:
+      - ["FragDenStaat 2023", "https://fragdenstaat.de/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/"]
+      - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/kreuzung-kriegs-brauer-reinhold-frank-strasse-massgebliches-verkehrsaufkommen/"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       eine Rad-Zählstelle (Erbprinzenstraße, Eco-Counter) über MobiData BW, in der Karte als
       Dauerzählstelle
     links:
       - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
-  was: >-
-    2023 auf Anfrage die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb herausgegeben
-    (Excel); sonst Zählwerte nur in Verkehrsuntersuchungen im Ratsinformationssystem
-  situation: >-
-    2023 hat die Stadt (Ordnungs- und Bürgeramt) auf eine Anfrage nach dem LIFG die Zählungen
-    zum Verkehrsversuch Fahrradstraße Rechts der Alb herausgegeben – als Excel-Datei, auf
-    FragDenStaat nur als umgewandelte PDF und ohne Lizenzangabe. Auf eine Anfrage 2025 zu einer
-    Kreuzung in der Innenstadt verwies sie auf eine Verkehrsuntersuchung im
-    Ratsinformationssystem. Einen offenen Datensatz mit Zählungen gibt es nicht.
-  empfehlung: >-
-    Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023.
-    Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
-  weg: "FragDenStaat, LIFG BW"
-  kontakt: {fds_suche: "Stadt Karlsruhe"}
-  anfrage: true
-  anfrage_zusatz: >-
-    2023 haben Sie die Zählungen zum Verkehrsversuch Fahrradstraße Rechts der Alb als Excel-Datei
-    herausgegeben. Ich bitte in derselben Form um alle Zählungen, auch um die für
-    Verkehrsuntersuchungen erhobenen.
-  links:
-    - ["FragDenStaat 2023", "https://fragdenstaat.de/anfrage/verkehrsversuch-fahrradstrasse-rechts-der-alb-ergebnisse-der-verkehrszaehlungen/"]
-    - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/kreuzung-kriegs-brauer-reinhold-frank-strasse-massgebliches-verkehrsaufkommen/"]
-- kommune: Ettlingen
-  land: BW
-  lon: 8.4078
-  lat: 48.9406
-  stand: automatisch
+- ags: "08215017"
+  name: Ettlingen
+  lage: [8.4078, 48.9406]
+  kontakt: {name: "Stadt Ettlingen", email: "hauptamt@ettlingen.de", fds: "https://fragdenstaat.de/behoerde/9199/stadt-ettlingen/"}
+  kurzzeit:
+    stand: nichts_offen
+    was: >-
+      automatische Zählstellen an sechs Stellen, Stundenwerte je Fahrzeugklasse (CC BY-NC 4.0) –
+      in der Karte als Dauerzählstellen; Kurzzeitzählungen nicht online
+    situation: >-
+      Die Stadt veröffentlicht die Werte ihrer automatischen Zählstellen auf dem Open-Data-Portal
+      re@di (Städte der TechnologieRegion Karlsruhe): Stundenwerte je Fahrzeugklasse (Pkw, leichte
+      Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad) an sechs Stellen in der Karlsruher,
+      Rastatter, Durlacher, Pforzheimer und Schillerstraße, seit August 2026 je Fahrtrichtung.
+      Lizenz: CC BY-NC 4.0, also nur nicht kommerziell. Die Karte zeigt sie als Dauerzählstellen
+      ab dem 20.08.2026; die älteren Werte ab Mai 2025 sind laufende Tageszähler ohne
+      Fahrtrichtung. Kurzzeitzählungen an Knotenpunkten stehen nicht online.
+    empfehlung: >-
+      Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder
+      erheben lässt. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        Gemeint sind nicht die automatischen Zählstellen, deren Werte Sie auf dem Open-Data-Portal
+        veröffentlichen, sondern Zählungen an Knotenpunkten und Querschnitten (etwa für
+        Verkehrsuntersuchungen).
+    links:
+      - ["Open-Data-Portal (re@di)", "https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen"]
   dauer:
     stand: in_karte
+    quellen: [ettlingen]
     was: >-
       automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und
       Fahrzeugklasse ab 20.08.2026 (CC BY-NC 4.0, nur nicht kommerziell), in der Karte als
@@ -209,36 +257,36 @@
       Fahrtrichtung und nicht übernommen
     links:
       - ["Open-Data-Portal (re@di)", "https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen"]
-  was: >-
-    automatische Zählstellen an sechs Stellen, Stundenwerte je Fahrzeugklasse (CC BY-NC 4.0) –
-    in der Karte als Dauerzählstellen; Kurzzeitzählungen nicht online
-  situation: >-
-    Die Stadt veröffentlicht die Werte ihrer automatischen Zählstellen auf dem Open-Data-Portal
-    re@di (Städte der TechnologieRegion Karlsruhe): Stundenwerte je Fahrzeugklasse (Pkw, leichte
-    Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad) an sechs Stellen in der Karlsruher,
-    Rastatter, Durlacher, Pforzheimer und Schillerstraße, seit August 2026 je Fahrtrichtung.
-    Lizenz: CC BY-NC 4.0, also nur nicht kommerziell. Die Karte zeigt sie als Dauerzählstellen
-    ab dem 20.08.2026; die älteren Werte ab Mai 2025 sind laufende Tageszähler ohne
-    Fahrtrichtung. Kurzzeitzählungen an Knotenpunkten stehen nicht online.
-  empfehlung: >-
-    Anfrage nach Knotenpunkt- und Querschnittszählungen, falls die Stadt solche erhebt oder
-    erheben lässt. Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
-  weg: "FragDenStaat, LIFG BW"
-  kontakt: {name: "Stadt Ettlingen", email: "hauptamt@ettlingen.de", fds: "https://fragdenstaat.de/behoerde/9199/stadt-ettlingen/"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Gemeint sind nicht die automatischen Zählstellen, deren Werte Sie auf dem Open-Data-Portal
-    veröffentlichen, sondern Zählungen an Knotenpunkten und Querschnitten (etwa für
-    Verkehrsuntersuchungen).
-  links:
-    - ["Open-Data-Portal (re@di)", "https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen"]
-- kommune: Ulm
-  land: BW
-  lon: 9.9916
-  lat: 48.3985
-  stand: automatisch
+- ags: "08421000"
+  name: Ulm
+  lage: [9.9916, 48.3985]
+  kontakt: {fds_suche: "Stadt Ulm"}
+  kurzzeit:
+    stand: nichts_offen
+    was: >-
+      fünf Zählkameras seit Juli 2024, je Verkehrsteilnehmer eine Zeile, Standorte nur als Kürzel;
+      dazu eine Rad-Dauerzählstelle; Kurzzeitzählungen nicht online
+    situation: >-
+      Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit
+      Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und
+      Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa
+      „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch, in der Karte sind sie nicht. Die
+      Rad-Dauerzählstelle am Blautalradweg (Lupferbrücke) steht über MobiData BW als Dauerzählstelle
+      in der Karte. Knotenpunkt- und Querschnittszählungen stehen nicht online.
+    empfehlung: >-
+      Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras.
+      Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        Zu den Kamerazählungen im Datenhub (Datensatz „vgv_ulm“) bitte ich nur um die Standorte der
+        Kameras (Koordinaten zu den Kürzeln wie „Cam-1-01“) und ihre Zählzeiträume.
+    links:
+      - ["Datenhub Ulm: vgv_ulm", "https://datenhub.ulm.de/ckan/dataset/vgv_ulm"]
+      - ["Datenhub Ulm: Fahrradzählstelle", "https://datenhub.ulm.de/ckan/dataset/fahrradzahler_lupferbruecke"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       Rad-Zählstelle Blautal Lupferbrücke über MobiData BW in der Karte; fünf Zählkameras seit
       Juli 2024 (eine Zeile je Verkehrsteilnehmer), Standorte nur als Kürzel und ohne
@@ -247,35 +295,32 @@
     links:
       - ["Datenhub Ulm: vgv_ulm", "https://datenhub.ulm.de/ckan/dataset/vgv_ulm"]
       - ["Datenhub Ulm: Fahrradzählstelle", "https://datenhub.ulm.de/ckan/dataset/fahrradzahler_lupferbruecke"]
-  was: >-
-    fünf Zählkameras seit Juli 2024, je Verkehrsteilnehmer eine Zeile, Standorte nur als Kürzel;
-    dazu eine Rad-Dauerzählstelle; Kurzzeitzählungen nicht online
-  situation: >-
-    Im Datenhub der Stadt stehen die Zählungen von fünf Kameras aus dem Projekt „VGV Ulm“ seit
-    Juli 2024: je erkanntem Verkehrsteilnehmer Zeitpunkt, Klasse (etwa Pkw, Fußgänger) und
-    Richtung, Lizenz „Andere (Namensnennung)“. Die Standorte stehen nur als Kürzel dabei (etwa
-    „Cam-1-01“); zwei Kameras liefen im Oktober 2026 noch, in der Karte sind sie nicht. Die
-    Rad-Dauerzählstelle am Blautalradweg (Lupferbrücke) steht über MobiData BW als Dauerzählstelle
-    in der Karte. Knotenpunkt- und Querschnittszählungen stehen nicht online.
-  empfehlung: >-
-    Anfrage nach den Knotenpunkt- und Querschnittszählungen und nach den Standorten der Kameras.
-    Grundlage: Landesinformationsfreiheitsgesetz Baden-Württemberg.
-  weg: "FragDenStaat, LIFG BW"
-  kontakt: {fds_suche: "Stadt Ulm"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Zu den Kamerazählungen im Datenhub (Datensatz „vgv_ulm“) bitte ich nur um die Standorte der
-    Kameras (Koordinaten zu den Kürzeln wie „Cam-1-01“) und ihre Zählzeiträume.
-  links:
-    - ["Datenhub Ulm: vgv_ulm", "https://datenhub.ulm.de/ckan/dataset/vgv_ulm"]
-    - ["Datenhub Ulm: Fahrradzählstelle", "https://datenhub.ulm.de/ckan/dataset/fahrradzahler_lupferbruecke"]
-- kommune: Heidelberg
-  land: BW
-  lon: 8.6724
-  lat: 49.3988
-  stand: automatisch
+- ags: "08221000"
+  name: Heidelberg
+  lage: [8.6724, 49.3988]
+  kontakt: {name: "Stadt Heidelberg", email: "Koordinierungsstelle-LIFG@Heidelberg.de", fds: "https://fragdenstaat.de/behoerde/9232/stadt-heidelberg/"}
+  kurzzeit:
+    stand: nichts_offen
+    was: >-
+      Zählkameras und Verkehrsrechnerdaten im Katalog der Datenplattform, zurzeit nicht frei
+      abrufbar
+    situation: >-
+      Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved,
+      15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht
+      (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es
+      nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind
+      davon nur die Rad-Zählstellen (über MobiData BW).
+    empfehlung: >-
+      Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz
+      Baden-Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage: {}
+    links:
+      - ["Datenplattform: Kamera (Beispiel)", "https://ckan.datenplattform.heidelberg.de/en/dataset/mobility_main_trafficcamera/resource/b95871b2-7de0-46b1-b377-db497250f8a0"]
+      - ["MobiData BW: Verkehrsrechnerdaten", "https://mobidata-bw.de/en/dataset/verkehrsleitrechnerdaten-in-heidelberg/resource/18936b7b-af96-45c5-ad05-f7f09ef6d9a3"]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 12 Zählkameras im Katalog der
       Datenplattform (CC0), dessen Schnittstelle im November 2026 nicht antwortete, und
@@ -283,30 +328,12 @@
     links:
       - ["Datenplattform: Kamera (Beispiel)", "https://ckan.datenplattform.heidelberg.de/en/dataset/mobility_main_trafficcamera/resource/b95871b2-7de0-46b1-b377-db497250f8a0"]
       - ["MobiData BW: Verkehrsrechnerdaten", "https://mobidata-bw.de/en/dataset/verkehrsleitrechnerdaten-in-heidelberg/resource/18936b7b-af96-45c5-ad05-f7f09ef6d9a3"]
-  was: >-
-    Zählkameras und Verkehrsrechnerdaten im Katalog der Datenplattform, zurzeit nicht frei
-    abrufbar
-  situation: >-
-    Im Katalog der Datenplattform stehen die Werte von 12 Zählkameras (TrafficFlowObserved,
-    15-Minuten-Werte, CC0) – die Schnittstelle des Katalogs antwortete im November 2026 aber nicht
-    (404), die Metadaten sind von 2023. Die Daten des Verkehrsrechners (Zählschleifen) gibt es
-    nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind
-    davon nur die Rad-Zählstellen (über MobiData BW).
-  empfehlung: >-
-    Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz
-    Baden-Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
-  weg: "FragDenStaat, LIFG BW"
-  kontakt: {name: "Stadt Heidelberg", email: "Koordinierungsstelle-LIFG@Heidelberg.de", fds: "https://fragdenstaat.de/behoerde/9232/stadt-heidelberg/"}
-  anfrage: true
-  links:
-    - ["Datenplattform: Kamera (Beispiel)", "https://ckan.datenplattform.heidelberg.de/en/dataset/mobility_main_trafficcamera/resource/b95871b2-7de0-46b1-b377-db497250f8a0"]
-    - ["MobiData BW: Verkehrsrechnerdaten", "https://mobidata-bw.de/en/dataset/verkehrsleitrechnerdaten-in-heidelberg/resource/18936b7b-af96-45c5-ad05-f7f09ef6d9a3"]
-- kommune: Mannheim
-  land: BW
-  lon: 8.4669
-  lat: 49.4875
+- ags: "08222000"
+  name: Mannheim
+  lage: [8.4669, 49.4875]
   dauer:
     stand: in_karte
+    quellen: [mobidata_rad]
     was: >-
       Rad-Zählstellen der Stadt (rund 17) über das Bündel von MobiData BW (dl-de/by-2-0) – in der
       Karte als Dauerzählstellen

@@ -3,8 +3,7 @@ CLAUDE.md: Ein Tippfehler oder eine vergessene Angabe fällt im PR auf – nicht
 Karte oder gar nicht (ein unbekannter optionaler Schlüssel würde sonst still zu `None`, eine Datei
 am falschen Ort still übergangen).
 
-Neue Regeln kommen hierher. Noch nicht geprüft, weil es heute noch nicht gilt: die Verknüpfung
-einer Kommune mit ihren Dauer-Quellen (die Karte sucht sie über den Namen und die Nähe).
+Neue Regeln kommen hierher.
 """
 
 from __future__ import annotations
@@ -16,7 +15,7 @@ from datetime import date
 import pytest
 import yaml
 
-from zaehlkarte import adapters, fetch, site
+from zaehlkarte import adapters, datenlage, fetch
 from zaehlkarte.config import Pfade, konfiguration
 from zaehlkarte.dauer import bau
 from zaehlkarte.kalender import FEIERTAGE_LAENDER, FERIEN, LAENDER, ferienkalender
@@ -35,9 +34,11 @@ URL = re.compile(r"https?://\S+$")
 CODE = re.compile(r"[a-z][a-z0-9]*(_[a-z0-9]+)*$")
 DEUTSCHLAND = {"lon": (5.8, 15.1), "lat": (47.2, 55.1)}
 
-EINTRAG = {"kommune", "land", "lon", "lat", "quelle", "stand", "was", "situation", "empfehlung",
-           "weg", "links", "kontakt", "anfrage", "anfrage_zusatz", "anfrage_an", "dauer"}
-DAUER_BLOCK = {"stand", "was", "situation", "links"}
+EINTRAG = {"ags", "name", "lage", "kontakt", "kurzzeit", "dauer"}
+BLOCK = {"kurzzeit": {"stand", "quellen", "was", "situation", "empfehlung", "weg", "anfrage",
+                      "links"},
+         "dauer": {"stand", "quellen", "was", "situation", "links"}}
+ANFRAGE = {"an", "zusatz"}
 KONTAKT = {"name", "email", "fds", "fds_suche"}  # Funktionsadressen aus FragDenStaat
 
 
@@ -201,64 +202,84 @@ def test_anfrage_vorlage():
     assert {"stelle", "zusatz"} <= platzhalter
 
 
-# --- Datenlage --------------------------------------------------------------------------------
+# --- Datenlage ---------------------------------------------------------------------------------
 
 
 def _name(e: dict) -> str:
-    return e.get("kommune", "?")
+    return e.get("name", "?")
+
+
+def _bloecke(e: dict):
+    return [(f, e[f]) for f in ("kurzzeit", "dauer") if e.get(f)]
 
 
 def test_datenlage_schluessel():
     for e in DATENLAGE:
         assert set(e) <= EINTRAG, f"{_name(e)}: unbekannt {set(e) - EINTRAG}"
-        assert set(e.get("dauer") or {}) <= DAUER_BLOCK, f"{_name(e)}: dauer {set(e['dauer'])}"
+        assert _bloecke(e), f"{_name(e)}: weder kurzzeit noch dauer"
+        for f, b in _bloecke(e):
+            assert set(b) <= BLOCK[f], f"{_name(e)}: {f} {set(b) - BLOCK[f]}"
         assert set(e.get("kontakt") or {}) <= KONTAKT, f"{_name(e)}: kontakt {set(e['kontakt'])}"
 
 
+def test_gemeindeschluessel():
+    """Schlüssel der Kommune: der amtliche Gemeindeschlüssel (8 Ziffern), bei Kreisen der
+    Kreisschlüssel (5 Ziffern) – eindeutig; das Land steckt in den ersten beiden Ziffern."""
+    schluessel = [e["ags"] for e in DATENLAGE]
+    for e in DATENLAGE:
+        assert isinstance(e["ags"], str) and re.fullmatch(r"\d{5}|\d{8}", e["ags"]), _name(e)
+        assert e["ags"][:2] in datenlage.LAND, f"{_name(e)}: Land {e['ags'][:2]}"
+    assert len(schluessel) == len(set(schluessel)), {a for a in schluessel
+                                                     if schluessel.count(a) > 1}
+
+
 def test_kommune_in_der_datei_ihres_landes():
-    """Je Land eine Datei: Jede Kommune steht in der ihres Landes (am Eintrag oder, mit `quelle`,
-    das der Quelle)."""
+    """Je Land eine Datei: jede Kommune steht in der ihres Landes (laut Gemeindeschlüssel)."""
     for pfad in sorted((CONFIG / "kommunen").glob("*.yaml")):
         for e in yaml.safe_load(pfad.read_text(encoding="utf-8")):
-            land = e.get("land") or KURZZEIT[e["quelle"]]["land"]
+            land = datenlage.LAND[e["ags"][:2]]
             assert land == pfad.stem, f"{_name(e)}: Land {land}, aber in {pfad.name}"
 
 
 def test_datenlage_kommunen_eindeutig():
-    namen = [e["kommune"] for e in DATENLAGE]
+    namen = [e["name"] for e in DATENLAGE]
     assert len(namen) == len(set(namen)), {n for n in namen if namen.count(n) > 1}
 
 
 def test_datenlage_staende():
+    """Eine Liste von Ständen für beide Familien (datenlage.STAND)."""
     for e in DATENLAGE:
-        assert e.get("stand") is not None or e.get("dauer"), f"{_name(e)}: weder stand noch dauer"
-        if e.get("stand") is not None:
-            assert e["stand"] in site.STAND, f"{_name(e)}: stand {e['stand']!r}"
-        if e.get("dauer"):
-            assert e["dauer"].get("stand") in site.DAUER_STAND, f"{_name(e)}: dauer.stand"
+        for f, b in _bloecke(e):
+            assert b.get("stand") in datenlage.STAND, f"{_name(e)}: {f}.stand {b.get('stand')!r}"
 
 
-def test_datenlage_lage_und_quelle():
-    """Mit `quelle` liegt die Kommune in der Karte (Lage und Land aus der Quelle), sonst stehen
-    Land und Lage am Eintrag."""
+def test_datenlage_lage():
     for e in DATENLAGE:
-        if e.get("quelle"):
-            q = KURZZEIT.get(e["quelle"])
-            assert q and q["status"] == "live", f"{_name(e)}: Quelle {e['quelle']!r}"
-            assert e.get("stand") == "in_karte", f"{_name(e)}: mit Quelle in_karte"
-            assert not {"land", "lon", "lat"} & set(e), f"{_name(e)}: Lage kommt aus der Quelle"
-        else:
-            assert e.get("stand") != "in_karte", f"{_name(e)}: in_karte ohne Quelle"
-            assert e.get("land") in CFG["recht"], f"{_name(e)}: Land {e.get('land')!r}"
-            for achse, (lo, hi) in DEUTSCHLAND.items():
-                assert lo <= e[achse] <= hi, f"{_name(e)}: {achse} {e[achse]}"
+        lage = e.get("lage")
+        assert isinstance(lage, list) and len(lage) == 2, f"{_name(e)}: lage [Länge, Breite]"
+        for wert, (lo, hi) in zip(lage, DEUTSCHLAND.values(), strict=True):
+            assert lo <= wert <= hi, f"{_name(e)}: lage {lage}"
 
 
-def test_jede_kurzzeit_quelle_hat_eine_kommune():
-    verknuepft = [e["quelle"] for e in DATENLAGE if e.get("quelle")]
-    assert len(verknuepft) == len(set(verknuepft)), "eine Quelle an mehreren Kommunen"
-    live = {c for c, q in KURZZEIT.items() if q["status"] == "live"}
-    assert live <= set(verknuepft), f"ohne Datenlage-Eintrag: {live - set(verknuepft)}"
+def test_quellen_der_kommunen():
+    """Kommune und Quelle sind ausdrücklich verknüpft (`quellen` je Familie): „in der Karte“
+    genau dann, wenn Quellen genannt sind, und nur Quellen der Familie, die in der Karte sind.
+    Jede Kurzzeit-Quelle gehört zu genau einer Kommune, jede Dauer-Quelle zu mindestens einer
+    (Bündel wie MobiData BW zu mehreren)."""
+    live = {"kurzzeit": {c for c, q in KURZZEIT.items() if q["status"] == "live"},
+            "dauer": {c for c, q in DAUER.items() if q["status"] == "live"}}
+    verknuepft: dict[str, list[str]] = {"kurzzeit": [], "dauer": []}
+    for e in DATENLAGE:
+        for f, b in _bloecke(e):
+            qs = b.get("quellen") or []
+            assert set(qs) <= live[f], f"{_name(e)}: {f}.quellen {set(qs) - live[f]}"
+            assert bool(qs) == (b["stand"] == "in_karte"), f"{_name(e)}: {f} in_karte ⇔ quellen"
+            verknuepft[f] += qs
+    k = verknuepft["kurzzeit"]
+    assert len(k) == len(set(k)), "eine Kurzzeit-Quelle an mehreren Kommunen"
+    assert set(k) == live["kurzzeit"], f"ohne Kommune: {live['kurzzeit'] - set(k)}"
+    assert set(verknuepft["dauer"]) == live["dauer"], (
+        f"ohne Kommune: {live['dauer'] - set(verknuepft['dauer'])}")
 
 
 def _links_ok(links) -> bool:
@@ -268,31 +289,28 @@ def _links_ok(links) -> bool:
 
 
 def test_datenlage_texte_und_links():
-    """Rechtliche Aussagen nur mit Beleg: jeder Stand mit Text und Links als [Titel, URL]."""
+    """Rechtliche Aussagen nur mit Beleg: jeder Stand mit Text und Links als [Titel, URL]; bei
+    Kurzzeitzählungen außerhalb der Karte dazu Lage, Empfehlung und Weg."""
     for e in DATENLAGE:
-        if e.get("stand") is not None:
-            assert (e.get("was") or "").strip(), f"{_name(e)}: was"
-            assert _links_ok(e.get("links")), f"{_name(e)}: links"
-            if not e.get("quelle"):
-                for k in ("situation", "empfehlung", "weg"):
-                    assert (e.get(k) or "").strip(), f"{_name(e)}: {k}"
-        if e.get("dauer"):
-            assert (e["dauer"].get("was") or "").strip(), f"{_name(e)}: dauer.was"
-            assert _links_ok(e["dauer"].get("links")), f"{_name(e)}: dauer.links"
+        for f, b in _bloecke(e):
+            assert (b.get("was") or "").strip(), f"{_name(e)}: {f}.was"
+            assert _links_ok(b.get("links")), f"{_name(e)}: {f}.links"
+        k = e.get("kurzzeit")
+        if k and k["stand"] != "in_karte":
+            for x in ("situation", "empfehlung", "weg"):
+                assert (k.get(x) or "").strip(), f"{_name(e)}: kurzzeit.{x}"
 
 
 def test_datenlage_anfrage_und_kontakt():
-    """Eine Anfrage nur mit Kontakt (Behörde aus FragDenStaat oder Suche dort); Zusatz und
-    angefragte Stelle nur mit Anfrage."""
+    """Eine Anfrage nur bei den Kurzzeitzählungen und nur mit Kontakt (Behörde aus FragDenStaat
+    oder Suche dort); `an` ist die angefragte Stelle, wo es keine Stadt ist."""
     for e in DATENLAGE:
         k = e.get("kontakt")
         if k:
             assert k.get("fds") or k.get("fds_suche"), f"{_name(e)}: Kontakt ohne FragDenStaat"
             if k.get("fds"):
                 assert URL.match(k["fds"]) and k.get("name"), f"{_name(e)}: Kontakt"
-        if "anfrage" in e:
-            assert isinstance(e["anfrage"], bool), f"{_name(e)}: anfrage ja/nein"
-        if e.get("anfrage"):
+        a = (e.get("kurzzeit") or {}).get("anfrage")
+        if a is not None:
+            assert isinstance(a, dict) and set(a) <= ANFRAGE, f"{_name(e)}: anfrage {a!r}"
             assert k, f"{_name(e)}: Anfrage ohne Kontakt"
-        if e.get("anfrage_zusatz") or e.get("anfrage_an"):
-            assert e.get("anfrage"), f"{_name(e)}: Zusatz oder Stelle ohne Anfrage"

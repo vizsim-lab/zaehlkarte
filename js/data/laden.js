@@ -18,14 +18,8 @@ export async function ladeStart() {
     json(manifest.dateien.index),
     json(manifest.dateien.datenlage),
   ]);
-  // Datenlage der Dauerzählstellen (`dauer` je Kommune): den Stand flach daneben, damit die
-  // Kartenebene ihn in Ausdrücken lesen kann (verschachtelte Werte kommen dort nur als Text an)
-  for (const f of datenlage.features) {
-    if (f.properties.dauer) f.properties.dauer_stand = f.properties.dauer.stand;
-    // Kommunen nur mit Dauerzählstellen haben keinen Stand der Kurzzeitzählungen: ohne den
-    // Schlüssel lässt der Filter der Ebene ("has") sie bei den Kurzzeitzählungen weg
-    if (f.properties.stand == null) delete f.properties.stand;
-  }
+  // datenlage.json (Version 2) bringt den Stand je Familie flach mit (`stand_k`, `stand_d`, nur wo
+  // die Familie einen Eintrag hat) – die Ebene filtert und färbt danach
   return { manifest, index, datenlage };
 }
 

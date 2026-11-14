@@ -1,34 +1,56 @@
 # Datenlage Schleswig-Holstein – je Kommune ein Eintrag (Format: pipeline/config/README.md).
 
-- kommune: Lübeck
-  land: SH
-  lon: 10.6866
-  lat: 53.8655
-  stand: kandidat
-  was: >-
-    Kreuzungszählungen, ausgewertet in der Plattform eines Zähldienstleisters (Kfz nach Klassen,
-    Rad, Fuß); eine Auswertung von 2025 liegt als PDF online
-  situation: >-
-    Online steht eine Kreuzungszählung als PDF (Forstmeisterweg, 3. Juni 2025, 7:30–8:30 Uhr): Kfz
-    nach Fahrzeugklassen, Rad und Fuß je Arm und Abbiegestrom, erzeugt mit der Plattform eines
-    Zähldienstleisters (mytrafficdata). Weitere Zählungen stehen nicht online.
-  empfehlung: >-
-    Anfrage nach allen Zählungen seit 2015, am besten als Export aus der Zählplattform (CSV/XLSX).
-    Grundlage: Informationszugangsgesetz Schleswig-Holstein.
-  weg: "FragDenStaat, IZG-SH"
+- ags: "01003000"
+  name: Lübeck
+  lage: [10.6866, 53.8655]
   kontakt: {fds_suche: "Hansestadt Lübeck"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Ihre Auswertungen entstehen in einer Zählplattform (etwa die Verkehrserhebung Forstmeisterweg
-    vom 3. Juni 2025); ein Export der Zählungen aus dieser Plattform genügt.
-  links:
-    - ["Verkehrserhebung 2025 (PDF)", "https://www.luebeck.de/file/verkehrserhebung_2025_fruehspitze.pdf"]
-    - ["IZG-SH (ULD)", "https://datenschutzzentrum.de/uploads/IZGFolien.pdf"]
-- kommune: Kiel
-  land: SH
-  lon: 10.1228
-  lat: 54.3233
-  stand: geliefert
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Kreuzungszählungen, ausgewertet in der Plattform eines Zähldienstleisters (Kfz nach Klassen,
+      Rad, Fuß); eine Auswertung von 2025 liegt als PDF online
+    situation: >-
+      Online steht eine Kreuzungszählung als PDF (Forstmeisterweg, 3. Juni 2025, 7:30–8:30 Uhr): Kfz
+      nach Fahrzeugklassen, Rad und Fuß je Arm und Abbiegestrom, erzeugt mit der Plattform eines
+      Zähldienstleisters (mytrafficdata). Weitere Zählungen stehen nicht online.
+    empfehlung: >-
+      Anfrage nach allen Zählungen seit 2015, am besten als Export aus der Zählplattform (CSV/XLSX).
+      Grundlage: Informationszugangsgesetz Schleswig-Holstein.
+    weg: "FragDenStaat, IZG-SH"
+    anfrage:
+      zusatz: >-
+        Ihre Auswertungen entstehen in einer Zählplattform (etwa die Verkehrserhebung Forstmeisterweg
+        vom 3. Juni 2025); ein Export der Zählungen aus dieser Plattform genügt.
+    links:
+      - ["Verkehrserhebung 2025 (PDF)", "https://www.luebeck.de/file/verkehrserhebung_2025_fruehspitze.pdf"]
+      - ["IZG-SH (ULD)", "https://datenschutzzentrum.de/uploads/IZGFolien.pdf"]
+- ags: "01002000"
+  name: Kiel
+  lage: [10.1228, 54.3233]
+  kontakt: {fds_suche: "Landeshauptstadt Kiel"}
+  kurzzeit:
+    stand: geliefert
+    was: >-
+      Knotenpunkt- und Querschnittszählungen (meist Spitzenstunden); 2025 auf Anfrage Zählberichte
+      2016–2019 als PDF herausgegeben, auf FragDenStaat nicht öffentlich
+    situation: >-
+      Kiel zählt an Knotenpunkten (alle Ströme, teils mit Rad und Fuß) und an Querschnitten, meist in
+      den Spitzenstunden, und rechnet auf 24 Stunden hoch; dazu kommen 27 Kfz-Dauerzählstellen. Auf
+      eine Anfrage 2025 zur Werftstraße hat die Stadt Zählberichte von 2016, 2018 und 2019 als PDF
+      geschickt – auf FragDenStaat nicht öffentlich.
+    empfehlung: >-
+      Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je
+      Intervall (nicht der Hochrechnung), maschinenlesbar. Grundlage: Informationszugangsgesetz
+      Schleswig-Holstein.
+    weg: "FragDenStaat, IZG-SH"
+    anfrage:
+      zusatz: >-
+        2025 haben Sie auf eine Anfrage zur Werftstraße Zählberichte als PDF geschickt. Ich bitte um
+        alle Zählungen mit den gezählten Werten je Intervall statt der Hochrechnung auf 24 Stunden.
+    links:
+      - ["kiel.de", "https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php"]
+      - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/"]
+      - ["IZG-SH (ULD)", "https://datenschutzzentrum.de/uploads/IZGFolien.pdf"]
   dauer:
     stand: kandidat
     was: >-
@@ -42,25 +64,3 @@
       - ["Mobilithek: älteres Angebot (CC BY 4.0)", "https://mobilithek.info/offers/995318989663924224"]
       - ["DatenDock der KielRegion (Dashboard)", "https://datendock.civora.org/app/dashboards/30"]
       - ["Mobilithek: Radzählstationen Kiel", "https://mobilithek.info/offers/1046783892706476032"]
-  was: >-
-    Knotenpunkt- und Querschnittszählungen (meist Spitzenstunden); 2025 auf Anfrage Zählberichte
-    2016–2019 als PDF herausgegeben, auf FragDenStaat nicht öffentlich
-  situation: >-
-    Kiel zählt an Knotenpunkten (alle Ströme, teils mit Rad und Fuß) und an Querschnitten, meist in
-    den Spitzenstunden, und rechnet auf 24 Stunden hoch; dazu kommen 27 Kfz-Dauerzählstellen. Auf
-    eine Anfrage 2025 zur Werftstraße hat die Stadt Zählberichte von 2016, 2018 und 2019 als PDF
-    geschickt – auf FragDenStaat nicht öffentlich.
-  empfehlung: >-
-    Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je
-    Intervall (nicht der Hochrechnung), maschinenlesbar. Grundlage: Informationszugangsgesetz
-    Schleswig-Holstein.
-  weg: "FragDenStaat, IZG-SH"
-  kontakt: {fds_suche: "Landeshauptstadt Kiel"}
-  anfrage: true
-  anfrage_zusatz: >-
-    2025 haben Sie auf eine Anfrage zur Werftstraße Zählberichte als PDF geschickt. Ich bitte um
-    alle Zählungen mit den gezählten Werten je Intervall statt der Hochrechnung auf 24 Stunden.
-  links:
-    - ["kiel.de", "https://www.kiel.de/de/umwelt_verkehr/verkehrswege/_verkehrsdaten.php"]
-    - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/betreff-anfrage-nach-dem-informationszugangsgesetz-schleswig-holstein-izg-sh-verkehrsdaten-und-emmissionswerte-werftstrasse-2020-2025/"]
-    - ["IZG-SH (ULD)", "https://datenschutzzentrum.de/uploads/IZGFolien.pdf"]

@@ -45,19 +45,26 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Datenlage-Texten: `uv run zaehlkarte datenlage`), `pipeline/geokodierung/berlin_ergaenzung.csv`
   (Workflow „Berlin geokodieren“), `pipeline/geokodierung/moers.csv`
   (`werkzeuge/geokodiere_moers.py`).
-- **Datenlage-Texte** (Lage, Empfehlung, Anfragezusatz, Kontakt) stehen in `config/kommunen/`.
-  Kontakte nur als Funktionsadressen (keine Namen einzelner Beschäftigter), aus der
-  FragDenStaat-Behördendatenbank; die Anfragevorlage (`anfrage_vorlage.yaml`) ist für alle gleich –
-  nur die angefragte Stelle ist „Stadt {kommune}“ oder `anfrage_an` (etwa „Gemeinde Mühltal“).
-  Die Datenlage folgt der Familie: je Kommune `stand` für die Kurzzeitzählungen und, wo
-  recherchiert, ein Block `dauer:` (`stand` in_karte | offen | kandidat, `was`, `links`) für die
-  Dauerzählstellen – die Karte zeigt bei ihnen nur Kommunen mit diesem Block, ohne Anfragetext.
-  Kommunen, von denen nur Dauerzählstellen bekannt sind, haben keinen `stand` (nur `dauer:`);
-  die Kurzzeit-Ebene lässt sie weg.
+- **Datenlage** (`config/kommunen/<LAND>.yaml`, Aufbau in `pipeline/config/README.md`): je
+  Kommune `ags` (amtlicher Gemeindeschlüssel, bei Kreisen der Kreisschlüssel – der Schlüssel der
+  Kommune, das Land steckt darin), `name`, `lage`, und je Familie ein Block `kurzzeit:` bzw.
+  `dauer:` mit `stand`, `quellen` (die Quellen der Familie, die die Kommune in die Karte bringen –
+  kein Abgleich über Namen), `was`, `situation`, `links`; bei den Kurzzeitzählungen dazu
+  `empfehlung`, `weg`, `anfrage`. Eine Liste von Ständen für beide Familien (`datenlage.STAND`:
+  in_karte, offen, geliefert, kandidat, ohne_lizenz, aggregiert, nur_karte, abgelehnt,
+  nichts_offen). Die Karte zeigt je Familie nur Kommunen mit deren Block; Kommunen, von denen nur
+  Dauerzählstellen bekannt sind, haben keinen Block `kurzzeit:`. Kontakte nur als
+  Funktionsadressen (keine Namen einzelner Beschäftigter), aus der FragDenStaat-Behördendatenbank;
+  die Anfragevorlage (`anfrage_vorlage.yaml`) ist für alle gleich – nur die angefragte Stelle ist
+  „Stadt {kommune}“ oder `anfrage.an` (etwa „Gemeinde Mühltal“); einen Anfragetext gibt es nur
+  bei den Kurzzeitzählungen.
 - **Frontend-Vertrag:** Feldnamen in `index.json` (`stellen.felder`, `zaehlungen.felder`,
   `gruppen`, `quellen`, `lieferungen`), Aufbau von `details/NN.json`, Dateinamen in
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und
-  `tests/web/vertrag.spec.js` im selben Schritt mit. Dauerzählstellen: Felder in
+  `tests/web/vertrag.spec.js` im selben Schritt mit. Datenlage: `datenlage.json` Version 2 (Kopf
+  von `pipeline/src/zaehlkarte/datenlage.py`) – mitziehen: `js/map/ebenen.js`, `main.js`,
+  `tests/web/vertrag.spec.js` und die Fixture `tests/web/fixtures/datenlage.json` (die
+  Browser-Tests lesen nur sie). Dauerzählstellen: Felder in
   `dauer/index.json` (`stellen.felder`, `gruppen` = Bits von `g`, `dateien`, `kalender`,
   `standardtag`, `juengster`, `quellen[].gruppen`/`zeitraeume`/`standardtag`), Aufbau von
   `dauer/tage/JJJJ.json` und `dauer/NN.json` (Kopf von `pipeline/src/zaehlkarte/dauer/site.py`)
@@ -126,8 +133,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `js/sprache/texte.js`, in beiden Sprachen (Unit-Test prüft gleiche Schlüssel und
   Platzhalter); statisches HTML über `data-i18n`/`data-i18n-attr`. Inhalte aus den Daten
   (Hinweise, Quellenbeschreibungen, Datenlage- und Anfragetexte) bleiben deutsch und tragen
-  `lang="de"`; englische Stand-Namen kommen als `manifest.stand_en` aus `site.py`. CSV-Exporte
-  bleiben in beiden Sprachen gleich (deutsche Spalten und Werte).
+  `lang="de"`; die Namen der Stände (DE/EN, je Familie) kommen mit `datenlage.json` aus
+  `datenlage.py`. CSV-Exporte bleiben in beiden Sprachen gleich (deutsche Spalten und Werte).
 - **Neue Quelle:** eine Datei `pipeline/config/quellen/<familie>/<code>.yaml` mit der nächsten
   `nr` (`status: research` bis der Adapter steht),
   Adapter mit `lese(quelle, pfade, bericht)` und `Bericht`, Test mit synthetischer Datei.

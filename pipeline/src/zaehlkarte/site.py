@@ -1,9 +1,5 @@
-"""Kartendaten schreiben: public/data/{manifest,index,datenlage}.json und details/NN.json.
-
-`schreibe_datenlage()` (`zaehlkarte datenlage`) erneuert nur datenlage.json und
-docs/DATENLAGE.md – aus der Konfiguration (`config/kommunen/`) und der vorhandenen index.json
-(Lage und Zahl der Zählungen der Kommunen in der Karte), also ohne neuen Bau, wenn sich nur
-Datenlage-Texte ändern.
+"""Kartendaten schreiben: public/data/{manifest,index}.json und details/NN.json, am Ende die
+Datenlage (datenlage.json und docs/DATENLAGE.md, `zaehlkarte.datenlage`).
 
 Vertrag mit dem Frontend (js/data/laden.js, js/data/modell.js): Feldnamen in `index.json`
 (`stellen.felder`, `zaehlungen.felder`), Aufbau von `details/NN.json` und die Dateinamen in
@@ -27,9 +23,10 @@ from collections import Counter
 from datetime import date
 from pathlib import Path
 
+from zaehlkarte import datenlage as datenlage_
 from zaehlkarte import kennzahlen as kz
 from zaehlkarte.build import Gebaut, Stelle
-from zaehlkarte.config import Pfade, konfiguration, quellen
+from zaehlkarte.config import Pfade, quellen
 from zaehlkarte.modell import GRUPPEN, Zaehlung
 
 VERSION = 1
@@ -45,29 +42,6 @@ GRUPPEN_NAMEN = {
     "fuss": "Fuß",
     "kind": "Kinder/Jugendliche",
 }
-STAND = {
-    "in_karte": "in der Karte",
-    "offen": "offen, noch nicht in der Karte",
-    "geliefert": "auf Anfrage herausgegeben",
-    "kandidat": "erhoben – Anfrage aussichtsreich",
-    "aggregiert": "nur Summen oder Mittelwerte offen",
-    "nur_karte": "nur als Karte",
-    "automatisch": "automatische Zählungen offen",
-    "abgelehnt": "Anfrage gescheitert",
-}
-# Für den Sprachumschalter der Karte (DE/EN); die Datenlage-Texte selbst bleiben deutsch.
-STAND_EN = {
-    "in_karte": "on the map",
-    "offen": "open, not yet on the map",
-    "geliefert": "released on request",
-    "kandidat": "collected – request promising",
-    "aggregiert": "only totals or averages open",
-    "nur_karte": "only as a map",
-    "automatisch": "automatic counts open",
-    "abgelehnt": "request failed",
-}
-
-
 def fenster_text(fenster: list[tuple[int, int]]) -> str:
     """[(420, 1140)] -> '7–19'; [(360, 600), (900, 1140)] -> '6–10, 15–19'; 6:30 -> '6:30'."""
 
@@ -156,218 +130,10 @@ def _lizenzen(q: dict, pfade: Pfade) -> list[dict]:
     return out
 
 
-FDS_SUCHE = "https://fragdenstaat.de/behoerden/?q="
-
-
-def anfrage(vorlage: dict, kommune: str, zusatz: str | None, an: str | None = None) -> dict:
-    """Anfragetext aus der Vorlage (config/anfrage_vorlage.yaml; Feld „Anfrage“ auf FragDenStaat).
-    `an`: die angefragte Stelle, wo sie keine Stadt ist (`anfrage_an`, etwa „Gemeinde Mühltal“)."""
-    zusatz = " ".join((zusatz or "").split())
-    text = vorlage["text"].format(kommune=kommune, stelle=an or f"Stadt {kommune}",
-                                  zusatz=f"\n{zusatz}\n" if zusatz else "")
-    return {"betreff": vorlage["betreff"], "text": text.strip()}
-
-
-def kontakt(roh: dict | None) -> dict | None:
-    """Kontakt aus der FragDenStaat-Behördendatenbank; ohne Behörde ein Link zur Suche dort."""
-    if not roh:
-        return None
-    out = {k: roh[k] for k in ("name", "email", "fds") if roh.get(k)}
-    if roh.get("fds_suche"):
-        from urllib.parse import quote_plus
-
-        out["fds"] = FDS_SUCHE + quote_plus(roh["fds_suche"])
-        out["fds_suche"] = True
-    return out
-
-
-DAUER_STAND = {  # Datenlage der Dauerzählstellen je Kommune (`dauer:` in config/kommunen/)
-    "in_karte": "in der Karte",
-    "offen": "offen, nicht in der Karte",
-    "kandidat": "vorhanden, Werte nicht offen",
-}
-
-
-def _dauer(e: dict) -> dict | None:
-    d = e.get("dauer")
-    if not d:
-        return None
-    if d.get("stand") not in DAUER_STAND:
-        raise ValueError(f"{e['kommune']}: dauer.stand {d.get('stand')!r} unbekannt")
-    return {
-        "stand": d["stand"],
-        "was": " ".join((d.get("was") or "").split()) or None,
-        "situation": " ".join((d.get("situation") or "").split()) or None,
-        "links": [{"titel": t, "url": u} for t, u in d.get("links", [])],
-    }
-
-
-def datenlage(stellen, pfade: Pfade) -> dict:
-    """GeoJSON der Datenlage je Kommune. `stellen`: die gebauten Stellen (oder ihr Abbild aus
-    index.json) – Lage und Zahl der Zählungen der Kommunen, die in der Karte sind."""
-    cfg = konfiguration(pfade)
-    vorlage = cfg["anfrage_vorlage"]
-    recht = cfg.get("recht", {})
-    alle = quellen(pfade, nur_live=False)
-    je_quelle: dict[str, list[Stelle]] = {}
-    for s in stellen:
-        je_quelle.setdefault(s.quelle, []).append(s)
-    features = []
-    for e in cfg["datenlage"]:
-        # `stand` gilt den Kurzzeitzählungen; Kommunen, von denen nur Dauerzählstellen bekannt
-        # sind, haben keinen (die Karte zeigt sie nur bei den Dauerzählstellen)
-        if e.get("stand") is None and not e.get("dauer"):
-            raise ValueError(f"{e['kommune']}: weder stand noch dauer")
-        if e.get("stand") is not None and e["stand"] not in STAND:
-            raise ValueError(f"{e['kommune']}: stand {e['stand']!r} unbekannt")
-        q = alle.get(e.get("quelle", ""), {})
-        lon, lat = e.get("lon"), e.get("lat")
-        n = None
-        if e.get("quelle"):
-            stellen = je_quelle.get(e["quelle"], [])
-            if not stellen:
-                continue
-            lon = round(sorted(s.lon for s in stellen)[len(stellen) // 2], 5)
-            lat = round(sorted(s.lat for s in stellen)[len(stellen) // 2], 5)
-            n = sum(len(s.zaehlungen) for s in stellen)
-        land = e.get("land") or q.get("land")
-        features.append(
-            {
-                "type": "Feature",
-                "geometry": {"type": "Point", "coordinates": [lon, lat]},
-                "properties": {
-                    "kommune": e["kommune"],
-                    "land": land,
-                    "stand": e.get("stand"),
-                    "was": e.get("was"),
-                    "links": [{"titel": t, "url": u} for t, u in e.get("links", [])],
-                    "recht": recht.get(land),
-                    "quelle": e.get("quelle"),
-                    "zaehlungen": n,
-                    "situation": e.get("situation"),
-                    "empfehlung": e.get("empfehlung"),
-                    "weg": e.get("weg"),
-                    "kontakt": kontakt(e.get("kontakt")),
-                    "anfrage": anfrage(vorlage, e["kommune"], e.get("anfrage_zusatz"),
-                                       e.get("anfrage_an"))
-                    if e.get("anfrage")
-                    else None,
-                    "dauer": _dauer(e),
-                },
-            }
-        )
-    return {"type": "FeatureCollection", "features": features}
-
-
-def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
-    """Übersicht für GitHub (docs/DATENLAGE.md) aus denselben Daten wie die Karte."""
-    zeilen = [
-        "# Datenlage: kommunale Verkehrszählungen",
-        "",
-        f"Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am {erzeugt} aus",
-        "`pipeline/config/kommunen/` (je Land eine Datei) – nicht von Hand ändern. Dieselben",
-        "Angaben zeigt die Karte unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw.",
-        "Dauerzählstellen). Kommunen, von denen nur Dauerzählstellen bekannt sind, haben keinen",
-        "Stand der Kurzzeitzählungen („–“).",
-        "Rechtliche Hinweise sind keine Rechtsberatung; Kontakte aus der Behördendatenbank von",
-        "FragDenStaat.",
-        "",
-        "| Kommune | Land | Stand | Dauerzählstellen | Empfehlung |",
-        "|---|---|---|---|---|",
-    ]
-    eintraege = sorted(
-        fc["features"],
-        key=lambda f: (f["properties"]["quelle"] is not None, f["properties"]["kommune"]),
-    )
-    for f in eintraege:
-        p = f["properties"]
-        emp = (p.get("empfehlung") or ("in der Karte" if p.get("quelle") else "")).split(". ")[0]
-        dauer = DAUER_STAND[p["dauer"]["stand"]] if p.get("dauer") else ""
-        kurz = stand[p["stand"]] if p.get("stand") else "–"
-        zeilen.append(f"| {p['kommune']} | {p['land'] or ''} | {kurz} | {dauer} | {emp} |")
-    for f in eintraege:
-        p = f["properties"]
-        if not p.get("stand"):  # nur Dauerzählstellen bekannt
-            d = p["dauer"]
-            titel = f"{p['kommune']} ({p['land']}) – Dauerzählstellen {DAUER_STAND[d['stand']]}"
-            zeilen += ["", f"## {titel}", "", f"**Lage:** {d.get('situation') or d.get('was')}", ""]
-            if d.get("links"):
-                zeilen += ["**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})"
-                                                     for x in d["links"]), ""]
-            continue
-        if p.get("quelle"):
-            if p.get("dauer"):  # in der Karte (Kurzzeitzählungen): nur die Dauerzählstellen
-                d = p["dauer"]
-                zeilen += ["", f"## {p['kommune']} – Dauerzählstellen {DAUER_STAND[d['stand']]}",
-                           "", d.get("situation") or d.get("was") or "", ""]
-                if d.get("links"):
-                    zeilen += ["**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})"
-                                                         for x in d["links"]), ""]
-            continue
-        zeilen += ["", f"## {p['kommune']} ({p['land']}) – {stand[p['stand']]}", ""]
-        zeilen += [f"**Lage:** {p.get('situation') or p.get('was')}", ""]
-        if p.get("empfehlung"):
-            zeilen += [f"**Empfehlung:** {p['empfehlung']}", ""]
-        if p.get("weg"):
-            zeilen += [f"**Weg:** {p['weg']}", ""]
-        if p.get("dauer"):
-            d = p["dauer"]
-            zeilen += [f"**Dauerzählstellen ({DAUER_STAND[d['stand']]}):** "
-                       f"{d.get('situation') or d.get('was')}", ""]
-        k = p.get("kontakt") or {}
-        if k:
-            teile = [
-                k.get("name"),
-                f"<{k['email']}>" if k.get("email") else None,
-                f"[FragDenStaat]({k['fds']})" if k.get("fds") else None,
-            ]
-            zeilen += ["**Kontakt:** " + " · ".join(t for t in teile if t), ""]
-        if p.get("anfrage"):
-            zeilen += [
-                f"**Anfragetext** – Betreff: {p['anfrage']['betreff']}",
-                "",
-                "```text",
-                p["anfrage"]["text"],
-                "```",
-                "",
-            ]
-        belege = p.get("links", []) + [x for x in (p.get("dauer") or {}).get("links", [])
-                                       if x not in p.get("links", [])]
-        if belege:
-            zeilen += [
-                "**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})" for x in belege),
-                "",
-            ]
-    return "\n".join(zeilen).rstrip() + "\n"
-
-
 def _schreibe_json(pfad: Path, inhalt: dict, eingerueckt: bool) -> None:
     text = json.dumps(inhalt, ensure_ascii=False, indent=1 if eingerueckt else None,
                       separators=None if eingerueckt else (",", ":"))
     pfad.write_text(text + "\n", encoding="utf-8")
-
-
-def schreibe_datenlage(pfade: Pfade | None = None, erzeugt: date | None = None) -> list[Path]:
-    """Nur datenlage.json und docs/DATENLAGE.md erneuern – Lage und Zahl der Zählungen der
-    Kommunen in der Karte aus der vorhandenen index.json, alles andere aus der Konfiguration."""
-    from types import SimpleNamespace
-
-    pfade = pfade or Pfade()
-    index = json.loads((pfade.karte / "index.json").read_text(encoding="utf-8"))
-    f = index["stellen"]["felder"]
-    iq, ilon, ilat = f.index("quelle"), f.index("lon"), f.index("lat")
-    n = Counter(z[0] for z in index["zaehlungen"]["werte"])
-    stellen = [SimpleNamespace(quelle=index["quellen"][w[iq]], lon=w[ilon], lat=w[ilat],
-                               zaehlungen=range(n[i]))
-               for i, w in enumerate(index["stellen"]["werte"])]
-    dl = datenlage(stellen, pfade)
-    ziel = pfade.karte / "datenlage.json"
-    _schreibe_json(ziel, dl, eingerueckt=True)
-    doku = pfade.repo / "docs" / "DATENLAGE.md"
-    doku.parent.mkdir(exist_ok=True)
-    doku.write_text(datenlage_md(dl, STAND, (erzeugt or date.today()).isoformat()),
-                    encoding="utf-8")
-    return [ziel, doku]
 
 
 def _statistik(stellen: list[Stelle], ohne: list[Zaehlung]) -> dict:
@@ -433,8 +199,6 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
         },
         "details_anzahl": n_chunks,
         "gruppen": [{"id": g, "name": GRUPPEN_NAMEN[g]} for g in GRUPPEN],
-        "stand": STAND,
-        "stand_en": STAND_EN,
         "quellen": [
             {
                 "code": c,
@@ -451,20 +215,17 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
         ],
         "statistik": _statistik(stellen, gebaut.ohne_lage),
     }
-    dl = datenlage(gebaut.stellen, pfade)
     dateien = {
         ziel / "index.json": index,
         ziel / "manifest.json": manifest,
-        ziel / "datenlage.json": dl,
     }
-    doku = pfade.repo / "docs" / "DATENLAGE.md"
-    doku.parent.mkdir(exist_ok=True)
-    doku.write_text(datenlage_md(dl, STAND, manifest["erzeugt"]), encoding="utf-8")
     for n, inhalt in enumerate(chunks):
         dateien[ziel / "details" / f"{n}.json"] = {"zaehlungen": inhalt}
     for alt in (ziel / "details").glob("*.json"):
         if alt not in dateien:
             alt.unlink()
     for pfad, inhalt in dateien.items():
-        _schreibe_json(pfad, inhalt, eingerueckt=pfad.name in ("manifest.json", "datenlage.json"))
-    return list(dateien)
+        _schreibe_json(pfad, inhalt, eingerueckt=pfad.name == "manifest.json")
+    zaehlungen = Counter({c: sum(len(s.zaehlungen) for s in je_quelle[c]) for c in codes})
+    dl = datenlage_.schreibe(pfade, date.fromisoformat(manifest["erzeugt"]), zaehlungen)
+    return [*dateien, dl[0]]

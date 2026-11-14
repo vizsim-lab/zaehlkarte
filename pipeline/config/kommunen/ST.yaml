@@ -1,51 +1,51 @@
 # Datenlage Sachsen-Anhalt – je Kommune ein Eintrag (Format: pipeline/config/README.md).
 
-- kommune: Magdeburg
-  land: ST
-  lon: 11.6276
-  lat: 52.1205
-  stand: geliefert
-  was: >-
-    2022 alle Zählunterlagen 2012–2020 angeboten (Viertelstunden je Richtung,
-    Rad/Pkw/Lfw/Lkw/Lz/Bus, PDF auf CD, gebührenfrei); Weitergabe-Lizenz offen
-  situation: >-
-    Hat 2022 alle Zählunterlagen 2012–2020 angeboten: Viertelstundenwerte je Richtung, nach Rad,
-    Pkw, Lieferwagen, Lkw, Lastzug und Bus – als PDF-Listen auf CD, gebührenfrei. Für die
-    Weitergabe war ein Entgelt nach dem Weiterverwendungsgesetz im Gespräch.
-  empfehlung: >-
-    Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen.
-    Grundlage: Informationszugangsgesetz Sachsen-Anhalt.
-  weg: "FragDenStaat, IZG LSA"
+- ags: "15003000"
+  name: Magdeburg
+  lage: [11.6276, 52.1205]
   kontakt: {name: "Landeshauptstadt Magdeburg", email: "info@magdeburg.de", fds: "https://fragdenstaat.de/behoerde/7460/landeshauptstadt-magdeburg/"}
-  anfrage: true
-  anfrage_zusatz: >-
-    2022 haben Sie die Zählunterlagen 2012–2020 als PDF-Listen auf CD angeboten. Ich bitte um die
-    Zählungen seit 2012 in digitaler, maschinenlesbarer Form per E-Mail oder Download.
-  links:
-    - ["FragDenStaat 2022", "https://fragdenstaat.de/anfrage/rohdaten-von-verkehrszahlungen-2012-bis-2021/"]
-- kommune: Halle (Saale)
-  land: ST
-  lon: 11.9696
-  lat: 51.4825
-  stand: kandidat
-  was: >-
-    laufende Querschnittszählungen an größeren Straßen und Knotenstromzählungen an wichtigen
-    Kreuzungen; Ergebnisse als Dienstleistung gegen Gebühr, online nichts
-  situation: >-
-    Halle lässt laufend an den größeren Straßen (Querschnitte) und an wichtigen Kreuzungen
-    (Knotenströme) zählen, meist dienstags bis donnerstags, nach Rad, Krad, Pkw, Transporter, Lkw
-    und Lastzug, selten auch Fußverkehr. Die Abteilung Verkehrsplanung gibt Ergebnisse für
-    24 Stunden, 16 Stunden (6–22 Uhr) oder die Spitzenstunde auf Antrag heraus, für 20 Euro je
-    angefangene halbe Bearbeitungsstunde.
-  empfehlung: >-
-    Anfrage nach allen Zählungen seit 2015 als Tabelle (je Intervall, Strom und Fahrzeugart), vorab
-    mit Kostenschätzung. Grundlage: Informationszugangsgesetz Sachsen-Anhalt.
-  weg: "FragDenStaat, IZG LSA"
+  kurzzeit:
+    stand: geliefert
+    was: >-
+      2022 alle Zählunterlagen 2012–2020 angeboten (Viertelstunden je Richtung,
+      Rad/Pkw/Lfw/Lkw/Lz/Bus, PDF auf CD, gebührenfrei); Weitergabe-Lizenz offen
+    situation: >-
+      Hat 2022 alle Zählunterlagen 2012–2020 angeboten: Viertelstundenwerte je Richtung, nach Rad,
+      Pkw, Lieferwagen, Lkw, Lastzug und Bus – als PDF-Listen auf CD, gebührenfrei. Für die
+      Weitergabe war ein Entgelt nach dem Weiterverwendungsgesetz im Gespräch.
+    empfehlung: >-
+      Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen.
+      Grundlage: Informationszugangsgesetz Sachsen-Anhalt.
+    weg: "FragDenStaat, IZG LSA"
+    anfrage:
+      zusatz: >-
+        2022 haben Sie die Zählunterlagen 2012–2020 als PDF-Listen auf CD angeboten. Ich bitte um die
+        Zählungen seit 2012 in digitaler, maschinenlesbarer Form per E-Mail oder Download.
+    links:
+      - ["FragDenStaat 2022", "https://fragdenstaat.de/anfrage/rohdaten-von-verkehrszahlungen-2012-bis-2021/"]
+- ags: "15002000"
+  name: Halle (Saale)
+  lage: [11.9696, 51.4825]
   kontakt: {fds_suche: "Stadt Halle (Saale)"}
-  anfrage: true
-  anfrage_zusatz: >-
-    Ihre Dienstleistung „Verkehrsmengendaten“ nennt Querschnitts- und Knotenstromzählungen. Ich
-    bitte um die Zählwerte selbst in Tabellenform, nicht um Belastungspläne je Knoten, und vorab um
-    eine Kostenschätzung.
-  links:
-    - ["Serviceportal Halle (Saale)", "https://halle.de/serviceportal/dienstleistungen/leistung/verkehrsmengendaten/398483920"]
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      laufende Querschnittszählungen an größeren Straßen und Knotenstromzählungen an wichtigen
+      Kreuzungen; Ergebnisse als Dienstleistung gegen Gebühr, online nichts
+    situation: >-
+      Halle lässt laufend an den größeren Straßen (Querschnitte) und an wichtigen Kreuzungen
+      (Knotenströme) zählen, meist dienstags bis donnerstags, nach Rad, Krad, Pkw, Transporter, Lkw
+      und Lastzug, selten auch Fußverkehr. Die Abteilung Verkehrsplanung gibt Ergebnisse für
+      24 Stunden, 16 Stunden (6–22 Uhr) oder die Spitzenstunde auf Antrag heraus, für 20 Euro je
+      angefangene halbe Bearbeitungsstunde.
+    empfehlung: >-
+      Anfrage nach allen Zählungen seit 2015 als Tabelle (je Intervall, Strom und Fahrzeugart), vorab
+      mit Kostenschätzung. Grundlage: Informationszugangsgesetz Sachsen-Anhalt.
+    weg: "FragDenStaat, IZG LSA"
+    anfrage:
+      zusatz: >-
+        Ihre Dienstleistung „Verkehrsmengendaten“ nennt Querschnitts- und Knotenstromzählungen. Ich
+        bitte um die Zählwerte selbst in Tabellenform, nicht um Belastungspläne je Knoten, und vorab um
+        eine Kostenschätzung.
+    links:
+      - ["Serviceportal Halle (Saale)", "https://halle.de/serviceportal/dienstleistungen/leistung/verkehrsmengendaten/398483920"]

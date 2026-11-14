@@ -156,10 +156,11 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   welche Stadt welche Klasse zählt. Welche Verkehrsarten es gibt, richtet sich nach den Quellen
   (Kfz, Lkw/Schwerverkehr, Rad); die Karte öffnet mit Kfz.
 - **Datenlage:** Die Ebene „Datenlage je Kommune“ folgt der Familie – bei den Dauerzählstellen
-  mit eigenem Stand je Kommune (in der Karte, offen und nicht in der Karte, vorhanden mit nicht
-  offenen Werten) und eigenen Belegen. „Hinzoomen“ wechselt dabei auf die Verkehrsart, die die
-  Kommune zählt (in Leipzig etwa auf Rad). Kommunen, von denen nur Dauerzählstellen bekannt sind
-  (etwa die Rad-Zählstellen hessischer Städte und Kreise), stehen nur dort.
+  mit eigenem Stand je Kommune und eigenen Belegen; beide Familien nutzen dieselben Stände (in der
+  Karte, offen, herausgegeben, aussichtsreich, ohne Lizenz, nur Summen, nichts offen …).
+  „Hinzoomen“ wechselt dabei auf die Verkehrsart, die die Quellen der Kommune zählen (in Leipzig
+  etwa auf Rad). Kommunen, von denen nur Dauerzählstellen bekannt sind (etwa die Rad-Zählstellen
+  hessischer Städte und Kreise), stehen nur dort.
 - Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
   (eine Stunde nur bei mindestens 75 % gültigen Messintervallen und nur, wenn alle Fahrstreifen
   gültig sind). Ab 2025 gibt es nur die neue Qualitätssicherung je Fahrstreifen; die Zählkarte

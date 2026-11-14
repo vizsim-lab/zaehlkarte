@@ -16,8 +16,8 @@ import {
 } from "./js/data/dauer.js";
 import { addBasemapTerrain } from "./js/map/basemapTerrain.js";
 import {
-  bindeHover, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeDauer, setzeFamilie, setzeStellen, standText,
-  standTextDauer,
+  bindeHover, datenlageBlock, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeDauer, setzeFamilie, setzeStellen,
+  standText,
 } from "./js/map/ebenen.js";
 import { t, zahl } from "./js/sprache/texte.js";
 import { bindeUmschalter, ersteSprache, wendeAn } from "./js/sprache/umschalter.js";
@@ -124,10 +124,10 @@ async function start() {
     dauerDetail.schliesse();
     setzeAuswahl(karte, null);
     // offene Datenlage einer Kommune: in der neuen Familie zeigen (ohne Eintrag dort: schließen)
-    if (!dlPanel.hidden && dlPanel.dataset.kommune) {
-      const p = datenlage.features.find((x) => x.properties.kommune === dlPanel.dataset.kommune)?.properties;
-      if ((f === "d" && !p?.dauer) || (f !== "d" && !p?.stand)) schliesseDatenlage();
-      else zeigeDatenlage(dlPanel.dataset.kommune);
+    if (!dlPanel.hidden && dlPanel.dataset.ags) {
+      const p = datenlage.features.find((x) => x.properties.ags === dlPanel.dataset.ags)?.properties;
+      if (!p || !datenlageBlock(p, f)) schliesseDatenlage();
+      else zeigeDatenlage(dlPanel.dataset.ags);
     }
     legende.zeichne();
     await zeichne();
@@ -223,34 +223,39 @@ async function start() {
   }
 
   // Datenlage einer Kommune in der gewählten Familie: Oberfläche in der gewählten Sprache, die
-  // Recherche-Texte deutsch. Dauerzählstellen: ihr eigener Stand mit Text und Belegen (`dauer`),
-  // ohne Anfragetext – der gilt den Kurzzeitzählungen.
-  function zeigeDatenlage(kommune, { behalteScroll = false } = {}) {
-    const f = datenlage.features.find((x) => x.properties.kommune === kommune);
+  // Recherche-Texte deutsch. Je Familie ein Block mit Stand, Text und Belegen; Empfehlung, Weg
+  // und Anfragetext gibt es nur bei den Kurzzeitzählungen. Die Kommune: ihr Gemeindeschlüssel.
+  function zeigeDatenlage(ags, { behalteScroll = false } = {}) {
+    const f = datenlage.features.find((x) => x.properties.ags === ags);
     if (!f) return;
     const p = f.properties;
     // Dauerzählstellen – oder eine Kommune, von der nur sie bekannt sind
-    const dl = zustand.familie === "d" || !p.stand ? p.dauer : null;
+    const familie = zustand.familie === "d" || !p.kurzzeit ? "d" : "k";
+    const b = datenlageBlock(p, familie);
+    const dl = familie === "d";
+    const inKarte = b.stand === "in_karte";
     const el = dlPanel;
     const scroll = el.scrollTop;
-    const links = (dl ? dl.links : p.links).map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");
+    const links = b.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");
     const k = p.kontakt;
     const kontakt = k ? `<div class="detail-abschnitt">${esc(t("dl.kontakt"))}</div><p class="detail-text">
         ${k.name ? `<span lang="de">${esc(k.name)}</span><br>` : ""}${k.email ? `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a><br>` : ""}
         ${k.fds ? `<a href="${esc(k.fds)}" target="_blank" rel="noopener">${esc(t(k.fds_suche ? "dl.fds_suche" : "dl.fds"))} →</a>` : ""}</p>` : "";
-    const a = dl ? null : p.anfrage;
+    const a = dl ? null : b.anfrage;
     const deutsch = t("dl.deutsch");
     const recht = p.recht ? `<div class="detail-abschnitt">${esc(t("dl.recht"))}</div><p class="detail-text"><span lang="de">${esc(p.recht)}.</span> ${esc(t("dl.keine_beratung"))}</p>` : "";
+    const was = `<p class="detail-text" lang="de">${esc(b.was ?? "")}</p>`;
+    const lage = b.situation ? `<div class="detail-abschnitt">${esc(t("dl.lage"))}</div><p class="detail-text" lang="de">${esc(b.situation)}</p>` : "";
     const inhalt = dl ? `
-      <p class="detail-text" lang="de">${esc(dl.was ?? "")}</p>
-      ${dl.stand === "in_karte" ? `<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.d.in_karte"))}</button></p>` : ""}
-      ${dl.situation ? `<div class="detail-abschnitt">${esc(t("dl.lage"))}</div><p class="detail-text" lang="de">${esc(dl.situation)}</p>` : ""}
-      ${dl.stand === "in_karte" ? "" : kontakt}
-      ${dl.stand === "in_karte" ? "" : recht}` : `
-      ${p.zaehlungen ? `<p class="detail-text" lang="de">${esc(p.was ?? "")}</p><p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.in_karte", { n: zahl(p.zaehlungen) }))}</button></p>` : ""}
-      ${p.situation ? `<div class="detail-abschnitt">${esc(t("dl.lage"))}</div><p class="detail-text" lang="de">${esc(p.situation)}</p>` : (p.zaehlungen ? "" : `<p class="detail-text" lang="de">${esc(p.was ?? "")}</p>`)}
-      ${p.empfehlung ? `<div class="detail-abschnitt">${esc(t("dl.empfehlung"))}</div><p class="detail-text" lang="de">${esc(p.empfehlung)}</p>` : ""}
-      ${p.weg ? `<p class="detail-text"><span class="pop-chip" lang="de">${esc(p.weg)}</span></p>` : ""}
+      ${was}
+      ${inKarte ? `<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.d.in_karte"))}</button></p>` : ""}
+      ${lage}
+      ${inKarte ? "" : kontakt}
+      ${inKarte ? "" : recht}` : `
+      ${b.zaehlungen ? `${was}<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.in_karte", { n: zahl(b.zaehlungen) }))}</button></p>` : ""}
+      ${lage || (b.zaehlungen ? "" : was)}
+      ${b.empfehlung ? `<div class="detail-abschnitt">${esc(t("dl.empfehlung"))}</div><p class="detail-text" lang="de">${esc(b.empfehlung)}</p>` : ""}
+      ${b.weg ? `<p class="detail-text"><span class="pop-chip" lang="de">${esc(b.weg)}</span></p>` : ""}
       ${kontakt}
       ${a ? `<div class="detail-abschnitt">${esc(t("dl.anfrage"))}</div>
         <p class="pop-meta">${esc(t("dl.anfrage_hinweis", { betreff: a.betreff }))}</p>
@@ -261,21 +266,22 @@ async function start() {
     el.innerHTML = `
       <header class="detail-kopf">
         <div><div class="pop-eyebrow">${esc(t(dl ? "hover.datenlage_d" : "hover.datenlage", { land: p.land ?? "" }))}</div>
-        <h2 class="detail-titel">${esc(p.kommune)}</h2>
-        <div class="pop-meta">${esc(dl ? standTextDauer(dl.stand) : standText(manifest, p.stand))}</div></div>
+        <h2 class="detail-titel">${esc(p.name)}</h2>
+        <div class="pop-meta">${esc(standText(datenlage, b.stand, familie))}</div></div>
         <button class="detail-zu" type="button" data-schliessen aria-label="${esc(t("schliessen"))}">×</button>
       </header>
       ${deutsch ? `<p class="pop-meta dl-sprache">${esc(deutsch)}</p>` : ""}
       ${inhalt}
       ${links ? `<div class="detail-abschnitt">${esc(t("dl.belege"))}</div><ul class="detail-hinweise" lang="de">${links}</ul>` : ""}
-      <div class="pop-foot"><a href="https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml" target="_blank" rel="noopener">${esc(t("dl.melden", { kommune: p.kommune }))}</a></div>`;
+      <div class="pop-foot"><a href="https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml" target="_blank" rel="noopener">${esc(t("dl.melden", { kommune: p.name }))}</a></div>`;
     el.hidden = false;
     el.scrollTop = behalteScroll ? scroll : 0;
     el.querySelector("[data-schliessen]").onclick = schliesseDatenlage;
     el.querySelector("[data-hinzoomen]")?.addEventListener("click", () => {
-      // Dauerzählstellen: auf die Verkehrsart wechseln, die die Kommune zählt (Leipzig nur Rad)
+      // Dauerzählstellen: auf die Verkehrsart wechseln, die die Quellen der Kommune zählen
+      // (Leipzig nur Rad) – die Quellen nennt die Datenlage, kein Abgleich über den Namen
       if (dl && dauer) {
-        const thema = themaFuerKommune(dauer, p.kommune, ...f.geometry.coordinates, zustand.dthema);
+        const thema = themaFuerKommune(dauer, b.quellen, zustand.dthema);
         if (thema !== zustand.dthema) {
           zustand.dthema = thema;
           legende.zeichne();
@@ -297,11 +303,11 @@ async function start() {
     });
     detail.schliesse();
     dauerDetail.schliesse();
-    el.dataset.kommune = kommune;
+    el.dataset.ags = ags;
   }
 
   const popup = bindeHover(karte, {
-    daten, manifest, gibZustand: () => zustand, gibEintrag: (i) => jeStelle.get(i),
+    daten, manifest, datenlage, gibZustand: () => zustand, gibEintrag: (i) => jeStelle.get(i),
     gibDauer: () => ({ d: dauer, juengster: imJuengsten(dauer, zustand), eintrag: (i) => jeDauer.get(i) }),
   });
   karte.on("click", (e) => {
@@ -311,7 +317,7 @@ async function start() {
     const ds = treffer.find((f) => f.layer.id === "dauer-kreis");
     if (ds && dauer) { oeffneDauer(dauer.stellen[ds.properties.i]); return; }
     const d = treffer.find((f) => f.layer.id === "datenlage-kreis");
-    if (d) { zeigeDatenlage(d.properties.kommune); return; }
+    if (d) { zeigeDatenlage(d.properties.ags); return; }
     detail.schliesse();
     dauerDetail.schliesse();
     schliesseDatenlage();
@@ -369,7 +375,7 @@ async function start() {
     beschrifteSteuerung(); // Kompass entsteht erst kurz nach dem Einhängen
     legende.uebersetze();
     zeichne();
-    if (!dlPanel.hidden && dlPanel.dataset.kommune) zeigeDatenlage(dlPanel.dataset.kommune, { behalteScroll: true });
+    if (!dlPanel.hidden && dlPanel.dataset.ags) zeigeDatenlage(dlPanel.dataset.ags, { behalteScroll: true });
   });
 
   if (aufruf.stelle) {

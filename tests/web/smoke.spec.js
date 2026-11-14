@@ -183,7 +183,7 @@ test("Datenlage: Klick auf eine Kommune zeigt Stand und Belege", async ({ page }
   const p = await page.evaluate(async () => {
     const k = window.__app.karte;
     await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
-    const f = k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).find((x) => x.properties.kommune === "Rostock");
+    const f = k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).find((x) => x.properties.name === "Rostock");
     return k.project(f.geometry.coordinates);
   });
   await page.mouse.click(p.x, p.y);
@@ -199,7 +199,7 @@ test("Datenlage: Empfehlung und Anfragetext für Dresden", async ({ page }) => {
   const p = await page.evaluate(async () => {
     const k = window.__app.karte;
     await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
-    const f = k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).find((x) => x.properties.kommune === "Dresden");
+    const f = k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).find((x) => x.properties.name === "Dresden");
     return k.project(f.geometry.coordinates);
   });
   await page.mouse.click(p.x, p.y);
