@@ -1,0 +1,62 @@
+[
+ {
+  "name": "olpe_honigsack.html",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 30772,
+  "dataset_links": [
+   "/dataset/verkehrsmessung-standort-zum-honigsack-35"
+  ]
+ },
+ {
+  "name": "olpe_gunsestrabe.html",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-gunsestrabe",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-gunsestrabe",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 27540,
+  "dataset_links": [
+   "/dataset/verkehrsmessungen-gunsestrabe"
+  ]
+ },
+ {
+  "name": "olpe_hatzenbergstrabe.html",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-hatzenbergstrabe",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-hatzenbergstrabe",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 27904,
+  "dataset_links": [
+   "/dataset/verkehrsmessungen-hatzenbergstrabe"
+  ]
+ },
+ {
+  "name": "olpe_in_der_wuste.html",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-in-der-wuste",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-in-der-wuste",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 27580,
+  "dataset_links": [
+   "/dataset/verkehrsmessungen-in-der-wuste"
+  ]
+ },
+ {
+  "name": "olpe_rochusstrabe.html",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-rochusstrabe",
+  "pipeline": true,
+  "werkzeug": true,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-rochusstrabe",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 26117,
+  "dataset_links": [
+   "/dataset/verkehrsmessungen-rochusstrabe"
+  ]
+ }
+]
