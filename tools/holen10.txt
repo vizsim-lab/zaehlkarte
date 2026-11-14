@@ -1,0 +1,3 @@
+# Quellen, Runde 10 (14.11.2026): Dresden – Werte vor dem 25.09.2009? Und das Jahr 2009 ganz.
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222009-09-25T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3E%3D%222009-01-01T00%3A00%3A00%22%20and%20messzeit%3C%222010-01-01T00%3A00%3A00%22&format=csv&delimiter=Semicolon&propertynames=ids,w1,w2,messzeit
