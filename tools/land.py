@@ -180,13 +180,22 @@ out center tags;"""
 
 def grenzen_osm():
     """Gemeinden und Kreise aus OSM (admin_level 8 bzw. 6), wenn Wikidata gesperrt ist."""
-    for server in ("https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter"):
-        try:
-            inhalt, _, _ = hole(server, daten=urllib.parse.urlencode({"data": OVERPASS_GRENZEN % LAND["iso"]}).encode(),
-                                kopf={"Content-Type": "application/x-www-form-urlencoded"}, roh=True, zeit=660)
-            break
-        except Exception as e:  # noqa: BLE001
-            protokoll.setdefault("grenzen_osm", {})[server] = repr(e)[:200]
+    for versuch in range(3):
+        for server in ("https://overpass.kumi.systems/api/interpreter",
+                       "https://overpass.private.coffee/api/interpreter",
+                       "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+                       "https://overpass-api.de/api/interpreter"):
+            try:
+                inhalt, _, _ = hole(server, daten=urllib.parse.urlencode({"data": OVERPASS_GRENZEN % LAND["iso"]}).encode(),
+                                    kopf={"Content-Type": "application/x-www-form-urlencoded"}, roh=True, zeit=900)
+                if inhalt[:1] == b"{":
+                    break
+            except Exception as e:  # noqa: BLE001
+                protokoll.setdefault("grenzen_osm", {})[f"{server}#{versuch}"] = repr(e)[:200]
+        else:
+            time.sleep(60)
+            continue
+        break
     else:
         return
     for e in json.loads(inhalt).get("elements", []):
