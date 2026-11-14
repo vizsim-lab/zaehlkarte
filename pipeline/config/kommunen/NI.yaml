@@ -86,10 +86,13 @@
     was: >-
       KI-Sensoren an rund zehn Kreuzungen, 15-Minuten-Werte seit 2023 über die
       SensorThings-Schnittstelle – ohne Lizenzangabe, daher nicht in der Karte (die Anfrage bei
-      den Kurzzeitzählungen fragt auch nach der Lizenz)
+      den Kurzzeitzählungen fragt auch nach der Lizenz); in der Mobilithek seit September 2025 der
+      Datensatz der 66 Sensoren vom 01.01.2022 bis 09.11.2023 als ZIP, eingestuft als freie
+      Nutzung, aber ohne genannte Lizenz
     links:
       - ["Datenplattform Osnabrück", "https://datenplattform.osnabrueck.de/verkehrszaehlung/"]
       - ["SensorThings-Schnittstelle", "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"]
+      - ["Mobilithek: Verkehrszählungsdatensatz 2022–2023", "https://mobilithek.info/offers/903287344194932736"]
 - ags: "03454032"
   name: Lingen (Ems)
   lage: [7.3172, 52.5233]
@@ -116,3 +119,252 @@
     links:
       - ["FragDenStaat 2022 (Kiesbergstraße)", "https://fragdenstaat.de/anfrage/verkehrsmengen-kiesbergstrasse/"]
       - ["FragDenStaat 2022 (verkehrsberuhigte Bereiche)", "https://fragdenstaat.de/anfrage/verkehrserhebungen-in-verkehrsberuhigten-bereichen-1/"]
+- ags: "03101000"
+  name: Braunschweig
+  lage: [10.5205, 52.2625]
+  dauer:
+    stand: aggregiert
+    was: >-
+      acht Rad-Dauerzählstellen (Zählschleifen, seit 2022); offen nur ein Tageswert je Zählstelle,
+      vierteljährlich als CSV (CC BY 4.0)
+    situation: >-
+      Die Stadt zählt den Radverkehr an acht Standorten mit Schleifen im Boden, drei davon mit
+      Zählsäule. Im Datenportal stehen seit 2023 vierteljährlich CSV-Dateien mit einem Tageswert je
+      Zählstelle (CC BY 4.0) und die Standorte; tagesaktuelle Werte zeigt ein Dashboard.
+      Stundenwerte sind nicht veröffentlicht, ob ein Tag vollständig gezählt ist, lässt sich so nicht
+      prüfen.
+    links:
+      - ["Datenportal: Automatische Radverkehrszählung", "https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung"]
+      - ["Stadt: Automatische Radverkehrszählungen", "https://www.braunschweig.de/leben/stadtplan_verkehr/radverkehr/automatische-radverkehrszaehlung.php"]
+- ags: "03153017"
+  name: Goslar
+  lage: [10.4293, 51.9065]
+  kontakt: {fds_suche: "Stadt Goslar"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      mobile Verkehrsdatenerfassung mit Videodetektion (zehn Fahrzeugklassen samt Rad)
+    situation: >-
+      Die Stadt erfasst den Verkehr auch mobil mit Videodetektion: KI-basierte Erkennung von zehn
+      Fahrzeugklassen samt Fahrrädern, ohne dass Video gespeichert wird. Ergebnisse sind nicht
+      veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen der mobilen Videodetektion als Export (Werte je Intervall, Richtung
+      und Fahrzeugklasse), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      zusatz: >-
+        Sie erfassen den Verkehr mobil mit Videodetektion. Ich bitte um die Zählungen dieser Geräte
+        als Export (Werte je Intervall, Richtung und Fahrzeugklasse).
+    links:
+      - ["Mobile Verkehrsdatenerfassung", "https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung"]
+  dauer:
+    stand: kandidat
+    was: >-
+      drei Rad-Dauerzählstellen seit Frühjahr 2018 (unter anderem Okerstraße und Arcachon-Brücke);
+      Werte nicht als Daten veröffentlicht
+    links:
+      - ["Stationäre Zählstellen", "https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen"]
+- ags: "03403000"
+  name: Oldenburg (Oldb)
+  lage: [8.213, 53.14]
+  kontakt: {fds_suche: "Stadt Oldenburg"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      automatische Zählungen an den Bahnübergängen in Ofenerdiek (Seitenradar, Zählplatten,
+      Zählkameras); frühere Zählungen etwa am Pophankenweg 2017
+    situation: >-
+      Für die Bahnübergänge in Ofenerdiek hat die Stadt an mehreren Knotenpunkten automatisch gezählt,
+      mit Seitenradar, Zählplatten und Zählkameras an Teleskopmasten. Am Pophankenweg nennt sie eine
+      Zählung vom August 2017 (9.654 Kfz und 264 Räder am Tag). Werte je Zählung sind nicht
+      veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen in Ofenerdiek und den übrigen Zählungen seit 2017 als Export (Werte
+      je Intervall und Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      zusatz: >-
+        Für die Bahnübergänge in Ofenerdiek haben Sie mit Seitenradar, Zählplatten und Zählkameras
+        gezählt. Ich bitte um diese Zählungen und die übrigen seit 2017 als Export der Geräte.
+    links:
+      - ["Verkehrszählung Ofenerdiek", "https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn/bahnuebergang-am-stadtrand/verkehrszaehlung-ofenerdiek.html"]
+  dauer:
+    stand: kandidat
+    was: >-
+      Rad-Zählsäule am Pophankenweg seit Februar 2023; Werte nicht als Daten veröffentlicht
+    links:
+      - ["Zählsäule am Pophankenweg", "https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/radverkehr/woran-wir-noch-arbeiten/konkretes-aus-dem-rad-und-fussverkehrsprogramm/fahrradzaehlstation/radzaehlsaeule-am-pophankenweg-1.html"]
+- ags: "03457013"
+  name: Leer (Ostfriesland)
+  lage: [7.4514, 53.2295]
+  dauer:
+    stand: aggregiert
+    was: >-
+      drei Rad-Zählstellen; die Stadt veröffentlicht regelmäßig aktualisierte Auswertungen
+      (Gesamtnutzung, Vergleich der Standorte), keine Werte je Stunde oder Tag
+    links:
+      - ["Auswertung Fahrradzählstellen", "https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/"]
+- ags: "03353"
+  name: Landkreis Harburg
+  lage: [10.2092, 53.3624]
+  kontakt: {fds_suche: "Landkreis Harburg"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      landkreisweite Zählung an den Kreisstraßen, je Abschnitt eine Zählstelle
+    situation: >-
+      Der Landkreis zählt landkreisweit auf seinem Kreisstraßennetz, das dafür in Abschnitte mit
+      möglichst gleicher Verkehrsstärke geteilt ist – je Abschnitt eine Zählstelle. Gezählte Werte
+      sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den gezählten Werten je Zählstelle (vor der Hochrechnung, je Intervall und
+      Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      an: "Landkreis Harburg"
+      zusatz: >-
+        Sie zählen landkreisweit an den Kreisstraßen und rechnen die Ergebnisse auf den DTV hoch. Ich
+        bitte um die gezählten Werte selbst, je Zählstelle, Intervall und Richtung.
+    links:
+      - ["Verkehrszählung und Verkehrsmodell", "https://www.landkreis-harburg.de/verkehr-ordnung/kreisstrassen-radverkehr/verkehrszaehlung-verkehrsmodell/"]
+- ags: "03151"
+  name: Landkreis Gifhorn
+  lage: [10.5469, 52.4844]
+  kontakt: {fds_suche: "Landkreis Gifhorn"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Zählung an 138 Stellen der Kreisstraßen, je 24 Stunden, vermehrt mit Videokameras (2025)
+    situation: >-
+      Der Landkreis lässt an 138 Stellen seiner Kreisstraßen nacheinander zählen, je 24 Stunden,
+      vermehrt mit Videokameras. Die Ergebnisse dienen laut Mitteilung auch Ämtern,
+      Forschungsinstituten und Verbänden für Lärm- und Emissionsberechnungen; veröffentlicht sind die
+      Zählungen nicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen 2025 (je Zählstelle 24 Stunden, Werte je Intervall, Richtung und
+      Fahrzeugklasse), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      an: "Landkreis Gifhorn"
+      zusatz: >-
+        Sie haben 2025 an 138 Stellen der Kreisstraßen je 24 Stunden gezählt. Ich bitte um diese
+        Zählungen mit den Werten je Intervall, Richtung und Fahrzeugklasse.
+    links:
+      - ["Verkehrszählungen an Kreisstraßen", "https://www.landkreis-gifhorn.de/Service/Verkehrsz%C3%A4hlungen-an-Kreisstra%C3%9Fen-im-Landkreis-Gifhorn.php?object=tx,4083.6271.1"]
+- ags: "03241012"
+  name: Neustadt am Rübenberge
+  lage: [9.4575, 52.5048]
+  kontakt: {fds_suche: "Stadt Neustadt am Rübenberge"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Zählung 2021 in der Kernstadt an 20 Standorten (Video, Seitenradar; beide Richtungen, nach
+      Fahrzeugklassen)
+    situation: >-
+      Im Mai 2021 hat die Stadt an 20 Standorten in der Kernstadt mit Video und Seitenradar gezählt,
+      in beiden Richtungen und nach Fahrzeugklassen, dazu eine Erfassung der Wege über
+      verschlüsselte Kennzeichen. Die Zählwerte sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen 2021 (Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz.
+      Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      zusatz: >-
+        Im Mai 2021 haben Sie an 20 Standorten in der Kernstadt mit Video und Seitenradar gezählt. Ich
+        bitte um diese Zählungen (nicht die Kennzeichenauswertung).
+    links:
+      - ["Verkehrszählung in der Kernstadt (2021)", "https://www.neustadt-a-rbge.de/rathaus/pressestelle/presse-archiv/2021/mai/verkehrszaehlung-in-der-kernstadt/"]
+- ags: "03102000"
+  name: Salzgitter
+  lage: [10.3292, 52.1536]
+  kontakt: {fds_suche: "Stadt Salzgitter"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Radverkehrszählung in Salzgitter-Bad (Radweg Nord-Süd-Straße, 2.–29. Juni 2025)
+    situation: >-
+      Die Stadt hat im Juni 2025 vier Wochen lang den Radverkehr auf dem Radweg an der
+      Nord-Süd-Straße in Salzgitter-Bad gezählt, als Grundlage der Radverkehrsplanung. Ergebnisse sind
+      nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach dieser Zählung und weiteren Zählungen der Stadt (Werte je Stunde und Richtung),
+      mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      zusatz: >-
+        Im Juni 2025 haben Sie den Radverkehr an der Nord-Süd-Straße in Salzgitter-Bad gezählt. Ich
+        bitte um diese Zählung und weitere Zählungen der Stadt seit 2020.
+    links:
+      - ["Radverkehrszählung in Salzgitter-Bad", "https://www.salzgitter.de/pressemeldungen/2025/radverkehrszaehlung-sz-bad"]
+- ags: "03359010"
+  name: Buxtehude
+  lage: [9.6986, 53.4759]
+  kontakt: {fds_suche: "Hansestadt Buxtehude"}
+  kurzzeit:
+    stand: nur_karte
+    was: >-
+      Zählungen an rund 40 Stellen für den Verkehrsentwicklungsplan, veröffentlicht nur als
+      Belastungsplan (Bild, Analyse 2017)
+    situation: >-
+      Für den Verkehrsentwicklungsplan hat die Stadt an rund 40 Stellen gezählt und daraus ein
+      Verkehrsmodell gebaut. Veröffentlicht sind nur Belastungspläne als Bild (Analyse 2017,
+      Prognose).
+    empfehlung: >-
+      Anfrage nach den Zählungen für den Verkehrsentwicklungsplan (Werte je Zählstelle, Intervall und
+      Richtung), mit Lizenz – nicht nach den Plänen. Grundlage: Niedersächsisches
+      Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      an: "Hansestadt Buxtehude"
+      zusatz: >-
+        Für Ihren Verkehrsentwicklungsplan haben Sie an rund 40 Stellen gezählt. Ich bitte um diese
+        Zählungen selbst, nicht um die Belastungspläne.
+    links:
+      - ["Verkehrszahlen", "https://www.buxtehude.de/bauen-verkehr-umwelt/verkehrsplanung/verkehrszahlen/"]
+- ags: "03453009"
+  name: Lastrup
+  lage: [7.8646, 52.795]
+  kontakt: {fds_suche: "Gemeinde Lastrup"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      zählt auf Antrag von Bürgerinnen und Bürgern je eine Woche mit eigenem Gerät (Bauhof)
+    situation: >-
+      Wer in Lastrup eine Verkehrszählung beantragt, bekommt sie nach Prüfung: Der Bauhof stellt das
+      Zählgerät der Gemeinde jeweils eine Woche auf. Ergebnisse sind nicht als Daten veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen der letzten Jahre als Export des Geräts (Werte je Stunde und
+      Richtung), mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      an: "Gemeinde Lastrup"
+      zusatz: >-
+        Ihr Bauhof stellt auf Antrag Ihr Zählgerät jeweils eine Woche auf. Ich bitte um die Exporte
+        dieser Zählungen seit 2020.
+    links:
+      - ["Verkehrserhebungen", "https://www.lastrup.de/verwaltung-politik/buergerservice/verkehrszaehldaten/"]
+- ags: "03355"
+  name: Landkreis Lüneburg
+  lage: [10.4088, 53.2492]
+  kontakt: {fds_suche: "Landkreis Lüneburg"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      verleiht mobile Rad-Zählgeräte an die Gemeinden; die Zähldaten werden online gespeichert
+    situation: >-
+      Der Landkreis hat mobile Rad-Zählgeräte (Eco-Counter) gekauft und verleiht sie an Gemeinden,
+      etwa für eine Zählung in Dahlenburg. Die Zähldaten werden online beim Hersteller gespeichert,
+      veröffentlicht sind sie nicht.
+    empfehlung: >-
+      Anfrage nach einem Export aller Zählungen mit den Leihgeräten (Werte je Stunde und Richtung),
+      mit Lizenz. Grundlage: Niedersächsisches Umweltinformationsgesetz.
+    weg: "FragDenStaat, Niedersächsisches UIG"
+    anfrage:
+      an: "Landkreis Lüneburg"
+      zusatz: >-
+        Sie verleihen mobile Rad-Zählgeräte an die Gemeinden; die Daten liegen im Online-Konto. Ich
+        bitte um einen Export aller Zählungen dieser Geräte.
+    links:
+      - ["Radverkehrszählgeräte zur Ausleihe", "https://www.landkreis-lueneburg.de/fuer-unsere-buergerinnen-und-buerger/mobil-im-landkreis/radfahren/radverkehrszaehlgeraete-zur-ausleihe.html"]
+      - ["Radverkehrszählung in Dahlenburg", "https://www.landkreis-lueneburg.de/das-wichtigste-auf-einen-blick/aktuelle-informationen/presse/pressemitteilungen/praezise-zahlen-fuer-den-radverkehr"]

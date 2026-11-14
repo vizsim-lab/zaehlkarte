@@ -345,6 +345,30 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     Kerpen, Bergheim, Brühl, Frechen, Pulheim, Erftstadt, Kamen, Bünde, Löhne, Greven, Steinfurt)
     fand die Websuche nichts Verwertbares, meist Gutachten zu Bebauungsplänen.
   - **Recht:** Das IFG NRW gilt für Gemeinden und Kreise unmittelbar.
+- Niedersachsen (November 2026, Kommune für Kommune, Runde 3: Gemeinden, Samtgemeinden und
+  Landkreise aus dem Gemeindeverzeichnis von Destatis, Webseiten aus OSM oder geraten – 910
+  Websites in zwei Durchsichten, 790 erreicht; je Website Sitemap, Suche und Startseite; dazu die
+  Mobilithek bundesweit; `tools/land.py`, `land_lesen.py`, `gezielt_lesen.py`,
+  `mobilithek_alle.py` auf `werkzeug/erkundung`, Ergebnisse `ergebnis/runde3*/NI`): keine offene
+  Kurzzeitzählung mit Lizenz.
+  - **Offen, aber nur Tageswerte:** Braunschweig – acht Rad-Dauerzählstellen, je Quartal eine CSV
+    mit einem Tageswert je Zählstelle (CC BY 4.0, seit 2023); ohne Stundenwerte nicht für die Karte
+    (Tagessumme nicht prüfbar).
+  - **Kreise zählen ihre Kreisstraßen selbst:** Landkreis Gifhorn 2025 an 138 Stellen je 24 Stunden
+    (Video), Landkreis Harburg landkreisweit je Abschnitt eine Zählstelle – die aussichtsreichsten
+    Anfragen im Land. Landkreis Lüneburg verleiht mobile Rad-Zählgeräte (Daten im Online-Konto).
+  - **Gezählt, nicht offen:** Goslar (mobile Videodetektion, drei Rad-Dauerzählstellen seit 2018),
+    Oldenburg (Ofenerdiek: Seitenradar, Zählplatten, Kameras; Zählsäule Pophankenweg seit 2023),
+    Neustadt am Rübenberge (2021, 20 Standorte), Salzgitter (Rad, Juni 2025), Lastrup (Gerät der
+    Gemeinde, je eine Woche auf Antrag); nur als Bild: Buxtehude (VEP, rund 40 Zählstellen); nur
+    Auswertungen: Leer (drei Rad-Zählstellen).
+  - **Osnabrück:** Die Mobilithek führt seit September 2025 den Datensatz der 66 TEU-Sensoren
+    (01.01.2022–09.11.2023) als ZIP, eingestuft als freie Nutzung, aber ohne genannte Lizenz.
+  - **Nicht kommunal oder ohne Wert:** Ankündigungen der Straßenverkehrszählung des Landes
+    (Sittensen, Scheeßel), Radzählungen des Regionalverbands für den Radschnellweg (Lehre),
+    einzelne Ergebnisse in Pressemitteilungen (Geeste: Radzählung an der Fährbrücke 2026,
+    Bienenbüttel: Verkehrsmessung Wichmannsburg 2024). Geratene Adressen treffen
+    gelegentlich die falsche Gemeinde (www.gronau.de ist Gronau in Westfalen).
 - Übrige Länder (November 2026, GovData je Land, Landes- und Stadtportale, alle
   FragDenStaat-Anfragen samt Anhängen, Stadtseiten): neu offen nur Olpe (in der Karte). Neu in der
   Datenlage: Bremen, Augsburg, Amberg, Wuppertal, Falkensee, Lingen (Ems); präzisiert: Kassel
