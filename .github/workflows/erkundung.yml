@@ -1,6 +1,7 @@
 # Entwicklungswerkzeug: Open-Data-Portale und Gemeindeseiten nach Verkehrszählungen durchsuchen
 # (tools/*.py) und das Ergebnis in denselben Branch legen (Pushes mit GITHUB_TOKEN starten keinen
-# neuen Lauf). Teile: portale, webseiten (tools/hessen.py), lesen (tools/hessen2.py).
+# neuen Lauf). Teile: portale, webseiten (tools/hessen.py), lesen (tools/hessen2.py);
+# Runde 3 (r3_<LAND>): tools/land.py + tools/land_lesen.py, mobilithek: tools/mobilithek_alle.py.
 name: Erkundung Zähldaten
 on:
   push:
@@ -12,11 +13,11 @@ permissions:
 jobs:
   erkunden:
     runs-on: ubuntu-24.04
-    timeout-minutes: 58
+    timeout-minutes: 150
     strategy:
       fail-fast: false
       matrix:
-        teil: [ags]
+        teil: [r3_NI, r3_BY, r3_BW, r3_RP, r3_SH, r3_SN, r3_ST, r3_TH, r3_BB, r3_MV, r3_SL, r3_HH, r3_HB, r3_BE, mobilithek]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
@@ -34,6 +35,13 @@ jobs:
             overpass_probe) timeout 15m python3 tools/overpass_probe.py ergebnis/overpass_probe || true ;;
             kmk_pdf) timeout 10m python3 tools/kmk_pdf.py ergebnis/ferien || true ;;
             ags) timeout 20m python3 tools/ags.py ergebnis/ags || true ;;
+            mobilithek) timeout 20m python3 tools/mobilithek_alle.py ergebnis/runde3 || true ;;
+            r3_*)
+              l="${{ matrix.teil }}"; l="${l#r3_}"
+              # Overpass-Abfragen der Länder zeitlich verteilen
+              sleep "$(python3 -c "import sys; print('NI BY BW RP SH SN ST TH BB MV SL HH HB BE'.split().index(sys.argv[1]) * 40)" "$l")"
+              timeout 75m python3 tools/land.py "ergebnis/runde3/$l" webseiten,osm "$l" || true
+              timeout 55m python3 tools/land_lesen.py "ergebnis/runde3/$l" 50 || true ;;
             pipeline_probe)
               git fetch -q origin robots-pipeline && git worktree add -q ../zk FETCH_HEAD
               (cd ../zk/pipeline && uv sync --locked -q && timeout 45m uv run python "$GITHUB_WORKSPACE/tools/pipeline_probe.py" "$GITHUB_WORKSPACE/ergebnis/pipeline_probe") || true ;;

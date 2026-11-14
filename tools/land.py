@@ -30,6 +30,25 @@ import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
 LAENDER = {
+    # Runde 3 (14.11.2026): die übrigen Länder; Gemeinden aus dem Gemeindeverzeichnis
+    # (tools/gemeinden/<LAND>.json), Webseiten aus OSM
+    "SH": {"ags": "01", "iso": "DE-SH", "name": "Schleswig-Holstein", "staedte": [], "extra": []},
+    "HH": {"ags": "02", "iso": "DE-HH", "name": "Hamburg", "staedte": [], "extra": []},
+    "NI": {"ags": "03", "iso": "DE-NI", "name": "Niedersachsen", "staedte": [],
+           "extra": [("RGB", "Regionalverband Großraum Braunschweig", "https://www.regionalverband-braunschweig.de/")]},
+    "HB": {"ags": "04", "iso": "DE-HB", "name": "Bremen", "staedte": [], "extra": []},
+    "RP": {"ags": "07", "iso": "DE-RP", "name": "Rheinland-Pfalz", "staedte": [], "extra": []},
+    "BW": {"ags": "08", "iso": "DE-BW", "name": "Baden-Württemberg", "staedte": [],
+           "extra": [("VRS", "Verband Region Stuttgart", "https://www.region-stuttgart.org/")]},
+    "BY": {"ags": "09", "iso": "DE-BY", "name": "Bayern", "staedte": [], "extra": []},
+    "SL": {"ags": "10", "iso": "DE-SL", "name": "Saarland", "staedte": [],
+           "extra": [("RVSB", "Regionalverband Saarbrücken", "https://www.regionalverband-saarbruecken.de/")]},
+    "BE": {"ags": "11", "iso": "DE-BE", "name": "Berlin", "staedte": [], "extra": []},
+    "BB": {"ags": "12", "iso": "DE-BB", "name": "Brandenburg", "staedte": [], "extra": []},
+    "MV": {"ags": "13", "iso": "DE-MV", "name": "Mecklenburg-Vorpommern", "staedte": [], "extra": []},
+    "SN": {"ags": "14", "iso": "DE-SN", "name": "Sachsen", "staedte": [], "extra": []},
+    "ST": {"ags": "15", "iso": "DE-ST", "name": "Sachsen-Anhalt", "staedte": [], "extra": []},
+    "TH": {"ags": "16", "iso": "DE-TH", "name": "Thüringen", "staedte": [], "extra": []},
     "NW": {"ags": "05", "iso": "DE-NW", "name": "Nordrhein-Westfalen",
            "staedte": ["Köln", "Düsseldorf", "Dortmund", "Essen", "Duisburg", "Bochum", "Wuppertal",
                        "Bielefeld", "Bonn", "Münster", "Mönchengladbach", "Gelsenkirchen", "Aachen",
@@ -40,7 +59,11 @@ LAENDER = {
                      ("ZNM", "Zukunftsnetz Mobilität NRW", "https://www.zukunftsnetz-mobilitaet.nrw.de/"),
                      ("AGFS", "AGFS NRW (fahrrad- und fußgängerfreundliche Städte)", "https://www.agfs-nrw.de/")]},
 }
-LAND = LAENDER[sys.argv[3] if len(sys.argv) > 3 else "NW"]
+LAND_CODE = sys.argv[3] if len(sys.argv) > 3 else "NW"
+LAND = LAENDER[LAND_CODE]
+# Gemeinden ohne eigene Webseite in OSM: Adresse raten nur ab dieser Einwohnerzahl (kleine Gemeinden
+# haben oft keine eigene Seite, sondern die ihrer Samtgemeinde, ihres Amts oder ihrer VG)
+RATEN_AB = 10_000
 ZIEL = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "ergebnis/nrw")
 ZIEL.mkdir(parents=True, exist_ok=True)
 TEILE = (sys.argv[2] if len(sys.argv) > 2 else "alle").split(",")
@@ -163,27 +186,37 @@ rel(area.land)["boundary"="administrative"]["admin_level"~"^(6|8)$"]["de:amtlich
 out center tags;"""
 
 
+OVERPASS_SERVER = ("https://overpass.private.coffee/api/interpreter",
+                   "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+                   "https://overpass.kumi.systems/api/interpreter")
+OVERPASS_GRENZEN_7 = """[out:json][timeout:900];
+area["ISO3166-2"="%s"][admin_level=4]->.land;
+rel(area.land)["boundary"="administrative"]["admin_level"~"^(6|7|8)$"];
+out center tags;"""
+
+
+def overpass(abfrage, name, zeit=900):
+    """Abfrage an die Overpass-Server, die robots.txt erlaubt (overpass-api.de sperrt /api/)."""
+    for versuch in range(3):
+        for server in OVERPASS_SERVER:
+            try:
+                inhalt, _, _ = hole(server, daten=urllib.parse.urlencode({"data": abfrage}).encode(),
+                                    kopf={"Content-Type": "application/x-www-form-urlencoded"}, roh=True, zeit=zeit)
+                if inhalt[:1] == b"{":
+                    protokoll.setdefault(name, {})["server"] = server
+                    return json.loads(inhalt)
+            except Exception as e:  # noqa: BLE001
+                protokoll.setdefault(name, {})[f"{server}#{versuch}"] = repr(e)[:200]
+        time.sleep(60)
+    return None
+
+
 def grenzen_osm():
     """Gemeinden und Kreise aus OSM (admin_level 8 bzw. 6), wenn Wikidata gesperrt ist."""
-    for versuch in range(3):
-        for server in ("https://overpass.kumi.systems/api/interpreter",
-                       "https://overpass.private.coffee/api/interpreter",
-                       "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
-                       "https://overpass-api.de/api/interpreter"):
-            try:
-                inhalt, _, _ = hole(server, daten=urllib.parse.urlencode({"data": OVERPASS_GRENZEN % LAND["iso"]}).encode(),
-                                    kopf={"Content-Type": "application/x-www-form-urlencoded"}, roh=True, zeit=900)
-                if inhalt[:1] == b"{":
-                    break
-            except Exception as e:  # noqa: BLE001
-                protokoll.setdefault("grenzen_osm", {})[f"{server}#{versuch}"] = repr(e)[:200]
-        else:
-            time.sleep(60)
-            continue
-        break
-    else:
+    r = overpass(OVERPASS_GRENZEN % LAND["iso"], "grenzen_osm")
+    if r is None:
         return
-    for e in json.loads(inhalt).get("elements", []):
+    for e in r.get("elements", []):
         t, c = e.get("tags", {}), e.get("center") or {}
         ags = t.get("de:amtlicher_gemeindeschluessel", "")
         web = {t[k] for k in ("website", "contact:website", "url") if t.get(k)}
@@ -196,6 +229,66 @@ def grenzen_osm():
             ks = ags[:5]
             KREISE[ks] = {"ks": ks, "name": t.get("name"), "osm": f"relation/{e['id']}", "einw": einw,
                           "einw_datum": "", "web": web}
+
+
+VERBAENDE: dict = {}
+
+
+def _web(t):
+    return {t[k].strip() for k in ("website", "contact:website", "url") if t.get(k, "").startswith("http")}
+
+
+@schritt("liste")
+def liste_runde3():
+    """Gemeinden, Verbände (Samtgemeinde, Amt, VG …) und Kreise aus dem Gemeindeverzeichnis
+    (tools/gemeinden/<LAND>.json, Gebietsstand 30.09.2026); Webseiten aus den OSM-Grenzen
+    (admin_level 6, 7, 8)."""
+    d = json.loads((pathlib.Path(__file__).parent / "gemeinden" / f"{LAND_CODE}.json").read_text())
+    for g in d["gemeinden"]:
+        GEMEINDEN[g["ags"]] = g | {"web": set()}
+    for v in d["verbaende"]:
+        VERBAENDE[v["vb"]] = v | {"web": set()}
+    je_kreis: dict = {}
+    for g in d["gemeinden"]:
+        je_kreis[g["ags"][:5]] = je_kreis.get(g["ags"][:5], 0) + 1
+    for k in d["kreise"]:
+        if je_kreis.get(k["ks"], 0) > 1:  # kreisfreie Städte stehen schon als Gemeinde da
+            KREISE[k["ks"]] = k | {"web": set()}
+    r = overpass(OVERPASS_GRENZEN_7 % LAND["iso"], "grenzen_osm")
+    osm, ohne = [], []
+    for e in (r or {}).get("elements", []):
+        t, c = e.get("tags", {}), e.get("center") or {}
+        ags, rs, stufe, web = (t.get("de:amtlicher_gemeindeschluessel", ""), t.get("de:regionalschluessel", ""),
+                               t.get("admin_level"), _web(t))
+        osm.append({"osm": e["id"], "stufe": stufe, "name": t.get("name"), "ags": ags, "rs": rs,
+                    "web": sorted(web), "lon": c.get("lon"), "lat": c.get("lat")})
+        if not ags and len(rs) == 12:
+            ags = rs[:5] + rs[9:]
+        if stufe == "8" or (stufe == "6" and ags in GEMEINDEN):
+            if ags in GEMEINDEN:
+                GEMEINDEN[ags]["web"] |= web
+                GEMEINDEN[ags]["osm"] = e["id"]
+            else:
+                ohne.append(t.get("name"))
+        elif stufe == "6" and ags[:5] in KREISE:
+            KREISE[ags[:5]]["web"] |= web
+        elif stufe == "7":
+            vb = rs[:9] if len(rs) == 12 else ""
+            if vb in VERBAENDE:
+                VERBAENDE[vb]["web"] |= web
+            elif web:  # Verband ohne Schlüssel in OSM: eigenes Ziel
+                VERBAENDE["osm" + str(e["id"])] = {"vb": "osm" + str(e["id"]), "name": t.get("name"),
+                                                   "einw": None, "gemeinden": None, "web": web}
+    schreibe("osm_grenzen.json", osm)
+    for x in list(GEMEINDEN.values()) + list(VERBAENDE.values()) + list(KREISE.values()):
+        x["web"] = sorted(x["web"])
+    schreibe("gemeinden.json", sorted(GEMEINDEN.values(), key=lambda g: g["ags"]))
+    schreibe("verbaende.json", sorted(VERBAENDE.values(), key=lambda v: v["vb"]))
+    schreibe("kreise.json", sorted(KREISE.values(), key=lambda k: k["ks"]))
+    protokoll["liste"] = {"gemeinden": len(GEMEINDEN), "mit_web": sum(1 for g in GEMEINDEN.values() if g["web"]),
+                          "verbaende": len(VERBAENDE), "verbaende_mit_web": sum(1 for v in VERBAENDE.values() if v["web"]),
+                          "kreise": len(KREISE), "kreise_mit_web": sum(1 for k in KREISE.values() if k["web"]),
+                          "osm_elemente": len(osm), "osm_ohne_gemeinde": ohne[:30]}
 
 
 @schritt("wikidata")
@@ -461,21 +554,16 @@ area["ISO3166-2"="%s"][admin_level=4]->.he;
   nwr(area.he)["monitoring:bicycle"="yes"];
 );
 out center tags;""" % LAND["iso"]
-    for server in ("https://overpass-api.de/api/interpreter", "https://overpass.kumi.systems/api/interpreter"):
-        try:
-            inhalt, _, _ = hole(server, daten=urllib.parse.urlencode({"data": abfrage}).encode(),
-                                kopf={"Content-Type": "application/x-www-form-urlencoded"}, roh=True, zeit=360)
-            r = json.loads(inhalt)
-            aus = []
-            for e in r.get("elements", []):
-                c = e.get("center") or {"lat": e.get("lat"), "lon": e.get("lon")}
-                aus.append({"osm": f"{e['type']}/{e['id']}", "lat": c.get("lat"), "lon": c.get("lon"),
-                            "tags": e.get("tags", {})})
-            schreibe("osm_zaehlstellen.json", aus)
-            protokoll["osm"] = {"anzahl": len(aus), "server": server}
-            return
-        except Exception as e:  # noqa: BLE001
-            protokoll.setdefault("osm", {})[server] = repr(e)[:200]
+    r = overpass(abfrage, "osm", zeit=360)
+    if r is None:
+        return
+    aus = []
+    for e in r.get("elements", []):
+        c = e.get("center") or {"lat": e.get("lat"), "lon": e.get("lon")}
+        aus.append({"osm": f"{e['type']}/{e['id']}", "lat": c.get("lat"), "lon": c.get("lon"),
+                    "tags": e.get("tags", {})})
+    schreibe("osm_zaehlstellen.json", aus)
+    protokoll["osm"]["anzahl"] = len(aus)
 
 
 # ---------------------------------------------------------------- 4. Webseiten der Gemeinden
@@ -564,15 +652,29 @@ def sitemap_urls(basis, frist):
     return urls, gelesen
 
 
+VORSILBEN = {"gemeinde": ("", "stadt-", "gemeinde-"), "verband": ("", "sg-", "vg-", "amt-"),
+             "kreis": ("landkreis-", "kreis-", "lk-")}
+
+
+def geraten(g):
+    """Adressen raten: „Lingen (Ems), Stadt“ -> lingen, „Samtgemeinde Harsefeld“ -> harsefeld."""
+    name = g["name"].split(",")[0]
+    name = re.sub(r"\(.*?\)", " ", name)
+    name = re.sub(r"^(Samtgemeinde|Verbandsgemeinde|Verwaltungsgemeinschaft|Gemeindeverwaltungsverband|"
+                  r"Verwaltungsverband|Amt|VG|VVG|GVV|Landkreis|Kreis|Region|Stadt|Gemeinde|Markt)\s+", "", name.strip())
+    slug = re.sub(r"[^a-z0-9]+", "-", name.lower().replace("ä", "ae").replace("ö", "oe")
+                  .replace("ü", "ue").replace("ß", "ss")).strip("-")
+    return [f"https://www.{v}{slug}.de/" for v in VORSILBEN[g.get("art", "gemeinde")]]
+
+
 def pruefe_seite(g):
     frist = time.time() + 60
-    erg = {"ags": g["ags"], "name": g["name"], "web": None, "titel": "", "generator": "",
+    erg = {"ags": g["ags"], "name": g["name"], "art": g.get("art"), "einw": g.get("einw"), "auch": g.get("auch", []),
+           "web": None, "titel": "", "generator": "",
            "sitemap_urls": 0, "sitemaps": 0, "treffer": [], "suche": None, "start_treffer": []}
     kandidaten = list(g.get("web") or [])
     if not kandidaten:
-        slug = re.sub(r"[^a-z0-9]+", "-", g["name"].lower().replace("ä", "ae").replace("ö", "oe")
-                      .replace("ü", "ue").replace("ß", "ss")).strip("-")
-        kandidaten = [f"https://www.{slug}.de/", f"https://www.stadt-{slug}.de/", f"https://www.gemeinde-{slug}.de/"]
+        kandidaten = geraten(g)
         erg["geraten"] = True
     for k in kandidaten:
         try:
@@ -636,10 +738,30 @@ def pruefe_seite(g):
 
 @schritt("webseiten")
 def webseiten():
-    ziele = sorted(GEMEINDEN.values(), key=lambda g: -(g.get("einw") or 0))
-    ziele += [{"ags": k["ks"], "name": k["name"], "web": k["web"]} for k in KREISE.values()
-              if "kreis" in k["name"].lower()]
-    ziele += [{"ags": a, "name": n, "web": [w]} for a, n, w in LAND["extra"]]
+    if VERBAENDE or LAND_CODE != "NW":  # Runde 3: Gemeinden ohne Webseite nur ab RATEN_AB raten
+        ziele = [g | {"art": "gemeinde"} for g in sorted(GEMEINDEN.values(), key=lambda g: -(g.get("einw") or 0))
+                 if g["web"] or (g.get("einw") or 0) >= RATEN_AB]
+        ziele += [{"ags": v["vb"], "name": v["name"], "web": v["web"], "einw": v.get("einw"), "art": "verband"}
+                  for v in VERBAENDE.values() if v["web"] or (v.get("einw") or 0) >= RATEN_AB]
+        ziele += [{"ags": k["ks"], "name": k["name"], "web": k["web"], "art": "kreis"} for k in KREISE.values()]
+    else:
+        ziele = sorted(GEMEINDEN.values(), key=lambda g: -(g.get("einw") or 0))
+        ziele += [{"ags": k["ks"], "name": k["name"], "web": k["web"]} for k in KREISE.values()
+                  if "kreis" in k["name"].lower()]
+    ziele += [{"ags": a, "name": n, "web": [w], "art": "verband"} for a, n, w in LAND["extra"]]
+    # dieselbe Seite nur einmal (Mitgliedsgemeinden verweisen oft auf ihre Samtgemeinde oder ihr Amt)
+    gesehen, eindeutig = {}, []
+    for z in ziele:
+        schluessel = {re.sub(r"^https?://(www\.)?", "", w.lower()).rstrip("/") for w in z.get("web") or []}
+        doppelt = next((gesehen[s] for s in schluessel if s in gesehen), None)
+        if doppelt is not None:
+            doppelt.setdefault("auch", []).append(z["ags"])
+            continue
+        for s in schluessel:
+            gesehen[s] = z
+        eindeutig.append(z)
+    ziele = eindeutig
+    protokoll["webseiten_ziele"] = {"ziele": len(ziele), "geraten": sum(1 for z in ziele if not z.get("web"))}
     aus = []
     with cf.ThreadPoolExecutor(max_workers=24) as pool:
         for erg in pool.map(pruefe_seite, ziele):
@@ -657,8 +779,11 @@ def webseiten():
 
 
 def lade_liste():
-    """Gemeinden und Kreise aus einem früheren Lauf, sonst aus Wikidata."""
-    if (ZIEL / "gemeinden.json").exists() and (ZIEL / "kreise.json").exists():
+    """Gemeinden und Kreise aus einem früheren Lauf, sonst aus dem Gemeindeverzeichnis samt OSM
+    (Runde 3) oder aus Wikidata."""
+    if (pathlib.Path(__file__).parent / "gemeinden" / f"{LAND_CODE}.json").exists():
+        liste_runde3()
+    elif (ZIEL / "gemeinden.json").exists() and (ZIEL / "kreise.json").exists():
         for g in json.loads((ZIEL / "gemeinden.json").read_text()):
             GEMEINDEN[g["ags"]] = g
         for k in json.loads((ZIEL / "kreise.json").read_text()):
@@ -676,6 +801,8 @@ if __name__ == "__main__":
         fds_gesetze()
         fds_behoerden()
         fds_anfragen()
+    if "osm" in TEILE:  # Runde 3: nur die Zählstellen aus OSM (GovData sperrt, Mobilithek bundesweit)
+        osm()
     if "portale" in TEILE or "alle" in TEILE:
         govdata()
         if LAND["iso"] == "DE-NW":
