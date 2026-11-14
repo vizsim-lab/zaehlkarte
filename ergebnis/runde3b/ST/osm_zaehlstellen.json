@@ -1,0 +1,34 @@
+[
+ {
+  "osm": "node/1843700719",
+  "lat": 51.3431678,
+  "lon": 11.4964539,
+  "tags": {
+   "description": "Induktionsschleife Wildwechselüberwachung",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/1843728890",
+  "lat": 51.346448,
+  "lon": 11.5057401,
+  "tags": {
+   "description": "Induktionsschleifev Wildwechselüberwachung",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/10038590780",
+  "lat": 52.1319118,
+  "lon": 11.6281917,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Eingeweiht 2022-09-16",
+   "recording:automated": "yes"
+  }
+ }
+]
