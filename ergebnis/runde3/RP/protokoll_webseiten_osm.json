@@ -1,0 +1,38 @@
+{
+ "grenzen_osm": {
+  "server": "https://overpass.private.coffee/api/interpreter"
+ },
+ "liste": {
+  "gemeinden": 2301,
+  "mit_web": 0,
+  "verbaende": 129,
+  "verbaende_mit_web": 0,
+  "kreise": 24,
+  "kreise_mit_web": 0,
+  "osm_elemente": 0,
+  "osm_ohne_gemeinde": [],
+  "ok": true,
+  "sekunden": 250
+ },
+ "osm": {
+  "https://overpass.private.coffee/api/interpreter#0": "TimeoutError('The read operation timed out')",
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "anzahl": 26,
+  "ok": true,
+  "sekunden": 389
+ },
+ "webseiten_ziele": {
+  "ziele": 192,
+  "geraten": 192
+ },
+ "webseiten": {
+  "seiten": 192,
+  "erreicht": 148,
+  "mit_sitemap": 116,
+  "mit_suche": 18,
+  "mit_treffern": 82,
+  "ok": true,
+  "sekunden": 159
+ },
+ "gesamt_sekunden_webseiten_osm": 798
+}
