@@ -1,0 +1,42 @@
+[
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-10-20/2026-10-27/hourly?stationIds=300026962,100030021,100047629,300039699,100044789&format=csv",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-10-20/2026-10-27/hourly?stationIds=300026962,100030021,100047629,300039699,100044789&format=csv",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 4833,
+  "datei": "01_hourly.csv",
+  "sha256": "35bbbf5998599f0e1d376d7f2381848f6b5d531286caf864873fea4712324842"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-10-20/2026-10-27/hourly?stationIds=300026962,100030021,100047629,300039699,100044789",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-10-20/2026-10-27/hourly?stationIds=300026962,100030021,100047629,300039699,100044789",
+  "typ": "application/json",
+  "bytes": 30850,
+  "datei": "02_hourly.json",
+  "sha256": "de4e808ec03b8ed206228ddd6d58484bed87c2d2c5dcb23ad2264c389c55a60d"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/problems/2026-01-01/2026-11-13?stationIds=300026962,100030021,100047629,300039699,100044789",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/problems/2026-01-01/2026-11-13?stationIds=300026962,100030021,100047629,300039699,100044789",
+  "typ": "application/json",
+  "bytes": 626,
+  "datei": "03_2026-11-13.json",
+  "sha256": "5571de140634f87da3994cdd9e2edf2fe460fa83717b920f97e21d16be12a972"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2017-01-01/2017-01-03/hourly?stationIds=100030021,300026962&format=csv",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2017-01-01/2017-01-03/hourly?stationIds=100030021,300026962&format=csv",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 1355,
+  "datei": "04_hourly.csv",
+  "sha256": "5f4505cc543b451fe3b49dbac1cf53d1e38abe7411df80393378af023a1a1854"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-03-28/2026-03-30/hourly?stationIds=100030021&format=csv",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-03-28/2026-03-30/hourly?stationIds=100030021&format=csv",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 1245,
+  "datei": "05_hourly.csv",
+  "sha256": "d6dc4702b6150400bdcd9c2c8b2ece587ae3b4a94855493b8949652c03765e3a"
+ }
+]

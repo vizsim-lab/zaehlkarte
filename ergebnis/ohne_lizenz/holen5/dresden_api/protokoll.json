@@ -1,0 +1,26 @@
+[
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/L1780?f=json",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/L1780?f=json",
+  "typ": "application/json; charset=utf-8",
+  "bytes": 96,
+  "datei": "06_L1780.json",
+  "sha256": "6143bfbe4b9de2f8120f1fccd62b6195fa215c73f1bf7182c8c8627441370779"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/L1780/items?limit=200&f=json",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/L1780/items?limit=200&f=json",
+  "typ": "application/json; charset=utf-8",
+  "bytes": 96,
+  "datei": "07_items.json",
+  "sha256": "6143bfbe4b9de2f8120f1fccd62b6195fa215c73f1bf7182c8c8627441370779"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/L1781/items?limit=50&f=json",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/L1781/items?limit=50&f=json",
+  "typ": "application/json; charset=utf-8",
+  "bytes": 96,
+  "datei": "08_items.json",
+  "sha256": "5820a0d095bfb9793667c0eb75bf12aefe551893358501695b38d7258ebdcdcb"
+ }
+]
