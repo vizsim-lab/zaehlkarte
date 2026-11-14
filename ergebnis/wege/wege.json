@@ -1,0 +1,427 @@
+[
+ {
+  "quelle": "moers",
+  "url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021.jsonld",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021.jsonld",
+  "typ": "application/ld+json",
+  "bytes": 56896,
+  "anfang": "{\n  \"@context\": {\n    \"adms\": \"http://www.w3.org/ns/adms#\",\n    \"brick\": \"https://brickschema.org/schema/Brick#\",\n    \"csvw\": \"http://www.w3.org/ns/csvw#\",\n    \"dc\": \"http://purl.org/dc/elements/1.1/\",\n    \"dcam\": \"http://purl.org/dc/dcam/\",\n    \"dcat\": \"http://www.w3.org/ns/dcat#\",\n    \"dcatap\": \"h",
+  "verteilungen": [
+   {
+    "titel": "Essenberger Straße Kv Bergstraße 144",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/180ca488-0a7d-4d14-8282-2d6f2b2eeb45/download/essenberger-strasse-kv-bergstrasse-144_t50_17.11.2021.txt"
+    },
+    "lizenz": null
+   },
+   {
+    "titel": "Siedweg ggü. 30",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/979609be-46f5-45de-a3a9-8e1cd709ec61/download/siedweg-ggu.-30_t30_17.03.2021.txt"
+    },
+    "lizenz": null
+   },
+   {
+    "titel": "Ackerstraße ggü. 178",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/6ad38901-5c0b-4f81-92c3-f6f69e634f9d/download/ackerstrasse-ggu.-178_t30_11.06.2021.txt"
+    },
+    "lizenz": null
+   },
+   {
+    "titel": "Holderbergerstraße 54",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2cf17482-8b43-4f13-9073-9351ce0b6453/download/holderbergerstrasse-54_t50_56_t50_25.03.2021.txt"
+    },
+    "lizenz": null
+   },
+   {
+    "titel": "Jockenstraße 27",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/65f51368-0d5e-431b-9f64-5fbf3076af63/download/jockenstrasse-27_vb_08.09.2021.txt"
+    },
+    "lizenz": null
+   },
+   {
+    "titel": "Asternstraße 11",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/361232c2-d96d-4536-8d9a-62b766f45113/download/asternstrasse-11_t30_19.02.2021.txt"
+    },
+    "lizenz": null
+   },
+   {
+    "titel": "Friemersheimer Straße 12",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/3dd0745b-c2b1-4ca4-bc86-7808374b53f2/download/frienersheimer-strasse-12_t30_24.09.2021.txt"
+    },
+    "lizenz": null
+   },
+   {
+    "titel": "Bismarckstraße 43",
+    "download": null,
+    "zugang": {
+     "@id": "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/b8b99242-3a78-49fb-8179-b1d7d3b8f577/download/bismarckstrasse-43_t50_26.07.2021.txt"
+    },
+    "lizenz": null
+   }
+  ],
+  "verteilungen_n": 46,
+  "datensaetze_n": 1
+ },
+ {
+  "quelle": "moers",
+  "url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021.rdf",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021.rdf",
+  "typ": "application/rdf+xml",
+  "bytes": 53002,
+  "anfang": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<rdf:RDF\n  xmlns:dcat=\"http://www.w3.org/ns/dcat#\"\n  xmlns:dct=\"http://purl.org/dc/terms/\"\n  xmlns:owl=\"http://www.w3.org/2002/07/owl#\"\n  xmlns:foaf=\"http://xmlns.com/foaf/0.1/\"\n  xmlns:vcard=\"http://www.w3.org/2006/vcard/ns#\"\n  xmlns:rdf=\"http://www.w3.org/199",
+  "downloads": [],
+  "ressourcen": [],
+  "datensaetze": []
+ },
+ {
+  "quelle": "moers",
+  "url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 94645,
+  "anfang": "<!DOCTYPE html>\n<!--[if IE 9]> <html lang=\"de\" class=\"ie9  mandant \"> <![endif]-->\n<!--[if gt IE 8]><!--> <html lang=\"de\"  class=\" mandant \"> <!--<![endif]-->\n  <head>\n    <meta charset=\"utf-8\" />\n      <meta name=\"csrf_field_name\" content=\"_csrf_token\" />\n      <meta name=\"_csrf_token\" content=\"Ijg",
+  "downloads": [
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e33e7d-fde1-4023-ad84-403a5a7d7c0d/download/mercatorstrasse_t30_16.12.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e909eb-1852-4ee5-8253-c44a8a1e1021/download/orsoyer-allee-an-vz-274_t30_15.11.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/180ca488-0a7d-4d14-8282-2d6f2b2eeb45/download/essenberger-strasse-kv-bergstrasse-144_t50_17.11.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/18a6fc08-93db-4254-8bbd-808faf0c0f2c/download/rheinbergerstrasse_6_t30_04.08.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/1d455611-31f9-4cea-be28-4a801d589305/download/essenberger-strasse-125_t50_05.11.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2288161e-e55e-41f7-a06c-8bc73f36fb9a/download/galmesweg-27_t30_03.03.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2cf17482-8b43-4f13-9073-9351ce0b6453/download/holderbergerstrasse-54_t50_56_t50_25.03.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/34552d1e-8324-4ebe-a82a-f456db10f2dd/download/langlingsweg-ggu.-78_t50_10.09.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/361232c2-d96d-4536-8d9a-62b766f45113/download/asternstrasse-11_t30_19.02.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/3dd0745b-c2b1-4ca4-bc86-7808374b53f2/download/frienersheimer-strasse-12_t30_24.09.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/454bfd69-5659-4fbd-a389-a55198d08279/download/oderstrasse-88_t50_17.11.21.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/46dbe24a-e8ce-4e76-9592-c853779fbd64/download/langlingsweg_75_t20_01.09.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4bcf5776-2fa3-48c9-970f-b2428b583475/download/ackerstrasse-nach-165-2.laterne_t30_11.06.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/4fa9feb3-41fd-4e62-a683-0aa6176986a4/download/liebrechtstrasse-ggu.-27_vb_19.05.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/5019fe45-5fd4-431a-884c-7e11928d5dbc/download/bonifatiusstrasse53_t30_25.05.2022.txt"
+  ],
+  "ressourcen": [
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e33e7d-fde1-4023-ad84-403a5a7d7c0d/download/mercatorstrasse_t30_16.12.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/06e909eb-1852-4ee5-8253-c44a8a1e1021/download/orsoyer-allee-an-vz-274_t30_15.11.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/180ca488-0a7d-4d14-8282-2d6f2b2eeb45/download/essenberger-strasse-kv-bergstrasse-144_t50_17.11.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/18a6fc08-93db-4254-8bbd-808faf0c0f2c/download/rheinbergerstrasse_6_t30_04.08.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/1d455611-31f9-4cea-be28-4a801d589305/download/essenberger-strasse-125_t50_05.11.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2288161e-e55e-41f7-a06c-8bc73f36fb9a/download/galmesweg-27_t30_03.03.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/2cf17482-8b43-4f13-9073-9351ce0b6453/download/holderbergerstrasse-54_t50_56_t50_25.03.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/34552d1e-8324-4ebe-a82a-f456db10f2dd/download/langlingsweg-ggu.-78_t50_10.09.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/361232c2-d96d-4536-8d9a-62b766f45113/download/asternstrasse-11_t30_19.02.2021.txt",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546/resource/3dd0745b-c2b1-4ca4-bc86-7808374b53f2/download/frienersheimer-strasse-12_t30_24.09.2021.txt"
+  ],
+  "datensaetze": [
+   "https://twitter.com/share?url=https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021",
+   "https://www.facebook.com/sharer.php?u=https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546.jsonld",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546.n3",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546.ttl",
+   "https://www.offenesdatenportal.de/dataset/d487b8fc-480f-42bc-a4f1-b075ccdb1546.xml",
+   "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021"
+  ]
+ },
+ {
+  "quelle": "moers",
+  "url": "https://www.offenesdatenportal.de/catalog.jsonld?q=Verkehrsz%C3%A4hlung",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://www.offenesdatenportal.de/catalog.jsonld?q=Verkehrsz%C3%A4hlung",
+  "typ": "application/ld+json",
+  "bytes": 264312,
+  "anfang": "[\n  {\n    \"@id\": \"https://www.offenesdatenportal.de/dataset/6a6f06d3-326c-4320-8abb-df3eb41e7e14/resource/74d9a3cf-961a-4505-80b6-9db4c4b87168\",\n    \"@type\": [\n      \"http://www.w3.org/ns/dcat#Distribution\"\n    ],\n    \"http://purl.org/dc/terms/description\": [\n      {\n        \"@value\": \"Der Datensatz",
+  "verteilungen": [],
+  "verteilungen_n": 0,
+  "datensaetze_n": 0
+ },
+ {
+  "quelle": "olpe",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18.jsonld",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18.jsonld",
+  "typ": "application/ld+json",
+  "bytes": 4760,
+  "anfang": "{\n  \"@context\": {\n    \"adms\": \"http://www.w3.org/ns/adms#\",\n    \"brick\": \"https://brickschema.org/schema/Brick#\",\n    \"cnt\": \"http://www.w3.org/2011/content#\",\n    \"cr\": \"http://mlcommons.org/croissant/\",\n    \"csvw\": \"http://www.w3.org/ns/csvw#\",\n    \"dc\": \"http://purl.org/dc/elements/1.1/\",\n    \"dc",
+  "verteilungen": [
+   {
+    "titel": "verkehrsdaten_K18-20250806-20250813.json",
+    "download": null,
+    "zugang": {
+     "@id": "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a/download/verkehrsdaten_k18-20250806-20250813.json"
+    },
+    "lizenz": null
+   }
+  ],
+  "verteilungen_n": 1,
+  "datensaetze_n": 1
+ },
+ {
+  "quelle": "olpe",
+  "url": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://opendata.olpe.de/dataset/verkehrsmessungen-k18",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 25272,
+  "anfang": "<!DOCTYPE html>\n<!--[if IE 9]> <html lang=\"de\" class=\"ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html lang=\"de\"  > <!--<![endif]-->\n  <head>\n    <meta charset=\"utf-8\" />\n      <meta name=\"csrf_field_name\" content=\"_csrf_token\" />\n      <meta name=\"_csrf_token\" content=\"ImUxM2ZmOWY5NWZjOGFkZmRmODc5ZD",
+  "downloads": [
+   "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a/download/verkehrsdaten_k18-20250806-20250813.json"
+  ],
+  "ressourcen": [
+   "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a/download/verkehrsdaten_k18-20250806-20250813.json",
+   "https://opendata.olpe.de/dataset/verkehrsmessungen-k18/resource/459ac06b-b69d-4d21-bad2-bbec03f8d33a"
+  ],
+  "datensaetze": [
+   "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42.jsonld",
+   "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42.n3",
+   "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42.ttl",
+   "https://opendata.olpe.de/dataset/d6eea81c-bbb0-43ab-a46e-c03adfa10f42.xml",
+   "https://opendata.olpe.de/dataset/verkehrsmessungen-k18",
+   "https://twitter.com/share?url=https://opendata.olpe.de/dataset/verkehrsmessungen-k18",
+   "https://www.facebook.com/sharer.php?u=https://opendata.olpe.de/dataset/verkehrsmessungen-k18"
+  ]
+ },
+ {
+  "quelle": "olpe",
+  "url": "https://opendata.olpe.de/dataset/?q=Verkehrsmessung",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://opendata.olpe.de/dataset/?q=Verkehrsmessung",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 30892,
+  "anfang": "<!DOCTYPE html>\n<!--[if IE 9]> <html lang=\"de\" class=\"ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html lang=\"de\"  > <!--<![endif]-->\n  <head>\n    <meta charset=\"utf-8\" />\n      <meta name=\"csrf_field_name\" content=\"_csrf_token\" />\n      <meta name=\"_csrf_token\" content=\"IjBlOWUyODViYWE2MmVhOWQzMTk5Yj",
+  "downloads": [],
+  "ressourcen": [],
+  "datensaetze": [
+   "https://opendata.olpe.de/dataset/verkehrsmessung-alte-landstrabe",
+   "https://opendata.olpe.de/dataset/verkehrsmessung-standort-zum-honigsack-35",
+   "https://opendata.olpe.de/dataset/verkehrsmessung-weite-schluppe",
+   "https://opendata.olpe.de/dataset/verkehrsmessungen-oberveischede",
+   "https://opendata.olpe.de/dataset/verkehrsmessungen-rochusstrabe"
+  ]
+ },
+ {
+  "quelle": "olpe",
+  "url": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://opendata.olpe.de/catalog.jsonld?q=Verkehrsmessung",
+  "typ": "application/ld+json",
+  "bytes": 28748,
+  "anfang": "[\n  {\n    \"@id\": \"https://opendata.olpe.de/dataset/d67399e8-949d-4ff3-a57a-0111ad456c16\",\n    \"@type\": [\n      \"http://www.w3.org/ns/dcat#Dataset\"\n    ],\n    \"http://dcat-ap.de/def/dcatde/maintainer\": [\n      {\n        \"@id\": \"_:N945d5c4154ed4574b49f8574b5db6231\"\n      }\n    ],\n    \"http://purl.org/",
+  "verteilungen": [],
+  "verteilungen_n": 0,
+  "datensaetze_n": 0
+ },
+ {
+  "quelle": "aachen_rad",
+  "url": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen.jsonld",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "fehler": "<HTTPError 404: 'NOT FOUND'>"
+ },
+ {
+  "quelle": "aachen_rad",
+  "url": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 29070,
+  "anfang": "<!DOCTYPE html>\n<!--[if IE 9]> <html lang=\"de\" class=\"ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html lang=\"de\"  > <!--<![endif]-->\n  <head>\n    <meta charset=\"utf-8\" />\n      <meta name=\"csrf_field_name\" content=\"_csrf_token\" />\n      <meta name=\"_csrf_token\" content=\"IjVkNTg1MmRjM2RjNmRhNmJkYzQ4Yj",
+  "downloads": [
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/272d2483-0a19-40d1-ad42-cbf17b8f7d2b/download/radzaehlstellen_2026.csv",
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/74c6bb97-6969-4c09-9f4b-79c5e14b11ab/download/radzaehlstellen_2025.csv",
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/773b5644-2a28-45d6-abc7-19b899fff1ba/download/standorte_radzahlstellen.pdf",
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/b5915bec-4dda-4063-8df3-0dd0cd6ec8c9/download/radzaehlstellen_2026.csv"
+  ],
+  "ressourcen": [
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/272d2483-0a19-40d1-ad42-cbf17b8f7d2b/download/radzaehlstellen_2026.csv",
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/74c6bb97-6969-4c09-9f4b-79c5e14b11ab/download/radzaehlstellen_2025.csv",
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/773b5644-2a28-45d6-abc7-19b899fff1ba/download/standorte_radzahlstellen.pdf",
+   "https://offenedaten.aachen.de/dataset/c81cc173-5302-45d9-9b9d-87bea105f77e/resource/b5915bec-4dda-4063-8df3-0dd0cd6ec8c9/download/radzaehlstellen_2026.csv",
+   "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen/resource/272d2483-0a19-40d1-ad42-cbf17b8f7d2b",
+   "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen/resource/74c6bb97-6969-4c09-9f4b-79c5e14b11ab",
+   "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen/resource/773b5644-2a28-45d6-abc7-19b899fff1ba",
+   "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen/resource/b5915bec-4dda-4063-8df3-0dd0cd6ec8c9"
+  ],
+  "datensaetze": [
+   "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen"
+  ]
+ },
+ {
+  "quelle": "muenchen_rad",
+  "url": "https://opendata.muenchen.de/dataset/x.jsonld",
+  "pipeline": true,
+  "werkzeug": false,
+  "crawl_delay": 10.0
+ },
+ {
+  "quelle": "muenchen_rad",
+  "url": "https://opendata.muenchen.de/dataset/?q=Raddauerz%C3%A4hlstellen",
+  "pipeline": true,
+  "werkzeug": false,
+  "crawl_delay": 10.0
+ },
+ {
+  "quelle": "potsdam",
+  "url": "https://de.ftp.opendatasoft.com/potsdam/Verkehrszaehlungen/2300.zip",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "potsdam",
+  "url": "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/export/",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "bochum_rad",
+  "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter.git/info/refs?service=git-upload-pack",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "bochum_rad",
+  "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/archive/main/radverkehr-zaehlstellen-eco-counter-main.tar.gz",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "bochum_rad",
+  "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/README.md",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "bochum_rad",
+  "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 1.0,
+  "end": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 60398,
+  "anfang": "\n\n\n\n\n<!DOCTYPE html>\n<html class=\"gl-system ui-neutral with-top-bar with-header page-with-panels with-gl-container-queries  user-logged-out\" lang=\"de\">\n<head prefix=\"og: http://ogp.me/ns#\">\n<meta charset=\"utf-8\">\n<meta content=\"IE=edge\" http-equiv=\"X-UA-Compatible\">\n<meta content=\"width=device-width",
+  "downloads": [
+   "https://gitlab.opencode.de/-/manifest.json"
+  ],
+  "ressourcen": [],
+  "datensaetze": []
+ },
+ {
+  "quelle": "bochum_rad",
+  "url": "https://opendata.ruhr/dataset/bochum-radverkehr-wittener-strasse",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 10.0,
+  "end": "https://opendata.ruhr/dataset/bochum-radverkehr-wittener-strasse",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 37547,
+  "anfang": "<!DOCTYPE html>\n<!--[if IE 9]> <html lang=\"de\" class=\"ie9\"> <![endif]-->\n<!--[if gt IE 8]><!--> <html lang=\"de\"  > <!--<![endif]-->\n  <head>\n    \n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n      <meta charset=\"utf-8\" />\n      <meta name=\"csrf_field_name\" content=\"csrf_token\" />\n",
+  "downloads": [
+   "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter/-/raw/main/data/wittener_strasse/bochum_ecocounter_wittener_strasse.csv"
+  ],
+  "ressourcen": [
+   "https://opendata.ruhr/dataset/bochum-radverkehr-wittener-strasse/resource/b2691da5-7db3-4bbc-aa4c-c3953c1fb6bf"
+  ],
+  "datensaetze": [
+   "https://opendata.ruhr/dataset/1d6af5ce-f17d-4d14-9d26-72abff7a539b.jsonld",
+   "https://opendata.ruhr/dataset/1d6af5ce-f17d-4d14-9d26-72abff7a539b.n3",
+   "https://opendata.ruhr/dataset/1d6af5ce-f17d-4d14-9d26-72abff7a539b.ttl",
+   "https://opendata.ruhr/dataset/1d6af5ce-f17d-4d14-9d26-72abff7a539b.xml",
+   "https://opendata.ruhr/dataset/bochum-radverkehr-wittener-strasse",
+   "https://twitter.com/share?url=https://opendata.ruhr/dataset/bochum-radverkehr-wittener-strasse",
+   "https://www.facebook.com/sharer.php?u=https://opendata.ruhr/dataset/bochum-radverkehr-wittener-strasse"
+  ]
+ },
+ {
+  "quelle": "hamburg (OSM)",
+  "url": "https://download.openstreetmap.fr/extracts/europe/germany/hamburg-latest.osm.pbf",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "hamburg (OSM)",
+  "url": "https://download.bbbike.org/osm/bbbike/Hamburg/Hamburg.osm.pbf",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "hamburg (OSM)",
+  "url": "https://overpass.kumi.systems/api/interpreter",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "hamburg (OSM)",
+  "url": "https://overpass.private.coffee/api/interpreter",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "rostock_rad",
+  "url": "https://www.opendata-hro.de/dataset/radmonitore",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "rostock_rad",
+  "url": "https://opendata-hro.de/dataset/radmonitore",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "wuerzburg/neuss/dortmund (ODS)",
+  "url": "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/export/",
+  "pipeline": true,
+  "werkzeug": true,
+  "crawl_delay": 1.0
+ },
+ {
+  "quelle": "wuerzburg/neuss/dortmund (ODS)",
+  "url": "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/download/?format=csv",
+  "pipeline": false,
+  "werkzeug": false,
+  "crawl_delay": 1.0
+ }
+]
