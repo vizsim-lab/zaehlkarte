@@ -126,7 +126,9 @@ quellen:
     lizenz: dl-de/zero-2-0
     lizenz_url: https://www.govdata.de/dl-de/zero-2-0
     portal: https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021
-    api: https://www.offenesdatenportal.de/api/3/action/package_show?id={paket}
+    # Metadaten aus dem DCAT-Dokument je Datensatz (die CKAN-API sperrt das Portal per robots.txt;
+    # die HTML-Seite zeigt nicht alle Ressourcen), Crawl-delay 10 s
+    ckan: https://www.offenesdatenportal.de
     # je Jahr ein Datensatz (Namen wie im Portal, teils nach der ersten Messung benannt)
     pakete:
       - verkehrszahlung-kirschenallee
@@ -160,13 +162,29 @@ quellen:
     weg: offen auf opendata.olpe.de (ab 2025)
     ferien: schulferien_nordrhein-westfalen.csv
     portal: https://opendata.olpe.de/dataset/?q=Verkehrsmessung
-    # alle Datensätze „Verkehrsmessung(en) …“ – neue Messungen kommen beim nächsten fetch dazu
-    api_suche: https://opendata.olpe.de/api/3/action/package_search?q=Verkehrsmessung&rows=200
+    # alle Datensätze „Verkehrsmessung(en) …“ – neue Messungen kommen beim nächsten fetch dazu.
+    # Über die Suche und die Seite je Datensatz (die CKAN-API sperrt das Portal per robots.txt,
+    # das DCAT-Dokument nennt keine Lizenz), Crawl-delay 10 s. Die Suche findet je nach Wortform
+    # andere Datensätze – darum beide Formen und die bekannten Datensätze (`pakete`).
+    ckan: https://opendata.olpe.de
+    suche: [Verkehrsmessung, Verkehrsmessungen]
     paket_muster: ^verkehrsmess
-    # Lizenz je Datensatz (license_id); ein Datensatz mit einer anderen Lizenz bleibt draußen
+    pakete:
+      - verkehrsmessung-alte-landstrabe
+      - verkehrsmessung-standort-zum-honigsack-35
+      - verkehrsmessung-weite-schluppe
+      - verkehrsmessungen-gunsestrabe
+      - verkehrsmessungen-hatzenbergstrabe
+      - verkehrsmessungen-in-der-wuste
+      - verkehrsmessungen-k18
+      - verkehrsmessungen-oberveischede
+      - verkehrsmessungen-rochusstrabe
+    # Lizenz je Datensatz: der Lizenz-Link auf seiner Seite (`lizenz_link`; `lizenz_id` = die
+    # Kennung im Portal); ein Datensatz mit einer anderen Lizenz bleibt draußen
     lieferungen:
       - code: dl-de-by
         lizenz_id: http://dcat-ap.de/def/licenses/dl-by-de/2.0
+        lizenz_link: https://www.govdata.de/dl-de/by-2-0
         titel: "Verkehrsmessungen (verändert: Stundensummen aus den Einzelmessungen)"
         herausgeber: Kreisstadt Olpe
         lizenz: dl-de/by-2-0
@@ -174,6 +192,7 @@ quellen:
         herkunft_url: https://opendata.olpe.de/dataset/?q=Verkehrsmessung
       - code: cc-by
         lizenz_id: http://dcat-ap.de/def/licenses/cc-by/4.0
+        lizenz_link: http://creativecommons.org/licenses/by/4.0/
         titel: "Verkehrsmessung Zum Honigsack 35 (verändert: Stundensummen aus den Einzelmessungen)"
         herausgeber: Kreisstadt Olpe
         lizenz: CC BY 4.0
@@ -219,6 +238,20 @@ quellen:
     portal: https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/
     api: https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets/verkehrszahlungen/exports/json
     abruf: potsdam/abruf.txt
+    # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
+    # den Daten gibt es nicht. Bis der Betreiber antwortet, holt die Pipeline nur diese URLs weiter
+    # (Kennung zaehlkarte-pipeline, wöchentlich bzw. monatlich) – die Projektleitung will die
+    # Quelle nicht verlieren, AGENTS.md „robots.txt und die Pipeline“. Ohne den Eintrag fiele sie
+    # beim nächsten Abruf weg; `fetch` nennt jeden Abruf, der nur dank der Ausnahme geht.
+    robots_ausnahme:
+      urls:
+        - https://opendata.potsdam.de/api/explore/
+        - https://de.ftp.opendatasoft.com/potsdam/
+      grund: >-
+        Opendatasoft sperrt /api/ und die Downloads (de.ftp.opendatasoft.com ganz); die Zählpläne
+        gibt es nur dort
+      seit: 2026-11-14
+      anfrage: noch nicht gestellt
   muenster:
     status: live
     adapter: muenster
@@ -480,7 +513,14 @@ dauer:
       sv: Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde
     nachladen_tage: 14  # so weit zurück holt jeder Lauf die Stunden erneut (Werte ändern sich noch)
     frisch_tage: 7  # jüngere Stunden kommen noch nicht in die Karte
-    osm: https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf
+    # Straßennamen für neue Stellen über Overpass (Geofabrik sperrt *.osm.pbf per robots.txt,
+    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche).
+    # Am 14.11.2026 antworteten aus GitHub Actions nur maps.mail.ru (POST, 15 s); kumi und
+    # private.coffee liefen in die Zeitgrenze.
+    overpass:
+      - https://overpass.kumi.systems/api/interpreter
+      - https://overpass.private.coffee/api/interpreter
+      - https://maps.mail.ru/osm/tools/overpass/api/interpreter
     titel: >-
       Verkehrsdaten Kfz Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
       zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
@@ -517,7 +557,14 @@ dauer:
       rad: Anzahl_Fahrraeder_Zaehlstelle_1-Stunde
     nachladen_tage: 14
     frisch_tage: 7
-    osm: https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf
+    # Straßennamen für neue Stellen über Overpass (Geofabrik sperrt *.osm.pbf per robots.txt,
+    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche).
+    # Am 14.11.2026 antworteten aus GitHub Actions nur maps.mail.ru (POST, 15 s); kumi und
+    # private.coffee liefen in die Zeitgrenze.
+    overpass:
+      - https://overpass.kumi.systems/api/interpreter
+      - https://overpass.private.coffee/api/interpreter
+      - https://maps.mail.ru/osm/tools/overpass/api/interpreter
     titel: >-
       Verkehrsdaten Rad Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
       zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
@@ -687,7 +734,9 @@ dauer:
     weg: offen im Open-Data-Portal der Stadt (täglich aktualisiert)
     ferien: schulferien_nordrhein-westfalen.csv
     portal: https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen
-    api: https://offenedaten.aachen.de/api/3/action/package_show
+    # Ressourcen von der Seite des Datensatzes (die CKAN-API sperrt das Portal per robots.txt,
+    # ein DCAT-Dokument gibt es nicht), Crawl-delay 10 s
+    ckan: https://offenedaten.aachen.de
     paket: radzaehlstellen-der-stadt-aachen
     lage:  # Korrekturen offenbarer Tippfehler im PDF der Standorte
       "447917": {lat: 50.776281, lon: 6.080208, grund: "im PDF Länge 6.80208"}
@@ -749,8 +798,10 @@ dauer:
     weg: offen im Open-Data-Portal der Stadt (Jahres- und Monatsdateien)
     ferien: schulferien_bayern.csv
     portal: https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen
-    api: https://opendata.muenchen.de/api/3/action/
-    suche: raddauerzählstellen
+    # Pakete über die Suche des Portals, Ressourcen aus dem DCAT-Dokument oder der Seite des
+    # Pakets (die CKAN-API sperrt das Portal per robots.txt), Crawl-delay 10 s
+    ckan: https://opendata.muenchen.de
+    suche: [raddauerzählstellen]
     wfs: >-
       https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen&outputFormat=application/json
     titel: >-
@@ -786,6 +837,18 @@ dauer:
     ferien: schulferien_bayern.csv
     portal: https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/
     basis: https://opendata.wuerzburg.de
+    # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
+    # den Daten gibt es nicht. Bis der Betreiber antwortet, holt die Pipeline nur diese URLs weiter
+    # (Kennung zaehlkarte-pipeline, wöchentlich bzw. monatlich) – die Projektleitung will die
+    # Quelle nicht verlieren, AGENTS.md „robots.txt und die Pipeline“. Ohne den Eintrag fiele sie
+    # beim nächsten Abruf weg; `fetch` nennt jeden Abruf, der nur dank der Ausnahme geht.
+    robots_ausnahme:
+      urls: [https://opendata.wuerzburg.de/api/explore/]
+      grund: >-
+        Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
+        es nur über diese Wege
+      seit: 2026-11-14
+      anfrage: noch nicht gestellt
     datensatz: fahrrad-zaehlung-daten
     standorte: bicycle_counter_sites
     titel: >-
@@ -824,6 +887,18 @@ dauer:
     ferien: schulferien_nordrhein-westfalen.csv
     portal: https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/
     basis: https://opendata.rhein-kreis-neuss.de
+    # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
+    # den Daten gibt es nicht. Bis der Betreiber antwortet, holt die Pipeline nur diese URLs weiter
+    # (Kennung zaehlkarte-pipeline, wöchentlich bzw. monatlich) – die Projektleitung will die
+    # Quelle nicht verlieren, AGENTS.md „robots.txt und die Pipeline“. Ohne den Eintrag fiele sie
+    # beim nächsten Abruf weg; `fetch` nennt jeden Abruf, der nur dank der Ausnahme geht.
+    robots_ausnahme:
+      urls: [https://opendata.rhein-kreis-neuss.de/api/explore/]
+      grund: >-
+        Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
+        es nur über diese Wege
+      seit: 2026-11-14
+      anfrage: noch nicht gestellt
     datensatz: eco-counter-data
     kanaele: true  # eine Zeile je Kanal; eine Stunde ist gezählt, wenn jeder Kanal einen Wert hat
     stellen:  # Lage und Ort laut Datensatzbeschreibung (die Daten nennen nur die Kommune)
@@ -868,6 +943,18 @@ dauer:
     ferien: schulferien_nordrhein-westfalen.csv
     portal: https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/
     basis: https://open-data.dortmund.de
+    # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
+    # den Daten gibt es nicht. Bis der Betreiber antwortet, holt die Pipeline nur diese URLs weiter
+    # (Kennung zaehlkarte-pipeline, wöchentlich bzw. monatlich) – die Projektleitung will die
+    # Quelle nicht verlieren, AGENTS.md „robots.txt und die Pipeline“. Ohne den Eintrag fiele sie
+    # beim nächsten Abruf weg; `fetch` nennt jeden Abruf, der nur dank der Ausnahme geht.
+    robots_ausnahme:
+      urls: [https://open-data.dortmund.de/api/explore/]
+      grund: >-
+        Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt
+        es nur über diese Wege
+      seit: 2026-11-14
+      anfrage: noch nicht gestellt
     datensatz: fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke
     stellen:  # Lage nicht im Datensatz: Knoten 5639350907 in OpenStreetMap
       # (© OpenStreetMap-Mitwirkende, ODbL), „Dauerzählstelle Radverkehr“ mit Verweis auf die
@@ -987,6 +1074,18 @@ dauer:
     portal: https://www.opendata-hro.de/dataset/radmonitore
     daten: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.csv
     standorte: https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_standorte.json
+    # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
+    # den Daten gibt es nicht. Bis der Betreiber antwortet, holt die Pipeline nur diese URLs weiter
+    # (Kennung zaehlkarte-pipeline, wöchentlich bzw. monatlich) – die Projektleitung will die
+    # Quelle nicht verlieren, AGENTS.md „robots.txt und die Pipeline“. Ohne den Eintrag fiele sie
+    # beim nächsten Abruf weg; `fetch` nennt jeden Abruf, der nur dank der Ausnahme geht.
+    robots_ausnahme:
+      urls: [https://geo.sv.rostock.de/download/opendata/radmonitore/]
+      grund: >-
+        geo.sv.rostock.de sperrt alles für alle Robots (ebenso opendata-hro.de); die Dateien gibt
+        es nur dort
+      seit: 2026-11-14
+      anfrage: noch nicht gestellt
     ohne:  # Zählstellen, die nicht in die Karte kommen, mit Grund
       "300041920": >-
         Saarplatz Lindenpark – laut Quelle „Steuergerät“; seine Tageswerte liegen stets etwas über
@@ -1028,6 +1127,19 @@ dauer:
     portal: https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter
     api: https://gitlab.opencode.de/api/v4
     projekt: StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter
+    # robots.txt (Prüfung 14.11.2026) sperrt diese Abrufe für alle Robots, einen erlaubten Weg zu
+    # den Daten gibt es nicht. Bis der Betreiber antwortet, holt die Pipeline nur diese URLs weiter
+    # (Kennung zaehlkarte-pipeline, wöchentlich bzw. monatlich) – die Projektleitung will die
+    # Quelle nicht verlieren, AGENTS.md „robots.txt und die Pipeline“. Ohne den Eintrag fiele sie
+    # beim nächsten Abruf weg; `fetch` nennt jeden Abruf, der nur dank der Ausnahme geht.
+    robots_ausnahme:
+      urls:
+        - https://gitlab.opencode.de/api/v4/projects/StadtBochum%2Fopen-data%2Fradverkehr-zaehlstellen-eco-counter/
+      grund: >-
+        openCode sperrt die GitLab-API, /*/raw, Archive und git über HTTPS für alle Robots;
+        opendata.ruhr verweist für die Dateien auf genau diese Wege
+      seit: 2026-11-14
+      anfrage: noch nicht gestellt
     stellen:  # Ordner im Repository; Name und Lage laut Tabelle im README
       wittener_strasse: {name: Wittener Straße, lat: 51.479338, lon: 7.225140}
       springorumtrasse: {name: Springorumtrasse, lat: 51.468826, lon: 7.229204}

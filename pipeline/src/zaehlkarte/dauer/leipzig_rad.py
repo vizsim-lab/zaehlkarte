@@ -136,9 +136,7 @@ def lies_standorte(text: str) -> dict[str, tuple[str, float, float]]:
 
 def hole(q: dict, pfade: Pfade) -> list[str]:
     """Standorte und die Stunden der letzten 31 Tage holen und ins Gedächtnis übernehmen."""
-    import requests
-
-    from zaehlkarte.fetch import UA
+    from zaehlkarte import abruf
 
     ordner = pfade.roh / q["code"]
     gordner = ordner / "gedaechtnis"
@@ -146,10 +144,9 @@ def hole(q: dict, pfade: Pfade) -> list[str]:
     jetzt = datetime.now(UTC).replace(microsecond=0)
     texte = {}
     for name in ("standorte", "stunden"):
-        r = requests.get(q["wfs"], params={
+        r = abruf.hole(q["wfs"], params={
             "service": "WFS", "version": "2.0.0", "request": "GetFeature",
-            "typeName": q["ebenen"][name], "outputFormat": "csv"}, headers=UA, timeout=300)
-        r.raise_for_status()
+            "typeName": q["ebenen"][name], "outputFormat": "csv"}, timeout=300)
         r.encoding = "utf-8"
         texte[name] = r.text
     werte, weg = lies_stunden(texte["stunden"])

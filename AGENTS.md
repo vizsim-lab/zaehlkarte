@@ -32,9 +32,8 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
   `/*/raw`), geo.sv.rostock.de (ganz), Downloads `*.osm.pbf` bei Geofabrik. FragDenStaat und
   GovData daher nur über die Websuche (`site:fragdenstaat.de`, `site:govdata.de`); Anhänge liegen
   auf media.frag-den-staat.de (eigener Host, erlaubt). Ältere Abschnitte unten beschreiben noch die
-  API-Wege – sie sind so nicht mehr zu gehen. Die Abrufe der Pipeline gegen robots.txt:
-  `ergebnis/robots_audit/audit.md` auf `werkzeug/erkundung` (Entscheidung offen, siehe
-  „robots.txt und die Pipeline“).
+  API-Wege – sie sind so nicht mehr zu gehen. Die Pipeline prüft robots.txt selbst
+  (`pipeline/src/zaehlkarte/abruf.py`); Stand und Ausnahmen: „robots.txt und die Pipeline“.
 - **Open-Data-Portale der Städte und Länder:** MobiData BW (CKAN, Gruppe
   `verkehrszaehldaten`, Pakete `zaehldaten-*`), opendata.potsdam.de, opendata.ruhr, Open.NRW.
   CKAN-API: `/api/3/action/package_search?q=Verkehrszählung`. Für Baden-Württemberg reicht
@@ -404,23 +403,56 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
 [DNG](https://www.gesetze-im-internet.de/dng/BJNR294200021.html),
 [MobiData BW Factsheet](https://mobidata-bw.de/data/MobiData-BW-Factsheet-Datenbereitstellungspflichten.pdf).
 
-## robots.txt und die Pipeline (Prüfung 14.11.2026)
+## robots.txt und die Pipeline (Stand 14.11.2026)
 `tools/robots_audit.py` (Branch `werkzeug/erkundung`, Ergebnis `ergebnis/robots_audit/audit.md`)
-prüft die Abrufe der Pipeline für ihre Kennung `zaehlkarte-pipeline` (es gilt die Gruppe `*`).
-Gesperrt für alle Kennungen sind:
-- die CKAN-API bei Moers (offenesdatenportal.de), Olpe, Aachen und München – dort erlaubt: die
-  Datensatzseiten (`/dataset/<name>`) und die Downloads der Ressourcen, Crawl-delay 10 Sekunden;
-- die Opendatasoft-Portale von Potsdam, Würzburg, dem Rhein-Kreis Neuss und Dortmund: `/api/` und
-  `/explore/dataset/*/download` – dort gibt es keinen erlaubten Weg zu den Daten;
-- Rostock (`geo.sv.rostock.de`, ganz), Bochum (gitlab.opencode.de: `/api/v*`, `/*/raw`), der
-  OSM-Auszug für Hamburg (Geofabrik: `*.osm.pbf`).
-Erlaubt: MobiData BW (Dateien unter `/daten/`), Münster, Konstanz, Xanten (opendata.ruhr ohne
-Query), Berlin (Archiv, Rad-Datei), Hamburg (SensorThings), Ettlingen, Open.NRW (API), Leipzig,
-Bonn, Düsseldorf. Viele Betreiber sperren ihre API in robots.txt gegen Suchmaschinen und bieten
-sie zugleich für Programme an – ob eine Pipeline, die bekannte Dateien wöchentlich holt, als
-„Robot“ gilt, ist eine Abwägung. Offen (Entscheidung der Projektleitung): auf erlaubte Wege
-umstellen, wo es sie gibt (CKAN), den Crawl-delay einhalten, für den Rest die Betreiber fragen
-oder die Quelle zurückstellen.
+hat die Abrufe der Pipeline gegen robots.txt geprüft; zehn Quellen holten über Wege, die
+robots.txt für alle Robots sperrt. Seitdem:
+- **Die Pipeline prüft jeden Abruf selbst** (`pipeline/src/zaehlkarte/abruf.py`): robots.txt nach
+  RFC 9309 für ihre Kennung `zaehlkarte-pipeline` (sonst die Gruppe `*`), Crawl-delay je Host
+  (höchstens 60 s), jedes Weiterleitungsziel. Gesperrtes nur mit `robots_ausnahme` an der Quelle in
+  sources.yaml (URL-Anfänge, Grund, seit, Stand der Anfrage beim Betreiber); das Protokoll von
+  `fetch` und `dauer fetch` nennt jeden Abruf, der nur dank einer Ausnahme ging, und die Wartezeit.
+  Neue Quellen: ohne erlaubten Weg keine Aufnahme, außer die Projektleitung beschließt eine
+  Ausnahme. GitHub (Checkout, Releases, API mit dem Token des Workflows) ist kein Crawlen und
+  bleibt außen vor.
+- **Umgestellt auf erlaubte Wege** (`pipeline/src/zaehlkarte/ckan.py`, Muster in
+  `ergebnis/wege2/`):
+  - Moers (offenesdatenportal.de): DCAT-Dokument je Datensatz (`/dataset/<name>.jsonld`) – die
+    HTML-Seite zeigt nur einen Teil der Ressourcen. Rund 200 Dateien mit 10 s Abstand: ein Lauf
+    von „Kartendaten neu bauen“ dauert eine gute halbe Stunde länger.
+  - Olpe: HTML-Suche und HTML-Seite je Datensatz. Die HTML-Suche findet je nach Wortform andere
+    Datensätze („Verkehrsmessung“ 5, „Verkehrsmessungen“ 8; die API fand mit dem ersten Wort alle
+    neun) – beide Formen plus die bekannten (`pakete`). Das DCAT-Dokument nennt keine Lizenz; die
+    Lizenz kommt aus dem Link der Seite (`lizenz_link` der Lieferung).
+  - Probelauf 14.11. (`tools/pipeline_probe.py`, `ergebnis/pipeline_probe/`): Olpe 9 Datensätze,
+    13 Messungen, 128 Zählungen; Moers 2021 und Kirschenallee 47 Dateien, 181 Zählungen – beides
+    genau wie in der Karte.
+  - Aachen: HTML-Seite (kein DCAT-Dokument). Die Stadt legt täglich eine neue Datei für das
+    laufende Jahr an und löscht die alte später; bei zwei Dateien eines Jahres gilt die jüngste
+    laut Seite der Ressource („Daten wurden zuletzt aktualisiert“).
+  - München: HTML-Suche, je Paket DCAT-Dokument oder HTML-Seite. Für die Werkzeuge nicht prüfbar
+    (opendata.muenchen.de sperrt ClaudeBot ganz); für die Pipeline erlaubt (Gruppe `*`).
+  - Hamburg: Straßennamen neuer Stellen über Overpass (overpass.kumi.systems,
+    overpass.private.coffee, maps.mail.ru – in dieser Reihenfolge) statt Geofabrik-Abzug –
+    Geofabrik sperrt `*.osm.pbf` (ebenso openstreetmap.fr ganz und BBBike `*.pbf`),
+    overpass-api.de seine API. Am 14.11. antwortete aus Actions nur maps.mail.ru (POST, 15 s; GET
+    504), kumi und private.coffee liefen in die Zeitgrenze (`ergebnis/overpass_probe/`). Scheitern
+    alle, bleiben die neuen Stellen ohne Namen, der nächste Lauf fragt neu.
+  - Moers-Geokodierung (`werkzeuge/geokodiere_moers.py`): Overpass über kumi, Abrufe über
+    `abruf` (Nominatim und Photon prüft es beim nächsten Lauf).
+- **Ausnahmen** (die Projektleitung will die Quellen nicht verlieren; bis die Betreiber
+  antworten): Potsdam (Opendatasoft-API, Zählpläne auf de.ftp.opendatasoft.com – ganz gesperrt),
+  Würzburg, Rhein-Kreis Neuss, Dortmund (Opendatasoft `/api/explore/`; auch
+  `/explore/dataset/*/download` ist gesperrt), Rostock (geo.sv.rostock.de und opendata-hro.de
+  ganz), Bochum (openCode-GitLab: API, `/*/raw`, Archive und git über HTTPS; opendata.ruhr
+  verweist auf genau diese Wege). Viele Betreiber sperren ihre API gegen Suchmaschinen und bieten
+  sie zugleich für Programme an – die Anfrage klärt, ob ein wöchentlicher Abruf bekannter Dateien
+  gemeint ist. Entwürfe: Projekt-Dokument `claude/anfragen-robots-2026-11.md`.
+- **Ohne Ausnahme gesperrt:** Workflow „Berlin geokodieren“ (Geofabrik-Abzug Berlin) – bricht ab,
+  das Ergebnis des letzten Laufs liegt im Git.
+- **Erlaubt** laut Prüfung: MobiData BW (Dateien unter `/daten/`), Münster, Konstanz, Xanten
+  (opendata.ruhr ohne Query), Berlin (Archiv, Rad-Datei), Hamburg (SensorThings), Ettlingen,
+  Open.NRW (API; Essen und Düsseldorf laden von den Seiten der Städte), Leipzig, Bonn.
 
 ## Dauerzählstellen (November 2026)
 
@@ -448,8 +480,9 @@ oder die Quelle zurückstellen.
     Stunden, die sieben Tage alt sind.
   - UTC (laut Quelle). Die Rückstellung legt zwei UTC-Stunden auf 2 Uhr Ortszeit.
   - Keine Straßennamen, nur Kennung (`assetID` = Knotenpunkt, 9, Arm, Richtung) und Punkt →
-    nächste benannte Straße aus dem Geofabrik-Abzug (OSM, ODbL), Kreuzungsname aus den
-    übrigen Armen desselben Knotenpunkts.
+    nächste benannte Straße aus OSM (ODbL; über Overpass, seit November 2026 – den
+    Geofabrik-Abzug sperrt robots.txt), Kreuzungsname aus den übrigen Armen desselben
+    Knotenpunkts.
   - Verschachteltes `$expand=Observations(…;$filter=phenomenonTime ge …;$top=10000)` über eine
     Seite Datastreams spart Abfragen; `$top` bis 20.000 geht.
   - Die alten Dienste `HH_STA_AutomatisierteVerkehrsmengenerfassung` und

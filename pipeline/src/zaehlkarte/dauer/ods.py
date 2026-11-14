@@ -16,25 +16,17 @@ from pathlib import Path
 
 
 def metadaten(basis: str, datensatz: str) -> dict:
-    import requests
+    from zaehlkarte import abruf
 
-    from zaehlkarte.fetch import UA
-
-    r = requests.get(f"{basis}/api/explore/v2.1/catalog/datasets/{datensatz}", headers=UA,
-                     timeout=120)
-    r.raise_for_status()
-    return r.json()
+    return abruf.hole(f"{basis}/api/explore/v2.1/catalog/datasets/{datensatz}").json()
 
 
 def datensaetze(basis: str, datensatz: str, **params: str) -> list[dict]:
     """Einige Datensätze über die Records-API (höchstens 100)."""
-    import requests
+    from zaehlkarte import abruf
 
-    from zaehlkarte.fetch import UA
-
-    r = requests.get(f"{basis}/api/explore/v2.1/catalog/datasets/{datensatz}/records",
-                     params={"limit": "100", **params}, headers=UA, timeout=120)
-    r.raise_for_status()
+    r = abruf.hole(f"{basis}/api/explore/v2.1/catalog/datasets/{datensatz}/records",
+                   params={"limit": "100", **params})
     return r.json().get("results", [])
 
 

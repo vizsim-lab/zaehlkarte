@@ -7,9 +7,10 @@ from zaehlkarte.adapters import olpe_radar as o
 from zaehlkarte.config import Pfade
 
 DL = "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+DL_LINK = "https://www.govdata.de/dl-de/by-2-0"
 QUELLE = {
     "code": "olpe", "land": "NW",
-    "lieferungen": [{"code": "dl-de-by", "lizenz_id": DL}],
+    "lieferungen": [{"code": "dl-de-by", "lizenz_id": DL, "lizenz_link": DL_LINK}],
     "orte": {"tabelle.json": {"name": "Zum Honigsack 35", "lon": 7.85, "lat": 51.0}},
 }
 
@@ -91,27 +92,29 @@ def test_umstellung_auf_sommerzeit():
 
 
 def test_hole_ersetzt_den_alten_abruf(tmp_path, monkeypatch):
-    from zaehlkarte import fetch
+    from zaehlkarte import ckan, fetch
 
     pfade = Pfade(pipeline=tmp_path, repo=tmp_path)
-    q = {**QUELLE, "adapter": "olpe_radar", "api_suche": "https://example.org/suche",
-         "paket_muster": "^verkehrsmess"}
-    pakete = [
-        {"name": "verkehrsmessung-standort-zum-honigsack-35", "license_id": DL,
-         "title": "Verkehrsmessung Standort „Zum Honigsack 35“",
-         "resources": [{"url": "https://example.org/Zum%20Honigsack%2035.json"},
-                       {"url": "https://example.org/Zum%20Honigsack%2035.csv"}]},
-        {"name": "parkplaetze", "resources": [{"url": "https://example.org/p.json"}]},
-    ]
+    q = {**QUELLE, "adapter": "olpe_radar", "ckan": "https://example.org",
+         "suche": ["Verkehrsmessung", "Verkehrsmessungen"], "paket_muster": "^verkehrsmess",
+         "pakete": ["verkehrsmessungen-bekannt"]}
+    pakete = {
+        "verkehrsmessung-standort-zum-honigsack-35": {
+            "name": "verkehrsmessung-standort-zum-honigsack-35", "license_url": DL_LINK,
+            "title": "Verkehrsmessung Standort „Zum Honigsack 35“",
+            "resources": [{"url": "https://example.org/Zum%20Honigsack%2035.json"},
+                          {"url": "https://example.org/Zum%20Honigsack%2035.csv"}]},
+        "verkehrsmessungen-bekannt": {"name": "verkehrsmessungen-bekannt", "resources": []},
+    }
+    gesucht, gelesen, geladen = [], [], []
 
-    class Antwort:
-        def raise_for_status(self):
-            pass
+    def suche(basis, begriffe):
+        gesucht.append((basis, begriffe))
+        return ["verkehrsmessung-standort-zum-honigsack-35", "parkplaetze"]
 
-        def json(self):
-            return {"result": {"results": pakete}}
-
-    geladen = []
+    def paket(basis, name, wege):
+        gelesen.append((name, wege))
+        return pakete[name]
 
     def lade(url, ziel):
         geladen.append(url)
@@ -119,15 +122,20 @@ def test_hole_ersetzt_den_alten_abruf(tmp_path, monkeypatch):
         return ziel
 
     monkeypatch.setattr(fetch, "quellen", lambda pfade: {"olpe": q})
-    monkeypatch.setattr(fetch.requests, "get", lambda url, **kw: Antwort())
+    monkeypatch.setattr(ckan, "suche", suche)
+    monkeypatch.setattr(ckan, "paket", paket)
     monkeypatch.setattr(fetch, "lade", lade)
     alt = pfade.roh / "olpe" / "verkehrsmessungen-alt"
     alt.mkdir(parents=True)
-    assert fetch.hole(pfade, ["olpe"]) == ["olpe: 1 Datensätze, 1 Messungen"]
+    assert fetch.hole(pfade, ["olpe"]) == ["olpe: 2 Datensätze, 1 Messungen"]
+    assert gesucht == [("https://example.org", ["Verkehrsmessung", "Verkehrsmessungen"])]
+    # die Suche und die bekannten Datensätze, nur „verkehrsmess…“; Lizenz steht nur auf der Seite
+    assert gelesen == [("verkehrsmessung-standort-zum-honigsack-35", ("html",)),
+                       ("verkehrsmessungen-bekannt", ("html",))]
     ordner = pfade.roh / "olpe" / "verkehrsmessung-standort-zum-honigsack-35"
     assert (ordner / "Zum Honigsack 35.json").exists()  # Name wie in `orte`
-    paket = json.loads((ordner / "paket.json").read_text(encoding="utf-8"))
-    assert paket["license_id"] == DL and paket["title"].endswith("35“")
+    paket_json = json.loads((ordner / "paket.json").read_text(encoding="utf-8"))
+    assert paket_json["license_url"] == DL_LINK and paket_json["title"].endswith("35“")
     assert not alt.exists() and geladen == ["https://example.org/Zum%20Honigsack%2035.json"]
 
 
@@ -137,7 +145,7 @@ def test_lese(tmp_path):
         ("verkehrsmessungen-rochusstrabe", DL, "geraet.json",
          _geraet([(f"2025-06-20 {h:02d}:30:00", 7) for h in range(10, 16)],
                  [("2025-06-20 21:59:59Z", 7.85, 51.03)])),
-        ("verkehrsmessung-standort-zum-honigsack-35", DL, "tabelle.json",
+        ("verkehrsmessung-standort-zum-honigsack-35", DL_LINK, "tabelle.json",
          [{"Datum": f"25.03.2026 {h:02d}:10:00", "Richtung": 1, "Klasse": 9,
            "Fahrzeugklassen-Bezeichnung": "Sattel-Kfz"} for h in range(8, 12)]),
         ("verkehrsmessungen-fremd", "http://dcat-ap.de/def/licenses/other-closed", "fremd.json",
@@ -147,8 +155,9 @@ def test_lese(tmp_path):
         ordner.mkdir(parents=True)
         (ordner / datei).write_text(json.dumps(inhalt), encoding="utf-8")
         titel = "Verkehrsmessungen Rochusstraße" if "rochus" in name else "Verkehrsmessung"
+        schluessel = "license_url" if lizenz.startswith("https://www.govdata") else "license_id"
         (ordner / "paket.json").write_text(json.dumps({
-            "name": name, "title": titel, "license_id": lizenz,
+            "name": name, "title": titel, schluessel: lizenz,
             "resources": [{"name": "Messung", "url": f"https://example.org/{datei}"}]}),
             encoding="utf-8")
     b = o.Bericht()

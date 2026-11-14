@@ -21,7 +21,9 @@ als Radfahrer erkannt (nur auf der Fahrbahn).
   Stunden am Stück ohne jedes Fahrzeug, in denen nach den übrigen Tagen mindestens zehn zu
   erwarten wären, gelten als Ausfall des Geräts („nicht gezählt“, mit Hinweis; ein Tag ganz im
   Ausfall ergibt keine Zählung); leere Nachtstunden in ruhigen Straßen bleiben echte Nullen.
-- Lizenz je Datensatz (`license_id`) → Lieferung in sources.yaml; ein Datensatz mit anderer
+- Lizenz je Datensatz: der Lizenz-Link auf seiner Seite (`license_url`; die CKAN-API mit der
+  `license_id` sperrt das Portal per robots.txt, das DCAT-Dokument nennt keine Lizenz) →
+  Lieferung in sources.yaml (`lizenz_link`, sonst `lizenz_id`); ein Datensatz mit anderer
   Lizenz kommt nicht in die Karte.
 """
 
@@ -236,18 +238,20 @@ def ort_aus_titel(titel: str) -> str:
 
 def lese(quelle: dict, pfade: Pfade, bericht: Bericht | None = None) -> Iterator[Zaehlung]:
     bericht = bericht if bericht is not None else Bericht()
-    lizenzen = {lf["lizenz_id"]: lf["code"] for lf in quelle.get("lieferungen", [])}
+    lizenzen = {lf[k]: lf["code"] for lf in quelle.get("lieferungen", [])
+                for k in ("lizenz_id", "lizenz_link") if lf.get(k)}
     orte = quelle.get("orte") or {}
     for paket_pfad in sorted((pfade.roh / "olpe").glob("*/paket.json")):
         paket = json.loads(paket_pfad.read_text(encoding="utf-8"))
-        lieferung = lizenzen.get(paket.get("license_id") or "")
+        lizenz = paket.get("license_url") or paket.get("license_id") or ""
+        lieferung = lizenzen.get(lizenz)
         for r in paket.get("resources", []):
             datei = unquote((r.get("url") or "").rsplit("/", 1)[-1])
             pfad = paket_pfad.parent / datei
             if not datei.lower().endswith(".json") or not pfad.exists():
                 continue
             if lieferung is None:
-                bericht.lizenz_fremd.append(f"{datei} ({paket.get('license_id')})")
+                bericht.lizenz_fremd.append(f"{datei} ({lizenz or 'ohne Lizenz'})")
                 continue
             try:
                 m = lese_messung(pfad.read_text(encoding="utf-8", errors="replace"))

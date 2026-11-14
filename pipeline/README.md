@@ -4,12 +4,19 @@ uv-Paket `zaehlkarte`: liest jede Quelle aus `config/sources.yaml` mit ihrem Ada
 alle Zählungen in ein Schema (`src/zaehlkarte/modell.py`) und schreibt die Kartendaten nach
 `../public/data/`.
 
+Jeder Abruf geht über `src/zaehlkarte/abruf.py`: nur, was robots.txt für die Kennung
+`zaehlkarte-pipeline` (sonst `*`) erlaubt, mit dem Abstand, den sie verlangt (Crawl-delay, bei
+den CKAN-Portalen 10 Sekunden). Ausnahmen nur über `robots_ausnahme` an der Quelle in
+`config/sources.yaml` (mit Grund und Stand der Anfrage beim Betreiber); `fetch` und `dauer fetch`
+nennen am Ende, welche Abrufe nur dank einer Ausnahme gingen und wie lange sie gewartet haben.
+Hintergrund: `../AGENTS.md`, „robots.txt und die Pipeline“.
+
 ```
 fetch  Rohdaten -> data/raw/           Berlin-Archive + Geokodierung (sha256 geprüft),
                                          MobiData BW: Übersicht + Excel aus den ZIPs,
                                          Münster: Positionen + XLS/PDF aus dem ZIP (sha256),
-                                         Moers: Datensätze 2010–2022 (CKAN-API),
-                                         Olpe: alle Verkehrsmessungen (CKAN-Suche), JSON,
+                                         Moers: Datensätze 2010–2022 (DCAT-Dokument),
+                                         Olpe: alle Verkehrsmessungen (Suche und Seite), JSON,
                                          Konstanz: eine CSV je Standort (sha256),
                                          Potsdam: Knotenliste (API) + Zählpläne aus den ZIPs,
                                          Xanten: zwei PDFs (sha256)
@@ -19,7 +26,7 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 
 dauer fetch  -> data/raw/berlin_viz/     Berlin: Monatsarchive der Verkehrsdetektion (Content-MD5)
              -> data/raw/hamburg_*/      Hamburg: Stellen (stellen.json) und gedaechtnis/ (Stunden
-                                         je UTC-Monat, Straßennamen aus OSM)
+                                         je UTC-Monat, Straßennamen aus OSM über Overpass)
              -> data/raw/ettlingen/      Ettlingen: Datastore von re@di
              -> data/raw/*_rad/          Rad-Zählstellen: MobiData BW (Monatsdateien, fehlende und
                                          die jüngsten zwei), Münster (Archiv des GitHub-Repositorys,
@@ -44,6 +51,8 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `adapters/potsdam_pdf.py` | Potsdam: Zählpläne (PDF) mit Spitzenstunden und 6-Stunden-Summen |
 | `adapters/xanten_pdf.py` | Xanten: Viertelstundenwerte aus den PDFs des Mobilitätskonzepts |
 | `adapters/muenster.py`, `muenster_xls.py`, `muenster_pdf.py` | Münster: Knotenstrompläne als XLS (2000–2012) und PDF (2010–2020) |
+| `abruf.py` | jeder Abruf: robots.txt (RFC 9309) für `zaehlkarte-pipeline`, Crawl-delay, Ausnahmen aus sources.yaml, Protokoll |
+| `ckan.py` | CKAN-Portale ohne API (die sperren sie per robots.txt): DCAT-Dokument oder HTML-Seite eines Datensatzes, HTML-Suche |
 | `koordinaten.py` | UTM -> Länge/Breite, örtliche Anpassung Gauß-Krüger -> UTM |
 | `kalender.py` | Schultag, Ferien, Feiertag, Wochenende je Land |
 | `kennzahlen.py` | Summen je Zeitfenster, stärkste Stunde |
@@ -67,7 +76,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/bonn_rad.py` | Bonn: Jahresdateien (Stundenauswertung), zwei Zeitformate, Summen der Brücken weg, Lage aus OSM |
 | `dauer/duesseldorf_rad.py` | Düsseldorf: Jahresdateien je Zählstelle, Zuordnung über den Namen, vier Formate, Summen weg |
 | `dauer/gedaechtnis.py` | Gedächtnis der Quellen mit kurzer Vorhaltezeit (Hamburg, Leipzig): Monatsdateien je UTC-Tag |
-| `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen) |
+| `dauer/strassen.py` | nächste benannte Straße aus OSM über Overpass oder aus einem Abzug (für Quellen ohne Straßennamen) |
 | `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen (Workflow) |
 | `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Text von `pdftotext -layout`), mit Abgleich gegen eine vorhandene CSV |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |

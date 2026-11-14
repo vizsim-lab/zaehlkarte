@@ -1,14 +1,17 @@
 """Rohdaten holen: Archive mit Prüfsumme (Berlin), MobiData BW samt Excel aus den ZIPs.
 
-Alles landet in pipeline/data/raw/ (gitignored). Berlin-Archive und Geokodierung sind auf einen
-Commit gepinnt (sha256 in sources.yaml); eine abweichende Prüfsumme bricht ab. MobiData BW
-liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt, aus dem ZIP nur
-die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
-Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz die Metadaten
-(CKAN-API) und alle Messdateien, jedes Mal neu. Konstanz: je Standort eine CSV mit Prüfsumme.
-Potsdam: Knotenliste (Opendatasoft-API) und je Knoten das ZIP der Zählpläne, jedes Mal neu; das
-Datum des Abrufs steht in `potsdam/abruf.txt` – es gehört zur Quellenangabe (NB-16-OGD).
-Olpe: alle Datensätze „Verkehrsmessung(en) …“ (CKAN-Suche) samt JSON-Dateien, jedes Mal neu.
+Alles landet in pipeline/data/raw/ (gitignored). Jeder Abruf geht über `zaehlkarte.abruf` – nur,
+was robots.txt erlaubt, mit dem verlangten Abstand (Crawl-delay). Berlin-Archive und Geokodierung
+sind auf einen Commit gepinnt (sha256 in sources.yaml); eine abweichende Prüfsumme bricht ab.
+MobiData BW liefert laufend neue Zählungen: Übersicht und ZIP werden jedes Mal neu geholt, aus dem
+ZIP nur die Excel-Dateien behalten (die PDFs sind dieselben Zahlen als Bericht). Münster: ZIP und
+Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz die Metadaten (DCAT-
+Dokument des Portals, `zaehlkarte.ckan`) und alle Messdateien – neu nur, was fehlt oder sich laut
+Metadaten geändert hat. Konstanz: je Standort eine CSV mit Prüfsumme. Potsdam: Knotenliste
+(Opendatasoft-API) und je Knoten das ZIP der Zählpläne, jedes Mal neu; das Datum des Abrufs steht
+in `potsdam/abruf.txt` – es gehört zur Quellenangabe (NB-16-OGD). Olpe: alle Datensätze
+„Verkehrsmessung(en) …“ (HTML-Suche und -Seite des Portals, die Lizenz steht nur dort) samt
+JSON-Dateien, jedes Mal neu.
 """
 
 from __future__ import annotations
@@ -23,11 +26,10 @@ from datetime import date
 from pathlib import Path
 from urllib.parse import unquote
 
-import requests
-
+from zaehlkarte import abruf, ckan
 from zaehlkarte.config import Pfade, quellen
 
-UA = {"User-Agent": "zaehlkarte-pipeline (+https://github.com/vizsim-lab/zaehlkarte)"}
+UA = abruf.UA
 
 
 def sha256(pfad: Path) -> str:
@@ -39,15 +41,12 @@ def sha256(pfad: Path) -> str:
 
 
 def lade(url: str, ziel: Path) -> Path:
-    ziel.parent.mkdir(parents=True, exist_ok=True)
-    tmp = ziel.with_suffix(ziel.suffix + ".teil")
-    with requests.get(url, headers=UA, stream=True, timeout=600) as r:
-        r.raise_for_status()
-        with tmp.open("wb") as f:
-            for block in r.iter_content(1 << 20):
-                f.write(block)
-    tmp.replace(ziel)
-    return ziel
+    """Datei holen (robots.txt und Crawl-delay: `zaehlkarte.abruf`)."""
+    return abruf.lade(url, ziel)
+
+
+def _schreibe_json(pfad: Path, daten: object) -> None:
+    pfad.write_text(json.dumps(daten, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 def lade_geprueft(url: str, ziel: Path, soll: str | None) -> str:
@@ -94,6 +93,7 @@ def entpacke_flach(zip_pfad: Path, ziel: Path, endungen: tuple[str, ...]) -> int
 def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
     pfade = pfade or Pfade()
     log = []
+    abruf.ausnahmen_setzen(quellen(pfade))
     for code, q in quellen(pfade).items():
         if nur and code not in nur:
             continue
@@ -110,20 +110,26 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 n = entpacke_excel(zip_pfad, ordner / "zip")
             log.append(f"{code}: Übersicht + {n} Excel-Dateien")
         elif q["adapter"] == "moers_radar":
-            n = 0
+            n = neu = 0
             for paket in q["pakete"]:
                 ordner = pfade.roh / "moers" / paket
                 ordner.mkdir(parents=True, exist_ok=True)
-                antwort = requests.get(q["api"].format(paket=paket), headers=UA, timeout=120)
-                antwort.raise_for_status()
-                p = antwort.json()["result"]
-                (ordner / "paket.json").write_text(json.dumps(p, ensure_ascii=False, indent=1))
-                for r in p.get("resources", []):
+                vorher = {}
+                if (ordner / "paket.json").exists():
+                    alt = json.loads((ordner / "paket.json").read_text(encoding="utf-8"))
+                    vorher = {r.get("url"): r.get("last_modified") for r in alt["resources"]}
+                p = ckan.paket(q["ckan"], paket, wege=("dcat",))
+                for r in p["resources"]:
                     datei = unquote((r.get("url") or "").rsplit("/", 1)[-1])
-                    if datei:
-                        lade(r["url"], ordner / datei)
-                        n += 1
-            log.append(f"{code}: {len(q['pakete'])} Datensätze, {n} Messungen")
+                    if not datei:
+                        continue
+                    n += 1
+                    if (ordner / datei).exists() and vorher.get(r["url"]) == r["last_modified"]:
+                        continue  # unverändert seit dem letzten Abruf
+                    lade(r["url"], ordner / datei)
+                    neu += 1
+                _schreibe_json(ordner / "paket.json", p)
+            log.append(f"{code}: {len(q['pakete'])} Datensätze, {n} Messungen ({neu} geladen)")
         elif q["adapter"] == "muenster":
             ordner = pfade.roh / "muenster"
             pos = q["positionen"]
@@ -135,9 +141,7 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
             log.append(f"{code}: Positionen + {n} XLS- und PDF-Dateien")
         elif q["adapter"] == "potsdam_pdf":
             ordner = pfade.roh / "potsdam"
-            antwort = requests.get(q["api"], headers=UA, timeout=120)
-            antwort.raise_for_status()
-            knoten = antwort.json()
+            knoten = abruf.hole(q["api"]).json()
             ordner.mkdir(parents=True, exist_ok=True)
             (ordner / "export.json").write_text(json.dumps(knoten, ensure_ascii=False, indent=1))
             n = 0
@@ -157,20 +161,20 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> list[str]:
                 ziel = pfade.roh / "xanten" / d["datei"]
                 log.append(lade_geprueft(d["url"], ziel, d.get("sha256")))
         elif q["adapter"] == "olpe_radar":
-            antwort = requests.get(q["api_suche"], headers=UA, timeout=120)
-            antwort.raise_for_status()
-            pakete = [p for p in antwort.json()["result"]["results"]
-                      if re.search(q["paket_muster"], p["name"])]
-            if not pakete:
-                raise ValueError(f"{code}: keine Datensätze gefunden ({q['api_suche']})")
+            # die Suche des Portals findet je nach Wortform andere Datensätze – alle Begriffe,
+            # dazu die bekannten (`pakete`), falls die Suche einen einmal nicht findet
+            namen = ckan.suche(q["ckan"], q["suche"]) + q.get("pakete", [])
+            namen = sorted({x for x in namen if re.search(q["paket_muster"], x)})
+            if not namen:
+                raise ValueError(f"{code}: keine Datensätze gefunden ({q['ckan']})")
+            pakete = [ckan.paket(q["ckan"], name, wege=("html",)) for name in namen]
             n = 0
             with tempfile.TemporaryDirectory() as tmp:
                 neu = Path(tmp) / "olpe"
                 for p in pakete:
                     ordner = neu / p["name"]
                     ordner.mkdir(parents=True)
-                    (ordner / "paket.json").write_text(json.dumps(p, ensure_ascii=False, indent=1),
-                                                       encoding="utf-8")
+                    _schreibe_json(ordner / "paket.json", p)
                     for r in p.get("resources", []):
                         datei = unquote((r.get("url") or "").rsplit("/", 1)[-1])
                         if datei.lower().endswith(".json"):

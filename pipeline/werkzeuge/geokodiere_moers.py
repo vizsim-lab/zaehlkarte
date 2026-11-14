@@ -8,11 +8,13 @@ Max-Beckmann-Straße“, „Orsoyer Allee an VZ 274“). Daraus:
 - nur eine Straße -> Mitte der Straße (Nominatim), Genauigkeit `strasse` – ungefähr;
 - nichts gefunden (Tippfehler im Namen) -> Photon (unscharfe Suche).
 
-Läuft dort, wo Nominatim und Overpass erreichbar sind (GitHub Actions):
-    python3 geokodiere_moers.py ROHDATEN ZIEL
+Läuft dort, wo Nominatim und Overpass erreichbar sind (GitHub Actions), aus pipeline/:
+    uv run python werkzeuge/geokodiere_moers.py ROHDATEN ZIEL
 ROHDATEN  pipeline/data/raw/moers (je Datensatz ein Ordner mit paket.json)
 ZIEL      pipeline/geokodierung/moers.csv – nicht von Hand ändern.
-Nur Standardbibliothek; höchstens eine Anfrage je Sekunde (Nutzungsregeln von Nominatim).
+Abrufe über `zaehlkarte.abruf` (robots.txt, Crawl-delay), höchstens eine Anfrage je Sekunde
+(Nutzungsregeln von Nominatim). Overpass über einen Server, der seine API erlaubt
+(overpass-api.de sperrt `/api/` per robots.txt, Prüfung November 2026).
 """
 
 from __future__ import annotations
@@ -23,24 +25,22 @@ import re
 import sys
 import time
 import urllib.parse
-import urllib.request
 from pathlib import Path
 
-UA = {"User-Agent": "zaehlkarte-geokodierung/0.1 (+https://github.com/vizsim-lab/zaehlkarte)"}
+from zaehlkarte import abruf
+
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
-OVERPASS = "https://overpass-api.de/api/interpreter"
+OVERPASS = "https://overpass.kumi.systems/api/interpreter"
 PHOTON = "https://photon.komoot.io/api/"
 _letzte = [0.0]
 
 
-def hole(url: str, daten: bytes | None = None) -> object:
+def hole(url: str, daten: dict | None = None) -> object:
     warten = 1.1 - (time.time() - _letzte[0])
     if warten > 0:
         time.sleep(warten)
     _letzte[0] = time.time()
-    anfrage = urllib.request.Request(url, data=daten, headers=UA)
-    with urllib.request.urlopen(anfrage, timeout=90) as a:
-        return json.loads(a.read())
+    return abruf.hole(url, daten=daten, timeout=90).json()
 
 
 def adresse(name: str) -> tuple[list[str], str | None]:
@@ -126,7 +126,7 @@ way(area.m)["highway"]["name"="{a}"]->.a;
 way(area.m)["highway"]["name"="{b}"]->.b;
 node(w.a)(w.b);
 out;"""
-    daten = hole(OVERPASS, urllib.parse.urlencode({"data": abfrage}).encode())
+    daten = hole(OVERPASS, {"data": abfrage})
     knoten = daten.get("elements", [])
     if not knoten:
         return None

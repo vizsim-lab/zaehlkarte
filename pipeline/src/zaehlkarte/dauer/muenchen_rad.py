@@ -85,18 +85,17 @@ def dateien_waehlen(ressourcen: list[dict]) -> dict[str, str]:
 
 
 def hole(q: dict, pfade: Pfade) -> list[str]:
-    """Pakete über die CKAN-Suche finden, Dateien holen (nur neue oder geänderte URLs), WFS."""
-    import requests
-
-    from zaehlkarte.fetch import UA, lade
+    """Pakete über die Suche des Portals finden (HTML; die CKAN-API sperrt es per robots.txt),
+    ihre Ressourcen aus dem DCAT-Dokument oder der Seite des Pakets; Dateien holen (nur neue oder
+    geänderte URLs), WFS."""
+    from zaehlkarte import ckan
+    from zaehlkarte.fetch import lade
 
     ordner = pfade.roh / q["code"]
     ordner.mkdir(parents=True, exist_ok=True)
     jetzt = datetime.now(UTC).replace(microsecond=0)
-    r = requests.get(q["api"] + "package_search", params={"q": q["suche"], "rows": 200},
-                     headers=UA, timeout=120)
-    r.raise_for_status()
-    ressourcen = [x for p in r.json()["result"]["results"] for x in p.get("resources", [])]
+    namen = ckan.suche(q["ckan"], q["suche"])
+    ressourcen = [x for n in namen for x in ckan.paket(q["ckan"], n)["resources"]]
     gewaehlt = dateien_waehlen(ressourcen)
     if not gewaehlt:
         raise ValueError(f"{q['code']}: keine 15-Minuten-Dateien gefunden")
