@@ -632,13 +632,22 @@
     "kommune": "Frankfurt am Main",
     "land": "HE",
     "stand": "aggregiert",
-    "was": "24-Stunden-Mittelwerte 2019–2023 als WFS, auch für Rad – in vizsim/svz",
-    "links": [],
+    "was": "24-Stunden-Mittelwerte 2019–2023 als WFS, auch für Rad – in vizsim/svz; Einzelzählungen laut Stadt auf Anfrage",
+    "links": [
+     {
+      "titel": "WFS Verkehrsmengen (Open Data Hessen)",
+      "url": "https://opendata.hessen.de/dataset/wfs-verkehrsmengen-frankfurt-am-main"
+     },
+     {
+      "titel": "FragDenStaat 2018",
+      "url": "https://fragdenstaat.de/anfrage/verkehrsaufkommen-frankfurt-sachsenhausen/"
+     }
+    ],
     "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
     "quelle": null,
     "zaehlungen": null,
-    "situation": "Offen sind 24-Stunden-Mittelwerte 2019–2023 als WFS, auch für Rad.",
-    "empfehlung": "Anfrage nach den Einzelzählungen. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.",
+    "situation": "Offen sind 24-Stunden-Mittelwerte 2019–2023 je Straßenabschnitt als WFS (Kfz, Rad, Lkw mit und ohne Anhänger; Datenlizenz Deutschland – Namensnennung 2.0). Laut Antwort des Referats Mobilitäts- und Verkehrsplanung auf eine Anfrage 2018 zählt die Stadt Fuß-, Rad- und Kfz-Verkehr im ganzen Stadtgebiet, aber nur bei Bedarf und nicht regelmäßig, und stellt vorliegende Verkehrsmengen „jedem Interessenten auf Anfrage gerne zur Verfügung“.",
+    "empfehlung": "Anfrage nach den Einzelzählungen hinter den Mittelwerten (seit 2015, je Zählung Werte je Intervall und Richtung) samt Lizenz – die Stadt hat 2018 Herausgabe auf Anfrage zugesagt. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.",
     "weg": "FragDenStaat, Hessisches UIG",
     "kontakt": {
      "fds": "https://fragdenstaat.de/behoerden/?q=Frankfurt+am+Main+Verkehr",
@@ -646,9 +655,27 @@
     },
     "anfrage": {
      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
-     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Frankfurt am Main seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind 24-Stunden-Mittelwerte je Zählstelle; ich bitte um die Einzelzählungen dahinter.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Frankfurt am Main seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nOffen sind 24-Stunden-Mittelwerte je Zählstelle (WFS „Verkehrsmengen“); ich bitte um die Einzelzählungen dahinter. 2018 hat das Referat Mobilitäts- und Verkehrsplanung geschrieben, vorliegende Verkehrsmengen stelle es jedem Interessenten auf Anfrage zur Verfügung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
-    "dauer": null
+    "dauer": {
+     "stand": "kandidat",
+     "was": "zehn Rad-Dauerzählstellen des Landesnetzes (fünf an Standorten der Stadt, fünf von Hessen Mobil) und eine Zählsäule der Stadt – Werte nur im Zählportal des Landes, ohne Lizenzangabe; Detektordaten der Messstellen der Stadt über die Mobilithek nur nach Freigabe einer Subskription",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Rad-Dauerzählstellen (radfahren-ffm.de)",
+       "url": "https://www.radfahren-ffm.de/703-0-Daten-fuer-die-Radverkehrsfoerderung.html"
+      },
+      {
+       "titel": "Zählportal des Landes",
+       "url": "https://hessen-mobil.eco-counter.com/"
+      },
+      {
+       "titel": "Detektordaten (Mobilithek)",
+       "url": "https://mobilithek.info/offers/110000000002386001"
+      }
+     ]
+    }
    }
   },
   {
@@ -2014,14 +2041,18 @@
      {
       "titel": "FragDenStaat 2021",
       "url": "https://fragdenstaat.de/anfrage/ifg-anfrage-radverkehrszahlung/"
+     },
+     {
+      "titel": "Satzung laut HBDI (FragDenStaat 2020)",
+      "url": "https://fragdenstaat.de/anfrage/automatisierte-verkehrszahlungen-in-rosbach-vdhohe-1/"
      }
     ],
     "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
     "quelle": null,
     "zaehlungen": null,
     "situation": "Die Stadt zählt laut ihrer Antwort von 2021 auf vier Arten: Dauerzählstellen mit Induktionsschleifen, Kurzzeitzählungen mit Seitenradar und mit Dialog-Displays an wechselnden Orten und Knotenstromzählungen über einen Tag an wechselnden Kreuzungen. Auf eine Anfrage 2021 kamen fünf Knotenstromzählungen 2018–2020 (24 Stunden an Werktagen), vier davon als Excel mit allen gezählten Verkehrsarten in 15-Minuten-Intervallen, eine als PDF-Tabellenbericht, dazu Grafiken des Radverkehrs – ohne Lizenzangabe, daher nicht in der Karte. Offen sind sonst nur die Verkehrsmengenkarten 2022, 2023 und 2024 als PDF (Kfz je Richtung, Mittel Mo–Fr) aus den Dauerzählstellen.",
-    "empfehlung": "Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.",
-    "weg": "FragDenStaat, Hessisches UIG",
+    "empfehlung": "Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz. Kassel hat eine Informationsfreiheitssatzung (so der Hessische Beauftragte für Datenschutz und Informationsfreiheit 2020 in einer Antwort auf FragDenStaat), also gilt das HDSIG; das Hessische Umweltinformationsgesetz gilt ohnehin.",
+    "weg": "FragDenStaat, HDSIG (Satzung) und Hessisches UIG",
     "kontakt": {
      "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Kassel",
      "fds_suche": true
@@ -2032,7 +2063,7 @@
     },
     "dauer": {
      "stand": "kandidat",
-     "was": "Dauerzählstellen mit Induktionsschleifen; offen nur die Verkehrsmengenkarten 2022–2024 als PDF (Mittel Mo–Fr), nicht die Zählwerte",
+     "was": "Dauerzählstellen mit Induktionsschleifen; offen nur die Verkehrsmengenkarten 2022–2024 als PDF (Mittel Mo–Fr), nicht die Zählwerte; Detektordaten über die Mobilithek nur nach Freigabe einer Subskription",
      "situation": null,
      "links": [
       {
@@ -2042,6 +2073,10 @@
       {
        "titel": "FragDenStaat 2021",
        "url": "https://fragdenstaat.de/anfrage/ifg-anfrage-radverkehrszahlung/"
+      },
+      {
+       "titel": "Detektordaten (Mobilithek)",
+       "url": "https://mobilithek.info/offers/110000000002398000"
       }
      ]
     }
@@ -2245,6 +2280,1250 @@
      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Lingen (Ems) seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2022 haben Sie auf Anfragen Berichte einzelner Verkehrserhebungen als PDF geschickt (etwa Kiesbergstraße, April 2021). Ich bitte um alle Erhebungen seit 2015, am besten als Export der Messgeräte.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
     },
     "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.65,
+     49.8667
+    ]
+   },
+   "properties": {
+    "kommune": "Darmstadt",
+    "land": "HE",
+    "stand": "automatisch",
+    "was": "offen nur die Rohdaten der Induktionsschleifen an den Ampeln (Minutenwerte seit 2022); Kurzzeitzählungen nicht online",
+    "links": [
+     {
+      "titel": "Verkehrsdaten im Rohformat 2025",
+      "url": "https://opendata.darmstadt.de/dataset/verkehrsdaten-im-rohformat-2025"
+     },
+     {
+      "titel": "FragDenStaat 2024",
+      "url": "https://fragdenstaat.de/anfrage/verkehrsanalyse-der-hauptverkehrsstrassen-differenzierung-nach-verkehrsarten/"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Die Stadt stellt die Rohdaten ihres Verkehrsleitrechners offen bereit: je Kreuzung Monatsdateien (CSV) mit Minutenwerten jeder Induktionsschleife, ungeprüft, seit 2022 (Datenlizenz Deutschland – Namensnennung 2.0). Kurzzeitzählungen stehen nicht online. Auf eine Anfrage 2024 nach dem Verkehr auf den Hauptverkehrsstraßen kamen Anteile des Durchgangs-, Binnen-, Quell- und Zielverkehrs, eine Grafik der Verkehrsstärken und der Hinweis, zum Tagesgang gebe es nur ungeprüfte Rohdaten an 14 Zufahrtsstraßen.",
+    "empfehlung": "Anfrage nach den Kurzzeitzählungen (Knotenpunkte, Querschnitte, Rad) seit 2015. Das hessische Informationsfreiheitsrecht gilt für Kommunen nur per Satzung – das Hessische Umweltinformationsgesetz gilt immer.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Darmstadt",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Darmstadt seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nDie Rohdaten Ihres Verkehrsleitrechners stehen bereits offen bereit (opendata.darmstadt.de); mir geht es um die Zählungen an Knotenpunkten und Querschnitten, auch des Radverkehrs.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": {
+     "stand": "offen",
+     "was": "Rohdaten des Verkehrsleitrechners: je Ampelkreuzung Minutenwerte jeder Induktionsschleife (Zählwert und Belegung) seit 2022, Datenlizenz Deutschland – Namensnennung 2.0; welche Schleife auf welcher Spur liegt, zeigen nur die Kreuzungspläne (PDF) – noch nicht in der Karte",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Verkehrsdaten im Rohformat 2025",
+       "url": "https://opendata.darmstadt.de/dataset/verkehrsdaten-im-rohformat-2025"
+      },
+      {
+       "titel": "Kreuzungspläne",
+       "url": "https://opendata.darmstadt.de/dataset/kreuzungspl%C3%A4ne-stadt-darmstadt"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.4119,
+     49.995
+    ]
+   },
+   "properties": {
+    "kommune": "Rüsselsheim am Main",
+    "land": "HE",
+    "stand": "automatisch",
+    "was": "offen nur die Detektordaten der Stadt in Echtzeit (Mobilithek); Kurzzeitzählungen nicht online",
+    "links": [
+     {
+      "titel": "Detektordaten (Mobilithek)",
+      "url": "https://mobilithek.info/offers/110000000003182000"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Die Stadt gibt die Werte ihrer Detektoren seit 2023 als Open Data über die Mobilithek ab, aber nur in Echtzeit (DATEX II, nach Abonnement) – eine Zeitreihe zum Herunterladen gibt es nicht. Die Werte ihrer fünf Fahrradbarometer stehen auf der städtischen Verkehrsinformationsplattform und im Zählportal des Landes. Kurzzeitzählungen stehen nicht online.",
+    "empfehlung": "Anfrage nach den Kurzzeitzählungen seit 2015 und nach einem Archiv der Detektordaten (Stundenwerte). Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=R%C3%BCsselsheim",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Rüsselsheim am Main seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhre Detektordaten geben Sie in Echtzeit über die Mobilithek ab; falls es ein Archiv der Stundenwerte gibt, bitte ich auch darum.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": {
+     "stand": "offen",
+     "was": "Detektordaten der Stadt in Echtzeit über die Mobilithek (Fahrzeuge je Stunde und mittlere Geschwindigkeit, minütlich aggregiert, DATEX II; Lizenz: freie Nutzung) – ohne Archiv, daher nicht in der Karte; dazu fünf Fahrradbarometer mit Werten im Zählportal des Landes",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Detektordaten (Mobilithek)",
+       "url": "https://mobilithek.info/offers/110000000003182000"
+      },
+      {
+       "titel": "Fahrradbarometer",
+       "url": "https://www.ruesselsheim.de/mobilitaet/radfahren-in-ruesselsheim/fahrradbarometer/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7667,
+     50.8167
+    ]
+   },
+   "properties": {
+    "kommune": "Marburg",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Knotenpunktzählungen 2021 für das Mobilitätskonzept MoVe 35 (6–10 und 15–19 Uhr, je Verkehrsstrom); Messungen der Straßenverkehrsbehörde mit Seitenradar-Geräten",
+    "links": [
+     {
+      "titel": "Zählung Herrmannstraße/K 68, 2021 (PDF)",
+      "url": "https://www.marburg.de/downloads/datei/ZDI1MDNmYTYyNzVkNzg5NzNSUk5oaVc5Ykx1YjlnWXI3dTRRd1M1UjV6UnZiRjRJT1RiOHBpb3BJSnVwZEtuL1NMYkpYcHR4N0pEWW1sNnUzeWszdHRkUmhhcmFKRjZFVnprWEhRaW93WGt4S2RrY1RwU2dKZE9neDM2WjRsSVBSOVdkYTZkWVZHNk4za0FtODRucDRFVFlvMXFhSXcyaHNDcTd6UUZ4N3A4VXZGRGZyWWt2NXVuVjdkbz0"
+     },
+     {
+      "titel": "Seitenradar Herrmannstraße, 2021 (PDF)",
+      "url": "https://www.marburg.de/downloads/datei/YjU0ZDUxYmQ2OWYwYmJhZXRsamoyQkpXZkJHQ2tnY25TdDNhOWUrV0xvNFR4dENkMWt4eVNITmtwbXkxbXV1SWlMdkFRWWxIN3dhRVIybFBhMTdqWDREVUhFdkRHRGZwUUY3dy9pRi9tVzg1cTY4ZWx1UDdRRUVoOG82TURVNXlITnB1UWFLZTJEd1RQYjRlOTVaV2U4TkRVdVpPYWZLa0Q2VU5ObCt5WVBRSDlmZlJ5TCtOdUJMblJJZ1NCZ2d2aXA5VmNkWHRTczZ5OUYxSQ"
+     },
+     {
+      "titel": "MoVe 35, Zwischenbericht (PDF)",
+      "url": "https://static.werdenktwas.de/domain/63/fs/Online-Infomesse/MoVe35Zwischenbericht.pdf"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Für das Mobilitäts- und Verkehrskonzept MoVe 35 hat die Stadt nach der Corona-Pause an Knotenpunkten gezählt; eine Auswertung (Knotenpunkt Herrmannstraße/K 68, 6. Juli 2021, 6–10 und 15–19 Uhr, Rohdaten je Verkehrsstrom) liegt als PDF auf marburg.de, ebenso der Bericht einer Seitenradar-Messung der Straßenverkehrsbehörde (Herrmannstraße, April/Mai 2021). Gesammelt veröffentlicht ist nichts.",
+    "empfehlung": "Anfrage nach den Knotenpunktzählungen für MoVe 35 und allen weiteren Zählungen und Seitenradar-Messungen seit 2015, als Tabelle oder Export der Geräte. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Universit%C3%A4tsstadt+Marburg",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Marburg seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nFür das Mobilitätskonzept MoVe 35 haben Sie 2021 an Knotenpunkten gezählt (veröffentlicht ist etwa die Auswertung Herrmannstraße/K 68 vom 6. Juli 2021). Ich bitte um alle diese Zählungen mit den Werten je Verkehrsstrom und um die Messungen Ihrer Seitenradar-Geräte.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": {
+     "stand": "kandidat",
+     "was": "sechs Kameras an fünf Stellen in der Ober- und Innenstadt seit 2024 (Personen, Rad, Pkw, Lieferverkehr, Lkw); offen nur aufbereitete Auswertungen eines Standorts (Marktgasse) als PDF",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Mobilitätsfrequenzen Oberstadt",
+       "url": "https://www.marburg.de/portal/seiten/erfassung-von-mobilitaetsfrequenzen-in-der-marburger-oberstadt-900003332-23001.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6105,
+     50.2292
+    ]
+   },
+   "properties": {
+    "kommune": "Bad Homburg vor der Höhe",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Videozählungen an zehn Knotenpunkten (1.–3. Juli 2025); Knotenpunktzählungen an 21 Stellen für das Mobilitäts- und Verkehrskonzept 2035",
+    "links": [
+     {
+      "titel": "Pressemitteilung Videozählung 2025",
+      "url": "https://www.bad-homburg.de/de/stadt/aktuelles/verkehrserhebungen-mit-videotechnik-mn8x0dp8xn"
+     },
+     {
+      "titel": "Mobilitäts- und Verkehrskonzept 2035 (PDF)",
+      "url": "https://www.bad-homburg.de/leben/mobilitaet/_mobilitaet/dokumente/2023/MoKo_Schlussbericht_1.pdf"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Für die Verlängerung der U2 hat die Stadt vom 1. bis 3. Juli 2025 an zehn Knotenpunkten per Video gezählt (Fahrzeugklassen wie Pkw, Lkw, Fahrrad). Für das Integrierte Mobilitäts- und Verkehrskonzept 2035 wurde an 21 Knotenpunkten gezählt – in der Corona-Zeit, daher im Bericht mit Werten nahegelegener Dauerzählstellen hochgerechnet. Online sind keine Zählwerte.",
+    "empfehlung": "Anfrage nach beiden Zählungen mit den gezählten Werten (vor jeder Hochrechnung). Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Bad+Homburg",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Bad Homburg vor der Höhe seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Videozählungen an zehn Knotenpunkten vom 1. bis 3. Juli 2025 (U2-Verlängerung) und die Zählungen an 21 Knotenpunkten für das Mobilitäts- und Verkehrskonzept 2035 – bitte mit den gezählten Werten vor jeder Hochrechnung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": {
+     "stand": "kandidat",
+     "was": "vier Rad-Dauerzählstellen des Landesnetzes (Friedberger Straße, Wirtschaftsweg nach Oberursel, Frölingstraße, Weinbergsweg) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2026",
+       "url": "https://www.bad-homburg.de/de/stadt/aktuelles/radverkehr-in-bad-homburg-wird-durch-dauerzaehlstellen-erfasst-kz84nj4y6l"
+      },
+      {
+       "titel": "Zählportal des Landes",
+       "url": "https://hessen-mobil.eco-counter.com/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.5769,
+     50.2028
+    ]
+   },
+   "properties": {
+    "kommune": "Oberursel (Taunus)",
+    "land": "HE",
+    "stand": "nur_karte",
+    "was": "Karte der Querschnittszählung vom 20. März 2018 (werktäglicher Verkehr, für das Verkehrsmodell) als PDF",
+    "links": [
+     {
+      "titel": "Verkehrsmengen Querschnitte 2018 (PDF)",
+      "url": "https://www.oberursel.de/pdf-pool/180607-oberursel-verkehrsmengen-querschnitte.pdf?cid=221"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Für das Verkehrsmodell der Stadt wurde am 20. März 2018 an Querschnitten gezählt; veröffentlicht ist nur eine Karte mit dem werktäglichen Verkehr (DTVw, Kfz je 24 Stunden) je Querschnitt.",
+    "empfehlung": "Anfrage nach den gezählten Werten dieser und aller späteren Zählungen. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Oberursel",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Oberursel (Taunus) seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nVeröffentlicht ist eine Karte der Querschnittszählung vom 20. März 2018 (DTVw). Ich bitte um die gezählten Werte dahinter (je Intervall und Richtung) und um alle späteren Zählungen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": {
+     "stand": "kandidat",
+     "was": "neun Rad-Dauerzählstellen des Landesnetzes (drei seit April 2022, sechs seit 2024) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2022",
+       "url": "https://www.oberursel.de/de/presse-artikel/2022-05/dauerzaehlstellen-radwegeplanung/"
+      },
+      {
+       "titel": "Pressemitteilung 2024",
+       "url": "https://www.oberursel.de/de/presse-artikel/2024-08/installation-sechs-neuer-dauerzaehlstellen-fuer-radverkehr-im-stadtgebiet/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.2692,
+     50.2206
+    ]
+   },
+   "properties": {
+    "kommune": "Idstein",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Knotenpunktzählungen 2018 an 24 Kreuzungen für den Verkehrsentwicklungsplan (teils über 24 Stunden, 15-Minuten-Werte, mit Rad)",
+    "links": [
+     {
+      "titel": "Verkehrsentwicklungsplan 2035 (PDF)",
+      "url": "https://www.idstein.de/umwelt-bauen/tiefbau-stadtwerke/verkehrsentwicklung/verkehrsentwicklungsplan-idstein-2035.pdf?cid=j5p"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Für den Verkehrsentwicklungsplan Idstein 2035 wurde 2018 (April, Juni, November) an 24 Knotenpunkten gezählt – vier über 24 Stunden, neun von 6 bis 19 Uhr, elf von 6 bis 10 und 15 bis 19 Uhr –, in 15-Minuten-Intervallen, per Video und teils von Hand (Fahrräder, Krad, Pkw, Lieferwagen, Lkw, Lastzüge, Busse). Der Plan zeigt davon nur hochgerechnete Tageswerte als Karte.",
+    "empfehlung": "Anfrage nach diesen Zählungen in 15-Minuten-Werten und allen späteren. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Stadt+Idstein",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Idstein seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Knotenpunktzählungen 2018 für den Verkehrsentwicklungsplan Idstein 2035 (24 Knotenpunkte, 15-Minuten-Werte).\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7756,
+     50.0086
+    ]
+   },
+   "properties": {
+    "kommune": "Dietzenbach",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Rad- und Kfz-Zählungen an drei Stellen (Januar–April 2025); Video-Knotenstromzählungen an drei Knotenpunkten (August 2026)",
+    "links": [
+     {
+      "titel": "Pressemitteilung Januar 2025",
+      "url": "https://www.dietzenbach.de/Stadt-Rathaus/Stadt/Aktuelles/Verkehrsz%C3%A4hlung-im-Stadtgebiet.php?ModID=255&FID=3651.26216.1"
+     },
+     {
+      "titel": "Pressemitteilung August 2026",
+      "url": "https://www.dietzenbach.de/Stadt-Rathaus/Stadt/Aktuelles/Verkehrsz%C3%A4hlung-im-August.php?ModID=255&FID=3651.29550.1"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Die Kreisstadt hat von Ende Januar bis Mitte April 2025 an drei wechselnden Stellen Rad- und Kfz-Verkehr mit Schlauch-Zählgeräten gezählt (Leihgeräte der Landesenergieagentur, für das Nahmobilitätskonzept). Vom 17. bis 19. August 2026 kamen Video-Knotenstromzählungen an drei Knotenpunkten am Theodor-Heuss-Ring dazu (nach Fahrzeugklassen, für eine Verkehrsuntersuchung). Online sind keine Werte.",
+    "empfehlung": "Anfrage nach beiden Zählungen. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Dietzenbach",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Dietzenbach seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Rad- und Kfz-Zählungen von Januar bis April 2025 (Rodgaustraße, Eisenbahnstraße) und die Knotenstromzählungen vom 17. bis 19. August 2026 am Theodor-Heuss-Ring.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7361,
+     50.1781
+    ]
+   },
+   "properties": {
+    "kommune": "Bad Vilbel",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Verkehrszählungen für den Gesamtverkehrsplan Kernstadt (Nacherfassung im Juni 2026 an vier Stellen)",
+    "links": [
+     {
+      "titel": "Pressemitteilung Juni 2026",
+      "url": "https://www.bad-vilbel.de/rathaus-politik/aktuelles/pressemitteilungen/2026/juni/masten-fuer-verkehrszaehlungen-im-gebiet-der-kernstadt/"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Für den Gesamtverkehrsplan Kernstadt zählt die Stadt; im Juni 2026 liefen an vier Stellen Nacherfassungen mit Zählgeräten an Masten, als Ergänzung früher erhobener Daten. Online sind keine Werte.",
+    "empfehlung": "Anfrage nach den Zählungen für den Gesamtverkehrsplan. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Bad+Vilbel",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Bad Vilbel seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Zählungen für den Gesamtverkehrsplan Kernstadt, auch die Nacherfassungen vom Juni 2026.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6044,
+     49.8056
+    ]
+   },
+   "properties": {
+    "kommune": "Pfungstadt",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Verkehrserhebungen Ende April 2023 für das Verkehrskonzept des Kernbereichs (Eberstädter Straße und Umgebung)",
+    "links": [
+     {
+      "titel": "Pressemitteilung April 2023",
+      "url": "https://www.pfungstadt.de/buergerservice/news-und-pressemeldungen/news/2025-und-aelter/verkehrszaehlung-befragung-ende-april/"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Für ein integriertes Verkehrskonzept des Kernbereichs hat die Stadt Ende April 2023 auf der Eberstädter Straße und in den angrenzenden Straßen erhoben, neben einer Onlinebefragung. Online sind keine Zählwerte. Die Videozählung am Knotenpunkt Mainstraße/Rheinstraße im März 2022 war eine Erhebung von Hessen Mobil.",
+    "empfehlung": "Anfrage nach den Zählungen für das Verkehrskonzept. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Pfungstadt",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Pfungstadt seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Verkehrserhebungen von Ende April 2023 für das Verkehrskonzept des Kernbereichs (Eberstädter Straße).\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.4818,
+     49.9214
+    ]
+   },
+   "properties": {
+    "kommune": "Groß-Gerau",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Radar-Messgerät in der Darmstädter Straße, Februar bis September 2025 (Fahrzeugklassen, Geschwindigkeiten, Lärm)",
+    "links": [
+     {
+      "titel": "Pressemitteilung 2025",
+      "url": "https://www.gross-gerau.de/Stadt-Verwaltung/Kreisstadt-Gro%C3%9F-Gerau/Kommunale-Pressemitteilungen/Verkehrsz%C3%A4hlger%C3%A4t-in-der-Darmst%C3%A4dter-Stra%C3%9Fe-installiert.php?ModID=255&FID=3411.34709.1"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Von Februar bis September 2025 hat ein radarbasiertes, von der BASt zertifiziertes Messgerät in der Darmstädter Straße durchgehend Fahrzeugklassen, Geschwindigkeiten und Lärm erfasst – für das Mobilitätskonzept (SUMP) und das Reallabor Transform-R. Online sind keine Werte.",
+    "empfehlung": "Anfrage nach den Daten dieses Geräts (Stundenwerte je Richtung und Fahrzeugklasse) und nach weiteren Zählungen. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Kreisstadt+Gro%C3%9F-Gerau",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Groß-Gerau seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Messwerte des Verkehrszählgeräts in der Darmstädter Straße 18a (Februar bis September 2025), als Export je Stunde, Richtung und Fahrzeugklasse.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.7067,
+     50.8683
+    ]
+   },
+   "properties": {
+    "kommune": "Bad Hersfeld",
+    "land": "HE",
+    "stand": "kandidat",
+    "was": "Zählungen mit temporär aufgestellten Seitenradar-Geräten der Kreisstadt (laut Masterplan Mobilität 2023)",
+    "links": [
+     {
+      "titel": "Masterplan Mobilität und Verkehr 2023 (PDF)",
+      "url": "https://www.bad-hersfeld.de/download/B_W_HEF_Mobil_Masterplan_Mobil.pdf"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Laut Masterplan Mobilität und Verkehr „HEF-Mobil“ (Endstand März 2023) zählt die Kreisstadt mit temporär aufgestellten Seitenradar-Geräten; die Daten gingen in die Bestandsanalyse ein. Online sind keine Werte.",
+    "empfehlung": "Anfrage nach den Messungen der Seitenradar-Geräte seit 2015, am besten als Export der Geräte. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Bad+Hersfeld",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Bad Hersfeld seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Messungen Ihrer Seitenradar-Geräte, auf denen laut Masterplan „HEF-Mobil“ die lokalen Verkehrszählungen beruhen – am besten als Export der Geräte.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7681,
+     50.2322
+    ]
+   },
+   "properties": {
+    "kommune": "Karben",
+    "land": "HE",
+    "stand": "geliefert",
+    "was": "2018 auf Anfrage die Rohdaten der Seitenradar-Geräte 2017/18 (eine Zeile je Fahrzeug); seit Oktober 2025 monatliche Berichte der Stadtpolizei als PDF",
+    "links": [
+     {
+      "titel": "Verkehrsmessungen in Karben",
+      "url": "https://www.karben.de/portal/seiten/verkehrsmessungen-in-karben-900000608-24930.html"
+     },
+     {
+      "titel": "FragDenStaat 2018",
+      "url": "https://fragdenstaat.de/anfrage/messdaten-der-geschwindigkeitsmessanlagen-im-stadtgebiet/"
+     },
+     {
+      "titel": "FragDenStaat 2020",
+      "url": "https://fragdenstaat.de/anfrage/messdaten-der-geschwindigkeitsmessanlagen-im-stadtgebiet-1/"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Die Stadtpolizei misst seit Ende 2017 mit Seitenradar-Geräten an wechselnden Stellen. Auf eine Anfrage 2018 kamen die Rohdaten als Textdateien (eine Zeile je Fahrzeug mit Zeitstempel) samt einem Plan der Standorte, ohne Lizenzangabe – daher nicht in der Karte; eine Folgeanfrage 2020 blieb unbeantwortet. Seit Oktober 2025 veröffentlicht die Stadt jeden Monat die Auswertungen als PDF: je Messstelle die Zahl der gemessenen Fahrzeuge im Monat und Geschwindigkeiten, keine Stunden- oder Tageswerte.",
+    "empfehlung": "Anfrage nach den Rohdaten aller Messungen seit 2018 in derselben Form, mit Standort und Zeitraum je Messung und einer Lizenz. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Karben",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Karben seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\n2018 haben Sie auf eine Anfrage die Rohdaten Ihrer Seitenradar-Geräte als Textdateien geschickt (eine Zeile je Fahrzeug). Ich bitte um alle Messungen seit Mai 2018 in derselben Form, mit Standort und Zeitraum je Messung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7022,
+     49.825
+    ]
+   },
+   "properties": {
+    "kommune": "Mühltal",
+    "land": "HE",
+    "stand": "aggregiert",
+    "was": "Berichte der Verkehrsmessungen seit 2022 als PDF (Summen je Zeitfenster und Richtung über den Messzeitraum, nach Fahrzeugklassen)",
+    "links": [
+     {
+      "titel": "Verkehrsdatenerhebung Kirchstraße 2022",
+      "url": "https://www.muehltal.de/muehltal/artikel/presseartikel/2022/kw35-verkehrsdatenerhebung-kirchstr/"
+     },
+     {
+      "titel": "Verkehrsmessdaten",
+      "url": "https://www.muehltal.de/muehltal/buerger-service/verwaltung/buergerservice-finden/verkehrsraeume/verkehrsmessdaten/"
+     },
+     {
+      "titel": "FragDenStaat 2022",
+      "url": "https://fragdenstaat.de/anfrage/veroffentlichung-verkehrsrelevanter-messergebnisse-und-blitzaktionen-der-gemeinde-muhltal/"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Seit einem Beschluss der Gemeindevertretung vom Februar 2022 veröffentlicht die Gemeinde ihre Verkehrsmessungen mit einem Seitenradar-Gerät als PDF-Bericht (etwa Kirchstraße, 15.–20. August 2022): je Richtung die Summen für vier Zeitfenster über den ganzen Messzeitraum, getrennt nach Zweirädern, Pkw, Lkw und Lastzügen, dazu die mittlere Tagesmenge und Geschwindigkeiten – Stundenwerte nur als Grafik. Auf eine Anfrage 2022 schrieb die Gemeinde, ältere Ergebnisse für Einzelne zusammenzustellen könne sie personell nicht leisten.",
+    "empfehlung": "Anfrage nach den Exporten der Messgeräte (Stundenwerte je Richtung und Fahrzeugklasse) für die veröffentlichten Messungen, mit Lizenz – eine Aufbereitung ist nicht nötig. Grundlage: Hessisches Umweltinformationsgesetz.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=M%C3%BChltal",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Gemeinde Mühltal seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIhre Berichte zu den Verkehrsmessungen (etwa Kirchstraße, August 2022) zeigen nur Summen über den Messzeitraum. Ich bitte um die Exporte der Messgeräte mit Stundenwerten je Richtung und Fahrzeugklasse für alle Messungen seit 2022 – so, wie sie vorliegen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7006,
+     50.2986
+    ]
+   },
+   "properties": {
+    "kommune": "Rosbach vor der Höhe",
+    "land": "HE",
+    "stand": "abgelehnt",
+    "was": "automatische Verkehrszählungen des Ordnungsamts; Anfrage 2018 abgelehnt",
+    "links": [
+     {
+      "titel": "FragDenStaat 2018",
+      "url": "https://fragdenstaat.de/anfrage/automatisierte-verkehrszahlungen-in-rosbach-vdhohe-1/"
+     }
+    ],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": "Das Ordnungsamt zählt mit automatischen Geräten. Eine Anfrage 2018 nach den Daten lehnte die Stadt ab – es gebe keine rechtliche Grundlage für die Weitergabe von Verkehrsdaten; 2020 blieb sie dabei. Der Hessische Beauftragte für Datenschutz und Informationsfreiheit erklärte sich für unzuständig: Rosbach hat keine Informationsfreiheitssatzung, und für das Umweltinformationsgesetz ist er nicht zuständig.",
+    "empfehlung": "Neue Anfrage ausdrücklich nach dem Hessischen Umweltinformationsgesetz. Es gilt für alle Kommunen; die Ablehnung 2018 ist darauf nicht eingegangen.",
+    "weg": "FragDenStaat, Hessisches UIG",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Rosbach",
+     "fds_suche": true
+    },
+    "anfrage": {
+     "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+     "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Rosbach vor der Höhe seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nGemeint sind besonders die Daten der automatischen Verkehrszählungen Ihres Ordnungsamts. 2018 haben Sie eine Anfrage danach abgelehnt, weil es keine Rechtsgrundlage gebe – das Hessische Umweltinformationsgesetz gilt aber für alle Kommunen.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+    },
+    "dauer": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6667,
+     50.5833
+    ]
+   },
+   "properties": {
+    "kommune": "Gießen",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "mehrere Rad-Dauerzählstellen von Land und Stadt (Goethestraße, Heuchelheimer Straße, Christoph-Rübsamen-Steg, Lahnufer am Wehr, R7 Wieseck), Induktionsschleifen je Richtung – Werte seit Herbst 2024 nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2026",
+       "url": "https://www.giessen.de/Rathaus/Newsroom/Aktuelle-Meldungen/Dauerz%C3%A4hlstellen-f%C3%BCr-den-Radverkehr-Erste-Daten-f%C3%BCr-Gie%C3%9Fen-online.php?ModID=255&FID=2874.75293.1"
+      },
+      {
+       "titel": "Zählportal des Landes",
+       "url": "https://hessen-mobil.eco-counter.com/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.24,
+     50.0825
+    ]
+   },
+   "properties": {
+    "kommune": "Wiesbaden",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Daten zur Fahrradnutzung nur im Dashboard „Datenwelt Fahrradnutzung“ (ohne Download); Detektordaten der Stadt über die Mobilithek nur nach Freigabe einer Subskription",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Datenwelt Fahrradnutzung",
+       "url": "https://www.wiesbaden.de/leben-in-wiesbaden/mobilitaet/radverkehr/Datenwelt-Fahrradnutzung-in-Wiesbaden"
+      },
+      {
+       "titel": "Detektordaten (Mobilithek)",
+       "url": "https://mobilithek.info/offers/110000000003165001"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6961,
+     50.0189
+    ]
+   },
+   "properties": {
+    "kommune": "Dreieich",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "sechs Rad-Zählstellen des Landesnetzes (Bau ab März 2022) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2023 (PDF)",
+       "url": "https://www.dreieich.de/rathaus-service/presse-medien/pressemitteilungen/radverkehr-zaehlstellen-erfassen-die-nutzung-der-dreieicher-radwege-es-wird-ueberdurchschnittlich-viel-geradelt/046-radzaehlmessstellen.pdf?cid=1dhz"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.8281,
+     49.9775
+    ]
+   },
+   "properties": {
+    "kommune": "Rödermark",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "fünf Rad-Dauerzählstellen des Landesnetzes (beantragt 2023, Inbetriebnahme für Anfang 2025 angekündigt) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Dauerzählstellen (roedermark.de)",
+       "url": "https://roedermark.de/bauen-umwelt/stadtplanung/dauerzaehlstellen.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.8841,
+     50.0256
+    ]
+   },
+   "properties": {
+    "kommune": "Rodgau",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Zählstellen des Landesnetzes (Pilotprojekt „Daten für den Radverkehr“, Ratsvorlage 2022) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Ratsvorlage 2022",
+       "url": "https://www.rodgau.de/de/ratsinfo-views/vorlage/0vGKj91ScAIDJdKt/pilotprojekt-daten-fuer-den-radverkehr-bereitstellung-von-zaehlstellen-fuer-den-radverkehr-durch-das-land-hessen/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.945,
+     50.2856
+    ]
+   },
+   "properties": {
+    "kommune": "Altenstadt",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Zählstellen des Landesnetzes – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Zählstellen Radverkehr (altenstadt.de)",
+       "url": "https://www.altenstadt.de/KulTour/rad-und-wanderwege/zaehlstellen-radverkehr/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.4183,
+     51.2589
+    ]
+   },
+   "properties": {
+    "kommune": "Baunatal",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "eine Rad-Dauerzählstelle des Landesnetzes seit 2022 – Tageswerte im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Dauerzählstelle (baunatal.de)",
+       "url": "https://www.baunatal.de/de/freizeit/sport-und-freizeit/radfahren-in-baunatal/dauerzaehlstelle.php"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7235,
+     50.8284
+    ]
+   },
+   "properties": {
+    "kommune": "Landkreis Marburg-Biedenkopf",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "kreiseigene Rad-Dauerzählstellen (Eco-Counter), 2024 um 17 Standorte erweitert, etwa am Lahnradweg in Sterzhausen und am Salzböderadweg – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählstellen (Landkreis)",
+       "url": "https://www.marburg-biedenkopf.de/microsites/klimaschutz/team-radverkehr/radinfrastruktur/index.php"
+      },
+      {
+       "titel": "Radverkehrsbericht 2024 (PDF)",
+       "url": "https://www.marburg-biedenkopf.de/auto-und-verkehr/radverkehr/20250228_Bericht_2024_final_komprimiert.pdf"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.872,
+     51.1665
+    ]
+   },
+   "properties": {
+    "kommune": "Landkreis Waldeck-Frankenberg",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "sechs Rad-Dauerzählstellen des Kreises im Landesnetz (2026) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Pressemitteilung 2026",
+       "url": "https://www.landkreis-waldeck-frankenberg.de/informieren-beantragen/verwaltung-verstehen/fachdienste/oeffentlichkeitsarbeit-kultur-paten-und-partnerschaften/presse/pressearchiv/2026/april/landkreis-errichtet-sechs-radverkehrsdauerzaehlstellen/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.1731,
+     50.2142
+    ]
+   },
+   "properties": {
+    "kommune": "Main-Kinzig-Kreis",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Zählstellen an 13 Standorten im Kreis (von Bad Orb bis Sinntal) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radverkehr (mkk.de)",
+       "url": "https://www.mkk.de/aktuelles/themen_1/radverkehr/radverkehr.html"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.9571,
+     49.7046
+    ]
+   },
+   "properties": {
+    "kommune": "Odenwaldkreis",
+    "land": "HE",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "HDSIG gilt für Kommunen nur, wenn sie es per Satzung einführen – sonst Hessisches UIG",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "kandidat",
+     "was": "Rad-Dauerzählstellen des Landesnetzes im Kreis (Inbetriebnahme Anfang 2025 angekündigt) – Werte nur im Zählportal des Landes, ohne Lizenzangabe",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Dauerzählstellen Radverkehr (Kreis)",
+       "url": "https://www.odenwaldkreis.de/de/projekte/fuss-und-radverkehr/dauerzaehlstellen-radverkehr/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.0808,
+     50.7754
+    ]
+   },
+   "properties": {
+    "kommune": "Aachen",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "26 Rad-Zählstellen der Stadt, Stundenwerte seit 2025 (dl-de/zero-2-0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählstellen der Stadt Aachen",
+       "url": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.1143,
+     50.7355
+    ]
+   },
+   "properties": {
+    "kommune": "Bonn",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "14 Rad-Zählstellen, Stundenwerte 2020, 2021 und ab 2023 als Jahresdateien (CC0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradmessstellen Bonn",
+       "url": "https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.2203,
+     51.486
+    ]
+   },
+   "properties": {
+    "kommune": "Bochum",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "acht Rad-Zählstellen der Stadt (Eco-Counter) seit 2018 – in der Karte als Dauerzählstellen; Lizenz dl-de/by-2-0 mit Nutzungsbeschränkung der Stadt (nicht im Wettbewerb zu Eco-Counter)",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Zählstellen Eco-Counter (Stadt Bochum)",
+       "url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.705,
+     51.1453
+    ]
+   },
+   "properties": {
+    "kommune": "Rhein-Kreis Neuss",
+    "land": "NW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "fünf Rad-Zählstationen des Kreises (Eco-Counter), 2015 bis Juli 2026 (CC0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Eco-Counter-Daten (Rhein-Kreis Neuss)",
+       "url": "https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.9502,
+     49.8005
+    ]
+   },
+   "properties": {
+    "kommune": "Würzburg",
+    "land": "BY",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradzählung Würzburg",
+       "url": "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.4669,
+     49.4875
+    ]
+   },
+   "properties": {
+    "kommune": "Mannheim",
+    "land": "BW",
+    "stand": null,
+    "was": null,
+    "links": [],
+    "recht": "Landesinformationsfreiheitsgesetz (LIFG)",
+    "quelle": null,
+    "zaehlungen": null,
+    "situation": null,
+    "empfehlung": null,
+    "weg": null,
+    "kontakt": null,
+    "anfrage": null,
+    "dauer": {
+     "stand": "in_karte",
+     "was": "Rad-Zählstellen der Stadt (rund 17) über das Bündel von MobiData BW (dl-de/by-2-0) – in der Karte als Dauerzählstellen",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Eco-Counter-Fahrradzähler (MobiData BW)",
+       "url": "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"
+      }
+     ]
+    }
    }
   }
  ]

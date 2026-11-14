@@ -150,12 +150,13 @@ export function setzeAuswahl(map, stelle) {
     : LEER);
 }
 
-/** Ebene Datenlage: sichtbar oder nicht; bei den Dauerzählstellen nur Kommunen mit deren Stand. */
+/** Ebene Datenlage: sichtbar oder nicht; je Familie nur Kommunen mit deren Stand (Kommunen, von
+ * denen nur Dauerzählstellen bekannt sind, fehlen bei den Kurzzeitzählungen). */
 export function setzeDatenlage(map, sichtbar, familie = "k") {
   for (const id of ["datenlage-kreis", "datenlage-text"]) {
     if (!map.getLayer(id)) continue;
     map.setLayoutProperty(id, "visibility", sichtbar ? "visible" : "none");
-    map.setFilter(id, familie === "d" ? ["has", "dauer_stand"] : null);
+    map.setFilter(id, ["has", familie === "d" ? "dauer_stand" : "stand"]);
   }
   if (map.getLayer("datenlage-kreis")) map.setPaintProperty("datenlage-kreis", "circle-color", familie === "d" ? FARBE_D : FARBE_K);
 }

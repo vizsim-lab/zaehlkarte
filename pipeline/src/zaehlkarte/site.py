@@ -158,10 +158,12 @@ def _lizenzen(q: dict, pfade: Pfade) -> list[dict]:
 FDS_SUCHE = "https://fragdenstaat.de/behoerden/?q="
 
 
-def anfrage(vorlage: dict, kommune: str, zusatz: str | None) -> dict:
-    """Anfragetext aus der Vorlage in sources.yaml (Feld „Anfrage“ auf FragDenStaat)."""
+def anfrage(vorlage: dict, kommune: str, zusatz: str | None, an: str | None = None) -> dict:
+    """Anfragetext aus der Vorlage in sources.yaml (Feld „Anfrage“ auf FragDenStaat). `an`: die
+    angefragte Stelle, wo sie keine Stadt ist (`anfrage_an`, etwa „Gemeinde Mühltal“)."""
     zusatz = " ".join((zusatz or "").split())
-    text = vorlage["text"].format(kommune=kommune, zusatz=f"\n{zusatz}\n" if zusatz else "")
+    text = vorlage["text"].format(kommune=kommune, stelle=an or f"Stadt {kommune}",
+                                  zusatz=f"\n{zusatz}\n" if zusatz else "")
     return {"betreff": vorlage["betreff"], "text": text.strip()}
 
 
@@ -211,6 +213,12 @@ def datenlage(stellen, pfade: Pfade) -> dict:
         je_quelle.setdefault(s.quelle, []).append(s)
     features = []
     for e in cfg["datenlage"]:
+        # `stand` gilt den Kurzzeitzählungen; Kommunen, von denen nur Dauerzählstellen bekannt
+        # sind, haben keinen (die Karte zeigt sie nur bei den Dauerzählstellen)
+        if e.get("stand") is None and not e.get("dauer"):
+            raise ValueError(f"{e['kommune']}: weder stand noch dauer")
+        if e.get("stand") is not None and e["stand"] not in STAND:
+            raise ValueError(f"{e['kommune']}: stand {e['stand']!r} unbekannt")
         q = alle.get(e.get("quelle", ""), {})
         lon, lat = e.get("lon"), e.get("lat")
         n = None
@@ -229,7 +237,7 @@ def datenlage(stellen, pfade: Pfade) -> dict:
                 "properties": {
                     "kommune": e["kommune"],
                     "land": land,
-                    "stand": e["stand"],
+                    "stand": e.get("stand"),
                     "was": e.get("was"),
                     "links": [{"titel": t, "url": u} for t, u in e.get("links", [])],
                     "recht": recht.get(land),
@@ -239,7 +247,8 @@ def datenlage(stellen, pfade: Pfade) -> dict:
                     "empfehlung": e.get("empfehlung"),
                     "weg": e.get("weg"),
                     "kontakt": kontakt(e.get("kontakt")),
-                    "anfrage": anfrage(vorlage, e["kommune"], e.get("anfrage_zusatz"))
+                    "anfrage": anfrage(vorlage, e["kommune"], e.get("anfrage_zusatz"),
+                                       e.get("anfrage_an"))
                     if e.get("anfrage")
                     else None,
                     "dauer": _dauer(e),
@@ -256,7 +265,8 @@ def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
         "",
         f"Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am {erzeugt} aus",
         "`pipeline/config/sources.yaml` – nicht von Hand ändern. Dieselben Angaben zeigt die Karte",
-        "unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw. Dauerzählstellen).",
+        "unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw. Dauerzählstellen). Kommunen, von",
+        "denen nur Dauerzählstellen bekannt sind, haben keinen Stand der Kurzzeitzählungen („–“).",
         "Rechtliche Hinweise sind keine Rechtsberatung; Kontakte aus der Behördendatenbank von",
         "FragDenStaat.",
         "",
@@ -271,10 +281,18 @@ def datenlage_md(fc: dict, stand: dict[str, str], erzeugt: str) -> str:
         p = f["properties"]
         emp = (p.get("empfehlung") or ("in der Karte" if p.get("quelle") else "")).split(". ")[0]
         dauer = DAUER_STAND[p["dauer"]["stand"]] if p.get("dauer") else ""
-        zeilen.append(f"| {p['kommune']} | {p['land'] or ''} | {stand[p['stand']]} | {dauer} "
-                      f"| {emp} |")
+        kurz = stand[p["stand"]] if p.get("stand") else "–"
+        zeilen.append(f"| {p['kommune']} | {p['land'] or ''} | {kurz} | {dauer} | {emp} |")
     for f in eintraege:
         p = f["properties"]
+        if not p.get("stand"):  # nur Dauerzählstellen bekannt
+            d = p["dauer"]
+            titel = f"{p['kommune']} ({p['land']}) – Dauerzählstellen {DAUER_STAND[d['stand']]}"
+            zeilen += ["", f"## {titel}", "", f"**Lage:** {d.get('situation') or d.get('was')}", ""]
+            if d.get("links"):
+                zeilen += ["**Belege:** " + " · ".join(f"[{x['titel']}]({x['url']})"
+                                                     for x in d["links"]), ""]
+            continue
         if p.get("quelle"):
             if p.get("dauer"):  # in der Karte (Kurzzeitzählungen): nur die Dauerzählstellen
                 d = p["dauer"]

@@ -316,6 +316,42 @@ test("Stellen am selben Punkt: Umschalter in der Seitenleiste, Lizenz CC BY-NC",
   expect(fehler).toEqual([]);
 });
 
+test("Datenlage: Kommunen nur mit Dauerzählstellen stehen nur bei den Dauerzählstellen", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page, "#dl=1");
+  const gezeigt = () => page.evaluate(async () => {
+    const k = window.__app.karte;
+    await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
+    return [...new Set(k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).map((f) => f.properties.kommune))].sort();
+  });
+  const { mitStand, nurDauer } = await page.evaluate(() => {
+    const fs = window.__app.datenlage.features.map((f) => f.properties);
+    return {
+      mitStand: fs.filter((p) => p.stand).map((p) => p.kommune).sort(),
+      nurDauer: fs.filter((p) => !p.stand).map((p) => ({ kommune: p.kommune, land: p.land, dauer: !!p.dauer })),
+    };
+  });
+  expect(nurDauer.length).toBeGreaterThan(0);
+  expect(nurDauer.every((x) => x.dauer)).toBe(true);
+  // Kurzzeitzählungen: nur Kommunen mit deren Stand, die Zähler der Legende passen dazu
+  await expect.poll(gezeigt, { timeout: 20000 }).toEqual(mitStand);
+  const zaehler = async () => (await page.locator("#datenlage-legende .count-badge").allTextContents()).map(Number).reduce((a, b) => a + b, 0);
+  expect(await zaehler()).toBe(mitStand.length);
+  // Dauerzählstellen: dort stehen sie, mit ihrem Stand und ohne Anfragetext
+  await page.locator('[data-familie="d"]').click();
+  const { kommune, land } = nurDauer[0];
+  // der Wechsel lädt erst die Dauerzählstellen (asynchron) – so lange warten, bis die Karte umgestellt ist
+  await expect.poll(gezeigt, { timeout: 20000 }).toContain(kommune);
+  await page.evaluate((k) => window.__app.zeigeDatenlage(k), kommune);
+  const el = page.locator("#datenlage-detail");
+  await expect(el.locator(".pop-eyebrow")).toHaveText(`Datenlage Dauerzählstellen · ${land}`);
+  await expect(el.locator(".anfrage-text")).toHaveCount(0);
+  // zurück zu den Kurzzeitzählungen: dort hat die Kommune keinen Eintrag – die Seitenleiste schließt
+  await page.locator('[data-familie="k"]').click();
+  await expect(el).toBeHidden();
+  expect(fehler).toEqual([]);
+});
+
 test("Datenlage: „hinzoomen“ wechselt auf die Verkehrsart, die die Kommune zählt", async ({ page }) => {
   await dauer(page);
   const fehler = await oeffne(page, "#f=d&t=rad.menge&dl=1");
