@@ -1,0 +1,78 @@
+[
+ {
+  "osm": "node/3370288333",
+  "lat": 53.5592487,
+  "lon": 10.0086754,
+  "tags": {
+   "amenity": "clock",
+   "check_date": "2025-09-20",
+   "date": "yes",
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "An der Alster",
+   "start_date": "2014",
+   "support": "pole",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/7246028895",
+  "lat": 53.5518582,
+  "lon": 10.0019361,
+  "tags": {
+   "display": "no",
+   "layer": "1",
+   "level": "6",
+   "man_made": "monitoring_station",
+   "monitoring:pedestrian": "yes",
+   "operator": "hystreet.com GmbH",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/13110781519",
+  "lat": 53.4940681,
+  "lon": 10.0342099,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/13110863123",
+  "lat": 53.5084645,
+  "lon": 10.0923539,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/13112793022",
+  "lat": 53.5357306,
+  "lon": 10.1417676,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/13205369225",
+  "lat": 53.4941375,
+  "lon": 10.0339573,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/14073325536",
+  "lat": 53.4926401,
+  "lon": 9.9134971,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ }
+]
