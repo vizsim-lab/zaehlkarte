@@ -1,0 +1,73 @@
+== Abruf
+augsburg_rad: Datei geholt
+Fehler: []
+Dauer: 17 s
+Rohdaten: 2 Dateien, 0.2 MB
+{
+ "abgerufen": "2026-11-14T23:06:24Z",
+ "datei": "https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/Smart_City/opendata/fahrradzaehler_augsburg-seit-start.csv"
+}
+
+Kopf zaehler.csv: Zeitraum,16. September 2016 - 11. August 2026 |  | Zeit,Dieselbrücke,Friedberger Straße östlich Afrabrücke,Friedrich-Ebert-Straße östlich Haltestelle Messe,Färberstraße/Gollwitzerstr.,Gögginger Straße südlich Rosenaustraße,Haunstetter Straße Höhe protestantischer Friedhof,Konrad Adenauer Allee Fahrradstraße,Postillionstraße südl. Roggenstraße,Rosenaustraße westlich Gögginger Straße,Südlich A8-Unterführung, Ostseite,Ulrichsbrücke,Wagenhalsstraße | 2016-09-16 00:00:00,,,,,,,1423,,,,, | 2016-09-17 00:00:00,,,,,,,1088,,,,, | 2016-09-18 00:00:00,,,,,,,358,,,,,
+== Lesen
+3617 Zeilen (0 unlesbar, 0 unlesbare Werte), 30308 Tageswerte in der Karte (widersprüchlich: 0); Zeitraum laut Datei: 2016-09-16 – 2026-08-11; nicht übernommen (Tag der Erstellung): 2026-08-11; jüngster Tag 2026-08-10
+Tage mit 0: Dieselbrücke 19, Friedberger Straße 2, Gögginger Straße 1, Haunstetter Straße 1
+Reihe 2016-09-16 – 2026-08-10, 12 Stellen
+=== Gruppe rad
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+dieselbruecke | Dieselbrücke | None | None – None | 2253 | 2026-08-10 | 1438
+friedberger-strasse | Friedberger Straße | östlich der Afrabrücke | None – None | 2481 | 2026-08-10 | 1980
+friedrich-ebert-strasse | Friedrich-Ebert-Straße | östlich der Haltestelle Messe | None – None | 2486 | 2026-08-10 | 608
+faerberstrasse | Färberstraße | an der Gollwitzerstraße | None – None | 2438 | 2026-08-10 | 1413
+goegginger-strasse | Gögginger Straße | südlich der Rosenaustraße | None – None | 2486 | 2026-08-10 | 2111
+haunstetter-strasse | Haunstetter Straße | Höhe protestantischer Friedhof | None – None | 2478 | 2026-08-10 | 1099
+konrad-adenauer-allee | Konrad-Adenauer-Allee | Fahrradstraße | None – None | 3616 | 2026-08-10 | 2450
+postillionstrasse | Postillionstraße | südlich der Roggenstraße | None – None | 1567 | 2026-08-10 | 536
+rosenaustrasse | Rosenaustraße | westlich der Gögginger Straße | None – None | 2484 | 2026-08-10 | 1250
+a8-unterfuehrung-ost | Geh- und Radweg am Lech (Ostufer) | südlich der Unterführung der A8 | None – None | 1593 | 2026-08-10 | 633
+ulrichsbruecke | Ulrichsbrücke | None | None – None | 3251 | 2026-08-10 | 1862
+wagenhalsstrasse | Wagenhalsstraße | None | None – None | 3175 | 2026-08-10 | 1208
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2016: 2016-12-31: 1/0
+2017: 2017-01-01: 1/0, 2017-12-31: 3/0
+2018: 2018-01-01: 3/0, 2018-12-31: 3/0
+2019: 2019-01-01: 3/0, 2019-12-31: 9/0
+2020: 2020-01-01: 9/0, 2020-12-31: 10/0
+2021: 2021-01-01: 10/0, 2021-12-31: 10/0
+2022: 2022-01-01: 10/0, 2022-12-31: 12/0
+2023: 2023-01-01: 12/0, 2023-12-31: 12/0
+2024: 2024-01-01: 12/0, 2024-12-31: 12/0
+2025: 2025-01-01: 12/0, 2025-12-31: 12/0
+2026: 2026-01-01: 12/0
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2016: 2016-10-30: voll 1/0, gezählte Stunden []
+2017: 2017-03-26: voll 1/0, gezählte Stunden []; 2017-10-29: voll 2/0, gezählte Stunden []
+2018: 2018-03-25: voll 3/0, gezählte Stunden []; 2018-10-28: voll 3/0, gezählte Stunden []
+2019: 2019-03-31: voll 3/0, gezählte Stunden []; 2019-10-27: voll 8/0, gezählte Stunden []
+2020: 2020-03-29: voll 9/0, gezählte Stunden []; 2020-10-25: voll 10/0, gezählte Stunden []
+2021: 2021-03-28: voll 10/0, gezählte Stunden []; 2021-10-31: voll 10/0, gezählte Stunden []
+2022: 2022-03-27: voll 10/0, gezählte Stunden []; 2022-10-30: voll 12/0, gezählte Stunden []
+2023: 2023-03-26: voll 12/0, gezählte Stunden []; 2023-10-29: voll 12/0, gezählte Stunden []
+2024: 2024-03-31: voll 12/0, gezählte Stunden []; 2024-10-27: voll 12/0, gezählte Stunden []
+2025: 2025-03-30: voll 12/0, gezählte Stunden []; 2025-10-26: voll 12/0, gezählte Stunden []
+2026: 2026-03-29: voll 11/0, gezählte Stunden []
+== Vollständige Tage je Jahr (alle Stellen)
+2016: 107 von 0 Tagen mit Werten
+2017: 503 von 0 Tagen mit Werten
+2018: 1095 von 0 Tagen mit Werten
+2019: 1519 von 0 Tagen mit Werten
+2020: 3499 von 0 Tagen mit Werten
+2021: 3650 von 0 Tagen mit Werten
+2022: 4174 von 0 Tagen mit Werten
+2023: 4380 von 0 Tagen mit Werten
+2024: 4392 von 0 Tagen mit Werten
+2025: 4380 von 0 Tagen mit Werten
+2026: 2609 von 0 Tagen mit Werten
+== Kartendaten (nur augsburg_rad)
+augsburg_rad: 12 Stellen mit vollständigen Tagen, 0 ohne
+13 Dateien, 0.4 MB, 1 Detail-Dateien
+augsburg_rad: vollständige Tage je Jahr (Stellen × Tage) – 2016: 107, 2017: 503, 2018: 1095, 2019: 1519, 2020: 3499, 2021: 3650, 2022: 4174, 2023: 4380, 2024: 4392, 2025: 4380, 2026: 2609
+augsburg_rad: davon Tageswerte der Quelle (rad): 30308
+augsburg_rad: rad-Tagessummen, Quintilgrenzen [680, 1130, 1590, 2260], Median 1355, Maximum 6291
+index.json quellen: [{"code": "augsburg_rad", "name": "Augsburg (Radzählstationen)", "land": "BY", "traeger": "Stadt Augsburg, Radverkehrsbeauftragter", "art": "zwölf Radzählstationen der Stadt (Induktionsschleifen): nur Tageswerte je Station, keine Stunden", "weg": "offen als CSV auf augsburg.de, verzeichnet in der Mobilithek", "portal": "https://mobilithek.info/offers/-4859503742463304999", "archiv": null, "quellenvermerk": "Stadt Augsburg", "lizenzen": [{"code": "augsburg_rad", "titel": "Augsburg: Radzählstationen (verändert: Tageswerte je Station übernommen, ohne den Tag der Erstellung der Datei)", "herausgeber": "Stadt Augsburg", "lizenz": "CC BY 4.0", "lizenz_url": "https://creativecommons.org/licenses/by/4.0/", "herkunft_url": "https://mobilithek.info/offers/-4859503742463304999"}], "hinweise": ["Die Quelle liefert nur Tageswerte, keine Stunden: Ob an einem Tag jede Stunde gezählt ist, lässt sich nicht prüfen. Die Karte zeigt den Tageswert, wie die Quelle ihn liefert (auch 0); ein leerer Wert gilt als nicht gezählt.", "Den letzten Tag der Datei – den Tag, an dem sie erstellt wurde – übernimmt die Zählkarte nicht: Er ist nur zum Teil gezählt.", "Die Datei endet am 11.08.2026; seither ist sie nicht fortgeschrieben (Stand 14.11.2026).", "Lage nach der Beschreibung der Station über die Straßen in OpenStreetMap (© OpenStreetMap- Mitwirkende, ODbL) – die Quelle nennt keine Koordinaten."], "stellen": 12, "von": "2016-09-16", "bis": "2026-08-10", "gruppen": ["rad"], "zeitraeume": {"rad": ["2016-0
+index.json lizenzen: null
