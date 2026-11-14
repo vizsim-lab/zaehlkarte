@@ -1,0 +1,46 @@
+{
+ "ckan": {
+  "fehler": {
+   "offenesdatenportal": [
+    "robots.txt"
+   ],
+   "opendata_ruhr": [
+    "robots.txt"
+   ],
+   "koeln": [
+    "<HTTPError 404: 'Not Found'>"
+   ],
+   "muenster": [
+    "<HTTPError 404: 'Not Found'>"
+   ],
+   "aachen": [
+    "robots.txt"
+   ],
+   "wuppertal": [
+    "<HTTPError 404: 'Not Found'>"
+   ],
+   "open_nrw": [
+    "URLError(TimeoutError('timed out'))"
+   ]
+  }
+ },
+ "ckan_sekunden": 152,
+ "mobilithek": {
+  "-5042567686068911126": "ok",
+  "-5525199905227696263": "ok",
+  "-1611162702897177411": "ok",
+  "681123204783038464": "ok",
+  "-1425387091592081516": "ok",
+  "767690308516229120": "ok",
+  "110000000002899003": "ok",
+  "110000000002899002": "ok",
+  "110000000002055001": "ok"
+ },
+ "mobilithek_sekunden": 8,
+ "seiten": {
+  "ziele": 9,
+  "gelesen": 6,
+  "robots": 2
+ },
+ "seiten_sekunden": 3
+}

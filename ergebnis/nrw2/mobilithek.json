@@ -1,0 +1,2783 @@
+{
+ "-5042567686068911126": {
+  "titel": "Münster Ampelkreuzungen (Monatswerte)",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-1381192595",
+   "publicationId": "-5042567686068911126",
+   "title": "Verkehrsaufkommen an wichtigen Ampelkreuzungen in Münster",
+   "description": "<p>Dieser Datensatz enthält die Anzahl der Fahrzeuge pro Monat seit dem Jahr 2021 für die folgenden fünf Ampelanlagen aus dem Stadtgebiet Münster:</p>\n<ul>\n<li>Kreuzung: Weseler Straße - Inselbogen</li>\n<li>Kreuzung: Albersloher Weg - An den Loddenbüschen</li>\n<li>Einmündung: Warendorfer Straße - Schifffahrter Damm</li>\n<li>Kreuzung: Einsteinstraße - Orléans Ring</li>\n<li>Einmündung: Steinfurter Straße - Austermannstraße<br />\n     </li>\n</ul>\n<p>Es handelt sich um die kumulierten Daten der Zählschleifen an den Fahrspuren.<br />\nDiese Daten werden auch visualisiert auf dem <a href=\"https://klimadashboard.ms/\">Klimadashboard Münster</a> auf der Kachel <a href=\"https://klimadashboard.ms/share/mobility-trafficload\">\"Kfz-Verkehrsbelastung\"</a> ausgegeben.</p>\n<p>Stichworte: LSA, LZA, Lichtsignalanlagen, Lichtzeichenanlagen, MIV, Individualverkehr, Autos, KFZ, Verkehrszählung, Verkehrsbelastung</p>\n",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#CAT_OTHER",
+   "dataCategoryDetail": [],
+   "keyword": [
+    "Transport und Verkehr",
+    "Open.NRW"
+   ],
+   "temporalCoverage": {
+    "begin": null,
+    "end": null
+   },
+   "language": [],
+   "contractOffer": {
+    "contractStart": null,
+    "contractEnd": null,
+    "providerApprovalRequired": null,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": null,
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Stadt Münster",
+     "emailAddress": null
+    },
+    "sovereign": {
+     "id": null,
+     "name": null,
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+   "standardLicense": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [],
+    "polygon": null
+   },
+   "created": "2026-11-13T00:15:05Z",
+   "modified": "2026-09-16T16:17:29Z",
+   "geoReferenceMethod": [],
+   "networkCoverage": [],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [],
+   "mdpBrokering": false,
+   "deltaDelivery": null,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": "https://opendata.stadt-muenster.de/sites/default/files/lza-monatsmittelwerte-202609.json",
+     "endpointDocumentation": "https://opendata.stadt-muenster.de/dataset/verkehrsaufkommen-wichtigen-ampelkreuzungen-m%C3%BCnster/resource/c8cabe56-0489-4cfc-8930",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/GEOJSON",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>Datenstand: 2026/09</p>\n",
+     "byteSize": 239857,
+     "fileName": "LZA Monatsmittelwerte - GeoJSON",
+     "creationDate": "2024-04-14T19:56:13Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.stadt-muenster.de/dataset/verkehrsaufkommen-wichtigen-ampelkreuzungen-m%C3%BCnster/resource/a686291a-99c2-4469-84a7",
+     "endpointDocumentation": "https://opendata.stadt-muenster.de/dataset/verkehrsaufkommen-wichtigen-ampelkreuzungen-m%C3%BCnster/resource/a686291a-99c2-4469-84a7",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>Interaktive Vorschau der Verkehrszählungsdaten</p>\n",
+     "byteSize": null,
+     "fileName": "Verkehrsaufkommen - Vorschau",
+     "creationDate": "2026-09-16T16:02:03Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": null,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+   ],
+   "originalId": "7a0a331f-ab8f-4a7b-9bb8-a908146e33c3",
+   "originatedFrom": "https://w3id.org/mdp/schema/portal#OPEN_NRW",
+   "originatedFromUri": "https://opendata.stadt-muenster.de/dataset/verkehrsaufkommen-wichtigen-ampelkreuzungen-m%C3%BCnster",
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": "VISIBLE",
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": "VISIBLE",
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": true,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "-5525199905227696263": {
+  "titel": "Düsseldorf Verkehrszähldaten 2024",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/183614969",
+   "publicationId": "-5525199905227696263",
+   "title": "Verkehrszähldaten Düsseldorf 2024",
+   "description": "<p>Der Datensatz enthält die gemittelten Verkehrszähldaten der letzten 5 Jahre aus Düsseldorf mit Stand 2024.</p>\n\n<p>Die breit angelegten Zählungen liefern wichtige Erkenntnisse für die Optimierung jeglicher Infrastruktur (Straßen, Brücken, Tunnel). Durch Gegenüberstellung der Verkehrsbelastungen mit den vorhandenen Kapazitäten lassen sich Engpässe identifizieren. Sie bilden die Grundlage für die Dimensionierung von Verkehrsanlagen, für Verkehrsmodellberechnung und für Rechenverfahren zur Bestimmung von verkehrsbezogenen Emissionen und Immissionen.</p>\n\n<p>Um einen belastbaren Durchschnittswert für die Verkehrsmenge zu bekommen wird 16 Stunden in der Zeit von 6-22 Uhr werktags gezählt. Die Zählwerte sind nicht älter als 5 Jahre.</p>\n\n<p>Weitere Informationen finden Sie auf den entsprechenden Seiten des <a href=\"https://www.duesseldorf.de/verkehrsmanagement/verkehrsmanagement/verkehrstechnik/\">Amtes für Verkehrsmanagement</a>.</p>\n\n<p>Die Dateien enthalten folgende Spalteninformationen:</p>\n\n<ul>\n\t<li>_uuid: eindeutige ID</li>\n\t<li>Strasse:<span style=\"white-space:pre\"> </span>Straßenname des Abschnitts</li>\n\t<li>typ<span style=\"white-space: pre;\">: </span>welcher DTV-Wert, z.B. DTVa-Kfz (24h, Mo-So, Feier- und Ferientage)</li>\n\t<li>belastung_gesamt_5j:<span style=\"white-space:pre\"> </span>Wert der Belastung</li>\n\t<li>zeitraum_5j<span style=\"white-space: pre;\">: </span>2020 - 2024</li>\n\t<li>belastung_gesamt_10j:<span style=\"white-space:pre\"> </span>Wert der Belastung</li>\n\t<li>zeitraum_10j<span style=\"white-space: pre;\">: </span>2015 – 2024</li>\n\t<li>vergleichswert_2019_5j<span style=\"white-space: pre;\">: </span>Wert der Belastung. Vergleichswerts aus der „vor Corona“-Zeit.</li>\n\t<li>vergleichswert_zeitraum_5j<span style=\"white-space: pre;\">: </span>2015 – 2019</li>\n\t<li>vergleichswert_2019_10j<span style=\"white-space: pre;\">: </span>Wert der Belastung. Vergleichswerts aus der „vor Corona“-Zeit. </li>\n\t<li>vergleichswert_zeitraum_10j<span style=\"white-space: pre;\">: </span>2010 – 2019</li>\n\t<li>_last_update: Datum des Imports</li>\n</ul>\n",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#CAT_OTHER",
+   "dataCategoryDetail": [],
+   "keyword": [
+    "Transport und Verkehr",
+    "Open.NRW"
+   ],
+   "temporalCoverage": {
+    "begin": null,
+    "end": null
+   },
+   "language": [],
+   "contractOffer": {
+    "contractStart": null,
+    "contractEnd": null,
+    "providerApprovalRequired": null,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": null,
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Landeshauptstadt Düsseldorf – Amt für Verkehrsmanagement",
+     "emailAddress": null
+    },
+    "sovereign": {
+     "id": null,
+     "name": null,
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+   "standardLicense": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [],
+    "polygon": null
+   },
+   "created": "2026-11-12T23:30:07Z",
+   "modified": "2026-06-11T08:40:31Z",
+   "geoReferenceMethod": [],
+   "networkCoverage": [],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [],
+   "mdpBrokering": false,
+   "deltaDelivery": null,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/b02b59cf-925c-42a2-b188-5dc6314f8180",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/b02b59cf-925c-42a2-b188-5dc6314f8180",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>JSON-Datei DTVa Kfz alle Tage im Format ETRS89 / UTM zone 32N EPSG:25832 </p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Kfz",
+     "creationDate": "2026-01-26T14:39:41Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/8be5a282-8823-4a14-9c8a-7c830d81b921",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/8be5a282-8823-4a14-9c8a-7c830d81b921",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>JSON-Datei DTVa Krad im Format ETRS89 / UTM zone 32N EPSG:25832 </p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Krad",
+     "creationDate": "2026-01-26T15:05:45Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/9a9098d6-dfdc-48eb-8c0d-faf5d522016a",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/9a9098d6-dfdc-48eb-8c0d-faf5d522016a",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>JSON-Datei DTVa Lfw im Format ETRS89 / UTM zone 32N EPSG:25832 </p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lfw",
+     "creationDate": "2026-01-26T15:13:54Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/f9a4af3b-731e-40dd-a1a4-66f5e4393691",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/f9a4af3b-731e-40dd-a1a4-66f5e4393691",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>JSON-Datei DTVa Lkw mit Anhänger im Format ETRS89 / UTM zone 32N EPSG:25832 </p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lkw mit Anhänger",
+     "creationDate": "2026-01-26T15:17:58Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/39683ab3-6dd0-4377-82a6-8939dfadcc2b",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/39683ab3-6dd0-4377-82a6-8939dfadcc2b",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/KML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>KML-Datei DTVa Pkw im Format WGS84 EPSG 4326</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Pkw",
+     "creationDate": "2026-01-26T15:41:55Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/6de59ca1-2f8e-4e20-b030-283a1d6f4674",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/6de59ca1-2f8e-4e20-b030-283a1d6f4674",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>CSV-Datei DTVa Krad</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Krad",
+     "creationDate": "2026-01-26T14:41:16Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/ad4d54cc-9ebd-43da-a711-5d6bcbf03dbe",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/ad4d54cc-9ebd-43da-a711-5d6bcbf03dbe",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>JSON-Datei DTVa Bus im Format ETRS89 / UTM zone 32N EPSG:25832 </p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Bus",
+     "creationDate": "2026-01-26T16:00:46Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/a0462ddb-a1ee-45bd-a4d7-0f9e585dd7ba",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/a0462ddb-a1ee-45bd-a4d7-0f9e585dd7ba",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>CSV-Datei DTVa Pkw</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Pkw",
+     "creationDate": "2026-01-26T15:40:09Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/1e63ed15-bed4-4cc8-aacc-f0aea15c9cb9",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/1e63ed15-bed4-4cc8-aacc-f0aea15c9cb9",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>JSON-Datei DTVa Pkw im Format ETRS89 / UTM zone 32N EPSG:25832 </p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Pkw",
+     "creationDate": "2026-01-26T15:48:27Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/7c62fef2-2390-48ad-a2c8-edbb4f12c08c",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/7c62fef2-2390-48ad-a2c8-edbb4f12c08c",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>CSV-Datei DTVa Lkw mit Anhänger</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lkw mit Anhänger",
+     "creationDate": "2026-01-26T15:15:03Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/5d5b32b9-7fda-43c5-8b26-a9a4d5256fcb",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/5d5b32b9-7fda-43c5-8b26-a9a4d5256fcb",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>JSON-Datei DTVa Lkw ohne Anhänger im Format ETRS89 / UTM zone 32N EPSG:25832 </p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lkw ohne Anhänger",
+     "creationDate": "2026-01-26T15:35:11Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/f0ee2a6f-61a8-4fa0-b13f-257ed8173042",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/f0ee2a6f-61a8-4fa0-b13f-257ed8173042",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>CSV-Datei DTVa Lkw ohne Anhänger</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lkw ohne Anhänger",
+     "creationDate": "2026-01-26T15:21:20Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/75b6ffef-0453-48b2-b5c1-d123d4fcb4c9",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/75b6ffef-0453-48b2-b5c1-d123d4fcb4c9",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/KML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>KML-Datei DTVa Krad im Format WGS84 EPSG 4326</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Krad",
+     "creationDate": "2026-01-26T14:55:09Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/efad35dc-c1d9-4b3c-b5ed-54473842b02d",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/efad35dc-c1d9-4b3c-b5ed-54473842b02d",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/KML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>KML-Datei DTVa Kfz alle Tage im Format WGS84 EPSG 4326</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Kfz",
+     "creationDate": "2026-01-26T14:38:27Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/ecfd8768-38a0-4632-b23b-32827eac35da",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/ecfd8768-38a0-4632-b23b-32827eac35da",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/KML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>KML-Datei DTVa Lfw im Format WGS84 EPSG 4326</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lfw",
+     "creationDate": "2026-01-26T15:12:46Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/8681fe8d-cbe0-4d96-9d54-0589074fdee3",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/8681fe8d-cbe0-4d96-9d54-0589074fdee3",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>CSV-Datei DTVa Bus</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Bus",
+     "creationDate": "2026-01-26T15:50:07Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/73ff7b45-149b-4e78-97ba-c2d2e8fb9f64",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/73ff7b45-149b-4e78-97ba-c2d2e8fb9f64",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/KML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>KML-Datei DTVa Lkw mit Anhänger im Format WGS84 EPSG 4326</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lkw mit Anhänger",
+     "creationDate": "2026-01-26T15:16:29Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/a76299df-ceb9-451f-9144-638c8e0606e0",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/a76299df-ceb9-451f-9144-638c8e0606e0",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>CSV-Datei DTVa Lfw</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lfw",
+     "creationDate": "2026-01-26T15:11:07Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/449eb974-9a60-4c77-b27e-2291096762a4",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/449eb974-9a60-4c77-b27e-2291096762a4",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>CSV-Datei DTVa Kfz alle Tage</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Kfz",
+     "creationDate": "2026-01-26T14:25:53Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/14e0068b-97fe-46a9-93d9-b4de69433473",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/14e0068b-97fe-46a9-93d9-b4de69433473",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/KML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>KML-Datei DTVa Lkw ohne Anhänger im Format WGS84 EPSG 4326</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Lkw ohne Anhänger",
+     "creationDate": "2026-01-26T15:25:08Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/cb5edfee-bba1-46a5-a4fb-ca63669e4b4e",
+     "endpointDocumentation": "https://opendata.duesseldorf.de/dataset/2efe874a-3568-4ea2-ba07-f33e95a66f60/resource/cb5edfee-bba1-46a5-a4fb-ca63669e4b4e",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/KML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "<p>KML-Datei DTVa Bus im Format WGS84 EPSG 4326</p>\n",
+     "byteSize": null,
+     "fileName": "DTVa Bus",
+     "creationDate": "2026-01-26T15:56:54Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": null,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+   ],
+   "originalId": "2efe874a-3568-4ea2-ba07-f33e95a66f60",
+   "originatedFrom": "https://w3id.org/mdp/schema/portal#OPEN_NRW",
+   "originatedFromUri": "https://opendata.duesseldorf.de/dataset/verkehrsz%C3%A4hldaten-d%C3%BCsseldorf-2024",
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": "VISIBLE",
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": "VISIBLE",
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": true,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "-1611162702897177411": {
+  "titel": "Neuss Radverkehrszählstelle RS5",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-1229501602",
+   "publicationId": "-1611162702897177411",
+   "title": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss",
+   "description": "Der Datensatz enthält die kontinuierlichen Erfassungsdaten (Rad-Zählung) der automatischen Dauerzählstelle am Standort Neuss auf der Trasse des Radschnellwegs RS5 (Verbindung Düsseldorf – Neuss – Langenfeld). Erfasst werden ausschließlich die Querungen pro Stunde (Stundenwerte) nach Fahrtrichtung inklusive Zeitstempel.",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#CAT_OTHER",
+   "dataCategoryDetail": [],
+   "keyword": [
+    "Stadt Neuss",
+    "Open.NRW",
+    "RS5",
+    "Radzählstelle"
+   ],
+   "temporalCoverage": {
+    "begin": null,
+    "end": null
+   },
+   "language": [],
+   "contractOffer": {
+    "contractStart": null,
+    "contractEnd": null,
+    "providerApprovalRequired": null,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": null,
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Stadt Neuss",
+     "emailAddress": null
+    },
+    "sovereign": {
+     "id": null,
+     "name": null,
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#NO_LICENSE",
+   "standardLicense": null,
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [],
+    "polygon": null
+   },
+   "created": "2026-11-12T05:10:44.822Z",
+   "modified": "2026-11-12T05:10:44.822Z",
+   "geoReferenceMethod": [],
+   "networkCoverage": [],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [],
+   "mdpBrokering": false,
+   "deltaDelivery": null,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/rdfxml",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/rdfxml",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (rdfxml)",
+     "byteSize": null,
+     "fileName": "rdfxml",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/csv?use_labels=true",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/csv?use_labels=true",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (csv)",
+     "byteSize": null,
+     "fileName": "csv",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/json",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/json",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (json)",
+     "byteSize": null,
+     "fileName": "json",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/parquet",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/parquet",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (parquet)",
+     "byteSize": null,
+     "fileName": "parquet",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/xls?use_labels=true",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/xls?use_labels=true",
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/XLS",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (xls)",
+     "byteSize": null,
+     "fileName": "xls",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/n3",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/n3",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (n3)",
+     "byteSize": null,
+     "fileName": "n3",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/jsonld",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/jsonld",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (jsonld)",
+     "byteSize": null,
+     "fileName": "jsonld",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/jsonl",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/jsonl",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (jsonl)",
+     "byteSize": null,
+     "fileName": "jsonl",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/turtle",
+     "endpointDocumentation": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/turtle",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": "Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (turtle)",
+     "byteSize": null,
+     "fileName": "turtle",
+     "creationDate": "2026-11-12T05:10:44.822Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": null,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN",
+    "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+   ],
+   "originalId": "stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse@rhein-kreis-neuss",
+   "originatedFrom": "https://w3id.org/mdp/schema/portal#OPEN_NRW",
+   "originatedFromUri": "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse",
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": "VISIBLE",
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": "VISIBLE",
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": true,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "681123204783038464": {
+  "titel": "Gelsenkirchen Verkehrsdaten",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/662509407",
+   "publicationId": "681123204783038464",
+   "title": "Gelsenkirchen Verkehrsdaten",
+   "description": "Reisezeiten und Verkehrsstärken für Gelsenkirchen",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+   "dataCategoryDetail": [
+    "https://w3id.org/mdp/schema/data_categories_detail#CURRENT_TRAVEL_TIMES",
+    "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_VOLUME"
+   ],
+   "keyword": [],
+   "temporalCoverage": {
+    "begin": "2024-01-01",
+    "end": null
+   },
+   "language": [],
+   "contractOffer": {
+    "contractStart": "2024-01-08",
+    "contractEnd": null,
+    "providerApprovalRequired": false,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": false
+   },
+   "accrualPeriodicity": "https://w3id.org/idsa/code/EVERY_1_MINUTE",
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Stadt Gelsenkirchen",
+     "emailAddress": "https://www.gelsenkirchen.de/de/default.aspx"
+    },
+    "sovereign": {
+     "id": null,
+     "name": "Stadt Gelsenkirchen",
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+   "standardLicense": null,
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [
+     {
+      "code": "DEA32",
+      "name": "Gelsenkirchen, Kreisfreie Stadt"
+     }
+    ],
+    "polygon": "GEOMETRYCOLLECTION (POLYGON ((7.14506 51.55224, 7.13956 51.50616, 7.1042 51.48127, 7.01021 51.53273, 6.99833 51.60772, 7.01864 51.62224, 7.11926 51.58385, 7.14506 51.55224)))"
+   },
+   "created": "2024-01-08T09:29:13.39Z",
+   "modified": "2025-10-16T14:02:57.717Z",
+   "geoReferenceMethod": [],
+   "networkCoverage": [
+    "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS"
+   ],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK"
+   ],
+   "mdpBrokering": true,
+   "deltaDelivery": false,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": null,
+     "endpointDocumentation": null,
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": null,
+     "creationDate": null,
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": false,
+     "masterSchema": {
+      "title": "",
+      "accessURL": "/schemas/MODEL_OTHER/Version_1.2/20110617_containermodel_schema.xsd",
+      "description": "",
+      "modified": null,
+      "instance": {
+       "fileName": null,
+       "mediaType": null,
+       "byteSize": 0
+      },
+      "validFrom": null,
+      "validTo": null
+     },
+     "schema": [],
+     "schemaProfileName": "Version_1.2"
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": false,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+   ],
+   "originalId": null,
+   "originatedFrom": null,
+   "originatedFromUri": null,
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": {
+      "code": "VISIBLE",
+      "name": "VISIBLE"
+     },
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": {
+      "title": "VISIBLE",
+      "accessURL": "VISIBLE",
+      "description": "VISIBLE",
+      "modified": "VISIBLE",
+      "instance": {
+       "fileName": "VISIBLE",
+       "mediaType": "VISIBLE",
+       "byteSize": "VISIBLE"
+      },
+      "validFrom": "VISIBLE",
+      "validTo": "VISIBLE"
+     },
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": false,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "-1425387091592081516": {
+  "titel": "Bielefeld Radverkehrszählstellen",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-837492967",
+   "publicationId": "-1425387091592081516",
+   "title": "Radverkehrszählstellen",
+   "description": "<div>\n<div>Seit dem Jahr 2019 führt die Stadt Bielefeld temporäre Radverkehrszählungen im gesamten Stadtgebiet mit drei mobilen Zählstellen durch. Diese ermöglichen es, die Auswirkungen von kurzfristigen Veränderungen im Verkehrsfluss wie zum Beispiel durch Baustellen oder Fertigstellungen neuer Radwege quantitativ zu beurteilen. Seit April 2021 wird darüber hinaus der Radverkehr an fünf Radhauptrouten innerhalb des Stadtgebietes dauerhaft erfasst. Im Januar 2022 wurde eine weitere Zählstelle am Stadtring in Brackwede in Betrieb genommen. Eine weitere Dauerzählstelle erhebt seit der Fertigstellung des Jahnplatzes Anfang September 2022 den dortigen Radverkehr und zeigt diesen über ein digitales Display (siehe Abbildung) in Echtzeit an. Die Stadt Bielefeld plant die Anzahl an Dauerzählstellen und digitalen Displays sukzessive auszubauen. Die dauerhafte Radverkehrszählung erfolgt über in den Boden eingelassene Induktionsschleifen, die eine Differenzierung von Radfahrenden und anderen Verkehrsteilnehmenden ermöglichen.</div>\n</div>\n\n<div> </div>\n",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#CAT_OTHER",
+   "dataCategoryDetail": [],
+   "keyword": [
+    "Bauen und Wohnen",
+    "Geo",
+    "Infrastruktur",
+    "Open.NRW"
+   ],
+   "temporalCoverage": {
+    "begin": null,
+    "end": null
+   },
+   "language": [],
+   "contractOffer": {
+    "contractStart": null,
+    "contractEnd": null,
+    "providerApprovalRequired": null,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": "https://w3id.org/mdp/schema/frequency#UNKNOWN",
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Stadt Bielefeld - Amt für Verkehr",
+     "emailAddress": null
+    },
+    "sovereign": {
+     "id": null,
+     "name": "Stadt Bielefeld - Amt für Verkehr",
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+   "standardLicense": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [],
+    "polygon": null
+   },
+   "created": "2024-08-20T06:19:33Z",
+   "modified": "2024-08-21T15:30:00Z",
+   "geoReferenceMethod": [],
+   "networkCoverage": [],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [],
+   "mdpBrokering": false,
+   "deltaDelivery": null,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/c92f4f54-08df-408e-bd36-8594af5c39bb",
+     "endpointDocumentation": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/c92f4f54-08df-408e-bd36-8594af5c39bb",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": "Zählstationen auf dem Internetauftritt der Stadt Bielefeld",
+     "creationDate": "2024-08-21T15:30:00Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/9d702c5f-d260-4298-97d3-852f48a7718c",
+     "endpointDocumentation": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/9d702c5f-d260-4298-97d3-852f48a7718c",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": "wms",
+     "creationDate": "2024-08-20T06:25:59Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/901837a5-5129-49d0-bf61-c916cb32167a",
+     "endpointDocumentation": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/901837a5-5129-49d0-bf61-c916cb32167a",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": "onlineKARTE",
+     "creationDate": "2024-08-20T06:28:30Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    },
+    {
+     "accessUrl": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/b139df19-a8f5-4f75-baaa-a7e4270a8260",
+     "endpointDocumentation": "https://open-data.bielefeld.de/dataset/4ec70198-1eab-4f17-ace6-6318d3a8df34/resource/b139df19-a8f5-4f75-baaa-a7e4270a8260",
+     "accessProtocol": null,
+     "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": "Metadaten",
+     "creationDate": "2024-08-20T06:20:07Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": null,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+   ],
+   "originalId": "4ec70198-1eab-4f17-ace6-6318d3a8df34",
+   "originatedFrom": "https://w3id.org/mdp/schema/portal#OPEN_NRW",
+   "originatedFromUri": "https://open-data.bielefeld.de/dataset/radverkehrsz%C3%A4hlstellen",
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": "VISIBLE",
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": "VISIBLE",
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": true,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "767690308516229120": {
+  "titel": "FH Aachen Datenpool",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/990104493",
+   "publicationId": "767690308516229120",
+   "title": "Aachener Datenpool - Technische Entwicklung und Planung auf Basis von zeitlich & örtlich hochaufgelösten Messdaten",
+   "description": "Im Rahmen des AC-DatEp-Projektes erfasste und konsolidierte Daten für Verkehr (motorisierter Verkehr, Radverkehr, Fußgänger), Luftqualitätsdaten, Temperatur und Luftfeuchtigkeit, Lärm, Veranstaltungen",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#CLIMATE_AND_WEATHER",
+   "dataCategoryDetail": [],
+   "keyword": [
+    "AC-DatEP",
+    "Ac-DatEp",
+    "Aachener Datenpool",
+    "Umwelt",
+    "Verkehr",
+    "Lärm",
+    "Luftqualität",
+    "Radvekehr",
+    "Fußgänger"
+   ],
+   "temporalCoverage": {
+    "begin": "2022-01-01",
+    "end": null
+   },
+   "language": [],
+   "contractOffer": {
+    "contractStart": "2024-11-06",
+    "contractEnd": null,
+    "providerApprovalRequired": false,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": "https://w3id.org/idsa/code/CONTINUOUS",
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "FH Aachen",
+     "emailAddress": "https://www.fh-aachen.de/"
+    },
+    "sovereign": {
+     "id": null,
+     "name": "FH Aachen",
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+   "standardLicense": "http://dcat-ap.de/def/licenses/ccpdm/1.0",
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [],
+    "polygon": "GEOMETRYCOLLECTION (POLYGON ((6.034927 50.805067, 6.137924 50.803765, 6.141357 50.747318, 6.031494 50.748187, 6.034927 50.805067)))"
+   },
+   "created": "2024-09-09T11:42:42.08Z",
+   "modified": "2024-11-06T08:56:53.667Z",
+   "geoReferenceMethod": [
+    "https://w3id.org/mdp/schema/geo_reference_method#METHOD_OTHER"
+   ],
+   "networkCoverage": [
+    "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS"
+   ],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_PEDESTRIAN",
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CYCLE"
+   ],
+   "mdpBrokering": false,
+   "deltaDelivery": null,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": "https://acdatep.nowum.fh-aachen.de/api/docs",
+     "endpointDocumentation": "https://acdatep.nowum.fh-aachen.de/api/docs",
+     "accessProtocol": null,
+     "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+     "dataModel": null,
+     "dataFormatAdditionalDescription": "",
+     "description": "",
+     "byteSize": null,
+     "fileName": null,
+     "creationDate": "2024-09-03T06:46:28.759Z",
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": null,
+     "masterSchema": null,
+     "schema": [],
+     "schemaProfileName": null
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": false,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN",
+    "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+   ],
+   "originalId": null,
+   "originatedFrom": null,
+   "originatedFromUri": null,
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": "VISIBLE",
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": "VISIBLE",
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": false,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "110000000002899003": {
+  "titel": "Köln Detektordaten dynamisch",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-1754630400",
+   "publicationId": "110000000002899003",
+   "title": "Detektordaten Stadt Köln dynamisch",
+   "description": "Messergebnisse an Dauermessstellen: Anzahl der Fahrzeuge (Pkw/Lkw) pro Stunde (Aggregierungsintervall 1,5 min) sowie der Durchschnittsgeschwindigkeit (Aggregierungsintervall 1,5 min), Aktualisierungszyklus: 5 min oder nur bei Veränderung des LOS mit nachträglicher Übertragung vorher gespeicherter Daten.",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+   "dataCategoryDetail": [],
+   "keyword": [],
+   "temporalCoverage": {
+    "begin": "2019-12-19",
+    "end": null
+   },
+   "language": [
+    "https://w3id.org/idsa/code/DE"
+   ],
+   "contractOffer": {
+    "contractStart": null,
+    "contractEnd": null,
+    "providerApprovalRequired": true,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": "https://w3id.org/idsa/code/EVERY_1_MINUTE",
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Stadt Köln",
+     "emailAddress": "http://www.stadt-koeln.de/"
+    },
+    "sovereign": {
+     "id": null,
+     "name": "Stadt Köln",
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+   "standardLicense": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [
+     {
+      "code": "DEA23",
+      "name": "Köln, Kreisfreie Stadt"
+     }
+    ],
+    "polygon": "GEOMETRYCOLLECTION (POLYGON ((6.89805 51.06489, 6.98218 51.01879, 7.06791 51.01874, 7.16128 50.86729, 6.98094 50.84092, 6.94029 50.84279, 6.82966 50.92974, 6.83728 51.01445, 6.77363 51.06439, 6.85349 51.08426, 6.89805 51.06489)))"
+   },
+   "created": "2023-06-20T15:07:41.331Z",
+   "modified": "2024-04-05T09:25:47.778Z",
+   "geoReferenceMethod": [
+    "https://w3id.org/mdp/schema/geo_reference_method#WGS84"
+   ],
+   "networkCoverage": [
+    "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS"
+   ],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR"
+   ],
+   "mdpBrokering": true,
+   "deltaDelivery": false,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": null,
+     "endpointDocumentation": null,
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": null,
+     "creationDate": null,
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": false,
+     "masterSchema": {
+      "title": "",
+      "accessURL": "/schemas/DATEX_2/Profile_Measurement_Data/MDM-Profile_MeasuredData.xsd",
+      "description": "",
+      "modified": null,
+      "instance": {
+       "fileName": null,
+       "mediaType": null,
+       "byteSize": 0
+      },
+      "validFrom": null,
+      "validTo": null
+     },
+     "schema": [],
+     "schemaProfileName": "Profile_Measurement_Data"
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": false,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+   ],
+   "originalId": null,
+   "originatedFrom": null,
+   "originatedFromUri": null,
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": {
+      "code": "VISIBLE",
+      "name": "VISIBLE"
+     },
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": {
+      "title": "VISIBLE",
+      "accessURL": "VISIBLE",
+      "description": "VISIBLE",
+      "modified": "VISIBLE",
+      "instance": {
+       "fileName": "VISIBLE",
+       "mediaType": "VISIBLE",
+       "byteSize": "VISIBLE"
+      },
+      "validFrom": "VISIBLE",
+      "validTo": "VISIBLE"
+     },
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": false,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "110000000002899002": {
+  "titel": "Köln Detektordaten statisch",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/52824063",
+   "publicationId": "110000000002899002",
+   "title": "Detektordaten Stadt Köln statisch",
+   "description": "Lage- und Richtungsangabe von ca.280 stationären Dauermessstellen (Stand 31.12.2019)  auf freien Strecken im MRV (mobilitätsrelevanten Verkehrsnetz https://offenedaten-koeln.de/dataset/mobilitaetsrelevantes-verkehrsnetz-mrv-koeln.",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+   "dataCategoryDetail": [],
+   "keyword": [],
+   "temporalCoverage": {
+    "begin": "2019-12-19",
+    "end": null
+   },
+   "language": [
+    "https://w3id.org/idsa/code/DE"
+   ],
+   "contractOffer": {
+    "contractStart": null,
+    "contractEnd": null,
+    "providerApprovalRequired": true,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": "https://w3id.org/idsa/code/DAILY",
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Stadt Köln",
+     "emailAddress": "http://www.stadt-koeln.de/"
+    },
+    "sovereign": {
+     "id": null,
+     "name": "Stadt Köln",
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+   "standardLicense": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+   "customLicenseAsResource": null,
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [
+     {
+      "code": "DEA23",
+      "name": "Köln, Kreisfreie Stadt"
+     }
+    ],
+    "polygon": "GEOMETRYCOLLECTION (POLYGON ((6.89805 51.06489, 6.98218 51.01879, 7.06791 51.01874, 7.16128 50.86729, 6.98094 50.84092, 6.94029 50.84279, 6.82966 50.92974, 6.83728 51.01445, 6.77363 51.06439, 6.85349 51.08426, 6.89805 51.06489)))"
+   },
+   "created": "2023-06-20T15:07:39.566Z",
+   "modified": "2024-04-05T09:27:19.419Z",
+   "geoReferenceMethod": [
+    "https://w3id.org/mdp/schema/geo_reference_method#WGS84"
+   ],
+   "networkCoverage": [
+    "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS"
+   ],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR"
+   ],
+   "mdpBrokering": true,
+   "deltaDelivery": false,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": null,
+     "endpointDocumentation": null,
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": null,
+     "creationDate": null,
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": false,
+     "masterSchema": {
+      "title": "",
+      "accessURL": "/schemas/DATEX_2/Profile_Measurement_Site/MDM-Profile_MeasurementSiteTable.xsd",
+      "description": "",
+      "modified": null,
+      "instance": {
+       "fileName": null,
+       "mediaType": null,
+       "byteSize": 0
+      },
+      "validFrom": null,
+      "validTo": null
+     },
+     "schema": [],
+     "schemaProfileName": "Profile_Measurement_Site"
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": false,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+   ],
+   "originalId": null,
+   "originatedFrom": null,
+   "originatedFromUri": null,
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": "VISIBLE",
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": {
+      "code": "VISIBLE",
+      "name": "VISIBLE"
+     },
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": {
+      "title": "VISIBLE",
+      "accessURL": "VISIBLE",
+      "description": "VISIBLE",
+      "modified": "VISIBLE",
+      "instance": {
+       "fileName": "VISIBLE",
+       "mediaType": "VISIBLE",
+       "byteSize": "VISIBLE"
+      },
+      "validFrom": "VISIBLE",
+      "validTo": "VISIBLE"
+     },
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": false,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ },
+ "110000000002055001": {
+  "titel": "Düsseldorf Detektordaten",
+  "daten": {
+   "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-2027905914",
+   "publicationId": "110000000002055001",
+   "title": "Detektordaten Stadt Düsseldorf dynamisch",
+   "description": "Datenart: Anzahl der Fahrzeuge pro Stunde (Aggregierungsintervall 1 min) sowie der Durchschnittsgeschwindigkeit (Aggregierungsintervall 1 min), Aktualisierungszyklus: 5 min.",
+   "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+   "dataCategoryDetail": [],
+   "keyword": [],
+   "temporalCoverage": {
+    "begin": "2013-06-05",
+    "end": null
+   },
+   "language": [
+    "https://w3id.org/idsa/code/DE"
+   ],
+   "contractOffer": {
+    "contractStart": null,
+    "contractEnd": null,
+    "providerApprovalRequired": true,
+    "napApprovalRequired": null,
+    "providerApprovalAnonymousAccessRequired": null
+   },
+   "accrualPeriodicity": "https://w3id.org/idsa/code/EVERY_1_MINUTE",
+   "agents": {
+    "publisher": {
+     "id": null,
+     "name": "Landeshauptstadt Düsseldorf",
+     "emailAddress": "http://www.duesseldorf.de"
+    },
+    "sovereign": {
+     "id": null,
+     "name": "Landeshauptstadt Düsseldorf",
+     "emailAddress": null
+    },
+    "contactPoint": null
+   },
+   "rights": "https://w3id.org/mdp/schema/license#NO_LICENSE",
+   "standardLicense": null,
+   "customLicenseAsResource": {
+    "title": "",
+    "accessURL": "/110000000002055001/MDM-Nutzungsbedingungen_Stadt_Duesseldorf.pdf",
+    "description": "",
+    "modified": "2023-06-21T20:22:39.896Z",
+    "instance": {
+     "fileName": "MDM-Nutzungsbedingungen_Stadt_Duesseldorf.pdf",
+     "mediaType": null,
+     "byteSize": 470734
+    },
+    "validFrom": null,
+    "validTo": null
+   },
+   "conditionForUse": null,
+   "sourceNote": null,
+   "spatialCoverage": {
+    "nuts": [
+     {
+      "code": "DEA11",
+      "name": "Düsseldorf, Kreisfreie Stadt"
+     }
+    ],
+    "polygon": "GEOMETRYCOLLECTION (POLYGON ((6.85605 51.12619, 6.72473 51.20656, 6.71486 51.3332, 6.8052 51.3488, 6.812 51.28365, 6.92143 51.25814, 6.88348 51.22328, 6.91189 51.13967, 6.85605 51.12619)))"
+   },
+   "created": "2023-06-21T20:22:40.586Z",
+   "modified": "2023-06-21T20:22:40.586Z",
+   "geoReferenceMethod": [
+    "https://w3id.org/mdp/schema/geo_reference_method#METHOD_OTHER"
+   ],
+   "networkCoverage": [
+    "https://w3id.org/mdp/schema/network_coverage#REGIONAL_ROADS",
+    "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS"
+   ],
+   "roadNetworkCoverageDescription": null,
+   "transportMode": [
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+    "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR"
+   ],
+   "mdpBrokering": true,
+   "deltaDelivery": false,
+   "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+   "status": null,
+   "contentStandard": [],
+   "samples": [],
+   "qualityDescription": "",
+   "contentData": [
+    {
+     "accessUrl": null,
+     "endpointDocumentation": null,
+     "accessProtocol": null,
+     "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+     "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+     "dataFormatAdditionalDescription": null,
+     "description": null,
+     "byteSize": null,
+     "fileName": null,
+     "creationDate": null,
+     "commMethod": null,
+     "retentionPeriod": null,
+     "deltaDelivery": false,
+     "masterSchema": {
+      "title": "",
+      "accessURL": "/schemas/DATEX_2/Profile_Measurement_Data/MDM-Profile_MeasuredData.xsd",
+      "description": "",
+      "modified": null,
+      "instance": {
+       "fileName": null,
+       "mediaType": null,
+       "byteSize": 0
+      },
+      "validFrom": null,
+      "validTo": null
+     },
+     "schema": [],
+     "schemaProfileName": "Profile_Measurement_Data"
+    }
+   ],
+   "limitedAccessOrg": null,
+   "virusCheckEnabled": null,
+   "schemaValidationEnabled": null,
+   "legalCheckEnabled": null,
+   "declarations": {
+    "declRights": null,
+    "relevantToMDVPBefG": false,
+    "rolePBefG": null,
+    "fulfillmentAgentForOrg": null,
+    "declNAPsend": null,
+    "declNAPreceive": null,
+    "declUseOfPersData": null,
+    "relevantToIVSG": null,
+    "declToNA": null,
+    "relevantToMFUND": null,
+    "mFUNDProjectName": null,
+    "mFUNDProjectNumber": null,
+    "relevantToEGov": null,
+    "declGovData": null,
+    "relevantToDNG": null
+   },
+   "themes": [
+    "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+   ],
+   "originalId": null,
+   "originatedFrom": null,
+   "originatedFromUri": null,
+   "fieldsVisibility": {
+    "id": "VISIBLE",
+    "title": "VISIBLE",
+    "description": "VISIBLE",
+    "dataCategory": "VISIBLE",
+    "dataCategoryDetail": "VISIBLE",
+    "keyword": "VISIBLE",
+    "temporalCoverage": {
+     "begin": "VISIBLE",
+     "end": "VISIBLE"
+    },
+    "language": "VISIBLE",
+    "contractOffer": {
+     "contractStart": "VISIBLE",
+     "contractEnd": "VISIBLE",
+     "providerApprovalRequired": "VISIBLE",
+     "napApprovalRequired": "HIDDEN",
+     "providerApprovalAnonymousAccessRequired": "VISIBLE"
+    },
+    "accrualPeriodicity": "VISIBLE",
+    "agents": {
+     "publisher": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "sovereign": {
+      "id": "HIDDEN",
+      "name": "VISIBLE",
+      "emailAddress": "VISIBLE"
+     },
+     "contactPoint": "HIDDEN"
+    },
+    "rights": "VISIBLE",
+    "standardLicense": "VISIBLE",
+    "customLicenseAsResource": {
+     "title": "VISIBLE",
+     "accessURL": "VISIBLE",
+     "description": "VISIBLE",
+     "modified": "VISIBLE",
+     "instance": {
+      "fileName": "VISIBLE",
+      "mediaType": "VISIBLE",
+      "byteSize": "VISIBLE"
+     },
+     "validFrom": "VISIBLE",
+     "validTo": "VISIBLE"
+    },
+    "conditionForUse": "VISIBLE",
+    "sourceNote": "VISIBLE",
+    "spatialCoverage": {
+     "nuts": {
+      "code": "VISIBLE",
+      "name": "VISIBLE"
+     },
+     "polygon": "VISIBLE"
+    },
+    "created": "VISIBLE",
+    "modified": "VISIBLE",
+    "geoReferenceMethod": "VISIBLE",
+    "networkCoverage": "VISIBLE",
+    "roadNetworkCoverageDescription": "VISIBLE",
+    "transportMode": "VISIBLE",
+    "mdpBrokering": "VISIBLE",
+    "deltaDelivery": "VISIBLE",
+    "accessRights": "VISIBLE",
+    "status": "HIDDEN",
+    "contentStandard": "VISIBLE",
+    "samples": "VISIBLE",
+    "qualityDescription": "VISIBLE",
+    "contentData": {
+     "accessUrl": "VISIBLE",
+     "endpointDocumentation": "VISIBLE",
+     "accessProtocol": "HIDDEN",
+     "mediaType": "VISIBLE",
+     "dataModel": "VISIBLE",
+     "dataFormatAdditionalDescription": "VISIBLE",
+     "description": "VISIBLE",
+     "byteSize": "VISIBLE",
+     "fileName": "VISIBLE",
+     "creationDate": "VISIBLE",
+     "commMethod": "HIDDEN",
+     "retentionPeriod": "VISIBLE",
+     "deltaDelivery": "VISIBLE",
+     "masterSchema": {
+      "title": "VISIBLE",
+      "accessURL": "VISIBLE",
+      "description": "VISIBLE",
+      "modified": "VISIBLE",
+      "instance": {
+       "fileName": "VISIBLE",
+       "mediaType": "VISIBLE",
+       "byteSize": "VISIBLE"
+      },
+      "validFrom": "VISIBLE",
+      "validTo": "VISIBLE"
+     },
+     "schema": "VISIBLE",
+     "schemaProfileName": "VISIBLE"
+    },
+    "limitedAccessOrg": "HIDDEN",
+    "virusCheckEnabled": "HIDDEN",
+    "schemaValidationEnabled": "HIDDEN",
+    "legalCheckEnabled": "HIDDEN",
+    "declarations": {
+     "declRights": "HIDDEN",
+     "relevantToMDVPBefG": "VISIBLE",
+     "rolePBefG": "HIDDEN",
+     "fulfillmentAgentForOrg": "HIDDEN",
+     "declNAPsend": "HIDDEN",
+     "declNAPreceive": "HIDDEN",
+     "declUseOfPersData": "HIDDEN",
+     "relevantToIVSG": "HIDDEN",
+     "declToNA": "HIDDEN",
+     "relevantToMFUND": "HIDDEN",
+     "mFUNDProjectName": "HIDDEN",
+     "mFUNDProjectNumber": "HIDDEN",
+     "relevantToEGov": "HIDDEN",
+     "declGovData": "HIDDEN",
+     "relevantToDNG": "HIDDEN"
+    },
+    "themes": "VISIBLE",
+    "originalId": "VISIBLE",
+    "originatedFrom": "VISIBLE",
+    "originatedFromUri": "VISIBLE",
+    "harvested": "VISIBLE",
+    "dynamicFields": "VISIBLE",
+    "feedback": "HIDDEN",
+    "lastDeclToNA": "VISIBLE",
+    "lastNoteDate": "VISIBLE",
+    "irregularSince": "VISIBLE",
+    "hvdCategory": "VISIBLE"
+   },
+   "harvested": false,
+   "dynamicFields": {},
+   "feedback": null,
+   "lastDeclToNA": null,
+   "lastNoteDate": null,
+   "irregularSince": null,
+   "hvdCategory": []
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "offenesdatenportal": {
+  "Verkehrszählung": "robots.txt"
+ },
+ "opendata_ruhr": {
+  "Verkehrszählung": "robots.txt"
+ },
+ "koeln": {
+  "Verkehrszählung": "<HTTPError 404: 'Not Found'>",
+  "Verkehrszaehlung": "<HTTPError 404: 'Not Found'>"
+ },
+ "muenster": {
+  "Verkehrszählung": "<HTTPError 404: 'Not Found'>",
+  "Verkehrszaehlung": "<HTTPError 404: 'Not Found'>"
+ },
+ "aachen": {
+  "Verkehrszählung": "robots.txt"
+ },
+ "wuppertal": {
+  "Verkehrszählung": "<HTTPError 404: 'Not Found'>",
+  "Verkehrszaehlung": "<HTTPError 404: 'Not Found'>"
+ },
+ "open_nrw": {
+  "Verkehrszählung": "URLError(TimeoutError('timed out'))",
+  "Verkehrszaehlung": "URLError(TimeoutError('timed out'))"
+ }
+}
