@@ -1,0 +1,502 @@
+[
+ {
+  "osm": "node/2140611382",
+  "lat": 49.5876688,
+  "lon": 10.9910545,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "name": "BASt Zählstelle AS Erlangen-Zentrum",
+   "operator": "Bundesanstalt für Straßenwesen (BASt)",
+   "ref:bast": "9661_Ri1",
+   "website": "https://www.bast.de/DE/Verkehrstechnik/Fachthemen/v2-verkehrszaehlung/zaehl_node.html"
+  }
+ },
+ {
+  "osm": "node/5191360450",
+  "lat": 47.6061368,
+  "lon": 12.1951716,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/5235473022",
+  "lat": 49.5927638,
+  "lon": 11.0054947,
+  "tags": {
+   "check_date": "2019-11-10",
+   "display": "digital",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Fahrradzähler",
+   "recording:automated": "yes",
+   "start_date": "2017",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/8108861026",
+  "lat": 48.534371,
+  "lon": 12.1378802,
+  "tags": {
+   "description": "Messtreifen im Boden, welcher die Anzahl der Radfahrer zählt",
+   "man_made": "monitoring_station",
+   "mapillary": "1639032066285664",
+   "monitoring:bicycle": "yes",
+   "operator": "Stadtwerke Landshut",
+   "start_date": "2017",
+   "website": "https://www.landshut.de/portal/familie/mobilitaet/radverkehr.html"
+  }
+ },
+ {
+  "osm": "node/8780788675",
+  "lat": 50.0982247,
+  "lon": 11.0074084,
+  "tags": {
+   "layer": "1",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Autobahn GmbH"
+  }
+ },
+ {
+  "osm": "node/8831834436",
+  "lat": 49.8004152,
+  "lon": 9.9330683,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Fahrradzähler Röntgenring",
+   "start_date": "2020-12-18",
+   "thermometer": "yes",
+   "visibility": "street",
+   "website": "http://www.eco-public.com/public2/?id=300014875"
+  }
+ },
+ {
+  "osm": "node/8831834437",
+  "lat": 49.7690523,
+  "lon": 9.9393392,
+  "tags": {
+   "description": "Fahrradzähler",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Heidingsfeld Überquerung Mergentheimer Str.",
+   "start_date": "2015-04-25",
+   "website": "https://data.eco-counter.com/public2/?id=100020241"
+  }
+ },
+ {
+  "osm": "node/8831834438",
+  "lat": 49.7695237,
+  "lon": 9.9391094,
+  "tags": {
+   "description": "Fahrradzähler",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Heidingsfeld in Verlängerung Wiesenweg",
+   "start_date": "2015-04-25",
+   "website": "https://www.eco-public.com/public2/?id=100020240"
+  }
+ },
+ {
+  "osm": "node/9692935497",
+  "lat": 48.2976022,
+  "lon": 11.9139524,
+  "tags": {
+   "description": "Maut-Erfassung",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Toll collect"
+  }
+ },
+ {
+  "osm": "node/10136006046",
+  "lat": 48.8569156,
+  "lon": 13.6777892,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/11881417783",
+  "lat": 49.5028792,
+  "lon": 11.0444654,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/12526373278",
+  "lat": 48.100806,
+  "lon": 11.4228727,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/12526373279",
+  "lat": 48.1007167,
+  "lon": 11.4229576,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/12706171307",
+  "lat": 49.9733111,
+  "lon": 9.150808,
+  "tags": {
+   "amenity": "clock",
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Alexandrastraße",
+   "start_date": "2018",
+   "thermometer": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100046798"
+  }
+ },
+ {
+  "osm": "node/12969462926",
+  "lat": 47.7974959,
+  "lon": 12.2968249,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/13019366619",
+  "lat": 47.58614,
+  "lon": 10.9865356,
+  "tags": {
+   "contact:phone": "+49 8822 922740",
+   "description": "Besucherzählung des Naturparks Ammergauer Alpen",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/13061812268",
+  "lat": 48.0442603,
+  "lon": 11.5710644,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes",
+   "website": "https://mobilitaet-landratsamt-muenchen.eco-counter.com/site/300054095"
+  }
+ },
+ {
+  "osm": "node/13706406729",
+  "lat": 48.0763044,
+  "lon": 11.8305722,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Swarco",
+   "monitoring:traffic": "yes",
+   "operator": "Staatliches Bauamt Rosenheim",
+   "ref": "9230",
+   "start_date": "1977"
+  }
+ },
+ {
+  "osm": "node/13805716057",
+  "lat": 48.1163281,
+  "lon": 11.4364768,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Gemeinde Gräfelfing",
+   "weather:thermometer": "yes"
+  }
+ },
+ {
+  "osm": "node/14096414342",
+  "lat": 47.8489606,
+  "lon": 12.0682924,
+  "tags": {
+   "amenity": "clock",
+   "date": "yes",
+   "display:digital": "yes",
+   "faces": "2",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Stadt Kolbermoor",
+   "recording:automated": "yes",
+   "support": "billboard",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/14106080508",
+  "lat": 49.9755722,
+  "lon": 9.1495373,
+  "tags": {
+   "description": "Radar-basierter Objektzähler für Fahrzeug-, Fahrrad- und Personenstatistiken. Solar-betrieben.",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "manufacturer": "pmx",
+   "monitoring:bicycle": "yes",
+   "monitoring:pedestrian": "yes",
+   "monitoring:traffic": "yes",
+   "monitoring:vehicle": "yes",
+   "support": "street_lamp"
+  }
+ },
+ {
+  "osm": "node/14106080509",
+  "lat": 49.9760105,
+  "lon": 9.1474566,
+  "tags": {
+   "description": "Radar-basierter Objektzähler für Fahrzeug-, Fahrrad- und Personenstatistiken. Solar-betrieben.",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "manufacturer": "pmx",
+   "monitoring:bicycle": "yes",
+   "monitoring:pedestrian": "yes",
+   "monitoring:traffic": "yes",
+   "monitoring:vehicle": "yes",
+   "support": "street_lamp"
+  }
+ },
+ {
+  "osm": "node/14106080510",
+  "lat": 49.9750387,
+  "lon": 9.1466531,
+  "tags": {
+   "description": "Radar-basierter Objektzähler für Fahrzeug-, Fahrrad- und Personenstatistiken. Solar-betrieben.",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "manufacturer": "pmx",
+   "monitoring:bicycle": "yes",
+   "monitoring:pedestrian": "yes",
+   "monitoring:traffic": "yes",
+   "monitoring:vehicle": "yes",
+   "support": "street_lamp"
+  }
+ },
+ {
+  "osm": "node/14106080511",
+  "lat": 49.9744411,
+  "lon": 9.1492655,
+  "tags": {
+   "description": "Radar-basierter Objektzähler für Fahrzeug-, Fahrrad- und Personenstatistiken. Solar-betrieben.",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "manufacturer": "pmx",
+   "monitoring:bicycle": "yes",
+   "monitoring:pedestrian": "yes",
+   "monitoring:traffic": "yes",
+   "monitoring:vehicle": "yes",
+   "support": "street_lamp"
+  }
+ },
+ {
+  "osm": "node/14127776752",
+  "lat": 48.1111237,
+  "lon": 11.7323209,
+  "tags": {
+   "construction": "yes",
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127776753",
+  "lat": 48.1256522,
+  "lon": 11.6648927,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127776754",
+  "lat": 48.1264901,
+  "lon": 11.6614667,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127786828",
+  "lat": 48.0830243,
+  "lon": 11.8624161,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127786829",
+  "lat": 48.0817926,
+  "lon": 11.8657225,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127794241",
+  "lat": 48.1119111,
+  "lon": 11.7290849,
+  "tags": {
+   "construction": "yes",
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127798116",
+  "lat": 48.0716296,
+  "lon": 11.8862326,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127800648",
+  "lat": 48.0988194,
+  "lon": 11.7886089,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127800649",
+  "lat": 48.1039462,
+  "lon": 11.7650384,
+  "tags": {
+   "construction": "yes",
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127800650",
+  "lat": 48.1046439,
+  "lon": 11.7621208,
+  "tags": {
+   "construction": "yes",
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127800692",
+  "lat": 48.0995627,
+  "lon": 11.7855761,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127803608",
+  "lat": 48.1187073,
+  "lon": 11.6974198,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127803609",
+  "lat": 48.1180192,
+  "lon": 11.7001927,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/14127811937",
+  "lat": 48.0988524,
+  "lon": 11.7884561,
+  "tags": {
+   "description": "Estimating passengers; see https://lightgate.deutschebahn.com/lightgate-de",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Deutsche Bahn",
+   "recording:automated": "yes",
+   "recording:remote": "yes"
+  }
+ }
+]
