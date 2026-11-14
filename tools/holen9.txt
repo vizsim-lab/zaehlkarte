@@ -1,0 +1,8 @@
+# Quellen, Runde 9 (14.11.2026): Dresden – gibt es Werte vor 2017? (je Grenze die ersten Zeilen)
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222017-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222016-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222015-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222014-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222013-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222012-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3C%222010-01-01T00%3A00%3A00%22&limit=3&format=csv&delimiter=Semicolon&propertynames=ids,bezeichnung,messzeit
