@@ -6,7 +6,8 @@ set -u
 # Prüfung 14.11.2026: eine Dauer-Quelle mit dem Adapter eines App-Branches holen und lesen –
 # Kennzahlen je Zählstelle, Jahresgrenzen, Zeitumstellung, Kartendaten nur dieser Quelle
 # (tools/quelle_pruefen.py, ergebnis/<code>/). Erst VMZ Niedersachsen (vmz-rad), dann Dresden,
-# dann Fuß (Augsburg, Bochum), jetzt Neuss RS5 und Würzburg Passanten (Branch neuss-wuerzburg).
+# dann Fuß (Augsburg, Bochum), dann Neuss RS5 und Würzburg Passanten (Branch neuss-wuerzburg), jetzt Augsburgs
+# Radzählstationen mit Tageswerten der Quelle (Branch tageswerte).
 pruefe() {  # pruefe <branch> <code>
   local ziel="$GITHUB_WORKSPACE/ergebnis/$2"
   mkdir -p "$ziel"
@@ -15,4 +16,6 @@ pruefe() {  # pruefe <branch> <code>
   ( cd app/pipeline && uv sync --locked -q && timeout 40m uv run python "$GITHUB_WORKSPACE/tools/quelle_pruefen.py" "$2" "$ziel" ) 2>&1 | tail -80 > "$ziel/lauf.txt" || true
 }
 # Neuss RS5: geprüft (ergebnis/neuss_rad)
-pruefe neuss-wuerzburg wuerzburg_fuss  # zweiter Lauf: „unverifiziert“ gezählt
+# Würzburg Passanten: geprüft (ergebnis/wuerzburg_fuss)
+# Tageswerte der Quelle (Branch tageswerte): Augsburgs Radzählstationen
+pruefe tageswerte augsburg_rad
