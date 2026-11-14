@@ -114,14 +114,12 @@ def lies_jahr(t: str) -> tuple[dict[int, tuple[str, str]], list[tuple[datetime, 
 def hole(q: dict, pfade: Pfade) -> list[str]:
     """Je Jahr ab `ab_jahr` (ohne `ohne_jahre`) die Stundenauswertung aus dem Katalog holen; nur
     Datensätze mit CC0. Scheitert ein Jahr, bleibt die Datei des letzten Abrufs."""
-    import requests
-
-    from zaehlkarte.fetch import UA, lade
+    from zaehlkarte import abruf
+    from zaehlkarte.fetch import lade
 
     ordner = pfade.roh / q["code"]
     ordner.mkdir(parents=True, exist_ok=True)
-    r = requests.get(q["katalog"], headers=UA, timeout=120)
-    r.raise_for_status()
+    r = abruf.hole(q["katalog"])
     ohne = set(q.get("ohne_jahre") or [])
     gewaehlt, uebersprungen = {}, []
     for ds in r.json().get("dataset", []):

@@ -38,6 +38,7 @@ from pathlib import Path
 import numpy as np
 import requests
 
+from zaehlkarte import abruf
 from zaehlkarte.config import Pfade
 from zaehlkarte.dauer import gedaechtnis
 from zaehlkarte.dauer.gedaechtnis import Gedaechtnis, letzte_stunde
@@ -45,7 +46,7 @@ from zaehlkarte.dauer.gedaechtnis import lies as lies_gedaechtnis
 from zaehlkarte.dauer.gedaechtnis import schreibe as schreibe_gedaechtnis
 from zaehlkarte.dauer.modell import Dauerstelle, Messreihe, kuerze, setze_utc
 
-UA = {"User-Agent": "zaehlkarte-pipeline (+https://github.com/vizsim-lab/zaehlkarte)"}
+UA = abruf.UA
 ZEIT = re.compile(r"^(\d{4}-\d{2}-\d{2})T(\d{2}):00:00(?:\.0+)?Z/\1T\2:59:59(?:\.\d+)?Z$")
 # „… bezüglich Zählstelle 0248 auf dem Richtungsarm Nordost von Nordost nach Südwest“
 ARM = re.compile(r"Richtungsarm (\S+)")
@@ -88,7 +89,7 @@ def _sitzung() -> requests.Session:
 def _json(sitzung: requests.Session, url: str, versuche: int = 4) -> dict:
     for i in range(versuche):
         try:
-            r = sitzung.get(url, timeout=180)
+            r = abruf.hole(url, sitzung=sitzung, timeout=180, status_pruefen=False)
             if r.status_code < 500:
                 r.raise_for_status()
                 return r.json()
@@ -237,25 +238,20 @@ def _punkte(ds: dict[str, list[dict]]) -> dict[str, tuple[float, float]]:
 
 
 def _strassen(q: dict, pfade: Pfade, ds: dict[str, list[dict]], gordner: Path) -> list[str]:
-    """Straßennamen für Stellen ohne Eintrag in gedaechtnis/strassen.json (OSM-Abzug laden)."""
-    from zaehlkarte.dauer.strassen import LIZENZ, naechste_strassen
+    """Straßennamen für Stellen ohne Eintrag in gedaechtnis/strassen.json – über Overpass
+    (`overpass` in sources.yaml: Server in der Reihenfolge, in der sie versucht werden)."""
+    from zaehlkarte.dauer.strassen import LIZENZ, naechste_strassen_overpass
 
     pfad = gordner / "strassen.json"
     alt = json.loads(pfad.read_text(encoding="utf-8")) if pfad.exists() else {}
     stellen = alt.get("stellen", {})
     fehlt = {k: p for k, p in _punkte(ds).items() if k not in stellen}
-    if not fehlt or not q.get("osm"):
+    if not fehlt or not q.get("overpass"):
         return []
-    from zaehlkarte.fetch import lade
-
-    # ein Abzug für alle Quellen derselben Gegend; am selben Tag nicht noch einmal laden
-    osm = pfade.roh / "osm" / Path(urllib.parse.urlparse(q["osm"]).path).name
-    if not osm.exists() or time.time() - osm.stat().st_mtime > 86_400:
-        lade(q["osm"], osm)
-    treffer = naechste_strassen(osm, fehlt)
+    treffer, server = naechste_strassen_overpass(q["overpass"], fehlt)
     for k in fehlt:
         stellen[k] = treffer.get(k) or {"name": None}
-    neu = {"lizenz": LIZENZ, "osm": q["osm"],
+    neu = {"lizenz": LIZENZ, "osm": server or alt.get("osm"),
            "stand": datetime.now(UTC).date().isoformat(), "stellen": dict(sorted(stellen.items()))}
     pfad.write_text(json.dumps(neu, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     return [f"{q['code']}: Straßennamen für {len(fehlt)} neue Stellen ({len(treffer)} gefunden)"]

@@ -13,6 +13,9 @@
 #   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
 #   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund), Essens Quartale und Düsseldorfs
 #   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu.
+# - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
+#   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus sources.yaml
+#   (`robots_ausnahme`) – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
 # - Hamburg und Leipzig halten Stundenwerte nur Wochen bis Monate vor (Leipzig: 31 Tage). Die
 #   Zählkarte hebt sie selbst auf
 #   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
@@ -27,7 +30,7 @@ on:
     - cron: "41 5 * * 1"
   push:
     branches: [main]
-    paths: [pipeline/src/zaehlkarte/dauer/**, pipeline/werkzeuge/gedaechtnis.py, .github/workflows/dauer.yml]
+    paths: [pipeline/src/zaehlkarte/dauer/**, pipeline/src/zaehlkarte/abruf.py, pipeline/src/zaehlkarte/ckan.py, pipeline/werkzeuge/gedaechtnis.py, .github/workflows/dauer.yml]
 
 permissions:
   contents: write

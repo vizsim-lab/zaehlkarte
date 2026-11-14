@@ -2,6 +2,11 @@
 # laufen lassen und das Ergebnis (public/data/) als Pull Request vorschlagen – nie direkt auf
 # main. Läuft am 3. jedes Monats und von Hand.
 #
+# Die Pipeline hält robots.txt und den Crawl-delay der Portale ein (pipeline/src/zaehlkarte/
+# abruf.py): bei Moers (rund 200 Dateien) und Olpe 10 Sekunden je Abruf – ein Lauf dauert darum
+# eine gute halbe Stunde länger als früher. Der Bericht im PR nennt die Wartezeit und jeden
+# Abruf, der nur dank einer Ausnahme in sources.yaml ging.
+#
 # Hinweis: Ein PR, den dieser Workflow anlegt, startet die CI nicht von selbst (GitHub-Regel
 # für GITHUB_TOKEN) – darum laufen die Tests hier mit. Darf Actions in der Organisation keine
 # PRs anlegen, bleibt der Branch stehen und die Zusammenfassung nennt den Vergleichs-Link.
@@ -19,7 +24,7 @@ permissions:
 jobs:
   daten:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
@@ -28,7 +33,7 @@ jobs:
           cache-dependency-glob: pipeline/uv.lock
       - name: Rohdaten holen
         working-directory: pipeline
-        run: uv sync --locked && uv run zaehlkarte fetch
+        run: uv sync --locked && uv run zaehlkarte fetch | tee "$RUNNER_TEMP/abruf.txt"
       - name: Kartendaten bauen
         working-directory: pipeline
         run: uv run zaehlkarte site | tee "$RUNNER_TEMP/bericht.txt"
@@ -52,7 +57,11 @@ jobs:
           git commit -q -m "Kartendaten neu gebaut ($(date -u +%F))"
           git push -f origin "$zweig"
           {
-            echo "Kartendaten neu gebaut. Bericht der Pipeline:"
+            echo "Kartendaten neu gebaut. Abruf:"
+            echo '```'
+            head -40 "$RUNNER_TEMP/abruf.txt"
+            echo '```'
+            echo "Bericht der Pipeline:"
             echo '```'
             grep -v "details/" "$RUNNER_TEMP/bericht.txt" | head -80
             echo '```'

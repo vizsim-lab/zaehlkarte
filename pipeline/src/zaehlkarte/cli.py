@@ -19,8 +19,29 @@ Datum = Annotated[str | None, typer.Option(help="Erzeugungsdatum im Manifest (JJ
 
 @app.command()
 def fetch(quelle: Quellen = None) -> None:
-    """Rohdaten nach pipeline/data/raw/ holen."""
-    for zeile in fetch_.hole(nur=quelle):
+    """Rohdaten nach pipeline/data/raw/ holen (nur was robots.txt erlaubt, mit Crawl-delay)."""
+    from zaehlkarte import abruf
+
+    for zeile in [*fetch_.hole(nur=quelle), *abruf.bericht()]:
+        typer.echo(zeile)
+
+
+@app.command()
+def lade(url: str, ziel: str) -> None:
+    """Eine Datei holen wie die Pipeline (robots.txt, Crawl-delay, Ausnahmen aus sources.yaml) –
+    für Workflows, die sonst curl nähmen."""
+    from pathlib import Path
+
+    from zaehlkarte import abruf
+    from zaehlkarte.config import dauerquellen, quellen
+
+    abruf.ausnahmen_setzen(quellen() | dauerquellen())
+    try:
+        abruf.lade(url, Path(ziel))
+    except abruf.Gesperrt as e:
+        typer.echo(str(e), err=True)
+        raise typer.Exit(2) from None
+    for zeile in abruf.bericht():
         typer.echo(zeile)
 
 
@@ -80,11 +101,12 @@ app.add_typer(dauer, name="dauer")
 def dauer_fetch(quelle: Quellen = None) -> None:
     """Rohdaten der Dauerzählstellen nach pipeline/data/raw/ holen (eine Quelle, die scheitert,
     hält die anderen nicht auf; Exit-Code 1 nur, wenn alle scheitern)."""
+    from zaehlkarte import abruf
     from zaehlkarte.config import Pfade, dauerquellen
     from zaehlkarte.dauer import bau
 
     log, fehler = bau.hole(nur=quelle)
-    for zeile in log:
+    for zeile in [*log, *abruf.bericht()]:
         typer.echo(zeile)
     versucht = [c for c in dauerquellen(Pfade()) if not quelle or c in quelle]
     if fehler and len(fehler) == len(versucht):

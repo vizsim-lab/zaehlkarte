@@ -61,14 +61,12 @@ class Bericht:
 
 def hole(q: dict, pfade: Pfade) -> list[str]:
     """Quartalsdateien mit offener Lizenz über die CKAN-API holen (nur neue oder geänderte)."""
-    import requests
-
-    from zaehlkarte.fetch import UA, lade
+    from zaehlkarte.abruf import hole as hole_url
+    from zaehlkarte.fetch import lade
 
     ordner = pfade.roh / q["code"]
     ordner.mkdir(parents=True, exist_ok=True)
-    r = requests.get(q["api"], params={"id": q["paket"]}, headers=UA, timeout=120)
-    r.raise_for_status()
+    r = hole_url(q["api"], params={"id": q["paket"]})
     gewaehlt, geschlossen = {}, []
     for res in r.json()["result"]["resources"]:
         name = (res.get("name") or "").strip()
