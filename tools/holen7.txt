@@ -1,0 +1,11 @@
+# Quellen, Runde 7 (14.11.2026): Dresden, Rad-Dauerzählstellen über die OGC API (cardo WFS3):
+# Filter (Iwan7: ==, <, and, In(), Zeichenketten in doppelten Anführungszeichen), CSV-Ausgabe,
+# eine Zählstelle ganz, Zeilen-ID als Bereich, alle Stellen zu einer Zeit und an Umstelltagen.
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=ids%3D%3D1077&format=csv&delimiter=Semicolon&propertynames=id,ids,w1,w2,messzeit,status,parameter
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=ids%3D%3D1104&format=csv&delimiter=Semicolon
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=id%3C6&format=csv&delimiter=Semicolon
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=id%3E%3D2000000%20and%20id%3C2000006&format=csv&delimiter=Semicolon
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=messzeit%3D%3D%2214.11.2026%2012%3A00%3A00%22&format=csv&delimiter=Semicolon
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2226.10.2025%2001%3A00%3A00%22%2C%2226.10.2025%2002%3A00%3A00%22%2C%2226.10.2025%2003%3A00%3A00%22%29&format=csv&delimiter=Semicolon
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2230.03.2025%2001%3A00%3A00%22%2C%2230.03.2025%2002%3A00%3A00%22%2C%2230.03.2025%2003%3A00%3A00%22%29&format=csv&delimiter=Semicolon
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?filter=In%28messzeit%2C%2231.12.2024%2023%3A00%3A00%22%2C%2201.01.2025%2000%3A00%3A00%22%2C%2201.01.2025%2001%3A00%3A00%22%29&format=csv&delimiter=Semicolon
