@@ -92,9 +92,44 @@ ABRUFE = {
 }
 KENNUNGEN = ("zaehlkarte-pipeline", "*")
 
+# Abrufe der Werkzeuge (tools/*.py) früherer Läufe – geprüft für die Kennungen der Werkzeuge
+WERKZEUG_ABRUFE = [
+    "https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsz%C3%A4hlung&rows=1000",
+    "https://www.govdata.de/ckan/api/3/action/package_show?id=x",
+    "https://fragdenstaat.de/api/v1/request/search/?q=Verkehrsz%C3%A4hlung",
+    "https://fragdenstaat.de/api/v1/request/?jurisdiction=6",
+    "https://fragdenstaat.de/api/v1/request/29243/",
+    "https://fragdenstaat.de/api/v1/publicbody/?q=Stadt",
+    "https://fragdenstaat.de/api/v1/law/?q=Satzung",
+    "https://media.frag-den-staat.de/files/foi/123/x.pdf",
+    "https://www.geoportal.hessen.de/mapbender/php/mod_callMetadata.php?searchText=Verkehrsz%C3%A4hlung",
+    "https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/search",
+    "https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/110000000003182000",
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
+    "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+    "https://query.wikidata.org/sparql?query=x",
+    "https://offenedaten.frankfurt.de/api/3/action/package_search?q=Z%C3%A4hlung",
+    "https://opendata.darmstadt.de/api/3/action/package_search?q=Z%C3%A4hlung",
+    "https://data.fid-move.de/api/3/action/package_show?id=x",
+    "https://hessen-mobil.eco-counter.com/",
+    "https://www.eco-visio.net/api/aladdin/1.0.0/pbl/publicwebpageplus/8080?withNull=true",
+    "https://data.eco-counter.com/ParcPublic/?id=8080",
+    "https://www.offenedaten-koeln.de/api/3/action/package_search?q=x",
+    "https://opendata.stadt-muenster.de/api/3/action/package_search?q=x",
+    "https://www.offenedaten-wuppertal.de/api/3/action/package_search?q=x",
+    "https://gitlab.opencode.de/api/v4/projects/x",
+    "https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/information/",
+    "https://open-data.bielefeld.de/dataset/radverkehrsz%C3%A4hlstellen",
+    "https://opendata.ruhr/dataset/verkehrszahlung-boschheideweg",
+]
+
 
 def main():
     aus, md = {}, ["| Quelle | Abruf | Pipeline | * | Crawl-delay |", "|---|---|---|---|---|"]
+    md_w = ["", "## Abrufe der Werkzeuge (Kennungen der Werkzeuge samt Claude)", "",
+            "| Abruf | erlaubt |", "|---|---|"]
     for quelle, urls in ABRUFE.items():
         for url in urls:
             try:
@@ -109,10 +144,19 @@ def main():
             md.append(f"| {quelle} | {t.netloc}{t.path[:60]}{'?…' if t.query else ''} | "
                       f"{'ja' if ok['zaehlkarte-pipeline'] else 'NEIN'} | {'ja' if ok['*'] else 'NEIN'} | "
                       f"{verz} ({art}) |")
+    werkzeug = {}
+    for url in WERKZEUG_ABRUFE:
+        try:
+            ok = R.erlaubt(url)
+        except Exception as e:  # noqa: BLE001
+            ok = f"Fehler {e!r}"[:100]
+        werkzeug[url] = ok
+        md_w.append(f"| {url[:110]} | {'ja' if ok is True else 'NEIN' if ok is False else ok} |")
+    aus["_werkzeuge"] = werkzeug
     (ZIEL / "audit.json").write_text(json.dumps(aus, ensure_ascii=False, indent=1))
-    (ZIEL / "audit.md").write_text("\n".join(md) + "\n")
+    (ZIEL / "audit.md").write_text("\n".join(md + md_w) + "\n")
     (ZIEL / "robots_texte.json").write_text(json.dumps(R.TEXTE, ensure_ascii=False, indent=1))
-    print("\n".join(md))
+    print("\n".join(md + md_w))
 
 
 if __name__ == "__main__":
