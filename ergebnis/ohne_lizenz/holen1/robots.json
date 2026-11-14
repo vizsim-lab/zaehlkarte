@@ -1,0 +1,6 @@
+{
+ "https://www.kevelaer.de": "(HTTP 404)",
+ "https://www.tuebingen.de": "# www.robotstxt.org/\n# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449\n\nUser-agent: MJ12bot\nDisallow: /\n\nUser-agent: MegaIndex.ru\nDisallow: /\n",
+ "https://www.neubulach.de": "# Ganze Site für alle Robots sperren\nUser-agent: *\nDisallow: \n\n# Sitemap: https://www.neubulach.de/ceasy/modules/cms/sitemap.php\n# Sitemap: https://www.feuerwehr-neubulach.de/ceasy/modules/cms/sitemap.php",
+ "https://daten-api.osnabrueck.de": "(HTTP 404)"
+}

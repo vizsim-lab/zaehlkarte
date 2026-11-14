@@ -1,0 +1,18 @@
+[
+ {
+  "url": "https://daten-api.osnabrueck.de/v1.1/",
+  "ende": "https://daten-api.osnabrueck.de/v1.1/",
+  "typ": "application/json;charset=UTF-8",
+  "bytes": 2297,
+  "datei": "07_datei.json",
+  "sha256": "92dce882b8c225d31e163041b5403ba66f1e462cf02fe280afc944fe9233dd08"
+ },
+ {
+  "url": "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)&$expand=Locations,Datastreams($select=name,description,unitOfMeasurement,phenomenonTime,properties)&$top=200",
+  "ende": "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)&$expand=Locations,Datastreams($select=name,description,unitOfMeasurement,phenomenonTime,properties)&$top=200",
+  "typ": "application/json;charset=UTF-8",
+  "bytes": 237204,
+  "datei": "08_Things.json",
+  "sha256": "ae7176ff27e65ef270dd478b28f8d27aa0a03377a2e180f93459266fafd76781"
+ }
+]
