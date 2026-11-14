@@ -1,0 +1,44 @@
+{
+ "grenzen_osm": {
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
+ },
+ "orte_osm": {
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "knoten": 316,
+  "zugeordnet": 74
+ },
+ "liste": {
+  "gemeinden": 964,
+  "mit_web": 98,
+  "verbaende": 115,
+  "verbaende_mit_web": 1,
+  "kreise": 37,
+  "kreise_mit_web": 1,
+  "osm_elemente": 1110,
+  "osm_ohne_gemeinde": [
+   "Nordkehdingen"
+  ],
+  "ok": true,
+  "sekunden": 62
+ },
+ "osm": {
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "anzahl": 84,
+  "ok": true,
+  "sekunden": 21
+ },
+ "webseiten_ziele": {
+  "ziele": 584,
+  "geraten": 484
+ },
+ "webseiten": {
+  "seiten": 584,
+  "erreicht": 504,
+  "mit_sitemap": 201,
+  "mit_suche": 65,
+  "mit_treffern": 148,
+  "ok": true,
+  "sekunden": 349
+ },
+ "gesamt_sekunden_webseiten_osm": 431
+}
