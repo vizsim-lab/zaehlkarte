@@ -1,0 +1,4 @@
+{
+ "https://www.vmz-niedersachsen.de": "User-agent: *\nDisallow: /typo3\n\nUser-agent: *\nDisallow: /geojson\n\nUser-agent: *\nDisallow: /nachricht\n",
+ "https://kommisdd.dresden.de": "User-agent: spatineo\r\nDisallow: /"
+}

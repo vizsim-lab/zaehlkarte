@@ -1,0 +1,34 @@
+[
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2025-10-25/2025-10-27/hourly?stationIds=100030021,300026962,100047629&format=csv",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2025-10-25/2025-10-27/hourly?stationIds=100030021,300026962,100047629&format=csv",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 1580,
+  "datei": "01_hourly.csv",
+  "sha256": "98225e463b36331f1299c4e1555f24eb01caa8f09be0550f2740bc237de621e2"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2025-10-25/2025-10-27/hourly?stationIds=100030021,300026962,100047629",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2025-10-25/2025-10-27/hourly?stationIds=100030021,300026962,100047629",
+  "typ": "application/json",
+  "bytes": 7369,
+  "datei": "02_hourly.json",
+  "sha256": "e0fd3e85617caad2fda4201ce120abc511f253f7f2dc2a598d63dd9fe82d9e20"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/problems/2017-01-01/2025-12-31?stationIds=100030021,300026962,100047629,300039699,100044789",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/problems/2017-01-01/2025-12-31?stationIds=100030021,300026962,100047629,300039699,100044789",
+  "typ": "application/json",
+  "bytes": 9751,
+  "datei": "03_2025-12-31.json",
+  "sha256": "6854f34b91a7b63cbb099c384f1766303a33392adb5ad4302f6bb4aee61f484c"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-11-01/2026-11-13/hourly?stationIds=100030021,300039699&format=csv",
+  "ende": "https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-11-01/2026-11-13/hourly?stationIds=100030021,300039699&format=csv",
+  "typ": "text/csv; charset=utf-8",
+  "bytes": 86,
+  "datei": "04_hourly.csv",
+  "sha256": "6b8f2049a731c1528c46497855401af0aeb4928cdd163ce7e4038480984f2e92"
+ }
+]

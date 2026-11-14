@@ -1,0 +1,34 @@
+[
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780?f=json",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780?f=json",
+  "typ": "application/json",
+  "bytes": 1669,
+  "datei": "05_L1780.json",
+  "sha256": "9966278b0858de4e225089565e01ca84a1e65a81140e3b383fd0044adc3d7af7"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?limit=100&f=json",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?limit=100&f=json",
+  "typ": "application/geo+json",
+  "bytes": 49740,
+  "datei": "06_items",
+  "sha256": "139c47a631d1cb2da6a9ed68c7cc8eb13acc25c9347521fc333c3e544df64e3d"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1781/items?limit=50&f=json",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1781/items?limit=50&f=json",
+  "typ": "application/geo+json",
+  "bytes": 25339,
+  "datei": "07_items",
+  "sha256": "1e5d40f2e57af8fc7ad94418aa7aae865d0ad5363470844ea360d40337cbb014"
+ },
+ {
+  "url": "https://kommisdd.dresden.de/net4/public/ogcapi/?f=json",
+  "ende": "https://kommisdd.dresden.de/net4/public/ogcapi/?f=json",
+  "typ": "application/json",
+  "bytes": 724,
+  "datei": "08_datei.json",
+  "sha256": "6a4049ddd1ed32a889ae2c5e53610e4a5abf8cb898aa5c04fb677a9c6afc66ab"
+ }
+]
