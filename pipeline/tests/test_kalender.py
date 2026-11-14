@@ -3,7 +3,14 @@ from __future__ import annotations
 from datetime import date
 
 from zaehlkarte.config import Pfade
-from zaehlkarte.kalender import FEIERTAGE_LAENDER, LAENDER, Ferienkalender, feiertage, tagtyp
+from zaehlkarte.kalender import (
+    FEIERTAGE_LAENDER,
+    LAENDER,
+    Ferienkalender,
+    feiertage,
+    ferienkalender,
+    tagtyp,
+)
 
 
 def test_feiertage_laender_wie_umgesetzt():
@@ -12,6 +19,43 @@ def test_feiertage_laender_wie_umgesetzt():
     bund = feiertage("XX", 2026)
     mit_eigenen = {land for land in LAENDER if len(feiertage(land, 2026)) > len(bund)}
     assert mit_eigenen == FEIERTAGE_LAENDER
+
+
+def test_feiertage_der_uebrigen_laender():
+    """HE, RP, SL, ST, TH – mit den Jahren, ab denen ein Feiertag gilt."""
+    fronleichnam = date(2026, 6, 4)
+    assert all(fronleichnam in feiertage(land, 2026) for land in ("HE", "RP", "SL"))
+    assert date(2026, 11, 1) in feiertage("RP", 2026) and date(2026, 11, 1) in feiertage("SL", 2026)
+    assert date(2026, 11, 1) not in feiertage("HE", 2026)
+    assert feiertage("SL", 2026)[date(2026, 8, 15)] == "Mariä Himmelfahrt"
+    assert date(1993, 1, 6) in feiertage("ST", 1993)
+    assert date(1992, 1, 6) not in feiertage("ST", 1992)
+    assert date(2026, 10, 31) in feiertage("ST", 2026)
+    assert feiertage("TH", 2019)[date(2019, 9, 20)] == "Weltkindertag"
+    assert date(2018, 9, 20) not in feiertage("TH", 2018)
+    assert date(2026, 10, 31) in feiertage("TH", 2026)
+
+
+def test_neue_laender_ferien_und_schultage():
+    """Hessen 2026/27 laut KMK-Kalender: Herbstferien 05.–17.10., ab 19.10. Schule, Fronleichnam
+    Feiertag; Schuljahre vor 1999/2000 unbekannt."""
+    k = ferienkalender("HE", Pfade().config)
+    assert tagtyp(date(2026, 10, 5), "HE", k) == ("ferien", "Herbstferien")
+    assert tagtyp(date(2026, 10, 19), "HE", k) == ("schule", None)
+    assert tagtyp(date(2027, 5, 27), "HE", k) == ("feiertag", "Fronleichnam")
+    assert tagtyp(date(1998, 9, 1), "HE", k) == (None, None)
+    sh = ferienkalender("SH", Pfade().config)
+    # Zelle „02.10. / 16. - 30.10.“
+    assert tagtyp(date(2006, 10, 2), "SH", sh) == ("ferien", "Herbstferien")
+    assert tagtyp(date(2006, 10, 16), "SH", sh) == ("ferien", "Herbstferien")
+    assert tagtyp(date(2006, 10, 10), "SH", sh) == ("schule", None)
+
+
+def test_mecklenburg_vorpommern_einzeltage_der_herbstferien():
+    """2024/25 und 2025/26 je zwei Einzeltage, die der Textleser den Nachbarzeilen gab."""
+    k = ferienkalender("MV", Pfade().config)
+    for tag in (date(2024, 10, 4), date(2024, 11, 1), date(2025, 10, 2), date(2025, 11, 3)):
+        assert tagtyp(tag, "MV", k) == ("ferien", "Herbstferien"), tag
 
 
 def test_feiertage_je_land():
@@ -108,3 +152,17 @@ def test_mecklenburg_vorpommern_feiertage_und_ferien():
     assert tagtyp(date(2026, 10, 20), "MV", k) == ("ferien", "Herbstferien")
     assert tagtyp(date(2026, 11, 12), "MV", k) == ("schule", None)
     assert tagtyp(date(2021, 2, 19), "MV", k) == ("ferien", "Winterferien")  # zweizeilige Zelle
+
+
+def test_abdeckung_meldet_kalender_die_bald_enden():
+    """`zaehlkarte kalender`: Alle 16 Länder reichen bis 2027/28; ein Stichtag im Schuljahr
+    2028/29 meldet jedes Land."""
+    from zaehlkarte.kalender import abdeckung
+
+    zeilen, fehlt = abdeckung(Pfade().config, date(2027, 2, 14))
+    assert fehlt == [] and len(zeilen) == len(LAENDER)
+    assert "Kalender HE: 1999/2000 – 2027/2028" in zeilen
+    zeilen, fehlt = abdeckung(Pfade().config, date(2028, 9, 1))
+    assert fehlt == list(LAENDER)
+    assert zeilen[0].endswith(
+        "endet vor 2028/2029: KMK-Kalender nachtragen (werkzeuge/kmk_ferien.py)")

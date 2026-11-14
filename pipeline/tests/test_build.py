@@ -66,3 +66,30 @@ def test_kennwerte_und_fenster():
 
 def test_stand_in_beiden_sprachen():
     assert STAND_EN.keys() == STAND.keys()  # der Sprachumschalter der Karte braucht jeden Stand
+
+
+def test_bericht_nennt_zaehlungen_ohne_ferienkalender(monkeypatch, tmp_path):
+    """Ein Werktag, dessen Schuljahr der Kalender des Landes nicht hat, bleibt „unbekannt“ – der
+    Bericht nennt die Zählungen je Schuljahr, damit der Kalender nachgetragen wird."""
+    import types
+
+    from zaehlkarte import adapters, build
+    from zaehlkarte.config import Pfade
+
+    zaehlungen = [z("K1", "K1", 13.4, 52.5, jahr=jahr) for jahr in (1995, 1995, 2020)]
+
+    class Bericht:
+        def zeilen(self):
+            return []
+
+    modul = types.SimpleNamespace(Bericht=Bericht, lese=lambda q, pfade, bericht: list(zaehlungen))
+    monkeypatch.setitem(adapters.ADAPTER, "test", modul)
+    monkeypatch.setattr(build, "quellen", lambda pfade: {
+        "berlin": {"code": "berlin", "adapter": "test", "land": "NW"}})
+    gebaut = build.baue(Pfade(pipeline=tmp_path / "p", repo=tmp_path))
+    # NW-Kalender fehlt im leeren config/: auch 2020 ist unbekannt
+    assert gebaut.berichte["berlin"][-1] == ("ohne Ferienkalender (NW, Tag unbekannt): "
+                                             "3 Zählungen in den Schuljahren 1994/1995, 2019/2020")
+    gebaut = build.baue(Pfade())
+    assert gebaut.berichte["berlin"][-1] == (
+        "ohne Ferienkalender (NW, Tag unbekannt): 2 Zählungen in den Schuljahren 1994/1995")

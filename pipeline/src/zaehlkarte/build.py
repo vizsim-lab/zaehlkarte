@@ -15,13 +15,13 @@ from __future__ import annotations
 
 import math
 import statistics
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from datetime import date
 
 from zaehlkarte import adapters
 from zaehlkarte.config import Pfade, quellen
-from zaehlkarte.kalender import Ferienkalender, tagtyp
+from zaehlkarte.kalender import ferienkalender, schuljahr, tagtyp
 from zaehlkarte.modell import Zaehlung
 
 NAH_M = 150  # Zählungen einer Kennung, die so nah liegen, sind eine Stelle
@@ -151,13 +151,20 @@ def baue(pfade: Pfade | None = None, nur: list[str] | None = None) -> Gebaut:
             continue
         modul = adapters.ADAPTER[q["adapter"]]
         bericht = modul.Bericht()
-        kalender = Ferienkalender.lade(pfade.config / q["ferien"]) if q.get("ferien") else None
+        kalender = ferienkalender(q["land"], pfade.config)
         anzahl = 0
+        ohne_kalender: Counter[str] = Counter()  # Werktage, deren Schuljahr der Kalender nicht hat
         for z in modul.lese(q, pfade, bericht):
             z.tagtyp, z.tagname = tagtyp(z.datum, q["land"], kalender, z.gebiet)
+            if z.datum and z.tagtyp is None:
+                ohne_kalender[schuljahr(z.datum)] += 1
             zaehlungen.append(z)
             anzahl += 1
         berichte[code] = [f"{anzahl} Zählungen", *bericht.zeilen()]
+        if ohne_kalender:
+            berichte[code].append(
+                f"ohne Ferienkalender ({q['land']}, Tag unbekannt): {ohne_kalender.total()} "
+                f"Zählungen in den Schuljahren {', '.join(sorted(ohne_kalender))}")
     n = uebertrage_lage(zaehlungen)
     berichte["lage"] = [f"Lage übertragen: {n}"]
     stellen = bilde_stellen(zaehlungen)
