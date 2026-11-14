@@ -1,0 +1,75 @@
+[
+ {
+  "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/",
+  "ende": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 315859,
+  "datei": "01_datei.html",
+  "sha256": "cc24bc55debf8e1ca6de47e0ffd572cd002f2c30c5274882db62d987d1ca4c17",
+  "gefolgt": [
+   "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300047417/",
+   "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300038133/",
+   "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300047428/"
+  ]
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300047417/",
+  "ende": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300047417/",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 311249,
+  "datei": "02_datei.html",
+  "sha256": "482acaa17ddbafe0cb47439bd2ce4543258c4a5e3d8820c477d5c047e18e65bb"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300038133/",
+  "ende": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300038133/",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 311296,
+  "datei": "03_datei.html",
+  "sha256": "666b19edff99194fc28a6216978143fa4fd1917477e1d0d42dd68d48d5708a41"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300047428/",
+  "ende": "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/wheel-counter-300047428/",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 311206,
+  "datei": "04_datei.html",
+  "sha256": "aec0c64f33bddc51455e1fa11fe17180aec66c96eb76e78d9461d25f66b892c1"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/",
+  "ende": "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 142191,
+  "datei": "05_datei.html",
+  "sha256": "828f150b57708bece877c6151c16aab4517c0da37adda7ddeb4f88ba2147cd46",
+  "gefolgt": [
+   "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/wheel-counter-300037945/",
+   "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/wheel-counter-100044789/"
+  ]
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/wheel-counter-300037945/",
+  "ende": "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/wheel-counter-300037945/",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 142176,
+  "datei": "06_datei.html",
+  "sha256": "0994e22bf2795ef826bbca1aab1b13e6bda58522c5020787f5dc55e1db62faf3"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/wheel-counter-100044789/",
+  "ende": "https://www.vmz-niedersachsen.de/region-hannover/radzaehler/wheel-counter-100044789/",
+  "typ": "text/html; charset=utf-8",
+  "bytes": 142122,
+  "datei": "07_datei.html",
+  "sha256": "40701e0d82333f6a5eccc061230e1aec997331954cbe9aaed81ccef13d81cccf"
+ },
+ {
+  "url": "https://www.vmz-niedersachsen.de/assets/js/app.1767873799.js",
+  "ende": "https://www.vmz-niedersachsen.de/assets/js/app.1767873799.js",
+  "typ": "application/javascript; charset=utf-8",
+  "bytes": 3213725,
+  "datei": "08_app.1767873799.js",
+  "sha256": "87590c1b4f19528325ff87179063613a18c7887dd6b14976c07b29349b409a71"
+ }
+]
