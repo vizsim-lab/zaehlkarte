@@ -1,0 +1,875 @@
+[
+ {
+  "osm": "node/2789821399",
+  "lat": 52.5002258,
+  "lon": 13.4742558,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Paul- und Paula-Uferweg Richtung Osten / Westen",
+   "operator": "Senatsverwaltung für Stadtentwicklung Berlin",
+   "operator:type": "government",
+   "operator:wikidata": "Q27978799",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101033035",
+   "website3": "http://www.eco-public.com/public2/?id=102033035"
+  }
+ },
+ {
+  "osm": "node/2789821402",
+  "lat": 52.5002993,
+  "lon": 13.4743468,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Paul- und Paula-Uferweg Richtung Osten / Westen",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100032801",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101033035",
+   "website3": "http://www.eco-public.com/public2/?id=102033035"
+  }
+ },
+ {
+  "osm": "node/2949144581",
+  "lat": 52.4380259,
+  "lon": 13.3877329,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:air_quality": "yes",
+   "monitoring:bicycle": "yes",
+   "name": "BLUME-Messnetz",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "ref": "100064713",
+   "website": "https://www.stadtentwicklung.berlin.de/umwelt/umweltatlas/extra/3_12/d312_MC124.htm"
+  }
+ },
+ {
+  "osm": "node/4036850595",
+  "lat": 52.4960352,
+  "lon": 13.3956527,
+  "tags": {
+   "description": "Pegelpunkt Kreuzberg (östl. Zossener Straße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "Q0906902"
+  }
+ },
+ {
+  "osm": "node/4036856598",
+  "lat": 52.4961376,
+  "lon": 13.3956659,
+  "tags": {
+   "description": "Pegelpunkt Kreuzberg (östl. Zossener Straße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "Q0906902"
+  }
+ },
+ {
+  "osm": "node/4036856599",
+  "lat": 52.4970771,
+  "lon": 13.3952318,
+  "tags": {
+   "description": "Pegelpunkt Kreuzberg (nördl. Blücherstraße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "Q0906901"
+  }
+ },
+ {
+  "osm": "node/4036858790",
+  "lat": 52.4970699,
+  "lon": 13.3953943,
+  "tags": {
+   "description": "Pegelpunkt Kreuzberg (nördl. Blücherstraße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "Q0906901"
+  }
+ },
+ {
+  "osm": "node/4036910494",
+  "lat": 52.5194592,
+  "lon": 13.4039173,
+  "tags": {
+   "description": "Pegelpunkt Mitte (westl. Spandauer Straße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording": "yes",
+   "recording:manually": "yes",
+   "ref": "Q0901901"
+  }
+ },
+ {
+  "osm": "node/4036910495",
+  "lat": 52.5202612,
+  "lon": 13.4043397,
+  "tags": {
+   "description": "Pegelpunkt Mitte (nördl. Karl-Liebknecht-Straße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "recording": "yes",
+   "recording:manually": "yes",
+   "ref": "Q0901902"
+  }
+ },
+ {
+  "osm": "node/4036963789",
+  "lat": 52.5195584,
+  "lon": 13.4037547,
+  "tags": {
+   "description": "Pegelpunkt Mitte (westl. Spandauer Straße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording": "yes",
+   "recording:manually": "yes",
+   "ref": "Q0901901"
+  }
+ },
+ {
+  "osm": "node/4036963790",
+  "lat": 52.5203445,
+  "lon": 13.404559,
+  "tags": {
+   "description": "Pegelpunkt Mitte (nördl. Karl-Liebknecht-Straße)",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "recording": "yes",
+   "recording:manually": "yes",
+   "ref": "Q0901902"
+  }
+ },
+ {
+  "osm": "node/4448988053",
+  "lat": 52.492615,
+  "lon": 13.5584718,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Alberichstraße",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100032797",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml"
+  }
+ },
+ {
+  "osm": "node/4807613429",
+  "lat": 52.5277315,
+  "lon": 13.3733247,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Zählstelle Invalidenstraße Richtung Westen",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100020862",
+   "website": "https://data.eco-counter.com/public2/?id=100032152"
+  }
+ },
+ {
+  "osm": "node/4807613430",
+  "lat": 52.5276321,
+  "lon": 13.3734064,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Zählstelle Invalidenstraße Richtung Osten",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100020861",
+   "website": "https://data.eco-counter.com/public2/?id=100032152"
+  }
+ },
+ {
+  "osm": "node/4807618120",
+  "lat": 52.5139657,
+  "lon": 13.4176635,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Jannowitzbrücke Richtung Moritzplatz",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100020210",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101024661"
+  }
+ },
+ {
+  "osm": "node/4807619921",
+  "lat": 52.5139543,
+  "lon": 13.4178005,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Jannowitzbrücke Richtung Alexanderplatz",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100020209",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=102024661"
+  }
+ },
+ {
+  "osm": "node/4807643361",
+  "lat": 52.4883494,
+  "lon": 13.3331138,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Prinzregentenstraße Richtung Norden/Süden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100032798",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101033039",
+   "website3": "http://www.eco-public.com/public2/?id=102033039"
+  }
+ },
+ {
+  "osm": "node/4808043678",
+  "lat": 52.4379582,
+  "lon": 13.3879084,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Mariendorfer Damm Richtung Süden",
+   "operator": "Senatsverwaltung für Stadtentwicklung Berlin",
+   "operator:type": "government",
+   "operator:wikidata": "Q27978799",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=102032166"
+  }
+ },
+ {
+  "osm": "node/4808043679",
+  "lat": 52.4385053,
+  "lon": 13.3878774,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Mariendorfer Damm Richtung Norden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030149",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032166"
+  }
+ },
+ {
+  "osm": "node/4813251727",
+  "lat": 52.5011654,
+  "lon": 13.4449592,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Oberbaumbrücke Richtung Friedrichshain",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "300023831",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032212"
+  }
+ },
+ {
+  "osm": "node/4813251728",
+  "lat": 52.5012119,
+  "lon": 13.4448739,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Oberbaumbrücke Richtung Kreuzberg",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "300023831",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=102032212"
+  }
+ },
+ {
+  "osm": "node/4813255030",
+  "lat": 52.4929864,
+  "lon": 13.4296831,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Maybachufer Richtung Osten / Westen",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030151",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032236",
+   "website3": "http://www.eco-public.com/public2/?id=102032236"
+  }
+ },
+ {
+  "osm": "node/4836436791",
+  "lat": 52.5136416,
+  "lon": 13.4746121,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Frankfurter Allee Richtung Lichtenberg",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030154",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032154"
+  }
+ },
+ {
+  "osm": "node/4836436792",
+  "lat": 52.5137686,
+  "lon": 13.4746466,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Frankfurter Allee Richtung Alexanderplatz",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030155",
+   "website": "https://viz.berlin.de/radzaehlstellen/",
+   "website2": "https://viz.berlin.de/wp-content/plugins/masterportal-wordpress/public/portals/berlin_2_19/index.html?layerIds=WebatlasBrandenburg,EcoCounter&transparency=30,0"
+  }
+ },
+ {
+  "osm": "node/4836441170",
+  "lat": 52.5490819,
+  "lon": 13.4003468,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Schwedter Steg Richtung Norden / Süden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100021103",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032159",
+   "website3": "http://www.eco-public.com/public2/?id=102032159"
+  }
+ },
+ {
+  "osm": "node/4836463075",
+  "lat": 52.5667178,
+  "lon": 13.4124481,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Berliner Straße Richtung Norden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030318",
+   "website": "https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/",
+   "website:eco-counter": "https://data.eco-counter.com/public2/?id=100032155"
+  }
+ },
+ {
+  "osm": "node/4836463076",
+  "lat": 52.5667071,
+  "lon": 13.4122225,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Berliner Straße Richtung Süden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030153",
+   "website": "https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/",
+   "website:eco-counter": "https://data.eco-counter.com/public2/?id=100032155"
+  }
+ },
+ {
+  "osm": "node/4836469579",
+  "lat": 52.5584903,
+  "lon": 13.3651773,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Marktstraße Richtung Süden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100020979",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=102032169"
+  }
+ },
+ {
+  "osm": "node/4836469580",
+  "lat": 52.5584989,
+  "lon": 13.3653958,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Marktstraße Richtung Norden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100032169",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032169"
+  }
+ },
+ {
+  "osm": "node/4836481230",
+  "lat": 52.4667584,
+  "lon": 13.3090575,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Breitenbachplatz Richtung Osten",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030129",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=102032163"
+  }
+ },
+ {
+  "osm": "node/4836481231",
+  "lat": 52.4671608,
+  "lon": 13.3083725,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Breitenbachplatz Richtung Westen",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100030130",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032163"
+  }
+ },
+ {
+  "osm": "node/4836615290",
+  "lat": 52.4921306,
+  "lon": 13.3730844,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Yorckstraße Richtung Kreuzberg",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100032791",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=102033038"
+  }
+ },
+ {
+  "osm": "node/4836615291",
+  "lat": 52.4923097,
+  "lon": 13.3730988,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Yorckstraße Richtung Schöneberg",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100032793",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101033038"
+  }
+ },
+ {
+  "osm": "node/9058304716",
+  "lat": 52.5131089,
+  "lon": 13.3268461,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "ref": "300019041"
+  }
+ },
+ {
+  "osm": "node/9071753090",
+  "lat": 52.4760488,
+  "lon": 13.4515482,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/9071753091",
+  "lat": 52.4760345,
+  "lon": 13.4515289,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/9633223900",
+  "lat": 52.5216898,
+  "lon": 13.417803,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording:automated": "yes",
+   "ref": "300021645"
+  }
+ },
+ {
+  "osm": "node/10258693035",
+  "lat": 52.5315028,
+  "lon": 13.4123503,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording:automated": "yes",
+   "ref": "300028062"
+  }
+ },
+ {
+  "osm": "node/10595179985",
+  "lat": 52.4906086,
+  "lon": 13.3330545,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording:automated": "yes",
+   "ref": "100033039"
+  }
+ },
+ {
+  "osm": "node/10595179986",
+  "lat": 52.5271811,
+  "lon": 13.3720637,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording:automated": "yes",
+   "ref": "100032152"
+  }
+ },
+ {
+  "osm": "node/10595179987",
+  "lat": 52.5273392,
+  "lon": 13.3719229,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "infraVelo",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/10768987851",
+  "lat": 52.5126685,
+  "lon": 13.3266231,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "ref": "300019042"
+  }
+ },
+ {
+  "osm": "node/10768987852",
+  "lat": 52.4663345,
+  "lon": 13.3082932,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "ref": "100032163"
+  }
+ },
+ {
+  "osm": "node/10768987853",
+  "lat": 52.5335657,
+  "lon": 13.1991919,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "ref": "100030156"
+  }
+ },
+ {
+  "osm": "node/10768987854",
+  "lat": 52.5332697,
+  "lon": 13.1983973,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "ref": "100030157"
+  }
+ },
+ {
+  "osm": "node/10770785692",
+  "lat": 52.4384975,
+  "lon": 13.3877605,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Mariendorfer Damm Richtung Norden",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100064714",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032166"
+  }
+ },
+ {
+  "osm": "node/10770785693",
+  "lat": 52.4880725,
+  "lon": 13.3698716,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Monumentenstraße Richtung Westen / Osten",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100020978",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032165",
+   "website3": "http://www.eco-public.com/public2/?id=102032165"
+  }
+ },
+ {
+  "osm": "node/10770785694",
+  "lat": 52.4881274,
+  "lon": 13.3698922,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Monumentenstraße Richtung Westen / Osten",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "100032165",
+   "website": "https://www.stadtentwicklung.berlin.de/verkehr/lenkung/vlb/de/radzaehlungen.shtml",
+   "website2": "http://www.eco-public.com/public2/?id=101032165",
+   "website3": "http://www.eco-public.com/public2/?id=102032165"
+  }
+ },
+ {
+  "osm": "node/10788246182",
+  "lat": 52.5498026,
+  "lon": 13.400056,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "ref": "100032159"
+  }
+ },
+ {
+  "osm": "node/10792290837",
+  "lat": 52.457126,
+  "lon": 13.518724,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "ref": "100032797"
+  }
+ },
+ {
+  "osm": "node/12065411085",
+  "lat": 52.5189549,
+  "lon": 13.4262693,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Eco-Compteur",
+   "operator:wikidata": "Q21074971",
+   "recording:automated": "yes",
+   "ref": "300041564"
+  }
+ },
+ {
+  "osm": "way/23227437",
+  "lat": 52.5662098,
+  "lon": 13.309276,
+  "tags": {
+   "addr:city": "Berlin",
+   "addr:country": "DE",
+   "addr:housenumber": "81b",
+   "addr:postcode": "13405",
+   "addr:street": "Scharnweberstraße",
+   "addr:suburb": "Reinickendorf",
+   "building": "service",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "name": "Tunnelleitzentrale Tegel"
+  }
+ }
+]
