@@ -61,6 +61,56 @@ for p in sorted(roh.rglob("*.csv"))[:3]:
         out.append(f"Kopf {p.name}: " + " | ".join(next(f, "").rstrip() for _ in range(6)))
 schreib()
 
+# Opendatasoft mit Kennzeichen (Würzburg: `unverified`): wie verteilen sich die gekennzeichneten
+# Stunden – nach Ortszeit, Monat, Standort, Länge der Folgen – und wie hoch sind ihre Werte?
+from zaehlkarte.config import dauerquellen  # noqa: E402
+
+try:
+    _q = dauerquellen(pfade)[CODE]
+except Exception as e:  # noqa: BLE001
+    _q = {}
+    out.append(f"(Quelldatei nicht gelesen: {e!r})")
+if _q.get("ungeprueft") and (roh / "export.csv").exists():
+    import pandas as pd
+
+    d = pd.read_csv(roh / "export.csv", sep=";", encoding="utf-8-sig", dtype=str)
+    f = _q["ungeprueft"]
+    d["k"] = d[f].str.strip().str.lower().isin(["1", "true"])
+    t = pd.to_datetime(d[_q["zeit"]], utc=True).dt.tz_convert("Europe/Berlin")
+    d["stunde"] = t.dt.hour
+    d["monat"] = t.dt.strftime("%Y-%m")
+    d["wert"] = pd.to_numeric(d[_q["werte"][0]], errors="coerce")
+    st = _q.get("stelle")
+    out.append(f"== Kennzeichen {f}: Anteil gekennzeichnet")
+    out.append("je Stunde (Ortszeit): " + ", ".join(
+        f"{h}: {a:.0%}" for h, a in d.groupby("stunde")["k"].mean().items()))
+    out.append("je Monat: " + ", ".join(
+        f"{m}: {a:.0%}" for m, a in d.groupby("monat")["k"].mean().items()))
+    if st:
+        out.append("je Standort: " + ", ".join(
+            f"{s_}: {a:.0%}" for s_, a in d.groupby(st)["k"].mean().items()))
+    out.append("Median der Werte je Stunde (Ortszeit), geprüft / gekennzeichnet: " + ", ".join(
+        f"{h}: {int(g[~g.k].wert.median()) if (~g.k).any() else '-'}/"
+        f"{int(g[g.k].wert.median()) if g.k.any() else '-'}"
+        for h, g in d.groupby("stunde")))
+    # Folgen gekennzeichneter Stunden je Standort (Länge in Stunden)
+    d["zeit_utc"] = pd.to_datetime(d[_q["zeit"]], utc=True)
+    for s_, g in d.sort_values("zeit_utc").groupby(st or (lambda _: "")):
+        lauf = (g["k"] != g["k"].shift()).cumsum()
+        laengen = g[g["k"]].groupby(lauf[g["k"]]).size()
+        if len(laengen):
+            out.append(f"{s_}: {len(laengen)} Folgen, Länge Median {int(laengen.median())} h, "
+                       f"größte {sorted(laengen.tolist())[-5:]} h; Anteil ganzer Ortstage "
+                       f"gekennzeichnet: {g.groupby(g.zeit_utc.dt.tz_convert('Europe/Berlin').dt.date)['k'].all().mean():.0%}")
+    # Beispieltag: Stunden eines Standorts mit Kennzeichen
+    if st:
+        erster = d[st].iloc[0]
+        g = d[d[st] == erster].sort_values("zeit_utc").tail(72)
+        out.append(f"jüngste 72 Stunden {erster}: " + " ".join(
+            f"{z:%d.%m %H}h={w}{'*' if k else ''}" for z, w, k in
+            zip(g.zeit_utc.dt.tz_convert("Europe/Berlin"), g.wert, g.k)))
+    schreib()
+
 gelesen, berichte = bau.baue(pfade, nur=[CODE])
 q, r = gelesen[0]
 out += ["== Lesen", *berichte[CODE], f"Reihe {r.von} – {r.tag(r.tage - 1)}, {len(r.stellen)} Stellen"]
