@@ -1,0 +1,1147 @@
+[
+{
+"kommune": "Braunschweig",
+"url": "https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1_Quartal_2024.csv",
+"end": null,
+"typ": "text/csv",
+"bytes": 27564,
+"art": "csv",
+"zeilen": [
+"﻿ID,NAME,DATUM,TAGESWERT,GESAMTZAHL",
+"300030787,Ringgleis Kälberwiese,2024-03-21,1425,",
+"300026961,Kurt-Schumacher-Str.,2024-03-21,556,",
+"300026963,Jasperallee,2024-03-21,2458,",
+"300030766,Wendenstraße,2024-03-21,1165,",
+"300030746,Ferdinandbrücke,2024-03-21,1846,",
+"300026962,Bültenweg,2024-03-21,2248,",
+"1000000,Gesamt etc.,2024-03-21,,9698"
+],
+"begriffe": {},
+"auszuege": []
+},
+{
+"kommune": "Braunschweig",
+"url": "https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung",
+"end": null,
+"typ": "text/html",
+"bytes": 61417,
+"art": "html",
+"titel": "Automatische Radverkehrszählung | Braunschweig",
+"dateilinks": [
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1HJ_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hlstationen.zip",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_3_Quartal_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_4_Quartal_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_3_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_4_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1_Quartal_2025.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2025.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_3_Quartal_2025.csv",
+"Herunterladen"
+]
+],
+"dateien": [
+{
+"url": "https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1HJ_2023.csv",
+"end": null,
+"typ": "text/csv",
+"bytes": 53874,
+"art": "csv",
+"zeilen": [
+"﻿ID,NAME,DATUM,TAGESWERT,GESAMTZAHL",
+"300026961,Kurt-Schumacher-Str.,2023-06-01,1122,",
+"300026962,Bültenweg,2023-06-01,3122,",
+"300030746,Ferdinandbrücke,2023-06-01,2785,",
+"300030766,Wendenstraße,2023-06-01,1988,",
+"300026963,Jasperallee,2023-06-01,4598,",
+"300030787,Ringgleis Kälberwiese,2023-06-01,2633,",
+"1000000,Gesamt etc.,2023-06-01,,16248"
+],
+"begriffe": {},
+"auszuege": [],
+"linktext": "Herunterladen"
+},
+{
+"url": "https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hlstationen.zip",
+"end": null,
+"typ": "application/zip",
+"bytes": 1638,
+"art": "zip",
+"inhalt": [
+"Fahrradzählstationen.cpg",
+"Fahrradzählstationen.csv",
+"Fahrradzählstationen.dbf",
+"Fahrradzählstationen.prj",
+"Fahrradzählstationen.shp",
+"Fahrradzählstationen.shx"
+],
+"linktext": "Herunterladen"
+},
+{
+"url": "https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2023.csv",
+"end": null,
+"typ": "text/csv",
+"bytes": 28024,
+"art": "csv",
+"zeilen": [
+"﻿ID,NAME,DATUM,TAGESWERT,GESAMTZAHL",
+"300026961,Kurt-Schumacher-Str.,2023-05-07,507,",
+"300026962,Bültenweg,2023-05-07,1853,",
+"300026963,Jasperallee,2023-05-07,2248,",
+"300030787,Ringgleis Kälberwiese,2023-05-07,1440,",
+"300030746,Ferdinandbrücke,2023-05-07,1318,",
+"300030766,Wendenstraße,2023-05-07,1103,",
+"1000000,Gesamt etc.,2023-05-07,,8469"
+],
+"begriffe": {},
+"auszuege": [],
+"linktext": "Herunterladen"
+}
+],
+"begriffe": {
+"verkehrszaehlung": 18,
+"zaehldaten": 14,
+"verkehrsmenge": 2,
+"rad": 35,
+"datei": 14,
+"lizenz": 3,
+"dauerzaehl": 1,
+"radzaehl": 16
+},
+"auszuege": [
+"Automatische Radverkehrszählung | Braunschweig Direkt zum Inhalt Search Toggle navigation Start Daten Daten anfragen Blog Beteiligte Anwendungen Startseite Startseite Datensätze Automatische Radverkehrszählung Stadt Braunsch",
+"atensatz teilen Twitter LinkedIn Reddit Facebook Automatische Radverkehrszählung In Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und automatisiert das gesamte Jahr mittels Zählschleifen im Boden erfasst. Aktuell sind fünf Zählanlagen verdeckt. Eine ist zusätzlich mit einem Display ausgestattet (Zählsäule), um die Radverkehrsstärken transparent und in Echtzeit in der Örtlichkeit dar",
+"Weitere Informationen und tagesaktuelle Werte finden Sie unter: https://experience.arcgis.com/experience/4584f8a20cf64db483ced1cefabbc841/ Dateien und Quellen Automatische Radverkehrszählung (Fahrradzähldaten 1. Halbjahr 2023)csv In Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen Fahrradzählstationenzip In Braunschweig wird der Radverkehr an mehreren Standor",
+"ert Herausgeber Stadt Braunschweig Veröffentlichungsdatum 2023-08-28 Metadaten angepasst 2026-07-16 Aktualisierungsintervall vierteljährlich Bezeichner 217571c0-610d-448b-b4da-e6a941f0ecef Lizenz cc-by/4.0 Autor/in Stadt Braunschweig Ansprechpartner/in Stadt Braunschweig - Tiefbau und Verkehr E-Mail-Kontakt radfahren@braunschweig.de Zugänglichkeit öffentlich Zusätzliche Informationen zum Datensat"
+],
+"links": [
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung.xml",
+"RDF"
+],
+[
+"https://opendata.braunschweig.de/dcatapde/dataset/automatische-radverkehrsz%C3%A4hlung.json",
+"JSON"
+],
+[
+"https://opendata.braunschweig.de/dcatapde/dataset/automatische-radverkehrsz%C3%A4hlung.xml",
+"RDF"
+],
+[
+"https://opendata.braunschweig.de/dcatapde/dataset/automatische-radverkehrsz%C3%A4hlung.ttl",
+"TTL"
+],
+[
+"https://twitter.com/share?url=https%3A//opendata.braunschweig.de/dataset/automatische-radverkehrsz%25C3%25A4hlung&text=Automatische%20Radverkehrsz%C3%A4hlung%20",
+"Twitter"
+],
+[
+"https://www.linkedin.com/shareArticle?url=https%3A//opendata.braunschweig.de/dataset/automatische-radverkehrsz%25C3%25A4hlung&title=Automatische%20Radverkehrsz%C3%A4hlung%20",
+"LinkedIn"
+],
+[
+"https://www.reddit.com/submit?url=https%3A//opendata.braunschweig.de/dataset/automatische-radverkehrsz%25C3%25A4hlung&title=Automatische%20Radverkehrsz%C3%A4hlung%20",
+"Reddit"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/313317db-c179-436d-8693-c90a6e28dbf6",
+"Automatische Radverkehrszählung (Fahrradzähldaten 1. Halbjahr 2023)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/313317db-c179-436d-8693-c90a6e28dbf6",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1HJ_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/87d113e8-fe0a-4a78-8433-cf8078aa3b37",
+"Fahrradzählstationenzip"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hlstationen.zip",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/8abb6d6d-ee49-4c17-84d2-bac9dcaa71dd",
+"Automatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2023)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/8abb6d6d-ee49-4c17-84d2-bac9dcaa71dd",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/12d508df-0772-4296-bb7b-65023a5a74d9",
+"Automatische Radverkehrszählung (Fahrradzähldaten 3. Quartal 2023)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/12d508df-0772-4296-bb7b-65023a5a74d9",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_3_Quartal_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/1fdfc0ba-6d76-41eb-8aca-f1c676c3cb58",
+"Automatische Radverkehrszählung (Fahrradzähldaten 4. Quartal 2023)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/1fdfc0ba-6d76-41eb-8aca-f1c676c3cb58",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_4_Quartal_2023.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/77284a09-8f28-4370-8578-f6e038ac45d5",
+"Automatische Radverkehrszählung (Fahrradzähldaten 1. Quartal 2024)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/77284a09-8f28-4370-8578-f6e038ac45d5",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/fdc5f70a-d840-4018-a6d2-322bc4bfe4a2",
+"Automatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2024)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/fdc5f70a-d840-4018-a6d2-322bc4bfe4a2",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/1f0d676f-e2ca-495a-ac9a-4ea278d8427f",
+"Automatische Radverkehrszählung (Fahrradzähldaten 3. Quartal 2024)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/1f0d676f-e2ca-495a-ac9a-4ea278d8427f",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_3_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/1bae360c-ccf5-4178-a8ba-8c7048455f67",
+"Automatische Radverkehrszählung (Fahrradzähldaten 4. Quartal 2024)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/1bae360c-ccf5-4178-a8ba-8c7048455f67",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_4_Quartal_2024.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/18e15644-8e9a-49b9-aa64-f1660ea63779",
+"Automatische Radverkehrszählung (Fahrradzähldaten 1. Quartal 2025)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/18e15644-8e9a-49b9-aa64-f1660ea63779",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1_Quartal_2025.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/44d4f461-41f0-4a1f-8105-9c75cac44b5b",
+"Automatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2025)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/44d4f461-41f0-4a1f-8105-9c75cac44b5b",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2025.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/7d19173b-2b80-467d-b102-2020f5aa3a59",
+"Automatische Radverkehrszählung (Fahrradzähldaten 3. Quartal 2025)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/7d19173b-2b80-467d-b102-2020f5aa3a59",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_3_Quartal_2025.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/bf0bb61f-b3c1-418d-887d-0c051206297d",
+"Automatische Radverkehrszählung (Fahrradzähldaten 4. Quartal 2025)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/bf0bb61f-b3c1-418d-887d-0c051206297d",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_4_Quartal_2025.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/2ec5e990-e933-4a2f-9e9c-52bdeb97169b",
+"Automatische Radverkehrszählung (Fahrradzähldaten 1. Quartal 2026)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/2ec5e990-e933-4a2f-9e9c-52bdeb97169b",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_1_Quartal_2026.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/9842fe03-4ccb-409e-a82a-05ead1d97d4c",
+"Automatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2026)csv"
+],
+[
+"https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung/resource/9842fe03-4ccb-409e-a82a-05ead1d97d4c",
+"Vorschau"
+],
+[
+"https://opendata.braunschweig.de/sites/default/files/Fahrradz%C3%A4hldaten_2_Quartal_2026.csv",
+"Herunterladen"
+],
+[
+"https://opendata.braunschweig.de/search/topic/radverkehrsz%C3%A4hlung-1118",
+"Radverkehrszählung"
+],
+[
+"https://opendata.braunschweig.de/search/topic/z%C3%A4hlger%C3%A4t-1119",
+"Zählgerät"
+],
+[
+"https://opendata.braunschweig.de/search/topic/radmobilit%C3%A4t-1120",
+"Radmobilität"
+],
+[
+"https://opendata.braunschweig.de/search/topic/mobilit%C3%A4t-459",
+"Mobilität"
+]
+],
+"volltext": "Automatische Radverkehrszählung | Braunschweig\n Direkt zum Inhalt\n Search \n Toggle navigation\nStart\nDaten\nDaten anfragen\nBlog\nBeteiligte\nAnwendungen\n Startseite\nStartseite\nDatensätze\nAutomatische Radverkehrszählung \n Stadt Braunschweig \n Lizenz \n cc-by/4.0\n Andere Formate \n Die Informationen dieser Seite stehen auch in folgenden Formaten zur Verfügung:\n JSON RDF\nDCAT-AP.deDie Metadaten des angezeigten Datensatzes im DCAT-AP.de-Profil stehen in den folgenden Formaten zur Verfügung:\n JSON RDF TTL\nüber die DKAN API \n Datensatz teilen \n Twitter\n LinkedIn\n Reddit\n Facebook\n Automatische Radverkehrszählung \nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und automatisiert das gesamte Jahr mittels Zählschleifen im Boden erfasst. Aktuell sind fünf Zählanlagen verdeckt. Eine ist zusätzlich mit einem Display ausgestattet (Zählsäule), um die Radverkehrsstärken transparent und in Echtzeit in der Örtlichkeit darzustellen. Die Erfassung erfolgt durch elektromagnetische\nInduktion, bei der die Metallbauteile der Fahrräder erfasst werden. Die Daten geben eine Auskunft über beispielsweise tages- und jahreszeitliche Veränderungen und Unterschiede im Radverkehrsaufkommen.\nWeitere Informationen und tagesaktuelle Werte finden Sie unter: https://experience.arcgis.com/experience/4584f8a20cf64db483ced1cefabbc841/ \nDateien und Quellen\nAutomatische Radverkehrszählung (Fahrradzähldaten 1. Halbjahr 2023)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nFahrradzählstationenzip\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2023)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 3. Quartal 2023)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 4. Quartal 2023)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 1. Quartal 2024)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2024)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 3. Quartal 2024)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 4. Quartal 2024)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 1. Quartal 2025)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2025)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 3. Quartal 2025)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 4. Quartal 2025)csv\nIn Braunschweig wird der Radverkehr an mehreren Standorten dauerhaft und... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 1. Quartal 2026)csv\n... Vorschau Herunterladen\nAutomatische Radverkehrszählung (Fahrradzähldaten 2. Quartal 2026)csv\n... Vorschau Herunterladen\nAlles herunterladen \nKategorien \nTransport und Verkehr\nSchlagworte \nRadverkehrszählung\nZählgerät\nRadmobilität\nFahrrad\nMobilität\n Informationen zum Datensatz \nFeld\nWert \nHerausgeber\nStadt Braunschweig\nVeröffentlichungsdatum\n2023-08-28 \nMetadaten angepasst\n2026-07-16 \nAktualisierungsintervall\nvierteljährlich\nBezeichner\n217571c0-610d-448b-b4da-e6a941f0ecef \nLizenz\ncc-by/4.0\nAutor/in\nStadt Braunschweig\nAnsprechpartner/in\n Stadt Braunschweig - Tiefbau und Verkehr\nE-Mail-Kontakt\nradfahren@braunschweig.de\nZugänglichkeit\nöffentlich\n Zusätzliche Informationen zum Datensatz (DCAT-AP.de) \nFeld\nWert \nHerausgeber (dct:publisher)\nStadt Braunschweig\nUrheber (dcatde:originator)\nStadt Braunschweig\nEbene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI)\nkommunale Ebene\nGeopolitische Abdeckung (dcatde:politicalGeocodingURI)\nBraunschweig, Stadt\nLöwenstadt Braunschweig, Plattform betrieben bei und von der Stadt Köln, realisiert mit DKAN\n Powered by DKAN \nDatenschutz\nKontakt\nImpressum\nLinks\nNutzungsbedingungen"
+},
+{
+"kommune": "Goslar",
+"url": "https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+"end": null,
+"typ": "text/html",
+"bytes": 100457,
+"art": "html",
+"titel": "Radverkehr in Goslar - Zählstellen / Verkehrserfassung",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"zaehlstelle": 8,
+"rad": 6,
+"radzaehl": 1
+},
+"auszuege": [
+"Radverkehr in Goslar - Zählstellen / Verkehrserfassung Zur Startseite Sprache auswählen DeutschArabischEnglischFranzösischItalienischNiederländischPolnischRussischSpanischTürkischUkrainischSeite in einfacher Sprache anzeigenAssiste",
+"agen Lärmaktionsplan Mobilitätsplan für Goslar Bürgerbeteiligung zum Mobilitätsplan Bürgerbeteiligung Vor-Ort Mobilitätsbefragung Ergebnisse der Online Beteiligung Veranstaltungen Radverkehr Zählstellen-Verkehrserfassung Stationäre Zählstellen Mobile Verkehrsdatenerfassung Routen-Netz Abstellanlagen Umgesetzte Maßnahmen Maßnahme Okerstraße - Breites Tor Maßnahme Alte Heerstraße Maßnahme Mar",
+"llanlagen Umgesetzte Maßnahmen Aktuelles zum Thema Radverkehr Zählstellen-Verkehrserfassung Stationäre Zählstellen Mobile Verkehrsdatenerfassung Zählstellen & Verkehrsdatenerfassung stationäre Fahrradzählstellen mobile Verkehrsdatenerfassung Kontakt und Informationen Stadt Goslar - FD Tiefbau Rammelsberger Straße 238640 Goslar Tel.: +49 5321 704 417 E-Mail schreiben Seite teilen Seite merken Kontak"
+],
+"links": [
+[
+"https://www.goslar.de/stadt-und-verwaltung/karriereportal/bezahlung-nach-dem-tvoed-vka",
+"Bezahlung nach dem TVöD-VKA"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/goslar-in-zahlen",
+"Goslar in Zahlen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar",
+"Mobilitätsplan für Goslar"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/buergerbeteiligung-zu",
+"Bürgerbeteiligung zum Mobilitätsplan"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/buergerbeteiligung-zu/buergerbeteiligung-vor-ort",
+"Bürgerbeteiligung Vor-Ort"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/mobilitaetsbefragung",
+"Mobilitätsbefragung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/ergebnisse-der-online-beteiligung",
+"Ergebnisse der Online Beteiligung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/veranstaltungen",
+"Veranstaltungen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+"Zählstellen-Verkehrserfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+"Stationäre Zählstellen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung",
+"Mobile Verkehrsdatenerfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar",
+"Mobilitätsplan für Goslar"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+"Zählstellen-Verkehrserfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+"Stationäre Zählstellen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung",
+"Mobile Verkehrsdatenerfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+""
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+"stationäre Fahrradzählstellen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung",
+""
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung",
+"mobile Verkehrsdatenerfassung"
+],
+[
+"https://www.facebook.com/sharer/sharer.php?u=https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+""
+],
+[
+"whatsapp://send?text=Ich%20habe%20einen%20interessanten%20Link%20f%C3%BCr%20dich%20entdeckt%3A%20https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+""
+]
+],
+"volltext": "Radverkehr in Goslar - Zählstellen / Verkehrserfassung\nZur Startseite\n Sprache auswählen \nDeutschArabischEnglischFranzösischItalienischNiederländischPolnischRussischSpanischTürkischUkrainischSeite in einfacher Sprache anzeigenAssistenz laden\n Suche\n Suche öffnen\n Menü\n Menü öffnen\nStadt und Verwaltung \nAktuelles \nBlog der Oberbürgermeisterin \nAmtsblatt \nAusschreibungen \nAktuelle Meldungen \nBekanntmachungen \nBekanntmachungen 2025 - Stadt Goslar \nBekanntmachungen 2024 - Stadt Goslar \nBekanntmachungen 2023 \nBekanntmachungen 2022 \nBekanntmachungen 2021 \nBekanntmachungen 2020 \nBekanntmachungen 2019 \nBekanntmachungen 2018 \nBekanntmachungen 2017 \nBekanntmachungen 2016 \nBekanntmachungen 2015 \nBekanntmachungen 2014 \nBekanntmachungen 2013 \nBekanntmachungen 2012 \nInformationsmaterial \nWahlen \nKommunalwahl 2026 \nBundestagswahl 2025 \nEuropawahl 2024 \nSag´s uns einfach \nRat der Stadt \nBürgerbüro vor Ort \nWas wird benötigt? \nVerwaltung \nFinanzen-Haushaltspläne \nOrtsrecht und Satzungen \nOrtsrecht der bisherigen Stadt Vienenburg \nÖffentliche Einrichtungen \nSoziale Sicherung \nÖffentliche Sicherheit-Ordnung \nFinanzen-Steuern \nBau \nStiftungssatzungen \nWirtschaftliche Unternehmen \nStadtforst \nKultur \nAllgemeine Verwaltung \nSchulen \nSchiedsamt \nZentrale Vergabestelle \nKommunaler Präventionsrat Goslar \nGleichstellung \nGleichstellungsbeauftragte \nAktuelles \nInternationaler Männertag 2024 \n28. Bundeskonferenz der Gleichstellungsbeauftragten \nMitMach Aktion Lila Fenster \nArbeitsschwerpunkte \nHilfetelefonnummern \nFrauenpolitische Arbeit \nfrauenORT Katharina von Kardorff-Oheimb in Goslar \nInteressante Links und Tipps \nInfomaterial und Ratgeber \nVeranstaltungsrückblick \nIntegration \nIntegrationsbeauftragte \nAktuelles \nArbeitsschwerpunkte \nIntegration in Goslar \nProjekte \nFest der Kulturen \nGrundsteuerreform \nKarriereportal \nStellenangebote \nDie Stadt Goslar als Arbeitgeberin \nGesundheitsmanagement \nBenefits \nBezahlung nach dem TVöD-VKA \nEin kleiner Überblick \nAusbildung und Studium \nDuales Studium Verwaltungswissenschaften \nVerwaltungsfachangestellte/r (m/w/d) \nFachangestellte/r für Medien- und Informationsdienste - Fachrichtung Bibliothek (m/w/d) \nFachangestellte/r für Medien- und Informationsdienste - Fachrichtung Archiv (m/w/d) \nFachinformatiker/in für Systemintegration (m/w/d) \nForstwirt/in \nBundesfreiwilligendienst \nPraktikum \nGoslars Stadt- und Ortsteile \nHahnenklee-Bockswiese \nHahndorf \nImmenrode \nJerstedt \nJürgenohl \nLengde \nLochtum \nOhlhof \nOker \nSudmerberg \nVienenburg \nWeddingen \nWiedelah \nBrand- und Bevölkerungsschutz \nBrandschutz \nBevölkerungsschutz \nSelbstschutz und Notfallvorsorge \nPartnerstädte - Patenschaften \nLeben in Goslar \nKinder \nKinderkrippen (Übersicht) \nKindergärten (Übersicht) \nKitas in städtischer Trägerschaft \nKinderkrippe Wiedelah \nKinderkrippe Münzstraße \nKindertagesstätte Bäringerstraße \nKindertagesstätte Kunterbunt \nKindertagesstätte Lilliputt \nKindertagesstätte Ohlhof \nKindertagesstätte Hahndorf \nKindertagesstätte Löwenzahn \nKindertagesstätte Hahnenklee \nKindertagesstätte Vienenburg \nHorte (Übersicht) \nIntegrationsgruppen (Übersicht) \nAnmelde-Formulare \nHallo Baby \nSport- und Spielkarte \nJugend \nSenioren \nSeniorenvertretung \nSeniorenzeitung \nHilfreiche Web-Adressen \nBildung \nSchulen \nGrundschulen in Goslar \nWeiterführende Schulen \nStadtelternrat \nKultur \nDOM:digital \nDer Goldene Ton \nKulturmarktplatz KUMA \nVeranstaltungsräume \nGoslarer Museum \nKAISER, KULT & KRACH \nMarktkirchenbibliothek \nStadtbibliothek \nAktuelles \nFür Kitas & Schulen \nCoworking \ne-Bibliothek \nFernleihe \nKontakt und Service \nMedienkisten \nMakerspace \nMitgliedschaft \nVeranstaltungen \nStadtarchiv \nÖffentlichkeitsarbeit Stadtarchiv \nSammlungen \nKorrespondierende Bestände \nArchivbestände \nArchivgeschichte \nKulturverwaltung \nKulturcafe - KuCaf \nKaiserpfalz Goslar \nGroßes Heiliges Kreuz \nKunst im öffentlichen Raum \nBrunnen im Stadtzentrum \nKirchenkunst im Stadtzentrum \nMahn-, Denk- und Ehrenmale im Stadtzentrum \nPlastiken im Stadtzentrum \nReliefs im Stadtzentrum \nSkulpturen im Stadtzentrum \nWandbilder im Stadtzentrum \nKunstwerke außerhalb des Stadtzentrums \nKunstwerkekatalog und Geoportal \nErinnerungskultur \nFliegerhorst Goslar \nFriedhof Hildesheimer Straße \nGeschichte \nGoslarer Persönlichkeiten \nMahnmale \nTouren \nGedenkstein und Mahnmal \nStraßennamen \nAgnes-Miegel-Straße \nHeinrich-Pieper-Straße \nHelmut-Schneider-Weg \nHindenburgerstraße und-platz \nRommelstraße \nKaiserring Goslar \nSoziales und Engagement \nHilfsvereine & Organisationen \nBarrierefreiheit und Inklusion \nBehindertenbeauftragte \nEhrenamtskarte \nAltenheime und Pflegeheime \nAltenbegegnungsstätte Vienenburg \nGoslarsche Höfe \nSport, Freizeit, Vereine \nSportfreiflächen \nVermietungen und Anträge \nÖffentliche Einrichtungen \nSportförderung \nSportvereine \nBaden im UNESCO-Welterbe \nWaldseen \nEheschließung und Standesamt \nStandesamtliche Trauung \nKirchliche Trauung \nTermine für Eheschließungen \nWirtschafts- und Zukunftsort \nKaiserPfalzQuartier \nWirtschaft \nWirtschaftsnews \nWirtschaftsstandort \nGoslar in Zahlen \nVerbände und Institutionen \nEnergie-Campus \nWirtschaftsförderung \nGoslar für Unternehmer und Investoren \nFördermittelberatung \nLeerstandsmanagement \nAufruf Pop-Up-Store \nGewerbeflächen und Gewerbeimmobilien \nLeerstandsmelder \nInnenstadtmanagement \nLiegenschaftsverwaltung \nSmart City \nStadtentwicklung \nISEK \nWohnentwicklung \nStädtebauförderung \nKaiserpfalzquartier und südliche Wallanlagen \nAltstadt - östlicher Teil \nJürgenohl \nFotowettbewerb \nQuartiersmanagement \nHahnenklee - Rathausstraße \nMarktplatz Vienenburg \nKommunale Wärmeplanung \nEntwurf Abschlussbericht \nVeranstaltungen \nDatenschutz \nFreiflächen-Photovoltaik-Konzept \nBauen und Wohnen \nBauleitplanung \nFlächennutzungspläne \nFlächennutzungsplan Bereich Goslar \nFlächennutzungsplan Bereich Vienenburg \nBebauungspläne \nBauleitpläne im Verfahren \nBaulückenbörse \nBau-Turbo \nDenkmalschutz \nGestaltungsfibel für die Altstadt von Goslar - verschiedene Informationsblätter \nAblauf einer Instandsetzungsmaßnahme \nFördermöglichkeiten und Zuschüsse \nWerbeanlagen \nLärmaktionsplan \nMobilitätsplan für Goslar \nBürgerbeteiligung zum Mobilitätsplan \nBürgerbeteiligung Vor-Ort \nMobilitätsbefragung \nErgebnisse der Online Beteiligung \nVeranstaltungen \nRadverkehr \nZählstellen-Verkehrserfassung \nStationäre Zählstellen \nMobile Verkehrsdatenerfassung \nRouten-Netz \nAbstellanlagen \nUmgesetzte Maßnahmen \nMaßnahme Okerstraße - Breites Tor \nMaßnahme Alte Heerstraße \nMaßnahme Marktstraße Bereich Bushaltestelle \nMaßnahme Mauerstraße Verlängerung Radweg \nMaßnahme Marktstraße Schutzstreifen \nAktuelles zum Thema Radverkehr \nStadt und UNESCO-Welterbe \nSanierung im Welterbe \nGoslar UNESCO-Weltkulturerbe \nKern- und Pufferzonen des Welterbes \nSchutz des Kulturgutes \nAktuelle Projekte \nKlima - Umwelt - Gewässerschutz \nKlimaanpassung \nKlimaanpassungskonzept (KLAK) \nUmweltschutz \nLebensraum im Garten \npraktische Anleitungen \nPflanzensteckbriefe \nRadonvorsorgegebiet \nAktionen \nAmphibienschutz \nRehkitzrettung \nEarth Hour \nBiostadt Goslar \nVeranstaltungen \nWarum sind Bio Lebensmittel teurer? \nWarum Bio? \nWie erkenne ich Bio? \nKommune für Biologische Vielfalt \nGewässerschutz \nÜberschwemmungsgebiete innerhalb der Stadt Goslar \nBauliche Anlagen in, an, unter oder über Gewässern \nWasserschutzgebiete-Trinkwassereinzugsgebiete \nMistlagerung - Feldmieten \nStarkregenereignisse \nHochwasserschutz \nAbwasserbeseitigung - Versickerung \nWassergefährdende Stoffe - Heizöllagerung \nWasserentnahmen Grund- & Oberflächenwasser \nErdwärme - Geothermie \nEnergieberatung / ERA \nStadtforst \nUnternehmereinsatz in der Stadtforst \nBrennholz aus der Stadtforst \nDer Stadtwald im Umbau \nBetriebshof \nFriedhöfe \nFeldstraße \nHildesheimer Straße \nOrtsteil Oker \nOrtsteil Jerstedt \nOrtsteil Hahnenklee \nGGM Goslarer Gebäudemanagement \nÜber uns \nVerkauf - Immobilien \nVermietungen - Garagen \nInfrastrukturdienste \nBaukonstruktion und Gebäudetechnik \nFinanz- und Rechnungswesen \nKontakte \nObjektmanager \nVertragsmanager \nInfrastrukturdienste \nGeoportal \nTourismus - Mein Goslar \nSie sind hier\nStadt Goslar \n Stadt und Verwaltung\n Leben in Goslar\n Wirtschafts- und Zukunftsort\n Tourismus - Mein Goslar\nWirtschafts- und Zukunftsort \n KaiserPfalzQuartier\n Wirtschaft\n Smart City\n Stadtentwicklung\n Bauen und Wohnen\n Stadt und UNESCO-Welterbe\n Klima - Umwelt - Gewässerschutz\n Stadtforst\n Betriebshof\n GGM Goslarer Gebäudemanagement\n Geoportal\nBauen und Wohnen \n Bauleitplanung\n Baulückenbörse\n Bau-Turbo\n Denkmalschutz\n Lärmaktionsplan\n Mobilitätsplan für Goslar\n Radverkehr\nRadverkehr \n Zählstellen-Verkehrserfassung\n Routen-Netz\n Abstellanlagen\n Umgesetzte Maßnahmen\n Aktuelles zum Thema Radverkehr\n Zählstellen-Verkehrserfassung \n Stationäre Zählstellen\n Mobile Verkehrsdatenerfassung\n Zählstellen & Verkehrsdatenerfassung\nstationäre Fahrradzählstellen\nmobile Verkehrsdatenerfassung\n Kontakt und Informationen\nStadt Goslar - FD Tiefbau\nRammelsberger Straße 238640 Goslar\n Tel.:\n +49 5321 704 417\nE-Mail schreiben\nSeite teilen\nSeite merken\nKontaktStadt Goslar\nPostfach 3452\n Charley-Jacob-Straße 3\n 38640 Goslar\n Tel: +49 5321 704-0 (Zentrale)\nFax: +49 5321 704-567\nE-Mail schreiben\nSchnellzugriff\n Öffnungszeiten\n Einfache Sprache\n Gebärdensprache\n Dienstleistungen A-Z\n Informationen für Neubürger\n Karriere\nService\n Datenschutz \n SEPA Lastschrift \n Impressum \n Erklärung zur Barrierefreiheit \n Sitemap \n Merkzettel \nCookie Einstellungen\nFolge uns auf\nLink zu FacebookLink zu Instagram \n Suche schließen\n Hey Goslar, ich suche nach\n Suchbegriff:\n Suchen\nSuchvorschläge anzeigen\nHäufig gesucht:\nStellenangebote\n Stadtentwicklung\n Förderprogramm Stadtgrün\n Welterbe\n Bürgerbüro\n Kinderbetreuung\n Kindertagesstätten\n Kaiserpfalz\n Verwaltung\n Ausbildung\n Termin buchen\n Reisepass\n Personalausweis beantragen\n Heiraten\n Terminbuchung - Führerscheinstelle"
+},
+{
+"kommune": "Goslar",
+"url": "https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+"end": null,
+"typ": "text/html",
+"bytes": 100227,
+"art": "html",
+"titel": "Radverkehr in Goslar - Stationäre Zählstellen",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"zaehlstelle": 10,
+"rad": 7,
+"dauerzaehl": 1,
+"radzaehl": 1
+},
+"auszuege": [
+"Radverkehr in Goslar - Stationäre Zählstellen Zur Startseite Sprache auswählen DeutschArabischEnglischFranzösischItalienischNiederländischPolnischRussischSpanischTürkischUkrainischSeite in einfacher Sprache anzeigenAssistenz laden Suche Suc",
+"agen Lärmaktionsplan Mobilitätsplan für Goslar Bürgerbeteiligung zum Mobilitätsplan Bürgerbeteiligung Vor-Ort Mobilitätsbefragung Ergebnisse der Online Beteiligung Veranstaltungen Radverkehr Zählstellen-Verkehrserfassung Stationäre Zählstellen Mobile Verkehrsdatenerfassung Routen-Netz Abstellanlagen Umgesetzte Maßnahmen Maßnahme Okerstraße - Breites Tor Maßnahme Alte Heerstraße Maßnahme Mar",
+"dverkehr Zählstellen-Verkehrserfassung Stationäre Zählstellen Mobile Verkehrsdatenerfassung Stationäre Zählstellen Stationäre Fahrradzählstellen Die Stadt betreibt seit dem Frühjahr 2018 drei Dauerzählstellen für den Radverkehr. Diese wurden an der Okerstraße in Höhe der Ausfahrt der Feuerwehr, an der Arcachon Brücke und der Brückenstraße installiert. Die Zählstelle an der Brückenstraße war während"
+],
+"links": [
+[
+"https://www.goslar.de/stadt-und-verwaltung/karriereportal/bezahlung-nach-dem-tvoed-vka",
+"Bezahlung nach dem TVöD-VKA"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/goslar-in-zahlen",
+"Goslar in Zahlen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar",
+"Mobilitätsplan für Goslar"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/buergerbeteiligung-zu",
+"Bürgerbeteiligung zum Mobilitätsplan"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/buergerbeteiligung-zu/buergerbeteiligung-vor-ort",
+"Bürgerbeteiligung Vor-Ort"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/mobilitaetsbefragung",
+"Mobilitätsbefragung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/ergebnisse-der-online-beteiligung",
+"Ergebnisse der Online Beteiligung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar/veranstaltungen",
+"Veranstaltungen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+"Zählstellen-Verkehrserfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+"Stationäre Zählstellen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung",
+"Mobile Verkehrsdatenerfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/mobilitaetsplan-fuer-goslar",
+"Mobilitätsplan für Goslar"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+"Zählstellen-Verkehrserfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung",
+"Zählstellen-Verkehrserfassung"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+"Stationäre Zählstellen"
+],
+[
+"https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-mobile-verkehrsdatenerfassung",
+"Mobile Verkehrsdatenerfassung"
+],
+[
+"https://www.facebook.com/sharer/sharer.php?u=https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+""
+],
+[
+"whatsapp://send?text=Ich%20habe%20einen%20interessanten%20Link%20f%C3%BCr%20dich%20entdeckt%3A%20https://www.goslar.de/wirtschafts-und-zukunftsort/bauen-und-wohnen/radverkehr/zaehlstellen-verkehrserfassung/radverkehr-1-1-stationaere-zaehlstellen",
+""
+]
+],
+"volltext": "Radverkehr in Goslar - Stationäre Zählstellen\nZur Startseite\n Sprache auswählen \nDeutschArabischEnglischFranzösischItalienischNiederländischPolnischRussischSpanischTürkischUkrainischSeite in einfacher Sprache anzeigenAssistenz laden\n Suche\n Suche öffnen\n Menü\n Menü öffnen\nStadt und Verwaltung \nAktuelles \nBlog der Oberbürgermeisterin \nAmtsblatt \nAusschreibungen \nAktuelle Meldungen \nBekanntmachungen \nBekanntmachungen 2025 - Stadt Goslar \nBekanntmachungen 2024 - Stadt Goslar \nBekanntmachungen 2023 \nBekanntmachungen 2022 \nBekanntmachungen 2021 \nBekanntmachungen 2020 \nBekanntmachungen 2019 \nBekanntmachungen 2018 \nBekanntmachungen 2017 \nBekanntmachungen 2016 \nBekanntmachungen 2015 \nBekanntmachungen 2014 \nBekanntmachungen 2013 \nBekanntmachungen 2012 \nInformationsmaterial \nWahlen \nKommunalwahl 2026 \nBundestagswahl 2025 \nEuropawahl 2024 \nSag´s uns einfach \nRat der Stadt \nBürgerbüro vor Ort \nWas wird benötigt? \nVerwaltung \nFinanzen-Haushaltspläne \nOrtsrecht und Satzungen \nOrtsrecht der bisherigen Stadt Vienenburg \nÖffentliche Einrichtungen \nSoziale Sicherung \nÖffentliche Sicherheit-Ordnung \nFinanzen-Steuern \nBau \nStiftungssatzungen \nWirtschaftliche Unternehmen \nStadtforst \nKultur \nAllgemeine Verwaltung \nSchulen \nSchiedsamt \nZentrale Vergabestelle \nKommunaler Präventionsrat Goslar \nGleichstellung \nGleichstellungsbeauftragte \nAktuelles \nInternationaler Männertag 2024 \n28. Bundeskonferenz der Gleichstellungsbeauftragten \nMitMach Aktion Lila Fenster \nArbeitsschwerpunkte \nHilfetelefonnummern \nFrauenpolitische Arbeit \nfrauenORT Katharina von Kardorff-Oheimb in Goslar \nInteressante Links und Tipps \nInfomaterial und Ratgeber \nVeranstaltungsrückblick \nIntegration \nIntegrationsbeauftragte \nAktuelles \nArbeitsschwerpunkte \nIntegration in Goslar \nProjekte \nFest der Kulturen \nGrundsteuerreform \nKarriereportal \nStellenangebote \nDie Stadt Goslar als Arbeitgeberin \nGesundheitsmanagement \nBenefits \nBezahlung nach dem TVöD-VKA \nEin kleiner Überblick \nAusbildung und Studium \nDuales Studium Verwaltungswissenschaften \nVerwaltungsfachangestellte/r (m/w/d) \nFachangestellte/r für Medien- und Informationsdienste - Fachrichtung Bibliothek (m/w/d) \nFachangestellte/r für Medien- und Informationsdienste - Fachrichtung Archiv (m/w/d) \nFachinformatiker/in für Systemintegration (m/w/d) \nForstwirt/in \nBundesfreiwilligendienst \nPraktikum \nGoslars Stadt- und Ortsteile \nHahnenklee-Bockswiese \nHahndorf \nImmenrode \nJerstedt \nJürgenohl \nLengde \nLochtum \nOhlhof \nOker \nSudmerberg \nVienenburg \nWeddingen \nWiedelah \nBrand- und Bevölkerungsschutz \nBrandschutz \nBevölkerungsschutz \nSelbstschutz und Notfallvorsorge \nPartnerstädte - Patenschaften \nLeben in Goslar \nKinder \nKinderkrippen (Übersicht) \nKindergärten (Übersicht) \nKitas in städtischer Trägerschaft \nKinderkrippe Wiedelah \nKinderkrippe Münzstraße \nKindertagesstätte Bäringerstraße \nKindertagesstätte Kunterbunt \nKindertagesstätte Lilliputt \nKindertagesstätte Ohlhof \nKindertagesstätte Hahndorf \nKindertagesstätte Löwenzahn \nKindertagesstätte Hahnenklee \nKindertagesstätte Vienenburg \nHorte (Übersicht) \nIntegrationsgruppen (Übersicht) \nAnmelde-Formulare \nHallo Baby \nSport- und Spielkarte \nJugend \nSenioren \nSeniorenvertretung \nSeniorenzeitung \nHilfreiche Web-Adressen \nBildung \nSchulen \nGrundschulen in Goslar \nWeiterführende Schulen \nStadtelternrat \nKultur \nDOM:digital \nDer Goldene Ton \nKulturmarktplatz KUMA \nVeranstaltungsräume \nGoslarer Museum \nKAISER, KULT & KRACH \nMarktkirchenbibliothek \nStadtbibliothek \nAktuelles \nFür Kitas & Schulen \nCoworking \ne-Bibliothek \nFernleihe \nKontakt und Service \nMedienkisten \nMakerspace \nMitgliedschaft \nVeranstaltungen \nStadtarchiv \nÖffentlichkeitsarbeit Stadtarchiv \nSammlungen \nKorrespondierende Bestände \nArchivbestände \nArchivgeschichte \nKulturverwaltung \nKulturcafe - KuCaf \nKaiserpfalz Goslar \nGroßes Heiliges Kreuz \nKunst im öffentlichen Raum \nBrunnen im Stadtzentrum \nKirchenkunst im Stadtzentrum \nMahn-, Denk- und Ehrenmale im Stadtzentrum \nPlastiken im Stadtzentrum \nReliefs im Stadtzentrum \nSkulpturen im Stadtzentrum \nWandbilder im Stadtzentrum \nKunstwerke außerhalb des Stadtzentrums \nKunstwerkekatalog und Geoportal \nErinnerungskultur \nFliegerhorst Goslar \nFriedhof Hildesheimer Straße \nGeschichte \nGoslarer Persönlichkeiten \nMahnmale \nTouren \nGedenkstein und Mahnmal \nStraßennamen \nAgnes-Miegel-Straße \nHeinrich-Pieper-Straße \nHelmut-Schneider-Weg \nHindenburgerstraße und-platz \nRommelstraße \nKaiserring Goslar \nSoziales und Engagement \nHilfsvereine & Organisationen \nBarrierefreiheit und Inklusion \nBehindertenbeauftragte \nEhrenamtskarte \nAltenheime und Pflegeheime \nAltenbegegnungsstätte Vienenburg \nGoslarsche Höfe \nSport, Freizeit, Vereine \nSportfreiflächen \nVermietungen und Anträge \nÖffentliche Einrichtungen \nSportförderung \nSportvereine \nBaden im UNESCO-Welterbe \nWaldseen \nEheschließung und Standesamt \nStandesamtliche Trauung \nKirchliche Trauung \nTermine für Eheschließungen \nWirtschafts- und Zukunftsort \nKaiserPfalzQuartier \nWirtschaft \nWirtschaftsnews \nWirtschaftsstandort \nGoslar in Zahlen \nVerbände und Institutionen \nEnergie-Campus \nWirtschaftsförderung \nGoslar für Unternehmer und Investoren \nFördermittelberatung \nLeerstandsmanagement \nAufruf Pop-Up-Store \nGewerbeflächen und Gewerbeimmobilien \nLeerstandsmelder \nInnenstadtmanagement \nLiegenschaftsverwaltung \nSmart City \nStadtentwicklung \nISEK \nWohnentwicklung \nStädtebauförderung \nKaiserpfalzquartier und südliche Wallanlagen \nAltstadt - östlicher Teil \nJürgenohl \nFotowettbewerb \nQuartiersmanagement \nHahnenklee - Rathausstraße \nMarktplatz Vienenburg \nKommunale Wärmeplanung \nEntwurf Abschlussbericht \nVeranstaltungen \nDatenschutz \nFreiflächen-Photovoltaik-Konzept \nBauen und Wohnen \nBauleitplanung \nFlächennutzungspläne \nFlächennutzungsplan Bereich Goslar \nFlächennutzungsplan Bereich Vienenburg \nBebauungspläne \nBauleitpläne im Verfahren \nBaulückenbörse \nBau-Turbo \nDenkmalschutz \nGestaltungsfibel für die Altstadt von Goslar - verschiedene Informationsblätter \nAblauf einer Instandsetzungsmaßnahme \nFördermöglichkeiten und Zuschüsse \nWerbeanlagen \nLärmaktionsplan \nMobilitätsplan für Goslar \nBürgerbeteiligung zum Mobilitätsplan \nBürgerbeteiligung Vor-Ort \nMobilitätsbefragung \nErgebnisse der Online Beteiligung \nVeranstaltungen \nRadverkehr \nZählstellen-Verkehrserfassung \nStationäre Zählstellen \nMobile Verkehrsdatenerfassung \nRouten-Netz \nAbstellanlagen \nUmgesetzte Maßnahmen \nMaßnahme Okerstraße - Breites Tor \nMaßnahme Alte Heerstraße \nMaßnahme Marktstraße Bereich Bushaltestelle \nMaßnahme Mauerstraße Verlängerung Radweg \nMaßnahme Marktstraße Schutzstreifen \nAktuelles zum Thema Radverkehr \nStadt und UNESCO-Welterbe \nSanierung im Welterbe \nGoslar UNESCO-Weltkulturerbe \nKern- und Pufferzonen des Welterbes \nSchutz des Kulturgutes \nAktuelle Projekte \nKlima - Umwelt - Gewässerschutz \nKlimaanpassung \nKlimaanpassungskonzept (KLAK) \nUmweltschutz \nLebensraum im Garten \npraktische Anleitungen \nPflanzensteckbriefe \nRadonvorsorgegebiet \nAktionen \nAmphibienschutz \nRehkitzrettung \nEarth Hour \nBiostadt Goslar \nVeranstaltungen \nWarum sind Bio Lebensmittel teurer? \nWarum Bio? \nWie erkenne ich Bio? \nKommune für Biologische Vielfalt \nGewässerschutz \nÜberschwemmungsgebiete innerhalb der Stadt Goslar \nBauliche Anlagen in, an, unter oder über Gewässern \nWasserschutzgebiete-Trinkwassereinzugsgebiete \nMistlagerung - Feldmieten \nStarkregenereignisse \nHochwasserschutz \nAbwasserbeseitigung - Versickerung \nWassergefährdende Stoffe - Heizöllagerung \nWasserentnahmen Grund- & Oberflächenwasser \nErdwärme - Geothermie \nEnergieberatung / ERA \nStadtforst \nUnternehmereinsatz in der Stadtforst \nBrennholz aus der Stadtforst \nDer Stadtwald im Umbau \nBetriebshof \nFriedhöfe \nFeldstraße \nHildesheimer Straße \nOrtsteil Oker \nOrtsteil Jerstedt \nOrtsteil Hahnenklee \nGGM Goslarer Gebäudemanagement \nÜber uns \nVerkauf - Immobilien \nVermietungen - Garagen \nInfrastrukturdienste \nBaukonstruktion und Gebäudetechnik \nFinanz- und Rechnungswesen \nKontakte \nObjektmanager \nVertragsmanager \nInfrastrukturdienste \nGeoportal \nTourismus - Mein Goslar \nSie sind hier\nStadt Goslar \n Stadt und Verwaltung\n Leben in Goslar\n Wirtschafts- und Zukunftsort\n Tourismus - Mein Goslar\nWirtschafts- und Zukunftsort \n KaiserPfalzQuartier\n Wirtschaft\n Smart City\n Stadtentwicklung\n Bauen und Wohnen\n Stadt und UNESCO-Welterbe\n Klima - Umwelt - Gewässerschutz\n Stadtforst\n Betriebshof\n GGM Goslarer Gebäudemanagement\n Geoportal\nBauen und Wohnen \n Bauleitplanung\n Baulückenbörse\n Bau-Turbo\n Denkmalschutz\n Lärmaktionsplan\n Mobilitätsplan für Goslar\n Radverkehr\nRadverkehr \n Zählstellen-Verkehrserfassung\n Routen-Netz\n Abstellanlagen\n Umgesetzte Maßnahmen\n Aktuelles zum Thema Radverkehr\nZählstellen-Verkehrserfassung \n Stationäre Zählstellen\n Mobile Verkehrsdatenerfassung\n Stationäre Zählstellen \n Stationäre Fahrradzählstellen \n Die Stadt betreibt seit dem Frühjahr 2018 drei Dauerzählstellen für den Radverkehr. Diese wurden an der Okerstraße in Höhe der Ausfahrt der Feuerwehr, an der Arcachon Brücke und der Brückenstraße installiert. Die Zählstelle an der Brückenstraße war während der Sicherungsmaßnahmen an der Stadtmauer (Januar 2022 bis Juli 2023) außer Betrieb. \nInhalt in neuem Fenster öffnen\n Kontakt und Informationen\nStadt Goslar - FD Tiefbau\nRammelsberger Straße 238640 Goslar\n Tel.:\n +49 5321 704 417\nE-Mail schreiben\nSeite teilen\nSeite merken\nKontaktStadt Goslar\nPostfach 3452\n Charley-Jacob-Straße 3\n 38640 Goslar\n Tel: +49 5321 704-0 (Zentrale)\nFax: +49 5321 704-567\nE-Mail schreiben\nSchnellzugriff\n Öffnungszeiten\n Einfache Sprache\n Gebärdensprache\n Dienstleistungen A-Z\n Informationen für Neubürger\n Karriere\nService\n Datenschutz \n SEPA Lastschrift \n Impressum \n Erklärung zur Barrierefreiheit \n Sitemap \n Merkzettel \nCookie Einstellungen\nFolge uns auf\nLink zu FacebookLink zu Instagram \n Suche schließen\n Hey Goslar, ich suche nach\n Suchbegriff:\n Suchen\nSuchvorschläge anzeigen\nHäufig gesucht:\nStellenangebote\n Stadtentwicklung\n Förderprogramm Stadtgrün\n Welterbe\n Bürgerbüro\n Kinderbetreuung\n Kindertagesstätten\n Kaiserpfalz\n Verwaltung\n Ausbildung\n Termin buchen\n Reisepass\n Personalausweis beantragen\n Heiraten\n Terminbuchung - Führerscheinstelle"
+},
+{
+"kommune": "Oldenburg",
+"url": "https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn/bahnuebergang-am-stadtrand/verkehrszaehlung-ofenerdiek.html",
+"end": null,
+"typ": "text/html",
+"bytes": 193616,
+"art": "html",
+"titel": "Verkehrszählung Ofenerdiek > Stadt Oldenburg",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"verkehrszaehlung": 7,
+"rad": 1,
+"radar": 1,
+"kamera": 1
+},
+"auszuege": [
+"Verkehrszählung Ofenerdiek > Stadt Oldenburg Zum Servicemenü springen Zum Hauptmenü springen Zum Inhalt springen Zur Suche springen DE Sprachauswahl, ausgewählt ist Deutsch DE Deutsch EN English FR Fran",
+"en & Preise Veröffentlichungen über Oldenburg Ferienwohnung Spiekeroog DE Sprachauswahl, ausgewählt ist Deutsch DE Deutsch EN English FR Français Karriere Tourismus Rainer Sturm/Pixelio Verkehrszählung Ofenerdiek Bahnübergang Ofenerdiek: Verkehrszählung als Basis für Verbesserungen Verkehrszählung Ofenerdiek Kontakt Amt für Verkehr und Straßenbau E-Mail: verkehr[at]stadt-oldenburg.de Startseite",
+"500 Meter) der Bahnübergänge Bürgerbuschweg, Am Stadtrand, Karuschenweg und Am Strehl an verschiedenen Knotenpunkten Verkehrszählungen mittels automatischer Zählgeräte vorgenommen. Eingesetzt wurden Seitenradar, Zählplatten und Zählkameras an Teleskopmasten. Neben den genannten Bahnübergängen selbst wurde der Verkehr in den Straßen Am Strehl, Ofenerdieker Straße, Langenweg, Weißenmoorstraße und Bürgerbuschw"
+],
+"links": [
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet.html",
+"Verkehr & Mobilität"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/baustellen.html",
+"Baustellen"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/verkehrstipps.html",
+"Verkehrstipps"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel.html",
+"Öffentliche Verkehrsmittel"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/radverkehr.html",
+"Radverkehr"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/parken.html",
+"Parken"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/elektromobilitaet.html",
+"Elektromobilität"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/carsharing.html",
+"Carsharing"
+],
+[
+"https://www.oldenburg.de/startseite/leben-umwelt/verkehr-mobilitaet/mobilitaetsplan-oldenburg-2030.html",
+"Mobilitätsplan Oldenburg 2030"
+],
+[
+"https://www.oldenburg.de/startseite/kultur/stadtportrait/ueber-oldenburg/oldenburg-in-zahlen.html",
+"Oldenburg in Zahlen"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet.html",
+"Verkehr & Mobilität"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel.html",
+"Öffentliche Verkehrsmittel"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn.html",
+"Bahn"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn/bahnuebergang-am-stadtrand.html",
+"Bahnübergang Am Stadtrand"
+],
+[
+"https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn/bahnuebergang-am-stadtrand.html",
+"Verbesserung des Bahnübergangs „Am Stadtrand“ im Stadtteil Ofenerdiek unterzeichnet"
+]
+],
+"volltext": "Verkehrszählung Ofenerdiek > Stadt Oldenburg\n Zum Servicemenü springen\n Zum Hauptmenü springen\n Zum Inhalt springen\n Zur Suche springen\n DE\n Sprachauswahl, ausgewählt ist\n Deutsch\n DE\n Deutsch\n EN\n English\n FR\n Français\n Barrierefreiheit\n Merkliste\n Suche\n Ihr Suchbegriff\n Suchen\n Rathaus\n Politik & Verwaltung\n Oberbürgermeister\n Stadtverwaltung\n Rat & Fraktionen\n Ratsinfo/Sitzungskalender\n Satzungen – Stadtrecht\n Wahlen\n Informiert bleiben\n Online-Portale der Stadt\n Presse\n Social Media\n Newsletter\n Bürgerbeteiligung\n Bekanntmachungen\n Ausschreibungen\n Im Notfall\n Internationales\n Oldenburgs Partnerkommunen\n Zuschüsse für Partnerschaftsprojekte\n Weiteres internationales Engagement\n Digitalisierung\n Digitale Services\n Digitalisierungsstrategie\n Projekte digitaler Transformation\n Leben in Oldenburg\n Familie\n Beratung & Hilfen für Eltern\n Angebote für Kinder & Jugendliche\n Kinder- & Jugendschutz\n Kindertagesbetreuung & Kitas\n Angebote für Mädchen & Frauen\n Standesamt\n Gesellschaft & Soziales\n Älter werden in Oldenburg\n Zuwanderung & Integration\n Strategische Sozialplanung\n Gleichstellung\n Ehrenamt\n Queeres Leben\n Kirche & Glaube\n OldenburgCard\n Oldenburg-Pass\n Bildung & Forschung\n Schulen\n Studium\n Jugend & Beruf\n Persönliche Beratung\n Fort- & Weiterbildung\n Außeruniversitäre Forschung\n Bibliotheken & Archive\n Weitere Bildungseinrichtungen\n Gesundheit\n Krankenhäuser & Kliniken\n Haus- & fachärztliche Versorgung\n Beratung und Anlaufstellen\n Informationen und Publikationen\n Gesundheitsförderung & Prävention\n Berufliche & ehrennamtliche Betreuung\n Menschen mit Behinderung\n Gesundheitsplanung\n Sport & Freizeit\n Sport\n Stadtteilangebote\n Grün- und Parkanlagen\n Wohnen\n Mietspiegel\n Stadtteilzentren\n Wohnkonzept\n Wohnungsmarktbericht & Bedarfsprognose\n Baugebiete\n Richtlinie zur Förderung von Belegungsbindungen\n Wohnungsbauförderungsprogramm\n Wohnen im Alter\n Wohnbauflächenkataster\n Stadtraum\n Zentrale Projekte\n Stadion-Neubau\n Sport- und Gesundheitsbad am Flötenteich\n Fliegerhorst\n Weser-Ems-Hallen\n Technologiepark Oldenburg\n Tiefgarage am Stadtmuseum\n MediTech Oldenburg\n Planen & Bauen\n Öffentlichkeitsbeteiligung\n Stadtentwicklungsplanung\n Stadterneuerung, Gestaltung & Bau\n ISEK Oldenburg 2050 | 2035\n Allgemeine Bauberatung\n Verkehr & Mobilität\n Baustellen\n Verkehrstipps\n Öffentliche Verkehrsmittel\n Radverkehr\n Parken\n Elektromobilität\n Carsharing\n Mobilitätsplan Oldenburg 2030\n Stadtverbesserer\n Umwelt\n Abfall & Entsorgung\n Klima\n Nachhaltigkeit\n Naturschutz und Landschaftspflege\n Technischer Umweltschutz\n Regionales Umweltbildungszentrum\n Grünes Oldenburg\n Wirtschaft\n Standort Oldenburg\n Standortprofil\n Unternehmensdatenbank\n Fachkräftesuche | Stellenbörse\n Hochschulstandort Oldenburg\n Hafen Oldenburg\n Innenstadtmanagement\n Nachhaltigkeit und Klimaschutz für Unternehmen\n Imagefilme\n Wirtschaftsrelevante Konzepte\n Wirtschaftsförderung\n Wir über uns\n Beratung & Unterstützung\n Förderprogramme\n Downloads & Broschüren\n Gewerbeflächen & Immobilienservice\n Gründen in Oldenburg\n Preise & Wettbewerbe\n Veranstaltungen & Netzwerke\n Zukunftsprojekte\n Fachkräfte & Arbeit\n Fachkräftesicherung\n Servicestelle für Arbeitgeberinnen und Arbeitgeber\n Familienfreundliches Arbeiten\n Stellenangebote der Stadt Oldenburg\n Kultur\n Kunst & Kultur\n Museen & Kunsthäuser\n Kulturbüro\n Theater, Film und Musik\n Literaturhaus Oldenburg\n Musikschule\n Kulturelle Bildung & Teilhabe\n Stadtbibliothek\n Veranstaltungen\n Was ist los in Oldenburg?\n Verkaufsoffene Sonntage\n Veranstaltungshöhepunkte\n Veranstaltungszentren\n Wochenmärkte\n Stadtportrait\n Über Oldenburg\n Oldenburg in Zahlen\n Stadtgeschichte\n Stiftungen\n Patenschaften\n Sehenswürdigkeiten\n Städtische Ehrungen & Preise\n Veröffentlichungen über Oldenburg\n Ferienwohnung Spiekeroog\n DE\n Sprachauswahl, ausgewählt ist\n Deutsch\n DE\n Deutsch\n EN\n English\n FR\n Français\n Karriere\n Tourismus\n Rainer Sturm/Pixelio\nVerkehrszählung Ofenerdiek\nBahnübergang Ofenerdiek: Verkehrszählung als Basis für Verbesserungen\n Verkehrszählung Ofenerdiek\n Kontakt\nAmt für Verkehr und Straßenbau\nE-Mail: verkehr[at]stadt-oldenburg.de\n Startseite\n Stadtraum\n Verkehr & Mobilität\n Öffentliche Verkehrsmittel\n Bahn\n Bahnübergang Am Stadtrand\n Verkehrszählung Ofenerdiek\n Änderung, Verlagerung oder Beseitigung des Bahnübergangs\nRund um die Bahnübergänge in Ofenerdiek fand am Donnerstag, 16. September 2021, eine Verkehrszählung statt. Von einem von der Stadt Oldenburg beauftragten Ingenieurbüro wurden im Nahbereich (Umkreis 500 Meter) der Bahnübergänge Bürgerbuschweg, Am Stadtrand, Karuschenweg und Am Strehl an verschiedenen Knotenpunkten Verkehrszählungen mittels automatischer Zählgeräte vorgenommen. Eingesetzt wurden Seitenradar, Zählplatten und Zählkameras an Teleskopmasten.\nNeben den genannten Bahnübergängen selbst wurde der Verkehr in den Straßen Am Strehl, Ofenerdieker Straße, Langenweg, Weißenmoorstraße und Bürgerbuschweg erfasst.\nDamit wird eine erste Datenbasis für die geplante Verbesserung der Bahnübergänge erhoben. Die Stadt Oldenburg und die DB Netz der Deutschen Bahn hatten Ende August 2021 eine Planungsvereinbarung zur Verbesserung des Bahnübergangs „Am Stadtrand“ im Stadtteil Ofenerdiek unterzeichnet.\nDie Planungsvereinbarung ist die Grundlage für Variantenlösungen zur Änderung, Verlagerung oder Beseitigung des Bahnübergangs.\n Waren diese Informationen hilfreich?\n Jetzt teilen\n Seite teilen\n Dialog schließen\n Facebook\n WhatsApp\n LinkedIn\n E-Mail\n Link kopieren\n Zuletzt geändert am\n 13. November 2026\n Immer informiert über Neues aus Oldenburg – \nmit unserem Bürgerbrief\n Ihre E-Mail-Adresse\n Datenschutzhinweis\nHiermit willige ich gemäß Artikel 6 Absatz 1 Satz 1 Nummer a in Verbindung mit Artikel 7 Datenschutz-Grundverordnung (DSGVO) ein, dass meine Daten zum Zwecke der Bearbeitung meiner Anfrage und in diesem Zusammenhang zu einer Kontaktaufnahme verwendet werden. Es werden die von Ihnen im oben stehenden Formular angegebenen Daten verarbeitet. Eine Übertragung der Daten gemäß Artikel 49 Absatz 1 a DSGVO an Drittstaaten, die kein den Anforderungen der EU an den Datenschutz genügendes Schutzniveau bieten, findet nicht statt.\nSie können Ihre Einwilligung jederzeit ohne Angabe von Gründen mit Wirkung für die Zukunft abändern oder gänzlich widerrufen. Den Widerruf richten Sie an folgende Adresse:\nStadt Oldenburg (Oldb)\nDer Oberbürgermeister\n26105 Oldenburg\noder per E-Mail an folgende Adresse: servicecenter@stadt-oldenburg.de.\n Ich habe den Datenschutzhinweis gelesen und stimme zu.\n Abonnieren\n Alle Newsletter\n Erfolg\nIhre Anmeldung zum Bürgerbrief wurde versandt. Sie erhalten eine E-Mail mit einem Bestätigungslink. Diesen müssen Sie bitte anklicken, um Ihre Anmeldung abzuschließen. Anschließend erhalten Sie den Bürgerbrief der Stadt Oldenburg an die übermittelte E-Mail-Adresse.\nWir bedanken uns für Ihr Interesse.\n Fehler\n Bei der Verarbeitung ist ein Fehler aufgetreten.\n Die E-Mail-Adresse entspricht nicht dem richtigen Format.\n Bitte lesen und bestätigen Sie den Datenschutzhinweis.\n Bitte kontaktieren Sie uns und geben Sie den Fehlercode mit an:\n Facebook\n Instagram\n Youtube\n LinkedIn\n Kontakt\nStadt Oldenburg (Oldb)\nDer Oberbürgermeister\nMarkt 1\n26105 Oldenburg\nServiceCenter\nMontag bis Freitag: 7 bis 18 Uhr\nTelefon: 0441 235-4444\nBehördenrufnummer: 115\n Kontaktformular\n Themen\n Rathaus\n Leben in Oldenburg\n Stadtraum\n Wirtschaft\n Kultur\n Schnellzugriff\n Serviceportal\n Karriere\n Bürgerbeteiligung\n Stadtverbesserer\n Was ist los in Oldenburg?\n Alle Newsletter\n Zustimmungsmanager\n Elektronische Kommunikation\n Datenschutz\n Impressum\nDiese Seite endet hier"
+},
+{
+"kommune": "Leer",
+"url": "https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/",
+"end": null,
+"typ": "text/html",
+"bytes": 117514,
+"art": "html",
+"titel": "Fahrradz�hlstellen / Stadt Leer (Ostfriesland)",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"zaehlstelle": 4,
+"rad": 6,
+"radzaehl": 3
+},
+"auszuege": [
+"ourismuskonzept Willkommensstationen Wappen St�dtepartnerschaften Stadt- & Nahverkehr Webcam - Leer auch aus der Ferne Patenschaft mit der Bundeswehr Podcast Leben in Leer Vorlesen Auswertung Fahrradzählstellen Die Stadt Leer erfasst seit einiger Zeit an drei zentralen Standorten die Anzahl der Radfahrenden im Stadtgebiet. Ziel dieser fortlaufenden Datenerhebung ist es, die Entwicklung des Radverkehrs tran",
+"genutzt wird und wie sich das Mobilitätsverhalten im Laufe des Jahres verändert. Die folgenden Auswertungen werden regelmäßig aktualisiert und bieten sowohl einen Überblick über die Gesamtnutzung der Zählstellen als auch detaillierte Vergleiche zwischen den einzelnen Standorten. So können Trends früh erkannt und Maßnahmen zur Förderung des Radverkehrs gezielt weiterentwickelt werden. Folgende Informationen",
+"ße Friesenstraße Friesenstraße schließen Kontakt Frau Christiane W�steney-Arbabi Rathausstra�e 1 26789 Leer (Ostfriesland) Karte anzeigen Telefon:0491 9782-166 Nachricht schreiben Wo sind die Fahrradzählstellen aufgestellt? Wo sind die Fahrradzählstellen aufgestellt? Fahrradz�hlstellen Wappen Stadt Leer Stadt Leer (Ostfriesland), Rathausstra�e 1, 26789 Leer (Ostfriesland) Telefon 0491 97 82 0,"
+],
+"links": [
+[
+"https://leer.de/Politik-Verwaltung/Verwaltung/Verwaltungsstruktur/Finanzen/Selbstablesung-der-Zwischenz%C3%A4hler/",
+"Selbstablesung der Zwischenz�hler"
+],
+[
+"https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/",
+"Fahrradz�hlstellen"
+],
+[
+"https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/",
+"Fahrradz�hlstellen"
+],
+[
+"https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/",
+"Fahrradz�hlstellen"
+],
+[
+"https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/index.php?ModID=9&object=tx%7c2586.1&FID=2840.47.1&NavID=2586.448",
+"Frau Christiane W�steney-Arbabi"
+],
+[
+"https://leer.de/Stadt-Leben/Stadt-Leer-Ostfriesland-/Fahrradfreundliche-Stadt-Leer/Fahrradz%C3%A4hlstellen/index.php?ModID=9&object=tx%7c2586.1&FID=2840.47.1&mt_step=contact&to_id=2840.47.1&NavID=2586.448",
+"Nachricht schreiben"
+]
+],
+"volltext": "Fahrradz�hlstellen / Stadt Leer (Ostfriesland)\n Direkt zu:\nSchnellnavigation\nSuche\nHauptnavigation\nUnternavigation \nSeiteninhalt\nFußzeile\nDiese Website verwendet Cookies, die für den technischen Betrieb der Website notwendig sind und stets gesetzt werden.\nWeitere Cookies werden nur mit Ihrer Zustimmung gesetzt, um statistische Daten zur Nutzung der Website in anonymisierter Form zu sammeln.\nMehr dazu in unserer Datenschutzerklärung.\n Ablehnen\nZustimmen\nStartseite\nSitemap\nKontakt\nImpressum\nDatenschutz\nOpenRathaus\nPolitik & Verwaltung\nVerwaltung\nAktuelle Mitteilungen\nPressemitteilungen\n�ffentliche Bekanntmachungen\nVerkehrsinfo \nAusschreibungen\n�ffentliche Ausschreibungen\nBeabsichtigte beschr�nkte Ausschreibungen\nAbgeschlossene Vergabeverfahren\nStadtplanung aktuell\nStellenausschreibungen\nOpenRathaus\nAnregungen\nMitarbeiter/in der Stadtverwaltung\nB�rgerb�ro\nOnline-Terminvergabe\nStandesamt Leer\nDienstleistungen\nRattenbekaempfung\nHaushalt\nHaushaltssatzung\nHaushaltsdaten\nLeeraner Ortsrecht\n�bernachtungssteuersatzung\nOnline-Formulare\nAbgaben\nGleichstellungsbeauftragte\nVerwaltungsstruktur\nBauverwaltung\nB�rgerservice und Soziales\nFinanzen\nSelbstablesung der Zwischenz�hler\n Zweitwohnungssteuer\nGeb�ude- und Energiemanagement\n IT-Entwicklung und TUI\nJugend, Schule und Sport\nJustiziariat\nRecht und Vergaben\nKommunale Wohnungsverwaltung Leer\nPersonal\nRechnungspr�fungsamt\nSicherheit und Ordnung\nWinterdienst\nStandesamt\nStadtmarketing und Tourismus\nStadtplanung und -entwicklung\nSoziales\nWirtschaftsf�rderung und Grundst�cke\nKommunalpolitik\nB�rgermeister\nDas Goldene Buch\nDie B�rgermeisterkette\nB�rgermeister und Stadtdirektoren\nDer Rat der Stadt Leer\nGremien und Fraktionen\nOrtsvorsteher/innen der Leeraner Ortschaften\nRatsinformation\nRechtsgrundlagen (Allgemeine Verwaltung)\nWahlen\nKommunalwahlen\nBundestagswahl\nLandtagswahl\nEuropawahl\nBeflaggungskalender\nStadt & Leben\nStadt Leer (Ostfriesland)\nGeschichte\nTourismus\nVeranstaltungen\nPr�ventionsrat Leer\nGleichstellungsbeauftragte\nVeranstaltungen\nKeine Wahl ist keine Wahl\nfrauenORT Wilhelmine Siefkes\nFrauenLeben in Ostfriesland\nInternationaler Tag gegen Gewalt an Frauen \nUnser Ostfriesland / Plattdeutsch\nMit Plattd��tsk d�r dat Jahr\nPlattd��tsk-Kring in't Raadhuus\nFeste\nOostfreeske Kookbook\nK�che\nSagen und Geschichten\nSport\nTee\nWilhelmine-Siefkes-Preis\nGallimarkt\nEr�ffnungsrede von B�rgermeister \nGalliviehmarkt\nDie Herolde\nChronik \nFaCit - Mit dem Fahrrad in der City\nFahrradfreundliche Stadt Leer\nZiele\nRadverkehrskonzept\nFahrradz�hlstellen\nFahrradstra�en\nFahrradstation\nRadtourismuskonzept\nWillkommensstationen\nWappen\nSt�dtepartnerschaften\nStadt- & Nahverkehr \nWebcam - Leer auch aus der Ferne\nPatenschaft mit der Bundeswehr\nAusstellung \"Evenburg-Kaserne\"\nPodcast\nLeben in Leer\nBauen & Wohnen\nBauordnung\nDigitales Bauantragsverfahren\nImmobilien\nWohnberechtigungsschein\nWohnraumf�rderung\nWohnraumversorgungskonzept\nStra�enaufbr�che\nBeirat f�r Menschen mit Behinderung\nDer RETTUNGSRING\nEhrenamt\nFaCit - Mit dem Fahrrad in der City\nFairtrade-Town\nFeuerwehr im Stadtgebiet \nFeuerwehrkampagne\nNachwuchs gesucht\nBingum\nBootsgruppe Bingum\nHeisfelde\nLeer\nLoga\nN�ttermoor\nKinder & Jugendliche\nKindertageseinrichtungen\nAlle Kindertageseinrichtungen \nKinderspielpl�tze\n Pr�ventionsProjekte\nFerienprogramme und Projekte\nFerienprogramme\nJuLeiCa\nFerienbetreuung in den Ferien \nZukunftstag 2025\nKontaktstelle gegen Diskriminierung\nRadfahren\nSchieds�mter\nSenioren\nSeniorenbeirat \nVeranstaltungen\nSoziales\nSoziale Leistungen\nArbeitslosengeld\nGrundsicherung im Alter und bei Erwerbsminderung\nObdachlose und Nichtsesshafte\nSozialhilfe\nWohngeld\nLastenzuschuss\nMietzuschuss\nPflege\nSport und Freizeit\nSporthallen und Sportpl�tze\nSportlerehrung\nSportvereine und -verb�nde\nStadtwerke Leer\nStandesamt Leer\nBildung & Kultur\nBildung\nAllgemeinbildende Schulen\nAusbildung bei der Stadt Leer\nBerufsbildende Schulen\nBundesfreiwilligendienst\nFreiwilliges Soziales Jahr Kultur\nHochschule Emden/Leer\nSonstige Schulen und Bildungseinrichtungen\nStadtbibliothek\nAngebote f�r ...\nLehrer/Schulen\nJugendliche und junge Erwachsene\nKinderg�rten\nKinder \nBilderb�cher\nJulius Club\nB�cherschrank\nEhrenamtskarte\nFernleihe\nFreundeskreis\nGeschichte des Hauses [PDF, 2,1 MB]\nMedienboten\nMedienverl�ngerung\nNewsletter\nOnleihe Niedersachsen\nOnlinekatalog\nPlattd��tsk\nWillkommen in Deutschland\nVeranstaltungen\nStadtelternrat\nVolkshochschule Leer\nKultur\nKulturspeicher\nKunst im Kulturspeichergarten\nVeranstaltungen im Kulturspeicher\nCaf� und Biergarten\nTechnische Ausstattung \nRaum mieten\nLandesb�hne Nord\nStadtbibliothek\nStadtarchiv\nArchivbild des Monats\nArchivp�dagogik\nAngebotspalette\nAufkl�rung\nFaktoren\nSatzung f�r das Stadtarchiv Leer\nGeb�hrensatzung\nPublikationen\nBernhard Bavink\nWer kennt..?\nfrauenORT Wilhelmine Siefkes\nFreiwilliges Soziales Jahr Kultur\nWilhelmine-Siefkes-Preis\nSynagogen-Gedenkst�tte\nVeranstaltungsorte\nWirtschaft & Stadtentwicklung\nWirtschaft\nBreitbandausbau\nEms Dollart Business Forum\nGewerbe- und Industriefl�chen\nEntwicklungskonzept 2020\nLage\nMaritime Wirtschaftsregion\nSoftware-Netzwerk Leer\nStruktur und Unternehmen\nWirtschaftsf�rderung\nStadtentwicklung\nAltstadt-Gestaltungssatzung\nBauen & Wohnen\nBauleitplanung der Stadt Leer\nWohnungsbau-Turbo\nBebauungspl�ne\nBrunnenstrasse\nDorferneuerung\nFl�chennutzungsplan\nInnenentwicklungskonzept der Stadt Leer\nInnenstadtfonds\nKommunale W�rmeplanung\nL�rmaktionsplanung\nLEADER\nPerspektive Innenstadt\nPlanungswerkstatt\nSanierungsgebiete\nAltstadt\nLeer-Oststadt\nLeer-Weststadt\nSanierungskommission\nKlimaschutz & Klimaanpassung \nKlimaschutz\nKlima-Taler\nFahrgemeinschaftsplattform PENDLA\nKlimaschutzkonzept\nEnergie- und Treibhausgasbilanz\nKommunale W�rmeplanung\nWattMonitor\nKlimadashboard\nEnergiebericht 2022 \nStadtradeln 2026 \nM�hrchenhefte\nKlimaanpassung \nPolitik &\n Verwaltung \nVerwaltung\nAktuelle Mitteilungen\nOpenRathaus\nAnregungen\nMitarbeiter/in der Stadtverwaltung\nB�rgerb�ro\nStandesamt Leer\nDienstleistungen\nHaushalt\nLeeraner Ortsrecht\nOnline-Formulare\nAbgaben\nGleichstellungsbeauftragte\nVerwaltungsstruktur\nKommunalpolitik\nB�rgermeister\nDer Rat der Stadt Leer\nGremien und Fraktionen\nOrtsvorsteher/innen der Leeraner Ortschaften\nRatsinformation\nRechtsgrundlagen (Allgemeine Verwaltung)\nWahlen\nBeflaggungskalender\nStadt &\n Leben \nStadt Leer (Ostfriesland)\nGeschichte\nTourismus\nVeranstaltungen\nPr�ventionsrat Leer\nGleichstellungsbeauftragte\nUnser Ostfriesland / Plattdeutsch\nGallimarkt\nFaCit - Mit dem Fahrrad in der City\nFahrradfreundliche Stadt Leer\nWappen\nSt�dtepartnerschaften\nStadt- & Nahverkehr\nWebcam - Leer auch aus der Ferne\nPatenschaft mit der Bundeswehr\nPodcast\nLeben in Leer\nBauen & Wohnen\nBeirat f�r Menschen mit Behinderung\nDer RETTUNGSRING\nEhrenamt\nFaCit - Mit dem Fahrrad in der City\nFairtrade-Town\nFeuerwehr im Stadtgebiet \nKinder & Jugendliche\nKontaktstelle gegen Diskriminierung\nRadfahren\nSchieds�mter\nSenioren\nSoziales\nSport und Freizeit\nStadtwerke Leer\nStandesamt Leer\nBildung &\n Kultur \nBildung\nAllgemeinbildende Schulen\nAusbildung bei der Stadt Leer\nBerufsbildende Schulen\nBundesfreiwilligendienst\nFreiwilliges Soziales Jahr Kultur\nHochschule Emden/Leer\nSonstige Schulen und Bildungseinrichtungen\nStadtbibliothek\nStadtelternrat\nVolkshochschule Leer\nKultur\nKulturspeicher\nLandesb�hne Nord\nStadtbibliothek\nStadtarchiv\nfrauenORT Wilhelmine Siefkes\nFreiwilliges Soziales Jahr Kultur\nWilhelmine-Siefkes-Preis\nSynagogen-Gedenkst�tte\nVeranstaltungsorte\nWirtschaft &\n Stadtentwicklung \nWirtschaft\nBreitbandausbau\nEms Dollart Business Forum\nGewerbe- und Industriefl�chen\nLage\nMaritime Wirtschaftsregion\nSoftware-Netzwerk Leer\nStruktur und Unternehmen\nWirtschaftsf�rderung\nStadtentwicklung\nAltstadt-Gestaltungssatzung\nBauen & Wohnen\nBauleitplanung der Stadt Leer\nWohnungsbau-Turbo\nBebauungspl�ne\nBrunnenstrasse\nDorferneuerung\nFl�chennutzungsplan\nInnenentwicklungskonzept der Stadt Leer\nInnenstadtfonds\nKommunale W�rmeplanung\nL�rmaktionsplanung\nLEADER\nPerspektive Innenstadt\nPlanungswerkstatt\nSanierungsgebiete\nKlimaschutz &\n Klimaanpassung \nKlimaschutz\nKlima-Taler\nFahrgemeinschaftsplattform PENDLA\nKlimaschutzkonzept\nEnergie- und Treibhausgasbilanz\nKommunale W�rmeplanung\nWattMonitor\nKlimadashboard\nEnergiebericht 2022 \nStadtradeln 2026\nM�hrchenhefte\nKlimaanpassung \n Leer ist sehenswert! \n Startseite\n/ Stadt & Leben\n/ Stadt Leer (Ostfriesland)\n/ Fahrradfreundliche Stadt Leer\n/ Fahrradz�hlstellen\nStadt Leer (Ostfriesland)\nGeschichte\nTourismus\nVeranstaltungen\nPr�ventionsrat Leer\nGleichstellungsbeauftragte\nUnser Ostfriesland / Plattdeutsch\nGallimarkt\nFaCit - Mit dem Fahrrad in der City\nFahrradfreundliche Stadt Leer\nZiele\nRadverkehrskonzept\nFahrradz�hlstellen\nFahrradstra�en\nFahrradstation\nRadtourismuskonzept\nWillkommensstationen\nWappen\nSt�dtepartnerschaften\nStadt- & Nahverkehr\nWebcam - Leer auch aus der Ferne\nPatenschaft mit der Bundeswehr\nPodcast\nLeben in Leer\n Vorlesen\nAuswertung Fahrradzählstellen\nDie Stadt Leer erfasst seit einiger Zeit an drei zentralen Standorten die Anzahl der Radfahrenden im Stadtgebiet. Ziel dieser fortlaufenden Datenerhebung ist es, die Entwicklung des Radverkehrs transparent darzustellen und eine verlässliche Grundlage für zukünftige Planungsentscheidungen zu schaffen.\nDurch die regelmäßige Auswertung erhalten Bürgerinnen und Bürger, Politik und Verwaltung einen Einblick darin, wie intensiv die vorhandene Fahrradinfrastruktur genutzt wird und wie sich das Mobilitätsverhalten im Laufe des Jahres verändert.\nDie folgenden Auswertungen werden regelmäßig aktualisiert und bieten sowohl einen Überblick über die Gesamtnutzung der Zählstellen als auch detaillierte Vergleiche zwischen den einzelnen Standorten. So können Trends früh erkannt und Maßnahmen zur Förderung des Radverkehrs gezielt weiterentwickelt werden.\nFolgende Informationen können aus den Diagrammen entnommen werden:\nZählungen: Radfahrende pro Tag\nDurchschnittliche Temperatur pro Tag\nRegenmenge in mm pro Tag\nAllgemeines Wetter durch Wettersymbol pro Tag\nÜberblick August 2026\nBahnhofsring\nBahnhofsring August 26\nBürgermeister-Ehrlenholtz-Straße\nBgm.-Ehrlenholtz-Straße August 26\nFriesenstraße\nFriesenstaße August 26\nÜberblick Juli 2026\nÜberblick Juli 2026\nBahnhofsring\nBahnhofsring\nBürgermeister-Ehrlenholtz-Straße\nBürgermeister-Ehrlenholtz-Straße\nFriesenstraße\nFriesenstraße\nÜberblick Juni 2026\nBahnhofsring\nBahnhofsring_06_26\nBürgermeister-Ehrlenholtz-Straße\nBürgermeister-Ehrlenholtz-Straße_06_26\nFriesenstraße\nFriesenstraße_06_26\nÜberblick Mai 2026\nBahnhofsring\nBahnhofsring_05_26\nBürgermeister-Ehrlenholtz-Starße\nBürgermeister-Ehrlenholtz-Straße_05_26\nFriesenstraße\nFriesenstraße_05_26\nÜberblick April 2026\nBahnhofsring\nBahnhofsring_04_26\nBürgermeister-Ehrlenholtz-Starße\nBürgermeister-Ehrlenholtz-Straße_04_26\nFriesenstraße\nFriesenstraße_04_26\nÜberblick März 2026\nBahnhofsring\nBahnhofsring_03_26\nBürgermeister-Ehrlenholtz-Starße\nBürgermeister-Ehrlenholtz-Straße_03_26\nFriesenstraße\nFriesenstraße_03_26\nÜberblick Februar 2026\nBahnhofsring\nBahnhofsring\nBürgermeister-Ehrlenholtz-Starße\nBürgermeister-Ehrlenholtz-Straße\nFriesenstraße\nFriesenstraße\n schließen\nKontakt\n Frau Christiane W�steney-Arbabi \n Rathausstra�e 1\n 26789 Leer (Ostfriesland)\n Karte anzeigen\n Telefon:0491 9782-166\n Nachricht schreiben\nWo sind die Fahrradzählstellen aufgestellt?\nWo sind die Fahrradzählstellen aufgestellt?\nFahrradz�hlstellen\nWappen Stadt Leer\n Stadt Leer (Ostfriesland), \n Rathausstra�e 1, 26789 Leer (Ostfriesland)\n Telefon 0491 97 82 0, \n Fax 0491 97 82 399"
+},
+{
+"kommune": "Landkreis Harburg",
+"url": "https://www.landkreis-harburg.de/verkehr-ordnung/kreisstrassen-radverkehr/verkehrszaehlung-verkehrsmodell/",
+"end": null,
+"typ": "text/html",
+"bytes": 227817,
+"art": "html",
+"titel": "Verkehrszählung und Verkehrsmodell | Landkreis Harburg",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"verkehrszaehlung": 9,
+"zaehlstelle": 2,
+"zaehldaten": 1,
+"verkehrsmenge": 9,
+"kfz_tag": 2,
+"rad": 8,
+"radar": 1,
+"dauerzaehl": 1
+},
+"auszuege": [
+"Verkehrszählung und Verkehrsmodell | Landkreis Harburg Landkreis Harburg Header Menü Services & Kontakt Aktuelles Baustellenatlas Social Media & Newsletter Schulausfall? BIWAPP Öffentliche Bekanntmachungen Amtsblatt",
+"l your Bike 3.0 Projekt Schutzengel Kreisstraßen & Radverkehr Laufende Maßnahmen Geplante Straßenbaumaßnahmen Betriebsgemeinschaft Straßendienst (BGS) Ortsumfahrung Buchholz Radverkehr Radschnellwege Verkehrszählung & Verkehrsmodell Zufahrten an Kreisstraßen Leitungsverlegung in Kreisstraßen Verkehrsspiegel an Kreisstraßen Entwicklung des Straßennetzes Auto & Führerschein BürgerService Online Bußgeldstelle/Verke",
+"ührt werden. Die Ergebnisse werden zur sogenannten „Durchschnittlichen Täglichen Verkehrsstärke“ (DTV) hochgerechnet und spiegeln das Verkehrsaufkommen auf dem klassifizierten Straßennetz wider. Die Zählergebnisse spielen unter anderem bei der Straßenplanung eine wichtige Rolle und sie bilden die Grundlagen für die koordinierten Erhaltungsprogramme von Straßen. Der DTV wird beispielsweise benötigt, um Ansprü",
+"liegen seit März 2023 vor. Der Landkreis Harburg führt derzeit eine landkreisweite Straßenverkehrszählung durch. Das Kreisstraßennetz wurde hierzu in Abschnitte eingeteilt, auf denen der Wert einer Zählstelle abgebildet ist. Diese Straßenabschnitte sollten eine möglichst homogene Verkehrsstärke aufweisen. Für jeden Abschnitt ist eine Zählstelle vorgesehen, welche bezüglich Lage und Gültigkeitsbereich unve"
+],
+"links": [
+[
+"https://www.landkreis-harburg.de/bauen-umwelt/abwasserbeseitigung/zaehlerstand-mitteilung-abwasser/",
+"Zählerstand - Mitteilung Abwasser"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/",
+"Verkehr & Mobilität"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/kreisstrassen-und-radverkehr/",
+"Kreisstraßen und Radverkehr"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/verkehrskoordination/",
+"Verkehrskoordination"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/baustellenatlas/",
+"Baustellenatlas"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/oeffentlicher-personennahverkehr/",
+"Öffentlicher Personennahverkehr"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/schuelerfahrkarten/",
+"Schülerfahrkarten"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/buegel-your-bike/",
+"Bügel your Bike"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/buegel-your-bike/buegel-your-bike-2-0/",
+"Bügel your Bike 2.0"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/buegel-your-bike/buegel-your-bike-3-0/",
+"Bügel your Bike 3.0"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/projekt-schutzengel/",
+"Projekt Schutzengel"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/kreisstrassen-radverkehr/verkehrszaehlung-verkehrsmodell/",
+"Verkehrszählung & Verkehrsmodell"
+],
+[
+"https://www.landkreis-harburg.de/verwaltung-politik/die-kreisverwaltung-wir-ueber-uns/zahlen-daten-fakten/",
+"Zahlen, Daten, Fakten"
+],
+[
+"https://www.landkreis-harburg.de/barrierefreiheit/barriere_melden.html?titel=Barriere+melden&url=https%3A%2F%2Fwww.landkreis-harburg.de%2Fverkehr-ordnung%2Fkreisstrassen-radverkehr%2Fverkehrszaehlung-verkehrsmodell%2F&naviID=reset1",
+"Barriere melden"
+],
+[
+"https://www.landkreis-harburg.de/bauen-umwelt/abwasserbeseitigung/zaehlerstand-mitteilung-abwasser/",
+"Zählerstand - Mitteilung Abwasser"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/",
+"Verkehr & Mobilität"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/kreisstrassen-und-radverkehr/",
+"Kreisstraßen und Radverkehr"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/verkehrskoordination/",
+"Verkehrskoordination"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/baustellenatlas/",
+"Baustellenatlas"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/oeffentlicher-personennahverkehr/",
+"Öffentlicher Personennahverkehr"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/schuelerfahrkarten/",
+"Schülerfahrkarten"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/buegel-your-bike/",
+"Bügel your Bike"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/buegel-your-bike/buegel-your-bike-2-0/",
+"Bügel your Bike 2.0"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/buegel-your-bike/buegel-your-bike-3-0/",
+"Bügel your Bike 3.0"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/verkehr-mobilitaet/projekt-schutzengel/",
+"Projekt Schutzengel"
+],
+[
+"https://www.landkreis-harburg.de/verkehr-ordnung/kreisstrassen-radverkehr/verkehrszaehlung-verkehrsmodell/",
+"Verkehrszählung & Verkehrsmodell"
+],
+[
+"https://www.landkreis-harburg.de/verwaltung-politik/die-kreisverwaltung-wir-ueber-uns/zahlen-daten-fakten/",
+"Zahlen, Daten, Fakten"
+]
+],
+"volltext": "Verkehrszählung und Verkehrsmodell | Landkreis Harburg\nLandkreis Harburg\nHeader\nMenü\nServices & Kontakt\nAktuelles\nBaustellenatlas\nSocial Media & Newsletter\nSchulausfall?\nBIWAPP\nÖffentliche Bekanntmachungen\nAmtsblatt\nÖffentliche Zustellungen\nÄmter, Mitarbeitende und Öffnungszeiten\nKontakt\nFeedback: Ideen & Beschwerden\nServiceportal für den Landkreis Harburg\nDienstleistungen A bis Z\nKarriere beim Landkreis Harburg\nDatenschutz und Korruptionsprävention\nDatenschutz: Informationspflicht nach der DSGVO\nDatenschutz: Rechte der Bürgerinnen und Bürger\nKorruptionsprävention\nGeoportal\nFormulare\nInfomaterial\nVeranstaltungen\nTourismus & Freizeit\nTourismus-Tipps\nLüneburger Heide GmbH\nDer Heidschnuckenweg\nHeide-Shuttle\nFlusslandschaft Elbe\nFlusslandschaft Elbe erleben!\nDas Agrarium am Kiekeberg\nAZL Luhmühlen: Bei uns ist der Reitsport zuhause!\nNaturpark Lüneburger Heide\nTouristische Radrouten\nRegionalpark Rosengarten\nWinsener Elbmarsch\nVereinsportal\nKultur\nKulturlandkreis Harburg\nFreillichtmuseum am Kiekeberg\nMuseum Kunststätte Bossard\nPlattdeutscher Veranstaltungskalender\nVeranstaltungskalender\nVeranstaltungen Metropolregion\nFördermöglichkeiten\nNavigator\nFamilie & Bildung\nKinder & Familie\nBesondere Leistungen für Kinder und Jugendliche\nAbteilung Jugend & Familie\nErziehungsberatung\nKinderbetreuung suchen\nTagesmütter gesucht\nJugendberufsagentur Landkreis Harburg\nLeistungen Kinder&Familie\nGleichstellung\nAusleihe\nBerichte und Tätigkeiten\nGemeinsam gegen häusliche Gewalt\nCEDAW - Die UN-Frauenrechtskonvention\nDie kommunalen Gleichstellungsbeauftragten\nFRAU.MACHT.DEMOKRATIE\nInternationaler Frauentag\nGewalt gegen Frauen\nHilfetelefon-nummern und Anlaufstellen\nIstanbul-Konvention\nOrange the world!\nZwangsheirat\n16-Tage-Kampagne gegen Gewalt an Frauen\nSicherheit für geflüchtete Frauen\nWas tun bei Trennung und Scheidung?\nGleichstellung auf Instagram\nKreisvolkshoch-schule\nFerienkurse - junge KVHS\nSchülerfahrt-kosten\nSchulausfall?\nSchule und Sport - Wer ist zuständig?\nÜbersicht der Schulen\nBildungswegweiser\nPraktikumswoche\nMedienzentrum Landkreis Harburg\nKreiselternrat Landkreis Harburg\nWir über uns\nDie Schulen im Landkreis\nLinks und Dokumente zur Elternarbeit\nKreisschülerrat\nHome\nUnsere Ziele\nDer Vorstand\nDer Kreisschülerrat im Ausschuss für Schule und Sport des Landkreises Harburg\nDer KSR auf Instagram\nBildungskommune\nÜber das Projekt\nMonitoring\nBildungswegweiser\nBildungskonferenz\nPraktikumswoche\nLeitbild und Strategieentwicklung\nNetzwerk Bildungskommune\nRZI\nGesundheit & Soziales\nGesundheit\nDienstleistungen Gesundheitsamt\nÄrztlicher Dienst\nHitze und Gesundheit\nTeilhabe für Menschen mit Behinderung\nBudget für Arbeit\nSozialpsychiatrischer Dienst\nZahngesundheit für Kinder und Jugendliche\nGesundheits- und Hygieneangelegenheiten\nInfektionsschutz\nInfektionsschutzbelehrung\nTuberkulosberatung\nAlten- und Pflegeheime Landkreis Harburg\nKrankenhaus Buchholz\nKrankenhaus Winsen\nWaldklinik Jesteburg\nPsychosomatische Klinik Ginsterhof\nStadtLandPraxis\nSoziale Leistungen\nServices Soziale Leistungen\nWohngeld\nJobcenter Landkreis Harburg\nSenioren- und Pflegestützpunkt\nNachbarschaftsprogramm DUO\nFür Senioren\nFür Ehrenamtliche\nWohnberatung\nPflegeangebote\nPflegedienste\nPflegeheime\nTagespflege\nKrankenhäuser\nAgentur für Ehrenamt\nKostenfreie Weiterbildung fürs Ehrenamt\nNiedersächsische Ehrenamtskarte\nEhrenamtsbörse\nVersicherung im Ehrenamt\nBauen & Umwelt\nAbfallwirtschaft\nAbfall Aktuell!\nAbfallkalender\nAbfallbehälter\nEinführung Gelbe Tonne\nEntsorgungs-möglichkeiten\nAbfall von A-Z\nAbfallrecht\nTipps & Termine\nSperrmüll-anmeldung\nNordheide Kompost®\nAbwasserbeseitigung\nAbwasser sparen!\nZählerstand - Mitteilung Abwasser\nAbwasserkanäle: Leitungsauskunft\nPilotprojekt Kläranlage Seevetal\nBauen\nHäufige Fragen (FAQ)\nBauen Online\nBaugenehmigung\nBauaufsicht\nBaulasten-Auskunft\nBaubroschüre 2021\nBaulasten-Eintrag\nBebauungspläne\nArchäologie & Denkmalschutz\nGeoportal des Landkreises Harburg\nKommunale Wohnungsbaugesellschaft für den Landkreis Harburg (KWG)\nDienstleistungen Bauen\nUmwelt\nWasserschutzgebiete\nÜberschwemmungsgebiete\nWasserrahmenrichtlinie\nKleinkläranlagen\nErdwärme\nImissionsschutz\nGrundstücksverkehr\nMasterplan Land- und Forstwirtschaft\nUntere Abfallbehörde\nNaturschutz\nArten- und Biotopschutz\nSchutzgebiete und Schutzobjekte\nEingriffe in Natur- und Landschaft\nNaturschutzstiftung Landkreis Harburg\nDer Landschaftsrahmenplan\nVeröffentlichungen\nKompensationsflächenpool\nAktuelles zum Pool\nFlächen\nPool-Service\nPool-Kontakt\nKlimaschutz\nEnergiewegweiser\nEuropean Energy Award\nKlimafolgenanpassung\nKlimapolitik\nEnergiewegweiser\nGebäudewirtschaft\nVerkehr & Ordnung\nVerkehr & Mobilität\nKreisstraßen und Radverkehr\nVerkehrskoordination\nBaustellenatlas\nÖffentlicher Personennahverkehr\nelbMobil - Dein On Demand-Verkehr für die Elbmarsch\nSchülerfahrkarten\nBügel your Bike\nBügel your Bike 2.0\nBügel your Bike 3.0\nProjekt Schutzengel\nKreisstraßen & Radverkehr\nLaufende Maßnahmen\nGeplante Straßenbaumaßnahmen\nBetriebsgemeinschaft Straßendienst (BGS)\nOrtsumfahrung Buchholz\nRadverkehr\nRadschnellwege\nVerkehrszählung & Verkehrsmodell\nZufahrten an Kreisstraßen\nLeitungsverlegung in Kreisstraßen\nVerkehrsspiegel an Kreisstraßen\nEntwicklung des Straßennetzes\nAuto & Führerschein\nBürgerService Online\nBußgeldstelle/Verkehrsüberwachung\nServices KfZ-Zulassung/BürgerService\nServices Führerschein\nServices Bußgeldstelle/Verkehrsüberwachung\nServices Verkehrsbehörde\nRettungsdienst, Brand & Katastrophenschutz\nRettungsdienst\nBrandschutz\nKatastrophen-schutz\nRettungs- und Feuerwehrleitstelle\nSelbstvorsorge\nNotfall-Monitor Niedersachsen\nNotfallvorsorge Menschen mit Lebens-unterstützungs-geräten\nBIWAPP\nMigration, Ordnung & Verbraucherschutz\nMigration\nAllgemeines Ausländerrecht\nAsyl und Flüchtlinge\nAsylbewerber-Leistungsgesetz\nSprachförderung\nEinbürgerung\nMigration und Teilhabe\nInfos für Geflüchtete aus der Ukraine\nUnterbringung\nOrdnung\nWaffen\nVersammlungen\nJagd\nGewerbe-überwachung\nSchornsteinfeger\nStaatsangehörig-keitsrecht\nGefährliche Hunde\nVerbraucherschutz: Veterinäramt\nGeflügelpest im Landkreis Harburg\nLebensmittel-überwachung\nVeterinärwesen\nTierschutz\nTiervermittlung\nDienstleistungen Veterinäramt\nGefährliche Hunde\nWirtschaft & Beruf\nWirtschaft(sförderung)\nÜber uns: Wirtschaftsförderung im Landkreis\nNewsletter\nUnser Netzwerk für Unternehmen\nZukunftsregion Süderelbe\nSüderelbe AG\nWLH\nWelcome Center\nGewerbevereine\nHandwerkskammer\nTZEW\nNBank\nkfW\nArbeitgeberservice Jobcenter\nFrau & Wirtschaft\nKVHS\nStandortinformationen\nGewerbeflächen\nMetropolregion Hamburg\nExistenzgründung\nWLH\nKMU-Förderung\nGründerzentrum Winsen\nISI Zentrum\nWirtschaftssenioren\nBusiness Angels\nFrau & Wirtschaft\nInnovation & Technologie\nTZEW\nISI\nINNO.NON\nH2.NON\nÖKOPROFIT\nUSIN5G\nFachkräfte\nMatchpoint-Ausbildungsportal\nPraktikumswoche\nWelcome Center Landkreis Harburg\nAllianz für Fachkräfte\nKoordinierungsstelle Frau & Wirtschaft\nFörderprogramme\nKMU-Förderung\nFörderdatenbank\nFördermittelsprechtag\nNewsletter\nNBANK\nkfW\nTZEW\nEU-Förderung für Unternehmen\nVeranstaltungen rund um Unternehmen\nWirtschaftsförderung vor Ort\nFördermittelsprechtag\nTag der Wirtschaft\nPraktikumswoche\nParlamentarischer Abend\nKommunale Wohnungsbaugesellschaft für den Landkreis Harburg (KWG)\nBreitbandausbau\nUSIN5G\nUSIN5G: Externe Projektwebseite\nUSIN5G: Allgemeine Informationen zur 5G-Technologie\nÖffentliche Ausschreibungen\nGeoportal des Landkreises Harburg\nKarriere\nKarriere beim Landkreis\nAusbildung & Studium\nAusbildungsberufe und Duale Studiengänge\nBewerbungsfristen und Messetermine\nTeam Ausbildung\nPraktikum\nBewerbungsportal\nPraktikum\nFaMi-Siegel\nHäufige Fragen von Bewerbern\nWelcome Center Landkreis Harburg\nÜber das Projekt\nUnternehmen\nInternationale Fach- und Nachwuchskräfte\nVerwaltung & Politik\nDie Kreisverwaltung - Wir über uns\nOrganisation\nÄmter, Mitarbeitende, Öffnungszeiten\nLandrat Rainer Rempe\nBüro des Landrats / Pressestelle\nErster Kreisrat Josef Nießen\nKreisrätin Annerose Tiedt\nKreisrätin Ana Cristina Bröcking\nZahlen, Daten, Fakten\nGeschichte des Landkreises Harburg\nKreisarchiv\nKarriere beim Landkreis Harburg\nPolitik\nAktuelles\nBaustellenatlas\nSocial Media & Newsletter\nBIWAPP\nSchulausfall?\nBreitbandausbau\nUSIN5G\nÖffentliche Bekanntmachungen\nAmtsblatt\nÖffentliche Zustellungen\nKreisentwicklung\nWirtschaftsförderung\nRegionalplanung\nRegionales Raumordnungsprogramm\nRaumordnung\nBauleitplanung\nMetropolregion Hamburg\nEU-Förderung\nEndlagersuche\nAchtern-Elbe-Diek\nWohnraumversorgungskonzept\nPlanung Ortsumfahrung Elstorf\nRaumordnungsverfahren Ortsumfahrung Pattensen-Luhdorf\nRadschnellwege\nBahnprojekt Hamburg-Hannover\nSteuerung der Windenergie\nHaushalt und Finanzen\nZentrale Vergabestelle\nWLH Wirtschaftsförder-ung\nKreiswohnungsbau\nITK Harburg\nKommunalaufsicht\nWahlen\nKommunalwahlen 2026\nBundestagswahl 2025\nEuropawahl 2024\nLandratswahl 2022\nLandtagswahl 2022\nSchnell-Suche\n Leistungen von A - Z\n Abteilungen / Einrichtungen\n Infomaterial & Formulare\nWas suchen Sie?\n Impressum\n Datenschutz\nInhaltsbereich\n Home  Verkehr & Ordnung  Kreisstraßen & Radverkehr  Verkehrszählung & Verkehrsmodell\nSeite drucken\nSeite teilen\n andere Sprachen\nHauptinhalt\nVerkehrszählung und Verkehrsmodell\nStraßenverkehrszählung \nZur Ermittlung der Verkehrsentwicklung und Bereitstellung der Verkehrsstärken auf den klassifizierten Straßen werden regelmäßig Zählungen des Straßenverkehrs durchgeführt. \nDie Erhebung ergänzt die Dauerzählungen, die über das ganze Jahr auf den Bundesfernstraßen durchgeführt werden. Die Ergebnisse werden zur sogenannten „Durchschnittlichen Täglichen Verkehrsstärke“ (DTV) hochgerechnet und spiegeln das Verkehrsaufkommen auf dem klassifizierten Straßennetz wider. \nDie Zählergebnisse spielen unter anderem bei der Straßenplanung eine wichtige Rolle und sie bilden die Grundlagen für die koordinierten Erhaltungsprogramme von Straßen. Der DTV wird beispielsweise benötigt, um Ansprüche beim Lärmschutz zu beurteilen oder den Straßenoberbau zu bemessen. Darüber hinaus können die nach Fahrzeugarten erfassten Verkehrsmengen dabei helfen, mögliche Verkehrsverlagerungen zu ermitteln. \nDie bundesweite Straßenverkehrszählung findet alle 5 Jahre auf den Straßen des überörtlichen Verkehrs, also auf allen Bundesautobahnen und Bundesstraßen, statt und ist eine Aufgabe der Straßenbauverwaltungen. Die gesammelten Daten werden an die Bundesanstalt für Straßenwesen (BASt) übermittelt und geprüft. Die Zählungen werden gemäß den Richtlinien des Bundesministeriums für Verkehr und digitale Infrastruktur durchgeführt. \n2020 wäre turnusmäßig ein Zähljahr gewesen. Doch Voraussetzung für eine Zählung ist, dass „am Tag der Zählung ‚normale´ Verkehrsverhältnisse herrschen.“ Diese Voraussetzung war während der Pandemie nicht gegeben. Eine Zählung hätte keine Aussagen über die realen Verkehrsbedingungen auf den Straßen ergeben. Pandemiebedingt wurde die für 2020 angesetzte bundesweite Straßenverkehrszählung auf 2021 verschoben. Hier wurden auch die Verkehrszahlen auf den Landesstraßen erfasst. Die Ergebnisse der Zählung auf den Bundesfernstraßen und Landesstraßen liegen seit März 2023 vor. \nDer Landkreis Harburg führt derzeit eine landkreisweite Straßenverkehrszählung durch. Das Kreisstraßennetz wurde hierzu in Abschnitte eingeteilt, auf denen der Wert einer Zählstelle abgebildet ist. Diese Straßenabschnitte sollten eine möglichst homogene Verkehrsstärke aufweisen. Für jeden Abschnitt ist eine Zählstelle vorgesehen, welche bezüglich Lage und Gültigkeitsbereich unverändert beibehalten werden soll, damit sie mit den vorangegangenen Zählungen vergleichbar bleibt. Der Betrieb Kreisstraßen setzt dazu digitale Messgeräte an 130 Standorten ein. Die Zählung wird voraussichtlich bis November dauern. Nach der Durchführung der Zählungen werden die Daten gesichtet, auf Plausibilität geprüft und ausgewertet. \nVerkehrsmodell \nVerkehrsmodelle werden dazu eingesetzt ein realistisches Abbild der Verkehrsabläufe anhand der Verkehrsmittel- und Verkehrswegewahl unter Zugrundelegung realitätsnaher Annahmen zu erfassen und darzustellen. Verkehrsmodelle sind in vielen Planungsstufen zum unverzichtbaren Hilfsmittel geworden. \nUm Aussagen über die zukünftige Verkehrsbelastungssituation treffen zu können, wird ein Verkehrsmodell für einen definierten Bereich aufgebaut, welches es erlaubt, die Veränderungen in der Verkehrsinfrastruktur mit ihrem Einfluss auf die Verkehrswegewahl und damit letztlich die Verkehrsbelastungssituation abbilden zu können. \nDer Landkreis Harburg beabsichtigt für das Straßennetz des Landkreises ein Verkehrsmodell aufzubauen, welches auf das Verkehrsmodell Niedersachsen als Datenbasis zugreift, das die landesweiten, übergeordneten und grenzüberschreitenden Verkehrsbeziehungen berücksichtigt. Für das Modell des Landkreises Harburg wird das Untersuchungsgebiet in abgegrenzte Teilgebiete unterteilt (Verkehrszellen) und um verkehrswichtige Straßen ergänzt. Mit Hilfe der Verkehrszellen können vorhandene, geplante oder prognostizierte Strukturdaten, Verkehrsmengen und Verkehrsbeziehungen erfasst und lokalisiert werden. \nAuf Grundlage dieser Parameter wird im Verkehrsmodell ein Analysenetz aufgebaut, welches für Aussagen zu Prognose-Verkehrsbelastungen unter definierten Randbedingungen herangezogen werden kann. \nDas Modell wird zukünftig für folgende Aufgabestellungen Grundlagedaten liefern: \nRealitätsnahe Abbildung der verkehrlichen Auswirkungen von Neu- und Ausbaumaßnahmen, \nAbleiten von Eckpunkte aus der strukturellen Entwicklung des Landkreises für zukünftige Straßenbaumaßnahmen, \nMaßnahmenfindung für zukünftige Straßenbaumaßnahmen aufgrund von Mängelanalysen, \nEmpfehlung für die Siedlungsentwicklung, \nVerwendung bei künftigen, lokalen Verkehrsstudien. \nzurück \nFooter\nLandkreis Harburg\nLandrat Rainer Rempe\nSchloßplatz 6\n21423 Winsen (Luhe)\nKontakt\nTelefonservice: 04171 693-0\nBundesweit einheitliche Behördenrufnr.: 115\nTelefax: 04171 693-99100\nbuergerservice@lkharburg.de\nFacebook\n Sie verlassen das Angebot von www.landkreis-harburg.de und rufen Inhalte auf Servern von Facebook ab, sobald Sie den Button JA anklicken. Der Landkreis Harburg speichert zu keiner Zeit personenbezogene Daten der Fans. Die von Ihnen auf unserer Fanpage eingegebenen Daten wie z.B. Kommentare, Videos oder Bilder, werden vom Landkreis Harburg zu keiner Zeit für andere Zwecke genutzt oder weitergegeben.\n Der Landkreis Harburg hat jedoch keinerlei Einfluss auf die Verarbeitung Ihrer Daten durch Facebook. Es kann nicht ausgeschlossen werden, dass Facebook Ihre Profildaten nutzt und/oder an Dritte weitergibt. Dies kann etwa Ihre Gewohnheiten, persönlichen Beziehungen, Vorlieben und weitere Aspekte betreffen.\n Wechseln Sie nur zu Facebook, wenn Sie sich dieser Auswirkungen bewusst sind und die genannten Risiken in Kauf nehmen möchten. Informieren Sie sich gegebenenfalls über die bereitgestellten Quellen. Klicken Sie auf den Button NEIN, wenn Sie nicht bereit sind, Ihre Daten gegebenenfalls an Facebook zu übermitteln.\n Ja\n Nein\nServices & Kontakt\nFamilie & Bildung\nGesundheit & Soziales\nBauen & Umwelt\nVerkehr & Ordnung\nWirtschaft & Beruf\nVerwaltung & Politik \nImpressum\nDatenschutz\nBarrierefreiheitserklärung\nBarriere melden\n Info\nInfobereich\nOrganisationseinheiten\nKreisstraßen und RadverkehrGebäude B\nSchloßplatz 6\n21423 Winsen (Luhe)\nTelefon: 04171 693-0\nTelefax: 04171 693-194\nE-Mail: kreisstrassen@LKHarburg.de\nÖffnungszeiten:\nAnfahrt über Schloßring!\nBesuchszeiten nach Terminabsprache:\nMontag bis Donnerstag 07:00 bis 19:00 Uhr\nFreitag 07:00 bis 14:00 Uhr\nTerminvereinbarungen bitte von\nMontag bis Donnerstag 08:30 bis 16:00 Uhr\nFreitag 08:30 bis 13:00 Uhr\nWeitere Informationen\nAdB NL Nord\nNLStBV Lüneburg\nBeschwerde an den Landkreis richten\nSeite drucken\nSeite versenden\nServices & Kontakt\nAktuelles\nBaustellenatlas\nSocial Media & Newsletter\nSchulausfall?\nBIWAPP\nÖffentliche Bekanntmachungen\nAmtsblatt\nÖffentliche Zustellungen\nÄmter, Mitarbeitende und Öffnungszeiten\nKontakt\nFeedback: Ideen & Beschwerden\nServiceportal für den Landkreis Harburg\nDienstleistungen A bis Z\nKarriere beim Landkreis Harburg\nDatenschutz und Korruptionsprävention\nDatenschutz: Informationspflicht nach der DSGVO\nDatenschutz: Rechte der Bürgerinnen und Bürger\nKorruptionsprävention\nGeoportal\nFormulare\nInfomaterial\nVeranstaltungen\nTourismus & Freizeit\nTourismus-Tipps\nLüneburger Heide GmbH\nDer Heidschnuckenweg\nHeide-Shuttle\nFlusslandschaft Elbe\nFlusslandschaft Elbe erleben!\nDas Agrarium am Kiekeberg\nAZL Luhmühlen: Bei uns ist der Reitsport zuhause!\nNaturpark Lüneburger Heide\nTouristische Radrouten\nRegionalpark Rosengarten\nWinsener Elbmarsch\nVereinsportal\nKultur\nKulturlandkreis Harburg\nFreillichtmuseum am Kiekeberg\nMuseum Kunststätte Bossard\nPlattdeutscher Veranstaltungskalender\nVeranstaltungskalender\nVeranstaltungen Metropolregion\nFördermöglichkeiten\nNavigator\nFamilie & Bildung\nKinder & Familie\nBesondere Leistungen für Kinder und Jugendliche\nAbteilung Jugend & Familie\nErziehungsberatung\nKinderbetreuung suchen\nTagesmütter gesucht\nJugendberufsagentur Landkreis Harburg\nLeistungen Kinder&Familie\nGleichstellung\nAusleihe\nBerichte und Tätigkeiten\nGemeinsam gegen häusliche Gewalt\nCEDAW - Die UN-Frauenrechtskonvention\nDie kommunalen Gleichstellungsbeauftragten\nFRAU.MACHT.DEMOKRATIE\nInternationaler Frauentag\nGewalt gegen Frauen\nHilfetelefon-nummern und Anlaufstellen\nIstanbul-Konvention\nOrange the world!\nZwangsheirat\n16-Tage-Kampagne gegen Gewalt an Frauen\nSicherheit für geflüchtete Frauen\nWas tun bei Trennung und Scheidung?\nGleichstellung auf Instagram\nKreisvolkshoch-schule\nFerienkurse - junge KVHS\nSchülerfahrt-kosten\nSchulausfall?\nSchule und Sport - Wer ist zuständig?\nÜbersicht der Schulen\nBildungswegweiser\nPraktikumswoche\nMedienzentrum Landkreis Harburg\nKreiselternrat Landkreis Harburg\nWir über uns\nDie Schulen im Landkreis\nLinks und Dokumente zur Elternarbeit\nKreisschülerrat\nHome\nUnsere Ziele\nDer Vorstand\nDer Kreisschülerrat im Ausschuss für Schule und Sport des Landkreises Harburg\nDer KSR auf Instagram\nBildungskommune\nÜber das Projekt\nMonitoring\nBildungswegweiser\nBildungskonferenz\nPraktikumswoche\nLeitbild und Strategieentwicklung\nNetzwerk Bildungskommune\nRZI\nGesundheit & Soziales\nGesundheit\nDienstleistungen Gesundheitsamt\nÄrztlicher Dienst\nHitze und Gesundheit\nTeilhabe für Menschen mit Behinderung\nBudget für Arbeit\nSozialpsychiatrischer Dienst\nZahngesundheit für Kinder und Jugendliche\nGesundheits- und Hygieneangelegenheiten\nInfektionsschutz\nInfektionsschutzbelehrung\nTuberkulosberatung\nAlten- und Pflegeheime Landkreis Harburg\nKrankenhaus Buchholz\nKrankenhaus Winsen\nWaldklinik Jesteburg\nPsychosomatische Klinik Ginsterhof\nStadtLandPraxis\nSoziale Leistungen\nServices Soziale Leistungen\nWohngeld\nJobcenter Landkreis Harburg\nSenioren- und Pflegestützpunkt\nNachbarschaftsprogramm DUO\nFür Senioren\nFür Ehrenamtliche\nWohnberatung\nPflegeangebote\nPflegedienste\nPflegeheime\nTagespflege\nKrankenhäuser\nAgentur für Ehrenamt\nKostenfreie Weiterbildung fürs Ehrenamt\nNiedersächsische Ehrenamtskarte\nEhrenamtsbörse\nVersicherung im Ehrenamt\nBauen & Umwelt\nAbfallwirtschaft\nAbfall Aktuell!\nAbfallkalender\nAbfallbehälter\nEinführung Gelbe Tonne\nEntsorgungs-möglichkeiten\nAbfall von A-Z\nAbfallrecht\nTipps & Termine\nSperrmüll-anmeldung\nNordheide Kompost®\nAbwasserbeseitigung\nAbwasser sparen!\nZählerstand - Mitteilung Abwasser\nAbwasserkanäle: Leitungsauskunft\nPilotprojekt Kläranlage Seevetal\nBauen\nHäufige Fragen (FAQ)\nBauen Online\nBaugenehmigung\nBauaufsicht\nBaulasten-Auskunft\nBaubroschüre 2021\nBaulasten-Eintrag\nBebauungspläne\nArchäologie & Denkmalschutz\nGeoportal des Landkreises Harburg\nKommunale Wohnungsbaugesellschaft für den Landkreis Harburg (KWG)\nDienstleistungen Bauen\nUmwelt\nWasserschutzgebiete\nÜberschwemmungsgebiete\nWasserrahmenrichtlinie\nKleinkläranlagen\nErdwärme\nImissionsschutz\nGrundstücksverkehr\nMasterplan Land- und Forstwirtschaft\nUntere Abfallbehörde\nNaturschutz\nArten- und Biotopschutz\nSchutzgebiete und Schutzobjekte\nEingriffe in Natur- und Landschaft\nNaturschutzstiftung Landkreis Harburg\nDer Landschaftsrahmenplan\nVeröffentlichungen\nKompensationsflächenpool\nAktuelles zum Pool\nFlächen\nPool-Service\nPool-Kontakt\nKlimaschutz\nEnergiewegweiser\nEuropean Energy Award\nKlimafolgenanpassung\nKlimapolitik\nEnergiewegweiser\nGebäudewirtschaft\nVerkehr & Ordnung\nVerkehr & Mobilität\nKreisstraßen und Radverkehr\nVerkehrskoordination\nBaustellenatlas\nÖffentlicher Personennahverkehr\nelbMobil - Dein On Demand-Verkehr für die Elbmarsch\nSchülerfahrkarten\nBügel your Bike\nBügel your Bike 2.0\nBügel your Bike 3.0\nProjekt Schutzengel\nKreisstraßen & Radverkehr\nLaufende Maßnahmen\nGeplante Straßenbaumaßnahmen\nBetriebsgemeinschaft Straßendienst (BGS)\nOrtsumfahrung Buchholz\nRadverkehr\nRadschnellwege\nVerkehrszählung & Verkehrsmodell\nZufahrten an Kreisstraßen\nLeitungsverlegung in Kreisstraßen\nVerkehrsspiegel an Kreisstraßen\nEntwicklung des Straßennetzes\nAuto & Führerschein\nBürgerService Online\nBußgeldstelle/Verkehrsüberwachung\nServices KfZ-Zulassung/BürgerService\nServices Führerschein\nServices Bußgeldstelle/Verkehrsüberwachung\nServices Verkehrsbehörde\nRettungsdienst, Brand & Katastrophenschutz\nRettungsdienst\nBrandschutz\nKatastrophen-schutz\nRettungs- und Feuerwehrleitstelle\nSelbstvorsorge\nNotfall-Monitor Niedersachsen\nNotfallvorsorge Menschen mit Lebens-unterstützungs-geräten\nBIWAPP\nMigration, Ordnung & Verbraucherschutz\nMigration\nAllgemeines Ausländerrecht\nAsyl und Flüchtlinge\nAsylbewerber-Leistungsgesetz\nSprachförderung\nEinbürgerung\nMigration und Teilhabe\nInfos für Geflüchtete aus der Ukraine\nUnterbringung\nOrdnung\nWaffen\nVersammlungen\nJagd\nGewerbe-überwachung\nSchornsteinfeger\nStaatsangehörig-keitsrecht\nGefährliche Hunde\nVerbraucherschutz: Veterinäramt\nGeflügelpest im Landkreis Harburg\nLebensmittel-überwachung\nVeterinärwesen\nTierschutz\nTiervermittlung\nDienstleistungen Veterinäramt\nGefährliche Hunde\nWirtschaft & Beruf\nWirtschaft(sförderung)\nÜber uns: Wirtschaftsförderung im Landkreis\nNewsletter\nUnser Netzwerk für Unternehmen\nZukunftsregion Süderelbe\nSüderelbe AG\nWLH\nWelcome Center\nGewerbevereine\nHandwerkskammer\nTZEW\nNBank\nkfW\nArbeitgeberservice Jobcenter\nFrau & Wirtschaft\nKVHS\nStandortinformationen\nGewerbeflächen\nMetropolregion Hamburg\nExistenzgründung\nWLH\nKMU-Förderung\nGründerzentrum Winsen\nISI Zentrum\nWirtschaftssenioren\nBusiness Angels\nFrau & Wirtschaft\nInnovation & Technologie\nTZEW\nISI\nINNO.NON\nH2.NON\nÖKOPROFIT\nUSIN5G\nFachkräfte\nMatchpoint-Ausbildungsportal\nPraktikumswoche\nWelcome Center Landkreis Harburg\nAllianz für Fachkräfte\nKoordinierungsstelle Frau & Wirtschaft\nFörderprogramme\nKMU-Förderung\nFörderdatenbank\nFördermittelsprechtag\nNewsletter\nNBANK\nkfW\nTZEW\nEU-Förderung für Unternehmen\nVeranstaltungen rund um Unternehmen\nWirtschaftsförderung vor Ort\nFördermittelsprechtag\nTag der Wirtschaft\nPraktikumswoche\nParlamentarischer Abend\nKommunale Wohnungsbaugesellschaft für den Landkreis Harburg (KWG)\nBreitbandausbau\nUSIN5G\nUSIN5G: Externe Projektwebseite\nUSIN5G: Allgemeine Informationen zur 5G-Technologie\nÖffentliche Ausschreibungen\nGeoportal des Landkreises Harburg\nKarriere\nKarriere beim Landkreis\nAusbildung & Studium\nAusbildungsberufe und Duale Studiengänge\nBewerbungsfristen und Messetermine\nTeam Ausbildung\nPraktikum\nBewerbungsportal\nPraktikum\nFaMi-Siegel\nHäufige Fragen von Bewerbern\nWelcome Center Landkreis Harburg\nÜber das Projekt\nUnternehmen\nInternationale Fach- und Nachwuchskräfte\nVerwaltung & Politik\nDie Kreisverwaltung - Wir über uns\nOrganisation\nÄmter, Mitarbeitende, Öffnungszeiten\nLandrat Rainer Rempe\nBüro des Landrats / Pressestelle\nErster Kreisrat Josef Nießen\nKreisrätin Annerose Tiedt\nKreisrätin Ana Cristina Bröcking\nZahlen, Daten, Fakten\nGeschichte des Landkreises Harburg\nKreisarchiv\nKarriere beim Landkreis Harburg\nPolitik\nAktuelles\nBaustellenatlas\nSocial Media & Newsletter\nBIWAPP\nSchulausfall?\nBreitbandausbau\nUSIN5G\nÖffentliche Bekanntmachungen\nAmtsblatt\nÖffentliche Zustellungen\nKreisentwicklung\nWirtschaftsförderung\nRegionalplanung\nRegionales Raumordnungsprogramm\nRaumordnung\nBauleitplanung\nMetropolregion Hamburg\nEU-Förderung\nEndlagersuche\nAchtern-Elbe-Diek\nWohnraumversorgungskonzept\nPlanung Ortsumfahrung Elstorf\nRaumordnungsverfahren Ortsumfahrung Pattensen-Luhdorf\nRadschnellwege\nBahnprojekt Hamburg-Hannover\nSteuerung der Windenergie\nHaushalt und Finanzen\nZentrale Vergabestelle\nWLH Wirtschaftsförder-ung\nKreiswohnungsbau\nITK Harburg\nKommunalaufsicht\nWahlen\nKommunalwahlen 2026\nBundestagswahl 2025\nEuropawahl 2024\nLandratswahl 2022\nLandtagswahl 2022\n Leistungen von A - Z\n Abteilungen / Einrichtungen\n Infomaterial & Formulare"
+},
+{
+"kommune": "Landkreis Gifhorn",
+"url": "https://www.landkreis-gifhorn.de/Service/Verkehrsz%C3%A4hlungen-an-Kreisstra%C3%9Fen-im-Landkreis-Gifhorn.php?object=tx,4083.6271.1",
+"end": null,
+"typ": "text/html",
+"bytes": 72175,
+"art": "html",
+"titel": "Verkehrszählungen an Kreisstraßen im Landkreis Gifhorn / Landkreis Gifhorn",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"verkehrszaehlung": 5,
+"verkehrsmenge": 3,
+"kamera": 1
+},
+"auszuege": [
+"Verkehrszählungen an Kreisstraßen im Landkreis Gifhorn / Landkreis Gifhorn Diese Website verwendet Cookies, die für den technischen Betrieb der Website notwendig sind und stets gesetzt werden. Weitere Cookies werde",
+"hgebiet Integration Karriere Stellenangebote Wurde der gesuchte Begriff nicht gefunden? Dann teilen Sie uns dies bitte über dieses Formular mit. Titelbild: © Lurii – Adobe Stock Startseite Service Verkehrszählungen an Kreisstraßen im Landkreis Gifhorn Vorlesen zu: Leichte Sprache Verkehrszählungen an Kreisstraßen im Landkreis Gifhorn An 138 Stellen wird nacheinander die Verkehrsbelastung ermittelt. Bild:",
+"Forschungsinstituten sowie Verbänden für Lärm- und Emissionsberechnungen sowie Mobilitätsstudien. Im Unterschied zu früheren Zählungen werden bei der diesjährigen Straßenverkehrszählung vermehrt Videokameras eingesetzt. Die Videoaufnahmen dienen ausschließlich der Zählung und Klassifizierung der Fahrzeuge. Die Auswertung der Daten erfolgt teilautomatisiert (das heißt computerunterstützt). Bei diesem Vor"
+],
+"links": [],
+"volltext": "Verkehrszählungen an Kreisstraßen im Landkreis Gifhorn / Landkreis Gifhorn\nDiese Website verwendet Cookies, die für den technischen Betrieb der Website notwendig sind und stets gesetzt werden. \nWeitere Cookies werden nur mit Ihrer Zustimmung gesetzt, um statistische Daten zur Nutzung der Website in anonymisierter Form zu sammeln. \nMehr dazu in unserer Datenschutzerklärung.\n Ablehnen\nZustimmen\nzum Inhalt \nzur Volltextsuche \nzur Hauptnavigation \nzur Navigation \nzur Servicenavigation \n schließen \n ‌Karriere\nBürgerservices\nLeistungen von A-Z\nOrganigramm \nStandorte und Öffnungszeiten\nAnsprechpersonen\nTerminvereinbarung\nAktuelles\nPressemitteilungen\nAmtsblatt\nÖffentlichkeitsarbeit\nVeranstaltungen\nUnser Landkreis\nStädte und Gemeinden im Landkreis\nFreizeit und Tourismus\nHistorische Entwicklung\nStrukturdaten\nDemografische Entwicklung \nPartnerschaft Zlotow\nKreisverwaltung und Politik\nDer Landrat\nKreistagsinformationssystem - ALLRIS\nWahlen\n Landkreis Gifhorn Kreishaus I: Detailseite\nKreishaus I \n Schlossplatz 1\n 38518 Gifhorn\nTelefon: 05371 82-0\nFax: 05371 82-357\nE-Mail schreiben\n Öffnungszeiten: Alle Öffnungszeiten\n Suche\n Menü \nServiceportal \nLeichte Sprache \nVisuelle Hilfe \n DE \nZum Aktivieren des Google-Übersetzers bitte klicken. Wir möchten darauf hinweisen, dass nach der Aktivierung Daten an Google übermittelt werden.\n Mehr Informationen zum Datenschutz \n Suche\n Menü \nWas können wir für Sie tun?\n Wie können wir helfen?\n Suchen\nHäufig gesucht\n ‌Startseite\n ‌Schuleingangsuntersuchung\n ‌Abfallkalender\n ‌Terminbuchung Landkreis Gifhorn\n ‌KFZ-Zulassung\n ‌Führerscheinwesen\n ‌Sachgebiet Integration\nKarriere\nStellenangebote\nWurde der gesuchte Begriff nicht gefunden? Dann teilen Sie uns dies bitte über dieses Formular mit. \n Titelbild: © Lurii – Adobe Stock \nStartseite\nService\nVerkehrszählungen an Kreisstraßen im Landkreis Gifhorn\n Vorlesen\n zu: Leichte Sprache \nVerkehrszählungen an Kreisstraßen im Landkreis Gifhorn\nAn 138 Stellen wird nacheinander die Verkehrsbelastung ermittelt. \n Bild: © Lazy_Bear – stock.adobe.com\n An insgesamt 138 Stellen wird nacheinander auf den Kreisstraßen die Verkehrsbelastung ermittelt.\nAb dieser Woche beginnen Verkehrszählungen im Landkreis Gifhorn. An insgesamt 138 Stellen wird nacheinander auf den Kreisstraßen die Verkehrsbelastung ermittelt. Dazu werden Aufzeichnungsgeräte installiert, und der Verkehr wird jeweils für 24 Stunden aufgezeichnet. Die Zählung liefert Daten für den größten Teil aller Abschnitte im Kreisstraßennetz. Die Ergebnisse sind wesentliche Grundlage zukünftiger Verkehrsplanungen. Sie dienen darüber hinaus auch Ämtern, Forschungsinstituten sowie Verbänden für Lärm- und Emissionsberechnungen sowie Mobilitätsstudien. Im Unterschied zu früheren Zählungen werden bei der diesjährigen Straßenverkehrszählung vermehrt Videokameras eingesetzt. Die Videoaufnahmen dienen ausschließlich der Zählung und Klassifizierung der Fahrzeuge. Die Auswertung der Daten erfolgt teilautomatisiert (das heißt computerunterstützt). Bei diesem Vorgehen werden alle Datenschutzregelungen eingehalten. Angaben wie das Kfz-Kennzeichen werden nicht erfasst und die Aufnahmen im Anschluss vernichtet. Die Zählungen sollen noch vor den Sommerferien abgeschlossen sein. Einzelne Nachzählungen können jedoch auch direkt nach den Sommerferien noch durchgeführt werden.\n22.05.2025 \nWeitere Informationen\nKontakt\n Stabsstelle Presse- und Öffentlichkeitsarbeit: Detailseite\n Schlossplatz 1\n Kreishaus I\n 38518 Gifhorn\nE-Mail schreiben\nTelefon: 05371 82-8709\nFax: 05371 82-208\nFolgen Sie uns\n ​Landkreis Gifhorn bei Instagram\n ​Landkreis Gifhorn bei Facebook\n ​Landkreis Gifhorn bei Linkedin\n ​Landkreis Gifhorn bei Whatsapp\nGesammelte Inhalte \nBürgerservices\nLeistungen von A-Z\nOrganigramm\nStandorte und Öffnungszeiten\nAnsprechpersonen\nTerminvereinbarung\nAktuelles\nPressemitteilungen\nAmtsblatt\nÖffentlichkeitsarbeit\nVeranstaltungen\nUnser Landkreis\nStädte und Gemeinden im Landkreis\nFreizeit und Tourismus\nHistorische Entwicklung\nStrukturdaten\nPartnerschaft Zlotow\nKreisverwaltung und Politik\nDer Landrat\nKreistagsinformationssystem - ALLRIS\nWahlen\nAllgemeine Informationen \nKontakt\n Landkreis Gifhorn Kreishaus I: Detailseite\nKreishaus I \n Schlossplatz 1\n 38518 Gifhorn\nTelefon: 05371 82-0\nFax: 05371 82-357\nE-Mail schreiben\nSprech- und Servicezeiten\nMontag bis Freitag: 08:30 Uhr – 12:00 Uhr\nDienstag: 14:00 Uhr – 16:00 Uhr\nDonnerstag: 14:00 Uhr – 17:00 Uhr\nAlle Sprech- und Servicezeiten\nWeitere Links\n ‌Bürgerservices\n ‌Der Landrat\n ‌Städte und Gemeinden im Landkreis\nRechtliches\n ‌Impressum\n ‌Datenschutz\n ‌Barrierefreiheit\n ‌E-Mail-Verkehr\n ‌Fehler melden"
+},
+{
+"kommune": "Buxtehude",
+"url": "https://www.buxtehude.de/bauen-verkehr-umwelt/verkehrsplanung/verkehrszahlen/",
+"end": null,
+"typ": "text/html",
+"bytes": 198669,
+"art": "html",
+"titel": "Verkehrszahlen | Hansestadt Buxtehude",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"verkehrszaehlung": 1,
+"verkehrsmenge": 1,
+"rad": 2,
+"fuss": 2
+},
+"auszuege": [
+"> Bauen, Verkehr & Umwelt >> Verkehrsplanung >> Verkehrszahlen Verkehrszahlen Im Rahmen der Erstellung des Verkehrsentwicklungsplanes der Hansestadt Buxtehude wurden an etwa 40 Stellen im Stadtgebiet Verkehrszählungen durchgeführt und in ein Verkehrsmodell überführt. Mit Hilfe dieses Modells wurde die heutige sowie die im Jahr 2030 zu erwartende Verkehrsbelastung (inkl. Anschluss der Autobahn 26 an die Autobahn"
+],
+"links": [
+[
+"https://www.buxtehude.de/stadt-verwaltung/buergerservice-oeffnungszeiten/wahlen/wahlergebnisse/",
+"Wahlergebnisse"
+],
+[
+"https://www.buxtehude.de/bauen-verkehr-umwelt/verkehrsplanung/verkehrszahlen/",
+"Verkehrszahlen"
+],
+[
+"https://www.buxtehude.de/bauen-verkehr-umwelt/verkehrsplanung/mobilitaetsbefragung/",
+"Mobilitätsbefragung"
+],
+[
+"https://www.buxtehude.de/kultur-stadtmarketing/stadtmarketing-projekte/passantenfrequenzmessung/",
+"Passantenfrequenzmessung"
+],
+[
+"https://www.buxtehude.de/medien/bilder/verkehrszahlen_analyse_mit_sv_2017_neu.jpg?20190417173638",
+""
+],
+[
+"https://www.buxtehude.de/medien/bilder/verkehrszahlen_prognosefall_mit_as_08_2018_sv_neu.jpg?20190417173721",
+""
+],
+[
+"https://www.buxtehude.de/barrierefreiheit/barriere_melden.html?titel=Barriere+melden&url=https%3A%2F%2Fwww.buxtehude.de%2Fbauen-verkehr-umwelt%2Fverkehrsplanung%2Fverkehrszahlen%2F",
+"Barriere melden"
+],
+[
+"https://www.buxtehude.de/stadt-verwaltung/buergerservice-oeffnungszeiten/wahlen/wahlergebnisse/",
+"Wahlergebnisse"
+],
+[
+"https://www.buxtehude.de/bauen-verkehr-umwelt/verkehrsplanung/verkehrszahlen/",
+"Verkehrszahlen"
+],
+[
+"https://www.buxtehude.de/bauen-verkehr-umwelt/verkehrsplanung/mobilitaetsbefragung/",
+"Mobilitätsbefragung"
+],
+[
+"https://www.buxtehude.de/kultur-stadtmarketing/stadtmarketing-projekte/passantenfrequenzmessung/",
+"Passantenfrequenzmessung"
+]
+],
+"volltext": "Verkehrszahlen | Hansestadt Buxtehude\nHansestadt Buxtehude\nKopfbereich / Header\nAktuelles\nStadt & Verwaltung\nÜber Buxtehude\nPartnerstädte\nBündnisse und Partnerschaften\nStadtporträt\nOrtschaften\nImagefilm\nEhrenbürger\nEhrenbürger\nPolitik\nBürgermeister\nRat der Hansestadt Buxtehude\nOrtsbürgermeisterinnen\nOrtsräte\nOrtsvorsteher\nOrtsrecht\nFraktionen\nGremien\nSitzungskalender\nSitzungsübersicht nach Gremien\nRatsvorlagen\nTextrecherche\nArbeitgeberin Hansestadt\nOnline-Bewerbungsportal\nAktuelle Stellenausschreibungen\nStellenausschreibungen\nKarriere\nKarriere\nAusbildungsberufe\nNachwuchskräfte gesucht!\nVergabewesen\nSag's uns einfach\nBuxtehude 2035\nKommunale Gesamtstrategie\nBuxtehude blüht auf\nAktuelles\nInternationale Wochen gegen Rassismus\nStadtforum\nStadtforum - Projekte\nÖffentlichkeitsbeteiligung 2023\nVoluntary Local Review\nBürgermeister\nGleichstellung\nAktuelles & Veranstaltungen\nDokumentationen\nWeiterführende Links\nfrauenORT\nÖffentliche Bekanntmachungen\nÖffentliche Bekanntmachungen nach dem BauGB\nInformationen zur Ukraine\nSie benötigen Hilfe?\nSie wollen Hilfe anbieten?\nUnterbringung\nBürgerservice & Öffnungszeiten\nVerwaltungsleitung\nDienstleistungen\nOrganisationsstruktur\nBürgerBüro\nStandesamt\nFundbüro\nTEST\nWahlen\nWahlen\nWahlergebnisse\nSchiedsamt\nOrdnungsamt\nFinanzen\nKommunale Steuern\nKommunale Steuern\nStadtkasse\nHaushaltsplan\nSpenden & Sponsoring\nFördermittel-Übersicht\nGeförderte Projekte in Buxtehude\nEU-geförderte Projekte\nEU-Infopoint\nFairtrade-Stadt\nNachhaltigkeit\nAktuelles\nStabstelle Nachhaltige Entwicklung\nNachhaltige Stadt #DNP13\nGemeinschaftsgarten\nKommunale Wärmeplanung\nPresseportal\nPresseinformationen\nLeben in Buxtehude\nKinder, Jugend & Familie\nAllgemeines zum Jugendamt\nKinderbetreuung/Kindertagesstätten\nJugendarbeit\nFamilienförderung\nFrühe Hilfen\nKinderbetreuung/Kindertagespflege\nBeistandschaft\nElterngeld\nStipendium\nOffene Ganztagsschule\nBeurkundungen\nUnterhaltsvorschuss\nJunge Volljährige\nBesE\nJugendhilfe im Strafverfahren\nLegale Graffitiflächen\nJugendschutz und Prävention\nJugendsozialarbeit\nEinzelfallhilfe - ESys\nTrennung und Scheidung\nUmgangsrecht\nKinderinseln\nCommunities That Care (CTC)\nPflegekinder\nBeratung bei Schulvermeidung und Schulabsentismus\nSozialstation Buxtehude\nIntegration\nWillkommen in Buxtehude\nInterkulturelle Freizeitangebote\nDeutsch lernen\nAktuelles & Termine\nBehördenleitfaden\nEhrenamtliche Initiativen\nSpenden\nUnterbrigung von Flüchtlingen\nLeben & Wohnen im Alter\nBeratung & Informationen für Senioren\nBegegnung & Freizeit\nNewsletter Generation 60+\nStadtteilzentren & Treffpunkte\nStadtteilarbeit\nUnser Viertel - Stadtteiltreff im Bollweg\nFaBiZ\nBegegnungsstätte Altkloster\nStieglitzhaus\nDorfgemeinschaftshaus Dammhausen\nBegegnungscafé in der Bahnhofstr. 9\nWochenmärkte\nDigital-Kompass\nSofia - Schutzwohnung für Frauen\nBildung\nSchulen in der Hansestadt Buxtehude\nOffene Ganztagsschule\nVHS - Volkshochschule Buxtehude\nStadtelternrat\nStadtschülerrat\nZukunftskatalog\nSchulanfänger\nEhrenamtliches Engagement\nEhrenamtliches Engagement\nPräventionsrat\nPräventionsrat\nMenschen mit Behinderungen\nMenschen mit Behinderungen\nVereine\nFriedhöfe\nBuxtehude Stiftung\nBuxtehuder Inklusionspreis 2026\nStadtbibliothek\nKatalog\nAngebote\nService\nVeranstaltungen\nSchulbibliotheken\nÜber uns\nFreiwillige Feuerwehr\nKirchen & Gemeinden\nKirchen & Gemeinden\nSport\nSport\nÜberlassungen\nSportentwicklungsplanung\nSportförderung\nJugendgästehaus\nSportlerehrung\nWohnen\nMietspiegel\nWohnhilfen\nWohnberechtigungsschein\nWohnungsbauförderung\nWohngeld\nVermieter:innen gesucht\nLandgang Stade\nSofortprogramm \"Perspektive Innenstadt!\"\nStadtteilbüro\nBauen, Verkehr & Umwelt\nBauen in Buxtehude\nBauantrag und sonstige Verfahren\nDigitaler Bauantrag\nDenkmalpflege\nArchäologie\nBaudenkmalpflege\nKlimaschutz\nAktuelles\nKlimaschutzkonzept\nKlimaschutzprojekte\nSauberhaftes Buxtehude\nZigarettenkampagne\nEnergiequartier Stieglitzweg\nBesser beraten in Buxtehude\nKlimaschutz und Bildung\nTreibhausgasbilanz\nStädtische Betriebe Buxtehude\nStadtplanung\nAktuelle Projekte\nBebauungspläne\nFlächennutzungsplan\nStadtsanierung\nRahmenplanung & städtebauliche Konzepte\nBeratung\nNeugestaltung Bahnhof Buxtehude\nStraßen & Grünanlagen\nAktuelle Straßenbauprojekte\nBau von Verkehrs- und Erschließungsanlagen\nAusschreibung & Vergabe\nBrücken und Ingenieurbauwerke\nUnterhaltung von Verkehrsanlagen\nGrünpflege\nWinterbeleuchtung\nFormulare und Anträge\nKlimaanpassung\nSchlau, wer schon leuchtet!\nVerkehrsplanung\nRadverkehrskonzept\nVerkehrskonzept Altstadt\nVerkehrszahlen\nLärmaktionsplan\nVerkehrsentwicklungsplan\nMobilitätsbefragung\nNatur & Umwelt\nEinheimische Gehölze\nEilendorfer Heide\nLandschaftsplanung\nGrünordnungsplanung\nBaumschutzsatzung\nGrabeland\nKüsten- und Hochwasserschutz\nInformationsveranstaltungen\nPläne\nZeitplan\nKultur & Stadtmarketing\nTheater und Konzerte\nSpielplan\nTickets\nAbonnement\nPreise\nService & Informationen\nKulturveranstaltungen\nBuxtehuder Kunstfest\nTeilnehmer 2018\n#kultbux\nKulturforum am Hafen\nBuxtehuder Kleinkunstigel e.V.\nTheater im Hinterhof\nKulturstiftung\nStadtarchiv\nStadtarchiv\nReligionsfachtag\nGeschichtswettbewerb\nBuxtehuder KunSTück\nBuxtehuder KunSTück\nKünstlerInnen sehen Buxtehude\nStreet-Piano\nAusstellungen\nArtothek\nFörderung von Kulturschaffenden\nNewsletter\nBuxtehuder Bulle\nKunstinsel\nStadtmarketing - Veranstaltungen\nHANSE AHOI\n\"Vor Ort Fair-Ändern\"\nWintermärchen Buxtehude\nStadtmarketing - Organisation\nLeitziele\nArbeitsgruppen\nMarketing-Beirat\nSponsoring\nStadtmarketing - Projekte\nBUXCARD - Buxtehuder Geschenkgutschein\nFairtrade Stadt\nArchiv\nPassantenfrequenzmessung\nStadtmarketing - Vereinsförderung\nBUXCARD-Buxtehuder Geschenkgutschein\nMalerschule\nTourismus\nSehen & Erleben\nTickets für Erlebnisse\nBarkassenfahrten\nVeranstaltungskalender\nVeranstaltungshighlights\nKulturpfade in Buxtehude\nDigitale Märchenrallye\nInteraktive Rallye zum BULLEvard\nSchlemmen & Shoppen\nBUXCard\nSouvenirs & Gutscheine\nWochenmärkte\nInfos & Service\nUrlaubsregion \"Altes Land am Elbstrom\"\nFreies WLAN / Free Wi-Fi\nSouvenirs & Gutscheine\nBarrierearmer Tourismus\nProspektbestellung\nStadtplan\nParken für Reisebusse\nAnreise & Parken\nFahrradabstellanlage und Fahrradboxen\nAktiv & Natur\nRad & Bike\nWandern\nWassererlebnisse\nÜbernachten\nUnterkunft buchen\nGastgeberliste\nWohnmobilstellplätze\nTouristische Konzepte\nTouristischer Masterplan\nWassertourismuskonzept\nKunst & Kultur\nBacksteingotik\nMärchen\nBuxtehude Museum\nSpielplan Theater\nKulturveranstaltungen\nBuxtehuder Bulle\nArtothek\nBuchbare Angebote\nTouren\nKurztrips\nErlebnisbausteine\nFührungen für Gruppen\nPressereise und Bildmaterial\nPressereise + Bildmaterial\nWirtschaft\nWirtschaftsförderung\nFreie Ladengeschäfte & CoWorking\nInnovation & Technologie\nWeiterbildung\nKI in Unternehmen\nExistenzgründung\nGewerbeflächen\nNetzwerke & Kooperationen\nZukunftskatalog\nFördermittel\nhochschule 21\nStandortinformationen\nGewerbeforum\nLeichte Sprache\nÜber Buxtehude (LS)\nKinder, Jugend & Familie (LS)\nStadtbibliothek (LS)\nWirtschaft (LS)\nStadt & Verwaltung (LS)\nBauen, Verkehr & Umwelt (LS)\nLeben in Buxtehude (LS)\nKultur, Tourismus, Stadtmarketing (LS)\n Startseite >> Bauen, Verkehr & Umwelt >> Verkehrsplanung >> Verkehrszahlen\nVerkehrszahlen\nIm Rahmen der Erstellung des Verkehrsentwicklungsplanes der Hansestadt Buxtehude wurden an etwa 40 Stellen im Stadtgebiet Verkehrszählungen durchgeführt und in ein Verkehrsmodell überführt. \nMit Hilfe dieses Modells wurde die heutige sowie die im Jahr 2030 zu erwartende Verkehrsbelastung (inkl. Anschluss der Autobahn 26 an die Autobahn 7) des Buxtehuder Hauptverkehrsnetzes ermittelt. \nzurück Drucken\n Nach oben\nSuche\n Suche eingeben\n Facebook\n Instagram\n Twitter\n E-Mail\nInfobereich\nDienstleistungen A-Z\n#A B C D E F G H I J K L M N O P Q R S T U V W X Y Z \n Suche \n Suchbegriffe \nSuchen \nOnline-Service & Öffnungszeiten des Stadthauses\nOnline-Terminvergabe \nOnline-Dienste \nÖffnungszeiten des Stadthauses \nSag's uns einfach \nVeranstaltungen\nSo., 15.11.2026, 11:00 - 12:30 Uhr  Hexenprozesse in BuxtehudeHistorisches RathausServicecenter Kultur & Tourismus\nMi., 18.11.2026, 19:00 - 21:00 Uhr  Ehrenamtsstammtisch BuxtehudeBegegnungscaféEhrenamtskoordination und BuxNetzE\nSa., 21.11.2026, 10:30 - 17:00 Uhr  Wärme mit Zukunft - HeizungsinfotagKreishaus Stade, HaupthausLandkreis Stade\nFr., 27.11.2026, 12:00 - 21:00 Uhr  Wintermärchen Buxtehude 2026Altstadt BuxtehudeStadtmarketing der Hansestadt Buxtehude\nSa., 28.11.2026, 12:00 - 21:00 Uhr  Wintermärchen Buxtehude 2026Altstadt BuxtehudeStadtmarketing der Hansestadt Buxtehude\nWeitere Veranstaltungen\n Briefanschrift\n Postfach 15 55\n 21605 Buxtehude\n Hansestadt Buxtehude\n Bahnhofstr. 7\n 21614 Buxtehude\n T 04161 501-0\n F 04161 50171555\n E stadtverwaltung@stadt.buxtehude.de\nImpressum\nDatenschutz\nBarrierefreiheit\nBarriere melden\nE-Mail-Kommunikation\nSitemap\n Menü\nAktuelles\nStadt & Verwaltung\nÜber Buxtehude\nPartnerstädte\nBündnisse und Partnerschaften\nStadtporträt\nOrtschaften\nImagefilm\nEhrenbürger\nEhrenbürger\nBürgermeister\nBürgerservice & Öffnungszeiten\nVerwaltungsleitung\nDienstleistungen\nOrganisationsstruktur\nBürgerBüro\nStandesamt\nFundbüro\nTEST\nWahlen\nWahlen\nWahlergebnisse\nSchiedsamt\nOrdnungsamt\nPolitik\nBürgermeister\nRat der Hansestadt Buxtehude\nOrtsbürgermeisterinnen\nOrtsräte\nOrtsvorsteher\nOrtsrecht\nFraktionen\nGremien\nSitzungskalender\nSitzungsübersicht nach Gremien\nRatsvorlagen\nTextrecherche\nGleichstellung\nAktuelles & Veranstaltungen\nDokumentationen\nWeiterführende Links\nfrauenORT\nFinanzen\nKommunale Steuern\nKommunale Steuern\nStadtkasse\nHaushaltsplan\nSpenden & Sponsoring\nFördermittel-Übersicht\nGeförderte Projekte in Buxtehude\nEU-geförderte Projekte\nEU-Infopoint\nArbeitgeberin Hansestadt\nOnline-Bewerbungsportal\nAktuelle Stellenausschreibungen\nStellenausschreibungen\nKarriere\nKarriere\nAusbildungsberufe\nNachwuchskräfte gesucht!\nÖffentliche Bekanntmachungen\nFairtrade-Stadt\nVergabewesen\nÖffentliche Bekanntmachungen nach dem BauGB\nNachhaltigkeit\nAktuelles\nStabstelle Nachhaltige Entwicklung\nNachhaltige Stadt #DNP13\nGemeinschaftsgarten\nKommunale Wärmeplanung\nSag's uns einfach\nInformationen zur Ukraine\nSie benötigen Hilfe?\nSie wollen Hilfe anbieten?\nUnterbringung\nPresseportal\nPresseinformationen\nBuxtehude 2035\nKommunale Gesamtstrategie\nBuxtehude blüht auf\nAktuelles\nInternationale Wochen gegen Rassismus\nStadtforum\nStadtforum - Projekte\nÖffentlichkeitsbeteiligung 2023\nVoluntary Local Review\nLeben in Buxtehude\nKinder, Jugend & Familie\nAllgemeines zum Jugendamt\nKinderbetreuung/Kindertagesstätten\nJugendarbeit\nFamilienförderung\nFrühe Hilfen\nKinderbetreuung/Kindertagespflege\nBeistandschaft\nElterngeld\nStipendium\nOffene Ganztagsschule\nBeurkundungen\nUnterhaltsvorschuss\nJunge Volljährige\nBesE\nJugendhilfe im Strafverfahren\nLegale Graffitiflächen\nJugendschutz und Prävention\nJugendsozialarbeit\nEinzelfallhilfe - ESys\nTrennung und Scheidung\nUmgangsrecht\nKinderinseln\nCommunities That Care (CTC)\nPflegekinder\nBeratung bei Schulvermeidung und Schulabsentismus\nBildung\nSchulen in der Hansestadt Buxtehude\nOffene Ganztagsschule\nVHS - Volkshochschule Buxtehude\nStadtelternrat\nStadtschülerrat\nZukunftskatalog\nSchulanfänger\nStadtbibliothek\nKatalog\nAngebote\nService\nVeranstaltungen\nSchulbibliotheken\nÜber uns\nSozialstation Buxtehude\nEhrenamtliches Engagement\nEhrenamtliches Engagement\nFreiwillige Feuerwehr\nIntegration\nWillkommen in Buxtehude\nInterkulturelle Freizeitangebote\nDeutsch lernen\nAktuelles & Termine\nBehördenleitfaden\nEhrenamtliche Initiativen\nSpenden\nUnterbrigung von Flüchtlingen\nPräventionsrat\nPräventionsrat\nKirchen & Gemeinden\nKirchen & Gemeinden\nLeben & Wohnen im Alter\nBeratung & Informationen für Senioren\nBegegnung & Freizeit\nNewsletter Generation 60+\nMenschen mit Behinderungen\nMenschen mit Behinderungen\nSport\nSport\nÜberlassungen\nSportentwicklungsplanung\nSportförderung\nJugendgästehaus\nSportlerehrung\nStadtteilzentren & Treffpunkte\nStadtteilarbeit\nUnser Viertel - Stadtteiltreff im Bollweg\nFaBiZ\nBegegnungsstätte Altkloster\nStieglitzhaus\nDorfgemeinschaftshaus Dammhausen\nBegegnungscafé in der Bahnhofstr. 9\nVereine\nWohnen\nMietspiegel\nWohnhilfen\nWohnberechtigungsschein\nWohnungsbauförderung\nWohngeld\nVermieter:innen gesucht\nWochenmärkte\nFriedhöfe\nLandgang Stade\nDigital-Kompass\nBuxtehude Stiftung\nSofortprogramm \"Perspektive Innenstadt!\"\nSofia - Schutzwohnung für Frauen\nBuxtehuder Inklusionspreis 2026\nStadtteilbüro\nBauen, Verkehr & Umwelt\nBauen in Buxtehude\nBauantrag und sonstige Verfahren\nDigitaler Bauantrag\nStadtplanung\nAktuelle Projekte\nBebauungspläne\nFlächennutzungsplan\nStadtsanierung\nRahmenplanung & städtebauliche Konzepte\nBeratung\nNeugestaltung Bahnhof Buxtehude\nVerkehrsplanung\nRadverkehrskonzept\nVerkehrskonzept Altstadt\nVerkehrszahlen\nLärmaktionsplan\nVerkehrsentwicklungsplan\nMobilitätsbefragung\nDenkmalpflege\nArchäologie\nBaudenkmalpflege\nStraßen & Grünanlagen\nAktuelle Straßenbauprojekte\nBau von Verkehrs- und Erschließungsanlagen\nAusschreibung & Vergabe\nBrücken und Ingenieurbauwerke\nUnterhaltung von Verkehrsanlagen\nGrünpflege\nWinterbeleuchtung\nFormulare und Anträge\nNatur & Umwelt\nEinheimische Gehölze\nEilendorfer Heide\nLandschaftsplanung\nGrünordnungsplanung\nBaumschutzsatzung\nGrabeland\nKlimaschutz\nAktuelles\nKlimaschutzkonzept\nKlimaschutzprojekte\nSauberhaftes Buxtehude\nZigarettenkampagne\nEnergiequartier Stieglitzweg\nBesser beraten in Buxtehude\nKlimaschutz und Bildung\nTreibhausgasbilanz\nKlimaanpassung\nKüsten- und Hochwasserschutz\nInformationsveranstaltungen\nPläne\nZeitplan\nStädtische Betriebe Buxtehude\nSchlau, wer schon leuchtet!\nKultur & Stadtmarketing\nTheater und Konzerte\nSpielplan\nTickets\nAbonnement\nPreise\nService & Informationen\nAusstellungen\nStadtmarketing - Veranstaltungen\nHANSE AHOI\n\"Vor Ort Fair-Ändern\"\nWintermärchen Buxtehude\nKulturveranstaltungen\nBuxtehuder Kunstfest\nTeilnehmer 2018\n#kultbux\nKulturforum am Hafen\nBuxtehuder Kleinkunstigel e.V.\nTheater im Hinterhof\nArtothek\nStadtmarketing - Organisation\nLeitziele\nArbeitsgruppen\nMarketing-Beirat\nSponsoring\nKulturstiftung\nFörderung von Kulturschaffenden\nStadtmarketing - Projekte\nBUXCARD - Buxtehuder Geschenkgutschein\nFairtrade Stadt\nArchiv\nPassantenfrequenzmessung\nStadtarchiv\nStadtarchiv\nReligionsfachtag\nGeschichtswettbewerb\nNewsletter\nStadtmarketing - Vereinsförderung\nBuxtehuder KunSTück\nBuxtehuder KunSTück\nKünstlerInnen sehen Buxtehude\nBuxtehuder Bulle\nBUXCARD-Buxtehuder Geschenkgutschein\nStreet-Piano\nKunstinsel\nMalerschule\nTourismus\nSehen & Erleben\nTickets für Erlebnisse\nBarkassenfahrten\nVeranstaltungskalender\nVeranstaltungshighlights\nKulturpfade in Buxtehude\nDigitale Märchenrallye\nInteraktive Rallye zum BULLEvard\nAktiv & Natur\nRad & Bike\nWandern\nWassererlebnisse\nKunst & Kultur\nBacksteingotik\nMärchen\nBuxtehude Museum\nSpielplan Theater\nKulturveranstaltungen\nBuxtehuder Bulle\nArtothek\nSchlemmen & Shoppen\nBUXCard\nSouvenirs & Gutscheine\nWochenmärkte\nÜbernachten\nUnterkunft buchen\nGastgeberliste\nWohnmobilstellplätze\nBuchbare Angebote\nTouren\nKurztrips\nErlebnisbausteine\nFührungen für Gruppen\nInfos & Service\nUrlaubsregion \"Altes Land am Elbstrom\"\nFreies WLAN / Free Wi-Fi\nSouvenirs & Gutscheine\nBarrierearmer Tourismus\nProspektbestellung\nStadtplan\nParken für Reisebusse\nAnreise & Parken\nFahrradabstellanlage und Fahrradboxen\nTouristische Konzepte\nTouristischer Masterplan\nWassertourismuskonzept\nPressereise und Bildmaterial\nPressereise + Bildmaterial\nWirtschaft\nWirtschaftsförderung\nExistenzgründung\nFördermittel\nFreie Ladengeschäfte & CoWorking\nGewerbeflächen\nhochschule 21\nInnovation & Technologie\nNetzwerke & Kooperationen\nStandortinformationen\nWeiterbildung\nZukunftskatalog\nGewerbeforum\nKI in Unternehmen\nLeichte Sprache\nÜber Buxtehude (LS)\nStadt & Verwaltung (LS)\nLeben in Buxtehude (LS)\nKinder, Jugend & Familie (LS)\nStadtbibliothek (LS)\nBauen, Verkehr & Umwelt (LS)\nKultur, Tourismus, Stadtmarketing (LS)\nWirtschaft (LS)"
+},
+{
+"kommune": "Geeste",
+"url": "https://www.geeste.de/rathaus-und-buergerservice/veroeffentlichungen/pressemeldungen/2026/verkehrszaehlung-an-der-faehrbruecke-in-klein-hesepe-zeigt-ergebnisse-der-nutzung",
+"end": null,
+"typ": "text/html",
+"bytes": 136760,
+"art": "html",
+"titel": "Verkehrszählung an der Fährbrücke in Klein Hesepe zeigt Ergebnisse der Nutzung",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"verkehrszaehlung": 4,
+"rad": 2
+},
+"auszuege": [
+"Verkehrszählung an der Fährbrücke in Klein Hesepe zeigt Ergebnisse der Nutzung Kontakt Mo - Fr 08:30 - 12:30 Uhr | Mo - Do 14:00 - 16:00 Uhr Open Rathaus Rathaus und Bürgerservice Übersichtsseite Rathaus und Bü",
+"rt Gewerbeflächen und Immobilien EU-Förderung Klimaschutz Energieberatungsangebote für Unternehmen Homepage Rathaus und Bürgerservice Veröffentlichungen Pressemeldungen Pressemeldungen 2026 Verkehrszählung an der Fährbrücke in Klein Hesepe zeigt Ergebnisse der Nutzung Wegweiser Rathaus Politik und Rat Veröffentlichungen Pressemeldungen Bekanntmachungen Stellenangebote Ausschreibungen Auftragsve"
+],
+"links": [
+[
+"https://www.geeste.de/leben-und-wohnen/gemeindeportraet/zahlen-daten-fakten",
+"Zahlen, Daten, Fakten"
+],
+[
+"https://www.geeste.de/rathaus-und-buergerservice/veroeffentlichungen/pressemeldungen/2026/verkehrszaehlung-an-der-faehrbruecke-in-klein-hesepe-zeigt-ergebnisse-der-nutzung",
+"Verkehrszählung an der Fährbrücke in Klein Hesepe zeigt Ergebnisse der Nutzung"
+]
+],
+"volltext": "Verkehrszählung an der Fährbrücke in Klein Hesepe zeigt Ergebnisse der Nutzung\n Kontakt\n Mo - Fr 08:30 - 12:30 Uhr | Mo - Do 14:00 - 16:00 Uhr\n Open Rathaus\n Rathaus und Bürgerservice\n Übersichtsseite Rathaus und Bürgerservice\n Wegweiser Rathaus\n Ansprechpartner\n Service A-Z\n Institutionen\n Fundsachen\n Politik und Rat\n Bürgerinformationssystem\n Wahlen\n KiJuPa - Kinder- und Jugendparlament Geeste\n Ihr Bürgermeister\n Veröffentlichungen\n Pressemeldungen\n Bekanntmachungen\n Stellenangebote\n Ausschreibungen\n Auftragsvergabe\n News aufs Handy\n Ortsrecht\n Satzungen\n Verordnungen\n Haushaltsplan\n Bauleitplanung\n Leben, Wohnen und Klima\n Übersichtsseite Leben, Wohnen und Klima\n Gemeindeporträt\n Zahlen, Daten, Fakten\n Ortsteile\n Wappen\n Historie - Geschichte und Archäologie\n Persönlichkeiten\n Archiv der Gemeinde Geeste\n 125 Jahre Bahnhof Osterbrock\n 125 Jahre Dortmund-Ems-Kanal: die Schleuse Varloh\n Sport\n Hallenbad, Sauna - Öffnungzeiten\n Sporteinrichtungen\n Sportvereine\n Richtlinie für Ehrungen\n Sportangebote in der Gemeinde Geeste\n Kinder und Jugendliche\n Spielplätze\n Ferienpassaktion\n Jugendserver\n Kindergärten\n Pauluskindergarten\n Kita am See\n Kindergarten Abenteuerland\n Josef-Kindergarten\n Klima\n Klimaschutzziele der Gemeinde Geeste\n Leitbild der Gemeinde Geeste\n Maßnahmen Klimaschutz\n Energieberatungsangebote für Haushalte\n Energiebericht\n Klima Klick Geeste - Inhalte rund um das Thema Klima- und Moorschutz\n Carsharing\n STADTRADELN 2026\n Öffentliche Einrichtungen\n Schulen, Kindergärten, Jugendheime\n Kultureinrichtungen, Bibliotheken\n Kirchen\n Vereine und Verbände\n Gesundheit / medizinische Versorgung\n EmslandCare in Geeste\n Wohnen\n Wohnbaugebiete, Grundstücke\n Baulückenkataster\n Bau-Turbo\n Senioren\n Wohnen\n Seniorenbetreuung\n Geeste Mobil\n Mittagstisch\n Tourismus, Freizeit und Kultur\n Übersichtsseite Tourismus, Freizeit und Kultur\n Sehenswürdigkeiten & Sehenswertes\n In der Nachbarschaft\n Urlaub in Geeste von A - Z\n Geführte Radtouren in der Gemeinde Geeste\n Veranstaltungen in der Gemeinde Geeste\n Erinnerungsort \"Lager XII Dalum\"\n Übernachten in der Gemeinde Geeste\n Schlemmen in der Gemeinde Geeste\n Sport- & Freizeitangebote\n Radfahren\n Wandern\n Wassersport\n Boule\n Informationsmaterial\n Wirtschaft und Energie\n Übersichtsseite Wirtschaft und Energie\n Wirtschaftsförderung\n Wirtschaftsstandort\n Gewerbeflächen und Immobilien\n EU-Förderung\n Klimaschutz\n Energieberatungsangebote für Unternehmen\n Homepage\n Rathaus und Bürgerservice\n Veröffentlichungen\n Pressemeldungen\n Pressemeldungen 2026\n Verkehrszählung an der Fährbrücke in Klein Hesepe zeigt Ergebnisse der Nutzung\n Wegweiser Rathaus\n Politik und Rat\n Veröffentlichungen\n Pressemeldungen\n Bekanntmachungen\n Stellenangebote\n Ausschreibungen\n Auftragsvergabe\n News aufs Handy\n Ortsrecht\nVerkehrszählung an der Fährbrücke in Klein Hesepe zeigt Ergebnisse der Nutzung\nIm September 2024 wurde die Fährbrücke offiziell eröffnet. Viele Bürgerinnen und Bürger hatten sich die Verbindung gewünscht, da die nächste Emsüberquerung einige Kilometer entfernt war.\nDie Fährbrücke spielt nicht nur im Radtourismus eine wichtige Rolle, sondern bietet auch Berufspendlerinnen und Berufspendlern im Alltag eine Abkürzung. Um zu ermitteln, wie intensiv die neu geschaffene Verbindung tatsächlich genutzt wird, wurde in diesem Jahr eine Radverkehrszählung durchgeführt.\nIm Zeitraum vom 22. Mai bis 28. Mai 2026 wurden an der Fährbrücke zwischen Klein Hesepe und Schwefingen über 2.500 Querungen gezählt. Das entspricht durchschnittlich mehr als 350 Querungen pro Tag. Die Ergebnisse zeigen, dass die Fährbrücke intensiv genutzt wird und eine wichtige Verbindung für den Radverkehr in der Gemeinde Geeste darstellt.\nÖffnungszeiten\nRathaus\nMo - Fr: 08:30 - 12:30 Uhr \nMo - Do: 14:00 - 16:00 Uhr\nBürgerbüro\nMo - Fr: 08:30 - 12:30 Uhr \nMo  & Di: 14:00 - 16:00 Uhr (Mittwochnachmittag geschlossen)\nDo: 14:00 - 18:00 Uhr \nSa: 10:00 - 12:00 Uhr\nArbeit und Soziales\nMo: 08:30 - 12:30 Uhr \nDo: 14:00 - 16:00 Uhr\nTermine außerhalb der Öffnungszeiten nach Vereinbarung\nSchnellzugriff\n Rathaus und Bürgerservice\n Leben, Wohnen und Klima\n Tourismus, Freizeit und Kultur\n Wirtschaft und Energie\n Impressum\n Datenschutz\nPartnerschaften\n© Gemeinde Geeste\n Kontakt\n Impressum\n Datenschutz"
+},
+{
+"kommune": "Salzgitter",
+"url": "https://www.salzgitter.de/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"end": null,
+"typ": "text/html",
+"bytes": 37257,
+"art": "html",
+"titel": "Radverkehrszählung in Salzgitter-Bad | Salzgitter",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"verkehrszaehlung": 3,
+"rad": 4
+},
+"auszuege": [
+"Radverkehrszählung in Salzgitter-Bad | Salzgitter Inhalt anspringen Datenschutzeinstellungen Durch die Nutzung dieser Website erklären Sie sich damit einverstanden, dass diese Seite Cookies verwendet.Datenschutzerklär",
+"t keine Möglichkeit, ein festgestelltes Nutzungsverhalten einem bestimmten Endgerät zuzuordnen. Weitere Erläuterungen zu Cookies speichern Menü Suche Was möchten Sie finden? Salzgitter 03.06.2025 Radverkehrszählung in Salzgitter-Bad Seit Montag, 2. Juni führt die Stadt Salzgitter auf dem Radweg an der Nord-Süd-Straße, nördlich der Straße Rothenberg, eine Radverkehrszählung durch. vorlesenweitere Informationen"
+],
+"links": [
+[
+"https://app-eu.readspeaker.com/cgi-bin/rsent?customerid=10444&lang=de_de&readid=SP-Main&url=https%3A%2F%2Fwww.salzgitter.de%2Fpressemeldungen%2F2025%2Fradverkehrszaehlung-sz-bad",
+"vorlesen"
+],
+[
+"https://www.salzgitter.de/pressemeldungen/2025/radverkehrszaehlung-sz-bad.php.media/110487/Hinweisschild-Radfahrzaehlung.jpg.scaled/3092e1980b88a3e0799d4de0c7940ee4.jpg",
+""
+],
+[
+"https://www.salzgitter.de/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"German (Deutsch)"
+],
+[
+"https://www.salzgitter.de/en/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"English (English)"
+],
+[
+"https://www.salzgitter.de/fr/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"French (Français)"
+],
+[
+"https://www.salzgitter.de/ar/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Arabic (اللغة العربية)"
+],
+[
+"https://www.salzgitter.de/tr/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Turkish (Türkçe)"
+],
+[
+"https://www.salzgitter.de/ro/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Romanian (Românesc)"
+],
+[
+"https://www.salzgitter.de/bg/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Bulgarian (Български)"
+],
+[
+"https://www.salzgitter.de/pl/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Polish (Polski)"
+],
+[
+"https://www.salzgitter.de/uk/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Ukrainian (Українська)"
+],
+[
+"https://www.salzgitter.de/ru/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Russian (Русский)"
+],
+[
+"https://www.salzgitter.de/sr/pressemeldungen/2025/radverkehrszaehlung-sz-bad",
+"Serbian (српски)"
+]
+],
+"volltext": "Radverkehrszählung in Salzgitter-Bad | Salzgitter\n Inhalt anspringen\nDatenschutzeinstellungen\nDurch die Nutzung dieser Website erklären Sie sich damit einverstanden, dass diese Seite Cookies verwendet.Datenschutzerklärung (Öffnet in einem neuen Tab)\nNur notwendige CookiesDatenschutzeinstellungen anpassenAlle Cookies akzeptieren\nFunktionale Cookies \nFunktionale Cookies sind notwendig, um Ihnen die grundlegenden Funktionen dieser Webseite bereitstellen zu können und können daher nicht deaktiviert werden.\nStatistische Auswertungen mit Matomo \nIndem Sie diese Checkbox aktivieren, erlauben Sie uns, Ihre Aktivität auf unserer Website mit dem Statistik-Tool Matomo zu erfassen. Die Datenerhebung erfolgt anonym mit Hilfe von Textdateien, sog. \"Cookies\". Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieses Internetangebotes dienen der Verbesserung unserer Website. Alle erhobenen Daten werden auf dem Server des Anbieters in Deutschland gespeichert. Es werden keine personenbezogenen Daten gespeichert, insbesondere wird Ihre IP-Adresse automatisch gekürzt und so anonymisiert. Es besteht somit keine Möglichkeit, ein festgestelltes Nutzungsverhalten einem bestimmten Endgerät zuzuordnen.\nWeitere Erläuterungen zu Cookies\nspeichern \nMenü\nSuche\nWas möchten Sie finden?\nSalzgitter\n03.06.2025\nRadverkehrszählung in Salzgitter-Bad\nSeit Montag, 2. Juni führt die Stadt Salzgitter auf dem Radweg an der Nord-Süd-Straße, nördlich der Straße Rothenberg, eine Radverkehrszählung durch. \nvorlesenweitere Informationen zum Readspeaker \nZiel ist es, verlässliche Daten für die künftige Radverkehrsplanung zu gewinnen. Personenbezogene Daten werden bei der Zählung nicht erhoben. Die Zählung dauert bis einschließlich Sonntag, 29. Juni. \nErläuterungen und Hinweise\nBildnachweise\nStadt Salzgitter \nAnschrift\nStadt Salzgitter\nJoachim-Campe-Straße 6 - 8\n38226 Salzgitter\nTelefon: 05341 / 839-0\nTelefax: 05341 / 839-4900\nService\nKontakt\nÖffnungszeiten und Erreichbarkeiten\nÜbersicht Leichte Sprache\nHilfe zur Vorlesen-Funktion\nDirekt zu\nFeuerwehr\nStadtreinigung\nRatsinformationssystem (Öffnet in einem neuen Tab)\nAuslegungen und Bekanntmachungen\nDatenschutz\nBarrierefreiheit\nImpressum \nGerman (Deutsch)\nEnglish (English)\nFrench (Français)\nArabic (اللغة العربية)\nTurkish (Türkçe)\nRomanian (Românesc)\nBulgarian (Български)\nPolish (Polski)\nUkrainian (Українська)\nRussian (Русский)\nSerbian (српски)"
+},
+{
+"kommune": "Neustadt am Rübenberge",
+"url": "https://www.neustadt-a-rbge.de/rathaus/pressestelle/presse-archiv/2021/mai/verkehrszaehlung-in-der-kernstadt/",
+"end": null,
+"typ": "text/html",
+"bytes": 340000,
+"art": "html",
+"titel": "Verkehrszählung in der Kernstadt | Stadtverwaltung Neustadt am Rübenberge",
+"dateilinks": [],
+"dateien": [],
+"begriffe": {
+"verkehrszaehlung": 3,
+"verkehrsmenge": 1,
+"kfz_stunde": 1,
+"radar": 5,
+"kamera": 1
+},
+"auszuege": [
+"Verkehrszählung in der Kernstadt | Stadtverwaltung Neustadt am Rübenberge Suchbegriff eingeben... Seiten{{ sa2search.resultSets['self:live'].result.totalCount > sa2search.resultSets['self:live'].perPage ? '> ' + sa2",
+"ten Ausbildung, Studium & Praktikum Weiterbildungsmöglichkeiten Der öffentliche Dienst Ansprechpartner Suche © Stadt Neustadt/Mirko Bartels Sie sind hier: Rathaus Pressestelle Presse-Archiv 2021 Mai Verkehrszählung in der Kernstadt Verkehrszählung in der Kernstadt An insgesamt 20 Standorten werden durch Videotechnik und Seitenradarmessgeräte vorbeifahrenden Kraftfahrzeuge erfasst und gezählt. 10. Mai 2021 MA",
+"Der Verkehrsfluss wird durch die Messungen nicht beeinträchtigt. An insgesamt 20 Standorten werden durch Videotechnik und Seitenradarmessgeräte vorbeifahrenden Kraftfahrzeuge erfasst und gezählt. Die Verkehrsmengen werden an allen Standorten in beide Fahrtrichtungen erfasst und nach Fahrzeugklassen unterschieden. Die ermittelten Daten dienen als Grundlage zur Erstellung eines Verkehrsmodells und sind wichtiger",
+"den. Darauf aufbauend können zielgerichtete Maßnahmen zur Steuerung und möglichen Verlagerung des Kfz-Verkehrs entwickelt werden. Um die Wege der Fahrzeuge genau nachvollziehen zu können, erfasst ein Kamerasystem von 6.00 bis 19.00 Uhr an neun Standorten deren Kennzeichen. Diese werden bei der Datenaufnahme verschlüsselt, sodass der Datenschutz gewährleistet ist. Zusätzlich werden an den Standorten der"
+],
+"links": [
+[
+"https://www.neustadt-a-rbge.de/wirtschaft/wirtschaftsstandort/standortkennzahlen/",
+"Standortkennzahlen"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/",
+"Mobilität & Verkehr"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/mobilitaet/",
+"Mobilität"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/verkehr/",
+"Verkehr"
+],
+[
+"https://www.neustadt-a-rbge.de/wirtschaft/wirtschaftsstandort/standortkennzahlen/",
+"Standortkennzahlen"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/",
+"Mobilität & Verkehr"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/mobilitaet/",
+"Mobilität"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/mobilitaet/stadtradeln/",
+"STADTRADELN"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/mobilitaet/oepnv/",
+"ÖPNV"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/mobilitaet/radfahren/",
+"Radfahren"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/mobilitaet/parken/",
+"Parken"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/mobilitaet/mitfahrbaenke/",
+"Mitfahrbänke"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/verkehr/",
+"Verkehr"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/verkehr/verkehrskonzept/",
+"Verkehrskonzept"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/verkehr/tempokontrollen/",
+"Tempokontrollen"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/verkehr/staedtische-strassen/",
+"Städtische Straßen"
+],
+[
+"https://www.neustadt-a-rbge.de/leben-in-neustadt/mobilitaet-verkehr/verkehr/aufhebung-hoehengleicher-bahnuebergaenge/",
+"Aufhebung höhengleicher Bahnübergänge"
+],
+[
+"https://www.neustadt-a-rbge.de/rathaus/pressestelle/presse-archiv/2021/mai/verkehrszaehlung-in-der-kernstadt/",
+"Verkehrszählung in der Kernstadt"
+]
+],
+"volltext": "Verkehrszählung in der Kernstadt | Stadtverwaltung Neustadt am Rübenberge\nSuchbegriff eingeben...\nSeiten{{ sa2search.resultSets['self:live'].result.totalCount > sa2search.resultSets['self:live'].perPage ? '> ' + sa2search.resultSets['self:live'].perPage : sa2search.resultSets['self:live'].result.totalCount}}\nLeistungen{{ sa2search.resultSets['bwc:entry'].result.totalCount > sa2search.resultSets['bwc:entry'].perPage ? '> ' + sa2search.resultSets['bwc:entry'].perPage : sa2search.resultSets['bwc:entry'].result.totalCount}}\nAbteilungen{{ sa2search.resultSets['bwc:department'].result.totalCount > sa2search.resultSets['bwc:department'].perPage ? '> ' + sa2search.resultSets['bwc:department'].perPage : sa2search.resultSets['bwc:department'].result.totalCount}}\nMitarbeitende{{ sa2search.resultSets['bwc:employee'].result.totalCount > sa2search.resultSets['bwc:employee'].perPage ? '> ' + sa2search.resultSets['bwc:employee'].perPage : sa2search.resultSets['bwc:employee'].result.totalCount}}\nFormulare{{ sa2search.resultSets['bwc:form'].result.totalCount > sa2search.resultSets['bwc:form'].perPage ? '> ' + sa2search.resultSets['bwc:form'].perPage : sa2search.resultSets['bwc:form'].result.totalCount}}\nOnline-Verfahren{{ sa2search.resultSets['bwc:procedure'].result.totalCount > sa2search.resultSets['bwc:procedure'].perPage ? '> ' + sa2search.resultSets['bwc:procedure'].perPage : sa2search.resultSets['bwc:procedure'].result.totalCount}}\nSitzungen{{ sa2search.resultSets['bwc:rismeeting'].result.totalCount > sa2search.resultSets['bwc:rismeeting'].perPage ? '> ' + sa2search.resultSets['bwc:rismeeting'].perPage : sa2search.resultSets['bwc:rismeeting'].result.totalCount}}\nGremien{{ sa2search.resultSets['bwc:risorganization'].result.totalCount > sa2search.resultSets['bwc:risorganization'].perPage ? '> ' + sa2search.resultSets['bwc:risorganization'].perPage : sa2search.resultSets['bwc:risorganization'].result.totalCount}}\nVorlagen{{ sa2search.resultSets['bwc:rispaper'].result.totalCount > sa2search.resultSets['bwc:rispaper'].perPage ? '> ' + sa2search.resultSets['bwc:rispaper'].perPage : sa2search.resultSets['bwc:rispaper'].result.totalCount}}\nMandatstragende{{ sa2search.resultSets['bwc:risperson'].result.totalCount > sa2search.resultSets['bwc:risperson'].perPage ? '> ' + sa2search.resultSets['bwc:risperson'].perPage : sa2search.resultSets['bwc:risperson'].result.totalCount}}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{ item.name }}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{ item.name }}\n {{ item.kommuneName }}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{ item.name }}\n {{ item.kommuneName }}\n {{ telephone }}\n {{faxNumber}}\n {{email}}\n {{ website }}\nÖffnungszeiten\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n{{ item.honorificPrefix +' '+ item.familyName +', '+ item.givenName | trim }}\n {{ item.kommuneName }}\n {{telephone}}\n {{faxNumber}}\n {{item.mobil}}\n {{email}}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{ item.name }}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{ item.name }}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{ item.name }}\n {{ item.start | date:\"short\"}}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{ item.name }}\n {{ item.classification }}\n {{ item.website }}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n {{body.name}}\n - \n {{underDirectionOf.name}}\n {{ item.paperType }} - {{ item.reference }}\nDie Suche konnte nicht ausgeführt werden. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.\n{{ item.formOfAddress +' '+ item.title[0] +' '+ item.familyName +', '+ item.givenName | trim }}\n {{phone}}\n {{mail}}\n Menü\nRathaus\nBürgerportal\nWirtschaft\nLeben in Neustadt\nStadtpolitik\nArbeiten in Neustadt\n Mehr\nQuicklinks\nRathaus\nBürgermeisterin\nBürgermeisterin direkt\nStellvertretungen\nPressestelle\nPressemeldungen\nFlyer & Broschüren\nFotos, Logo & Wappen\nPresse-Archiv\nStellenausschreibungen Startseite\nGleichstellungsbeauftragte\nRunder Tisch gegen häusliche Gewalt\nAktuelles\nVeranstaltungen\nBekanntmachungen\nAusschreibungen & Vergaben\nAusschreibungen\nBeabsichtigte Ausschreibungen\nAuftragsvergaben\nFreiberufliche Leistungen\nIhre Verwaltung\nVerwaltungsvorstand\nHaushalt & Finanzen\nSteuern & Gebühren\nInteraktiver Haushalt\nStädt. Unternehmensbeteiligung\nHaushaltspläne und Jahresabschlüsse\nOrtsrecht & Satzungen\nAllgemeines\nFinanzwesen\nRecht, Sicherheit & Ordnung\nSchule & Kultur\nSoziales, Jugend & Gesundheit\nBau, Umwelt & Verkehr\nFriedhöfe, Wasser & Abwasser\nVerträge & Vereinbarungen\nSchiedspersonen\nBürgerportal\nRathausdirekt - Onlineservices\nStandesamt\nGeburten\nHeiraten\nSterbefälle\nKirchenaustritt\nNamensrecht\nUrkunden\nStadtbüro\nFormularcenter\nBeschwerdestelle\nKFZ-Zulassung\nOnline-Terminservice\nÖffentliche Ordnung\nLärm\nWilder Müll\nHunde\nSchädlinge\nVeranstaltung online anmelden\nFundtiere\nWirtschaft\nWirtschaftsstandort\nInnenstadt\nGewerbegebiete\nImagefilm Wirtschaftsstandort Neustadt\nBreitbandversorgung\nStandortkennzahlen\nWirtschaftsförderung\nWirtschaftsförderung GmbH\nStadtmarketing\nGemeinschaft für Wirtschaftsförderung\nNordkreisinitiative\nIdeenstadtwerke\nGewerbeimmobilien/-flächen\nFlächen im Gewerbegebiet Ost (Erweiterung)\nLeerstands- und Flächenmanagement\nGewerbe-Immobiliendatenbank\nEinzelhandelskonzept\nVergnügungsstättenkonzept\nService für Unternehmen\nBeratungsleistung\nExistenzgründung\nFachkräftegewinnung\nAusbildung\nFördermöglichkeiten\nFrauenNetzWerken\nUnternehmensnetzwerke\nVeranstaltungskalender Wirtschaft\nLeben in Neustadt\nFamilie, Kinder & Jugend\nSchule & Bildung\nAngebote für Kinder und Familien\nKitas in Neustadt\nJugendpflege\nStadtinfo & Stadtentwicklung\nStadtinfo\nStadtentwicklung\nStadtbibliothek\nService & Angebote\nInfos für Krippen, Kitas und Schulen\nStadtteilbüchereien\nBibliothek der Dinge\nVeranstaltungskalender\nAnmeldung & Benutzung\nMobilität & Verkehr\nMobilität\nVerkehr\nGesundheit & Vorsorge\nKlinikum Neustadt\nNotdienste\nSelbsthilfegruppen\nAltenpflege\nBauen & Wohnen\nBauleitplanung\nWindenergie\nPV-Freiflächenanlagen\nWohnraumförderung\nGrundstücke\nBauantrag & Baugenehmigung\nVermarktung städtischer Immobilien\nEntwicklungsbereich Auenland\nEntwicklungsbereich Hüttengelände - Siemensstraße\nSicherheit & Ordnung\nStraßenreinigung\nWinterdienst\nFeuerwehr & Brandschutz\nNotfall - Info\nHochwasser und Starkregen\nWaldbrand & Moorbrand\nUnwetter & Sturm\nFriedhöfe & Bestattungen\nÖffentliche Toiletten\nFreizeit & Tourismus\nVeranstaltungskalender\nUmwelt & Klimaschutz\nKlimaschutz\nBiodiversität\nEnergiespartipps\nSchutzgebiete\nLandschaftsplanung\nGrünflächen\nSuedlink\nLärmschutz\nAbwasser - Regenwasser\nNordWestLink\nAkzeptanzabgabe\nGesellschaft & Soziales\nSozialhilfe & Asyl\nWohngeld\nElterngeld\nWohnberechtigungsschein\nBehindertenbeauftragte\nReligion\nSozialpädagogische Hilfen\nSeniorenarbeit\nInformation für Menschen mit Behinderung\nInformationen für Obdachlose\nInformationen für geflüchtete Menschen\nBürgerengagement\nBeratungsführer\nGleichstellungsbeauftragte\nKultur\nSchloss Landestrost\nKunst & Kultur\nKulturförderung\nSport & Bewegung\nStadtpolitik\nRat\nOrtsräte\nInfos aus den Gremien\nWahlen\nPräventionsrat\nStadtelternrat\nIntegrationsbeirat\nArbeiten in Neustadt\nStellenangebote\nstaatl. anerkannte Erzieher*in und Sozialassistenten\nAusbildung, Studium & Praktikum\nWeiterbildungsmöglichkeiten\nDer öffentliche Dienst\nAnsprechpartner\nRathaus\nBürgermeisterin\nBürgermeisterin direkt\nAnmeldung NJE 2027\nStellvertretungen\nPressestelle\nPressemeldungen\n2025\n2026\nFlyer & Broschüren\nFotos, Logo & Wappen\nPresse-Archiv\n2024\n2025\nStellenausschreibungen Startseite\nInformatik-Ingenieur/-in Bereich Verwaltung und Feuerwehr\nSchulhausmeister/-in Grundschule Stockhausenstraße \nAssistenz der Bürgermeisterin\nGleichstellungsbeauftragte\nRunder Tisch gegen häusliche Gewalt\nAktuelles\nFrauenNetzWerken im Schloss Landestrost\nVereinbarkeit von Beruf & Familie meistern\nEqual Pay Day 2025\nmenschlich ∙ solidarisch ∙ fair \nSchwangerschaftsverhütung gleichberechtigt gestalten\nOffener Treff für Alleinerziehende\nFrauenNetzWerken – KI für mein Unternehmen nutzbar machen\nVortrag: „Frauen und Finanzen“\nGemeinsam alleinerziehend in Neustadt\nFrauen starten durch: (Wieder-)Einstieg in den Job\nAltersvorsorge für Frauen – Rente richtig angehen\nDie Rote Bank am Roten Weg\nAusstellung „Gemeinsam gegen Sexismus“\nVeranstaltungen\nBekanntmachungen\nAusschreibungen & Vergaben\nAusschreibungen\nBeabsichtigte Ausschreibungen\nAuftragsvergaben\nFreiberufliche Leistungen\nIhre Verwaltung\nVerwaltungsvorstand\nHaushalt & Finanzen\nSteuern & Gebühren\nInteraktiver Haushalt\nStädt. Unternehmensbeteiligung\nHaushaltspläne und Jahresabschlüsse\nOrtsrecht & Satzungen\nAllgemeines\nFinanzwesen\nRecht, Sicherheit & Ordnung\nSchule & Kultur\nSoziales, Jugend & Gesundheit\nBau, Umwelt & Verkehr\nFriedhöfe, Wasser & Abwasser\nVerträge & Vereinbarungen\nSchiedspersonen\nBürgerportal\nRathausdirekt - Onlineservices\nStandesamt\nGeburten\nHeiraten\nSterbefälle\nKirchenaustritt\nNamensrecht\nUrkunden\nStadtbüro\nFormularcenter\nBeschwerdestelle\nKFZ-Zulassung\nOnline-Terminservice\nÖffentliche Ordnung\nLärm\nWilder Müll\nHunde\nSchädlinge\nVeranstaltung online anmelden\nFundtiere\nWirtschaft\nWirtschaftsstandort\nInnenstadt\nGewerbegebiete\nImagefilm Wirtschaftsstandort Neustadt\nBreitbandversorgung\nStandortkennzahlen\nWirtschaftsförderung\nWirtschaftsförderung GmbH\nStadtmarketing\nGemeinschaft für Wirtschaftsförderung\nNordkreisinitiative\nIdeenstadtwerke\nGewerbeimmobilien/-flächen\nFlächen im Gewerbegebiet Ost (Erweiterung)\nLeerstands- und Flächenmanagement\nGewerbe-Immobiliendatenbank\nEinzelhandelskonzept\nVergnügungsstättenkonzept\nService für Unternehmen\nBeratungsleistung\nExistenzgründung\nFachkräftegewinnung\nAusbildung\nFördermöglichkeiten\nFrauenNetzWerken\nUnternehmensnetzwerke\nVeranstaltungskalender Wirtschaft\nLeben in Neustadt\nFamilie, Kinder & Jugend\nSchule & Bildung\nGrundschule\nweiterführende Schulen\nSchulanmeldungen\nBerufsbildung\nSchulsozialarbeit\nFörderprojekte\nAngebote für Kinder und Familien\nFamilien Service Büro\nKindertagespflege\nKinderbetreuung\nFrühe Hilfen\nKita-App\nKitas in Neustadt\nFamilienzentrum Kinder- und Jugendhaus\nKita Ahnsförth\nKita Auengärten\nKita Bordenau\nKita Borstel / Nöpke\nKita Büren\nKita Dudensen\nKita Hagen\nKita Helstorf\nKita Mardorf\nKita Poggenhagen\nKita Scharrel\nKita Schneeren\nKita Stöckendrebber\nKita Suttorf\nJugendpflege\nAktuelles/Bildergalerie\nOffene Angebote\nFerienbetreuung, Ferienpass, Freizeitangebote\nVernetzung, Equipment, Raumnutzung\nAusbildungen und Stellenangebote\nKonzepte und Richtlinien\nStadtinfo & Stadtentwicklung\nStadtinfo\nOrtschaften\nDaten & Statistiken\nStadtgeschichte\nStädtepartnerschaft\nLeitbild\nStadtentwicklung\nInnenstadtentwicklung\nLeader-Region Meer & Moor\nDorferneuerungsprogramme\nStadtbibliothek\nService & Angebote\nInfos für Krippen, Kitas und Schulen\nStadtteilbüchereien\nBibliothek der Dinge\nFür Kinder\nRobotik & Lernen (MINT)\nHobby & Freizeit\nMusikinstrumente\nSpielen & Sport\nParty\nThemenkisten Demenz\nVeranstaltungskalender\nAnmeldung & Benutzung\nMobilität & Verkehr\nMobilität\nSTADTRADELN\nÖPNV\nRadfahren\nParken\nMitfahrbänke\nVerkehr\nVerkehrskonzept\nTempokontrollen\nStädtische Straßen\nAufhebung höhengleicher Bahnübergänge\nGesundheit & Vorsorge\nKlinikum Neustadt\nNotdienste\nSelbsthilfegruppen\nAltenpflege\nBauen & Wohnen\nBauleitplanung\nWindenergie\nPV-Freiflächenanlagen\nWohnraumförderung\nGrundstücke\nBauantrag & Baugenehmigung\nAbgeschlossenheitsbescheinigung\nAkteneinsicht\nBauberatung\nBaugenehmigung\nBaulasten\nBauvorbescheid\nDenkmalpflege\nfliegende Bauten\nHausnummern\nVermarktung städtischer Immobilien\nEntwicklungsbereich Auenland\nEntwicklungsbereich Hüttengelände - Siemensstraße\nSicherheit & Ordnung\nStraßenreinigung\nWinterdienst\nFeuerwehr & Brandschutz\nNotfall - Info\nHochwasser und Starkregen\nHochwasserschutz\nStarkregen\nHochwasserschutz - Planfeststellungsverfahren zur Öffnung des Deichverteidigungsweges\nWaldbrand & Moorbrand\nUnwetter & Sturm\nFriedhöfe & Bestattungen\nÖffentliche Toiletten\nFreizeit & Tourismus\nVeranstaltungskalender\nUmwelt & Klimaschutz\nKlimaschutz\nBiodiversität\nEnergiespartipps\nSchutzgebiete\nLandschaftsplanung\nGrünflächen\nSuedlink\nLärmschutz\nAbwasser - Regenwasser\nNordWestLink\nAkzeptanzabgabe\nGesellschaft & Soziales\nSozialhilfe & Asyl\nWohngeld\nElterngeld\nWohnberechtigungsschein\nBehindertenbeauftragte\nReligion\nSozialpädagogische Hilfen\nSeniorenarbeit\nInformation für Menschen mit Behinderung\nTag der Begegnung 2026\nInformationen für Obdachlose\nInformationen für geflüchtete Menschen\nBürgerengagement\nBeratungsführer\nGleichstellungsbeauftragte\nKultur\nSchloss Landestrost\nKunst & Kultur\nMuseum zur Stadtgeschichte\nTheater und Kleinkunst\nMuseen & Vereine\nKino in Neustadt\nKunst am Bahnhof\nKulturförderung\nSport & Bewegung\nStadtpolitik\nRat\nOrtsräte\nInfos aus den Gremien\nWahlen\nPräventionsrat\nStadtelternrat\nIntegrationsbeirat\nArbeiten in Neustadt\nStellenangebote\nstaatl. anerkannte Erzieher*in und Sozialassistenten\nAusbildung, Studium & Praktikum\nWeiterbildungsmöglichkeiten\nDer öffentliche Dienst\nAnsprechpartner\n Suche\n© Stadt Neustadt/Mirko Bartels\nSie sind hier:\nRathaus\nPressestelle\nPresse-Archiv\n2021\nMai\nVerkehrszählung in der Kernstadt\nVerkehrszählung in der Kernstadt\nAn insgesamt 20 Standorten werden durch Videotechnik und Seitenradarmessgeräte vorbeifahrenden Kraftfahrzeuge erfasst und gezählt. \n10. Mai 2021  \nMANFRED SCHAEFER, © ©fotohansel - stock.adobe.com\nWie viele Autos fahren täglich auf den Neustädter Straßen? Wie viele Fahrzeuge queren die Kernstadt ohne irgendwo anzuhalten und wie viele Einwohnerinnen und Einwohner fahren nur wenige hundert Meter, um von A nach B zu kommen? Um diese und weitere verkehrliche Fragen zu klären, lässt die Stadt Neustadt in der kommenden Woche den Verkehr an den innerstädtischen Hauptverkehrsstraßen zählen. Der Verkehrsfluss wird durch die Messungen nicht beeinträchtigt.\nAn insgesamt 20 Standorten werden durch Videotechnik und Seitenradarmessgeräte vorbeifahrenden Kraftfahrzeuge erfasst und gezählt. Die Verkehrsmengen werden an allen Standorten in beide Fahrtrichtungen erfasst und nach Fahrzeugklassen unterschieden.\nDie ermittelten Daten dienen als Grundlage zur Erstellung eines Verkehrsmodells und sind wichtiger Bestandteil für die Fortschreibung des städtischen Verkehrsentwicklungsplans. Aus den Ergebnissen lassen sich beispielsweise die Quell- und Zielverkehre sowie die Durchgangsverkehre ableiten und unterscheiden. Darauf aufbauend können zielgerichtete Maßnahmen zur Steuerung und möglichen Verlagerung des Kfz-Verkehrs entwickelt werden.\nUm die Wege der Fahrzeuge genau nachvollziehen zu können, erfasst ein Kamerasystem von 6.00 bis 19.00 Uhr an neun Standorten deren Kennzeichen. Diese werden bei der Datenaufnahme verschlüsselt, sodass der Datenschutz gewährleistet ist. Zusätzlich werden an den Standorten der Kennzeichenerfassung alle Kraftfahrzeuge auch durch Seitenradargeräte erfasst, die 24 Stunden eingeschaltet sind.\nErgänzend dazu finden an 20 Knotenpunkten entlang der Hauptverkehrsstraßen von 6.00 bis 10.00 Uhr und von 15.00 bis 19.00 Uhr gesonderte Zählungen statt, um einen Überblick über den Geradeausverkehr sowie die relevanten Abbiegebeziehungen zu erhalten. Aus diesen Daten lassen sich die Hauptverkehrsströme ableiten, die unter anderem Rückschlüsse auf die werktäglichen Fahrtenrelationen im Stadtgebiet erlauben. Zudem lassen sich die Spitzenstunden für mögliche weitergehende Detailbetrachtungen der Knotenpunkte bestimmen. \nSeite 1 von 1\nKontakt\nStadtverwaltung Neustadt am Rübenberge\nAn der Stadtmauer 1\n31535 Neustadt am Rübenberge \n+49 5032 84-0\n+49 5032 84-00001\nstadtverwaltung@neustadt-a-rbge.de\neRechnung\nLeitweg-ID: 032410012012-0-73\n rechnungen@neustadt-a-rbge.de\nInformationen\nKontakt\nImpressum\nDatenschutz\nDatenschutz Abgaben \nBarrierefreiheit\nÖffnungszeiten\nVerwaltung\nKlicken, um weitere Öffnungs- oder Schließzeiten auszublenden\nGeschlossen:öffnet nächsten Montag um 08:00 Uhr\nMontag\n08:00 - 16:00 Uhr Von 08:00 bis 16:00 Uhr \nDienstag\n08:00 - 16:00 Uhr Von 08:00 bis 16:00 Uhr \nMittwoch\n08:00 - 16:00 Uhr Von 08:00 bis 16:00 Uhr \nDonnerstag\n08:00 - 18:00 Uhr Von 08:00 bis 18:00 Uhr \nFreitag\n08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr \nBürgerservice (Stadtbüro & Kfz-Zulassung)\nKlicken, um weitere Öffnungs- oder Schließzeiten auszublenden\nGeschlossen:öffnet nächsten Montag um 08:00 Uhr\nMontag\n08:00 - 11:30 Uhr Von 08:00 bis 11:30 Uhr 13:00 - 16:00 Uhr Von 13:00 bis 16:00 Uhr \nDienstag\n08:00 - 11:30 Uhr Von 08:00 bis 11:30 Uhr 13:00 - 16:00 Uhr Von 13:00 bis 16:00 Uhr \nMittwoch\n08:00 - 11:30 Uhr Von 08:00 bis 11:30 Uhr 13:00 - 16:00 Uhr Von 13:00 bis 16:00 Uhr \nDonnerstag\n13:00 - 18:00 Uhr Von 13:00 bis 18:00 Uhr \nFreitag\n08:00 - 12:00 Uhr Von 08:00 bis 12:00 Uhr"
+}
+]
