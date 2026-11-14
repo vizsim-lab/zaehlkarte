@@ -1,7 +1,8 @@
 # Entwicklungswerkzeug: Open-Data-Portale und Gemeindeseiten nach Verkehrszählungen durchsuchen
 # (tools/*.py) und das Ergebnis in denselben Branch legen (Pushes mit GITHUB_TOKEN starten keinen
 # neuen Lauf). Teile: portale, webseiten (tools/hessen.py), lesen (tools/hessen2.py);
-# Runde 3 (r3_<LAND>): tools/land.py + tools/land_lesen.py, mobilithek: tools/mobilithek_alle.py.
+# Runde 3 (r3_<LAND>): tools/land.py + tools/land_lesen.py, mobilithek: tools/mobilithek_alle.py;
+# Quellen ohne Lizenz: holen<N> (tools/holen.py mit tools/holen<N>.txt), angebote2.
 name: Erkundung Zähldaten
 on:
   push:
@@ -17,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [gezielt6]
+        teil: [holen1, angebote2]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
@@ -37,6 +38,8 @@ jobs:
             ags) timeout 20m python3 tools/ags.py ergebnis/ags || true ;;
             gezielt*) timeout 40m python3 tools/gezielt_lesen.py "ergebnis/runde3/${{ matrix.teil }}" "tools/r3_gezielt_${{ matrix.teil }}.txt" || true ;;
             mobilithek) timeout 20m python3 tools/mobilithek_alle.py ergebnis/runde3 || true ;;
+            holen*) timeout 30m python3 tools/holen.py "ergebnis/ohne_lizenz/${{ matrix.teil }}" "tools/${{ matrix.teil }}.txt" || true ;;
+            angebote2) timeout 10m python3 tools/mobilithek_angebote.py ergebnis/ohne_lizenz/angebote -1611162702897177411 -6042365511594508563 || true ;;
             angebote) timeout 10m python3 tools/mobilithek_angebote.py ergebnis/runde3/angebote -3266808188115042159 903287344194932736 -4859503742463304999 -1747083335311792689 -8264466313321172654 -7110458871198256509 922430355709591552 973579563426357248 837297127089401856 110000000003145002 || true ;;
             r3_*)
               l="${{ matrix.teil }}"; l="${l#r3_}"
