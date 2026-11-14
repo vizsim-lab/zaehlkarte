@@ -1,11 +1,19 @@
 == Abruf
-dresden_rad: 38 Zählstellen, Jahre [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+dresden_rad: 38 Zählstellen, Jahre [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
 Fehler: []
-Dauer: 606 s
-Rohdaten: 13 Dateien, 39.8 MB
+Dauer: 1598 s
+Rohdaten: 21 Dateien, 48.5 MB
 {
- "abgerufen": "2026-11-14T20:35:35Z",
+ "abgerufen": "2026-11-14T21:07:16Z",
  "jahre": [
+  2009,
+  2010,
+  2011,
+  2012,
+  2013,
+  2014,
+  2015,
+  2016,
   2017,
   2018,
   2019,
@@ -22,17 +30,17 @@ Rohdaten: 13 Dateien, 39.8 MB
 }
 
 == Lesen
-1284818 Zeilen, 38 Zählstellen, 1284512 Stunden in der Karte (krumme Zeitstempel, Stunde nicht gezählt: 104; ohne Wert einer Richtung: 0; 2 Uhr am Tag der Sommerzeit verworfen: 0); jüngster Wert 2026-11-14
-Reihe 2017-01-01 – 2026-11-14, 38 Stellen
+1566912 Zeilen, 38 Zählstellen, 1566562 Stunden in der Karte (krumme Zeitstempel, Stunde nicht gezählt: 107; ohne Wert einer Richtung: 0; 2 Uhr am Tag der Sommerzeit verworfen: 0); jüngster Wert 2026-11-14
+Reihe 2009-09-25 – 2026-11-14, 38 Stellen
 == Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
 F01004 | Antonstraße | zwischen Bhf Neustadt und Leipziger Straße | 2024-04-29 – 2026-11-14 | 922 | 2026-11-13 | 2507
 F01012 | Glacisstraße | Wigardstraße | 2025-08-14 – 2026-11-14 | 454 | 2026-11-13 | 1216
 F01019 | Grunaer Straße | Nähe Straßburger Platz | 2024-07-29 – 2026-11-14 | 829 | 2026-11-13 | 1602
 F01020 | Lennéstraße | in Höhe Hauptallee | 2017-10-10 – 2026-11-14 | 3195 | 2026-11-13 | 1223
 F01032 | Ammonstraße | in Höhe Rosenstraße | 2024-02-26 – 2026-11-14 | 986 | 2026-11-13 | 1688
-F01092 | Albertbrücke | in Höhe Rosa-Luxemburg-Platz | 2017-01-01 – 2026-11-14 | 3588 | 2026-11-13 | 4597
+F01092 | Albertbrücke | in Höhe Rosa-Luxemburg-Platz | 2016-08-24 – 2026-11-14 | 3716 | 2026-11-13 | 4567
 F01099 | Albertbrücke_1 | Erweiterung FZS Albertbrücke, Rampe Altstadt | 2025-04-09 – 2026-11-14 | 581 | 2026-11-13 | 1214
-F02003 | St. Petersburger Straße | in Höhe Kreuzstraße | 2017-01-01 – 2025-04-03 | 2993 | 2025-04-02 | 1441
+F02003 | St. Petersburger Straße | in Höhe Kreuzstraße | 2009-09-25 – 2025-04-03 | 5569 | 2025-04-02 | 1349
 F02003_1 | St. Petersburger Straße West | i.H. Kreuzstraße | 2025-04-09 – 2026-11-14 | 578 | 2026-11-13 | 651
 F02003_2 | St. Petersburger Straße Ost | i.H. Kreuzstraße | 2025-04-09 – 2026-11-14 | 577 | 2026-11-13 | 524
 F02005 | Rathenauplatz Ost | in Höhe Carolabrücke | 2024-05-02 – 2025-03-12 | 312 | 2025-03-11 | 0
@@ -40,30 +48,38 @@ F02012 | Terrassenufer | in Höhe Steinstraße | 2023-11-10 – 2026-11-14 | 108
 F02026 | Budapester Straße | in Höhe Josephinenstraße | 2023-12-05 – 2026-11-14 | 1064 | 2026-11-13 | 700
 F02034 | Freiberger Straße | in Höhe Alfred-Althus-Straße | 2023-09-28 – 2026-11-14 | 1133 | 2026-11-13 | 1763
 F02036 | Pillnitzer Straße | i.H. Rietschelstraße | 2026-02-19 – 2026-11-14 | 250 | 2026-11-13 | 584
-F02092 | Fußgängerquerung St. Petersburger Straße | in Höhe Kreuzstraße | 2017-01-01 – 2026-11-14 | 3584 | 2026-11-13 | 1354
+F02092 | Fußgängerquerung St. Petersburger Straße | in Höhe Kreuzstraße | 2009-09-28 – 2026-11-14 | 6172 | 2026-11-13 | 1221
 F02093 | Carolabrücke | Höhe Synagoge | 2024-04-08 – 2025-03-12 | 336 | 2025-03-11 | 0
 F02500 | Elberadweg Terrassenufer | in Höhe Steinstraße | 2023-11-10 – 2026-11-14 | 1085 | 2026-11-13 | 1184
 F03023 | Striesener Straße | zwischen Fetscherplatz und Güntzstraße | 2024-11-07 – 2026-11-14 | 729 | 2026-11-13 | 1632
-F03042 | Elberadweg | in Höhe Waldschlößchenbrücke | 2017-01-01 – 2026-11-14 | 3584 | 2026-11-13 | 1702
-F03043 | Waldschlößchenbrücke | in Höhe Rampe Altstadt | 2017-01-01 – 2026-11-14 | 3586 | 2026-11-13 | 3132
+F03042 | Elberadweg | in Höhe Waldschlößchenbrücke | 2015-06-10 – 2026-11-14 | 4150 | 2026-11-13 | 1686
+F03043 | Waldschlößchenbrücke | in Höhe Rampe Altstadt | 2013-08-16 – 2026-11-14 | 4810 | 2026-11-13 | 2794
 F03155 | Käthe-Kollwitz-Ufer | Nähe Waldschlößchenbrücke | 2024-11-29 – 2026-11-14 | 704 | 2026-11-13 | 1222
 F03176 | Fetscherstraße | in Höhe Gabelsbergerstraße | 2023-04-14 – 2026-11-14 | 1261 | 2026-11-13 | 1395
-F04065 | Winterbergstraße | in Höhe Liebstädter Straße | 2017-01-01 – 2026-11-14 | 3563 | 2026-11-13 | 1554
+F04065 | Winterbergstraße | in Höhe Liebstädter Straße | 2010-08-30 – 2026-11-14 | 5614 | 2026-11-13 | 1435
 F05004 | Fritz-Löffler-Straße | Schnorrstraße | 2024-04-22 – 2026-11-14 | 927 | 2026-11-13 | 1554
 F05007 | Bergstraße | i.H. Mommsenstraße | 2025-08-19 – 2026-11-14 | 449 | 2026-11-13 | 447
-F07005 | Tharandter Straße | in Höhe Paschkystraße | 2017-01-01 – 2026-11-14 | 3332 | 2026-11-13 | 602
+F07005 | Tharandter Straße | in Höhe Paschkystraße | 2011-04-18 – 2026-11-14 | 5396 | 2026-11-13 | 536
 F08053 | Löbtauer Straße | Nähe Wernerstraße | 2024-09-16 – 2026-11-14 | 782 | 2026-11-13 | 1272
 F08154 | Wernerstraße | i.H. Reisewitzer Straße | 2025-10-10 – 2026-11-14 | 391 | 2026-11-13 | 513
 F09006 | Elberadweg Flügelwegbrücke | unterhalb Flügelwegbrücke | 2024-02-20 – 2026-11-14 | 989 | 2026-11-13 | 1450
 F10006 | Molenbrücke | Nähe Leipziger Straße | 2024-11-19 – 2026-11-14 | 721 | 2026-11-13 | 3040
 F11008 | Königsbrücker Straße | in Höhe Magazinstraße | 2023-12-13 – 2026-11-14 | 1060 | 2026-11-13 | 1179
 F11105 | Grenzstraße | in Höhe S-Bahnstation | 2023-03-21 – 2026-11-14 | 1320 | 2026-11-13 | 126
-F12006 | Elberadweg (rechtselbisch) | in Höhe Waldschlößchenbrücke | 2017-01-01 – 2026-11-14 | 3521 | 2026-11-13 | 1299
+F12006 | Elberadweg (rechtselbisch) | in Höhe Waldschlößchenbrücke | 2015-09-26 – 2026-11-14 | 3979 | 2026-11-13 | 1225
 F12058 | Waldschlößchenstraße | Nähe Bautzener Straße | 2024-09-25 – 2026-11-14 | 772 | 2026-11-13 | 880
 F12999 | Waldschlösschenstraße_1 | Waldschlösschenstraße i.H. Radeberger Straße | 2025-06-18 – 2026-11-14 | 509 | 2026-11-13 | 914
 F13067 | Grundstraße | i.H. Steglichstraße | 2024-06-04 – 2026-11-14 | 885 | 2026-11-13 | 743
 F14004 | Großenhainer Sraße | i.H. Haltestelle Liststraße | 2025-07-18 – 2026-11-14 | 480 | 2026-11-13 | 1342
 == Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2009: 2009-12-31: 2/2
+2010: 2010-01-01: 2/2, 2010-12-31: 3/3
+2011: 2011-01-01: 3/3, 2011-12-31: 4/4
+2012: 2012-01-01: 4/4, 2012-12-31: 4/4
+2013: 2013-01-01: 4/4, 2013-12-31: 5/5
+2014: 2014-01-01: 5/5, 2014-12-31: 4/4
+2015: 2015-01-01: 4/4, 2015-12-31: 7/7
+2016: 2016-01-01: 7/7, 2016-12-31: 8/8
 2017: 2017-01-01: 8/8, 2017-12-31: 9/9
 2018: 2018-01-01: 9/9, 2018-12-31: 9/9
 2019: 2019-01-01: 9/9, 2019-12-31: 9/9
@@ -75,6 +91,14 @@ F14004 | Großenhainer Sraße | i.H. Haltestelle Liststraße | 2025-07-18 – 20
 2025: 2025-01-01: 29/29, 2025-12-31: 34/34
 2026: 2026-01-01: 34/34
 == Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2009: 2009-10-25: voll 0/2, gezählte Stunden [23]
+2010: 2010-03-28: voll 2/2, gezählte Stunden [23]; 2010-10-31: voll 0/3, gezählte Stunden [23]
+2011: 2011-03-27: voll 3/3, gezählte Stunden [23]; 2011-10-30: voll 0/4, gezählte Stunden [23]
+2012: 2012-03-25: voll 4/4, gezählte Stunden [23]; 2012-10-28: voll 0/4, gezählte Stunden [23]
+2013: 2013-03-31: voll 1/4, gezählte Stunden [22, 23]; 2013-10-27: voll 0/5, gezählte Stunden [23]
+2014: 2014-03-30: voll 2/5, gezählte Stunden [22, 23]; 2014-10-26: voll 0/5, gezählte Stunden [23]
+2015: 2015-03-29: voll 4/4, gezählte Stunden [23]; 2015-10-25: voll 0/7, gezählte Stunden [23]
+2016: 2016-03-27: voll 7/7, gezählte Stunden [23]; 2016-10-30: voll 0/8, gezählte Stunden [23]
 2017: 2017-03-26: voll 8/8, gezählte Stunden [23]; 2017-10-29: voll 0/9, gezählte Stunden [23]
 2018: 2018-03-25: voll 9/9, gezählte Stunden [23]; 2018-10-28: voll 0/9, gezählte Stunden [23]
 2019: 2019-03-31: voll 9/9, gezählte Stunden [23]; 2019-10-27: voll 0/9, gezählte Stunden [23]
@@ -86,6 +110,14 @@ F14004 | Großenhainer Sraße | i.H. Haltestelle Liststraße | 2025-07-18 – 20
 2025: 2025-03-30: voll 14/27, gezählte Stunden [22, 23]; 2025-10-26: voll 0/34, gezählte Stunden [23]
 2026: 2026-03-29: voll 11/35, gezählte Stunden [22, 23]; 2026-10-25: voll 0/35, gezählte Stunden [23]
 == Vollständige Tage je Jahr (alle Stellen)
+2009: 188 von 193 Tagen mit Werten
+2010: 838 von 851 Tagen mit Werten
+2011: 1318 von 1336 Tagen mit Werten
+2012: 1454 von 1463 Tagen mit Werten
+2013: 1543 von 1565 Tagen mit Werten
+2014: 1755 von 1777 Tagen mit Werten
+2015: 1896 von 1914 Tagen mit Werten
+2016: 2663 von 2692 Tagen mit Werten
 2017: 2990 von 3003 Tagen mit Werten
 2018: 3274 von 3285 Tagen mit Werten
 2019: 3273 von 3285 Tagen mit Werten
@@ -98,8 +130,8 @@ F14004 | Großenhainer Sraße | i.H. Haltestelle Liststraße | 2025-07-18 – 20
 2026: 10916 von 11069 Tagen mit Werten
 == Kartendaten (nur dresden_rad)
 dresden_rad: 38 Stellen mit vollständigen Tagen, 0 ohne
-13 Dateien, 1.6 MB, 2 Detail-Dateien
-dresden_rad: vollständige Tage je Jahr (Stellen × Tage) – 2017: 2990, 2018: 3274, 2019: 3273, 2020: 3280, 2021: 3176, 2022: 3029, 2023: 3918, 2024: 8104, 2025: 11161, 2026: 10916
-dresden_rad: rad-Tagessummen, Quintilgrenzen [580, 1040, 1600, 2460], Median 1297, Maximum 26032
-index.json quellen: [{"code": "dresden_rad", "name": "Dresden (Rad-Zählstellen)", "land": "SN", "traeger": "Landeshauptstadt Dresden", "art": "Rad-Dauerzählstellen: Stundenwerte je Richtung seit Oktober 2017, in der Karte die Summe je Zählstelle; auch drei nicht mehr betriebene Zählstellen (darunter die Carolabrücke)", "weg": "offen über die OGC-API-Schnittstelle des Themenstadtplans, ohne Lizenzangabe", "portal": "https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////", "archiv": null, "quellenvermerk": null, "lizenzen": [{"code": "dresden_rad", "titel": "Landeshauptstadt Dresden: Radverkehr – Dauerzählstellen – alle Zählwerte (veröffentlicht) (verändert: Richtungen summiert, Stundenwerte zu Tagessummen zusammengefasst)", "herausgeber": "Landeshauptstadt Dresden", "lizenz": null, "lizenz_url": null, "herkunft_url": "https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////", "ohne_lizenz": {"herausgegeben": "über die OGC-API-Schnittstelle des Themenstadtplans veröffentlicht (Ebene L1780), dort ohne Lizenzangabe; die Lizenz im Open-Data-Portal ist nicht geprüft", "geprueft": "2026-11-14"}}], "hinweise": ["Zeiten in Ortszeit, wie die Schnittstelle sie in der CSV-Ausgabe liefert; die Uhrzeit gilt als Beginn der Stunde. Zeilen mit krummen Minuten (an den Tagen der Zeitumstellung, vereinzelt an anderen Tagen) sind keine Stundenwerte – ihre Stunde und damit der Tag gelten als nicht vollständ
+21 Dateien, 1.8 MB, 2 Detail-Dateien
+dresden_rad: vollständige Tage je Jahr (Stellen × Tage) – 2009: 188, 2010: 838, 2011: 1318, 2012: 1454, 2013: 1543, 2014: 1755, 2015: 1896, 2016: 2663, 2017: 2990, 2018: 3274, 2019: 3273, 2020: 3280, 2021: 3176, 2022: 3029, 2023: 3918, 2024: 8104, 2025: 11161, 2026: 10916
+dresden_rad: rad-Tagessummen, Quintilgrenzen [530, 980, 1540, 2360], Median 1246, Maximum 26032
+index.json quellen: [{"code": "dresden_rad", "name": "Dresden (Rad-Zählstellen)", "land": "SN", "traeger": "Landeshauptstadt Dresden", "art": "Rad-Dauerzählstellen: Stundenwerte je Richtung seit September 2009, in der Karte die Summe je Zählstelle; auch drei nicht mehr betriebene Zählstellen (darunter die Carolabrücke)", "weg": "offen über die OGC-API-Schnittstelle des Themenstadtplans, ohne Lizenzangabe", "portal": "https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////", "archiv": null, "quellenvermerk": null, "lizenzen": [{"code": "dresden_rad", "titel": "Landeshauptstadt Dresden: Radverkehr – Dauerzählstellen – alle Zählwerte (veröffentlicht) (verändert: Richtungen summiert, Stundenwerte zu Tagessummen zusammengefasst)", "herausgeber": "Landeshauptstadt Dresden", "lizenz": null, "lizenz_url": null, "herkunft_url": "https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////", "ohne_lizenz": {"herausgegeben": "über die OGC-API-Schnittstelle des Themenstadtplans veröffentlicht (Ebene L1780), dort ohne Lizenzangabe; die Lizenz im Open-Data-Portal ist nicht geprüft", "geprueft": "2026-11-14"}}], "hinweise": ["Zeiten in Ortszeit, wie die Schnittstelle sie in der CSV-Ausgabe liefert; die Uhrzeit gilt als Beginn der Stunde. Zeilen mit krummen Minuten (an den Tagen der Zeitumstellung, vereinzelt an anderen Tagen) sind keine Stundenwerte – ihre Stunde und damit der Tag gelten als nicht vollstä
 index.json lizenzen: null
