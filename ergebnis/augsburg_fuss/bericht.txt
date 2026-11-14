@@ -1,0 +1,47 @@
+== Abruf
+augsburg_fuss: Datei geholt
+Fehler: []
+Dauer: 3 s
+Rohdaten: 2 Dateien, 2.2 MB
+{
+ "abgerufen": "2026-11-14T21:12:27Z",
+ "datei": "https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/Smart_City/opendata/240429/Annastra%C3%9Fe_Frequenzdaten.csv"
+}
+
+== Lesen
+48956 Zeilen (0 unlesbar), Standorte Annastraße, 48949 Stunden in der Karte (2 Uhr am Tag der Sommerzeit verworfen: 0); jüngster Wert 2026-08-11
+Reihe 2020-12-16 – 2026-08-11, 1 Stellen
+=== Gruppe fuss
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+annastrasse | Annastraße | None | 2020-12-16 – 2026-08-11 | 1709 | 2026-08-10 | 17594
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2020: 2020-12-31: 0/1
+2021: 2021-01-01: 0/1, 2021-12-31: 1/1
+2022: 2022-01-01: 1/1, 2022-12-31: 1/1
+2023: 2023-01-01: 1/1, 2023-12-31: 1/1
+2024: 2024-01-01: 1/1, 2024-12-31: 1/1
+2025: 2025-01-01: 1/1, 2025-12-31: 1/1
+2026: 2026-01-01: 1/1
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2020: 
+2021: 2021-03-28: voll 0/1, gezählte Stunden [22]; 2021-10-31: voll 0/1, gezählte Stunden [23]
+2022: 2022-03-27: voll 1/1, gezählte Stunden [23]; 2022-10-30: voll 0/1, gezählte Stunden [23]
+2023: 2023-03-26: voll 1/1, gezählte Stunden [23]; 2023-10-29: voll 0/1, gezählte Stunden [23]
+2024: 2024-03-31: voll 1/1, gezählte Stunden [23]; 2024-10-27: voll 0/1, gezählte Stunden [23]
+2025: 2025-03-30: voll 1/1, gezählte Stunden [23]; 2025-10-26: voll 0/1, gezählte Stunden [23]
+2026: 2026-03-29: voll 1/1, gezählte Stunden [23]
+== Vollständige Tage je Jahr (alle Stellen)
+2020: 1 von 16 Tagen mit Werten
+2021: 191 von 365 Tagen mit Werten
+2022: 313 von 365 Tagen mit Werten
+2023: 334 von 365 Tagen mit Werten
+2024: 338 von 366 Tagen mit Werten
+2025: 328 von 365 Tagen mit Werten
+2026: 204 von 223 Tagen mit Werten
+== Kartendaten (nur augsburg_fuss)
+augsburg_fuss: 1 Stellen mit vollständigen Tagen, 0 ohne
+9 Dateien, 0.1 MB, 1 Detail-Dateien
+augsburg_fuss: vollständige Tage je Jahr (Stellen × Tage) – 2020: 1, 2021: 191, 2022: 313, 2023: 334, 2024: 338, 2025: 328, 2026: 204
+augsburg_fuss: fuss-Tagessummen, Quintilgrenzen [10090, 16160, 18900, 22690], Median 17594, Maximum 50495
+index.json quellen: [{"code": "augsburg_fuss", "name": "Augsburg (Passanten Annastraße)", "land": "BY", "traeger": "Stadt Augsburg (Wirtschaftsförderung)", "art": "Passantenzählung in der Fußgängerzone Annastraße: Personen je Stunde, beide Richtungen zusammen, seit Dezember 2020", "weg": "offen als CSV auf augsburg.de, verzeichnet in der Mobilithek", "portal": "https://mobilithek.info/offers/-1747083335311792689", "archiv": null, "quellenvermerk": "Stadt Augsburg", "lizenzen": [{"code": "augsburg_fuss", "titel": "Augsburg: Passanten Annastraße (verändert: Stundenwerte zu Tagessummen zusammengefasst)", "herausgeber": "Stadt Augsburg", "lizenz": "CC BY 4.0", "lizenz_url": "https://creativecommons.org/licenses/by/4.0/", "herkunft_url": "https://mobilithek.info/offers/-1747083335311792689"}], "hinweise": ["Die Quelle enthält keine Stunde mit dem Wert 0; es fehlen Stunden, fast nur nachts (2 bis 4 Uhr), vermutlich Stunden ohne Passanten. Die Zählkarte füllt nichts auf: Ein Tag mit fehlender Stunde gilt als nicht vollständig gezählt (2021 fast jeden zweiten Tag).", "Am Tag der Rückstellung der Uhr steht 2 Uhr nur einmal – ob mit beiden Stunden, ist nicht eindeutig; dieser Tag gilt als nicht vollständig gezählt.", "Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind."], "stellen": 1, "von": "2020-12-16", "bis": "2026-08-11", "gruppen": ["fuss"], "zeitraeume": {"fuss": ["2020-12-30", "2026-08-10"]}, "standardtag": "2026-07-31", "stunden_von": "2025-08-12", "verfahren
+index.json lizenzen: null

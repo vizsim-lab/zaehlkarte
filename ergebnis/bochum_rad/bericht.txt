@@ -1,0 +1,113 @@
+== Abruf
+bochum_rad: 8 Zählstellen geholt
+Fehler: []
+Dauer: 21 s
+robots.txt: 8 Abrufe für bochum_rad trotz Sperre (https://gitlab.opencode.de/api/v4/projects/StadtBochum%2Fopen-data%2Fradverkehr-zaehlstellen-eco-counter/) – Ausnahme laut robots.yaml: openCode sperrt die GitLab-API, /*/raw, Archive und git über HTTPS für alle Robots; opendata.ruhr verweist für die Dateien auf genau diese Wege (Anfrage: noch nicht gestellt)
+Rohdaten: 9 Dateien, 82.4 MB
+{
+ "abgerufen": "2026-11-14T21:12:53Z",
+ "stellen": [
+  "wittener_strasse",
+  "springorumtrasse",
+  "brueckstrasse",
+  "universitaetsstrasse",
+  "erzbahntrasse",
+  "hofsteder_bach",
+  "lothringentrasse",
+  "bluecherstrasse"
+ ],
+ "fehler": []
+}
+
+== Lesen
+1099849 Viertelstunden; ohne beide Richtungen (nicht gezählt): springorumtrasse fuss 179833, brueckstrasse rad 15588, universitaetsstrasse rad 13439, springorumtrasse rad 10895, lothringentrasse rad 10418, lothringentrasse fuss 10418, wittener_strasse rad 8394, bluecherstrasse rad 723, bluecherstrasse fuss 723, erzbahntrasse rad 204, erzbahntrasse fuss 204, hofsteder_bach rad 13, hofsteder_bach fuss 13; doppelt mit verschiedenen Werten: 0; 8 Zählstellen (mit Fuß: springorumtrasse, erzbahntrasse, hofsteder_bach, lothringentrasse, bluecherstrasse); Stunden in der Karte: rad 259872, fuss 101943
+nicht in der Karte (`ohne` in der Quelldatei): springorumtrasse_sued
+Reihe 2018-11-22 – 2026-11-13, 8 Stellen
+=== Gruppe rad
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+wittener_strasse | Wittener Straße | None | 2018-11-22 – 2026-11-13 | 2804 | 2026-11-13 | 833
+springorumtrasse | Springorumtrasse | None | 2018-11-22 – 2026-11-13 | 2718 | 2026-11-11 | 1083
+brueckstrasse | Brückstraße | None | 2023-09-14 – 2026-11-13 | 963 | 2026-10-21 | 908
+universitaetsstrasse | Universitätsstraße | None | 2023-09-14 – 2026-11-13 | 987 | 2026-10-24 | 499
+erzbahntrasse | Erzbahntrasse | None | 2023-08-24 – 2026-11-13 | 1166 | 2026-11-13 | 690
+hofsteder_bach | Hofsteder Bach | None | 2023-08-24 – 2026-11-13 | 1167 | 2026-11-13 | 204
+lothringentrasse | Lothringentrasse | None | 2024-05-21 – 2026-04-27 | 660 | 2026-03-14 | 180
+bluecherstrasse | Blücherstraße | None | 2026-03-09 – 2026-11-13 | 242 | 2026-11-10 | 530
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2018: 2018-12-31: 2/2
+2019: 2019-01-01: 2/2, 2019-12-31: 2/2
+2020: 2020-01-01: 2/2, 2020-12-31: 2/2
+2021: 2021-01-01: 2/2, 2021-12-31: 2/2
+2022: 2022-01-01: 2/2, 2022-12-31: 2/2
+2023: 2023-01-01: 2/2, 2023-12-31: 6/6
+2024: 2024-01-01: 6/6, 2024-12-31: 6/6
+2025: 2025-01-01: 6/7, 2025-12-31: 6/6
+2026: 2026-01-01: 6/6
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2018: 
+2019: 2019-03-31: voll 2/2, gezählte Stunden [23]; 2019-10-27: voll 0/2, gezählte Stunden [23]
+2020: 2020-03-29: voll 2/2, gezählte Stunden [23]; 2020-10-25: voll 0/2, gezählte Stunden [23]
+2021: 2021-03-28: voll 2/2, gezählte Stunden [23]; 2021-10-31: voll 0/2, gezählte Stunden [23]
+2022: 2022-03-27: voll 2/2, gezählte Stunden [23]; 2022-10-30: voll 0/2, gezählte Stunden [23]
+2023: 2023-03-26: voll 2/2, gezählte Stunden [23]; 2023-10-29: voll 0/5, gezählte Stunden [23]
+2024: 2024-03-31: voll 6/6, gezählte Stunden [23]; 2024-10-27: voll 0/6, gezählte Stunden [23]
+2025: 2025-03-30: voll 7/7, gezählte Stunden [23]; 2025-10-26: voll 0/6, gezählte Stunden [23]
+2026: 2026-03-29: voll 5/6, gezählte Stunden [5, 23]; 2026-10-25: voll 0/0, gezählte Stunden []
+== Vollständige Tage je Jahr (alle Stellen)
+2018: 80 von 80 Tagen mit Werten
+2019: 728 von 730 Tagen mit Werten
+2020: 730 von 732 Tagen mit Werten
+2021: 728 von 730 Tagen mit Werten
+2022: 682 von 686 Tagen mit Werten
+2023: 1130 von 1146 Tagen mit Werten
+2024: 2324 von 2336 Tagen mit Werten
+2025: 2468 von 2483 Tagen mit Werten
+2026: 1837 von 2068 Tagen mit Werten
+=== Gruppe fuss
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+wittener_strasse | Wittener Straße | None | None – None | 0 | None | None
+springorumtrasse | Springorumtrasse | None | 2023-11-01 – 2026-11-13 | 966 | 2026-11-11 | 513
+brueckstrasse | Brückstraße | None | None – None | 0 | None | None
+universitaetsstrasse | Universitätsstraße | None | None – None | 0 | None | None
+erzbahntrasse | Erzbahntrasse | None | 2023-08-24 – 2026-11-13 | 1166 | 2026-11-13 | 251
+hofsteder_bach | Hofsteder Bach | None | 2023-08-24 – 2026-11-13 | 1167 | 2026-11-13 | 225
+lothringentrasse | Lothringentrasse | None | 2024-05-21 – 2026-04-27 | 660 | 2026-03-14 | 209
+bluecherstrasse | Blücherstraße | None | 2026-03-09 – 2026-11-13 | 242 | 2026-11-10 | 111
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2018: 2018-12-31: 0/0
+2019: 2019-01-01: 0/0, 2019-12-31: 0/0
+2020: 2020-01-01: 0/0, 2020-12-31: 0/0
+2021: 2021-01-01: 0/0, 2021-12-31: 0/0
+2022: 2022-01-01: 0/0, 2022-12-31: 0/0
+2023: 2023-01-01: 0/0, 2023-12-31: 3/3
+2024: 2024-01-01: 3/3, 2024-12-31: 4/4
+2025: 2025-01-01: 4/4, 2025-12-31: 4/4
+2026: 2026-01-01: 4/4
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2018: 
+2019: 2019-03-31: voll 0/0, gezählte Stunden []; 2019-10-27: voll 0/0, gezählte Stunden []
+2020: 2020-03-29: voll 0/0, gezählte Stunden []; 2020-10-25: voll 0/0, gezählte Stunden []
+2021: 2021-03-28: voll 0/0, gezählte Stunden []; 2021-10-31: voll 0/0, gezählte Stunden []
+2022: 2022-03-27: voll 0/0, gezählte Stunden []; 2022-10-30: voll 0/0, gezählte Stunden []
+2023: 2023-03-26: voll 0/0, gezählte Stunden []; 2023-10-29: voll 0/2, gezählte Stunden [23]
+2024: 2024-03-31: voll 3/3, gezählte Stunden [23]; 2024-10-27: voll 0/4, gezählte Stunden [23]
+2025: 2025-03-30: voll 4/4, gezählte Stunden [23]; 2025-10-26: voll 0/4, gezählte Stunden [23]
+2026: 2026-03-29: voll 3/4, gezählte Stunden [5, 23]; 2026-10-25: voll 0/0, gezählte Stunden []
+== Vollständige Tage je Jahr (alle Stellen)
+2018: 0 von 0 Tagen mit Werten
+2019: 0 von 0 Tagen mit Werten
+2020: 0 von 0 Tagen mit Werten
+2021: 0 von 0 Tagen mit Werten
+2022: 0 von 0 Tagen mit Werten
+2023: 319 von 321 Tagen mit Werten
+2024: 1316 von 1323 Tagen mit Werten
+2025: 1455 von 1460 Tagen mit Werten
+2026: 1111 von 1261 Tagen mit Werten
+== Kartendaten (nur bochum_rad)
+bochum_rad: 8 Stellen mit vollständigen Tagen, 0 ohne
+11 Dateien, 0.5 MB, 1 Detail-Dateien
+bochum_rad: vollständige Tage je Jahr (Stellen × Tage) – 2018: 80, 2019: 728, 2020: 730, 2021: 728, 2022: 682, 2023: 1130, 2024: 2324, 2025: 2468, 2026: 1837
+bochum_rad: rad-Tagessummen, Quintilgrenzen [280, 540, 850, 1270], Median 692, Maximum 4595
+bochum_rad: fuss-Tagessummen, Quintilgrenzen [160, 220, 300, 460], Median 253, Maximum 107501
+index.json quellen: [{"code": "bochum_rad", "name": "Bochum (Rad- und Fuß-Zählstellen)", "land": "NW", "traeger": "Stadt Bochum", "art": "Zählstellen für Rad- und Fußverkehr (Eco-Counter); 15-Minuten-Werte je Richtung, in der Karte Rad und – wo eigene Kanäle zählen – Fuß, je Verkehrsart beide Richtungen zusammen", "weg": "offen im GitLab der Stadt auf openCode.de (täglich aktualisiert)", "portal": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter", "archiv": null, "quellenvermerk": "Stadt Bochum", "lizenzen": [{"code": "bochum_rad", "titel": "Rad- und Fußverkehr – Zählstellen Eco-Counter, Stadt Bochum (verändert: 15-Minuten-Werte zu Stunden und Tagessummen zusammengefasst)", "herausgeber": "Stadt Bochum", "lizenz": "dl-de/by-2-0, mit Nutzungsbeschränkung der Stadt: nicht für Produkte oder Services im direkten Wettbewerb zu Eco-Counter", "lizenz_url": "https://www.govdata.de/dl-de/by-2-0", "herkunft_url": "https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter"}], "hinweise": ["Lizenz laut Portal der Stadt (bochum.opendata.ruhr) und README des Repositories: Datenlizenz Deutschland – Namensnennung 2.0. Die Datensatzbeschreibung schränkt ein: „Die Nutzung dieser Daten für Produkte oder Services, die im direkten Wettbewerb zu Eco-Counter stehen, ist nicht gestattet.“ Das gilt auch für die Werte aus der Zählkarte. (Open.NRW führt die Datensätze unter „Andere geschlossene Lizenz“, die Lizenzdatei des Repositories nennt CC0 – maßgeblich 
+index.json lizenzen: null
