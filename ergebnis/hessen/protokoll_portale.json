@@ -1,0 +1,79 @@
+{
+ "wikidata": {
+  "gemeinden": 429,
+  "kreise": 26,
+  "ohne_web": 4,
+  "ok": true,
+  "sekunden": 7
+ },
+ "fds_gesetze": {
+  "anzahl": 4,
+  "gesamt": 4,
+  "ok": true,
+  "sekunden": 1
+ },
+ "fds_behoerden": {
+  "anzahl": 3262,
+  "gesamt": 3262,
+  "ok": true,
+  "sekunden": 77
+ },
+ "govdata": {
+  "Verkehrszählung": 2422,
+  "Verkehrszählungen": 32,
+  "Verkehrsmengen": 51,
+  "Zählstellen": 2505,
+  "Zählstelle": 2522,
+  "Zähldaten": 36,
+  "Verkehrsstärke": 38,
+  "Verkehrsbelastung": 37,
+  "Radverkehrszählung": 2,
+  "Radzählstelle": 4,
+  "Fahrradzählstelle": 8,
+  "Radverkehr Zählung": 5,
+  "Knotenpunktzählung": 0,
+  "Verkehrsdaten": 186,
+  "Verkehrserhebung": 4,
+  "Dauerzählstelle": 28,
+  "Hessen Verkehr": 125,
+  "Hessen Zählung": 0,
+  "pakete": 2546,
+  "ok": true,
+  "sekunden": 27
+ },
+ "geoportal": {
+  "ok": true,
+  "sekunden": 33
+ },
+ "mobilithek": {
+  "ok": true,
+  "sekunden": 26
+ },
+ "osm": {
+  "anzahl": 63,
+  "server": "https://overpass-api.de/api/interpreter",
+  "ok": true,
+  "sekunden": 35
+ },
+ "fds_anfragen": {
+  "im_land": 5627,
+  "gelesen": 5627,
+  "suche:Verkehrszählung": "<HTTPError 400: 'Bad Request'>",
+  "suche:Verkehrszählungen": "<HTTPError 400: 'Bad Request'>",
+  "suche:Verkehrsmengen": "<HTTPError 400: 'Bad Request'>",
+  "suche:Zählstelle": "<HTTPError 400: 'Bad Request'>",
+  "suche:Zähldaten": "<HTTPError 400: 'Bad Request'>",
+  "suche:Radverkehrszählung": "<HTTPError 400: 'Bad Request'>",
+  "suche:Verkehrsbelastung": "<HTTPError 400: 'Bad Request'>",
+  "suche:Knotenpunktzählung": "<HTTPError 400: 'Bad Request'>",
+  "suche:Verkehrserhebung": "<HTTPError 400: 'Bad Request'>",
+  "suche:Geschwindigkeitsmessung": "<HTTPError 400: 'Bad Request'>",
+  "suche:Verkehrsdaten": "<HTTPError 400: 'Bad Request'>",
+  "suche:Zählung Verkehr": "<HTTPError 400: 'Bad Request'>",
+  "suche:Dauerzählstelle": "<HTTPError 400: 'Bad Request'>",
+  "funde": 234,
+  "ok": true,
+  "sekunden": 156
+ },
+ "gesamt_sekunden_portale": 277
+}

@@ -1,0 +1,867 @@
+[
+ {
+  "osm": "node/33482244",
+  "lat": 50.0503642,
+  "lon": 8.7231585,
+  "tags": {
+   "TMC:cid_58:tabcd_1:Class": "Point",
+   "TMC:cid_58:tabcd_1:Direction": "positive",
+   "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+   "TMC:cid_58:tabcd_1:LocationCode": "36695",
+   "TMC:cid_58:tabcd_1:NextLocationCode": "36696",
+   "TMC:cid_58:tabcd_1:PrevLocationCode": "37191",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/92555547",
+  "lat": 50.1049642,
+  "lon": 8.6754129,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "302a",
+   "start_date": "2022-05-24",
+   "website": "https://hessen-mobil.eco-counter.com/site/300033290"
+  }
+ },
+ {
+  "osm": "node/3925123495",
+  "lat": 51.2595455,
+  "lon": 9.493307,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/4456450862",
+  "lat": 50.1129424,
+  "lon": 8.7516554,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "start_date": "2016",
+   "support": "pole",
+   "thermometer": "yes",
+   "visibility": "street",
+   "website": "https://data.eco-counter.com/public2/?id=300023687"
+  }
+ },
+ {
+  "osm": "node/4595856333",
+  "lat": 49.76368,
+  "lon": 8.5438477,
+  "tags": {
+   "description": "Dauerzählstelle Almendfeld, Richtiung 2, Fernziel Mannheim",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Bundesanstalt für Straßen- und Verkehrswesen",
+   "recording:remote": "yes",
+   "ref": "6740"
+  }
+ },
+ {
+  "osm": "node/6877647877",
+  "lat": 49.8470649,
+  "lon": 8.6461166,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "recording:automated": "yes",
+   "website": "http://public.data.eco-counter.com/?id=100050420"
+  }
+ },
+ {
+  "osm": "node/7068915561",
+  "lat": 51.4036115,
+  "lon": 9.1778996,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/9570489700",
+  "lat": 50.0529951,
+  "lon": 8.2779704,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "ref": "085",
+   "start_date": "2022",
+   "website": "https://data.eco-counter.com/public2/?id=300022664"
+  }
+ },
+ {
+  "osm": "node/9593976053",
+  "lat": 50.1388504,
+  "lon": 8.4626999,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "HessenMobil"
+  }
+ },
+ {
+  "osm": "node/9878674880",
+  "lat": 50.5504043,
+  "lon": 8.4667987,
+  "tags": {
+   "description:de": "Fahrradzähler",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=300024971"
+  }
+ },
+ {
+  "osm": "node/10021874845",
+  "lat": 50.050179,
+  "lon": 8.7209919,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/10021874847",
+  "lat": 50.0506639,
+  "lon": 8.7244954,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/10158173304",
+  "lat": 50.5502018,
+  "lon": 9.6998405,
+  "tags": {
+   "display": "no",
+   "layer": "-1",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Es handelt sich hierbei um eine Kontaktschleife im Boden.",
+   "operator": "Hessen Mobil",
+   "recording:remote": "yes",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300032823"
+  }
+ },
+ {
+  "osm": "node/10172200879",
+  "lat": 50.5590543,
+  "lon": 9.6932622,
+  "tags": {
+   "layer": "-1",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Es handelt sich hier um eine Kontaktschleife im Boden",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300032824"
+  }
+ },
+ {
+  "osm": "node/10230712802",
+  "lat": 50.5679434,
+  "lon": 9.2563406,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Hessen Mobil"
+  }
+ },
+ {
+  "osm": "node/10669836435",
+  "lat": 50.1110384,
+  "lon": 8.6573549,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen der Radwege daneben",
+   "operator": "Stadt Frankfurt",
+   "start_date": "2022-01-26",
+   "support": "pole",
+   "thermometer": "yes",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/10980961599",
+  "lat": 50.7552024,
+  "lon": 9.3274543,
+  "tags": {
+   "description": "Induktionsschleife",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Die Autobahn GmbH des Bundes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/11549422907",
+  "lat": 50.5864922,
+  "lon": 8.6507024,
+  "tags": {
+   "display": "no",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "start_date": "2024",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300046811"
+  }
+ },
+ {
+  "osm": "node/11549422908",
+  "lat": 50.5799747,
+  "lon": 8.6770008,
+  "tags": {
+   "display": "no",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Hessen Mobil",
+   "recording:automated": "yes",
+   "start_date": "2024",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300046696"
+  }
+ },
+ {
+  "osm": "node/11549422909",
+  "lat": 50.578727,
+  "lon": 8.683946,
+  "tags": {
+   "display": "no",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Hessen Mobil",
+   "recording:automated": "yes",
+   "start_date": "2024"
+  }
+ },
+ {
+  "osm": "node/12094732440",
+  "lat": 49.9937364,
+  "lon": 8.3046287,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Hessen Mobil",
+   "recording:automated": "yes",
+   "recording:manually": "no",
+   "recording:remote": "yes",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300032707"
+  }
+ },
+ {
+  "osm": "node/12152460411",
+  "lat": 50.1050701,
+  "lon": 8.7559767,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "start_date": "2022-09-27",
+   "website": "https://data.eco-counter.com/public2/?id=300032814#"
+  }
+ },
+ {
+  "osm": "node/12186076065",
+  "lat": 50.0079535,
+  "lon": 8.2803767,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Hessisches Ministerium für Wirtschaft, Energie, Verkehr, Wohnen und ländlichen Raum.",
+   "recording:automated": "yes",
+   "recording:manually": "no",
+   "recording:remote": "yes",
+   "ref": "10 027",
+   "website": "https://data.eco-counter.com/public2/?id=300023897"
+  }
+ },
+ {
+  "osm": "node/12186176683",
+  "lat": 50.0081028,
+  "lon": 8.2799613,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Hessisches Ministerium für Wirtschaft, Energie, Verkehr, Wohnen und ländlichen Raum.",
+   "recording:automated": "yes",
+   "recording:manually": "no",
+   "recording:remote": "yes",
+   "ref": "229 1641",
+   "website": "https://data.eco-counter.com/ParcPublic/?id=8080"
+  }
+ },
+ {
+  "osm": "node/12196934741",
+  "lat": 50.0717088,
+  "lon": 8.2477787,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "source": "survey"
+  }
+ },
+ {
+  "osm": "node/12749483809",
+  "lat": 50.0934869,
+  "lon": 8.7584548,
+  "tags": {
+   "addr:housenumber": "6",
+   "addr:street": "Lortzingstraße",
+   "display": "none",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Fahrradzähler"
+  }
+ },
+ {
+  "osm": "node/12850611420",
+  "lat": 50.3040328,
+  "lon": 9.4263169,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Kontaktschleife zur Radverkehrszählung",
+   "operator": "Main-Kinzig-Kreis",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/13071569445",
+  "lat": 50.1629212,
+  "lon": 8.652453,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "303",
+   "start_date": "2022-05-23",
+   "website": "https://hessen-mobil.eco-counter.com/site/300033292"
+  }
+ },
+ {
+  "osm": "node/13071575965",
+  "lat": 50.1945311,
+  "lon": 8.6057798,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/13136618215",
+  "lat": 50.2088731,
+  "lon": 8.6028799,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/13375548922",
+  "lat": 49.7417864,
+  "lon": 8.5433812,
+  "tags": {
+   "description": "Induktionsschleifen",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Die Autobahn GmbH des Bundes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/13375548923",
+  "lat": 49.7460714,
+  "lon": 8.5433523,
+  "tags": {
+   "description": "Induktionsschleifen",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Die Autobahn GmbH des Bundes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/13446653269",
+  "lat": 50.1047551,
+  "lon": 8.6758969,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "302b",
+   "start_date": "2022-05-24",
+   "website": "https://hessen-mobil.eco-counter.com/site/300033291"
+  }
+ },
+ {
+  "osm": "node/13446711209",
+  "lat": 50.1040905,
+  "lon": 8.5017823,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "043",
+   "start_date": "2022-03-16",
+   "website": "https://hessen-mobil.eco-counter.com/site/300022870"
+  }
+ },
+ {
+  "osm": "node/13446723923",
+  "lat": 50.0883558,
+  "lon": 8.5138126,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "047",
+   "start_date": "2022-03-18",
+   "website": "https://hessen-mobil.eco-counter.com/site/300023023"
+  }
+ },
+ {
+  "osm": "node/13446723924",
+  "lat": 50.088327,
+  "lon": 8.5135671,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "047",
+   "start_date": "2022-03-18",
+   "website": "https://hessen-mobil.eco-counter.com/site/300023023"
+  }
+ },
+ {
+  "osm": "node/13446726666",
+  "lat": 50.104529,
+  "lon": 8.5044051,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "044",
+   "start_date": "2022-03-17",
+   "website": "https://hessen-mobil.eco-counter.com/site/300022899"
+  }
+ },
+ {
+  "osm": "node/13446958817",
+  "lat": 50.1157118,
+  "lon": 8.6698533,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "300a",
+   "start_date": "2022-05-23",
+   "website": "https://hessen-mobil.eco-counter.com/site/300033286"
+  }
+ },
+ {
+  "osm": "node/13446958818",
+  "lat": 50.1493544,
+  "lon": 8.7093757,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "119b",
+   "start_date": "2022-07-05",
+   "website": "https://hessen-mobil.eco-counter.com/site/300025551"
+  }
+ },
+ {
+  "osm": "node/13446958819",
+  "lat": 50.1154868,
+  "lon": 8.6701646,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "300b",
+   "start_date": "2022-05-23",
+   "website": "https://hessen-mobil.eco-counter.com/site/300033287"
+  }
+ },
+ {
+  "osm": "node/13446958820",
+  "lat": 50.1490144,
+  "lon": 8.7097175,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "119a",
+   "start_date": "2022-04-28",
+   "website": "https://hessen-mobil.eco-counter.com/site/300023733"
+  }
+ },
+ {
+  "osm": "node/13446959175",
+  "lat": 50.1358403,
+  "lon": 8.6716734,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "1499b",
+   "start_date": "2025-07-08",
+   "website": "https://hessen-mobil.eco-counter.com/site/300054428"
+  }
+ },
+ {
+  "osm": "node/13447000493",
+  "lat": 50.1267442,
+  "lon": 8.6921605,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "301a",
+   "start_date": "2022-05-25",
+   "website": "https://hessen-mobil.eco-counter.com/site/300033288"
+  }
+ },
+ {
+  "osm": "node/13447000494",
+  "lat": 50.1271265,
+  "lon": 8.6919157,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco-Counter",
+   "monitoring:bicycle": "yes",
+   "note": "Zählt beide Richtungen des Radweg",
+   "operator": "Arbeitsgemeinschaft Nahmobilität Hessen (AGNH)",
+   "ref": "301b",
+   "start_date": "2022-05-25",
+   "website": "https://hessen-mobil.eco-counter.com/site/300033289"
+  }
+ },
+ {
+  "osm": "node/13450167606",
+  "lat": 50.5338612,
+  "lon": 9.6682431,
+  "tags": {
+   "layer": "-1",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Es handelt sich hierbei um eine Kontaktschleife im Boden.",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300032821"
+  }
+ },
+ {
+  "osm": "node/13450167607",
+  "lat": 50.5583895,
+  "lon": 9.6635678,
+  "tags": {
+   "layer": "-1",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Es handelt sich hier um eine Kontaktschleife im Boden.",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300032820"
+  }
+ },
+ {
+  "osm": "node/13450167608",
+  "lat": 50.5356799,
+  "lon": 9.6984757,
+  "tags": {
+   "display": "no",
+   "layer": "-1",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Es handelt sich hier um eine Kontaktschleife im Boden.",
+   "operator": "Hessen Mobil",
+   "recording:remote": "yes",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300032822"
+  }
+ },
+ {
+  "osm": "node/13451246398",
+  "lat": 50.1927133,
+  "lon": 8.5946236,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "ref": "500",
+   "start_date": "2022-02-02",
+   "website": "https://hessen-mobil.eco-counter.com/site/300032829"
+  }
+ },
+ {
+  "osm": "node/13451293722",
+  "lat": 50.1912957,
+  "lon": 8.5834873,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "ref": "501",
+   "start_date": "2022-04-04",
+   "website": "https://hessen-mobil.eco-counter.com/site/300032830"
+  }
+ },
+ {
+  "osm": "node/13451302402",
+  "lat": 50.2043118,
+  "lon": 8.5858255,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "ref": "502",
+   "start_date": "2022-04-08",
+   "website": "https://hessen-mobil.eco-counter.com/site/300032831"
+  }
+ },
+ {
+  "osm": "node/13455556387",
+  "lat": 49.9548135,
+  "lon": 8.6516599,
+  "tags": {
+   "display": "no",
+   "fixme": "Position nur geschätzt",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "ref": "701",
+   "start_date": "2022-03-04",
+   "website": "https://hessen-mobil.eco-counter.com/site/300032996?granularity=P1M"
+  }
+ },
+ {
+  "osm": "node/13455556388",
+  "lat": 50.0080652,
+  "lon": 8.6746646,
+  "tags": {
+   "display": "no",
+   "fixme": "Position nur geschätzt",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "ref": "056",
+   "start_date": "2022-04-20",
+   "website": "https://hessen-mobil.eco-counter.com/site/300023562?granularity=P1M"
+  }
+ },
+ {
+  "osm": "node/13455556389",
+  "lat": 50.0055764,
+  "lon": 8.6858708,
+  "tags": {
+   "display": "no",
+   "fixme": "Position nur geschätzt",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "ref": "055b",
+   "start_date": "2022-04-01",
+   "website": "https://hessen-mobil.eco-counter.com/site/300023583?granularity=P1M"
+  }
+ },
+ {
+  "osm": "node/13455556390",
+  "lat": 50.0053593,
+  "lon": 8.685694,
+  "tags": {
+   "display": "no",
+   "fixme": "Position nur geschätzt",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "ref": "055a",
+   "start_date": "2022-04-01",
+   "website": "https://hessen-mobil.eco-counter.com/site/300023605?granularity=P1M"
+  }
+ },
+ {
+  "osm": "node/13538894928",
+  "lat": 50.5641142,
+  "lon": 9.7412964,
+  "tags": {
+   "layer": "-1",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Es handelt sich hierbei um eine Kontaktschleife im Boden.",
+   "website": "https://hessen-mobil.eco-counter.com/?siteId=300049446"
+  }
+ },
+ {
+  "osm": "node/13668854172",
+  "lat": 49.8804416,
+  "lon": 8.6635862,
+  "tags": {
+   "display:digital": "yes",
+   "highway": "street_lamp",
+   "man_made": "monitoring_station",
+   "monitoring:air_quality": "yes",
+   "monitoring:noise": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Heiner Box",
+   "recording:automated": "yes",
+   "ref": "251",
+   "website": "https://heinerbox.tu-darmstadt.de/"
+  }
+ },
+ {
+  "osm": "node/13705109865",
+  "lat": 50.0794797,
+  "lon": 8.2301801,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/13952547263",
+  "lat": 50.028701,
+  "lon": 8.2565774,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "recording:manually": "no"
+  }
+ },
+ {
+  "osm": "node/13952547264",
+  "lat": 50.0286449,
+  "lon": 8.2565079,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes",
+   "recording:manually": "no"
+  }
+ },
+ {
+  "osm": "node/14196410136",
+  "lat": 49.7636802,
+  "lon": 8.5440044,
+  "tags": {
+   "description": "Dauerzählstelle Almendfeld, Richtiung 1, Fernziel Darmstadt",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Bundesanstalt für Straßen- und Verkehrswesen",
+   "recording:remote": "yes",
+   "ref": "6740"
+  }
+ },
+ {
+  "osm": "node/14196537543",
+  "lat": 49.7104238,
+  "lon": 8.5461318,
+  "tags": {
+   "contact:website": "https://www.bast.de/DE/Themen/Digitales/HF_1/Massnahmen/verkehrszaehlung/Daten/2023_1/Jawe2023.html?filter=true&nn=414410&detail=6828&map=0",
+   "description": "Dauerzählstelle Gernsheim, Richtiung 1, Fernziel Darmstadt",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Bundesanstalt für Straßen- und Verkehrswesen",
+   "recording:remote": "yes",
+   "ref": "6828"
+  }
+ },
+ {
+  "osm": "node/14196537545",
+  "lat": 49.7104126,
+  "lon": 8.5459769,
+  "tags": {
+   "contact:website": "https://www.bast.de/DE/Themen/Digitales/HF_1/Massnahmen/verkehrszaehlung/Daten/2023_1/Jawe2023.html?filter=true&nn=414410&detail=6828&map=0",
+   "description": "Dauerzählstelle Gernsheim, Richtiung 2, Fernziel Mannheim",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Bundesanstalt für Straßen- und Verkehrswesen",
+   "recording:remote": "yes",
+   "ref": "6828"
+  }
+ },
+ {
+  "osm": "way/453304597",
+  "lat": 49.9807085,
+  "lon": 7.9431854,
+  "tags": {
+   "building": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ }
+]
