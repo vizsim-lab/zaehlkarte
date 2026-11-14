@@ -1,0 +1,15 @@
+{
+ "fds_gesetze": {
+  "fehler": "Gesperrt('https://fragdenstaat.de/api/v1/jurisdiction/?limit=50')",
+  "sekunden": 1
+ },
+ "fds_behoerden": {
+  "fehler": "Gesperrt('https://fragdenstaat.de/api/v1/jurisdiction/?limit=50')",
+  "sekunden": 0
+ },
+ "fds_anfragen": {
+  "fehler": "Gesperrt('https://fragdenstaat.de/api/v1/jurisdiction/?limit=50')",
+  "sekunden": 0
+ },
+ "gesamt_sekunden_fds": 1
+}
