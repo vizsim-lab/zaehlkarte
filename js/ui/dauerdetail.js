@@ -13,6 +13,7 @@ import {
 import { TAGE } from "../data/modell.js";
 import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
 import { TG, TR_FARBEN, tagesgang, tagesreihe } from "./diagramme.js";
+import { lizenzHtml, ohneLizenzHtml } from "./lizenz.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 // Farben der Reihen im Tagesgang nach Reihenfolge der Gruppen der Stelle (wie bei den
@@ -172,13 +173,15 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
         <tr><td>${esc(t("dd.zeitraum"))}</td><td>${esc(datum(stelle.von))} – ${esc(datum(stelle.bis))}</td></tr>
         ${verfahren ? `<tr><td>${esc(t("dd.verfahren"))}</td><td lang="de">${esc(verfahren.text)}</td></tr>` : ""}
         <tr><td>${esc(t("detail.quelle"))}</td><td lang="de">${esc(lz.titel ?? "")}${lz.herausgeber ? `, ${esc(lz.herausgeber)}` : ""}</td></tr>
-        <tr><td>${esc(t("detail.lizenz"))}</td><td>${lz.lizenz_url ? `<a href="${esc(lz.lizenz_url)}" target="_blank" rel="noopener">${esc(lz.lizenz)}</a>` : esc(lz.lizenz ?? "")}</td></tr>
+        <tr><td>${esc(t("detail.lizenz"))}</td><td>${lizenzHtml(lz)}</td></tr>
       </table>
+      ${ohneLizenzHtml(lz)}
       <div class="pop-foot detail-links">
         ${q?.archiv ? `<a href="${esc(q.archiv)}" target="_blank" rel="noopener">${esc(t("dd.archiv"))}</a>` : ""}
         ${lz.herkunft_url ? `<a href="${esc(lz.herkunft_url)}" target="_blank" rel="noopener">${esc(t("detail.herkunft_link"))}</a>` : ""}
+        ${lz.ohne_lizenz ? `<span class="pop-meta">${esc(t("lizenz.kein_export"))}</span>` : `
         <button type="button" class="link-knopf" data-csv-tage>${esc(t("dd.csv_tage"))}</button>
-        ${stunden ? `<button type="button" class="link-knopf" data-csv-stunden>${esc(t("dd.csv_stunden"))}</button>` : ""}
+        ${stunden ? `<button type="button" class="link-knopf" data-csv-stunden>${esc(t("dd.csv_stunden"))}</button>` : ""}`}
       </div>`;
     if (tr.svg) bindeReihe(el.querySelector(".tr-wrap"), werte, typen, tr, reiheVon);
     if (stunden) bindeTagesgang(el.querySelector(".detail-tag .tg-wrap"), stunden.reihen, stunden.tg);
@@ -271,8 +274,11 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   }
 
+  /** Quelle ohne Lizenz: kein CSV (CLAUDE.md, „Quellen ohne Lizenz“). */
+  const ohneLizenz = () => Boolean(quelle(gibDauer())?.lizenzen?.[0]?.ohne_lizenz);
+
   function csvTage() {
-    if (!detail) return;
+    if (!detail || ohneLizenz()) return;
     const d = gibDauer();
     const q = quelle(d);
     const gruppen = DAUER_GRUPPEN.filter((x) => detail.tage[x]);
@@ -288,7 +294,7 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
   }
 
   function csvStunden() {
-    if (!detail) return;
+    if (!detail || ohneLizenz()) return;
     const tag = gibTag(stelle);
     const gruppen = DAUER_GRUPPEN.filter((x) => stundenAm(detail, x, tag));
     const reihen = gruppen.map((x) => stundenAm(detail, x, tag));

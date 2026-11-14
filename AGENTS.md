@@ -469,6 +469,32 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
 [DNG](https://www.gesetze-im-internet.de/dng/BJNR294200021.html),
 [MobiData BW Factsheet](https://mobidata-bw.de/data/MobiData-BW-Factsheet-Datenbereitstellungspflichten.pdf).
 
+**Quellen ohne Lizenz** (Beschluss der Projektleitung, 14.11.2026; Regel in CLAUDE.md): Was eine
+Kommune ohne Lizenz veröffentlicht oder auf Anfrage herausgegeben hat, zeigt die Karte mit dem
+Hinweis „ohne Lizenz“, Link zum Original und Link „Entfernen lassen“ (Issue-Formular
+`daten-entfernen.yml`), aber nicht im CSV-Export. Die Abwägung (keine Rechtsberatung):
+- Zählwerte sind Fakten; Rohdaten sind nicht urheberrechtlich geschützt
+  ([Uni Bremen, Schutz von Datenbanken](https://www.uni-bremen.de/urheberrecht/wissensplattform/9-schutz-von-datenbanken)).
+  Schützen kann sie nur das Recht des Datenbankherstellers (§§ 87a ff. UrhG), und nur gegen die
+  Übernahme wesentlicher Teile – eine ganze Zählung ist eher wesentlich.
+- Behörden können sich nach dem Datennutzungsgesetz nicht auf dieses Recht berufen, um die
+  Weiterverwendung zu unterbinden ([netzpolitik.org, 2021](https://netzpolitik.org/?p=323225));
+  einen generellen Ausschluss der Weiterverwendung in Landes-IFGs gibt es nicht mehr
+  ([Bundeswirtschaftsministerium zum IWG](https://www.bundeswirtschaftsministerium.de/Redaktion/DE/Artikel/Digitale-Welt/open-data-iwg.html)).
+  Bayern verlor 2026 vor dem OLG München gegen Markus Drenger, der Hauskoordinaten gespiegelt
+  hatte – nach Takedown, Strafanzeige und Zivilklage, rund fünf Jahre nach der ersten Forderung
+  ([netzpolitik.org, August 2026](https://netzpolitik.org/?p=529717)).
+- Auf § 5 UrhG (amtliche Werke) nicht bauen: eng ausgelegt
+  ([BGH, Bodenrichtwertsammlung](https://lexetius.com/2006,3016)); Karten und Grafiken in
+  Berichten können geschützt sein ([BGH I ZR 59/19, 2021](https://www.haufe.de/id/entscheidung/bgh-urteil-vom-21012021-i-zr-5919-HI14366013.html))
+  – darum nur die Zahlen übernehmen, Berichte verlinken.
+- Folgen schlimmstenfalls: Bitte um Entfernung, Abmahnung (bei einer Privatperson die
+  Anwaltskosten der ersten Abmahnung gedeckelt,
+  [§ 97a Abs. 3 UrhG](https://www.gesetze-im-internet.de/urhg/__97a.html)). Darum: auf Bitte
+  sofort entfernen; nie, wenn die Kommune Bedingungen gestellt hat (Amberg: Nutzungserklärung;
+  Magdeburg: Entgelt für die Weitergabe im Gespräch). Der CSV-Export bleibt bei Quellen mit
+  Lizenz, damit die Karte nichts ohne Lizenz an Dritte weiterreicht.
+
 ## robots.txt und die Pipeline (Stand 14.11.2026)
 `tools/robots_audit.py` (Branch `werkzeug/erkundung`, Ergebnis `ergebnis/robots_audit/audit.md`)
 hat die Abrufe der Pipeline gegen robots.txt geprüft; zehn Quellen holten über Wege, die

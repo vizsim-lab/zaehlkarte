@@ -33,8 +33,22 @@ test("index.json und manifest.json haben die erwarteten Felder", async ({ reques
     }
   }
   expect(manifest.kriterien).toBeUndefined();
-  for (const q of manifest.quellen) expect(q.lizenzen.length).toBeGreaterThan(0);
+  for (const q of manifest.quellen) {
+    expect(q.lizenzen.length).toBeGreaterThan(0);
+    for (const l of q.lizenzen) lizenzOderOhne(l);
+  }
 });
+
+/** Eine Lizenz – oder ohne Lizenz (CLAUDE.md): wie herausgegeben, Tag der Prüfung, keine daneben. */
+function lizenzOderOhne(l) {
+  if (!l.ohne_lizenz) {
+    expect(l.lizenz).toBeTruthy();
+    return;
+  }
+  expect(l.lizenz).toBeNull();
+  expect(l.ohne_lizenz.herausgegeben).toMatch(/\S/);
+  expect(l.ohne_lizenz.geprueft).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+}
 
 // Datenlage (Version 2, pipeline/src/zaehlkarte/datenlage.py): die echte Datei und die Fixture der
 // Browser-Tests (tests/web/fixtures/datenlage.json) – so kann die Fixture nicht vom Vertrag abweichen.
@@ -90,6 +104,7 @@ test("dauer/index.json, Jahres- und Detaildateien haben die erwarteten Felder", 
   expect(d.standardtag >= d.von && d.standardtag <= d.bis).toBe(true);
   for (const q of d.quellen) {
     expect(q.lizenzen.length).toBeGreaterThan(0);
+    for (const l of q.lizenzen) lizenzOderOhne(l);
     expect(d.kalender[q.land].length).toBe(Math.round((Date.parse(d.bis) - Date.parse(d.von)) / 86_400_000) + 1);
     expect(q.gruppen.length).toBeGreaterThan(0);
     expect(q.gruppen.every((g) => d.gruppen.includes(g))).toBe(true);

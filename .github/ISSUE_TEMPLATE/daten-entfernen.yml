@@ -1,0 +1,41 @@
+name: "Daten entfernen lassen"
+description: "Sie halten die Rechte an Zählwerten, die die Karte ohne Lizenz zeigt, und möchten sie entfernt haben."
+title: "[Entfernen] <Kommune oder Quelle>"
+labels: ["entfernen"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Die Zählkarte zeigt einige Zählwerte, die eine Kommune ohne Lizenz veröffentlicht oder auf Anfrage herausgegeben hat – in der Karte als „ohne Lizenz“ gekennzeichnet und nicht im CSV-Export. Wenn Sie (oder Ihre Stelle) die Rechte daran halten und die Werte nicht in der Karte sehen möchten, nennen Sie hier die Quelle; wir entfernen sie umgehend.
+        Lieber eine Lizenz? Dann genügt der Name der Lizenz (etwa CC BY 4.0 oder Datenlizenz Deutschland) – die Werte erscheinen dann mit Lizenz und auch im CSV-Export.
+        Dieses Formular ist öffentlich; bitte keine persönlichen Daten eintragen.
+  - type: input
+    id: quelle
+    attributes:
+      label: Kommune oder Quelle
+      description: So, wie sie in der Karte unter „Quellen & Lizenzen“ steht.
+      placeholder: "z. B. Kevelaer"
+    validations:
+      required: true
+  - type: dropdown
+    id: wunsch
+    attributes:
+      label: Was sollen wir tun?
+      options:
+        - "Werte aus der Karte entfernen"
+        - "Werte mit einer Lizenz zeigen (Lizenz unten)"
+    validations:
+      required: true
+  - type: input
+    id: stelle
+    attributes:
+      label: Für welche Stelle sprechen Sie?
+      description: Behörde, Amt oder Büro – kein Name einer Person nötig.
+      placeholder: "z. B. Stadt Kevelaer, Fachbereich Stadtplanung"
+    validations:
+      required: true
+  - type: textarea
+    id: mehr
+    attributes:
+      label: Sonst noch was? (optional)
+      description: Lizenz, nur einzelne Zählungen, ein Link zur Quelle.

@@ -210,3 +210,34 @@ test("Datenlage: Empfehlung und Anfragetext für Dresden", async ({ page }) => {
   await expect(el.locator('a[href^="https://fragdenstaat.de/"]').first()).toBeVisible();
   await expect(el.locator("[data-kopieren]")).toBeVisible();
 });
+
+test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export", async ({ page }) => {
+  // Ravensburg so, wie eine Quelldatei mit `ohne_lizenz` in manifest.json ankäme
+  await page.route(/\/data\/manifest\.json$/, async (route) => {
+    const antwort = await route.fetch();
+    const m = await antwort.json();
+    const q = m.quellen.find((x) => x.code === "ravensburg");
+    q.lizenzen = q.lizenzen.map((l) => ({
+      ...l, lizenz: null, lizenz_url: null,
+      ohne_lizenz: { herausgegeben: "als PDF auf der Website der Stadt, ohne Lizenzangabe", geprueft: "2026-11-14" },
+    }));
+    await route.fulfill({ response: antwort, json: m });
+  });
+  const fehler = await oeffne(page, "#t=kfz.menge&q=ravensburg");
+  await klickeStelle(page, (x) => x.quelle === "ravensburg" && x.zaehlungen.some((z) => z.fenster === "0–24"));
+  const detail = page.locator("#detail");
+  await expect(detail.locator(".ohne-lizenz")).toHaveText("ohne Lizenz");
+  await expect(detail).toContainText("als PDF auf der Website der Stadt, ohne Lizenzangabe (geprüft am 14.11.2026)");
+  await expect(detail.getByRole("link", { name: "Entfernen lassen" })).toHaveAttribute("href", /template=daten-entfernen\.yml$/);
+  await expect(detail.locator("[data-csv]")).toHaveCount(0);
+  await expect(detail).toContainText("ohne Lizenz – kein CSV");
+  // „Quellen & Lizenzen“: Ravensburg gekennzeichnet, die übrigen mit ihrer Lizenz
+  await expect(page.locator("#quellen-text .ohne-lizenz")).toHaveCount(1);
+  await expect(page.locator('#quellen-text a[href*="dl-de/by-2-0"]').first()).toBeAttached();
+  // CSV der Zählungen im Filter (nur Ravensburg): nur die Kopfzeile
+  await expect(page.locator("#export-csv")).toHaveAttribute("title", "Zählungen im Filter als CSV (nur Quellen mit Lizenz)");
+  const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);
+  const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
+  expect(text.replace(/^﻿/, "").trim().split("\n")).toEqual([expect.stringMatching(/^quelle;stelle;name;/)]);
+  expect(fehler).toEqual([]);
+});

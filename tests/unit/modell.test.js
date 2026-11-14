@@ -2,7 +2,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  ansicht, csv, entpacke, features, kennwert, kennzahlText, standardZustand, stufe, stufenText, zaehlen,
+  ansicht, csv, entpacke, features, kennwert, kennzahlText, lizenzFuerCsv, standardZustand, stufe, stufenText, zaehlen,
 } from "../../js/data/modell.js";
 
 const INDEX = {
@@ -107,4 +107,14 @@ test("Zähler und CSV", () => {
   assert.equal(zeilen.length, 5);
   assert.ok(text.startsWith("\ufeffquelle;stelle;name"));
   assert.ok(!zeilen[0].includes("schulweg"));
+  // Quelle ohne Lizenz (CLAUDE.md): ihre Zählungen bleiben weg, die anderen tragen ihre Lizenz
+  const ohne = csv(daten, z, (quelle) => (quelle === "ravensburg" ? null : "dl-de/by-2-0")).trim().split("\n");
+  assert.equal(ohne.length, 4);
+  assert.ok(ohne.slice(1).every((x) => x.startsWith("berlin;") && x.endsWith(";dl-de/by-2-0")));
+});
+
+test("lizenzFuerCsv: der Name der Lizenz, null ohne Lizenz", () => {
+  assert.equal(lizenzFuerCsv({ lizenz: "CC0 1.0", lizenz_url: "https://creativecommons.org/publicdomain/zero/1.0/" }), "CC0 1.0");
+  assert.equal(lizenzFuerCsv({ lizenz: null, ohne_lizenz: { herausgegeben: "PDF", geprueft: "2026-11-14" } }), null);
+  assert.equal(lizenzFuerCsv(undefined), "");
 });

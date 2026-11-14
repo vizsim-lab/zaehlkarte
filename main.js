@@ -9,7 +9,7 @@
 // Sprache (DE Standard, EN wählbar): js/sprache/ – nach einem Wechsel wird neu gezeichnet.
 import { Map as Karte } from "./js/lib/maplibre.js";
 import { gibtDauer, ladeDauer, ladeStart } from "./js/data/laden.js";
-import { ansicht, csv, entpacke, features, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
+import { ansicht, csv, entpacke, features, lizenzFuerCsv, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
 import {
   ansichtDauer, ansichtJuengster, csvDauer, csvDauerJuengster, entpackeDauer, featuresDauer, imJuengsten, tagDerStelle,
   tagImZeitraum, themaFuerKommune, themaIn, zaehleDauer,
@@ -233,7 +233,10 @@ async function start() {
     const familie = zustand.familie === "d" || !p.kurzzeit ? "d" : "k";
     const b = datenlageBlock(p, familie);
     const dl = familie === "d";
-    const inKarte = b.stand === "in_karte";
+    // in der Karte: mit Lizenz („in_karte“) oder ohne („ohne_lizenz“ mit Quellen) – Kontakt und
+    // Rechtslage, solange eine Anfrage noch etwas bringt, also auch bei Werten ohne Lizenz
+    const inKarte = b.quellen.length > 0;
+    const mitLizenz = b.stand === "in_karte";
     const el = dlPanel;
     const scroll = el.scrollTop;
     const links = b.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");
@@ -250,8 +253,8 @@ async function start() {
       ${was}
       ${inKarte ? `<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.d.in_karte"))}</button></p>` : ""}
       ${lage}
-      ${inKarte ? "" : kontakt}
-      ${inKarte ? "" : recht}` : `
+      ${mitLizenz ? "" : kontakt}
+      ${mitLizenz ? "" : recht}` : `
       ${b.zaehlungen ? `${was}<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.in_karte", { n: zahl(b.zaehlungen) }))}</button></p>` : ""}
       ${lage || (b.zaehlungen ? "" : was)}
       ${b.empfehlung ? `<div class="detail-abschnitt">${esc(t("dl.empfehlung"))}</div><p class="detail-text" lang="de">${esc(b.empfehlung)}</p>` : ""}
@@ -327,7 +330,8 @@ async function start() {
     if (zustand.familie === "d" && dauer) {
       // gewählter Tag: alle Stellen an dem Tag; im Standard je Stelle ihr jüngster Schultag
       const tag = tagJetzt();
-      const lizenz = (quelle) => dauer.quellenMeta.find((q) => q.code === quelle)?.lizenzen[0]?.lizenz ?? "";
+      // Quellen ohne Lizenz: null – ihre Stellen bleiben weg
+      const lizenz = (quelle) => lizenzFuerCsv(dauer.quellenMeta.find((q) => q.code === quelle)?.lizenzen[0]);
       const text = tag == null ? csvDauerJuengster(dauer, lizenz) : csvDauer(dauer, dauerJahr, tag, lizenz);
       const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
       const a = document.createElement("a");
@@ -340,7 +344,7 @@ async function start() {
     const lizenzVon = (quelle, lieferung) => {
       const q = manifest.quellen.find((x) => x.code === quelle);
       const code = lieferung ? lieferung.split(":")[1] : quelle;
-      return (q.lizenzen.find((l) => l.code === code) ?? q.lizenzen[0])?.lizenz ?? "";
+      return lizenzFuerCsv(q.lizenzen.find((l) => l.code === code) ?? q.lizenzen[0]); // ohne Lizenz: null
     };
     const blob = new Blob([csv(daten, zustand, lizenzVon)], { type: "text/csv;charset=utf-8" });
     const a = document.createElement("a");

@@ -12,7 +12,7 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   Kinder/Jugendliche im Tagesgang).
 - Kennzahl wählbar: Summe 7–19 Uhr, Summe 24 Stunden oder die stärkste Stunde.
 - Je Zählstelle alle Zählungen, der **Tagesgang** jeder Zählung, der Verlauf über die Jahre,
-  die Rohdatei und die Lizenz; Download als CSV.
+  die Rohdatei und die Lizenz; Download als CSV (nur Quellen mit Lizenz, siehe unten).
 - **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen, für beide
   Familien getrennt.
@@ -274,7 +274,13 @@ Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
 - **Code:** AGPL-3.0-or-later. ZDA-Leser und Namensbereinigung stammen aus
   [vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege) (MIT).
 - **Daten:** die Lizenz der jeweiligen Quelle (Tabellen oben, in der Karte je Zählung und je
-  Dauerzählstelle, im CSV-Export in jeder Zeile); Namensnennung erforderlich. Wo eine Quelle
+  Dauerzählstelle, im CSV-Export in jeder Zeile); Namensnennung erforderlich.
+  **Quellen ohne Lizenz:** Hat eine Kommune Zählwerte ohne Lizenz veröffentlicht oder auf
+  Anfrage herausgegeben, ohne Bedingungen zu stellen, zeigt die Karte die Zahlen mit dem Hinweis
+  „ohne Lizenz“ und dem Link zum Original – nicht im CSV-Export, und wer sie weiterverwenden will,
+  fragt die Kommune. Rechteinhaber können sie über das Formular
+  [„Daten entfernen lassen“](https://github.com/vizsim-lab/zaehlkarte/issues/new?template=daten-entfernen.yml)
+  entfernen lassen; das geschieht umgehend. Abwägung in `AGENTS.md` („Rechtliches“). Wo eine Quelle
   keine Lage oder keine Straßennamen nennt, stammen sie aus OpenStreetMap
   (© OpenStreetMap-Mitwirkende, ODbL; vermerkt an der Quelle). Hintergrundkarte
   © OpenStreetMap-Mitwirkende, OpenFreeMap; Relief: Mapterhorn.

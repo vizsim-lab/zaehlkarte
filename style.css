@@ -1044,6 +1044,9 @@ body {
 .quelle-eintrag ul { margin: 4px 0 0; padding-left: 16px; color: var(--ui-text-muted); }
 .quelle-eintrag a, .detail-panel a { color: var(--ui-accent); text-decoration: none; }
 .quelle-eintrag a:hover, .detail-panel a:hover { text-decoration: underline; }
+/* Quellen ohne Lizenz (CLAUDE.md): Kennzeichen in Seitenleiste und Detail, nicht im CSV-Export */
+.ohne-lizenz { font-weight: 600; color: var(--ui-text); }
+.ohne-lizenz-text { margin: 2px 0 4px; }
 
 /* ───── Seitenleiste einer Stelle (links, unter der Suche) ───── */
 .detail-panel {
