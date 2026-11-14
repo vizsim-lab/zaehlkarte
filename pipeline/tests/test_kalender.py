@@ -3,7 +3,15 @@ from __future__ import annotations
 from datetime import date
 
 from zaehlkarte.config import Pfade
-from zaehlkarte.kalender import Ferienkalender, feiertage, tagtyp
+from zaehlkarte.kalender import FEIERTAGE_LAENDER, LAENDER, Ferienkalender, feiertage, tagtyp
+
+
+def test_feiertage_laender_wie_umgesetzt():
+    """FEIERTAGE_LAENDER nennt genau die Länder, für die `feiertage()` mehr als die bundesweiten
+    kennt – jedes Land hat mindestens einen eigenen Feiertag."""
+    bund = feiertage("XX", 2026)
+    mit_eigenen = {land for land in LAENDER if len(feiertage(land, 2026)) > len(bund)}
+    assert mit_eigenen == FEIERTAGE_LAENDER
 
 
 def test_feiertage_je_land():
