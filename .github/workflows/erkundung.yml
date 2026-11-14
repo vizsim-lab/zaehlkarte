@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [r3_NI, r3_BY, r3_BW, r3_RP, r3_SH, r3_SN, r3_ST, r3_TH, r3_BB, r3_MV, r3_SL, r3_HH, r3_HB, r3_BE]
+        teil: [gezielt1]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
@@ -35,6 +35,7 @@ jobs:
             overpass_probe) timeout 15m python3 tools/overpass_probe.py ergebnis/overpass_probe || true ;;
             kmk_pdf) timeout 10m python3 tools/kmk_pdf.py ergebnis/ferien || true ;;
             ags) timeout 20m python3 tools/ags.py ergebnis/ags || true ;;
+            gezielt*) timeout 40m python3 tools/gezielt_lesen.py "ergebnis/runde3/${{ matrix.teil }}" "tools/r3_gezielt_${{ matrix.teil }}.txt" || true ;;
             mobilithek) timeout 20m python3 tools/mobilithek_alle.py ergebnis/runde3 || true ;;
             angebote) timeout 10m python3 tools/mobilithek_angebote.py ergebnis/runde3/angebote -3266808188115042159 903287344194932736 -4859503742463304999 -1747083335311792689 -8264466313321172654 -7110458871198256509 922430355709591552 973579563426357248 837297127089401856 110000000003145002 || true ;;
             r3_*)
