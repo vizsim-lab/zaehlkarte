@@ -81,6 +81,11 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Münster-ZIP und -Positionen, die Konstanzer CSVs und die Xantener PDFs über ihre Prüfsumme
   (sha256 in sources.yaml). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
   sources.yaml mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
+- **Abrufe der Pipeline nur über `zaehlkarte.abruf`** (robots.txt nach RFC 9309 für die Kennung
+  `zaehlkarte-pipeline`, Crawl-delay, Weiterleitungen), nie `requests` direkt; CKAN-Portale ohne
+  ihre API über `zaehlkarte.ckan`. Was robots.txt sperrt, holt die Pipeline nur mit
+  `robots_ausnahme` an der Quelle in sources.yaml (URL-Anfänge, Grund, seit, Stand der Anfrage) –
+  eine neue Ausnahme beschließt die Projektleitung (AGENTS.md, „robots.txt und die Pipeline“).
 - **Keyless:** Hintergrund OpenFreeMap (Positron, lokale `public/style.json` ohne Sprite),
   Relief Mapterhorn, Suche Photon. Keine API-Keys, keine Secrets im Repo.
 - **MapLibre (ESM, v6):** nur über `js/lib/maplibre.js` importieren; wird NICHT gebündelt
@@ -117,6 +122,10 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Frontend:** `npm run dev`; vor jedem Push `npm run test:unit` und `npm run test:web`
   (Playwright sperrt das Netz außer dem Testserver – die Karte muss ohne Hintergrund laufen).
   Neues Verhalten = neuer Test in `tests/web/`.
+- **Abrufe der Werkzeuge** (Branches `werkzeug/*`): nur, was robots.txt erlaubt – für die eigene
+  Kennung, für `*` und für die Kennungen von Claude; prüfen mit `tools/robots.py` (RFC 9309 samt
+  `*` und `$`, Crawl-delay), nicht mit `urllib.robotparser`. FragDenStaat und GovData sperren
+  Werkzeuge ganz (AGENTS.md, „Wo suchen“).
 - **Daten neu bauen:** Workflow „Kartendaten neu bauen“ (`.github/workflows/daten.yml`) oder
   lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW und die Portale von Münster,
   Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den

@@ -172,14 +172,13 @@ def hole(q: dict, pfade: Pfade, pause: float = 60) -> list[str]:
     """Die Jahrespakete ab `ab_jahr` über die Katalog-API von Open.NRW suchen und die CSV-Dateien
     mit offener Lizenz holen – nur neue oder geänderte (der Server lehnt Abrufe oft ab: je Datei
     mehrere Versuche, sonst bleibt der letzte Stand)."""
-    import requests
 
-    from zaehlkarte.fetch import UA, lade
+    from zaehlkarte.abruf import hole as hole_url
+    from zaehlkarte.fetch import lade
 
     ordner = pfade.roh / q["code"]
     ordner.mkdir(parents=True, exist_ok=True)
-    r = requests.get(q["api"], params={"q": q["suche"], "rows": 100}, headers=UA, timeout=120)
-    r.raise_for_status()
+    r = hole_url(q["api"], params={"q": q["suche"], "rows": 100})
     gewaehlt, geschlossen = {}, []
     for paket in r.json()["result"]["results"]:
         m = re.fullmatch(q["paket_muster"], paket["name"])

@@ -41,9 +41,12 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list
     wird dann mit dem, was schon da ist (Rohdaten im Cache, Gedächtnis aus dem Release)."""
     import traceback
 
+    from zaehlkarte import abruf
+
     pfade = pfade or Pfade()
     log: list[str] = []
     fehler: list[str] = []
+    abruf.ausnahmen_setzen(dauerquellen(pfade))
     for code, q in dauerquellen(pfade).items():
         if nur and code not in nur:
             continue

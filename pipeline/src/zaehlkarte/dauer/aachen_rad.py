@@ -10,7 +10,7 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
   Fahrtrichtung („Falschfahrer“) – sie gehören zur Zählstelle.
 - Standorte: PDF „Standorte Radzählstellen“ (Kennung, Name, „Breite, Länge“, Daten seit). Offenbare
   Tippfehler darin korrigiert `lage` in sources.yaml (mit Vermerk), statt die Rohdatei zu ändern.
-- Mehrere Ressourcen für dasselbe Jahr: die jüngste gilt.
+- Mehrere Ressourcen für dasselbe Jahr: die jüngste gilt (Datum auf der Seite der Ressource).
 """
 
 from __future__ import annotations
@@ -57,28 +57,35 @@ class Bericht:
 
 
 def hole(q: dict, pfade: Pfade) -> list[str]:
-    """Alle Jahres-CSV und das PDF der Standorte über die CKAN-API des Portals holen."""
-    import requests
-
-    from zaehlkarte.fetch import UA, lade
+    """Alle Jahres-CSV und das PDF der Standorte holen. Die Ressourcen stehen auf der Seite des
+    Datensatzes (die CKAN-API sperrt das Portal per robots.txt, ein DCAT-Dokument gibt es nicht).
+    Mehrere Dateien für ein Jahr (die Stadt legt täglich eine neue an und löscht die alte später):
+    die jüngste laut Seite der Ressource, bei gleichem Datum die spätere in der Liste."""
+    from zaehlkarte import ckan
+    from zaehlkarte.fetch import lade
 
     ordner = pfade.roh / q["code"]
     ordner.mkdir(parents=True, exist_ok=True)
     jetzt = datetime.now(UTC).replace(microsecond=0)
-    r = requests.get(q["api"], params={"id": q["paket"]}, headers=UA, timeout=120)
-    r.raise_for_status()
-    paket = r.json()["result"]
-    jahre: dict[str, dict] = {}
+    paket = ckan.paket(q["ckan"], q["paket"], wege=("html",))
+    kandidaten: dict[str, list[dict]] = {}
     pdf = None
     for res in paket["resources"]:
         name = (res.get("name") or "") + " " + (res.get("url") or "")
         if m := re.search(r"(20\d{2})\.csv", name, re.I):
-            alt = jahre.get(m.group(1))
-            stand = res.get("last_modified") or res.get("created") or ""
-            if not alt or stand > (alt.get("last_modified") or alt.get("created") or ""):
-                jahre[m.group(1)] = res
+            kandidaten.setdefault(m.group(1), []).append(res)
         elif (res.get("format") or "").upper() == "PDF" and "standort" in name.lower():
             pdf = res
+
+    def stand(nr_res: tuple[int, dict]) -> tuple[str, int]:
+        nr, res = nr_res
+        s = res.get("last_modified") or res.get("created")
+        if not s and res.get("seite"):
+            s = (d := ckan.ressource_stand(res["seite"])) and d.isoformat()
+        return s or "", nr
+
+    jahre = {j: liste[0] if len(liste) == 1 else max(enumerate(liste), key=stand)[1]
+             for j, liste in kandidaten.items()}
     if not jahre or pdf is None:
         raise ValueError(f"{q['code']}: Ressourcen nicht gefunden ({len(jahre)} Jahre, "
                          f"PDF {pdf is not None})")

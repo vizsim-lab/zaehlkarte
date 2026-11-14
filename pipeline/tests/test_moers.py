@@ -67,3 +67,41 @@ def test_lese_mit_lage(tmp_path):
     assert z.fenster == [(600, 1440)]  # 10–24 Uhr
     assert zs[1].fenster == [(0, 660)]  # 0–11 Uhr
     assert bericht.dateien == 1 and bericht.genauigkeit == {"hausnummer": 1}
+
+
+def test_hole_aus_dcat_nur_geaenderte(tmp_path, monkeypatch):
+    from zaehlkarte import ckan, fetch
+
+    pfade = Pfade(pipeline=tmp_path, repo=tmp_path)
+    q = {"adapter": "moers_radar", "ckan": "https://odp.example",
+         "pakete": ["verkehrszahlungen-2018"]}
+    stand = {"a": "2022-08-16T09:04:55"}
+
+    def paket(basis, name, wege):
+        assert (basis, wege) == ("https://odp.example", ("dcat",))
+        return {"name": name, "title": "Verkehrszählungen 2018", "license_id": None, "resources": [
+            {"name": "A", "url": "https://odp.example/r/a/download/a_t30_01.02.2018.txt",
+             "last_modified": stand["a"]},
+            {"name": "B", "url": "https://odp.example/r/b/download/b%20c.txt",
+             "last_modified": "2022-08-16T09:04:55"},
+            {"name": "ohne Datei", "url": "https://odp.example/r/c/download/",
+             "last_modified": None}]}
+
+    geladen = []
+
+    def lade(url, ziel):
+        geladen.append(url.rsplit("/", 1)[-1])
+        ziel.write_text("01.02.18 10:00:00;00;030;01;0", encoding="utf-8")
+        return ziel
+
+    monkeypatch.setattr(fetch, "quellen", lambda pfade: {"moers": q})
+    monkeypatch.setattr(ckan, "paket", paket)
+    monkeypatch.setattr(fetch, "lade", lade)
+    assert fetch.hole(pfade, ["moers"]) == ["moers: 1 Datensätze, 2 Messungen (2 geladen)"]
+    ordner = pfade.roh / "moers" / "verkehrszahlungen-2018"
+    assert (ordner / "b c.txt").exists()
+    assert json.loads((ordner / "paket.json").read_text(encoding="utf-8"))["title"].endswith("2018")
+    # zweiter Lauf: nur, was sich laut Metadaten geändert hat
+    stand["a"] = "2026-10-20T17:48:38"
+    assert fetch.hole(pfade, ["moers"]) == ["moers: 1 Datensätze, 2 Messungen (1 geladen)"]
+    assert geladen == ["a_t30_01.02.2018.txt", "b%20c.txt", "a_t30_01.02.2018.txt"]

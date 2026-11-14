@@ -18,6 +18,22 @@ Dauerzählstellen von Bund und Ländern (BASt, Landes-Dauerzählstellen) – nic
 davon offen gibt, steht unten unter „Nicht kommunal“.
 
 ## Wo suchen
+- **Zuerst robots.txt.** Jeder Abruf eines Werkzeugs nur, wenn robots.txt ihn erlaubt – für die
+  eigene Kennung, für `*` und für die Kennungen von Claude (ClaudeBot, Claude-User,
+  Claude-SearchBot, anthropic-ai). Prüfen mit `tools/robots.py` (Branch `werkzeug/erkundung`):
+  RFC 9309 mit `*` und `$`, Crawl-delay, Prüfung jeder Weiterleitung. `urllib.robotparser` taugt
+  dafür nicht – in Python 3.12 (Runner) ignoriert es die Platzhalter, „Disallow: /*?*“ sperrte dort
+  nichts. Gesperrt sind (Stand 14.11.2026) unter anderem: **fragdenstaat.de ganz für ClaudeBot und
+  anthropic-ai** (für alle: `/anfrage/*/pdf/`, `/anfrage/*/download/`), **govdata.de ganz für
+  alle**, `query.wikidata.org/sparql`, `overpass-api.de/api/` (andere Overpass-Server erlauben es),
+  die CKAN-API (`/api/`) von offenesdatenportal.de, opendata.olpe.de, offenedaten.aachen.de,
+  opendata.muenchen.de, opendata.ruhr (dort auch jede URL mit Query), mobidata-bw.de, die
+  Opendatasoft-Portale (`/api/` und `/explore/dataset/*/download`), gitlab.opencode.de (`/api/v*`,
+  `/*/raw`), geo.sv.rostock.de (ganz), Downloads `*.osm.pbf` bei Geofabrik. FragDenStaat und
+  GovData daher nur über die Websuche (`site:fragdenstaat.de`, `site:govdata.de`); Anhänge liegen
+  auf media.frag-den-staat.de (eigener Host, erlaubt). Ältere Abschnitte unten beschreiben noch die
+  API-Wege – sie sind so nicht mehr zu gehen. Die Pipeline prüft robots.txt selbst
+  (`pipeline/src/zaehlkarte/abruf.py`); Stand und Ausnahmen: „robots.txt und die Pipeline“.
 - **Open-Data-Portale der Städte und Länder:** MobiData BW (CKAN, Gruppe
   `verkehrszaehldaten`, Pakete `zaehldaten-*`), opendata.potsdam.de, opendata.ruhr, Open.NRW.
   CKAN-API: `/api/3/action/package_search?q=Verkehrszählung`. Für Baden-Württemberg reicht
@@ -208,7 +224,8 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
   Groß-Gerau, Bad Hersfeld, Karben, Mühltal, Rosbach; präzisiert: Frankfurt, Kassel. Nur mit
   Dauerzählstellen (ohne Stand der Kurzzeitzählungen): Gießen, Wiesbaden, Dreieich, Rödermark,
   Rodgau, Altenstadt, Baunatal und die Kreise Marburg-Biedenkopf, Waldeck-Frankenberg,
-  Main-Kinzig und Odenwald; Offenbach fehlt noch (Beleg zu den acht Rad-Zählstellen gesucht).
+  Main-Kinzig und Odenwald sowie Offenbach (acht Rad-Zählstellen laut Pressemitteilung vom
+  30.01.2024).
   - **Rad-Zählnetz des Landes** (wichtigster Fund): seit 2022 Induktionsschleifen je Richtung,
     Stufe 1 (2022) 270 Stellen, etwa die Hälfte in Zuständigkeit von Kreisen, Städten und
     Gemeinden, Stufe 2 (ab 2024) 301 weitere, davon 148 kommunal; Ziel Ende 2026: 571
@@ -222,12 +239,12 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     Lizenz nicht am Datensatz, auch nicht beim WFS Frankfurt, der dl-de/by-2-0 hat).
     Hebel: eine Anfrage bei Hessen Mobil (als Landesbehörde unter dem HDSIG) nach den Stundenwerten
     aller Stellen samt Lizenz – sie brächte die kommunalen Stellen mit. Kommunen mit Stellen laut
-    eigener Meldung: Frankfurt (10), Oberursel (9), Offenbach (8, sieben städtisch), Rödermark (5),
-    Bad Homburg (4), Gießen, Baunatal, Dreieich, Rodgau, Wetzlar, Altenstadt, Eschborn (Zählstationen
-    seit 2018); Kreise Marburg-Biedenkopf (2024 17 Stellen dazu), Waldeck-Frankenberg (6), Main-Kinzig
-    (13 Standorte), Odenwald. Die AGNH verleiht mobile Zählgeräte (Rad, Fuß, Kfz) an Kommunen; die
-    Werte liegen im Eco-Visio-Konto der Kommune – nicht veröffentlicht (Dietzenbach zählte 2025 mit
-    Leihgeräten der Landesenergieagentur).
+    eigener Meldung: Frankfurt (10), Oberursel (9), Offenbach (8, eine davon betreibt Hessen Mobil),
+    Rödermark (5), Bad Homburg (4), Gießen, Baunatal, Dreieich, Rodgau, Wetzlar, Altenstadt, Eschborn
+    (Zählstationen seit 2018); Kreise Marburg-Biedenkopf (2024 17 Stellen dazu), Waldeck-Frankenberg
+    (6), Main-Kinzig (13 Standorte), Odenwald. Die AGNH verleiht mobile Zählgeräte (Rad, Fuß, Kfz)
+    an Kommunen; die Werte liegen im Eco-Visio-Konto der Kommune – nicht veröffentlicht (Dietzenbach
+    zählte 2025 mit Leihgeräten der Landesenergieagentur).
   - **Detektordaten der Verkehrsrechner** in der Mobilithek: Frankfurt (110000000002386001),
     Kassel (110000000002398000) und Wiesbaden (110000000003165001) nur nach Freigabe einer
     Subskription; Rüsselsheim (110000000003182000) Open Data, aber nur Echtzeit (DATEX II).
@@ -263,6 +280,65 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     als CSV unter `sites/default/files/…-Datenbestand_DA_0.csv`); `opendata.cloud.wiesbaden.de`
     lief in Zeitüberschreitungen; Eco-Visio-API-Pfade geraten → 404; Mühltals Übersicht
     „Verkehrsmessdaten“ lädt ihre Liste per JavaScript.
+- Nordrhein-Westfalen (November 2026, Kommune für Kommune: alle 396 Gemeinden und 53 Kreise bzw.
+  kreisfreien Städte laut OSM-Grenzen – Wikidata sperrt Abruf-Werkzeuge per robots.txt –, je Website
+  Sitemap, Suche und Startseite: 429 Seiten, 359 erreicht, 64 per robots.txt gesperrt, vor allem in
+  Lippe, Herford, Minden-Lübbecke, Düren und im Rhein-Erft-Kreis; `tools/land.py`, `tools/nrw2.py`
+  auf `werkzeug/erkundung`, Ergebnisse `ergebnis/nrw*/` –, dazu Websuche für die gesperrten Städte,
+  Open.NRW, opendata.ruhr und offenesdatenportal.de über die Websuche, Mobilithek und der
+  Musterdatenkatalog): keine neue offene Kurzzeitzählung mit Lizenz. Neu in der Datenlage: Kevelaer,
+  Verl, Bad Honnef, Emsdetten, Ratingen, Marl, Gronau, Geseke, Mülheim an der Ruhr, Bottrop,
+  Herscheid, Datteln; präzisiert: Paderborn, Köln. Nur mit Dauerzählstellen: Bielefeld, Neuss,
+  Hennef, Rhein-Sieg-Kreis.
+  - **Offen, aber ohne Lizenz:** Kevelaer – Zählung September 2019 (16 Knotenpunkte 6–10 und
+    15–19 Uhr, Viertelstunden je Strom nach Pkw, Krad, Lieferwagen, Lkw; 13 Querschnitte 24 Stunden,
+    Stundenwerte) als 74-seitiges PDF eines Büros auf kevelaer.de. Bester Fund des Landes: mit einer
+    Lizenz käme die Zählung in die Karte (Text mit pdftotext lesbar, Intervalle „06:00 - 06:15“,
+    ähnlich `xanten_pdf`).
+  - **Nur Summen offen:** Paderborn (Juni 2018 rund 100 Stellen, nur Pläne der DTVw), Verl (gut 60
+    Messberichte der Verkehrsmessungen, Stundenwerte nur als Diagramm), Bad Honnef
+    (Zusammenfassung je Seitenradar-Zählung, die Liste lädt per JavaScript), Emsdetten (Wochenmittel
+    an fünf Kamera-Zählstellen während der Sperrung der B 481), Münster (Monatsmittel der
+    Ampelschleifen an fünf Kreuzungen seit 2021, Mobilithek -5042567686068911126 – keine Tageswerte,
+    nicht in der Karte).
+  - **Gezählt, nicht offen:** Ratingen (33 Kreuzungen 2024), Marl (67 eigene Zählstellen zur
+    Straßenverkehrszählung 2025), Gronau, Geseke (Schulwege, Fuß und Rad, September 2026), Mülheim,
+    Bottrop, Herscheid (verdeckte Messungen je Fahrzeug), Datteln; nur Ankündigungen von Zählungen
+    durch Büros: Bad Salzuflen, Niederkassel, Unna, Gütersloh, Hilden; eigene Zählgeräte bzw.
+    Geschwindigkeitsanzeigen mit Statistik: Augustdorf, Reken, Eschweiler, Freudenberg, Burbach,
+    Warendorf, Brakel, Neuss (Dialog-Displays an 31 Standorten), Haan (Messergebnisse der
+    Geschwindigkeitsanzeige 2018–2021, rund 80 Berichte – die PDF-Downloads sperrt robots.txt,
+    Inhalt nicht geprüft).
+  - **Dauerzählstellen:** Stadt Neuss (Rad-Zählstelle am RS5, Stundenwerte im Portal des
+    Rhein-Kreises, in der Mobilithek „keine Lizenz“), Bielefeld (sieben Rad-Dauerzählstellen; der
+    Open-Data-Eintrag verlinkt nur Webseite und Karte), Hennef (Horstmannsteg, Jahresberichte als
+    PDF), Rhein-Sieg-Kreis (12 Rad-Zählstellen, interaktive Karte), Köln (17 und mehr, einige mit Kfz,
+    nur Eco Public), Paderborn (Sensoren der Smart City), Emsdetten (KI-Kameras am
+    Döring-Kreisverkehr). Detektordaten: Köln und Gelsenkirchen nur DATEX II (Echtzeit), Düsseldorf
+    ohne Lizenz (Mobilithek 110000000002055001).
+  - **Moers ist vollständig:** Die Einzel-Datensätze auf opendata.ruhr und Open.NRW („Verkehrszählung
+    Boschheideweg“, „… Kirchweg“ von 2014 usw.) sind ältere Einträge derselben Messungen; auf
+    offenesdatenportal.de gibt es genau die zehn Jahresdatensätze 2010–2021, die die Karte liest
+    (`verkehrszahlung-kirschenallee` heißt dort „Verkehrszählungen 2010“).
+  - **Für die Geschwindigkeitskontrollen** (`vizsim-lab/geschwindigkeitskontrollen`): Messstellen der
+    mobilen Überwachung von Kreis Kleve, Kleve und Wesel (offenesdatenportal.de, dl-de/zero),
+    Moers („Verkehrsüberwachung“), Düsseldorf (stationäre Überwachung), Köln (Messplatzliste 2022);
+    Fallzahlen semistationärer Anlagen: Kreise Mettmann, Siegen-Wittgenstein, Hochsauerlandkreis.
+  - **Nicht kommunal:** FH Aachen („Aachener Datenpool“ ACDatEP, Mobilithek 767690308516229120),
+    Straßen.NRW (Straßenverkehrszählung, Dauerzählstellen), die Zählungen der Kreise zur
+    Straßenverkehrszählung 2025 (Ergebnisse veröffentlicht die BASt).
+  - **Sackgassen:** Open.NRW (`ckan.open.nrw.de`) aus Actions nicht erreichbar, seine API sperrt
+    robots.txt – die Websuche mit `site:open.nrw` findet die Datensätze, auch die von opendata.ruhr
+    und offenesdatenportal.de gespiegelten (dort aber ohne Ressourcen); opendata.ruhr sperrt `/api/`
+    und jede URL mit Query (`/*?*`), offenesdatenportal.de `/api/` (Crawl-delay 10 s). Der
+    Musterdatenkatalog (Themen der kommunalen Open-Data-Sätze) liegt bei der FITKO auf openCode (das
+    Projekt fand die API nicht); ein Stand von 2023 liegt auf GitHub
+    (`bertelsmannstift/musterdatenkatalog`, Kategorien „Individualverkehr – Messstellen“ und
+    „Radverkehr – Messstellen“) – dort nichts Neues. Für gesperrte oder nicht erreichbare
+    Gemeindeseiten (Herford, Hürth, Castrop-Rauxel, Herne, Remscheid, Hagen, Langenfeld, Stolberg,
+    Kerpen, Bergheim, Brühl, Frechen, Pulheim, Erftstadt, Kamen, Bünde, Löhne, Greven, Steinfurt)
+    fand die Websuche nichts Verwertbares, meist Gutachten zu Bebauungsplänen.
+  - **Recht:** Das IFG NRW gilt für Gemeinden und Kreise unmittelbar.
 - Übrige Länder (November 2026, GovData je Land, Landes- und Stadtportale, alle
   FragDenStaat-Anfragen samt Anhängen, Stadtseiten): neu offen nur Olpe (in der Karte). Neu in der
   Datenlage: Bremen, Augsburg, Amberg, Wuppertal, Falkensee, Lingen (Ems); präzisiert: Kassel
@@ -327,6 +403,57 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
 [DNG](https://www.gesetze-im-internet.de/dng/BJNR294200021.html),
 [MobiData BW Factsheet](https://mobidata-bw.de/data/MobiData-BW-Factsheet-Datenbereitstellungspflichten.pdf).
 
+## robots.txt und die Pipeline (Stand 14.11.2026)
+`tools/robots_audit.py` (Branch `werkzeug/erkundung`, Ergebnis `ergebnis/robots_audit/audit.md`)
+hat die Abrufe der Pipeline gegen robots.txt geprüft; zehn Quellen holten über Wege, die
+robots.txt für alle Robots sperrt. Seitdem:
+- **Die Pipeline prüft jeden Abruf selbst** (`pipeline/src/zaehlkarte/abruf.py`): robots.txt nach
+  RFC 9309 für ihre Kennung `zaehlkarte-pipeline` (sonst die Gruppe `*`), Crawl-delay je Host
+  (höchstens 60 s), jedes Weiterleitungsziel. Gesperrtes nur mit `robots_ausnahme` an der Quelle in
+  sources.yaml (URL-Anfänge, Grund, seit, Stand der Anfrage beim Betreiber); das Protokoll von
+  `fetch` und `dauer fetch` nennt jeden Abruf, der nur dank einer Ausnahme ging, und die Wartezeit.
+  Neue Quellen: ohne erlaubten Weg keine Aufnahme, außer die Projektleitung beschließt eine
+  Ausnahme. GitHub (Checkout, Releases, API mit dem Token des Workflows) ist kein Crawlen und
+  bleibt außen vor.
+- **Umgestellt auf erlaubte Wege** (`pipeline/src/zaehlkarte/ckan.py`, Muster in
+  `ergebnis/wege2/`):
+  - Moers (offenesdatenportal.de): DCAT-Dokument je Datensatz (`/dataset/<name>.jsonld`) – die
+    HTML-Seite zeigt nur einen Teil der Ressourcen. Rund 200 Dateien mit 10 s Abstand: ein Lauf
+    von „Kartendaten neu bauen“ dauert eine gute halbe Stunde länger.
+  - Olpe: HTML-Suche und HTML-Seite je Datensatz. Die HTML-Suche findet je nach Wortform andere
+    Datensätze („Verkehrsmessung“ 5, „Verkehrsmessungen“ 8; die API fand mit dem ersten Wort alle
+    neun) – beide Formen plus die bekannten (`pakete`). Das DCAT-Dokument nennt keine Lizenz; die
+    Lizenz kommt aus dem Link der Seite (`lizenz_link` der Lieferung).
+  - Probelauf 14.11. (`tools/pipeline_probe.py`, `ergebnis/pipeline_probe/`): Olpe 9 Datensätze,
+    13 Messungen, 128 Zählungen; Moers 2021 und Kirschenallee 47 Dateien, 181 Zählungen – beides
+    genau wie in der Karte.
+  - Aachen: HTML-Seite (kein DCAT-Dokument). Die Stadt legt täglich eine neue Datei für das
+    laufende Jahr an und löscht die alte später; bei zwei Dateien eines Jahres gilt die jüngste
+    laut Seite der Ressource („Daten wurden zuletzt aktualisiert“).
+  - München: HTML-Suche, je Paket DCAT-Dokument oder HTML-Seite. Für die Werkzeuge nicht prüfbar
+    (opendata.muenchen.de sperrt ClaudeBot ganz); für die Pipeline erlaubt (Gruppe `*`).
+  - Hamburg: Straßennamen neuer Stellen über Overpass (overpass.kumi.systems,
+    overpass.private.coffee, maps.mail.ru – in dieser Reihenfolge) statt Geofabrik-Abzug –
+    Geofabrik sperrt `*.osm.pbf` (ebenso openstreetmap.fr ganz und BBBike `*.pbf`),
+    overpass-api.de seine API. Am 14.11. antwortete aus Actions nur maps.mail.ru (POST, 15 s; GET
+    504), kumi und private.coffee liefen in die Zeitgrenze (`ergebnis/overpass_probe/`). Scheitern
+    alle, bleiben die neuen Stellen ohne Namen, der nächste Lauf fragt neu.
+  - Moers-Geokodierung (`werkzeuge/geokodiere_moers.py`): Overpass über kumi, Abrufe über
+    `abruf` (Nominatim und Photon prüft es beim nächsten Lauf).
+- **Ausnahmen** (die Projektleitung will die Quellen nicht verlieren; bis die Betreiber
+  antworten): Potsdam (Opendatasoft-API, Zählpläne auf de.ftp.opendatasoft.com – ganz gesperrt),
+  Würzburg, Rhein-Kreis Neuss, Dortmund (Opendatasoft `/api/explore/`; auch
+  `/explore/dataset/*/download` ist gesperrt), Rostock (geo.sv.rostock.de und opendata-hro.de
+  ganz), Bochum (openCode-GitLab: API, `/*/raw`, Archive und git über HTTPS; opendata.ruhr
+  verweist auf genau diese Wege). Viele Betreiber sperren ihre API gegen Suchmaschinen und bieten
+  sie zugleich für Programme an – die Anfrage klärt, ob ein wöchentlicher Abruf bekannter Dateien
+  gemeint ist. Entwürfe: Projekt-Dokument `claude/anfragen-robots-2026-11.md`.
+- **Ohne Ausnahme gesperrt:** Workflow „Berlin geokodieren“ (Geofabrik-Abzug Berlin) – bricht ab,
+  das Ergebnis des letzten Laufs liegt im Git.
+- **Erlaubt** laut Prüfung: MobiData BW (Dateien unter `/daten/`), Münster, Konstanz, Xanten
+  (opendata.ruhr ohne Query), Berlin (Archiv, Rad-Datei), Hamburg (SensorThings), Ettlingen,
+  Open.NRW (API; Essen und Düsseldorf laden von den Seiten der Städte), Leipzig, Bonn.
+
 ## Dauerzählstellen (November 2026)
 
 - **Berlin (in der Karte, `berlin_viz`):** öffentlicher Azure-Container
@@ -353,8 +480,9 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     Stunden, die sieben Tage alt sind.
   - UTC (laut Quelle). Die Rückstellung legt zwei UTC-Stunden auf 2 Uhr Ortszeit.
   - Keine Straßennamen, nur Kennung (`assetID` = Knotenpunkt, 9, Arm, Richtung) und Punkt →
-    nächste benannte Straße aus dem Geofabrik-Abzug (OSM, ODbL), Kreuzungsname aus den
-    übrigen Armen desselben Knotenpunkts.
+    nächste benannte Straße aus OSM (ODbL; über Overpass, seit November 2026 – den
+    Geofabrik-Abzug sperrt robots.txt), Kreuzungsname aus den übrigen Armen desselben
+    Knotenpunkts.
   - Verschachteltes `$expand=Observations(…;$filter=phenomenonTime ge …;$top=10000)` über eine
     Seite Datastreams spart Abfragen; `$top` bis 20.000 geht.
   - Die alten Dienste `HH_STA_AutomatisierteVerkehrsmengenerfassung` und

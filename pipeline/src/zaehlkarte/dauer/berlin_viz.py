@@ -44,12 +44,11 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-import requests
 
+from zaehlkarte import abruf
 from zaehlkarte.config import Pfade
 from zaehlkarte.dauer.modell import LEER, Dauerstelle, Messreihe, umstellungen
 
-UA = {"User-Agent": "zaehlkarte-pipeline (+https://github.com/vizsim-lab/zaehlkarte)"}
 ORDNER = "berlin_viz"
 GRUPPEN = ("kfz", "lkw")  # Lkw = Klasse des Detektors
 ALT = re.compile(
@@ -111,8 +110,7 @@ def blob_liste(archiv: str) -> list[dict]:
         params = {"restype": "container", "comp": "list", "maxresults": "5000"}
         if marker:
             params["marker"] = marker
-        antwort = requests.get(archiv, params=params, headers=UA, timeout=120)
-        antwort.raise_for_status()
+        antwort = abruf.hole(archiv, params=params)
         wurzel = ET.fromstring(antwort.content)
         for b in wurzel.iter("Blob"):
             p = b.find("Properties")

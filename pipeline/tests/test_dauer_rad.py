@@ -329,7 +329,7 @@ AC_KOPF = ["Zeitstempel_von (UTC)", "Zeitstempel_bis (UTC)",
            "Radfahrer Richtung Mozartstraße (Falschfahrer)",
            "447917 | Annuntiatenbach | Radfahrer Richtung Augustinerbach",
            "999999 | Ohne Lage | Rad"]
-AC_Q = {"code": "aachen_rad", "land": "NW", "api": "https://ac.example/api/3/action/package_show",
+AC_Q = {"code": "aachen_rad", "land": "NW", "ckan": "https://ac.example",
         "paket": "radzaehlstellen",
         "lage": {"447917": {"lat": 50.776281, "lon": 6.080208, "grund": "Tippfehler"}}}
 
@@ -358,24 +358,20 @@ def test_aachen_standorte_aus_text():
 def test_aachen_hole_und_lese(pfade, monkeypatch):
     # 24.10.2026 22 Uhr UTC = 25.10. 0 Uhr Ortszeit; die Rückstellung hat 25 Stunden
     csv25 = ac_jahr(datetime(2026, 10, 24, 22), 25 + 24, leer={(30, 0)}, ohne={40})
+    # wie auf der Seite des Datensatzes: ohne Datum; das steht auf der Seite der Ressource
     ressourcen = [
-        {"name": "Radzaehlstellen_2026.csv", "url": "https://ac.example/alt_2026.csv",
-         "last_modified": "2026-11-12T03:00:00"},
+        {"name": "Standorte Radzählstellen", "format": "pdf", "url": "https://ac.example/standorte.pdf"},
         {"name": "Radzaehlstellen_2026.csv", "url": "https://ac.example/neu_2026.csv",
-         "last_modified": "2026-11-13T03:00:00"},
-        {"name": "Standorte Radzählstellen", "format": "PDF", "url": "https://ac.example/standorte.pdf"},
+         "seite": "https://ac.example/r/neu"},
+        {"name": "Radzaehlstellen_2026.csv", "url": "https://ac.example/alt_2026.csv",
+         "seite": "https://ac.example/r/alt"},
     ]
+    from zaehlkarte import ckan
 
-    class Antwort:
-        def raise_for_status(self):
-            pass
-
-        def json(self):
-            return {"result": {"resources": ressourcen}}
-
-    import requests
-
-    monkeypatch.setattr(requests, "get", lambda url, **k: Antwort())
+    stand = {"https://ac.example/r/neu": date(2026, 11, 13),
+             "https://ac.example/r/alt": date(2026, 11, 12)}
+    monkeypatch.setattr(ckan, "paket", lambda basis, name, wege: {"resources": ressourcen})
+    monkeypatch.setattr(ckan, "ressource_stand", lambda seite: stand[seite])
     geholt = []
 
     def lade(url: str, ziel: Path) -> Path:
@@ -499,6 +495,34 @@ def test_muenchen_dateien_waehlen():
     assert muenchen_rad.dateien_waehlen(res) == {
         "jahr_2025.csv": "https://m.example/rad_2025_15min.csv",
         "monat_2026_03.csv": "https://m.example/rad_2026_03_15min.csv"}
+
+
+def test_muenchen_hole_ueber_suche_und_pakete(pfade, monkeypatch):
+    from zaehlkarte import ckan
+
+    q = {"code": "muenchen_rad", "ckan": "https://m.example", "suche": ["raddauerzählstellen"],
+         "wfs": "https://geo.example/ows?typeName=rad"}
+    pakete = {
+        "jahreszahlen": [{"name": "15 Minuten Werte 2025", "url": "https://m.example/2025.csv"}],
+        "monate-2026": [{"name": "15 Minuten-Werte - März 2026 - Daten der Raddauerzählstellen",
+                         "url": "https://m.example/2026_03.csv"},
+                        {"name": "Tageswerte und Wetter - März 2026", "url": "https://m.example/t.csv"}],
+    }
+    monkeypatch.setattr(ckan, "suche", lambda basis, begriffe: list(pakete))
+    monkeypatch.setattr(ckan, "paket", lambda basis, name: {"resources": pakete[name]})
+    geladen = []
+
+    def lade(url: str, ziel: Path) -> Path:
+        geladen.append(url)
+        ziel.parent.mkdir(parents=True, exist_ok=True)
+        ziel.write_text("x")
+        return ziel
+
+    monkeypatch.setattr(zaehlkarte.fetch, "lade", lade)
+    assert muenchen_rad.hole(q, pfade) == ["muenchen_rad: 2 Dateien, davon 2 neu geladen"]
+    assert muenchen_rad.hole(q, pfade) == ["muenchen_rad: 2 Dateien, davon 0 neu geladen"]
+    assert geladen == ["https://m.example/2025.csv", "https://m.example/2026_03.csv", q["wfs"],
+                       q["wfs"]]
 
 
 def test_muenchen_lese(pfade):

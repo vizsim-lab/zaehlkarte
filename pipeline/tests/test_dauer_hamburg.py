@@ -214,6 +214,42 @@ def test_naechste_strasse(tmp_path):
     assert "c" not in t
 
 
+def test_strassennamen_overpass_nicht_erreichbar(api, pfade, monkeypatch):
+    from zaehlkarte import abruf
+
+    def hole(url, **k):
+        raise abruf.requests.ReadTimeout(url)
+
+    monkeypatch.setattr(abruf, "hole", hole)
+    a = thing("0248931", 10.0050, 53.60005, "Ost nach West", "Ost")
+    api.ds = [{"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {},
+               "obs": stunden(utc(2026, 11, 1, 23), 48)}]
+    q = {**Q, "overpass": ["https://langsam.example/api/interpreter"]}
+    log = hh.hole(q, pfade)
+    assert any("Stunden geholt" in z for z in log)  # die Zählwerte kommen trotzdem
+    assert any("nicht geholt (Overpass: ReadTimeout)" in z for z in log)
+    assert not (pfade.roh / "hamburg_kfz" / "gedaechtnis" / "strassen.json").exists()
+
+
+def test_naechste_strasse_aus_overpass():
+    from zaehlkarte.dauer.strassen import naechste, overpass_abfrage, segmente_aus_overpass
+
+    punkte = {"a": (10.005, 53.60025), "b": (10.005, 53.61002), "c": (10.005, 53.6050)}
+    antwort = overpass_antwort(
+        ("Bramfelder Straße", "secondary", [(10.0, 53.6), (10.01, 53.6)]),
+        ("Radweg Nord", "cycleway", [(10.0, 53.6003), (10.01, 53.6003)]),
+        ("Parkweg", "footway", [(10.0, 53.61), (10.01, 53.61)]),
+        ("Gleis", "rail", [(10.0, 53.605), (10.01, 53.605)]))  # kein highway der Listen
+    antwort["elements"].append({"type": "node", "id": 1, "lat": 53.605, "lon": 10.005})
+    t = naechste(punkte, segmente_aus_overpass(antwort, (9.9, 53.5, 10.1, 53.7)))
+    assert t["a"]["name"] == "Bramfelder Straße" and t["a"]["abstand_m"] < 30
+    assert t["b"]["name"] == "Parkweg"
+    assert "c" not in t
+    abfrage = overpass_abfrage({"a": (10.005, 53.60025)})
+    assert abfrage == ('[out:json][timeout:60];(way(around:50,53.600250,10.005000)'
+                       '["highway"]["name"];);out geom;')
+
+
 def test_site_mit_hamburg(api, pfade):
     a = thing("0248931", 10.0, 53.6, "Nordost nach Südwest", "Nordost")
     api.ds = [{"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {},
@@ -241,30 +277,35 @@ def test_site_mit_hamburg(api, pfade):
     assert {g: len(v) for g, v in index["juengster"].items()} == {"kfz": 1, "sv": 1}
 
 
-def test_strassennamen_und_knotenpunkt(api, pfade, tmp_path, monkeypatch):
+def overpass_antwort(*wege: tuple[str, str, list[tuple[float, float]]]) -> dict:
+    """Antwort von Overpass (`out geom`): je Weg Name, highway und Punkte (lon, lat)."""
+    return {"elements": [
+        {"type": "way", "id": i, "tags": {"highway": hw, "name": name},
+         "geometry": [{"lat": lat, "lon": lon} for lon, lat in punkte]}
+        for i, (name, hw, punkte) in enumerate(wege, 10)]}
+
+
+def test_strassennamen_und_knotenpunkt(api, pfade, monkeypatch):
     # zwei Arme eines Knotenpunkts an zwei Straßen: Name = eigene Straße, Abschnitt = die andere
-    osm = tmp_path / "hh.osm"
-    osm.write_text("""<?xml version='1.0' encoding='UTF-8'?>
-<osm version="0.6">
- <node id="1" lat="53.6000" lon="9.9900"/><node id="2" lat="53.6000" lon="10.0100"/>
- <node id="3" lat="53.5900" lon="10.0000"/><node id="4" lat="53.6100" lon="10.0000"/>
- <way id="10"><nd ref="1"/><nd ref="2"/><tag k="highway" v="primary"/>
-  <tag k="name" v="Bramfelder Straße"/></way>
- <way id="11"><nd ref="3"/><nd ref="4"/><tag k="highway" v="secondary"/>
-  <tag k="name" v="Steilshooper Straße"/></way>
-</osm>
-""")
-    import zaehlkarte.fetch
+    from zaehlkarte import abruf
 
-    geladen = []
+    antwort = overpass_antwort(
+        ("Bramfelder Straße", "primary", [(9.99, 53.60), (10.01, 53.60)]),
+        ("Steilshooper Straße", "secondary", [(10.00, 53.59), (10.00, 53.61)]))
+    abfragen = []
 
-    def lade(url, ziel):
-        geladen.append(url)
-        ziel.parent.mkdir(parents=True, exist_ok=True)
-        ziel.write_bytes(osm.read_bytes())
-        return ziel
+    class Antwort:
+        def json(self):
+            return antwort
 
-    monkeypatch.setattr(zaehlkarte.fetch, "lade", lade)
+    def hole(url, daten=None, **k):
+        abfragen.append(url)
+        if "kaputt" in url:
+            raise abruf.Gesperrt(url)  # der erste Server: der nächste wird versucht
+        assert "around:50," in daten["data"] and "out geom" in daten["data"]
+        return Antwort()
+
+    monkeypatch.setattr(abruf, "hole", hole)
     a = thing("0248931", 10.0050, 53.60005, "Ost nach West", "Ost")  # an der Bramfelder Straße
     b = thing("0248942", 10.00005, 53.6050, "Nord nach Süd", "Nord")  # an der Steilshooper Straße
     # Gegenrichtung desselben Arms, näher an der Querstraße (20 m) als an ihrer eigenen (30 m)
@@ -273,13 +314,15 @@ def test_strassennamen_und_knotenpunkt(api, pfade, tmp_path, monkeypatch):
     api.ds = [{"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {}, "obs": obs},
               {"id": 2, "layer": "Kfz_1-Stunde", "thing": b, "props": {}, "obs": obs},
               {"id": 3, "layer": "Kfz_1-Stunde", "thing": c, "props": {}, "obs": obs}]
-    q = {**Q, "osm": "https://download.example/hamburg-latest.osm"}  # XML statt PBF
+    q = {**Q, "overpass": ["https://kaputt.example/api/interpreter",
+                           "https://overpass.example/api/interpreter"]}
     log = hh.hole(q, pfade)
     assert any("Straßennamen für 3 neue Stellen (3 gefunden)" in z for z in log)
-    hh.hole(q, pfade)  # zweiter Lauf: Namen aus dem Gedächtnis, kein neuer Abzug
-    assert len(geladen) == 1
+    hh.hole(q, pfade)  # zweiter Lauf: Namen aus dem Gedächtnis, keine neue Abfrage
+    assert abfragen == q["overpass"]
     namen = json.loads((pfade.roh / "hamburg_kfz" / "gedaechtnis" / "strassen.json").read_text())
     assert "OpenStreetMap" in namen["lizenz"]
+    assert namen["osm"] == "https://overpass.example/api/interpreter"
     r = hh.lese(q, pfade, hh.Bericht())
     s = {x.kennung: x for x in r.stellen}
     assert s["0248931"].name == "Bramfelder Straße"

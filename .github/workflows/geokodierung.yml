@@ -2,14 +2,15 @@
 # Geocoder aus vizsim/berlin-traffic-counts_schulwege (gepinnt wie die Rohdaten), OSM-Abzug
 # von Geofabrik. Ergebnis: pipeline/geokodierung/berlin_ergaenzung.csv als Pull Request
 # (darf Actions keine PRs anlegen, bleibt der Branch stehen – Link in der Zusammenfassung).
-# Läuft von Hand und wenn sich Werkzeug oder Workflow ändern.
+#
+# Achtung: Geofabrik sperrt `*.osm.pbf` per robots.txt für alle Robots (Prüfung November 2026).
+# Der Abzug geht darum über die Pipeline (`zaehlkarte lade`, robots.txt) – und bricht ab, solange
+# sources.yaml keine Ausnahme dafür nennt. Das Ergebnis des letzten Laufs liegt im Git. Darum
+# läuft der Workflow nur noch von Hand (vorher auch bei Änderungen an Werkzeug oder Workflow).
 name: Berlin geokodieren
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths: [pipeline/werkzeuge/geokodiere_berlin.py, .github/workflows/geokodierung.yml]
 
 permissions:
   contents: write
@@ -34,7 +35,8 @@ jobs:
           uv run zaehlkarte fetch --quelle berlin
           uv run zaehlkarte geokodier-liste "$RUNNER_TEMP/liste.csv"
       - name: OSM-Abzug Berlin (Geofabrik, ODbL)
-        run: curl -sSfL -o "$RUNNER_TEMP/berlin.osm.pbf" https://download.geofabrik.de/europe/germany/berlin-latest.osm.pbf
+        working-directory: pipeline
+        run: uv run zaehlkarte lade https://download.geofabrik.de/europe/germany/berlin-latest.osm.pbf "$RUNNER_TEMP/berlin.osm.pbf"
       - name: Geokodieren
         working-directory: schulwege/pipeline
         run: |

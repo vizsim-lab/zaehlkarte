@@ -1,10 +1,16 @@
-"""Nächste benannte Straße zu Zählstellen ohne Straßennamen, aus einem OpenStreetMap-Abzug
-(Geofabrik, .osm.pbf; © OpenStreetMap-Mitwirkende, ODbL 1.0).
+"""Nächste benannte Straße zu Zählstellen ohne Straßennamen, aus OpenStreetMap (© OpenStreetMap-
+Mitwirkende, ODbL 1.0): über eine Overpass-API (`naechste_strassen_overpass`) oder aus einem
+Abzug als .osm/.osm.pbf (`naechste_strassen`).
 
 Für Quellen, deren Zählstellen nur einen Punkt und eine Kennung haben (Hamburg). Gesucht wird
 die nächste Straße mit Namen im Umkreis von `UMKREIS_M` Metern – zuerst unter den Fahrstraßen,
 dann unter allen benannten Wegen (Rad- und Fußwege). Ohne Treffer bleibt der Name leer; die
 Adapter nennen die Stelle dann nach ihrer Kennung.
+
+Overpass statt Abzug: Geofabrik sperrt `*.osm.pbf` per robots.txt für alle Robots (wie
+openstreetmap.fr und BBBike), overpass-api.de seine API; die Overpass-Server in sources.yaml
+erlauben sie (Prüfung November 2026). Für eine Handvoll neuer Stellen ist eine Abfrage im Umkreis
+ohnehin leichter als ein Abzug der ganzen Stadt.
 """
 
 from __future__ import annotations
@@ -33,21 +39,34 @@ def _abstand_m(px: float, py: float, ax: float, ay: float, bx: float, by: float)
     return math.hypot(px - (ax + t * dx), py - (ay + t * dy))
 
 
+Segment = tuple[float, float, float, float, str, str]  # lon/lat von A und B, Name, highway
+
+
+def _strecken(pts: list[tuple[float, float]], name: str, hw: str, box) -> list[Segment]:
+    out = []
+    for (a, b), (c, d) in zip(pts, pts[1:], strict=False):
+        if (max(a, c) < box[0] or min(a, c) > box[2]
+                or max(b, d) < box[1] or min(b, d) > box[3]):
+            continue
+        out.append((a, b, c, d, name, hw))
+    return out
+
+
+def _box(punkte: dict[str, tuple[float, float]], rand: float = 0.01):
+    lons = [p[0] for p in punkte.values()]
+    lats = [p[1] for p in punkte.values()]
+    return (min(lons) - rand, min(lats) - rand, max(lons) + rand, max(lats) + rand)
+
+
 def naechste_strassen(osm: Path, punkte: dict[str, tuple[float, float]],
                       umkreis_m: float = UMKREIS_M) -> dict[str, dict]:
-    """{Kennung: (lon, lat)} -> {Kennung: {name, highway, abstand_m}} (nur mit Treffer)."""
+    """Aus einem Abzug: {Kennung: (lon, lat)} -> {Kennung: {name, highway, abstand_m}}."""
     import osmium
 
     if not punkte:
         return {}
-    lons = [p[0] for p in punkte.values()]
-    lats = [p[1] for p in punkte.values()]
-    rand = 0.01
-    box = (min(lons) - rand, min(lats) - rand, max(lons) + rand, max(lats) + rand)
-    lat0 = sum(lats) / len(lats)
-    mx, my = 111_320.0 * math.cos(math.radians(lat0)), 110_540.0
-
-    segmente: list[tuple[float, float, float, float, str, str]] = []
+    box = _box(punkte)
+    segmente: list[Segment] = []
 
     class Wege(osmium.SimpleHandler):
         def way(self, w):  # noqa: D102
@@ -55,13 +74,66 @@ def naechste_strassen(osm: Path, punkte: dict[str, tuple[float, float]],
             if not hw or not name or (hw not in FAHRSTRASSEN and hw not in WEGE):
                 return
             pts = [(n.location.lon, n.location.lat) for n in w.nodes if n.location.valid()]
-            for (a, b), (c, d) in zip(pts, pts[1:], strict=False):
-                if (max(a, c) < box[0] or min(a, c) > box[2]
-                        or max(b, d) < box[1] or min(b, d) > box[3]):
-                    continue
-                segmente.append((a, b, c, d, name, hw))
+            segmente.extend(_strecken(pts, name, hw, box))
 
     Wege().apply_file(str(osm), locations=True)
+    return naechste(punkte, segmente, umkreis_m)
+
+
+def overpass_abfrage(punkte: dict[str, tuple[float, float]], umkreis_m: float = UMKREIS_M) -> str:
+    teile = "".join(f'way(around:{umkreis_m:g},{lat:.6f},{lon:.6f})["highway"]["name"];'
+                    for lon, lat in punkte.values())
+    return f"[out:json][timeout:60];({teile});out geom;"
+
+
+def segmente_aus_overpass(antwort: dict, box) -> list[Segment]:
+    """Antwort von Overpass (`out geom`) -> Strecken der benannten Straßen und Wege."""
+    segmente: list[Segment] = []
+    for el in antwort.get("elements", []):
+        tags = el.get("tags") or {}
+        hw, name = tags.get("highway"), tags.get("name")
+        if el.get("type") != "way" or not name or (hw not in FAHRSTRASSEN and hw not in WEGE):
+            continue
+        pts = [(g["lon"], g["lat"]) for g in el.get("geometry") or [] if g]
+        segmente.extend(_strecken(pts, name, hw, box))
+    return segmente
+
+
+def naechste_strassen_overpass(server: list[str], punkte: dict[str, tuple[float, float]],
+                               umkreis_m: float = UMKREIS_M, je_abfrage: int = 10
+                               ) -> tuple[dict[str, dict], str | None]:
+    """Über Overpass (der erste Server, der antwortet): -> (Treffer wie oben, Server)."""
+    from zaehlkarte import abruf
+
+    if not punkte:
+        return {}, None
+    segmente: list[Segment] = []
+    liste = sorted(punkte.items())
+    genutzt = None
+    for i in range(0, len(liste), je_abfrage):
+        teil = dict(liste[i:i + je_abfrage])
+        fehler: Exception | None = None
+        for url in server:
+            try:
+                r = abruf.hole(url, daten={"data": overpass_abfrage(teil, umkreis_m)},
+                               timeout=90)
+                segmente += segmente_aus_overpass(r.json(), _box(teil))
+                genutzt, fehler = url, None
+                break
+            except Exception as e:  # noqa: BLE001 – der nächste Server
+                fehler = e
+        if fehler is not None:
+            raise fehler
+    return naechste(punkte, segmente, umkreis_m), genutzt
+
+
+def naechste(punkte: dict[str, tuple[float, float]], segmente: list[Segment],
+             umkreis_m: float = UMKREIS_M) -> dict[str, dict]:
+    """{Kennung: (lon, lat)} -> {Kennung: {name, highway, abstand_m}} (nur mit Treffer)."""
+    if not punkte:
+        return {}
+    lat0 = sum(p[1] for p in punkte.values()) / len(punkte)
+    mx, my = 111_320.0 * math.cos(math.radians(lat0)), 110_540.0
 
     raster: dict[tuple[int, int], list[int]] = defaultdict(list)
     for i, (a, b, c, d, _, _) in enumerate(segmente):

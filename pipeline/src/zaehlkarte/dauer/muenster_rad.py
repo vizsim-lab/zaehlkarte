@@ -64,15 +64,13 @@ class Bericht:
 def hole(q: dict, pfade: Pfade) -> list[str]:
     """Das Repository als Archiv (Stand des Zweigs) und die Standorte holen; aus dem Archiv nur die
     Monatsdateien und site_min.json behalten."""
-    import requests
-
-    from zaehlkarte.fetch import UA, lade
+    from zaehlkarte import abruf
+    from zaehlkarte.fetch import lade
 
     ordner = pfade.roh / q["code"]
     ordner.mkdir(parents=True, exist_ok=True)
     jetzt = datetime.now(UTC).replace(microsecond=0)
-    r = requests.get(q["archiv"], headers=UA, timeout=600)
-    r.raise_for_status()
+    r = abruf.hole(q["archiv"], timeout=600)
     daten = r.content
     ziel = ordner / "repo"
     if ziel.exists():
