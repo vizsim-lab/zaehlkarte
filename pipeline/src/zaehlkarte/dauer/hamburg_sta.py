@@ -248,7 +248,11 @@ def _strassen(q: dict, pfade: Pfade, ds: dict[str, list[dict]], gordner: Path) -
     fehlt = {k: p for k, p in _punkte(ds).items() if k not in stellen}
     if not fehlt or not q.get("overpass"):
         return []
-    treffer, server = naechste_strassen_overpass(q["overpass"], fehlt)
+    try:
+        treffer, server = naechste_strassen_overpass(q["overpass"], fehlt)
+    except Exception as e:  # noqa: BLE001 – die Stellen bleiben ohne Namen, der nächste Lauf fragt neu
+        return [f"{q['code']}: Straßennamen für {len(fehlt)} neue Stellen nicht geholt (Overpass: "
+                f"{type(e).__name__}) – der nächste Lauf versucht es wieder"]
     for k in fehlt:
         stellen[k] = treffer.get(k) or {"name": None}
     neu = {"lizenz": LIZENZ, "osm": server or alt.get("osm"),

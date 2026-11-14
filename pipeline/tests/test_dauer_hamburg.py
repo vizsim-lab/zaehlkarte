@@ -214,6 +214,23 @@ def test_naechste_strasse(tmp_path):
     assert "c" not in t
 
 
+def test_strassennamen_overpass_nicht_erreichbar(api, pfade, monkeypatch):
+    from zaehlkarte import abruf
+
+    def hole(url, **k):
+        raise abruf.requests.ReadTimeout(url)
+
+    monkeypatch.setattr(abruf, "hole", hole)
+    a = thing("0248931", 10.0050, 53.60005, "Ost nach West", "Ost")
+    api.ds = [{"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {},
+               "obs": stunden(utc(2026, 11, 1, 23), 48)}]
+    q = {**Q, "overpass": ["https://langsam.example/api/interpreter"]}
+    log = hh.hole(q, pfade)
+    assert any("Stunden geholt" in z for z in log)  # die Zählwerte kommen trotzdem
+    assert any("nicht geholt (Overpass: ReadTimeout)" in z for z in log)
+    assert not (pfade.roh / "hamburg_kfz" / "gedaechtnis" / "strassen.json").exists()
+
+
 def test_naechste_strasse_aus_overpass():
     from zaehlkarte.dauer.strassen import naechste, overpass_abfrage, segmente_aus_overpass
 
@@ -229,7 +246,7 @@ def test_naechste_strasse_aus_overpass():
     assert t["b"]["name"] == "Parkweg"
     assert "c" not in t
     abfrage = overpass_abfrage({"a": (10.005, 53.60025)})
-    assert abfrage == ('[out:json][timeout:90];(way(around:50,53.600250,10.005000)'
+    assert abfrage == ('[out:json][timeout:60];(way(around:50,53.600250,10.005000)'
                        '["highway"]["name"];);out geom;')
 
 

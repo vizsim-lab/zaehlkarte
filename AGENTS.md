@@ -420,19 +420,24 @@ robots.txt für alle Robots sperrt. Seitdem:
   - Moers (offenesdatenportal.de): DCAT-Dokument je Datensatz (`/dataset/<name>.jsonld`) – die
     HTML-Seite zeigt nur einen Teil der Ressourcen. Rund 200 Dateien mit 10 s Abstand: ein Lauf
     von „Kartendaten neu bauen“ dauert eine gute halbe Stunde länger.
-  - Olpe: HTML-Suche und HTML-Seite je Datensatz. Die Suche findet je nach Wortform andere
-    Datensätze („Verkehrsmessung“ 5, „Verkehrsmessungen“ 8) – beide Formen plus die bekannten
-    (`pakete`). Das DCAT-Dokument nennt keine Lizenz; die Lizenz kommt aus dem Link der Seite
-    (`lizenz_link` der Lieferung). Drei Datensätze (Günsestraße, Hatzenbergstraße, In der Wüste)
-    fand die alte API-Suche nicht – sie kommen mit dem nächsten Bau dazu.
+  - Olpe: HTML-Suche und HTML-Seite je Datensatz. Die HTML-Suche findet je nach Wortform andere
+    Datensätze („Verkehrsmessung“ 5, „Verkehrsmessungen“ 8; die API fand mit dem ersten Wort alle
+    neun) – beide Formen plus die bekannten (`pakete`). Das DCAT-Dokument nennt keine Lizenz; die
+    Lizenz kommt aus dem Link der Seite (`lizenz_link` der Lieferung).
+  - Probelauf 14.11. (`tools/pipeline_probe.py`, `ergebnis/pipeline_probe/`): Olpe 9 Datensätze,
+    13 Messungen, 128 Zählungen; Moers 2021 und Kirschenallee 47 Dateien, 181 Zählungen – beides
+    genau wie in der Karte.
   - Aachen: HTML-Seite (kein DCAT-Dokument). Die Stadt legt täglich eine neue Datei für das
     laufende Jahr an und löscht die alte später; bei zwei Dateien eines Jahres gilt die jüngste
     laut Seite der Ressource („Daten wurden zuletzt aktualisiert“).
   - München: HTML-Suche, je Paket DCAT-Dokument oder HTML-Seite. Für die Werkzeuge nicht prüfbar
     (opendata.muenchen.de sperrt ClaudeBot ganz); für die Pipeline erlaubt (Gruppe `*`).
-  - Hamburg: Straßennamen neuer Stellen über Overpass (overpass.kumi.systems, sonst
-    overpass.private.coffee) statt Geofabrik-Abzug – Geofabrik sperrt `*.osm.pbf` (ebenso
-    openstreetmap.fr ganz und BBBike `*.pbf`), overpass-api.de seine API.
+  - Hamburg: Straßennamen neuer Stellen über Overpass (overpass.kumi.systems,
+    overpass.private.coffee, maps.mail.ru – in dieser Reihenfolge) statt Geofabrik-Abzug –
+    Geofabrik sperrt `*.osm.pbf` (ebenso openstreetmap.fr ganz und BBBike `*.pbf`),
+    overpass-api.de seine API. Am 14.11. antwortete aus Actions nur maps.mail.ru (POST, 15 s; GET
+    504), kumi und private.coffee liefen in die Zeitgrenze (`ergebnis/overpass_probe/`). Scheitern
+    alle, bleiben die neuen Stellen ohne Namen, der nächste Lauf fragt neu.
   - Moers-Geokodierung (`werkzeuge/geokodiere_moers.py`): Overpass über kumi, Abrufe über
     `abruf` (Nominatim und Photon prüft es beim nächsten Lauf).
 - **Ausnahmen** (die Projektleitung will die Quellen nicht verlieren; bis die Betreiber

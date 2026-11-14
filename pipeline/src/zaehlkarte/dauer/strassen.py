@@ -83,7 +83,7 @@ def naechste_strassen(osm: Path, punkte: dict[str, tuple[float, float]],
 def overpass_abfrage(punkte: dict[str, tuple[float, float]], umkreis_m: float = UMKREIS_M) -> str:
     teile = "".join(f'way(around:{umkreis_m:g},{lat:.6f},{lon:.6f})["highway"]["name"];'
                     for lon, lat in punkte.values())
-    return f"[out:json][timeout:90];({teile});out geom;"
+    return f"[out:json][timeout:60];({teile});out geom;"
 
 
 def segmente_aus_overpass(antwort: dict, box) -> list[Segment]:
@@ -100,7 +100,7 @@ def segmente_aus_overpass(antwort: dict, box) -> list[Segment]:
 
 
 def naechste_strassen_overpass(server: list[str], punkte: dict[str, tuple[float, float]],
-                               umkreis_m: float = UMKREIS_M, je_abfrage: int = 25
+                               umkreis_m: float = UMKREIS_M, je_abfrage: int = 10
                                ) -> tuple[dict[str, dict], str | None]:
     """Über Overpass (der erste Server, der antwortet): -> (Treffer wie oben, Server)."""
     from zaehlkarte import abruf
@@ -116,7 +116,7 @@ def naechste_strassen_overpass(server: list[str], punkte: dict[str, tuple[float,
         for url in server:
             try:
                 r = abruf.hole(url, daten={"data": overpass_abfrage(teil, umkreis_m)},
-                               timeout=180)
+                               timeout=90)
                 segmente += segmente_aus_overpass(r.json(), _box(teil))
                 genutzt, fehler = url, None
                 break

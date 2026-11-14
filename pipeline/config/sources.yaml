@@ -514,10 +514,13 @@ dauer:
     nachladen_tage: 14  # so weit zurück holt jeder Lauf die Stunden erneut (Werte ändern sich noch)
     frisch_tage: 7  # jüngere Stunden kommen noch nicht in die Karte
     # Straßennamen für neue Stellen über Overpass (Geofabrik sperrt *.osm.pbf per robots.txt,
-    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche)
+    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche).
+    # Am 14.11.2026 antworteten aus GitHub Actions nur maps.mail.ru (POST, 15 s); kumi und
+    # private.coffee liefen in die Zeitgrenze.
     overpass:
       - https://overpass.kumi.systems/api/interpreter
       - https://overpass.private.coffee/api/interpreter
+      - https://maps.mail.ru/osm/tools/overpass/api/interpreter
     titel: >-
       Verkehrsdaten Kfz Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
       zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
@@ -555,10 +558,13 @@ dauer:
     nachladen_tage: 14
     frisch_tage: 7
     # Straßennamen für neue Stellen über Overpass (Geofabrik sperrt *.osm.pbf per robots.txt,
-    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche)
+    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche).
+    # Am 14.11.2026 antworteten aus GitHub Actions nur maps.mail.ru (POST, 15 s); kumi und
+    # private.coffee liefen in die Zeitgrenze.
     overpass:
       - https://overpass.kumi.systems/api/interpreter
       - https://overpass.private.coffee/api/interpreter
+      - https://maps.mail.ru/osm/tools/overpass/api/interpreter
     titel: >-
       Verkehrsdaten Rad Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
       zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
