@@ -8,7 +8,10 @@ Holt
 - Zählstellen aus OpenStreetMap (man_made=monitoring_station),
 - je Gemeinde-Webseite die Sitemap und die Suche der Seite nach Zähl-Begriffen.
 
-Nur Standardbibliothek. Aufruf: python3 tools/hessen.py ergebnis/hessen
+Webseiten der Gemeinden nur mit ehrlicher Kennung und nur, was ihre robots.txt erlaubt (auch für
+die Kennungen von Claude – was dem Abruf-Werkzeug verboten ist, holt dieses Werkzeug auch nicht).
+
+Nur Standardbibliothek. Aufruf: python3 tools/hessen.py ergebnis/hessen [portale|webseiten|alle]
 """
 
 import concurrent.futures as cf
@@ -17,19 +20,24 @@ import json
 import pathlib
 import re
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import urllib.robotparser
 import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 
 ZIEL = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "ergebnis/hessen")
 ZIEL.mkdir(parents=True, exist_ok=True)
+TEILE = (sys.argv[2] if len(sys.argv) > 2 else "alle").split(",")
 UA = "zaehlkarte-werkzeug/0.2 (+https://github.com/vizsim-lab/zaehlkarte)"
-BROWSER_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+ROBOT_KENNUNGEN = ("zaehlkarte-werkzeug", "ClaudeBot", "Claude-User", "Claude-SearchBot", "anthropic-ai", "*")
 protokoll: dict = {}
 START = time.time()
+_ROBOTS: dict = {}
+_ROBOTS_SPERRE = threading.Lock()
 
 # Begriffe für Zählungen in URLs, Titeln und Linktexten
 MUSTER = re.compile(
@@ -69,6 +77,29 @@ def schreibe(name, obj):
     (ZIEL / name).write_text(json.dumps(obj, ensure_ascii=False, indent=1))
 
 
+def erlaubt(url):
+    """robots.txt des Hosts für alle ROBOT_KENNUNGEN; ohne robots.txt (404) ist alles erlaubt."""
+    t = urllib.parse.urlsplit(url)
+    basis = f"{t.scheme}://{t.netloc}"
+    with _ROBOTS_SPERRE:
+        rp = _ROBOTS.get(basis)
+    if rp is None:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            inhalt, _, _ = hole(basis + "/robots.txt", roh=True, zeit=15)
+            rp.parse(inhalt.decode("utf-8", "replace").splitlines())
+        except urllib.error.HTTPError as e:
+            if e.code in (401, 403):
+                rp.disallow_all = True
+            else:
+                rp.allow_all = True
+        except Exception:  # noqa: BLE001
+            rp.allow_all = True
+        with _ROBOTS_SPERRE:
+            _ROBOTS[basis] = rp
+    return all(rp.can_fetch(k, url) for k in ROBOT_KENNUNGEN)
+
+
 def schritt(name):
     def deko(f):
         def innen(*a, **kw):
@@ -79,7 +110,7 @@ def schritt(name):
             except Exception as e:  # noqa: BLE001
                 protokoll[name] = protokoll.get(name, {}) | {"fehler": repr(e)[:400]}
             protokoll[name]["sekunden"] = round(time.time() - t0)
-            schreibe("protokoll.json", protokoll)
+            schreibe(f"protokoll_{'_'.join(TEILE)}.json", protokoll)
             print(name, json.dumps(protokoll[name], ensure_ascii=False)[:300], flush=True)
         return innen
     return deko
@@ -233,7 +264,7 @@ def fds_anfragen():
     gesamt = (erste.get("meta") or {}).get("total_count")
     protokoll["fds_anfragen"] = {"im_land": gesamt}
     if gesamt and gesamt < 40000:
-        alle, _ = fds_alle("request/", {"jurisdiction": HESSEN}, grenze=900)
+        alle, _ = fds_alle("request/", {"jurisdiction": HESSEN}, grenze=600)
         protokoll["fds_anfragen"]["gelesen"] = len(alle)
         for o in alle:
             if ANFRAGE_MUSTER.search((o.get("title") or "") + " " + (o.get("description") or "")):
@@ -399,8 +430,14 @@ class Links(HTMLParser):
             self.titel += d
 
 
+class Gesperrt(Exception):
+    """robots.txt verbietet den Abruf."""
+
+
 def seite(url, zeit=25):
-    inhalt, end, typ = hole(url, roh=True, zeit=zeit, ua=BROWSER_UA)
+    if not erlaubt(url):
+        raise Gesperrt(url)
+    inhalt, end, typ = hole(url, roh=True, zeit=zeit)
     return inhalt, end, typ
 
 
@@ -408,7 +445,7 @@ def sitemap_urls(basis, frist):
     """Alle URLs aus robots.txt-Sitemaps und üblichen Orten (höchstens 40 Teil-Sitemaps)."""
     kandidaten, gesehen, urls = [], set(), []
     try:
-        robots, _, _ = seite(urllib.parse.urljoin(basis, "/robots.txt"), zeit=15)
+        robots, _, _ = hole(urllib.parse.urljoin(basis, "/robots.txt"), roh=True, zeit=15)
         kandidaten += re.findall(r"(?im)^\s*sitemap:\s*(\S+)", robots.decode("utf-8", "replace"))
     except Exception:  # noqa: BLE001
         pass
@@ -456,6 +493,9 @@ def pruefe_seite(g):
             inhalt, end, typ = seite(k)
             erg["web"] = end
             break
+        except Gesperrt:
+            erg["gesperrt"] = True
+            erg.setdefault("fehler", []).append(f"{k}: robots.txt")
         except Exception as e:  # noqa: BLE001
             erg.setdefault("fehler", []).append(f"{k}: {repr(e)[:120]}")
     if not erg["web"]:
@@ -497,6 +537,9 @@ def pruefe_seite(g):
                 for x in funde:
                     if x not in erg["such_treffer"]:
                         erg["such_treffer"].append(x)
+            except Gesperrt:
+                erg["suche"] = {"url": url, "fehler": "robots.txt"}
+                break
             except Exception as e:  # noqa: BLE001
                 erg["suche"] = {"url": url, "fehler": repr(e)[:120]}
         break
@@ -530,17 +573,33 @@ def webseiten():
     }
 
 
+def lade_liste():
+    """Gemeinden und Kreise aus einem früheren Lauf, sonst aus Wikidata."""
+    if (ZIEL / "gemeinden.json").exists() and (ZIEL / "kreise.json").exists():
+        for g in json.loads((ZIEL / "gemeinden.json").read_text()):
+            GEMEINDEN[g["ags"]] = g
+        for k in json.loads((ZIEL / "kreise.json").read_text()):
+            KREISE[k["ks"]] = k
+    else:
+        wikidata()
+
+
 if __name__ == "__main__":
-    wikidata()
-    fds_gesetze()
-    fds_behoerden()
-    fds_anfragen()
-    govdata()
-    geoportal()
-    mobilithek()
-    osm()
-    if GEMEINDEN:
+    lade_liste()
+    if (ZIEL / "protokoll.json").exists():
+        protokoll.update(json.loads((ZIEL / "protokoll.json").read_text()))
+    if "portale" in TEILE or "alle" in TEILE:
+        if not (ZIEL / "fds_gesetze.json").exists():
+            fds_gesetze()
+        if not (ZIEL / "fds_behoerden.json").exists():
+            fds_behoerden()
+        govdata()
+        geoportal()
+        mobilithek()
+        osm()
+        fds_anfragen()
+    if ("webseiten" in TEILE or "alle" in TEILE) and GEMEINDEN:
         webseiten()
-    protokoll["gesamt_sekunden"] = round(time.time() - START)
-    schreibe("protokoll.json", protokoll)
+    protokoll[f"gesamt_sekunden_{'_'.join(TEILE)}"] = round(time.time() - START)
+    schreibe(f"protokoll_{'_'.join(TEILE)}.json", protokoll)
     print(json.dumps(protokoll, ensure_ascii=False, indent=1)[:6000])
