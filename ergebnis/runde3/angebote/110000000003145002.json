@@ -1,0 +1,281 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/1755003110",
+ "publicationId": "110000000003145002",
+ "title": "Verkehrszählstellen München - dynamische Stundenwerte",
+ "description": "Der Datensatz enthält alle Verkehrszählstellen für Fahrzeuge in München. An diesen Dauerzählstellen wird der Kfz-Verkehr mittels Induktionsschleifen automatisch 24 Stunden am Tag und 365 Tage im Jahr erfasst. Eine Messstelle besteht aus mehreren Messquerschnitten (bestimmte Fahrtrichtung), welche sich wiederum aus Detektoren zusammensetzen.\n\nKlassifikation der Zählstellen:\n\n•\tLichtsignalanlagen: Messstellen an Lichtsignalanlagen (Detektor_ID beginnend mit 1XXX).\n•\tFreie Messstellen: unabhängige Messstellen (Detektor_ID beginnend mit 4XXX).\n\nFahrzeugklassen:\n\nDie Detektordaten unterscheiden neun Fahrzeugklassen, um eine detaillierte Analyse des Verkehrsflusses zu ermöglichen (8+1): \n \no\tKRAD: Motorrad\no\tPKW: Auto\no\tPKWA: Auto mit Anhänger\no\tLFW: Lieferwagen\no\tBUS: Bus\no\tLKW: Lastkraftwagen\no\tLKWA: Lastkraftwagen mit Anhänger\no\tSATTEL_KFZ: Sattelkraftfahrzeug\no\tNK_KFZ: alle nicht klassifizierten Fahrzeuge\n\nWeitere Erläuterung:\nQKFZ:\tSumme Fahrzeuge aller neun Fahrzeugklassen\nQx:\tvorangestelltes Q = aggregierter Zählwert/Anzahl\nVx:\tvorangestelltes V = aggregierter Geschwindigkeitswert\nSx:\tStandardabweichung\n\nDer jeweils aktuelle Datensatz wird aggregiert einmal pro Stunde über die Mobilithek veröffentlicht.\n",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+ "dataCategoryDetail": [
+  "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_VOLUME"
+ ],
+ "keyword": [
+  "Dauerzählstellen",
+  "Verkehr",
+  "Zählstellen",
+  "KFZ",
+  "München",
+  "LHM",
+  "Verkehrsdaten",
+  "Verkehrszählung",
+  "Verkehrsaufkommen",
+  "QKfz",
+  "PKW",
+  "LKW",
+  "Zählung",
+  "Rad",
+  "Radverkehr",
+  "Radverkehrszählstellen"
+ ],
+ "temporalCoverage": {
+  "begin": "2021-07-26",
+  "end": null
+ },
+ "language": [
+  "https://w3id.org/idsa/code/DE"
+ ],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": true,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": null
+ },
+ "accrualPeriodicity": "https://w3id.org/idsa/code/HOURLY",
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Landeshauptstadt München Mobilitätsreferat",
+   "emailAddress": "http://muenchen.de"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Landeshauptstadt München Mobilitätsreferat",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#OTHER_CONTRACTUAL_ARRANGEMENT",
+ "standardLicense": null,
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DE212",
+    "name": "München, Kreisfreie Stadt"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (POLYGON ((11.41245 48.12711, 11.37186 48.15946, 11.40294 48.20312, 11.49982 48.24815, 11.63871 48.21391, 11.70614 48.13639, 11.70212 48.09745, 11.51004 48.06779, 11.45449 48.12344, 11.41245 48.12711)))"
+ },
+ "created": "2023-06-21T20:37:11.125Z",
+ "modified": "2024-05-02T10:24:31.688Z",
+ "geoReferenceMethod": [
+  "https://w3id.org/mdp/schema/geo_reference_method#METHOD_OTHER"
+ ],
+ "networkCoverage": [
+  "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS",
+  "https://w3id.org/mdp/schema/network_coverage#REGIONAL_ROADS"
+ ],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_MOTORCYCLE",
+  "https://w3id.org/mdp/schema/transport_mode#SCHEDULED_BUS",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CYCLE"
+ ],
+ "mdpBrokering": true,
+ "deltaDelivery": false,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "Die veröffentlichten Daten stellen Rohdaten dar und unterliegen keiner Validierung. Infolgedessen können unschlüssige Datenausgaben auftreten. Es besteht die Möglichkeit von Datenlücken und inkonsistenten Daten, sowie gelegentlich das Fehlen von Daten aufgrund technischer Störungen während des Datenerfassungsprozesses.",
+ "contentData": [
+  {
+   "accessUrl": null,
+   "endpointDocumentation": null,
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": null,
+   "fileName": null,
+   "creationDate": null,
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": false,
+   "masterSchema": {
+    "title": "",
+    "accessURL": "/schemas/DATEX_2/Profile_Measurement_Data/MDM-Profile_MeasuredData.xsd",
+    "description": "",
+    "modified": null,
+    "instance": {
+     "fileName": null,
+     "mediaType": null,
+     "byteSize": 0
+    },
+    "validFrom": null,
+    "validTo": null
+   },
+   "schema": [],
+   "schemaProfileName": "Profile_Measurement_Data"
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": {
+    "title": "VISIBLE",
+    "accessURL": "VISIBLE",
+    "description": "VISIBLE",
+    "modified": "VISIBLE",
+    "instance": {
+     "fileName": "VISIBLE",
+     "mediaType": "VISIBLE",
+     "byteSize": "VISIBLE"
+    },
+    "validFrom": "VISIBLE",
+    "validTo": "VISIBLE"
+   },
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}

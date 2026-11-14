@@ -1,0 +1,268 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-369369037",
+ "publicationId": "903287344194932736",
+ "title": "Verkehrszählungsdatensatz Osnabrück 01.01.2022-09.11.2023",
+ "description": "Der Datensatz enthält Zeitreihendaten von 66 Traffic Eye Universal (TEU) Verkehrssensoren, die den Verkehrsfluss und die Geschwindigkeit messen. Die Sensoren sind paarweise an Straßen der Stadt Osnabrück installiert. Ein Sensor des Paares misst in eine Fahrtrichtung, der zweite Sensor in die Gegenrichtung. Der Verkehr wird in die Kategorien Pkw, Lkw, Lkw mit Anhänger und nicht klassifiziert unterteilt. Die Daten werden roh ohne Vorverarbeitung bereitgestellt.",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#CAT_OTHER",
+ "dataCategoryDetail": [],
+ "keyword": [
+  "Verkerszählung",
+  "Individualverkehr",
+  "PIR Sensor",
+  "Zeitreihe"
+ ],
+ "temporalCoverage": {
+  "begin": "2022-01-01",
+  "end": "2023-09-11"
+ },
+ "language": [
+  "https://w3id.org/idsa/code/EN",
+  "https://w3id.org/idsa/code/DE"
+ ],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": false,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": false
+ },
+ "accrualPeriodicity": "https://w3id.org/mdp/schema/frequency#NEVER",
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Stadt Osnabrück",
+   "emailAddress": "https://www.osnabrueck.de/de/"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Stadt Osnabrück",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+ "standardLicense": null,
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DE944",
+    "name": "Osnabrück, Kreisfreie Stadt"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (POLYGON ((7.95647 52.27249, 7.96463 52.32486, 8.16604 52.28412, 8.10262 52.23062, 8.01159 52.23256, 7.95647 52.27249)))"
+ },
+ "created": "2025-09-17T09:18:45.702Z",
+ "modified": "2025-09-17T09:21:55.167Z",
+ "geoReferenceMethod": [
+  "https://w3id.org/mdp/schema/geo_reference_method#WGS84"
+ ],
+ "networkCoverage": [
+  "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS",
+  "https://w3id.org/mdp/schema/network_coverage#REGIONAL_ROADS"
+ ],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK"
+ ],
+ "mdpBrokering": false,
+ "deltaDelivery": null,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [
+  {
+   "title": "",
+   "accessURL": "/903287344194932736/README.pdf",
+   "description": "",
+   "modified": "2025-09-17T09:17:24Z",
+   "instance": {
+    "fileName": "README.pdf",
+    "mediaType": null,
+    "byteSize": 6744489
+   },
+   "validFrom": null,
+   "validTo": null
+  }
+ ],
+ "samples": [],
+ "qualityDescription": "",
+ "contentData": [
+  {
+   "accessUrl": "/903287344194932736/teu_dataset.zip",
+   "endpointDocumentation": null,
+   "accessProtocol": null,
+   "mediaType": "https://w3id.org/mdp/schema/media_type#MEDIA_OTHER",
+   "dataModel": null,
+   "dataFormatAdditionalDescription": "",
+   "description": "",
+   "byteSize": 120065451,
+   "fileName": "teu_dataset.zip",
+   "creationDate": "2025-09-12T11:04:14Z",
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": null,
+   "masterSchema": null,
+   "schema": [],
+   "schemaProfileName": null
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN",
+  "http://publications.europa.eu/resource/authority/data-theme/REGI"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": {
+   "title": "VISIBLE",
+   "accessURL": "VISIBLE",
+   "description": "VISIBLE",
+   "modified": "VISIBLE",
+   "instance": {
+    "fileName": "VISIBLE",
+    "mediaType": "VISIBLE",
+    "byteSize": "VISIBLE"
+   },
+   "validFrom": "VISIBLE",
+   "validTo": "VISIBLE"
+  },
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": "VISIBLE",
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}

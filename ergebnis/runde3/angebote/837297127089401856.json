@@ -1,0 +1,262 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-1638800458",
+ "publicationId": "837297127089401856",
+ "title": "Dynamische Verkehrsdaten",
+ "description": "Dynamische Verkehrsdaten der Stadt Regensburg\nBitte beachten Sie die Nutzungsbedingungen",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+ "dataCategoryDetail": [
+  "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_VOLUME"
+ ],
+ "keyword": [
+  "Dynamische Detektordaten Stadt Regensburg"
+ ],
+ "temporalCoverage": {
+  "begin": "2025-03-14",
+  "end": null
+ },
+ "language": [
+  "https://w3id.org/idsa/code/DE"
+ ],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": true,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": null
+ },
+ "accrualPeriodicity": "https://w3id.org/idsa/code/EVERY_5_MINUTES",
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Stadt Regensburg",
+   "emailAddress": "www.Regensburg.de"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Stadt Regensburg",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_RESTRICTED_USE_FREE_OF_CHARGE",
+ "standardLicense": null,
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DE232",
+    "name": "Regensburg, Kreisfreie Stadt"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (POLYGON ((12.03092 49.00987, 12.05166 49.03882, 12.09908 49.043, 12.09524 49.06265, 12.13867 49.0676, 12.16376 49.04811, 12.15949 49.01927, 12.18605 49.00376, 12.17467 48.97337, 12.07818 48.97067, 12.06591 48.99787, 12.03092 49.00987)))"
+ },
+ "created": "2025-03-14T08:36:31.363Z",
+ "modified": "2025-03-14T08:36:31.363Z",
+ "geoReferenceMethod": [
+  "https://w3id.org/mdp/schema/geo_reference_method#ETRS89"
+ ],
+ "networkCoverage": [
+  "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS"
+ ],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK"
+ ],
+ "mdpBrokering": true,
+ "deltaDelivery": false,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "",
+ "contentData": [
+  {
+   "accessUrl": null,
+   "endpointDocumentation": null,
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": null,
+   "fileName": null,
+   "creationDate": null,
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": false,
+   "masterSchema": {
+    "title": "",
+    "accessURL": "/837297127089401856/MDM-Profile_MeasuredData.xsd",
+    "description": "",
+    "modified": "2025-03-14T08:33:15Z",
+    "instance": {
+     "fileName": "MDM-Profile_MeasuredData.xsd",
+     "mediaType": null,
+     "byteSize": 36231
+    },
+    "validFrom": null,
+    "validTo": null
+   },
+   "schema": [],
+   "schemaProfileName": null
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": {
+    "title": "VISIBLE",
+    "accessURL": "VISIBLE",
+    "description": "VISIBLE",
+    "modified": "VISIBLE",
+    "instance": {
+     "fileName": "VISIBLE",
+     "mediaType": "VISIBLE",
+     "byteSize": "VISIBLE"
+    },
+    "validFrom": "VISIBLE",
+    "validTo": "VISIBLE"
+   },
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}

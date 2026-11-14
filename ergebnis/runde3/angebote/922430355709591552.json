@@ -1,0 +1,267 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/1358142573",
+ "publicationId": "922430355709591552",
+ "title": "Verkehrszähldaten Stadt Konstanz dynamisch",
+ "description": "Dynamische Daten zu Verkehrszählstellen im Stadtgebiet Konstanz.",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+ "dataCategoryDetail": [
+  "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_VOLUME"
+ ],
+ "keyword": [
+  "Verkehr",
+  "Verkehrszähldaten"
+ ],
+ "temporalCoverage": {
+  "begin": "2025-11-01",
+  "end": null
+ },
+ "language": [
+  "https://w3id.org/idsa/code/DE"
+ ],
+ "contractOffer": {
+  "contractStart": "2025-11-04",
+  "contractEnd": null,
+  "providerApprovalRequired": true,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": false
+ },
+ "accrualPeriodicity": "https://w3id.org/idsa/code/EVERY_5_MINUTES",
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Stadt Konstanz",
+   "emailAddress": "https://www.konstanz.de/start-"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Stadt Konstanz",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+ "standardLicense": "http://dcat-ap.de/def/licenses/cc-by/4.0",
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DE138",
+    "name": "Konstanz"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (POLYGON ((9.12858 47.84682, 9.04452 47.79946, 9.1771 47.72435, 9.2063 47.67728, 9.18219 47.65589, 9.03586 47.68395, 8.87489 47.65467, 8.81439 47.72001, 8.78152 47.71253, 8.79571 47.6756, 8.67046 47.68486, 8.66335 47.68589, 8.70673 47.71025, 8.70534 47.73718, 8.61383 47.80108, 8.64015 47.85481, 9.01205 47.93692, 9.13501 47.896, 9.12858 47.84682)))"
+ },
+ "created": "2025-11-06T08:33:40.902Z",
+ "modified": "2025-11-06T08:33:40.902Z",
+ "geoReferenceMethod": [
+  "https://w3id.org/mdp/schema/geo_reference_method#WGS84"
+ ],
+ "networkCoverage": [
+  "https://w3id.org/mdp/schema/network_coverage#REGIONAL_ROADS",
+  "https://w3id.org/mdp/schema/network_coverage#URBAN_LOCAL_ROADS",
+  "https://w3id.org/mdp/schema/network_coverage#NETWORK_OTHER"
+ ],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+  "https://w3id.org/mdp/schema/transport_mode#SCHEDULED_BUS",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_MOTORCYCLE"
+ ],
+ "mdpBrokering": true,
+ "deltaDelivery": false,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "",
+ "contentData": [
+  {
+   "accessUrl": null,
+   "endpointDocumentation": null,
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": null,
+   "fileName": null,
+   "creationDate": null,
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": false,
+   "masterSchema": {
+    "title": "",
+    "accessURL": "/schemas/DATEX_2/Version_2.3/DATEXIISchema_2_2_3.xsd",
+    "description": "",
+    "modified": null,
+    "instance": {
+     "fileName": null,
+     "mediaType": null,
+     "byteSize": 0
+    },
+    "validFrom": null,
+    "validTo": null
+   },
+   "schema": [],
+   "schemaProfileName": "Version_2.3"
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": {
+    "title": "VISIBLE",
+    "accessURL": "VISIBLE",
+    "description": "VISIBLE",
+    "modified": "VISIBLE",
+    "instance": {
+     "fileName": "VISIBLE",
+     "mediaType": "VISIBLE",
+     "byteSize": "VISIBLE"
+    },
+    "validFrom": "VISIBLE",
+    "validTo": "VISIBLE"
+   },
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}

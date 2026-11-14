@@ -1,0 +1,252 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/99828332",
+ "publicationId": "973579563426357248",
+ "title": "Verkehrsdaten Stadtwerke Schweinfurt (dynamisch)",
+ "description": "Selbst erhobene Verkehrsdaten auf Grund von Verkehrsdetektion.",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+ "dataCategoryDetail": [
+  "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_SPEEDS",
+  "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_VOLUME"
+ ],
+ "keyword": [],
+ "temporalCoverage": {
+  "begin": null,
+  "end": null
+ },
+ "language": [],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": true,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": false
+ },
+ "accrualPeriodicity": null,
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Stadtwerke Schweinfurt GmbH",
+   "emailAddress": "www.stadtwerke-sw.de"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Stadtwerke Schweinfurt GmbH",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#NO_LICENSE",
+ "standardLicense": null,
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DE262",
+    "name": "Schweinfurt, Kreisfreie Stadt"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (POLYGON ((10.17448 50.02846, 10.22704 50.08313, 10.2624 50.08313, 10.26719 50.05845, 10.24025 50.01655, 10.17448 50.02846)))"
+ },
+ "created": "2026-03-25T10:18:08.908Z",
+ "modified": "2026-03-25T10:24:05.62Z",
+ "geoReferenceMethod": [],
+ "networkCoverage": [],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [],
+ "mdpBrokering": true,
+ "deltaDelivery": false,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "",
+ "contentData": [
+  {
+   "accessUrl": null,
+   "endpointDocumentation": null,
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": null,
+   "fileName": null,
+   "creationDate": null,
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": false,
+   "masterSchema": {
+    "title": "",
+    "accessURL": "/schemas/DATEX_2/Version_2.3/DATEXIISchema_2_2_3.xsd",
+    "description": "",
+    "modified": null,
+    "instance": {
+     "fileName": null,
+     "mediaType": null,
+     "byteSize": 0
+    },
+    "validFrom": null,
+    "validTo": null
+   },
+   "schema": [],
+   "schemaProfileName": "Version_2.3"
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": {
+    "title": "VISIBLE",
+    "accessURL": "VISIBLE",
+    "description": "VISIBLE",
+    "modified": "VISIBLE",
+    "instance": {
+     "fileName": "VISIBLE",
+     "mediaType": "VISIBLE",
+     "byteSize": "VISIBLE"
+    },
+    "validFrom": "VISIBLE",
+    "validTo": "VISIBLE"
+   },
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}
