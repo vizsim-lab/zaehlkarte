@@ -49,6 +49,13 @@ if (roh / "metadaten.json").exists():  # Opendatasoft: Felder des Datensatzes
                                         for f in meta.get("fields") or []], ensure_ascii=False))
     m = (meta.get("metas") or {}).get("default") or {}
     out.append("Metadaten: " + json.dumps({k: m.get(k) for k in ("title", "records_count", "modified", "data_processed", "timezone", "license")}, ensure_ascii=False))
+    import html
+    import re
+    text = html.unescape(re.sub(r"<[^>]+>", " ", m.get("description") or ""))
+    out.append("Beschreibung: " + re.sub(r"\s+", " ", text).strip()[:3000])
+    for k in ("publisher", "attributions", "keyword", "theme", "territory", "geographic_reference"):
+        if m.get(k):
+            out.append(f"{k}: {m.get(k)}")
 for p in sorted(roh.rglob("*.csv"))[:3]:
     with p.open(encoding="utf-8", errors="replace") as f:
         out.append(f"Kopf {p.name}: " + " | ".join(next(f, "").rstrip() for _ in range(6)))
