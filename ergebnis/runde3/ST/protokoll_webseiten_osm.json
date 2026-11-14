@@ -1,0 +1,39 @@
+{
+ "grenzen_osm": {
+  "https://overpass.private.coffee/api/interpreter#0": "<HTTPError 502: 'Bad Gateway'>",
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter"
+ },
+ "liste": {
+  "gemeinden": 218,
+  "mit_web": 26,
+  "verbaende": 25,
+  "verbaende_mit_web": 7,
+  "kreise": 11,
+  "kreise_mit_web": 0,
+  "osm_elemente": 247,
+  "osm_ohne_gemeinde": [],
+  "ok": true,
+  "sekunden": 275
+ },
+ "osm": {
+  "https://overpass.private.coffee/api/interpreter#0": "<HTTPError 502: 'Bad Gateway'>",
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "anzahl": 3,
+  "ok": true,
+  "sekunden": 286
+ },
+ "webseiten_ziele": {
+  "ziele": 95,
+  "geraten": 62
+ },
+ "webseiten": {
+  "seiten": 95,
+  "erreicht": 61,
+  "mit_sitemap": 38,
+  "mit_suche": 16,
+  "mit_treffern": 21,
+  "ok": true,
+  "sekunden": 131
+ },
+ "gesamt_sekunden_webseiten_osm": 692
+}
