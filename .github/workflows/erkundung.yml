@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [angebote]
+        teil: [r3_NI, r3_BY, r3_BW, r3_RP, r3_SH, r3_SN, r3_ST, r3_TH, r3_BB, r3_MV, r3_SL, r3_HH, r3_HB, r3_BE]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
@@ -41,8 +41,8 @@ jobs:
               l="${{ matrix.teil }}"; l="${l#r3_}"
               # Overpass-Abfragen der Länder zeitlich verteilen
               sleep "$(python3 -c "import sys; print('NI BY BW RP SH SN ST TH BB MV SL HH HB BE'.split().index(sys.argv[1]) * 40)" "$l")"
-              timeout 75m python3 tools/land.py "ergebnis/runde3/$l" webseiten,osm "$l" || true
-              timeout 55m python3 tools/land_lesen.py "ergebnis/runde3/$l" 50 || true ;;
+              timeout 75m python3 tools/land.py "ergebnis/runde3b/$l" webseiten,osm "$l" || true
+              timeout 55m python3 tools/land_lesen.py "ergebnis/runde3b/$l" 50 || true ;;
             pipeline_probe)
               git fetch -q origin robots-pipeline && git worktree add -q ../zk FETCH_HEAD
               (cd ../zk/pipeline && uv sync --locked -q && timeout 45m uv run python "$GITHUB_WORKSPACE/tools/pipeline_probe.py" "$GITHUB_WORKSPACE/ergebnis/pipeline_probe") || true ;;

@@ -18,6 +18,7 @@ Nur Standardbibliothek. Aufruf: python3 tools/land.py ergebnis/nrw [portale|webs
 import concurrent.futures as cf
 import gzip
 import json
+import math
 import pathlib
 import re
 import sys
@@ -63,7 +64,7 @@ LAND_CODE = sys.argv[3] if len(sys.argv) > 3 else "NW"
 LAND = LAENDER[LAND_CODE]
 # Gemeinden ohne eigene Webseite in OSM: Adresse raten nur ab dieser Einwohnerzahl (kleine Gemeinden
 # haben oft keine eigene Seite, sondern die ihrer Samtgemeinde, ihres Amts oder ihrer VG)
-RATEN_AB = 10_000
+RATEN_AB = 3_000
 ZIEL = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "ergebnis/nrw")
 ZIEL.mkdir(parents=True, exist_ok=True)
 TEILE = (sys.argv[2] if len(sys.argv) > 2 else "alle").split(",")
@@ -186,13 +187,22 @@ rel(area.land)["boundary"="administrative"]["admin_level"~"^(6|8)$"]["de:amtlich
 out center tags;"""
 
 
-OVERPASS_SERVER = ("https://overpass.private.coffee/api/interpreter",
-                   "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
-                   "https://overpass.kumi.systems/api/interpreter")
+OVERPASS_SERVER = ("https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+                   "https://overpass.kumi.systems/api/interpreter",
+                   "https://overpass.private.coffee/api/interpreter")
 OVERPASS_GRENZEN_7 = """[out:json][timeout:900];
-area["ISO3166-2"="%s"][admin_level=4]->.land;
-rel(area.land)["boundary"="administrative"]["admin_level"~"^(6|7|8)$"];
+(
+  rel["boundary"="administrative"]["admin_level"~"^(6|8)$"]["de:amtlicher_gemeindeschluessel"~"^%(ags)s"];
+  rel["boundary"="administrative"]["admin_level"~"^(6|7|8)$"]["de:regionalschluessel"~"^%(ags)s"];
+);
 out center tags;"""
+# Ortsknoten mit Webseite (an den Grenzen fehlt sie meist), im Rechteck um die Gemeinden des Landes
+OVERPASS_ORTE = """[out:json][timeout:600];
+(
+  node["place"~"^(city|town|village|municipality)$"]["website"](%s);
+  node["place"~"^(city|town|village|municipality)$"]["contact:website"](%s);
+);
+out;"""
 
 
 def overpass(abfrage, name, zeit=900):
@@ -203,8 +213,13 @@ def overpass(abfrage, name, zeit=900):
                 inhalt, _, _ = hole(server, daten=urllib.parse.urlencode({"data": abfrage}).encode(),
                                     kopf={"Content-Type": "application/x-www-form-urlencoded"}, roh=True, zeit=zeit)
                 if inhalt[:1] == b"{":
+                    r = json.loads(inhalt)
+                    if "error" in (r.get("remark") or "") or not r.get("elements"):
+                        # Laufzeitfehler oder leer (manche Server kennen keine Flächen): nächster Server
+                        protokoll.setdefault(name, {})[f"{server}#{versuch}"] = (r.get("remark") or "leer")[:200]
+                        continue
                     protokoll.setdefault(name, {})["server"] = server
-                    return json.loads(inhalt)
+                    return r
             except Exception as e:  # noqa: BLE001
                 protokoll.setdefault(name, {})[f"{server}#{versuch}"] = repr(e)[:200]
         time.sleep(60)
@@ -238,6 +253,39 @@ def _web(t):
     return {t[k].strip() for k in ("website", "contact:website", "url") if t.get(k, "").startswith("http")}
 
 
+def _norm_name(n):
+    n = re.sub(r"\(.*?\)", " ", (n or "").split(",")[0]).lower()
+    n = n.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+    return re.sub(r"[^a-z0-9]+", "", n)
+
+
+def orte_zuordnen():
+    """Webseiten von Ortsknoten (place=*) den Gemeinden ohne Webseite zuordnen: gleicher Name,
+    höchstens 6 km vom Mittelpunkt laut Gemeindeverzeichnis."""
+    lage = [(g["lon"], g["lat"]) for g in GEMEINDEN.values() if g.get("lon")]
+    if not lage:
+        return
+    w, o = min(x for x, _ in lage) - 0.05, max(x for x, _ in lage) + 0.05
+    s_, n = min(y for _, y in lage) - 0.05, max(y for _, y in lage) + 0.05
+    bbox = f"{s_:.3f},{w:.3f},{n:.3f},{o:.3f}"
+    r = overpass(OVERPASS_ORTE % (bbox, bbox), "orte_osm", zeit=600)
+    je_name: dict = {}
+    for e in (r or {}).get("elements", []):
+        je_name.setdefault(_norm_name(e.get("tags", {}).get("name")), []).append(e)
+    treffer = 0
+    for g in GEMEINDEN.values():
+        if g["web"] or not g.get("lon"):
+            continue
+        for e in je_name.get(_norm_name(g["name"]), []):
+            kx = 111.32 * math.cos(math.radians(g["lat"]))
+            if math.hypot((e["lon"] - g["lon"]) * kx, (e["lat"] - g["lat"]) * 110.57) <= 6:
+                g["web"] |= _web(e.get("tags", {}))
+                treffer += 1
+                break
+    protokoll["orte_osm"] = protokoll.get("orte_osm", {}) | {"knoten": len((r or {}).get("elements", [])),
+                                                             "zugeordnet": treffer}
+
+
 @schritt("liste")
 def liste_runde3():
     """Gemeinden, Verbände (Samtgemeinde, Amt, VG …) und Kreise aus dem Gemeindeverzeichnis
@@ -254,7 +302,7 @@ def liste_runde3():
     for k in d["kreise"]:
         if je_kreis.get(k["ks"], 0) > 1:  # kreisfreie Städte stehen schon als Gemeinde da
             KREISE[k["ks"]] = k | {"web": set()}
-    r = overpass(OVERPASS_GRENZEN_7 % LAND["iso"], "grenzen_osm")
+    r = overpass(OVERPASS_GRENZEN_7 % LAND, "grenzen_osm")
     osm, ohne = [], []
     for e in (r or {}).get("elements", []):
         t, c = e.get("tags", {}), e.get("center") or {}
@@ -280,6 +328,7 @@ def liste_runde3():
                 VERBAENDE["osm" + str(e["id"])] = {"vb": "osm" + str(e["id"]), "name": t.get("name"),
                                                    "einw": None, "gemeinden": None, "web": web}
     schreibe("osm_grenzen.json", osm)
+    orte_zuordnen()
     for x in list(GEMEINDEN.values()) + list(VERBAENDE.values()) + list(KREISE.values()):
         x["web"] = sorted(x["web"])
     schreibe("gemeinden.json", sorted(GEMEINDEN.values(), key=lambda g: g["ags"]))
@@ -652,8 +701,10 @@ def sitemap_urls(basis, frist):
     return urls, gelesen
 
 
-VORSILBEN = {"gemeinde": ("", "stadt-", "gemeinde-"), "verband": ("", "sg-", "vg-", "amt-"),
-             "kreis": ("landkreis-", "kreis-", "lk-")}
+VORSILBEN = {"gemeinde": ("", "stadt-", "gemeinde-"), "kreis": ("landkreis-", "kreis-", "lk-")}
+VERBAND_VORSILBEN = {"NI": ("", "sg-", "samtgemeinde-"), "RP": ("vg-", "", "verbandsgemeinde-"),
+                     "SH": ("amt-", ""), "MV": ("amt-", ""), "BB": ("amt-", ""), "ST": ("vgem-", "", "verbandsgemeinde-"),
+                     "TH": ("vg-", "", "vgem-"), "SN": ("", "vg-", "vvg-"), "BY": ("vgem-", "vg-", "")}
 
 
 def geraten(g):
@@ -661,10 +712,15 @@ def geraten(g):
     name = g["name"].split(",")[0]
     name = re.sub(r"\(.*?\)", " ", name)
     name = re.sub(r"^(Samtgemeinde|Verbandsgemeinde|Verwaltungsgemeinschaft|Gemeindeverwaltungsverband|"
-                  r"Verwaltungsverband|Amt|VG|VVG|GVV|Landkreis|Kreis|Region|Stadt|Gemeinde|Markt)\s+", "", name.strip())
+                  r"Verwaltungsverband|Amt|VG|VVG|GVV|Landkreis|Kreis|Region|Stadt|Gemeinde|Markt)\s+(der\s+(Stadt|Gemeinde)\s+)?",
+                  "", name.strip())
+    if g.get("art") == "verband":
+        name = name.split("/")[0]
     slug = re.sub(r"[^a-z0-9]+", "-", name.lower().replace("ä", "ae").replace("ö", "oe")
                   .replace("ü", "ue").replace("ß", "ss")).strip("-")
-    return [f"https://www.{v}{slug}.de/" for v in VORSILBEN[g.get("art", "gemeinde")]]
+    vorsilben = (VERBAND_VORSILBEN.get(LAND_CODE, ("",)) if g.get("art") == "verband"
+                 else VORSILBEN[g.get("art") or "gemeinde"])
+    return [f"https://www.{v}{slug}.de/" for v in vorsilben]
 
 
 def pruefe_seite(g):
@@ -742,7 +798,7 @@ def webseiten():
         ziele = [g | {"art": "gemeinde"} for g in sorted(GEMEINDEN.values(), key=lambda g: -(g.get("einw") or 0))
                  if g["web"] or (g.get("einw") or 0) >= RATEN_AB]
         ziele += [{"ags": v["vb"], "name": v["name"], "web": v["web"], "einw": v.get("einw"), "art": "verband"}
-                  for v in VERBAENDE.values() if v["web"] or (v.get("einw") or 0) >= RATEN_AB]
+                  for v in VERBAENDE.values() if v["web"] or (LAND_CODE != "BW" and (v.get("einw") or 0) >= 1000)]
         ziele += [{"ags": k["ks"], "name": k["name"], "web": k["web"], "art": "kreis"} for k in KREISE.values()]
     else:
         ziele = sorted(GEMEINDEN.values(), key=lambda g: -(g.get("einw") or 0))
