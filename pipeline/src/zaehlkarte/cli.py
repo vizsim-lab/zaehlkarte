@@ -1,5 +1,6 @@
 """Kommandozeile: `uv run zaehlkarte fetch | build | site` (aus pipeline/), für die
-Dauerzählstellen `uv run zaehlkarte dauer fetch | site` (Kartendaten unter public/data/dauer/)."""
+Dauerzählstellen `uv run zaehlkarte dauer fetch | site | frische` (Kartendaten unter
+public/data/dauer/; `frische` prüft das Gedächtnis)."""
 
 from __future__ import annotations
 
@@ -19,11 +20,17 @@ Datum = Annotated[str | None, typer.Option(help="Erzeugungsdatum im Manifest (JJ
 
 @app.command()
 def fetch(quelle: Quellen = None) -> None:
-    """Rohdaten nach pipeline/data/raw/ holen (nur was robots.txt erlaubt, mit Crawl-delay)."""
+    """Rohdaten nach pipeline/data/raw/ holen (nur was robots.txt erlaubt, mit Crawl-delay). Eine
+    Quelle, die scheitert, hält die anderen nicht auf; Exit-Code 1, wenn eine scheitert – ohne
+    ihre Rohdaten fehlte sie im Bau."""
     from zaehlkarte import abruf
 
-    for zeile in [*fetch_.hole(nur=quelle), *abruf.bericht()]:
+    log, fehler = fetch_.hole(nur=quelle)
+    for zeile in [*log, *abruf.bericht()]:
         typer.echo(zeile)
+    if fehler:
+        typer.echo(f"Abruf gescheitert: {', '.join(fehler)}")
+        raise typer.Exit(1)
 
 
 @app.command()
@@ -108,8 +115,31 @@ def dauer_fetch(quelle: Quellen = None) -> None:
     log, fehler = bau.hole(nur=quelle)
     for zeile in [*log, *abruf.bericht()]:
         typer.echo(zeile)
+    if fehler:
+        typer.echo(f"Abruf gescheitert: {', '.join(fehler)}")
     versucht = [c for c in dauerquellen(Pfade()) if not quelle or c in quelle]
     if fehler and len(fehler) == len(versucht):
+        raise typer.Exit(1)
+
+
+@dauer.command("frische")
+def dauer_frische(
+    tage: Annotated[float, typer.Option(help="höchstes Alter der jüngsten Stunde")] = 10,
+) -> None:
+    """Gedächtnis prüfen (Quellen, die Stundenwerte nur kurz vorhalten): Exit-Code 1, wenn die
+    jüngste Stunde einer Quelle älter als `--tage` ist – dann scheitert ihr Abruf seit mindestens
+    einem Wochenlauf, und bald fehlen Stunden für immer (Leipzig hält 31 Tage vor)."""
+    from datetime import UTC, datetime
+
+    from zaehlkarte.config import Pfade
+    from zaehlkarte.dauer import bau, gedaechtnis
+
+    pfade = Pfade()
+    zeilen, alt = gedaechtnis.frische(pfade.roh, bau.mit_gedaechtnis(pfade), datetime.now(UTC),
+                                      tage)
+    for z in zeilen:
+        typer.echo(z)
+    if alt:
         raise typer.Exit(1)
 
 

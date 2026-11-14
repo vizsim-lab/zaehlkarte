@@ -245,17 +245,22 @@ kleinen synthetischen Datei in `pipeline/tests/`. Wie man Quellen findet und was
 funktioniert hat: [AGENTS.md](AGENTS.md).
 
 Die Daten erneuert der Workflow „Kartendaten neu bauen“ (monatlich und von Hand) als Pull
-Request. Die Dauerzählstellen baut der Workflow „Dauerzählstellen bauen“ (wöchentlich, von
-Hand und bei Änderungen an `pipeline/src/zaehlkarte/dauer/`) und legt sie als Release-Asset
-`dauerzaehlstellen/dauer.tar.gz` ab – Daten, die sich laufend ändern, gehören nicht ins Git.
-Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die Kurzzeitzählungen.
+Request; scheitert der Abruf einer Quelle, endet er rot ohne PR und nennt sie. Die
+Dauerzählstellen baut der Workflow „Dauerzählstellen bauen“ (wöchentlich, von Hand und bei
+Änderungen an `pipeline/src/zaehlkarte/dauer/` oder der Konfiguration) und legt sie als
+Release-Asset `dauerzaehlstellen/dauer.tar.gz` ab – Daten, die sich laufend ändern, gehören
+nicht ins Git. Eine Quelle, die scheitert, hält die anderen nicht auf; sie steht als Warnung am
+Lauf. Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die Kurzzeitzählungen.
 
 **Gedächtnis:** Hamburg hält Stundenwerte nur zwei Monate vor, Leipzig 31 Tage. Was die
 Zählkarte davon aufhebt (Monatsdateien je Quelle, `<code>__stunden_JJJJ-MM.csv.gz`, für Hamburg
 dazu die Straßennamen `<code>__strassen.json`), liegt im selben Release. Der Workflow holt es
 vor dem Abruf und legt danach ab, was sich geändert hat – nie mit weniger Werten
 (`pipeline/werkzeuge/gedaechtnis.py`). Wer diese Assets löscht, verliert die Stunden, die die
-Quelle nicht mehr hat.
+Quelle nicht mehr hat. Darum liegt jede Fassung zusätzlich im Release
+`gedaechtnis-kopie-JJJJ` (eins je Jahr, nie überschrieben). Ist die jüngste Stunde einer Quelle
+älter als 10 Tage, wird der Wochenlauf rot (`zaehlkarte dauer frische`): Dann scheitert ihr Abruf
+seit mindestens einer Woche, und Leipzig etwa bleiben noch gut zwei Wochen bis zum Verlust.
 
 Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
 

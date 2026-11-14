@@ -5,7 +5,11 @@
 # „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach
 # startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
 #
-# Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code oder dieser Workflow ändern.
+# Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code, die Konfiguration
+# (sources.yaml, Ferien), der Kalender oder dieser Workflow ändern.
+# - Schritte laufen mit `shell: bash` (set -eo pipefail): Ein Fehler vor `| tee` beendet den
+#   Schritt – ohne pipefail zählte nur der Exit-Code von tee. Der Abruf scheitert nur, wenn alle
+#   Quellen scheitern; einzelne gescheiterte Quellen stehen als Warnung am Lauf.
 # - Berlin: Rohdaten zwischen den Läufen im Actions-Cache; geladen wird nur, was sich laut
 #   Prüfsumme (Content-MD5 des Archivs) geändert hat. Ebenso im Cache: die Monatsdateien von
 #   MobiData BW (neu geholt werden fehlende und die jüngsten zwei) und die Dateien Münchens (neu
@@ -26,7 +30,11 @@
 #   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
 #   (Assets `<code>__<datei>`): vor dem Abruf holen, danach ablegen, was sich geändert hat –
 #   nie mit weniger Werten (pipeline/werkzeuge/gedaechtnis.py). Scheitert das Holen, bricht der
-#   Lauf ab, bevor etwas überschrieben wird.
+#   Lauf ab, bevor etwas überschrieben wird; hätte eine Datei weniger Werte, ebenso (vor dem Bau).
+#   Eine zweite Kopie jeder Fassung legt der Lauf ins Release `gedaechtnis-kopie-JJJJ` (nie
+#   überschrieben, nie gelöscht). Zuletzt prüft er, ob das Gedächtnis noch wächst: Ist die
+#   jüngste Stunde einer Quelle älter als 10 Tage, wird der Lauf rot – die Karte ist dann schon
+#   ausgeliefert, aber der Abruf scheitert seit mindestens einer Woche, und bald fehlen Stunden.
 name: Dauerzählstellen bauen
 
 on:
@@ -35,7 +43,7 @@ on:
     - cron: "41 5 * * 1"
   push:
     branches: [main]
-    paths: [pipeline/src/zaehlkarte/dauer/**, pipeline/src/zaehlkarte/abruf.py, pipeline/src/zaehlkarte/ckan.py, pipeline/werkzeuge/gedaechtnis.py, .github/workflows/dauer.yml]
+    paths: [pipeline/src/zaehlkarte/dauer/**, pipeline/src/zaehlkarte/abruf.py, pipeline/src/zaehlkarte/ckan.py, pipeline/src/zaehlkarte/kalender.py, pipeline/src/zaehlkarte/config.py, pipeline/config/**, pipeline/werkzeuge/gedaechtnis.py, .github/workflows/dauer.yml]
 
 permissions:
   contents: write
@@ -44,6 +52,10 @@ permissions:
 concurrency:
   group: dauer
   cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
 
 jobs:
   dauer:
@@ -118,6 +130,11 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: uv run python werkzeuge/gedaechtnis.py ablegen | tee -a "$RUNNER_TEMP/abruf.txt"
+      - name: Gedächtnis kopieren (zweite Kopie, nie überschrieben)
+        working-directory: pipeline
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: uv run python werkzeuge/gedaechtnis.py kopieren | tee -a "$RUNNER_TEMP/abruf.txt"
       - name: Kartendaten bauen
         working-directory: pipeline
         run: |
@@ -139,3 +156,15 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run ci.yml --ref main
+      - name: Abruf und Gedächtnis prüfen
+        working-directory: pipeline
+        run: |
+          grep '^FEHLER' "$RUNNER_TEMP/abruf.txt" | sed 's/^/::warning title=Abruf gescheitert::/' || true
+          status=0
+          uv run zaehlkarte dauer frische --tage 10 > "$RUNNER_TEMP/frische.txt" || status=$?
+          cat "$RUNNER_TEMP/frische.txt"
+          { echo; echo "Gedächtnis:"; echo '```'; cat "$RUNNER_TEMP/frische.txt"; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$status" -ne 0 ]; then
+            grep -E 'älter als|keine Stunden' "$RUNNER_TEMP/frische.txt" | sed 's/^/::error title=Gedächtnis wächst nicht::/' || true
+            exit "$status"
+          fi

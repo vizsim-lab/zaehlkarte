@@ -10,8 +10,17 @@ neue umbenennen. Bricht ein Lauf dazwischen ab, liegt `<name>.neu` im Release �
 dann diese Fassung. Und nie mit weniger: Eine Datei, die weniger Werte enthält als beim Holen
 (Stunden mit Wert bzw. Stellen), wird nicht abgelegt – das Gedächtnis wächst nur.
 
-    uv run python werkzeuge/gedaechtnis.py holen  [--release dauerzaehlstellen]
-    uv run python werkzeuge/gedaechtnis.py ablegen [--release dauerzaehlstellen]
+Zweite Kopie (`kopieren`, nach dem Ablegen): jede Fassung einer Datei, die es dort noch nicht
+gibt, als `<Zeitpunkt>__<Prüfsumme>__<code>__<datei>` in ein eigenes Release je Jahr
+(`gedaechtnis-kopie-JJJJ`; ein Release fasst höchstens 1000 Assets) – nie überschrieben, nie
+gelöscht. Sie schützt vor gelöschten oder kaputten Assets im Release `dauerzaehlstellen`.
+Wiederherstellen: je `<code>__<datei>` die jüngste Fassung (Name beginnt mit dem Zeitpunkt) aus
+dem jüngsten Kopie-Release laden, unter `<code>__<datei>` nach
+`pipeline/data/raw/<code>/gedaechtnis/<datei>` legen und `ablegen` laufen lassen.
+
+    uv run python werkzeuge/gedaechtnis.py holen    [--release dauerzaehlstellen]
+    uv run python werkzeuge/gedaechtnis.py ablegen  [--release dauerzaehlstellen]
+    uv run python werkzeuge/gedaechtnis.py kopieren
 """
 
 from __future__ import annotations
@@ -26,10 +35,19 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROH = Path(__file__).resolve().parents[1] / "data" / "raw"
 VORHER = ROH / "gedaechtnis_vorher.json"
+KOPIE = "gedaechtnis-kopie-{jahr}"
+KOPIE_NOTIZ = (
+    "Zweite Kopie des Gedächtnisses aus dem Release dauerzaehlstellen: jede Fassung einer Datei "
+    "als <Zeitpunkt>__<Prüfsumme>__<code>__<datei>, nie überschrieben, nie gelöscht. "
+    "Wiederherstellen: je <code>__<datei> die jüngste Fassung (pipeline/werkzeuge/gedaechtnis.py)."
+    " Stundenwerte wie geliefert – Hamburg: dl-de/by-2-0, Freie und Hansestadt Hamburg, Behörde "
+    "für Verkehr und Mobilitätswende; Leipzig: dl-de/by-2-0, Stadt Leipzig; strassen.json: "
+    "© OpenStreetMap-Mitwirkende, ODbL. Abgelegt vom Workflow „Dauerzählstellen bauen“.")
 
 
 def gh(*args: str, ausgabe: bool = False) -> str:
@@ -122,12 +140,46 @@ def ablegen(release: str) -> None:
             print(f"Gedächtnis abgelegt: {name} ({pfad.stat().st_size / 1e6:.1f} MB)")
 
 
+def release_anlegen(release: str, titel: str, notiz: str) -> None:
+    try:
+        gh("release", "view", release, ausgabe=True)
+    except subprocess.CalledProcessError:
+        gh("release", "create", release, "--latest=false", "--title", titel, "--notes", notiz)
+
+
+def kopieren(jetzt: datetime | None = None) -> None:
+    """Jede Fassung, die es in der Kopie dieses Jahres noch nicht gibt, dorthin – nie ersetzen."""
+    jetzt = jetzt or datetime.now(UTC)
+    lokal = dateien()
+    if not lokal:
+        print("Gedächtnis: nichts zu kopieren")
+        return
+    release = KOPIE.format(jahr=jetzt.year)
+    release_anlegen(release, f"Daten: Gedächtnis, zweite Kopie {jetzt.year}", KOPIE_NOTIZ)
+    da = {n.split("__", 1)[1] for n in assets(release) if n.count("__") >= 3}
+    zeit = jetzt.strftime("%Y-%m-%dT%H%M%SZ")
+    neu = 0
+    with tempfile.TemporaryDirectory() as tmp:
+        for name, pfad in lokal.items():
+            kennung = f"{sha(pfad)[:12]}__{name}"
+            if kennung in da:
+                continue
+            ziel = Path(tmp) / f"{zeit}__{kennung}"
+            shutil.copyfile(pfad, ziel)
+            gh("release", "upload", release, str(ziel))
+            neu += 1
+    print(f"Gedächtnis: {neu} von {len(lokal)} Dateien neu in der Kopie {release}")
+
+
 def main() -> int:
     a = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    a.add_argument("was", choices=["holen", "ablegen"])
+    a.add_argument("was", choices=["holen", "ablegen", "kopieren"])
     a.add_argument("--release", default="dauerzaehlstellen")
     args = a.parse_args()
-    (holen if args.was == "holen" else ablegen)(args.release)
+    if args.was == "kopieren":
+        kopieren()
+    else:
+        (holen if args.was == "holen" else ablegen)(args.release)
     return 0
 
 

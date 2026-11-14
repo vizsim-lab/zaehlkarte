@@ -2,6 +2,10 @@
 
 from __future__ import annotations
 
+import ast
+import re
+from pathlib import Path
+
 import pytest
 import requests
 
@@ -208,3 +212,58 @@ def test_post_und_lade(tmp_path, netz):
     assert ziel.read_bytes() == b"a;b\n1;2\n" and not (tmp_path / "roh" / "x.csv.teil").exists()
     with pytest.raises(requests.HTTPError):
         abruf.lade("https://daten.example/fehlt.csv", tmp_path / "fehlt.csv")
+
+
+# Netz nur über `abruf` (CLAUDE.md: nie `requests` direkt). Geprüft am Quelltext der Pipeline
+# und ihrer Werkzeuge: keine Aufrufe von requests.get/post/… oder einer Sitzung an `abruf.hole`
+# vorbei, keine anderen HTTP-Bibliotheken, kein curl/wget, keine URL direkt an pandas.
+PIPELINE = Path(__file__).resolve().parents[1]
+HTTP_VERBEN = {"get", "post", "put", "patch", "delete", "head", "options", "request"}
+ANDERE_NETZMODULE = {"urllib.request", "http.client", "httpx", "aiohttp", "urllib3", "socket",
+                     "pycurl", "ftplib"}
+LESER = {"read_csv", "read_excel", "read_json", "read_html", "read_xml", "read_parquet",
+         "ExcelFile", "urlretrieve"}
+
+
+def _verstoesse(pfad: Path, basis: Path = PIPELINE) -> list[str]:
+    baum = ast.parse(pfad.read_text(encoding="utf-8"))
+    out = []
+    for k in ast.walk(baum):
+        if isinstance(k, ast.Import):
+            out += [a.name for a in k.names if a.name in ANDERE_NETZMODULE]
+        elif isinstance(k, ast.ImportFrom) and k.module in ANDERE_NETZMODULE:
+            out.append(k.module)
+        elif isinstance(k, ast.Constant) and isinstance(k.value, str):
+            if re.match(r"(curl|wget)\b", k.value):
+                out.append(k.value[:20])
+        elif isinstance(k, ast.Call):
+            f = k.func
+            name = f.value.id if isinstance(f, ast.Attribute) and isinstance(f.value,
+                                                                            ast.Name) else ""
+            attr = f.attr if isinstance(f, ast.Attribute) else getattr(f, "id", "")
+            if attr in HTTP_VERBEN and (name == "requests" or "sitzung" in name
+                                        or "session" in name.lower()):
+                out.append(f"{name}.{attr}()")
+            if (attr in LESER and k.args and isinstance(k.args[0], ast.Constant)
+                    and str(k.args[0].value).startswith(("http://", "https://"))):
+                out.append(f"{attr}(URL)")
+    return [f"{pfad.relative_to(basis)}: {v}" for v in out]
+
+
+def test_netz_nur_ueber_abruf():
+    dateien = [p for p in sorted((PIPELINE / "src" / "zaehlkarte").rglob("*.py"))
+               if p.name != "abruf.py"] + sorted((PIPELINE / "werkzeuge").glob("*.py"))
+    assert len(dateien) > 30
+    assert [v for p in dateien for v in _verstoesse(p)] == []
+
+
+def test_netz_pruefung_erkennt_umwege(tmp_path):
+    p = tmp_path / "x.py"
+    p.write_text("import urllib.request\nimport requests\nimport pandas as pd\n"
+                 "requests.get('https://a.example')\ns = requests.Session()\n"
+                 "sitzung.post('https://a.example')\n"
+                 "pd.read_csv('https://a.example/x.csv')\n"
+                 "subprocess.run(['curl', '-O', 'https://a.example'])\n", encoding="utf-8")
+    befunde = sorted(v.split(": ", 1)[1] for v in _verstoesse(p, tmp_path))
+    assert befunde == sorted(["urllib.request", "requests.get()", "sitzung.post()",
+                              "read_csv(URL)", "curl"])

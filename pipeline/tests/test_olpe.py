@@ -127,7 +127,7 @@ def test_hole_ersetzt_den_alten_abruf(tmp_path, monkeypatch):
     monkeypatch.setattr(fetch, "lade", lade)
     alt = pfade.roh / "olpe" / "verkehrsmessungen-alt"
     alt.mkdir(parents=True)
-    assert fetch.hole(pfade, ["olpe"]) == ["olpe: 2 Datensätze, 1 Messungen"]
+    assert fetch.hole(pfade, ["olpe"]) == (["olpe: 2 Datensätze, 1 Messungen"], [])
     assert gesucht == [("https://example.org", ["Verkehrsmessung", "Verkehrsmessungen"])]
     # die Suche und die bekannten Datensätze, nur „verkehrsmess…“; Lizenz steht nur auf der Seite
     assert gelesen == [("verkehrsmessung-standort-zum-honigsack-35", ("html",)),

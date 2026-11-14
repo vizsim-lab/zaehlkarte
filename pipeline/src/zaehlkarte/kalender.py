@@ -18,6 +18,11 @@ from pathlib import Path
 
 GEBIETE = ("west", "ost")
 TAGTYPEN = ("schule", "ferien", "feiertag", "wochenende")
+# Länder, deren eigene Feiertage `feiertage()` kennt – für die übrigen liefert sie nur die
+# bundesweiten (tests/test_konfiguration.py: jede Quelle liegt in einem dieser Länder)
+FEIERTAGE_LAENDER = frozenset({"BB", "BE", "BW", "BY", "HB", "HH", "MV", "NI", "NW", "SH", "SN"})
+LAENDER = ("BB", "BE", "BW", "BY", "HB", "HE", "HH", "MV", "NI", "NW", "RP", "SH", "SL", "SN",
+           "ST", "TH")
 
 
 @dataclass(frozen=True)

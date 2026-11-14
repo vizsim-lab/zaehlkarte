@@ -97,11 +97,11 @@ def test_hole_aus_dcat_nur_geaenderte(tmp_path, monkeypatch):
     monkeypatch.setattr(fetch, "quellen", lambda pfade: {"moers": q})
     monkeypatch.setattr(ckan, "paket", paket)
     monkeypatch.setattr(fetch, "lade", lade)
-    assert fetch.hole(pfade, ["moers"]) == ["moers: 1 Datensätze, 2 Messungen (2 geladen)"]
+    assert fetch.hole(pfade, ["moers"]) == (["moers: 1 Datensätze, 2 Messungen (2 geladen)"], [])
     ordner = pfade.roh / "moers" / "verkehrszahlungen-2018"
     assert (ordner / "b c.txt").exists()
     assert json.loads((ordner / "paket.json").read_text(encoding="utf-8"))["title"].endswith("2018")
     # zweiter Lauf: nur, was sich laut Metadaten geändert hat
     stand["a"] = "2026-10-20T17:48:38"
-    assert fetch.hole(pfade, ["moers"]) == ["moers: 1 Datensätze, 2 Messungen (1 geladen)"]
+    assert fetch.hole(pfade, ["moers"]) == (["moers: 1 Datensätze, 2 Messungen (1 geladen)"], [])
     assert geladen == ["a_t30_01.02.2018.txt", "b%20c.txt", "a_t30_01.02.2018.txt"]

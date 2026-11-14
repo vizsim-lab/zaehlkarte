@@ -25,7 +25,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Leipzig: 31 Tage):
   Assets `<code>__<datei>` aus `pipeline/data/raw/<code>/gedaechtnis/`, geholt und abgelegt von
   `pipeline/werkzeuge/gedaechtnis.py` – nie löschen, nie mit weniger Werten ersetzen (sonst
-  sind die Stunden verloren).
+  sind die Stunden verloren). Eine zweite Kopie jeder Fassung liegt je Jahr im Release
+  `gedaechtnis-kopie-JJJJ` (ebenso nie löschen); `zaehlkarte dauer frische` macht den
+  Wochenlauf rot, wenn das Gedächtnis einer Quelle seit 10 Tagen nicht gewachsen ist.
 - **Repo-Wurzel** — das Frontend (Vite): `index.html`, `main.js`, `js/`, `style.css`,
   `vite.config.js`. Build -> `dist/` (gitignored). Ungebaut läuft es nicht (nackte Imports).
 - **`tests/`** — `unit/` (node --test, browserlos), `web/` (Playwright gegen den Build).
@@ -109,6 +111,10 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 
 ## Konventionen
 - **uv**, nie `pip install`. Lint `uvx ruff check`, Tests `uv run pytest` (aus `pipeline/`).
+  Die harten Regeln zur Konfiguration prüft `tests/test_konfiguration.py` an der echten
+  sources.yaml (Lizenzen, Land mit Ferien und Feiertagen, robots-Ausnahmen, Datenlage-Felder),
+  `tests/test_abruf.py`, dass kein Modul das Netz an `abruf` vorbei ruft – eine neue Regel
+  bekommt dort ihre Prüfung.
 - **Sprache:** Deutsch in Doku, Kommentaren und Bezeichnern. Die UI ist zweisprachig
   (Deutsch Standard, Englisch per Umschalter): jeder neue UI-Text als Schlüssel in
   `js/sprache/texte.js`, in beiden Sprachen (Unit-Test prüft gleiche Schlüssel und
@@ -118,7 +124,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   bleiben in beiden Sprachen gleich (deutsche Spalten und Werte).
 - **Neue Quelle:** Eintrag in `sources.yaml` (`status: research` bis der Adapter steht),
   Adapter mit `lese(quelle, pfade, bericht)` und `Bericht`, Test mit synthetischer Datei.
-  Mehrere Kommunen mit gleichem Format teilen sich einen Adapter (`adapter:`).
+  Mehrere Kommunen mit gleichem Format teilen sich einen Adapter (`adapter:`). Kurzzeit: der
+  Abruf des Formats steht in `fetch.ABRUF`. Eine Quelle aus einem Land ohne Ferien oder
+  Feiertage braucht zuerst den Kalender (`kalender.FEIERTAGE_LAENDER`, `config/schulferien_*`).
 - **Frontend:** `npm run dev`; vor jedem Push `npm run test:unit` und `npm run test:web`
   (Playwright sperrt das Netz außer dem Testserver – die Karte muss ohne Hintergrund laufen).
   Neues Verhalten = neuer Test in `tests/web/`.
