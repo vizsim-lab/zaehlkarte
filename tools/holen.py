@@ -5,7 +5,8 @@ Kennungen von Claude), mit dem Abstand je Host. Je Eintrag ein Ordner mit der Da
 Text (pdftotext -layout) daneben, und ein Protokoll (URL, Ziel, Typ, Größe, sha256 oder Fehler).
 
 Aufruf: python3 tools/holen.py <ziel> <liste>
-Liste: je Zeile „name | url“ (# Kommentar); name = Ordner im Ziel.
+Liste: je Zeile „name | url“ (# Kommentar); name = Ordner im Ziel. Mit „| folge=<regex> | max=<n>“
+werden danach bis zu n Links der Seite geholt, deren Ziel auf den Ausdruck passt (gleicher Host).
 """
 
 import hashlib
@@ -36,13 +37,36 @@ def dateiname(url: str, typ: str, n: int) -> str:
     return f"{n:02d}_{name}"
 
 
-def main():
-    protokoll: dict[str, list] = {}
-    for n, zeile in enumerate(LISTE.read_text(encoding="utf-8").splitlines()):
+def auftraege() -> list[tuple[str, str, str | None, int]]:
+    out = []
+    for zeile in LISTE.read_text(encoding="utf-8").splitlines():
         zeile = zeile.strip()
         if not zeile or zeile.startswith("#"):
             continue
-        name, url = (t.strip() for t in zeile.split("|", 1))
+        teile = [t.strip() for t in re.split(r"\s\|\s", zeile)]  # „ | “ trennt, „|“ im Ausdruck nicht
+        opt = dict(t.split("=", 1) for t in teile[2:] if "=" in t)
+        out.append((teile[0], teile[1], opt.get("folge"), int(opt.get("max", "20"))))
+    return out
+
+
+def links(inhalt: bytes, basis: str, muster: str, n: int) -> list[str]:
+    text = inhalt.decode("utf-8", "replace")
+    host = urllib.parse.urlsplit(basis).netloc
+    gesehen: list[str] = []
+    for href in re.findall(r'(?:href|src)="([^"#]+)', text):
+        u = urllib.parse.urljoin(basis, href.replace("&amp;", "&"))
+        if urllib.parse.urlsplit(u).netloc == host and re.search(muster, u) and u not in gesehen:
+            gesehen.append(u)
+    return gesehen[:n]
+
+
+def main():
+    protokoll: dict[str, list] = {}
+    liste = auftraege()
+    n = 0
+    while liste:
+        name, url, folge, maximal = liste.pop(0)
+        n += 1
         ordner = ZIEL / name
         ordner.mkdir(parents=True, exist_ok=True)
         eintrag = {"url": url}
@@ -57,6 +81,10 @@ def main():
             if inhalt[:5] == b"%PDF-":
                 subprocess.run(["pdftotext", "-layout", str(datei), str(datei) + ".txt"],
                                check=False, timeout=300)
+            if folge:
+                neu = links(inhalt, ende, folge, maximal)
+                eintrag["gefolgt"] = neu
+                liste[:0] = [(name, u, None, 0) for u in neu]
             print(name, url, "ok", len(inhalt))
         except Exception as e:  # noqa: BLE001
             eintrag["fehler"] = repr(e)[:300]

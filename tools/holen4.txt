@@ -1,0 +1,7 @@
+# Quellen, Runde 4 (November 2026): Rad-Zähler der VMZ Niedersachsen (kommunale), Dresden (Informationsportal), Erfurt
+vmz | https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/ | folge=wheel-counter|NeoCount | max=3
+vmz | https://www.vmz-niedersachsen.de/region-hannover/radzaehler/ | folge=wheel-counter|NeoCount | max=2
+vmz | https://www.vmz-niedersachsen.de/assets/js/app.1767873799.js
+dresden | https://opendata.dresden.de/informationsportal/InformationPortal/InformationPortal.nocache.js
+dresden | https://kommisdd.dresden.de/net4/public/ogcapi/collections?f=json
+erfurt | https://www.erfurt.de/ef/de/leben/verkehr/mobil/radverkehr/fahrradzaehlstellen/index.html | folge=(?i)csv|xlsx|json|download|opendata|zaehl|eco | max=12
