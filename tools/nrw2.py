@@ -111,21 +111,38 @@ MDK_PROJEKT = "fitko/govdata/tools/musterdatenkatalog-pipeline"
 def mdk():
     """Musterdatenkatalog (GovData/FITKO): Rohdaten (CSV/XLSX) aus dem Repository auf openCode –
     ordnet die offenen Datensätze der Kommunen Themen zu (etwa Verkehrszählung)."""
-    api = "https://gitlab.opencode.de/api/v4/projects/" + urllib.parse.quote(MDK_PROJEKT, safe="")
+    basis = "https://gitlab.opencode.de/api/v4/projects/"
     aus = {}
     try:
-        baum = json.loads(h.seite(api + "/repository/tree?" + urllib.parse.urlencode(
-            {"path": "musterdatenkatalog", "ref": "main", "per_page": 100, "recursive": "true"}), zeit=60)[0])
+        proj = json.loads(h.seite(basis + urllib.parse.quote(MDK_PROJEKT, safe=""), zeit=60)[0])
     except h.Gesperrt:
         protokoll["mdk"] = "robots.txt"
         return
-    aus["baum"] = baum
+    except Exception as e:  # noqa: BLE001
+        protokoll["mdk"] = f"Projekt: {e!r}"[:200]
+        return
+    aus["projekt"] = {k: proj.get(k) for k in ("id", "default_branch", "visibility", "last_activity_at",
+                                                "web_url")}
+    zweig = proj.get("default_branch") or "main"
+    baum = []
+    for seite_nr in range(1, 30):
+        try:
+            teil = json.loads(h.seite(f"{basis}{proj['id']}/repository/tree?" + urllib.parse.urlencode(
+                {"ref": zweig, "per_page": 100, "page": seite_nr, "recursive": "true"}), zeit=60)[0])
+        except Exception as e:  # noqa: BLE001
+            aus["baum_fehler"] = repr(e)[:200]
+            break
+        baum += teil
+        if len(teil) < 100:
+            break
+    aus["baum"] = [b["path"] for b in baum]
     (ZIEL / "mdk").mkdir(exist_ok=True)
     for b in baum:
         if b.get("type") != "blob" or not b["path"].lower().endswith((".csv", ".xlsx", ".json")):
             continue
-        url = (f"https://gitlab.opencode.de/{MDK_PROJEKT}/-/raw/main/"
-               + urllib.parse.quote(b["path"]))
+        if not b["path"].startswith("musterdatenkatalog"):
+            continue
+        url = f"{basis}{proj['id']}/repository/files/{urllib.parse.quote(b['path'], safe='')}/raw?ref={zweig}"
         try:
             inhalt = h.seite(url, zeit=120, grenze=200_000_000)[0]
             # gepackt, damit der Branch klein bleibt
@@ -136,7 +153,50 @@ def mdk():
         except Exception as e:  # noqa: BLE001
             aus.setdefault("dateien", {})[b["path"]] = repr(e)[:200]
     h.schreibe("mdk.json", aus)
-    protokoll["mdk"] = aus.get("dateien")
+    protokoll["mdk"] = aus.get("dateien") or aus.get("baum_fehler") or len(aus.get("baum", []))
+
+# Portale, die die Pipeline abruft (sources.yaml), und was robots.txt je Kennung erlaubt
+ROBOTS_PRUEFEN = [
+    "https://www.offenesdatenportal.de/api/3/action/package_show?id=verkehrszahlung-in-moers-2021",
+    "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021",
+    "https://opendata.olpe.de/api/3/action/package_search?q=Verkehrsmessung&rows=200",
+    "https://offenedaten.aachen.de/api/3/action/package_show?id=radzaehlstellen-der-stadt-aachen",
+    "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen",
+    "https://opendata.muenchen.de/api/3/action/package_show?id=x",
+    "https://open.nrw/api/3/action/package_show?id=radverkehrszahlungen-e",
+    "https://open.nrw/api/3/action/package_search?q=x",
+    "https://opendata.rhein-kreis-neuss.de/api/explore/v2.1/catalog/datasets/eco-counter-data/exports/csv",
+    "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/csv?use_labels=true",
+    "https://open-data.dortmund.de/api/explore/v2.1/catalog/datasets/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/exports/csv",
+    "https://opendata.bonn.de/data.json",
+    "https://opendata.stadt-muenster.de/sites/default/files/Verkehrsz%C3%A4hlung.zip",
+    "https://opendata.ruhr/api/3/action/package_show?id=mobilitatskonzept",
+    "https://opendata.ruhr/dataset/mobilitatskonzept",
+    "https://opendata.duesseldorf.de/api/3/action/package_show?id=x",
+    "https://opendata.mobidata-bw.de/x",
+]
+KENNUNGEN = ("zaehlkarte-pipeline", "zaehlkarte-werkzeug", "ClaudeBot", "Claude-User", "Claude-SearchBot",
+             "anthropic-ai", "*")
+
+
+def robots():
+    import urllib.robotparser
+    aus = {}
+    for url in ROBOTS_PRUEFEN:
+        t_ = urllib.parse.urlsplit(url)
+        basis = f"{t_.scheme}://{t_.netloc}"
+        if basis not in aus:
+            try:
+                inhalt = h.roh(basis + "/robots.txt", zeit=30)[0].decode("utf-8", "replace")
+            except Exception as e:  # noqa: BLE001
+                inhalt = f"(Fehler: {e!r})"
+            aus[basis] = {"robots": inhalt[:8000], "urls": {}}
+        rp = urllib.robotparser.RobotFileParser()
+        rp.parse(aus[basis]["robots"].splitlines() if not aus[basis]["robots"].startswith("(Fehler") else [])
+        aus[basis]["urls"][url] = {k: rp.can_fetch(k, url) for k in KENNUNGEN}
+    h.schreibe("robots.json", aus)
+    protokoll["robots"] = {b: {u.split(b)[-1][:50]: [k for k, ok in v.items() if not ok]
+                               for u, v in x["urls"].items()} for b, x in aus.items()}
 
 
 def seiten():
@@ -147,7 +207,7 @@ def seiten():
 
 if __name__ == "__main__":
     for name in TEILE:
-        f = {"ckan": ckan, "mobilithek": mobilithek, "seiten": seiten, "mdk": mdk}[name]
+        f = {"ckan": ckan, "mobilithek": mobilithek, "seiten": seiten, "mdk": mdk, "robots": robots}[name]
         t0 = time.time()
         try:
             f()
