@@ -16,15 +16,12 @@ import urllib.parse
 from robots import TEXTE, oeffne
 
 ZIEL = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "ergebnis/ags")
-SEITEN = [
-    "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/_inhalt.html",
-    "https://www.destatis.de/EN/Themes/Countries-Regions/Regional-Statistics/OnlineListMunicipalities/"
-    "list-municipalities-information-system.html",
-]
+GV = "https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/Archiv/"
+SEITEN = [GV + "GVAuszugQ/AuszugGV3QAktuell.html", GV + "GVAuszugJ/31122025_Auszug_GV.html"]
 # Unterseiten des Gemeindeverzeichnisses, auf denen die Excel-Auszüge liegen können (höchstens so
 # viele Seiten – Crawl-delay 30 s)
 UNTER = re.compile(r"/(Gemeindeverzeichnis|OnlineListMunicipalities)/")
-HOECHSTENS = 10
+HOECHSTENS = 2
 
 ZIEL.mkdir(parents=True, exist_ok=True)
 protokoll: dict = {"seiten": {}, "dateien": {}, "fehler": {}}
