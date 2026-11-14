@@ -334,13 +334,14 @@ test("Datenlage: Kommunen nur mit Dauerzählstellen stehen nur bei den Dauerzäh
   expect(nurDauer.length).toBeGreaterThan(0);
   expect(nurDauer.every((x) => x.dauer)).toBe(true);
   // Kurzzeitzählungen: nur Kommunen mit deren Stand, die Zähler der Legende passen dazu
-  expect(await gezeigt()).toEqual(mitStand);
+  await expect.poll(gezeigt, { timeout: 20000 }).toEqual(mitStand);
   const zaehler = async () => (await page.locator("#datenlage-legende .count-badge").allTextContents()).map(Number).reduce((a, b) => a + b, 0);
   expect(await zaehler()).toBe(mitStand.length);
   // Dauerzählstellen: dort stehen sie, mit ihrem Stand und ohne Anfragetext
   await page.locator('[data-familie="d"]').click();
   const { kommune, land } = nurDauer[0];
-  expect(await gezeigt()).toContain(kommune);
+  // der Wechsel lädt erst die Dauerzählstellen (asynchron) – so lange warten, bis die Karte umgestellt ist
+  await expect.poll(gezeigt, { timeout: 20000 }).toContain(kommune);
   await page.evaluate((k) => window.__app.zeigeDatenlage(k), kommune);
   const el = page.locator("#datenlage-detail");
   await expect(el.locator(".pop-eyebrow")).toHaveText(`Datenlage Dauerzählstellen · ${land}`);
