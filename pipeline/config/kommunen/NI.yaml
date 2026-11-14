@@ -82,16 +82,18 @@
       - ["SensorThings-Schnittstelle", "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"]
       - ["Meldung mobile Zählstellen", "https://mobil.osnabrueck.de/de/aktuelles/daten-fuer-nachhaltige-mobilitaetsplanung-mobile-zaehlstellen-erfassen-rad-und-fussverkehr-in-osnabrueck/"]
   dauer:
-    stand: ohne_lizenz
+    stand: offen
     was: >-
-      KI-Sensoren an rund zehn Kreuzungen, 15-Minuten-Werte seit 2023 über die
-      SensorThings-Schnittstelle – ohne Lizenzangabe, daher nicht in der Karte (die Anfrage bei
-      den Kurzzeitzählungen fragt auch nach der Lizenz); in der Mobilithek seit September 2025 der
-      Datensatz der 66 Sensoren vom 01.01.2022 bis 09.11.2023 als ZIP, eingestuft als freie
-      Nutzung, aber ohne genannte Lizenz
+      KI-Sensoren an rund zehn Kreuzungen (Pkw, Lkw, Bus, Motorrad, Rad, Fuß) seit 2022 über die
+      SensorThings-Schnittstelle der Stadtwerke, laut Mobilithek unter dl-de/by-2-0 (SWO Netz
+      GmbH); nicht in der Karte: die Werte kommen in Abständen von gut 15 Minuten mit wandernden
+      Zeitstempeln, volle Stunden lassen sich daraus nicht bilden. In der Mobilithek seit September
+      2025 auch der Datensatz der 66 Sensoren vom 01.01.2022 bis 09.11.2023 als ZIP, eingestuft als
+      freie Nutzung, aber ohne genannte Lizenz
     links:
       - ["Datenplattform Osnabrück", "https://datenplattform.osnabrueck.de/verkehrszaehlung/"]
       - ["SensorThings-Schnittstelle", "https://daten-api.osnabrueck.de/v1.1/Things?$filter=substringof('Verkehr',name)"]
+      - ["Mobilithek: Verkehrszählung Osnabrück (dl-de/by-2-0)", "https://mobilithek.info/offers/-6042365511594508563"]
       - ["Mobilithek: Verkehrszählungsdatensatz 2022–2023", "https://mobilithek.info/offers/903287344194932736"]
 - ags: "03454032"
   name: Lingen (Ems)
@@ -122,20 +124,103 @@
 - ags: "03101000"
   name: Braunschweig
   lage: [10.5205, 52.2625]
+  kontakt: {fds_suche: "Stadt Braunschweig"}
   dauer:
-    stand: aggregiert
+    stand: ohne_lizenz
+    quellen: [vmz_rad]
     was: >-
-      acht Rad-Dauerzählstellen (Zählschleifen, seit 2022); offen nur ein Tageswert je Zählstelle,
-      vierteljährlich als CSV (CC BY 4.0)
+      acht Rad-Dauerzählstellen (Zählschleifen, seit 2022): Stundenwerte in der Zählerabfrage der
+      VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis; im Datenportal der Stadt nur
+      ein Tageswert je Zählstelle, vierteljährlich als CSV (CC BY 4.0)
     situation: >-
       Die Stadt zählt den Radverkehr an acht Standorten mit Schleifen im Boden, drei davon mit
       Zählsäule. Im Datenportal stehen seit 2023 vierteljährlich CSV-Dateien mit einem Tageswert je
-      Zählstelle (CC BY 4.0) und die Standorte; tagesaktuelle Werte zeigt ein Dashboard.
-      Stundenwerte sind nicht veröffentlicht, ob ein Tag vollständig gezählt ist, lässt sich so nicht
-      prüfen.
+      Zählstelle (CC BY 4.0) und die Standorte; ob ein Tag vollständig gezählt ist, lässt sich daran
+      nicht prüfen. Stundenwerte derselben Zählstellen zeigt die Zählstellenübersicht der VMZ
+      Niedersachsen (mit Download), dort ohne Lizenzangabe.
     links:
+      - ["VMZ Niedersachsen: Zählstellenübersicht Radverkehr", "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"]
       - ["Datenportal: Automatische Radverkehrszählung", "https://opendata.braunschweig.de/dataset/automatische-radverkehrsz%C3%A4hlung"]
       - ["Stadt: Automatische Radverkehrszählungen", "https://www.braunschweig.de/leben/stadtplan_verkehr/radverkehr/automatische-radverkehrszaehlung.php"]
+# Die übrigen Kommunen mit Rad-Zählstellen in der Zählstellenübersicht der VMZ Niedersachsen
+# (Gruppen dort; die Zählstellen der Landesbehörde an Bundes- und Landesstraßen gehören zu keiner).
+- ags: "03241001"
+  name: Hannover
+  lage: [9.7381, 52.3745]
+  kontakt: {fds_suche: "Landeshauptstadt Hannover"}
+  dauer:
+    stand: ohne_lizenz
+    quellen: [vmz_rad]
+    was: >-
+      13 Rad-Dauerzählstellen der Stadt (Zählschleifen, meist je Straßenseite, die ersten seit
+      2016): Stundenwerte in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der
+      Karte mit Hinweis
+    links:
+      - ["VMZ Niedersachsen: Zählstellenübersicht Radverkehr", "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"]
+      - ["VMZ: Radverkehr – Zähler-Auswertungen", "https://www.vmz-niedersachsen.de/radverkehr/zaehler-auswertungen/"]
+      - ["Stadt: Lust auf Fahrrad (Dauerzählstellen)", "https://www.hannover.de/Leben-in-der-Region-Hannover/Verwaltungen-Kommunen/Die-Verwaltung-der-Landeshauptstadt-Hannover/Dezernate-und-Fachbereiche-der-LHH/Stadtentwicklung-und-Bauen/Fachbereich-Planen-und-Stadtentwicklung/Stadtentwicklung-und-Mobilit%C3%A4tsplanung/Lust-auf-Fahrrad"]
+- ags: "03241"
+  name: Region Hannover
+  lage: [9.80, 52.44]  # zwischen den Zählstellen der Region (der Sitz ist Hannover)
+  kontakt: {fds_suche: "Region Hannover"}
+  dauer:
+    stand: ohne_lizenz
+    quellen: [vmz_rad]
+    was: >-
+      vier Rad-Dauerzählstellen an Kreisstraßen (Ortsdurchfahrten Großburgwedel, Ilten, Hemmingen,
+      Harenberg): Stundenwerte in der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in
+      der Karte mit Hinweis
+    links:
+      - ["VMZ Niedersachsen: Zählstellenübersicht Radverkehr", "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"]
+- ags: "03361012"
+  name: Verden (Aller)
+  lage: [9.2311, 52.9234]
+  kontakt: {fds_suche: "Stadt Verden"}
+  dauer:
+    stand: ohne_lizenz
+    quellen: [vmz_rad]
+    was: >-
+      vier Rad-Dauerzählstellen der Stadt: Stundenwerte in der Zählerabfrage der VMZ
+      Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis
+    links:
+      - ["VMZ Niedersachsen: Zählstellenübersicht Radverkehr", "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"]
+# Samtgemeinden haben keinen eigenen Gemeindeschlüssel: der von Reppenstedt (Sitz)
+- ags: "03355031"
+  name: Samtgemeinde Gellersen
+  lage: [10.3647, 53.2475]
+  kontakt: {fds_suche: "Samtgemeinde Gellersen"}
+  dauer:
+    stand: ohne_lizenz
+    quellen: [vmz_rad]
+    was: >-
+      vier Rad-Dauerzählstellen (Brockwinkel, Oedeme, Reppenstedt je Richtung): Stundenwerte in
+      der Zählerabfrage der VMZ Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis
+    links:
+      - ["VMZ Niedersachsen: Zählstellenübersicht Radverkehr", "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"]
+- ags: "03357039"
+  name: Rotenburg (Wümme)
+  lage: [9.4037, 53.1104]
+  kontakt: {fds_suche: "Stadt Rotenburg (Wümme)"}
+  dauer:
+    stand: ohne_lizenz
+    quellen: [vmz_rad]
+    was: >-
+      eine Rad-Dauerzählstelle: Stundenwerte in der Zählerabfrage der VMZ Niedersachsen, ohne
+      Lizenzangabe – in der Karte mit Hinweis
+    links:
+      - ["VMZ Niedersachsen: Zählstellenübersicht Radverkehr", "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"]
+- ags: "03457012"
+  name: Jemgum
+  lage: [7.3827, 53.2651]
+  kontakt: {fds_suche: "Gemeinde Jemgum"}
+  dauer:
+    stand: ohne_lizenz
+    quellen: [vmz_rad]
+    was: >-
+      eine Rad-Dauerzählstelle in Oldendorp: Stundenwerte in der Zählerabfrage der VMZ
+      Niedersachsen, ohne Lizenzangabe – in der Karte mit Hinweis
+    links:
+      - ["VMZ Niedersachsen: Zählstellenübersicht Radverkehr", "https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/"]
 - ags: "03153017"
   name: Goslar
   lage: [10.4293, 51.9065]

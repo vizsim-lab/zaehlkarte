@@ -1,0 +1,44 @@
+# Rad-Zählstellen auf der Seite der VMZ Niedersachsen (Hinweis der Projektleitung, November 2026;
+# Werkzeug-Branch `werkzeug/erkundung`, tools/holen.py Runden 4–6). Aufbau und Fallen im Adapter
+# und in AGENTS.md. Ohne Lizenz (CLAUDE.md, „Quellen ohne Lizenz“): die Seite nennt keine Lizenz,
+# nur „© VMZ Niedersachsen“ in der Fußzeile.
+nr: 19
+status: live
+adapter: vmz_rad
+name: VMZ Niedersachsen (Rad-Zählstellen)
+land: NI
+traeger: >-
+  Land Niedersachsen (Landesbehörde für Straßenbau und Verkehr), Landeshauptstadt Hannover,
+  Region Hannover, Stadt Braunschweig, Stadt Verden (Aller), Samtgemeinde Gellersen, Stadt
+  Rotenburg (Wümme), Gemeinde Jemgum
+art: >-
+  Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten (Schleifen im Boden);
+  Stundenwerte je Zählstelle seit 2017, Richtungen und Straßenseiten als eigene Zählstellen, wie
+  die Quelle sie führt
+weg: offen auf vmz-niedersachsen.de (Zählerabfrage mit Download), ohne Lizenz
+portal: https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/
+liste: https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/
+api: https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/
+ab_jahr: 2017  # das früheste Jahr der Zählerabfrage
+rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal
+titel: >-
+  VMZ Niedersachsen: Zählstellenübersicht Radverkehr (verändert: Stundenwerte zu Tagessummen
+  zusammengefasst)
+herausgeber: Verkehrsmanagementzentrale Niedersachsen und Region Hannover
+ohne_lizenz:
+  herausgegeben: >-
+    auf vmz-niedersachsen.de veröffentlicht (Zählstellenübersicht und Zählerabfrage mit
+    Download), ohne Lizenzangabe
+  geprueft: 2026-11-14
+hinweise:
+  - >-
+    Die Zählstellen an Bundes- und Landesstraßen betreibt die Landesbehörde für Straßenbau und
+    Verkehr, die übrigen die Kommunen (Gruppen der Zählstellenübersicht).
+  - >-
+    Stunden in Zeiträumen, die die Quelle als Störung führt (fehlende Daten), gelten als nicht
+    gezählt. Am Tag der Rückstellung der Uhr steht 2 Uhr nur einmal – dieser Tag gilt als nicht
+    vollständig gezählt.
+  - >-
+    Seit dem 25.10.2026 liefert die Zählerabfrage keine neuen Werte (Stand 14.11.2026).
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
