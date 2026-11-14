@@ -158,10 +158,12 @@ def _lizenzen(q: dict, pfade: Pfade) -> list[dict]:
 FDS_SUCHE = "https://fragdenstaat.de/behoerden/?q="
 
 
-def anfrage(vorlage: dict, kommune: str, zusatz: str | None) -> dict:
-    """Anfragetext aus der Vorlage in sources.yaml (Feld „Anfrage“ auf FragDenStaat)."""
+def anfrage(vorlage: dict, kommune: str, zusatz: str | None, an: str | None = None) -> dict:
+    """Anfragetext aus der Vorlage in sources.yaml (Feld „Anfrage“ auf FragDenStaat). `an`: die
+    angefragte Stelle, wo sie keine Stadt ist (`anfrage_an`, etwa „Gemeinde Mühltal“)."""
     zusatz = " ".join((zusatz or "").split())
-    text = vorlage["text"].format(kommune=kommune, zusatz=f"\n{zusatz}\n" if zusatz else "")
+    text = vorlage["text"].format(kommune=kommune, stelle=an or f"Stadt {kommune}",
+                                  zusatz=f"\n{zusatz}\n" if zusatz else "")
     return {"betreff": vorlage["betreff"], "text": text.strip()}
 
 
@@ -239,7 +241,8 @@ def datenlage(stellen, pfade: Pfade) -> dict:
                     "empfehlung": e.get("empfehlung"),
                     "weg": e.get("weg"),
                     "kontakt": kontakt(e.get("kontakt")),
-                    "anfrage": anfrage(vorlage, e["kommune"], e.get("anfrage_zusatz"))
+                    "anfrage": anfrage(vorlage, e["kommune"], e.get("anfrage_zusatz"),
+                                       e.get("anfrage_an"))
                     if e.get("anfrage")
                     else None,
                     "dauer": _dauer(e),

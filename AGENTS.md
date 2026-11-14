@@ -196,6 +196,68 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
   Verkehrsmengen; Heilbronn hat nur Kfz-Bestand und Fahrleistung (Statistisches Landesamt);
   Aalen zählt mit eigenem Seitenradar, veröffentlicht aber nichts. Karlsruhe hat 2023 Zählungen
   eines Verkehrsversuchs als Excel herausgegeben (FragDenStaat) – alles in der Datenlage.
+- Hessen (November 2026, Kommune für Kommune: alle Gemeinden laut Wikidata (425) und alle 21
+  Landkreise, je Website Sitemap, Suche und Startseite – 453 Seiten, 27 per robots.txt gesperrt;
+  `tools/hessen.py`, `hessen2.py` auf `werkzeug/erkundung`, Ergebnisse `ergebnis/hessen*/` –,
+  dazu Websuche je Stadt ab 20.000 Einwohnern und je Kreis, alle
+  rund 5.600 FragDenStaat-Anfragen im Land, GovData/Open Data Hessen, Mobilithek, OSM): keine
+  offenen kommunalen Kurzzeitzählungen. Offen sind nur automatische Zählungen – Darmstadt
+  (Ampelschleifen, siehe Dauerzählstellen), Rüsselsheim (Detektoren, nur Echtzeit) – und
+  Frankfurts 24-Stunden-Mittel (WFS, in `vizsim/svz`). Neu in der Datenlage: Darmstadt,
+  Rüsselsheim, Marburg, Bad Homburg, Oberursel, Idstein, Dietzenbach, Bad Vilbel, Pfungstadt,
+  Groß-Gerau, Bad Hersfeld, Karben, Mühltal, Rosbach; präzisiert: Frankfurt, Kassel.
+  - **Rad-Zählnetz des Landes** (wichtigster Fund): seit 2022 Induktionsschleifen je Richtung,
+    Stufe 1 (2022) 270 Stellen, etwa die Hälfte in Zuständigkeit von Kreisen, Städten und
+    Gemeinden, Stufe 2 (ab 2024) 301 weitere, davon 148 kommunal; Ziel Ende 2026: 571
+    ([AGNH](https://www.nahmobil-hessen.de/unterstuetzung/daten-fuer-den-radverkehr/dauerzaehlstellen/)).
+    Hessen Mobil beschafft und baut, das Land zahlt, die Kommunen wählen die Standorte und tragen
+    teils den Betrieb (Bad Homburg: 300–500 Euro je Stelle und Jahr). Werte (Tag, Monat, Jahr,
+    „ohne vorherige Plausibilisierung“) nur im Eco-Counter-Portal `hessen-mobil.eco-counter.com`
+    (= `data.eco-counter.com/ParcPublic/?id=8080`), ohne Lizenz; der GovData-Eintrag
+    „Dauerzählstellen für den Radverkehr in Hessen“ hat keine Lizenz und verlinkt nur das Portal.
+    Hebel: eine Anfrage bei Hessen Mobil (als Landesbehörde unter dem HDSIG) nach den Stundenwerten
+    aller Stellen samt Lizenz – sie brächte die kommunalen Stellen mit. Kommunen mit Stellen laut
+    eigener Meldung: Frankfurt (10), Oberursel (9), Offenbach (8, sieben städtisch), Rödermark (5),
+    Bad Homburg (4), Gießen, Baunatal, Dreieich, Rodgau, Wetzlar, Altenstadt, Eschborn (Zählstationen
+    seit 2018); Kreise Marburg-Biedenkopf (2024 17 Stellen dazu), Waldeck-Frankenberg (6), Main-Kinzig
+    (13 Standorte), Odenwald. Die AGNH verleiht mobile Zählgeräte (Rad, Fuß, Kfz) an Kommunen; die
+    Werte liegen im Eco-Visio-Konto der Kommune – nicht veröffentlicht (Dietzenbach zählte 2025 mit
+    Leihgeräten der Landesenergieagentur).
+  - **Detektordaten der Verkehrsrechner** in der Mobilithek: Frankfurt (110000000002386001),
+    Kassel (110000000002398000) und Wiesbaden (110000000003165001) nur nach Freigabe einer
+    Subskription; Rüsselsheim (110000000003182000) Open Data, aber nur Echtzeit (DATEX II).
+  - **Kameras und Sensoren:** Marburg Oberstadt (sechs Kameras seit 2024, Personen, Rad, Pkw,
+    Lieferverkehr; nur PDF-Auswertungen eines Standorts), Kassel (Radarsensoren im Testfeld AUREA,
+    nur Dashboard), Groß-Gerau (Radar-Messgerät 2025). Neu-Isenburgs „Passantenfrequenz“ misst
+    Funksignale von Handys – keine Zählung im Sinne der Karte.
+  - **Seitenradar und Messtafeln:** Mühltal (seit 2022 Berichte mit Summen je Zeitfenster,
+    Gemeindebeschluss), Karben (2018 Rohdaten auf Anfrage, seit Oktober 2025 Monatsberichte),
+    Reichelsheim (Wetterau; Bericht mit Tages- und Stundenwerten in Sitzungsunterlagen 2024),
+    Rodenbach (Auswertungen als Bild), Bad Hersfeld (laut Masterplan). Viele kleine Gemeinden
+    veröffentlichen nur Ergebnisse ihrer Geschwindigkeitsüberwachung (gemessene Fahrzeuge und
+    Verstöße je Einsatz: Butzbach, Weiterstadt, Gudensberg, Naumburg, Schlitz, Königstein,
+    Ginsheim-Gustavsburg, Kirchhain, Niedernhausen, Biebertal, Limburg) – keine Zählungen.
+  - **Nur in Plänen und Gutachten:** Idstein (VEP 2035: 24 Knotenpunkte 2018), Bad Nauheim (VEP
+    2015, Kordonerhebung 2012/13), Neu-Isenburg (Radverkehrskonzept 2015: 16 Knotenpunkte 2012),
+    Oberursel (Querschnitte 2018 als Karte), Lahn-Dill-Kreis (Radverkehrskonzept: vier
+    Rad-Zählstellen 2022, nur als Grafik), sonst Gutachten zu Bebauungsplänen.
+  - **Nicht kommunal:** Frankfurt University of Applied Sciences („Automatisierte
+    Verkehrsflusszählung“, Open Data, mobile Sensoren 2025), FID move (Rad am R3, Forschung),
+    Videozählungen von Hessen Mobil (Herborn, Pfungstadt, Geisenheim), SVZ 2025.
+  - **Recht:** Das HDSIG gilt für Kommunen nur mit Informationsfreiheitssatzung – gefunden in
+    [Wiesbaden](https://www.wiesbaden.de/vv/produkte/0105/Informationsfreiheitssatzung),
+    [Offenbach](https://www.offenbach.de/buerger_innen/buerger-service/stadtrecht/informationsfreiheitssatzung.php),
+    [Neu-Isenburg](https://Neu-Isenburg.de/medien/downloads/buergerservice/verwaltung-im-rathaus/amtliche-bekanntmachungen/2023/Informationsfreiheitssatzung_neufassung_2023.pdf),
+    [Hofheim](https://www.hofheim.fcio.net/fileadmin/dokumente/Politik_und_Verwaltung/Verwaltung/Stadtrecht/Allgemeine_Verwaltung/Hofheimer_Stadtrecht_Allgemeine_Verwaltung_Informationsfreiheitssatzung_A08.pdf),
+    Solms (genannt in einer Antwort auf FragDenStaat 2024) und Kassel (laut HBDI 2020); sonst gilt
+    das HUIG. Rosbach lehnte 2018 ab („keine rechtliche Grundlage“), Mühltal 2022 die
+    Zusammenstellung älterer Messungen.
+  - **Sackgassen:** frankfurt.de, darmstadt.de, kassel.de, wetzlar.de, bensheim.de und
+    landkreiskassel.de sperren Abruf-Werkzeuge per robots.txt, ebenso Teile von wiesbaden.de;
+    `offenedaten.frankfurt.de` und `opendata.darmstadt.de` sind kein CKAN (Darmstadt: Bestandsliste
+    als CSV unter `sites/default/files/…-Datenbestand_DA_0.csv`); `opendata.cloud.wiesbaden.de`
+    lief in Zeitüberschreitungen; Eco-Visio-API-Pfade geraten → 404; Mühltals Übersicht
+    „Verkehrsmessdaten“ lädt ihre Liste per JavaScript.
 - Übrige Länder (November 2026, GovData je Land, Landes- und Stadtportale, alle
   FragDenStaat-Anfragen samt Anhängen, Stadtseiten): neu offen nur Olpe (in der Karte). Neu in der
   Datenlage: Bremen, Augsburg, Amberg, Wuppertal, Falkensee, Lingen (Ems); präzisiert: Kassel
@@ -492,8 +554,9 @@ noch offen). Belege: [IVSG](https://www.gesetze-im-internet.de/ivsg_2026/BJNR094
     MobiData-Bündel, also doppelt: Konstanz (Jahres-CSV CC0 – Herosé, Bahnhaltepunkte Fürstenberg
     und Petershausen, Alte Rheinbrücke, Friedrichstraße), Heidelberg (CKAN-API 404), Ulm
     (Lupferbrücke, eingestellt), Mannheims Portal (ohne Lizenzangabe). Nicht offen als
-    Stundenwerte: Hessen Mobil (Land, also ohnehin nicht kommunal; Export der Diagrammwerte je
-    Stelle – Tage, Wochen, Monate;
+    Stundenwerte: Hessen Mobil (Rad-Zählnetz des Landes, etwa die Hälfte der Stellen kommunal –
+    siehe Sackgassen, Hessen; ohne Lizenz; Export der Diagrammwerte je Stelle – Tage, Wochen,
+    Monate;
     `hessen-mobil.eco-counter.com` sperrt Abruf-Werkzeuge per robots.txt) und Bielefeld – dort
     hilft eine Anfrage (Eco-Counter-Kunden haben in Eco-Visio einen Export). Nur Summen:
     Mannheims Portal (Summe je Zähler), Stuttgarts Portal (Saisons).

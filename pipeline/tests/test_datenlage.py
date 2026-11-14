@@ -63,6 +63,15 @@ def test_dauer_stand_je_kommune(pfade):
     assert dorf["dauer"] is None  # kein Eintrag: bei den Dauerzählstellen nicht in der Ebene
 
 
+def test_anfrage_an_gemeinde():
+    """Die Vorlage nennt die angefragte Stelle: „Stadt X“, wo nichts anderes steht, sonst
+    `anfrage_an` des Eintrags (Gemeinden, Kreise) – der übrige Text ist für alle gleich."""
+    vorlage = {"betreff": "Zählungen", "text": "Zählungen, die die {stelle} hat.{zusatz}"}
+    assert site.anfrage(vorlage, "Mühltal", None)["text"] == "Zählungen, die die Stadt Mühltal hat."
+    assert (site.anfrage(vorlage, "Mühltal", "Seit 2022.", "Gemeinde Mühltal")["text"]
+            == "Zählungen, die die Gemeinde Mühltal hat.\nSeit 2022.")
+
+
 def test_dauer_stand_unbekannt(pfade):
     with pytest.raises(ValueError, match="dauer.stand 'geliefert' unbekannt"):
         site._dauer({"kommune": "X", "dauer": {"stand": "geliefert"}})
