@@ -1,0 +1,1151 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-14T21:42:08Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 4782910741,
+  "lat": 51.2052654,
+  "lon": 6.7459326,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes",
+    "operator": "Landeshauptstadt Düsseldorf"
+  }
+},
+{
+  "type": "node",
+  "id": 5492164211,
+  "lat": 51.1939845,
+  "lon": 6.6924987,
+  "tags": {
+    "description": "Luftqualitätsüberwachung NO2-Passivsammler Kürzel VNEM2",
+    "man_made": "monitoring_station",
+    "monitoring:air_quality": "yes",
+    "website": "https://www.lanuv.nrw.de/luqs/messorte/steckbrief.php?ort=VNEM2"
+  }
+},
+{
+  "type": "way",
+  "id": 26341507,
+  "center": {
+    "lat": 51.2031181,
+    "lon": 6.7230412
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 26751097,
+  "center": {
+    "lat": 51.2028258,
+    "lon": 6.7155942
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 29146812,
+  "center": {
+    "lat": 51.2027819,
+    "lon": 6.7157580
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|through|through"
+  }
+},
+{
+  "type": "way",
+  "id": 29146813,
+  "center": {
+    "lat": 51.2029611,
+    "lon": 6.7173688
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 29146814,
+  "center": {
+    "lat": 51.2028885,
+    "lon": 6.7170091
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 29146815,
+  "center": {
+    "lat": 51.2027041,
+    "lon": 6.7145459
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 29146822,
+  "center": {
+    "lat": 51.2023726,
+    "lon": 6.7095680
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 38113919,
+  "center": {
+    "lat": 51.1988578,
+    "lon": 6.6974348
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "4",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through",
+    "turn:lanes:forward": "through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 38113923,
+  "center": {
+    "lat": 51.2026790,
+    "lon": 6.7135243
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "postal_code": "41460",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 38113924,
+  "center": {
+    "lat": 51.2025797,
+    "lon": 6.7136088
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "postal_code": "41460",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 80339453,
+  "center": {
+    "lat": 51.2029310,
+    "lon": 6.7166362
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 87411566,
+  "center": {
+    "lat": 51.1983381,
+    "lon": 6.6960010
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 88368347,
+  "center": {
+    "lat": 51.1986952,
+    "lon": 6.6961104
+  },
+  "tags": {
+    "building": "yes",
+    "description": "A small tower which shows the waterlevel",
+    "display:analog": "yes",
+    "man_made": "monitoring_station",
+    "monitoring:water_level": "yes",
+    "name": "Pegeluhr",
+    "roof:shape": "pyramidal",
+    "tourism": "attraction"
+  }
+},
+{
+  "type": "way",
+  "id": 112442733,
+  "center": {
+    "lat": 51.1984247,
+    "lon": 6.6955434
+  },
+  "tags": {
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 156993543,
+  "center": {
+    "lat": 51.2030602,
+    "lon": 6.7190444
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "6",
+    "lanes:backward": "4",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through|right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 163839132,
+  "center": {
+    "lat": 51.2006887,
+    "lon": 6.7020818
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:backward": "2",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 173466907,
+  "center": {
+    "lat": 51.2032375,
+    "lon": 6.7218279
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 375296720,
+  "center": {
+    "lat": 51.1984576,
+    "lon": 6.6957336
+  },
+  "tags": {
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 409845943,
+  "center": {
+    "lat": 51.1984955,
+    "lon": 6.6956888
+  },
+  "tags": {
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 425091786,
+  "center": {
+    "lat": 51.2030190,
+    "lon": 6.7185035
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "7",
+    "lanes:backward": "4",
+    "lanes:forward": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through|right|right",
+    "turn:lanes:forward": "left|left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 425091787,
+  "center": {
+    "lat": 51.2029804,
+    "lon": 6.7179858
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "6",
+    "lanes:backward": "3",
+    "lanes:forward": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left;through|right|right",
+    "turn:lanes:forward": "left|left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 425091788,
+  "center": {
+    "lat": 51.2031399,
+    "lon": 6.7200708
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "4",
+    "lanes:backward": "1",
+    "lanes:forward": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:forward": "left|through|through;right"
+  }
+},
+{
+  "type": "way",
+  "id": 425204424,
+  "center": {
+    "lat": 51.2027480,
+    "lon": 6.7151617
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "4",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:condition:both": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|through|through;right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 425204425,
+  "center": {
+    "lat": 51.2028109,
+    "lon": 6.7162127
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 425204426,
+  "center": {
+    "lat": 51.2011694,
+    "lon": 6.7032407
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:backward": "2",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "parking:condition:both": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 425204427,
+  "center": {
+    "lat": 51.2001331,
+    "lon": 6.7007452
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:backward": "2",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 425204431,
+  "center": {
+    "lat": 51.2014111,
+    "lon": 6.7038279
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "secondary",
+    "lanes": "4",
+    "lanes:backward": "3",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "parking:condition:both": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:backward": "left|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 425204435,
+  "center": {
+    "lat": 51.1998957,
+    "lon": 6.7001761
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:forward": "through|through;right"
+  }
+},
+{
+  "type": "way",
+  "id": 425204439,
+  "center": {
+    "lat": 51.2019866,
+    "lon": 6.7052376
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 426967501,
+  "center": {
+    "lat": 51.1985290,
+    "lon": 6.6963242
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:condition:both": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 426967502,
+  "center": {
+    "lat": 51.1984412,
+    "lon": 6.6959501
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|through"
+  }
+},
+{
+  "type": "way",
+  "id": 426967503,
+  "center": {
+    "lat": 51.1986122,
+    "lon": 6.6966002
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:condition:both": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 426967504,
+  "center": {
+    "lat": 51.1986443,
+    "lon": 6.6966058
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:condition:both": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|left;through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 758036490,
+  "center": {
+    "lat": 51.2026558,
+    "lon": 6.7139723
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "2",
+    "lanes:backward": "1",
+    "lanes:forward": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 758036491,
+  "center": {
+    "lat": 51.2026923,
+    "lon": 6.7137030
+  },
+  "tags": {
+    "highway": "tertiary",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "postal_code": "41460",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1251937247,
+  "center": {
+    "lat": 51.1994350,
+    "lon": 6.6990759
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:forward": "through|through;right"
+  }
+},
+{
+  "type": "way",
+  "id": 1468786336,
+  "center": {
+    "lat": 51.1984626,
+    "lon": 6.6954985
+  },
+  "tags": {
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1468786337,
+  "center": {
+    "lat": 51.1984036,
+    "lon": 6.6957287
+  },
+  "tags": {
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1468786339,
+  "center": {
+    "lat": 51.1983234,
+    "lon": 6.6956424
+  },
+  "tags": {
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "maxspeed:type": "DE:urban",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:both": "no",
+    "parking:both:restriction": "no_stopping",
+    "postal_code": "41460",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1470896137,
+  "center": {
+    "lat": 51.2017867,
+    "lon": 6.7047303
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:forward": "left|through;right"
+  }
+},
+{
+  "type": "way",
+  "id": 1471198635,
+  "center": {
+    "lat": 51.2016380,
+    "lon": 6.7043760
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes:forward": "left|through;right"
+  }
+},
+{
+  "type": "way",
+  "id": 1475540537,
+  "center": {
+    "lat": 51.1985551,
+    "lon": 6.6960220
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:condition:both": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|left;through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1475540538,
+  "center": {
+    "lat": 51.1986118,
+    "lon": 6.6963323
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:condition:both": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|left;through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1475540539,
+  "center": {
+    "lat": 51.1986387,
+    "lon": 6.6964943
+  },
+  "tags": {
+    "cycleway": "separate",
+    "foot": "use_sidepath",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "name:etymology:wikidata": "Q1384350",
+    "oneway": "yes",
+    "parking:condition:both": "no_stopping",
+    "postal_code": "41460",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt",
+    "turn:lanes": "left|left;through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1476779432,
+  "center": {
+    "lat": 51.2021060,
+    "lon": 6.7056042
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "2",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1476779433,
+  "center": {
+    "lat": 51.2019866,
+    "lon": 6.7052376
+  },
+  "tags": {
+    "cycleway": "separate",
+    "highway": "tertiary",
+    "lanes": "1",
+    "lit": "yes",
+    "lit_by_led": "yes",
+    "maxspeed": "50",
+    "name": "Hammer Landstraße",
+    "oneway": "yes",
+    "parking:both:restriction": "no_stopping",
+    "sidewalk": "separate",
+    "source:maxspeed": "DE:urban",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "relation",
+  "id": 14376525,
+  "center": {
+    "lat": 51.1418544,
+    "lon": 6.8048111
+  },
+  "tags": {
+    "cycle_highway": "yes",
+    "cycleway:type": "cycle_expressway",
+    "from": "Neuss",
+    "name": "Radschnellweg Neuss - Düsseldorf - Langenfeld",
+    "network": "rcn",
+    "ref": "RS 5",
+    "route": "bicycle",
+    "to": "Langenfeld",
+    "type": "route",
+    "website": "https://www.radschnellwege.nrw/https://www.strassen.nrw.de/de/rs5-radschnellweg-neuss-duesseldorf-langenfeld-projektueberblick.html",
+    "wikidata": "Q131156241"
+  }
+}
+
+  ]
+}
