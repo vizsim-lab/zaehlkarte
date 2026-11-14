@@ -1,0 +1,112 @@
+{
+ "robots": {
+  "https://www.offenesdatenportal.de": {
+   "/api/3/action/package_show?id=verkehrszahlung-in-m": [
+    "zaehlkarte-pipeline",
+    "zaehlkarte-werkzeug",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "*"
+   ],
+   "/dataset/verkehrszahlung-in-moers-2021": []
+  },
+  "https://opendata.olpe.de": {
+   "/api/3/action/package_search?q=Verkehrsmessung&row": [
+    "zaehlkarte-pipeline",
+    "zaehlkarte-werkzeug",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "*"
+   ]
+  },
+  "https://offenedaten.aachen.de": {
+   "/api/3/action/package_show?id=radzaehlstellen-der-": [
+    "zaehlkarte-pipeline",
+    "zaehlkarte-werkzeug",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "*"
+   ],
+   "/dataset/radzaehlstellen-der-stadt-aachen": []
+  },
+  "https://opendata.muenchen.de": {
+   "/api/3/action/package_show?id=x": [
+    "ClaudeBot"
+   ]
+  },
+  "https://open.nrw": {
+   "/api/3/action/package_show?id=radverkehrszahlungen": [],
+   "/api/3/action/package_search?q=x": []
+  },
+  "https://opendata.rhein-kreis-neuss.de": {
+   "/api/explore/v2.1/catalog/datasets/eco-counter-dat": [
+    "zaehlkarte-pipeline",
+    "zaehlkarte-werkzeug",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "*"
+   ],
+   "/api/v2/catalog/datasets/stadt-neuss-radzaehlstell": [
+    "zaehlkarte-pipeline",
+    "zaehlkarte-werkzeug",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "*"
+   ]
+  },
+  "https://open-data.dortmund.de": {
+   "/api/explore/v2.1/catalog/datasets/fb61-dauerzaehl": [
+    "zaehlkarte-pipeline",
+    "zaehlkarte-werkzeug",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "*"
+   ]
+  },
+  "https://opendata.bonn.de": {
+   "/data.json": []
+  },
+  "https://opendata.stadt-muenster.de": {
+   "/sites/default/files/Verkehrsz%C3%A4hlung.zip": []
+  },
+  "https://opendata.ruhr": {
+   "/api/3/action/package_show?id=mobilitatskonzept": [
+    "zaehlkarte-pipeline",
+    "zaehlkarte-werkzeug",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "*"
+   ],
+   "/dataset/mobilitatskonzept": []
+  },
+  "https://opendata.duesseldorf.de": {
+   "/api/3/action/package_show?id=x": []
+  },
+  "https://opendata.mobidata-bw.de": {
+   "/x": []
+  }
+ },
+ "robots_sekunden": 8,
+ "mdk": "Projekt: <HTTPError 404: 'Not Found'>",
+ "mdk_sekunden": 1,
+ "seiten": {
+  "ziele": 97,
+  "gelesen": 90,
+  "robots": 1
+ },
+ "seiten_sekunden": 14
+}

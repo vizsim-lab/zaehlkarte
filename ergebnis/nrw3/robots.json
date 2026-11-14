@@ -1,0 +1,215 @@
+{
+ "https://www.offenesdatenportal.de": {
+  "robots": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+  "urls": {
+   "https://www.offenesdatenportal.de/api/3/action/package_show?id=verkehrszahlung-in-moers-2021": {
+    "zaehlkarte-pipeline": false,
+    "zaehlkarte-werkzeug": false,
+    "ClaudeBot": false,
+    "Claude-User": false,
+    "Claude-SearchBot": false,
+    "anthropic-ai": false,
+    "*": false
+   },
+   "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://opendata.olpe.de": {
+  "robots": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+  "urls": {
+   "https://opendata.olpe.de/api/3/action/package_search?q=Verkehrsmessung&rows=200": {
+    "zaehlkarte-pipeline": false,
+    "zaehlkarte-werkzeug": false,
+    "ClaudeBot": false,
+    "Claude-User": false,
+    "Claude-SearchBot": false,
+    "anthropic-ai": false,
+    "*": false
+   }
+  }
+ },
+ "https://offenedaten.aachen.de": {
+  "robots": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n",
+  "urls": {
+   "https://offenedaten.aachen.de/api/3/action/package_show?id=radzaehlstellen-der-stadt-aachen": {
+    "zaehlkarte-pipeline": false,
+    "zaehlkarte-werkzeug": false,
+    "ClaudeBot": false,
+    "Claude-User": false,
+    "Claude-SearchBot": false,
+    "anthropic-ai": false,
+    "*": false
+   },
+   "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://opendata.muenchen.de": {
+  "robots": "User-agent: *\n\n# Bisherige Regeln\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-delay: 10\n\n# Historische Ansichten\nDisallow: /*?activity_id=\nDisallow: /*?*&activity_id=\n\n# Fremdsprachige URL-Praefixe\nDisallow: /am/\nDisallow: /ar/\nDisallow: /bg/\nDisallow: /bs/\nDisallow: /ca/\nDisallow: /cs_CZ/\nDisallow: /da_DK/\nDisallow: /el/\nDisallow: /en/\nDisallow: /en_AU/\nDisallow: /en_GB/\nDisallow: /es/\nDisallow: /es_AR/\nDisallow: /eu/\nDisallow: /fa_IR/\nDisallow: /fi/\nDisallow: /fr/\nDisallow: /gl/\nDisallow: /he/\nDisallow: /hr/\nDisallow: /hu/\nDisallow: /id/\nDisallow: /is/\nDisallow: /it/\nDisallow: /ja/\nDisallow: /km/\nDisallow: /ko_KR/\nDisallow: /lt/\nDisallow: /lv/\nDisallow: /mk/\nDisallow: /mn_MN/\nDisallow: /my_MM/\nDisallow: /nb_NO/\nDisallow: /ne/\nDisallow: /nl/\nDisallow: /no/\nDisallow: /pl/\nDisallow: /pt_BR/\nDisallow: /pt_PT/\nDisallow: /ro/\nDisallow: /ru/\nDisallow: /sk/\nDisallow: /sl/\nDisallow: /sq/\nDisallow: /sr/\nDisallow: /sr_Latn/\nDisallow: /sv/\nDisallow: /th/\nDisallow: /tl/\nDisallow: /tr/\nDisallow: /uk/\nDisallow: /uk_UA/\nDisallow: /vi/\nDisallow: /zh_Hans_CN/\nDisallow: /zh_Hant_TW/\n\n# Ausgewaehlte Crawler vollstaendig ausschliessen\nUser-agent: meta-webindexer\nUser-agent: Amazonbot\nUser-agent: AhrefsBot\nUser-agent: SemrushBot\nUser-agent: Barkrowler\nUser-agent: ClaudeBot\nUser-agent: GPTBot\nUser-agent: DotBot\nUser-agent: KeenableBot\nUser-agent: GoogleOther\nUser-agent: ExaSearchBot\nUser-agent: Reflectionbot\nUser-agent: YuleFinder\nUser-agent: LinkupBot\nUser-agent: AionBot\nUser-agent: AIWebIndex\nUser-agent: PetalBot\nDisallow: /\n",
+  "urls": {
+   "https://opendata.muenchen.de/api/3/action/package_show?id=x": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": false,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://open.nrw": {
+  "robots": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\n# CSS, JS, Images\nAllow: /core/*.css$\nAllow: /core/*.css?\nAllow: /core/*.js$\nAllow: /core/*.js?\nAllow: /core/*.avif\nAllow: /core/*.gif\nAllow: /core/*.jpg\nAllow: /core/*.jpeg\nAllow: /core/*.png\nAllow: /core/*.svg\nAllow: /core/*.webp\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.avif\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /profiles/*.svg\nAllow: /profiles/*.webp\n# Directories\nDisallow: /core/\nDisallow: /profiles/\n# Files\nDisallow: /README.md\nDisallow: /composer/Metapackage/README.txt\nDisallow: /composer/Plugin/ProjectMessage/README.md\nDisallow: /composer/Plugin/Scaffold/README.md\nDisallow: /composer/Plugin/VendorHardening/README.txt\nDisallow: /composer/Template/README.txt\nDisallow: /modules/README.txt\nDisallow: /sites/README.txt\nDisallow: /themes/README.txt\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /search?\nDisallow: /user/register\nDisallow: /user/password\nDisallow: /user/login\nDisallow: /user/logout\nDisallow: /media/oembed\nDisallow: /*/media/oembed\n# Paths (no clean URLs)\nDisallow: /index.php/admin/\nDisallow: /index.php/comment/reply/\nDisallow: /index.php/filter/tips\nDisallow: /index.php/node/add/\nDisallow: /index.php/search/\nDisallow: /index.php/search?\nDisallow: /index.php/user/password\nDisallow: /index.php/user/register\nDisallow: /index.php/user/login\nDisallow: /index.php/user/logout\nDisallow: /index.php/media/oembed\nDisallow: /index.php/*/media/oembed\n",
+  "urls": {
+   "https://open.nrw/api/3/action/package_show?id=radverkehrszahlungen-e": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   },
+   "https://open.nrw/api/3/action/package_search?q=x": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://opendata.rhein-kreis-neuss.de": {
+  "robots": "User-agent: Twitterbot\nDisallow:\n\nUser-agent: *\nDisallow: /logout\nDisallow: /login\nDisallow: /publish\nDisallow: /backoffice\nDisallow: /explore/download\nDisallow: /explore/dataset/*/download\nDisallow: /explore/dataset/*/rss/\nDisallow: /explore/dataset/*/atom/\nDisallow: /p-preview/\nDisallow: /explore/form-preview/\nDisallow: /api/\nDisallow: /static/\n\nUser-agent: Googlebot\nDisallow: /logout\nDisallow: /login\nDisallow: /publish\nDisallow: /backoffice\nDisallow: /explore/download\nDisallow: /explore/dataset/*/download\nDisallow: /explore/dataset/*/rss/\nDisallow: /explore/dataset/*/atom/\nDisallow: /p-preview/\nDisallow: /explore/form-preview/\nDisallow: /api/v2/*/exports/\nDisallow: /api/explore/v2*/exports/\n\nSitemap: https://opendata.rhein-kreis-neuss.de/sitemap.xml\n",
+  "urls": {
+   "https://opendata.rhein-kreis-neuss.de/api/explore/v2.1/catalog/datasets/eco-counter-data/exports/csv": {
+    "zaehlkarte-pipeline": false,
+    "zaehlkarte-werkzeug": false,
+    "ClaudeBot": false,
+    "Claude-User": false,
+    "Claude-SearchBot": false,
+    "anthropic-ai": false,
+    "*": false
+   },
+   "https://opendata.rhein-kreis-neuss.de/api/v2/catalog/datasets/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/exports/csv?use_labels=true": {
+    "zaehlkarte-pipeline": false,
+    "zaehlkarte-werkzeug": false,
+    "ClaudeBot": false,
+    "Claude-User": false,
+    "Claude-SearchBot": false,
+    "anthropic-ai": false,
+    "*": false
+   }
+  }
+ },
+ "https://open-data.dortmund.de": {
+  "robots": "User-agent: Twitterbot\nDisallow:\n\nUser-agent: *\nDisallow: /logout\nDisallow: /login\nDisallow: /publish\nDisallow: /backoffice\nDisallow: /explore/download\nDisallow: /explore/dataset/*/download\nDisallow: /explore/dataset/*/rss/\nDisallow: /explore/dataset/*/atom/\nDisallow: /p-preview/\nDisallow: /explore/form-preview/\nDisallow: /explore/assets/\nDisallow: /glossary/\nDisallow: /api/\nDisallow: /static/\n\nUser-agent: Googlebot\nDisallow: /logout\nDisallow: /login\nDisallow: /publish\nDisallow: /backoffice\nDisallow: /explore/download\nDisallow: /explore/dataset/*/download\nDisallow: /explore/dataset/*/rss/\nDisallow: /explore/dataset/*/atom/\nDisallow: /p-preview/\nDisallow: /explore/form-preview/\nDisallow: /explore/assets/\nDisallow: /glossary/\nDisallow: /api/v2/*/exports/\nDisallow: /api/explore/v2*/exports/\n\nSitemap: https://open-data.dortmund.de/sitemap.xml\n",
+  "urls": {
+   "https://open-data.dortmund.de/api/explore/v2.1/catalog/datasets/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/exports/csv": {
+    "zaehlkarte-pipeline": false,
+    "zaehlkarte-werkzeug": false,
+    "ClaudeBot": false,
+    "Claude-User": false,
+    "Claude-SearchBot": false,
+    "anthropic-ai": false,
+    "*": false
+   }
+  }
+ },
+ "https://opendata.bonn.de": {
+  "robots": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\nCrawl-delay: 10\n# CSS, JS, Images\nAllow: /misc/*.css$\nAllow: /misc/*.css?\nAllow: /misc/*.js$\nAllow: /misc/*.js?\nAllow: /misc/*.gif\nAllow: /misc/*.jpg\nAllow: /misc/*.jpeg\nAllow: /misc/*.png\nAllow: /modules/*.css$\nAllow: /modules/*.css?\nAllow: /modules/*.js$\nAllow: /modules/*.js?\nAllow: /modules/*.gif\nAllow: /modules/*.jpg\nAllow: /modules/*.jpeg\nAllow: /modules/*.png\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /themes/*.css$\nAllow: /themes/*.css?\nAllow: /themes/*.js$\nAllow: /themes/*.js?\nAllow: /themes/*.gif\nAllow: /themes/*.jpg\nAllow: /themes/*.jpeg\nAllow: /themes/*.png\n# Directories\nDisallow: /includes/\nDisallow: /misc/\nDisallow: /modules/\nDisallow: /profiles/\nDisallow: /scripts/\nDisallow: /themes/\n# Files\nDisallow: /CHANGELOG.txt\nDisallow: /cron.php\nDisallow: /INSTALL.mysql.txt\nDisallow: /INSTALL.pgsql.txt\nDisallow: /INSTALL.sqlite.txt\nDisallow: /install.php\nDisallow: /INSTALL.txt\nDisallow: /LICENSE.txt\nDisallow: /MAINTAINERS.txt\nDisallow: /update.php\nDisallow: /UPGRADE.txt\nDisallow: /xmlrpc.php\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips/\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /user/register/\nDisallow: /user/password/\nDisallow: /user/login/\nDisallow: /user/logout/\n# Paths (no clean URLs)\nDisallow: /?q=admin/\nDisallow: /?q=comment/reply/\nDisallow: /?q=filter/tips/\nDisallow: /?q=node/add/\nDisallow: /?q=search/\nDisallow: /?q=user/password/\nDisallow: /?q=user/register/\nDisallow: /?q=user/login/\nDisallow: /?q=user/logout/\n",
+  "urls": {
+   "https://opendata.bonn.de/data.json": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://opendata.stadt-muenster.de": {
+  "robots": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\nCrawl-delay: 10\n# CSS, JS, Images\nAllow: /misc/*.css$\nAllow: /misc/*.css?\nAllow: /misc/*.js$\nAllow: /misc/*.js?\nAllow: /misc/*.gif\nAllow: /misc/*.jpg\nAllow: /misc/*.jpeg\nAllow: /misc/*.png\nAllow: /modules/*.css$\nAllow: /modules/*.css?\nAllow: /modules/*.js$\nAllow: /modules/*.js?\nAllow: /modules/*.gif\nAllow: /modules/*.jpg\nAllow: /modules/*.jpeg\nAllow: /modules/*.png\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /themes/*.css$\nAllow: /themes/*.css?\nAllow: /themes/*.js$\nAllow: /themes/*.js?\nAllow: /themes/*.gif\nAllow: /themes/*.jpg\nAllow: /themes/*.jpeg\nAllow: /themes/*.png\n# Directories\nDisallow: /includes/\nDisallow: /misc/\nDisallow: /modules/\nDisallow: /profiles/\nDisallow: /scripts/\nDisallow: /themes/\n# Files\nDisallow: /CHANGELOG.txt\nDisallow: /cron.php\nDisallow: /INSTALL.mysql.txt\nDisallow: /INSTALL.pgsql.txt\nDisallow: /INSTALL.sqlite.txt\nDisallow: /install.php\nDisallow: /INSTALL.txt\nDisallow: /LICENSE.txt\nDisallow: /MAINTAINERS.txt\nDisallow: /update.php\nDisallow: /UPGRADE.txt\nDisallow: /xmlrpc.php\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips/\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /user/register/\nDisallow: /user/password/\nDisallow: /user/login/\nDisallow: /user/logout/\n# Paths (no clean URLs)\nDisallow: /?q=admin/\nDisallow: /?q=comment/reply/\nDisallow: /?q=filter/tips/\nDisallow: /?q=node/add/\nDisallow: /?q=search/\nDisallow: /?q=user/password/\nDisallow: /?q=user/register/\nDisallow: /?q=user/login/\nDisallow: /?q=user/logout/\n",
+  "urls": {
+   "https://opendata.stadt-muenster.de/sites/default/files/Verkehrsz%C3%A4hlung.zip": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://opendata.ruhr": {
+  "robots": "User-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nDisallow: /*?*\nCrawl-Delay: 10\n\nUser-agent: meta-externalagent\nDisallow: /\n\nUser-agent: meta-webindexer\nDisallow: /",
+  "urls": {
+   "https://opendata.ruhr/api/3/action/package_show?id=mobilitatskonzept": {
+    "zaehlkarte-pipeline": false,
+    "zaehlkarte-werkzeug": false,
+    "ClaudeBot": false,
+    "Claude-User": false,
+    "Claude-SearchBot": false,
+    "anthropic-ai": false,
+    "*": false
+   },
+   "https://opendata.ruhr/dataset/mobilitatskonzept": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://opendata.duesseldorf.de": {
+  "robots": "#\n# robots.txt\n#\n# This file is to prevent the crawling and indexing of certain parts\n# of your site by web crawlers and spiders run by sites like Yahoo!\n# and Google. By telling these \"robots\" where not to go on your site,\n# you save bandwidth and server resources.\n#\n# This file will be ignored unless it is at the root of your host:\n# Used:    http://example.com/robots.txt\n# Ignored: http://example.com/site/robots.txt\n#\n# For more information about the robots.txt standard, see:\n# http://www.robotstxt.org/robotstxt.html\n\nUser-agent: *\nCrawl-delay: 10\n# CSS, JS, Images\nAllow: /misc/*.css$\nAllow: /misc/*.css?\nAllow: /misc/*.js$\nAllow: /misc/*.js?\nAllow: /misc/*.gif\nAllow: /misc/*.jpg\nAllow: /misc/*.jpeg\nAllow: /misc/*.png\nAllow: /modules/*.css$\nAllow: /modules/*.css?\nAllow: /modules/*.js$\nAllow: /modules/*.js?\nAllow: /modules/*.gif\nAllow: /modules/*.jpg\nAllow: /modules/*.jpeg\nAllow: /modules/*.png\nAllow: /profiles/*.css$\nAllow: /profiles/*.css?\nAllow: /profiles/*.js$\nAllow: /profiles/*.js?\nAllow: /profiles/*.gif\nAllow: /profiles/*.jpg\nAllow: /profiles/*.jpeg\nAllow: /profiles/*.png\nAllow: /themes/*.css$\nAllow: /themes/*.css?\nAllow: /themes/*.js$\nAllow: /themes/*.js?\nAllow: /themes/*.gif\nAllow: /themes/*.jpg\nAllow: /themes/*.jpeg\nAllow: /themes/*.png\n# Directories\nDisallow: /includes/\nDisallow: /misc/\nDisallow: /modules/\nDisallow: /profiles/\nDisallow: /scripts/\nDisallow: /themes/\n# Files\nDisallow: /CHANGELOG.txt\nDisallow: /cron.php\nDisallow: /INSTALL.mysql.txt\nDisallow: /INSTALL.pgsql.txt\nDisallow: /INSTALL.sqlite.txt\nDisallow: /install.php\nDisallow: /INSTALL.txt\nDisallow: /LICENSE.txt\nDisallow: /MAINTAINERS.txt\nDisallow: /update.php\nDisallow: /UPGRADE.txt\nDisallow: /xmlrpc.php\n# Paths (clean URLs)\nDisallow: /admin/\nDisallow: /comment/reply/\nDisallow: /filter/tips/\nDisallow: /node/add/\nDisallow: /search/\nDisallow: /user/register/\nDisallow: /user/password/\nDisallow: /user/login/\nDisallow: /user/logout/\n# Paths (no clean URLs)\nDisallow: /?q=admin/\nDisallow: /?q=comment/reply/\nDisallow: /?q=filter/tips/\nDisallow: /?q=node/add/\nDisallow: /?q=search/\nDisallow: /?q=user/password/\nDisallow: /?q=user/register/\nDisallow: /?q=user/login/\nDisallow: /?q=user/logout/\n",
+  "urls": {
+   "https://opendata.duesseldorf.de/api/3/action/package_show?id=x": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ },
+ "https://opendata.mobidata-bw.de": {
+  "robots": "(Fehler: URLError(gaierror(-2, 'Name or service not known')))",
+  "urls": {
+   "https://opendata.mobidata-bw.de/x": {
+    "zaehlkarte-pipeline": true,
+    "zaehlkarte-werkzeug": true,
+    "ClaudeBot": true,
+    "Claude-User": true,
+    "Claude-SearchBot": true,
+    "anthropic-ai": true,
+    "*": true
+   }
+  }
+ }
+}
