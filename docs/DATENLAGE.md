@@ -2206,7 +2206,7 @@ Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stad
 
 Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
 
-Auf Ihrer Seite „Verkehrsmessungen“ stehen Berichte zu rund 55 Messorten. Ich bitte um die Messdaten dahinter – den Export der Geräte je Fahrzeug oder je Stunde und Richtung.
+Auf Ihrer Seite „Verkehrsmessungen“ stehen gut 60 Messberichte. Ich bitte um die Messdaten dahinter – den Export der Geräte je Fahrzeug oder je Stunde und Richtung.
 
 Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
 

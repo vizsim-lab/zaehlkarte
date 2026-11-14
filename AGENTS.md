@@ -296,8 +296,8 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     Stundenwerte) als 74-seitiges PDF eines Büros auf kevelaer.de. Bester Fund des Landes: mit einer
     Lizenz käme die Zählung in die Karte (Text mit pdftotext lesbar, Intervalle „06:00 - 06:15“,
     ähnlich `xanten_pdf`).
-  - **Nur Summen offen:** Paderborn (Juni 2018 rund 100 Stellen, nur Pläne der DTVw), Verl (rund 55
-    Messberichte der Seitenradar-Messungen, Stundenwerte nur als Diagramm), Bad Honnef
+  - **Nur Summen offen:** Paderborn (Juni 2018 rund 100 Stellen, nur Pläne der DTVw), Verl (gut 60
+    Messberichte der Verkehrsmessungen, Stundenwerte nur als Diagramm), Bad Honnef
     (Zusammenfassung je Seitenradar-Zählung, die Liste lädt per JavaScript), Emsdetten (Wochenmittel
     an fünf Kamera-Zählstellen während der Sperrung der B 481), Münster (Monatsmittel der
     Ampelschleifen an fünf Kreuzungen seit 2021, Mobilithek -5042567686068911126 – keine Tageswerte,
@@ -311,7 +311,7 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     Geschwindigkeitsanzeige 2018–2021, rund 80 Berichte – die PDF-Downloads sperrt robots.txt,
     Inhalt nicht geprüft).
   - **Dauerzählstellen:** Stadt Neuss (Rad-Zählstelle am RS5, Stundenwerte im Portal des
-    Rhein-Kreises, in der Mobilithek „keine Lizenz“), Bielefeld (acht Rad-Dauerzählstellen; der
+    Rhein-Kreises, in der Mobilithek „keine Lizenz“), Bielefeld (sieben Rad-Dauerzählstellen; der
     Open-Data-Eintrag verlinkt nur Webseite und Karte), Hennef (Horstmannsteg, Jahresberichte als
     PDF), Rhein-Sieg-Kreis (12 Rad-Zählstellen, interaktive Karte), Köln (17 und mehr, einige mit Kfz,
     nur Eco Public), Paderborn (Sensoren der Smart City), Emsdetten (KI-Kameras am
