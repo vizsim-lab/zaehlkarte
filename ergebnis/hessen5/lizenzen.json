@@ -1,28 +1,8 @@
 {
  "dauerzahlstellen-fur-den-radverkehr-in-hessen": {
-  "fehler": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_show?id=dauerzahlstellen-fur-den-radverkehr-in-hessen')"
+  "fehler": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?rows=1&q=name%3A%22dauerzahlstellen-fur-den-radverkehr-in-hessen%22')"
  },
  "wfs-verkehrsmengen-frankfurt-am-main": {
-  "fehler": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_show?id=wfs-verkehrsmengen-frankfurt-am-main')"
- },
- "suche Dauerzählstellen Radverkehr": {
-  "kommune": "Land",
-  "url": "https://opendata.hessen.de/search?query=Dauerz%C3%A4hlstellen%20Radverkehr",
-  "fehler": "<HTTPError 404: 'Not Found'>"
- },
- "suche Radverkehr Hessen Zählstellen": {
-  "kommune": "Land",
-  "url": "https://opendata.hessen.de/search?query=Radverkehr%20Hessen%20Z%C3%A4hlstellen",
-  "fehler": "<HTTPError 404: 'Not Found'>"
- },
- "dauerzaehlstellen-fuer-den-radverkehr-in-hessen": {
-  "kommune": "Land",
-  "url": "https://opendata.hessen.de/dataset/dauerzaehlstellen-fuer-den-radverkehr-in-hessen",
-  "fehler": "<HTTPError 404: 'Not Found'>"
- },
- "dauerzahlstellen-fur-den-radverkehr-in-hessen-0": {
-  "kommune": "Land",
-  "url": "https://opendata.hessen.de/dataset/dauerzahlstellen-fur-den-radverkehr-in-hessen-0",
-  "fehler": "<HTTPError 404: 'Not Found'>"
+  "fehler": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?rows=1&q=name%3A%22wfs-verkehrsmengen-frankfurt-am-main%22')"
  }
 }
