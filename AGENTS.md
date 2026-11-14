@@ -10,11 +10,14 @@ Zwei Familien, beide mit gezählten Werten im Zeitverlauf:
   Tageswerten über Monate und Jahre – Quellen in `pipeline/config/quellen/dauer/`, Code in
   `src/zaehlkarte/dauer/`.
 
-Gleich, wer zählt (Beschluss der Projektleitung, 14.11.2026 – „gerade bei Rad und Fuß ist es
-egal, woher die Zahlen kommen“): Kommunen, Kreise, Länder, auch gemeinsame Plattformen wie die VMZ
-Niedersachsen. Bis dahin galten nur kommunale Zählstellen; was unten unter „Nicht kommunal“
-steht, ist seitdem Kandidat. Vorerst nicht dabei: die Dauerzählstellen der BASt (Autobahnen und
-Bundesstraßen). Ohne Lizenz nur, was eine öffentliche Stelle veröffentlicht oder herausgegeben hat
+Alle Zählungen mit Werten je Stunde (oder feiner) oder je Tag an einer bestimmten Stelle, gleich,
+wer zählt (Beschluss der Projektleitung, 14.11.2026: „ich will gerne alle Zählungen … also muss es
+nur in Abgrenzung zum svz Projekt sein“): Kommunen, Kreise, Länder, der Bund (BASt), gemeinsame
+Plattformen wie die VMZ Niedersachsen. Bis dahin galten nur kommunale Zählstellen; was unten
+unter „Nicht kommunal“ steht, ist seitdem Kandidat. Ebenso Quellen mit nur Tageswerten je Stelle
+und Datum (in der Datenlage bisher „nur Summen“, etwa Augsburgs Radzählstationen oder Planegg):
+ihr Tageswert gilt wie geliefert – dafür braucht das Modell der Dauerzählstellen noch einen Weg
+ohne Stunden. Ohne Lizenz nur, was eine öffentliche Stelle veröffentlicht oder herausgegeben hat
 (CLAUDE.md, „Quellen ohne Lizenz“).
 
 Nicht gemeint: Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür
@@ -893,8 +896,7 @@ robots.txt für alle Robots sperrt. Seitdem:
     `hessen-mobil.eco-counter.com` sperrt Abruf-Werkzeuge per robots.txt) und Bielefeld – dort
     hilft eine Anfrage (Eco-Counter-Kunden haben in Eco-Visio einen Export). Nur Summen:
     Mannheims Portal (Summe je Zähler), Stuttgarts Portal (Saisons).
-- **Nicht kommunal (dokumentiert, nicht in der Karte; seit 14.11.2026 Kandidaten – die BASt
-  vorerst nicht):**
+- **Nicht kommunal (dokumentiert, nicht in der Karte; seit 14.11.2026 Kandidaten):**
   - **Baden-Württemberg, Verkehrsministerium:** „Stundenwerte der Dauerzählstellen in
     Baden-Württemberg“ (MobiData `stundenwerte_dauerzaehlstellen`, dl-de/by-2-0): ein ZIP je
     Monat (`…/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_JJJJMM.zip`, mindestens

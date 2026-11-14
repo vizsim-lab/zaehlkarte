@@ -16,10 +16,14 @@ portal: https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundend
 basis: https://opendata.wuerzburg.de
 datensatz: passantenzaehlung_stundendaten
 gruppe: fuss
-zeit: null  # nach dem ersten Abruf festlegen (Felder in raw/wuerzburg_fuss/metadaten.json)
-werte: []
-stelle: null
-stellen: {}
+zeit: timestamp
+werte: [pedestrians_count]  # alle Passanten (beide Richtungen, Erwachsene und Kinder)
+stelle: location_id
+ungeprueft: unverified
+stellen:  # Lage: Mittelpunkt der Zählfläche laut Datensatz (`geo_point_2d`)
+  "135": {kennung: "135", name: Schönbornstraße, lon: 9.931060, lat: 49.795490}
+  "470": {kennung: "470", name: Spiegelstraße, lon: 9.934114, lat: 49.795127}
+  "476": {kennung: "476", name: Kaiserstraße, lon: 9.933888, lat: 49.798499}
 titel: >-
   Passantenzählung – Stundendaten, Stadt Würzburg (verändert: Stundenwerte zu Tagessummen
   zusammengefasst)
@@ -28,5 +32,7 @@ quellenvermerk: Stadt Würzburg
 lizenz: dl-de/by-2-0
 lizenz_url: https://www.govdata.de/dl-de/by-2-0
 hinweise:
+  - >-
+    Stunden, die die Quelle als „unverifiziert“ kennzeichnet, gelten als nicht gezählt.
   - >-
     Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

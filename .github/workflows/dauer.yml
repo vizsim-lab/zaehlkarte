@@ -16,9 +16,10 @@
 #   MobiData BW (neu geholt werden fehlende und die jüngsten zwei) und die Dateien Münchens (neu
 #   nur bei geänderter URL); Münster, Aachen und Berlin (Rad) holt jeder Lauf ganz neu – der Cache
 #   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
-#   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund), Essens Quartale und Düsseldorfs
-#   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu. VMZ Niedersachsen
-#   und Dresden: Jahresdateien seit 2017 im Cache, neu nur das laufende Jahr und das Vorjahr.
+#   Die Opendatasoft-Exporte (Würzburg: Rad und Passanten; Rhein-Kreis Neuss; Neuss: RS5;
+#   Dortmund), Essens Quartale und Düsseldorfs Jahresdateien nur bei Änderung; Bonns
+#   Jahresdateien holt jeder Lauf neu. VMZ Niedersachsen und Dresden: Jahresdateien im Cache, neu
+#   nur das laufende Jahr und das Vorjahr.
 # - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
 #   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus
 #   pipeline/config/robots.yaml – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
@@ -123,6 +124,13 @@ jobs:
           path: pipeline/data/raw/augsburg_fuss
           key: dauer-fuss-roh-${{ github.run_id }}
           restore-keys: dauer-fuss-roh-
+      - uses: actions/cache@v6  # Neuss RS5 und Würzburg Passanten (Opendatasoft, nur bei Änderung)
+        with:
+          path: |
+            pipeline/data/raw/neuss_rad
+            pipeline/data/raw/wuerzburg_fuss
+          key: dauer-ods2-roh-${{ github.run_id }}
+          restore-keys: dauer-ods2-roh-
       - uses: actions/cache@v6  # OSM-Abzug Hamburg (Straßennamen neuer Stellen): einmal laden, dann behalten
         with:
           path: pipeline/data/raw/osm

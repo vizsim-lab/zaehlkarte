@@ -24,6 +24,6 @@ test("Handy: DE/EN im zugeklappten Streifen schaltet um, ohne die Legende aufzuk
   await page.locator('#sprachwahl [data-sprache="en"]').tap();
   await expect(page.locator("html")).toHaveAttribute("lang", "en");
   await expect(legende).toHaveClass(/collapsed/);
-  await expect(page.locator(".legend-subtext")).toContainText("Public traffic counts");
+  await expect(page.locator(".legend-subtext")).toContainText("Traffic counts by hour and day");
   await expect(page.locator("#fc-stellen + span")).toHaveText("sites");
 });

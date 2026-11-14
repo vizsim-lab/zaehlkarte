@@ -20,16 +20,16 @@ export function setzeSprache(s) {
 
 export const TEXTE = {
   de: {
-    "dokument.titel": "Zählkarte – öffentliche Verkehrszählungen",
-    "dokument.beschreibung": "Verkehrszählungen von Kommunen, Kreisen und Ländern auf einer Karte: Kurzzeitzählungen (Kfz, Schwerverkehr, Rad, Fuß) mit dem Tagesgang jeder Zählung, Dauerzählstellen mit Tagessummen und Stundenwerten – und wo es solche Daten gibt.",
+    "dokument.titel": "Zählkarte – Verkehrszählungen je Stunde und Tag",
+    "dokument.beschreibung": "Verkehrszählungen je Stunde und Tag auf einer Karte, gleich, wer zählt: Kurzzeitzählungen (Kfz, Schwerverkehr, Rad, Fuß) mit dem Tagesgang jeder Zählung, Dauerzählstellen mit Tagessummen und Stundenwerten – und wo es solche Daten gibt.",
     "karte": "Karte",
     "fehler.laden": "Die Karte konnte nicht geladen werden: {fehler}",
     "sprache.wahl": "Sprache wählen",
     "schliessen": "Schließen",
 
-    "legende.untertitel": "Öffentliche Verkehrszählungen",
+    "legende.untertitel": "Verkehrszählungen je Stunde und Tag",
     "legende.arten": "Kfz · Rad · Fuß",
-    "legende.info": "Zwei Familien: Kurzzeitzählungen an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre) – von Kommunen, Kreisen und Ländern. Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten.",
+    "legende.info": "Zwei Familien: Kurzzeitzählungen an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre) – gleich, wer zählt. Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten.",
     "legende.klappen": "Legende ein-/ausklappen",
 
     "thema.titel": "Verkehrsart",
@@ -284,16 +284,16 @@ export const TEXTE = {
   },
 
   en: {
-    "dokument.titel": "Zählkarte – public traffic counts",
-    "dokument.beschreibung": "Traffic counts by German municipalities, counties and states on one map: short-term counts (motor vehicles, heavy vehicles, cycling, pedestrians) with the daily profile of each count, permanent counters with daily totals and hourly values – and where such data exist.",
+    "dokument.titel": "Zählkarte – traffic counts by hour and day",
+    "dokument.beschreibung": "Traffic counts by hour and day on one map, whoever counts: short-term counts (motor vehicles, heavy vehicles, cycling, pedestrians) with the daily profile of each count, permanent counters with daily totals and hourly values – and where such data exist.",
     "karte": "Map",
     "fehler.laden": "The map could not be loaded: {fehler}",
     "sprache.wahl": "Choose language",
     "schliessen": "Close",
 
-    "legende.untertitel": "Public traffic counts",
+    "legende.untertitel": "Traffic counts by hour and day",
     "legende.arten": "Vehicles · Bikes · Pedestrians",
-    "legende.info": "Two families: short-term counts at junctions and cross-sections (by hand, on video or with counting devices) and permanent counters (permanently installed, hourly and daily values over years) – by municipalities, counties and states. Counted values only, no annual averages (AADT). Sources and licences below.",
+    "legende.info": "Two families: short-term counts at junctions and cross-sections (by hand, on video or with counting devices) and permanent counters (permanently installed, hourly and daily values over years) – whoever counts. Counted values only, no annual averages (AADT). Sources and licences below.",
     "legende.klappen": "Expand or collapse the legend",
 
     "thema.titel": "Mode",

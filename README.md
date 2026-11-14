@@ -1,4 +1,4 @@
-# Zählkarte – öffentliche Verkehrszählungen
+# Zählkarte – Verkehrszählungen je Stunde und Tag
 
 **Karte:** https://vizsim-lab.github.io/zaehlkarte/
 
@@ -31,9 +31,8 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
 
 Zwei Familien, beide nur mit gezählten Werten im Zeitverlauf: **Kurzzeitzählungen** (Werte je
-Zählung) und **Dauerzählstellen** (Stunden- und Tageswerte) – gleich, ob eine Kommune, ein Kreis
-oder ein Land zählt; nur die Dauerzählstellen der BASt an Autobahnen und Bundesstraßen vorerst
-nicht.
+Zählung) und **Dauerzählstellen** (Stunden- und Tageswerte) – gleich, wer zählt: gesucht sind
+Werte je Stunde oder je Tag an einer bestimmten Stelle.
 Nicht gemeint sind Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür gibt
 es [vizsim/svz](https://github.com/vizsim/svz). Liefert eine Quelle beides, nimmt jedes Repo
 seinen Teil: Hamburgs DTV-Tabelle gehört nach svz, die Stundenwerte der Wärmebildkameras hierher.

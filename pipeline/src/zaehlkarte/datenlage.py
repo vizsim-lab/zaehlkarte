@@ -150,7 +150,7 @@ def _belege(links: list[dict]) -> list[str]:
 def datenlage_md(fc: dict, erzeugt: str) -> str:
     """Übersicht für GitHub (docs/DATENLAGE.md) aus denselben Daten wie die Karte."""
     zeilen = [
-        "# Datenlage: kommunale Verkehrszählungen",
+        "# Datenlage: Verkehrszählungen je Kommune",
         "",
         f"Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am {erzeugt} aus",
         "`pipeline/config/kommunen/` (je Land eine Datei) – nicht von Hand ändern. Dieselben",
