@@ -1,0 +1,1826 @@
+                                                                                                       powered by
+Auswertung Verkehrsdaten
+ Autor
+ Institution                             Stadt Marburg
+ Abteilung                               Straßenverkehr
+ Straße                                  Frauenbergstraße 35
+ PLZ                                     35039
+ Stadt                                   Marburg
+ Land                                    Deutschland
+ Ansprechpartner                         Felix Schäfer
+ Telefon                                 +49-6421201-1165
+ E-Mail                                  felix.schaefer@marburg-stadt.de
+                                              Erstellt mit DataCollect Webreporter Version 1.0 am 18.05.2021 08:04:53
+
+ Messstelle                                                              Zeitbereich
+ Name                                  Herrmannstraße                    Startdatum                 29.04.2021 13:00
+ Rtg. kommend (Name)                   stadtauswärts                     Enddatum                   06.05.2021 00:59
+ Rtg. gehend (Name)                    stadteinwärts                     Tage                       Mo, Di, Mi, Do, Fr, Sa, So
+                                                                         Zeitintervall              60 Minuten
+ Vmax StVO                              30
+                                                                         Zeitfenster / Tag          00:00 - 23:59
+ Kommentar
+ Gerätetyp                             SDR
+
+
+
+
+ Längenklassen                    [L in m]
+
+
+      Querschnitt                              stadtauswärts                                          stadteinwärts
+
+ Zeit               Σ             Σ          PKW         LKW             LZ             Σ           PKW          LKW              LZ
+ 00:00-06:00        185          67           59              4          4             118           98              1            19
+ 06:00-09:00 1346                528          482            30          16            818          731             46            41
+ 15:00-19:00 2519                1214        1153            42          19           1305          1236            24            45
+ 06:00-22:00 7741                3611        3355            183         73           4130          3814            137           179
+ 00:00-24:00 8000                3712        3432            197         83           4288          3938            139           211
+
+
+
+
+ Geschwindigkeitskennzahlen                            [V in km/h]
+
+
+                          Vmin               Vmax            Vavg             V15            V50              V85           Vexc %
+    Querschnitt              6                72              41              33              41               49             84.3
+ stadtauswärts               7                70              42              35              43               50             89.0
+ stadteinwärts               6                72              39              32              40               47             80.3
+
+Beschreibungen
+
+Vmin: Minimale Geschwindigkeit                                       V50: Grenzgeschwindigkeit für die ersten 50% der Fahrzeuge
+Vmax: Maximale Geschwindigkeit                                       V85: Grenzgeschwindigkeit für die ersten 85% der Fahrzeuge
+Vavg: Durchschnittliche Geschwindigkeit                              Vexc %: Geschwindigkeitsüberschreitung in %
+V15: Grenzgeschwindigkeit für die ersten 15% der Fahrzeuge
+
+
+
+                                                                                                            www.datacollect.com
+                                                                                                                                                                                                                                                                             powered by
+ Auswertung Verkehrsdaten
+        Autor
+        Institution                                                                           Stadt Marburg
+        Abteilung                                                                             Straßenverkehr
+        Straße                                                                                Frauenbergstraße 35
+        PLZ                                                                                   35039
+        Stadt                                                                                 Marburg
+        Land                                                                                  Deutschland
+        Ansprechpartner                                                                       Felix Schäfer
+        Telefon                                                                               +49-6421201-1165
+        E-Mail                                                                                felix.schaefer@marburg-stadt.de
+                                                                                                             Erstellt mit DataCollect Webreporter Version 1.0 am 18.05.2021 08:04:53
+
+        Messstelle                                                                                                                                                                      Zeitbereich
+        Name                                                                                 Herrmannstraße                                                                             Startdatum                                                                 29.04.2021 13:00
+        Rtg. kommend (Name)                                                                  stadtauswärts                                                                              Enddatum                                                                   06.05.2021 00:59
+        Rtg. gehend (Name)                                                                   stadteinwärts                                                                              Tage                                                                       Mo, Di, Mi, Do, Fr, Sa, So
+                                                                                                                                                                                        Zeitintervall                                                              60 Minuten
+        Vmax StVO                                                                            30
+                                                                                                                                                                                        Zeitfenster / Tag                                                          00:00 - 23:59
+        Kommentar
+        Gerätetyp                                                                            SDR
+
+
+
+
+        Verkehrsmengen Ganglinie
+
+
+            140
+
+
+
+            120
+
+
+
+            100
+
+
+
+             80
+Menge
+
+
+
+
+             60
+
+
+
+             40
+
+
+
+             20
+
+
+
+              0
+                  29 Apr 13:00
+
+                                 29 Apr 20:00
+
+                                                30 Apr 03:00
+
+                                                               30 Apr 10:00
+
+                                                                              30 Apr 17:00
+
+                                                                                              01 Mai 00:00
+
+                                                                                                             01 Mai 07:00
+
+                                                                                                                            01 Mai 14:00
+
+                                                                                                                                           01 Mai 21:00
+
+                                                                                                                                                          02 Mai 04:00
+
+                                                                                                                                                                         02 Mai 11:00
+
+                                                                                                                                                                                        02 Mai 18:00
+
+                                                                                                                                                                                                       03 Mai 01:00
+
+                                                                                                                                                                                                                      03 Mai 08:00
+
+                                                                                                                                                                                                                                     03 Mai 15:00
+
+                                                                                                                                                                                                                                                    03 Mai 22:00
+
+                                                                                                                                                                                                                                                                    04 Mai 05:00
+
+                                                                                                                                                                                                                                                                                   04 Mai 12:00
+
+                                                                                                                                                                                                                                                                                                  04 Mai 19:00
+
+                                                                                                                                                                                                                                                                                                                 05 Mai 02:00
+
+                                                                                                                                                                                                                                                                                                                                05 Mai 09:00
+
+                                                                                                                                                                                                                                                                                                                                               05 Mai 16:00
+
+                                                                                                                                                                                                                                                                                                                                                                05 Mai 23:00
+
+                                                                                                                                                                                                                                                                                                                                                                               06 Mai 06:00
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                              Zeit
+                                   stadtauswärts                                                stadteinwärts                                              Querschnitt
+
+                                                                                                                                                                                                                                                                                        www.datacollect.com
+                                                                                                                                                             powered by
+ Auswertung Verkehrsdaten
+        Autor
+        Institution                                       Stadt Marburg
+        Abteilung                                         Straßenverkehr
+        Straße                                            Frauenbergstraße 35
+        PLZ                                               35039
+        Stadt                                             Marburg
+        Land                                              Deutschland
+        Ansprechpartner                                   Felix Schäfer
+        Telefon                                           +49-6421201-1165
+        E-Mail                                            felix.schaefer@marburg-stadt.de
+                                                                    Erstellt mit DataCollect Webreporter Version 1.0 am 18.05.2021 08:04:53
+
+        Messstelle                                                                                                        Zeitbereich
+        Name                                        Herrmannstraße                                                        Startdatum                    29.04.2021 13:00
+        Rtg. kommend (Name)                         stadtauswärts                                                         Enddatum                      06.05.2021 00:59
+        Rtg. gehend (Name)                          stadteinwärts                                                         Tage                          Mo, Di, Mi, Do, Fr, Sa, So
+                                                                                                                          Zeitintervall                 60 Minuten
+        Vmax StVO                                       30
+                                                                                                                          Zeitfenster / Tag             00:00 - 23:59
+        Kommentar
+        Gerätetyp                                   SDR
+
+
+
+
+        Geschwindigkeits-Histogramm
+                                                                                                       3510
+
+
+
+
+           3500
+                                                                                  3054
+
+
+
+
+           3000
+
+
+
+
+           2500
+                                                                           1857
+
+
+
+
+           2000
+                                                                                         1778
+                                                                                                1732
+Menge
+
+
+
+
+           1500
+                                                                    1197
+
+
+
+
+           1000
+                                                                                                                          717
+                                                                                                              473
+                                                              465
+
+
+
+
+            500
+                                                        323
+
+
+
+
+                                                                                                                    244
+                                            188
+
+                                                  142
+                                      116
+                                 72
+
+
+
+
+                                                                                                                                          42
+                                                                                                                                35
+                            23
+                  15
+                       8
+
+
+
+
+                                                                                                                                     7
+
+
+
+
+                                                                                                                                               1
+                                                                                                                                                    1
+
+
+
+
+              0
+                       10             20                30                 40                   50                  60               70        80       90        100       110       >110
+                                                                                                                                                                     Geschwindigkeit in [km/h]
+                        stadtauswärts                         stadteinwärts                              Querschnitt
+
+                                                                                                                                                                 www.datacollect.com
+                                                                                               powered by
+ Auswertung Verkehrsdaten
+        Autor
+        Institution                         Stadt Marburg
+        Abteilung                           Straßenverkehr
+        Straße                              Frauenbergstraße 35
+        PLZ                                 35039
+        Stadt                               Marburg
+        Land                                Deutschland
+        Ansprechpartner                     Felix Schäfer
+        Telefon                             +49-6421201-1165
+        E-Mail                              felix.schaefer@marburg-stadt.de
+                                                   Erstellt mit DataCollect Webreporter Version 1.0 am 18.05.2021 08:04:53
+
+        Messstelle                                                       Zeitbereich
+        Name                               Herrmannstraße                Startdatum          29.04.2021 13:00
+        Rtg. kommend (Name)                stadtauswärts                 Enddatum            06.05.2021 00:59
+        Rtg. gehend (Name)                 stadteinwärts                 Tage                Mo, Di, Mi, Do, Fr, Sa, So
+                                                                         Zeitintervall       60 Minuten
+        Vmax StVO                          30
+                                                                         Zeitfenster / Tag   00:00 - 23:59
+        Kommentar
+        Gerätetyp                          SDR
+
+
+
+
+        Längen-Histogramm
+                                                 7370
+
+
+
+
+           7000
+
+
+
+
+           6000
+
+
+
+
+           5000
+                                    3938
+
+
+
+
+           4000
+Menge
+
+
+
+
+                      3432
+
+
+
+
+           3000
+
+
+
+
+           2000
+
+
+
+
+           1000
+                                                                                    336
+
+
+
+
+                                                                                                                    294
+                                                                                                            211
+                                                               197
+
+
+
+
+                                                                              139
+
+
+
+
+                                                                                                83
+
+
+
+
+              0
+                                PKW                                       LKW                               LZ
+                                                                                                                  Länge in [m]
+                    stadtauswärts            stadteinwärts      Querschnitt
+
+                                                                                                     www.datacollect.com
+                                                                                                                                       powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+      29.04.2021 13:00     40    36      4     0     1        0    2    22    13     2   0    0    0    0     0     0     9      38       56        33    37    46
+      29.04.2021 14:00     116   109     6     1     0        1    6    42    59     8   0    0    0    0     0     0     16     41       56        34    42    48
+      29.04.2021 15:00     145   135     8     2     0        0    6    51    77    11   0    0    0    0     0     0     22     42       57        36    42    48
+      29.04.2021 16:00     123   118     2     3     0        1    12   46    48    15   1    0    0    0     0     0     16     41       61        34    41    49
+      29.04.2021 17:00     101   96      3     2     0        0    4    45    37    14   1    0    0    0     0     0     28     41       63        33    41    50
+      29.04.2021 18:00     75    71      1     3     0        3    2    20    38    12   0    0    0    0     0     0     11     42       54        37    43    51
+      29.04.2021 19:00     39    36      2     1     0        0    2    13    20     3   1    0    0    0     0     0     28     43       70        36    42    49
+      29.04.2021 20:00     25    23      1     1     0        0    2    11    8      3   1    0    0    0     0     0     29     42       66        32    40    57
+      29.04.2021 21:00     11     9      1     1     0        0    2    6     2      1   0    0    0    0     0     0     27     38       52        29    38    47
+      29.04.2021 22:00      7     4      2     1     0        0    0    2     4      1   0    0    0    0     0     0     32     44       54        36    42    50
+      29.04.2021 23:00      3     1      2     0     0        0    2    0     0      1   0    0    0    0     0     0     29     37       51        29    30    51
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      [Do, 29 April]        Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+
+
+
+
+      00:00-06:00           0     0     0     0      0        0    0     0     0     0   0    0    0    0     0     0      -      -        -         -     -     -
+      06:00-09:00           0     0     0     0      0        0    0     0     0     0   0    0    0    0     0     0      -      -        -         -     -     -
+      15:00-19:00          444   420    14    10     0        4    24   162   200   52   2    0    0    0     0     0     11     42       63        35    42    49
+      06:00-22:00          675   633    28    14     1        5    38   256   302   69   4    0    0    0     0     0     9      41       70        34    41    49
+      00:00-24:00          685   638    32    15     1        5    40   258   306   71   4    0    0    0     0     0     9      41       70        34    41    49
+
+
+
+
+1/8                                                                                                                                        www.datacollect.com
+                                                                                                                                        powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                            x
+                                                                                                                      0
+
+
+
+
+                                                                                                                                   g
+                                                                                                                           VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                     V15
+
+
+                                                                                                                                                           V50
+
+
+                                                                                                                                                                 V85
+                                                                                                         100
+
+
+                                                                                                               110
+
+
+
+
+                                                                                                                                           VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                     >11
+
+
+
+
+                                                                                                                                  VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                          70
+
+
+                                                                                               80
+
+
+                                                                                                    90
+                                              LZ
+      30.04.2021 00:00      1     0      0     1     0        0    1    0     0      0    0    0    0    0     0     0     23     23       23        23    23    23
+      30.04.2021 01:00      0     0      0     0     0        0    0    0     0      0    0    0    0    0     0     0     0      0         0        0     0      0
+      30.04.2021 02:00      1     1      0     0     0        0    0    1     0      0    0    0    0    0     0     0     34     34       34        34    34    34
+      30.04.2021 03:00      2     2      0     0     0        0    0    1     1      0    0    0    0    0     0     0     40     43       46        40    46    46
+      30.04.2021 04:00      5     3      1     1     0        0    1    2     1      1    0    0    0    0     0     0     26     41       58        26    37    58
+      30.04.2021 05:00     27    24      1     2     0        0    3    7     12     4    1    0    0    0     0     0     23     42       61        32    44    52
+      30.04.2021 06:00     84    75      3     6     0        0    4    36    39     4    1    0    0    0     0     0     28     41       61        34    41    47
+      30.04.2021 07:00     129   118     9     2     0        0    8    58    55     7    1    0    0    0     0     0     24     41       66        34    40    48
+      30.04.2021 08:00     87    79      4     4     0        3    9    32    39     4    0    0    0    0     0     0     11     39       54        31    40    46
+      30.04.2021 09:00     85    75      7     3     0        5    8    32    34     6    0    0    0    0     0     0     13     39       55        30    40    48
+      30.04.2021 10:00     101   92      7     2     1        0    5    54    36     4    1    0    0    0     0     0     6      40       61        34    39    46
+      30.04.2021 11:00     87    78      5     4     0        3    5    37    36     6    0    0    0    0     0     0     12     40       60        32    40    47
+      30.04.2021 12:00     107   95      6     6     0        2    8    37    48    11    1    0    0    0     0     0     13     41       67        34    41    48
+      30.04.2021 13:00     85    78      4     3     0        0    4    36    36     9    0    0    0    0     0     0     27     42       54        33    42    50
+      30.04.2021 14:00     107   101     4     2     1        0    9    39    54     4    0    0    0    0     0     0     10     40       56        34    41    47
+      30.04.2021 15:00     100   96      3     1     0        1    2    34    48    14    1    0    0    0     0     0     15     43       63        37    43    51
+      30.04.2021 16:00     98    93      1     4     0        1    2    37    45    13    0    0    0    0     0     0     17     42       59        34    42    49
+      30.04.2021 17:00     91    86      5     0     0        4    6    33    38     9    1    0    0    0     0     0     12     40       66        32    41    49
+      30.04.2021 18:00     69    66      2     1     1        0    6    25    25     9    3    0    0    0     0     0     8      40       62        32    41    52
+      30.04.2021 19:00     41    39      1     1     0        0    1    15    19     5    1    0    0    0     0     0     29     43       64        37    41    49
+      30.04.2021 20:00     34    32      1     1     0        0    2    17    13     2    0    0    0    0     0     0     27     40       57        34    40    48
+      30.04.2021 21:00     23    20      2     1     0        0    2    9     7      4    1    0    0    0     0     0     26     43       64        34    44    53
+      30.04.2021 22:00     11     9      1     1     0        0    1    2     6      2    0    0    0    0     0     0     28     44       58        34    44    51
+      30.04.2021 23:00      2     0      0     2     0        0    0    2     0      0    0    0    0    0     0     0     33     36       39        33    39    39
+
+
+
+
+                                                                                                                                            x
+                                                                                                                      0
+
+
+
+
+                                                                                                                                   g
+                                                                                                                           VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                     V15
+
+
+                                                                                                                                                           V50
+
+
+                                                                                                                                                                 V85
+                                                                                                         100
+
+
+                                                                                                               110
+
+
+
+
+                                                                                                                                           VMa
+      [Fr, 30 April]        Σ
+
+
+
+
+                                                                                                                     >11
+
+
+
+
+                                                                                                                                  VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                          70
+
+
+                                                                                               80
+
+
+                                                                                                    90
+                                              LZ
+
+
+
+
+      00:00-06:00          36   30      2     4      0        0    5     11   14     5    1    0    0    0     0     0     23     41       61        31    43    52
+      06:00-09:00         300 272       16    12     0        3    21   126   133   15    2    0    0    0     0     0     11     40       66        33    41    47
+      15:00-19:00         358 341       11    6      1        6    16   129   156   45    5    0    0    0     0     0     8      41       66        33    42    50
+      06:00-22:00         1328 1223     64    41     3        19   81   531   572   111   11   0    0    0     0     0     6      41       67        33    41    49
+      00:00-24:00         1377 1262     67    48     3        19   87   546   592   118   12   0    0    0     0     0     6      41       67        33    41    49
+
+
+2/8                                                                                                                                         www.datacollect.com
+                                                                                                                                       powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+      01.05.2021 00:00     3       2     0     1     0        0    0    2     1      0   0    0    0    0     0     0     34     39       47        34    37    47
+      01.05.2021 01:00     0       0     0     0     0        0    0    0     0      0   0    0    0    0     0     0     0      0         0        0     0      0
+      01.05.2021 02:00     0       0     0     0     0        0    0    0     0      0   0    0    0    0     0     0     0      0         0        0     0      0
+      01.05.2021 03:00     0       0     0     0     0        0    0    0     0      0   0    0    0    0     0     0     0      0         0        0     0      0
+      01.05.2021 04:00     2       2     0     0     0        0    0    0     2      0   0    0    0    0     0     0     47     48       49        47    49    49
+      01.05.2021 05:00     8       8     0     0     0        0    0    2     5      0   0    1    0    0     0     0     36     47       72        38    46    48
+      01.05.2021 06:00     6       6     0     0     0        0    0    3     2      1   0    0    0    0     0     0     32     41       53        32    43    53
+      01.05.2021 07:00     24     21     1     2     0        0    1    10    8      5   0    0    0    0     0     0     28     42       54        34    43    51
+      01.05.2021 08:00     33     31     1     1     0        0    1    9     19     4   0    0    0    0     0     0     25     43       53        36    44    50
+      01.05.2021 09:00     60     57     2     1     0        1    2    22    32     3   0    0    0    0     0     0     11     42       56        35    42    49
+      01.05.2021 10:00     69     65     3     1     0        1    0    30    35     3   0    0    0    0     0     0     12     41       56        35    42    47
+      01.05.2021 11:00     62     60     1     1     0        4    5    24    24     4   1    0    0    0     0     0     11     39       69        32    40    47
+      01.05.2021 12:00     61     59     0     2     0        0    5    18    34     4   0    0    0    0     0     0     26     42       59        35    42    49
+      01.05.2021 13:00     84     82     1     1     1        3    2    35    32    10   1    0    0    0     0     0     8      41       68        34    41    50
+      01.05.2021 14:00     88     83     4     1     0        1    5    36    42     4   0    0    0    0     0     0     13     41       53        34    41    47
+      01.05.2021 15:00     71     69     2     0     1        3    2    35    23     6   1    0    0    0     0     0     7      39       64        33    40    47
+      01.05.2021 16:00     67     65     0     2     0        0    4    34    22     7   0    0    0    0     0     0     24     41       58        34    39    48
+      01.05.2021 17:00     87     85     1     1     0        0    4    37    35     9   2    0    0    0     0     0     23     43       67        36    41    50
+      01.05.2021 18:00     69     67     1     1     0        1    6    22    33     6   1    0    0    0     0     0     11     41       62        34    41    48
+      01.05.2021 19:00     42     40     1     1     0        0    1    16    19     5   1    0    0    0     0     0     29     42       70        34    41    50
+      01.05.2021 20:00     27     25     0     2     0        0    1    11    11     3   1    0    0    0     0     0     27     42       61        33    41    49
+      01.05.2021 21:00     18     16     1     1     0        0    1    2     9      6   0    0    0    0     0     0     30     47       60        35    48    55
+      01.05.2021 22:00     12     10     1     1     0        0    0    4     6      1   1    0    0    0     0     0     31     44       66        32    45    52
+      01.05.2021 23:00     5       3     1     1     0        0    1    1     2      1   0    0    0    0     0     0     27     43       57        27    48    57
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      [Sa, 1 Mai]           Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+
+
+
+
+      00:00-06:00          13    12     0     1      0        0    0     4     8     0   0    1    0    0     0     0     34     45       72        36    46    49
+      06:00-09:00          63    58     2     3      0        0    2     22   29    10   0    0    0    0     0     0     25     42       54        35    43    51
+      15:00-19:00          294   286    4     4      1        4    16   128   113   28   4    0    0    0     0     0     7      41       67        34    40    49
+      06:00-22:00          868   831    19    18     2        14   40   344   380   80   8    0    0    0     0     0     7      41       70        34    41    49
+      00:00-24:00          898   856    21    21     2        14   41   353   396   82   9    1    0    0     0     0     7      41       72        34    41    49
+
+
+3/8                                                                                                                                        www.datacollect.com
+                                                                                                                                       powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+      02.05.2021 00:00     1       0     0     1     0        0    0    1     0     0    0    0    0    0     0     0     32     32       32        32    32    32
+      02.05.2021 01:00     0       0     0     0     0        0    0    0     0     0    0    0    0    0     0     0     0      0         0        0     0      0
+      02.05.2021 02:00     0       0     0     0     0        0    0    0     0     0    0    0    0    0     0     0     0      0         0        0     0      0
+      02.05.2021 03:00     1       1     0     0     0        0    0    0     1     0    0    0    0    0     0     0     50     50       50        50    50    50
+      02.05.2021 04:00     6       6     0     0     0        0    0    2     4     0    0    0    0    0     0     0     32     43       49        32    47    49
+      02.05.2021 05:00     6       6     0     0     0        0    0    2     4     0    0    0    0    0     0     0     33     41       50        33    43    50
+      02.05.2021 06:00     10     10     0     0     1        0    0    2     5     2    0    0    0    0     0     0     9      41       53        31    44    51
+      02.05.2021 07:00     33     31     0     2     0        0    3    15    9     6    0    0    0    0     0     0     26     41       56        31    40    52
+      02.05.2021 08:00     36     33     2     1     0        2    0    16    15    3    0    0    0    0     0     0     11     40       54        32    41    48
+      02.05.2021 09:00     58     56     0     2     3        1    1    13    36    3    1    0    0    0     0     0     9      42       62        36    45    49
+      02.05.2021 10:00     66     63     2     1     0        0    1    26    32    7    0    0    0    0     0     0     21     42       55        37    44    48
+      02.05.2021 11:00     63     60     2     1     0        2    2    19    30    9    1    0    0    0     0     0     14     42       63        33    42    51
+      02.05.2021 12:00     78     76     0     2     1        3    4    28    36    6    0    0    0    0     0     0     9      40       58        34    41    48
+      02.05.2021 13:00     81     79     0     2     0        1    4    32    35    9    0    0    0    0     0     0     14     41       56        34    41    49
+      02.05.2021 14:00     96     94     0     2     1        4    5    53    27    6    0    0    0    0     0     0     8      38       58        32    39    46
+      02.05.2021 15:00     95     92     2     1     0        6    3    37    41    8    0    0    0    0     0     0     12     40       56        33    41    48
+      02.05.2021 16:00     73     70     2     1     0        1    5    26    33    8    0    0    0    0     0     0     13     41       57        34    41    49
+      02.05.2021 17:00     67     62     3     2     0        2    2    23    32    7    1    0    0    0     0     0     18     42       66        34    42    49
+      02.05.2021 18:00     63     60     1     2     0        0    4    20    29    8    2    0    0    0     0     0     24     43       69        34    43    51
+      02.05.2021 19:00     43     41     0     2     0        1    1    10    24    6    1    0    0    0     0     0     14     44       66        35    45    51
+      02.05.2021 20:00     32     30     0     2     0        0    2    13    12    5    0    0    0    0     0     0     28     43       60        34    41    51
+      02.05.2021 21:00     9       7     0     2     0        0    1    5     2     1    0    0    0    0     0     0     26     38       52        34    38    44
+      02.05.2021 22:00     3       1     1     1     0        0    2    0     1     0    0    0    0    0     0     0     27     35       47        27    30    47
+      02.05.2021 23:00     4       2     0     2     0        0    1    2     1     0    0    0    0    0     0     0     27     39       50        27    39    50
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      [So, 2 Mai]           Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+
+
+
+
+      00:00-06:00          14    13     0     1      0        0    0     5     9     0   0    0    0    0     0     0     32     42       50        33    44    49
+      06:00-09:00          79    74     2     3      1        2    3     33   29    11   0    0    0    0     0     0     9      40       56        31    41    50
+      15:00-19:00          298   284    8     6      0        9    14   106   135   31   3    0    0    0     0     0     12     41       69        34    42    49
+      06:00-22:00          903   864    14    25     6        23   38   338   398   94   6    0    0    0     0     0     8      41       69        34    42    49
+      00:00-24:00          924   880    15    29     6        23   41   345   409   94   6    0    0    0     0     0     8      41       69        34    42    49
+
+
+4/8                                                                                                                                        www.datacollect.com
+                                                                                                                                        powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                            x
+                                                                                                                      0
+
+
+
+
+                                                                                                                                   g
+                                                                                                                           VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                     V15
+
+
+                                                                                                                                                           V50
+
+
+                                                                                                                                                                 V85
+                                                                                                         100
+
+
+                                                                                                               110
+
+
+
+
+                                                                                                                                           VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                     >11
+
+
+
+
+                                                                                                                                  VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                          70
+
+
+                                                                                               80
+
+
+                                                                                                    90
+                                              LZ
+      03.05.2021 00:00      3     2     0      1     0        1    0    1     1      0    0    0    0    0     0     0     17     35       48        17    39    48
+      03.05.2021 01:00      0     0     0      0     0        0    0    0     0      0    0    0    0    0     0     0     0      0         0        0     0      0
+      03.05.2021 02:00      0     0     0      0     0        0    0    0     0      0    0    0    0    0     0     0     0      0         0        0     0      0
+      03.05.2021 03:00      1     1     0      0     0        0    0    0     0      1    0    0    0    0     0     0     54     54       54        54    54    54
+      03.05.2021 04:00      7     6     0      1     0        0    2    2     3      0    0    0    0    0     0     0     26     38       48        29    39    47
+      03.05.2021 05:00     25    22     0      3     0        0    3    10    10     2    0    0    0    0     0     0     28     40       56        31    38    50
+      03.05.2021 06:00     70    62     2      6     0        0    4    33    29     4    0    0    0    0     0     0     29     40       54        34    40    46
+      03.05.2021 07:00     123   118    1      4     0        2    8    40    64     9    0    0    0    0     0     0     15     41       57        34    42    47
+      03.05.2021 08:00     78    70     4      4     0        1    7    35    29     6    0    0    0    0     0     0     14     39       57        32    39    47
+      03.05.2021 09:00     80    75     2      3     0        0    3    30    35    11    1    0    0    0     0     0     22     42       63        35    42    51
+      03.05.2021 10:00     85    77     4      4     0        1    5    34    39     6    0    0    0    0     0     0     19     41       56        33    41    48
+      03.05.2021 11:00     105   91     11     3     0        1    9    37    53     5    0    0    0    0     0     0     13     41       54        34    42    49
+      03.05.2021 12:00     93    85     3      5     0        0    4    31    49     9    0    0    0    0     0     0     22     42       58        34    42    48
+      03.05.2021 13:00     113   107    3      3     0        1    5    42    51    13    1    0    0    0     0     0     16     42       61        35    42    50
+      03.05.2021 14:00     104   95     7      2     0        2    4    33    51    14    0    0    0    0     0     0     13     42       59        34    43    49
+      03.05.2021 15:00     110   102    5      3     0        3    2    37    57    11    0    0    0    0     0     0     17     42       55        34    42    50
+      03.05.2021 16:00     94    89     2      3     0        3    4    30    48     8    1    0    0    0     0     0     16     41       64        34    42    49
+      03.05.2021 17:00     115   110    3      2     0        5    7    36    58     9    0    0    0    0     0     0     15     41       59        33    43    47
+      03.05.2021 18:00     65    62     1      2     0        0    5    19    26    12    3    0    0    0     0     0     21     44       68        37    44    52
+      03.05.2021 19:00     37    35     0      2     0        0    0    8     21     8    0    0    0    0     0     0     34     45       58        39    44    51
+      03.05.2021 20:00     36    34     0      2     0        0    2    13    19     2    0    0    0    0     0     0     29     41       57        34    41    47
+      03.05.2021 21:00     11     9     0      2     0        0    4    1     5      1    0    0    0    0     0     0     26     39       52        28    41    48
+      03.05.2021 22:00      5     3     0      2     0        0    1    0     4      0    0    0    0    0     0     0     28     40       45        28    42    45
+      03.05.2021 23:00      5     2     1      2     0        0    0    2     2      1    0    0    0    0     0     0     32     42       54        32    43    54
+
+
+
+
+                                                                                                                                            x
+                                                                                                                      0
+
+
+
+
+                                                                                                                                   g
+                                                                                                                           VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                     V15
+
+
+                                                                                                                                                           V50
+
+
+                                                                                                                                                                 V85
+                                                                                                         100
+
+
+                                                                                                               110
+
+
+
+
+                                                                                                                                           VMa
+      [Mo, 3 Mai]           Σ
+
+
+
+
+                                                                                                                     >11
+
+
+
+
+                                                                                                                                  VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                          70
+
+
+                                                                                               80
+
+
+                                                                                                    90
+                                              LZ
+
+
+
+
+      00:00-06:00          36   31      0     5      0        1    5     13   14     3    0    0    0    0     0     0     17     40       56        30    39    49
+      06:00-09:00         271 250       7     14     0        3    19   108   122   19    0    0    0    0     0     0     14     40       57        34    41    47
+      15:00-19:00         385 364       11    10     0        11   18   123   189   40    4    0    0    0     0     0     15     42       68        34    43    49
+      06:00-22:00         1319 1221     48    50     0        19   73   459   634   128   6    0    0    0     0     0     13     41       68        34    42    49
+      00:00-24:00         1365 1257     49    59     0        20   79   474   654   132   6    0    0    0     0     0     13     41       68        34    42    49
+
+
+5/8                                                                                                                                         www.datacollect.com
+                                                                                                                                       powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+      04.05.2021 00:00      1     0     0      1     0        0    0    1     0      0   0    0    0    0     0     0     37     37       37        37    37    37
+      04.05.2021 01:00      0     0     0      0     0        0    0    0     0      0   0    0    0    0     0     0     0      0         0        0     0      0
+      04.05.2021 02:00      0     0     0      0     0        0    0    0     0      0   0    0    0    0     0     0     0      0         0        0     0      0
+      04.05.2021 03:00      2     2     0      0     0        0    0    1     1      0   0    0    0    0     0     0     39     42       44        39    44    44
+      04.05.2021 04:00      7     5     0      2     0        2    1    2     2      0   0    0    0    0     0     0     17     34       46        19    39    45
+      04.05.2021 05:00     32    29     1      2     0        0    4    9     16     3   0    0    0    0     0     0     24     41       52        31    43    49
+      04.05.2021 06:00     77    68     4      5     0        0    12   33    29     3   0    0    0    0     0     0     24     39       52        30    39    44
+      04.05.2021 07:00     133   124    7      2     0        1    10   63    54     5   0    0    0    0     0     0     20     39       53        33    40    46
+      04.05.2021 08:00     89    75     11     3     0        0    10   42    33     4   0    0    0    0     0     0     22     39       57        32    39    45
+      04.05.2021 09:00     77    68     6      3     0        2    9    32    27     7   0    0    0    0     0     0     19     39       58        31    39    48
+      04.05.2021 10:00     73    65     4      4     1        0    5    38    23     6   0    0    0    0     0     0     8      39       60        32    39    48
+      04.05.2021 11:00     68    56     8      4     0        0    3    32    31     2   0    0    0    0     0     0     24     40       54        33    40    46
+      04.05.2021 12:00     102   95     3      4     2        1    3    45    43     8   0    0    0    0     0     0     8      40       56        34    41    48
+      04.05.2021 13:00     99    88     9      2     0        0    9    35    48     7   0    0    0    0     0     0     26     41       56        34    42    47
+      04.05.2021 14:00     105   97     6      2     0        0    4    53    39     9   0    0    0    0     0     0     21     40       58        34    39    48
+      04.05.2021 15:00     104   97     3      4     0        4    2    48    42     8   0    0    0    0     0     0     16     40       55        33    40    48
+      04.05.2021 16:00     141   127    5      9     0        31   5    32    63    10   0    0    0    0     0     0     11     36       58        16    41    48
+      04.05.2021 17:00     78    73     1      4     0        3    3    23    41     8   0    0    0    0     0     0     13     41       58        34    42    49
+      04.05.2021 18:00     64    60     3      1     0        0    1    23    29    10   1    0    0    0     0     0     29     44       63        35    44    51
+      04.05.2021 19:00     45    42     2      1     0        0    2    19    20     3   1    0    0    0     0     0     23     41       70        35    41    47
+      04.05.2021 20:00     28    26     0      2     0        1    2    9     14     1   1    0    0    0     0     0     19     40       61        31    43    49
+      04.05.2021 21:00     18    16     0      2     0        0    2    6     7      3   0    0    0    0     0     0     30     43       58        33    45    57
+      04.05.2021 22:00      4     2     0      2     0        0    1    2     1      0   0    0    0    0     0     0     29     37       45        29    39    45
+      04.05.2021 23:00      4     2     0      2     0        0    0    4     0      0   0    0    0    0     0     0     33     35       38        33    35    38
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                  g
+                                                                                                                          VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                        100
+
+
+                                                                                                              110
+
+
+
+
+                                                                                                                                          VMa
+      [Di, 4 Mai]           Σ
+
+
+
+
+                                                                                                                    >11
+
+
+
+
+                                                                                                                                 VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                         70
+
+
+                                                                                              80
+
+
+                                                                                                   90
+                                              LZ
+
+
+
+
+      00:00-06:00          42   36      1     5      0        2    5     13   19     3   0    0    0    0     0     0     17     40       52        30    41    49
+      06:00-09:00         299 267       22    10     0        1    32   138   116   12   0    0    0    0     0     0     20     39       57        32    40    45
+      15:00-19:00         387 357       12    18     0        38   11   126   175   36   1    0    0    0     0     0     11     39       63        31    41    49
+      06:00-22:00         1301 1177     72    52     3        43   82   533   543   94   3    0    0    0     0     0     8      40       70        33    40    48
+      00:00-24:00         1351 1217     73    61     3        45   88   552   563   97   3    0    0    0     0     0     8      40       70        32    40    48
+
+
+6/8                                                                                                                                        www.datacollect.com
+                                                                                                                                        powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                            x
+                                                                                                                      0
+
+
+
+
+                                                                                                                                   g
+                                                                                                                           VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                     V15
+
+
+                                                                                                                                                           V50
+
+
+                                                                                                                                                                 V85
+                                                                                                         100
+
+
+                                                                                                               110
+
+
+
+
+                                                                                                                                           VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                     >11
+
+
+
+
+                                                                                                                                  VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                          70
+
+
+                                                                                               80
+
+
+                                                                                                    90
+                                              LZ
+      05.05.2021 00:00      2     1     0      1     0        0    1    0     1      0    0    0    0    0     0     0     30     40       49        30    49    49
+      05.05.2021 01:00      2     2     0      0     0        0    1    1     0      0    0    0    0    0     0     0     30     35       40        30    40    40
+      05.05.2021 02:00      2     0     2      0     0        2    0    0     0      0    0    0    0    0     0     0     14     15       15        14    15    15
+      05.05.2021 03:00      1     1     0      0     0        0    0    0     1      0    0    0    0    0     0     0     50     50       50        50    50    50
+      05.05.2021 04:00      9     7     0      2     0        0    1    5     1      2    0    0    0    0     0     0     25     40       54        34    38    51
+      05.05.2021 05:00     26    23     0      3     0        0    3    7     11     4    1    0    0    0     0     0     23     43       62        32    46    52
+      05.05.2021 06:00     78    68     5      5     0        0    9    36    28     5    0    0    0    0     0     0     25     40       52        33    40    46
+      05.05.2021 07:00     125   116    6      3     0        2    4    48    61    10    0    0    0    0     0     0     14     41       55        33    41    49
+      05.05.2021 08:00     131   108    16     7     2        34   9    38    37    11    0    0    0    0     0     0     9      33       56        14    37    46
+      05.05.2021 09:00     88    76     9      3     1        1    6    42    34     4    0    0    0    0     0     0     7      39       55        34    40    44
+      05.05.2021 10:00     90    80     6      4     3        10   10   26    33     8    0    0    0    0     0     0     9      37       57        22    40    49
+      05.05.2021 11:00     88    82     3      3     1        3    7    34    39     4    0    0    0    0     0     0     9      39       53        31    40    46
+      05.05.2021 12:00     106   93     8      5     0        0    7    41    45    13    0    0    0    0     0     0     25     42       57        34    42    50
+      05.05.2021 13:00     95    87     4      4     0        2    7    44    32    10    0    0    0    0     0     0     16     40       57        32    40    47
+      05.05.2021 14:00     101   91     7      3     0        1    2    40    44    14    0    0    0    0     0     0     20     42       60        35    42    50
+      05.05.2021 15:00     119   114    3      2     0        4    4    36    64    11    0    0    0    0     0     0     14     42       58        35    43    49
+      05.05.2021 16:00     93    89     1      3     0        1    9    32    44     7    0    0    0    0     0     0     15     41       60        32    42    48
+      05.05.2021 17:00     82    78     1      3     1        1    2    32    38     8    0    0    0    0     0     0     9      41       55        34    41    49
+      05.05.2021 18:00     59    56     1      2     0        0    2    23    30     4    0    0    0    0     0     0     24     41       60        33    41    47
+      05.05.2021 19:00     38    33     4      1     0        1    2    17    14     4    0    0    0    0     0     0     20     40       60        32    40    47
+      05.05.2021 20:00     35    32     1      2     0        0    3    10    20     2    0    0    0    0     0     0     24     42       58        35    43    49
+      05.05.2021 21:00     19    17     0      2     0        0    0    8     9      1    1    0    0    0     0     0     34     43       61        35    43    50
+      05.05.2021 22:00      7     5     1      1     0        0    0    2     4      1    0    0    0    0     0     0     32     43       51        37    46    48
+      05.05.2021 23:00      2     0     1      1     0        0    0    2     0      0    0    0    0    0     0     0     36     36       36        36    36    36
+
+
+
+
+                                                                                                                                            x
+                                                                                                                      0
+
+
+
+
+                                                                                                                                   g
+                                                                                                                           VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                     V15
+
+
+                                                                                                                                                           V50
+
+
+                                                                                                                                                                 V85
+                                                                                                         100
+
+
+                                                                                                               110
+
+
+
+
+                                                                                                                                           VMa
+      [Mi, 5 Mai]           Σ
+
+
+
+
+                                                                                                                     >11
+
+
+
+
+                                                                                                                                  VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                              50
+
+
+                                                                                    60
+
+
+                                                                                          70
+
+
+                                                                                               80
+
+
+                                                                                                    90
+                                              LZ
+
+
+
+
+      00:00-06:00          42   34      2     6      0        2    6     13   14     6    1    0    0    0     0     0     14     40       62        30    41    51
+      06:00-09:00         334 292       27    15     2        36   22   122   126   26    0    0    0    0     0     0     9      38       56        28    39    47
+      15:00-19:00         353 337       6     10     1        6    17   123   176   30    0    0    0    0     0     0     9      41       60        34    42    49
+      06:00-22:00         1347 1220     75    52     8        60   83   507   572   116   1    0    0    0     0     0     7      40       61        32    41    48
+      00:00-24:00         1398 1259     79    60     8        62   89   524   590   123   2    0    0    0     0     0     7      40       62        32    41    48
+
+
+7/8                                                                                                                                         www.datacollect.com
+                                                                                                                                       powered by
+      Stadt Marburg: Herrmannstraße (Richtung: Querschnitt)
+
+
+
+
+                                                                                                                                           x
+                                                                                                                   0
+
+
+
+
+                                                                                                                                 g
+                                                                                                                         VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                      100
+
+
+                                                                                                            110
+
+
+
+
+                                                                                                                                          VMa
+      Zeit                  Σ
+
+
+
+
+                                                                                                                  >11
+
+
+
+
+                                                                                                                                VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                             50
+
+
+                                                                                  60
+
+
+                                                                                       70
+
+
+                                                                                            80
+
+
+                                                                                                 90
+                                              LZ
+      06.05.2021 00:00      2     1      0     1     0        0    0    2    0    0    0    0    0    0     0     0      32     36        40        32    40    40
+
+
+
+
+                                                                                                                                           x
+                                                                                                                     0
+
+
+
+
+                                                                                                                                   g
+                                                                                                                         VMin
+                                  PKW
+
+
+                                        LKW
+
+
+
+
+                                                                                                                                                    V15
+
+
+                                                                                                                                                          V50
+
+
+                                                                                                                                                                V85
+                                                                                                      100
+
+
+                                                                                                            110
+
+
+
+
+                                                                                                                                          VMa
+      [Do, 6 Mai]           Σ
+
+
+
+
+                                                                                                                  >11
+
+
+
+
+                                                                                                                                VAv
+                                                     10
+
+
+                                                              20
+
+
+                                                                   30
+
+
+                                                                        40
+
+
+                                                                             50
+
+
+                                                                                  60
+
+
+                                                                                       70
+
+
+                                                                                            80
+
+
+                                                                                                 90
+                                              LZ
+      00:00-06:00           2     1      0     1     0        0    0    2    0    0    0    0    0    0     0     0      32     36        40        32    40    40
+      06:00-09:00           0     0      0     0     0        0    0    0    0    0    0    0    0    0     0     0       -      -         -         -     -     -
+      15:00-19:00           0     0      0     0     0        0    0    0    0    0    0    0    0    0     0     0       -      -         -         -     -     -
+      06:00-22:00           0     0      0     0     0        0    0    0    0    0    0    0    0    0     0     0       -      -         -         -     -     -
+      00:00-24:00           2     1      0     1     0        0    0    2    0    0    0    0    0    0     0     0      32     36        40        32    40    40
+
+
+
+
+8/8                                                                                                                                        www.datacollect.com
+

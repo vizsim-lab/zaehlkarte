@@ -1,0 +1,26 @@
+{
+ "seiten": {
+  "ziele": 111,
+  "gelesen": 98,
+  "robots": 8
+ },
+ "seiten_sekunden": 26,
+ "fds": {
+  "anfragen": 11
+ },
+ "fds_sekunden": 51,
+ "eco_counter": {
+  "https://www.eco-visio.net/api/aladdin/1.0.0/pbl/publicwebpageplus/8080?withNull=true": "<HTTPError 404: 'Not Found'>",
+  "https://data.eco-counter.com/ParcPublic/?id=8080": "URLError(TimeoutError('timed out'))",
+  "https://hessen-mobil.eco-counter.com/": "<!DOCTYPE html><html lang=\"de\"><head><meta charSet=\"utf-8\"/>"
+ },
+ "eco_counter_sekunden": 145,
+ "portale": {
+  "frankfurt_fehler": 7,
+  "darmstadt_fehler": 7,
+  "fid_move_r3": 47,
+  "mobilithek": 5,
+  "geoportal": 21
+ },
+ "portale_sekunden": 51
+}
