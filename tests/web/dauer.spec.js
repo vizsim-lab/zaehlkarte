@@ -69,6 +69,9 @@ test("Umschalter lädt die Dauerzählstellen: alle Quellen am jüngsten Schultag
   await expect(quellen).toContainText("Berlin: 30.06.2025");
   await expect(quellen).toContainText("Hamburg: 10.07.2025");
   await expect(quellen).toContainText("Ettlingen: 10.07.2025");
+  // Quellen & Lizenzen: jede Familie mit ihrem eigenen Stand (die Fixture ist vom 12.11.2026)
+  await expect(page.locator("#quellen-dauer")).toContainText("Stand: 12.11.2026 (jede Woche neu gebaut)");
+  await expect(page.locator("#quellen-text")).toContainText(/Stand der Kurzzeitzählungen: \d\d\.\d\d\.\d{4}\./);
   await expect(page.locator('[data-section="filter"]')).toBeHidden();
   await expect(page.locator("#art-wahl")).toBeHidden();
   // Lkw (Berlin, Ettlingen) und Schwerverkehr (Hamburg) unter einem Chip, kein eigener Lkw-Chip
@@ -228,6 +231,7 @@ test("Dauerzählstellen auf Englisch", async ({ page }) => {
   await expect(page.locator('#dauer-modus [data-dmodus="j"]')).toHaveText("latest school day");
   await expect(page.locator("#klassen-legende")).toContainText("Motor vehicles, daily total on each site's latest school day");
   await expect(page.locator("#dauer-quellen")).toContainText("Days shown per source");
+  await expect(page.locator("#quellen-dauer")).toContainText("As of 12 Nov 2026 (rebuilt every week)");
   await expect(page.locator("#fc-zaehlungen-name")).toHaveText("complete");
   await page.locator('#dauer-modus [data-dmodus="t"]').click();
   await expect(page.locator("#klassen-legende")).toContainText("Motor vehicles, daily total on 26 Jun 2025");

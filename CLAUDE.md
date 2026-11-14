@@ -121,8 +121,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   (`.github/workflows/dauer.yml`, wöchentlich) – Ergebnis als Release-Asset, kein PR; danach
   startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de`,
   `opendata.readi.de` (Ettlingen) und die Rad-Quellen (MobiData BW, berlin.de, Open.NRW, die
-  Portale von Münster, Aachen, München, Würzburg, Neuss, Dortmund, Leipzig, Rostock und Bochums
-  GitLab) sind aus der Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch
+  Portale von Münster, Aachen, München, Würzburg, Neuss, Dortmund, Leipzig, Rostock, Bonn und
+  Düsseldorf und Bochums GitLab) sind aus der Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch
   `werkzeug/dauer`, `tools/lauf.sh`); GitHub geht (Münsters Repository).
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

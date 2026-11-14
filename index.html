@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Zählkarte – kommunale Verkehrszählungen</title>
-  <meta name="description" content="Kfz-, Schwerverkehrs-, Rad- und Fußverkehrszählungen der Kommunen auf einer Karte: Werte je Verkehrsart, Tagesgang je Zählung und wo es solche Daten gibt.">
+  <meta name="description" content="Verkehrszählungen der Kommunen auf einer Karte: Kurzzeitzählungen (Kfz, Schwerverkehr, Rad, Fuß) mit dem Tagesgang jeder Zählung, Dauerzählstellen mit Tagessummen und Stundenwerten – und wo es solche Daten gibt.">
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./main.js"></script>
 </head>
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="legend-subtext"><span data-i18n="legende.untertitel">Kommunale Verkehrszählungen</span> <br><span data-i18n="legende.arten">Kfz · Rad · Fuß</span>
-          <span class="info-icon" data-tip="Zwei Familien: Kurzzeitzählungen der Städte an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre). Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten." data-i18n-attr="data-tip:legende.info">i</span>
+          <span class="info-icon" data-tip="Zwei Familien: Kurzzeitzählungen der Kommunen an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre). Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten." data-i18n-attr="data-tip:legende.info">i</span>
         </div>
       </div>
       <button class="toggle-arrow toggle-root open" type="button" aria-expanded="true" aria-label="Legende ein-/ausklappen" data-i18n-attr="aria-label:legende.klappen"></button>
@@ -36,7 +36,7 @@
       <div class="legend-section" data-section="familie">
         <div class="legend-chips legend-chips--familie" id="familie-chips" role="radiogroup" aria-label="Zählungen" data-i18n-attr="aria-label:familie.titel">
           <button type="button" class="legend-chip is-active" data-familie="k" role="radio" aria-checked="true" title="Einzelne Zähltage an Knotenpunkten und Querschnitten" data-i18n="familie.k" data-i18n-attr="title:familie.k_tip">Kurzzeitzählungen</button>
-          <button type="button" class="legend-chip" data-familie="d" role="radio" aria-checked="false" title="Fest eingebaute Zähler: Tagessummen über Jahre, Stunden der jüngsten 12 Monate" data-i18n="familie.d" data-i18n-attr="title:familie.d_tip" disabled>Dauerzählstellen</button>
+          <button type="button" class="legend-chip" data-familie="d" role="radio" aria-checked="false" title="Fest eingebaute Zähler: Tagessummen über Jahre, Stundenwerte der jüngsten 12 Monate" data-i18n="familie.d" data-i18n-attr="title:familie.d_tip" disabled>Dauerzählstellen</button>
         </div>
         <div class="legend-hint" id="familie-hinweis" hidden></div>
       </div>
@@ -73,7 +73,7 @@
             </div>
             <input type="range" id="dauer-regler" class="dauer-regler" aria-label="Tag im Zeitraum" data-i18n-attr="aria-label:dauer.regler">
           </div>
-          <div class="legend-hint" data-i18n="dauer.hinweis">Tagessumme 0–24 Uhr je Zählstelle (meist eine Fahrtrichtung) – nur, wo jede Stunde des Tages gezählt ist.</div>
+          <div class="legend-hint" data-i18n="dauer.hinweis">Tagessumme 0–24 Uhr je Zählstelle (je nach Quelle eine Fahrtrichtung oder beide zusammen) – nur, wo jede Stunde des Tages gezählt ist.</div>
           <div class="dauer-quellen" id="dauer-quellen" hidden></div>
         </div>
         <div class="legend-items" id="klassen-legende"></div>

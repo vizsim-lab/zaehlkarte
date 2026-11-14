@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Danke! Kommune und Link genügen – den Rest schauen wir uns an.
-        Gemeint sind Kurzzeitzählungen der Kommunen (Knotenpunkte, Querschnitte, Rad, Fuß), keine Dauerzählstellen.
+        Gemeint sind gezählte Werte der Kommunen: Kurzzeitzählungen (Knotenpunkte, Querschnitte; Kfz, Rad, Fuß) und Dauerzählstellen (fest eingebaute Zähler mit Stunden- oder Tageswerten, ohne die von Bund und Ländern). Jahresmittel (DTV) und Verkehrsmengenkarten sammelt [vizsim/svz](https://github.com/vizsim/svz).
   - type: input
     id: kommune
     attributes:
@@ -15,6 +15,16 @@ body:
       placeholder: "z. B. Rostock"
     validations:
       required: true
+  - type: dropdown
+    id: familie
+    attributes:
+      label: Welche Zählungen?
+      options:
+        - "Kurzzeitzählungen (einzelne Zähltage)"
+        - "Dauerzählstellen (fest eingebaute Zähler)"
+        - "beides oder unklar"
+    validations:
+      required: false
   - type: dropdown
     id: stand
     attributes:

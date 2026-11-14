@@ -79,3 +79,27 @@ test("jeder Datenlage-Stand der Kartendaten hat eine englische Bezeichnung", () 
   const manifest = JSON.parse(readFileSync(new URL("../../public/data/manifest.json", import.meta.url), "utf-8"));
   assert.deepEqual(Object.keys(manifest.stand_en).sort(), Object.keys(manifest.stand).sort());
 });
+
+test("die deutschen Standardtexte in index.html sind die aus texte.js", () => {
+  // index.html trägt Deutsch als Standard (sichtbar vor dem ersten Sprachwechsel und ohne JS) –
+  // wer einen Text in texte.js ändert, zieht ihn dort mit
+  const html = readFileSync(new URL("../../index.html", import.meta.url), "utf-8");
+  const text = (s) => s.trim().replaceAll("&amp;", "&").replaceAll("&quot;", '"').replaceAll("&lt;", "<").replaceAll("&gt;", ">");
+  let n = 0;
+  for (const [, key, inhalt] of html.matchAll(/data-i18n="([^"]+)"[^>]*>([^<]*)</g)) {
+    assert.equal(text(inhalt), TEXTE.de[key], `data-i18n="${key}"`);
+    n++;
+  }
+  for (const [tag] of html.matchAll(/<\w+[^>]*data-i18n-attr="[^"]+"[^>]*>/g)) {
+    for (const paar of tag.match(/data-i18n-attr="([^"]+)"/)[1].split(";")) {
+      const [attr, key] = paar.split(":");
+      const wert = tag.match(new RegExp(`\\s${attr}="([^"]*)"`));
+      assert.ok(wert, `${attr} fehlt für ${key}`);
+      assert.equal(text(wert[1]), TEXTE.de[key], `${attr}:${key}`);
+      n++;
+    }
+  }
+  assert.ok(n > 50, `nur ${n} Texte gefunden`);
+  assert.equal(text(html.match(/<title>([^<]*)<\/title>/)[1]), TEXTE.de["dokument.titel"]);
+  assert.equal(text(html.match(/<meta name="description" content="([^"]*)"/)[1]), TEXTE.de["dokument.beschreibung"]);
+});

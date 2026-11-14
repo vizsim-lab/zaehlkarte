@@ -21,7 +21,7 @@ export function setzeSprache(s) {
 export const TEXTE = {
   de: {
     "dokument.titel": "Zählkarte – kommunale Verkehrszählungen",
-    "dokument.beschreibung": "Kfz-, Schwerverkehrs-, Rad- und Fußverkehrszählungen der Kommunen auf einer Karte: Werte je Verkehrsart, Tagesgang je Zählung und wo es solche Daten gibt.",
+    "dokument.beschreibung": "Verkehrszählungen der Kommunen auf einer Karte: Kurzzeitzählungen (Kfz, Schwerverkehr, Rad, Fuß) mit dem Tagesgang jeder Zählung, Dauerzählstellen mit Tagessummen und Stundenwerten – und wo es solche Daten gibt.",
     "karte": "Karte",
     "fehler.laden": "Die Karte konnte nicht geladen werden: {fehler}",
     "sprache.wahl": "Sprache wählen",
@@ -29,7 +29,7 @@ export const TEXTE = {
 
     "legende.untertitel": "Kommunale Verkehrszählungen",
     "legende.arten": "Kfz · Rad · Fuß",
-    "legende.info": "Zwei Familien: Kurzzeitzählungen der Städte an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre). Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten.",
+    "legende.info": "Zwei Familien: Kurzzeitzählungen der Kommunen an Knotenpunkten und Querschnitten (von Hand, per Video oder mit Messgeräten) und Dauerzählstellen (fest eingebaute Zähler, Stunden- und Tageswerte über Jahre). Nur gezählte Werte, keine Jahresmittel (DTV). Quellen und Lizenzen unten.",
     "legende.klappen": "Legende ein-/ausklappen",
 
     "thema.titel": "Verkehrsart",
@@ -102,7 +102,7 @@ export const TEXTE = {
     "quellen.klappen": "Quellen ein-/ausklappen",
     "quellen.umfang": "{zaehlungen} Zählungen an {stellen} Stellen",
     "quellen.ohne_lage": "{n} weitere Zählungen noch ohne Lage (nicht in der Karte)",
-    "quellen.karte": "Karte: © OpenStreetMap-Mitwirkende, OpenFreeMap; Relief: Mapterhorn. Stand der Daten: {datum}.",
+    "quellen.karte": "Karte: © OpenStreetMap-Mitwirkende, OpenFreeMap; Relief: Mapterhorn. Stand der Kurzzeitzählungen: {datum}.",
     "quellen.deutsch": "",
 
     "zaehler.stellen": "Stellen",
@@ -204,7 +204,7 @@ export const TEXTE = {
     "familie.k": "Kurzzeitzählungen",
     "familie.d": "Dauerzählstellen",
     "familie.k_tip": "Einzelne Zähltage an Knotenpunkten und Querschnitten",
-    "familie.d_tip": "Fest eingebaute Zähler: Tagessummen über Jahre, Stunden der jüngsten 12 Monate",
+    "familie.d_tip": "Fest eingebaute Zähler: Tagessummen über Jahre, Stundenwerte der jüngsten 12 Monate",
     "familie.d_fehlt": "Dauerzählstellen sind gerade nicht verfügbar ({fehler}).",
     "gruppe.lkw": "Lkw (Detektor)",
     "gruppe.sv_detektor": "Schwerverkehr (Detektor)",
@@ -240,9 +240,9 @@ export const TEXTE = {
     "dauer.vor": "Einen Tag vor",
     "dauer.datum": "Datum wählen",
     "dauer.regler": "Tag im Zeitraum",
-    "dauer.hinweis": "Tagessumme 0–24 Uhr je Zählstelle (meist eine Fahrtrichtung) – nur, wo jede Stunde des Tages gezählt ist.",
+    "dauer.hinweis": "Tagessumme 0–24 Uhr je Zählstelle (je nach Quelle eine Fahrtrichtung oder beide zusammen) – nur, wo jede Stunde des Tages gezählt ist.",
     "dauer.nicht": "an dem Tag nicht vollständig gezählt",
-    "dauer.nicht_tip": "Die Stelle besteht, aber mindestens eine Stunde des Tages fehlt (Ausfall oder Prüfung der Quelle). Ein Tag wird nie aufgefüllt oder hochgerechnet.",
+    "dauer.nicht_tip": "Die Stelle besteht, aber mindestens eine Stunde des Tages fehlt (Ausfall, Prüfung der Quelle oder eine Stunde, die die Quelle bei der Zeitumstellung nicht führt). Ein Tag wird nie aufgefüllt oder hochgerechnet.",
     "dauer.zaehler.stellen_tip": "Dauerzählstellen, die an dem Tag bestehen",
     "dauer.zaehler.voll": "vollständig",
     "dauer.zaehler.voll_tip": "Stellen, an denen jede Stunde des Tages gezählt ist",
@@ -273,11 +273,12 @@ export const TEXTE = {
     "dd.csv_stunden": "Stunden des Tags als CSV",
     "quellen.dauer": "Dauerzählstellen",
     "quellen.dauer_umfang": "{stellen} Stellen, {zeitraum}",
+    "quellen.dauer_stand": "Stand: {datum} (jede Woche neu gebaut)",
   },
 
   en: {
     "dokument.titel": "Zählkarte – municipal traffic counts",
-    "dokument.beschreibung": "Motor vehicle, heavy vehicle, cycling and pedestrian counts of German municipalities on one map: values per mode, the daily profile of each count, and where such data exist.",
+    "dokument.beschreibung": "Traffic counts of German municipalities on one map: short-term counts (motor vehicles, heavy vehicles, cycling, pedestrians) with the daily profile of each count, permanent counters with daily totals and hourly values – and where such data exist.",
     "karte": "Map",
     "fehler.laden": "The map could not be loaded: {fehler}",
     "sprache.wahl": "Choose language",
@@ -285,7 +286,7 @@ export const TEXTE = {
 
     "legende.untertitel": "Municipal traffic counts",
     "legende.arten": "Vehicles · Bikes · Pedestrians",
-    "legende.info": "Two families: short-term counts by German municipalities at junctions and cross-sections (by hand, on video or with counting devices) and permanent counters (fixed detectors, hourly and daily values over years). Counted values only, no annual averages (AADT). Sources and licences below.",
+    "legende.info": "Two families: short-term counts by German municipalities at junctions and cross-sections (by hand, on video or with counting devices) and permanent counters (permanently installed, hourly and daily values over years). Counted values only, no annual averages (AADT). Sources and licences below.",
     "legende.klappen": "Expand or collapse the legend",
 
     "thema.titel": "Mode",
@@ -358,7 +359,7 @@ export const TEXTE = {
     "quellen.klappen": "Expand or collapse sources",
     "quellen.umfang": "{zaehlungen} counts at {stellen} sites",
     "quellen.ohne_lage": "{n} more counts without a location yet (not on the map)",
-    "quellen.karte": "Map: © OpenStreetMap contributors, OpenFreeMap; terrain: Mapterhorn. Data as of {datum}.",
+    "quellen.karte": "Map: © OpenStreetMap contributors, OpenFreeMap; terrain: Mapterhorn. Short-term counts as of {datum}.",
     "quellen.deutsch": "The descriptions of the sources are in German.",
 
     "zaehler.stellen": "sites",
@@ -460,7 +461,7 @@ export const TEXTE = {
     "familie.k": "Short-term counts",
     "familie.d": "Permanent counters",
     "familie.k_tip": "Single count days at junctions and cross-sections",
-    "familie.d_tip": "Fixed detectors: daily totals over years, hours of the latest 12 months",
+    "familie.d_tip": "Permanently installed counters: daily totals over years, hourly values for the latest 12 months",
     "familie.d_fehlt": "Permanent counters are not available right now ({fehler}).",
     "gruppe.lkw": "Trucks (detector)",
     "gruppe.sv_detektor": "Heavy vehicles (detector)",
@@ -496,9 +497,9 @@ export const TEXTE = {
     "dauer.vor": "One day forward",
     "dauer.datum": "Choose date",
     "dauer.regler": "Day in the period",
-    "dauer.hinweis": "Daily total 0–24 h per counting site (usually one direction) – only where every hour of the day is counted.",
+    "dauer.hinweis": "Daily total 0–24 h per counting site (one direction or both together, depending on the source) – only where every hour of the day is counted.",
     "dauer.nicht": "not fully counted on this day",
-    "dauer.nicht_tip": "The site exists, but at least one hour of the day is missing (outage or the source's quality check). A day is never filled in or extrapolated.",
+    "dauer.nicht_tip": "The site exists, but at least one hour of the day is missing (outage, the source's quality check, or an hour the source leaves out at the clock change). A day is never filled in or extrapolated.",
     "dauer.zaehler.stellen_tip": "Permanent counters that exist on this day",
     "dauer.zaehler.voll": "complete",
     "dauer.zaehler.voll_tip": "Sites where every hour of the day is counted",
@@ -529,6 +530,7 @@ export const TEXTE = {
     "dd.csv_stunden": "Hours of the day as CSV",
     "quellen.dauer": "Permanent counters",
     "quellen.dauer_umfang": "{stellen} sites, {zeitraum}",
+    "quellen.dauer_stand": "As of {datum} (rebuilt every week)",
   },
 };
 

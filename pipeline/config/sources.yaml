@@ -869,9 +869,9 @@ dauer:
     portal: https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/
     basis: https://open-data.dortmund.de
     datensatz: fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke
-    stellen:  # Lage nicht im Datensatz: Knoten 5639350907 in OpenStreetMap (© OpenStreetMap-
-      # Mitwirkende, ODbL), „Dauerzählstelle Radverkehr“ mit Verweis auf die Eco-Counter-Seite der
-      # Stelle (Abfrage über Overpass, 13.11.2026)
+    stellen:  # Lage nicht im Datensatz: Knoten 5639350907 in OpenStreetMap
+      # (© OpenStreetMap-Mitwirkende, ODbL), „Dauerzählstelle Radverkehr“ mit Verweis auf die
+      # Eco-Counter-Seite der Stelle (Abfrage über Overpass, 13.11.2026)
       schnettkerbruecke:
         name: Schnettkerbrücke
         abschnitt: Fuß- und Radweg nördlich der B 1, zwischen Wittekindstraße und Dorstfelder Allee
@@ -889,8 +889,9 @@ dauer:
         Je Viertelstunde beide Richtungen zusammen; eine Stunde ist gezählt, wenn alle vier
         Viertelstunden einen Wert haben.
       - >-
-        Der Datensatz nennt keine Koordinaten; die Lage stammt aus OpenStreetMap (© OpenStreetMap-
-        Mitwirkende, ODbL), wo die Zählstelle mit ihrer Anzeigetafel eingetragen ist.
+        Der Datensatz nennt keine Koordinaten; die Lage stammt aus OpenStreetMap
+        (© OpenStreetMap-Mitwirkende, ODbL), wo die Zählstelle mit ihrer Anzeigetafel eingetragen
+        ist.
       - >-
         Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
         dieser Tag gilt als nicht vollständig gezählt.
@@ -1065,6 +1066,179 @@ dauer:
       - >-
         Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
         dieser Tag gilt als nicht vollständig gezählt.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+
+  # Dritte Runde (November 2026): Bonn und Düsseldorf (Werkzeug-Branch `werkzeug/dauer`,
+  # tools/rad_erkunden15–16.py; Aufbau und Fallen je Adapter und in AGENTS.md).
+  bonn_rad:
+    status: live
+    adapter: bonn_rad
+    name: Bonn (Rad-Zählstellen)
+    land: NW
+    traeger: Bundesstadt Bonn
+    art: >-
+      Fahrradmessstellen der Stadt (Eco-Counter, Induktionsschleifen); Stundenwerte je Zählstelle,
+      eine Datei je Jahr
+    weg: offen im Open-Data-Portal der Stadt (eine CSV je Jahr, nach Ende des Jahres)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025
+    katalog: https://opendata.bonn.de/data.json
+    ab_jahr: 2020  # 2019: bei Open.NRW unter geschlossener Lizenz (und Mac-Roman)
+    ohne_jahre: [2022]  # nur je Kanal; Kanäle derselben Stelle zählen gleichzeitig
+    rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal
+    stellen:  # Kennung der Datei („5.01 BN - …“); Lage aus OpenStreetMap (Knoten mit `ref` und
+      # operator=Stadt Bonn, © OpenStreetMap-Mitwirkende, ODbL; Abfrage über Overpass, 13.11.2026)
+      "5.01": {name: Kennedybrücke, abschnitt: Nordseite, lat: 50.739044, lon: 7.115346}  # 3573295199
+      "5.02": {name: Kennedybrücke, abschnitt: Südseite, lat: 50.737466, lon: 7.105983}  # 3573295196
+      "5.03": {name: Nordbrücke, abschnitt: Südseite, lat: 50.758595, lon: 7.104141}  # 3573295209
+      "5.04": {name: Nordbrücke, abschnitt: Nordseite, lat: 50.759051, lon: 7.103744}  # 3573295210
+      "5.05": {name: Südbrücke, abschnitt: Südseite, lat: 50.711852, lon: 7.139981}  # 3573295193
+      "5.06": {name: Südbrücke, abschnitt: Nordseite, lat: 50.719957, lon: 7.144591}  # 103962861
+      "5.07": {name: Estermannufer, lat: 50.768091, lon: 7.068817}  # 6270681304
+      "5.08": {name: Von-Sandt-Ufer, lat: 50.700823, lon: 7.166879}  # 6270681306
+      "5.09": {name: Rhenusallee, lat: 50.722268, lon: 7.133602}  # 1768253188
+      "5.10": {name: Bröhltalweg, lat: 50.742539, lon: 7.113631}  # 3573295202
+      "5.11": {name: Brühler Straße, lat: 50.740429, lon: 7.069423}  # 2988598302
+      "5.13": {name: Wilhelm-Spiritus-Ufer, lat: 50.728146, lon: 7.112066}  # 259666370
+      "5.14": {name: Mc Cloy Weg, lat: 50.671047, lon: 7.187897}  # 6270681305
+      "5.15": {name: Weg auf Damm Neil, lat: 50.733446, lon: 7.115042}  # 1378698849
+      "5.16": {lat: 50.715329, lon: 7.117448}  # 9856060192 – noch in keiner Jahresdatei
+      "5.17": {lat: 50.715865, lon: 7.116366}  # 9856060193 – noch in keiner Jahresdatei
+    titel: >-
+      Fahrradmessstellen Ergebnisse Radzählungen (verändert: Stundenwerte je Zählstelle zu
+      Tagessummen zusammengefasst)
+    herausgeber: Bundesstadt Bonn
+    quellenvermerk: Bundesstadt Bonn
+    lizenz: CC0 1.0
+    lizenz_url: https://creativecommons.org/publicdomain/zero/1.0/deed.de
+    hinweise:
+      - >-
+        Die Stadt veröffentlicht die Stundenwerte einmal im Jahr als Jahresdatei; in der Karte 2020,
+        2021 und ab 2023. Es fehlen 2019 (bei Open.NRW unter einer geschlossenen Lizenz geführt) und
+        2022: Die Datei 2022 nennt nur Kanäle, und die Kanäle einer Zählstelle zählen dort
+        gleichzeitig – welche zusammen die Stelle ergeben, sagt die Datei nicht.
+      - >-
+        Die Summen je Brücke (Kennedy-, Nord- und Südbrücke) sind nicht übernommen – ihre beiden
+        Seiten stehen als eigene Zählstellen in der Karte (Namen wie in der Quelle).
+      - >-
+        Die Daten nennen keine Lage; sie stammt aus OpenStreetMap (© OpenStreetMap-Mitwirkende,
+        ODbL), wo die Zählstellen der Stadt mit ihrer Kennung eingetragen sind. Der Stadtplan der
+        Stadt mit den Standorten war beim Abruf nicht erreichbar.
+      - >-
+        Am Tag der Rückstellung der Uhr steht 2 Uhr in der Quelle nur einmal – dieser Tag gilt als
+        nicht vollständig gezählt. Am Tag der Sommerzeit führt sie 3 Uhr zweimal, einmal leer; die
+        leere Zeile zählt nicht.
+      - >-
+        Die Quelle führt keinen Status – ob Werte rekonstruiert sind, ist nicht erkennbar. Ganze
+        Tage mit 0 kommen vor (etwa an der Südbrücke 2020) und erscheinen als gezählte Tage; am Mc
+        Cloy Weg stehen von Juni bis August 2025 Tageswerte von 10.000 bis über 50.000, ein
+        Vielfaches der übrigen Monate – in der Karte wie geliefert.
+      - >-
+        Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+  duesseldorf_rad:
+    status: live
+    adapter: duesseldorf_rad
+    name: Düsseldorf (Rad-Zählstellen)
+    land: NW
+    traeger: Landeshauptstadt Düsseldorf
+    art: >-
+      Dauerzählstellen Radverkehr der Stadt (Induktionsschleifen, Eco-Counter); Stundenwerte je
+      Zählstelle und Richtung, eine Datei je Zählstelle und Jahr, in der Karte beide Richtungen
+      zusammen
+    weg: offen über Open.NRW (eine CSV je Zählstelle und Jahr, nach Ende des Jahres)
+    ferien: schulferien_nordrhein-westfalen.csv
+    portal: https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d
+    api: https://open.nrw/api/3/action/package_search
+    suche: Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr
+    paket_muster: 'wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-(\d{4})-d'
+    ab_jahr: 2020  # bis 2019 „Andere geschlossene Lizenz“
+    lizenz_ressource: dl-by-de  # Lizenz je Ressource (2020: zwei Koblenzer Dateien geschlossen)
+    rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal
+    # Zuordnung über den Namen der Ressource (ohne „ - Wetterabhängige …“, Jahr und IN/OUT,
+    # Umlaute ausgeschrieben, klein; `duesseldorf_rad.norm`). Lage: Standorte der Stadt
+    # („Standorte der Dauerzählstellen Radverkehr in Düsseldorf“, dl-de/zero-2-0, Zählstellen_2.csv;
+    # Bilker Allee: Mitte der beiden Fahrtrichtungen), Hofgartenrampe und Luegallee aus
+    # OpenStreetMap (© OpenStreetMap-Mitwirkende, ODbL; Overpass, 13.11.2026).
+    stellen:
+      bilker_allee: {name: Bilker Allee, muster: 'bilker allee', lat: 51.21074, lon: 6.77141}
+      christophstrasse: {name: Christophstraße, muster: christophstrasse, lat: 51.19623, lon: 6.79654}
+      elisabethstrasse: {name: Elisabethstraße, muster: elisabethstrasse, lat: 51.21641, lon: 6.77528}
+      fleher_deich: {name: Fleher Deich, muster: 'fleher deich', lat: 51.187888, lon: 6.77799}
+      fleher_deich_ost:
+        {name: Fleher Deich, abschnitt: 'Ost, stromaufwärts', muster: 'fleher deich o(st)? stromauf(waerts)?',
+         lat: 51.18834, lon: 6.77571}
+      fleher_deich_west:
+        {name: Fleher Deich, abschnitt: 'West, stromabwärts', muster: 'fleher deich w(est)? stromab(waerts)?',
+         lat: 51.18774, lon: 6.77514}
+      fleher_deich_rampe: {muster: 'fleher deich rampe'}
+      friedrichstrasse: {name: Friedrichstraße, muster: friedrichstrasse, lat: 51.21461, lon: 6.77685}
+      hofgartenrampe:  # OSM-Knoten 10902621056
+        {name: Hofgartenrampe, abschnitt: Oederallee, muster: 'hofgartenrampe oederallee',
+         lat: 51.231714, lon: 6.775853}
+      kirchfeldstrasse: {name: Kirchfeldstraße, muster: kirchfeldstrasse, lat: 51.21246, lon: 6.77076}
+      koblenzer_nach_tls:
+        {name: Koblenzer Straße, abschnitt: 'einwärts, nach Theodor-Litt-Straße',
+         muster: 'koblenzer( strasse)? einwaerts nach tl ?s', lat: 51.14922, lon: 6.88603}
+      koblenzer_vor_tls:
+        {name: Koblenzer Straße, abschnitt: 'einwärts, vor Theodor-Litt-Straße',
+         muster: 'koblenzer( strasse)? einwaerts vor tl ?s', lat: 51.14898, lon: 6.88668}
+      koblenzer_stadtauswaerts:
+        {name: Koblenzer Straße, abschnitt: stadtauswärts, muster: 'koblenzer( strasse)? stadtauswaerts',
+         lat: 51.14911, lon: 6.88611}
+      koblenzer_strasse: {muster: 'koblenzer strasse'}
+      koe_steinstrasse:
+        {name: Königsallee, abschnitt: Steinstraße, muster: 'koe( steinstrasse)?', lat: 51.22324,
+         lon: 6.77918}
+      koelner_strasse_186: {name: Kölner Straße 186 (Radweg), muster: 'koelner strasse 186 radweg'}
+      lohauser_deich: {name: Lohauser Deich, muster: 'lohauser deich', lat: 51.27754, lon: 6.71409}
+      luegallee: {name: Luegallee, muster: luegallee, lat: 51.231494, lon: 6.75953}  # OSM 10929612054
+      mannesmannufer:
+        {name: Mannesmannufer, muster: 'mannesmann ?ufer( totem 01)?', lat: 51.22015, lon: 6.76712}
+      muenchener_ickerswarder:
+        {name: Münchener Straße, abschnitt: Ickerswarder Straße,
+         muster: 'muenche?ner( strasse)? icker?swarder str(asse)?', lat: 51.170336, lon: 6.821488}
+      oberkasseler_bruecke: {muster: 'oberkasseler bruecke'}
+      okb_nord: {name: Oberkasseler Brücke, abschnitt: Nord, muster: 'okb nord', lat: 51.23166, lon: 6.7632}
+      okb_sued: {name: Oberkasseler Brücke, abschnitt: Süd, muster: 'okb sued', lat: 51.23146, lon: 6.76324}
+      pempelforter_42: {name: Pempelforter Straße 42 (Mischverkehr), muster: 'pempelforter strasse 42 mischverkehr'}
+    ohne:  # Summen anderer Stellen (sonst doppelt in der Karte), aus den Tagessummen belegt
+      fleher_deich_rampe: Summe von Fleher Deich Ost und West (2020, 2023 bis 2025 an jedem Tag)
+      oberkasseler_bruecke: Summe von OKB Nord und OKB Süd (2023 bis 2025 an jedem Tag)
+      koblenzer_strasse: Summe der drei Koblenzer Stellen (2023 auf die Stunde)
+    ohne_dateien:  # Dateien, die nicht in die Karte kommen, mit Grund
+      2021: [koblenzer_nach_tls]  # Kopie von „vor TLS“ (beide Köpfe: „Koblenzer einwaerts vor TLS“)
+    titel: >-
+      Wetterabhängige Jahresübersicht der Dauerzählstellen Radverkehr (verändert: Richtungen und
+      Stundenwerte zu Tagessummen zusammengefasst, ohne Wetter)
+    herausgeber: Landeshauptstadt Düsseldorf
+    quellenvermerk: Landeshauptstadt Düsseldorf
+    lizenz: dl-de/by-2-0
+    lizenz_url: https://www.govdata.de/dl-de/by-2-0
+    hinweise:
+      - >-
+        Die Stadt veröffentlicht die Stundenwerte einmal im Jahr, je Zählstelle eine Datei; in der
+        Karte ab 2020 (vorher unter geschlossener Lizenz). Für 2022 gibt es keine Dateien. 2021
+        steht für „Koblenzer Straße einwärts, nach Theodor-Litt-Straße“ eine Kopie der Datei „vor
+        Theodor-Litt-Straße“ – nicht übernommen.
+      - >-
+        Je Zählstelle alle Richtungen zusammen; eine Stunde ist gezählt, wenn jede Richtung einen
+        Wert hat. Nicht in der Karte: Fleher Deich Rampe, Oberkasseler Brücke und Koblenzer Straße –
+        laut Daten die Summen anderer Zählstellen; Kölner Straße 186 und Pempelforter Straße 42 –
+        keine Lage gefunden.
+      - >-
+        Die Quelle unterscheidet nicht immer zwischen einem Ausfall und null Rädern: Friedrichstraße
+        2023 und Luegallee 2025 führen jede gezählte Stunde mit 0, Luegallee schon 2024 die meisten
+        Tage – in der Karte als gezählte Tage. Am Mannesmannufer stehen 2020 viele Stunden doppelt;
+        sie gelten als nicht gezählt.
+      - >-
+        Lage laut den Standorten der Stadt (dl-de/zero-2-0); Hofgartenrampe und Luegallee fehlen
+        dort und stammen aus OpenStreetMap (© OpenStreetMap-Mitwirkende, ODbL).
+      - >-
+        Am Tag der Rückstellung der Uhr steht 2 Uhr in der Quelle nur einmal – dieser Tag gilt als
+        nicht vollständig gezählt.
+      - >-
+        Die Quelle führt keinen Status – ob Werte rekonstruiert sind, ist nicht erkennbar.
       - >-
         Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
 
@@ -1390,6 +1564,15 @@ datenlage:
     lon: 6.7735
     lat: 51.2277
     stand: aggregiert
+    dauer:
+      stand: in_karte
+      was: >-
+        Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung als Jahresdateien,
+        offen ab 2020 (dl-de/by-2-0; 2012–2019 unter geschlossener Lizenz, 2022 nicht
+        veröffentlicht) – in der Karte als Dauerzählstellen
+      links:
+        - ["Jahresübersicht Dauerzählstellen Radverkehr 2025 (Open.NRW)", "https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d"]
+        - ["Standorte der Dauerzählstellen Radverkehr (Open.NRW)", "https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d"]
     was: >-
       Mittel der Zählungen der letzten fünf Jahre je Abschnitt (DTV je Fahrzeugart, Stand 2019 und
       2024) – in vizsim/svz
@@ -1993,8 +2176,8 @@ datenlage:
       nur über eine Schnittstelle mit Schlüssel. Beides wären Dauerzählstellen; in der Karte sind
       davon nur die Rad-Zählstellen (über MobiData BW).
     empfehlung: >-
-      Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz Baden-
-      Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
+      Manuelle Knotenpunktzählungen anfragen. Grundlage: Landesinformationsfreiheitsgesetz
+      Baden-Württemberg; die Stadt hat dafür eine eigene Koordinierungsstelle.
     weg: "FragDenStaat, LIFG BW"
     kontakt: {name: "Stadt Heidelberg", email: "Koordinierungsstelle-LIFG@Heidelberg.de", fds: "https://fragdenstaat.de/behoerde/9232/stadt-heidelberg/"}
     anfrage: true

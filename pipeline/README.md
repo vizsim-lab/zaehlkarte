@@ -28,7 +28,9 @@ dauer fetch  -> data/raw/berlin_viz/     Berlin: Monatsarchive der Verkehrsdetek
                                          Würzburg, Rhein-Kreis Neuss, Dortmund (Opendatasoft-Export,
                                          nur bei Änderung), Essen (Quartale über Open.NRW), Leipzig
                                          (WFS -> gedaechtnis/), Rostock (CSV, GeoJSON), Bochum
-                                         (GitLab, eine CSV je Zählstelle)
+                                         (GitLab, eine CSV je Zählstelle), Bonn (Jahresdateien aus
+                                         dem Katalog der Stadt), Düsseldorf (Jahresdateien je
+                                         Zählstelle über Open.NRW, nur bei Änderung)
 dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (nicht im Git)
 ```
 
@@ -62,6 +64,8 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/leipzig_rad.py` | Leipzig: WFS mit 31 Tagen, Gedächtnis; doppelte 2 Uhr nach objectid, jüngste Lieferung gilt |
 | `dauer/rostock_rad.py` | Rostock: Radmonitore, 15-Minuten-Werte mit Versatz, Standorte als GeoJSON |
 | `dauer/bochum_rad.py` | Bochum: Gesamtdatei je Zählstelle aus dem GitLab der Stadt, nur Rad |
+| `dauer/bonn_rad.py` | Bonn: Jahresdateien (Stundenauswertung), zwei Zeitformate, Summen der Brücken weg, Lage aus OSM |
+| `dauer/duesseldorf_rad.py` | Düsseldorf: Jahresdateien je Zählstelle, Zuordnung über den Namen, vier Formate, Summen weg |
 | `dauer/gedaechtnis.py` | Gedächtnis der Quellen mit kurzer Vorhaltezeit (Hamburg, Leipzig): Monatsdateien je UTC-Tag |
 | `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen) |
 | `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen (Workflow) |
@@ -84,8 +88,10 @@ uv run zaehlkarte build            # Bericht ohne zu schreiben
 uv run zaehlkarte site             # Kartendaten schreiben (~1,5 min)
 uv run zaehlkarte datenlage        # nur datenlage.json und docs/DATENLAGE.md (aus sources.yaml
                                    # und der vorhandenen index.json, ohne neuen Bau)
-uv run zaehlkarte dauer fetch      # Dauerzählstellen: ~330 MB (Berliner Monatsarchive), Hamburg
-                                   # über SensorThings (erster Abruf ohne Gedächtnis: einige Minuten)
-uv run zaehlkarte dauer site       # public/data/dauer/ schreiben (~30 MB, ~5 min)
+uv run zaehlkarte dauer fetch      # Dauerzählstellen: Berliner Monatsarchive (~330 MB), Rostock
+                                   # (~200 MB), Ettlingen (~40 MB), Münster (~25 MB) und die übrigen
+                                   # Rad-Quellen; Hamburg und Leipzig über ihre Schnittstellen (erster
+                                   # Abruf ohne Gedächtnis: einige Minuten)
+uv run zaehlkarte dauer site       # public/data/dauer/ schreiben (~70 MB, gepackt ~20 MB, ~5 min)
 uv run pytest && uvx ruff check
 ```
