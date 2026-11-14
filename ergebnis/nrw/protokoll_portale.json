@@ -1,0 +1,43 @@
+{
+ "govdata": {
+  "Verkehrszählung": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsz%C3%A4hlung&rows=1000')",
+  "Verkehrszählungen": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsz%C3%A4hlungen&rows=1000')",
+  "Verkehrsmengen": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsmengen&rows=1000')",
+  "Zählstellen": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Z%C3%A4hlstellen&rows=1000')",
+  "Zählstelle": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Z%C3%A4hlstelle&rows=1000')",
+  "Zähldaten": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Z%C3%A4hldaten&rows=1000')",
+  "Verkehrsstärke": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsst%C3%A4rke&rows=1000')",
+  "Verkehrsbelastung": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsbelastung&rows=1000')",
+  "Radverkehrszählung": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Radverkehrsz%C3%A4hlung&rows=1000')",
+  "Radzählstelle": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Radz%C3%A4hlstelle&rows=1000')",
+  "Fahrradzählstelle": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Fahrradz%C3%A4hlstelle&rows=1000')",
+  "Radverkehr Zählung": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Radverkehr+Z%C3%A4hlung&rows=1000')",
+  "Knotenpunktzählung": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Knotenpunktz%C3%A4hlung&rows=1000')",
+  "Verkehrsdaten": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrsdaten&rows=1000')",
+  "Verkehrserhebung": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Verkehrserhebung&rows=1000')",
+  "Dauerzählstelle": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Dauerz%C3%A4hlstelle&rows=1000')",
+  "Nordrhein-Westfalen Verkehr": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Nordrhein-Westfalen+Verkehr&rows=1000')",
+  "Nordrhein-Westfalen Zählung": "Gesperrt('https://www.govdata.de/ckan/api/3/action/package_search?q=Nordrhein-Westfalen+Z%C3%A4hlung&rows=1000')",
+  "pakete": 0,
+  "ok": true,
+  "sekunden": 9
+ },
+ "opennrw": {
+  "Verkehrszählung": "URLError(TimeoutError('timed out'))",
+  "Verkehrszählungen": "URLError(TimeoutError('timed out'))",
+  "Verkehrsmengen": "URLError(TimeoutError('timed out'))",
+  "ok": true,
+  "sekunden": 137
+ },
+ "mobilithek": {
+  "ok": true,
+  "sekunden": 57
+ },
+ "osm": {
+  "anzahl": 215,
+  "server": "https://overpass.kumi.systems/api/interpreter",
+  "ok": true,
+  "sekunden": 99
+ },
+ "gesamt_sekunden_portale": 302
+}
