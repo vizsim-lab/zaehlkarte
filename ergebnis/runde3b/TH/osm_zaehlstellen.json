@@ -1,0 +1,22 @@
+[
+ {
+  "osm": "node/3164371295",
+  "lat": 51.3427838,
+  "lon": 11.3418436,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "power": "cable_distribution_cabinet",
+   "voltage": "400"
+  }
+ },
+ {
+  "osm": "node/14191275505",
+  "lat": 50.9980446,
+  "lon": 11.0121798,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ }
+]
