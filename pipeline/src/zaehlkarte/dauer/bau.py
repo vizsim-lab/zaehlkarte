@@ -36,6 +36,13 @@ ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta,
            "bochum_rad": bochum_rad, "bonn_rad": bonn_rad, "duesseldorf_rad": duesseldorf_rad}
 
 
+def mit_gedaechtnis(pfade: Pfade | None = None) -> list[str]:
+    """Codes der live-Quellen, deren Adapter die Stunden selbst aufhebt (`GEDAECHTNIS = True` im
+    Modul) – für sie prüft `zaehlkarte dauer frische`, ob das Gedächtnis noch wächst."""
+    return [c for c, q in dauerquellen(pfade).items()
+            if getattr(ADAPTER[q["adapter"]], "GEDAECHTNIS", False)]
+
+
 def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list[str], list[str]]:
     """-> (Log, Quellen mit Fehler). Scheitert eine Quelle, laufen die anderen weiter – gebaut
     wird dann mit dem, was schon da ist (Rohdaten im Cache, Gedächtnis aus dem Release)."""

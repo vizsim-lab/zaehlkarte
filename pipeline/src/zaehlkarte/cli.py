@@ -1,5 +1,6 @@
 """Kommandozeile: `uv run zaehlkarte fetch | build | site` (aus pipeline/), für die
-Dauerzählstellen `uv run zaehlkarte dauer fetch | site` (Kartendaten unter public/data/dauer/)."""
+Dauerzählstellen `uv run zaehlkarte dauer fetch | site | frische` (Kartendaten unter
+public/data/dauer/; `frische` prüft das Gedächtnis)."""
 
 from __future__ import annotations
 
@@ -118,6 +119,27 @@ def dauer_fetch(quelle: Quellen = None) -> None:
         typer.echo(f"Abruf gescheitert: {', '.join(fehler)}")
     versucht = [c for c in dauerquellen(Pfade()) if not quelle or c in quelle]
     if fehler and len(fehler) == len(versucht):
+        raise typer.Exit(1)
+
+
+@dauer.command("frische")
+def dauer_frische(
+    tage: Annotated[float, typer.Option(help="höchstes Alter der jüngsten Stunde")] = 10,
+) -> None:
+    """Gedächtnis prüfen (Quellen, die Stundenwerte nur kurz vorhalten): Exit-Code 1, wenn die
+    jüngste Stunde einer Quelle älter als `--tage` ist – dann scheitert ihr Abruf seit mindestens
+    einem Wochenlauf, und bald fehlen Stunden für immer (Leipzig hält 31 Tage vor)."""
+    from datetime import UTC, datetime
+
+    from zaehlkarte.config import Pfade
+    from zaehlkarte.dauer import bau, gedaechtnis
+
+    pfade = Pfade()
+    zeilen, alt = gedaechtnis.frische(pfade.roh, bau.mit_gedaechtnis(pfade), datetime.now(UTC),
+                                      tage)
+    for z in zeilen:
+        typer.echo(z)
+    if alt:
         raise typer.Exit(1)
 
 

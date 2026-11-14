@@ -47,6 +47,7 @@ from zaehlkarte.dauer.gedaechtnis import schreibe as schreibe_gedaechtnis
 from zaehlkarte.dauer.modell import Dauerstelle, Messreihe, kuerze, setze_utc
 
 UA = abruf.UA
+GEDAECHTNIS = True  # hebt die Stunden selbst auf (bau.mit_gedaechtnis, `zaehlkarte dauer frische`)
 ZEIT = re.compile(r"^(\d{4}-\d{2}-\d{2})T(\d{2}):00:00(?:\.0+)?Z/\1T\2:59:59(?:\.\d+)?Z$")
 # „… bezüglich Zählstelle 0248 auf dem Richtungsarm Nordost von Nordost nach Südwest“
 ARM = re.compile(r"Richtungsarm (\S+)")
