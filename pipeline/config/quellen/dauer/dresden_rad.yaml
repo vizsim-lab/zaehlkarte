@@ -11,14 +11,14 @@ name: Dresden (Rad-Zählstellen)
 land: SN
 traeger: Landeshauptstadt Dresden
 art: >-
-  Rad-Dauerzählstellen: Stundenwerte je Richtung seit Oktober 2017, in der Karte die Summe je
+  Rad-Dauerzählstellen: Stundenwerte je Richtung seit September 2009, in der Karte die Summe je
   Zählstelle; auch drei nicht mehr betriebene Zählstellen (darunter die Carolabrücke)
 weg: offen über die OGC-API-Schnittstelle des Themenstadtplans, ohne Lizenzangabe
 portal: https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////
 api: https://kommisdd.dresden.de/net4/public/ogcapi/collections/
 werte: L1780  # Radverkehr – Dauerzählstellen – alle Zählwerte (veröffentlicht)
 aktuell: L1781  # Radverkehr – Dauerzählstellen – aktuelle Zählwerte (veröffentlicht), mit Lage
-ab_jahr: 2017  # die ersten Werte: 10.10.2017
+ab_jahr: 2009  # die ersten Werte: 25.09.2009 (St. Petersburger Straße)
 rueck: einfach  # am Rückstelltag steht 2 Uhr nur einmal (seit 2025 dazu eine Zeile mit krummer Minute)
 titel: >-
   Landeshauptstadt Dresden: Radverkehr – Dauerzählstellen – alle Zählwerte (veröffentlicht)
