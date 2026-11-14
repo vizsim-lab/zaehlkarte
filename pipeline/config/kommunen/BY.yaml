@@ -130,13 +130,16 @@
   lage: [9.9502, 49.8005]
   dauer:
     stand: in_karte
-    quellen: [wuerzburg_rad]
+    quellen: [wuerzburg_rad, wuerzburg_fuss]
     was: >-
-      sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 (dl-de/by-2-0) – in der Karte als
-      Dauerzählstellen; offen dazu eine Passantenzählung mit Stundenwerten (Lasersensoren,
-      dl-de/by-2-0) – Fußverkehr ist noch keine Gruppe der Karte
+      sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 und die Passantenzählung an drei
+      Standorten der Innenstadt (Laserscanner von hystreet.com, Stundenwerte Januar 2024 bis Mai
+      2026), beide dl-de/by-2-0 – in der Karte als Dauerzählstellen. Ältere Stundenwerte der
+      Passantenzählung (Schönbornstraße seit April 2019, Kaiser- und Spiegelstraße seit Oktober
+      2022) stehen in eigenen Datensätzen je Standort, noch nicht in der Karte
     links:
       - ["Fahrradzählung Würzburg", "https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/"]
+      - ["Passantenzählung – Stundendaten", "https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/"]
       - ["Mobilithek: Passantenzählung Würzburg (Stundendaten)", "https://mobilithek.info/offers/-8264466313321172654"]
 - ags: "09184138"
   name: Planegg

@@ -19,10 +19,12 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
   Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen und die Rad-Zählstellen von
   Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
-  Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen in
+  Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen und dem Land in
   Baden-Württemberg und in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau
-  und Verkehr, Hannover, Region Hannover, Braunschweig und vier weitere Kommunen); Fuß in Augsburg
-  (Passantenzählung Annastraße) und Bochum (fünf Rad- und Fuß-Zählstellen).
+  und Verkehr, Hannover, Region Hannover, Braunschweig und vier weitere Kommunen), dazu der
+  Radschnellweg RS5 in Neuss; Fuß in Augsburg (Passantenzählung Annastraße), Würzburg
+  (Passantenzählung an drei Standorten der Innenstadt) und Bochum (fünf Rad- und
+  Fuß-Zählstellen).
   Die Karte zeigt je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags oder
   eines wählbaren Tags (Kfz zuerst, Rad, Fuß und Lkw/Schwerverkehr über die Chips), die
   Seitenleiste die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
@@ -59,7 +61,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
 | Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; in der Karte rund 1.120 Zählstellen, Straßennamen aus OpenStreetMap | vollständig gezählte Tage: Kfz und Rad ab 09.09.2026, Schwerverkehr ab 01.03.2026; wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
 | Ettlingen (Stadt Ettlingen) | automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der Karte als Kfz (Summe der Klassen) und Lkw (Lkw und Lkw mit Anhänger); 10 Richtungen an 5 Stellen mit vollständigen Tagen | ab 20.08.2026 (ältere Werte ab Mai 2025 nicht übernommen); wöchentlich ergänzt | offen im [Open-Data-Portal re@di](https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen) (Datastore) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.de) – nur nicht kommerziell, „Stadt Ettlingen“ |
-| Baden-Württemberg: 27 Städte und Landkreise (gebündelt von MobiData BW) | Rad-Zählstellen, meist Eco-Counter: Stundenwerte je Zählstelle, beide Richtungen zusammen; in der Karte 178 Zählstellen | 2013 – Anfang November 2026; wöchentlich ergänzt (die jüngsten drei Tage erst beim nächsten Bau) | offen auf [MobiData BW](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler) (Monatsdateien) | dl-de/by-2-0, „MobiData BW“ |
+| Baden-Württemberg: 27 Städte und Landkreise und das Land (gebündelt von MobiData BW) | Rad-Zählstellen, meist Eco-Counter: Stundenwerte je Zählstelle, beide Richtungen zusammen; in der Karte 179 Zählstellen (eine davon des Landes, in Bad Wimpfen) | 2013 – Anfang November 2026; wöchentlich ergänzt (die jüngsten drei Tage erst beim nächsten Bau) | offen auf [MobiData BW](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler) (Monatsdateien) | dl-de/by-2-0, „MobiData BW“ |
 | Münster (Stadt Münster) | Rad-Zählstellen (Eco-Counter): 15-Minuten-Werte je Kanal mit Status, in der Karte Stundenwerte je Zählstelle aus Rohwerten und geprüften Werten; 23 Zählstellen | 2019–2026; wöchentlich ergänzt | offen im [GitHub-Repository der Stadt](https://github.com/od-ms/radverkehr-zaehlstellen) (nächtlich aktualisiert), Lage im [Open-Data-Portal](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten) | dl-de/by-2-0, „Stadt Münster“ |
 | Aachen (Stadt Aachen) | Radzählstellen: Stundenwerte je Richtung (UTC), in der Karte die Summe je Zählstelle; 26 Zählstellen | 2025–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen) (CSV je Jahr, Standorte als PDF) | dl-de/zero-2-0 |
 | Berlin (Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt) | Rad-Zählstellen: Stundenwerte, meist je Richtung; farbig markierte Werte (rekonstruiert, unplausibel, keine Daten) nicht übernommen; 33 Zählstellen | 2012–2025; einmal im Jahr ergänzt | offen auf [berlin.de](https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/) (eine Excel-Datei) | dl-de/zero-2-0 |
@@ -76,6 +78,8 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Niedersachsen: Landesbehörde für Straßenbau und Verkehr, Hannover, Region Hannover, Braunschweig, Verden (Aller), Samtgemeinde Gellersen, Rotenburg (Wümme), Jemgum (VMZ Niedersachsen) | Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten: Stundenwerte je Zählstelle, Richtungen und Straßenseiten wie die Quelle sie führt; Störungen der Quelle als nicht gezählt; 74 Zählstellen | 2017–2026 (Hannover seit 2017, die Landesbehörde seit Ende 2023); seit dem 25.10.2026 keine neuen Werte außer Jemgum und Rotenburg; wöchentlich ergänzt | offen in der [Zählstellenübersicht der VMZ Niedersachsen](https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/) (Zählerabfrage) | ohne Lizenz (siehe unten) |
 | Dresden (Landeshauptstadt Dresden) | Rad-Dauerzählstellen: Stundenwerte je Richtung, in der Karte die Summe je Zählstelle; Zeilen mit krummen Minuten an den Umstelltagen nicht übernommen; 38 Zählstellen, 35 in Betrieb | September 2009 – 2026; wöchentlich ergänzt | offen über die [OGC-API des Themenstadtplans](https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780) (je Jahr eine CSV), [Open-Data-Portal](https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////) | ohne Lizenz (siehe unten) |
 | Augsburg (Stadt Augsburg, Wirtschaftsförderung) | Passantenzählung in der Fußgängerzone Annastraße: Personen je Stunde, beide Richtungen zusammen; fehlende Stunden (fast nur nachts) bleiben nicht gezählt; 1 Zählstelle, Lage aus OpenStreetMap | Dezember 2020 – 2026; laufend ergänzt | offen als CSV auf augsburg.de, verzeichnet in der [Mobilithek](https://mobilithek.info/offers/-1747083335311792689) | CC BY 4.0, „Stadt Augsburg“ |
+| Neuss (Stadt Neuss) | Rad-Dauerzählstelle am Radschnellweg RS5 (Hammer Landstraße): ein Wert je Stunde, ohne Richtung; 1 Zählstelle, Lage ungefähr (der Datensatz nennt keine Koordinaten) | Juli 2026 – 2026; wöchentlich ergänzt | offen im [Open-Data-Portal des Rhein-Kreises Neuss](https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/) (Opendatasoft, täglich aktualisiert) | CC BY-SA 4.0, „Stadt Neuss“ (Weitergabe unter gleichen Bedingungen) |
+| Würzburg (Stadt Würzburg, Messung hystreet.com) | Passantenzählung an drei Standorten der Innenstadt (Schönborn-, Spiegel-, Kaiserstraße; Laserscanner): Personen je Stunde, beide Richtungen zusammen; als „unverifiziert“ gekennzeichnete Stunden zählen wie Rohwerte; Lage laut Datensatz | Januar 2024 – Mai 2026 (seitdem nicht fortgeschrieben) | offen im [Open-Data-Portal der Stadt](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/) (Opendatasoft) | dl-de/by-2-0, „Stadt Würzburg; hystreet.com GmbH“ |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`, die der Dauerzählstellen in
@@ -162,7 +166,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   beide: jede Stelle in ihrer Klasse und mit deren Namen, nie zusammengezählt; die Legende nennt,
   welche Stadt welche Klasse zählt. Welche Verkehrsarten es gibt, richtet sich nach den Quellen
   (Kfz, Lkw/Schwerverkehr, Rad, Fuß); die Karte öffnet mit Kfz. Die Stufen für Fuß trennen Rad-
-  und Fußwege (Bochum: meist 100 bis 500 am Tag) von Fußgängerzonen (Augsburg: rund 17.600).
+  und Fußwege (Bochum: meist 100 bis 500 am Tag) von Fußgängerzonen (Augsburg: rund 17.600,
+  Würzburg: MEDIANE).
 - **Datenlage:** Die Ebene „Datenlage je Kommune“ folgt der Familie – bei den Dauerzählstellen
   mit eigenem Stand je Kommune und eigenen Belegen; beide Familien nutzen dieselben Stände (in der
   Karte, offen, herausgegeben, aussichtsreich, ohne Lizenz, nur Summen, nichts offen …).
@@ -192,7 +197,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   sind nicht übernommen. Lizenz CC BY-NC 4.0: Weiterverwendung nur nicht kommerziell; die
   Lizenz steht an der Quelle, in der Seitenleiste und in jeder Zeile des CSV-Exports.
 - Rad-Zählstellen (Berlin, Münster, Aachen, München, Baden-Württemberg über MobiData BW,
-  Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Bochum, Bonn, Düsseldorf, Leipzig, Rostock):
+  Würzburg, Rhein-Kreis Neuss, Neuss, Dortmund, Essen, Bochum, Bonn, Düsseldorf, Leipzig,
+  Rostock):
   Zählschleifen oder -säulen, meist von Eco-Counter; in der Karte je Zählstelle die Summe ihrer
   Richtungen – wo die Quelle jede Richtung als eigene Zählstelle führt (Berlin meist, Würzburg
   am Greinberg), steht jede für sich. Gezählt ist nur, was die Quelle als Rohwert oder geprüften
@@ -201,18 +207,19 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Status je Wert, Rhein-Kreis Neuss: „modified“, Berlin: Zellfarbe). Die übrigen Quellen führen
   keinen Status: Aachen und München lassen Ausfälle leer; bei MobiData BW stecken nachweislich
   rekonstruierte Werte in den Stundenwerten, bei Dortmund, Essen, Bochum, Bonn, Düsseldorf,
-  Leipzig und Rostock lässt es sich nicht prüfen. Wo die Quelle einen Ausfall als 0 führt
+  Leipzig, Rostock und am RS5 in Neuss lässt es sich nicht prüfen. Wo die Quelle einen Ausfall als 0 führt
   (Würzburg-Heidingsfeld, Rhein-Kreis Neuss, Rostock, Bonn, Düsseldorf), erscheint der Tag als
   gezählt (Hinweis an der Quelle).
 - Nicht in der Karte (Gründe in der Quelldatei und an der Quelle): Zählstellen, die Rad und Fuß
-  zusammen zählen, eine Zählstelle des Landes, und Stellen, die nur die Summe anderer sind oder
-  deren Gerät schon unter anderen Stellen zählt (sonst doppelt: die Brücken-Summen in Bonn, drei
+  zusammen zählen, und Stellen, die nur die Summe anderer sind oder deren Gerät schon unter
+  anderen Stellen zählt (sonst doppelt: die Brücken-Summen in Bonn, drei
   Stellen in Düsseldorf, je eine in Stuttgart und Rostock). Bochum zählt Fuß getrennt – in der
   Karte stehen Rad und Fuß als eigene Verkehrsarten, ohne die Springorumtrasse Süd, an der laut
   Stadt Rad-Kanäle fehlen.
 - Zeitumstellung bei den Rad-Zählstellen: Bei der Rückstellung der Uhr fassen MobiData BW,
   Münster und Berlin beide Stunden 2–3 Uhr unter einer Uhrzeit zusammen; in München, Würzburg,
-  Dortmund, Essen, Bochum, Bonn, Düsseldorf, Rostock und im Rhein-Kreis Neuss fehlt eine davon
+  Dortmund, Essen, Bochum, Bonn, Düsseldorf, Rostock, im Rhein-Kreis Neuss und am RS5 in Neuss
+  fehlt eine davon
   oder ist unvollständig – der Tag gilt als nicht vollständig gezählt. Leipzig führt beide
   Stunden, Aachen liefert UTC.
 

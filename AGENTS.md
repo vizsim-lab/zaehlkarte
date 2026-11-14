@@ -392,7 +392,8 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
     Jahr eine Excel-Datei mit Tageswerten je Richtung, ohne Lizenz.
   - **Mobilithek:** Detektordaten Regensburg (eingeschränkte Lizenz, nur vermittelt), Stadtwerke
     Schweinfurt (ohne Lizenz), Kfz-Dauerzählstellen München (nur mit Vertrag); Fußverkehr stündlich
-    offen in Augsburg (Annastraße, CC BY 4.0) und Würzburg (dl-de/by-2-0).
+    offen in Augsburg (Annastraße, CC BY 4.0) und Würzburg (dl-de/by-2-0) – beide seit November
+    2026 in der Karte.
   - **Gezählt, nicht offen:** Regensburg (eigene Zählungen März–Oktober, 6–10 und 15–19 Uhr);
     nur als Plan: Erlangen (Verkehrsbelastungsplan 2017).
 - Übrige Länder, Runde 3 (November 2026, Kommune für Kommune wie Niedersachsen; Websites je Land:
@@ -544,7 +545,8 @@ robots.txt für alle Robots sperrt. Seitdem:
 - **Ausnahmen** (die Projektleitung will die Quellen nicht verlieren; bis die Betreiber
   antworten): Potsdam (Opendatasoft-API, Zählpläne auf de.ftp.opendatasoft.com – ganz gesperrt),
   Würzburg, Rhein-Kreis Neuss, Dortmund (Opendatasoft `/api/explore/`; auch
-  `/explore/dataset/*/download` ist gesperrt), Rostock (geo.sv.rostock.de und opendata-hro.de
+  `/explore/dataset/*/download` ist gesperrt; seit 14.11.2026 auch für Würzburgs
+  Passantenzählung und den RS5 der Stadt Neuss im Portal des Kreises), Rostock (geo.sv.rostock.de und opendata-hro.de
   ganz), Bochum (openCode-GitLab: API, `/*/raw`, Archive und git über HTTPS; opendata.ruhr
   verweist auf genau diese Wege). Viele Betreiber sperren ihre API gegen Suchmaschinen und bieten
   sie zugleich für Programme an – die Anfrage klärt, ob ein wöchentlicher Abruf bekannter Dateien
@@ -696,9 +698,10 @@ robots.txt für alle Robots sperrt. Seitdem:
     nebeneinander, Pkw-Kanäle (Bohlweg) sind leer. MobiData zählt in `channels_all` nur
     Rad-Kanäle (Pkw- und Personen-Kanäle in Ludwigsburg, Reutlingen, Böblingen nicht). Aachen:
     eigene Kanäle für Falschfahrer (Hohenstaufenallee) – gehören zur Zählstelle. Zählstellen,
-    deren Name Fuß- und Radverkehr nennt, ein Gerät neben seinen eigenen Zählstellen („Hardware
-    für …“, gleiche Seriennummer) und eine Stelle des Regierungspräsidiums (Land) stehen in
-    `ohne`. Offen: Tübingens Unterführung Steinlach hat dieselbe Kanalstruktur wie der
+    deren Name Fuß- und Radverkehr nennt, und ein Gerät neben seinen eigenen Zählstellen
+    („Hardware für …“, gleiche Seriennummer) stehen in `ohne`. Die Stelle des
+    Regierungspräsidiums Stuttgart in Bad Wimpfen (Land) ist seit dem 14.11.2026 in der Karte
+    (alle Zählungen, gleich, wer zählt). Offen: Tübingens Unterführung Steinlach hat dieselbe Kanalstruktur wie der
     Fuß- & Radtunnel („Fahrräder IN/OUT“ und „Richtung …“), der Name nennt aber keinen Fuß.
   - **Lage:** MobiData, Berlin (Blatt „Standortdaten“) und München (WFS) mit Koordinaten,
     Münster über das GeoJSON der Stadt (`fahrradzaehl-standorte_0.geojson`, gleiche Kennungen),
@@ -857,6 +860,21 @@ robots.txt für alle Robots sperrt. Seitdem:
       Stunden bis Monaten (Lennéstraße Januar bis April 2023). Jüngster Wert rund eine Stunde alt.
     - Die Kfz-Dauerzählstellen der Stadt sind nur als Mittelwerte in der Verkehrsmengenkarte offen
       (Ebenen „Kfz/Tag HIN/RÜCK“) – Fall für `vizsim/svz`.
+  - **Neuss, Radschnellweg RS5** (`neuss_rad`, Stadt Neuss, CC BY-SA 4.0 laut Portal – die
+    Mobilithek, Angebot `-1611162702897177411`, führt den Datensatz ohne Lizenz; Hinweis und
+    Beschluss der Projektleitung, 14.11.2026): Opendatasoft-Datensatz
+    `stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse` im Portal des Rhein-Kreises
+    Neuss (robots-Ausnahme wie `rhein_kreis_neuss_rad`), Adapter `ods_stunden` (Felder `date`,
+    `counts`). Ein Wert je Stunde seit dem 03.07.2026, keine Doppelten, keine Richtung (die
+    Beschreibung nennt „Querungen … nach Fahrtrichtung“); Rückstellung: eine der beiden Stunden
+    2–3 Uhr fehlt. Median eines vollen Tags 787, höchster 1.255 (bis 13.11.2026). **Lage:** nicht
+    im Datensatz (nur der Gemeindeschlüssel), keine Zählstelle in OSM (Overpass, Ausschnitt
+    Hammer Landstraße, `ergebnis/ohne_lizenz/holen15–16/` auf `werkzeug/erkundung`). Der RS5 läuft
+    in Neuss an der Hammer Landstraße zwischen den Einmündungen Industriestraße und
+    Langemarck-/Danziger Straße (OSM-Knoten 266565345 und 1692302391, rund 500 m; Pressemitteilungen
+    der Stadt 2022–2025) und biegt dort in die Langemarckstraße – in der Karte die Mitte dieses
+    Abschnitts, mit Hinweis „Lage ungefähr“. Die genaue Lage weiß die Stadt (Funktionsadresse
+    opendata@stadt.neuss.de laut Portal).
   - **Fuß (seit November 2026, Entscheidung der Projektleitung):**
     - **Augsburg** (`augsburg_fuss`, CC BY 4.0, Mobilithek-Angebot `-1747083335311792689` der
       Wirtschaftsförderung): eine CSV auf augsburg.de
@@ -876,10 +894,25 @@ robots.txt für alle Robots sperrt. Seitdem:
       Gruppe `fuss`, je Richtung wie Rad. An der Springorumtrasse sind die Passanten-Spalten bis
       Oktober 2023 leer. Erzbahntrasse: seit Juni 2026 Tagessummen von 0 bis über 100.000 (sonst
       rund 250–300) – Hinweis an der Stelle, Werte wie geliefert.
-    - **Würzburg** (Passantenzählung, Stundendaten, dl-de/by-2-0, Opendatasoft-Datensatz
-      `passantenzaehlung_stundendaten`): bräuchte die robots-Ausnahme für
-      `opendata.wuerzburg.de/api/explore/` auch für eine neue Quelle – Entscheidung der
-      Projektleitung offen.
+    - **Würzburg** (`wuerzburg_fuss`, Passantenzählung von hystreet.com, dl-de/by-2-0, im Portal
+      „hystreet.com GmbH“ als Quelle genannt → Quellenvermerk; robots-Ausnahme wie `wuerzburg_rad`,
+      Beschluss der Projektleitung 14.11.2026): Opendatasoft-Datensatz
+      `passantenzaehlung_stundendaten`, generischer Adapter `ods_stunden` (Felder `timestamp`,
+      `pedestrians_count`, `location_id`; Lage aus `geo_point_2d`, als Zahlen in der Quelldatei).
+      Drei Standorte (Schönbornstraße 135, Spiegelstraße 470, Kaiserstraße 476), 01.01.2024 bis
+      17.05.2026 – seither nicht fortgeschrieben (`data_processed` 18.05.2026, Stand 14.11.2026).
+      Keine Doppelten. **`unverified`:** 79 % der Zeilen, nach Ortszeit 0–20 Uhr zu 92 %, 20–24 Uhr
+      zu 0–7 %, an allen drei Standorten gleich – vermutlich übernimmt das Portal die Stunden eines
+      Tages gegen 20 Uhr, solange hystreet sie noch nicht geprüft hat, und zieht sie nicht nach.
+      Das Kennzeichen sagt also nicht, dass ein Wert falsch ist: gezählt wie Rohwerte (Münster,
+      Würzburg Rad); Ausfälle stehen teils als 0 (Schönbornstraße 15.05.2026, 12 Uhr: 0 zwischen
+      3.822 und 4.790) – Hinweis an der Quelle. Die Verteilung des Kennzeichens zeigt
+      `tools/quelle_pruefen.py` (Abschnitt „Kennzeichen“, Branch `werkzeug/dauer`).
+      Nicht übernommen: ältere Stundenwerte je Standort in eigenen Datensätzen
+      (`passantenzaehlung_schoenbornstrasse` seit April 2019, `passantenzaehlung_kaiserstrasse`
+      und `passantenzaehlung_spiegelstrasse` seit Oktober 2022; Felder unbekannt, Überschneidung
+      mit den Stundendaten klären), Tageswerte seit 2020 (`passantenzaehlung_tagesdaten`) und eine
+      Monatsübersicht (`passantenzaehlung_wuerzburg`).
     - Weitere Kandidaten: Freiburg (FR.ITZ, Rad und Fuß getrennt), die Personen-Kanäle im Bündel
       von MobiData BW (Ludwigsburg, Reutlingen, Böblingen).
   - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,

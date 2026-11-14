@@ -8,9 +8,7 @@ Die Quelldatei legt fest:
   eines, ist die Stunde nicht gezählt;
 - `stelle`: Feld mit dem Standort (mehrere Zählstellen in einem Datensatz) oder keins;
 - `stellen`: je Standort (Wert des Felds `stelle`, sonst `""`) Kennung, Name, Abschnitt, Lage und
-  Hinweise. Standorte ohne Eintrag kommen nicht in die Karte (Bericht);
-- `ungeprueft` (wahlweise): Feld, mit dem die Quelle Stunden als nicht geprüft kennzeichnet
-  (Würzburg: `unverified`) – solche Stunden gelten als nicht gezählt.
+  Hinweise. Standorte ohne Eintrag kommen nicht in die Karte (Bericht).
 `hole` legt die Metadaten (Felder, Beschreibung) neben den Export (`metadaten.json`); fehlen
 `zeit` oder `werte`, nennt `lese` die Spalten des Exports.
 """
@@ -39,7 +37,6 @@ class Bericht:
     unlesbar: int = 0
     leer: int = 0
     doppelt: int = 0
-    ungeprueft: Counter = field(default_factory=Counter)  # je Jahr
     ohne_stelle: Counter = field(default_factory=Counter)
     zeitraum: dict = field(default_factory=dict)  # Kennung -> [erste, letzte Stunde] (UTC)
     stunden: int = 0
@@ -50,9 +47,6 @@ class Bericht:
         z = [f"{self.gelesen} Zeilen ({self.unlesbar} unlesbar, {self.leer} ohne alle Werte, "
              f"{self.doppelt} Stunden doppelt), {self.stellen} Zählstellen, {self.stunden} "
              f"Stunden in der Karte; jüngster Wert {self.bis}"]
-        if self.ungeprueft:
-            z.append("als nicht geprüft gekennzeichnet (nicht gezählt): "
-                     + ", ".join(f"{j}: {n}" for j, n in sorted(self.ungeprueft.items())))
         z += [f"{k}: {a} bis {b} (UTC)" for k, (a, b) in sorted(self.zeitraum.items())]
         if self.ohne_stelle:
             z.append("Standorte ohne Eintrag in der Quelldatei (nicht in der Karte): "
@@ -66,7 +60,7 @@ def hole(q: dict, pfade: Pfade) -> list[str]:
     meta = ods.metadaten(q["basis"], q["datensatz"])
     (ordner / "metadaten.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1) + "\n",
                                            encoding="utf-8")
-    felder = [q["zeit"], *q["werte"]] + [q[k] for k in ("stelle", "ungeprueft") if q.get(k)] \
+    felder = [q["zeit"], *q["werte"]] + ([q["stelle"]] if q.get("stelle") else []) \
         if q.get("zeit") and q.get("werte") else None
     return [ods.hole_export(q["basis"], q["datensatz"], ",".join(felder) if felder else None,
                             ordner, DATEI)]
@@ -81,11 +75,6 @@ def stunde(text: str) -> datetime | None:
     if t.tzinfo is not None:
         t = (t - t.utcoffset()).replace(tzinfo=None)
     return t if t.minute == 0 and t.second == 0 else None
-
-
-def gekennzeichnet(text: str | None) -> bool:
-    """Kennzeichen der Quelle („1“, „true“) -> wahr; leer, „0“, „false“ -> falsch."""
-    return (text or "").strip().lower() in ("1", "true", "wahr", "ja")
 
 
 def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
@@ -128,9 +117,6 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
         try:
             w = sum(int(round(float(x))) for x in werte) if all(werte) else -1
         except ValueError:
-            w = -1
-        if q.get("ungeprueft") and gekennzeichnet(r.get(q["ungeprueft"])):
-            bericht.ungeprueft[t.year] += 1
             w = -1
         kennung = stellen[index[ort]].kennung
         a, b = bericht.zeitraum.get(kennung, (t, t))

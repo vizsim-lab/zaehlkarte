@@ -10,7 +10,7 @@ land: NW
 traeger: Stadt Neuss
 art: >-
   Rad-Dauerzählstelle auf der Trasse des Radschnellwegs RS5 (Düsseldorf – Neuss – Langenfeld):
-  ein Wert je Stunde
+  ein Wert je Stunde, seit Juli 2026
 weg: offen im Open-Data-Portal des Rhein-Kreises Neuss (Opendatasoft, täglich aktualisiert)
 portal: https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/
 basis: https://opendata.rhein-kreis-neuss.de
@@ -18,8 +18,20 @@ datensatz: stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse
 gruppe: rad
 zeit: date
 werte: [counts]
-stellen:  # ein Standort je Datensatz; Lage: LAGE
-  "": {kennung: rs5, name: Radschnellweg RS5, abschnitt: Hammer Landstraße, lon: 6.70, lat: 51.205}
+stellen:  # ein Standort je Datensatz; Lage ungefähr (Datensatz ohne Koordinaten, nicht in OSM):
+  # Mitte des RS5 an der Hammer Landstraße zwischen den OSM-Knoten 266565345 und 1692302391
+  # (Einmündungen Industriestraße und Langemarck-/Danziger Straße), siehe AGENTS.md
+  "":
+    kennung: rs5
+    name: Radschnellweg RS5
+    abschnitt: Hammer Landstraße
+    lon: 6.7012
+    lat: 51.2003
+    hinweise:
+      - >-
+        Lage ungefähr: Der Datensatz nennt keine Koordinaten. Die Zählstelle liegt am
+        Radschnellweg entlang der Hammer Landstraße (am Rennbahnpark); der Punkt in der Karte
+        ist die Mitte dieses Abschnitts.
 titel: >-
   Stadt Neuss: Radverkehrszählstelle RS5 (Düsseldorf – Langenfeld) – Standort Neuss (verändert:
   Stundenwerte zu Tagessummen zusammengefasst)
@@ -34,5 +46,8 @@ hinweise:
   - >-
     Die Beschreibung des Datensatzes spricht von Querungen je Fahrtrichtung; der Datensatz enthält
     aber nur einen Wert je Stunde, ohne Richtung.
+  - >-
+    Am Tag der Rückstellung der Uhr fehlt in der Quelle eine der beiden Stunden von 2 bis 3 Uhr –
+    dieser Tag gilt als nicht vollständig gezählt.
   - >-
     Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

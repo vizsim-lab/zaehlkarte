@@ -1,6 +1,6 @@
 """Opendatasoft-Stundenwerte (dauer/ods_stunden.py) mit synthetischen Exporten im Aufbau der
-Quellen: Würzburg (Passantenzählung, mehrere Standorte, Kennzeichen „unverified“) und Neuss
-(RS5, ein Standort ohne Feld). Zeiten im Export in UTC."""
+Quellen: Würzburg (Passantenzählung, mehrere Standorte; das Kennzeichen „unverified“ – ungeprüfte
+Rohwerte – ändert nichts) und Neuss (RS5, ein Standort ohne Feld). Zeiten im Export in UTC."""
 
 from datetime import date, datetime, timedelta
 
@@ -13,7 +13,7 @@ from zaehlkarte.dauer.modell import tagessummen
 WUERZBURG = {
     "code": "wuerzburg_fuss", "land": "BY", "basis": "https://example.org", "datensatz": "p",
     "gruppe": "fuss", "zeit": "timestamp", "werte": ["pedestrians_count"],
-    "stelle": "location_id", "ungeprueft": "unverified",
+    "stelle": "location_id",
     "stellen": {"135": {"kennung": "135", "name": "Schönbornstraße", "lon": 9.93, "lat": 49.79},
                 "470": {"kennung": "470", "name": "Spiegelstraße", "lon": 9.934, "lat": 49.795}},
 }
@@ -44,13 +44,13 @@ def _schreibe(tmp_path, code: str, kopf: str, zeilen: list[str]) -> Pfade:
     return pfade
 
 
-def test_wuerzburg_standorte_und_kennzeichen(tmp_path):
+def test_wuerzburg_standorte(tmp_path):
     kopf = "timestamp;pedestrians_count;unverified;location_id;location_name"
     z = []
     voll = date(2025, 6, 3)  # Sommerzeit: Ortstag beginnt 22 Uhr UTC am Vortag
     z += [f"{_iso(t)};{100 + i};0;135;Schönbornstraße"
           for i, t in enumerate(_stunden(voll, 2))]
-    z += [f"{_iso(t)};50;{1 if i == 12 else 0};470;Spiegelstraße"  # eine Stunde unverifiziert
+    z += [f"{_iso(t)};50;{1 if i < 20 else 0};470;Spiegelstraße"  # unverifiziert: Rohwert
           for i, t in enumerate(_stunden(voll, 2))]
     z += [f"{_iso(t)};7;0;999;Unbekannt" for t in _stunden(voll, 2)[:3]]
     doppelt = date(2025, 6, 4)
@@ -68,13 +68,12 @@ def test_wuerzburg_standorte_und_kennzeichen(tmp_path):
     summen, _ = tagessummen(reihe, "fuss")
     i = reihe.index
     assert summen[0, i(voll)] == sum(100 + h for h in range(24))
-    assert summen[1, i(voll)] < 0  # unverifizierte Stunde: nicht gezählt
+    assert summen[1, i(voll)] == 24 * 50  # ungeprüfte Rohwerte zählen
     assert summen[0, i(doppelt)] < 0  # doppelte Stunde: nicht gezählt
-    assert bericht.ungeprueft == {2025: 1}
     assert bericht.ohne_stelle == {"999": 3}
     assert bericht.doppelt == 1 and bericht.unlesbar == 1 and bericht.leer == 1
     assert bericht.zeitraum["135"][0] == "2025-06-02T22:00"
-    assert any("nicht geprüft" in z for z in bericht.zeilen())
+    assert any("135: 2025-06-02T22:00" in z for z in bericht.zeilen())
 
 
 def test_neuss_ein_standort_und_sommerzeit(tmp_path):
@@ -91,7 +90,7 @@ def test_neuss_ein_standort_und_sommerzeit(tmp_path):
     summen, _ = tagessummen(reihe, "rad")
     assert summen[0, reihe.index(date(2025, 3, 30))] == 230  # 23 Stunden
     assert summen[0, reihe.index(date(2025, 7, 1))] == sum(range(24))
-    assert bericht.stellen == 1 and bericht.stunden == 47 and not bericht.ungeprueft
+    assert bericht.stellen == 1 and bericht.stunden == 47
 
 
 def test_ohne_felder_nennt_spalten(tmp_path):
@@ -108,15 +107,12 @@ def test_hole_waehlt_felder(tmp_path, monkeypatch):
     pfade = Pfade(pipeline=tmp_path, repo=tmp_path)
     ods_stunden.hole(WUERZBURG, pfade)
     ods_stunden.hole(NEUSS | {"zeit": None, "werte": []}, pfade)
-    assert aufrufe == ["timestamp,pedestrians_count,location_id,unverified", None]
+    assert aufrufe == ["timestamp,pedestrians_count,location_id", None]
     assert (pfade.roh / "wuerzburg_fuss" / "metadaten.json").exists()
 
 
-def test_stunde_und_kennzeichen():
+def test_stunde():
     assert ods_stunden.stunde("2026-07-13T10:00:00+00:00") == datetime(2026, 7, 13, 10)
     assert ods_stunden.stunde("2026-07-13T12:00:00+02:00") == datetime(2026, 7, 13, 10)
     assert ods_stunden.stunde("2026-07-13T10:15:00+00:00") is None
     assert ods_stunden.stunde("kein Datum") is None
-    assert ods_stunden.gekennzeichnet("1") and ods_stunden.gekennzeichnet("True")
-    assert not ods_stunden.gekennzeichnet("0") and not ods_stunden.gekennzeichnet(None)
-    assert not ods_stunden.gekennzeichnet("")

@@ -408,6 +408,17 @@
       (dl-de/by-2-0) – in der Karte als Dauerzählstellen
     links:
       - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08125007"
+  name: Bad Wimpfen
+  lage: [9.1633, 49.2282]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle des Landes (Regierungspräsidium Stuttgart) über das Bündel von MobiData
+      BW (dl-de/by-2-0) – in der Karte als Dauerzählstelle
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
 - ags: "08416041"
   name: Tübingen
   lage: [9.0599, 48.5166]
