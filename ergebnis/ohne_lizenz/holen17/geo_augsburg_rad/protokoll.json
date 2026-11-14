@@ -1,0 +1,22 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22man_made%22%3D%22monitoring_station%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22monitoring%3Abicycle%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22name%22~%22%5BZz%5D%C3%A4hl%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3B%29%3Bout%20center%20tags%3B",
+  "fehler": "TimeoutError('The read operation timed out')"
+ },
+ {
+  "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22man_made%22%3D%22monitoring_station%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22monitoring%3Abicycle%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22name%22~%22%5BZz%5D%C3%A4hl%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3B%29%3Bout%20center%20tags%3B",
+  "ende": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22man_made%22%3D%22monitoring_station%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22monitoring%3Abicycle%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22name%22~%22%5BZz%5D%C3%A4hl%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3B%29%3Bout%20center%20tags%3B",
+  "typ": "application/json",
+  "bytes": 24587,
+  "datei": "02_interpreter.json",
+  "sha256": "cf39851a7f35e9da5679141c245a63bf2f69ef82c15010116a73ce1f87929e2c"
+ },
+ {
+  "url": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22man_made%22%3D%22monitoring_station%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22monitoring%3Abicycle%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22name%22~%22%5BZz%5D%C3%A4hl%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3B%29%3Bout%20center%20tags%3B",
+  "ende": "https://overpass.kumi.systems/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%28nwr%5B%22man_made%22%3D%22monitoring_station%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22monitoring%3Abicycle%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3Bnwr%5B%22name%22~%22%5BZz%5D%C3%A4hl%22%5D%2848.30%2C10.80%2C48.45%2C10.98%29%3B%29%3Bout%20center%20tags%3B",
+  "typ": "application/json",
+  "bytes": 24265,
+  "datei": "03_interpreter.json",
+  "sha256": "a866269af57e516be217f9eb695325cd8c242ad221db517fa9504b2e79cc1f79"
+ }
+]

@@ -1,0 +1,1121 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-14T22:44:06Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 864086273,
+  "lat": 48.3765779,
+  "lon": 10.8883851,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:air_quality": "yes",
+    "name": "Messstation Augsburg Bourges-Platz",
+    "operator": "Bayerisches Landesamt für Umwelt",
+    "ref": "DEBY007/ L 7.6"
+  }
+},
+{
+  "type": "node",
+  "id": 2620894777,
+  "lat": 48.4253149,
+  "lon": 10.9418899,
+  "tags": {
+    "ele": "461.4",
+    "man_made": "monitoring_station",
+    "monitoring:weather": "yes",
+    "name": "Augsburg",
+    "operator": "Deutscher Wetterdienst",
+    "operator:wikidata": "Q325859",
+    "recording:automated": "yes",
+    "ref:icao": "EDMA",
+    "ref:wmo": "10852",
+    "source:position": "Bing"
+  }
+},
+{
+  "type": "node",
+  "id": 4286370799,
+  "lat": 48.3136181,
+  "lon": 10.9150024,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:water_level": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 4440646534,
+  "lat": 48.3571639,
+  "lon": 10.9273127,
+  "tags": {
+    "man_made": "monitoring_station",
+    "name": "Ultraschalldurchflussmessanlage",
+    "website": "https://www.ott.com/de-de/produkte/durchfluss-41/ott-sonicflow-79/"
+  }
+},
+{
+  "type": "node",
+  "id": 5625183755,
+  "lat": 48.3445826,
+  "lon": 10.8664692,
+  "tags": {
+    "description": "Gasdruck-Regelstation",
+    "man_made": "monitoring_station",
+    "operator": "Stadtwerke Augsburg",
+    "ref": "5160",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 7355140623,
+  "lat": 48.3645976,
+  "lon": 10.8950371,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:air_quality": "yes",
+    "name": "Messstation Augsburg Königsplatz",
+    "operator": "Bayerisches Landesamt für Umwelt",
+    "ref": "DEBY006/ L 7.1"
+  }
+},
+{
+  "type": "node",
+  "id": 7355140624,
+  "lat": 48.3703664,
+  "lon": 10.8968205,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:air_quality": "yes",
+    "name": "Messstation Augsburg Karlstraße",
+    "operator": "Bayerisches Landesamt für Umwelt",
+    "ref": "DEBY110/ L 14.1"
+  }
+},
+{
+  "type": "node",
+  "id": 8251277886,
+  "lat": 48.4162151,
+  "lon": 10.8933190,
+  "tags": {
+    "description": "Gasbrunnen zur Gewinnung von Deponiegas.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8259638130,
+  "lat": 48.3727279,
+  "lon": 10.8825614,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8259638131,
+  "lat": 48.3728443,
+  "lon": 10.8826846,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8262493942,
+  "lat": 48.4224275,
+  "lon": 10.8913985,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:water_level": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8262493943,
+  "lat": 48.4241850,
+  "lon": 10.8918784,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:water_level": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566017,
+  "lat": 48.4177299,
+  "lon": 10.8940313,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566018,
+  "lat": 48.4175239,
+  "lon": 10.8944096,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566019,
+  "lat": 48.4173016,
+  "lon": 10.8939326,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566020,
+  "lat": 48.4174696,
+  "lon": 10.8948975,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566021,
+  "lat": 48.4170979,
+  "lon": 10.8944783,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566022,
+  "lat": 48.4182866,
+  "lon": 10.8942090,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566023,
+  "lat": 48.4181533,
+  "lon": 10.8941779,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566024,
+  "lat": 48.4179156,
+  "lon": 10.8947390,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566025,
+  "lat": 48.4178642,
+  "lon": 10.8952023,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566026,
+  "lat": 48.4183831,
+  "lon": 10.8948969,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566027,
+  "lat": 48.4185791,
+  "lon": 10.8943885,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566028,
+  "lat": 48.4186166,
+  "lon": 10.8938030,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566029,
+  "lat": 48.4181992,
+  "lon": 10.8935808,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566030,
+  "lat": 48.4186436,
+  "lon": 10.8932423,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566031,
+  "lat": 48.4190261,
+  "lon": 10.8933598,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566032,
+  "lat": 48.4190299,
+  "lon": 10.8939352,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566033,
+  "lat": 48.4189977,
+  "lon": 10.8944971,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566034,
+  "lat": 48.4198156,
+  "lon": 10.8935700,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566035,
+  "lat": 48.4198792,
+  "lon": 10.8943634,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566036,
+  "lat": 48.4194433,
+  "lon": 10.8940626,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566037,
+  "lat": 48.4194087,
+  "lon": 10.8946601,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566038,
+  "lat": 48.4192651,
+  "lon": 10.8952013,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566039,
+  "lat": 48.4196597,
+  "lon": 10.8954782,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566040,
+  "lat": 48.4191411,
+  "lon": 10.8957420,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566041,
+  "lat": 48.4195675,
+  "lon": 10.8960137,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566042,
+  "lat": 48.4202812,
+  "lon": 10.8941974,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566043,
+  "lat": 48.4202689,
+  "lon": 10.8948212,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566044,
+  "lat": 48.4198382,
+  "lon": 10.8949014,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566045,
+  "lat": 48.4202306,
+  "lon": 10.8954129,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566046,
+  "lat": 48.4211363,
+  "lon": 10.8943642,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566047,
+  "lat": 48.4209738,
+  "lon": 10.8937760,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566048,
+  "lat": 48.4207080,
+  "lon": 10.8943361,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566049,
+  "lat": 48.4205667,
+  "lon": 10.8937231,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566050,
+  "lat": 48.4206799,
+  "lon": 10.8950260,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566051,
+  "lat": 48.4207412,
+  "lon": 10.8955819,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566052,
+  "lat": 48.4204891,
+  "lon": 10.8959533,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566053,
+  "lat": 48.4214190,
+  "lon": 10.8953150,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566054,
+  "lat": 48.4214597,
+  "lon": 10.8947100,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566055,
+  "lat": 48.4169993,
+  "lon": 10.8932873,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566056,
+  "lat": 48.4168674,
+  "lon": 10.8939372,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8262566058,
+  "lat": 48.4173692,
+  "lon": 10.8932547,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 8589489753,
+  "lat": 48.3720115,
+  "lon": 10.8839578,
+  "tags": {
+    "description": "Grundwassermessstelle (Überflur). Peilrohr sichtbar.",
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes",
+    "wikidata": "Q1266437",
+    "wikipedia": "de:Grundwassermessstelle"
+  }
+},
+{
+  "type": "node",
+  "id": 8594681441,
+  "lat": 48.3702966,
+  "lon": 10.8842950,
+  "tags": {
+    "man_made": "monitoring_station"
+  }
+},
+{
+  "type": "node",
+  "id": 8830086593,
+  "lat": 48.3010412,
+  "lon": 10.9787901,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes",
+    "official_name": "Grundwasserpegel"
+  }
+},
+{
+  "type": "node",
+  "id": 9378698321,
+  "lat": 48.3078823,
+  "lon": 10.9165521,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9378811116,
+  "lat": 48.3031559,
+  "lon": 10.9455390,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 9382157169,
+  "lat": 48.3079588,
+  "lon": 10.9166174,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 11218304917,
+  "lat": 48.4198699,
+  "lon": 10.8942347,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022650,
+  "lat": 48.4199124,
+  "lon": 10.8970575,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022651,
+  "lat": 48.4202649,
+  "lon": 10.8969750,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022652,
+  "lat": 48.4206138,
+  "lon": 10.8965931,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022653,
+  "lat": 48.4197120,
+  "lon": 10.8965177,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022654,
+  "lat": 48.4197711,
+  "lon": 10.8965140,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022655,
+  "lat": 48.4211634,
+  "lon": 10.8956473,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022656,
+  "lat": 48.4217915,
+  "lon": 10.8949399,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022657,
+  "lat": 48.4202271,
+  "lon": 10.8964517,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022658,
+  "lat": 48.4187015,
+  "lon": 10.8955843,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022659,
+  "lat": 48.4187313,
+  "lon": 10.8951471,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022660,
+  "lat": 48.4188466,
+  "lon": 10.8950559,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022661,
+  "lat": 48.4172854,
+  "lon": 10.8941828,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022662,
+  "lat": 48.4157831,
+  "lon": 10.8936360,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022663,
+  "lat": 48.4159905,
+  "lon": 10.8936360,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022664,
+  "lat": 48.4157767,
+  "lon": 10.8928206,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022665,
+  "lat": 48.4162727,
+  "lon": 10.8926661,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022666,
+  "lat": 48.4194178,
+  "lon": 10.8934462,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022667,
+  "lat": 48.4188277,
+  "lon": 10.8937819,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378022668,
+  "lat": 48.4177825,
+  "lon": 10.8934360,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378093769,
+  "lat": 48.4166043,
+  "lon": 10.8936350,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378093770,
+  "lat": 48.4167224,
+  "lon": 10.8924200,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378093771,
+  "lat": 48.4165399,
+  "lon": 10.8932575,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378093772,
+  "lat": 48.4170315,
+  "lon": 10.8926781,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378093773,
+  "lat": 48.4174231,
+  "lon": 10.8926605,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 11378093774,
+  "lat": 48.4182183,
+  "lon": 10.8929944,
+  "tags": {
+    "description": "Gasbrunnen zur Weiterleitung an das örtliche Kraftwerk.",
+    "man_made": "monitoring_station",
+    "monitoring:gas": "yes",
+    "substance": "gas"
+  }
+},
+{
+  "type": "node",
+  "id": 12770037339,
+  "lat": 48.3492524,
+  "lon": 10.8949346,
+  "tags": {
+    "man_made": "monitoring_station",
+    "monitoring:groundwater": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13928490378,
+  "lat": 48.3090742,
+  "lon": 10.9187135,
+  "tags": {
+    "man_made": "monitoring_station",
+    "operator": "Wasserstraßen- und Schifffahrtsamt Elbe-Nordsee",
+    "operator:short": "WSA Elbe-Nordsee",
+    "operator:type": "government",
+    "operator:wikidata": "Q105966498"
+  }
+},
+{
+  "type": "way",
+  "id": 53188180,
+  "center": {
+    "lat": 48.3276120,
+    "lon": 10.9006466
+  },
+  "tags": {
+    "building": "yes",
+    "man_made": "monitoring_station",
+    "monitoring:weather": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 123757591,
+  "center": {
+    "lat": 48.3166808,
+    "lon": 10.9456561
+  },
+  "tags": {
+    "building": "yes",
+    "man_made": "monitoring_station",
+    "monitoring:water_level": "yes",
+    "name": "Pegel Haunstetten Lech",
+    "operator": "WWA DON",
+    "recording:remote": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 170512033,
+  "center": {
+    "lat": 48.3579405,
+    "lon": 10.9070887
+  },
+  "tags": {
+    "building": "container",
+    "contact:website": "https://www.helmholtz-munich.de/",
+    "description": "Aerosolmessstation",
+    "man_made": "monitoring_station",
+    "monitoring:air_quality": "yes",
+    "operator": "Helmholtz Zentrum München"
+  }
+},
+{
+  "type": "way",
+  "id": 369930030,
+  "center": {
+    "lat": 48.3727179,
+    "lon": 10.9116148
+  },
+  "tags": {
+    "building": "office",
+    "building:levels": "3",
+    "name": "Zählergebäude",
+    "nohousenumber": "yes",
+    "roof:levels": "0",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 1017415006,
+  "center": {
+    "lat": 48.3260236,
+    "lon": 10.9030736
+  },
+  "tags": {
+    "building": "service",
+    "man_made": "monitoring_station",
+    "monitoring:air_quality": "yes",
+    "name": "Messstation Augsburg LfU",
+    "operator": "Bayerisches Landesamt für Umwelt",
+    "ref": "DEBY099/ L 7.8"
+  }
+}
+
+  ]
+}
