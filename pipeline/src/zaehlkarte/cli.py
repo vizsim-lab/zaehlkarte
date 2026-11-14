@@ -19,11 +19,17 @@ Datum = Annotated[str | None, typer.Option(help="Erzeugungsdatum im Manifest (JJ
 
 @app.command()
 def fetch(quelle: Quellen = None) -> None:
-    """Rohdaten nach pipeline/data/raw/ holen (nur was robots.txt erlaubt, mit Crawl-delay)."""
+    """Rohdaten nach pipeline/data/raw/ holen (nur was robots.txt erlaubt, mit Crawl-delay). Eine
+    Quelle, die scheitert, hält die anderen nicht auf; Exit-Code 1, wenn eine scheitert – ohne
+    ihre Rohdaten fehlte sie im Bau."""
     from zaehlkarte import abruf
 
-    for zeile in [*fetch_.hole(nur=quelle), *abruf.bericht()]:
+    log, fehler = fetch_.hole(nur=quelle)
+    for zeile in [*log, *abruf.bericht()]:
         typer.echo(zeile)
+    if fehler:
+        typer.echo(f"Abruf gescheitert: {', '.join(fehler)}")
+        raise typer.Exit(1)
 
 
 @app.command()
@@ -108,6 +114,8 @@ def dauer_fetch(quelle: Quellen = None) -> None:
     log, fehler = bau.hole(nur=quelle)
     for zeile in [*log, *abruf.bericht()]:
         typer.echo(zeile)
+    if fehler:
+        typer.echo(f"Abruf gescheitert: {', '.join(fehler)}")
     versucht = [c for c in dauerquellen(Pfade()) if not quelle or c in quelle]
     if fehler and len(fehler) == len(versucht):
         raise typer.Exit(1)
