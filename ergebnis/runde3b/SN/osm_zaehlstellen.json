@@ -1,0 +1,134 @@
+[
+ {
+  "osm": "node/4259282315",
+  "lat": 51.0607023,
+  "lon": 13.7770016,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/4259282316",
+  "lat": 51.0607142,
+  "lon": 13.7772864,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "website": "https://stadtplan.dresden.de/?permalink=2CThC2KJ"
+  }
+ },
+ {
+  "osm": "node/4285020727",
+  "lat": 51.0475761,
+  "lon": 13.7441951,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/4285020728",
+  "lat": 51.0477971,
+  "lon": 13.7436388,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/6484103909",
+  "lat": 51.0384528,
+  "lon": 13.7133942,
+  "tags": {
+   "highway": "street_lamp",
+   "lamp_mount": "bent_mast",
+   "layer": "1",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/11256891160",
+  "lat": 51.0504574,
+  "lon": 13.7254154,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/11560978308",
+  "lat": 51.0422848,
+  "lon": 13.7509296,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/11560978309",
+  "lat": 51.0420761,
+  "lon": 13.7509996,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/11560978310",
+  "lat": 51.0299682,
+  "lon": 13.701194,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/12901761861",
+  "lat": 51.0360378,
+  "lon": 13.7315822,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Radverkehr - Dauerzählstelle: Fritz-Löffler-Straße Süd (Schnorrstraße)",
+   "website": "https://www.dresden.de/konfiguration/tsp/glbMapControl.php?readyCallback=tspMapNamespace_68480036573a6.init&lang=de&TH=STA_FAHRRADZAEHLST&#"
+  }
+ },
+ {
+  "osm": "node/12901761862",
+  "lat": 51.0359477,
+  "lon": 13.7320694,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Radverkehr - Dauerzählstelle: Fritz-Löffler-Straße Nord (Schnorrstraße)",
+   "website": "https://www.dresden.de/konfiguration/tsp/glbMapControl.php?readyCallback=tspMapNamespace_68480036573a6.init&lang=de&TH=STA_FAHRRADZAEHLST&#"
+  }
+ },
+ {
+  "osm": "node/13827597206",
+  "lat": 51.340439,
+  "lon": 12.4085769,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:air_quality": "yes",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/13827663893",
+  "lat": 51.3319701,
+  "lon": 12.4060235,
+  "tags": {
+   "description": "is used by the UFZ for measuring air quality and is used by the AIAMO pilot project (traffic measurement)",
+   "man_made": "monitoring_station",
+   "manufacturer": "TSystems",
+   "monitoring:air_quality": "yes",
+   "monitoring:traffic": "yes"
+  }
+ }
+]

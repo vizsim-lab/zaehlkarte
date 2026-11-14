@@ -1,0 +1,53 @@
+{
+ "grenzen_osm": {
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter#0": "<HTTPError 504: 'Gateway Time-out'>",
+  "server": "https://overpass.kumi.systems/api/interpreter"
+ },
+ "orte_osm": {
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter#0": "<HTTPError 504: 'Gateway Timeout'>",
+  "https://overpass.kumi.systems/api/interpreter#0": "<HTTPError 504: 'Gateway Timeout'>",
+  "https://overpass.private.coffee/api/interpreter#0": "<HTTPError 504: 'Gateway Timeout'>",
+  "server": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "knoten": 307,
+  "zugeordnet": 68
+ },
+ "liste": {
+  "gemeinden": 418,
+  "mit_web": 95,
+  "verbaende": 70,
+  "verbaende_mit_web": 0,
+  "kreise": 10,
+  "kreise_mit_web": 0,
+  "osm_elemente": 499,
+  "osm_ohne_gemeinde": [],
+  "ok": true,
+  "sekunden": 561
+ },
+ "osm": {
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter#0": "<HTTPError 504: 'Gateway Time-out'>",
+  "https://overpass.kumi.systems/api/interpreter#0": "<HTTPError 502: 'Bad Gateway'>",
+  "https://overpass.private.coffee/api/interpreter#0": "<HTTPError 504: 'Gateway Timeout'>",
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter#1": "<HTTPError 504: 'Gateway Time-out'>",
+  "https://overpass.kumi.systems/api/interpreter#1": "<HTTPError 504: 'Gateway Timeout'>",
+  "https://overpass.private.coffee/api/interpreter#1": "TimeoutError('The read operation timed out')",
+  "https://maps.mail.ru/osm/tools/overpass/api/interpreter#2": "<HTTPError 504: 'Gateway Time-out'>",
+  "server": "https://overpass.kumi.systems/api/interpreter",
+  "anzahl": 13,
+  "ok": true,
+  "sekunden": 1203
+ },
+ "webseiten_ziele": {
+  "ziele": 358,
+  "geraten": 263
+ },
+ "webseiten": {
+  "seiten": 358,
+  "erreicht": 257,
+  "mit_sitemap": 155,
+  "mit_suche": 63,
+  "mit_treffern": 39,
+  "ok": true,
+  "sekunden": 299
+ },
+ "gesamt_sekunden_webseiten_osm": 2062
+}
