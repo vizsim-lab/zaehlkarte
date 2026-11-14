@@ -1,0 +1,338 @@
+                                                                                                           powered by
+Auswertung Verkehrsdaten
+ Autor
+ Institution                            Gemeindevorstand der Gemeine Mühltal
+ Abteilung                              Fachbereich Sicherheit und Ordnung
+ Straße                                 Ober-Ramstädter Str. 2-4
+ PLZ                                    64367
+ Stadt                                  Mühltal
+ Land                                   Deutschland
+ Ansprechpartner
+ Telefon                                +49-6151-1417-119
+ E-Mail                                 strassenverkehr@muehltal.de
+                                              Erstellt mit DataCollect Webreporter Version 1.0 am 31.08.2022 10:11:52
+
+ Messstelle                                                                  Zeitbereich
+ Name                               Kirchstraße                              Startdatum                15.08.2022 12:00
+ Rtg. kommend (Name)                Rathaus                                  Enddatum                  20.08.2022 19:59
+ Rtg. gehend (Name)                 Rheinstraße                              Tage                      Mo, Di, Mi, Do, Fr, Sa, So
+                                                                             Zeitintervall             60 Minuten
+ Vmax StVO                              30
+                                                                             Zeitfenster / Tag         00:00 - 23:59
+ Kommentar                          A.d.Zehntscheuer
+ Gerätetyp                          SDR Traffic+
+ Ø-Verk.-Menge/Tag                      128     137
+
+
+
+ Längenklassen                  [L in m]
+
+
+      Querschnitt                                Rathaus                                                   Rheinstraße
+
+ Zeit               Σ              Σ                 0                  Lkw                  Σ                  0               Lkw
+ 05:00-09:00        334           150                 0                  150                184                 0                184
+ 09:00-17:00        642           313                 0                  313                329                 0                329
+ 17:00-23:59        143           77                  0                  77                  66                 0                66
+ 00:00-05:00        94            46                  0                  46                  48                 0                48
+ 00:00-24:00 1213                 586                 0                  586                627                 0                627
+
+
+
+
+ Geschwindigkeitskennzahlen                               [V in km/h]
+
+
+                        Vmin           Vmax         Vavg                V15           V50           V85             V1          Vexc %
+ Querschnitt              9             41            23                19             23             27            11               2.5
+      Rathaus             9             39            22                18             23             25            11               1.2
+ Rheinstraße              10            41            24                20             24             28            15               3.7
+
+Beschreibungen
+
+Vmin: Minimale Geschwindigkeit                                          V50: Grenzgeschwindigkeit für die ersten 50% der Fahrzeuge
+Vmax: Maximale Geschwindigkeit                                          V85: Grenzgeschwindigkeit für die ersten 85% der Fahrzeuge
+Vavg: Durchschnittliche Geschwindigkeit                                 V1: Grenzgeschwindigkeit für die ersten 1% der Fahrzeuge
+V15: Grenzgeschwindigkeit für die ersten 15% der Fahrzeuge              Vexc %: Geschwindigkeitsüberschreitung in %
+
+
+
+                                                                                                               www.datacollect.com
+                                                                                                                                                                                                                                                                      powered by
+ Auswertung Verkehrsdaten
+        Autor
+        Institution                                                                         Gemeindevorstand der Gemeine Mühltal
+        Abteilung                                                                           Fachbereich Sicherheit und Ordnung
+        Straße                                                                              Ober-Ramstädter Str. 2-4
+        PLZ                                                                                 64367
+        Stadt                                                                               Mühltal
+        Land                                                                                Deutschland
+        Ansprechpartner
+        Telefon                                                                             +49-6151-1417-119
+        E-Mail                                                                              strassenverkehr@muehltal.de
+                                                                                                            Erstellt mit DataCollect Webreporter Version 1.0 am 31.08.2022 10:11:52
+
+        Messstelle                                                                                                                                                                    Zeitbereich
+        Name                                                                        Kirchstraße                                                                                       Startdatum                                                        15.08.2022 12:00
+        Rtg. kommend (Name)                                                         Rathaus                                                                                           Enddatum                                                          20.08.2022 19:59
+        Rtg. gehend (Name)                                                          Rheinstraße                                                                                       Tage                                                              Mo, Di, Mi, Do, Fr, Sa, So
+                                                                                                                                                                                      Zeitintervall                                                     60 Minuten
+        Vmax StVO                                                                           30
+                                                                                                                                                                                      Zeitfenster / Tag                                                 00:00 - 23:59
+        Kommentar                                                                   A.d.Zehntscheuer
+        Gerätetyp                                                                   SDR Traffic+
+        Ø-Verk.-Menge/Tag                                                                   128                     137
+
+
+
+        Verkehrsmengen Ganglinie
+
+
+
+            30
+
+
+
+
+            25
+
+
+
+
+            20
+Menge
+
+
+
+
+            15
+
+
+
+
+            10
+
+
+
+
+             5
+
+
+
+
+             0
+                 15 Aug 12:00
+
+                                15 Aug 18:00
+
+                                               16 Aug 00:00
+
+                                                              16 Aug 06:00
+
+                                                                             16 Aug 12:00
+
+                                                                                             16 Aug 18:00
+
+                                                                                                             17 Aug 00:00
+
+                                                                                                                            17 Aug 06:00
+
+                                                                                                                                              17 Aug 12:00
+
+                                                                                                                                                             17 Aug 18:00
+
+                                                                                                                                                                            18 Aug 00:00
+
+                                                                                                                                                                                           18 Aug 06:00
+
+                                                                                                                                                                                                          18 Aug 12:00
+
+                                                                                                                                                                                                                         18 Aug 18:00
+
+                                                                                                                                                                                                                                        19 Aug 00:00
+
+                                                                                                                                                                                                                                                       19 Aug 06:00
+
+                                                                                                                                                                                                                                                                        19 Aug 12:00
+
+                                                                                                                                                                                                                                                                                         19 Aug 18:00
+
+                                                                                                                                                                                                                                                                                                        20 Aug 00:00
+
+                                                                                                                                                                                                                                                                                                                       20 Aug 06:00
+
+                                                                                                                                                                                                                                                                                                                                      20 Aug 12:00
+
+                                                                                                                                                                                                                                                                                                                                                       20 Aug 18:00
+
+                                                                                                                                                                                                                                                                                                                                                                      21 Aug 00:00
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                     Zeit
+                                Rathaus                                      Rheinstraße                                                   Querschnitt
+
+                                                                                                                                                                                                                                                                                       www.datacollect.com
+                                                                                                                             powered by
+ Auswertung Verkehrsdaten
+        Autor
+        Institution                                      Gemeindevorstand der Gemeine Mühltal
+        Abteilung                                        Fachbereich Sicherheit und Ordnung
+        Straße                                           Ober-Ramstädter Str. 2-4
+        PLZ                                              64367
+        Stadt                                            Mühltal
+        Land                                             Deutschland
+        Ansprechpartner
+        Telefon                                          +49-6151-1417-119
+        E-Mail                                           strassenverkehr@muehltal.de
+                                                                   Erstellt mit DataCollect Webreporter Version 1.0 am 31.08.2022 10:11:52
+
+        Messstelle                                                                                  Zeitbereich
+        Name                                       Kirchstraße                                      Startdatum          15.08.2022 12:00
+        Rtg. kommend (Name)                        Rathaus                                          Enddatum            20.08.2022 19:59
+        Rtg. gehend (Name)                         Rheinstraße                                      Tage                Mo, Di, Mi, Do, Fr, Sa, So
+                                                                                                    Zeitintervall       60 Minuten
+        Vmax StVO                                      30
+                                                                                                    Zeitfenster / Tag   00:00 - 23:59
+        Kommentar                                  A.d.Zehntscheuer
+        Gerätetyp                                  SDR Traffic+
+        Ø-Verk.-Menge/Tag                                128           137
+
+
+
+        Geschwindigkeits-Histogramm
+                                                             919
+
+
+
+
+            800
+
+
+
+
+            600
+                                                       500
+Menge
+
+
+
+
+                                                 419
+
+
+
+
+            400
+                                           258
+
+
+
+
+            200
+                               156
+                                     102
+
+
+
+
+                                                                            29
+                                                                       22
+                                                                   7
+                           6
+                  4
+                      2
+
+
+
+
+                                                                                    1
+                                                                                        1
+
+
+
+
+              0
+                      10             20                30              40          50          60       70      80      90        100       110       >110
+                                                                                                                                     Geschwindigkeit in [km/h]
+                       Rathaus                   Rheinstraße                     Querschnitt
+
+                                                                                                                                 www.datacollect.com
+                                                                                      powered by
+ Auswertung Verkehrsdaten
+        Autor
+        Institution               Gemeindevorstand der Gemeine Mühltal
+        Abteilung                 Fachbereich Sicherheit und Ordnung
+        Straße                    Ober-Ramstädter Str. 2-4
+        PLZ                       64367
+        Stadt                     Mühltal
+        Land                      Deutschland
+        Ansprechpartner
+        Telefon                   +49-6151-1417-119
+        E-Mail                    strassenverkehr@muehltal.de
+                                          Erstellt mit DataCollect Webreporter Version 1.0 am 31.08.2022 10:11:52
+
+        Messstelle                                              Zeitbereich
+        Name                   Kirchstraße                      Startdatum          15.08.2022 12:00
+        Rtg. kommend (Name)    Rathaus                          Enddatum            20.08.2022 19:59
+        Rtg. gehend (Name)     Rheinstraße                      Tage                Mo, Di, Mi, Do, Fr, Sa, So
+                                                                Zeitintervall       60 Minuten
+        Vmax StVO                30
+                                                                Zeitfenster / Tag   00:00 - 23:59
+        Kommentar              A.d.Zehntscheuer
+        Gerätetyp              SDR Traffic+
+        Ø-Verk.-Menge/Tag         128       137
+
+
+
+        Längen-Histogramm
+
+
+
+
+                                                                                                       1213
+           1200
+
+
+
+
+           1000
+
+
+
+
+            800
+                                                                                        627
+Menge
+
+
+
+
+                                                                          586
+
+
+
+
+            600
+
+
+
+
+            400
+
+
+
+
+            200
+
+
+
+
+              0
+                                      0                                                Lkw
+                                                                                                              Länge in [m]
+                    Rathaus   Rheinstraße         Querschnitt
+
+                                                                                              www.datacollect.com
+
