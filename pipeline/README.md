@@ -1,13 +1,13 @@
 # Pipeline der Zählkarte
 
-uv-Paket `zaehlkarte`: liest jede Quelle aus `config/sources.yaml` mit ihrem Adapter, bringt
+uv-Paket `zaehlkarte`: liest jede Quelle aus `config/` (Aufbau: `config/README.md`) mit ihrem Adapter, bringt
 alle Zählungen in ein Schema (`src/zaehlkarte/modell.py`) und schreibt die Kartendaten nach
 `../public/data/`.
 
 Jeder Abruf geht über `src/zaehlkarte/abruf.py`: nur, was robots.txt für die Kennung
 `zaehlkarte-pipeline` (sonst `*`) erlaubt, mit dem Abstand, den sie verlangt (Crawl-delay, bei
-den CKAN-Portalen 10 Sekunden). Ausnahmen nur über `robots_ausnahme` an der Quelle in
-`config/sources.yaml` (mit Grund und Stand der Anfrage beim Betreiber); `fetch` und `dauer fetch`
+den CKAN-Portalen 10 Sekunden). Ausnahmen nur über `config/robots.yaml` (je Host oder Pfad, mit
+den Quellen, dem Grund und dem Stand der Anfrage beim Betreiber); `fetch` und `dauer fetch`
 nennen am Ende, welche Abrufe nur dank einer Ausnahme gingen und wie lange sie gewartet haben.
 Hintergrund: `../AGENTS.md`, „robots.txt und die Pipeline“.
 
@@ -51,7 +51,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `adapters/potsdam_pdf.py` | Potsdam: Zählpläne (PDF) mit Spitzenstunden und 6-Stunden-Summen |
 | `adapters/xanten_pdf.py` | Xanten: Viertelstundenwerte aus den PDFs des Mobilitätskonzepts |
 | `adapters/muenster.py`, `muenster_xls.py`, `muenster_pdf.py` | Münster: Knotenstrompläne als XLS (2000–2012) und PDF (2010–2020) |
-| `abruf.py` | jeder Abruf: robots.txt (RFC 9309) für `zaehlkarte-pipeline`, Crawl-delay, Ausnahmen aus sources.yaml, Protokoll |
+| `abruf.py` | jeder Abruf: robots.txt (RFC 9309) für `zaehlkarte-pipeline`, Crawl-delay, Ausnahmen aus `config/robots.yaml`, Protokoll |
 | `ckan.py` | CKAN-Portale ohne API (die sperren sie per robots.txt): DCAT-Dokument oder HTML-Seite eines Datensatzes, HTML-Suche |
 | `koordinaten.py` | UTM -> Länge/Breite, örtliche Anpassung Gauß-Krüger -> UTM |
 | `kalender.py` | Schultag, Ferien, Feiertag, Wochenende je Land |
@@ -81,10 +81,11 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Tabelle des PDFs mit pdfplumber; Text von `pdftotext -layout` nur ohne PDF), mit Abgleich gegen eine vorhandene CSV |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |
 
-Konfiguration: `config/sources.yaml` (Quellen, Datenlage, Rechtslage je Land),
-`config/schulferien_*.csv` (KMK-Ferienkalender aller 16 Länder für die Einordnung des Zähltags; das Land
-der Quelle wählt die Datei, `kalender.FERIEN`),
-`config/berlin_rohdateien_2019-2025.txt` (welche Berliner Rohdateien einzeln online liegen).
+Konfiguration (`config/`, Aufbau in `config/README.md`, gelesen von `config.py`): je Quelle eine
+Datei (`quellen/kurzzeit/`, `quellen/dauer/`), die Datenlage je Land (`kommunen/<LAND>.yaml`),
+`recht.yaml`, `anfrage_vorlage.yaml`, `robots.yaml`, `kalender/ferien/<LAND>.csv`
+(KMK-Ferienkalender aller 16 Länder für die Einordnung des Zähltags; das Land der Quelle wählt die
+Datei) und `berlin_rohdateien_2019-2025.txt` (welche Berliner Rohdateien einzeln online liegen).
 `geokodierung/berlin_ergaenzung.csv`: Lage der Berliner Zählungen, die weder GPS noch einen
 Eintrag im Schulwege-Cache haben – erzeugt vom Workflow „Berlin geokodieren“
 (`zaehlkarte geokodier-liste` + `werkzeuge/geokodiere_berlin.py` mit dem Schulwege-Geocoder).
@@ -98,7 +99,7 @@ uv run zaehlkarte fetch            # ~450 MB Download (MobiData-ZIPs samt PDFs);
 uv run zaehlkarte build            # Bericht ohne zu schreiben
 uv run zaehlkarte site             # Kartendaten schreiben (~1,5 min)
 uv run zaehlkarte kalender         # Ferien je Land: Exit-Code 1, wenn sie in drei Monaten enden
-uv run zaehlkarte datenlage        # nur datenlage.json und docs/DATENLAGE.md (aus sources.yaml
+uv run zaehlkarte datenlage        # nur datenlage.json und docs/DATENLAGE.md (aus config/kommunen/
                                    # und der vorhandenen index.json, ohne neuen Bau)
 uv run zaehlkarte dauer fetch      # Dauerzählstellen: Berliner Monatsarchive (~330 MB), Rostock
                                    # (~200 MB), Ettlingen (~40 MB), Münster (~25 MB) und die übrigen

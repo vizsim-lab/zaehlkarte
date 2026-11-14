@@ -195,7 +195,7 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Leipzig und Rostock lässt es sich nicht prüfen. Wo die Quelle einen Ausfall als 0 führt
   (Würzburg-Heidingsfeld, Rhein-Kreis Neuss, Rostock, Bonn, Düsseldorf), erscheint der Tag als
   gezählt (Hinweis an der Quelle).
-- Nicht in der Karte (Gründe in `sources.yaml` und an der Quelle): Zählstellen, die Rad und Fuß
+- Nicht in der Karte (Gründe in der Quelldatei und an der Quelle): Zählstellen, die Rad und Fuß
   zusammen zählen, eine Zählstelle des Landes, und Stellen, die nur die Summe anderer sind oder
   deren Gerät schon unter anderen Stellen zählt (sonst doppelt: die Brücken-Summen in Bonn, drei
   Stellen in Düsseldorf, je eine in Stuttgart und Rostock). Bochum zählt Fuß getrennt – in der
@@ -210,7 +210,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
 
 ```
 pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> Kartendaten
-  config/sources.yaml   die einzige Quellenliste (Quellen, Lizenzen, Datenlage)
+  config/              die einzige Quellenliste: je Quelle eine Datei, Datenlage je Land,
+                       Rechtslage, robots-Ausnahmen, Ferien (Aufbau: config/README.md)
   src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
                             olpe_radar, konstanz_mobil, potsdam_pdf, xanten_pdf)
   src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta, readi_urbanpulse;
@@ -239,7 +240,8 @@ npm run dev                  # http://localhost:5173
 npm run test:unit && npm run test:web
 ```
 
-Eine neue Quelle: Eintrag in `pipeline/config/sources.yaml`, Adapter in
+Eine neue Quelle: eine Datei in `pipeline/config/quellen/<familie>/` (Aufbau:
+[pipeline/config/README.md](pipeline/config/README.md)), Adapter in
 `src/zaehlkarte/adapters/` (liefert `Zaehlung`-Objekte, siehe `modell.py`), Test mit einer
 kleinen synthetischen Datei in `pipeline/tests/`. Wie man Quellen findet und was nicht
 funktioniert hat: [AGENTS.md](AGENTS.md).

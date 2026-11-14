@@ -1,9 +1,10 @@
 # Datenlage: kommunale Verkehrszählungen
 
 Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am 2026-11-14 aus
-`pipeline/config/sources.yaml` – nicht von Hand ändern. Dieselben Angaben zeigt die Karte
-unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw. Dauerzählstellen). Kommunen, von
-denen nur Dauerzählstellen bekannt sind, haben keinen Stand der Kurzzeitzählungen („–“).
+`pipeline/config/kommunen/` (je Land eine Datei) – nicht von Hand ändern. Dieselben
+Angaben zeigt die Karte unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw.
+Dauerzählstellen). Kommunen, von denen nur Dauerzählstellen bekannt sind, haben keinen
+Stand der Kurzzeitzählungen („–“).
 Rechtliche Hinweise sind keine Rechtsberatung; Kontakte aus der Behördendatenbank von
 FragDenStaat.
 

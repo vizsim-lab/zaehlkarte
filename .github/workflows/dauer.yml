@@ -6,7 +6,7 @@
 # startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
 #
 # Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code, die Konfiguration
-# (sources.yaml, Ferien), der Kalender oder dieser Workflow ändern.
+# (pipeline/config/: Quellen, Ferien, robots.yaml), der Kalender oder dieser Workflow ändern.
 # - Schritte laufen mit `shell: bash` (set -eo pipefail): Ein Fehler vor `| tee` beendet den
 #   Schritt – ohne pipefail zählte nur der Exit-Code von tee. Der Abruf scheitert nur, wenn alle
 #   Quellen scheitern; einzelne gescheiterte Quellen stehen als Warnung am Lauf.
@@ -18,8 +18,8 @@
 #   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund), Essens Quartale und Düsseldorfs
 #   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu.
 # - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
-#   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus sources.yaml
-#   (`robots_ausnahme`) – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
+#   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus
+#   pipeline/config/robots.yaml – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
 # - Der OSM-Abzug Hamburg (Geofabrik, für die Straßennamen neuer Stellen) wird nur geladen, wenn
 #   neue Stellen ohne Namen auftauchen und keiner im Cache liegt, und dann behalten (neu laden:
 #   Schlüssel `osm-hamburg-1` erhöhen). GitHub löscht Caches nach sieben Tagen ohne Zugriff; der

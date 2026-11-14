@@ -22,7 +22,7 @@ export const DATENLAGE_KLASSEN = [
   klasse("kandidat", "#eb6834", ["kandidat"]),
   klasse("sonst", DATENLAGE_GRAU, ["aggregiert", "nur_karte", "automatisch", "abgelehnt"]),
 ];
-// Dauerzählstellen: eigener Stand je Kommune (`dauer` in datenlage.json, aus sources.yaml) – die
+// Dauerzählstellen: eigener Stand je Kommune (`dauer` in datenlage.json, aus config/kommunen/) – die
 // Ebene zeigt dann nur die Kommunen mit einem solchen Eintrag
 export const DATENLAGE_KLASSEN_D = [
   klasse("in_karte", "#2a78d6", ["in_karte"], "datenlage.d.klasse"),
