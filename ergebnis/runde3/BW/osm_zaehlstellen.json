@@ -1,0 +1,1767 @@
+[
+ {
+  "osm": "node/10856169",
+  "lat": 49.5709447,
+  "lon": 8.6628307,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/28128571",
+  "lat": 47.9986035,
+  "lon": 7.8220163,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "FR2 Güterbahn / Ferdinand-Weiß-Straße",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "source": "bing:orto",
+   "start_date": "2014-08-01",
+   "thermometer": "no",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/187274590",
+  "lat": 48.7912172,
+  "lon": 9.7206591,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Lorch",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-10",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300048016"
+  }
+ },
+ {
+  "osm": "node/270237903",
+  "lat": 49.4091877,
+  "lon": 8.6765949,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "display": "digital",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "start_date": "2014",
+   "support": "pole",
+   "website": "https://data.eco-counter.com/public2/?id=100048811"
+  }
+ },
+ {
+  "osm": "node/549890686",
+  "lat": 48.9377774,
+  "lon": 10.2691189,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Ellwangen-Röhlingen",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-11",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300047961"
+  }
+ },
+ {
+  "osm": "node/1028191708",
+  "lat": 48.9072612,
+  "lon": 10.1598052,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Bucher Stausee",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-03",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300043279"
+  }
+ },
+ {
+  "osm": "node/1036341014",
+  "lat": 48.9544356,
+  "lon": 10.1171075,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Ellwangen-Schrezheim",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-02",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300043273"
+  }
+ },
+ {
+  "osm": "node/1045867218",
+  "lat": 48.8880118,
+  "lon": 10.1477288,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Westhausen",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-07",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300047924"
+  }
+ },
+ {
+  "osm": "node/2302699573",
+  "lat": 48.7806338,
+  "lon": 9.8132473,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Waldstetten",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-08",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300047979"
+  }
+ },
+ {
+  "osm": "node/2354554621",
+  "lat": 48.818619,
+  "lon": 9.8851184,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Schwäbisch Gmünd-Zimmern",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "note": "Auf der Mobidata-Seite taucht die Zählstelle nicht auf, sie ist aber definitiv verbaut und aktiv. Es wird nur Radverkehr gezählt, durch magnetische Kontaktschleife. D.h. Carbonräder werden ggf. nicht gezählt.",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-06",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300043251"
+  }
+ },
+ {
+  "osm": "node/2962644695",
+  "lat": 49.0072635,
+  "lon": 8.4025584,
+  "tags": {
+   "description": "Fahrradzähler",
+   "display": "digital",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "name": "Erbprinzenstraße",
+   "recording:automated": "yes",
+   "start_date": "2012-04",
+   "support": "pole",
+   "thermometer": "yes",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/3045490907",
+  "lat": 49.0241736,
+  "lon": 8.4053201,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "note": "Verkehrszählstelle an der östlichen Seite der Brücke mit Detektoren",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/3154658846",
+  "lat": 49.1394689,
+  "lon": 9.2143766,
+  "tags": {
+   "amenity": "clock",
+   "check_date": "2024-10-13",
+   "date": "yes",
+   "description": "Fahrradzähler mit Anzeige",
+   "display": "digital",
+   "display:digital": "yes",
+   "image": "https://de.wikipedia.org/wiki/Datei:Heilbronn-fahrradz%C3%A4hler.JPG",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Stadt Heilbronn",
+   "recording:automated": "yes",
+   "ref_name": "Obere Neckarstraße",
+   "source": "bing:orto",
+   "start_date": "2013",
+   "support": "pole",
+   "visibility": "street",
+   "website": "http://www.eco-public.com/public2/?id=100117704"
+  }
+ },
+ {
+  "osm": "node/3370677652",
+  "lat": 48.467757,
+  "lon": 7.9424286,
+  "tags": {
+   "display": "digital",
+   "fixme": "position;\nNo longer present as of 2025?",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "source": "bing:orto",
+   "start_date": "2012",
+   "support": "pole",
+   "thermometer": "yes",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/3370677653",
+  "lat": 47.9952953,
+  "lon": 7.8407184,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter (Zähltechnik) und Veksö (Display)",
+   "monitoring:bicycle": "yes",
+   "name": "Wiwilíbrücke",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "source": "bing:orto",
+   "start_date": "2012-05-01",
+   "support": "ground",
+   "thermometer": "yes",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay",
+   "wikimedia_commons": "File:Stele zum Zählen der Radfahrer an der Freiburger Wiwilìbrücke 6.jpg"
+  }
+ },
+ {
+  "osm": "node/3375727048",
+  "lat": 47.6197148,
+  "lon": 7.6592976,
+  "tags": {
+   "amenity": "clock",
+   "date": "yes",
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Tumringer Straße",
+   "source": "bing:ortophoto",
+   "start_date": "2013",
+   "support": "pole",
+   "visibility": "street",
+   "website": "http://www.eco-public.com/public2/?id=100117687"
+  }
+ },
+ {
+  "osm": "node/3443543580",
+  "lat": 48.6452961,
+  "lon": 9.4515269,
+  "tags": {
+   "amenity": "clock",
+   "check_date": "2026-06-25",
+   "contact:website": "http://www.eco-public.com/public2/?id=100117707",
+   "date": "yes",
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Dettinger Straße",
+   "source": "bing:orto",
+   "start_date": "2012",
+   "support": "pole",
+   "thermometer": "yes",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/3736798285",
+  "lat": 48.7465763,
+  "lon": 9.135645,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "location": "surface",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Böblinger Straße",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2013",
+   "visibility": "street",
+   "website": "http://www.eco-public.com/public2/?id=100034894"
+  }
+ },
+ {
+  "osm": "node/3736798288",
+  "lat": 48.7989896,
+  "lon": 9.2101141,
+  "tags": {
+   "amenity": "clock",
+   "check_date": "2026-10-04",
+   "date": "yes",
+   "description": "Anzeigetafel der Fahrrad-Zählstelle König-Karls-Brücke: Tagesanzahl der registrierten Radfahrer zusammen mit denen des letzten Jahres und die aktuelle Uhrzeit/Datum",
+   "display": "yes",
+   "display:digital": "yes",
+   "faces": "2",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Fahrradzählstelle König-Karls-Brücke",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2016-04-21",
+   "support": "pole",
+   "visibility": "street",
+   "website": "https://data.eco-counter.com/ParcPublic/?id=607"
+  }
+ },
+ {
+  "osm": "node/3736798289",
+  "lat": 48.799012,
+  "lon": 9.2101167,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "location": "surface",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle König-Karls-Brücke",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "KKB-1",
+   "start_date": "2012",
+   "visibility": "house"
+  }
+ },
+ {
+  "osm": "node/3802428205",
+  "lat": 49.4758195,
+  "lon": 8.4973669,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/3872487158",
+  "lat": 48.5179486,
+  "lon": 9.0480032,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Fußgängertunnel",
+   "start_date": "2015",
+   "support": "pole",
+   "visibility": "street",
+   "wikimedia_commons": "File:Bicycle counting monitor, Tübingen, Germania Dec 29, 2025 12-42-01 PM.jpeg"
+  }
+ },
+ {
+  "osm": "node/4328252890",
+  "lat": 49.002147,
+  "lon": 8.4309431,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "note": "misst Verkehr in beide Richtungen, solarbetrieben an Laterne montiert",
+   "recording:automated": "yes",
+   "solar_powered": "yes",
+   "support": "pole"
+  }
+ },
+ {
+  "osm": "node/5471137809",
+  "lat": 48.9933706,
+  "lon": 8.4305383,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "note": "hängt am Mast zwischen den Fahrbahnen",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471137810",
+  "lat": 48.9933944,
+  "lon": 8.4305705,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "note": "hängt am Mast zwischen den Fahrbahnen",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471198619",
+  "lat": 48.991949,
+  "lon": 8.3826113,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471200337",
+  "lat": 48.9901809,
+  "lon": 8.4045273,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471200338",
+  "lat": 48.990154,
+  "lon": 8.4045548,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471200348",
+  "lat": 48.9915398,
+  "lon": 8.4083518,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471200349",
+  "lat": 48.9915667,
+  "lon": 8.4083243,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471313945",
+  "lat": 49.0187704,
+  "lon": 8.3482575,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471313973",
+  "lat": 49.009298,
+  "lon": 8.356221,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471313974",
+  "lat": 49.0093341,
+  "lon": 8.3563592,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471313975",
+  "lat": 49.0093587,
+  "lon": 8.356453,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471314005",
+  "lat": 49.0081214,
+  "lon": 8.3608337,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471314006",
+  "lat": 49.0081038,
+  "lon": 8.3607023,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471314007",
+  "lat": 49.008059,
+  "lon": 8.3605132,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/5471352849",
+  "lat": 49.0292337,
+  "lon": 8.3320664,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/5471352850",
+  "lat": 49.0293102,
+  "lon": 8.3321844,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/5471389808",
+  "lat": 49.0372305,
+  "lon": 8.3197872,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/5471389809",
+  "lat": 49.037249,
+  "lon": 8.3197926,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/5471389810",
+  "lat": 49.0373695,
+  "lon": 8.3198208,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "recording:remote": "yes"
+  }
+ },
+ {
+  "osm": "node/6051651180",
+  "lat": 49.4067119,
+  "lon": 8.6942652,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "display": "digital",
+   "display:digital": "yes",
+   "disused:man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100012608"
+  }
+ },
+ {
+  "osm": "node/6487786362",
+  "lat": 48.9949221,
+  "lon": 8.4262837,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "note": "hängt am Mast zwischen den Fahrbahnen",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/6487786363",
+  "lat": 48.9949527,
+  "lon": 8.426297,
+  "tags": {
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "note": "hängt am Mast zwischen den Fahrbahnen",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/7142781868",
+  "lat": 48.7572951,
+  "lon": 9.0331971,
+  "tags": {
+   "description": "Induktionsschleifen",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Straßenverkehrszentrale Baden-Württemberg",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/7684578692",
+  "lat": 48.7797145,
+  "lon": 9.2484864,
+  "tags": {
+   "description": "Kontaktschleife der Fahrradzählstelle",
+   "display": "no",
+   "location": "surface",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Fahrradzählstelle Untertürkheim Bahnhof",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "KKB-1",
+   "start_date": "2020-07",
+   "visibility": "house"
+  }
+ },
+ {
+  "osm": "node/7684578693",
+  "lat": 48.7797087,
+  "lon": 9.2485044,
+  "tags": {
+   "amenity": "clock",
+   "check_date": "2024-08-20",
+   "date": "yes",
+   "description": "Anzeigetafel der Fahrrad-Zählstelle Untertürkheim Bahnhof: Tagesanzahl der registrierten Radfahrer zusammen mit denen des letzten Jahres und die aktuelle Uhrzeit/Datum",
+   "display": "yes",
+   "display:digital": "yes",
+   "faces": "2",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Fahrradzählstelle Untertürkheim Bahnhof",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2020-07",
+   "support": "pole",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/7884770224",
+  "lat": 48.7397353,
+  "lon": 9.152251,
+  "tags": {
+   "display": "yes",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Kremmlerstraße",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2020-09",
+   "website": "http://www.eco-public.com/public2/?id=100061633"
+  }
+ },
+ {
+  "osm": "node/7886236054",
+  "lat": 48.784309,
+  "lon": 9.1470566,
+  "tags": {
+   "display": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Kräherwald",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2020-08",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/7996719971",
+  "lat": 48.8114594,
+  "lon": 9.1674195,
+  "tags": {
+   "amenity": "clock",
+   "date": "yes",
+   "description": "Anzeigetafel der Fahrrad-Zählstelle Stuttgarter Straße: Tagesanzahl der registrierten Radfahrer zusammen mit denen des letzten Jahres und die aktuelle Uhrzeit/Datum, Zahlen: http://www.eco-public.com/public2/?id=100062943",
+   "display": "yes",
+   "display:digital": "yes",
+   "faces": "2",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Fahrradzählstelle Stuttgarter Straße",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2020-09-01",
+   "support": "pole",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/8018447677",
+  "lat": 48.7698946,
+  "lon": 9.1722657,
+  "tags": {
+   "display": "yes",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Tübinger Straße",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "website": "http://www.eco-public.com/public2/?id=100063225"
+  }
+ },
+ {
+  "osm": "node/8023298270",
+  "lat": 47.9997191,
+  "lon": 7.837105,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "FR3 Eschholzstraße / Egonstraße",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "source": "bing:orto",
+   "start_date": "2015-01-01",
+   "thermometer": "no",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/8023301918",
+  "lat": 47.990533,
+  "lon": 7.8623046,
+  "tags": {
+   "display": "no",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "FR1 Dreisam / Otto-Wels-Straße",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "source": "bing:orto",
+   "start_date": "2014-08-01",
+   "thermometer": "no",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/8025138528",
+  "lat": 48.780309,
+  "lon": 9.1773346,
+  "tags": {
+   "display": "yes",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Lautenschlagerstraße",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "operator:wikidata": "Q108315630",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "website": "http://www.eco-public.com/public2/?id=100063206"
+  }
+ },
+ {
+  "osm": "node/8032963254",
+  "lat": 49.1469544,
+  "lon": 9.2105909,
+  "tags": {
+   "amenity": "clock",
+   "date": "yes",
+   "description": "Fahrradzähler mit Anzeige",
+   "display": "digital",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Fahrradzählstation Neckaruferpark",
+   "operator": "Stadt Heilbronn",
+   "recording:automated": "yes",
+   "ref_name": "Neckaruferpark",
+   "start_date": "2020",
+   "support": "pole",
+   "visibility": "street",
+   "website": "https://eco-display-map.eco-counter.com/site/100065138"
+  }
+ },
+ {
+  "osm": "node/8246062504",
+  "lat": 48.8318531,
+  "lon": 10.0989262,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Radweg am Kocher",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Stadt Aalen",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2020-12",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300015196"
+  }
+ },
+ {
+  "osm": "node/8614426099",
+  "lat": 48.8066828,
+  "lon": 9.1043398,
+  "tags": {
+   "amenity": "clock",
+   "check_date": "2026-10-11",
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Zählstelle Solitudestraße",
+   "network": "Fahrrad-Zählstellen Stuttgart",
+   "operator": "Landeshauptstadt Stuttgart",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "start_date": "2020-07-28",
+   "visibility": "street",
+   "website": "https://data.eco-counter.com/public2/?id=100062945"
+  }
+ },
+ {
+  "osm": "node/8665202685",
+  "lat": 48.4008394,
+  "lon": 9.9576725,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "eco-counter",
+   "monitoring:bicycle": "yes",
+   "name": "Blautal Lupferbrücke",
+   "recording:automated": "yes",
+   "ref": "100057246",
+   "website": "https://stadtulm.eco-counter.com/site/100057246"
+  }
+ },
+ {
+  "osm": "node/8691434561",
+  "lat": 48.7400081,
+  "lon": 9.2266763,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/9709055278",
+  "lat": 49.4066918,
+  "lon": 8.6886604,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100050750"
+  }
+ },
+ {
+  "osm": "node/10597768103",
+  "lat": 48.552284,
+  "lon": 8.2825059,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Nationalpark Schwarzwald",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/10597768222",
+  "lat": 48.5744864,
+  "lon": 8.3468118,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes",
+   "operator": "Nationalpark Schwarzwald",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/10597768223",
+  "lat": 48.5689163,
+  "lon": 8.2360131,
+  "tags": {
+   "description": "Eco-Counter",
+   "man_made": "monitoring_station",
+   "monitoring:pedestrian": "yes",
+   "operator": "Nationalpark Schwarzwald",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/10688533962",
+  "lat": 49.4218524,
+  "lon": 8.6769944,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "operator:wikidata": "Q2966",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100059184"
+  }
+ },
+ {
+  "osm": "node/10688533963",
+  "lat": 49.4219961,
+  "lon": 8.6767363,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "operator:wikidata": "Q2966",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100059184"
+  }
+ },
+ {
+  "osm": "node/10688533967",
+  "lat": 49.4046838,
+  "lon": 8.6498673,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100059187"
+  }
+ },
+ {
+  "osm": "node/10688533968",
+  "lat": 49.4048038,
+  "lon": 8.6496463,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100059187"
+  }
+ },
+ {
+  "osm": "node/10688533969",
+  "lat": 49.4117758,
+  "lon": 8.659315,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "noref": "yes",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100013034"
+  }
+ },
+ {
+  "osm": "node/10688533974",
+  "lat": 49.3976334,
+  "lon": 8.6896122,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100048813"
+  }
+ },
+ {
+  "osm": "node/10688533975",
+  "lat": 49.3886268,
+  "lon": 8.6766838,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100056769"
+  }
+ },
+ {
+  "osm": "node/10688533976",
+  "lat": 49.3978043,
+  "lon": 8.6725661,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100056770"
+  }
+ },
+ {
+  "osm": "node/10688533977",
+  "lat": 49.4146934,
+  "lon": 8.7183025,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "operator:wikidata": "Q2966",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100049883"
+  }
+ },
+ {
+  "osm": "node/10688533978",
+  "lat": 49.4091421,
+  "lon": 8.6985255,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100012161"
+  }
+ },
+ {
+  "osm": "node/10688533979",
+  "lat": 49.3975671,
+  "lon": 8.6893169,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100048814"
+  }
+ },
+ {
+  "osm": "node/10688533980",
+  "lat": 49.4198492,
+  "lon": 8.7273394,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100049901"
+  }
+ },
+ {
+  "osm": "node/10718025949",
+  "lat": 49.397588,
+  "lon": 8.6894228,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100048813"
+  }
+ },
+ {
+  "osm": "node/10747266851",
+  "lat": 49.406382,
+  "lon": 8.6884857,
+  "tags": {
+   "description": "Radfahrzählanlage",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Heidelberg",
+   "recording:automated": "yes",
+   "recording:remote": "yes",
+   "website": "https://data.eco-counter.com/public2/?id=100050750"
+  }
+ },
+ {
+  "osm": "node/11059223353",
+  "lat": 48.5727894,
+  "lon": 8.236453,
+  "tags": {
+   "description": "Besucherzähler",
+   "man_made": "monitoring_station",
+   "monitoring:pedestrian": "yes",
+   "operator": "Nationalpark Schwarzwald",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/11079399995",
+  "lat": 48.5013908,
+  "lon": 8.246223,
+  "tags": {
+   "description": "Besucherzähler",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:pedestrian": "yes",
+   "operator": "Nationalpark Schwarzwald",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/11252326113",
+  "lat": 48.6738599,
+  "lon": 8.9749711,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/11383325826",
+  "lat": 48.9299551,
+  "lon": 8.4203272,
+  "tags": {
+   "description": "Fahrradzähler",
+   "display": "digital",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "recording:automated": "yes",
+   "start_date": "2023-11",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/11792875946",
+  "lat": 48.3656771,
+  "lon": 9.4310231,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/11957013481",
+  "lat": 48.007845,
+  "lon": 7.8352096,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter (Zähltechnik) und Veksö (Display)",
+   "monitoring:bicycle": "yes",
+   "name": "FR2 Elsässer Straße / Uniklinik",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "source": "survey",
+   "start_date": "2024-05-23",
+   "support": "ground",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay",
+   "wikimedia_commons": "File:Fahrradzählstelle Uniklinik Freiburg 02.jpg"
+  }
+ },
+ {
+  "osm": "node/11968002484",
+  "lat": 47.992918,
+  "lon": 7.8467535,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "Rempartstraße / Mensa",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "start_date": "2024-05-29",
+   "support": "ground",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/11968002485",
+  "lat": 47.9956264,
+  "lon": 7.8458838,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "FR6 Rotteckring / H Theater",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "start_date": "2024-06-04",
+   "support": "ground",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/11968002486",
+  "lat": 47.995619,
+  "lon": 7.8461504,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "FR6 Rotteckring / H Theater",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "start_date": "2024-06-04",
+   "support": "ground",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/11968002487",
+  "lat": 47.9882514,
+  "lon": 7.8361041,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "Heinrich-von-Stephan-Straße 9 / JobRad",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "start_date": "2024-05-28",
+   "support": "ground",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/11968002488",
+  "lat": 47.9884038,
+  "lon": 7.836514,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "Heinrich-von-Stephan-Straße 9 / JobRad",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "start_date": "2024-05-28",
+   "support": "ground",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/11983403865",
+  "lat": 47.9863017,
+  "lon": 7.8715458,
+  "tags": {
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco counter",
+   "monitoring:bicycle": "yes",
+   "name": "FR8 Schützenallee / Stadthalle",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "start_date": "2024-05-29",
+   "support": "ground",
+   "visibility": "street",
+   "website": "https://www.freiburg.de/radzaehldisplay"
+  }
+ },
+ {
+  "osm": "node/12236167699",
+  "lat": 47.9862797,
+  "lon": 7.8714632,
+  "tags": {
+   "display": "yes",
+   "man_made": "monitoring_station",
+   "manufacturer": "Eco Counter",
+   "monitoring:bicycle": "yes",
+   "name": "FR8 Schützenallee / Stadthalle",
+   "operator": "Stadt Freiburg",
+   "operator:wikidata": "Q2833",
+   "recording:automated": "yes",
+   "website": "https://www.freiburg.de/pb/,Lde/336245.html"
+  }
+ },
+ {
+  "osm": "node/12384147341",
+  "lat": 47.6519202,
+  "lon": 9.4759247,
+  "tags": {
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "note": "Erfasst den gesamten Verkehr, unterscheidet aber nach Kraftfahrzeugen und Fahrrädern.",
+   "operator": "Landkreis Bodenseekreis",
+   "recording:automated": "yes",
+   "start_date": "2024-11-28",
+   "visibility": "street"
+  }
+ },
+ {
+  "osm": "node/12461769383",
+  "lat": 49.231844,
+  "lon": 9.1835115,
+  "tags": {
+   "description": "Fahrradzähler mit Anzeige",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/12510181561",
+  "lat": 48.5690103,
+  "lon": 8.2619593,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:pedestrian": "yes",
+   "monitoring:traffic": "yes",
+   "operator": "Nationalpark Schwarzwald",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/12725334860",
+  "lat": 49.4900858,
+  "lon": 8.4812161,
+  "tags": {
+   "amenity": "clock",
+   "direction": "both",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "induction_loop",
+   "name": "Renzstraße",
+   "operator": "Stadt Mannheim",
+   "recording:automated": "yes",
+   "ref:DE:BW": "100013246",
+   "start_date": "2014"
+  }
+ },
+ {
+  "osm": "node/12783807700",
+  "lat": 49.4951246,
+  "lon": 8.4727924,
+  "tags": {
+   "amenity": "clock",
+   "display": "digital",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "operator": "Stadt Mannheim",
+   "recording:automated": "yes",
+   "ref:DE:BW": "100043761",
+   "start_date": "2016"
+  }
+ },
+ {
+  "osm": "node/12813103404",
+  "lat": 49.5144162,
+  "lon": 8.473108,
+  "tags": {
+   "display": "no",
+   "display:analog": "no",
+   "display:digital": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Mannheim",
+   "recording:automated": "yes",
+   "ref:DE:BW": "300034898",
+   "start_date": "2022"
+  }
+ },
+ {
+  "osm": "node/12813103405",
+  "lat": 49.4903399,
+  "lon": 8.480884,
+  "tags": {
+   "amenity": "clock",
+   "display:digital": "yes",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "bicycle",
+   "operator": "Stadt Mannheim",
+   "recording:automated": "yes",
+   "ref:DE:BW": "100013246",
+   "start_date": "2014"
+  }
+ },
+ {
+  "osm": "node/12878813398",
+  "lat": 48.808078,
+  "lon": 9.1855154,
+  "tags": {
+   "description": "Messung mittels Kontaktschleife.",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Zählstelle Samaraweg",
+   "operator": "Landeshauptstadt Stuttgart",
+   "website": "https://data.eco-counter.com/public2/?id=100060100"
+  }
+ },
+ {
+  "osm": "node/12900210808",
+  "lat": 49.611375,
+  "lon": 9.5550623,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:traffic": "yes"
+  }
+ },
+ {
+  "osm": "node/13092730055",
+  "lat": 49.4870141,
+  "lon": 8.4931657,
+  "tags": {
+   "direction": "both",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "induction_loop",
+   "name": "Fernmeldeturm",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/13092848272",
+  "lat": 49.4887343,
+  "lon": 8.5131523,
+  "tags": {
+   "direction": "both",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "induction_loop",
+   "name": "Feudenheimer Straße",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/13092848273",
+  "lat": 49.4890186,
+  "lon": 8.513748,
+  "tags": {
+   "direction": "both",
+   "display": "no",
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Feudenheimer Straße",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/13151939696",
+  "lat": 48.4352563,
+  "lon": 8.2111464,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:pedestrian": "yes"
+  }
+ },
+ {
+  "osm": "node/13151939697",
+  "lat": 48.4807925,
+  "lon": 8.2561974,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:pedestrian": "yes"
+  }
+ },
+ {
+  "osm": "node/13205423617",
+  "lat": 48.8471983,
+  "lon": 9.9171423,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "name": "Göggingen-Horn",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-09",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300048419"
+  }
+ },
+ {
+  "osm": "node/13205423619",
+  "lat": 48.8435848,
+  "lon": 10.3843906,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Bopfingen",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-05",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300043269"
+  }
+ },
+ {
+  "osm": "node/13205423620",
+  "lat": 48.9113421,
+  "lon": 9.9088759,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Obergröningen-Algishofen",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-04",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300043250"
+  }
+ },
+ {
+  "osm": "node/13205423621",
+  "lat": 48.7929846,
+  "lon": 10.1237157,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "name": "Oberkochen",
+   "network": "Fahrrad-Zählstellen Ostalbkreis",
+   "operator": "Ostalbkreis",
+   "recording": "yes",
+   "recording:automated": "yes",
+   "ref": "OAK-01",
+   "website": "https://landratsamtostalbkreis.eco-counter.com/site/300043261"
+  }
+ },
+ {
+  "osm": "node/13245548163",
+  "lat": 48.3964323,
+  "lon": 9.984203,
+  "tags": {
+   "amenity": "clock",
+   "check_date": "2025-10-20",
+   "display": "digital",
+   "man_made": "monitoring_station",
+   "manufacturer": "eco-counter",
+   "monitoring:bicycle": "yes",
+   "name": "Neue Straße",
+   "recording:automated": "yes",
+   "ref": "300046201",
+   "start_date": "2024-10-07",
+   "website": "https://stadtulm.eco-counter.com/site/300046201"
+  }
+ },
+ {
+  "osm": "node/13536449514",
+  "lat": 49.4600951,
+  "lon": 8.9983087,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:pedestrian": "yes",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/13542603977",
+  "lat": 47.591228,
+  "lon": 7.5927245,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/13685674052",
+  "lat": 49.4596558,
+  "lon": 8.9936661,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes",
+   "monitoring:traffic": "yes",
+   "recording:automated": "yes"
+  }
+ },
+ {
+  "osm": "node/13980176328",
+  "lat": 48.3945709,
+  "lon": 9.9901434,
+  "tags": {
+   "man_made": "monitoring_station",
+   "manufacturer": "eco-counter",
+   "monitoring:bicycle": "yes",
+   "name": "Donauradweg",
+   "recording:automated": "yes",
+   "ref": "300069315",
+   "website": "https://stadtulm.eco-counter.com/site/300069315"
+  }
+ },
+ {
+  "osm": "node/14029845106",
+  "lat": 47.7823459,
+  "lon": 9.6025191,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:bicycle": "yes"
+  }
+ },
+ {
+  "osm": "node/14060204001",
+  "lat": 47.8030103,
+  "lon": 9.5413133,
+  "tags": {
+   "man_made": "monitoring_station",
+   "monitoring:temperature": "yes",
+   "monitoring:traffic": "yes"
+  }
+ }
+]
