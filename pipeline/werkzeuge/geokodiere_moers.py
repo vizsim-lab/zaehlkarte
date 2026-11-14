@@ -14,7 +14,8 @@ ROHDATEN  pipeline/data/raw/moers (je Datensatz ein Ordner mit paket.json)
 ZIEL      pipeline/geokodierung/moers.csv – nicht von Hand ändern.
 Abrufe über `zaehlkarte.abruf` (robots.txt, Crawl-delay), höchstens eine Anfrage je Sekunde
 (Nutzungsregeln von Nominatim). Overpass über einen Server, der seine API erlaubt
-(overpass-api.de sperrt `/api/` per robots.txt, Prüfung November 2026).
+(overpass-api.de sperrt `/api/` per robots.txt, Prüfung November 2026; private.coffee lief am
+14.11. aus Actions in die Zeitgrenze – dann maps.mail.ru versuchen).
 """
 
 from __future__ import annotations
@@ -30,7 +31,7 @@ from pathlib import Path
 from zaehlkarte import abruf
 
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
-OVERPASS = "https://overpass.kumi.systems/api/interpreter"
+OVERPASS = "https://overpass.private.coffee/api/interpreter"  # früher overpass.kumi.systems
 PHOTON = "https://photon.komoot.io/api/"
 _letzte = [0.0]
 

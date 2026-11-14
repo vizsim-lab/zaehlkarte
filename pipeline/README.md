@@ -26,7 +26,7 @@ site   -> public/data/                  manifest.json, index.json, details/NN.js
 
 dauer fetch  -> data/raw/berlin_viz/     Berlin: Monatsarchive der Verkehrsdetektion (Content-MD5)
              -> data/raw/hamburg_*/      Hamburg: Stellen (stellen.json) und gedaechtnis/ (Stunden
-                                         je UTC-Monat, Straßennamen aus OSM über Overpass)
+                                         je UTC-Monat, Straßennamen aus dem OSM-Abzug)
              -> data/raw/ettlingen/      Ettlingen: Datastore von re@di
              -> data/raw/*_rad/          Rad-Zählstellen: MobiData BW (Monatsdateien, fehlende und
                                          die jüngsten zwei), Münster (Archiv des GitHub-Repositorys,
@@ -76,7 +76,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/bonn_rad.py` | Bonn: Jahresdateien (Stundenauswertung), zwei Zeitformate, Summen der Brücken weg, Lage aus OSM |
 | `dauer/duesseldorf_rad.py` | Düsseldorf: Jahresdateien je Zählstelle, Zuordnung über den Namen, vier Formate, Summen weg |
 | `dauer/gedaechtnis.py` | Gedächtnis der Quellen mit kurzer Vorhaltezeit (Hamburg, Leipzig): Monatsdateien je UTC-Tag |
-| `dauer/strassen.py` | nächste benannte Straße aus OSM über Overpass oder aus einem Abzug (für Quellen ohne Straßennamen) |
+| `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen; Geofabrik, einmal geladen) |
 | `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen (Workflow) |
 | `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Text von `pdftotext -layout`), mit Abgleich gegen eine vorhandene CSV |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |

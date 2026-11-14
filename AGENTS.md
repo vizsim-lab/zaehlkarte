@@ -432,14 +432,13 @@ robots.txt für alle Robots sperrt. Seitdem:
     laut Seite der Ressource („Daten wurden zuletzt aktualisiert“).
   - München: HTML-Suche, je Paket DCAT-Dokument oder HTML-Seite. Für die Werkzeuge nicht prüfbar
     (opendata.muenchen.de sperrt ClaudeBot ganz); für die Pipeline erlaubt (Gruppe `*`).
-  - Hamburg: Straßennamen neuer Stellen über Overpass (overpass.kumi.systems,
-    overpass.private.coffee, maps.mail.ru – in dieser Reihenfolge) statt Geofabrik-Abzug –
-    Geofabrik sperrt `*.osm.pbf` (ebenso openstreetmap.fr ganz und BBBike `*.pbf`),
-    overpass-api.de seine API. Am 14.11. antwortete aus Actions nur maps.mail.ru (POST, 15 s; GET
-    504), kumi und private.coffee liefen in die Zeitgrenze (`ergebnis/overpass_probe/`). Scheitern
-    alle, bleiben die neuen Stellen ohne Namen, der nächste Lauf fragt neu.
-  - Moers-Geokodierung (`werkzeuge/geokodiere_moers.py`): Overpass über kumi, Abrufe über
-    `abruf` (Nominatim und Photon prüft es beim nächsten Lauf).
+  - Hamburg: Straßennamen neuer Stellen kurz über Overpass statt aus dem Geofabrik-Abzug. Am
+    14.11. antwortete aus Actions nur maps.mail.ru (VK, POST 15 s; GET 504);
+    overpass.private.coffee lief in die Zeitgrenze, overpass.kumi.systems ist laut OSM-Wiki
+    derselbe Server unter altem Namen (`ergebnis/overpass_probe/`). Darum zurück zum Abzug, mit
+    Ausnahme (unten).
+  - Moers-Geokodierung (`werkzeuge/geokodiere_moers.py`): Overpass über private.coffee statt
+    overpass-api.de, Abrufe über `abruf` (Nominatim und Photon prüft es beim nächsten Lauf).
 - **Ausnahmen** (die Projektleitung will die Quellen nicht verlieren; bis die Betreiber
   antworten): Potsdam (Opendatasoft-API, Zählpläne auf de.ftp.opendatasoft.com – ganz gesperrt),
   Würzburg, Rhein-Kreis Neuss, Dortmund (Opendatasoft `/api/explore/`; auch
@@ -448,8 +447,16 @@ robots.txt für alle Robots sperrt. Seitdem:
   verweist auf genau diese Wege). Viele Betreiber sperren ihre API gegen Suchmaschinen und bieten
   sie zugleich für Programme an – die Anfrage klärt, ob ein wöchentlicher Abruf bekannter Dateien
   gemeint ist. Entwürfe: Projekt-Dokument `claude/anfragen-robots-2026-11.md`.
-- **Ohne Ausnahme gesperrt:** Workflow „Berlin geokodieren“ (Geofabrik-Abzug Berlin) – bricht ab,
-  das Ergebnis des letzten Laufs liegt im Git.
+- **Geofabrik** (Beschluss der Projektleitung, 14.11.2026): Geofabrik sperrt `*.osm.pbf` per
+  robots.txt für alle Robots (ebenso openstreetmap.fr ganz und BBBike `*.pbf`). Der Abzug ist aber
+  der übliche Weg zu den OSM-Daten einer Stadt; das OSM-Wiki rät für größere Datenmengen zu
+  Extrakten statt Overpass (https://wiki.openstreetmap.org/wiki/Overpass_API), und Geofabrik
+  bittet in seinem Blog vor allem darum, nicht dieselbe Datei immer wieder zu laden
+  (https://blog.geofabrik.de/index.php/2025/09/10/download-responsibly/). Ausnahme für
+  `download.geofabrik.de/europe/germany/`
+  an Hamburg (Kfz, Rad) und Berlin („Berlin geokodieren“, nur von Hand). Beide Abzüge werden nur
+  einmal geladen und im Actions-Cache behalten (Schlüssel `osm-hamburg-1`, `osm-berlin-1`);
+  Hamburg lädt ohnehin nur, wenn neue Stellen ohne Namen auftauchen.
 - **Erlaubt** laut Prüfung: MobiData BW (Dateien unter `/daten/`), Münster, Konstanz, Xanten
   (opendata.ruhr ohne Query), Berlin (Archiv, Rad-Datei), Hamburg (SensorThings), Ettlingen,
   Open.NRW (API; Essen und Düsseldorf laden von den Seiten der Städte), Leipzig, Bonn.
@@ -480,9 +487,8 @@ robots.txt für alle Robots sperrt. Seitdem:
     Stunden, die sieben Tage alt sind.
   - UTC (laut Quelle). Die Rückstellung legt zwei UTC-Stunden auf 2 Uhr Ortszeit.
   - Keine Straßennamen, nur Kennung (`assetID` = Knotenpunkt, 9, Arm, Richtung) und Punkt →
-    nächste benannte Straße aus OSM (ODbL; über Overpass, seit November 2026 – den
-    Geofabrik-Abzug sperrt robots.txt), Kreuzungsname aus den übrigen Armen desselben
-    Knotenpunkts.
+    nächste benannte Straße aus dem Geofabrik-Abzug (OSM, ODbL; einmal geladen, Ausnahme zu
+    robots.txt in sources.yaml), Kreuzungsname aus den übrigen Armen desselben Knotenpunkts.
   - Verschachteltes `$expand=Observations(…;$filter=phenomenonTime ge …;$top=10000)` über eine
     Seite Datastreams spart Abfragen; `$top` bis 20.000 geht.
   - Die alten Dienste `HH_STA_AutomatisierteVerkehrsmengenerfassung` und

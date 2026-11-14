@@ -16,6 +16,11 @@
 # - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
 #   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus sources.yaml
 #   (`robots_ausnahme`) – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
+# - Der OSM-Abzug Hamburg (Geofabrik, für die Straßennamen neuer Stellen) wird nur geladen, wenn
+#   neue Stellen ohne Namen auftauchen und keiner im Cache liegt, und dann behalten (neu laden:
+#   Schlüssel `osm-hamburg-1` erhöhen). GitHub löscht Caches nach sieben Tagen ohne Zugriff; der
+#   wöchentliche Lauf greift jedes Mal zu – fällt der Cache trotzdem weg, lädt erst die nächste
+#   neue Stelle den Abzug wieder.
 # - Hamburg und Leipzig halten Stundenwerte nur Wochen bis Monate vor (Leipzig: 31 Tage). Die
 #   Zählkarte hebt sie selbst auf
 #   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
@@ -86,6 +91,10 @@ jobs:
             pipeline/data/raw/duesseldorf_rad
           key: dauer-rad3-roh-${{ github.run_id }}
           restore-keys: dauer-rad3-roh-
+      - uses: actions/cache@v6  # OSM-Abzug Hamburg (Straßennamen neuer Stellen): einmal laden, dann behalten
+        with:
+          path: pipeline/data/raw/osm
+          key: osm-hamburg-1
       - name: Release anlegen bzw. Beschreibung nachführen
         env:
           GH_TOKEN: ${{ github.token }}

@@ -57,6 +57,17 @@ quellen:
     # vom Workflow „Berlin geokodieren“, im Git (relativ zu pipeline/). Nicht von Hand ändern.
     geokodierung_ergaenzung:
       datei: geokodierung/berlin_ergaenzung.csv
+    # Der Workflow braucht den OSM-Abzug Berlin von Geofabrik (`zaehlkarte lade`). Geofabrik
+    # sperrt *.osm.pbf per robots.txt für alle Robots; Ausnahme auf Beschluss der Projektleitung
+    # (14.11.2026), wie bei Hamburg. Der Workflow läuft nur von Hand und lädt den Abzug einmal
+    # (Cache).
+    robots_ausnahme:
+      urls: [https://download.geofabrik.de/europe/germany/]
+      grund: >-
+        Geofabrik sperrt *.osm.pbf für alle Robots; der Abzug ist der übliche Weg zu den
+        OSM-Daten einer Stadt und wird nur einmal geladen
+      seit: 2026-11-14
+      anfrage: nicht gestellt (Beschluss der Projektleitung)
 
   ravensburg: &mobidata
     status: live
@@ -513,14 +524,22 @@ dauer:
       sv: Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde
     nachladen_tage: 14  # so weit zurück holt jeder Lauf die Stunden erneut (Werte ändern sich noch)
     frisch_tage: 7  # jüngere Stunden kommen noch nicht in die Karte
-    # Straßennamen für neue Stellen über Overpass (Geofabrik sperrt *.osm.pbf per robots.txt,
-    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche).
-    # Am 14.11.2026 antworteten aus GitHub Actions nur maps.mail.ru (POST, 15 s); kumi und
-    # private.coffee liefen in die Zeitgrenze.
-    overpass:
-      - https://overpass.kumi.systems/api/interpreter
-      - https://overpass.private.coffee/api/interpreter
-      - https://maps.mail.ru/osm/tools/overpass/api/interpreter
+    # Straßennamen für neue Stellen aus dem OSM-Abzug von Geofabrik (ODbL). Geladen wird er nur,
+    # wenn neue Stellen ohne Namen auftauchen und noch keiner da ist, und dann behalten (Cache im
+    # Workflow): Straßen ändern sich selten, und Geofabrik bittet, nicht dieselbe Datei immer
+    # wieder zu laden.
+    osm: https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf
+    # Geofabrik sperrt *.osm.pbf per robots.txt für alle Robots – vermutlich gegen Crawler, die den
+    # ganzen Server abgrasen. Ausnahme auf Beschluss der Projektleitung (14.11.2026): Der Abzug ist
+    # der übliche Weg zu den OSM-Daten einer Stadt; Overpass war die erlaubte Alternative, aber
+    # unzuverlässig (am 14.11. antwortete aus GitHub Actions nur ein Server).
+    robots_ausnahme:
+      urls: [https://download.geofabrik.de/europe/germany/]
+      grund: >-
+        Geofabrik sperrt *.osm.pbf für alle Robots; der Abzug ist der übliche Weg zu den
+        OSM-Daten einer Stadt und wird nur einmal geladen
+      seit: 2026-11-14
+      anfrage: nicht gestellt (Beschluss der Projektleitung)
     titel: >-
       Verkehrsdaten Kfz Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
       zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
@@ -557,14 +576,22 @@ dauer:
       rad: Anzahl_Fahrraeder_Zaehlstelle_1-Stunde
     nachladen_tage: 14
     frisch_tage: 7
-    # Straßennamen für neue Stellen über Overpass (Geofabrik sperrt *.osm.pbf per robots.txt,
-    # overpass-api.de seine API; diese Server erlauben sie – Reihenfolge = Reihenfolge der Versuche).
-    # Am 14.11.2026 antworteten aus GitHub Actions nur maps.mail.ru (POST, 15 s); kumi und
-    # private.coffee liefen in die Zeitgrenze.
-    overpass:
-      - https://overpass.kumi.systems/api/interpreter
-      - https://overpass.private.coffee/api/interpreter
-      - https://maps.mail.ru/osm/tools/overpass/api/interpreter
+    # Straßennamen für neue Stellen aus dem OSM-Abzug von Geofabrik (ODbL). Geladen wird er nur,
+    # wenn neue Stellen ohne Namen auftauchen und noch keiner da ist, und dann behalten (Cache im
+    # Workflow): Straßen ändern sich selten, und Geofabrik bittet, nicht dieselbe Datei immer
+    # wieder zu laden.
+    osm: https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf
+    # Geofabrik sperrt *.osm.pbf per robots.txt für alle Robots – vermutlich gegen Crawler, die den
+    # ganzen Server abgrasen. Ausnahme auf Beschluss der Projektleitung (14.11.2026): Der Abzug ist
+    # der übliche Weg zu den OSM-Daten einer Stadt; Overpass war die erlaubte Alternative, aber
+    # unzuverlässig (am 14.11. antwortete aus GitHub Actions nur ein Server).
+    robots_ausnahme:
+      urls: [https://download.geofabrik.de/europe/germany/]
+      grund: >-
+        Geofabrik sperrt *.osm.pbf für alle Robots; der Abzug ist der übliche Weg zu den
+        OSM-Daten einer Stadt und wird nur einmal geladen
+      seit: 2026-11-14
+      anfrage: nicht gestellt (Beschluss der Projektleitung)
     titel: >-
       Verkehrsdaten Rad Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen
       zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)
