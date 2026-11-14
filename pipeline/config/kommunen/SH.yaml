@@ -64,3 +64,88 @@
       - ["Mobilithek: älteres Angebot (CC BY 4.0)", "https://mobilithek.info/offers/995318989663924224"]
       - ["DatenDock der KielRegion (Dashboard)", "https://datendock.civora.org/app/dashboards/30"]
       - ["Mobilithek: Radzählstationen Kiel", "https://mobilithek.info/offers/1046783892706476032"]
+- ags: "01062006"
+  name: Bargteheide
+  lage: [10.2619, 53.7301]
+  kontakt: {fds_suche: "Stadt Bargteheide"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      zwei eigene Verkehrszählgeräte der Stadt; dazu eine kameragestützte Verkehrszählung
+    situation: >-
+      Die Stadt hat zwei eigene Verkehrszählgeräte in Betrieb genommen und eine kameragestützte
+      Verkehrszählung angekündigt (Meldungen der Stadt). Ergebnisse sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Exporten der beiden Zählgeräte und der Kamerazählung (Werte je Intervall und
+      Richtung), mit Lizenz. Grundlage: IZG-SH.
+    weg: "FragDenStaat, IZG-SH"
+    anfrage:
+      zusatz: >-
+        Sie haben zwei eigene Verkehrszählgeräte in Betrieb genommen. Ich bitte um die Exporte dieser
+        Geräte und um die kameragestützte Verkehrszählung.
+    links:
+      - ["Zwei Verkehrszählgeräte in Betrieb", "https://www.bargteheide.de/Aktuelles/Aktuelle-Meldungen-/Bargteheide-nimmt-zwei-Verkehrsz%C3%A4hlger%C3%A4te-in-Betrieb.php?ModID=255&FID=3489.49331.1"]
+      - ["Kameragestützte Verkehrszählung", "https://www.bargteheide.de/Aktuelles/Aktuelle-Meldungen-/Ank%C3%BCndigung-einer-kameraunterst%C3%BCtzten-Verkehrsz%C3%A4hlung.php?ModID=255&FID=3489.2809.1"]
+- ags: "01057091"
+  name: Schwentinental
+  lage: [10.2382, 54.2824]
+  kontakt: {fds_suche: "Stadt Schwentinental"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      temporäre Radzählung der Stadt von September bis Mitte Oktober 2025
+    situation: >-
+      Von September bis Mitte Oktober 2025 hat die Stadt temporär den Radverkehr gezählt, als
+      Grundlage für Planungen. Ergebnisse sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach der Radzählung 2025 (Werte je Stunde und Richtung), mit Lizenz. Grundlage:
+      IZG-SH.
+    weg: "FragDenStaat, IZG-SH"
+    anfrage:
+      zusatz: >-
+        Von September bis Mitte Oktober 2025 haben Sie temporär den Radverkehr gezählt. Ich bitte um
+        diese Zählung.
+    links:
+      - ["Temporäre Radzählung 2025", "https://www.schwentinental.de/detail/temporaere-radzaehlung-von-september-bis-mitte-oktober-2025"]
+- ags: "01057057"
+  name: Plön
+  lage: [10.4164, 54.1583]
+  kontakt: {fds_suche: "Stadt Plön"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Radzählgeräte der Stadt in der Lütjenburger Straße und der Eutiner Straße
+    situation: >-
+      Die Stadt misst mit Radzählgeräten, wie viele Menschen in der Lütjenburger Straße und der
+      Eutiner Straße Rad fahren. Ergebnisse sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen dieser Geräte (Werte je Stunde und Richtung), mit Lizenz.
+      Grundlage: IZG-SH.
+    weg: "FragDenStaat, IZG-SH"
+    anfrage:
+      zusatz: >-
+        Sie zählen mit Radzählgeräten in der Lütjenburger Straße und der Eutiner Straße. Ich bitte um
+        diese Zählungen.
+    links:
+      - ["Radzählanlagen Lütjenburger und Eutiner Straße", "https://www.ploen.de/Pl%C3%B6n-Aktuell/Stadtnachrichten/Radz%C3%A4hlanlagen-in-L%C3%BCtjenburger-Stra%C3%9Fe-und-Eutiner-Stra%C3%9Fe.php?ModID=255&FID=3319.8560.1"]
+- ags: "01054056"
+  name: Husum
+  lage: [9.0513, 54.4764]
+  kontakt: {fds_suche: "Stadt Husum"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Fahrradzählgerät der Stadt im Einsatz (An der Mühlenau)
+    situation: >-
+      Die Stadt setzt ein Fahrradzählgerät ein, etwa An der Mühlenau. Ergebnisse sind nicht
+      veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen des Geräts (Werte je Stunde und Richtung), mit Lizenz. Grundlage:
+      IZG-SH.
+    weg: "FragDenStaat, IZG-SH"
+    anfrage:
+      zusatz: >-
+        Sie setzen ein Fahrradzählgerät ein, etwa An der Mühlenau. Ich bitte um die Zählungen dieses
+        Geräts.
+    links:
+      - ["Fahrradzählgerät An der Mühlenau", "https://www.husum.org/Verwaltung-Politik/Ver%C3%B6ffentlichungen/Fahrradz%C3%A4hlger%C3%A4t-An-der-M%C3%BChlenau-im-Einsatz.php?ModID=255&FID=3214.36723.1"]

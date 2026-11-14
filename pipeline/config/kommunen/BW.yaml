@@ -99,9 +99,11 @@
     stand: in_karte
     quellen: [mobidata_rad]
     was: >-
-      sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen
+      sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen; die
+      Verkehrszähldaten der Stadt (Kfz, CC BY 4.0) gibt es über die Mobilithek nur nach Vermittlung
     links:
       - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+      - ["Mobilithek: Verkehrszähldaten Konstanz (dynamisch)", "https://mobilithek.info/offers/922430355709591552"]
 - ags: "08111000"
   name: Stuttgart
   lage: [9.1829, 48.7758]
@@ -324,7 +326,8 @@
     was: >-
       Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 12 Zählkameras im Katalog der
       Datenplattform (CC0), dessen Schnittstelle im November 2026 nicht antwortete, und
-      Verkehrsrechnerdaten nur mit Schlüssel – nicht in der Karte
+      Verkehrsrechnerdaten (15-Minuten-Werte, laut Mobilithek CC0) nur über eine Schnittstelle mit
+      Schlüssel – nicht in der Karte
     links:
       - ["Datenplattform: Kamera (Beispiel)", "https://ckan.datenplattform.heidelberg.de/en/dataset/mobility_main_trafficcamera/resource/b95871b2-7de0-46b1-b377-db497250f8a0"]
       - ["MobiData BW: Verkehrsrechnerdaten", "https://mobidata-bw.de/en/dataset/verkehrsleitrechnerdaten-in-heidelberg/resource/18936b7b-af96-45c5-ad05-f7f09ef6d9a3"]
@@ -339,3 +342,248 @@
       Karte als Dauerzählstellen
     links:
       - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08119"
+  name: Rems-Murr-Kreis
+  lage: [9.4247, 48.88]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      25 Rad-Zählstellen (Landratsamt Rems-Murr-Kreis, Daten seit 2021) über das Bündel von MobiData
+      BW (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08118048"
+  name: Ludwigsburg
+  lage: [9.195, 48.8935]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      22 Rad-Zählstellen (Stadt Ludwigsburg, Daten seit 2017) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08136"
+  name: Ostalbkreis
+  lage: [10.1172, 48.8472]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      elf Rad-Zählstellen (Landratsamt Ostalbkreis, Daten seit 2024) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08121000"
+  name: Heilbronn
+  lage: [9.2146, 49.1399]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      acht Rad-Zählstellen (Stadt Heilbronn, Daten seit 2013) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08415061"
+  name: Reutlingen
+  lage: [9.2089, 48.4909]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      acht Rad-Zählstellen (Stadt Reutlingen, Daten seit 2021) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08125"
+  name: Landkreis Heilbronn
+  lage: [9.198, 49.1437]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      fünf Rad-Zählstellen (Landratsamt Heilbronn, Daten seit 2024) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08416041"
+  name: Tübingen
+  lage: [9.0599, 48.5166]
+  kontakt: {fds_suche: "Stadt Tübingen"}
+  kurzzeit:
+    stand: ohne_lizenz
+    was: >-
+      Bericht Verkehrszählungen Juni/Juli 2022 im Ratsinformationssystem: Kfz und Rad je
+      Querschnitt in 24 Stunden (Kernstadt, Teilorte), ohne Lizenz
+    situation: >-
+      Zur Vorlage 242/2022 („Bericht Verkehrszählungen Juni/Juli 2022“) stehen die Zählungen als
+      Anlagen im Ratsinformationssystem: je Querschnitt Kfz und Rad in 24 Stunden, für die Kernstadt
+      mit Vergleich zu 2019 (Verkehrsversuch), für die Teilorte gegen den DTV 2019. Eine Lizenz
+      nennen die Unterlagen nicht; Zählungen anderer Jahre sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen 2019 und 2022 (und später) als Export – Werte je Intervall und
+      Richtung – mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        Zu Ihrer Vorlage 242/2022 („Bericht Verkehrszählungen Juni/Juli 2022“) stehen 24-Stunden-Werte
+        je Querschnitt im Ratsinformationssystem. Ich bitte um diese Zählungen und die späteren als
+        Export mit den Werten je Intervall und Richtung.
+    links:
+      - ["Vorlage 242/2022: Bericht Verkehrszählungen", "https://www.tuebingen.de/gemeinderat/vo0050.php?__kvonr=16692"]
+      - ["Anlage 1: Zählungen Kernstadt", "https://www.tuebingen.de/gemeinderat/getfile.asp?id=81457&type=do"]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      vier Rad-Zählstellen (Stadt Tübingen, Daten seit 2013) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08336050"
+  name: Lörrach
+  lage: [7.6658, 47.6191]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      zwei Rad-Zählstellen (Stadt Lörrach, Daten seit 2013) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08115"
+  name: Landkreis Böblingen
+  lage: [9.0281, 48.6927]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      zwei Rad-Zählstellen (Landkreis Böblingen, Daten seit 2019) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08337096"
+  name: Bad Säckingen
+  lage: [7.9371, 47.5673]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      zwei Rad-Zählstellen (Stadt Bad Säckingen, Daten seit 2023) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08116033"
+  name: Kirchheim unter Teck
+  lage: [9.4516, 48.6452]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Kirchheim unter Teck, Daten seit 2014) über das Bündel von MobiData
+      BW (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08317096"
+  name: Offenburg
+  lage: [7.9423, 48.468]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Offenburg, Daten seit 2017) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08136088"
+  name: Aalen
+  lage: [10.0987, 48.832]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Aalen, Daten seit 2020) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08335075"
+  name: Singen (Hohentwiel)
+  lage: [8.85, 47.7608]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Singen, Daten seit 2022) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08211000"
+  name: Baden-Baden
+  lage: [8.228, 48.7699]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Baden-Baden, Daten seit 2024) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08316011"
+  name: Emmendingen
+  lage: [7.8648, 48.1128]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Emmendingen, Daten seit 2026) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08231000"
+  name: Pforzheim
+  lage: [8.7066, 48.8892]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Pforzheim, Daten seit 2025) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08125065"
+  name: Neckarsulm
+  lage: [9.2236, 49.1793]
+  dauer:
+    stand: in_karte
+    quellen: [mobidata_rad]
+    was: >-
+      eine Rad-Zählstelle (Stadt Neckarsulm, Daten seit 2026) über das Bündel von MobiData BW
+      (dl-de/by-2-0) – in der Karte als Dauerzählstellen
+    links:
+      - ["Eco-Counter-Fahrradzähler (MobiData BW)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
+- ags: "08235047"
+  name: Neubulach
+  lage: [8.692, 48.6614]
+  kontakt: {fds_suche: "Stadt Neubulach"}
+  kurzzeit:
+    stand: ohne_lizenz
+    was: >-
+      Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als PDF:
+      Querschnitte über 24 Stunden, Knotenpunkte je zweimal vier Stunden, ohne Lizenz
+    situation: >-
+      Für die Fortschreibung des Lärmaktionsplans hat die Stadt ein Büro zählen lassen: an
+      Querschnitten über 24 Stunden, an Knotenpunkten vormittags und nachmittags je vier Stunden
+      (hochgerechnet anhand der 24-Stunden-Zählungen). Der Kurzbericht mit den Werten steht als PDF
+      auf der Website der Stadt, ohne Lizenzangabe.
+    empfehlung: >-
+      Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw. Strom und
+      Fahrzeugart), mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
+    weg: "FragDenStaat, LIFG BW"
+    anfrage:
+      zusatz: >-
+        Ich bitte um die Zählungen aus dem Kurzbericht „Verkehrszählungen zur Fortschreibung des
+        Lärmaktionsplans“ (Januar 2024) als Export mit den Werten je Intervall.
+    links:
+      - ["Kurzbericht Verkehrszählungen (PDF)", "https://www.neubulach.de/ceasy/resource/?download=1&id=3956"]

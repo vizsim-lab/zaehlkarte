@@ -387,6 +387,24 @@ davon offen gibt, steht unten unter „Nicht kommunal“.
     offen in Augsburg (Annastraße, CC BY 4.0) und Würzburg (dl-de/by-2-0).
   - **Gezählt, nicht offen:** Regensburg (eigene Zählungen März–Oktober, 6–10 und 15–19 Uhr);
     nur als Plan: Erlangen (Verkehrsbelastungsplan 2017).
+- Übrige Länder, Runde 3 (November 2026, Kommune für Kommune wie Niedersachsen; Websites je Land:
+  BW 1.375, RP 859, SH 334, SN 358, TH 265, ST 251, BB 247, MV 222, SL 46, dazu die Stadtstaaten;
+  Ergebnisse `ergebnis/runde3*/<LAND>`): keine offene Kurzzeitzählung mit Lizenz.
+  - **Werte als PDF ohne Lizenz:** Tübingen (Ratsinformationssystem, Vorlage 242/2022: 24-Stunden-
+    Werte je Querschnitt für Kfz und Rad), Neubulach (Kurzbericht zum Lärmaktionsplan 2024).
+  - **MobiData BW:** 18 weitere Kommunen und Kreise haben Rad-Zählstellen im Bündel und damit in
+    der Karte (Rems-Murr-Kreis 25, Ludwigsburg 22, Ostalbkreis 11 …) – jetzt mit Datenlage-Eintrag.
+  - **Gezählt, nicht offen:** Görlitz (Kameras an 30 Knoten), Landkreis Sächsische
+    Schweiz-Osterzgebirge (Kreisstraßen ab 2026), Zweibrücken (2022), Greifswald (Rad 2019 an rund
+    50 Stellen, Fuß und Rad 2024), Finsterwalde (VEP 2025), Birkenwerder, Bargteheide,
+    Schwentinental, Plön, Husum (Rad), Elmstein (Display mit Datenerfassung je Fahrzeug), Binz
+    (Auskunft gegen Gebühr).
+  - **Rad-Dauerzählstellen ohne offene Werte:** Koblenz (zwei), Greifswald (drei), Schmölln.
+  - **Mobilithek:** Verkehrszähldaten Konstanz (Kfz, CC BY 4.0, nur vermittelt); Heidelbergs
+    Verkehrsrechnerdaten laut Mobilithek CC0, aber nur über eine Schnittstelle mit Schlüssel.
+  - **Ohne Fund:** Sachsen-Anhalt und das Saarland (nur schon bekannte Einträge), die Stadtstaaten.
+    Zählungen des Landesamts für Umwelt Brandenburg zur Lärmkartierung tauchen als Ankündigungen
+    der Städte auf (Beelitz).
 - Übrige Länder (November 2026, GovData je Land, Landes- und Stadtportale, alle
   FragDenStaat-Anfragen samt Anhängen, Stadtseiten): neu offen nur Olpe (in der Karte). Neu in der
   Datenlage: Bremen, Augsburg, Amberg, Wuppertal, Falkensee, Lingen (Ems); präzisiert: Kassel

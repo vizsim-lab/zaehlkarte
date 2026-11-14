@@ -1,0 +1,60 @@
+# Datenlage Rheinland-Pfalz – je Kommune ein Eintrag (Format: pipeline/config/README.md).
+
+- ags: "07111000"
+  name: Koblenz
+  lage: [7.598, 50.3595]
+  dauer:
+    stand: kandidat
+    was: >-
+      zwei Dauerzählstellen für den Radverkehr (Förderung der Nationalen Klimaschutzinitiative);
+      Werte nicht als Daten veröffentlicht
+    links:
+      - ["Zwei Dauerzählstellen für Fahrräder", "https://www.koblenz.de/umwelt-und-planung/mobilitaet/radfahren-in-koblenz/aktuelles/dauerzaehlstellen/"]
+- ags: "07320000"
+  name: Zweibrücken
+  lage: [7.3631, 49.2492]
+  kontakt: {fds_suche: "Stadt Zweibrücken"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Verkehrszählungen im Stadtgebiet von März 2022 bis zu den Osterferien für ein multimodales
+      Verkehrsmodell (Mobilitätskonzept)
+    situation: >-
+      Von Mitte März 2022 bis zu den Osterferien hat die Stadt im Stadtgebiet gezählt, um ein
+      multimodales Verkehrsmodell für ihr Mobilitätskonzept aufzubauen. Die Zählungen sind nicht
+      veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Zählungen 2022 (Werte je Intervall, Strom bzw. Richtung und Verkehrsart), mit
+      Lizenz. Grundlage: Landestransparenzgesetz.
+    weg: "FragDenStaat, LTranspG RP"
+    anfrage:
+      zusatz: >-
+        Im März und April 2022 haben Sie für Ihr Mobilitätskonzept im Stadtgebiet gezählt. Ich bitte
+        um diese Zählungen.
+    links:
+      - ["Verkehrszählungen starten (März 2022)", "https://www.zweibruecken.de/de/leben-in-zweibruecken/aktuelles/jahresarchiv-2022/03/verkehrszaehlungen-starten-in-der-kommenden-woche/"]
+- ags: "07332014"
+  name: Elmstein
+  lage: [7.9353, 49.3522]
+  kontakt: {fds_suche: "Gemeinde Elmstein"}
+  kurzzeit:
+    stand: kandidat
+    was: >-
+      Geschwindigkeitsdisplay mit Verkehrsdatenerfassung seit 2019 an wechselnden Stellen (je
+      Fahrzeug Uhrzeit, Länge, Geschwindigkeit)
+    situation: >-
+      Seit 2019 setzt die Gemeinde ein Geschwindigkeitsdisplay mit Verkehrsdatenerfassung an
+      wechselnden Stellen ein, wo Anwohner sich sorgen. Das Gerät erfasst je Fahrzeug Uhrzeit, Länge
+      und Geschwindigkeit; 2021 hat die Gemeinde ihre Erfahrungen zusammengefasst. Die Daten selbst
+      sind nicht veröffentlicht.
+    empfehlung: >-
+      Anfrage nach den Exporten des Geräts (je Messung, mit Ort und Zeitraum), mit Lizenz.
+      Grundlage: Landestransparenzgesetz.
+    weg: "FragDenStaat, LTranspG RP"
+    anfrage:
+      an: "Gemeinde Elmstein"
+      zusatz: >-
+        Ihr Geschwindigkeitsdisplay erfasst seit 2019 je Fahrzeug Uhrzeit, Länge und Geschwindigkeit.
+        Ich bitte um die Exporte dieser Messungen mit Ort und Zeitraum.
+    links:
+      - ["Zwei Jahre Verkehrszählung (2021)", "https://elmstein.de/2021/10/06/zwei-jahre-verkehrszaehlung-zusammenfassung-der-erfahrungen/"]
