@@ -1,0 +1,360 @@
+{
+ "berlin (Kurzzeit)": [
+  {
+   "url": "https://raw.githubusercontent.com/vizsim/berlin-traffic-counts_schulwege/d09e6f06aaa84dd339a6e9ea91dfbf25b642c1a0/data/rohdaten-2019-2025.7z",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  },
+  {
+   "url": "https://vizsim.github.io/berlin-traffic-counts_schulwege/data/rohdaten-fuss-2019-2025/x.zda",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  }
+ ],
+ "ravensburg & Co. (MobiData BW)": [
+  {
+   "url": "https://mobidata-bw.de/daten/portal/RV_Zaehl/Verkehrszaehlungen_RV.xlsx",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://mobidata-bw.de/daten/portal/RV_Zaehl/Zaehldaten_PDF-Excel_RV.zip",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "moers": [
+  {
+   "url": "https://www.offenesdatenportal.de/api/3/action/package_show?id=verkehrszahlung-in-moers-2021",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://www.offenesdatenportal.de/dataset/0f1d1c6c/resource/4bcf5776/download/ackerstrasse.txt",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "olpe": [
+  {
+   "url": "https://opendata.olpe.de/api/3/action/package_search?q=Verkehrsmessung&rows=200",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://opendata.olpe.de/dataset/x",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://opendata.olpe.de/dataset/x/resource/y/download/z.json",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "potsdam": [
+  {
+   "url": "https://opendata.potsdam.de/api/explore/v2.1/catalog/datasets/verkehrszahlungen/exports/json",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/information/",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "muenster": [
+  {
+   "url": "https://opendata.stadt-muenster.de/sites/default/files/Verkehrsz%C3%A4hlung.zip",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "konstanz": [
+  {
+   "url": "https://offenedaten-konstanz.de/sites/default/files/Schottenstrasse_2.csv",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "xanten": [
+  {
+   "url": "https://opendata.ruhr/dataset/dd58836a-5e0c-4b05-97df-d3bd714e702e/resource/fea95307-56ea-425c-9a77-535b88d10598/download/20210104_gesamtubersicht_zahldaten_xanten_knotenpunkte.pdf",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "berlin_viz": [
+  {
+   "url": "https://mdhopendata.blob.core.windows.net/verkehrsdetektion?restype=container&comp=list",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  },
+  {
+   "url": "https://api.viz.berlin.de/daten/verkehrsdetektion",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  }
+ ],
+ "hamburg_kfz/rad": [
+  {
+   "url": "https://iot.hamburg.de/v1.1/Datastreams?$filter=properties/serviceName%20eq%20%27x%27",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  },
+  {
+   "url": "https://download.geofabrik.de/europe/germany/hamburg-latest.osm.pbf",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "ettlingen": [
+  {
+   "url": "https://opendata.readi.de/datastore/dump/a903967d-9177-4db6-977c-267fd745a390",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "mobidata_rad": [
+  {
+   "url": "https://mobidata-bw.de/daten/eco-counter/v2/fahrradzaehler_stundenwerten_202601.csv.gz",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "muenster_rad": [
+  {
+   "url": "https://codeload.github.com/od-ms/radverkehr-zaehlstellen/tar.gz/refs/heads/main",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  },
+  {
+   "url": "https://opendata.stadt-muenster.de/sites/default/files/fahrradzaehl-standorte_0.geojson",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "aachen_rad": [
+  {
+   "url": "https://offenedaten.aachen.de/api/3/action/package_show?id=radzaehlstellen-der-stadt-aachen",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://offenedaten.aachen.de/dataset/x/resource/y/download/z.csv",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "berlin_rad": [
+  {
+   "url": "https://www.berlin.de/sen/uvk/_assets/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/gesamtdatei-stundenwerte.xlsx",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "muenchen_rad": [
+  {
+   "url": "https://opendata.muenchen.de/api/3/action/package_show?id=x",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://opendata.muenchen.de/dataset/x/resource/y/download/z.csv",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://geoportal.muenchen.de/geoserver/mor_wfs/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=mor_wfs:raddauerzaehlstellen",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  }
+ ],
+ "wuerzburg_rad": [
+  {
+   "url": "https://opendata.wuerzburg.de/api/explore/v2.1/catalog/datasets/x/exports/csv",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "rhein_kreis_neuss_rad": [
+  {
+   "url": "https://opendata.rhein-kreis-neuss.de/api/explore/v2.1/catalog/datasets/eco-counter-data/exports/csv",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "dortmund_rad": [
+  {
+   "url": "https://open-data.dortmund.de/api/explore/v2.1/catalog/datasets/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/exports/csv",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "essen_rad / duesseldorf_rad": [
+  {
+   "url": "https://open.nrw/api/3/action/package_show?id=radverkehrszahlungen-e",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://open.nrw/api/3/action/package_search?q=x",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://ckan.open.nrw.de/dataset/x/resource/y/download/z.csv",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "alles gesperrt"
+  },
+  {
+   "url": "https://opendata.duesseldorf.de/sites/default/files/x.csv",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://www.essen.de/x.csv",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  }
+ ],
+ "leipzig_rad": [
+  {
+   "url": "https://geodienste.leipzig.de/l3/OpenData/wfs?service=WFS&request=GetFeature&typeName=x",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 1.0,
+   "robots": "alles erlaubt"
+  }
+ ],
+ "rostock_rad": [
+  {
+   "url": "https://geo.sv.rostock.de/download/opendata/radmonitore/radmonitore_daten.csv",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "bochum_rad": [
+  {
+   "url": "https://gitlab.opencode.de/api/v4/projects/x/repository/archive",
+   "zaehlkarte-pipeline": false,
+   "*": false,
+   "crawl_delay": 1.0,
+   "robots": "Regeln"
+  }
+ ],
+ "bonn_rad": [
+  {
+   "url": "https://opendata.bonn.de/data.json",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  },
+  {
+   "url": "https://opendata.bonn.de/sites/default/files/x.csv",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ],
+ "mannheim/ulm/… (MobiData)": [
+  {
+   "url": "https://mobidata-bw.de/fahrradzaehldaten/v2/",
+   "zaehlkarte-pipeline": true,
+   "*": true,
+   "crawl_delay": 10.0,
+   "robots": "Regeln"
+  }
+ ]
+}
