@@ -1,0 +1,9 @@
+# Quellen, Runde 6 (November 2026): VMZ-Rückstelltag 2025, Dresden OGC API (Pfad mit collections/)
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2025-10-25/2025-10-27/hourly?stationIds=100030021,300026962,100047629&format=csv
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2025-10-25/2025-10-27/hourly?stationIds=100030021,300026962,100047629
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/problems/2017-01-01/2025-12-31?stationIds=100030021,300026962,100047629,300039699,100044789
+vmz_api | https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/values/2026-11-01/2026-11-13/hourly?stationIds=100030021,300039699&format=csv
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780?f=json
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780/items?limit=100&f=json
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1781/items?limit=50&f=json
+dresden_api | https://kommisdd.dresden.de/net4/public/ogcapi/?f=json
