@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [wege]
+        teil: [wege2]
     steps:
       - uses: actions/checkout@v7
       - run: sudo apt-get install -y -qq poppler-utils > /dev/null
@@ -28,6 +28,7 @@ jobs:
             lizenz5) timeout 20m python3 tools/hessen5.py || true ;;
             nrw4) timeout 40m python3 tools/nrw2.py ergebnis/nrw4 tools/nrw4_seiten.txt nachpruefen,seiten || true ;;
             wege) timeout 20m python3 tools/wege.py ergebnis/wege || true ;;
+            wege2) timeout 20m python3 tools/wege2.py ergebnis/wege2 || true ;;
             robots_audit) timeout 20m python3 tools/robots_audit.py || true ;;
             nrw3) timeout 52m python3 tools/nrw2.py ergebnis/nrw3 tools/nrw3_seiten.txt robots,mdk,seiten || true ;;
             nrw2_mdk) timeout 30m python3 tools/nrw2.py ergebnis/nrw2_mdk tools/nrw2_seiten.txt mdk || true ;;
