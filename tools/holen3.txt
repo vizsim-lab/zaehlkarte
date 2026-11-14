@@ -1,0 +1,14 @@
+# Quellen ohne Lizenz, Runde 3 (November 2026): Hinweise der Projektleitung (Dresden, Hannover),
+# Neuss RS5 (Opendatasoft, Seite), Osnabrück (Stichprobe der Beobachtungen, Seite der Datenplattform)
+dresden | https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D
+dresden | https://opendata.dresden.de/dcat-ap/
+dresden | https://opendata.dresden.de/dcat-ap/dataset/de-sn-dresden-verkehrsnetz_md1_1990ff_dresden.html
+dresden | https://www.dresden.de/de/stadtraum/verkehr/fahrrad/radverkehrskonzept/020-Dauerzaehlstellen-Radverkehr.php
+hannover | https://www.vmz-niedersachsen.de/radverkehr/zaehler-abfrage/
+hannover | https://www.vmz-niedersachsen.de/radverkehr/zaehler-auswertungen/
+hannover | https://www.vmz-niedersachsen.de/impressum/
+neuss_rs5 | https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/information/
+osnabrueck_sta | https://datenplattform.osnabrueck.de/verkehrszaehlung/
+osnabrueck_sta | https://daten-api.osnabrueck.de/v1.1/Things(673)/Datastreams
+osnabrueck_sta | https://daten-api.osnabrueck.de/v1.1/Things(673)/Datastreams?$expand=Observations($top=300;$orderby=phenomenonTime%20desc)
+osnabrueck_sta | https://daten-api.osnabrueck.de/v1.1/Things(1578)/Datastreams?$expand=Observations($top=300;$orderby=phenomenonTime%20desc)
