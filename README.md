@@ -19,9 +19,9 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
   Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen und die Rad-Zählstellen von
   Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
-  Leipzig, Rostock, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen in Baden-Württemberg und
-  in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau und Verkehr,
-  Hannover, Region Hannover, Braunschweig und vier weitere Kommunen).
+  Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen in
+  Baden-Württemberg und in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau
+  und Verkehr, Hannover, Region Hannover, Braunschweig und vier weitere Kommunen).
   Die Karte zeigt je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags oder
   eines wählbaren Tags (Kfz zuerst, Rad und Lkw/Schwerverkehr über die Chips), die
   Seitenleiste die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
@@ -74,6 +74,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Bonn (Bundesstadt Bonn) | Fahrradmessstellen (Eco-Counter): Stundenwerte je Zählstelle, die Brücken je Seite; Summen der Brücken nicht übernommen; 14 Zählstellen, Lage aus OpenStreetMap | 2020–2025 ohne 2022 (nur je Kanal); einmal im Jahr ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025) (eine CSV je Jahr) | CC0 1.0 |
 | Düsseldorf (Landeshauptstadt Düsseldorf) | Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung, in der Karte die Summe je Zählstelle; Stellen, die nur Summen anderer sind, nicht übernommen; 19 Zählstellen | 2020–2025 ohne 2022 (nicht veröffentlicht); einmal im Jahr ergänzt | offen über [Open.NRW](https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d) (eine CSV je Zählstelle und Jahr), Lage aus den [Standorten der Stadt](https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d) | dl-de/by-2-0, „Landeshauptstadt Düsseldorf“ |
 | Niedersachsen: Landesbehörde für Straßenbau und Verkehr, Hannover, Region Hannover, Braunschweig, Verden (Aller), Samtgemeinde Gellersen, Rotenburg (Wümme), Jemgum (VMZ Niedersachsen) | Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten: Stundenwerte je Zählstelle, Richtungen und Straßenseiten wie die Quelle sie führt; Störungen der Quelle als nicht gezählt; 74 Zählstellen | 2017–2026 (Hannover seit 2017, die Landesbehörde seit Ende 2023); seit dem 25.10.2026 keine neuen Werte außer Jemgum und Rotenburg; wöchentlich ergänzt | offen in der [Zählstellenübersicht der VMZ Niedersachsen](https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/) (Zählerabfrage) | ohne Lizenz (siehe unten) |
+| Dresden (Landeshauptstadt Dresden) | Rad-Dauerzählstellen: Stundenwerte je Richtung, in der Karte die Summe je Zählstelle; Zeilen mit krummen Minuten an den Umstelltagen nicht übernommen; 38 Zählstellen, 35 in Betrieb | September 2009 – 2026; wöchentlich ergänzt | offen über die [OGC-API des Themenstadtplans](https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780) (je Jahr eine CSV), [Open-Data-Portal](https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////) | ohne Lizenz (siehe unten) |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`, die der Dauerzählstellen in

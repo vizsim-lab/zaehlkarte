@@ -6622,8 +6622,8 @@
      "stand": "kandidat",
      "quellen": [],
      "zaehlungen": null,
-     "was": "Zählt an Knotenpunkten (Abbiegeströme für die Ampelplanung) und im Nebennetz, meist per Video oder Radar durch städtische Mitarbeitende; offen sind nur Mittelwerte der Dauerzählstellen (Verkehrsmengenkarte). Laut Antwort auf die Anfrage AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
-     "situation": "Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene Mitarbeitende. Offen sind nur Mittelwerte der Dauerzählstellen (Verkehrsmengenkarte). Laut Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
+     "was": "Zählt an Knotenpunkten (Abbiegeströme für die Ampelplanung) und im Nebennetz, meist per Video oder Radar durch städtische Mitarbeitende; offen sind nur Mittelwerte der Kfz-Dauerzählstellen (Verkehrsmengenkarte) und die Stundenwerte der Rad-Dauerzählstellen. Laut Antwort auf die Anfrage AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
+     "situation": "Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene Mitarbeitende. Offen sind nur Mittelwerte der Kfz-Dauerzählstellen (Verkehrsmengenkarte) und die Stundenwerte der Rad-Dauerzählstellen. Laut Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.",
      "empfehlung": "Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25. Grundlage: Sächsisches Umweltinformationsgesetz – das Transparenzgesetz gilt für Kommunen nur, wenn sie es per Satzung einführen.",
      "weg": "FragDenStaat, Sächsisches Umweltinformationsgesetz",
      "anfrage": {
@@ -6638,11 +6638,21 @@
      ]
     },
     "dauer": {
-     "stand": "kandidat",
-     "quellen": [],
-     "was": "Dauerzählstellen; offen nur ihre Mittelwerte in der Verkehrsmengenkarte, nicht die Zählwerte",
-     "situation": null,
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "dresden_rad"
+     ],
+     "was": "38 Rad-Dauerzählstellen (35 in Betrieb): Stundenwerte je Richtung seit September 2009 über die OGC-API-Schnittstelle des Themenstadtplans, ohne Lizenzangabe – in der Karte mit Hinweis. Die Kfz-Dauerzählstellen nur als Mittelwerte in der Verkehrsmengenkarte, nicht die Zählwerte",
+     "situation": "Die Stadt veröffentlicht die Stundenwerte ihrer Rad-Dauerzählstellen je Richtung als Ebene „Radverkehr – Dauerzählstellen – alle Zählwerte“ des Themenstadtplans, abrufbar über die OGC-API-Schnittstelle; eine Lizenz nennt die Schnittstelle nicht. Von den Kfz-Dauerzählstellen sind laut Antwort AF0915/25 nur Mittelwerte offen.",
      "links": [
+      {
+       "titel": "Open-Data-Portal: Radverkehr – Dauerzählstellen",
+       "url": "https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////"
+      },
+      {
+       "titel": "OGC-API: Radverkehr – Dauerzählstellen – alle Zählwerte",
+       "url": "https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780"
+      },
       {
        "titel": "Antwort AF0915/25 (18.11.2025)",
        "url": "https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf"
@@ -6650,7 +6660,7 @@
      ]
     },
     "stand_k": "kandidat",
-    "stand_d": "kandidat"
+    "stand_d": "ohne_lizenz"
    }
   },
   {

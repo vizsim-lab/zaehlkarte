@@ -1,10 +1,10 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
 # SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
 # München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum, Bonn,
-# Düsseldorf und der VMZ Niedersachsen), Kartendaten nach public/data/dauer/ schreiben und als
-# Release-Asset „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich
-# laufend). Danach startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und
-# liefert es aus.
+# Düsseldorf, Dresden und der VMZ Niedersachsen), Kartendaten nach public/data/dauer/ schreiben
+# und als Release-Asset „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert
+# sich laufend). Danach startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset
+# und liefert es aus.
 #
 # Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code, die Konfiguration
 # (pipeline/config/: Quellen, Ferien, robots.yaml), der Kalender oder dieser Workflow ändern.
@@ -17,8 +17,8 @@
 #   nur bei geänderter URL); Münster, Aachen und Berlin (Rad) holt jeder Lauf ganz neu – der Cache
 #   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
 #   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund), Essens Quartale und Düsseldorfs
-#   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu. VMZ Niedersachsen:
-#   Jahresdateien je Zählstelle seit 2017 im Cache, neu nur das laufende Jahr und das Vorjahr.
+#   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu. VMZ Niedersachsen
+#   und Dresden: Jahresdateien seit 2017 im Cache, neu nur das laufende Jahr und das Vorjahr.
 # - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
 #   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus
 #   pipeline/config/robots.yaml – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
@@ -65,7 +65,8 @@ jobs:
   dauer:
     runs-on: ubuntu-24.04
     # Ein Lauf ohne Cache und ohne Gedächtnis (Berlin und Hamburg ganz) brauchte im
-    # Werkzeug-Branch zwischen 15 und 59 Minuten, je nach Antwortzeit der Quellen.
+    # Werkzeug-Branch zwischen 15 und 59 Minuten, je nach Antwortzeit der Quellen; ohne Cache für
+    # Dresden kommen 27 Minuten dazu (18 Jahre, rund anderthalb Minuten je Jahr beim Server).
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v7
@@ -112,6 +113,11 @@ jobs:
           path: pipeline/data/raw/vmz_rad
           key: dauer-vmz-roh-${{ github.run_id }}
           restore-keys: dauer-vmz-roh-
+      - uses: actions/cache@v6  # Dresden: Jahresdateien seit 2017, neu nur die jüngsten zwei Jahre
+        with:
+          path: pipeline/data/raw/dresden_rad
+          key: dauer-dresden-roh-${{ github.run_id }}
+          restore-keys: dauer-dresden-roh-
       - uses: actions/cache@v6  # OSM-Abzug Hamburg (Straßennamen neuer Stellen): einmal laden, dann behalten
         with:
           path: pipeline/data/raw/osm

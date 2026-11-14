@@ -42,7 +42,7 @@ FragDenStaat.
 | Dietzenbach | HE | erhoben – Anfrage aussichtsreich |  | Anfrage nach beiden Zählungen |
 | Dortmund | NW | nur Summen oder Mittelwerte offen | in der Karte | Anfrage nach den Ergebnissen der Zählungen im Zählstellenplan, nach IFG NRW |
 | Dreieich | HE | – | vorhanden, Werte nicht offen |  |
-| Dresden | SN | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25 |
+| Dresden | SN | erhoben – Anfrage aussichtsreich | vorhanden, aber ohne Lizenz | Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25 |
 | Düsseldorf | NW | nur Summen oder Mittelwerte offen | in der Karte | Anfrage nach den Einzelzählungen, aus denen die Mittelwerte entstehen, an das Amt für Verkehrsmanagement |
 | Elmstein | RP | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Exporten des Geräts (je Messung, mit Ort und Zeitraum), mit Lizenz |
 | Emmendingen | BW | – | in der Karte |  |
@@ -856,13 +856,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Dresden (SN) – erhoben – Anfrage aussichtsreich
 
-**Lage:** Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene Mitarbeitende. Offen sind nur Mittelwerte der Dauerzählstellen (Verkehrsmengenkarte). Laut Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.
+**Lage:** Dresden zählt an Knotenpunkten und im Nebennetz, meist per Video oder Radar durch eigene Mitarbeitende. Offen sind nur Mittelwerte der Kfz-Dauerzählstellen (Verkehrsmengenkarte) und die Stundenwerte der Rad-Dauerzählstellen. Laut Antwort AF0915/25 vom 18.11.2025 bereitet die Stadt Verkehrsdaten auf Anfrage auf, je nach Kapazität.
 
 **Empfehlung:** Anfrage über FragDenStaat an die Landeshauptstadt Dresden nach den Einzelzählungen seit 2015, mit Verweis auf AF0915/25. Grundlage: Sächsisches Umweltinformationsgesetz – das Transparenzgesetz gilt für Kommunen nur, wenn sie es per Satzung einführen.
 
 **Weg:** FragDenStaat, Sächsisches Umweltinformationsgesetz
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** Dauerzählstellen; offen nur ihre Mittelwerte in der Verkehrsmengenkarte, nicht die Zählwerte
+**Dauerzählstellen (vorhanden, aber ohne Lizenz):** Die Stadt veröffentlicht die Stundenwerte ihrer Rad-Dauerzählstellen je Richtung als Ebene „Radverkehr – Dauerzählstellen – alle Zählwerte“ des Themenstadtplans, abrufbar über die OGC-API-Schnittstelle; eine Lizenz nennt die Schnittstelle nicht. Von den Kfz-Dauerzählstellen sind laut Antwort AF0915/25 nur Mittelwerte offen.
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Landeshauptstadt+Dresden)
 
@@ -884,7 +884,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Antwort AF0915/25 (18.11.2025)](https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf)
+**Belege:** [Antwort AF0915/25 (18.11.2025)](https://team-zastrow.de/wp-content/uploads/2025/11/AF0915_25-Verkehrszaehlung.pdf) · [Open-Data-Portal: Radverkehr – Dauerzählstellen](https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////) · [OGC-API: Radverkehr – Dauerzählstellen – alle Zählwerte](https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780)
 
 
 ## Düsseldorf (NW) – nur Summen oder Mittelwerte offen

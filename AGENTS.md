@@ -819,6 +819,41 @@ robots.txt für alle Robots sperrt. Seitdem:
       Straße 2024: 93 Tage, L 826 Rastede 2026: 81, K 139 Ilten 2024: 61) – Werte wie geliefert,
       Hinweis an der Quelle. Braunschweigs Datenportal hat dieselben Zählstellen nur als
       Tageswerte (CC BY 4.0).
+  - **Dresden** (`dresden_rad`, ohne Lizenz – die Schnittstelle nennt keine, das Open-Data-Portal
+    ist nicht geprüft; Entscheidung der Projektleitung 14.11.2026: erst einmal ohne Lizenz zeigen;
+    Werkzeug-Branch `werkzeug/erkundung`, `tools/holen.py` Runden 4–8):
+    - **Schnittstelle:** OGC API des Themenstadtplans (cardo,
+      `https://kommisdd.dresden.de/net4/public/ogcapi/collections/`). Ebene `L1780` „Radverkehr –
+      Dauerzählstellen – alle Zählwerte (veröffentlicht)“: eine Zeile je Zählstelle und Stunde mit
+      `ids`, `fremd_id`, `bezeichnung`, `lage`, `status`, `r1`/`w1`, `r2`/`w2`, `messzeit`, Punkt.
+      `L1781`: je aktiver Zählstelle der jüngste Wert mit Lage (Objekt-ID = `ids`). Der Pfad
+      braucht `collections/` (`/ogcapi/L1780/items` antwortet „NotSupportedException“).
+      robots.txt sperrt nur Spatineo; aus der Sandbox nicht erreichbar. Der Server braucht je
+      Jahresabfrage ein bis zwei Minuten (alle 18 Jahre seit 2009: 27 Minuten, 48 MB; danach je
+      Woche nur das laufende Jahr und das Vorjahr).
+    - **Abfragen** (Doku: cardogis.com/WFS3Server): `limit` ohne Obergrenze, kein `offset`, keine
+      Folgeseiten; `filter` in der Syntax des Servers (`ids==1077 and
+      messzeit>="2025-01-01T00:00:00"`, `In(...)`, Zeichenketten in doppelten Anführungszeichen,
+      Zeiten nur als ISO – „14.11.2026 12:00:00“ ergibt einen Fehler); `format=csv`,
+      `delimiter=Semicolon`, `propertynames=…`. Leerzeichen als `%20` kodieren. Ein Jahr aller
+      Stellen mit vier Spalten: 270.000 Zeilen, 8 MB. Die Zeilen-ID `id` vergibt der Server bei
+      jedem Aufbau der Ebene neu (je Zählstelle ein Block, Lennéstraße 1–77.223) – kein Schlüssel,
+      kein Weiterlesen ab der letzten ID.
+    - **Zeit:** CSV und Filter in Ortszeit, 0 Uhr nur als Datum („2025-10-26“); GeoJSON zeigt
+      dieselbe Zeile in UTC und deutscher Schreibweise (CSV „2017-10-10 12:00:00“ = GeoJSON
+      „10.10.2017 10:00:00“). Sommerzeit: 2 Uhr fehlt; Rückstellung: 2 Uhr einmal (2018–2024).
+      Seit 2025 an den Umstelltagen zusätzliche Zeilen mit krummer Minute (Lennéstraße
+      „2025-10-26 02:13:00“, „2026-03-29 03:11:00“, Löbtauer Straße „2025-03-30 03:05:00“) und
+      vereinzelt sonst („2026-05-19 04:09:00“; 2009–2026 zusammen 107) – keine Stundenwerte, ihre
+      Stunde gilt als nicht gezählt. Ob die Uhrzeit Beginn oder Ende der Stunde ist, sagt die Quelle nicht: an Werktagen
+      ist die Stunde ab 8 Uhr die stärkste am Morgen (126 gegen 49 ab 7 Uhr an der Lennéstraße) –
+      das passte auch zu Endzeiten. Die Karte nimmt die Uhrzeit wie geliefert als Beginn.
+    - **Stand 14.11.2026:** 38 Zählstellen, die ersten seit 25.09.2009 (2009 zwei, 2017–2023 rund
+      neun, Mitte 2024 schon 23; vor dem 25.09.2009 keine Zeile), 35 in Betrieb; nicht mehr: St. Petersburger Straße („Historisch“), Carolabrücke (nur eine Richtung,
+      „Inaktiv“), Rathenauplatz Ost („Inaktiv“). Keine leeren Werte, keine Doppelten; Lücken von
+      Stunden bis Monaten (Lennéstraße Januar bis April 2023). Jüngster Wert rund eine Stunde alt.
+    - Die Kfz-Dauerzählstellen der Stadt sind nur als Mittelwerte in der Verkehrsmengenkarte offen
+      (Ebenen „Kfz/Tag HIN/RÜCK“) – Fall für `vizsim/svz`.
   - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue
