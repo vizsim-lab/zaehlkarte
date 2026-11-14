@@ -12,9 +12,9 @@ traeger: >-
   Region Hannover, Stadt Braunschweig, Stadt Verden (Aller), Samtgemeinde Gellersen, Stadt
   Rotenburg (Wümme), Gemeinde Jemgum
 art: >-
-  Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten (Schleifen im Boden);
-  Stundenwerte je Zählstelle seit 2017, Richtungen und Straßenseiten als eigene Zählstellen, wie
-  die Quelle sie führt
+  Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten: Stundenwerte je
+  Zählstelle (Hannover seit 2017, Region Hannover seit 2018, die übrigen seit Ende 2023 bis 2025),
+  Richtungen und Straßenseiten als eigene Zählstellen, wie die Quelle sie führt
 weg: offen auf vmz-niedersachsen.de (Zählerabfrage mit Download), ohne Lizenz
 portal: https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/
 liste: https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/
@@ -39,6 +39,10 @@ hinweise:
     gezählt. Am Tag der Rückstellung der Uhr steht 2 Uhr nur einmal – dieser Tag gilt als nicht
     vollständig gezählt.
   - >-
-    Seit dem 25.10.2026 liefert die Zählerabfrage keine neuen Werte (Stand 14.11.2026).
+    Seit dem 25.10.2026 liefert die Zählerabfrage keine neuen Werte, außer für die beiden
+    Zählstellen in Jemgum und Rotenburg (Wümme) (Stand 14.11.2026).
   - >-
     Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.
+    Manche Zählstellen melden über Tage bis Monate nur 0 (etwa Kleefelder Straße in Hannover
+    2024, L 826 bei Rastede 2026) – vermutlich Ausfälle, die die Quelle nicht als Störung führt;
+    die Karte zeigt die Werte wie geliefert.

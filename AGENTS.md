@@ -4,18 +4,23 @@ Learnings aus dem Aufbau (November 2026). Ergänzen, wenn etwas Neues auffällt.
 
 ## Was gesucht ist
 Zwei Familien, beide mit gezählten Werten im Zeitverlauf:
-- **Kurzzeitzählungen** der Kommunen mit **Werten je Zählung** – am besten je Intervall (15/60
-  Minuten) und Richtung, mindestens Tagessummen je Verkehrsart.
-- **Dauerzählstellen** der Kommunen (fest eingebaute Detektoren, Kameras, Rad-Zählstellen) mit Stunden- oder
+- **Kurzzeitzählungen** mit **Werten je Zählung** – am besten je Intervall (15/60 Minuten) und
+  Richtung, mindestens Tagessummen je Verkehrsart.
+- **Dauerzählstellen** (fest eingebaute Detektoren, Kameras, Rad-Zählstellen) mit Stunden- oder
   Tageswerten über Monate und Jahre – Quellen in `pipeline/config/quellen/dauer/`, Code in
   `src/zaehlkarte/dauer/`.
+
+Gleich, wer zählt (Beschluss der Projektleitung, 14.11.2026 – „gerade bei Rad und Fuß ist es
+egal, woher die Zahlen kommen“): Kommunen, Kreise, Länder, auch gemeinsame Plattformen wie die VMZ
+Niedersachsen. Bis dahin galten nur kommunale Zählstellen; was unten unter „Nicht kommunal“
+steht, ist seitdem Kandidat. Vorerst nicht dabei: die Dauerzählstellen der BASt (Autobahnen und
+Bundesstraßen). Ohne Lizenz nur, was eine öffentliche Stelle veröffentlicht oder herausgegeben hat
+(CLAUDE.md, „Quellen ohne Lizenz“).
 
 Nicht gemeint: Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür
 `vizsim/svz`. Prüffrage: Ein Wert je Stelle und Jahr → svz; Werte je Intervall oder Tag →
 hier; beides → jedes Repo seinen Teil (Hamburg: DTV-Tabelle svz, Detektor-Stunden hier).
-Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 dazu. Nicht dabei:
-Dauerzählstellen von Bund und Ländern (BASt, Landes-Dauerzählstellen) – nicht kommunal; was es
-davon offen gibt, steht unten unter „Nicht kommunal“.
+Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 dazu.
 
 ## Wo suchen
 - **Zuerst robots.txt.** Jeder Abruf eines Werkzeugs nur, wenn robots.txt ihn erlaubt – für die
@@ -623,9 +628,12 @@ robots.txt für alle Robots sperrt. Seitdem:
   - **Osnabrück:** SensorThings `https://daten-api.osnabrueck.de/v1.1` mit KI-Sensoren an
     rund zehn Kreuzungen (Things „Verkehrszaehlung …“ je Fahrstreifen bzw. Abbiegestrom; PKWs,
     LKWs, Busse, Motorräder, Fahrräder, Personen; 15-Minuten-Werte seit 2023, Zeitstempel
-    unregelmäßig zum Zeitpunkt der Übertragung). Keine Lizenzangabe (GovData-Eintrag ohne
-    Lizenz) → erst nach Klärung; die Stunden müssten aus 15-Minuten-Meldungen ohne festes
-    Raster gebildet werden.
+    unregelmäßig zum Zeitpunkt der Übertragung). Lizenz: laut Mobilithek dl-de/by-2-0,
+    Herausgeber SWO Netz GmbH (Angebot `-6042365511594508563`, aus GovData übernommen; am
+    12.11.2026 zeigte der GovData-Eintrag keine Lizenz). Nicht aufgenommen, weil die Meldungen
+    kein festes Raster haben: Abstände von gut 15 Minuten (rund 15:23), die Zeitstempel wandern
+    durch die Stunde – volle Stunden lassen sich daraus nicht sauber bilden (Werkzeug-Branch
+    `werkzeug/erkundung`, Runde `holen3`, 14.11.2026).
   - **Ulm** (`vgv_ulm`, CKAN-Datastore `datenhub.ulm.de`): eine Zeile je erkanntem
     Verkehrsteilnehmer (Zeit, Klasse, Kamera-Kürzel, Richtung), Millionen Zeilen. Keine
     Standorte, und ohne Betriebszeiten ist eine Stunde ohne Zeile nicht von einem Ausfall zu
@@ -780,6 +788,37 @@ robots.txt für alle Robots sperrt. Seitdem:
       Radverkehr“ (dl-de/zero-2-0, `Zählstellen_2.csv`), Hofgartenrampe und Luegallee aus OSM;
       Kölner Straße 186 und Pempelforter Straße 42 (ab 2025 mit Werten) ohne Lage. Der Server
       lehnt Abrufe zeitweise ab („Connection refused“) – Wiederholungen und Cache im Workflow.
+  - **VMZ Niedersachsen** (`vmz_rad`, ohne Lizenz – nur „© VMZ Niedersachsen“ in der Fußzeile;
+    Hinweis der Projektleitung 14.11.2026; Werkzeug-Branches `werkzeug/erkundung`, `tools/holen.py`
+    Runden 4–6, und `werkzeug/dauer`, `tools/vmz_pruefen.py`, Ergebnis `ergebnis/vmz/`):
+    - **Zählstellen:** Die Seite `/niedersachsen/radzaehler/` trägt die Karte als Startzustand
+      (`JSON.parse('…')`, darin `reHydratedState.featureSources["niedersachsen-radzaehler"].data`,
+      eine FeatureCollection mit `externalId`, `name`, `group`, `source`). Dieselbe Liste unter
+      `/geojson/` sperrt robots.txt (dazu `/typo3`, `/nachricht`; kein Crawl-delay). 74 Zählstellen
+      in Gruppen: die Regionen der Landesbehörde (NLStBV) `20_Nordwest` 12, `30_Nordost` 9,
+      `40_West` 7, `50_Südost` 8 an Bundes- und Landesstraßen; `60_Region Hannover` (vier an
+      Kreisstraßen, dazu B 217); `70_Stadt Hannover` (13 der Stadt, dazu B 6 Garbsen und L 389
+      Wülfel; Schwarzer Bär Süd steht doppelt); `zzz_…` für Braunschweig 8, Verden 4, Gellersen 4,
+      Rotenburg (Wümme) 1, Jemgum 1 (die letzten beiden NeoCount). `source` nennt den Lieferweg,
+      nicht den Betreiber („NLSTBV“ auch bei Braunschweigs Stadtstraßen).
+    - **Werte:** `https://www.vmz-niedersachsen.de/msp/public/count-aggregator/wheel-counter/`
+      `values/<von>/<bis>/<hourly|daily|weekly|monthly|yearly>?stationIds=<id>,…` – JSON je
+      `externalId` mit `values: [{datetime: "2025-10-25 00:00:00", value: "30"}]` (Ortszeit, Wert
+      als Text); mit `format=csv` eine Tabelle `"Zeitpunkt ('Y-m-d H:i:s')";"<Name>";…`, leere
+      Zelle = kein Wert. Vom Endtag kommt nur die Stunde ab 0 Uhr (`toDateTime` = Beginn des
+      Endtags) – je Jahr bis zum 1.1. des Folgejahrs abrufen, sonst fehlt der 31.12. Ein Jahr für
+      zehn Zählstellen sind rund 4 MB; alle Jahre seit 2017 für alle Stellen: 740 Dateien, 75 MB,
+      knapp zwei Minuten. Daneben `problems/<von>/<bis>?stationIds=…` (bisher nur
+      `missing_data`, ganze Tage), `last-values/`, `last-problems/`.
+    - **Zeit:** Sommerzeit: 2 Uhr fehlt (drei Einträge um 2 Uhr in zehn Jahren); Rückstellung:
+      2 Uhr steht einmal (`rueck: einfach`, der Tag gilt als nicht vollständig).
+    - **Stand 14.11.2026:** 2,4 Mio. Stunden, alle 74 Zählstellen mit vollständigen Tagen; Hannover
+      seit 2017, Region Hannover seit Juli 2018, die Landesbehörde seit Ende 2023 bzw. 2024,
+      Braunschweig seit 2024. Seit dem 25.10.2026 keine neuen Werte außer Jemgum und Rotenburg.
+      Lange Folgen von Tagen mit lauter Nullen, die die Quelle nicht als Störung führt (Kleefelder
+      Straße 2024: 93 Tage, L 826 Rastede 2026: 81, K 139 Ilten 2024: 61) – Werte wie geliefert,
+      Hinweis an der Quelle. Braunschweigs Datenportal hat dieselben Zählstellen nur als
+      Tageswerte (CC BY 4.0).
   - **Nicht aufgenommen (zweite Runde):** Augsburg (CC BY 4.0, nur Tageswerte), Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue
@@ -794,14 +833,16 @@ robots.txt für alle Robots sperrt. Seitdem:
     `hessen-mobil.eco-counter.com` sperrt Abruf-Werkzeuge per robots.txt) und Bielefeld – dort
     hilft eine Anfrage (Eco-Counter-Kunden haben in Eco-Visio einen Export). Nur Summen:
     Mannheims Portal (Summe je Zähler), Stuttgarts Portal (Saisons).
-- **Nicht kommunal (dokumentiert, nicht in der Karte):**
+- **Nicht kommunal (dokumentiert, nicht in der Karte; seit 14.11.2026 Kandidaten – die BASt
+  vorerst nicht):**
   - **Baden-Württemberg, Verkehrsministerium:** „Stundenwerte der Dauerzählstellen in
     Baden-Württemberg“ (MobiData `stundenwerte_dauerzaehlstellen`, dl-de/by-2-0): ein ZIP je
     Monat (`…/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_JJJJMM.zip`, mindestens
     2025-01 bis 2026-08, rund zwei Monate Verzug), darin je Stelle eine CSV mit Kopf (Nummer,
     Straße, Name, Richtungen, Fahrstreifen) und je Stunde und Fahrstreifen KFZ, SV und die
     TLS-Klassen Mot, Pkw, Lfw, PmA, Bus, LoA, LmA, Sat, Son mit Kennung `K_…`; 161 Stellen an
-    Autobahnen, Bundes- und Landesstraßen (je eine an einer Kreis- und einer Gemeindestraße).
+    Autobahnen, Bundes- und Landesstraßen (je eine an einer Kreis- und einer Gemeindestraße) –
+    an Autobahnen und Bundesstraßen vermutlich dieselben Stellen wie bei der BASt (nicht geprüft).
     Daneben „Ergebnisse und Ganglinien“: Monats- und Jahres-DTV seit 2002 als Excel (Kandidat für
     `vizsim/svz`) und Ganglinien nur als PDF-Grafik.
   - **BASt:** Stundenwerte 2003–2024 je Jahr und Straßenart, Rohdaten je Monat

@@ -1,9 +1,10 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
 # SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
-# München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum, Bonn und
-# Düsseldorf), Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
-# „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich laufend). Danach
-# startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und liefert es aus.
+# München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum, Bonn,
+# Düsseldorf und der VMZ Niedersachsen), Kartendaten nach public/data/dauer/ schreiben und als
+# Release-Asset „dauerzaehlstellen/dauer.tar.gz“ ablegen – nicht ins Git (zu groß, ändert sich
+# laufend). Danach startet der Workflow die CI auf main neu: Der Deploy-Job holt das Asset und
+# liefert es aus.
 #
 # Läuft wöchentlich (montags), von Hand und wenn sich Pipeline-Code, die Konfiguration
 # (pipeline/config/: Quellen, Ferien, robots.yaml), der Kalender oder dieser Workflow ändern.
@@ -16,7 +17,8 @@
 #   nur bei geänderter URL); Münster, Aachen und Berlin (Rad) holt jeder Lauf ganz neu – der Cache
 #   hält den letzten Stand, falls ein Portal einmal nicht antwortet (sonst fiele der Bau aus).
 #   Die Opendatasoft-Exporte (Würzburg, Neuss, Dortmund), Essens Quartale und Düsseldorfs
-#   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu.
+#   Jahresdateien nur bei Änderung; Bonns Jahresdateien holt jeder Lauf neu. VMZ Niedersachsen:
+#   Jahresdateien je Zählstelle seit 2017 im Cache, neu nur das laufende Jahr und das Vorjahr.
 # - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
 #   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus
 #   pipeline/config/robots.yaml – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
@@ -105,6 +107,11 @@ jobs:
             pipeline/data/raw/duesseldorf_rad
           key: dauer-rad3-roh-${{ github.run_id }}
           restore-keys: dauer-rad3-roh-
+      - uses: actions/cache@v6  # VMZ Niedersachsen: Jahresdateien seit 2017, neu nur die jüngsten zwei Jahre
+        with:
+          path: pipeline/data/raw/vmz_rad
+          key: dauer-vmz-roh-${{ github.run_id }}
+          restore-keys: dauer-vmz-roh-
       - uses: actions/cache@v6  # OSM-Abzug Hamburg (Straßennamen neuer Stellen): einmal laden, dann behalten
         with:
           path: pipeline/data/raw/osm

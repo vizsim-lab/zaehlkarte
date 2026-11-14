@@ -1,11 +1,13 @@
 # CLAUDE.md — zaehlkarte
 
-Karte kommunaler Verkehrszählungen aus mehreren Quellen in zwei Familien:
+Karte öffentlicher Verkehrszählungen aus mehreren Quellen in zwei Familien:
 Kurzzeitzählungen (Knotenpunkte, Querschnitte) und Dauerzählstellen (Stunden- und Tageswerte
 fest eingebauter Zähler: Detektoren, Kameras, Rad-Zählstellen) – nur Zählwerte, je Verkehrsart
 (Kfz, Schwerverkehr, Rad, Fuß; bei Dauerzählstellen die Klassen der Detektoren: Kfz, Lkw bzw.
-Schwerverkehr laut Detektor, Rad). Nur kommunale Zählstellen; die Dauerzählstellen von Bund und
-Ländern (BASt, Landesstraßen) nicht – sie stehen dokumentiert in `AGENTS.md`.
+Schwerverkehr laut Detektor, Rad). Gleich, wer zählt – Kommune, Kreis, Land oder eine gemeinsame
+Plattform wie die VMZ Niedersachsen (Beschluss der Projektleitung, 14.11.2026; bis dahin nur
+kommunale Zählstellen); nur die Dauerzählstellen der BASt (Autobahnen, Bundesstraßen) vorerst
+nicht – sie stehen dokumentiert in `AGENTS.md`.
 Jahresmittel (DTV), Verkehrsmengenkarten und Modellwerte gehören nach `vizsim/svz`. Stil und
 Aufbau des Frontends wie `vizsim/unfallkarte`,
 ZDA-Leser aus `vizsim/berlin-traffic-counts_schulwege`, Quellenverwaltung wie `vizsim/svz`.
@@ -119,15 +121,17 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Quelle (`hinweise` in der Quelldatei); die Lizenz – samt Einschränkung – steht in der
   Seitenleiste und in jeder Zeile des CSV-Exports.
 - **Quellen ohne Lizenz** (Beschluss der Projektleitung, 14.11.2026; Abwägung in AGENTS.md,
-  „Rechtliches“): Zählwerte, die eine Kommune ohne Lizenz veröffentlicht oder auf Anfrage
+  „Rechtliches“): Zählwerte, die eine öffentliche Stelle (Kommune, Kreis, Land, auch über eine
+  gemeinsame Plattform wie die VMZ Niedersachsen) ohne Lizenz veröffentlicht oder auf Anfrage
   herausgegeben hat, kommen nur so in die Karte: Block `ohne_lizenz` statt `lizenz` in der
   Quelldatei (wie herausgegeben, Tag der Prüfung), Link zum Original (`portal` bzw.
   `herkunft_url`), in der Karte „ohne Lizenz“ mit Hinweis und Link „Entfernen lassen“, nie im
-  CSV-Export; die Kommune steht in der Datenlage auf `ohne_lizenz`. Nur die Zahlen übernehmen,
-  keine Berichte, Grafiken oder Karten spiegeln. Nie, wenn die Kommune Bedingungen gestellt hat
-  (Nutzungserklärung wie Amberg, Entgelt für die Weitergabe wie Magdeburg) oder die
-  Veröffentlichung untersagt; auf Bitte der Rechteinhaber sofort entfernen. Jede andere Quelle
-  braucht eine Lizenzangabe.
+  CSV-Export; die Kommunen, deren Zählstellen so in die Karte kommen, stehen in der Datenlage auf
+  `ohne_lizenz`. Nur die Zahlen übernehmen, keine Berichte, Grafiken oder Karten spiegeln. Nie,
+  wenn die Stelle Bedingungen gestellt hat (Nutzungserklärung wie Amberg, Entgelt für die
+  Weitergabe wie Magdeburg) oder die Veröffentlichung untersagt; auf Bitte der Rechteinhaber
+  sofort entfernen. Jede andere Quelle braucht eine Lizenzangabe – auch jede, die nicht von einer
+  öffentlichen Stelle kommt (Vereine, Firmen).
 - **Lizenz:** AGPL-3.0-or-later. Aus dem Schulwege-Projekt (MIT) übernommene Dateien tragen
   einen Herkunftsvermerk.
 
@@ -168,7 +172,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de`,
   `opendata.readi.de` (Ettlingen) und die Rad-Quellen (MobiData BW, berlin.de, Open.NRW, die
   Portale von Münster, Aachen, München, Würzburg, Neuss, Dortmund, Leipzig, Rostock, Bonn und
-  Düsseldorf und Bochums GitLab) sind aus der Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch
-  `werkzeug/dauer`, `tools/lauf.sh`); GitHub geht (Münsters Repository).
+  Düsseldorf, Bochums GitLab und die VMZ Niedersachsen) sind aus der Sandbox ebenfalls nicht
+  erreichbar (Werkzeug-Branch `werkzeug/dauer`, `tools/lauf.sh`); GitHub geht (Münsters
+  Repository).
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

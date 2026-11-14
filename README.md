@@ -1,4 +1,4 @@
-# Zählkarte – kommunale Verkehrszählungen
+# Zählkarte – öffentliche Verkehrszählungen
 
 **Karte:** https://vizsim-lab.github.io/zaehlkarte/
 
@@ -19,7 +19,9 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
   Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen und die Rad-Zählstellen von
   Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
-  Leipzig, Rostock, dem Rhein-Kreis Neuss und 27 Städten und Landkreisen in Baden-Württemberg.
+  Leipzig, Rostock, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen in Baden-Württemberg und
+  in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau und Verkehr,
+  Hannover, Region Hannover, Braunschweig und vier weitere Kommunen).
   Die Karte zeigt je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags oder
   eines wählbaren Tags (Kfz zuerst, Rad und Lkw/Schwerverkehr über die Chips), die
   Seitenleiste die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
@@ -27,8 +29,10 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
   Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
 
-Zwei Familien, beide nur mit gezählten Werten im Zeitverlauf: **Kurzzeitzählungen** der
-Kommunen (Werte je Zählung) und **Dauerzählstellen** der Kommunen (Stunden- und Tageswerte).
+Zwei Familien, beide nur mit gezählten Werten im Zeitverlauf: **Kurzzeitzählungen** (Werte je
+Zählung) und **Dauerzählstellen** (Stunden- und Tageswerte) – gleich, ob eine Kommune, ein Kreis
+oder ein Land zählt; nur die Dauerzählstellen der BASt an Autobahnen und Bundesstraßen vorerst
+nicht.
 Nicht gemeint sind Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür gibt
 es [vizsim/svz](https://github.com/vizsim/svz). Liefert eine Quelle beides, nimmt jedes Repo
 seinen Teil: Hamburgs DTV-Tabelle gehört nach svz, die Stundenwerte der Wärmebildkameras hierher.
@@ -69,6 +73,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Rostock (Hanse- und Universitätsstadt Rostock) | Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle, beide Richtungen zusammen, in der Karte Stundenwerte; 17 Zählstellen | 2012–2026; wöchentlich ergänzt | offen auf [OpenData.HRO](https://www.opendata-hro.de/dataset/radmonitore) (eine CSV) | CC0 1.0 |
 | Bonn (Bundesstadt Bonn) | Fahrradmessstellen (Eco-Counter): Stundenwerte je Zählstelle, die Brücken je Seite; Summen der Brücken nicht übernommen; 14 Zählstellen, Lage aus OpenStreetMap | 2020–2025 ohne 2022 (nur je Kanal); einmal im Jahr ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025) (eine CSV je Jahr) | CC0 1.0 |
 | Düsseldorf (Landeshauptstadt Düsseldorf) | Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung, in der Karte die Summe je Zählstelle; Stellen, die nur Summen anderer sind, nicht übernommen; 19 Zählstellen | 2020–2025 ohne 2022 (nicht veröffentlicht); einmal im Jahr ergänzt | offen über [Open.NRW](https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d) (eine CSV je Zählstelle und Jahr), Lage aus den [Standorten der Stadt](https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d) | dl-de/by-2-0, „Landeshauptstadt Düsseldorf“ |
+| Niedersachsen: Landesbehörde für Straßenbau und Verkehr, Hannover, Region Hannover, Braunschweig, Verden (Aller), Samtgemeinde Gellersen, Rotenburg (Wümme), Jemgum (VMZ Niedersachsen) | Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten: Stundenwerte je Zählstelle, Richtungen und Straßenseiten wie die Quelle sie führt; Störungen der Quelle als nicht gezählt; 74 Zählstellen | 2017–2026 (Hannover seit 2017, die Landesbehörde seit Ende 2023); seit dem 25.10.2026 keine neuen Werte außer Jemgum und Rotenburg; wöchentlich ergänzt | offen in der [Zählstellenübersicht der VMZ Niedersachsen](https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/) (Zählerabfrage) | ohne Lizenz (siehe unten) |
 
 Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
 Lizenzen“ und in `public/data/manifest.json`, die der Dauerzählstellen in
@@ -275,10 +280,10 @@ Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
   [vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege) (MIT).
 - **Daten:** die Lizenz der jeweiligen Quelle (Tabellen oben, in der Karte je Zählung und je
   Dauerzählstelle, im CSV-Export in jeder Zeile); Namensnennung erforderlich.
-  **Quellen ohne Lizenz:** Hat eine Kommune Zählwerte ohne Lizenz veröffentlicht oder auf
-  Anfrage herausgegeben, ohne Bedingungen zu stellen, zeigt die Karte die Zahlen mit dem Hinweis
-  „ohne Lizenz“ und dem Link zum Original – nicht im CSV-Export, und wer sie weiterverwenden will,
-  fragt die Kommune. Rechteinhaber können sie über das Formular
+  **Quellen ohne Lizenz:** Hat eine öffentliche Stelle (Kommune, Kreis, Land) Zählwerte ohne
+  Lizenz veröffentlicht oder auf Anfrage herausgegeben, ohne Bedingungen zu stellen, zeigt die
+  Karte die Zahlen mit dem Hinweis „ohne Lizenz“ und dem Link zum Original – nicht im CSV-Export,
+  und wer sie weiterverwenden will, fragt den Herausgeber. Rechteinhaber können sie über das Formular
   [„Daten entfernen lassen“](https://github.com/vizsim-lab/zaehlkarte/issues/new?template=daten-entfernen.yml)
   entfernen lassen; das geschieht umgehend. Abwägung in `AGENTS.md` („Rechtliches“). Wo eine Quelle
   keine Lage oder keine Straßennamen nennt, stammen sie aus OpenStreetMap
