@@ -13,4 +13,4 @@ pruefe() {  # pruefe <branch> <code>
   git -C app rev-parse HEAD > "$ziel/stand.txt"
   ( cd app/pipeline && uv sync --locked -q && timeout 40m uv run python "$GITHUB_WORKSPACE/tools/quelle_pruefen.py" "$2" "$ziel" ) 2>&1 | tail -80 > "$ziel/lauf.txt" || true
 }
-pruefe dresden-rad dresden_rad
+pruefe dresden-rad dresden_rad  # zweiter Lauf: ab 2009
