@@ -1,7 +1,7 @@
 == Abruf
 passantenzaehlung_stundendaten: 59605 Zeilen geladen (Stand 2026-05-18T02:05:33.481000+00:00)
 Fehler: []
-Dauer: 12 s
+Dauer: 13 s
 robots.txt: 3 Abrufe für wuerzburg_rad, wuerzburg_fuss trotz Sperre (https://opendata.wuerzburg.de/api/explore/) – Ausnahme laut robots.yaml: Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt es nur über diese Wege (Anfrage: noch nicht gestellt)
 Rohdaten: 3 Dateien, 2.2 MB
 {
@@ -9,7 +9,7 @@ Rohdaten: 3 Dateien, 2.2 MB
   "url": "https://opendata.wuerzburg.de/api/explore/v2.1/catalog/datasets/passantenzaehlung_stundendaten/exports/csv?select=timestamp%2Cpedestrians_count%2Clocation_id%2Cunverified&delimiter=%3B&timezone=UTC",
   "stand": "2026-09-03T12:58:13.213000+00:00|2026-05-18T02:05:33.481000+00:00",
   "datensaetze": 59605,
-  "abgerufen": "2026-11-14T21:46:06Z"
+  "abgerufen": "2026-11-14T21:51:07Z"
  }
 }
 
@@ -23,6 +23,15 @@ theme: ['TRAN']
 territory: ['Stadt Würzburg']
 geographic_reference: ['de_80_096630000000']
 Kopf export.csv: ﻿timestamp;pedestrians_count;location_id;unverified | 2026-05-17T22:00:00+00:00;28;135;1 | 2026-05-17T22:00:00+00:00;22;470;1 | 2026-05-17T22:00:00+00:00;36;476;1 | 2026-05-17T21:00:00+00:00;55;135;0 | 2026-05-17T21:00:00+00:00;55;470;0
+== Kennzeichen unverified: Anteil gekennzeichnet
+je Stunde (Ortszeit): 0: 92%, 1: 92%, 2: 93%, 3: 92%, 4: 92%, 5: 92%, 6: 92%, 7: 92%, 8: 92%, 9: 92%, 10: 93%, 11: 92%, 12: 93%, 13: 93%, 14: 93%, 15: 93%, 16: 92%, 17: 93%, 18: 93%, 19: 92%, 20: 6%, 21: 6%, 22: 7%, 23: 0%
+je Monat: 2024-01: 0%, 2024-02: 71%, 2024-03: 78%, 2024-04: 55%, 2024-05: 84%, 2024-06: 79%, 2024-07: 85%, 2024-08: 85%, 2024-09: 84%, 2024-10: 84%, 2024-11: 84%, 2024-12: 81%, 2025-01: 69%, 2025-02: 84%, 2025-03: 85%, 2025-04: 84%, 2025-05: 84%, 2025-06: 86%, 2025-07: 86%, 2025-08: 86%, 2025-09: 84%, 2025-10: 84%, 2025-11: 84%, 2025-12: 84%, 2026-01: 84%, 2026-02: 85%, 2026-03: 85%, 2026-04: 84%, 2026-05: 84%
+je Standort: 135: 79%, 470: 79%, 476: 79%
+Median der Werte je Stunde (Ortszeit), geprüft / gekennzeichnet: 0: 46/43, 1: 20/24, 2: 10/13, 3: 10/11, 4: 12/13, 5: 38/40, 6: 81/93, 7: 257/320, 8: 412/465, 9: 704/823, 10: 1106/1274, 11: 1339/1548, 12: 1713/1920, 13: 1829/1976, 14: 1688/1813, 15: 1733/1874, 16: 1753/1958, 17: 1541/1844, 18: 1134/1412, 19: 739/945, 20: 500/376, 21: 332/245, 22: 197/167, 23: 7/56
+135: 781 Folgen, Länge Median 20 h, größte [23, 23, 29, 30, 37] h; Anteil ganzer Ortstage gekennzeichnet: 1%
+470: 781 Folgen, Länge Median 20 h, größte [23, 23, 29, 30, 37] h; Anteil ganzer Ortstage gekennzeichnet: 1%
+476: 781 Folgen, Länge Median 20 h, größte [23, 23, 29, 30, 37] h; Anteil ganzer Ortstage gekennzeichnet: 1%
+jüngste 72 Stunden 135: 15.05 00h=76* 15.05 01h=33* 15.05 02h=22* 15.05 03h=4* 15.05 04h=14* 15.05 05h=11* 15.05 06h=87* 15.05 07h=268* 15.05 08h=702* 15.05 09h=2381* 15.05 10h=3822* 15.05 11h=332* 15.05 12h=0* 15.05 13h=442* 15.05 14h=4790* 15.05 15h=5547* 15.05 16h=4592* 15.05 17h=4786* 15.05 18h=4211* 15.05 19h=3426* 15.05 20h=1489 15.05 21h=1121 15.05 22h=1239 15.05 23h=300 16.05 00h=158* 16.05 01h=67* 16.05 02h=40* 16.05 03h=42* 16.05 04h=32* 16.05 05h=24* 16.05 06h=44* 16.05 07h=99* 16.05 08h=342* 16.05 09h=1508* 16.05 10h=2895* 16.05 11h=4122* 16.05 12h=4758* 16.05 13h=5131* 16.05 14h=5415* 16.05 15h=5956* 16.05 16h=5648* 16.05 17h=5451* 16.05 18h=4529* 16.05 19h=3483* 16.05 20h=1624 16.05 21h=1314 16.05 23h=306 17.05 00h=171* 17.05 01h=96* 17.05 02h=58* 17.05 03h=36* 17.05 04h=33* 17.05 05h=46* 17.05 06h=36* 17.05 07h=64* 17.05 08h=201* 17.05 09h=351* 17.05 10h=304* 17.05 11h=682* 17.05 12h=911* 17.05 13h=934* 17.05 14h=948* 17.05 15h=957* 17.05 16h=900* 17.05 17h=764* 17.05 18h=622* 17.05 19h=461* 17.05 20h=423 17.05 21h=316 17.05 22h=164 17.05 23h=55 18.05 00h=28*
 == Lesen
 59605 Zeilen (0 unlesbar, 0 ohne alle Werte, 0 Stunden doppelt), 3 Zählstellen, 12678 Stunden in der Karte; jüngster Wert 2026-05-17
 als nicht geprüft gekennzeichnet (nicht gezählt): 2024: 18838, 2025: 21330, 2026: 6759
