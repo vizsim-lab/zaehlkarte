@@ -16,7 +16,7 @@
   "gemeinden": 16,
   "herkunft": {
    "https://www.landkreis-kleve.de/": "geraten",
-   "https://www.kreis-kleve.de/": "vorher_oder_liste",
+   "https://www.kreis-kleve.de/": "wikipedia",
    "https://www.lk-kleve.de/": "geraten",
    "https://www.lra-kleve.de/": "geraten",
    "https://www.kleve.de/": "geraten",
@@ -40,7 +40,7 @@
   "gemeinden": 10,
   "herkunft": {
    "https://www.landkreis-mettmann.de/": "geraten",
-   "https://www.kreis-mettmann.de/": "vorher_oder_liste",
+   "https://www.kreis-mettmann.de/": "wikipedia",
    "https://www.lk-mettmann.de/": "geraten",
    "https://www.lra-mettmann.de/": "geraten",
    "https://www.mettmann.de/": "geraten",
@@ -71,7 +71,7 @@
    "https://www.lra-rhein-neuss.de/": "geraten",
    "https://www.rhein-neuss.de/": "geraten",
    "https://www.landkreisrheinneuss.de/": "geraten",
-   "https://www.rhein-kreis-neuss.de/": "vorher_oder_liste",
+   "https://www.rhein-kreis-neuss.de/": "wikipedia",
    "https://www.rheinkreisneuss.de/": "geraten"
   }
  },
@@ -81,9 +81,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-viersen.de/",
    "https://www.kreis-viersen.de",
    "https://www.landkreis-viersen.de/",
-   "https://www.kreis-viersen.de/",
    "https://www.lk-viersen.de/",
    "https://www.lra-viersen.de/",
    "https://www.viersen.de/",
@@ -93,7 +93,7 @@
   "gemeinden": 9,
   "herkunft": {
    "https://www.landkreis-viersen.de/": "geraten",
-   "https://www.kreis-viersen.de/": "geraten",
+   "https://www.kreis-viersen.de/": "wikipedia",
    "https://www.lk-viersen.de/": "geraten",
    "https://www.lra-viersen.de/": "geraten",
    "https://www.viersen.de/": "geraten",
@@ -107,9 +107,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-wesel.de/",
    "https://www.kreis-wesel.de",
    "https://www.landkreis-wesel.de/",
-   "https://www.kreis-wesel.de/",
    "https://www.lk-wesel.de/",
    "https://www.lra-wesel.de/",
    "https://www.wesel.de/",
@@ -119,7 +119,7 @@
   "gemeinden": 13,
   "herkunft": {
    "https://www.landkreis-wesel.de/": "geraten",
-   "https://www.kreis-wesel.de/": "geraten",
+   "https://www.kreis-wesel.de/": "wikipedia",
    "https://www.lk-wesel.de/": "geraten",
    "https://www.lra-wesel.de/": "geraten",
    "https://www.wesel.de/": "geraten",
@@ -161,9 +161,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-dueren.de/",
    "https://www.kreis-dueren.de",
    "https://www.landkreis-dueren.de/",
-   "https://www.kreis-dueren.de/",
    "https://www.lk-dueren.de/",
    "https://www.lra-dueren.de/",
    "https://www.dueren.de/",
@@ -173,7 +173,7 @@
   "gemeinden": 15,
   "herkunft": {
    "https://www.landkreis-dueren.de/": "geraten",
-   "https://www.kreis-dueren.de/": "geraten",
+   "https://www.kreis-dueren.de/": "wikipedia",
    "https://www.lk-dueren.de/": "geraten",
    "https://www.lra-dueren.de/": "geraten",
    "https://www.dueren.de/": "geraten",
@@ -187,6 +187,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.rhein-erft-kreis.de/",
    "https://www.rhein-erft-kreis.de",
    "https://www.landkreis-rhein-erft.de/",
    "https://www.kreis-rhein-erft.de/",
@@ -194,7 +195,6 @@
    "https://www.lra-rhein-erft.de/",
    "https://www.rhein-erft.de/",
    "https://www.landkreisrheinerft.de/",
-   "https://www.rhein-erft-kreis.de/",
    "https://www.rheinerftkreis.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -206,7 +206,7 @@
    "https://www.lra-rhein-erft.de/": "geraten",
    "https://www.rhein-erft.de/": "geraten",
    "https://www.landkreisrheinerft.de/": "geraten",
-   "https://www.rhein-erft-kreis.de/": "geraten",
+   "https://www.rhein-erft-kreis.de/": "wikipedia",
    "https://www.rheinerftkreis.de/": "geraten",
    "https://www.rhein-erft-kreis.de": "vorher_oder_liste"
   }
@@ -217,9 +217,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-euskirchen.de/",
    "https://www.kreis-euskirchen.de",
    "https://www.landkreis-euskirchen.de/",
-   "https://www.kreis-euskirchen.de/",
    "https://www.lk-euskirchen.de/",
    "https://www.lra-euskirchen.de/",
    "https://www.euskirchen.de/",
@@ -229,7 +229,7 @@
   "gemeinden": 11,
   "herkunft": {
    "https://www.landkreis-euskirchen.de/": "geraten",
-   "https://www.kreis-euskirchen.de/": "geraten",
+   "https://www.kreis-euskirchen.de/": "wikipedia",
    "https://www.lk-euskirchen.de/": "geraten",
    "https://www.lra-euskirchen.de/": "geraten",
    "https://www.euskirchen.de/": "geraten",
@@ -243,10 +243,10 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-heinsberg.de/",
    "https://www.kreis-heinsberg.de/startseite.html",
    "https://www.kreis-heinsberg.de",
    "https://www.landkreis-heinsberg.de/",
-   "https://www.kreis-heinsberg.de/",
    "https://www.lk-heinsberg.de/",
    "https://www.lra-heinsberg.de/",
    "https://www.heinsberg.de/",
@@ -256,7 +256,7 @@
   "gemeinden": 10,
   "herkunft": {
    "https://www.landkreis-heinsberg.de/": "geraten",
-   "https://www.kreis-heinsberg.de/": "geraten",
+   "https://www.kreis-heinsberg.de/": "wikipedia",
    "https://www.lk-heinsberg.de/": "geraten",
    "https://www.lra-heinsberg.de/": "geraten",
    "https://www.heinsberg.de/": "geraten",
@@ -271,8 +271,8 @@
   "art": "kreis",
   "tk": "43",
   "web": [
-   "https://www.obk.de/obk/",
    "https://www.obk.de/",
+   "https://www.obk.de/obk/",
    "https://www.landkreis-oberbergischer.de/",
    "https://www.kreis-oberbergischer.de/",
    "https://www.lk-oberbergischer.de/",
@@ -294,7 +294,7 @@
    "https://www.oberbergischer-kreis.de/": "geraten",
    "https://www.oberbergischerkreis.de/": "geraten",
    "https://www.obk.de/obk/": "vorher_oder_liste",
-   "https://www.obk.de/": "vorher_oder_liste"
+   "https://www.obk.de/": "wikipedia"
   }
  },
  {
@@ -303,6 +303,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.rbk-direkt.de/",
    "https://www.rbk-direkt.de",
    "https://www.landkreis-rheinisch-bergischer.de/",
    "https://www.kreis-rheinisch-bergischer.de/",
@@ -324,7 +325,8 @@
    "https://www.landkreisrheinischbergischer.de/": "geraten",
    "https://www.rheinisch-bergischer-kreis.de/": "geraten",
    "https://www.rheinischbergischerkreis.de/": "geraten",
-   "https://www.rbk-direkt.de": "vorher_oder_liste"
+   "https://www.rbk-direkt.de": "vorher_oder_liste",
+   "https://www.rbk-direkt.de/": "wikipedia"
   }
  },
  {
@@ -333,6 +335,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.rhein-sieg-kreis.de/",
    "https://www.rhein-sieg-kreis.de",
    "https://www.landkreis-rhein-sieg.de/",
    "https://www.kreis-rhein-sieg.de/",
@@ -340,7 +343,6 @@
    "https://www.lra-rhein-sieg.de/",
    "https://www.rhein-sieg.de/",
    "https://www.landkreisrheinsieg.de/",
-   "https://www.rhein-sieg-kreis.de/",
    "https://www.rheinsiegkreis.de/"
   ],
   "vorher": "erreicht",
@@ -352,7 +354,7 @@
    "https://www.lra-rhein-sieg.de/": "geraten",
    "https://www.rhein-sieg.de/": "geraten",
    "https://www.landkreisrheinsieg.de/": "geraten",
-   "https://www.rhein-sieg-kreis.de/": "geraten",
+   "https://www.rhein-sieg-kreis.de/": "wikipedia",
    "https://www.rheinsiegkreis.de/": "geraten",
    "https://www.rhein-sieg-kreis.de": "vorher_oder_liste"
   }
@@ -363,10 +365,10 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-borken.de/",
    "https://www.kreis-borken.de/de/index.php",
    "https://www.kreis-borken.de",
    "https://www.landkreis-borken.de/",
-   "https://www.kreis-borken.de/",
    "https://www.lk-borken.de/",
    "https://www.lra-borken.de/",
    "https://www.borken.de/",
@@ -376,7 +378,7 @@
   "gemeinden": 17,
   "herkunft": {
    "https://www.landkreis-borken.de/": "geraten",
-   "https://www.kreis-borken.de/": "geraten",
+   "https://www.kreis-borken.de/": "wikipedia",
    "https://www.lk-borken.de/": "geraten",
    "https://www.lra-borken.de/": "geraten",
    "https://www.borken.de/": "geraten",
@@ -391,9 +393,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-coesfeld.de/",
    "https://www.kreis-coesfeld.de",
    "https://www.landkreis-coesfeld.de/",
-   "https://www.kreis-coesfeld.de/",
    "https://www.lk-coesfeld.de/",
    "https://www.lra-coesfeld.de/",
    "https://www.coesfeld.de/",
@@ -403,7 +405,7 @@
   "gemeinden": 11,
   "herkunft": {
    "https://www.landkreis-coesfeld.de/": "geraten",
-   "https://www.kreis-coesfeld.de/": "geraten",
+   "https://www.kreis-coesfeld.de/": "wikipedia",
    "https://www.lk-coesfeld.de/": "geraten",
    "https://www.lra-coesfeld.de/": "geraten",
    "https://www.coesfeld.de/": "geraten",
@@ -417,6 +419,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-re.de/",
    "https://www.kreis-re.de/Inhalte/index.asp",
    "https://www.kreis-re.de",
    "https://www.landkreis-recklinghausen.de/",
@@ -436,7 +439,8 @@
    "https://www.recklinghausen.de/": "geraten",
    "https://www.landkreisrecklinghausen.de/": "geraten",
    "https://www.kreis-re.de/Inhalte/index.asp": "vorher_oder_liste",
-   "https://www.kreis-re.de": "vorher_oder_liste"
+   "https://www.kreis-re.de": "vorher_oder_liste",
+   "https://www.kreis-re.de/": "wikipedia"
   }
  },
  {
@@ -445,10 +449,10 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-steinfurt.de/",
    "https://www.kreis-steinfurt.de/kv_steinfurt/Home/",
    "https://www.kreis-steinfurt.de",
    "https://www.landkreis-steinfurt.de/",
-   "https://www.kreis-steinfurt.de/",
    "https://www.lk-steinfurt.de/",
    "https://www.lra-steinfurt.de/",
    "https://www.steinfurt.de/",
@@ -458,7 +462,7 @@
   "gemeinden": 24,
   "herkunft": {
    "https://www.landkreis-steinfurt.de/": "geraten",
-   "https://www.kreis-steinfurt.de/": "geraten",
+   "https://www.kreis-steinfurt.de/": "wikipedia",
    "https://www.lk-steinfurt.de/": "geraten",
    "https://www.lra-steinfurt.de/": "geraten",
    "https://www.steinfurt.de/": "geraten",
@@ -473,10 +477,10 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-warendorf.de/",
    "https://www.kreis-warendorf.de/aktuelles/startseite",
    "https://www.kreis-warendorf.de",
    "https://www.landkreis-warendorf.de/",
-   "https://www.kreis-warendorf.de/",
    "https://www.lk-warendorf.de/",
    "https://www.lra-warendorf.de/",
    "https://www.warendorf.de/",
@@ -486,7 +490,7 @@
   "gemeinden": 13,
   "herkunft": {
    "https://www.landkreis-warendorf.de/": "geraten",
-   "https://www.kreis-warendorf.de/": "geraten",
+   "https://www.kreis-warendorf.de/": "wikipedia",
    "https://www.lk-warendorf.de/": "geraten",
    "https://www.lra-warendorf.de/": "geraten",
    "https://www.warendorf.de/": "geraten",
@@ -501,9 +505,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-guetersloh.de/",
    "https://www.kreis-guetersloh.de",
    "https://www.landkreis-guetersloh.de/",
-   "https://www.kreis-guetersloh.de/",
    "https://www.lk-guetersloh.de/",
    "https://www.lra-guetersloh.de/",
    "https://www.guetersloh.de/",
@@ -513,7 +517,7 @@
   "gemeinden": 13,
   "herkunft": {
    "https://www.landkreis-guetersloh.de/": "geraten",
-   "https://www.kreis-guetersloh.de/": "geraten",
+   "https://www.kreis-guetersloh.de/": "wikipedia",
    "https://www.lk-guetersloh.de/": "geraten",
    "https://www.lra-guetersloh.de/": "geraten",
    "https://www.guetersloh.de/": "geraten",
@@ -527,9 +531,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-herford.de/",
    "https://www.kreis-herford.de",
    "https://www.landkreis-herford.de/",
-   "https://www.kreis-herford.de/",
    "https://www.lk-herford.de/",
    "https://www.lra-herford.de/",
    "https://www.herford.de/",
@@ -539,7 +543,7 @@
   "gemeinden": 9,
   "herkunft": {
    "https://www.landkreis-herford.de/": "geraten",
-   "https://www.kreis-herford.de/": "geraten",
+   "https://www.kreis-herford.de/": "wikipedia",
    "https://www.lk-herford.de/": "geraten",
    "https://www.lra-herford.de/": "geraten",
    "https://www.herford.de/": "geraten",
@@ -553,9 +557,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-hoexter.de/",
    "https://www.kreis-hoexter.de",
    "https://www.landkreis-hoexter.de/",
-   "https://www.kreis-hoexter.de/",
    "https://www.lk-hoexter.de/",
    "https://www.lra-hoexter.de/",
    "https://www.hoexter.de/",
@@ -565,7 +569,7 @@
   "gemeinden": 10,
   "herkunft": {
    "https://www.landkreis-hoexter.de/": "geraten",
-   "https://www.kreis-hoexter.de/": "geraten",
+   "https://www.kreis-hoexter.de/": "wikipedia",
    "https://www.lk-hoexter.de/": "geraten",
    "https://www.lra-hoexter.de/": "geraten",
    "https://www.hoexter.de/": "geraten",
@@ -579,10 +583,10 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-lippe.de/",
    "https://www.kreis-lippe.de/kreis-lippe/index.php",
    "https://www.kreis-lippe.de",
    "https://www.landkreis-lippe.de/",
-   "https://www.kreis-lippe.de/",
    "https://www.lk-lippe.de/",
    "https://www.lra-lippe.de/",
    "https://www.lippe.de/",
@@ -592,7 +596,7 @@
   "gemeinden": 16,
   "herkunft": {
    "https://www.landkreis-lippe.de/": "geraten",
-   "https://www.kreis-lippe.de/": "geraten",
+   "https://www.kreis-lippe.de/": "wikipedia",
    "https://www.lk-lippe.de/": "geraten",
    "https://www.lra-lippe.de/": "geraten",
    "https://www.lippe.de/": "geraten",
@@ -607,12 +611,12 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.minden-luebbecke.de/",
    "https://www.minden-luebbecke.de",
    "https://www.landkreis-minden-luebbecke.de/",
    "https://www.kreis-minden-luebbecke.de/",
    "https://www.lk-minden-luebbecke.de/",
    "https://www.lra-minden-luebbecke.de/",
-   "https://www.minden-luebbecke.de/",
    "https://www.landkreismindenluebbecke.de/",
    "https://www.mindenluebbecke.de/"
   ],
@@ -623,7 +627,7 @@
    "https://www.kreis-minden-luebbecke.de/": "geraten",
    "https://www.lk-minden-luebbecke.de/": "geraten",
    "https://www.lra-minden-luebbecke.de/": "geraten",
-   "https://www.minden-luebbecke.de/": "geraten",
+   "https://www.minden-luebbecke.de/": "wikipedia",
    "https://www.landkreismindenluebbecke.de/": "geraten",
    "https://www.mindenluebbecke.de/": "geraten",
    "https://www.minden-luebbecke.de": "vorher_oder_liste"
@@ -635,9 +639,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-paderborn.de/",
    "https://www.kreis-paderborn.de",
    "https://www.landkreis-paderborn.de/",
-   "https://www.kreis-paderborn.de/",
    "https://www.lk-paderborn.de/",
    "https://www.lra-paderborn.de/",
    "https://www.paderborn.de/",
@@ -647,7 +651,7 @@
   "gemeinden": 10,
   "herkunft": {
    "https://www.landkreis-paderborn.de/": "geraten",
-   "https://www.kreis-paderborn.de/": "geraten",
+   "https://www.kreis-paderborn.de/": "wikipedia",
    "https://www.lk-paderborn.de/": "geraten",
    "https://www.lra-paderborn.de/": "geraten",
    "https://www.paderborn.de/": "geraten",
@@ -661,6 +665,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.enkreis.de/",
    "https://www.enkreis.de",
    "https://www.landkreis-ennepe-ruhr.de/",
    "https://www.kreis-ennepe-ruhr.de/",
@@ -682,7 +687,8 @@
    "https://www.landkreisenneperuhr.de/": "geraten",
    "https://www.ennepe-ruhr-kreis.de/": "geraten",
    "https://www.enneperuhrkreis.de/": "geraten",
-   "https://www.enkreis.de": "vorher_oder_liste"
+   "https://www.enkreis.de": "vorher_oder_liste",
+   "https://www.enkreis.de/": "wikipedia"
   }
  },
  {
@@ -691,6 +697,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.hochsauerlandkreis.de/",
    "https://www.hochsauerlandkreis.de/hochsauerlandkreis",
    "https://hochsauerlandkreis.de",
    "https://www.landkreis-hochsauerland.de/",
@@ -698,8 +705,7 @@
    "https://www.lk-hochsauerland.de/",
    "https://www.lra-hochsauerland.de/",
    "https://www.hochsauerland.de/",
-   "https://www.landkreishochsauerland.de/",
-   "https://www.hochsauerlandkreis.de/"
+   "https://www.landkreishochsauerland.de/"
   ],
   "vorher": "erreicht",
   "gemeinden": 12,
@@ -710,7 +716,7 @@
    "https://www.lra-hochsauerland.de/": "geraten",
    "https://www.hochsauerland.de/": "geraten",
    "https://www.landkreishochsauerland.de/": "geraten",
-   "https://www.hochsauerlandkreis.de/": "geraten",
+   "https://www.hochsauerlandkreis.de/": "wikipedia",
    "https://www.hochsauerlandkreis.de/hochsauerlandkreis": "vorher_oder_liste",
    "https://hochsauerlandkreis.de": "vorher_oder_liste"
   }
@@ -721,6 +727,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "http://www.maerkischer-kreis.de/",
    "https://www.maerkischer-kreis.de",
    "https://www.landkreis-maerkischer.de/",
    "https://www.kreis-maerkischer.de/",
@@ -742,7 +749,8 @@
    "https://www.landkreismaerkischer.de/": "geraten",
    "https://www.maerkischer-kreis.de/": "geraten",
    "https://www.maerkischerkreis.de/": "geraten",
-   "https://www.maerkischer-kreis.de": "vorher_oder_liste"
+   "https://www.maerkischer-kreis.de": "vorher_oder_liste",
+   "http://www.maerkischer-kreis.de/": "wikipedia"
   }
  },
  {
@@ -768,7 +776,7 @@
    "https://www.lra-olpe.de/": "geraten",
    "https://www.olpe.de/": "geraten",
    "https://www.landkreisolpe.de/": "geraten",
-   "https://kreis-olpe.de/": "vorher_oder_liste"
+   "https://kreis-olpe.de/": "wikipedia"
   }
  },
  {
@@ -777,12 +785,12 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.siegen-wittgenstein.de/",
    "https://www.siegen-wittgenstein.de",
    "https://www.landkreis-siegen-wittgenstein.de/",
    "https://www.kreis-siegen-wittgenstein.de/",
    "https://www.lk-siegen-wittgenstein.de/",
    "https://www.lra-siegen-wittgenstein.de/",
-   "https://www.siegen-wittgenstein.de/",
    "https://www.landkreissiegenwittgenstein.de/",
    "https://www.siegenwittgenstein.de/"
   ],
@@ -793,7 +801,7 @@
    "https://www.kreis-siegen-wittgenstein.de/": "geraten",
    "https://www.lk-siegen-wittgenstein.de/": "geraten",
    "https://www.lra-siegen-wittgenstein.de/": "geraten",
-   "https://www.siegen-wittgenstein.de/": "geraten",
+   "https://www.siegen-wittgenstein.de/": "wikipedia",
    "https://www.landkreissiegenwittgenstein.de/": "geraten",
    "https://www.siegenwittgenstein.de/": "geraten",
    "https://www.siegen-wittgenstein.de": "vorher_oder_liste"
@@ -805,9 +813,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-soest.de/",
    "https://www.kreis-soest.de",
    "https://www.landkreis-soest.de/",
-   "https://www.kreis-soest.de/",
    "https://www.lk-soest.de/",
    "https://www.lra-soest.de/",
    "https://www.soest.de/",
@@ -817,7 +825,7 @@
   "gemeinden": 14,
   "herkunft": {
    "https://www.landkreis-soest.de/": "geraten",
-   "https://www.kreis-soest.de/": "geraten",
+   "https://www.kreis-soest.de/": "wikipedia",
    "https://www.lk-soest.de/": "geraten",
    "https://www.lra-soest.de/": "geraten",
    "https://www.soest.de/": "geraten",
@@ -831,9 +839,9 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-unna.de/",
    "https://www.kreis-unna.de",
    "https://www.landkreis-unna.de/",
-   "https://www.kreis-unna.de/",
    "https://www.lk-unna.de/",
    "https://www.lra-unna.de/",
    "https://www.unna.de/",
@@ -843,7 +851,7 @@
   "gemeinden": 10,
   "herkunft": {
    "https://www.landkreis-unna.de/": "geraten",
-   "https://www.kreis-unna.de/": "geraten",
+   "https://www.kreis-unna.de/": "wikipedia",
    "https://www.lk-unna.de/": "geraten",
    "https://www.lra-unna.de/": "geraten",
    "https://www.unna.de/": "geraten",
