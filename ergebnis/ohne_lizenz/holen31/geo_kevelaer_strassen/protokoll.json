@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22junction%22%3D%22roundabout%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3B%29%3Bout%20body%20geom%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22junction%22%3D%22roundabout%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3B%29%3Bout%20body%20geom%3B",
+  "ende": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22junction%22%3D%22roundabout%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3B%29%3Bout%20body%20geom%3B",
+  "typ": "application/json",
+  "bytes": 1185075,
+  "datei": "16_interpreter.json",
+  "sha256": "a67190886c1fa44c1606e4aa3da3e263f5a71d59ffb7c71e1d0b6fe16e1da6fc"
+ }
+]
