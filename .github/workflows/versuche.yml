@@ -1,0 +1,33 @@
+# Entwicklungswerkzeug (15.11.2026): Seiten und Berichte zu Verkehrsversuchen, Kiezblocks und
+# Schulstraßen lesen (tools/versuche_lesen.py, Kandidaten in tools/versuche_ziele.json aus Runde
+# 4/4b). Ergebnis nach ergebnis/versuche/ in diesen Branch: nur Kennzahlen und kurze Auszüge, keine
+# Dateien und keine Volltexte.
+name: Erkundung Verkehrsversuche
+on:
+  push:
+    branches: [werkzeug/runde4]
+    paths: [tools/versuche*, .github/workflows/versuche.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  lesen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 70
+    steps:
+      - uses: actions/checkout@v7
+      - run: sudo apt-get install -y -q poppler-utils > /dev/null
+      - run: |
+          mkdir -p ergebnis/versuche
+          PYTHONUNBUFFERED=1 timeout 60m python3 tools/versuche_lesen.py ergebnis/versuche 55 > ergebnis/versuche/lauf.txt 2>&1 || true
+          tail -c 3000 ergebnis/versuche/lauf.txt
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ergebnis/versuche
+          git commit -q -m "Verkehrsversuche gelesen $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3 4 5 6; do
+            git pull -q --rebase origin werkzeug/runde4 && git push -q origin HEAD:werkzeug/runde4 && break
+            sleep $((RANDOM % 15 + 5))
+          done
