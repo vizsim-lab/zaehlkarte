@@ -1,0 +1,27 @@
+# Quellen, Runde 23 (15.11.2026): Nürnberg – Berichte der jährlichen Verkehrszählung 2007–2025 (PDF,
+# ohne Lizenz) und OpenStreetMap für die Lage der Zählstellen (Stadtgrenze, Brücken, Straßen, Bahn).
+nuernberg_seite | https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html
+nuernberg_2025 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszahlung_bericht_2025.pdf
+nuernberg_2024 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_entwicklung_gesamtverkehr_2024.pdf
+nuernberg_2023 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_entwicklung_gesamtverkehr_2023_reduziert.pdf
+nuernberg_2022 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/ergebnisse_verkehrszaehlung_2022.pdf
+nuernberg_2019 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_2019_komplett_neu.pdf
+nuernberg_2018 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf
+nuernberg_2017 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/ergebnisse_verkehrszaehlung_2017_bericht_gesamt_.pdf
+nuernberg_2016 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_gesamt.pdf
+nuernberg_2015 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_gesamt_2015.pdf
+nuernberg_2014 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_2014.pdf
+nuernberg_2013 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_2013.pdf
+nuernberg_2012 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_2012.pdf
+nuernberg_2010 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_2010_web.pdf
+nuernberg_2009 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_2009_komplett.pdf
+nuernberg_2008 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/qz_2008.pdf
+nuernberg_2007 | https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/querschnittszaehlung_2007.pdf
+# OSM (Overpass): benannte Straßen samt Knoten-IDs (Kreuzungen), alle Brücken an der Pegnitz,
+# Bahnstrecken und Haltepunkte, Verwaltungsgrenzen (Stadtgrenze) und die Pegnitz, Orte/Landmarken.
+geo_nuernberg_strassen | https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3B%29%3Bout%20body%20geom%3B
+geo_nuernberg_strassen | https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3B%29%3Bout%20body%20geom%3B
+geo_nuernberg_bruecken | https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Bway%5B%22bridge%22%5D%5B%22highway%22%5D%2849.40%2C10.97%2C49.50%2C11.22%29%3Bout%20body%20geom%3B
+geo_nuernberg_bahn | https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Clight_rail%7Csubway%7Ctram%7Cnarrow_gauge%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20tags%20geom%3Bnode%5B%22railway%22~%22%5E%28station%7Chalt%7Cstop%7Ctram_stop%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%3B
+geo_nuernberg_grenzen | https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22~%22%5E%286%7C8%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20geom%3Bway%5B%22waterway%22%3D%22river%22%5D%5B%22name%22%3D%22Pegnitz%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20tags%20geom%3B
+geo_nuernberg_orte | https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Bnwr%5B%22name%22~%22Metro%7CVerkehrsmuseum%7CDB%20Museum%7COpernhaus%7CStaatstheater%7CLeiblsteg%7CSandreuth%7CSchloss%20Stein%7CFaber-Castell%7CFinkenbrunn%7CHahnenbalz%7CFischbach%7CNeunhof%7CBirnthon%7CZollhaus%7CWegfeld%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3Bnode%5B%22place%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%3B
