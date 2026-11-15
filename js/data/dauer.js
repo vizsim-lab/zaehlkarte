@@ -15,7 +15,7 @@ import { datum, sprache, t } from "../sprache/texte.js";
 import { STUFENFARBEN, stufe } from "./modell.js";
 
 /** Vertrag mit dauer/index.json (`version`, VERSION in pipeline/src/zaehlkarte/dauer/site.py). */
-export const DAUER_VERSION = 4;
+export const DAUER_VERSION = 5;
 
 // Gruppen, wie die Quellen sie zählen – in den Daten nie ineinander gemischt: Berlins und
 // Ettlingens „Lkw“ und Hamburgs „Schwerverkehr“ sind je eine Klasse des Detektors, keine der

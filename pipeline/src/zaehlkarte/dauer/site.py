@@ -13,6 +13,10 @@ beide im selben Schritt mit:
   `juengster`: je Gruppe und Stelle (Reihenfolge der Stellen) [Datum, Tagessumme] des jüngsten
   vollständig gezählten Schultags im Land der Stelle, sonst null – damit die Karte alle Quellen
   zugleich zeigen kann, auch wenn ihre Zeiträume sich nicht überschneiden.
+- Gemeinde je Stelle (Vertrag 5): `ags` in `stellen.felder` = amtlicher Gemeindeschlüssel der
+  Gemeinde, in der die Stelle liegt (VG250 des BKG, `zaehlkarte.gemeinden`), null ohne Gemeinde
+  oder ohne Grenzen beim Bau; `gemeinden` = Angaben zu den Grenzen für „Quellen & Lizenzen“ (wie
+  ein Eintrag in `lizenzen`, dazu `quellenvermerk` und `stand`), null ohne Grenzen.
 - Tageswerte der Quelle (Quellen, die für eine Stelle nur Tageswerte liefern, `modell.py`):
   `tageswerte_bis` je Gruppe und Stelle (Reihenfolge der Stellen) der letzte Tag, dessen Wert der
   Tageswert der Quelle ist, sonst null – nur Gruppen, in denen es solche Tage gibt. Sie liegen
@@ -42,14 +46,16 @@ import numpy as np
 
 from zaehlkarte.config import Pfade
 from zaehlkarte.dauer.modell import GRUPPEN, Messreihe, aus_tageswerten, tagessummen
+from zaehlkarte.gemeinden import Gemeinden
 from zaehlkarte.kalender import ferienkalender, tagtyp
 from zaehlkarte.lizenz import ohne_lizenz
 
-VERSION = 4  # 2: `juengster`; 3: `lizenzen[].ohne_lizenz`; 4: Tageswerte der Quelle (Nov. 2026)
+VERSION = 5  # 2: `juengster`; 3: `lizenzen[].ohne_lizenz`; 4: Tageswerte der Quelle;
+# 5: Gemeinde je Stelle (`ags`, `gemeinden`) – alle November 2026
 CHUNK_BYTES = 900_000
 STUNDEN_TAGE = 365  # Stundenwerte: die jüngsten 12 Monate je Quelle
 STELLEN_FELDER = ["id", "quelle", "name", "abschnitt", "richtung", "lon", "lat", "von", "bis", "g",
-                  "chunk"]
+                  "ags", "chunk"]
 GRUPPEN_NAMEN = {"kfz": "Kfz", "lkw": "Lkw (Detektor)", "sv": "Schwerverkehr (Detektor)",
                  "rad": "Rad", "fuss": "Fuß"}
 TAG = {"schule": "s", "ferien": "f", "feiertag": "h", "wochenende": "w"}
@@ -79,8 +85,9 @@ def _lizenzen(q: dict) -> list[dict]:
 
 
 def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
-             erzeugt: date | None = None) -> tuple[list[Path], list[str]]:
-    """-> (geschriebene Dateien, Berichtszeilen)."""
+             erzeugt: date | None = None, gemeinden: Gemeinden | None = None
+             ) -> tuple[list[Path], list[str]]:
+    """-> (geschriebene Dateien, Berichtszeilen). `gemeinden`: Grenzen für `ags` (None: leer)."""
     pfade = pfade or Pfade()
     ziel = pfade.karte / "dauer"
     (ziel / "tage").mkdir(parents=True, exist_ok=True)
@@ -185,6 +192,9 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
                           for a, b, t in r.verfahren],
         })
 
+    # Gemeinde je Stelle (vor der Nummer der Detail-Datei, der letzten Spalte)
+    bericht += _gemeinden(stellen_werte, gemeinden)
+
     # Chunks der Details: der Reihe nach, bis eine Datei etwa CHUNK_BYTES erreicht
     chunks: list[dict] = [{}]
     groesse = 0
@@ -215,6 +225,7 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
         "stellen": {"felder": STELLEN_FELDER, "werte": stellen_werte},
         "juengster": juengster,
         "tageswerte_bis": {g: werte for g, werte in tageswerte_bis.items() if any(werte)},
+        "gemeinden": gemeinden.meta if gemeinden else None,
     }
     dateien: dict[Path, dict] = {ziel / "index.json": index}
     for j, werte in jahreswerte.items():
@@ -231,6 +242,28 @@ def schreibe(gelesen: list[tuple[dict, Messreihe]], pfade: Pfade | None = None,
     groesse_mb = sum(p.stat().st_size for p in dateien) / 1e6
     bericht.append(f"{len(dateien)} Dateien, {groesse_mb:.1f} MB, {len(chunks)} Detail-Dateien")
     return list(dateien), bericht
+
+
+def _gemeinden(stellen_werte: list[list], gemeinden: Gemeinden | None) -> list[str]:
+    """`ags` an jede Zeile der Stellen hängen; Berichtszeilen (Stellen am Rand, ohne Gemeinde)."""
+    if gemeinden is None:
+        for zeile in stellen_werte:
+            zeile.append(None)
+        return ["Gemeinden: keine Grenzen – ags leer (zaehlkarte dauer fetch holt sie)"]
+    ags, arten = gemeinden.zuordne([(z[5], z[6]) for z in stellen_werte])
+    for zeile, a in zip(stellen_werte, ags, strict=True):
+        zeile.append(a)
+    rand = [f"{z[0]} ({gemeinden.name(a)})" for z, a, art in zip(stellen_werte, ags, arten,
+                                                                 strict=True) if art == "rand"]
+    ohne = [z[0] for z, art in zip(stellen_werte, arten, strict=True) if art == "ohne"]
+    zeilen = [f"Gemeinden ({gemeinden.meta.get('stand', '?')}): "
+              f"{len(ags) - len(rand) - len(ohne)} von {len(ags)} Stellen in einer Gemeinde, "
+              f"{len(rand)} knapp außerhalb (der nächsten zugeordnet), {len(ohne)} ohne Gemeinde"]
+    for titel, liste in (("knapp außerhalb", rand), ("ohne Gemeinde", ohne)):
+        if liste:
+            mehr = " …" if len(liste) > 30 else ""
+            zeilen.append(f"  {titel}: " + ", ".join(liste[:30]) + mehr)
+    return zeilen
 
 
 def vollstaendig(r: Messreihe) -> np.ndarray:

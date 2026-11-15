@@ -101,7 +101,7 @@ def test_site_schreibt_tageswerte(tmp_path):
     _, bericht = site.schreibe([(Q, r)], pfade, erzeugt=date(2026, 11, 14))
     ziel = pfade.karte / "dauer"
     index = json.loads((ziel / "index.json").read_text())
-    assert index["version"] == site.VERSION == 4
+    assert index["version"] == site.VERSION >= 4
     ids = [w[0] for w in index["stellen"]["werte"]]
     assert ids == ["test_tw:a", "test_tw:b"]
     assert index["tageswerte_bis"] == {"rad": ["2025-06-06", "2025-06-03"]}

@@ -6,6 +6,7 @@ from __future__ import annotations
 from datetime import date
 from pathlib import Path
 
+from zaehlkarte import gemeinden as gemeinden_
 from zaehlkarte.config import Pfade, dauerquellen
 from zaehlkarte.dauer import (
     aachen_rad,
@@ -62,6 +63,10 @@ def hole(pfade: Pfade | None = None, nur: list[str] | None = None) -> tuple[list
     log: list[str] = []
     fehler: list[str] = []
     abruf.ausnahmen_setzen(dauerquellen(pfade), pfade=pfade)
+    try:  # Gemeindegrenzen (ags je Stelle): ohne sie baut die Karte trotzdem, nur ags bleibt leer
+        log += gemeinden_.hole(pfade)
+    except Exception as e:  # noqa: BLE001
+        log.append(f"FEHLER gemeinden: {e!r}")
     for code, q in dauerquellen(pfade).items():
         if nur and code not in nur:
             continue
@@ -90,6 +95,7 @@ def baue(pfade: Pfade | None = None, nur: list[str] | None = None
 
 def site(pfade: Pfade | None = None, erzeugt: date | None = None) -> tuple[list[Path], list[str]]:
     gelesen, berichte = baue(pfade)
-    dateien, zeilen = site_.schreibe(gelesen, pfade, erzeugt)
+    gemeinden, fehlt = gemeinden_.lese(pfade)
+    dateien, zeilen = site_.schreibe(gelesen, pfade, erzeugt, gemeinden)
     alle = [f"{c}: {z}" for c, zs in berichte.items() for z in zs]
-    return dateien, [*alle, *zeilen, *site_.statistik(gelesen)]
+    return dateien, [*alle, *fehlt, *zeilen, *site_.statistik(gelesen)]

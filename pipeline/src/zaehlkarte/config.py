@@ -91,13 +91,15 @@ def _konfiguration(config: Path) -> dict:
         "recht": datei("recht.yaml", {}),
         "anfrage_vorlage": datei("anfrage_vorlage.yaml", None),
         "robots": datei("robots.yaml", []),
+        "gemeinden": datei("gemeinden.yaml", None),
     }
 
 
 def konfiguration(pfade: Pfade | None = None) -> dict:
     """Die ganze Konfiguration aus `pipeline/config/`: `quellen` (Kurzzeit) und `dauer` (Code ->
     Eintrag, nach `nr`), `datenlage` (die Kommunen aller Länder), `recht` (Land -> Rechtslage),
-    `anfrage_vorlage`, `robots` (Ausnahmen von robots.txt)."""
+    `anfrage_vorlage`, `robots` (Ausnahmen von robots.txt), `gemeinden` (Gemeindegrenzen VG250 für
+    die Zuordnung der Dauerzählstellen, `zaehlkarte.gemeinden`)."""
     return _konfiguration((pfade or Pfade()).config)
 
 
