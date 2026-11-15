@@ -1,0 +1,631 @@
+[
+ {
+  "ags": "13071",
+  "name": "Mecklenburgische Seenplatte",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.lk-mecklenburgische-seenplatte.de/",
+   "https://www.landkreis-mecklenburgische-seenplatte.de/",
+   "https://www.kreis-mecklenburgische-seenplatte.de/",
+   "https://www.lra-mecklenburgische-seenplatte.de/",
+   "https://www.mecklenburgische-seenplatte.de/",
+   "https://www.landkreismecklenburgischeseenplatte.de/",
+   "https://www.mecklenburgischeseenplatte.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 146,
+  "herkunft": {
+   "https://www.landkreis-mecklenburgische-seenplatte.de/": "geraten",
+   "https://www.kreis-mecklenburgische-seenplatte.de/": "geraten",
+   "https://www.lk-mecklenburgische-seenplatte.de/": "vorher_oder_liste",
+   "https://www.lra-mecklenburgische-seenplatte.de/": "geraten",
+   "https://www.mecklenburgische-seenplatte.de/": "geraten",
+   "https://www.landkreismecklenburgischeseenplatte.de/": "geraten",
+   "https://www.mecklenburgischeseenplatte.de/": "geraten"
+  }
+ },
+ {
+  "ags": "13072",
+  "name": "Landkreis Rostock",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-rostock.de/",
+   "https://www.kreis-rostock.de/",
+   "https://www.lk-rostock.de/",
+   "https://www.lra-rostock.de/",
+   "https://www.rostock.de/",
+   "https://www.landkreisrostock.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 112,
+  "herkunft": {
+   "https://www.landkreis-rostock.de/": "vorher_oder_liste",
+   "https://www.kreis-rostock.de/": "geraten",
+   "https://www.lk-rostock.de/": "geraten",
+   "https://www.lra-rostock.de/": "geraten",
+   "https://www.rostock.de/": "geraten",
+   "https://www.landkreisrostock.de/": "geraten"
+  }
+ },
+ {
+  "ags": "13073",
+  "name": "Vorpommern-Rügen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-vorpommern-ruegen.de/",
+   "https://www.kreis-vorpommern-ruegen.de/",
+   "https://www.lk-vorpommern-ruegen.de/",
+   "https://www.lra-vorpommern-ruegen.de/",
+   "https://www.vorpommern-ruegen.de/",
+   "https://www.landkreisvorpommernruegen.de/",
+   "https://www.vorpommernruegen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 101,
+  "herkunft": {
+   "https://www.landkreis-vorpommern-ruegen.de/": "geraten",
+   "https://www.kreis-vorpommern-ruegen.de/": "geraten",
+   "https://www.lk-vorpommern-ruegen.de/": "geraten",
+   "https://www.lra-vorpommern-ruegen.de/": "geraten",
+   "https://www.vorpommern-ruegen.de/": "geraten",
+   "https://www.landkreisvorpommernruegen.de/": "geraten",
+   "https://www.vorpommernruegen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "13074",
+  "name": "Nordwestmecklenburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-nordwestmecklenburg.de/",
+   "https://www.kreis-nordwestmecklenburg.de/",
+   "https://www.lk-nordwestmecklenburg.de/",
+   "https://www.lra-nordwestmecklenburg.de/",
+   "https://www.nordwestmecklenburg.de/",
+   "https://www.landkreisnordwestmecklenburg.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 83,
+  "herkunft": {
+   "https://www.landkreis-nordwestmecklenburg.de/": "geraten",
+   "https://www.kreis-nordwestmecklenburg.de/": "geraten",
+   "https://www.lk-nordwestmecklenburg.de/": "geraten",
+   "https://www.lra-nordwestmecklenburg.de/": "geraten",
+   "https://www.nordwestmecklenburg.de/": "geraten",
+   "https://www.landkreisnordwestmecklenburg.de/": "geraten"
+  }
+ },
+ {
+  "ags": "13075",
+  "name": "Vorpommern-Greifswald",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-vorpommern-greifswald.de/",
+   "https://www.kreis-vorpommern-greifswald.de/",
+   "https://www.lk-vorpommern-greifswald.de/",
+   "https://www.lra-vorpommern-greifswald.de/",
+   "https://www.vorpommern-greifswald.de/",
+   "https://www.landkreisvorpommerngreifswald.de/",
+   "https://www.vorpommerngreifswald.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 138,
+  "herkunft": {
+   "https://www.landkreis-vorpommern-greifswald.de/": "geraten",
+   "https://www.kreis-vorpommern-greifswald.de/": "geraten",
+   "https://www.lk-vorpommern-greifswald.de/": "geraten",
+   "https://www.lra-vorpommern-greifswald.de/": "geraten",
+   "https://www.vorpommern-greifswald.de/": "geraten",
+   "https://www.landkreisvorpommerngreifswald.de/": "geraten",
+   "https://www.vorpommerngreifswald.de/": "geraten"
+  }
+ },
+ {
+  "ags": "13076",
+  "name": "Ludwigslust-Parchim",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ludwigslust-parchim.de/",
+   "https://www.kreis-ludwigslust-parchim.de/",
+   "https://www.lk-ludwigslust-parchim.de/",
+   "https://www.lra-ludwigslust-parchim.de/",
+   "https://www.ludwigslust-parchim.de/",
+   "https://www.landkreisludwigslustparchim.de/",
+   "https://www.ludwigslustparchim.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 142,
+  "herkunft": {
+   "https://www.landkreis-ludwigslust-parchim.de/": "geraten",
+   "https://www.kreis-ludwigslust-parchim.de/": "geraten",
+   "https://www.lk-ludwigslust-parchim.de/": "geraten",
+   "https://www.lra-ludwigslust-parchim.de/": "geraten",
+   "https://www.ludwigslust-parchim.de/": "geraten",
+   "https://www.landkreisludwigslustparchim.de/": "geraten",
+   "https://www.ludwigslustparchim.de/": "geraten"
+  }
+ },
+ {
+  "ags": "13003000",
+  "name": "Rostock, Hanse- und Universitätsstadt",
+  "art": "gemeinde",
+  "einw": 204929,
+  "lon": 12.135993,
+  "lat": 54.088548,
+  "web": [
+   "https://www.rostock.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13004000",
+  "name": "Schwerin, Landeshauptstadt",
+  "art": "gemeinde",
+  "einw": 97922,
+  "lon": 11.414434,
+  "lat": 53.628545,
+  "web": [
+   "https://www.schwerin.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13071107",
+  "name": "Neubrandenburg, Vier-Tore-Stadt",
+  "art": "gemeinde",
+  "einw": 59494,
+  "lon": 13.25996,
+  "lat": 53.557345,
+  "web": [
+   "https://www.neubrandenburg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13075039",
+  "name": "Greifswald, Universitäts- und Hansestadt",
+  "art": "gemeinde",
+  "einw": 56154,
+  "lon": 13.379627,
+  "lat": 54.09581,
+  "web": [
+   "https://www.greifswald.de/de/",
+   "https://www.greifswald.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13073088",
+  "name": "Stralsund, Hansestadt",
+  "art": "gemeinde",
+  "einw": 55481,
+  "lon": 13.089973,
+  "lat": 54.313975,
+  "web": [
+   "https://www.stralsund.de/",
+   "https://stralsund.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13074087",
+  "name": "Wismar, Hansestadt",
+  "art": "gemeinde",
+  "einw": 43103,
+  "lon": 11.466024,
+  "lat": 53.891577,
+  "web": [
+   "https://www.wismar.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13072043",
+  "name": "Güstrow, Barlachstadt",
+  "art": "gemeinde",
+  "einw": 28861,
+  "lon": 12.175691,
+  "lat": 53.794458,
+  "web": [
+   "https://www.guestrow.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13071156",
+  "name": "Waren (Müritz), Stadt",
+  "art": "gemeinde",
+  "einw": 20211,
+  "lon": 12.686242,
+  "lat": 53.513209,
+  "web": [
+   "https://www.waren-mueritz.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13071110",
+  "name": "Neustrelitz, Residenzstadt",
+  "art": "gemeinde",
+  "einw": 20136,
+  "lon": 13.062278,
+  "lat": 53.363118,
+  "web": [
+   "https://www.neustrelitz.de/de/home"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13076108",
+  "name": "Parchim, Stadt",
+  "art": "gemeinde",
+  "einw": 17825,
+  "lon": 11.847644,
+  "lat": 53.425581,
+  "web": [
+   "https://www.parchim.de/de/",
+   "https://www.parchim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13073075",
+  "name": "Ribnitz-Damgarten, Bernsteinstadt",
+  "art": "gemeinde",
+  "einw": 15297,
+  "lon": 12.431833,
+  "lat": 54.243021,
+  "web": [
+   "https://www.ribnitz-damgarten.de/"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "130735361"
+  ]
+ },
+ {
+  "ags": "13073010",
+  "name": "Bergen auf Rügen, Stadt",
+  "art": "gemeinde",
+  "einw": 13394,
+  "lon": 13.430633,
+  "lat": 54.417301,
+  "web": [
+   "https://www.stadt-bergen-auf-ruegen.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13072006",
+  "name": "Bad Doberan, Stadt",
+  "art": "gemeinde",
+  "einw": 13059,
+  "lon": 11.89935,
+  "lat": 54.106684,
+  "web": [
+   "https://www.bad-doberan-heiligendamm.de/",
+   "https://www.bad-doberan-heiligendamm.de/de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13076060",
+  "name": "Hagenow, Stadt",
+  "art": "gemeinde",
+  "einw": 11987,
+  "lon": 11.192521,
+  "lat": 53.432045,
+  "web": [
+   "https://www.hagenow.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13075005",
+  "name": "Anklam, Hansestadt",
+  "art": "gemeinde",
+  "einw": 11793,
+  "lon": 13.693003,
+  "lat": 53.855297,
+  "web": [
+   "https://www.anklam.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13076090",
+  "name": "Ludwigslust, Stadt",
+  "art": "gemeinde",
+  "einw": 11778,
+  "lon": 11.497142,
+  "lat": 53.326305,
+  "web": [
+   "https://www.ludwigslust.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13076014",
+  "name": "Boizenburg/ Elbe, Stadt",
+  "art": "gemeinde",
+  "einw": 11147,
+  "lon": 10.722631,
+  "lat": 53.374248,
+  "web": [
+   "https://www.boizenburg-elbe.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13075144",
+  "name": "Wolgast, Stadt",
+  "art": "gemeinde",
+  "einw": 10859,
+  "lon": 13.774621,
+  "lat": 54.052886,
+  "web": [
+   "https://www.wolgast.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13074026",
+  "name": "Grevesmühlen, Stadt",
+  "art": "gemeinde",
+  "einw": 10082,
+  "lon": 11.184913,
+  "lat": 53.864458,
+  "web": [
+   "https://www.grevesmuehlen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "13071029",
+  "name": "Demmin, Hansestadt",
+  "art": "gemeinde",
+  "einw": 10001,
+  "lon": 13.038196,
+  "lat": 53.905543,
+  "web": [
+   "https://www.demmin.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130765668",
+  "name": "Crivitz",
+  "art": "verband",
+  "einw": 24500,
+  "web": [
+   "https://www.amt-crivitz.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130745459",
+  "name": "Schönberger Land",
+  "art": "verband",
+  "einw": 17667,
+  "web": [
+   "https://www.schoenberger-land.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130725263",
+  "name": "Warnow-West",
+  "art": "verband",
+  "einw": 17166,
+  "web": [
+   "https://amt-warnow-west.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130735352",
+  "name": "Barth",
+  "art": "verband",
+  "einw": 14836,
+  "web": [
+   "https://www.amt-barth.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130715159",
+  "name": "Röbel-Müritz",
+  "art": "verband",
+  "einw": 13573,
+  "web": [
+   "https://www.amt-roebel-mueritz.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130755559",
+  "name": "Torgelow-Ferdinandshof",
+  "art": "verband",
+  "einw": 13492,
+  "web": [
+   "https://www.amt-torgelow-ferdinandshof.de/de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130745455",
+  "name": "Lützow-Lübstorf",
+  "art": "verband",
+  "einw": 13315,
+  "web": [
+   "https://www.luetzow-luebstorf.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130765665",
+  "name": "Stralendorf",
+  "art": "verband",
+  "einw": 11711,
+  "web": [
+   "https://www.amt-stralendorf.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130765664",
+  "name": "Sternberger Seenlandschaft",
+  "art": "verband",
+  "einw": 11637,
+  "web": [
+   "https://amt-ssl.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130765655",
+  "name": "Eldenburg Lübz",
+  "art": "verband",
+  "einw": 11513,
+  "web": [
+   "https://www.amt-eldenburg-luebz.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130715153",
+  "name": "Malchin am Kummerower See",
+  "art": "verband",
+  "einw": 11385,
+  "web": [
+   "https://www.amt-malchin-am-kummerower-see.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130755563",
+  "name": "Züssow",
+  "art": "verband",
+  "einw": 11238,
+  "web": [
+   "https://www.amt-zuessow.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130745457",
+  "name": "Neukloster-Warin",
+  "art": "verband",
+  "einw": 10862,
+  "web": [
+   "https://www.amt-neukloster-warin.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130715162",
+  "name": "Stavenhagen",
+  "art": "verband",
+  "einw": 10782,
+  "web": [
+   "https://www.stavenhagen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130755555",
+  "name": "Landhagen",
+  "art": "verband",
+  "einw": 10726,
+  "web": [
+   "https://www.landhagen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130725260",
+  "name": "Rostocker Heide",
+  "art": "verband",
+  "einw": 10594,
+  "web": [
+   "https://www.amt-rostocker-heide.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130765657",
+  "name": "Grabow",
+  "art": "verband",
+  "einw": 10583,
+  "web": [
+   "https://www.grabow.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130755557",
+  "name": "Lubmin",
+  "art": "verband",
+  "einw": 10435,
+  "web": [
+   "https://www.lubmin.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130755556",
+  "name": "Löcknitz-Penkun",
+  "art": "verband",
+  "einw": 10320,
+  "web": [
+   "https://www.amt-loecknitz-penkun.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130715154",
+  "name": "Malchow",
+  "art": "verband",
+  "einw": 10272,
+  "web": [
+   "https://www.amt-malchow.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130745454",
+  "name": "Klützer Winkel",
+  "art": "verband",
+  "einw": 10231,
+  "web": [
+   "https://www.kluetzer-winkel.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130755552",
+  "name": "Am Stettiner Haff",
+  "art": "verband",
+  "einw": 10120,
+  "web": [
+   "https://www.amt-am-stettiner-haff.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "130765667",
+  "name": "Zarrentin",
+  "art": "verband",
+  "einw": 10079,
+  "web": [
+   "https://www.amt-zarrentin.de/"
+  ],
+  "vorher": "erreicht"
+ }
+]
