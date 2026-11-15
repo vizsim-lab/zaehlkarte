@@ -44,3 +44,14 @@ def test_spitzenstunde():
     z = zaehlung(7, kfz=[10, 50, None, 50, 20])
     assert kz.spitzenstunde(z, "kfz") == (8, 50)  # bei Gleichstand die frühere Stunde
     assert kz.spitzenstunde(z, "rad") is None
+
+
+def test_summe6_22_aus_stunden_oder_genau_diesem_fenster():
+    z = zaehlung(0, kfz=list(range(24)))
+    assert kz.summe6_22(z, "kfz") == sum(range(6, 22))
+    assert kz.summe6_22(zaehlung(7, kfz=[100] * 12), "kfz") is None  # 6 und 19–22 Uhr nicht gezählt
+    z = zaehlung(None)
+    z.fenster, z.fenstersummen = [(360, 1320)], {"kfz": 25757}  # Nürnberg: nur die Summe 6–22 Uhr
+    assert kz.summe6_22(z, "kfz") == 25757 and kz.summe6_22(z, "rad") is None
+    z.fenster = [(420, 600), (900, 1080)]  # anderes Fenster (Potsdam): keine Summe 6–22 Uhr
+    assert kz.summe6_22(z, "kfz") is None

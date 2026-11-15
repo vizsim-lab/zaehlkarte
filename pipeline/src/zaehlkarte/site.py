@@ -7,7 +7,9 @@ Vertrag mit dem Frontend (js/data/laden.js, js/data/modell.js): Feldnamen in `in
 
 - index.json: alles, was Karte und Filter brauchen – spaltenweise, damit es klein bleibt.
   Kennwerte je Zählung als Liste in der Reihenfolge von GRUPPEN: `w` = Summe 7–19 Uhr (nur,
-  wo jede Stunde gezählt ist), `w24` = Summe über 24 Stunden, `sp` = stärkste gezählte Stunde.
+  wo jede Stunde gezählt ist), `w16` = Summe 6–22 Uhr (aus Stunden oder, bei genau diesem
+  Zählfenster, die Summe der Quelle), `w24` = Summe über 24 Stunden, `sp` = stärkste gezählte
+  Stunde.
   `l` = Lieferung (Index in `lieferungen`), wo eine Quelle mehrere mit eigener Lizenz hat.
 - details/NN.json: Stundenreihen aller Gruppen und die Angaben zur Zählung; je Stelle in
   einer Datei (`stellen.chunk`), geladen erst beim Klick. Ohne Stundenreihe gibt es dort
@@ -35,7 +37,7 @@ TAG = {"schule": "s", "ferien": "f", "feiertag": "h", "wochenende": "w"}
 LAGEN = ["gps", "quelle", "geokodiert", "uebertragen"]
 CHUNK_BYTES = 350_000
 STELLEN_FELDER = ["id", "quelle", "name", "typ", "lon", "lat", "lage", "chunk"]
-ZAEHLUNGEN_FELDER = ["stelle", "datum", "tag", "fenster", "g", "w", "w24", "sp", "l"]
+ZAEHLUNGEN_FELDER = ["stelle", "datum", "tag", "fenster", "g", "w", "w16", "w24", "sp", "l"]
 GRUPPEN_NAMEN = {
     "kfz": "Kfz",
     "sv": "Schwerverkehr",
@@ -67,6 +69,7 @@ def kennwerte(z: Zaehlung) -> dict:
         "fenster": fenster_text(z.fenster),
         "g": maske,
         "w": _liste([kz.summe(z, g, 7, 19) for g in GRUPPEN]),
+        "w16": _liste([kz.summe6_22(z, g) for g in GRUPPEN]),
         "w24": _liste([kz.tag24(z, g) for g in GRUPPEN]),
         "sp": _liste(sp),
     }

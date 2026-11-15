@@ -162,6 +162,29 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   zählt die Tabelle. Querschnitt 2 heißt in Tabelle 1 „Oberhaugstetter Straße (Ortsausgang
   West)“, in der Wertetabelle „Altbulacher Str.“; der Zählstellenplan zeigt ihn am Ortsausgang
   Richtung Altbulach.
+- **Nürnberg** (`nuernberg_pdf`, ohne Lizenz): je Jahr ein Bericht der Querschnittszählung (16
+  PDFs 2007–2025; für 2011, 2020 und 2021 gibt es keinen). Gelesen wird die Tabelle aller
+  Zählstellen (Kfz/16 h, mehrere Seiten, teils quer: Zeichenmatrix (0,1,-1,0) oder skaliert –
+  zurückgedreht). Zeilen aus den waagrechten Linien, wo keine sind, aus den Zählstellennummern;
+  Spalten aus den Jahren im Kopf (auch „Juli2002“). Je Zelle: erste Zeile der Wert (auch ohne
+  Tausenderpunkt), kleine hochgestellte Ziffern = Fußnote, ab 2023 die zweite Zeile Lkw +
+  Lastzüge (Kontrolle: Außenkordon 2025 zusammen 31.292 wie im Text); ◆ (`u`, `(cid:N)`,
+  `\uf075`) = Fußgängerbereich; Fußnote „Vorjahreswert“ = nicht gezählt. Fallen: versteckter
+  Text in den Namen („Weg)13.027“), Nummern ohne Schrägstrich („224 1“, „30c7“), Namen, die in
+  die Nachbarzeile laufen. Die Gruppentabellen (Außenkordon, Pegnitzbrücken) weichen in
+  einzelnen Zellen ab (2024, Zählstelle 60: Außenkordon 16.450, Zählstellentabelle 19.118) –
+  es gilt die Zählstellentabelle, die andere Zahl steht im Hinweis.
+  Gezählt wird Dienstag 10–14 und 18–22, Mittwoch 6–10 und 14–18 Uhr (Berichte 2007 und 2025).
+  Lage: Regeln über OSM (Hausnummer, sonst Kreuzung und 35 m in die genannte Richtung; Brücke,
+  Tunnel, Bahn, Autobahn, Stadtgrenze) und die Zählstellenpläne 2012 und 2022–2025 (Vektor,
+  Beschriftung = Nummer, affin über sicher verortete Stellen, Median-Rest 28–44 m). Nennt ein Name
+  Hausnummer und Querstraße und liegen beide weit auseinander, bestätigen die Pläne die Hausnummer
+  (11b, 51, 121, 231). Querstraßen nur über ähnliche Namen (Tippfehler) gefunden: Ortsteile
+  („nördl. Kornburg“) nicht als Straße nehmen; gleichnamige Straßen in Nachbarorten (Nordring,
+  Leipziger Straße): nur Adressen in der Stadt. Einzelne Pläne mit falschem Etikett liegen rund
+  10 km daneben (7, 271, 275, 452) – ein einzelner Plan gilt nur an der genannten Straße. Werkzeuge
+  `tools/nuernberg/` auf `werkzeug/erkundung` (Ablauf im README dort), Overpass-Abzüge
+  `ergebnis/ohne_lizenz/holen23–30` (Overpass antwortet oft mit 504: kleine Abfragen, Ersatzserver).
 - **PDF je Knoten** (Magdeburg-Angebot): noch kein Adapter (Ansatz wie `potsdam_pdf` bzw.
   `muenster_pdf`).
 - **Miovision-Excel** („Tabellenbericht“: Blatt „Übersicht“ mit Studienname, Zeitintervall,
@@ -400,6 +423,9 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
 - Bayern (November 2026, Kommune für Kommune, Runde 3 wie Niedersachsen: 1.489 Websites der
   Gemeinden, Verwaltungsgemeinschaften und Landkreise, 1.177 erreicht; Ergebnisse
   `ergebnis/runde3*/BY`): keine offene Kurzzeitzählung mit Lizenz.
+  - **Werte als PDF ohne Lizenz:** Nürnberg (Berichte der jährlichen Querschnittszählung
+    2007–2025, Kfz 6–22 Uhr je Zählstelle) – seit November 2026 in der Karte, ohne Lizenz
+    (`nuernberg_pdf`).
   - **Rauschen:** Fast jede Gemeinde bindet den Text „Straßenverkehrszählungen; Durchführung“ aus
     dem BayernPortal ein (Zählungen des Landes, BAYSIS); auch „aktuelle Daten“ kleiner Gemeinden
     verweisen meist auf BAYSIS (Möhrendorf). Landkreise veröffentlichen SVZ-Datenblätter je

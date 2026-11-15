@@ -9,7 +9,7 @@ test("index.json und manifest.json haben die erwarteten Felder", async ({ reques
   expect(Object.keys(manifest.dateien)).toEqual(["index", "details", "datenlage"]);
   const index = await (await request.get(`/data/${manifest.dateien.index}`)).json();
   expect(index.stellen.felder).toEqual(["id", "quelle", "name", "typ", "lon", "lat", "lage", "chunk"]);
-  expect(index.zaehlungen.felder).toEqual(["stelle", "datum", "tag", "fenster", "g", "w", "w24", "sp", "l"]);
+  expect(index.zaehlungen.felder).toEqual(["stelle", "datum", "tag", "fenster", "g", "w", "w16", "w24", "sp", "l"]);
   expect(index.gruppen).toEqual(["kfz", "sv", "rad", "fuss", "kind"]);
   expect(index.quellen).toEqual(manifest.quellen.map((q) => q.code));
   const chunk = index.stellen.werte[0][7];

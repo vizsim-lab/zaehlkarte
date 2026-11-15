@@ -1,0 +1,680 @@
+# Nürnberg: jährliche Querschnittszählung des Verkehrsplanungsamts (Kfz 6–22 Uhr je Zählstelle)
+# aus den Berichten „Verkehrszählung …“ 2007–2025 (je Jahr ein PDF auf nuernberg.de), ohne
+# Lizenzangabe – in der Karte nach dem Beschluss vom 14.11.2026 („Quellen ohne Lizenz“,
+# CLAUDE.md). Aufbau und Regeln im Kopf des Adapters (src/zaehlkarte/adapters/nuernberg_pdf.py);
+# geprüft im Werkzeug-Branch `werkzeug/erkundung` (tools/nuernberg/, November 2026). Die Werte
+# 1997–2006 in den Tabellen der älteren Berichte bleiben draußen: ohne eigenen Bericht kein Zähltag.
+nr: 15
+status: live
+adapter: nuernberg_pdf
+name: Nürnberg
+land: BY
+traeger: Stadt Nürnberg, Verkehrsplanungsamt
+titel: Verkehrszählung (Querschnittszählung) – Berichte 2007–2025
+art: >-
+  Jährliche Querschnittszählung von Hand an rund 75–135 Stellen, Dienstag und Mittwoch der
+  vorletzten Schulwoche vor den Sommerferien, 6–22 Uhr in vier Intervallen à vier Stunden an zwei
+  Tagen; in den Berichten je Zählstelle nur die Summe Kfz 6–22 Uhr
+weg: offen auf nuernberg.de (je Jahr ein Bericht als PDF), ohne Lizenzangabe
+ohne_lizenz:
+  herausgegeben: >-
+    als Berichte „Verkehrszählung …“ (PDF) auf nuernberg.de, ohne Lizenzangabe; die Werte stehen im
+    Anhang jedes Berichts (Tabelle „Entwicklung des Verkehrs (Kfz/16 h) – Zählstellen“)
+  geprueft: 2026-11-15
+portal: https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html
+hinweise:
+  - >-
+    Gezählt an zwei Tagen: Dienstag 10–14 und 18–22 Uhr, Mittwoch 6–10 und 14–18 Uhr (Berichte
+    2007 und 2025). Die 16 Stunden stammen also aus zwei Tagen; die Zählung trägt das Datum des
+    Dienstags.
+  - >-
+    Nur Kfz (beide Richtungen zusammen). Lkw und Lastzüge nennen die Berichte ab 2023 ohne Busse –
+    das ist nicht der Schwerverkehr der Karte und fehlt darum.
+# je Jahr ein Bericht; Prüfsumme wie bei Xanten (Fassung vom 15.11.2026). Zähltage aus dem Text
+# des Berichts (Dienstag, Mittwoch).
+dateien:
+  - jahr: 2025
+    datei: bericht_2025.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszahlung_bericht_2025.pdf
+    sha256: 82691afbb300406decff255d846aa2361393874d60d0f83748d3bf5f4d73e1db
+    zaehltage: [2025-07-22, 2025-07-23]
+  - jahr: 2024
+    datei: bericht_2024.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_entwicklung_gesamtverkehr_2024.pdf
+    sha256: bf07372a2f4f885d150cc4373e8203adb3f82ab63397197e1b85c8237f2e9b8e
+    zaehltage: [2024-07-16, 2024-07-17]
+  - jahr: 2023
+    datei: bericht_2023.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_entwicklung_gesamtverkehr_2023_reduziert.pdf
+    sha256: b6cce96a1b93230ee0c787daeacc89d2816f46bf352ca0c63fc0d1f38e1cb7f7
+    zaehltage: [2023-07-18, 2023-07-19]
+  - jahr: 2022
+    datei: bericht_2022.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/ergebnisse_verkehrszaehlung_2022.pdf
+    sha256: 59fd2208af21a69a922f63be14aa52b74bef07a71886bde3d7ef528b8791e7a1
+    zaehltage: [2022-07-19, 2022-07-20]
+  - jahr: 2019
+    datei: bericht_2019.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_2019_komplett_neu.pdf
+    sha256: dc46584c75eea5e70cd8c662cf9279cc360071e4f49e8f5fd2633b1b6bc732e9
+    zaehltage: [2019-07-16, 2019-07-17]
+  - jahr: 2018
+    datei: bericht_2018.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf
+    sha256: f1ad2ba348d6a3ce43c01ddfc83da40f04bb7a49354901085cc4f42d6579837f
+    zaehltage: [2018-07-17, 2018-07-18]
+  - jahr: 2017
+    datei: bericht_2017.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/ergebnisse_verkehrszaehlung_2017_bericht_gesamt_.pdf
+    sha256: d72e5b447dab445e12276d27556aba1dff3ef98ca2029cccabc8a03dc0bbe33f
+    zaehltage: [2017-07-18, 2017-07-19]
+  - jahr: 2016
+    datei: bericht_2016.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_gesamt.pdf
+    sha256: 860f700c316fcead7408de71d4e3cc9d580c34809c9bb1da473183bb158fc9ff
+    zaehltage: [2016-07-19, 2016-07-20]
+  - jahr: 2015
+    datei: bericht_2015.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_gesamt_2015.pdf
+    sha256: 14da054dd1e7d34e5faa5c2b89c43608df4170b35287f40e5092fbb7352074f6
+    zaehltage: [2015-07-21, 2015-07-22]
+  - jahr: 2014
+    datei: bericht_2014.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_2014.pdf
+    sha256: 5424c82b6904306dd355fc35eb2771eed0e2f273fef520b8180bfb6eab7cd285
+    zaehltage: [2014-07-22, 2014-07-23]
+  - jahr: 2013
+    datei: bericht_2013.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_2013.pdf
+    sha256: 760e177170c4daf333beceb598980ada3fd53a074bf539e80e5af7e6efb09ae7
+    zaehltage: [2013-07-23, 2013-07-24]
+  - jahr: 2012
+    datei: bericht_2012.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszaehlung_2012.pdf
+    sha256: 00a9370fc88d183d68a70694f941b198b8e1595c56aceab1caa654dc7df9ab85
+    zaehltage: [2012-07-24, 2012-07-25]
+  - jahr: 2010
+    datei: bericht_2010.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_2010_web.pdf
+    sha256: 322ab1f7a773f26495c56ec157148d0fada24aece980764f04845fa8a2f5500f
+    zaehltage: [2010-07-20, 2010-07-21]
+  - jahr: 2009
+    datei: bericht_2009.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/qz_bericht_2009_komplett.pdf
+    sha256: 66f5fcc2d661d396a2cae9d86c925eb9a31dde2dd9256902f478e85849e47dc7
+    zaehltage: [2009-07-21, 2009-07-22]
+  - jahr: 2008
+    datei: bericht_2008.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/qz_2008.pdf
+    sha256: 58fb731bd86814eb5d1320f328cedf0fc6567cbe4ed17767d63e9b1278ff0cdc
+    zaehltage: [2008-07-22, 2008-07-23]
+  - jahr: 2007
+    datei: bericht_2007.pdf
+    url: https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/querschnittszaehlung_2007.pdf
+    sha256: 7ba8def51e3feabcad94fb275da38041c464151cc4bde165f93d39b093166dba
+    zaehltage: [2007-07-17, 2007-07-18]
+# Lage: je Zählstellennummer aus OpenStreetMap nach dem Namen – Hausnummer, sonst „Straße (östl. X)“:
+# Kreuzung, 35 m in die Richtung versetzt; Brücke, Tunnel, Bahn- und Autobahnbrücke, Stadtgrenze –
+# und aus den Zählstellenplänen der Berichte 2012 und 2022–2025 (Vektorkarten, über sicher verortete
+# Zählstellen auf Koordinaten umgerechnet, im Mittel 30–45 m Abweichung). Weichen Regel und Plan um
+# mehr als 150 m ab und stimmen mindestens zwei Pläne überein, gilt der Plan, auf die Straße gelegt.
+# Varianten einer Nummer mit derselben Straße teilen sich die Lage; wo eine Nummer in verschiedenen
+# Jahren an verschiedenen Stellen liegt, wählt `wenn` (Teil des Namens) die Lage, der Eintrag ohne
+# `wenn` gilt für die übrigen Namen. Ohne Lage bleiben Rampen, Parkplatzausfahrten und einzelne
+# Plätze (20 Nummern). Werkzeuge und OSM-Abzüge (15.11.2026): Branch werkzeug/erkundung,
+# tools/nuernberg/ (Ablauf im README dort) und ergebnis/ohne_lizenz/holen23–30.
+geokodierung:
+  titel: Lage der Zählstellen (OpenStreetMap; Zählstellenpläne der Berichte)
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  herkunft_url: https://www.openstreetmap.org/copyright
+orte:
+  "1": {lon: 11.064492, lat: 49.473644, genauigkeit: kreuzung_ohne_richtung, hinweise: &kreuzung ["Lage an der Kreuzung – auf welcher Seite gezählt wurde, nennt der Bericht nicht."]}
+  "1a": {lon: 11.052492, lat: 49.492875, genauigkeit: plan, hinweise: &plan ["Lage nach dem Zählstellenplan im Bericht (auf Koordinaten umgerechnet, etwa ±50 m)."]}
+  "1m": {lon: 11.068969, lat: 49.469428, genauigkeit: hausnummer}
+  "3a": {lon: 11.071342, lat: 49.456826, genauigkeit: plan, hinweise: *plan}
+  "5": {lon: 11.081512, lat: 49.458594, genauigkeit: strasse, hinweise: &strasse ["Lage ungefähr: Mitte der Straße – der Bericht nennt keine genauere Stelle."]}
+  "6": {lon: 11.084763, lat: 49.460913, genauigkeit: hausnummer}
+  "6b": {lon: 11.081496, lat: 49.469992, genauigkeit: hausnummer}
+  "7": {lon: 11.088555, lat: 49.457589, genauigkeit: strasse, hinweise: *strasse}
+  "7a": {lon: 11.088564, lat: 49.455578, genauigkeit: strasse, hinweise: *strasse}
+  "7a/1": {lon: 11.08812, lat: 49.455562, genauigkeit: kreuzung}
+  "7a/2": {lon: 11.087709, lat: 49.455637, genauigkeit: kreuzung}
+  "7a/3": {lon: 11.08826, lat: 49.45597, genauigkeit: kreuzung}
+  "8": {lon: 11.09002, lat: 49.458791, genauigkeit: hausnummer}
+  "9": {lon: 11.10349, lat: 49.47386, genauigkeit: hausnummer}
+  "9/1": {lon: 11.103193, lat: 49.474567, genauigkeit: kreuzung}
+  "9/2": {lon: 11.103767, lat: 49.474796, genauigkeit: kreuzung}
+  "9/3": {lon: 11.104028, lat: 49.474425, genauigkeit: kreuzung}
+  "9a": {lon: 11.105856, lat: 49.480099, genauigkeit: hausnummer}
+  "9c": {lon: 11.098318, lat: 49.484063, genauigkeit: plan, hinweise: *plan}
+  "10a": {lon: 11.121256, lat: 49.474921, genauigkeit: kreuzung}
+  "10a/1": {lon: 11.121773, lat: 49.474754, genauigkeit: kreuzung}
+  "10a/2": {lon: 11.120801, lat: 49.474728, genauigkeit: kreuzung}
+  "10d":
+    - {wenn: "Äußere Sulzbacher Straße", lon: 11.126126, lat: 49.489717, genauigkeit: plan, hinweise: ["Lage nach dem Zählstellenplan im Bericht (auf Koordinaten umgerechnet, etwa ±50 m).", "Die Berichte 2010 und 2012 nennen die Zählstelle so; die Lage ist die von „Äußere Bayreuther Straße (B 2 nördl. Bierweg)“ (die Werte passen zur Reihe der übrigen Jahre)."]}
+    - {lon: 11.126126, lat: 49.489717, genauigkeit: plan, hinweise: *plan}
+  "10d/1": {lon: 11.131093, lat: 49.487256, genauigkeit: strasse, hinweise: *strasse}
+  "10d/2": {lon: 11.125088, lat: 49.488896, genauigkeit: kreuzung}
+  "10e": {lon: 11.118036, lat: 49.489077, genauigkeit: hausnummer}
+  "11b": {lon: 11.104491, lat: 49.464878, genauigkeit: hausnummer}
+  "12": {lon: 11.09079, lat: 49.45782, genauigkeit: hausnummer}
+  "12a":
+    - {wenn: "Äußere Bayreuther Straße", lon: 11.106438, lat: 49.460721, genauigkeit: hausnummer, hinweise: ["Der Bericht 2010 nennt die Zählstelle so; die Lage ist die von „Äußere Sulzbacher Straße 32“ (Nummer 12 ist die Sulzbacher Straße)."]}
+    - {lon: 11.106438, lat: 49.460721, genauigkeit: hausnummer}
+  "13": {lon: 11.139056, lat: 49.472393, genauigkeit: plan, hinweise: *plan}
+  "15": {lon: 11.128541, lat: 49.462437, genauigkeit: plan, hinweise: *plan}
+  "15c": {lon: 11.132229, lat: 49.458844, genauigkeit: bahn}
+  "17": {lon: 11.151459, lat: 49.464962, genauigkeit: hausnummer}
+  "17a": {lon: 11.182212, lat: 49.469333, genauigkeit: hausnummer}
+  "18": {lon: 11.099647, lat: 49.455298, genauigkeit: hausnummer}
+  "18/1": {lon: 11.098584, lat: 49.454192, genauigkeit: kreuzung}
+  "18/2": {lon: 11.098016, lat: 49.454565, genauigkeit: kreuzung}
+  "18/3": {lon: 11.098401, lat: 49.454949, genauigkeit: kreuzung}
+  "19": {lon: 11.085654, lat: 49.452058, genauigkeit: bruecke}
+  "20": {lon: 11.097161, lat: 49.450993, genauigkeit: bruecke}
+  "21": {lon: 11.117246, lat: 49.455447, genauigkeit: hausnummer}
+  "21a": {lon: 11.105497, lat: 49.448113, genauigkeit: bahn}
+  "22": {lon: 11.12926, lat: 49.447211, genauigkeit: hausnummer}
+  "22/8": {lon: 11.124401, lat: 49.443002, genauigkeit: kreuzung}
+  "23/7": {lon: 11.084692, lat: 49.449233, genauigkeit: kreuzung}
+  "25": {lon: 11.085453, lat: 49.446049, genauigkeit: tunnel}
+  "25a": {lon: 11.089763, lat: 49.441783, genauigkeit: kreuzung}
+  "25a/1": {lon: 11.090502, lat: 49.441637, genauigkeit: kreuzung}
+  "25a/2": {lon: 11.090104, lat: 49.441208, genauigkeit: kreuzung}
+  "25a/3": {lon: 11.089395, lat: 49.441441, genauigkeit: kreuzung}
+  "26": {lon: 11.089244, lat: 49.446907, genauigkeit: tunnel}
+  "26/8": {lon: 11.089332, lat: 49.446159, genauigkeit: kreuzung}
+  "26b/6": {lon: 11.095992, lat: 49.445572, genauigkeit: kreuzung}
+  "27": {lon: 11.097659, lat: 49.446366, genauigkeit: plan, hinweise: *plan}
+  "27/7": {lon: 11.097023, lat: 49.445874, genauigkeit: kreuzung}
+  "27/8": {lon: 11.097499, lat: 49.445455, genauigkeit: kreuzung}
+  "27a": {lon: 11.098031, lat: 49.445886, genauigkeit: kreuzung}
+  "29": {lon: 11.119136, lat: 49.43733, genauigkeit: hausnummer}
+  "29/7": {lon: 11.117982, lat: 49.43835, genauigkeit: kreuzung}
+  "29/8": {lon: 11.117676, lat: 49.437966, genauigkeit: kreuzung}
+  "29/9":
+    - {wenn: "Jitzhak-Rabin", lon: 11.103252, lat: 49.431345, genauigkeit: kreuzung, hinweise: ["Der Bericht 2012 nennt die Zählstelle so; die Lage ist die von „Bayernstraße (südl. Regensburger Straße)“ (wie in den späteren Berichten)."]}
+    - {lon: 11.103252, lat: 49.431345, genauigkeit: kreuzung}
+  "29b": {lon: 11.176137, lat: 49.399245, genauigkeit: plan, hinweise: *plan}
+  "29d": {lon: 11.170152, lat: 49.410613, genauigkeit: strasse, hinweise: *strasse}
+  "30b/9": {lon: 11.123725, lat: 49.442125, genauigkeit: kreuzung}
+  "30c": {lon: 11.131326, lat: 49.432471, genauigkeit: kreuzung}
+  "30c/7": {lon: 11.130896, lat: 49.432623, genauigkeit: kreuzung}
+  "30c/8": {lon: 11.132425, lat: 49.432215, genauigkeit: kreuzung}
+  "30c/9": {lon: 11.131822, lat: 49.432416, genauigkeit: kreuzung}
+  "30e": {lon: 11.146763, lat: 49.410796, genauigkeit: hausnummer}
+  "34a": {lon: 11.102403, lat: 49.428958, genauigkeit: hausnummer}
+  "34a/1": {lon: 11.103488, lat: 49.428844, genauigkeit: kreuzung}
+  "35": {lon: 11.102837, lat: 49.431167, genauigkeit: kreuzung}
+  "35a": {lon: 11.114909, lat: 49.403304, genauigkeit: kreuzung}
+  "35b": {lon: 11.123501, lat: 49.398002, genauigkeit: kreuzung}
+  "35c": {lon: 11.12374, lat: 49.3977, genauigkeit: kreuzung}
+  "35g": {lon: 11.116457, lat: 49.403224, genauigkeit: hausnummer}
+  "36b": {lon: 11.08585, lat: 49.397653, genauigkeit: hausnummer}
+  "37": {lon: 11.07614, lat: 49.446672, genauigkeit: plan, hinweise: *plan}
+  "37/1": {lon: 11.074844, lat: 49.446453, genauigkeit: kreuzung}
+  "37/2": {lon: 11.074407, lat: 49.446804, genauigkeit: kreuzung}
+  "37a": {lon: 11.076291, lat: 49.444962, genauigkeit: plan, hinweise: *plan}
+  "38": {lon: 11.080954, lat: 49.444874, genauigkeit: tunnel}
+  "38/2": {lon: 11.08542, lat: 49.434312, genauigkeit: strasse, hinweise: *strasse}
+  "38/3": {lon: 11.080306, lat: 49.44375, genauigkeit: kreuzung}
+  "38e": {lon: 11.081228, lat: 49.440211, genauigkeit: hausnummer}
+  "39": {lon: 11.075584, lat: 49.444252, genauigkeit: tunnel}
+  "40a": {lon: 11.083416, lat: 49.436033, genauigkeit: hausnummer}
+  "40b": {lon: 11.087622, lat: 49.43663, genauigkeit: hausnummer}
+  "44": {lon: 11.055704, lat: 49.445361, genauigkeit: bahn}
+  "45": {lon: 11.058816, lat: 49.443226, genauigkeit: plan, hinweise: *plan}
+  "46b": {lon: 11.06297, lat: 49.440728, genauigkeit: kreuzung}
+  "47": {lon: 11.068286, lat: 49.443553, genauigkeit: plan, hinweise: *plan}
+  "50": {lon: 11.054721, lat: 49.42963, genauigkeit: plan, hinweise: *plan}
+  "51": {lon: 11.06568, lat: 49.429395, genauigkeit: hausnummer}
+  "51/1": {lon: 11.066218, lat: 49.427964, genauigkeit: kreuzung}
+  "51a": {lon: 11.065463, lat: 49.425787, genauigkeit: hausnummer}
+  "51b": {lon: 11.07903, lat: 49.414747, genauigkeit: plan, hinweise: *plan}
+  "51b/1": {lon: 11.079584, lat: 49.414419, genauigkeit: kreuzung}
+  "51b/2": {lon: 11.078903, lat: 49.41432, genauigkeit: kreuzung}
+  "51b/3": {lon: 11.078756, lat: 49.415058, genauigkeit: kreuzung}
+  "52": {lon: 11.020257, lat: 49.417785, genauigkeit: plan, hinweise: *plan}
+  "52/2": {lon: 11.021507, lat: 49.418262, genauigkeit: kreuzung}
+  "53": {lon: 11.035813, lat: 49.420925, genauigkeit: kreuzung}
+  "53d": {lon: 11.038214, lat: 49.395291, genauigkeit: plan, hinweise: *plan}
+  "54": {lon: 11.030828, lat: 49.41423, genauigkeit: hausnummer}
+  "55a": {lon: 11.040113, lat: 49.381188, genauigkeit: plan, hinweise: *plan}
+  "55a/4": {lon: 11.039882, lat: 49.380765, genauigkeit: kreuzung}
+  "55a/5": {lon: 11.040317, lat: 49.381473, genauigkeit: kreuzung}
+  "57/7": {lon: 10.994764, lat: 49.43754, genauigkeit: kreuzung}
+  "57/8": {lon: 10.994486, lat: 49.437094, genauigkeit: kreuzung}
+  "57b": {lon: 11.036201, lat: 49.439094, genauigkeit: kreuzung}
+  "58": {lon: 11.042499, lat: 49.455211, genauigkeit: hausnummer}
+  "58/1": {lon: 11.041026, lat: 49.455307, genauigkeit: kreuzung}
+  "58/3": {lon: 11.041187, lat: 49.455752, genauigkeit: kreuzung}
+  "60": {lon: 11.018164, lat: 49.463369, genauigkeit: plan, hinweise: *plan}
+  "60a": {lon: 11.022398, lat: 49.460923, genauigkeit: hausnummer}
+  "60a/1": {lon: 11.023383, lat: 49.461312, genauigkeit: kreuzung}
+  "60a/2": {lon: 11.022982, lat: 49.461769, genauigkeit: kreuzung}
+  "60e": {lon: 11.016641, lat: 49.469051, genauigkeit: bruecke}
+  "60f": {lon: 11.027475, lat: 49.466744, genauigkeit: bruecke}
+  "60g": {lon: 11.012448, lat: 49.45763, genauigkeit: hausnummer}
+  "60m": {lon: 11.026859, lat: 49.456018, genauigkeit: plan, hinweise: *plan}
+  "61": {lon: 11.050506, lat: 49.463672, genauigkeit: hausnummer}
+  "61/1": {lon: 11.051326, lat: 49.463367, genauigkeit: kreuzung}
+  "61/3": {lon: 11.051394, lat: 49.463231, genauigkeit: kreuzung}
+  "62": {lon: 11.053813, lat: 49.465992, genauigkeit: hausnummer}
+  "62f": {lon: 11.035325, lat: 49.477534, genauigkeit: hausnummer}
+  "63": {lon: 11.058531, lat: 49.455629, genauigkeit: bruecke}
+  "65": {lon: 11.069833, lat: 49.454524, genauigkeit: bruecke}
+  "65a": {lon: 11.061862, lat: 49.454406, genauigkeit: strasse, hinweise: *strasse}
+  "66": {lon: 11.070366, lat: 49.455951, genauigkeit: strasse, hinweise: *strasse}
+  "66a": {lon: 11.072558, lat: 49.453427, genauigkeit: bruecke}
+  "66b": {lon: 11.069753, lat: 49.452456, genauigkeit: plan, hinweise: *plan}
+  "68": {lon: 11.076878, lat: 49.453013, genauigkeit: bruecke}
+  "68a": {lon: 11.074492, lat: 49.453315, genauigkeit: plan, hinweise: *plan}
+  "69": {lon: 11.077927, lat: 49.45273, genauigkeit: bruecke}
+  "70": {lon: 11.082625, lat: 49.449951, genauigkeit: plan, hinweise: *plan}
+  "70/2": {lon: 11.0834, lat: 49.449785, genauigkeit: kreuzung}
+  "71": {lon: 11.081841, lat: 49.447863, genauigkeit: plan, hinweise: *plan}
+  "75": {lon: 11.01846, lat: 49.469267, genauigkeit: hausnummer}
+  "76": {lon: 11.021543, lat: 49.471897, genauigkeit: adresse}
+  "77": {lon: 11.046386, lat: 49.459555, genauigkeit: bruecke}
+  "78": {lon: 11.102348, lat: 49.431457, genauigkeit: kreuzung}
+  "79": {lon: 11.107461, lat: 49.472825, genauigkeit: kreuzung}
+  "79a": {lon: 11.103269, lat: 49.472924, genauigkeit: strasse, hinweise: *strasse}
+  "83": {lon: 11.033266, lat: 49.531476, genauigkeit: plan, hinweise: *plan}
+  "84": {lon: 11.108059, lat: 49.510432, genauigkeit: bahn}
+  "84/4": {lon: 11.108842, lat: 49.51105, genauigkeit: strasse, hinweise: *strasse}
+  "85": {lon: 11.177018, lat: 49.41456, genauigkeit: kreuzung}
+  "86": {lon: 11.184798, lat: 49.408997, genauigkeit: plan, hinweise: *plan}
+  "87": {lon: 11.206474, lat: 49.420124, genauigkeit: plan, hinweise: *plan}
+  "87a": {lon: 11.208183, lat: 49.421058, genauigkeit: plan, hinweise: *plan}
+  "88": {lon: 11.165363, lat: 49.395139, genauigkeit: plan, hinweise: *plan}
+  "89": {lon: 11.127694, lat: 49.393337, genauigkeit: kreuzung}
+  "90": {lon: 11.10035, lat: 49.350194, genauigkeit: autobahn}
+  "91": {lon: 11.054483, lat: 49.34888, genauigkeit: bruecke}
+  "93": {lon: 11.027188, lat: 49.475575, genauigkeit: kreuzung}
+  "94": {lon: 11.027634, lat: 49.488222, genauigkeit: kreuzung}
+  "95": {lon: 11.08067, lat: 49.453128, genauigkeit: bruecke}
+  "100/5": {lon: 11.079218, lat: 49.454566, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "101": {lon: 11.066257, lat: 49.449706, genauigkeit: kreuzung}
+  "102": {lon: 11.066895, lat: 49.448542, genauigkeit: plan, hinweise: *plan}
+  "105": {lon: 11.084061, lat: 49.451504, genauigkeit: plan, hinweise: *plan}
+  "106": {lon: 11.083275, lat: 49.45081, genauigkeit: plan, hinweise: *plan}
+  "107": {lon: 11.077178, lat: 49.447818, genauigkeit: strasse, hinweise: *strasse}
+  "108": {lon: 11.07184, lat: 49.447509, genauigkeit: plan, hinweise: *plan}
+  "109": {lon: 11.071806, lat: 49.447311, genauigkeit: strasse, hinweise: *strasse}
+  "111": {lon: 11.086742, lat: 49.428136, genauigkeit: plan, hinweise: *plan}
+  "111/1": {lon: 11.085852, lat: 49.429174, genauigkeit: kreuzung}
+  "111/2": {lon: 11.086211, lat: 49.429633, genauigkeit: kreuzung}
+  "112": {lon: 11.035425, lat: 49.44087, genauigkeit: hausnummer}
+  "112/1": {lon: 11.03595, lat: 49.441259, genauigkeit: kreuzung}
+  "112/2": {lon: 11.03646, lat: 49.440913, genauigkeit: kreuzung}
+  "112/3": {lon: 11.03584, lat: 49.440526, genauigkeit: kreuzung}
+  "113": {lon: 11.041103, lat: 49.455641, genauigkeit: kreuzung}
+  "117": {lon: 11.057668, lat: 49.450472, genauigkeit: hausnummer}
+  "120": {lon: 11.155619, lat: 49.403457, genauigkeit: kreuzung}
+  "121": {lon: 11.026577, lat: 49.372949, genauigkeit: hausnummer}
+  "123": {lon: 11.063713, lat: 49.458945, genauigkeit: hausnummer}
+  "124": {lon: 11.076292, lat: 49.450022, genauigkeit: hausnummer}
+  "125": {lon: 11.054402, lat: 49.465244, genauigkeit: strasse, hinweise: *strasse}
+  "126": {lon: 11.034002, lat: 49.420923, genauigkeit: plan, hinweise: *plan}
+  "127": {lon: 11.104894, lat: 49.46032, genauigkeit: hausnummer}
+  "127/1": {lon: 11.105905, lat: 49.4607, genauigkeit: kreuzung}
+  "127/3": {lon: 11.105894, lat: 49.460509, genauigkeit: kreuzung}
+  "128": {lon: 11.116116, lat: 49.45855, genauigkeit: bruecke}
+  "128/1": {lon: 11.113579, lat: 49.459597, genauigkeit: kreuzung}
+  "128/2": {lon: 11.114274, lat: 49.459851, genauigkeit: kreuzung}
+  "130": {lon: 11.05304, lat: 49.445419, genauigkeit: kreuzung}
+  "132": {lon: 11.014101, lat: 49.4225, genauigkeit: hausnummer}
+  "133": {lon: 11.045924, lat: 49.431274, genauigkeit: hausnummer}
+  "134": {lon: 11.010162, lat: 49.454054, genauigkeit: plan, hinweise: *plan}
+  "134a": {lon: 11.010113, lat: 49.4565, genauigkeit: kreuzung}
+  "136": {lon: 11.073354, lat: 49.38546, genauigkeit: plan, hinweise: *plan}
+  "136/1": {lon: 11.073161, lat: 49.385157, genauigkeit: kreuzung}
+  "137": {lon: 11.002747, lat: 49.439075, genauigkeit: plan, hinweise: *plan}
+  "140": {lon: 11.055327, lat: 49.36536, genauigkeit: strasse, hinweise: *strasse}
+  "141": {lon: 11.068201, lat: 49.468551, genauigkeit: hausnummer}
+  "141/1": {lon: 11.067421, lat: 49.469336, genauigkeit: kreuzung}
+  "143": {lon: 11.071947, lat: 49.451324, genauigkeit: hausnummer}
+  "144": {lon: 11.078864, lat: 49.449889, genauigkeit: hausnummer}
+  "145": {lon: 11.118516, lat: 49.39052, genauigkeit: plan, hinweise: *plan}
+  "147": {lon: 11.081987, lat: 49.469423, genauigkeit: hausnummer}
+  "147/1": {lon: 11.081413, lat: 49.469123, genauigkeit: kreuzung}
+  "147/2": {lon: 11.080949, lat: 49.469449, genauigkeit: kreuzung}
+  "148": {lon: 11.062811, lat: 49.436097, genauigkeit: kreuzung}
+  "149": {lon: 11.052329, lat: 49.520131, genauigkeit: plan, hinweise: *plan}
+  "153": {lon: 11.017515, lat: 49.522539, genauigkeit: strasse, hinweise: *strasse}
+  "155": {lon: 11.192561, lat: 49.420951, genauigkeit: hausnummer}
+  "155/1": {lon: 11.192642, lat: 49.420448, genauigkeit: kreuzung}
+  "155/2": {lon: 11.191852, lat: 49.420336, genauigkeit: kreuzung}
+  "156": {lon: 11.123079, lat: 49.398234, genauigkeit: hausnummer}
+  "160": {lon: 11.073109, lat: 49.45015, genauigkeit: hausnummer}
+  "162": {lon: 11.143838, lat: 49.397146, genauigkeit: kreuzung}
+  "162/2": {lon: 11.143443, lat: 49.397105, genauigkeit: kreuzung}
+  "164": {lon: 11.087054, lat: 49.370505, genauigkeit: strasse, hinweise: *strasse}
+  "168": {lon: 11.139376, lat: 49.415346, genauigkeit: kreuzung}
+  "169": {lon: 11.127228, lat: 49.430296, genauigkeit: strasse, hinweise: *strasse}
+  "170": {lon: 11.129031, lat: 49.445248, genauigkeit: hausnummer}
+  "171": {lon: 11.122062, lat: 49.453052, genauigkeit: hausnummer}
+  "172": {lon: 11.12071, lat: 49.456566, genauigkeit: hausnummer}
+  "173": {lon: 11.064217, lat: 49.440379, genauigkeit: hausnummer}
+  "177/2": {lon: 11.097592, lat: 49.459378, genauigkeit: kreuzung}
+  "178": {lon: 11.066348, lat: 49.355589, genauigkeit: kreuzung}
+  "178/1": {lon: 11.06637, lat: 49.356081, genauigkeit: kreuzung}
+  "178/2": {lon: 11.067424, lat: 49.356526, genauigkeit: kreuzung}
+  "180": {lon: 11.042961, lat: 49.388633, genauigkeit: kreuzung}
+  "180/7": {lon: 11.045871, lat: 49.387755, genauigkeit: kreuzung}
+  "180/8": {lon: 11.045211, lat: 49.38785, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "182": {lon: 11.010611, lat: 49.447404, genauigkeit: hausnummer}
+  "183": {lon: 11.066979, lat: 49.375964, genauigkeit: strasse, hinweise: *strasse}
+  "186":
+    - {wenn: "westl. Erlanger Str.", lon: 11.060601, lat: 49.480036, genauigkeit: kreuzung}
+    - {lon: 11.053967, lat: 49.478146, genauigkeit: hausnummer}
+  "187": {lon: 11.079779, lat: 49.456148, genauigkeit: kreuzung}
+  "187/4": {lon: 11.079167, lat: 49.45583, genauigkeit: kreuzung}
+  "187/5": {lon: 11.080517, lat: 49.455832, genauigkeit: kreuzung}
+  "191": {lon: 11.072152, lat: 49.343219, genauigkeit: plan, hinweise: *plan}
+  "192":
+    - {wenn: "westl. Vestnertormauer", lon: 11.080185, lat: 49.458863, genauigkeit: kreuzung}
+    - {lon: 11.073536, lat: 49.459558, genauigkeit: kreuzung}
+  "192/1": {lon: 11.080185, lat: 49.458863, genauigkeit: kreuzung}
+  "193": {lon: 11.087762, lat: 49.458545, genauigkeit: hausnummer}
+  "195": {lon: 11.05875, lat: 49.406268, genauigkeit: kreuzung}
+  "199": {lon: 11.023994, lat: 49.39388, genauigkeit: hausnummer}
+  "207": {lon: 11.080021, lat: 49.448227, genauigkeit: kreuzung}
+  "208": {lon: 11.015502, lat: 49.441539, genauigkeit: kreuzung}
+  "213": {lon: 11.121765, lat: 49.442672, genauigkeit: kreuzung}
+  "213/7": {lon: 11.121339, lat: 49.442484, genauigkeit: kreuzung}
+  "213/8": {lon: 11.120876, lat: 49.442969, genauigkeit: kreuzung}
+  "213/9": {lon: 11.121443, lat: 49.443146, genauigkeit: kreuzung}
+  "216": {lon: 11.11843, lat: 49.455621, genauigkeit: kreuzung}
+  "218": {lon: 11.035953, lat: 49.408001, genauigkeit: kreuzung}
+  "218/7": {lon: 11.035443, lat: 49.40764, genauigkeit: kreuzung}
+  "218/8": {lon: 11.035522, lat: 49.408215, genauigkeit: kreuzung}
+  "224": {lon: 11.105511, lat: 49.484295, genauigkeit: kreuzung}
+  "224/1": {lon: 11.105039, lat: 49.484352, genauigkeit: kreuzung}
+  "225": {lon: 11.08211, lat: 49.484482, genauigkeit: plan, hinweise: *plan}
+  "225/1": {lon: 11.082746, lat: 49.484546, genauigkeit: kreuzung}
+  "225/2": {lon: 11.081614, lat: 49.484548, genauigkeit: kreuzung}
+  "227": {lon: 11.125472, lat: 49.466928, genauigkeit: kreuzung}
+  "227/1": {lon: 11.125559, lat: 49.46683, genauigkeit: kreuzung}
+  "227/2": {lon: 11.125559, lat: 49.46683, genauigkeit: kreuzung}
+  "227/3": {lon: 11.125052, lat: 49.466769, genauigkeit: kreuzung}
+  "230": {lon: 11.088742, lat: 49.405514, genauigkeit: hausnummer}
+  "230/1": {lon: 11.114721, lat: 49.404163, genauigkeit: kreuzung}
+  "231": {lon: 11.026022, lat: 49.534126, genauigkeit: hausnummer}
+  "233": {lon: 11.036171, lat: 49.375639, genauigkeit: bahn}
+  "234": {lon: 11.132552, lat: 49.456358, genauigkeit: hausnummer}
+  "236": {lon: 11.130728, lat: 49.410542, genauigkeit: hausnummer}
+  "238": {lon: 11.122025, lat: 49.416542, genauigkeit: strasse, hinweise: *strasse}
+  "241": {lon: 11.128707, lat: 49.474139, genauigkeit: kreuzung}
+  "242": {lon: 11.119561, lat: 49.470568, genauigkeit: hausnummer}
+  "243": {lon: 11.106669, lat: 49.477731, genauigkeit: hausnummer}
+  "244": {lon: 11.072474, lat: 49.460537, genauigkeit: kreuzung}
+  "244/1": {lon: 11.072912, lat: 49.460858, genauigkeit: kreuzung}
+  "244/2": {lon: 11.072312, lat: 49.461162, genauigkeit: kreuzung}
+  "244/3": {lon: 11.071834, lat: 49.460863, genauigkeit: kreuzung}
+  "245": {lon: 11.057906, lat: 49.434753, genauigkeit: plan, hinweise: *plan}
+  "246": {lon: 11.006926, lat: 49.523224, genauigkeit: kreuzung}
+  "246/7": {lon: 11.007449, lat: 49.523518, genauigkeit: kreuzung}
+  "246/8": {lon: 11.007892, lat: 49.523203, genauigkeit: kreuzung}
+  "246/9": {lon: 11.007369, lat: 49.52289, genauigkeit: kreuzung}
+  "248": {lon: 11.07929, lat: 49.438712, genauigkeit: kreuzung}
+  "249": {lon: 11.063964, lat: 49.373253, genauigkeit: kreuzung}
+  "249/1": {lon: 11.064194, lat: 49.372787, genauigkeit: kreuzung}
+  "249/2": {lon: 11.063624, lat: 49.37273, genauigkeit: kreuzung}
+  "250": {lon: 11.040519, lat: 49.440765, genauigkeit: kreuzung}
+  "254": {lon: 11.062656, lat: 49.460796, genauigkeit: hausnummer}
+  "256/3": {lon: 11.074845, lat: 49.462543, genauigkeit: kreuzung}
+  "257": {lon: 11.081542, lat: 49.441055, genauigkeit: hausnummer}
+  "257/1": {lon: 11.082402, lat: 49.440476, genauigkeit: kreuzung}
+  "257/2": {lon: 11.082052, lat: 49.440077, genauigkeit: kreuzung}
+  "258": {lon: 11.097837, lat: 49.363186, genauigkeit: plan, hinweise: *plan}
+  "259": {lon: 11.075385, lat: 49.362912, genauigkeit: hausnummer}
+  "260": {lon: 11.120721, lat: 49.434658, genauigkeit: kreuzung}
+  "262": {lon: 11.104341, lat: 49.470206, genauigkeit: kreuzung}
+  "263": {lon: 11.117372, lat: 49.472956, genauigkeit: hausnummer}
+  "263/2": {lon: 11.116295, lat: 49.471968, genauigkeit: kreuzung}
+  "263/3": {lon: 11.116229, lat: 49.472464, genauigkeit: kreuzung}
+  "265": {lon: 11.162984, lat: 49.407878, genauigkeit: hausnummer}
+  "266": {lon: 11.080898, lat: 49.451069, genauigkeit: hausnummer}
+  "268": {lon: 11.078194, lat: 49.447735, genauigkeit: hausnummer}
+  "269": {lon: 11.075737, lat: 49.451019, genauigkeit: hausnummer}
+  "270": {lon: 11.076344, lat: 49.452366, genauigkeit: kreuzung}
+  "271":
+    - {wenn: "Vordere Sterngasse", lon: 11.078194, lat: 49.447735, genauigkeit: hausnummer}
+    - {lon: 11.076646, lat: 49.45552, genauigkeit: landmarke, hinweise: &landmarke ["Lage beim im Namen genannten Ort (OpenStreetMap)."]}
+  "272": {lon: 11.117388, lat: 49.480895, genauigkeit: kreuzung}
+  "272/1": {lon: 11.116782, lat: 49.481, genauigkeit: kreuzung}
+  "275": {lon: 11.075979, lat: 49.456365, genauigkeit: kreuzung}
+  "277": {lon: 11.174714, lat: 49.38898, genauigkeit: kreuzung}
+  "277/1": {lon: 11.174816, lat: 49.389598, genauigkeit: kreuzung}
+  "277/2": {lon: 11.175521, lat: 49.389118, genauigkeit: kreuzung}
+  "277/3": {lon: 11.17487, lat: 49.388687, genauigkeit: kreuzung}
+  "281": {lon: 11.081887, lat: 49.430342, genauigkeit: zwischen}
+  "286": {lon: 11.099998, lat: 49.376649, genauigkeit: kreuzung}
+  "289": {lon: 11.010823, lat: 49.526631, genauigkeit: hausnummer}
+  "290": {lon: 11.067028, lat: 49.405595, genauigkeit: kreuzung}
+  "290/1": {lon: 11.066214, lat: 49.405938, genauigkeit: kreuzung}
+  "290/2":
+    - {wenn: "Hafenstraße", lon: 11.067003, lat: 49.405925, genauigkeit: kreuzung}
+    - {lon: 11.048978, lat: 49.408332, genauigkeit: kreuzung}
+  "290/3":
+    - {wenn: "Donaustraße", lon: 11.048978, lat: 49.408332, genauigkeit: kreuzung}
+    - {lon: 11.067003, lat: 49.405925, genauigkeit: kreuzung}
+  "291": {lon: 11.062661, lat: 49.405403, genauigkeit: kreuzung}
+  "291/2": {lon: 11.06322, lat: 49.405776, genauigkeit: kreuzung}
+  "292": {lon: 11.053917, lat: 49.406462, genauigkeit: kreuzung}
+  "293": {lon: 11.048741, lat: 49.387632, genauigkeit: kreuzung}
+  "293/1": {lon: 11.049113, lat: 49.387303, genauigkeit: kreuzung}
+  "293/2": {lon: 11.048166, lat: 49.387422, genauigkeit: kreuzung}
+  "294": {lon: 11.05577, lat: 49.386862, genauigkeit: kreuzung}
+  "295": {lon: 11.062735, lat: 49.386338, genauigkeit: kreuzung}
+  "297": {lon: 11.077724, lat: 49.445403, genauigkeit: kreuzung}
+  "297/1": {lon: 11.077693, lat: 49.445723, genauigkeit: kreuzung}
+  "297/2": {lon: 11.078225, lat: 49.445439, genauigkeit: kreuzung}
+  "302": {lon: 11.003391, lat: 49.450204, genauigkeit: kreuzung}
+  "302/1": {lon: 11.002774, lat: 49.450259, genauigkeit: kreuzung}
+  "302/2": {lon: 11.002937, lat: 49.450756, genauigkeit: kreuzung}
+  "302/3": {lon: 11.003506, lat: 49.450669, genauigkeit: kreuzung}
+  "304": {lon: 11.076186, lat: 49.440846, genauigkeit: kreuzung}
+  "306": {lon: 11.133307, lat: 49.456263, genauigkeit: hausnummer}
+  "307": {lon: 11.057651, lat: 49.447064, genauigkeit: hausnummer}
+  "308": {lon: 11.043547, lat: 49.447342, genauigkeit: strasse, hinweise: *strasse}
+  "309": {lon: 11.081474, lat: 49.455811, genauigkeit: hausnummer}
+  "315": {lon: 11.065535, lat: 49.447355, genauigkeit: kreuzung}
+  "321": {lon: 11.08425, lat: 49.456339, genauigkeit: kreuzung}
+  "321/1": {lon: 11.084814, lat: 49.45575, genauigkeit: kreuzung}
+  "321/2": {lon: 11.084153, lat: 49.455584, genauigkeit: kreuzung}
+  "321/3": {lon: 11.08419, lat: 49.456051, genauigkeit: strasse, hinweise: *strasse}
+  "321/4": {lon: 11.083857, lat: 49.456491, genauigkeit: kreuzung}
+  "323": {lon: 11.081064, lat: 49.439446, genauigkeit: hausnummer}
+  "324": {lon: 11.012252, lat: 49.465163, genauigkeit: kreuzung}
+  "329": {lon: 11.080455, lat: 49.473892, genauigkeit: hausnummer}
+  "330": {lon: 11.082783, lat: 49.444022, genauigkeit: plan, hinweise: *plan}
+  "334": {lon: 11.08539, lat: 49.439751, genauigkeit: hausnummer}
+  "334/1": {lon: 11.08587, lat: 49.439488, genauigkeit: kreuzung}
+  "336": {lon: 11.086617, lat: 49.429317, genauigkeit: kreuzung}
+  "338": {lon: 11.097954, lat: 49.44993, genauigkeit: hausnummer}
+  "339": {lon: 11.112975, lat: 49.412946, genauigkeit: kreuzung}
+  "340": {lon: 11.041631, lat: 49.453845, genauigkeit: kreuzung}
+  "341": {lon: 11.0679, lat: 49.446906, genauigkeit: kreuzung}
+  "342/1": {lon: 11.088946, lat: 49.447831, genauigkeit: kreuzung}
+  "342/2": {lon: 11.089503, lat: 49.447798, genauigkeit: kreuzung}
+  "344": {lon: 11.067076, lat: 49.461972, genauigkeit: hausnummer}
+  "345": {lon: 11.004895, lat: 49.440367, genauigkeit: kreuzung}
+  "346": {lon: 11.089319, lat: 49.457478, genauigkeit: kreuzung}
+  "349": {lon: 11.058754, lat: 49.484576, genauigkeit: kreuzung}
+  "349/1": {lon: 11.059437, lat: 49.484208, genauigkeit: kreuzung}
+  "349/2": {lon: 11.0589, lat: 49.483851, genauigkeit: kreuzung}
+  "349/3": {lon: 11.058238, lat: 49.484168, genauigkeit: kreuzung}
+  "350": {lon: 11.011386, lat: 49.529867, genauigkeit: kreuzung}
+  "351": {lon: 11.092142, lat: 49.461589, genauigkeit: kreuzung}
+  "351/1": {lon: 11.092007, lat: 49.461873, genauigkeit: kreuzung}
+  "351/2": {lon: 11.111291, lat: 49.479445, genauigkeit: kreuzung}
+  "351/3": {lon: 11.092416, lat: 49.461214, genauigkeit: kreuzung}
+  "353": {lon: 11.028623, lat: 49.469793, genauigkeit: kreuzung}
+  "353/1": {lon: 11.028953, lat: 49.469371, genauigkeit: kreuzung}
+  "353/2": {lon: 11.030588, lat: 49.468674, genauigkeit: kreuzung}
+  "353/3": {lon: 11.027947, lat: 49.469643, genauigkeit: kreuzung}
+  "357": {lon: 11.108631, lat: 49.417646, genauigkeit: kreuzung}
+  "358": {lon: 11.061393, lat: 49.480081, genauigkeit: kreuzung}
+  "358/1": {lon: 11.060892, lat: 49.479729, genauigkeit: kreuzung}
+  "358/3": {lon: 11.060835, lat: 49.480422, genauigkeit: kreuzung}
+  "359": {lon: 11.083123, lat: 49.436703, genauigkeit: kreuzung}
+  "359/3": {lon: 11.07609, lat: 49.43453, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "361": {lon: 11.073061, lat: 49.465207, genauigkeit: kreuzung}
+  "361/1": {lon: 11.073801, lat: 49.465005, genauigkeit: kreuzung}
+  "368": {lon: 11.049074, lat: 49.435971, genauigkeit: kreuzung}
+  "368/2": {lon: 11.049628, lat: 49.435666, genauigkeit: kreuzung}
+  "369": {lon: 11.102762, lat: 49.43159, genauigkeit: kreuzung}
+  "369/1": {lon: 11.103743, lat: 49.431451, genauigkeit: kreuzung}
+  "370": {lon: 11.064513, lat: 49.473984, genauigkeit: kreuzung}
+  "370/1": {lon: 11.065117, lat: 49.473661, genauigkeit: kreuzung}
+  "370/2": {lon: 11.06441, lat: 49.473426, genauigkeit: kreuzung}
+  "370/3": {lon: 11.063856, lat: 49.473609, genauigkeit: kreuzung}
+  "372": {lon: 11.068149, lat: 49.434758, genauigkeit: kreuzung}
+  "384": {lon: 11.056507, lat: 49.453883, genauigkeit: kreuzung}
+  "385": {lon: 11.093293, lat: 49.469465, genauigkeit: kreuzung}
+  "385/1": {lon: 11.09337, lat: 49.469, genauigkeit: kreuzung}
+  "385/2": {lon: 11.092808, lat: 49.468909, genauigkeit: kreuzung}
+  "385/3": {lon: 11.092565, lat: 49.469403, genauigkeit: kreuzung}
+  "386": {lon: 11.05071, lat: 49.360954, genauigkeit: kreuzung}
+  "387": {lon: 11.074409, lat: 49.438406, genauigkeit: kreuzung}
+  "387/1": {lon: 11.074651, lat: 49.438015, genauigkeit: kreuzung}
+  "387/2": {lon: 11.07449, lat: 49.437559, genauigkeit: kreuzung}
+  "387/3": {lon: 11.073821, lat: 49.437852, genauigkeit: kreuzung}
+  "388": {lon: 11.111407, lat: 49.448509, genauigkeit: hausnummer}
+  "389/1": {lon: 11.076785, lat: 49.45389, genauigkeit: strasse, hinweise: *strasse}
+  "389/2": {lon: 11.078043, lat: 49.45372, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "389/3": {lon: 11.077853, lat: 49.453601, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "390": {lon: 11.069329, lat: 49.449643, genauigkeit: strasse, hinweise: *strasse}
+  "391": {lon: 11.081587, lat: 49.465322, genauigkeit: kreuzung}
+  "392": {lon: 11.030061, lat: 49.450194, genauigkeit: kreuzung}
+  "394": {lon: 11.067537, lat: 49.435136, genauigkeit: kreuzung}
+  "394/1": {lon: 11.068044, lat: 49.435255, genauigkeit: kreuzung}
+  "395": {lon: 11.075089, lat: 49.455348, genauigkeit: kreuzung}
+  "395/1": {lon: 11.075571, lat: 49.455327, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "395/2": {lon: 11.075645, lat: 49.455023, genauigkeit: kreuzung}
+  "396": {lon: 11.089083, lat: 49.445102, genauigkeit: kreuzung}
+  "396/1": {lon: 11.089083, lat: 49.445102, genauigkeit: kreuzung}
+  "396/2": {lon: 11.089049, lat: 49.444462, genauigkeit: kreuzung}
+  "396/3": {lon: 11.088646, lat: 49.444896, genauigkeit: kreuzung}
+  "397": {lon: 11.006154, lat: 49.512639, genauigkeit: kreuzung}
+  "397/1": {lon: 11.006658, lat: 49.512306, genauigkeit: kreuzung}
+  "397/2": {lon: 11.006177, lat: 49.512325, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "397/3": {lon: 11.005719, lat: 49.512425, genauigkeit: kreuzung}
+  "398": {lon: 11.153381, lat: 49.416388, genauigkeit: kreuzung}
+  "398/1": {lon: 11.153126, lat: 49.416048, genauigkeit: kreuzung}
+  "398/2": {lon: 11.152447, lat: 49.416237, genauigkeit: kreuzung}
+  "400": {lon: 11.174706, lat: 49.389344, genauigkeit: kreuzung}
+  "401": {lon: 11.102449, lat: 49.441065, genauigkeit: kreuzung}
+  "401/1": {lon: 11.102698, lat: 49.440879, genauigkeit: kreuzung}
+  "401/2": {lon: 11.102724, lat: 49.440736, genauigkeit: kreuzung}
+  "402": {lon: 11.056058, lat: 49.351868, genauigkeit: kreuzung}
+  "402/1": {lon: 11.056688, lat: 49.351739, genauigkeit: kreuzung}
+  "402/2": {lon: 11.05652, lat: 49.351316, genauigkeit: kreuzung}
+  "402/3": {lon: 11.055944, lat: 49.351435, genauigkeit: kreuzung}
+  "404": {lon: 11.130701, lat: 49.460471, genauigkeit: kreuzung}
+  "404/1": {lon: 11.13074, lat: 49.460029, genauigkeit: kreuzung}
+  "404/2": {lon: 11.130058, lat: 49.460045, genauigkeit: kreuzung}
+  "405": {lon: 11.052419, lat: 49.443082, genauigkeit: kreuzung}
+  "405/1": {lon: 11.052419, lat: 49.443082, genauigkeit: kreuzung}
+  "405/2": {lon: 11.052903, lat: 49.44329, genauigkeit: kreuzung}
+  "407": {lon: 11.107318, lat: 49.437897, genauigkeit: hausnummer}
+  "409": {lon: 11.094799, lat: 49.448444, genauigkeit: kreuzung}
+  "410": {lon: 11.096355, lat: 49.431581, genauigkeit: kreuzung}
+  "410/1": {lon: 11.096851, lat: 49.431284, genauigkeit: kreuzung}
+  "410/2": {lon: 11.095819, lat: 49.431303, genauigkeit: kreuzung}
+  "411": {lon: 11.097898, lat: 49.462715, genauigkeit: kreuzung}
+  "412": {lon: 11.07601, lat: 49.463584, genauigkeit: kreuzung}
+  "412/1": {lon: 11.076486, lat: 49.463285, genauigkeit: kreuzung}
+  "412/2": {lon: 11.075949, lat: 49.462958, genauigkeit: kreuzung}
+  "412/3": {lon: 11.075521, lat: 49.463263, genauigkeit: kreuzung}
+  "414": {lon: 11.086499, lat: 49.42529, genauigkeit: kreuzung}
+  "414/1": {lon: 11.08594, lat: 49.425135, genauigkeit: kreuzung}
+  "415": {lon: 11.072736, lat: 49.449734, genauigkeit: kreuzung}
+  "415/1": {lon: 11.073057, lat: 49.449349, genauigkeit: kreuzung}
+  "415/2": {lon: 11.072449, lat: 49.449133, genauigkeit: kreuzung}
+  "415/3": {lon: 11.072131, lat: 49.449528, genauigkeit: kreuzung}
+  "416": {lon: 11.081359, lat: 49.474261, genauigkeit: kreuzung}
+  "416/1": {lon: 11.080695, lat: 49.474441, genauigkeit: kreuzung}
+  "416/3": {lon: 11.081538, lat: 49.474729, genauigkeit: kreuzung}
+  "417": {lon: 11.073122, lat: 49.450735, genauigkeit: kreuzung}
+  "418": {lon: 11.065777, lat: 49.463504, genauigkeit: kreuzung}
+  "419": {lon: 11.065437, lat: 49.463865, genauigkeit: kreuzung}
+  "420": {lon: 11.133407, lat: 49.456466, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "421": {lon: 11.095481, lat: 49.44205, genauigkeit: kreuzung}
+  "423": {lon: 11.027367, lat: 49.475103, genauigkeit: kreuzung}
+  "424": {lon: 11.093593, lat: 49.431526, genauigkeit: kreuzung}
+  "424/1": {lon: 11.093155, lat: 49.431206, genauigkeit: kreuzung}
+  "424/2": {lon: 11.092629, lat: 49.431535, genauigkeit: kreuzung}
+  "424/3": {lon: 11.093059, lat: 49.431831, genauigkeit: kreuzung}
+  "425": {lon: 11.051765, lat: 49.450533, genauigkeit: kreuzung}
+  "426": {lon: 11.072462, lat: 49.481802, genauigkeit: kreuzung}
+  "427": {lon: 11.071562, lat: 49.481023, genauigkeit: kreuzung}
+  "427/1": {lon: 11.072207, lat: 49.481203, genauigkeit: kreuzung}
+  "427/2": {lon: 11.071826, lat: 49.480625, genauigkeit: kreuzung}
+  "429": {lon: 11.099315, lat: 49.443331, genauigkeit: kreuzung}
+  "429/1": {lon: 11.100482, lat: 49.442967, genauigkeit: kreuzung}
+  "429/2": {lon: 11.100309, lat: 49.442718, genauigkeit: kreuzung}
+  "429/3": {lon: 11.098897, lat: 49.443148, genauigkeit: kreuzung}
+  "430": {lon: 11.097788, lat: 49.444488, genauigkeit: kreuzung}
+  "430/1": {lon: 11.097281, lat: 49.444357, genauigkeit: kreuzung}
+  "431": {lon: 11.101375, lat: 49.443279, genauigkeit: kreuzung}
+  "432": {lon: 11.121336, lat: 49.452733, genauigkeit: kreuzung}
+  "433": {lon: 11.036158, lat: 49.460033, genauigkeit: hausnummer}
+  "435": {lon: 11.101674, lat: 49.458704, genauigkeit: hausnummer}
+  "436": {lon: 11.101315, lat: 49.458562, genauigkeit: hausnummer}
+  "437": {lon: 11.108237, lat: 49.471426, genauigkeit: kreuzung}
+  "438": {lon: 11.107906, lat: 49.471948, genauigkeit: hausnummer}
+  "439": {lon: 11.061836, lat: 49.445951, genauigkeit: kreuzung}
+  "439/2": {lon: 11.060914, lat: 49.44575, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "439/3": {lon: 11.060636, lat: 49.445625, genauigkeit: kreuzung}
+  "439/4": {lon: 11.060914, lat: 49.44575, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
+  "440": {lon: 11.071121, lat: 49.469185, genauigkeit: kreuzung}
+  "442": {lon: 11.159741, lat: 49.420891, genauigkeit: kreuzung}
+  "442/1": {lon: 11.160309, lat: 49.420798, genauigkeit: kreuzung}
+  "442/2": {lon: 11.159581, lat: 49.420592, genauigkeit: kreuzung}
+  "443": {lon: 11.139835, lat: 49.415248, genauigkeit: kreuzung}
+  "444": {lon: 11.144231, lat: 49.412666, genauigkeit: kreuzung}
+  "445": {lon: 11.049598, lat: 49.430472, genauigkeit: kreuzung}
+  "446": {lon: 11.072806, lat: 49.455186, genauigkeit: strasse, hinweise: *strasse}
+  "446/1": {lon: 11.071021, lat: 49.454742, genauigkeit: kreuzung}
+  "447": {lon: 11.105778, lat: 49.477533, genauigkeit: kreuzung}
+  "447/1": {lon: 11.106235, lat: 49.477566, genauigkeit: kreuzung}
+  "447/2": {lon: 11.10545, lat: 49.476981, genauigkeit: kreuzung}
+  "449": {lon: 11.104758, lat: 49.464563, genauigkeit: hausnummer}
+  "450": {lon: 11.059167, lat: 49.445318, genauigkeit: hausnummer}
+  "452": {lon: 11.080795, lat: 49.448177, genauigkeit: kreuzung}
+  "455": {lon: 11.13557, lat: 49.46191, genauigkeit: kreuzung}
+  "455/1": {lon: 11.136262, lat: 49.461702, genauigkeit: kreuzung}
+  "455/2": {lon: 11.135922, lat: 49.461328, genauigkeit: kreuzung}
+  "455/3": {lon: 11.135317, lat: 49.461573, genauigkeit: kreuzung}
+  "456": {lon: 11.08658, lat: 49.432097, genauigkeit: kreuzung}
+  "456/1": {lon: 11.08714, lat: 49.431785, genauigkeit: kreuzung}
+  "456/2": {lon: 11.086605, lat: 49.431463, genauigkeit: kreuzung}
+  "456/3": {lon: 11.086053, lat: 49.43179, genauigkeit: kreuzung}
+  "457": {lon: 11.075871, lat: 49.44193, genauigkeit: kreuzung}
+  "457/1": {lon: 11.076419, lat: 49.441685, genauigkeit: kreuzung}
+  "457/2": {lon: 11.075979, lat: 49.441497, genauigkeit: kreuzung}
+  "457/3": {lon: 11.075475, lat: 49.441555, genauigkeit: kreuzung}
+  "458": {lon: 11.076523, lat: 49.455446, genauigkeit: strasse, hinweise: *strasse}
+  "460": {lon: 11.036344, lat: 49.482429, genauigkeit: kreuzung}
+  "460/1": {lon: 11.036808, lat: 49.482101, genauigkeit: kreuzung}
+  "460/2": {lon: 11.036307, lat: 49.4818, genauigkeit: kreuzung}
+  "461": {lon: 11.036705, lat: 49.471442, genauigkeit: kreuzung}
+  "461/1": {lon: 11.037261, lat: 49.471121, genauigkeit: kreuzung}
+  "461/2": {lon: 11.036542, lat: 49.470864, genauigkeit: kreuzung}
+  "462": {lon: 11.096135, lat: 49.431593, genauigkeit: kreuzung}
+  "462/1": {lon: 11.096154, lat: 49.431279, genauigkeit: kreuzung}
+  "463": {lon: 11.067145, lat: 49.439843, genauigkeit: kreuzung}
+  "463/1": {lon: 11.067721, lat: 49.439413, genauigkeit: kreuzung}
+  "463/2": {lon: 11.067161, lat: 49.439034, genauigkeit: kreuzung}
+  "463/3": {lon: 11.066697, lat: 49.439627, genauigkeit: kreuzung}
+  "465": {lon: 11.132739, lat: 49.411574, genauigkeit: kreuzung}
+  "466/1": {lon: 11.060692, lat: 49.459829, genauigkeit: kreuzung}
+  "466/2": {lon: 11.061027, lat: 49.459554, genauigkeit: kreuzung}
+  "466/4": {lon: 11.059971, lat: 49.459534, genauigkeit: kreuzung}
+  "466/5": {lon: 11.059776, lat: 49.459978, genauigkeit: kreuzung}
+  "466a": {lon: 11.058973, lat: 49.459842, genauigkeit: kreuzung}
+  "466a/1": {lon: 11.059264, lat: 49.459444, genauigkeit: kreuzung}

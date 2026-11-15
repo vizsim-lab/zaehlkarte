@@ -19,7 +19,7 @@ function namen(schluessel, praefix) {
 export const GRUPPEN = ["kfz", "sv", "rad", "fuss", "kind"];
 export const GRUPPEN_NAMEN = namen(GRUPPEN, "gruppe");
 export const TAGE = namen(["s", "f", "h", "w", "u"], "tag");
-export const ARTEN = namen(["w", "w24", "sp"], "art");
+export const ARTEN = namen(["w", "w16", "w24", "sp"], "art");
 const BIT = Object.fromEntries(GRUPPEN.map((g, i) => [g, 1 << i]));
 
 // Eine Blau-Stufung (hell -> dunkel), gegen den Positron-Hintergrund #f2f3f0 geprüft.
@@ -27,10 +27,10 @@ export const STUFENFARBEN = ["#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366
 
 // Klassengrenzen (4 Grenzen -> 5 Stufen), an den Quartilen der Berliner Daten ausgerichtet.
 export const STUFEN = {
-  kfz: { w: [5000, 10000, 20000, 35000], w24: [6000, 12000, 25000, 40000], sp: [500, 1000, 2000, 3500] },
-  sv: { w: [250, 500, 1000, 2000], w24: [250, 500, 1000, 2000], sp: [25, 50, 100, 200] },
-  rad: { w: [250, 500, 1000, 2500], w24: [250, 500, 1000, 2500], sp: [25, 50, 100, 250] },
-  fuss: { w: [100, 300, 1000, 3000], w24: [100, 300, 1000, 3000], sp: [15, 30, 100, 300] },
+  kfz: { w: [5000, 10000, 20000, 35000], w16: [6000, 12000, 24000, 40000], w24: [6000, 12000, 25000, 40000], sp: [500, 1000, 2000, 3500] },
+  sv: { w: [250, 500, 1000, 2000], w16: [250, 500, 1000, 2000], w24: [250, 500, 1000, 2000], sp: [25, 50, 100, 200] },
+  rad: { w: [250, 500, 1000, 2500], w16: [250, 500, 1000, 2500], w24: [250, 500, 1000, 2500], sp: [25, 50, 100, 250] },
+  fuss: { w: [100, 300, 1000, 3000], w16: [100, 300, 1000, 3000], w24: [100, 300, 1000, 3000], sp: [15, 30, 100, 300] },
   anteil: { sv: [0.03, 0.05, 0.08, 0.12], rad: [0.02, 0.05, 0.1, 0.2] },
 };
 
@@ -100,7 +100,7 @@ export function entpacke(index) {
 
 export const hat = (z, g) => (z.g & BIT[g]) !== 0;
 
-/** Wert einer Gruppe in einer Kennzahl-Art ("w" 7–19 Uhr, "w24", "sp" stärkste Stunde). */
+/** Wert einer Gruppe in einer Kennzahl-Art ("w" 7–19 Uhr, "w16" 6–22 Uhr, "w24", "sp" stärkste Stunde). */
 export function wert(z, g, art) {
   const liste = z[art];
   return liste ? (liste[GRUPPEN.indexOf(g)] ?? null) : null;
@@ -251,14 +251,15 @@ export const lizenzFuerCsv = (l) => (l?.ohne_lizenz ? null : l?.lizenz ?? "");
 
 /**
  * CSV (Semikolon, UTF-8) aller Zählungen im Filter – nicht nur der gezeigten je Stelle.
- * Spalten und Werte bleiben in jeder Sprache gleich (deutsch), damit Auswertungen nicht brechen.
+ * Spalten und Werte bleiben in jeder Sprache gleich (deutsch), damit Auswertungen nicht brechen;
+ * neue Spalten kommen vor `lizenz`, die immer die letzte bleibt (`*_6_22` seit November 2026).
  * `lizenzVon(quelle, lieferung)`: die Lizenz der Zeile (lizenzFuerCsv) – null: Zeile weglassen.
  */
 export function csv(daten, zustand, lizenzVon) {
   const kopf = [
     "quelle", "stelle", "name", "typ", "lon", "lat", "lage", "datum", "zaehltag", "fenster",
     ...GRUPPEN.map((g) => `${g}_7_19`), ...GRUPPEN.map((g) => `${g}_24h`),
-    ...GRUPPEN.map((g) => `${g}_spitzenstunde`), "lizenz",
+    ...GRUPPEN.map((g) => `${g}_spitzenstunde`), ...GRUPPEN.map((g) => `${g}_6_22`), "lizenz",
   ];
   const zeilen = [kopf.join(";")];
   for (const s of daten.stellen) {
@@ -270,7 +271,7 @@ export function csv(daten, zustand, lizenzVon) {
       zeilen.push([
         s.quelle, s.id, s.name, s.typ, s.lon, s.lat, s.lage, z.datum, t(`tag.${z.tag ?? "u"}`, {}, "de"), z.fenster,
         ...GRUPPEN.map((g) => wert(z, g, "w")), ...GRUPPEN.map((g) => wert(z, g, "w24")),
-        ...GRUPPEN.map((g) => wert(z, g, "sp")), lizenz,
+        ...GRUPPEN.map((g) => wert(z, g, "sp")), ...GRUPPEN.map((g) => wert(z, g, "w16")), lizenz,
       ].map(csvFeld).join(";"));
     }
   }

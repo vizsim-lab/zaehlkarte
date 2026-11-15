@@ -181,6 +181,26 @@ test("Stelle aus Neubulach: Knoten mit Summe 15–19 Uhr, ohne Spitzenstunden", 
   expect(z.filter((x) => x.fenster === "15–19").length).toBe(7);
 });
 
+test("Stelle aus Nürnberg: Kfz 6–22 Uhr laut Bericht, ohne Lizenz, nur unter 6–22 Uhr", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=w16");
+  await expect(page.locator('#art-chips [data-art="w16"]')).toHaveClass(/is-active/);
+  await expect(page.locator("#klassen-legende")).toContainText("Kfz, Summe 6–22 Uhr");
+  await klickeStelle(page, (x) => x.quelle === "nuernberg" && x.name === "Hallertorbrücke");
+  const detail = page.locator("#detail");
+  await expect(detail.locator(".ohne-lizenz")).toHaveText("ohne Lizenz");
+  await expect(detail).toContainText("die Quelle nennt nur die Summe der gezählten Stunden");
+  await expect(detail.locator(".detail-kennwerte thead")).toContainText("6–22 Uhr");
+  await expect(detail.locator(".detail-kennwerte")).toContainText("21.629"); // Bericht 2025
+  await expect(detail.locator(".detail-zaehlplan")).toContainText("Summe 6–22 Uhr");
+  await expect(detail).toContainText("Zählstelle 65 (Bericht 2025");
+  await expect(detail.locator("[data-csv]")).toHaveCount(0);
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "nuernberg").flatMap((s) => s.zaehlungen));
+  expect(z.length).toBe(1650);
+  // nur die Summe 6–22 Uhr: keine Stunden, also weder 7–19 Uhr noch 24 Stunden
+  expect(z.every((x) => x.w16 && x.fenster === "6–22" && x.w == null && x.w24 == null)).toBe(true);
+});
+
 test("Stelle aus Olpe: Radarmessung je Fahrzeug, Lizenz je Datensatz", async ({ page }) => {
   await oeffne(page, "#t=kfz.menge&a=w24");
   await klickeStelle(page, (x) => x.quelle === "olpe" && x.name === "Zum Honigsack 35");

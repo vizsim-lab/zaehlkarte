@@ -6,7 +6,7 @@
   "details": "details/{n}.json",
   "datenlage": "datenlage.json"
  },
- "details_anzahl": 41,
+ "details_anzahl": 43,
  "gruppen": [
   {
    "id": "kfz",
@@ -588,14 +588,60 @@
    "lage": {
     "geokodiert": 8
    }
+  },
+  {
+   "code": "nuernberg",
+   "name": "Nürnberg",
+   "land": "BY",
+   "traeger": "Stadt Nürnberg, Verkehrsplanungsamt",
+   "art": "Jährliche Querschnittszählung von Hand an rund 75–135 Stellen, Dienstag und Mittwoch der vorletzten Schulwoche vor den Sommerferien, 6–22 Uhr in vier Intervallen à vier Stunden an zwei Tagen; in den Berichten je Zählstelle nur die Summe Kfz 6–22 Uhr",
+   "weg": "offen auf nuernberg.de (je Jahr ein Bericht als PDF), ohne Lizenzangabe",
+   "portal": "https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html",
+   "lizenzen": [
+    {
+     "code": "nuernberg",
+     "titel": "Verkehrszählung (Querschnittszählung) – Berichte 2007–2025",
+     "herausgeber": "Stadt Nürnberg, Verkehrsplanungsamt",
+     "lizenz": null,
+     "lizenz_url": null,
+     "herkunft_url": "https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html",
+     "ohne_lizenz": {
+      "herausgegeben": "als Berichte „Verkehrszählung …“ (PDF) auf nuernberg.de, ohne Lizenzangabe; die Werte stehen im Anhang jedes Berichts (Tabelle „Entwicklung des Verkehrs (Kfz/16 h) – Zählstellen“)",
+      "geprueft": "2026-11-15"
+     }
+    },
+    {
+     "code": "lage",
+     "titel": "Lage der Zählstellen (OpenStreetMap; Zählstellenpläne der Berichte)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 538,
+   "zaehlungen": 1650,
+   "ohne_lage": 39,
+   "gruppen": {
+    "kfz": 1650,
+    "sv": 0,
+    "rad": 0,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2007,
+   "bis": 2025,
+   "lage": {
+    "geokodiert": 1650
+   }
   }
  ],
  "statistik": {
-  "stellen": 12153,
-  "zaehlungen": 29229,
-  "ohne_lage": 1509,
+  "stellen": 12691,
+  "zaehlungen": 30879,
+  "ohne_lage": 1548,
   "gruppen": {
-   "kfz": 18970,
+   "kfz": 20620,
    "sv": 18247,
    "rad": 18030,
    "fuss": 6016,
@@ -604,7 +650,7 @@
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "geokodiert": 21089,
+   "geokodiert": 22739,
    "gps": 4919,
    "uebertragen": 1412,
    "quelle": 1809

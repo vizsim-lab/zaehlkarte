@@ -114,7 +114,7 @@ FragDenStaat.
 | Neubulach | BW | vorhanden, aber ohne Lizenz |  | Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw |
 | Neuss | NW | – | in der Karte |  |
 | Neustadt am Rübenberge | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen 2021 (Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz |
-| Nürnberg | BY | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt |
+| Nürnberg | BY | vorhanden, aber ohne Lizenz |  | Anfrage nach allen Zählungen seit 2015 in Halbstundenwerten je Richtung und Fahrzeugart, an das Verkehrsplanungsamt, mit Lizenz |
 | Oberursel (Taunus) | HE | nur als Karte | vorhanden, Werte nicht offen | Anfrage nach den gezählten Werten dieser und aller späteren Zählungen |
 | Odenwaldkreis | HE | – | vorhanden, Werte nicht offen |  |
 | Offenbach am Main | HE | – | vorhanden, Werte nicht offen |  |
@@ -2591,11 +2591,11 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Belege:** [Verkehrszählung in der Kernstadt (2021)](https://www.neustadt-a-rbge.de/rathaus/pressestelle/presse-archiv/2021/mai/verkehrszaehlung-in-der-kernstadt/)
 
 
-## Nürnberg (BY) – auf Anfrage herausgegeben
+## Nürnberg (BY) – vorhanden, aber ohne Lizenz
 
-**Lage:** Zählt seit 1967 jedes Jahr von Hand. Eine Anfrage 2025/26 bekam eine Zählung in Halbstundenwerten; abgelehnt wurden nur Geschwindigkeitsdaten der Verkehrsüberwachung.
+**Lage:** Zählt seit 1967 jedes Jahr von Hand, am Dienstag und Mittwoch der vorletzten Schulwoche vor den Sommerferien, 6–22 Uhr in vier Intervallen à vier Stunden an zwei Tagen. Die Berichte (je Jahr ein PDF auf nuernberg.de, ohne Lizenzangabe) nennen je Zählstelle nur die Summe Kfz 6–22 Uhr, ab 2023 dazu Lkw und Lastzüge; die Werte 2007–2025 sind daraus in der Karte. Getrennt nach Richtung, Fahrzeugart und halber Stunde liegen sie beim Verkehrsplanungsamt („einsehbar“). Eine Anfrage 2025/26 bekam eine Zählung in Halbstundenwerten; abgelehnt wurden nur Geschwindigkeitsdaten der Verkehrsüberwachung.
 
-**Empfehlung:** Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt. Grundlage: Bayerisches Umweltinformationsgesetz.
+**Empfehlung:** Anfrage nach allen Zählungen seit 2015 in Halbstundenwerten je Richtung und Fahrzeugart, an das Verkehrsplanungsamt, mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.
 
 **Weg:** FragDenStaat, Bayerisches UIG
 
@@ -2619,7 +2619,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2025/26](https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/) · [Bericht Verkehrszählung 2018](https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf) · [Verkehrszählungen (Berichte bis 2025)](https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html)
+**Belege:** [FragDenStaat 2025/26](https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/) · [Verkehrszählungen (Berichte 2007–2025)](https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html) · [Bericht Verkehrszählung 2025](https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszahlung_bericht_2025.pdf)
 
 
 ## Oberursel (Taunus) (HE) – nur als Karte
