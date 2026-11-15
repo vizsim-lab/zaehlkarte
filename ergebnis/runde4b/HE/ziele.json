@@ -1,0 +1,570 @@
+[
+ {
+  "ags": "06431",
+  "name": "Bergstraße",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-bergstrasse.de/",
+   "https://www.landkreis-bergstrasse.de/",
+   "https://www.lk-bergstrasse.de/",
+   "https://www.lra-bergstrasse.de/",
+   "https://www.bergstrasse.de/",
+   "https://www.landkreisbergstrasse.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-bergstrasse.de/": "geraten",
+   "https://www.kreis-bergstrasse.de/": "vorher_oder_liste",
+   "https://www.lk-bergstrasse.de/": "geraten",
+   "https://www.lra-bergstrasse.de/": "geraten",
+   "https://www.bergstrasse.de/": "geraten",
+   "https://www.landkreisbergstrasse.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06432",
+  "name": "Darmstadt-Dieburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.ladadi.de/",
+   "https://www.landkreis-darmstadt-dieburg.de/",
+   "https://www.kreis-darmstadt-dieburg.de/",
+   "https://www.lk-darmstadt-dieburg.de/",
+   "https://www.lra-darmstadt-dieburg.de/",
+   "https://www.darmstadt-dieburg.de/",
+   "https://www.landkreisdarmstadtdieburg.de/",
+   "https://www.darmstadtdieburg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-darmstadt-dieburg.de/": "geraten",
+   "https://www.kreis-darmstadt-dieburg.de/": "geraten",
+   "https://www.lk-darmstadt-dieburg.de/": "geraten",
+   "https://www.lra-darmstadt-dieburg.de/": "geraten",
+   "https://www.darmstadt-dieburg.de/": "geraten",
+   "https://www.landkreisdarmstadtdieburg.de/": "geraten",
+   "https://www.darmstadtdieburg.de/": "geraten",
+   "https://www.ladadi.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06433",
+  "name": "Groß-Gerau",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreisgg.de/",
+   "https://www.landkreis-gross-gerau.de/",
+   "https://www.kreis-gross-gerau.de/",
+   "https://www.lk-gross-gerau.de/",
+   "https://www.lra-gross-gerau.de/",
+   "https://www.gross-gerau.de/",
+   "https://www.landkreisgrossgerau.de/",
+   "https://www.grossgerau.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 14,
+  "herkunft": {
+   "https://www.landkreis-gross-gerau.de/": "geraten",
+   "https://www.kreis-gross-gerau.de/": "geraten",
+   "https://www.lk-gross-gerau.de/": "geraten",
+   "https://www.lra-gross-gerau.de/": "geraten",
+   "https://www.gross-gerau.de/": "geraten",
+   "https://www.landkreisgrossgerau.de/": "geraten",
+   "https://www.grossgerau.de/": "geraten",
+   "https://www.kreisgg.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06434",
+  "name": "Hochtaunuskreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.hochtaunuskreis.de/",
+   "https://www.landkreis-hochtaunus.de/",
+   "https://www.kreis-hochtaunus.de/",
+   "https://www.lk-hochtaunus.de/",
+   "https://www.lra-hochtaunus.de/",
+   "https://www.hochtaunus.de/",
+   "https://www.landkreishochtaunus.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 13,
+  "herkunft": {
+   "https://www.landkreis-hochtaunus.de/": "geraten",
+   "https://www.kreis-hochtaunus.de/": "geraten",
+   "https://www.lk-hochtaunus.de/": "geraten",
+   "https://www.lra-hochtaunus.de/": "geraten",
+   "https://www.hochtaunus.de/": "geraten",
+   "https://www.landkreishochtaunus.de/": "geraten",
+   "https://www.hochtaunuskreis.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06435",
+  "name": "Main-Kinzig-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.mkk.de/",
+   "https://www.landkreis-main-kinzig.de/",
+   "https://www.kreis-main-kinzig.de/",
+   "https://www.lk-main-kinzig.de/",
+   "https://www.lra-main-kinzig.de/",
+   "https://www.main-kinzig.de/",
+   "https://www.landkreismainkinzig.de/",
+   "https://www.main-kinzig-kreis.de/",
+   "https://www.mainkinzigkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 29,
+  "herkunft": {
+   "https://www.landkreis-main-kinzig.de/": "geraten",
+   "https://www.kreis-main-kinzig.de/": "geraten",
+   "https://www.lk-main-kinzig.de/": "geraten",
+   "https://www.lra-main-kinzig.de/": "geraten",
+   "https://www.main-kinzig.de/": "geraten",
+   "https://www.landkreismainkinzig.de/": "geraten",
+   "https://www.main-kinzig-kreis.de/": "geraten",
+   "https://www.mainkinzigkreis.de/": "geraten",
+   "https://www.mkk.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06436",
+  "name": "Main-Taunus-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.mtk.org/home",
+   "https://www.mtk.org/",
+   "https://www.landkreis-main-taunus.de/",
+   "https://www.kreis-main-taunus.de/",
+   "https://www.lk-main-taunus.de/",
+   "https://www.lra-main-taunus.de/",
+   "https://www.main-taunus.de/",
+   "https://www.landkreismaintaunus.de/",
+   "https://www.main-taunus-kreis.de/",
+   "https://www.maintaunuskreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 12,
+  "herkunft": {
+   "https://www.landkreis-main-taunus.de/": "geraten",
+   "https://www.kreis-main-taunus.de/": "geraten",
+   "https://www.lk-main-taunus.de/": "geraten",
+   "https://www.lra-main-taunus.de/": "geraten",
+   "https://www.main-taunus.de/": "geraten",
+   "https://www.landkreismaintaunus.de/": "geraten",
+   "https://www.main-taunus-kreis.de/": "geraten",
+   "https://www.maintaunuskreis.de/": "geraten",
+   "https://www.mtk.org/home": "vorher_oder_liste",
+   "https://www.mtk.org/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06437",
+  "name": "Odenwaldkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.odenwaldkreis.de/de/",
+   "https://www.odenwaldkreis.de/",
+   "https://www.landkreis-odenwald.de/",
+   "https://www.kreis-odenwald.de/",
+   "https://www.lk-odenwald.de/",
+   "https://www.lra-odenwald.de/",
+   "https://www.odenwald.de/",
+   "https://www.landkreisodenwald.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 12,
+  "herkunft": {
+   "https://www.landkreis-odenwald.de/": "geraten",
+   "https://www.kreis-odenwald.de/": "geraten",
+   "https://www.lk-odenwald.de/": "geraten",
+   "https://www.lra-odenwald.de/": "geraten",
+   "https://www.odenwald.de/": "geraten",
+   "https://www.landkreisodenwald.de/": "geraten",
+   "https://www.odenwaldkreis.de/": "vorher_oder_liste",
+   "https://www.odenwaldkreis.de/de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06438",
+  "name": "Offenbach",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-offenbach.de/",
+   "https://www.landkreis-offenbach.de/",
+   "https://www.lk-offenbach.de/",
+   "https://www.lra-offenbach.de/",
+   "https://www.offenbach.de/",
+   "https://www.landkreisoffenbach.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 13,
+  "herkunft": {
+   "https://www.landkreis-offenbach.de/": "geraten",
+   "https://www.kreis-offenbach.de/": "vorher_oder_liste",
+   "https://www.lk-offenbach.de/": "geraten",
+   "https://www.lra-offenbach.de/": "geraten",
+   "https://www.offenbach.de/": "geraten",
+   "https://www.landkreisoffenbach.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06439",
+  "name": "Rheingau-Taunus-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.rheingau-taunus.de/",
+   "https://www.landkreis-rheingau-taunus.de/",
+   "https://www.kreis-rheingau-taunus.de/",
+   "https://www.lk-rheingau-taunus.de/",
+   "https://www.lra-rheingau-taunus.de/",
+   "https://www.landkreisrheingautaunus.de/",
+   "https://www.rheingau-taunus-kreis.de/",
+   "https://www.rheingautaunuskreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 17,
+  "herkunft": {
+   "https://www.landkreis-rheingau-taunus.de/": "geraten",
+   "https://www.kreis-rheingau-taunus.de/": "geraten",
+   "https://www.lk-rheingau-taunus.de/": "geraten",
+   "https://www.lra-rheingau-taunus.de/": "geraten",
+   "https://www.rheingau-taunus.de/": "vorher_oder_liste",
+   "https://www.landkreisrheingautaunus.de/": "geraten",
+   "https://www.rheingau-taunus-kreis.de/": "geraten",
+   "https://www.rheingautaunuskreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06440",
+  "name": "Wetteraukreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://wetteraukreis.de/home",
+   "https://wetteraukreis.de/",
+   "https://www.landkreis-wetterau.de/",
+   "https://www.kreis-wetterau.de/",
+   "https://www.lk-wetterau.de/",
+   "https://www.lra-wetterau.de/",
+   "https://www.wetterau.de/",
+   "https://www.landkreiswetterau.de/",
+   "https://www.wetteraukreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-wetterau.de/": "geraten",
+   "https://www.kreis-wetterau.de/": "geraten",
+   "https://www.lk-wetterau.de/": "geraten",
+   "https://www.lra-wetterau.de/": "geraten",
+   "https://www.wetterau.de/": "geraten",
+   "https://www.landkreiswetterau.de/": "geraten",
+   "https://www.wetteraukreis.de/": "geraten",
+   "https://wetteraukreis.de/home": "vorher_oder_liste",
+   "https://wetteraukreis.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06531",
+  "name": "Gießen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.lkgi.de/",
+   "https://www.landkreis-giessen.de/",
+   "https://www.kreis-giessen.de/",
+   "https://www.lk-giessen.de/",
+   "https://www.lra-giessen.de/",
+   "https://www.giessen.de/",
+   "https://www.landkreisgiessen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 18,
+  "herkunft": {
+   "https://www.landkreis-giessen.de/": "geraten",
+   "https://www.kreis-giessen.de/": "geraten",
+   "https://www.lk-giessen.de/": "geraten",
+   "https://www.lra-giessen.de/": "geraten",
+   "https://www.giessen.de/": "geraten",
+   "https://www.landkreisgiessen.de/": "geraten",
+   "https://www.lkgi.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06532",
+  "name": "Lahn-Dill-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.lahn-dill-kreis.de/",
+   "https://www.landkreis-lahn-dill.de/",
+   "https://www.kreis-lahn-dill.de/",
+   "https://www.lk-lahn-dill.de/",
+   "https://www.lra-lahn-dill.de/",
+   "https://www.lahn-dill.de/",
+   "https://www.landkreislahndill.de/",
+   "https://www.lahndillkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-lahn-dill.de/": "geraten",
+   "https://www.kreis-lahn-dill.de/": "geraten",
+   "https://www.lk-lahn-dill.de/": "geraten",
+   "https://www.lra-lahn-dill.de/": "geraten",
+   "https://www.lahn-dill.de/": "geraten",
+   "https://www.landkreislahndill.de/": "geraten",
+   "https://www.lahn-dill-kreis.de/": "vorher_oder_liste",
+   "https://www.lahndillkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06533",
+  "name": "Limburg-Weilburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-limburg-weilburg.de/",
+   "https://www.kreis-limburg-weilburg.de/",
+   "https://www.lk-limburg-weilburg.de/",
+   "https://www.lra-limburg-weilburg.de/",
+   "https://www.limburg-weilburg.de/",
+   "https://www.landkreislimburgweilburg.de/",
+   "https://www.limburgweilburg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 19,
+  "herkunft": {
+   "https://www.landkreis-limburg-weilburg.de/": "vorher_oder_liste",
+   "https://www.kreis-limburg-weilburg.de/": "geraten",
+   "https://www.lk-limburg-weilburg.de/": "geraten",
+   "https://www.lra-limburg-weilburg.de/": "geraten",
+   "https://www.limburg-weilburg.de/": "geraten",
+   "https://www.landkreislimburgweilburg.de/": "geraten",
+   "https://www.limburgweilburg.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06534",
+  "name": "Marburg-Biedenkopf",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.marburg-biedenkopf.de/",
+   "https://www.landkreis-marburg-biedenkopf.de/",
+   "https://www.kreis-marburg-biedenkopf.de/",
+   "https://www.lk-marburg-biedenkopf.de/",
+   "https://www.lra-marburg-biedenkopf.de/",
+   "https://www.landkreismarburgbiedenkopf.de/",
+   "https://www.marburgbiedenkopf.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 22,
+  "herkunft": {
+   "https://www.landkreis-marburg-biedenkopf.de/": "geraten",
+   "https://www.kreis-marburg-biedenkopf.de/": "geraten",
+   "https://www.lk-marburg-biedenkopf.de/": "geraten",
+   "https://www.lra-marburg-biedenkopf.de/": "geraten",
+   "https://www.marburg-biedenkopf.de/": "vorher_oder_liste",
+   "https://www.landkreismarburgbiedenkopf.de/": "geraten",
+   "https://www.marburgbiedenkopf.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06535",
+  "name": "Vogelsbergkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.vogelsbergkreis.de/",
+   "https://www.landkreis-vogelsberg.de/",
+   "https://www.kreis-vogelsberg.de/",
+   "https://www.lk-vogelsberg.de/",
+   "https://www.lra-vogelsberg.de/",
+   "https://www.vogelsberg.de/",
+   "https://www.landkreisvogelsberg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 19,
+  "herkunft": {
+   "https://www.landkreis-vogelsberg.de/": "geraten",
+   "https://www.kreis-vogelsberg.de/": "geraten",
+   "https://www.lk-vogelsberg.de/": "geraten",
+   "https://www.lra-vogelsberg.de/": "geraten",
+   "https://www.vogelsberg.de/": "geraten",
+   "https://www.landkreisvogelsberg.de/": "geraten",
+   "https://www.vogelsbergkreis.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06631",
+  "name": "Fulda",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-fulda.de/",
+   "https://www.kreis-fulda.de/",
+   "https://www.lk-fulda.de/",
+   "https://www.lra-fulda.de/",
+   "https://www.fulda.de/",
+   "https://www.landkreisfulda.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-fulda.de/": "vorher_oder_liste",
+   "https://www.kreis-fulda.de/": "geraten",
+   "https://www.lk-fulda.de/": "geraten",
+   "https://www.lra-fulda.de/": "geraten",
+   "https://www.fulda.de/": "geraten",
+   "https://www.landkreisfulda.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06632",
+  "name": "Hersfeld-Rotenburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.hef-rof.de/",
+   "https://www.landkreis-hersfeld-rotenburg.de/",
+   "https://www.kreis-hersfeld-rotenburg.de/",
+   "https://www.lk-hersfeld-rotenburg.de/",
+   "https://www.lra-hersfeld-rotenburg.de/",
+   "https://www.hersfeld-rotenburg.de/",
+   "https://www.landkreishersfeldrotenburg.de/",
+   "https://www.hersfeldrotenburg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 20,
+  "herkunft": {
+   "https://www.landkreis-hersfeld-rotenburg.de/": "geraten",
+   "https://www.kreis-hersfeld-rotenburg.de/": "geraten",
+   "https://www.lk-hersfeld-rotenburg.de/": "geraten",
+   "https://www.lra-hersfeld-rotenburg.de/": "geraten",
+   "https://www.hersfeld-rotenburg.de/": "geraten",
+   "https://www.landkreishersfeldrotenburg.de/": "geraten",
+   "https://www.hersfeldrotenburg.de/": "geraten",
+   "https://www.hef-rof.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06633",
+  "name": "Kassel",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreiskassel.de/",
+   "https://www.landkreis-kassel.de/",
+   "https://www.kreis-kassel.de/",
+   "https://www.lk-kassel.de/",
+   "https://www.lra-kassel.de/",
+   "https://www.kassel.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 29,
+  "herkunft": {
+   "https://www.landkreis-kassel.de/": "geraten",
+   "https://www.kreis-kassel.de/": "geraten",
+   "https://www.lk-kassel.de/": "geraten",
+   "https://www.lra-kassel.de/": "geraten",
+   "https://www.kassel.de/": "geraten",
+   "https://www.landkreiskassel.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "06634",
+  "name": "Schwalm-Eder-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.schwalm-eder-kreis.de/",
+   "https://www.landkreis-schwalm-eder.de/",
+   "https://www.kreis-schwalm-eder.de/",
+   "https://www.lk-schwalm-eder.de/",
+   "https://www.lra-schwalm-eder.de/",
+   "https://www.schwalm-eder.de/",
+   "https://www.landkreisschwalmeder.de/",
+   "https://www.schwalmederkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 27,
+  "herkunft": {
+   "https://www.landkreis-schwalm-eder.de/": "geraten",
+   "https://www.kreis-schwalm-eder.de/": "geraten",
+   "https://www.lk-schwalm-eder.de/": "geraten",
+   "https://www.lra-schwalm-eder.de/": "geraten",
+   "https://www.schwalm-eder.de/": "geraten",
+   "https://www.landkreisschwalmeder.de/": "geraten",
+   "https://www.schwalm-eder-kreis.de/": "vorher_oder_liste",
+   "https://www.schwalmederkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06635",
+  "name": "Waldeck-Frankenberg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-waldeck-frankenberg.de/",
+   "https://www.kreis-waldeck-frankenberg.de/",
+   "https://www.lk-waldeck-frankenberg.de/",
+   "https://www.lra-waldeck-frankenberg.de/",
+   "https://www.waldeck-frankenberg.de/",
+   "https://www.landkreiswaldeckfrankenberg.de/",
+   "https://www.waldeckfrankenberg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 21,
+  "herkunft": {
+   "https://www.landkreis-waldeck-frankenberg.de/": "vorher_oder_liste",
+   "https://www.kreis-waldeck-frankenberg.de/": "geraten",
+   "https://www.lk-waldeck-frankenberg.de/": "geraten",
+   "https://www.lra-waldeck-frankenberg.de/": "geraten",
+   "https://www.waldeck-frankenberg.de/": "geraten",
+   "https://www.landkreiswaldeckfrankenberg.de/": "geraten",
+   "https://www.waldeckfrankenberg.de/": "geraten"
+  }
+ },
+ {
+  "ags": "06636",
+  "name": "Werra-Meißner-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.werra-meissner-kreis.de/",
+   "https://www.landkreis-werra-meissner.de/",
+   "https://www.kreis-werra-meissner.de/",
+   "https://www.lk-werra-meissner.de/",
+   "https://www.lra-werra-meissner.de/",
+   "https://www.werra-meissner.de/",
+   "https://www.landkreiswerrameissner.de/",
+   "https://www.werrameissnerkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 17,
+  "herkunft": {
+   "https://www.landkreis-werra-meissner.de/": "geraten",
+   "https://www.kreis-werra-meissner.de/": "geraten",
+   "https://www.lk-werra-meissner.de/": "geraten",
+   "https://www.lra-werra-meissner.de/": "geraten",
+   "https://www.werra-meissner.de/": "geraten",
+   "https://www.landkreiswerrameissner.de/": "geraten",
+   "https://www.werra-meissner-kreis.de/": "vorher_oder_liste",
+   "https://www.werrameissnerkreis.de/": "geraten"
+  }
+ }
+]
