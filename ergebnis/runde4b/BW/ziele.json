@@ -1,0 +1,902 @@
+[
+ {
+  "ags": "08115",
+  "name": "Böblingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-boeblingen.de/",
+   "https://www.kreis-boeblingen.de/",
+   "https://www.lk-boeblingen.de/",
+   "https://www.lra-boeblingen.de/",
+   "https://www.boeblingen.de/",
+   "https://www.landkreisboeblingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 26,
+  "herkunft": {
+   "https://www.landkreis-boeblingen.de/": "geraten",
+   "https://www.kreis-boeblingen.de/": "geraten",
+   "https://www.lk-boeblingen.de/": "geraten",
+   "https://www.lra-boeblingen.de/": "geraten",
+   "https://www.boeblingen.de/": "geraten",
+   "https://www.landkreisboeblingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08116",
+  "name": "Esslingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-esslingen.de/",
+   "https://www.kreis-esslingen.de/",
+   "https://www.lk-esslingen.de/",
+   "https://www.lra-esslingen.de/",
+   "https://www.esslingen.de/",
+   "https://www.landkreisesslingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 44,
+  "herkunft": {
+   "https://www.landkreis-esslingen.de/": "geraten",
+   "https://www.kreis-esslingen.de/": "geraten",
+   "https://www.lk-esslingen.de/": "geraten",
+   "https://www.lra-esslingen.de/": "geraten",
+   "https://www.esslingen.de/": "geraten",
+   "https://www.landkreisesslingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08117",
+  "name": "Göppingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-goeppingen.de/",
+   "https://www.kreis-goeppingen.de/",
+   "https://www.lk-goeppingen.de/",
+   "https://www.lra-goeppingen.de/",
+   "https://www.goeppingen.de/",
+   "https://www.landkreisgoeppingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 38,
+  "herkunft": {
+   "https://www.landkreis-goeppingen.de/": "geraten",
+   "https://www.kreis-goeppingen.de/": "geraten",
+   "https://www.lk-goeppingen.de/": "geraten",
+   "https://www.lra-goeppingen.de/": "geraten",
+   "https://www.goeppingen.de/": "geraten",
+   "https://www.landkreisgoeppingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08118",
+  "name": "Ludwigsburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ludwigsburg.de/",
+   "https://www.kreis-ludwigsburg.de/",
+   "https://www.lk-ludwigsburg.de/",
+   "https://www.lra-ludwigsburg.de/",
+   "https://www.ludwigsburg.de/",
+   "https://www.landkreisludwigsburg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 39,
+  "herkunft": {
+   "https://www.landkreis-ludwigsburg.de/": "vorher_oder_liste",
+   "https://www.kreis-ludwigsburg.de/": "geraten",
+   "https://www.lk-ludwigsburg.de/": "geraten",
+   "https://www.lra-ludwigsburg.de/": "geraten",
+   "https://www.ludwigsburg.de/": "geraten",
+   "https://www.landkreisludwigsburg.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08119",
+  "name": "Rems-Murr-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.rems-murr-kreis.de/startseite",
+   "https://www.rems-murr-kreis.de",
+   "https://www.landkreis-rems-murr.de/",
+   "https://www.kreis-rems-murr.de/",
+   "https://www.lk-rems-murr.de/",
+   "https://www.lra-rems-murr.de/",
+   "https://www.rems-murr.de/",
+   "https://www.landkreisremsmurr.de/",
+   "https://www.rems-murr-kreis.de/",
+   "https://www.remsmurrkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 31,
+  "herkunft": {
+   "https://www.landkreis-rems-murr.de/": "geraten",
+   "https://www.kreis-rems-murr.de/": "geraten",
+   "https://www.lk-rems-murr.de/": "geraten",
+   "https://www.lra-rems-murr.de/": "geraten",
+   "https://www.rems-murr.de/": "geraten",
+   "https://www.landkreisremsmurr.de/": "geraten",
+   "https://www.rems-murr-kreis.de/": "geraten",
+   "https://www.remsmurrkreis.de/": "geraten",
+   "https://www.rems-murr-kreis.de/startseite": "vorher_oder_liste",
+   "https://www.rems-murr-kreis.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08125",
+  "name": "Heilbronn",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-heilbronn.de/",
+   "https://www.kreis-heilbronn.de/",
+   "https://www.lk-heilbronn.de/",
+   "https://www.lra-heilbronn.de/",
+   "https://www.heilbronn.de/",
+   "https://www.landkreisheilbronn.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 46,
+  "herkunft": {
+   "https://www.landkreis-heilbronn.de/": "vorher_oder_liste",
+   "https://www.kreis-heilbronn.de/": "geraten",
+   "https://www.lk-heilbronn.de/": "geraten",
+   "https://www.lra-heilbronn.de/": "geraten",
+   "https://www.heilbronn.de/": "geraten",
+   "https://www.landkreisheilbronn.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08126",
+  "name": "Hohenlohekreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-hohenlohe.de/",
+   "https://www.kreis-hohenlohe.de/",
+   "https://www.lk-hohenlohe.de/",
+   "https://www.lra-hohenlohe.de/",
+   "https://www.hohenlohe.de/",
+   "https://www.landkreishohenlohe.de/",
+   "https://www.hohenlohekreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 16,
+  "herkunft": {
+   "https://www.landkreis-hohenlohe.de/": "geraten",
+   "https://www.kreis-hohenlohe.de/": "geraten",
+   "https://www.lk-hohenlohe.de/": "geraten",
+   "https://www.lra-hohenlohe.de/": "geraten",
+   "https://www.hohenlohe.de/": "geraten",
+   "https://www.landkreishohenlohe.de/": "geraten",
+   "https://www.hohenlohekreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08127",
+  "name": "Schwäbisch Hall",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-schwaebisch-hall.de/",
+   "https://www.kreis-schwaebisch-hall.de/",
+   "https://www.lk-schwaebisch-hall.de/",
+   "https://www.lra-schwaebisch-hall.de/",
+   "https://www.schwaebisch-hall.de/",
+   "https://www.landkreisschwaebischhall.de/",
+   "https://www.schwaebischhall.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 30,
+  "herkunft": {
+   "https://www.landkreis-schwaebisch-hall.de/": "geraten",
+   "https://www.kreis-schwaebisch-hall.de/": "geraten",
+   "https://www.lk-schwaebisch-hall.de/": "geraten",
+   "https://www.lra-schwaebisch-hall.de/": "geraten",
+   "https://www.schwaebisch-hall.de/": "geraten",
+   "https://www.landkreisschwaebischhall.de/": "geraten",
+   "https://www.schwaebischhall.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08128",
+  "name": "Main-Tauber-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-main-tauber.de/",
+   "https://www.kreis-main-tauber.de/",
+   "https://www.lk-main-tauber.de/",
+   "https://www.lra-main-tauber.de/",
+   "https://www.main-tauber.de/",
+   "https://www.landkreismaintauber.de/",
+   "https://www.main-tauber-kreis.de/",
+   "https://www.maintauberkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 18,
+  "herkunft": {
+   "https://www.landkreis-main-tauber.de/": "geraten",
+   "https://www.kreis-main-tauber.de/": "geraten",
+   "https://www.lk-main-tauber.de/": "geraten",
+   "https://www.lra-main-tauber.de/": "geraten",
+   "https://www.main-tauber.de/": "geraten",
+   "https://www.landkreismaintauber.de/": "geraten",
+   "https://www.main-tauber-kreis.de/": "geraten",
+   "https://www.maintauberkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08135",
+  "name": "Heidenheim",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-heidenheim.de/",
+   "https://www.kreis-heidenheim.de/",
+   "https://www.lk-heidenheim.de/",
+   "https://www.lra-heidenheim.de/",
+   "https://www.heidenheim.de/",
+   "https://www.landkreisheidenheim.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 11,
+  "herkunft": {
+   "https://www.landkreis-heidenheim.de/": "geraten",
+   "https://www.kreis-heidenheim.de/": "geraten",
+   "https://www.lk-heidenheim.de/": "geraten",
+   "https://www.lra-heidenheim.de/": "geraten",
+   "https://www.heidenheim.de/": "geraten",
+   "https://www.landkreisheidenheim.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08136",
+  "name": "Ostalbkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ostalb.de/",
+   "https://www.kreis-ostalb.de/",
+   "https://www.lk-ostalb.de/",
+   "https://www.lra-ostalb.de/",
+   "https://www.ostalb.de/",
+   "https://www.landkreisostalb.de/",
+   "https://www.ostalbkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 42,
+  "herkunft": {
+   "https://www.landkreis-ostalb.de/": "geraten",
+   "https://www.kreis-ostalb.de/": "geraten",
+   "https://www.lk-ostalb.de/": "geraten",
+   "https://www.lra-ostalb.de/": "geraten",
+   "https://www.ostalb.de/": "geraten",
+   "https://www.landkreisostalb.de/": "geraten",
+   "https://www.ostalbkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08215",
+  "name": "Karlsruhe",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-karlsruhe.de/",
+   "https://www.kreis-karlsruhe.de/",
+   "https://www.lk-karlsruhe.de/",
+   "https://www.lra-karlsruhe.de/",
+   "https://www.karlsruhe.de/",
+   "https://www.landkreiskarlsruhe.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 32,
+  "herkunft": {
+   "https://www.landkreis-karlsruhe.de/": "vorher_oder_liste",
+   "https://www.kreis-karlsruhe.de/": "geraten",
+   "https://www.lk-karlsruhe.de/": "geraten",
+   "https://www.lra-karlsruhe.de/": "geraten",
+   "https://www.karlsruhe.de/": "geraten",
+   "https://www.landkreiskarlsruhe.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08216",
+  "name": "Rastatt",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-rastatt.de/startseite",
+   "https://www.landkreis-rastatt.de/",
+   "https://www.kreis-rastatt.de/",
+   "https://www.lk-rastatt.de/",
+   "https://www.lra-rastatt.de/",
+   "https://www.rastatt.de/",
+   "https://www.landkreisrastatt.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-rastatt.de/": "geraten",
+   "https://www.kreis-rastatt.de/": "geraten",
+   "https://www.lk-rastatt.de/": "geraten",
+   "https://www.lra-rastatt.de/": "geraten",
+   "https://www.rastatt.de/": "geraten",
+   "https://www.landkreisrastatt.de/": "geraten",
+   "https://www.landkreis-rastatt.de/startseite": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08225",
+  "name": "Neckar-Odenwald-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-neckar-odenwald.de/",
+   "https://www.kreis-neckar-odenwald.de/",
+   "https://www.lk-neckar-odenwald.de/",
+   "https://www.lra-neckar-odenwald.de/",
+   "https://www.neckar-odenwald.de/",
+   "https://www.landkreisneckarodenwald.de/",
+   "https://www.neckar-odenwald-kreis.de/",
+   "https://www.neckarodenwaldkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 27,
+  "herkunft": {
+   "https://www.landkreis-neckar-odenwald.de/": "geraten",
+   "https://www.kreis-neckar-odenwald.de/": "geraten",
+   "https://www.lk-neckar-odenwald.de/": "geraten",
+   "https://www.lra-neckar-odenwald.de/": "geraten",
+   "https://www.neckar-odenwald.de/": "geraten",
+   "https://www.landkreisneckarodenwald.de/": "geraten",
+   "https://www.neckar-odenwald-kreis.de/": "geraten",
+   "https://www.neckarodenwaldkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08226",
+  "name": "Rhein-Neckar-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://landkreis-rhein-neckar-kreis.de/",
+   "https://www.landkreis-rhein-neckar.de/",
+   "https://www.kreis-rhein-neckar.de/",
+   "https://www.lk-rhein-neckar.de/",
+   "https://www.lra-rhein-neckar.de/",
+   "https://www.rhein-neckar.de/",
+   "https://www.landkreisrheinneckar.de/",
+   "https://www.rhein-neckar-kreis.de/",
+   "https://www.rheinneckarkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 54,
+  "herkunft": {
+   "https://www.landkreis-rhein-neckar.de/": "geraten",
+   "https://www.kreis-rhein-neckar.de/": "geraten",
+   "https://www.lk-rhein-neckar.de/": "geraten",
+   "https://www.lra-rhein-neckar.de/": "geraten",
+   "https://www.rhein-neckar.de/": "geraten",
+   "https://www.landkreisrheinneckar.de/": "geraten",
+   "https://www.rhein-neckar-kreis.de/": "geraten",
+   "https://www.rheinneckarkreis.de/": "geraten",
+   "https://landkreis-rhein-neckar-kreis.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08235",
+  "name": "Calw",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-calw.de/",
+   "https://www.landkreis-calw.de/",
+   "https://www.lk-calw.de/",
+   "https://www.lra-calw.de/",
+   "https://www.calw.de/",
+   "https://www.landkreiscalw.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-calw.de/": "geraten",
+   "https://www.kreis-calw.de/": "vorher_oder_liste",
+   "https://www.lk-calw.de/": "geraten",
+   "https://www.lra-calw.de/": "geraten",
+   "https://www.calw.de/": "geraten",
+   "https://www.landkreiscalw.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08236",
+  "name": "Enzkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-enz.de/",
+   "https://www.kreis-enz.de/",
+   "https://www.lk-enz.de/",
+   "https://www.lra-enz.de/",
+   "https://www.enz.de/",
+   "https://www.landkreisenz.de/",
+   "https://www.enzkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 28,
+  "herkunft": {
+   "https://www.landkreis-enz.de/": "geraten",
+   "https://www.kreis-enz.de/": "geraten",
+   "https://www.lk-enz.de/": "geraten",
+   "https://www.lra-enz.de/": "geraten",
+   "https://www.enz.de/": "geraten",
+   "https://www.landkreisenz.de/": "geraten",
+   "https://www.enzkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08237",
+  "name": "Freudenstadt",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-fds.de/startseite",
+   "https://www.landkreis-freudenstadt.de/",
+   "https://www.kreis-freudenstadt.de/",
+   "https://www.lk-freudenstadt.de/",
+   "https://www.lra-freudenstadt.de/",
+   "https://www.freudenstadt.de/",
+   "https://www.landkreisfreudenstadt.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 16,
+  "herkunft": {
+   "https://www.landkreis-freudenstadt.de/": "geraten",
+   "https://www.kreis-freudenstadt.de/": "geraten",
+   "https://www.lk-freudenstadt.de/": "geraten",
+   "https://www.lra-freudenstadt.de/": "geraten",
+   "https://www.freudenstadt.de/": "geraten",
+   "https://www.landkreisfreudenstadt.de/": "geraten",
+   "https://www.kreis-fds.de/startseite": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08315",
+  "name": "Breisgau-Hochschwarzwald",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.breisgau-hochschwarzwald.de/start",
+   "https://www.breisgau-hochschwarzwald.de/",
+   "https://www.landkreis-breisgau-hochschwarzwald.de/",
+   "https://www.kreis-breisgau-hochschwarzwald.de/",
+   "https://www.lk-breisgau-hochschwarzwald.de/",
+   "https://www.lra-breisgau-hochschwarzwald.de/",
+   "https://www.landkreisbreisgauhochschwarzwald.de/",
+   "https://www.breisgauhochschwarzwald.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 50,
+  "herkunft": {
+   "https://www.landkreis-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.kreis-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.lk-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.lra-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.breisgau-hochschwarzwald.de/": "vorher_oder_liste",
+   "https://www.landkreisbreisgauhochschwarzwald.de/": "geraten",
+   "https://www.breisgauhochschwarzwald.de/": "geraten",
+   "https://www.breisgau-hochschwarzwald.de/start": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08316",
+  "name": "Emmendingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-emmendingen.de/startseite",
+   "https://www.landkreis-emmendingen.de/",
+   "https://www.kreis-emmendingen.de/",
+   "https://www.lk-emmendingen.de/",
+   "https://www.lra-emmendingen.de/",
+   "https://www.emmendingen.de/",
+   "https://www.landkreisemmendingen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 24,
+  "herkunft": {
+   "https://www.landkreis-emmendingen.de/": "geraten",
+   "https://www.kreis-emmendingen.de/": "geraten",
+   "https://www.lk-emmendingen.de/": "geraten",
+   "https://www.lra-emmendingen.de/": "geraten",
+   "https://www.emmendingen.de/": "geraten",
+   "https://www.landkreisemmendingen.de/": "geraten",
+   "https://www.landkreis-emmendingen.de/startseite": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08317",
+  "name": "Ortenaukreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ortenau.de/",
+   "https://www.kreis-ortenau.de/",
+   "https://www.lk-ortenau.de/",
+   "https://www.lra-ortenau.de/",
+   "https://www.ortenau.de/",
+   "https://www.landkreisortenau.de/",
+   "https://www.ortenaukreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 52,
+  "herkunft": {
+   "https://www.landkreis-ortenau.de/": "geraten",
+   "https://www.kreis-ortenau.de/": "geraten",
+   "https://www.lk-ortenau.de/": "geraten",
+   "https://www.lra-ortenau.de/": "geraten",
+   "https://www.ortenau.de/": "geraten",
+   "https://www.landkreisortenau.de/": "geraten",
+   "https://www.ortenaukreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08325",
+  "name": "Rottweil",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-rottweil.de/willkommen",
+   "https://www.landkreis-rottweil.de/",
+   "https://www.kreis-rottweil.de/",
+   "https://www.lk-rottweil.de/",
+   "https://www.lra-rottweil.de/",
+   "https://www.rottweil.de/",
+   "https://www.landkreisrottweil.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 21,
+  "herkunft": {
+   "https://www.landkreis-rottweil.de/": "geraten",
+   "https://www.kreis-rottweil.de/": "geraten",
+   "https://www.lk-rottweil.de/": "geraten",
+   "https://www.lra-rottweil.de/": "geraten",
+   "https://www.rottweil.de/": "geraten",
+   "https://www.landkreisrottweil.de/": "geraten",
+   "https://www.landkreis-rottweil.de/willkommen": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08326",
+  "name": "Schwarzwald-Baar-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-schwarzwald-baar.de/",
+   "https://www.kreis-schwarzwald-baar.de/",
+   "https://www.lk-schwarzwald-baar.de/",
+   "https://www.lra-schwarzwald-baar.de/",
+   "https://www.schwarzwald-baar.de/",
+   "https://www.landkreisschwarzwaldbaar.de/",
+   "https://www.schwarzwald-baar-kreis.de/",
+   "https://www.schwarzwaldbaarkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 20,
+  "herkunft": {
+   "https://www.landkreis-schwarzwald-baar.de/": "geraten",
+   "https://www.kreis-schwarzwald-baar.de/": "geraten",
+   "https://www.lk-schwarzwald-baar.de/": "geraten",
+   "https://www.lra-schwarzwald-baar.de/": "geraten",
+   "https://www.schwarzwald-baar.de/": "geraten",
+   "https://www.landkreisschwarzwaldbaar.de/": "geraten",
+   "https://www.schwarzwald-baar-kreis.de/": "geraten",
+   "https://www.schwarzwaldbaarkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08327",
+  "name": "Tuttlingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-tuttlingen.de/",
+   "https://www.kreis-tuttlingen.de/",
+   "https://www.lk-tuttlingen.de/",
+   "https://www.lra-tuttlingen.de/",
+   "https://www.tuttlingen.de/",
+   "https://www.landkreistuttlingen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 35,
+  "herkunft": {
+   "https://www.landkreis-tuttlingen.de/": "vorher_oder_liste",
+   "https://www.kreis-tuttlingen.de/": "geraten",
+   "https://www.lk-tuttlingen.de/": "geraten",
+   "https://www.lra-tuttlingen.de/": "geraten",
+   "https://www.tuttlingen.de/": "geraten",
+   "https://www.landkreistuttlingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08335",
+  "name": "Konstanz",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-konstanz.de/",
+   "https://www.kreis-konstanz.de/",
+   "https://www.lk-konstanz.de/",
+   "https://www.lra-konstanz.de/",
+   "https://www.konstanz.de/",
+   "https://www.landkreiskonstanz.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-konstanz.de/": "geraten",
+   "https://www.kreis-konstanz.de/": "geraten",
+   "https://www.lk-konstanz.de/": "geraten",
+   "https://www.lra-konstanz.de/": "geraten",
+   "https://www.konstanz.de/": "geraten",
+   "https://www.landkreiskonstanz.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08336",
+  "name": "Lörrach",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.loerrach-landkreis.de/willkommen",
+   "https://www.loerrach-landkreis.de/",
+   "https://www.landkreis-loerrach.de/",
+   "https://www.kreis-loerrach.de/",
+   "https://www.lk-loerrach.de/",
+   "https://www.lra-loerrach.de/",
+   "https://www.loerrach.de/",
+   "https://www.landkreisloerrach.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 35,
+  "herkunft": {
+   "https://www.landkreis-loerrach.de/": "geraten",
+   "https://www.kreis-loerrach.de/": "geraten",
+   "https://www.lk-loerrach.de/": "geraten",
+   "https://www.lra-loerrach.de/": "geraten",
+   "https://www.loerrach.de/": "geraten",
+   "https://www.landkreisloerrach.de/": "geraten",
+   "https://www.loerrach-landkreis.de/willkommen": "vorher_oder_liste",
+   "https://www.loerrach-landkreis.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08337",
+  "name": "Waldshut",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-waldshut.de/",
+   "https://www.kreis-waldshut.de/",
+   "https://www.lk-waldshut.de/",
+   "https://www.lra-waldshut.de/",
+   "https://www.waldshut.de/",
+   "https://www.landkreiswaldshut.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 32,
+  "herkunft": {
+   "https://www.landkreis-waldshut.de/": "vorher_oder_liste",
+   "https://www.kreis-waldshut.de/": "geraten",
+   "https://www.lk-waldshut.de/": "geraten",
+   "https://www.lra-waldshut.de/": "geraten",
+   "https://www.waldshut.de/": "geraten",
+   "https://www.landkreiswaldshut.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08415",
+  "name": "Reutlingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-reutlingen.de/",
+   "https://www.landkreis-reutlingen.de/",
+   "https://www.lk-reutlingen.de/",
+   "https://www.lra-reutlingen.de/",
+   "https://www.reutlingen.de/",
+   "https://www.landkreisreutlingen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 27,
+  "herkunft": {
+   "https://www.landkreis-reutlingen.de/": "geraten",
+   "https://www.kreis-reutlingen.de/": "vorher_oder_liste",
+   "https://www.lk-reutlingen.de/": "geraten",
+   "https://www.lra-reutlingen.de/": "geraten",
+   "https://www.reutlingen.de/": "geraten",
+   "https://www.landkreisreutlingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08416",
+  "name": "Tübingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-tuebingen.de/",
+   "https://www.kreis-tuebingen.de/",
+   "https://www.lk-tuebingen.de/",
+   "https://www.lra-tuebingen.de/",
+   "https://www.tuebingen.de/",
+   "https://www.landkreistuebingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 15,
+  "herkunft": {
+   "https://www.landkreis-tuebingen.de/": "geraten",
+   "https://www.kreis-tuebingen.de/": "geraten",
+   "https://www.lk-tuebingen.de/": "geraten",
+   "https://www.lra-tuebingen.de/": "geraten",
+   "https://www.tuebingen.de/": "geraten",
+   "https://www.landkreistuebingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08417",
+  "name": "Zollernalbkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-zollernalb.de/",
+   "https://www.kreis-zollernalb.de/",
+   "https://www.lk-zollernalb.de/",
+   "https://www.lra-zollernalb.de/",
+   "https://www.zollernalb.de/",
+   "https://www.landkreiszollernalb.de/",
+   "https://www.zollernalbkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-zollernalb.de/": "geraten",
+   "https://www.kreis-zollernalb.de/": "geraten",
+   "https://www.lk-zollernalb.de/": "geraten",
+   "https://www.lra-zollernalb.de/": "geraten",
+   "https://www.zollernalb.de/": "geraten",
+   "https://www.landkreiszollernalb.de/": "geraten",
+   "https://www.zollernalbkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08425",
+  "name": "Alb-Donau-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-alb-donau.de/",
+   "https://www.kreis-alb-donau.de/",
+   "https://www.lk-alb-donau.de/",
+   "https://www.lra-alb-donau.de/",
+   "https://www.alb-donau.de/",
+   "https://www.landkreisalbdonau.de/",
+   "https://www.alb-donau-kreis.de/",
+   "https://www.albdonaukreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 55,
+  "herkunft": {
+   "https://www.landkreis-alb-donau.de/": "geraten",
+   "https://www.kreis-alb-donau.de/": "geraten",
+   "https://www.lk-alb-donau.de/": "geraten",
+   "https://www.lra-alb-donau.de/": "geraten",
+   "https://www.alb-donau.de/": "geraten",
+   "https://www.landkreisalbdonau.de/": "geraten",
+   "https://www.alb-donau-kreis.de/": "geraten",
+   "https://www.albdonaukreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08426",
+  "name": "Biberach",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-biberach.de/",
+   "https://www.kreis-biberach.de/",
+   "https://www.lk-biberach.de/",
+   "https://www.lra-biberach.de/",
+   "https://www.biberach.de/",
+   "https://www.landkreisbiberach.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 45,
+  "herkunft": {
+   "https://www.landkreis-biberach.de/": "geraten",
+   "https://www.kreis-biberach.de/": "geraten",
+   "https://www.lk-biberach.de/": "geraten",
+   "https://www.lra-biberach.de/": "geraten",
+   "https://www.biberach.de/": "geraten",
+   "https://www.landkreisbiberach.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08435",
+  "name": "Bodenseekreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-bodensee.de/",
+   "https://www.kreis-bodensee.de/",
+   "https://www.lk-bodensee.de/",
+   "https://www.lra-bodensee.de/",
+   "https://www.bodensee.de/",
+   "https://www.landkreisbodensee.de/",
+   "https://www.bodenseekreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-bodensee.de/": "geraten",
+   "https://www.kreis-bodensee.de/": "geraten",
+   "https://www.lk-bodensee.de/": "geraten",
+   "https://www.lra-bodensee.de/": "geraten",
+   "https://www.bodensee.de/": "geraten",
+   "https://www.landkreisbodensee.de/": "geraten",
+   "https://www.bodenseekreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08436",
+  "name": "Ravensburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ravensburg.de/",
+   "https://www.kreis-ravensburg.de/",
+   "https://www.lk-ravensburg.de/",
+   "https://www.lra-ravensburg.de/",
+   "https://www.ravensburg.de/",
+   "https://www.landkreisravensburg.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 39,
+  "herkunft": {
+   "https://www.landkreis-ravensburg.de/": "geraten",
+   "https://www.kreis-ravensburg.de/": "geraten",
+   "https://www.lk-ravensburg.de/": "geraten",
+   "https://www.lra-ravensburg.de/": "geraten",
+   "https://www.ravensburg.de/": "geraten",
+   "https://www.landkreisravensburg.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08437",
+  "name": "Sigmaringen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-sigmaringen.de/",
+   "https://www.kreis-sigmaringen.de/",
+   "https://www.lk-sigmaringen.de/",
+   "https://www.lra-sigmaringen.de/",
+   "https://www.sigmaringen.de/",
+   "https://www.landkreissigmaringen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-sigmaringen.de/": "geraten",
+   "https://www.kreis-sigmaringen.de/": "geraten",
+   "https://www.lk-sigmaringen.de/": "geraten",
+   "https://www.lra-sigmaringen.de/": "geraten",
+   "https://www.sigmaringen.de/": "geraten",
+   "https://www.landkreissigmaringen.de/": "geraten"
+  }
+ }
+]
