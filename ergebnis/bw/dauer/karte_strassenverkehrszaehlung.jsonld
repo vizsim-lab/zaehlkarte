@@ -1,0 +1,199 @@
+{
+  "@context": {
+    "adms": "http://www.w3.org/ns/adms#",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "cnt": "http://www.w3.org/2011/content#",
+    "cr": "http://mlcommons.org/croissant/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcatap": "http://data.europa.eu/r5r/",
+    "dcatde": "http://dcat-ap.de/def/dcatde/",
+    "dcatus": "http://resources.data.gov/ontology/dcat-us#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dct": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gsp": "http://www.opengis.net/ont/geosparql#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "schema1": "http://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "time1": "http://www.w3.org/2006/time",
+    "vann": "http://purl.org/vocab/vann/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "Verkehrsministerium%20Baden-Württemberg",
+      "@type": "foaf:Document"
+    },
+    {
+      "@id": "https://mobidata-bw.de/organization/129fb088-4d3e-44ce-b5f4-218bc3cfcdd4",
+      "@type": "foaf:Agent",
+      "foaf:name": "Verkehrsministerium Baden - Württemberg"
+    },
+    {
+      "@id": "https://mobidata-bw.de/dataset/fabf8610-5915-4f08-9813-49d2d8ff2aa8/resource/55f3fda3-e329-4f84-b7f7-99e322b78782",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://mobidata-bw.de/vm/Verkehrsentwicklungen_Jahresvergleiche_Strassenverkehr_BW/Jahresvergleiche/Darstellung_MethodikUndErgebnisse_2015_2017.pdf"
+      },
+      "dcat:byteSize": {
+        "@type": "xsd:decimal",
+        "@value": "5440613"
+      },
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2024-02-19T07:31:36.872220"
+      },
+      "dct:license": {
+        "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2024-02-19T07:31:36.847457"
+      },
+      "dct:title": "Darstellung der Methodik für die Straßenverkehrszählung"
+    },
+    {
+      "@id": "https://mobidata-bw.de/dataset/fabf8610-5915-4f08-9813-49d2d8ff2aa8/resource/5b627d01-7d83-479b-9f14-e87008a9b738",
+      "@type": "dcat:Distribution",
+      "dcat:accessURL": {
+        "@id": "https://mobidata-bw.de/vm/Karte_Strassenverkehrszaehlung_BW/SVZ-Zaehlstellen_2026-06-26_augmented_SVZ2024.csv"
+      },
+      "dcat:mediaType": {
+        "@id": "https://www.iana.org/assignments/media-types/text/csv"
+      },
+      "dct:description": "Unter dem obigen Link kann die Grunddatentabelle, welche zur Erstellung der SVZ-Karte BW verwendet wird, abgerufen werden.\r\n\r\n<b>METADATEN</b><br>\r\nzur Grunddatentabelle hinter der Karte der Straßenverkehrszählung in Baden-Württemberg\r\n\r\nJede Zeile repräsentiert eine Zählstelle.<br>\r\nJede Spalte repräsentiert ein Zählstellen-Attribut.<br>\r\n\r\n\"[Attribut-Name]\": [Attribut-Beschreibung]<br>\r\n<li>\"svznr\": achtstelliger Identifikator einer Zählstelle (integer)</li>\r\n<li>\"zstart\": Art der Zählstelle aus {TM, DZ, MZ} (String)</li>\r\n<li>\"klasse\": Straßenklasse aus {A, B, L, K, G} (String)</li>\r\n<li>\"nummer\": Straßennummer (integer)</li>\r\n<li>\"gpsx1\": GPS-Koordinate Längengrad (float)</li>\r\n<li>\"gpsy1\": GPS-Koordinate Breitengrad (float)</li>\r\n<li>\"RI\": Fahrtrichtung 1 (String)</li>\r\n<li>\"RII\": Fahrtrichtung 2 (String)</li>\r\n<li>\"DTV{YYYY}\": Durchschnittlicher Täglicher Verkehr alle Tage im Jahr {YYYY} (integer)</li>\r\n<li>\"DTVSV\": Durchschnittlicher Täglicher Verkehr Schwerverkehr an allen Tagen (integer)",
+      "dct:format": {
+        "@id": "http://publications.europa.eu/resource/authority/file-type/CSV"
+      },
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-06T12:03:10.486228"
+      },
+      "dct:license": {
+        "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-07-22T11:03:54.049288"
+      },
+      "dct:title": "Grunddaten hinter der SVZ-Karte BW",
+      "spdx:checksum": {
+        "@id": "_:N58d77d795c754aea957224627e7aa3b3"
+      }
+    },
+    {
+      "@id": "_:N58d77d795c754aea957224627e7aa3b3",
+      "@type": "spdx:Checksum",
+      "spdx:checksumValue": {
+        "@type": "xsd:hexBinary",
+        "@value": "bfd8c0de1d5cc1c207f0e0b9cedaa1ea"
+      }
+    },
+    {
+      "@id": "https://mobidata-bw.de/dataset/fabf8610-5915-4f08-9813-49d2d8ff2aa8",
+      "@type": "dcat:Dataset",
+      "dcat:contactPoint": {
+        "@id": "_:N4f89f17856a74645bd6b63dc62f92392"
+      },
+      "dcat:distribution": [
+        {
+          "@id": "https://mobidata-bw.de/dataset/fabf8610-5915-4f08-9813-49d2d8ff2aa8/resource/5b627d01-7d83-479b-9f14-e87008a9b738"
+        },
+        {
+          "@id": "https://mobidata-bw.de/dataset/fabf8610-5915-4f08-9813-49d2d8ff2aa8/resource/55f3fda3-e329-4f84-b7f7-99e322b78782"
+        }
+      ],
+      "dcat:keyword": [
+        "Zähldaten",
+        "Straßenverkehr"
+      ],
+      "dcat:landingPage": {
+        "@id": "Verkehrsministerium%20Baden-Württemberg"
+      },
+      "dcat:theme": {
+        "@id": "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+      },
+      "dcatde:contributorID": {
+        "@id": "http://dcat-ap.de/def/contributors/govData"
+      },
+      "dcatde:maintainer": {
+        "@id": "_:N14ebd144f53144bf923453ccb829345f"
+      },
+      "dct:creator": {
+        "@id": "_:N650868b9d06a45d8ba9098d9c9a52884"
+      },
+      "dct:description": "<p>Die Straßenverkehrszählung (SVZ) umfasst alle Zählungen mittels Dauerzählstellen, temporären Zählstellen (Seitenradargeräten / Verkehrsmonitoring) und manuellen Zählstellen.</p>\n\n<h3>Zählstellen-Karte</h3>\n<p>Die Karte zeigt die temporären, dauerhaften und manuellen Zählstellen in Baden-Württemberg. Eingeblendet sind zunächst die Zählstellen an Autobahnen, welche bei hoher Zoomstufe durch die übrigen Zählstellen an Bundes-, Land- und Kreisstraßen ergänzt werden. Durch Klick auf eine Zählstelle lassen sich in einem Popup die jeweilige Straße und Zählstellennummer anzeigen. \n<p>Der folgende Link führt zur <strong> <a href=\"https://www.mobidata-bw.de/karten/count_car/\" target=\"_blank\">Vollbildansicht der Zählstellen-Karte</a></strong>.</p>\n<p><iframe src=\"https://www.mobidata-bw.de/karten/count_car/\" width=\"100%\" height=\"750px\"></iframe></p>\n<hr>\n\n<p><strong>Temporäre Zählungen (TM)</strong>: Die Zählgeräte der temporären Messungen sind mobil und daher an wechselnden Standorten einsetzbar. Es werden an den Zählstellen in einem vorgegebenen Messzeitraum von i.d.R. zwei mal zwei Wochen (jeweils vor und nach den Sommerferien) Zählungen vorgenommen. Der Verkehr wird kontinuierlich und rund um die Uhr gezählt. Die Temporären Zählungen stellen jährlich Verkehrswerte bereit. Die Ermittlung der Ergebnisse beruht dabei auf der Zählung von ca. 20% aller TM-Zählstellen jährlich. Die Ergebnisse der restlichen Zählstellen werden fortgeschrieben oder eingeschätzt. Die jährliche Einsatzplanung gewährleistet, dass die 5-Jährigkeit der Zählung gemäß SVZ auch bei den TM-Zählungen gewahrt bleibt. Die Punkte der temporäreren Zählstellen werden erst bei höherer Zoomstufe in der Karte sichtbar. </p>\n<p><strong>Dauerzählstellen (DZ)</strong>: Das Zählstellennetz der Dauerzählstellen (DZ) umfasst rd. 150 Zählstellen auf Bundesautobahnen, Bundes- und Landstraßen in Baden-Württemberg. Erfasst werden an den Dauerzählstellen alle Kraftfahrzeuge (Kfz). Es werden hierbei 8 + 1 = 9 Fahrzeugarten unterschieden.</p>\n<p><strong>Manuelle Zählungen (MZ) und Videodetektion</strong>: Durch manuelle Zählungen wird im Rahmen der SVZ alle 5 Jahre der Verkehr auf Bundesfernstraßen als zeitliche Stichprobe über ausgewählte Tage / Stunden eines Jahres erhoben. Für manuelle Zählungen wird im Normalfall an insgesamt 8 Tagen (2 Normalwerktage, 2 Freitage, 2 Ferienwerktage und 2 Sonntage) gezählt. An den Werktagen finden die Zählungen in der Zeit von 15 – 18 Uhr, an den Sonntagen von 16 – 19 Uhr und an den beiden Normalwerktagen zusätzlich vormittags in der Zeit von 7 – 9 Uhr statt. Insgesamt ergibt sich somit ein Zählumfang von maximal 28 Stunden je Zählstelle.\nIn den für die manuellen Zählungen vorgegebenen Zeiträumen können alternativ Erhebungen mittels Videotechnik vorgenommen werden. Die Videos werden anschließend von Personen, d. h. manuell angesehen und ausgewertet. Vorteil dieses Verfahrens ist die Auswertung durch eine überschaubare Anzahl Fachpersonal sowie die Nachvollziehbarkeit der Zählungen.</p>\n<hr>",
+      "dct:identifier": "fabf8610-5915-4f08-9813-49d2d8ff2aa8",
+      "dct:issued": {
+        "@type": "xsd:dateTime",
+        "@value": "2024-02-19T07:23:57.615129"
+      },
+      "dct:modified": {
+        "@type": "xsd:dateTime",
+        "@value": "2026-11-15T02:08:56.507347"
+      },
+      "dct:publisher": {
+        "@id": "https://mobidata-bw.de/organization/129fb088-4d3e-44ce-b5f4-218bc3cfcdd4"
+      },
+      "dct:spatial": {
+        "@id": "_:N137c51ed1e4b4df8b4a22d1706784f19"
+      },
+      "dct:title": "Karte der Straßenverkehrszählung in Baden-Württemberg"
+    },
+    {
+      "@id": "_:N650868b9d06a45d8ba9098d9c9a52884",
+      "@type": "foaf:Organization",
+      "foaf:mbox": "svz@vm.bwl.de",
+      "foaf:name": "Verkehrsministerium Baden-Württemberg"
+    },
+    {
+      "@id": "_:N14ebd144f53144bf923453ccb829345f",
+      "@type": "foaf:Organization",
+      "foaf:mbox": "svz@vm.bwl.de",
+      "foaf:name": "Verkehrsministerium Baden-Württemberg"
+    },
+    {
+      "@id": "_:N137c51ed1e4b4df8b4a22d1706784f19",
+      "@type": "dct:Location",
+      "locn:geometry": {
+        "@type": "gsp:wktLiteral",
+        "@value": "POLYGON ((7.5118 47.5324, 10.4956 47.5324, 10.4956 49.7913, 7.5118 49.7913, 7.5118 47.5324))"
+      }
+    },
+    {
+      "@id": "_:N4f89f17856a74645bd6b63dc62f92392",
+      "@type": "vcard:Organization",
+      "vcard:fn": "Verkehrsministerium Baden-Württemberg",
+      "vcard:hasEmail": {
+        "@id": "mailto:svz@vm.bwl.de"
+      }
+    },
+    {
+      "@id": "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+      "dct:type": {
+        "@id": "http://purl.org/adms/licencetype/UnknownIPR"
+      }
+    }
+  ]
+}
