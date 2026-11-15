@@ -33,7 +33,7 @@ FragDenStaat.
 | Bonn | NW | – | in der Karte |  |
 | Bottrop | NW | erhoben – Anfrage aussichtsreich |  | Anfrage nach allen Zählungen seit 2015 an das Stadtplanungsamt |
 | Braunschweig | NI | – | vorhanden, aber ohne Lizenz |  |
-| Bremen | HB | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung) |
+| Bremen | HB | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung) |
 | Bremerhaven | HB | auf Anfrage herausgegeben |  | Anfrage nach allen Zählungen seit 2015 mit den Werten je Intervall |
 | Buchloe | BY | nur Summen oder Mittelwerte offen |  | Anfrage nach den Exporten der Messgeräte (Werte je Stunde und Richtung) für die veröffentlichten Messungen, mit Lizenz |
 | Buxtehude | NI | nur als Karte |  | Anfrage nach den Zählungen für den Verkehrsentwicklungsplan (Werte je Zählstelle, Intervall und Richtung), mit Lizenz – nicht nach den Plänen |
@@ -64,6 +64,7 @@ FragDenStaat.
 | Groß-Gerau | HE | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Daten dieses Geräts (Stundenwerte je Richtung und Fahrzeugklasse) und nach weiteren Zählungen |
 | Görlitz | SN | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Knotenpunktzählungen (Werte je Intervall, Strom und Fahrzeugklasse), mit Lizenz |
 | Göttingen | NI | nur als Karte |  | Neu anfragen, gezielt nach den gezählten Werten je Zählstelle (die zweimal vier Stunden), nicht nach der Karte |
+| Gütersloh | NW | – | vorhanden, Werte nicht offen |  |
 | Halle (Saale) | ST | erhoben – Anfrage aussichtsreich |  | Anfrage nach allen Zählungen seit 2015 als Tabelle (je Intervall, Strom und Fahrzeugart), vorab mit Kostenschätzung |
 | Hamburg | HH | nur Summen oder Mittelwerte offen | in der Karte | Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt. |
 | Hannover | NI | – | vorhanden, aber ohne Lizenz |  |
@@ -77,11 +78,13 @@ FragDenStaat.
 | Karben | HE | vorhanden, aber ohne Lizenz |  | Anfrage nach den Rohdaten aller Messungen seit 2018 in derselben Form, mit Standort und Zeitraum je Messung und einer Lizenz |
 | Karlsruhe | BW | auf Anfrage herausgegeben | in der Karte | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023 |
 | Kassel | HE | vorhanden, aber ohne Lizenz | vorhanden, Werte nicht offen | Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz |
+| Kempten (Allgäu) | BY | – | vorhanden, Werte nicht offen |  |
 | Kevelaer | NW | vorhanden, aber ohne Lizenz |  | Bitte an die Stadt, die Zählung unter eine offene Lizenz zu stellen (etwa Datenlizenz Deutschland – Zero), am besten mit der Tabelle des Büros |
 | Kiel | SH | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je Intervall (nicht der Hochrechnung), maschinenlesbar |
 | Kirchheim unter Teck | BW | – | in der Karte |  |
 | Koblenz | RP | – | vorhanden, Werte nicht offen |  |
 | Köln | NW | nur Summen oder Mittelwerte offen | nur Summen oder Mittelwerte offen | Anfrage nach den Einzelzählungen hinter den Mittelwerten, an das Amt für Verkehrsmanagement |
+| Landau in der Pfalz | RP | – | vorhanden, Werte nicht offen |  |
 | Landkreis Bamberg | BY | – | vorhanden, Werte nicht offen |  |
 | Landkreis Böblingen | BW | – | in der Karte |  |
 | Landkreis Gifhorn | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen 2025 (je Zählstelle 24 Stunden, Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz |
@@ -89,6 +92,7 @@ FragDenStaat.
 | Landkreis Heilbronn | BW | – | in der Karte |  |
 | Landkreis Lüneburg | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach einem Export aller Zählungen mit den Leihgeräten (Werte je Stunde und Richtung), mit Lizenz |
 | Landkreis Marburg-Biedenkopf | HE | – | vorhanden, Werte nicht offen |  |
+| Landkreis München | BY | – | vorhanden, Werte nicht offen |  |
 | Landkreis Sächsische Schweiz-Osterzgebirge | SN | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen an den Kreisstraßen ab 2026 (Werte je Intervall und Richtung), mit Lizenz |
 | Landkreis Waldeck-Frankenberg | HE | – | vorhanden, Werte nicht offen |  |
 | Landshut | BY | – | vorhanden, Werte nicht offen |  |
@@ -99,7 +103,7 @@ FragDenStaat.
 | Ludwigsburg | BW | – | in der Karte |  |
 | Lörrach | BW | – | in der Karte |  |
 | Lübeck | SH | erhoben – Anfrage aussichtsreich |  | Anfrage nach allen Zählungen seit 2015, am besten als Export aus der Zählplattform (CSV/XLSX) |
-| Magdeburg | ST | auf Anfrage herausgegeben |  | Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen |
+| Magdeburg | ST | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Die Zählungen seit 2012 digital (CSV/XLSX statt PDF auf CD) und mit offener Lizenz anfragen |
 | Main-Kinzig-Kreis | HE | – | vorhanden, Werte nicht offen |  |
 | Mannheim | BW | – | in der Karte |  |
 | Marburg | HE | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage nach den Knotenpunktzählungen für MoVe 35 und allen weiteren Zählungen und Seitenradar-Messungen seit 2015, als Tabelle oder Export der Geräte |
@@ -114,7 +118,7 @@ FragDenStaat.
 | Neubulach | BW | vorhanden, aber ohne Lizenz |  | Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw |
 | Neuss | NW | – | in der Karte |  |
 | Neustadt am Rübenberge | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen 2021 (Werte je Intervall, Richtung und Fahrzeugklasse), mit Lizenz |
-| Nürnberg | BY | vorhanden, aber ohne Lizenz |  | Anfrage nach allen Zählungen seit 2015 in Halbstundenwerten je Richtung und Fahrzeugart, an das Verkehrsplanungsamt, mit Lizenz |
+| Nürnberg | BY | vorhanden, aber ohne Lizenz | vorhanden, Werte nicht offen | Anfrage nach allen Zählungen seit 2015 in Halbstundenwerten je Richtung und Fahrzeugart, an das Verkehrsplanungsamt, mit Lizenz |
 | Oberursel (Taunus) | HE | nur als Karte | vorhanden, Werte nicht offen | Anfrage nach den gezählten Werten dieser und aller späteren Zählungen |
 | Odenwaldkreis | HE | – | vorhanden, Werte nicht offen |  |
 | Offenbach am Main | HE | – | vorhanden, Werte nicht offen |  |
@@ -128,6 +132,7 @@ FragDenStaat.
 | Planegg | BY | – | vorhanden, aber ohne Lizenz |  |
 | Plön | SH | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen dieser Geräte (Werte je Stunde und Richtung), mit Lizenz |
 | Ratingen | NW | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen an 33 Kreuzungen (Oktober 2024) und allen weiteren seit 2015 |
+| Rees | NW | – | vorhanden, Werte nicht offen |  |
 | Regensburg | BY | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage nach allen Zählungen seit 2015 (Werte je Intervall, Strom bzw |
 | Region Hannover | NI | – | vorhanden, aber ohne Lizenz |  |
 | Rems-Murr-Kreis | BW | – | in der Karte |  |
@@ -582,6 +587,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, BremIFG
 
+**Dauerzählstellen (vorhanden, Werte nicht offen):** Rad-Dauerzählstellen („Fahrradzähler“, 2019 zwölf, etwa an der Graf-Moltke-Straße); Werte nur in Berichten an die Deputation, nicht als Daten veröffentlicht
+
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Senatorin+f%C3%BCr+Bau%2C+Mobilit%C3%A4t+und+Stadtentwicklung)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -602,7 +609,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-bremen/) · [bau.bremen.de: Verkehrsdaten](https://bau.bremen.de/mobilitaet/verkehrsdaten-3841)
+**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-bremen/) · [bau.bremen.de: Verkehrsdaten](https://bau.bremen.de/mobilitaet/verkehrsdaten-3841) · [Entwicklung der Radverkehrszahlen (Deputation, 2019)](https://bau.bremen.de/sixcms/media.php/13/S_TOP_30b_BdV_Entwicklung_Radverkehrszahlen.pdf)
 
 
 ## Bremerhaven (HB) – auf Anfrage herausgegeben
@@ -1164,7 +1171,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Hessisches UIG
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** zehn Rad-Dauerzählstellen des Landesnetzes (fünf an Standorten der Stadt, fünf von Hessen Mobil) und eine Zählsäule der Stadt – Werte nur im Zählportal des Landes, ohne Lizenzangabe; Detektordaten der Messstellen der Stadt über die Mobilithek nur nach Freigabe einer Subskription
+**Dauerzählstellen (vorhanden, Werte nicht offen):** zehn Rad-Dauerzählstellen des Landesnetzes (fünf an Standorten der Stadt, fünf von Hessen Mobil) und eine Zählsäule der Stadt – Werte nur im Zählportal des Landes, ohne Lizenzangabe; Detektordaten der Messstellen der Stadt über die Mobilithek nur nach Freigabe einer Subskription; dazu seit Oktober 2023 die Passantenfrequenz in acht Einkaufsstraßen auf der Urbanen Datenplattform (stündlich aktualisiert, mit der Wirtschaftsförderung), nicht als Daten veröffentlicht
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Frankfurt+am+Main+Verkehr)
 
@@ -1186,7 +1193,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [WFS Verkehrsmengen (Open Data Hessen)](https://opendata.hessen.de/dataset/wfs-verkehrsmengen-frankfurt-am-main) · [FragDenStaat 2018](https://fragdenstaat.de/anfrage/verkehrsaufkommen-frankfurt-sachsenhausen/) · [Rad-Dauerzählstellen (radfahren-ffm.de)](https://www.radfahren-ffm.de/703-0-Daten-fuer-die-Radverkehrsfoerderung.html) · [Zählportal des Landes](https://hessen-mobil.eco-counter.com/) · [Detektordaten (Mobilithek)](https://mobilithek.info/offers/110000000002386001)
+**Belege:** [WFS Verkehrsmengen (Open Data Hessen)](https://opendata.hessen.de/dataset/wfs-verkehrsmengen-frankfurt-am-main) · [FragDenStaat 2018](https://fragdenstaat.de/anfrage/verkehrsaufkommen-frankfurt-sachsenhausen/) · [Rad-Dauerzählstellen (radfahren-ffm.de)](https://www.radfahren-ffm.de/703-0-Daten-fuer-die-Radverkehrsfoerderung.html) · [Zählportal des Landes](https://hessen-mobil.eco-counter.com/) · [Detektordaten (Mobilithek)](https://mobilithek.info/offers/110000000002386001) · [Passantenfrequenz auf der Urbanen Datenplattform (Newsletter Oktober 2023)](https://frankfurt.de/-/media/frankfurtde/frankfurt-themen/digitalisierung/pdf/newsletter/2023/newsletter-oktober-2023.pdf)
 
 
 ## Freiburg im Breisgau (BW) – nichts offen
@@ -1479,6 +1486,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [FragDenStaat 2026](https://fragdenstaat.de/anfrage/verkehrszaehlung-2023-1/)
+
+
+## Gütersloh (NW) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** zwölf fest installierte Passantenzählstellen in der Innenstadt (Smart-City-Projekt, mit der Gütersloh Marketing GmbH), fortlaufend statt wie bisher an zwei Stichtagen im Jahr; Werte nicht als Daten veröffentlicht
+
+**Belege:** [Gütersloh zählt Passanten in der Innenstadt](https://www.guetersloh.de/de/rathaus/presseportal/news/meldungen/passantenzaehlung-innenstadt.php)
 
 
 ## Halle (Saale) (ST) – erhoben – Anfrage aussichtsreich
@@ -1794,6 +1808,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Belege:** [kassel.de](https://www.kassel.de/buerger/verkehr_und_mobilitaet/verkehrsprojekte/verkehrszaehlungen.php) · [FragDenStaat 2021](https://fragdenstaat.de/anfrage/ifg-anfrage-radverkehrszahlung/) · [Satzung laut HBDI (FragDenStaat 2020)](https://fragdenstaat.de/anfrage/automatisierte-verkehrszahlungen-in-rosbach-vdhohe-1/) · [Detektordaten (Mobilithek)](https://mobilithek.info/offers/110000000002398000)
 
 
+## Kempten (Allgäu) (BY) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** Fahrradzählanlage am Illersteg; Werte nicht als Daten veröffentlicht
+
+**Belege:** [Fahrradzählanlage Illersteg (Stadt Kempten)](https://kempten.de/02-textseite-30925-30925.html)
+
+
 ## Kevelaer (NW) – vorhanden, aber ohne Lizenz
 
 **Lage:** Für die Verkehrsuntersuchung im Kernort hat ein Planungsbüro im September 2019 an 16 Knotenpunkten (6–10 und 15–19 Uhr) und 13 Querschnitten (24 Stunden, per Video) gezählt. Die „Ergebnisse der Verkehrszählungen“ (74 Seiten) stehen auf kevelaer.de: je Knotenpunkt und Viertelstunde die Ströme nach Pkw, Krad, Lieferwagen und Lkw, je Querschnitt Stundenwerte, dazu DTV und Spitzenstunden. Eine Lizenz nennt die Stadt nicht; die Zählwerte sind daraus in der Karte (Kfz und Lkw je Stunde), die Seiten, die im PDF nur Bilder sind, abgeschrieben und wie alle anderen gegen die Summen des Berichts geprüft.
@@ -1903,6 +1924,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [Open.NRW](https://ckan.open.nrw.de/dataset/kfz-zaehlstellen-und-werte-koeln-k) · [FragDenStaat 2024](https://fragdenstaat.de/anfrage/verkehrszaehlungen-auf-der-kitschburger-str-in-koeln-lindenthal/) · [Fahrrad Verkehrsdaten Köln 2022 (Open.NRW)](https://open.nrw/dataset/fahrrad-verkehrsdaten-koln-2022-k) · [Neue Dauerzählstelle an der Hohe Pforte (2022)](https://www.stadt-koeln.de/politik-und-verwaltung/presse/mitteilungen/24564/index.html)
+
+
+## Landau in der Pfalz (RP) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** zwei Fahrradzählstationen (Merowingerstraße an der Brücke über die Bahn, Waffenstraße), zum Abschluss des Förderprojekts „Klimaschutz durch Radverkehr“; Werte nicht als Daten veröffentlicht
+
+**Belege:** [Zwei neue Fahrradzählstationen (Stadt Landau)](https://www.landau.de/Verwaltung-Politik/Pressemitteilungen/Landau-tritt-in-die-Pedale-Zwei-neue-Fahrradz%C3%A4hlstationen-markieren-Abschluss-des-F%C3%B6rderprojekts-Klimaschutz-durch-Radverkehr-Zus%C3%A4tzliche-Fahrradservicestation-in-der-Innenstadt.php?FID=2644.20496.1)
 
 
 ## Landkreis Bamberg (BY) – Dauerzählstellen vorhanden, Werte nicht offen
@@ -2024,6 +2052,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Lage:** kreiseigene Rad-Dauerzählstellen (Eco-Counter), 2024 um 17 Standorte erweitert, etwa am Lahnradweg in Sterzhausen und am Salzböderadweg – Werte nur im Zählportal des Landes, ohne Lizenzangabe
 
 **Belege:** [Radzählstellen (Landkreis)](https://www.marburg-biedenkopf.de/microsites/klimaschutz/team-radverkehr/radinfrastruktur/index.php) · [Radverkehrsbericht 2024 (PDF)](https://www.marburg-biedenkopf.de/auto-und-verkehr/radverkehr/20250228_Bericht_2024_final_komprimiert.pdf)
+
+
+## Landkreis München (BY) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** erste Fahrradzählstation des Landkreises, mit Display, an der Radhauptverbindung von München durch den Perlacher Forst nach Sauerlach (Linienstraße, Oberhaching); Werte nicht als Daten veröffentlicht
+
+**Belege:** [Fahrradzählstation (Landkreis München)](https://www.landkreis-muenchen.de/themen/mobilitaet/radverkehr/fahrradzaehlstation/)
 
 
 ## Landkreis Sächsische Schweiz-Osterzgebirge (SN) – erhoben – Anfrage aussichtsreich
@@ -2226,6 +2261,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, IZG LSA
 
+**Dauerzählstellen (vorhanden, Werte nicht offen):** Rad-Zählstelle am Hauptbahnhof (Weg unter den Eisenbahnbrücken, seit September 2022) mit Anzeige; Werte nicht als Daten veröffentlicht
+
 **Kontakt:** Landeshauptstadt Magdeburg · <info@magdeburg.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/7460/landeshauptstadt-magdeburg/)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -2246,7 +2283,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2022](https://fragdenstaat.de/anfrage/rohdaten-von-verkehrszahlungen-2012-bis-2021/)
+**Belege:** [FragDenStaat 2022](https://fragdenstaat.de/anfrage/rohdaten-von-verkehrszahlungen-2012-bis-2021/) · [Volksstimme: Zählstelle am Hauptbahnhof (Oktober 2022)](https://www.volksstimme.de/lokal/magdeburg/fahrrad-fahren-in-magdeburg-100-000-radfahrer-in-einem-monat-am-hauptbahnhof-3465724)
 
 
 ## Main-Kinzig-Kreis (HE) – Dauerzählstellen vorhanden, Werte nicht offen
@@ -2599,6 +2636,8 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Bayerisches UIG
 
+**Dauerzählstellen (vorhanden, Werte nicht offen):** zwölf Rad-Dauerzählstellen (Königstorgraben seit 2015, Karl-Bröger-Tunnel seit 2019, zehn weitere aus dem Förderprogramm „Digitalisierung kommunaler Verkehrssysteme“, vier mit Display); Werte nur auf der Zählstellen-Website, nicht als Daten veröffentlicht
+
 **Kontakt:** Verkehrsplanungsamt Nürnberg · [FragDenStaat](https://fragdenstaat.de/behoerde/52086/verkehrsplanungsamt-nuernberg/)
 
 **Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
@@ -2619,7 +2658,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2025/26](https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/) · [Verkehrszählungen (Berichte 2007–2025)](https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html) · [Bericht Verkehrszählung 2025](https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszahlung_bericht_2025.pdf)
+**Belege:** [FragDenStaat 2025/26](https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/) · [Verkehrszählungen (Berichte 2007–2025)](https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html) · [Bericht Verkehrszählung 2025](https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszahlung_bericht_2025.pdf) · [Radzählgeräte (Stadt Nürnberg)](https://www.nuernberg.de/internet/verkehrsplanung/radzaehlgeraete.html) · [10 Radzählgeräte für Nürnberg (Runder Tisch Radverkehr, Juli 2021)](https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/rtr/19f_rtr_radzaehlgeraete_vpl.pdf)
 
 
 ## Oberursel (Taunus) (HE) – nur als Karte
@@ -2684,7 +2723,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Niedersächsisches UIG
 
-**Dauerzählstellen (vorhanden, Werte nicht offen):** Rad-Zählsäule am Pophankenweg seit Februar 2023; Werte nicht als Daten veröffentlicht
+**Dauerzählstellen (vorhanden, Werte nicht offen):** Rad-Zählsäule am Pophankenweg seit Februar 2023 (Werte nicht als Daten veröffentlicht); Passantenzählung des Innenstadtmanagements an vier Standorten der Fußgängerzone, veröffentlicht nur als Monatswerte
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Oldenburg)
 
@@ -2706,7 +2745,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Verkehrszählung Ofenerdiek](https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn/bahnuebergang-am-stadtrand/verkehrszaehlung-ofenerdiek.html) · [Zählsäule am Pophankenweg](https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/radverkehr/woran-wir-noch-arbeiten/konkretes-aus-dem-rad-und-fussverkehrsprogramm/fahrradzaehlstation/radzaehlsaeule-am-pophankenweg-1.html)
+**Belege:** [Verkehrszählung Ofenerdiek](https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/oeffentliche-verkehrsmittel/bahn/bahnuebergang-am-stadtrand/verkehrszaehlung-ofenerdiek.html) · [Zählsäule am Pophankenweg](https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/radverkehr/woran-wir-noch-arbeiten/konkretes-aus-dem-rad-und-fussverkehrsprogramm/fahrradzaehlstation/radzaehlsaeule-am-pophankenweg-1.html) · [City: Passantenfrequenzen](https://www.oldenburg.de/startseite/wirtschaft/standort-oldenburg/innenstadtmanagement/city-passantenfrequenzen.html)
 
 
 ## Osnabrück (NI) – vorhanden, aber ohne Lizenz
@@ -2887,6 +2926,13 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 ```
 
 **Belege:** [Verkehrszählung an 33 Kreuzungen (2024)](https://www.stadt-ratingen.de/zzz-sit-politik-rathaus/pressemeldungen/meldung/verkehrszaehlung-an-33-kreuzungen)
+
+
+## Rees (NW) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** laserbasierte Personenfrequenzmessung im Stadtgebiet seit August 2025 (für Stadtmarketing und Veranstaltungsplanung); Werte nicht als Daten veröffentlicht
+
+**Belege:** [Personenfrequenzmessung im Reeser Stadtgebiet](https://www.stadt-rees.de/rathaus/veroeffentlichungen/presse-und-oeffentlichkeitsarbeit/2025/personenfrequenzmessung-im-reeser-stadtgebiet/)
 
 
 ## Regensburg (BY) – erhoben – Anfrage aussichtsreich
