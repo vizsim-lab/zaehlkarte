@@ -1,0 +1,3 @@
+{
+ "https://mobidata-bw.de": "User-agent: *\n\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n\n"
+}
