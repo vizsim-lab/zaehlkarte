@@ -5,6 +5,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.lrabb.de/",
    "https://www.landkreis-boeblingen.de/",
    "https://www.kreis-boeblingen.de/",
    "https://www.lk-boeblingen.de/",
@@ -20,7 +21,8 @@
    "https://www.lk-boeblingen.de/": "geraten",
    "https://www.lra-boeblingen.de/": "geraten",
    "https://www.boeblingen.de/": "geraten",
-   "https://www.landkreisboeblingen.de/": "geraten"
+   "https://www.landkreisboeblingen.de/": "geraten",
+   "https://www.lrabb.de/": "wikipedia"
   }
  },
  {
@@ -39,7 +41,7 @@
   "vorher": "nicht_erreicht",
   "gemeinden": 44,
   "herkunft": {
-   "https://www.landkreis-esslingen.de/": "geraten",
+   "https://www.landkreis-esslingen.de/": "wikipedia",
    "https://www.kreis-esslingen.de/": "geraten",
    "https://www.lk-esslingen.de/": "geraten",
    "https://www.lra-esslingen.de/": "geraten",
@@ -63,7 +65,7 @@
   "vorher": "nicht_erreicht",
   "gemeinden": 38,
   "herkunft": {
-   "https://www.landkreis-goeppingen.de/": "geraten",
+   "https://www.landkreis-goeppingen.de/": "wikipedia",
    "https://www.kreis-goeppingen.de/": "geraten",
    "https://www.lk-goeppingen.de/": "geraten",
    "https://www.lra-goeppingen.de/": "geraten",
@@ -87,7 +89,7 @@
   "vorher": "erreicht",
   "gemeinden": 39,
   "herkunft": {
-   "https://www.landkreis-ludwigsburg.de/": "vorher_oder_liste",
+   "https://www.landkreis-ludwigsburg.de/": "wikipedia",
    "https://www.kreis-ludwigsburg.de/": "geraten",
    "https://www.lk-ludwigsburg.de/": "geraten",
    "https://www.lra-ludwigsburg.de/": "geraten",
@@ -101,6 +103,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.rems-murr-kreis.de/",
    "https://www.rems-murr-kreis.de/startseite",
    "https://www.rems-murr-kreis.de",
    "https://www.landkreis-rems-murr.de/",
@@ -109,7 +112,6 @@
    "https://www.lra-rems-murr.de/",
    "https://www.rems-murr.de/",
    "https://www.landkreisremsmurr.de/",
-   "https://www.rems-murr-kreis.de/",
    "https://www.remsmurrkreis.de/"
   ],
   "vorher": "erreicht",
@@ -121,7 +123,7 @@
    "https://www.lra-rems-murr.de/": "geraten",
    "https://www.rems-murr.de/": "geraten",
    "https://www.landkreisremsmurr.de/": "geraten",
-   "https://www.rems-murr-kreis.de/": "geraten",
+   "https://www.rems-murr-kreis.de/": "wikipedia",
    "https://www.remsmurrkreis.de/": "geraten",
    "https://www.rems-murr-kreis.de/startseite": "vorher_oder_liste",
    "https://www.rems-murr-kreis.de": "vorher_oder_liste"
@@ -143,7 +145,7 @@
   "vorher": "erreicht",
   "gemeinden": 46,
   "herkunft": {
-   "https://www.landkreis-heilbronn.de/": "vorher_oder_liste",
+   "https://www.landkreis-heilbronn.de/": "wikipedia",
    "https://www.kreis-heilbronn.de/": "geraten",
    "https://www.lk-heilbronn.de/": "geraten",
    "https://www.lra-heilbronn.de/": "geraten",
@@ -157,13 +159,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.hohenlohekreis.de/",
    "https://www.landkreis-hohenlohe.de/",
    "https://www.kreis-hohenlohe.de/",
    "https://www.lk-hohenlohe.de/",
    "https://www.lra-hohenlohe.de/",
    "https://www.hohenlohe.de/",
-   "https://www.landkreishohenlohe.de/",
-   "https://www.hohenlohekreis.de/"
+   "https://www.landkreishohenlohe.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 16,
@@ -174,7 +176,7 @@
    "https://www.lra-hohenlohe.de/": "geraten",
    "https://www.hohenlohe.de/": "geraten",
    "https://www.landkreishohenlohe.de/": "geraten",
-   "https://www.hohenlohekreis.de/": "geraten"
+   "https://www.hohenlohekreis.de/": "wikipedia"
   }
  },
  {
@@ -183,6 +185,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.lrasha.de/",
    "https://www.landkreis-schwaebisch-hall.de/",
    "https://www.kreis-schwaebisch-hall.de/",
    "https://www.lk-schwaebisch-hall.de/",
@@ -200,7 +203,8 @@
    "https://www.lra-schwaebisch-hall.de/": "geraten",
    "https://www.schwaebisch-hall.de/": "geraten",
    "https://www.landkreisschwaebischhall.de/": "geraten",
-   "https://www.schwaebischhall.de/": "geraten"
+   "https://www.schwaebischhall.de/": "geraten",
+   "https://www.lrasha.de/": "wikipedia"
   }
  },
  {
@@ -209,13 +213,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.main-tauber-kreis.de/",
    "https://www.landkreis-main-tauber.de/",
    "https://www.kreis-main-tauber.de/",
    "https://www.lk-main-tauber.de/",
    "https://www.lra-main-tauber.de/",
    "https://www.main-tauber.de/",
    "https://www.landkreismaintauber.de/",
-   "https://www.main-tauber-kreis.de/",
    "https://www.maintauberkreis.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -227,7 +231,7 @@
    "https://www.lra-main-tauber.de/": "geraten",
    "https://www.main-tauber.de/": "geraten",
    "https://www.landkreismaintauber.de/": "geraten",
-   "https://www.main-tauber-kreis.de/": "geraten",
+   "https://www.main-tauber-kreis.de/": "wikipedia",
    "https://www.maintauberkreis.de/": "geraten"
   }
  },
@@ -237,6 +241,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.landkreis-heidenheim.de/",
    "https://www.landkreis-heidenheim.de/",
    "https://www.kreis-heidenheim.de/",
    "https://www.lk-heidenheim.de/",
@@ -252,7 +257,8 @@
    "https://www.lk-heidenheim.de/": "geraten",
    "https://www.lra-heidenheim.de/": "geraten",
    "https://www.heidenheim.de/": "geraten",
-   "https://www.landkreisheidenheim.de/": "geraten"
+   "https://www.landkreisheidenheim.de/": "geraten",
+   "http://www.landkreis-heidenheim.de/": "wikipedia"
   }
  },
  {
@@ -261,13 +267,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.ostalbkreis.de/",
    "https://www.landkreis-ostalb.de/",
    "https://www.kreis-ostalb.de/",
    "https://www.lk-ostalb.de/",
    "https://www.lra-ostalb.de/",
    "https://www.ostalb.de/",
-   "https://www.landkreisostalb.de/",
-   "https://www.ostalbkreis.de/"
+   "https://www.landkreisostalb.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 42,
@@ -278,7 +284,7 @@
    "https://www.lra-ostalb.de/": "geraten",
    "https://www.ostalb.de/": "geraten",
    "https://www.landkreisostalb.de/": "geraten",
-   "https://www.ostalbkreis.de/": "geraten"
+   "https://www.ostalbkreis.de/": "wikipedia"
   }
  },
  {
@@ -297,7 +303,7 @@
   "vorher": "erreicht",
   "gemeinden": 32,
   "herkunft": {
-   "https://www.landkreis-karlsruhe.de/": "vorher_oder_liste",
+   "https://www.landkreis-karlsruhe.de/": "wikipedia",
    "https://www.kreis-karlsruhe.de/": "geraten",
    "https://www.lk-karlsruhe.de/": "geraten",
    "https://www.lra-karlsruhe.de/": "geraten",
@@ -311,6 +317,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.landkreis-rastatt.de/",
    "https://www.landkreis-rastatt.de/startseite",
    "https://www.landkreis-rastatt.de/",
    "https://www.kreis-rastatt.de/",
@@ -328,7 +335,8 @@
    "https://www.lra-rastatt.de/": "geraten",
    "https://www.rastatt.de/": "geraten",
    "https://www.landkreisrastatt.de/": "geraten",
-   "https://www.landkreis-rastatt.de/startseite": "vorher_oder_liste"
+   "https://www.landkreis-rastatt.de/startseite": "vorher_oder_liste",
+   "http://www.landkreis-rastatt.de/": "wikipedia"
   }
  },
  {
@@ -337,6 +345,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.neckar-odenwald-kreis.de/",
    "https://www.landkreis-neckar-odenwald.de/",
    "https://www.kreis-neckar-odenwald.de/",
    "https://www.lk-neckar-odenwald.de/",
@@ -356,7 +365,8 @@
    "https://www.neckar-odenwald.de/": "geraten",
    "https://www.landkreisneckarodenwald.de/": "geraten",
    "https://www.neckar-odenwald-kreis.de/": "geraten",
-   "https://www.neckarodenwaldkreis.de/": "geraten"
+   "https://www.neckarodenwaldkreis.de/": "geraten",
+   "http://www.neckar-odenwald-kreis.de/": "wikipedia"
   }
  },
  {
@@ -365,6 +375,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.rhein-neckar-kreis.de/",
    "https://landkreis-rhein-neckar-kreis.de/",
    "https://www.landkreis-rhein-neckar.de/",
    "https://www.kreis-rhein-neckar.de/",
@@ -372,7 +383,6 @@
    "https://www.lra-rhein-neckar.de/",
    "https://www.rhein-neckar.de/",
    "https://www.landkreisrheinneckar.de/",
-   "https://www.rhein-neckar-kreis.de/",
    "https://www.rheinneckarkreis.de/"
   ],
   "vorher": "erreicht",
@@ -384,7 +394,7 @@
    "https://www.lra-rhein-neckar.de/": "geraten",
    "https://www.rhein-neckar.de/": "geraten",
    "https://www.landkreisrheinneckar.de/": "geraten",
-   "https://www.rhein-neckar-kreis.de/": "geraten",
+   "https://www.rhein-neckar-kreis.de/": "wikipedia",
    "https://www.rheinneckarkreis.de/": "geraten",
    "https://landkreis-rhein-neckar-kreis.de/": "vorher_oder_liste"
   }
@@ -406,7 +416,7 @@
   "gemeinden": 25,
   "herkunft": {
    "https://www.landkreis-calw.de/": "geraten",
-   "https://www.kreis-calw.de/": "vorher_oder_liste",
+   "https://www.kreis-calw.de/": "wikipedia",
    "https://www.lk-calw.de/": "geraten",
    "https://www.lra-calw.de/": "geraten",
    "https://www.calw.de/": "geraten",
@@ -419,13 +429,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.enzkreis.de/",
    "https://www.landkreis-enz.de/",
    "https://www.kreis-enz.de/",
    "https://www.lk-enz.de/",
    "https://www.lra-enz.de/",
    "https://www.enz.de/",
-   "https://www.landkreisenz.de/",
-   "https://www.enzkreis.de/"
+   "https://www.landkreisenz.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 28,
@@ -436,7 +446,7 @@
    "https://www.lra-enz.de/": "geraten",
    "https://www.enz.de/": "geraten",
    "https://www.landkreisenz.de/": "geraten",
-   "https://www.enzkreis.de/": "geraten"
+   "https://www.enzkreis.de/": "wikipedia"
   }
  },
  {
@@ -445,8 +455,8 @@
   "art": "kreis",
   "tk": "44",
   "web": [
-   "https://www.kreis-fds.de/startseite",
    "https://www.landkreis-freudenstadt.de/",
+   "https://www.kreis-fds.de/startseite",
    "https://www.kreis-freudenstadt.de/",
    "https://www.lk-freudenstadt.de/",
    "https://www.lra-freudenstadt.de/",
@@ -456,7 +466,7 @@
   "vorher": "erreicht",
   "gemeinden": 16,
   "herkunft": {
-   "https://www.landkreis-freudenstadt.de/": "geraten",
+   "https://www.landkreis-freudenstadt.de/": "wikipedia",
    "https://www.kreis-freudenstadt.de/": "geraten",
    "https://www.lk-freudenstadt.de/": "geraten",
    "https://www.lra-freudenstadt.de/": "geraten",
@@ -471,8 +481,8 @@
   "art": "kreis",
   "tk": "44",
   "web": [
-   "https://www.breisgau-hochschwarzwald.de/start",
    "https://www.breisgau-hochschwarzwald.de/",
+   "https://www.breisgau-hochschwarzwald.de/start",
    "https://www.landkreis-breisgau-hochschwarzwald.de/",
    "https://www.kreis-breisgau-hochschwarzwald.de/",
    "https://www.lk-breisgau-hochschwarzwald.de/",
@@ -487,7 +497,7 @@
    "https://www.kreis-breisgau-hochschwarzwald.de/": "geraten",
    "https://www.lk-breisgau-hochschwarzwald.de/": "geraten",
    "https://www.lra-breisgau-hochschwarzwald.de/": "geraten",
-   "https://www.breisgau-hochschwarzwald.de/": "vorher_oder_liste",
+   "https://www.breisgau-hochschwarzwald.de/": "wikipedia",
    "https://www.landkreisbreisgauhochschwarzwald.de/": "geraten",
    "https://www.breisgauhochschwarzwald.de/": "geraten",
    "https://www.breisgau-hochschwarzwald.de/start": "vorher_oder_liste"
@@ -499,6 +509,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.landkreis-emmendingen.de/",
    "https://www.landkreis-emmendingen.de/startseite",
    "https://www.landkreis-emmendingen.de/",
    "https://www.kreis-emmendingen.de/",
@@ -516,7 +527,8 @@
    "https://www.lra-emmendingen.de/": "geraten",
    "https://www.emmendingen.de/": "geraten",
    "https://www.landkreisemmendingen.de/": "geraten",
-   "https://www.landkreis-emmendingen.de/startseite": "vorher_oder_liste"
+   "https://www.landkreis-emmendingen.de/startseite": "vorher_oder_liste",
+   "http://www.landkreis-emmendingen.de/": "wikipedia"
   }
  },
  {
@@ -525,13 +537,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.ortenaukreis.de/",
    "https://www.landkreis-ortenau.de/",
    "https://www.kreis-ortenau.de/",
    "https://www.lk-ortenau.de/",
    "https://www.lra-ortenau.de/",
    "https://www.ortenau.de/",
-   "https://www.landkreisortenau.de/",
-   "https://www.ortenaukreis.de/"
+   "https://www.landkreisortenau.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 52,
@@ -542,7 +554,7 @@
    "https://www.lra-ortenau.de/": "geraten",
    "https://www.ortenau.de/": "geraten",
    "https://www.landkreisortenau.de/": "geraten",
-   "https://www.ortenaukreis.de/": "geraten"
+   "https://www.ortenaukreis.de/": "wikipedia"
   }
  },
  {
@@ -551,8 +563,8 @@
   "art": "kreis",
   "tk": "44",
   "web": [
-   "https://www.landkreis-rottweil.de/willkommen",
    "https://www.landkreis-rottweil.de/",
+   "https://www.landkreis-rottweil.de/willkommen",
    "https://www.kreis-rottweil.de/",
    "https://www.lk-rottweil.de/",
    "https://www.lra-rottweil.de/",
@@ -562,7 +574,7 @@
   "vorher": "erreicht",
   "gemeinden": 21,
   "herkunft": {
-   "https://www.landkreis-rottweil.de/": "geraten",
+   "https://www.landkreis-rottweil.de/": "wikipedia",
    "https://www.kreis-rottweil.de/": "geraten",
    "https://www.lk-rottweil.de/": "geraten",
    "https://www.lra-rottweil.de/": "geraten",
@@ -577,6 +589,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.lrasbk.de/",
    "https://www.landkreis-schwarzwald-baar.de/",
    "https://www.kreis-schwarzwald-baar.de/",
    "https://www.lk-schwarzwald-baar.de/",
@@ -596,7 +609,8 @@
    "https://www.schwarzwald-baar.de/": "geraten",
    "https://www.landkreisschwarzwaldbaar.de/": "geraten",
    "https://www.schwarzwald-baar-kreis.de/": "geraten",
-   "https://www.schwarzwaldbaarkreis.de/": "geraten"
+   "https://www.schwarzwaldbaarkreis.de/": "geraten",
+   "https://www.lrasbk.de/": "wikipedia"
   }
  },
  {
@@ -615,7 +629,7 @@
   "vorher": "erreicht",
   "gemeinden": 35,
   "herkunft": {
-   "https://www.landkreis-tuttlingen.de/": "vorher_oder_liste",
+   "https://www.landkreis-tuttlingen.de/": "wikipedia",
    "https://www.kreis-tuttlingen.de/": "geraten",
    "https://www.lk-tuttlingen.de/": "geraten",
    "https://www.lra-tuttlingen.de/": "geraten",
@@ -629,6 +643,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.lrakn.de/",
    "https://www.landkreis-konstanz.de/",
    "https://www.kreis-konstanz.de/",
    "https://www.lk-konstanz.de/",
@@ -644,7 +659,8 @@
    "https://www.lk-konstanz.de/": "geraten",
    "https://www.lra-konstanz.de/": "geraten",
    "https://www.konstanz.de/": "geraten",
-   "https://www.landkreiskonstanz.de/": "geraten"
+   "https://www.landkreiskonstanz.de/": "geraten",
+   "https://www.lrakn.de/": "wikipedia"
   }
  },
  {
@@ -653,8 +669,8 @@
   "art": "kreis",
   "tk": "44",
   "web": [
-   "https://www.loerrach-landkreis.de/willkommen",
    "https://www.loerrach-landkreis.de/",
+   "https://www.loerrach-landkreis.de/willkommen",
    "https://www.landkreis-loerrach.de/",
    "https://www.kreis-loerrach.de/",
    "https://www.lk-loerrach.de/",
@@ -672,7 +688,7 @@
    "https://www.loerrach.de/": "geraten",
    "https://www.landkreisloerrach.de/": "geraten",
    "https://www.loerrach-landkreis.de/willkommen": "vorher_oder_liste",
-   "https://www.loerrach-landkreis.de/": "vorher_oder_liste"
+   "https://www.loerrach-landkreis.de/": "wikipedia"
   }
  },
  {
@@ -691,7 +707,7 @@
   "vorher": "erreicht",
   "gemeinden": 32,
   "herkunft": {
-   "https://www.landkreis-waldshut.de/": "vorher_oder_liste",
+   "https://www.landkreis-waldshut.de/": "wikipedia",
    "https://www.kreis-waldshut.de/": "geraten",
    "https://www.lk-waldshut.de/": "geraten",
    "https://www.lra-waldshut.de/": "geraten",
@@ -705,6 +721,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.kreis-reutlingen.de/",
    "https://www.kreis-reutlingen.de/",
    "https://www.landkreis-reutlingen.de/",
    "https://www.lk-reutlingen.de/",
@@ -720,7 +737,8 @@
    "https://www.lk-reutlingen.de/": "geraten",
    "https://www.lra-reutlingen.de/": "geraten",
    "https://www.reutlingen.de/": "geraten",
-   "https://www.landkreisreutlingen.de/": "geraten"
+   "https://www.landkreisreutlingen.de/": "geraten",
+   "http://www.kreis-reutlingen.de/": "wikipedia"
   }
  },
  {
@@ -729,6 +747,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.kreis-tuebingen.de/",
    "https://www.landkreis-tuebingen.de/",
    "https://www.kreis-tuebingen.de/",
    "https://www.lk-tuebingen.de/",
@@ -744,7 +763,8 @@
    "https://www.lk-tuebingen.de/": "geraten",
    "https://www.lra-tuebingen.de/": "geraten",
    "https://www.tuebingen.de/": "geraten",
-   "https://www.landkreistuebingen.de/": "geraten"
+   "https://www.landkreistuebingen.de/": "geraten",
+   "http://www.kreis-tuebingen.de/": "wikipedia"
   }
  },
  {
@@ -753,6 +773,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.zollernalbkreis.de/",
    "https://www.landkreis-zollernalb.de/",
    "https://www.kreis-zollernalb.de/",
    "https://www.lk-zollernalb.de/",
@@ -770,7 +791,8 @@
    "https://www.lra-zollernalb.de/": "geraten",
    "https://www.zollernalb.de/": "geraten",
    "https://www.landkreiszollernalb.de/": "geraten",
-   "https://www.zollernalbkreis.de/": "geraten"
+   "https://www.zollernalbkreis.de/": "geraten",
+   "http://www.zollernalbkreis.de/": "wikipedia"
   }
  },
  {
@@ -779,13 +801,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.alb-donau-kreis.de/",
    "https://www.landkreis-alb-donau.de/",
    "https://www.kreis-alb-donau.de/",
    "https://www.lk-alb-donau.de/",
    "https://www.lra-alb-donau.de/",
    "https://www.alb-donau.de/",
    "https://www.landkreisalbdonau.de/",
-   "https://www.alb-donau-kreis.de/",
    "https://www.albdonaukreis.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -797,7 +819,7 @@
    "https://www.lra-alb-donau.de/": "geraten",
    "https://www.alb-donau.de/": "geraten",
    "https://www.landkreisalbdonau.de/": "geraten",
-   "https://www.alb-donau-kreis.de/": "geraten",
+   "https://www.alb-donau-kreis.de/": "wikipedia",
    "https://www.albdonaukreis.de/": "geraten"
   }
  },
@@ -807,11 +829,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.biberach.de/",
    "https://www.landkreis-biberach.de/",
    "https://www.kreis-biberach.de/",
    "https://www.lk-biberach.de/",
    "https://www.lra-biberach.de/",
-   "https://www.biberach.de/",
    "https://www.landkreisbiberach.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -821,7 +843,7 @@
    "https://www.kreis-biberach.de/": "geraten",
    "https://www.lk-biberach.de/": "geraten",
    "https://www.lra-biberach.de/": "geraten",
-   "https://www.biberach.de/": "geraten",
+   "https://www.biberach.de/": "wikipedia",
    "https://www.landkreisbiberach.de/": "geraten"
   }
  },
@@ -831,6 +853,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.bodenseekreis.de/",
    "https://www.landkreis-bodensee.de/",
    "https://www.kreis-bodensee.de/",
    "https://www.lk-bodensee.de/",
@@ -848,7 +871,8 @@
    "https://www.lra-bodensee.de/": "geraten",
    "https://www.bodensee.de/": "geraten",
    "https://www.landkreisbodensee.de/": "geraten",
-   "https://www.bodenseekreis.de/": "geraten"
+   "https://www.bodenseekreis.de/": "geraten",
+   "http://www.bodenseekreis.de/": "wikipedia"
   }
  },
  {
@@ -857,6 +881,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.rv.de/",
    "https://www.landkreis-ravensburg.de/",
    "https://www.kreis-ravensburg.de/",
    "https://www.lk-ravensburg.de/",
@@ -872,7 +897,8 @@
    "https://www.lk-ravensburg.de/": "geraten",
    "https://www.lra-ravensburg.de/": "geraten",
    "https://www.ravensburg.de/": "geraten",
-   "https://www.landkreisravensburg.de/": "geraten"
+   "https://www.landkreisravensburg.de/": "geraten",
+   "https://www.rv.de/": "wikipedia"
   }
  },
  {
@@ -891,7 +917,7 @@
   "vorher": "nicht_erreicht",
   "gemeinden": 25,
   "herkunft": {
-   "https://www.landkreis-sigmaringen.de/": "geraten",
+   "https://www.landkreis-sigmaringen.de/": "wikipedia",
    "https://www.kreis-sigmaringen.de/": "geraten",
    "https://www.lk-sigmaringen.de/": "geraten",
    "https://www.lra-sigmaringen.de/": "geraten",
