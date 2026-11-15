@@ -255,7 +255,7 @@
      ],
      "zaehlungen": 26595,
      "was": "rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter",
-     "situation": null,
+     "situation": "In der Karte sind die Zählungen der Senatsverwaltung (ZDA-Rohdateien). Die Bezirke lassen daneben eigene Zählungen machen, vor allem für Kiezblocks und Verkehrskonzepte: Pankow (eine Antwort auf eine Schriftliche Anfrage listet die vom Senat und die vom Bezirk beauftragten Verkehrszählungen der letzten fünf Jahre; Kiezblocks Komponistenviertel und Arnimkiez 2021/2022), Mitte (Bellermannkiez, je eine Stunde vorher 2022 an fünf, nachher 2024 an sieben Zählstellen), Friedrichshain-Kreuzberg (Samariterkiez 2020, Ostkreuz-Kiez). Offen sind davon nur Präsentationen und Berichte; die Werte je Intervall ließen sich nach dem Berliner Informationsfreiheitsgesetz beim jeweiligen Bezirksamt anfragen.",
      "empfehlung": null,
      "weg": null,
      "anfrage": null,
@@ -267,6 +267,22 @@
       {
        "titel": "FragDenStaat 2019",
        "url": "https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/"
+      },
+      {
+       "titel": "Pankow: Zählungen von Senat und Bezirk (Drucksache 19/26749)",
+       "url": "https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-26749.pdf"
+      },
+      {
+       "titel": "Pankow: Kiezblock Komponistenviertel, Abschlussbericht",
+       "url": "https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/stadtentwicklungsamt/mobilbericht/230110_abschlussbericht_kiezblock_komponistenviertel.pdf"
+      },
+      {
+       "titel": "Mitte: Bellermannkiez, Evaluation der Zählung",
+       "url": "https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/bellermannkiez-evaluation-zaehlung-online.pdf"
+      },
+      {
+       "titel": "Friedrichshain-Kreuzberg: Samariterkiez, Evaluationsbericht",
+       "url": "https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/verkehrsberuhigung_samariterkiez_evaluationsbericht.pdf"
       }
      ]
     },
@@ -1794,8 +1810,24 @@
       }
      ]
     },
-    "dauer": null,
-    "stand_k": "ohne_lizenz"
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "zwölf Rad-Dauerzählstellen (Königstorgraben seit 2015, Karl-Bröger-Tunnel seit 2019, zehn weitere aus dem Förderprogramm „Digitalisierung kommunaler Verkehrssysteme“, vier mit Display); Werte nur auf der Zählstellen-Website, nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Radzählgeräte (Stadt Nürnberg)",
+       "url": "https://www.nuernberg.de/internet/verkehrsplanung/radzaehlgeraete.html"
+      },
+      {
+       "titel": "10 Radzählgeräte für Nürnberg (Runder Tisch Radverkehr, Juli 2021)",
+       "url": "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/rtr/19f_rtr_radzaehlgeraete_vpl.pdf"
+      }
+     ]
+    },
+    "stand_k": "ohne_lizenz",
+    "stand_d": "kandidat"
    }
   },
   {
@@ -2236,6 +2268,99 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     11.5908,
+     48.0247
+    ]
+   },
+   "properties": {
+    "ags": "09184",
+    "name": "Landkreis München",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "erste Fahrradzählstation des Landkreises, mit Display, an der Radhauptverbindung von München durch den Perlacher Forst nach Sauerlach (Linienstraße, Oberhaching); Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradzählstation (Landkreis München)",
+       "url": "https://www.landkreis-muenchen.de/themen/mobilitaet/radverkehr/fahrradzaehlstation/"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.3153,
+     47.7267
+    ]
+   },
+   "properties": {
+    "ags": "09763000",
+    "name": "Kempten (Allgäu)",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Fahrradzählanlage am Illersteg; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradzählanlage Illersteg (Stadt Kempten)",
+       "url": "https://kempten.de/02-textseite-30925-30925.html"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.4136,
+     49.5011
+    ]
+   },
+   "properties": {
+    "ags": "09575",
+    "name": "Landkreis Neustadt a.d.Aisch-Bad Windsheim",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "erste Fahrradzählstation des Landkreises seit Juli 2023, am Aischtalradweg zwischen Lenkersheim und Bad Windsheim (zählt fortlaufend, je Richtung); Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradzählstation „Aischtalradweg“ (Landkreis)",
+       "url": "https://www.kreis-nea.de/amt-verwaltung/veroeffentlichungen-formulare-co/aktuelles/fahrradzaehlstation-aischtalradweg"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      10.2303,
      50.0455
     ]
@@ -2371,7 +2496,7 @@
      "quellen": [],
      "zaehlungen": null,
      "was": "zählt an Knoten und Querschnitten, auch Rad; 2017 auf Anfrage eine Liste der Erhebungen 2016 mit Übersichtsplänen – Werte nur gegen Aufbereitung (rund 5 Euro je Zählstelle und Tag)",
-     "situation": "Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag.",
+     "situation": "Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag. Gezählt wird auch für die Beiräte der Stadtteile, etwa 2024 in der Lüssumer Straße für den Beirat Blumenthal (Ergebnisse in einer Stellungnahme an den Beirat).",
      "empfehlung": "Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung). Grundlage: Bremer Informationsfreiheitsgesetz.",
      "weg": "FragDenStaat, BremIFG",
      "anfrage": {
@@ -2386,11 +2511,27 @@
       {
        "titel": "bau.bremen.de: Verkehrsdaten",
        "url": "https://bau.bremen.de/mobilitaet/verkehrsdaten-3841"
+      },
+      {
+       "titel": "Blumenthal: Verkehrszählung Lüssumer Straße (2024)",
+       "url": "https://www.ortsamt-blumenthal.bremen.de/sixcms/media.php/13/Stellungnahme_Verkehrsz%C3%A4hlung_L%C3%BCssumer-Stra%C3%9Fe.docx.pdf"
       }
      ]
     },
-    "dauer": null,
-    "stand_k": "kandidat"
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Rad-Dauerzählstellen („Fahrradzähler“, 2019 zwölf, etwa an der Graf-Moltke-Straße); Werte nur in Berichten an die Deputation, nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Entwicklung der Radverkehrszahlen (Deputation, 2019)",
+       "url": "https://bau.bremen.de/sixcms/media.php/13/S_TOP_30b_BdV_Entwicklung_Radverkehrszahlen.pdf"
+      }
+     ]
+    },
+    "stand_k": "kandidat",
+    "stand_d": "kandidat"
    }
   },
   {
@@ -2478,7 +2619,7 @@
     "dauer": {
      "stand": "kandidat",
      "quellen": [],
-     "was": "zehn Rad-Dauerzählstellen des Landesnetzes (fünf an Standorten der Stadt, fünf von Hessen Mobil) und eine Zählsäule der Stadt – Werte nur im Zählportal des Landes, ohne Lizenzangabe; Detektordaten der Messstellen der Stadt über die Mobilithek nur nach Freigabe einer Subskription",
+     "was": "zehn Rad-Dauerzählstellen des Landesnetzes (fünf an Standorten der Stadt, fünf von Hessen Mobil) und eine Zählsäule der Stadt – Werte nur im Zählportal des Landes, ohne Lizenzangabe; Detektordaten der Messstellen der Stadt über die Mobilithek nur nach Freigabe einer Subskription; dazu seit Oktober 2023 die Passantenfrequenz in acht Einkaufsstraßen auf der Urbanen Datenplattform (stündlich aktualisiert, mit der Wirtschaftsförderung), nicht als Daten veröffentlicht",
      "situation": null,
      "links": [
       {
@@ -2492,6 +2633,10 @@
       {
        "titel": "Detektordaten (Mobilithek)",
        "url": "https://mobilithek.info/offers/110000000002386001"
+      },
+      {
+       "titel": "Passantenfrequenz auf der Urbanen Datenplattform (Newsletter Oktober 2023)",
+       "url": "https://frankfurt.de/-/media/frankfurtde/frankfurt-themen/digitalisierung/pdf/newsletter/2023/newsletter-oktober-2023.pdf"
       }
      ]
     },
@@ -3665,7 +3810,7 @@
      "quellen": [],
      "zaehlungen": null,
      "was": "Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch, in der Karte als Dauerzählstellen)",
-     "situation": "Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen.",
+     "situation": "Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022); offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen Kleinen Anfragen in der Bürgerschaft oder in Berichten zu Verkehrsversuchen – etwa der Bericht des LSBG zur Reeperbahn mit Kfz 6–19 Uhr (Osten und Westen) an vier Tagen 2019–2024 und Radfahrenden an zwei Zählstellen.",
      "empfehlung": "Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.",
      "weg": "FragDenStaat, Hamburgisches Transparenzgesetz",
      "anfrage": {
@@ -3684,6 +3829,18 @@
       {
        "titel": "BMV",
        "url": "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"
+      },
+      {
+       "titel": "Altona: Hegarstraße",
+       "url": "https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/baustellen/hegarstrasse-999432"
+      },
+      {
+       "titel": "Eimsbüttel: Gutachten Schulcampus Schnelsen",
+       "url": "https://bauleitplanung.hamburg.de/file/b37ff444-6c5a-11eb-aaea-00505697774f/bf180600-4571-42e7-b8a2-0edfb4b6534e"
+      },
+      {
+       "titel": "LSBG: Verkehrsversuch Reeperbahn, Bericht",
+       "url": "https://lsbg.hamburg.de/resource/blob/1119512/ccf28254f7fb8e78d7afa063c7b5ed9a/reeperbahn-stadtauswaerts-verstetigung-verkehrsversuch-abgestimmte-planung-bericht-data.pdf"
       }
      ]
     },
@@ -3906,6 +4063,37 @@
     },
     "dauer": null,
     "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.2617,
+     53.5569
+    ]
+   },
+   "properties": {
+    "ags": "13071",
+    "name": "Landkreis Mecklenburgische Seenplatte",
+    "land": "MV",
+    "recht": "Informationsfreiheitsgesetz M-V",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "zwölf Rad-Zählstationen an den Radrouten des Kreises (etwa in Altentreptow und Rechlin), dort auch nach Stunde und Tag ausgewertet; Werte nur in Presseberichten, nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Nordkurier: Kleine Kästen in der Seenplatte",
+       "url": "https://www.nordkurier.de/regional/mueritz/kleine-kasten-in-der-seenplatte-sorgen-fur-wichtige-verkehrs-daten-1172578"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
    }
   },
   {
@@ -4474,12 +4662,16 @@
     "dauer": {
      "stand": "kandidat",
      "quellen": [],
-     "was": "Rad-Zählsäule am Pophankenweg seit Februar 2023; Werte nicht als Daten veröffentlicht",
+     "was": "Rad-Zählsäule am Pophankenweg seit Februar 2023 (Werte nicht als Daten veröffentlicht); Passantenzählung des Innenstadtmanagements an vier Standorten der Fußgängerzone, veröffentlicht nur als Monatswerte",
      "situation": null,
      "links": [
       {
        "titel": "Zählsäule am Pophankenweg",
        "url": "https://www.oldenburg.de/startseite/stadtraum/verkehr-mobilitaet/radverkehr/woran-wir-noch-arbeiten/konkretes-aus-dem-rad-und-fussverkehrsprogramm/fahrradzaehlstation/radzaehlsaeule-am-pophankenweg-1.html"
+      },
+      {
+       "titel": "City: Passantenfrequenzen",
+       "url": "https://www.oldenburg.de/startseite/wirtschaft/standort-oldenburg/innenstadtmanagement/city-passantenfrequenzen.html"
       }
      ]
     },
@@ -6184,6 +6376,68 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     8.3785,
+     51.9069
+    ]
+   },
+   "properties": {
+    "ags": "05754008",
+    "name": "Gütersloh",
+    "land": "NW",
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "zwölf fest installierte Passantenzählstellen in der Innenstadt (Smart-City-Projekt, mit der Gütersloh Marketing GmbH), fortlaufend statt wie bisher an zwei Stichtagen im Jahr; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Gütersloh zählt Passanten in der Innenstadt",
+       "url": "https://www.guetersloh.de/de/rathaus/presseportal/news/meldungen/passantenzaehlung-innenstadt.php"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.3969,
+     51.7614
+    ]
+   },
+   "properties": {
+    "ags": "05154044",
+    "name": "Rees",
+    "land": "NW",
+    "recht": "Informationsfreiheitsgesetz NRW",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "laserbasierte Personenfrequenzmessung im Stadtgebiet seit August 2025 (für Stadtmarketing und Veranstaltungsplanung); Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Personenfrequenzmessung im Reeser Stadtgebiet",
+       "url": "https://www.stadt-rees.de/rathaus/veroeffentlichungen/presse-und-oeffentlichkeitsarbeit/2025/personenfrequenzmessung-im-reeser-stadtgebiet/"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      7.598,
      50.3595
     ]
@@ -6290,6 +6544,109 @@
     },
     "dauer": null,
     "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.117,
+     49.1985
+    ]
+   },
+   "properties": {
+    "ags": "07313000",
+    "name": "Landau in der Pfalz",
+    "land": "RP",
+    "recht": "Landestransparenzgesetz (LTranspG) – Antragsrecht auch gegenüber Gemeinden",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "zwei Fahrradzählstationen (Merowingerstraße an der Brücke über die Bahn, Waffenstraße), zum Abschluss des Förderprojekts „Klimaschutz durch Radverkehr“; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Zwei neue Fahrradzählstationen (Stadt Landau)",
+       "url": "https://www.landau.de/Verwaltung-Politik/Pressemitteilungen/Landau-tritt-in-die-Pedale-Zwei-neue-Fahrradz%C3%A4hlstationen-markieren-Abschluss-des-F%C3%B6rderprojekts-Klimaschutz-durch-Radverkehr-Zus%C3%A4tzliche-Fahrradservicestation-in-der-Innenstadt.php?FID=2644.20496.1"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.2226,
+     50.3276
+    ]
+   },
+   "properties": {
+    "ags": "07137",
+    "name": "Landkreis Mayen-Koblenz",
+    "land": "RP",
+    "recht": "Landestransparenzgesetz (LTranspG) – Antragsrecht auch gegenüber Gemeinden",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "30 Rad-Dauerzählstellen, eingerichtet ab 16. November 2026 an Radwegen und viel befahrenen Straßen (überwiegend Induktionsschleifen, vereinzelt Kamera oder Radar), Auswertung nach Richtung und Tageszeit; geplant ist eine interaktive Online-Karte mit Dashboards – Werte noch nicht veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Landkreis richtet 30 dauerhafte Radzählstellen ein (November 2026)",
+       "url": "https://www.kvmyk.de/aktuelles/pressemeldungen-2026/2026-11/landkreis-richtet-30-dauerhafte-radzaehlstellen-ein/"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.5688,
+     49.4102
+    ]
+   },
+   "properties": {
+    "ags": "07335022",
+    "name": "Landstuhl",
+    "land": "RP",
+    "recht": "Landestransparenzgesetz (LTranspG) – Antragsrecht auch gegenüber Gemeinden",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Verbandsgemeinde+Landstuhl",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "ohne_lizenz",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Begleituntersuchung zum Verkehrsversuch Kaiserstraße (R+T, 2022, PDF): Knotenstromzählungen an sechs Knoten vom 15.05.2018 und 17.02.2022, Kfz und Schwerverkehr als Summe 6–10 und 15–19 Uhr; ohne Lizenz, mit Urheberrechtsvermerk des Büros",
+     "situation": "Für den Verkehrsversuch in der Kaiserstraße hat die Verbandsgemeindeverwaltung das Büro R+T Verkehrsplanung an sechs Knotenpunkten zählen lassen, vorher am 15. Mai 2018 und während des Versuchs am 17. Februar 2022. Der Bericht vom 14. April 2022 steht als PDF auf landstuhl.de: Kfz und Schwerverkehr je Knotenarm und Fahrbeziehung, aber nur als Summe der Stundengruppen 6–10 und 15–19 Uhr („Kfz/8h“); gezählt zeigt sie nur Plan 1, für den Vergleich sind alle Werte von 2022 mit einem Faktor von 11 % korrigiert. Eine Lizenz nennt der Bericht nicht; Texte, Fotos und Grafiken stehen unter dem Urheberrecht des Büros. Werte je Stunde enthält er nicht.",
+     "empfehlung": "Anfrage nach den Zählungen 2018 und 2022 je Stunde (oder Viertelstunde), Knotenpunkt und Fahrbeziehung, wie sie das Büro geliefert hat, mit Lizenz. Grundlage: Landestransparenzgesetz.",
+     "weg": "FragDenStaat, LTranspG RP",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Verbandsgemeindeverwaltung Landstuhl seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nFür den Verkehrsversuch Kaiserstraße hat R+T Verkehrsplanung am 15.05.2018 und am 17.02.2022 an Knotenpunkten gezählt (Begleituntersuchung vom 14.04.2022). Ich bitte vor allem um diese Zählungen mit den Werten je Intervall, Knotenpunkt und Fahrbeziehung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Begleituntersuchung Verkehrsversuch Kaiserstraße (2022)",
+       "url": "https://www.landstuhl.de/verbandsgemeinde-landstuhl/die-verbandsgemeinde/die-ortsgemeinden/sickingenstadt-landstuhl/stadt/projekte/2022-04-14-rt-verkehrsversuch-landstuhl-gesamtbericht.pdf?cid=152m"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "ohne_lizenz"
    }
   },
   {
@@ -6915,8 +7272,20 @@
       }
      ]
     },
-    "dauer": null,
-    "stand_k": "geliefert"
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "Rad-Zählstelle am Hauptbahnhof (Weg unter den Eisenbahnbrücken, seit September 2022) mit Anzeige; Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Volksstimme: Zählstelle am Hauptbahnhof (Oktober 2022)",
+       "url": "https://www.volksstimme.de/lokal/magdeburg/fahrrad-fahren-in-magdeburg-100-000-radfahrer-in-einem-monat-am-hauptbahnhof-3465724"
+      }
+     ]
+    },
+    "stand_k": "geliefert",
+    "stand_d": "kandidat"
    }
   },
   {

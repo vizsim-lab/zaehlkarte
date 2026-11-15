@@ -8,9 +8,23 @@
     quellen: [berlin]
     was: >-
       rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter
+    situation: >-
+      In der Karte sind die Zählungen der Senatsverwaltung (ZDA-Rohdateien). Die Bezirke lassen
+      daneben eigene Zählungen machen, vor allem für Kiezblocks und Verkehrskonzepte: Pankow (eine
+      Antwort auf eine Schriftliche Anfrage listet die vom Senat und die vom Bezirk beauftragten
+      Verkehrszählungen der letzten fünf Jahre; Kiezblocks Komponistenviertel und Arnimkiez
+      2021/2022), Mitte (Bellermannkiez, je eine Stunde vorher 2022 an fünf, nachher 2024 an sieben
+      Zählstellen),
+      Friedrichshain-Kreuzberg (Samariterkiez 2020, Ostkreuz-Kiez). Offen sind davon nur
+      Präsentationen und Berichte; die Werte je Intervall ließen sich nach dem Berliner
+      Informationsfreiheitsgesetz beim jeweiligen Bezirksamt anfragen.
     links:
       - ["FragDenStaat 2025", "https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/"]
       - ["FragDenStaat 2019", "https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/"]
+      - ["Pankow: Zählungen von Senat und Bezirk (Drucksache 19/26749)", "https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-26749.pdf"]
+      - ["Pankow: Kiezblock Komponistenviertel, Abschlussbericht", "https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/stadtentwicklungsamt/mobilbericht/230110_abschlussbericht_kiezblock_komponistenviertel.pdf"]
+      - ["Mitte: Bellermannkiez, Evaluation der Zählung", "https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/bellermannkiez-evaluation-zaehlung-online.pdf"]
+      - ["Friedrichshain-Kreuzberg: Samariterkiez, Evaluationsbericht", "https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/verkehrsberuhigung_samariterkiez_evaluationsbericht.pdf"]
   dauer:
     stand: in_karte
     quellen: [berlin_viz, berlin_rad]
