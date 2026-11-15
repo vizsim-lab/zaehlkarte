@@ -305,20 +305,50 @@ def hole(q: dict, pfade: Pfade, *, abrufer: Abrufer | None = None,
     5. Lücken: ältere Monate ab `ab`, der jüngste Abschnitt zuerst;
     6. Zählstellen, die seit `nachladen_tage` nicht gefragt wurden (Sicherheitsnetz), und
        Stammdaten, die älter als `stamm_tage` sind.
+    Stunden fragt er nur für Zählstellen, die BAYSIS kennt: Für zwei der Liste (9478, 9710) sind
+    die Stammdaten leer (November 2026) – sie werden nur alle `stamm_tage` neu nachgesehen.
     Ein Lauf ohne neue Monate fragt so dreimal (zwei Listen, eine Probe). Alle Zeiten eines Laufs
-    sind sein Beginn: Was ein Lauf fragt, gilt nach der Neuigkeit, die er findet, als gefragt."""
+    sind sein Beginn: Was ein Lauf fragt, gilt nach der Neuigkeit, die er findet, als gefragt.
+    Eine Antwort, die nicht so aussieht wie erwartet (Fehlermeldung statt Liste, 4xx, kein JSON),
+    ersetzt nichts im Cache; nach `fehler_abbruch` (5) solchen hört der Lauf auf."""
+    import requests
+
     ordner = pfade.roh / q["code"]
     ordner.mkdir(parents=True, exist_ok=True)
     a = abrufer or Abrufer(q)
     jetzt = jetzt or datetime.now(UTC)
     lauf = _iso(jetzt)
+    log: list[str] = []
+    fehler: list[str] = []
+    versucht: set[str] = set()  # Stammdaten in diesem Lauf schon gefragt
+
+    def fehlerhaft(text: str) -> None:
+        fehler.append(text[:200])
+        if len(fehler) >= int(q.get("fehler_abbruch", 5)):
+            raise Abbruch(f"{len(fehler)} fehlerhafte Antworten")
+
+    def frage(url: str, nutzlast: dict | None = None, timeout: float = 300):
+        """Antwort oder None (fehlerhafte Antwort: gemerkt, weiter mit der nächsten Anfrage)."""
+        try:
+            return a.json(url, nutzlast, timeout=timeout)
+        except (requests.HTTPError, ValueError) as e:
+            was = f"{nutzlast['zaehlstellennummer']} {nutzlast['abfrageArt']}" if nutzlast else url
+            fehlerhaft(f"{was}: {e!r}")
+        return None
+
     try:
         for k in q["strassenklassen"]:  # Liste und Lage je Straßenklasse
-            liste = a.json(q["liste"].format(klasse=k), timeout=120)
-            (ordner / f"liste_{k}.json").write_text(json.dumps(liste, ensure_ascii=False),
-                                                     encoding="utf-8")
+            liste = frage(q["liste"].format(klasse=k), timeout=120)
+            if isinstance(liste, dict) and isinstance(liste.get("results"), list) \
+                    and liste["results"]:
+                (ordner / f"liste_{k}.json").write_text(json.dumps(liste, ensure_ascii=False),
+                                                         encoding="utf-8")
+            else:
+                log.append(f"{q['code']}: Liste {k} ohne Ergebnis – es bleibt die alte")
+                if liste is not None:
+                    fehlerhaft(f"Liste {k}: {str(liste)[:150]}")
     except Abbruch as e:
-        return [f"{q['code']}: Abruf abgebrochen ({e}) – es bleibt der Stand im Cache"]
+        return [*log, f"{q['code']}: Abruf abgebrochen ({e}) – es bleibt der Stand im Cache"]
     stellen = [s["nr"] for s in _stellen_der_liste(q, _lies_listen(ordner, q))]
     stand = _lies_stand(ordner)
     gefragt = stand["gefragt"]
@@ -334,7 +364,12 @@ def hole(q: dict, pfade: Pfade, *, abrufer: Abrufer | None = None,
             stand["neuester_tag"], stand["seit"] = neu.isoformat(), lauf
 
     def stammdaten(nr: str) -> None:
-        d = a.json(q["api"], {"zaehlstellennummer": nr, "abfrageArt": "stammdaten"})
+        versucht.add(nr)
+        d = frage(q["api"], {"zaehlstellennummer": nr, "abfrageArt": "stammdaten"})
+        if not isinstance(d, list) or not all(isinstance(x, dict) for x in d):
+            if d is not None:
+                fehlerhaft(f"{nr} stammdaten: keine Liste ({str(d)[:120]})")
+            return
         p = ordner / "stamm" / f"{nr}.json"
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
@@ -342,11 +377,16 @@ def hole(q: dict, pfade: Pfade, *, abrufer: Abrufer | None = None,
         n["stammdaten"] += 1
         _schreibe_stand(ordner, stand)
 
-    def stunden(nr: str, von: str, bis_monat: str, art: str) -> None:
-        zeilen = a.json(q["api"], {"zaehlstellennummer": nr, "abfrageArt": "stundenwerte",
-                                   "vonDatum": f"{von}-01",
-                                   "bisDatum": _monatsende(bis_monat).isoformat()}, timeout=600)
-        je_monat = zeilen_je_monat(zeilen or [])
+    def stunden(nr: str, von: str, bis_monat: str, art: str) -> bool:
+        zeilen = frage(q["api"], {"zaehlstellennummer": nr, "abfrageArt": "stundenwerte",
+                                  "vonDatum": f"{von}-01",
+                                  "bisDatum": _monatsende(bis_monat).isoformat()}, timeout=600)
+        if not isinstance(zeilen, list) or not all(isinstance(z, dict) for z in zeilen):
+            if zeilen is not None:
+                fehlerhaft(f"{nr} stundenwerte {von}–{bis_monat}: keine Liste "
+                           f"({str(zeilen)[:120]})")
+            return False
+        je_monat = zeilen_je_monat(zeilen)
         for m in monate(von, _monatsende(bis_monat)):
             _schreibe_json_gz(ordner / "werte" / nr / f"{m}.json.gz", je_monat.get(m, []))
             n["monate"] += 1
@@ -355,17 +395,23 @@ def hole(q: dict, pfade: Pfade, *, abrufer: Abrufer | None = None,
         bis[nr] = juengster_tag(ordner / "werte" / nr)
         merke_neuesten()
         _schreibe_stand(ordner, stand)
+        return True
 
     def juengste_fragen(nr: str, art: str) -> None:
         start = start_der_frage(q, ziel, bis[nr])
-        if start <= ziel[-1]:
-            stunden(nr, start, ziel[-1], art)
-        gefragt[nr] = lauf
-        _schreibe_stand(ordner, stand)
+        if start > ziel[-1] or stunden(nr, start, ziel[-1], art):  # sonst: der nächste Lauf
+            gefragt[nr] = lauf
+            _schreibe_stand(ordner, stand)
+
+    def bekannt(nr: str) -> bool:  # Stammdaten da und nicht leer
+        try:
+            return bool(json.loads((ordner / "stamm" / f"{nr}.json").read_text(encoding="utf-8")))
+        except (OSError, ValueError):
+            return False
 
     def luecken() -> list[tuple[str, str, str]]:
         out = []
-        for nr in stellen:
+        for nr in filter(bekannt, stellen):
             start = start_der_frage(q, ziel, bis[nr])
             da = {p.name[:7] for p in (ordner / "werte" / nr).glob("*.json.gz")}
             out += [(von, bm, nr) for von, bm in bloecke(
@@ -383,25 +429,26 @@ def hole(q: dict, pfade: Pfade, *, abrufer: Abrufer | None = None,
         for nr in stellen:  # 3. fehlende Stammdaten, neue Zählstellen
             if not (ordner / "stamm" / f"{nr}.json").exists():
                 stammdaten(nr)
-            if nr not in gefragt:
+            if nr not in gefragt and bekannt(nr):
                 juengste_fragen(nr, "neu")
+        bekannte = [nr for nr in stellen if nr in gefragt and bekannt(nr)]
 
         def zurueck(nr: str) -> bool:
             t = stand["neuester_tag"]
             return (t is not None and gefragt[nr] < (stand["seit"] or "")
                     and (bis[nr] is None or bis[nr] < date.fromisoformat(t) - rueck))
 
-        for nr in sorted(filter(zurueck, stellen), key=lambda nr: (gefragt[nr], nr)):  # 4.
+        for nr in sorted(filter(zurueck, bekannte), key=lambda nr: (gefragt[nr], nr)):  # 4.
             juengste_fragen(nr, "nachgeladen")
         for von, bm, nr in luecken():  # 5.
             stunden(nr, von, bm, "luecken")
         grenze = _iso(jetzt - timedelta(days=float(q.get("nachladen_tage", 35))))
-        for nr in sorted((nr for nr in stellen if gefragt[nr] < grenze),
+        for nr in sorted((nr for nr in bekannte if gefragt[nr] < grenze),
                          key=lambda nr: (gefragt[nr], nr)):  # 6.
             juengste_fragen(nr, "sicherheitsnetz")
         grenze = _iso(jetzt - timedelta(days=float(q.get("stamm_tage", 91))))
-        for nr in sorted((nr for nr in stellen if stand["stamm"].get(nr, "") < grenze),
-                         key=lambda nr: (stand["stamm"].get(nr, ""), nr)):
+        for nr in sorted((nr for nr in stellen if stand["stamm"].get(nr, "") < grenze
+                          and nr not in versucht), key=lambda nr: (stand["stamm"].get(nr, ""), nr)):
             stammdaten(nr)
     except Abbruch as e:
         status = f"abgebrochen ({e}) – der nächste Lauf holt den Rest"
@@ -412,9 +459,11 @@ def hole(q: dict, pfade: Pfade, *, abrufer: Abrufer | None = None,
         "anfragen": a.anfragen, "ablehnungen": a.ablehnungen,
         "megabyte": round(a.bytes / 1e6, 1), "kodierung": dict(a.kodierung),
         "neuester_tag": stand["neuester_tag"], "offene_abschnitte": offen,
-        "status": status}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+        "fehler": fehler, "status": status}, ensure_ascii=False, indent=1) + "\n",
+        encoding="utf-8")
     teile = ", ".join(f"{k} {v}" for k, v in sorted(n.items()))
-    return [f"{q['code']}: {len(stellen)} Zählstellen; {teile or 'nichts Neues gefragt'}; "
+    log += [f"{q['code']}: fehlerhafte Antwort – {f}" for f in fehler]
+    return [*log, f"{q['code']}: {len(stellen)} Zählstellen; {teile or 'nichts Neues gefragt'}; "
             f"{a.anfragen} Anfragen ({a.bytes / 1e6:.0f} MB), {a.ablehnungen} Ablehnungen; "
             f"jüngster Tag {stand['neuester_tag']}; offen {offen} Abschnitte älterer Monate; "
             f"{status}"]
@@ -460,7 +509,7 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
         nr = s["nr"]
         p = ordner / "stamm" / f"{nr}.json"
         d = json.loads(p.read_text(encoding="utf-8")) if p.exists() else []
-        if not d:
+        if not isinstance(d, list) or not d or not isinstance(d[0], dict):
             bericht.ohne_stamm.append(f"{nr} ({s.get('strasse')})")
             continue
         stamm[nr] = {k: _wert(v) for k, v in d[0].items()}

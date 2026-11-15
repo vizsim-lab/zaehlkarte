@@ -202,8 +202,8 @@ class Server:
     """BAYSIS zum Testen: die Listen, Stammdaten und Stundenzeilen (am 1. und 15. jedes Monats
     und am jüngsten Tag) bis `stand[nr]`; merkt sich die Fragen."""
 
-    def __init__(self, stand: dict, abbruch_nach: int | None = None):
-        self.stand, self.abbruch_nach = stand, abbruch_nach
+    def __init__(self, stand: dict, abbruch_nach: int | None = None, unbekannt=()):
+        self.stand, self.abbruch_nach, self.unbekannt = stand, abbruch_nach, set(unbekannt)
         self.fragen: list[tuple] = []
         self.anfragen = self.ablehnungen = self.bytes = 0
         self.kodierung: dict = {}
@@ -219,7 +219,7 @@ class Server:
         nr = nutzlast["zaehlstellennummer"]
         if nutzlast["abfrageArt"] == "stammdaten":
             self.fragen.append(("stamm", nr))
-            return _stamm(nr, "St 1", f"Ort {nr}", "A", "B")
+            return [] if nr in self.unbekannt else _stamm(nr, "St 1", f"Ort {nr}", "A", "B")
         von = date.fromisoformat(nutzlast["vonDatum"])
         bis = date.fromisoformat(nutzlast["bisDatum"])
         self.fragen.append((nr, nutzlast["vonDatum"][:7], nutzlast["bisDatum"][:7]))
@@ -290,3 +290,71 @@ def test_hole_abbruch_und_weiter(tmp_path):
     server = Server(stand)  # der nächste Lauf: die Probe, dann 9648 ohne neue Stammdaten
     bd.hole(q, pfade, abrufer=server, jetzt=datetime(2026, 11, 22, 6, tzinfo=UTC))
     assert server.fragen[2:] == [("9639", "2026-10", "2026-11"), ("9648", "2026-09", "2026-11")]
+
+
+def test_hole_ohne_stammdaten(tmp_path):
+    """Kennt BAYSIS eine Zählstelle der Liste nicht (Stammdaten leer), fragt der Lauf keine
+    Stunden für sie – nur ihre Stammdaten wieder nach `stamm_tage`."""
+    q = {**Q, "ab": "2026-09", "block_monate": 3, "stamm_tage": 91}
+    pfade = Pfade(pipeline=tmp_path, repo=tmp_path)
+    stand = {"9639": date(2026, 9, 30), "9700": None}
+    server = Server(stand, unbekannt={"9700"})
+    bd.hole(q, pfade, abrufer=server, jetzt=datetime(2026, 11, 15, 6, tzinfo=UTC))
+    assert server.fragen[2:] == [("stamm", "9639"), ("9639", "2026-09", "2026-11"),
+                                 ("stamm", "9700")]
+    server = Server(stand, unbekannt={"9700"})  # nach einem Vierteljahr: Stammdaten neu
+    bd.hole(q, pfade, abrufer=server, jetzt=datetime(2027, 2, 20, 6, tzinfo=UTC))
+    assert ("stamm", "9700") in server.fragen
+    assert not [f for f in server.fragen if f[0] == "9700"]
+
+
+def test_hole_fehlerhafte_antworten(tmp_path):
+    """Eine Fehlermeldung statt der Liste ersetzt die alte nicht; eine fehlerhafte Antwort auf
+    Stammdaten oder Stunden schreibt nichts (der nächste Lauf fragt wieder); nach fünf hört der
+    Lauf auf."""
+    q = {**Q, "ab": "2026-09", "block_monate": 3}
+    pfade = Pfade(pipeline=tmp_path, repo=tmp_path)
+    o = pfade.roh / "bayern_dauz"
+    stand = {"9639": date(2026, 9, 30), "9648": date(2026, 9, 30)}
+    jetzt = datetime(2026, 11, 15, 6, tzinfo=UTC)
+    bd.hole(q, pfade, abrufer=Server(stand), jetzt=jetzt)
+    alt = (o / "liste_St.json").read_text()
+
+    class Kaputt(Server):
+        def json(self, url, nutzlast=None, timeout=300):
+            if nutzlast is None:
+                self.anfragen += 1
+                return {"error": {"code": 400, "message": "Unable to complete operation."}}
+            if nutzlast["zaehlstellennummer"] == "9648":
+                self.anfragen += 1
+                raise requests.HTTPError("400 Client Error")
+            return super().json(url, nutzlast, timeout)
+
+    stand["9639"] = date(2026, 10, 31)  # die Probe (9639) findet den Oktober, dann 9648: 400
+    server = Kaputt(stand)
+    log = bd.hole(q, pfade, abrufer=server, jetzt=datetime(2026, 12, 15, 6, tzinfo=UTC))
+    assert (o / "liste_St.json").read_text() == alt
+    assert any("Liste St ohne Ergebnis" in z for z in log)
+    a = json.loads((o / "abruf.json").read_text())
+    assert a["status"] == "vollständig" and len(a["fehler"]) == 3  # zwei Listen, 9648
+    assert a["fehler"][0].startswith("Liste St: {'error'") and "9648 stundenwerte" in a["fehler"][2]
+    gefragt = json.loads((o / "stand.json").read_text())["gefragt"]
+    assert gefragt["9648"] == "2026-11-15T06:00:00Z"  # nicht als gefragt vermerkt
+    server = Server(stand)  # der nächste Lauf fragt 9648 wieder
+    bd.hole(q, pfade, abrufer=server, jetzt=datetime(2026, 12, 22, 6, tzinfo=UTC))
+    assert ("9648", "2026-10", "2026-12") in server.fragen
+
+    class Immer(Server):
+        def json(self, url, nutzlast=None, timeout=300):
+            if nutzlast is None:
+                return super().json(url, nutzlast, timeout)
+            self.anfragen += 1
+            return {"error": "x"}
+
+    pfade2 = Pfade(pipeline=tmp_path / "b", repo=tmp_path / "b")
+    server = Immer({**stand, "9700": None, "9701": None})
+    bd.hole({**q, "fehler_abbruch": 3}, pfade2, abrufer=server, jetzt=jetzt)
+    a = json.loads((pfade2.roh / "bayern_dauz" / "abruf.json").read_text())
+    assert a["status"].startswith("abgebrochen (3 fehlerhafte") and len(a["fehler"]) == 3
+    # zwei Listen, dann drei Stammdaten mit Fehlermeldung – nichts geschrieben
+    assert server.anfragen == 5 and not (pfade2.roh / "bayern_dauz" / "stamm").exists()
