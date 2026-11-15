@@ -105,8 +105,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `-1`/fehlend heißt „nicht gezählt“, nie 0. Werte aus verschiedenen Zählfenstern nie
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.
 - **Rohdaten bleiben unverändert**; Berlin-Archive und Geokodierung sind auf Commits gepinnt,
-  Münster-ZIP und -Positionen, die Konstanzer CSVs und die PDFs aus Xanten, Tübingen
-  und Neubulach über ihre Prüfsumme
+  Münster-ZIP und -Positionen, die Konstanzer CSVs und die PDFs aus Xanten, Tübingen,
+  Neubulach und Nürnberg über ihre Prüfsumme
   (sha256 in der Quelldatei). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
   die Quelldatei mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
 - **Gemeinde je Dauerzählstelle:** `ags` aus den Gemeindegrenzen VG250 des BKG
@@ -184,9 +184,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `*` und `$`, Crawl-delay), nicht mit `urllib.robotparser`. FragDenStaat und GovData sperren
   Werkzeuge ganz (AGENTS.md, „Wo suchen“).
 - **Daten neu bauen:** Workflow „Kartendaten neu bauen“ (`.github/workflows/daten.yml`) oder
-  lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW und die Portale von Münster,
-  Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht erreichbar – dann den
-  Workflow nutzen. Dauerzählstellen: Workflow „Dauerzählstellen bauen“
+  lokal `fetch` + `site`. Das Ergebnis kommt als PR. MobiData BW, nuernberg.de und die Portale
+  von Münster, Konstanz, Potsdam und Olpe sind aus manchen Entwicklungsumgebungen nicht
+  erreichbar – dann den Workflow nutzen. Dauerzählstellen: Workflow „Dauerzählstellen bauen“
   (`.github/workflows/dauer.yml`, wöchentlich) – Ergebnis als Release-Asset, kein PR; danach
   startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de`,
   `opendata.readi.de` (Ettlingen) und die Rad-Quellen (MobiData BW, berlin.de, Open.NRW, die
