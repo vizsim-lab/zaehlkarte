@@ -1,0 +1,406 @@
+[
+ {
+  "ags": "15081",
+  "name": "Altmarkkreis Salzwedel",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": "https://www.altmarkkreis-salzwedel.de/Home.aspx",
+  "titel": "Altmarkkreis-Salzwedel - Home",
+  "generator": "contentXXL Business Content Management System  5.4.3807.21851.3212(.net4.5, AnyC",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [],
+  "start_treffer": [],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15082",
+  "name": "Anhalt-Bitterfeld",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": "https://www.anhalt-bitterfeld.de/",
+  "titel": "Startseite | Anhalt-Bitterfeld",
+  "generator": "GeoCMS Version:5.52.00 brain-SCC GmbH (c) 2026",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [
+   {
+    "begriff": "Verkehrszählung",
+    "url": "https://www.anhalt-bitterfeld.de/de/suche-lk.html?xc1_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=c001596af41095aa5d22cb5c4ccedaa6&searchwords=Verkehrsz%C3%A4hlung",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Zählstelle",
+    "url": "https://www.anhalt-bitterfeld.de/de/suche-lk.html?xc1_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=c001596af41095aa5d22cb5c4ccedaa6&searchwords=Z%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Radzählstelle",
+    "url": "https://www.anhalt-bitterfeld.de/de/suche-lk.html?xc1_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=c001596af41095aa5d22cb5c4ccedaa6&searchwords=Radz%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Verkehrsdaten",
+    "fehler": "Zeit"
+   }
+  ],
+  "start_treffer": [],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15083",
+  "name": "Börde",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "erreicht",
+  "auch": [],
+  "web": "https://www.landkreis-boerde.de/",
+  "titel": "Startseite | Landkreis Börde",
+  "generator": "TYPO3 CMS",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [],
+  "start_treffer": [
+   [
+    "https://www.landkreis-boerde.de/menschen/verkehr-und-oepnv/radverkehr-im-landkreis-boerde",
+    "Radverkehrskonzept"
+   ]
+  ],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15084",
+  "name": "Burgenlandkreis",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": "https://www.burgenlandkreis.de/",
+  "titel": "Startseite Burgenlandkreis Portal",
+  "generator": "GeoCMS Version:5.52.00 brain-SCC GmbH (c) 2026",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [
+   {
+    "begriff": "Verkehrszählung",
+    "url": "https://www.burgenlandkreis.de/de/suche.html?xc8_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=42668938eb6d9a544a64e49fcdbdcde7&searchwords=Verkehrsz%C3%A4hlung",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Zählstelle",
+    "url": "https://www.burgenlandkreis.de/de/suche.html?xc8_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=42668938eb6d9a544a64e49fcdbdcde7&searchwords=Z%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Radzählstelle",
+    "url": "https://www.burgenlandkreis.de/de/suche.html?xc8_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=42668938eb6d9a544a64e49fcdbdcde7&searchwords=Radz%C3%A4hlstelle",
+    "fehler": "URLError(ConnectionRefusedError(111, 'Connection refused'))"
+   },
+   {
+    "begriff": "Verkehrsdaten",
+    "url": "https://www.burgenlandkreis.de/de/suche.html?xc8_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=42668938eb6d9a544a64e49fcdbdcde7&searchwords=Verkehrsdaten",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   }
+  ],
+  "start_treffer": [
+   [
+    "https://www.burgenlandkreis.de/de/artikeldarstellung/verwaltungsvereinbarung-ueber-das-verfahren-zur-zahlung-einer-erlegungspraemie-fuer-schwarzwild.html",
+    ""
+   ],
+   [
+    "https://www.burgenlandkreis.de/de/artikeldarstellung/verwaltungsvereinbarung-ueber-das-verfahren-zur-zahlung-einer-erlegungspraemie-fuer-schwarzwild.html",
+    "Verwaltungsvereinbarung über das Verfahren zur Zahlung einer Erlegungsprämie für Schwarzwild"
+   ],
+   [
+    "https://www.burgenlandkreis.de/de/artikeldarstellung/verwaltungsvereinbarung-ueber-das-verfahren-zur-zahlung-einer-erlegungspraemie-fuer-schwarzwild.html",
+    "[mehr]"
+   ]
+  ],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15085",
+  "name": "Harz",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "erreicht",
+  "auch": [],
+  "web": "https://www.kreis-hz.de/",
+  "titel": "Startseite Landkreis Harz",
+  "generator": "GeoCMS Version:5.52.00 brain-SCC GmbH (c) 2026",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [
+   {
+    "begriff": "Verkehrszählung",
+    "url": "https://www.kreis-hz.de/de/suche.html?xc5_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=f7a32bba813b25c394fab6dbcdead756&searchwords=Verkehrsz%C3%A4hlung",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Zählstelle",
+    "url": "https://www.kreis-hz.de/de/suche.html?xc5_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=f7a32bba813b25c394fab6dbcdead756&searchwords=Z%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Radzählstelle",
+    "url": "https://www.kreis-hz.de/de/suche.html?xc5_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=f7a32bba813b25c394fab6dbcdead756&searchwords=Radz%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Verkehrsdaten",
+    "fehler": "Zeit"
+   }
+  ],
+  "start_treffer": [
+   [
+    "https://www.kreis-hz.de/de/radverkehrskonzeption.html",
+    "Radverkehrskonzeption"
+   ],
+   [
+    "https://www.kreis-hz.de/de/radverkehrskonzeption.html",
+    "Radverkehrskonzeption"
+   ],
+   [
+    "https://www.kreis-hz.de/de/radverkehrskonzeption.html",
+    "Radverkehrskonzeption"
+   ]
+  ],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15086",
+  "name": "Jerichower Land",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": "https://www.lkjl.de/",
+  "titel": "Startseite Landkreis Jerichower Land - zur Startseite",
+  "generator": "GeoCMS Version:5.52.00 brain-SCC GmbH (c) 2026",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [
+   {
+    "begriff": "Verkehrszählung",
+    "url": "https://www.lkjl.de/de/suche.html?xc2_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=ab00e8a933945d4006d76aba4dcf6e7f&searchwords=Verkehrsz%C3%A4hlung",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Zählstelle",
+    "url": "https://www.lkjl.de/de/suche.html?xc2_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=ab00e8a933945d4006d76aba4dcf6e7f&searchwords=Z%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Radzählstelle",
+    "url": "https://www.lkjl.de/de/suche.html?xc2_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=ab00e8a933945d4006d76aba4dcf6e7f&searchwords=Radz%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Verkehrsdaten",
+    "fehler": "Zeit"
+   }
+  ],
+  "start_treffer": [
+   [
+    "https://www.lkjl.de/de/radverkehrskonzept.html",
+    "Radverkehrskonzept"
+   ]
+  ],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15087",
+  "name": "Mansfeld-Südharz",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": "https://www.mansfeldsuedharz.de/",
+  "titel": "Startseite: Landkreis Mansfeld-Südharz",
+  "generator": "TYPO3 CMS",
+  "sitemap_urls": 0,
+  "sitemaps": 2,
+  "treffer": [],
+  "suche": [
+   {
+    "begriff": "Verkehrszählung",
+    "url": "https://www.mansfeldsuedharz.de/suche?id=78&tx_kesearch_pi1%5Bsword%5D=Verkehrsz%C3%A4hlung",
+    "laenge": 78958,
+    "treffer": 0
+   },
+   {
+    "begriff": "Zählstelle",
+    "fehler": "Zeit"
+   }
+  ],
+  "start_treffer": [],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "such_treffer": [],
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15088",
+  "name": "Saalekreis",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": null,
+  "titel": "",
+  "generator": "",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [],
+  "start_treffer": [],
+  "versuche": [
+   [
+    "https://www.saalekreis.de/",
+    "robots.txt oder nicht erreichbar"
+   ],
+   [
+    "https://www.landkreis-saale.de/",
+    "robots.txt oder nicht erreichbar"
+   ],
+   [
+    "https://www.kreis-saale.de/",
+    "robots.txt oder nicht erreichbar"
+   ],
+   [
+    "https://www.lk-saale.de/",
+    "robots.txt oder nicht erreichbar"
+   ],
+   [
+    "https://www.lra-saale.de/",
+    "robots.txt oder nicht erreichbar"
+   ],
+   [
+    "https://www.saale.de/",
+    "passt nicht: http://extrasec.info/index.php?dom=saale.de „Willkommen“"
+   ],
+   [
+    "https://www.landkreissaale.de/",
+    "robots.txt oder nicht erreichbar"
+   ]
+  ]
+ },
+ {
+  "ags": "15089",
+  "name": "Salzlandkreis",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": "https://www.salzlandkreis.de/",
+  "titel": "Kreisverwaltung Salzlandkreis | Salzlandkreis",
+  "generator": "",
+  "sitemap_urls": 2130,
+  "sitemaps": 1,
+  "treffer": [
+   "https://www.salzlandkreis.de/buergerservice-views/leistungen/ST:entry:52372-VLR/aenderung-der-personendaten-fuer-bafoeg-rueckzahlung-melden/",
+   "https://www.salzlandkreis.de/buergerservice/formulare/21-fachdienst-soziales/berufliche-rehabilitierung-berrehag/slk-14-21-1226-antrag-unbare-zahlung-berrehag-zf.pdf?cid=5pv",
+   "https://www.salzlandkreis.de/buergerservice/formulare/21-fachdienst-soziales/eingliederungshilfe/slk-14-21-1059-antrag-auf-unbare-zahlung-zf.pdf?cid=5ks",
+   "https://www.salzlandkreis.de/buergerservice/formulare/21-fachdienst-soziales/hilfe-zum-lebensunterhalt-und-grundsicherung/slk-14-21-1059-antrag-auf-unbare-zahlung-zf.pdf?cid=5ks",
+   "https://www.salzlandkreis.de/buergerservice/formulare/21-fachdienst-soziales/hilfe-zur-pflege/slk-14-21-1059-antrag-auf-unbare-zahlung-zf.pdf?cid=5mj"
+  ],
+  "suche": [],
+  "start_treffer": [],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15090",
+  "name": "Stendal",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "erreicht",
+  "auch": [],
+  "web": "https://www.landkreis-stendal.de/",
+  "titel": "Startseite Landkreis Stendal",
+  "generator": "GeoCMS Version:5.52.00 brain-SCC GmbH (c) 2026",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [
+   {
+    "begriff": "Verkehrszählung",
+    "url": "https://www.landkreis-stendal.de/de/suche.html?xc2_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=0ebb165349a1000d6abadcde1a738be5&searchwords=Verkehrsz%C3%A4hlung",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Zählstelle",
+    "url": "https://www.landkreis-stendal.de/de/suche.html?xc2_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=0ebb165349a1000d6abadcde1a738be5&searchwords=Z%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Radzählstelle",
+    "url": "https://www.landkreis-stendal.de/de/suche.html?xc2_submitted=1&cpage=&xc_f01e01a094982ffdc10776c9beda71ad=&_csrf_token=0ebb165349a1000d6abadcde1a738be5&searchwords=Radz%C3%A4hlstelle",
+    "fehler": "URLError(TimeoutError('timed out'))"
+   },
+   {
+    "begriff": "Verkehrsdaten",
+    "fehler": "Zeit"
+   }
+  ],
+  "start_treffer": [],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ },
+ {
+  "ags": "15091",
+  "name": "Wittenberg",
+  "art": "kreis",
+  "einw": null,
+  "vorher": "erreicht",
+  "auch": [],
+  "web": "https://www.landkreis-wittenberg.de/",
+  "titel": "Home - Landkreis Wittenberg",
+  "generator": "Elementor 4.3.6; features: additional_custom_breakpoints; settings: css_print_me",
+  "sitemap_urls": 7885,
+  "sitemaps": 22,
+  "treffer": [
+   "https://www.landkreis-wittenberg.de/buergerbeteiligung-zum-radverkehrskonzept/",
+   "https://www.landkreis-wittenberg.de/entwicklung-radverkehrskonzept/",
+   "https://www.landkreis-wittenberg.de/erinnerung-an-die-zahlung-der-abfallgebuehren-2026-zur-faelligkeit-15-04-2026/",
+   "https://www.landkreis-wittenberg.de/erstattung-verdienstausfall-lohnfortzahlung/",
+   "https://www.landkreis-wittenberg.de/kreiswahlausschuss-stellt-ergebnis-im-wahlkreis-24-fest-nachzaehlung-im-wahlkreis-25-erforderlich/",
+   "https://www.landkreis-wittenberg.de/radverkehrskonzept-des-landkreises-wittenberg/",
+   "https://www.landkreis-wittenberg.de/zukunft-gestalten/regionalentwicklung/radverkehrskonzept/"
+  ],
+  "suche": [],
+  "start_treffer": [
+   [
+    "https://www.landkreis-wittenberg.de/zukunft-gestalten/regionalentwicklung/radverkehrskonzept/",
+    "Radverkehrskonzept"
+   ]
+  ],
+  "versuche": [],
+  "herkunft": "wikipedia",
+  "neu_treffer": 0
+ }
+]
