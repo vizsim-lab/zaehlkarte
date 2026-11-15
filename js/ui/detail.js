@@ -188,7 +188,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     ];
     const nach = spitzen[0]?.nach;
     const zaehlplan = zpZeilen.length ? `
-      <div class="detail-abschnitt">${esc(t("detail.zaehlplan"))}</div>
+      <div class="detail-abschnitt">${esc(t(spitzen.length ? "detail.zaehlplan" : "detail.laut_quelle"))}</div>
       <table class="pop-table detail-zaehlplan">
         <thead><tr><td></td>${zpGruppen.map((g) => `<td>${esc(GRUPPEN_NAMEN[g])}</td>`).join("")}</tr></thead>
         <tbody>${zpZeilen.map((r) => `<tr><td>${esc(r.name)}</td>${zpGruppen.map((g) => `<td>${r.werte?.[g] == null ? "–" : zahl(r.werte[g])}</td>`).join("")}</tr>`).join("")}</tbody>
@@ -197,7 +197,11 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
     const lz = lizenz(x);
     const hinweise = (d.hinweise ?? []).map((h) => `<li>${esc(h)}</li>`).join("");
     const tagText = [TAGE[x.tag ?? "u"], d.tagname ? name(d.tagname) : null].filter(Boolean).join(": ");
-    const ohneStunden = d.summen ? "detail.nur_summen" : zpZeilen.length ? "detail.nur_zaehlplan" : "detail.keine_stunden";
+    // ohne Stundenwerte: Tagessummen (Tabelle), Zählplan mit Spitzenstunden (Potsdam) oder nur die
+    // Summe über das Zählfenster (Neubulach)
+    const ohneStunden = d.summen ? "detail.nur_summen"
+      : spitzen.length ? "detail.nur_zaehlplan"
+        : zpZeilen.length ? "detail.nur_fenstersumme" : "detail.keine_stunden";
     ziel.innerHTML = `
       <div class="detail-abschnitt">${esc(t("detail.zaehlung_vom", { wochentag: wochentag(x.datum), datum: datum(x.datum), tag: tagText }))}</div>
       ${chips ? `<div class="pop-chips">${chips}</div>` : ""}

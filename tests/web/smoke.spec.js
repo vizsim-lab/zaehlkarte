@@ -134,6 +134,41 @@ test("Stelle aus Xanten: 24-Stunden-Querschnitt aus dem Mobilitätskonzept, nur 
   expect(z.filter((x) => x.fenster === "7–9, 15–18").length).toBe(12);
 });
 
+test("Stelle aus Tübingen: Tageswerte ohne Lizenz, Richtungen summiert, nicht im CSV", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=w24");
+  await klickeStelle(page, (x) => x.quelle === "tuebingen" && x.name.startsWith("Stuttgarter Straße"));
+  const detail = page.locator("#detail");
+  await expect(detail.locator(".ohne-lizenz")).toHaveText("ohne Lizenz");
+  await expect(detail).toContainText("Ratsinformationssystem");
+  await expect(detail.getByRole("link", { name: "Entfernen lassen" })).toBeVisible();
+  await expect(detail).toContainText("Richtung Norden");
+  await expect(detail).toContainText("Summe beider Richtungen");
+  await expect(detail).toContainText("Nur Tagessummen geliefert");
+  await expect(detail.locator("[data-csv]")).toHaveCount(0);
+  await expect(detail.locator(".detail-hinweise")).toContainText("Adler-Kreuzung");
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "tuebingen").flatMap((s) => s.zaehlungen));
+  expect(z.length).toBe(47);
+  expect(z.every((x) => x.w24 && x.fenster === "0–24" && x.w == null)).toBe(true); // nur 24-Stunden-Werte
+});
+
+test("Stelle aus Neubulach: Knoten mit Summe 15–19 Uhr, ohne Spitzenstunden", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=w24");
+  await klickeStelle(page, (x) => x.quelle === "neubulach" && x.name.startsWith("Calwer Straße"));
+  const detail = page.locator("#detail");
+  await expect(detail.locator(".ohne-lizenz")).toHaveText("ohne Lizenz");
+  await expect(detail).toContainText("die Quelle nennt nur die Summe der gezählten Stunden");
+  await expect(detail).toContainText("Laut Quelle");
+  await expect(detail.locator(".detail-zaehlplan")).toContainText("Summe 15–19 Uhr");
+  await expect(detail.locator(".detail-zaehlplan")).toContainText("3.644");
+  await expect(detail.locator(".detail-hinweise")).toContainText("Summe der Zufahrten");
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "neubulach").flatMap((s) => s.zaehlungen));
+  expect(z.length).toBe(8);
+  expect(z.filter((x) => x.w24).length).toBe(1); // nur Knoten 1 über 24 Stunden
+  expect(z.filter((x) => x.fenster === "15–19").length).toBe(7);
+});
+
 test("Stelle aus Olpe: Radarmessung je Fahrzeug, Lizenz je Datensatz", async ({ page }) => {
   await oeffne(page, "#t=kfz.menge&a=w24");
   await klickeStelle(page, (x) => x.quelle === "olpe" && x.name === "Zum Honigsack 35");
@@ -213,6 +248,7 @@ test("Datenlage: Empfehlung und Anfragetext für Dresden", async ({ page }) => {
 
 test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export", async ({ page }) => {
   // Ravensburg so, wie eine Quelldatei mit `ohne_lizenz` in manifest.json ankäme
+  let ohne = 0; // Lizenzangaben ohne Lizenz im Manifest (Ravensburg und die echten, etwa Tübingen)
   await page.route(/\/data\/manifest\.json$/, async (route) => {
     const antwort = await route.fetch();
     const m = await antwort.json();
@@ -221,6 +257,7 @@ test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export",
       ...l, lizenz: null, lizenz_url: null,
       ohne_lizenz: { herausgegeben: "als PDF auf der Website der Stadt, ohne Lizenzangabe", geprueft: "2026-11-14" },
     }));
+    ohne = m.quellen.flatMap((x) => x.lizenzen).filter((l) => l.ohne_lizenz).length;
     await route.fulfill({ response: antwort, json: m });
   });
   const fehler = await oeffne(page, "#t=kfz.menge&q=ravensburg");
@@ -231,8 +268,11 @@ test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export",
   await expect(detail.getByRole("link", { name: "Entfernen lassen" })).toHaveAttribute("href", /template=daten-entfernen\.yml$/);
   await expect(detail.locator("[data-csv]")).toHaveCount(0);
   await expect(detail).toContainText("ohne Lizenz – kein CSV");
-  // „Quellen & Lizenzen“: Ravensburg gekennzeichnet, die übrigen mit ihrer Lizenz
-  await expect(page.locator("#quellen-text .ohne-lizenz")).toHaveCount(1);
+  // „Quellen & Lizenzen“: Ravensburg gekennzeichnet wie die echten Quellen ohne Lizenz, die übrigen
+  // mit ihrer Lizenz
+  expect(ohne).toBeGreaterThan(0);
+  await expect(page.locator("#quellen-text .ohne-lizenz")).toHaveCount(ohne);
+  await expect(page.locator("#quellen-text li", { hasText: "Ravensburg" }).locator(".ohne-lizenz")).toHaveCount(1);
   await expect(page.locator('#quellen-text a[href*="dl-de/by-2-0"]').first()).toBeAttached();
   // CSV der Zählungen im Filter (nur Ravensburg): nur die Kopfzeile
   await expect(page.locator("#export-csv")).toHaveAttribute("title", "Zählungen im Filter als CSV (nur Quellen mit Lizenz)");
