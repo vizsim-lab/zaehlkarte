@@ -425,14 +425,18 @@
   kontakt: {fds_suche: "Stadt Tübingen"}
   kurzzeit:
     stand: ohne_lizenz
+    quellen: [tuebingen]
     was: >-
       Bericht Verkehrszählungen Juni/Juli 2022 im Ratsinformationssystem: Kfz und Rad je
-      Querschnitt in 24 Stunden (Kernstadt, Teilorte), ohne Lizenz
+      Querschnitt in 24 Stunden (Kernstadt, Teilorte), ohne Lizenz – 47 Tageswerte an 24 Stellen
+      (2011–2022) in der Karte mit Hinweis
     situation: >-
       Zur Vorlage 242/2022 („Bericht Verkehrszählungen Juni/Juli 2022“) stehen die Zählungen als
       Anlagen im Ratsinformationssystem: je Querschnitt Kfz und Rad in 24 Stunden, für die Kernstadt
       mit Vergleich zu 2019 (Verkehrsversuch), für die Teilorte gegen den DTV 2019. Eine Lizenz
-      nennen die Unterlagen nicht; Zählungen anderer Jahre sind nicht veröffentlicht.
+      nennen die Unterlagen nicht; Zählungen anderer Jahre sind nicht veröffentlicht. In der Karte
+      stehen die Werte gezählter Tage; Hochrechnungen von 16 auf 24 Stunden, Mittel über Tage
+      (Dauerzählstellen) und der DTV fehlen dort.
     empfehlung: >-
       Anfrage nach den Zählungen 2019 und 2022 (und später) als Export – Werte je Intervall und
       Richtung – mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
@@ -580,21 +584,25 @@
   kontakt: {fds_suche: "Stadt Neubulach"}
   kurzzeit:
     stand: ohne_lizenz
+    quellen: [neubulach]
     was: >-
       Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als PDF:
-      Querschnitte über 24 Stunden, Knotenpunkte je zweimal vier Stunden, ohne Lizenz
+      ein Knotenpunkt über 24 Stunden, fünf Knotenpunkte und zwei Querschnitte von 15 bis 19 Uhr
+      (12.10.2023), Kfz und Schwerverkehr, ohne Lizenz – in der Karte mit Hinweis
     situation: >-
-      Für die Fortschreibung des Lärmaktionsplans hat die Stadt ein Büro zählen lassen: an
-      Querschnitten über 24 Stunden, an Knotenpunkten vormittags und nachmittags je vier Stunden
-      (hochgerechnet anhand der 24-Stunden-Zählungen). Der Kurzbericht mit den Werten steht als PDF
-      auf der Website der Stadt, ohne Lizenzangabe.
+      Für die Fortschreibung des Lärmaktionsplans hat die Stadt am 12.10.2023 per Video zählen
+      lassen: einen Knotenpunkt über 24 Stunden, die übrigen fünf Knotenpunkte und zwei Querschnitte
+      von 15 bis 19 Uhr (im Bericht auf 24 Stunden und den DTV hochgerechnet). Der Kurzbericht mit
+      den Werten je Arm steht als PDF auf der Website der Stadt, ohne Lizenzangabe. In der Karte
+      stehen nur die gezählten Werte; Rad ist laut Bericht erfasst, aber nicht veröffentlicht.
     empfehlung: >-
       Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw. Strom und
-      Fahrzeugart), mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
+      Fahrzeugart, auch Rad), mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
     weg: "FragDenStaat, LIFG BW"
     anfrage:
       zusatz: >-
         Ich bitte um die Zählungen aus dem Kurzbericht „Verkehrszählungen zur Fortschreibung des
-        Lärmaktionsplans“ (Januar 2024) als Export mit den Werten je Intervall.
+        Lärmaktionsplans“ (Januar 2024) als Export mit den Werten je Intervall, einschließlich
+        des Radverkehrs.
     links:
       - ["Kurzbericht Verkehrszählungen (PDF)", "https://www.neubulach.de/ceasy/resource/?download=1&id=3956"]

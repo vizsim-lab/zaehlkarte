@@ -142,6 +142,26 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   (alle 816 stimmen). Lage: die Karte im Bericht ist ein Rasterbild – Marker über die Farbe
   gefunden, über die zwölf Knotenpunkte (OSM) affin auf Koordinaten umgerechnet (Restfehler
   4–19 m). An Kreisverkehren haben die Straßen in OSM keinen gemeinsamen Knoten.
+- **Tübingen** (`tuebingen_pdf`, ohne Lizenz): Anlagen 1 und 3 zur Vorlage 242/2022 – je
+  Zählstelle ein Kasten (fetter Straßenname, Zusatz darunter, je Spalte Zähltag, Wert „6.361
+  Kfz/24h“, Veränderung in Prozent, kleiner Vermerk). Der Text von pdfplumber zerreißt die Spalten
+  (Werte gestaffelt über drei Zeilen) – gelesen über die Lage der Wörter (Höhe, Größe, fett). Nur
+  Spalten mit Datum; nicht übernommen: „Hochrechnung 16h → 24h“ (2011–2015 an fünf Stellen),
+  „Dauerzählstelle Ø Di-Do“, „DTV 2019“, Kalenderwochen, Bus und „Kfz ohne Bus“. In den Teilorten
+  steht der Ort im Vermerk (zwei Standorte in einem Kasten); die Vorlage nennt Orte genauer („Ecke
+  Kielmeyerstraße“, „Westarm des Knotens in Weilheim“, „am Alten Friedhof in Derendingen“). Die
+  Stuttgarter Straße hat je Richtung einen Kasten (Summe in der Karte, Richtungen in der
+  Bemerkung). Die Vorlage selbst rundet auf 100, die Tabellen nicht.
+- **Neubulach** (`neubulach_pdf`, ohne Lizenz): Kurzbericht des Büros IGV (2024), Tabelle
+  „Übersicht der DTV-Werte“ mit einem Block je Arm („2.3 Oberhaugstetter Str. (K 4304)“) und den
+  Zeilen 4h-Werte, 24h (DTVw), DTV, Tag/Nacht, M, P. Gezählt sind Knoten 1 über 24 Stunden (Zeile
+  „24h (DTVw)“, laut Bericht nicht hochgerechnet) und sonst 15–19 Uhr („4h-Werte“; der Text
+  spricht von vor- und nachmittags, Tabelle 1 und der Kopf der Tabelle nur von 15–19 Uhr). Knoten =
+  halbe Summe der Arme. Der Strombelastungsplan hat Tippfehler (Knoten 2: 4.254 statt 4.244, die
+  Ströme ergeben wie die Tabelle 4.244; Knoten 1: „3.041 (314)“, die Ströme 3.403 (105)) – daher
+  zählt die Tabelle. Querschnitt 2 heißt in Tabelle 1 „Oberhaugstetter Straße (Ortsausgang
+  West)“, in der Wertetabelle „Altbulacher Str.“; der Zählstellenplan zeigt ihn am Ortsausgang
+  Richtung Altbulach.
 - **PDF je Knoten** (Magdeburg-Angebot): noch kein Adapter (Ansatz wie `potsdam_pdf` bzw.
   `muenster_pdf`).
 - **Miovision-Excel** („Tabellenbericht“: Blatt „Übersicht“ mit Studienname, Zeitintervall,
@@ -400,7 +420,8 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   BW 1.375, RP 859, SH 334, SN 358, TH 265, ST 251, BB 247, MV 222, SL 46, dazu die Stadtstaaten;
   Ergebnisse `ergebnis/runde3*/<LAND>`): keine offene Kurzzeitzählung mit Lizenz.
   - **Werte als PDF ohne Lizenz:** Tübingen (Ratsinformationssystem, Vorlage 242/2022: 24-Stunden-
-    Werte je Querschnitt für Kfz und Rad), Neubulach (Kurzbericht zum Lärmaktionsplan 2024).
+    Werte je Querschnitt für Kfz und Rad), Neubulach (Kurzbericht zum Lärmaktionsplan 2024) –
+    seit November 2026 in der Karte, ohne Lizenz (`tuebingen_pdf`, `neubulach_pdf`).
   - **MobiData BW:** 18 weitere Kommunen und Kreise haben Rad-Zählstellen im Bündel und damit in
     der Karte (Rems-Murr-Kreis 25, Ludwigsburg 22, Ostalbkreis 11 …) – jetzt mit Datenlage-Eintrag.
   - **Gezählt, nicht offen:** Görlitz (Kameras an 30 Knoten), Landkreis Sächsische

@@ -171,6 +171,12 @@ def _xanten_pdf(code: str, q: dict, pfade: Pfade) -> list[str]:
             for d in q["dateien"]]
 
 
+def _pdf_dateien(code: str, q: dict, pfade: Pfade) -> list[str]:
+    """PDFs aus `dateien` (URL und Prüfsumme) nach data/raw/<code>/ (Tübingen, Neubulach)."""
+    return [lade_geprueft(d["url"], pfade.roh / code / d["datei"], d.get("sha256"))
+            for d in q["dateien"]]
+
+
 def _olpe_radar(code: str, q: dict, pfade: Pfade) -> list[str]:
     # die Suche des Portals findet je nach Wortform andere Datensätze – alle Begriffe,
     # dazu die bekannten (`pakete`), falls die Suche einen einmal nicht findet
@@ -213,6 +219,8 @@ ABRUF: dict[str, Callable[[str, dict, Pfade], list[str]]] = {
     "xanten_pdf": _xanten_pdf,
     "olpe_radar": _olpe_radar,
     "konstanz_mobil": _konstanz_mobil,
+    "tuebingen_pdf": _pdf_dateien,
+    "neubulach_pdf": _pdf_dateien,
 }
 
 

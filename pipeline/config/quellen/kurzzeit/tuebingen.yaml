@@ -1,0 +1,134 @@
+# Tübingen: Verkehrszählungen an einzelnen Werktagen (24 Stunden, Kfz und Rad) aus dem „Bericht
+# Verkehrszählungen Juni/Juli 2022“ (Vorlage 242/2022) im Ratsinformationssystem der Stadt, ohne
+# Lizenzangabe – in der Karte nach dem Beschluss vom 14.11.2026 („Quellen ohne Lizenz“,
+# CLAUDE.md). Aufbau und Regeln im Kopf des Adapters (src/zaehlkarte/adapters/tuebingen_pdf.py);
+# geprüft im Werkzeug-Branch `werkzeug/bw` (tools/bw_ol.py, November 2026). Anlage 2 (Monatsmittel
+# der Rad-Dauerzählstellen) bleibt draußen: Mittel über Tage; die Rad-Zählstellen stehen über
+# MobiData BW bei den Dauerzählstellen.
+nr: 13
+status: live
+adapter: tuebingen_pdf
+name: Tübingen
+land: BW
+traeger: Universitätsstadt Tübingen (Bericht Verkehrszählungen Juni/Juli 2022)
+titel: Bericht Verkehrszählungen Juni/Juli 2022 (Vorlage 242/2022), Anlagen 1 und 3
+art: >-
+  Zählungen an einzelnen Werktagen über 24 Stunden je Querschnitt, Kfz und an einigen Stellen
+  Rad, 2011–2022 (Kernstadt: Vergleich zum Verkehrsversuch Mühlstraße; Teilorte: neue B 28)
+weg: Anlagen zur Vorlage 242/2022 im Ratsinformationssystem der Stadt (PDF)
+portal: https://www.tuebingen.de/gemeinderat/vo0050.asp?__kvonr=16692
+ohne_lizenz:
+  herausgegeben: >-
+    als Anlagen zur Vorlage 242/2022 im Ratsinformationssystem der Stadt (PDF), ohne
+    Lizenzangabe
+  geprueft: 2026-11-15
+# Fassung vom August 2022, Prüfsumme wie bei Xanten
+dateien:
+  - datei: Anlage1_Zaehlungen_Kernstadt.pdf
+    titel: Bericht Verkehrszählungen Juni/Juli 2022 (Vorlage 242/2022), Anlage 1 – Zählungen Kernstadt
+    url: https://www.tuebingen.de/gemeinderat/getfile.asp?id=81457&type=do
+    sha256: 3751d25ed41249ae47569c424a6d00dc7bfd18a446dc6815c1c22a3c1659aead
+  - datei: Anlage3_Zaehlungen_Teilorte.pdf
+    titel: Bericht Verkehrszählungen Juni/Juli 2022 (Vorlage 242/2022), Anlage 3 – Zählungen Teilorte
+    url: https://www.tuebingen.de/gemeinderat/getfile.asp?id=81490&type=do
+    sha256: 1603be1e983120aec9824673b378395cbc24e00ea2776a02d715550dcf6fd4e5
+# Lage: Die Tabellen nennen Straße und Bezug („westl. Belthlestraße“), die Vorlage teils mehr
+# („Ecke Kielmeyerstraße“). Punkte aus OpenStreetMap (Overpass, November 2026), Genauigkeit:
+# kreuzung (am Knoten) | strasse (auf der Straße neben dem genannten Bezug, etwa 30 m) | bauwerk
+# (Brücke, Tunnelportal) | ungefaehr (Begründung im Hinweis).
+geokodierung:
+  titel: Lage der Zählstellen (OpenStreetMap, nach den Angaben der Tabellen und der Vorlage)
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  herkunft_url: https://www.openstreetmap.org/copyright
+# Zählstellen: `kaesten` = Kästen der Tabellen („Straße | Zusatz“; Kfz- und Rad-Kasten einer Stelle
+# ergeben am selben Tag eine Zählung), `je_richtung` = je Richtung ein Kasten (Summe beider
+# Richtungen), `vermerk` = der Ort steht im Vermerk unter der Spalte (Teilorte). Nicht genannt und
+# damit nicht in der Karte: „Mühlstraße | nur Bus“ und „Kfz ohne Bus“ (Teilmengen der Stelle
+# Mühlstraße), Spalten ohne Datum und Hochrechnungen.
+stellen:
+  # Kernstadt Ost
+  - id: kusterdinger
+    name: Kusterdinger Straße (Neckarbrücke)
+    kaesten: ["Kusterdinger Straße | Neckarbrücke"]
+  - id: stuttgarter
+    name: Stuttgarter Straße südlich der Adlerkreuzung
+    je_richtung:
+      Richtung Norden: "Stuttgarter Straße | südl. Adlerkreuzung nach Nord"
+      Richtung Süden: "Stuttgarter Straße | südl. Adlerkreuzung nach Süd"
+  - id: wilhelm_adler
+    name: Wilhelmstraße westlich der Adlerkreuzung
+    kaesten: ["Wilhelmstraße | westl. Adlerkreuzung"]
+  - id: wilhelm_nordring
+    name: Wilhelmstraße östlich des Nordrings
+    kaesten: ["Wilhelmstraße | östl. Nordring"]
+  # Kernstadt Mitte
+  - id: wilhelm_lustnauer_tor
+    name: Wilhelmstraße nördlich des Lustnauer Tors
+    kaesten: ["Wilhelmstraße | nördl. Lustnauer Tor"]
+  - id: stadtgraben
+    name: Am Stadtgraben westlich des Lustnauer Tors
+    kaesten: ["Am Stadtgraben | westl. Lustnauer Tor"]
+  - id: lustnauer_tor
+    name: Lustnauer Tor zwischen Stadtgraben und Doblerstraße
+    kaesten: ["Lustnauer Tor | zw. Stadtgr. und Doblerstr."]
+  - id: muehlstrasse
+    name: Mühlstraße südlich des Lustnauer Tors
+    kaesten: ["Mühlstraße | alle Kfz", "Mühlstraße | südl. Lustnauer Tor"]
+  - id: eberhardsbruecke
+    name: Eberhardsbrücke (Nordseite)
+    kaesten: ["Eberhardsbrücke | Nordseite"]
+  - id: gartenstrasse
+    name: Gartenstraße (Ecke Kielmeyerstraße)
+    kaesten: ["Gartenstraße"]
+  # Kernstadt West
+  - id: westbahnhof
+    name: Westbahnhofstraße westlich der Belthlestraße
+    kaesten: ["Westbahnhofstraße | westl. Belthlestraße"]
+  - id: schleifmuehle
+    name: Schleifmühleweg westlich der Rappstraße
+    kaesten: ["Schleifmühleweg | westl. Rappstraße"]
+  - id: hagellocher
+    name: Hagellocher Weg westlich der Rosentalstraße
+    kaesten: ["Hagellocher Weg | westl. Rosentalstraße"]
+  - id: hegel
+    name: Hegelstraße westlich der Derendinger Straße
+    kaesten: ["Hegelstraße | westl. Derendinger Straße"]
+  - id: schnarrenberg
+    name: Schnarrenbergstraße nördlich der Herrenberger Straße
+    kaesten: ["Schnarrenbergstraße | nördl. Herrenberger Str."]
+  - id: tunnel
+    name: B 296, Schloßbergtunnel (Nordportal)
+    kaesten: ["B 296/Tunnel | Nordportal"]
+  # Teilorte
+  - id: buehl_knollstrasse
+    name: Bühl, Eugen-Bolz-Straße östlich der Knollstraße
+    kaesten: ["Bühl | Eugen-Bolz-Straße"]
+    vermerk: östl. Knollstr.
+  - id: buehl_bonlanden
+    name: Bühl, Eugen-Bolz-Straße westlich Bonlanden
+    kaesten: ["Bühl | Eugen-Bolz-Straße"]
+    vermerk: westl. Bonlanden
+  - id: hirschau
+    name: Hirschau, Kingersheimer Straße östlich der Industriestraße
+    kaesten: ["Hirschau | östl. Industriestraße"]
+  - id: kilchberg
+    name: L 370 westlich Weilheim (Westarm des Knotens Weinbergstraße/Alte Landstraße)
+    kaesten: ["Kilchberg | L 370"]
+    vermerk: westl. Weilheim
+  - id: unterjesingen_parkplatz
+    name: Unterjesingen, Parkplatz am östlichen Ortsende
+    kaesten: ["Unterjesingen"]
+    vermerk: Parkplatz Ost
+  - id: unterjesingen_rottenburger
+    name: Unterjesingen, Ostarm des Knotens Hauptstraße/Rottenburger Straße
+    kaesten: ["Unterjesingen"]
+    vermerk: östl. Rott. Str.
+  - id: weinberg_friedhof
+    name: Weinbergstraße am Alten Friedhof (Derendingen)
+    kaesten: ["Weilheim | Weinbergstraße"]
+    vermerk: Friedhof
+  - id: weinberg_alte_landstrasse
+    name: Weilheim, Weinbergstraße östlich der Alten Landstraße
+    kaesten: ["Weilheim | Weinbergstraße"]
+    vermerk: östl. Alte Landstr.

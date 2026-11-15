@@ -20,6 +20,7 @@ fetch  Rohdaten -> data/raw/           Berlin-Archive + Geokodierung (sha256 gep
                                          Konstanz: eine CSV je Standort (sha256),
                                          Potsdam: Knotenliste (API) + Zählpläne aus den ZIPs,
                                          Xanten: zwei PDFs (sha256)
+                                         Tübingen, Neubulach: PDFs (sha256)
 build  Adapter -> Zählungen             Zähltag (Ferienkalender je Land), Lage übertragen,
                                          Stellen bilden (je Kennung, 150 m)
 site   -> public/data/                  manifest.json, index.json, details/NN.json, datenlage.json
@@ -50,6 +51,8 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `adapters/konstanz_mobil.py` | Konstanz: mobile Zählgeräte, 5- und 15-Minuten-Werte je Richtung |
 | `adapters/potsdam_pdf.py` | Potsdam: Zählpläne (PDF) mit Spitzenstunden und 6-Stunden-Summen |
 | `adapters/xanten_pdf.py` | Xanten: Viertelstundenwerte aus den PDFs des Mobilitätskonzepts |
+| `adapters/tuebingen_pdf.py` | Tübingen: 24-Stunden-Werte je Querschnitt aus den Tabellen der Vorlage 242/2022 (ohne Lizenz) |
+| `adapters/neubulach_pdf.py` | Neubulach: Werte je Arm aus dem Kurzbericht zum Lärmaktionsplan, Knoten = Summe der Zufahrten (ohne Lizenz) |
 | `adapters/muenster.py`, `muenster_xls.py`, `muenster_pdf.py` | Münster: Knotenstrompläne als XLS (2000–2012) und PDF (2010–2020) |
 | `abruf.py` | jeder Abruf: robots.txt (RFC 9309) für `zaehlkarte-pipeline`, Crawl-delay, Ausnahmen aus `config/robots.yaml`, Protokoll |
 | `ckan.py` | CKAN-Portale ohne API (die sperren sie per robots.txt): DCAT-Dokument oder HTML-Seite eines Datensatzes, HTML-Suche |

@@ -9,8 +9,10 @@ from zaehlkarte.adapters import (
     mobidata_bw,
     moers_radar,
     muenster,
+    neubulach_pdf,
     olpe_radar,
     potsdam_pdf,
+    tuebingen_pdf,
     xanten_pdf,
 )
 
@@ -23,4 +25,6 @@ ADAPTER = {
     "konstanz_mobil": konstanz_mobil,
     "potsdam_pdf": potsdam_pdf,
     "xanten_pdf": xanten_pdf,
+    "tuebingen_pdf": tuebingen_pdf,
+    "neubulach_pdf": neubulach_pdf,
 }
