@@ -1,0 +1,57 @@
+# Dauerzählstellen der Bayerischen Straßenbauverwaltung (BAYSIS) an Staats- und Kreisstraßen
+# (Wunsch der Projektleitung am 15.11.2026: Landesstraßen ja, Autobahnen und Bundesstraßen nein;
+# die Freigabe, die Werte über die Schnittstelle der Seite „Dauerzählstellen“ zu holen, ebenso vom
+# 15.11.2026). Aufbau, Prüfkennzeichen, Lage und Abrufregeln im Kopf des Adapters
+# (src/zaehlkarte/dauer/baysis_dauz.py) und in AGENTS.md; erkundet im Werkzeug-Branch
+# `werkzeug/bw` (tools/bw_fl4.py bis bw_fl7.py).
+nr: 28
+status: live
+adapter: baysis_dauz
+ebene: land  # Zählstellen des Landes: gehören zu keiner Kommune der Datenlage
+name: Bayern (Kfz, Dauerzählstellen an Staats- und Kreisstraßen)
+land: BY
+traeger: Freistaat Bayern, Bayerische Straßenbauverwaltung (Zentralstelle für Verkehrsmanagement)
+art: >-
+  fest eingebaute Zählgeräte (Induktivschleifen, TLS 8+1) an Staats- und Kreisstraßen:
+  Stundenwerte je Fahrtrichtung für Kfz und Schwerverkehr
+weg: >-
+  offen über die Seite „Dauerzählstellen“ von BAYSIS (Abfrage je Zählstelle), verzeichnet in der
+  Mobilithek
+portal: https://www.baysis.bayern.de/internet/verdat/dauz/index.html
+api: https://www.baysis.bayern.de/services/apiDAUZ/api/DAUZ
+# Liste und Lage (Punkt in WGS84) je Straßenklasse; {klasse} wird ersetzt. Die Operation `query`
+# derselben Ebene liefert keine Geometrie, `find` schon.
+liste: https://gisportal-stmb.bayern.de/server/rest/services/WMS/BAYSIS_Verkehrsdaten/MapServer/find?searchText={klasse}&contains=false&searchFields=Strassenklasse&layers=0&returnGeometry=true&sr=4326&f=json
+strassenklassen: [St, K]  # keine Autobahnen (A) und Bundesstraßen (B) – Wunsch der Projektleitung
+ab: 2022-01  # Werte mindestens ab Juni 2022 (Juni 2019: keine); die Seite nennt nur die jüngsten 45 Monate
+block_monate: 24  # Monate je Anfrage (ein Jahr: rund 10 MB, acht Sekunden)
+rueckstand_tage: 14  # Zählstellen so weit hinter dem jüngsten Tag gelten als aktuell
+nachladen_tage: 35  # Sicherheitsnetz: jede Zählstelle spätestens nach so vielen Tagen neu fragen
+stamm_tage: 91  # Stammdaten neu nach so vielen Tagen
+pause: 15  # Sekunden zwischen zwei Anfragen (mit zehn lehnte der Server nach fünf, sechs ab)
+abbruch: 4  # Ablehnungen in Folge, nach denen der Lauf für BAYSIS aufhört
+budget_minuten: 45  # je Lauf; was fehlt, holt der nächste
+titel: >-
+  BAYSIS – Dauerzählstellen, Stundenwerte (verändert: nur Zählstellen an Staats- und
+  Kreisstraßen, Stunden je Fahrtrichtung zu Tagessummen zusammengefasst)
+herausgeber: Bayerische Straßenbauverwaltung – Zentralstelle für Verkehrsmanagement
+quellenvermerk: Bayerische Straßenbauverwaltung - BAYSIS (www.baysis.bayern.de)
+lizenz: GeoNutzV
+lizenz_url: https://www.gesetze-im-internet.de/geonutzv/
+hinweise:
+  - >-
+    Nur die Zählstellen an Staats- und Kreisstraßen – die an Autobahnen und Bundesstraßen
+    (die meisten der rund 200 bayerischen Dauerzählstellen) nimmt die Zählkarte nicht auf.
+  - >-
+    Je Fahrtrichtung eine Stelle (beide am selben Punkt). Eine Stunde zählt nur, wenn BAYSIS sie
+    als korrekt kennzeichnet („-“, auch „u“: korrekt, aber unregelmäßig); Ausfälle (a), fehlerhafte
+    Werte (d) und Schätzwerte (s, k) gelten als nicht gezählt.
+  - >-
+    Schwerverkehr ist die Gruppe der Zählgeräte (8+1 Fahrzeugarten: Lkw ohne und mit Anhänger,
+    Sattelzüge, Busse) – nicht der Schwerverkehr der Kurzzeitzählungen.
+  - >-
+    Ortszeit. Am Tag der Rückstellung der Uhr steht 2–3 Uhr nur einmal da, mit „z“ – der Tag ist
+    dort nicht vollständig gezählt.
+  - >-
+    Die Werte erscheinen mit rund sechs Wochen Verzug; die Zählkarte fragt jede Woche, ob neue
+    Monate da sind.

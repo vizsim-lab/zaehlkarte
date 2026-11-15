@@ -1221,26 +1221,39 @@ robots.txt für alle Robots sperrt. Seitdem:
   - **Länder** (geprüft 15.11.2026 auf Wunsch des Nutzers: Landes-, Staats- und Kreisstraßen,
     keine Autobahnen und Bundesstraßen; `werkzeug/bw`, `tools/bw_fl1.py`, `bw_fl2.py`,
     `bw_fl4.py`, Ergebnisse `ergebnis/bw/fl1/`, `fl2/`, `fl4/`). Außer Baden-Württemberg
-    veröffentlicht kein Land Stunden- oder Tageswerte an Landesstraßen als Datei:
+    veröffentlicht kein Land Stunden- oder Tageswerte an Landesstraßen als Datei; Bayern zeigt
+    sie in einer Web-Anwendung (seit November 2026 in der Karte, unten):
     - **Schleswig-Holstein, Bayern (GovData):** Die rund 1.100 bzw. 1.200 Pakete „Automatische
       Zählstelle … JJJJ“ (Landesportal, open.bydata) sind die Dateien der BASt
       (`bast.de/videos/JJJJ/zstNNNN.zip`, Herausgeber BASt) – nur Autobahnen und Bundesstraßen.
       Die Messquerschnitte des LBV.SH (q und v, DATEX II; Mobilithek 748506312813203456 und
       748508537744674816) nur über die Vermittlung der Mobilithek mit Freigabe → nicht keyless.
-    - **Bayern, BAYSIS:** 212 automatische Dauerzählstellen (ArcGIS-Dienst
-      `gisportal-stmb.bayern.de/server/rest/services/WMS/BAYSIS_Verkehrsdaten/MapServer/0`:
-      Zaehlstellennummer, Strassenbezeichnung, Strassenklasse, Status; 132 an Bundes-, 72 an
-      Staats-, 8 an Kreisstraßen, 176 in Betrieb; die Abfrage liefert keine Geometrie). Die
-      Mobilithek (798871611185745920, Zentralstelle für Verkehrsmanagement,
-      „LICENSE_FREE_USE_OPEN_DATA“, ohne Vermittlung) nennt als Zugang die Seite
-      „Dauerzählstellen“ von BAYSIS:
-      Auswahl je Zählstelle, Stunden-, Tages-, Monats- und Jahreswerte samt Verfügbarkeit mit den
-      Prüfkennzeichen der BASt (s, k, a, d, u, z, -), Export als CSV. Die Seite ist eine
-      Web-Anwendung (`/resources/js/baysis.js`, 20 MB), die die Werte über eine eigene, nicht
-      dokumentierte Schnittstelle lädt (`/services/apiDAUZ/api/DAUZ`) – nicht abgefragt: Ob die
-      Zählkarte sie automatisch nutzen darf, entscheidet die Projektleitung; sonst bei der
-      Zentralstelle nach einem Download je Zählstelle und Jahr fragen. Der WFS der SVZ 2021 steht
-      unter CC BY 4.0 („Datenquelle: Bayerische Straßenbauverwaltung - BAYSIS“).
+    - **Bayern, BAYSIS – seit November 2026 in der Karte** (`bayern_dauz`, Adapter
+      `baysis_dauz`; Freigabe der Projektleitung am 15.11.2026, die Schnittstelle der Seite
+      „Dauerzählstellen“ zu nutzen; Erkundung `tools/bw_fl4.py` bis `bw_fl7.py`): 212 automatische
+      Dauerzählstellen in der ArcGIS-Ebene `gisportal-stmb.bayern.de/server/rest/services/WMS/
+      BAYSIS_Verkehrsdaten/MapServer/0` (Zaehlstellennummer, Strassenbezeichnung, Strassenklasse,
+      Status; 132 an Bundes-, 72 an Staats-, 8 an Kreisstraßen; die Abfrage liefert keine
+      Geometrie). Die Mobilithek (798871611185745920, Zentralstelle für Verkehrsmanagement,
+      „LICENSE_FREE_USE_OPEN_DATA“, Nutzungsbedingungen GeoNutzV, ohne Vermittlung) nennt als
+      Zugang die Seite „Dauerzählstellen“ – eine Web-Anwendung (Vue, `/resources/js/baysis.js`,
+      20 MB), die ihre Werte per `POST /services/apiDAUZ/api/DAUZ` lädt (JSON
+      `{"zaehlstellennummer": …, "abfrageArt": "stammdaten" | "verfügbarkeit" | "stundenwerte" |
+      "tagwerte" | "monatswert" | "jahreswerte", "vonDatum", "bisDatum"}`; Datum als JJJJ-MM-TT
+      oder TT.MM.JJJJ). Stunden: je Zeile `datum` (TT.MM.JJJJ), `stunde` 01–24 (Ende der Stunde),
+      Kfz und „LKW“ (in der Anwendung „SV“) je Richtung mit Prüfkennzeichen der BASt, dazu die
+      Summe beider Richtungen (GQ). Ein Jahr einer Zählstelle: 8.760 Zeilen, rund 10 MB, acht
+      Sekunden. Die Verfügbarkeit nennt Monate ab Januar 2023. Herbst-Umstellung: 2–3 Uhr einmal,
+      mit „z“. Stammdaten ohne Koordinaten (`koordinaten: null`); alle bisher gesehenen Stellen an
+      Staats- und Kreisstraßen zählen 8+1 Fahrzeugarten. **Der Server lehnt Folgen von Anfragen
+      ab:** nach rund 15 Anfragen in einer Minute „Connection refused“ (auch beim GIS-Portal), über
+      eine halbe Stunde lang fast jede Anfrage – daher im Adapter zehn Sekunden Pause, Wartezeit
+      nach Ablehnungen, Abbruch nach vier in Folge, höchstens 40 Minuten je Lauf. Die
+      Stationssuche des Diensts SibPublic (`…/SibPublic/MapServer/exts/SibPublic/Stationssuche`)
+      antwortet auf `station`, `strassenBezeichnung` ohne Leerzeichen und `abschnitt` mit 500;
+      die Internet-Fassung der Anwendung rechnet Stationen über
+      `/services/linearReferencingAPI/api/ListAbschnittsfolge` um. Der WFS der SVZ 2021 steht unter
+      CC BY 4.0 („Datenquelle: Bayerische Straßenbauverwaltung - BAYSIS“).
     - **Nordrhein-Westfalen:** `opendata.strassen.nrw.de/Verkehrsdaten/Dauerzaehlungen/`
       (dl-de/zero-2-0 laut Open.NRW) hat nur Monats- und Jahresberichte als PDF (DTV je Stelle,
       höchster Tageswert mit Datum; 119 Stellen an Bundes-, 58 an Landes-, 2 an Kreisstraßen) →

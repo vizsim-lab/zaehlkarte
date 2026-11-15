@@ -70,6 +70,8 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/readi_urbanpulse.py` | Ettlingen: Datastore von re@di (UrbanPulse-Ströme je Fahrtrichtung), Kfz als Summe der Klassen |
 | `dauer/mobidata_eco.py` | Rad-Zählstellen in Baden-Württemberg (Eco-Counter, gebündelt von MobiData BW), Stundenwerte in Ortszeit |
 | `dauer/bw_land.py` | Baden-Württemberg: Dauerzählstellen des Landes (BASt-Bestandsband als CSV, Monats- und Jahres-ZIPs nach Datum im DCAT-Dokument), Fahrstreifen je Richtung, Prüfkennzeichen, Lage aus der Zählstellenkarte |
+| `dauer/baysis_dauz.py` | Bayern: Dauerzählstellen an Staats- und Kreisstraßen über die Schnittstelle der BAYSIS-Seite „Dauerzählstellen“ (je Zählstelle und Monat, höflich mit Pause und Zeitbudget), Prüfkennzeichen der BASt |
+| `dauer/planegg_rad.py` | Planegg: Fahrradzählstelle, eine Excel-Datei je Jahr (Links von der Seite), Tageswerte der Quelle, Monat laut Blatt |
 | `dauer/muenster_rad.py` | Münster: Rad-Zählstellen (Eco-Counter) aus dem GitHub-Repository der Stadt, Status je Viertelstunde |
 | `dauer/aachen_rad.py` | Aachen: Radzählstellen je Kanal (UTC), Standorte aus dem PDF |
 | `dauer/berlin_rad.py` | Berlin: Rad-Zählstellen aus der Excel-Datei der Senatsverwaltung, Markierungen per Zellfarbe |
