@@ -8,7 +8,9 @@ import { sprache, t } from "../sprache/texte.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-export function setupPhotonGeocoder(map) {
+/** `versatz()`: wohin der Treffer rückt (Mitte des freien Teils gegen die Fenstermitte, px) –
+ *  sonst landete er auf dem Handy unter einem offenen Sheet (js/ui/platz.js). */
+export function setupPhotonGeocoder(map, { versatz = () => [0, 0] } = {}) {
   const container = document.createElement('div');
   container.className = 'geocoder';
   container.innerHTML = `
@@ -88,7 +90,7 @@ export function setupPhotonGeocoder(map) {
     }
 
     marker = new Marker({ color: '#2563eb' }).setLngLat([lng, lat]).addTo(map);
-    map.flyTo({ center: [lng, lat], zoom: 14, essential: true });
+    map.flyTo({ center: [lng, lat], zoom: 14, offset: versatz(), essential: true });
 
     const formatted = formatResult(feature);
     input.value = formatted.secondary ? `${formatted.primary}, ${formatted.secondary}` : formatted.primary;

@@ -143,12 +143,19 @@ export function setzeDatenlage(map, sichtbar) {
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
-/** EIN Hover-Popup für Zählstellen, Dauerzählstellen und Datenlage (wie in der Unfallkarte). */
-export function bindeHover(map, { daten, manifest, datenlage, gibZustand, gibEintrag, gibDauer }) {
+/**
+ * EIN Hover-Popup für Zählstellen, Dauerzählstellen und Datenlage (wie in der Unfallkarte) – nur
+ * mit Maus: Auf Touch-Geräten (hover: none) käme es beim Antippen und bliebe neben dem Sheet
+ * stehen, das dasselbe zeigt. `gibRand(punkt)`: verdeckte Ränder (js/ui/platz.js), damit MapLibre
+ * das Kärtchen zur freien Seite verankert statt unter Seitenleiste oder Legende.
+ */
+export function bindeHover(map, { daten, manifest, datenlage, gibZustand, gibEintrag, gibDauer, gibRand = null }) {
   const popup = new Popup({ closeButton: false, closeOnClick: false, maxWidth: "280px", offset: 10 });
   const jeAgs = new Map(datenlage.features.map((f) => [f.properties.ags, f.properties]));
   const ebenen = ["stellen-kreis", "dauer-kreis", "datenlage-kreis"];
+  const ohneHover = window.matchMedia("(hover: none)");
   map.on("mousemove", (e) => {
+    if (ohneHover.matches) return;
     const f = map.queryRenderedFeatures(e.point, { layers: ebenen.filter((id) => map.getLayer(id)) })[0];
     if (!f) {
       popup.remove();
@@ -196,6 +203,7 @@ export function bindeHover(map, { daten, manifest, datenlage, gibZustand, gibEin
         <div class="pop-meta">${esc(tag)}${eintrag?.z ? ` · ${esc(TAGE[eintrag.z.tag ?? "u"])}` : ""}${s.zaehlungen.length > 1 ? ` · ${esc(t("hover.mehrere", { n: zahl(s.zaehlungen.length) }))}` : ""}</div>
         <div class="pop-pinhint">${esc(t("hover.details"))}</div>`;
     }
+    if (gibRand) popup.setPadding(gibRand(e.point));
     popup.setLngLat(e.lngLat).setHTML(html).addTo(map);
   });
   map.getCanvas().addEventListener("mouseleave", () => popup.remove());

@@ -28,7 +28,8 @@ import { erstelleDetail } from "./js/ui/detail.js";
 import { erstelleKommune } from "./js/ui/kommune.js";
 import { erstelleLegende } from "./js/ui/legende.js";
 import { setupMobileLayout } from "./js/ui/mobileLayout.js";
-import { addNavigationControl, beschrifteSteuerung, rueckeNebenPanels, setupMapPanel } from "./js/ui/setupMapPanel.js";
+import { erstellePlatz } from "./js/ui/platz.js";
+import { addNavigationControl, beschrifteSteuerung, setupMapPanel } from "./js/ui/setupMapPanel.js";
 import { setupTooltips } from "./js/ui/tooltip.js";
 import { setupPhotonGeocoder } from "./js/utils/geocoder.js";
 import { dekodiere, kodiere } from "./js/utils/permalinkFormat.js";
@@ -119,6 +120,8 @@ async function start() {
     tagWechseln: (iso) => tagWechseln(iso),
     dauerModus: (m) => dauerModus(m),
   });
+  // Panels nehmen Rücksicht: Legende klappt bei Platzmangel zu, Auswahl bleibt sichtbar (js/ui/platz.js)
+  const platz = erstellePlatz(karte);
 
   async function holeDauer() {
     if (!dauer) {
@@ -222,6 +225,7 @@ async function start() {
     kommune.schliesse();
     detail.zeige(s, zaehlung ?? jeStelle.get(s.index)?.z.index ?? null);
     setzeAuswahl(karte, s);
+    platz.waehle([s.lon, s.lat]);
     merkeLink();
   }
 
@@ -230,6 +234,7 @@ async function start() {
     detail.schliesse();
     dauerDetail.zeige(s);
     setzeAuswahl(karte, s);
+    platz.waehle([s.lon, s.lat]);
     merkeLink();
   }
 
@@ -238,19 +243,9 @@ async function start() {
     detail.schliesse();
     dauerDetail.schliesse();
     setzeAuswahl(karte, null);
-    if (kommune.zeige(ags)) merkeLink();
-  }
-
-  /** Rand der Karte, den Steckbrief und Legende verdecken (für fitBounds). */
-  function kartenRand() {
-    const rand = { top: 70, bottom: 50, left: 50, right: 50 };
-    if (window.innerWidth <= 640) return rand;
-    const panel = document.getElementById("kommune-detail");
-    if (!panel.hidden) rand.left = Math.round(panel.getBoundingClientRect().right) + 30;
-    const leg = document.getElementById("legend");
-    if (!leg.classList.contains("collapsed")) rand.right = Math.round(window.innerWidth - leg.getBoundingClientRect().left) + 30;
-    if (window.innerWidth - rand.left - rand.right < 220) Object.assign(rand, { left: 50, right: 50 });
-    return rand;
+    if (!kommune.zeige(ags)) return;
+    platz.waehle(datenlage.features.find((f) => f.properties.ags === ags)?.geometry.coordinates ?? null);
+    merkeLink();
   }
 
   /**
@@ -270,8 +265,8 @@ async function start() {
     }
     legende.zeichne();
     await zeichne();
-    if (window.innerWidth <= 640) kommune.schliesse(); // auf dem Handy die Karte frei machen
-    if (umriss) karte.fitBounds(umriss, { padding: kartenRand(), maxZoom: 14, duration: 700 });
+    if (platz.mobil()) kommune.schliesse(); // auf dem Handy die Karte frei machen
+    if (umriss) karte.fitBounds(umriss, { padding: platz.rand(), maxZoom: 14, duration: 700 });
   }
 
   /** Lizenz einer Kurzzeit-Zählung für den CSV-Export (null: Quelle ohne Lizenz, Zeile weglassen). */
@@ -302,8 +297,10 @@ async function start() {
   const popup = bindeHover(karte, {
     daten, manifest, datenlage, gibZustand: () => zustand, gibEintrag: (i) => jeStelle.get(i),
     gibDauer: () => ({ d: dauer, juengster: imJuengsten(dauer, zustand), eintrag: (i) => jeDauer.get(i) }),
+    gibRand: (punkt) => platz.popupRand(punkt),
   });
   karte.on("click", (e) => {
+    popup.remove(); // was das Kärtchen zeigte, steht gleich in der Seitenleiste
     const treffer = karte.queryRenderedFeatures(e.point, { layers: ["stellen-kreis", "dauer-kreis", "datenlage-kreis"] });
     const s = treffer.find((f) => f.layer.id === "stellen-kreis");
     if (s) { oeffneStelle(daten.stellen[s.properties.i]); return; }
@@ -329,11 +326,10 @@ async function start() {
     ladeCsv(csv(daten, zustand, lizenzVon), `zaehlungen_${manifest.erzeugt}.csv`);
   });
 
-  setupPhotonGeocoder(karte);
+  setupPhotonGeocoder(karte, { versatz: () => platz.versatz() });
   setupMapPanel(karte);
   addNavigationControl(karte);
   beschrifteSteuerung();
-  rueckeNebenPanels();
   setupMobileLayout();
   // Dauerzählstellen: nur nachsehen, ob es sie gibt; geladen wird beim Umschalten (oder f=d)
   gibtDauer().then((da) => { if (!dauer) legende.setzeDauer({ da }); });
@@ -360,18 +356,20 @@ async function start() {
   if (aufruf.stelle) {
     const s = zustand.familie === "d" ? dauer?.jeId.get(aufruf.stelle) : daten.stellen.find((x) => x.id === aufruf.stelle);
     if (s) {
-      if (zustand.familie === "d") oeffneDauer(s); else oeffneStelle(s);
       if (!aufruf.karte) karte.jumpTo({ center: [s.lon, s.lat], zoom: 14 });
+      if (zustand.familie === "d") oeffneDauer(s); else oeffneStelle(s);
+      platz.waehle([s.lon, s.lat], { sofort: true }); // liegt sie unter dem Panel (Handy-Sheet): ins Freie
     }
   } else if (aufruf.kommune) {
     const f = datenlage.features.find((x) => x.properties.ags === aufruf.kommune);
     if (f) {
-      oeffneKommune(aufruf.kommune);
       if (!aufruf.karte) karte.jumpTo({ center: f.geometry.coordinates, zoom: 9 });
+      oeffneKommune(aufruf.kommune);
+      platz.waehle(f.geometry.coordinates, { sofort: true });
     }
   }
   window.__app = {
-    karte, daten, zustand, manifest, datenlage, zeichne, oeffneStelle, oeffneKommune, kommune, detail, eintraege: () => eintraege,
+    karte, daten, zustand, manifest, datenlage, zeichne, oeffneStelle, oeffneKommune, kommune, detail, platz, eintraege: () => eintraege,
     dauer: () => dauer, dauerDetail, oeffneDauer, familieWechseln, tagWechseln, dauerModus, dauerEintraege: () => dauerEintraege,
   };
   document.documentElement.dataset.bereit = "1";

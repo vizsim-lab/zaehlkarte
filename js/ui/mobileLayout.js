@@ -1,11 +1,11 @@
-// mobileLayout.js — unter 640px wird die Legende zum Bottom-Sheet (CSS in style.css).
+// mobileLayout.js — im Handy-Layout (bis 760 px, MOBIL aus js/ui/platz.js) wird die Legende zum
+// Bottom-Sheet (CSS in style.css).
 // Hier nur, was CSS nicht kann (vereinfacht aus vizsim/unfallkarte, ohne Zieh-Geste):
 //   1. die Höhe des zugeklappten Sheets als `--legend-peek` melden – daran hängen die
 //      Bedienelemente unten links und die Attribution;
 //   2. die Suche auf dem Handy zum Lupen-Knopf falten.
 import { t } from "../sprache/texte.js";
-
-const MOBIL = "(max-width: 640px)";
+import { MOBIL } from "./platz.js";
 
 export function setupMobileLayout() {
   const legend = document.querySelector(".legend");

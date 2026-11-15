@@ -369,14 +369,16 @@ body {
   opacity: 0.8;
 }
 
-/* ────────────── Photon Geocoder (Stil: vizsim/hilo_profiler) ────────────── */
+/* ────────────── Photon Geocoder (Stil: vizsim/hilo_profiler) ──────────────
+   So breit wie die Seitenleisten darunter und bündig mit ihnen: Suche, Seitenleiste und
+   Knopfleiste bilden EINE linke Spalte (js/ui/platz.js). */
 .geocoder {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 10px;
+  left: 10px;
   z-index: 7;
-  width: 320px;
-  max-width: calc(100vw - 24px);
+  width: 380px;
+  max-width: calc(100vw - 20px);
   font-family: sans-serif;
 }
 
@@ -472,14 +474,18 @@ body {
 }
 .geocoder-no-results { padding: 10px 12px; }
 
-/* ───── Container Bottom Left ───── */
+/* ───── Knopfleiste unten links ─────
+   Karten-Knopf (.map-settings-toggle, left 10px), daneben Plus, Minus, Kompass: EINE waagrechte
+   Leiste unter der linken Spalte. Die Seitenleisten enden darüber (.detail-panel, max-height),
+   die Leiste rückt also nie – bis November 2026 standen die Knöpfe senkrecht und sprangen neben
+   lange Seitenleisten. 66px = 10 Rand + 44 Karten-Knopf + 12 Abstand. */
 #bottom-left-ui-container {
   position: absolute;
-  bottom: 64px;            /* angehoben: Platz für den Karten-Panel-Button darunter */
-  left: 10px;
+  bottom: 10px;
+  left: 66px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: flex-end;
   gap: 8px;
   z-index: 2;
   font-family: sans-serif;
@@ -488,9 +494,9 @@ body {
 /* Nav (Zoom/Kompass) als 44px-Kacheln, passend zum Karten-Panel-Button (wie hilo_profiler) */
 #custom-nav-control .maplibregl-ctrl-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 8px;
-  width: 44px;
+  width: auto;
   background: transparent;
   border: none;
   box-shadow: none;
@@ -596,7 +602,7 @@ body {
   position: absolute; left: 10px; bottom: 64px; width: 300px;
   max-width: calc(100vw - 32px);
   background: #fff; border-radius: 16px; border: 1px solid #e3e5e9;
-  box-shadow: 0 14px 40px rgba(0,0,0,.18); z-index: 5; padding: 14px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.18); z-index: 7; padding: 14px; /* über einer Seitenleiste */
   display: flex; flex-direction: column; gap: 12px;
 }
 .map-settings-panel.is-collapsed { display: none; }
@@ -805,13 +811,14 @@ body {
 /* ══════════════════════ Mobile: Legende als Bottom-Sheet ══════════════════════
    Bis hierher hatte das Stylesheet keine einzige @media-Query: die 320-px-Legende
    klebte auch auf einem 360-px-Telefon oben rechts und verdeckte fast die halbe
-   Karte. Unter 640px wandert sie deshalb an den unteren Rand und wird zum Sheet —
+   Karte. Bis 760px (MOBIL_BIS in js/utils/platzRechnung.js; darunter lägen Seitenleiste und
+   Legende aufeinander) wandert sie deshalb an den unteren Rand und wird zum Sheet —
    zugeklappt bleibt ein Streifen mit Titel und Zählern stehen, aufgeklappt
    deckt sie höchstens 72 % der Höhe ab. Der INHALT ändert sich nicht, nur die Lage.
 
    Die Höhe des zugeklappten Streifens misst js/ui/mobileLayout.js und meldet sie als
    --legend-peek; daran hängen die Bedienelemente unten links. */
-@media (max-width: 640px) {
+@media (max-width: 760px) {
   .legend {
     top: auto;
     right: 0;
@@ -907,15 +914,15 @@ body {
     bottom: calc(var(--legend-peek, 96px) + 4px);
   }
 
-  /* Ausgeklappt lief das Band über die volle Breite — und damit unter den Karten-Knopf
-     unten links (44px + 10px Rand). Hier gedeckelt: der Text bricht lieber um, als sich
-     mit den Bedienelementen zu überlagern. */
+  /* Ausgeklappt lief das Band über die volle Breite — und damit unter die Knopfleiste
+     unten links. Hier gedeckelt: der Text bricht lieber um, als sich mit den
+     Bedienelementen zu überlagern. */
   .maplibregl-ctrl-bottom-right .maplibregl-ctrl-attrib {
     /* border-box, weil MapLibre 36px Innenabstand für den ⓘ-Knopf einrechnet — sonst
        misst die Grenze am falschen Kasten und das Band ragt doch wieder hinüber.
-       74px = 10 Eigenrand + 44 Knopf + 10 Rand links + 10 Luft. */
+       234px = 10 Eigenrand + Leiste bis 214px (66 + 3 × 44 + 2 × 8) + 10 Luft. */
     box-sizing: border-box;
-    max-width: calc(100vw - 74px);
+    max-width: calc(100vw - 234px);
   }
 
   /* Während der Geste schiebt sich das Sheet über die Bedienelemente unten links.
@@ -925,13 +932,13 @@ body {
     z-index: 7;
   }
 
-  /* Zugeklappt: Karten-Bedienelemente sitzen direkt ÜBER dem Streifen.
-     Geschwister-Selektor, weil .legend im Markup vor beiden steht. */
-  .legend.collapsed~.map-settings-toggle {
+  /* Zugeklappt: die Knopfleiste sitzt direkt ÜBER dem Streifen, die Karteneinstellungen
+     darüber. Geschwister-Selektor, weil .legend im Markup vor allen steht. */
+  .legend.collapsed~.map-settings-toggle,
+  .legend.collapsed~#bottom-left-ui-container {
     bottom: calc(var(--legend-peek, 96px) + 12px);
   }
 
-  .legend.collapsed~#bottom-left-ui-container,
   .legend.collapsed~.map-settings-panel {
     bottom: calc(var(--legend-peek, 96px) + 66px);
   }
@@ -1063,7 +1070,8 @@ body {
 .ohne-lizenz { font-weight: 600; color: var(--ui-text); }
 .ohne-lizenz-text { margin: 2px 0 4px; }
 
-/* ───── Seitenleiste einer Stelle (links, unter der Suche) ───── */
+/* ───── Seitenleiste einer Stelle (links, unter der Suche) ─────
+   Endet über der Knopfleiste unten links: 60 oben + 64 unten (10 + 44 Leiste + 10 Luft). */
 .detail-panel {
   position: absolute;
   top: 60px;
@@ -1071,7 +1079,7 @@ body {
   z-index: 6;
   width: 380px;
   max-width: calc(100vw - 20px);
-  max-height: calc(100dvh - 76px);
+  max-height: calc(100dvh - 124px);
   overflow-y: auto;
   box-sizing: border-box;
   padding: 0 16px 14px;
@@ -1084,7 +1092,6 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #d1d5db transparent;
 }
-.detail-panel--klein { width: 320px; }
 .detail-kopf {
   position: sticky; top: 0; z-index: 1;
   display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
@@ -1129,13 +1136,6 @@ body {
 .link-knopf { padding: 0; border: 0; background: none; color: var(--ui-accent); font: inherit; cursor: pointer; }
 .link-knopf:hover { text-decoration: underline; }
 .pop-chips .legend-chip { font-size: 11px; padding: 3px 9px; }
-
-/* Reicht ein offenes Panel bis zu den Bedienelementen unten links, rücken sie daneben
-   (js/ui/setupMapPanel.js misst: rueckeNebenPanels); kurze Panels lassen sie am Rand. */
-#bottom-left-ui-container, .map-settings-toggle, .map-settings-panel { transition: left .15s ease; }
-body.steuerung-daneben #bottom-left-ui-container,
-body.steuerung-daneben .map-settings-toggle,
-body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px); }
 
 /* ───── Tagesgang und Verlauf (js/ui/diagramme.js) ───── */
 .tg-wrap { position: relative; margin-top: 6px; }
@@ -1243,16 +1243,18 @@ body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px)
 .kz-datenlage .detail-abschnitt:first-of-type { margin-top: 8px; }
 .kz-belege { margin: 0 0 6px; }
 
-@media (max-width: 640px) {
+/* Handy-Layout (bis 760 px wie js/utils/platzRechnung.js, MOBIL_BIS): Seitenleisten als Sheet
+   unten. Nie zwei Sheets: mit offener Seitenleiste ist die Legende zu (js/ui/platz.js), und die
+   Knopfleiste weicht (body.hat-panel) – sie schaute sonst halb unter dem Sheet hervor. */
+@media (max-width: 760px) {
   .detail-panel {
     top: auto; left: 0; right: 0; bottom: 0; width: auto; max-width: none;
     max-height: 70dvh; border-radius: var(--ui-radius) var(--ui-radius) 0 0; z-index: 8;
     padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
   }
-  .detail-panel--klein { width: auto; }
-  body.steuerung-daneben #bottom-left-ui-container,
-  body.steuerung-daneben .map-settings-toggle,
-  body.steuerung-daneben .map-settings-panel { left: 10px; }
+  body.hat-panel #bottom-left-ui-container,
+  body.hat-panel .map-settings-toggle,
+  body.hat-panel .map-settings-panel { display: none; }
   .legend-chip { padding: 6px 11px; }
 }
 
@@ -1263,4 +1265,3 @@ body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px)
   font: 11.5px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--ui-text); resize: vertical;
 }
-.detail-panel--klein { width: 360px; }

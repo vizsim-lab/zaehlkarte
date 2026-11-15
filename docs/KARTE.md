@@ -42,6 +42,15 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   Die Karte zeigt je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags oder
   eines wählbaren Tags (Kfz zuerst, Rad, Fuß und Lkw/Schwerverkehr über die Chips), die
   Seitenleiste die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
+- **Platz für die Karte**: Links stehen die Suche, darunter die Seitenleiste einer Stelle oder der
+  Steckbrief und ganz unten die Knopfleiste (Hintergrundkarte, Plus, Minus, Kompass); die
+  Seitenleiste endet über der Leiste, die Leiste rückt nie. Rechts steht die Legende. Blieben
+  zwischen Seitenleiste und Legende weniger als 480 px Karte (Fenster unter etwa 1230 px), klappt
+  die Legende auf ihre Kopfzeile zu, solange die Seitenleiste offen ist; wer sie von Hand auf- oder
+  zuklappt, behält das. Bis 760 px Breite gilt das Handy-Layout: Legende und Seitenleisten sind
+  Sheets am unteren Rand, offen ist immer nur eins, und die Knopfleiste weicht. Liegt die gewählte
+  Stelle oder Kommune unter einem Panel, rückt die Karte sie in den freien Teil (auch beim Link
+  und bei der Suche); das Hover-Kärtchen öffnet zur freien Seite und erscheint nur mit Maus.
 - **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
   `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
   Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
