@@ -40,6 +40,7 @@ BLOCK = {"kurzzeit": {"stand", "quellen", "was", "situation", "empfehlung", "weg
          "dauer": {"stand", "quellen", "was", "situation", "links"}}
 ANFRAGE = {"an", "zusatz"}
 KONTAKT = {"name", "email", "fds", "fds_suche"}  # Funktionsadressen aus FragDenStaat
+EBENEN = {"land", "bund"}  # `ebene` einer Quelle, die keine Kommune betreibt
 
 
 def _id(x: tuple) -> str:
@@ -302,7 +303,8 @@ def test_quellen_der_kommunen():
     Familie, die in der Karte sind: „in der Karte“ immer mit Quellen, und nur mit solchen mit
     Lizenz; „ohne Lizenz“ mit Quellen, sobald die Werte in der Karte sind, und nur mit solchen ohne
     Lizenz; jeder andere Stand ohne Quellen. Jede Kurzzeit-Quelle gehört zu genau einer Kommune,
-    jede Dauer-Quelle zu mindestens einer (Bündel wie MobiData BW zu mehreren)."""
+    jede Dauer-Quelle zu mindestens einer (Bündel wie MobiData BW zu mehreren) – außer Quellen
+    des Landes oder des Bundes (`ebene` in der Quelldatei): Sie gehören zu keiner Kommune."""
     alle = {"kurzzeit": KURZZEIT, "dauer": DAUER}
     live = {f: {c for c, q in qs.items() if q["status"] == "live"} for f, qs in alle.items()}
     verknuepft: dict[str, list[str]] = {"kurzzeit": [], "dauer": []}
@@ -323,8 +325,18 @@ def test_quellen_der_kommunen():
     k = verknuepft["kurzzeit"]
     assert len(k) == len(set(k)), "eine Kurzzeit-Quelle an mehreren Kommunen"
     assert set(k) == live["kurzzeit"], f"ohne Kommune: {live['kurzzeit'] - set(k)}"
-    assert set(verknuepft["dauer"]) == live["dauer"], (
-        f"ohne Kommune: {live['dauer'] - set(verknuepft['dauer'])}")
+    ohne_kommune = {c for c, q in DAUER.items() if q.get("ebene") in EBENEN}
+    assert not set(verknuepft["dauer"]) & ohne_kommune, "Quelle des Landes/Bundes an einer Kommune"
+    assert set(verknuepft["dauer"]) == live["dauer"] - ohne_kommune, (
+        f"ohne Kommune: {live['dauer'] - ohne_kommune - set(verknuepft['dauer'])}")
+
+
+@pytest.mark.parametrize("quelle", LIVE, ids=_id)
+def test_ebene(quelle):
+    """`ebene` nur bei Dauerzählstellen, die keine Kommune betreibt: Land oder Bund."""
+    familie, code, q = quelle
+    if "ebene" in q:
+        assert familie == "dauer" and q["ebene"] in EBENEN, f"{code}: ebene {q['ebene']!r}"
 
 
 def _links_ok(links) -> bool:
