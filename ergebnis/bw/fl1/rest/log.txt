@@ -1,0 +1,17 @@
+ok https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse 305980 text/html;charset=UTF-8
+ok https://www.planegg.de/umwelt/energie/links-und-downloads-zum-thema-regenerative-energie-und-energieeinsparung 306608 text/html;charset=UTF-8
+ok https://www.planegg.de/_Resources/Persistent/6/c/3/5/6c35aeab141ab53dfe6596d67d9a318110f2c176/2021_Fahrrad%20Amtmannstra%C3%9Fe.xlsx 66479 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ok https://www.planegg.de/_Resources/Persistent/0/e/d/6/0ed686592496320b67e0e0c47d03fa85af268305/2022_Fahrrad%20Amtmannstra%C3%9Fe.xlsx 113913 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ok https://www.planegg.de/_Resources/Persistent/2/3/1/8/2318d3bfb2613065757c100f271a9f15b6711d67/2023_Fahrrad%20Amtmannstra%C3%9Fe.xlsx 117597 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ok https://www.planegg.de/_Resources/Persistent/7/b/d/a/7bdaaeacbcc06bac7ec2fc829d3879bcf563c1d1/2024_Fahrrad%20Amtmannstra%C3%9Fe.xlsx 114904 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ok https://www.planegg.de/_Resources/Persistent/d/6/2/1/d6213a27b90457caf8d92f59c9b1e50b048c6189/2025_Fahrrad%20Amtmannstra%C3%9Fe.xlsx 120828 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+ok https://www.planegg.de/_Resources/Persistent/d/4/d/2/d4d207f3e03cabdf3c4b3926318a8b71cc617604/2026_Fahrrad%20Amtmannstra%C3%9Fe.xlsx 55486 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+gesperrt https://mobidata-bw.de/api/3/action/package_show?id=eco-counter-fahrradzahler
+gesperrt https://mobidata-bw.de/api/3/action/package_show?id=eco-counter-fahrradzaehler
+ok https://mobidata-bw.de/daten/eco-counter/ 1092 text/html
+Fehler 1 https://mobidata-bw.de/daten/eco-counter/v2/ <HTTPError 403: 'Forbidden'>
+Fehler 2 https://mobidata-bw.de/daten/eco-counter/v2/ <HTTPError 403: 'Forbidden'>
+Fehler 3 https://mobidata-bw.de/daten/eco-counter/v2/ <HTTPError 403: 'Forbidden'>
+ok https://www.baysis.bayern.de/internet/verdat/dauz/index.html 24995 text/html
+ok https://www.baysis.bayern.de/internet/verdat/statistik/index.html 27390 text/html
+ok https://www.baysis.bayern.de/internet/veroeffentlichung/index.html 59310 text/html
