@@ -1,0 +1,41 @@
+[
+ {
+  "ags": "11000000",
+  "name": "Berlin, Stadt",
+  "art": "gemeinde",
+  "einw": 3700577,
+  "vorher": "erreicht",
+  "auch": [],
+  "web": "https://www.berlin.de/",
+  "titel": "Berlin - Offizielles Stadtportal der Hauptstadt Deutschlands – Berlin.de",
+  "generator": "",
+  "sitemap_urls": 10826,
+  "sitemaps": 8,
+  "treffer": [
+   "https://www.berlin.de/aktuelles/9069237-958090-bvg-schafft-barzahlung-in-bussen-ab.html",
+   "https://www.berlin.de/aktuelles/9134874-958090-nur-noch-bargeldlose-zahlung-in-bvgbusse.html",
+   "https://www.berlin.de/weihnachtsmarkt/5697424-3496862-weihnachtsmarkt-fussgaengerzone-wilmersd.html"
+  ],
+  "suche": [
+   {
+    "begriff": "Frequenzmessung",
+    "url": "https://www.berlin.de/suche/?q=Frequenzmessung",
+    "fehler": "<HTTPError 403: 'Forbidden'>"
+   },
+   {
+    "begriff": "Radzählstelle",
+    "url": "https://www.berlin.de/suche/?q=Radz%C3%A4hlstelle",
+    "fehler": "<HTTPError 403: 'Forbidden'>"
+   },
+   {
+    "begriff": "Verkehrsversuch",
+    "url": "https://www.berlin.de/suche/?q=Verkehrsversuch",
+    "fehler": "<HTTPError 403: 'Forbidden'>"
+   }
+  ],
+  "start_treffer": [],
+  "versuche": [],
+  "herkunft": "liste_oder_geraten",
+  "neu_treffer": 0
+ }
+]
