@@ -9,9 +9,9 @@ Positionsdatei mit Prüfsumme; aus dem ZIP die XLS und PDF. Moers: je Datensatz 
 Dokument des Portals, `zaehlkarte.ckan`) und alle Messdateien – neu nur, was fehlt oder sich laut
 Metadaten geändert hat. Konstanz: je Standort eine CSV mit Prüfsumme. Potsdam: Knotenliste
 (Opendatasoft-API) und je Knoten das ZIP der Zählpläne, jedes Mal neu; das Datum des Abrufs steht
-in `potsdam/abruf.txt` – es gehört zur Quellenangabe (NB-16-OGD). Olpe: alle Datensätze
-„Verkehrsmessung(en) …“ (HTML-Suche und -Seite des Portals, die Lizenz steht nur dort) samt
-JSON-Dateien, jedes Mal neu.
+in `potsdam/abruf.txt` – es gehört zur Quellenangabe (NB-16-OGD). Tübingen, Neubulach und
+Nürnberg: die PDFs aus `dateien` mit Prüfsumme. Olpe: alle Datensätze „Verkehrsmessung(en) …“
+(HTML-Suche und -Seite des Portals, die Lizenz steht nur dort) samt JSON-Dateien, jedes Mal neu.
 
 Scheitert eine Quelle, laufen die anderen weiter (wie bei den Dauerzählstellen); `hole` nennt sie
 mit dem Fehler, ihre Rohdaten bleiben, wie sie waren. `zaehlkarte fetch` endet dann mit
@@ -172,7 +172,8 @@ def _xanten_pdf(code: str, q: dict, pfade: Pfade) -> list[str]:
 
 
 def _pdf_dateien(code: str, q: dict, pfade: Pfade) -> list[str]:
-    """PDFs aus `dateien` (URL und Prüfsumme) nach data/raw/<code>/ (Tübingen, Neubulach)."""
+    """PDFs aus `dateien` (URL und Prüfsumme) nach data/raw/<code>/ (Tübingen, Neubulach,
+    Nürnberg)."""
     return [lade_geprueft(d["url"], pfade.roh / code / d["datei"], d.get("sha256"))
             for d in q["dateien"]]
 
@@ -221,6 +222,7 @@ ABRUF: dict[str, Callable[[str, dict, Pfade], list[str]]] = {
     "konstanz_mobil": _konstanz_mobil,
     "tuebingen_pdf": _pdf_dateien,
     "neubulach_pdf": _pdf_dateien,
+    "nuernberg_pdf": _pdf_dateien,
 }
 
 

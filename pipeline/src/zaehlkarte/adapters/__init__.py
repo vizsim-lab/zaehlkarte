@@ -10,6 +10,7 @@ from zaehlkarte.adapters import (
     moers_radar,
     muenster,
     neubulach_pdf,
+    nuernberg_pdf,
     olpe_radar,
     potsdam_pdf,
     tuebingen_pdf,
@@ -27,4 +28,5 @@ ADAPTER = {
     "xanten_pdf": xanten_pdf,
     "tuebingen_pdf": tuebingen_pdf,
     "neubulach_pdf": neubulach_pdf,
+    "nuernberg_pdf": nuernberg_pdf,
 }
