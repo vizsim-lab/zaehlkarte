@@ -1,0 +1,67 @@
+== Abruf
+leipzig_rad: 18106 Stunden geholt (verworfen: keine), Gedächtnis 22307 -> 22307 Stunden, geändert: nichts
+leipzig_rad: 14794 Tageswerte geholt (2024-11-14 bis 2026-11-14; verworfen: keine), Gedächtnis 0 -> 14794 Tage, geändert: tage_2024.csv.gz, tage_2025.csv.gz, tage_2026.csv.gz
+Fehler: []
+Dauer: 5 s
+Rohdaten: 8 Dateien, 0.1 MB
+{
+ "abgerufen": "2026-11-15T09:06:28Z",
+ "stunden": 18106,
+ "von": "2026-10-15T00:00:00+00:00",
+ "bis": "2026-11-14T23:00:00+00:00",
+ "verworfen": {}
+}
+
+Kopf standorte.csv: FID,objectid,stationname,stationid,installationdate,fme_tstamp,geom | radverkehr_dauerzaehlstelle_standort_statisch.12321,12321,Manetstraße,de.sn.stlp.statisch.rad.100040870,2017-10-25,2026-11-15T04:10:08.739,POINT (316626.3845562657 5690467.490876849) | radverkehr_dauerzaehlstelle_standort_statisch.12322,12322,Semmelweisstraße,de.sn.stlp.statisch.rad.100049149,2019-01-01,2026-11-15T04:10:08.807,POINT (317893.03118411166 5688748.019950466) | radverkehr_dauerzaehlstelle_standort_statisch.12323,12323,Karl-Liebknecht-Straße,de.sn.stlp.statisch.rad.100049150,2019-01-01,2026-11-15T04:10:08.807,POINT (317027.7080595421 5689433.528480498) | radverkehr_dauerzaehlstelle_standort_statisch.12324,12324,Lene-Voigt-Park,de.sn.stlp.statisch.rad.100064501,2020-11-06,2026-11-15T04:10:08.808,POINT (318827.3670646044 5690234.340580439) | radverkehr_dauerzaehlstelle_standort_statisch.12325,12325,Gerberstraße,de.sn.stlp.statisch.rad.300021611,2019-01-01,2026-11-15T04:10:08.809,POINT (317313.2538134111 5691605.388503392)
+== Lesen
+26 Zählstellen; Stunden in der Karte: rad 22282; Gedächtnis: 2 Monate (2026-10 bis 2026-11)
+Tageswerte der Quelle (UTC-Tage): 14794 im Gedächtnis (2024 bis 2026), in der Karte 13860
+Reihe 2024-11-14 – 2026-11-15, 26 Stellen
+=== Gruppe rad
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+100040870 | Manetstraße | None | 2026-10-08 – 2026-11-15 | 730 | 2026-11-14 | 3527
+100049149 | Semmelweisstraße | None | 2026-10-08 – 2026-11-15 | 730 | 2026-11-14 | 2925
+100049150 | Karl-Liebknecht-Straße | None | 2026-10-08 – 2026-11-15 | 730 | 2026-11-14 | 5207
+100064501 | Lene-Voigt-Park | None | 2026-10-08 – 2026-11-15 | 725 | 2026-11-14 | 1504
+300021611 | Gerberstraße | None | 2026-10-08 – 2026-11-15 | 726 | 2026-11-14 | 2810
+300023813 | Jahnallee | None | None – None | 634 | 2026-09-20 | 1223
+300027510 | Georg-Schumann-Straße | None | 2026-10-08 – 2026-11-15 | 730 | 2026-11-14 | 962
+300028399 | Wurzner Straße | None | 2026-10-08 – 2026-11-15 | 730 | 2026-11-14 | 1873
+300029261 | Lützner Straße | None | 2026-10-08 – 2026-11-14 | 729 | 2026-11-13 | 1238
+300030764 | Sachsenbrücke | None | 2026-10-08 – 2026-11-15 | 730 | 2026-11-14 | 9277
+300031249 | Grimmaischer Steinweg | None | 2026-10-08 – 2026-11-15 | 730 | 2026-11-14 | 6381
+300051936 | Heuweg | None | 2026-10-08 – 2026-11-15 | 558 | 2026-11-14 | 725
+300051941 | Elsterradweg | None | 2026-10-08 – 2026-11-15 | 558 | 2026-11-14 | 2424
+300051980 | Messe-Allee (Ost-West) | None | 2026-10-08 – 2026-11-15 | 544 | 2026-11-14 | 287
+300051981 | Messe-Allee (Nord-Süd) | None | 2026-10-08 – 2026-10-30 | 493 | 2026-10-29 | 169
+300052679 | Die Linie | None | 2026-10-08 – 2026-11-15 | 543 | 2026-11-14 | 677
+300052725 | Neue Linie | None | 2026-10-08 – 2026-11-13 | 540 | 2026-11-12 | 1454
+300054384 | Schleußiger Weg | None | 2026-10-08 – 2026-11-15 | 557 | 2026-11-14 | 4640
+300054386 | Hans-Weigel-Straße | None | 2026-10-08 – 2026-11-15 | 548 | 2026-11-14 | 632
+300054387 | Zweinaundorfer Straße | None | 2026-10-08 – 2026-11-15 | 544 | 2026-11-14 | 752
+300054391 | Hermann-Liebmann-Brücke | None | 2026-10-08 – 2026-11-15 | 543 | 2026-11-14 | 2369
+300054392 | Prager Straße | None | 2026-10-08 – 2026-11-15 | 527 | 2026-11-14 | 1226
+300065894 | Landsberger Straße | None | 2026-10-08 – 2026-11-15 | 239 | 2026-11-14 | 990
+300066825 | Dittrichring | None | 2026-10-08 – 2026-11-15 | 219 | 2026-11-14 | 1553
+300066925 | Robert-Koch-Park | None | 2026-10-08 – 2026-11-15 | 213 | 2026-11-14 | 744
+300067035 | Klingerbrücke | None | 2026-10-08 – 2026-11-15 | 212 | 2026-11-14 | 4131
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2024: 2024-12-31: 11/0
+2025: 2025-01-01: 11/0, 2025-12-31: 22/0
+2026: 2026-01-01: 22/0
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2024: 
+2025: 2025-03-30: voll 11/0, gezählte Stunden []; 2025-10-26: voll 22/0, gezählte Stunden []
+2026: 2026-03-29: voll 23/0, gezählte Stunden []; 2026-10-25: voll 24/25, gezählte Stunden [4, 24]
+== Vollständige Tage je Jahr (alle Stellen)
+2024: 528 von 0 Tagen mit Werten
+2025: 6501 von 0 Tagen mit Werten
+2026: 7733 von 956 Tagen mit Werten
+== Kartendaten (nur leipzig_rad)
+leipzig_rad: 26 Stellen mit vollständigen Tagen, 0 ohne
+5 Dateien, 0.3 MB, 1 Detail-Dateien
+leipzig_rad: vollständige Tage je Jahr (Stellen × Tage) – 2024: 528, 2025: 6501, 2026: 7733
+leipzig_rad: davon Tageswerte der Quelle (rad): 13860
+leipzig_rad: rad-Tagessummen, Quintilgrenzen [570, 1170, 2160, 4090], Median 1575, Maximum 15640
+index.json quellen: [{"code": "leipzig_rad", "name": "Leipzig (Rad-Zählstellen)", "land": "SN", "traeger": "Stadt Leipzig, Verkehrs- und Tiefbauamt", "art": "Dauerzählstellen Radverkehr der Stadt (Eco-Counter); Stundenwerte je Zählstelle, davor Tageswerte der Quelle (UTC-Tage)", "weg": "offen im WFS des Geoportals (Stunden der letzten 31 Tage, Tageswerte der letzten zwei Jahre; die Zählkarte hebt beides auf)", "portal": "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei", "archiv": null, "quellenvermerk": "Stadt Leipzig", "lizenzen": [{"code": "leipzig_rad", "titel": "Dauerzählstellen Radverkehr – Gesamtanzahl der Fahrräder pro Stunde der letzten 31 Tage und pro Tag der letzten 2 Jahre, Stadt Leipzig (verändert: Werte gesammelt, Stundenwerte zu Tagessummen zusammengefasst)", "herausgeber": "Stadt Leipzig", "lizenz": "dl-de/by-2-0", "lizenz_url": "https://www.govdata.de/dl-de/by-2-0", "herkunft_url": "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei"}], "hinweise": ["Die Quelle hält die Stundenwerte nur 31 Tage vor; die Zählkarte hebt sie seit ihrem ersten Abruf im November 2026 selbst auf – ältere Stunden fehlen in der Karte.", "Vor der ersten gezählten Stunde einer Zählstelle (bis 07.10.2026) stehen die Tageswerte der Quelle (Datensatz „pro Tag der letzten 2 Jahre“, seit 14.11.2024; die Zählkarte hebt auch sie auf). Sie sind Summen 
+index.json lizenzen: null
