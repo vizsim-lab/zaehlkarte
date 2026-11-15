@@ -20,7 +20,7 @@ fetch  Rohdaten -> data/raw/           Berlin-Archive + Geokodierung (sha256 gep
                                          Konstanz: eine CSV je Standort (sha256),
                                          Potsdam: Knotenliste (API) + Zählpläne aus den ZIPs,
                                          Xanten: zwei PDFs (sha256)
-                                         Tübingen, Neubulach, Nürnberg: PDFs (sha256)
+                                         Tübingen, Neubulach, Nürnberg, Kevelaer: PDFs (sha256)
 build  Adapter -> Zählungen             Zähltag (Ferienkalender je Land), Lage übertragen,
                                          Stellen bilden (je Kennung, 150 m)
 site   -> public/data/                  manifest.json, index.json, details/NN.json, datenlage.json
@@ -54,6 +54,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `adapters/tuebingen_pdf.py` | Tübingen: 24-Stunden-Werte je Querschnitt aus den Tabellen der Vorlage 242/2022 (ohne Lizenz) |
 | `adapters/neubulach_pdf.py` | Neubulach: Werte je Arm aus dem Kurzbericht zum Lärmaktionsplan, Knoten = Summe der Zufahrten (ohne Lizenz) |
 | `adapters/nuernberg_pdf.py` | Nürnberg: Kfz 6–22 Uhr je Zählstelle und Jahr aus den Tabellen der Berichte 2007–2025, Lage aus `orte` (ohne Lizenz) |
+| `adapters/kevelaer_pdf.py` | Kevelaer: Viertelstunden je Strom (Knotenpunkte) und Stundenwerte (Querschnitte) aus dem Bericht 2019, Bildseiten aus der Abschrift `abschriften/kevelaer.csv`, geprüft gegen die Summen des Berichts, Lage aus `orte` (ohne Lizenz) |
 | `adapters/muenster.py`, `muenster_xls.py`, `muenster_pdf.py` | Münster: Knotenstrompläne als XLS (2000–2012) und PDF (2010–2020) |
 | `abruf.py` | jeder Abruf: robots.txt (RFC 9309) für `zaehlkarte-pipeline`, Crawl-delay, Ausnahmen aus `config/robots.yaml`, Protokoll |
 | `ckan.py` | CKAN-Portale ohne API (die sperren sie per robots.txt): DCAT-Dokument oder HTML-Seite eines Datensatzes, HTML-Suche |
@@ -84,6 +85,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/gedaechtnis.py` | Gedächtnis der Quellen mit kurzer Vorhaltezeit (Hamburg, Leipzig): Monatsdateien je UTC-Tag |
 | `dauer/strassen.py` | nächste benannte Straße aus einem OSM-Abzug (für Quellen ohne Straßennamen; Geofabrik, einmal geladen) |
 | `werkzeuge/gedaechtnis.py` | Gedächtnis im Release `dauerzaehlstellen` holen und ablegen, zweite Kopie je Jahr in `gedaechtnis-kopie-JJJJ` (Workflow) |
+| `werkzeuge/abschrift_kevelaer.py` | Kevelaer: Abschrift der Bildseiten des Berichts (Gitter, Tesseract, Ziffern per Mustervergleich) nach `abschriften/kevelaer.csv`; braucht Tesseract (`deu`) und poppler-utils |
 | `werkzeuge/kmk_ferien.py` | Schulferien eines Landes aus den KMK-Ferienkalendern (Tabelle des PDFs mit pdfplumber; Text von `pdftotext -layout` nur ohne PDF), mit Abgleich gegen eine vorhandene CSV |
 | `dauer/site.py`, `dauer/bau.py` | Dauerzählstellen schreiben (Vertrag im Kopfkommentar) bzw. holen und bauen |
 
@@ -97,6 +99,8 @@ Eintrag im Schulwege-Cache haben – erzeugt vom Workflow „Berlin geokodieren�
 (`zaehlkarte geokodier-liste` + `werkzeuge/geokodiere_berlin.py` mit dem Schulwege-Geocoder).
 `geokodierung/moers.csv`: Lage der Moerser Messstellen aus ihren Adressen – erzeugt von
 `werkzeuge/geokodiere_moers.py` (Nominatim, Overpass, Photon; braucht Netz, z. B. GitHub Actions).
+`abschriften/kevelaer.csv`: Werte der Seiten des Kevelaerer Berichts, die im PDF nur Bilder sind –
+erzeugt von `werkzeuge/abschrift_kevelaer.py`, geprüft im Adapter gegen die Summen des Berichts.
 
 ```bash
 uv sync

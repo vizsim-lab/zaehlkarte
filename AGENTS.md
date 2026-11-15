@@ -185,6 +185,25 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   10 km daneben (7, 271, 275, 452) – ein einzelner Plan gilt nur an der genannten Straße. Werkzeuge
   `tools/nuernberg/` auf `werkzeug/erkundung` (Ablauf im README dort), Overpass-Abzüge
   `ergebnis/ohne_lizenz/holen23–30` (Overpass antwortet oft mit 504: kleine Abfragen, Ersatzserver).
+- **Kevelaer** (`kevelaer_pdf`, ohne Lizenz): Bericht „Ergebnisse der Verkehrszählungen“ 2019
+  (büro stadtVerkehr, 74 Seiten, wie Xanten). Je Knotenpunkt k die Seiten 4k (Kopf und
+  Morgentabelle), 4k+1 (Nachmittag), 4k+2 (Summen: „Summe Kfz|Pkw|Lkw/4h“, DTV, „davon mo“ bzw.
+  „davon“ je Art), 4k+3 (Grafik); 13 Morgentabellen und 12 Summenseiten sind nur Bilder. Die
+  liest `pipeline/werkzeuge/abschrift_kevelaer.py` (Gitter aus dünnen Linien, Tesseract für die
+  Zeilen, Ziffern per Mustervergleich, angelernt an den Zeilen, die Tesseract sicher liest) nach
+  `pipeline/abschriften/kevelaer.csv`; der Adapter prüft jedes Fenster gegen die Summen (Text
+  und Abschrift sind unabhängige Lesungen – alle 32 stimmen). Fallen: Knoten mit drei Armen
+  haben sechs Ströme (Zeile „2 3 4 6 7 8“ unter „Intervall Fz-Arten“); nach „davon( mo) PKW“
+  folgen KRAD, LIEFERWAGEN, LKW ohne „davon“; Tausenderpunkte („1.065“); einmal je
+  Nachmittagstabelle heißt die Lkw-Zeile „LKW m.A.“ (17:15) – „Summe Kfz/4h“ zählt sie mit,
+  „davon … LKW“ und „Summe Lkw/4h“ nicht; die Daten der Querschnitte stehen senkrecht (Zeichen
+  mit `upright` falsch); „Do. 17.09.2019“ (ein Dienstag) im Kopf der meisten Knotenpunkte.
+  Lage: Knotenpunkte aus OSM (gemeinsamer Knoten der Arme, Kreisverkehr: Mitte), Querschnitte
+  vom Zählstellenplan im Zwischenbericht (Abb. 2.3.1.2-2, Rasterbild: blaue Punkte, rote
+  Balken), affin über 13 Knotenpunkte (Rest 1–12 m), auf die Straße gelegt. Namen im Bericht
+  weichen ab: „Wellener Landstraße“ = Weller Landstraße (L 491), „Geldener Straße“ = Gelderner
+  Straße. Werkzeuge `tools/kevelaer/` auf `werkzeug/erkundung`, Abzüge
+  `ergebnis/ohne_lizenz/holen31` (Bericht, Seite mit Zwischenbericht, OSM-Straßen).
 - **PDF je Knoten** (Magdeburg-Angebot): noch kein Adapter (Ansatz wie `potsdam_pdf` bzw.
   `muenster_pdf`).
 - **Miovision-Excel** („Tabellenbericht“: Blatt „Übersicht“ mit Studienname, Zeitintervall,
@@ -349,9 +368,8 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   Hennef, Rhein-Sieg-Kreis.
   - **Offen, aber ohne Lizenz:** Kevelaer – Zählung September 2019 (16 Knotenpunkte 6–10 und
     15–19 Uhr, Viertelstunden je Strom nach Pkw, Krad, Lieferwagen, Lkw; 13 Querschnitte 24 Stunden,
-    Stundenwerte) als 74-seitiges PDF eines Büros auf kevelaer.de. Bester Fund des Landes: mit einer
-    Lizenz käme die Zählung in die Karte (Text mit pdftotext lesbar, Intervalle „06:00 - 06:15“,
-    ähnlich `xanten_pdf`).
+    Stundenwerte) als 74-seitiges PDF eines Büros auf kevelaer.de. Bester Fund des Landes – seit
+    November 2026 in der Karte, ohne Lizenz (`kevelaer_pdf`; Bildseiten abgeschrieben).
   - **Nur Summen offen:** Paderborn (Juni 2018 rund 100 Stellen, nur Pläne der DTVw), Verl (gut 60
     Messberichte der Verkehrsmessungen, Stundenwerte nur als Diagramm), Bad Honnef
     (Zusammenfassung je Seitenradar-Zählung, die Liste lädt per JavaScript), Emsdetten (Wochenmittel

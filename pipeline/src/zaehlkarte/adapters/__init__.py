@@ -5,6 +5,7 @@ Quellen dürfen denselben nutzen (MobiData BW: fünf Kommunen, ein Format)."""
 
 from zaehlkarte.adapters import (
     berlin_zda,
+    kevelaer_pdf,
     konstanz_mobil,
     mobidata_bw,
     moers_radar,
@@ -29,4 +30,5 @@ ADAPTER = {
     "tuebingen_pdf": tuebingen_pdf,
     "neubulach_pdf": neubulach_pdf,
     "nuernberg_pdf": nuernberg_pdf,
+    "kevelaer_pdf": kevelaer_pdf,
 }
