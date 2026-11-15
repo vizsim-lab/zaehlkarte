@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { achse, pfad, proStunde, tagesgang, tagesreihe, verlauf } from "../../js/ui/diagramme.js";
+import { achse, pfad, proStunde, tagesgang, tagesreihe, textBreite, verlauf } from "../../js/ui/diagramme.js";
 
 test("tagesreihe: ein Pfad je Tagtyp, Lücken bleiben, Jahresachse, Tag unter dem Zeiger", () => {
   assert.equal(tagesreihe([null, null], "ss", "2024-12-31").svg, "");
@@ -14,6 +14,19 @@ test("tagesreihe: ein Pfad je Tagtyp, Lücken bleiben, Jahresachse, Tag unter de
   assert.match(svg, /class="tr-gewaehlt"/);
   assert.equal(index(42), 0);
   assert.equal(index(330), 3);
+});
+
+test("tagesreihe: der Rand links wächst mit der längsten Beschriftung (Ausreißer)", () => {
+  const rand = (svg) => Number(svg.match(/class="tg-raster" x1="([\d.]+)"/)[1]);
+  assert.equal(rand(tagesreihe([12000, 30000], "ss", "2024-01-01").svg), 42); // kurze Beschriftung: Standard
+  const { svg, index } = tagesreihe([12000, 10_242_460], "ss", "2021-02-04");
+  const l = rand(svg);
+  assert.ok(l > 42);
+  // die längste Beschriftung („10.000.000“, rechtsbündig bei l − 6) beginnt nicht links vom Bild
+  const ticks = [...svg.matchAll(/class="tg-tick" x="([\d.]+)"[^>]*text-anchor="end">([^<]+)</g)];
+  for (const [, x, text] of ticks) assert.ok(Number(x) - textBreite(text) >= 0, text);
+  assert.equal(index(l + 1), 0);
+  assert.equal(index(330), 1);
 });
 
 test("achse: runde Schritte", () => {

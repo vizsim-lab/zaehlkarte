@@ -59,7 +59,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Quelle | Was | Zeitraum | Weg | Lizenz |
 |---|---|---|---|---|
 | Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
-| Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; in der Karte rund 1.120 Zählstellen, Straßennamen aus OpenStreetMap | vollständig gezählte Tage: Kfz und Rad ab 09.09.2026, Schwerverkehr ab 01.03.2026; wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
+| Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; davor Tageswerte der Quelle (Kfz und Rad, als solche gekennzeichnet); in der Karte rund 1.140 Zählstellen, Straßennamen aus OpenStreetMap | Kfz und Rad seit 2020 (bis Ende August 2026 Tageswerte der Quelle, danach Stunden), Schwerverkehr ab März 2026; wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
 | Ettlingen (Stadt Ettlingen) | automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der Karte als Kfz (Summe der Klassen) und Lkw (Lkw und Lkw mit Anhänger); 10 Richtungen an 5 Stellen mit vollständigen Tagen | ab 20.08.2026 (ältere Werte ab Mai 2025 nicht übernommen); wöchentlich ergänzt | offen im [Open-Data-Portal re@di](https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen) (Datastore) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.de) – nur nicht kommerziell, „Stadt Ettlingen“ |
 | Baden-Württemberg: 27 Städte und Landkreise und das Land (gebündelt von MobiData BW) | Rad-Zählstellen, meist Eco-Counter: Stundenwerte je Zählstelle, beide Richtungen zusammen; in der Karte 179 Zählstellen (eine davon des Landes, in Bad Wimpfen) | 2013 – Anfang November 2026; wöchentlich ergänzt (die jüngsten drei Tage erst beim nächsten Bau) | offen auf [MobiData BW](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler) (Monatsdateien) | dl-de/by-2-0, „MobiData BW“ |
 | Münster (Stadt Münster) | Rad-Zählstellen (Eco-Counter): 15-Minuten-Werte je Kanal mit Status, in der Karte Stundenwerte je Zählstelle aus Rohwerten und geprüften Werten; 23 Zählstellen | 2019–2026; wöchentlich ergänzt | offen im [GitHub-Repository der Stadt](https://github.com/od-ms/radverkehr-zaehlstellen) (nächtlich aktualisiert), Lage im [Open-Data-Portal](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten) | dl-de/by-2-0, „Stadt Münster“ |
@@ -148,7 +148,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   2–3 Uhr zweimal, mit Hinweis); führt eine Quelle dann nur eine dieser Stunden, ist der Tag
   nicht vollständig gezählt.
 - **Tageswerte der Quelle:** Liefert eine Quelle für eine Stelle nur Tageswerte (Augsburgs
-  Radzählstationen), zeigt die Karte deren Tageswert wie geliefert – „Tageswert der Quelle“ im
+  Radzählstationen; Hamburg vor den Stunden, die die Zählkarte seit August 2026 aufhebt), zeigt
+  die Karte deren Tageswert wie geliefert – „Tageswert der Quelle“ im
   Hover, in der Seitenleiste und als Hinweis in der Legende, ohne Tagesgang; ob jede Stunde
   gezählt ist, lässt sich dort nicht prüfen. Tageswerte gelten nur vor der ersten gezählten
   Stunde einer Stelle, nie als Ersatz fehlender Stunden, und nie aus Wochen-, Monats- oder
@@ -192,9 +193,16 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Rückstellung liegen zwei Stunden in 2–3 Uhr). Die Quelle hält Stundenwerte nur zwei Monate
   vor; die Zählkarte hebt sie selbst auf (Gedächtnis, siehe unten) und übernimmt eine Stunde
   erst, wenn sie sieben Tage alt ist (Lücken werden laut Quelle noch nachgeliefert). Ganze Tage
-  fehlen gelegentlich an allen Stellen zugleich. Die Quelle nennt keine Straßen: Der Name ist die
-  nächste benannte Straße aus OpenStreetMap, die Kreuzung ergibt sich aus den übrigen Armen
-  desselben Knotenpunkts.
+  fehlen gelegentlich an allen Stellen zugleich. Vor der ersten gezählten Stunde einer Stelle
+  (meist bis 28.08.2026) stehen für Kfz und Rad die Tageswerte der Quelle (seit 2020; auch sie
+  hebt die Zählkarte auf, die Quelle hält sie nur für das laufende und das letzte Jahr vor). Sie
+  entstehen nicht aus den Stunden: Wo es beides gibt, ist der Tageswert an rund drei von vier
+  vollständig gezählten Tagen gleich der Summe der Stunden, sonst meist knapp darüber, und auch
+  Tage mit fehlenden Stunden haben einen Tageswert (manchmal nur für den gezählten Teil). Die
+  Quelle kennzeichnet keine unplausiblen Werte (es gibt Tage mit Millionen Kfz); die Zählkarte
+  übernimmt sie wie geliefert. Die Quelle nennt keine Straßen: Der Name ist die nächste benannte
+  Straße aus OpenStreetMap, die Kreuzung ergibt sich aus den übrigen Armen desselben
+  Knotenpunkts.
 - Ettlingen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse (UTC, in Ortszeit umgerechnet);
   Kfz ist die Summe der Klassen (Pkw, leichte Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad),
   Lkw die von Lkw und Lkw mit Anhänger.
@@ -280,7 +288,8 @@ Lauf. Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die Kur
 
 **Gedächtnis:** Hamburg hält Stundenwerte nur zwei Monate vor, Leipzig 31 Tage. Was die
 Zählkarte davon aufhebt (Monatsdateien je Quelle, `<code>__stunden_JJJJ-MM.csv.gz`, für Hamburg
-dazu die Straßennamen `<code>__strassen.json`), liegt im selben Release. Der Workflow holt es
+dazu die Tageswerte je Jahr `<code>__tage_JJJJ.csv.gz` und die Straßennamen
+`<code>__strassen.json`), liegt im selben Release. Der Workflow holt es
 vor dem Abruf und legt danach ab, was sich geändert hat – nie mit weniger Werten
 (`pipeline/werkzeuge/gedaechtnis.py`). Wer diese Assets löscht, verliert die Stunden, die die
 Quelle nicht mehr hat. Darum liegt jede Fassung zusätzlich im Release

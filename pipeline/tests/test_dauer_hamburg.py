@@ -312,3 +312,174 @@ def test_strassennamen_und_knotenpunkt(api, pfade, tmp_path, monkeypatch):
     assert s["0248942"].abschnitt == "Knotenpunkt mit Bramfelder Straße, Arm Nord"
     assert namen["stellen"]["0248932"]["name"] == "Steilshooper Straße"  # eigener Treffer …
     assert s["0248932"].name == "Bramfelder Straße"  # … aber der Arm heißt wie sein bester
+
+
+# ---------------------------------------------------------------- Tageswerte (Layer „1-Tag“)
+
+Q_TAG = {**Q, "tageslayer": {"kfz": "Kfz_1-Tag", "sv": "SV_1-Tag"}}
+
+
+def ortstage(von: date, n: int, wert=lambda t: 1000) -> list[tuple[str, object]]:
+    """Tages-Observations wie Hamburg sie liefert: Ortstag in UTC (Mitternacht bis Mitternacht
+    Ortszeit, 23 bzw. 25 Stunden an den Tagen der Zeitumstellung)."""
+    from zoneinfo import ZoneInfo
+
+    berlin = ZoneInfo("Europe/Berlin")
+    out = []
+    for i in range(n):
+        t = von + timedelta(days=i)
+        n_ = t + timedelta(days=1)
+        a = datetime(t.year, t.month, t.day, tzinfo=berlin).astimezone(UTC)
+        b = (datetime(n_.year, n_.month, n_.day, tzinfo=berlin).astimezone(UTC)
+             - timedelta(seconds=1))
+        out.append((f"{a:%Y-%m-%dT%H:%M:%SZ}/{b:%Y-%m-%dT%H:%M:%SZ}", wert(t)))
+    return out
+
+
+def test_ortstag():
+    assert hh.ortstag("2021-05-25T22:00:00Z/2021-05-26T21:59:59Z") == date(2021, 5, 26)
+    assert hh.ortstag("2026-11-10T23:00:00Z/2026-11-11T22:59:59Z") == date(2026, 11, 11)
+    assert hh.ortstag("2026-11-10T23:00:00Z/2026-11-11T22:59:59.999Z") == date(2026, 11, 11)
+    # Zeitumstellung: 23 bzw. 25 Stunden
+    assert hh.ortstag("2026-03-28T23:00:00Z/2026-03-29T21:59:59Z") == date(2026, 3, 29)
+    assert hh.ortstag("2026-10-24T22:00:00Z/2026-10-25T22:59:59Z") == date(2026, 10, 25)
+    # kein Ortstag: UTC-Tag, halber Tag, 24 Stunden über die Umstellung, unlesbar
+    assert hh.ortstag("2026-10-24T00:00:00Z/2026-10-24T23:59:59Z") is None
+    assert hh.ortstag("2026-11-10T23:00:00Z/2026-11-11T10:59:59Z") is None
+    assert hh.ortstag("2026-10-24T22:00:00Z/2026-10-25T21:59:59Z") is None
+    assert hh.ortstag("2026-11-10T23:00:00/2026-11-11T22:59:59") is None  # ohne Zone
+    assert hh.ortstag("") is None and hh.ortstag("2026-11-11") is None
+
+
+def test_tagesgedaechtnis_roundtrip(tmp_path):
+    g = {}
+    ok, weg, widerspruch = hh.uebernimm_tage(g, "kfz", "0248931", [
+        *ortstage(date(2025, 12, 30), 3, lambda t: t.day),
+        ("2026-01-05T00:00:00Z/2026-01-05T23:59:59Z", 7),  # UTC-Tag, kein Ortstag
+        (ortstage(date(2026, 1, 6), 1)[0][0], None),  # kein Wert
+        (ortstage(date(2026, 1, 7), 1)[0][0], -3),
+        (ortstage(date(2026, 1, 8), 1)[0][0], 0),  # 0 bleibt 0
+        (ortstage(date(2026, 1, 8), 1)[0][0], 0),  # derselbe Tag noch einmal, gleicher Wert
+        # Zeitumstellung 2026 mit 24 statt 23 Stunden (so liefert Hamburg 2026): kein Ortstag
+        ("2026-03-28T23:00:00Z/2026-03-29T22:59:59Z", 900),
+    ])
+    assert (ok, weg, widerspruch) == (4, 4, 0)
+    # verschiedene Werte für denselben Tag: nicht übernommen, ein aufgehobener Wert bleibt
+    assert hh.uebernimm_tage(g, "kfz", "0248931", [
+        (ortstage(date(2025, 12, 30), 1)[0][0], 5), (ortstage(date(2025, 12, 30), 1)[0][0], 6),
+        (ortstage(date(2026, 1, 9), 1)[0][0], 5), (ortstage(date(2026, 1, 9), 1)[0][0], 6),
+    ]) == (0, 0, 2)
+    assert g[("0248931", "kfz", "2025-12")][29] == 30
+    assert g[("0248931", "kfz", "2026-01")][8] is None
+    ordner = tmp_path / "gedaechtnis"
+    assert hh.schreibe_tage(ordner, g) == ["tage_2025.csv.gz", "tage_2026.csv.gz"]
+    assert hh.schreibe_tage(ordner, g) == []  # gleicher Inhalt -> keine Änderung
+    zurueck = hh.lies_tage(ordner)
+    assert zurueck[("0248931", "kfz", "2025-12")][29:31] == [30, 31]
+    assert zurueck[("0248931", "kfz", "2026-01")][:8] == [1, None, None, None, None, None, None, 0]
+    assert hh.letzter_tag(zurueck) == date(2026, 1, 8)
+    assert hh.lies_gedaechtnis(ordner) == {}  # Stunden- und Tagesdateien getrennt
+
+
+def test_hole_und_lese_mit_tageswerten(api, pfade):
+    """Tageswerte nur vor der ersten gezählten Stunde einer Stelle; ein Tag mit fehlender Stunde
+    bleibt „nicht vollständig gezählt“; eine Stelle nur mit Tageswerten kommt in die Karte."""
+    from zaehlkarte.dauer.modell import aus_tageswerten
+
+    a = thing("0248931", 10.0, 53.6, "Nordost nach Südwest", "Nordost")
+    c = thing("0249912", 10.01, 53.61, "Nord nach Süd", "Nord")  # nur Tageswerte
+    beginn = utc(2026, 10, 23, 22)  # 24.10. 0 Uhr Sommerzeit
+    kfz_a = [x for x in stunden(beginn, 4 * 24 + 1, lambda t: 100)
+             if x[0][:13] != "2026-10-26T05"]  # am 26.10. fehlt eine Stunde
+    api.ds = [
+        {"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {}, "obs": kfz_a},
+        {"id": 2, "layer": "SV_1-Stunde", "thing": a, "props": {},
+         "obs": stunden(beginn, 4 * 24 + 1, lambda t: 3)},
+        {"id": 11, "layer": "Kfz_1-Tag", "thing": a, "props": {},
+         "obs": ortstage(date(2026, 10, 20), 9, lambda t: 1000 + t.day)},  # bis 28.10.
+        {"id": 12, "layer": "SV_1-Tag", "thing": a, "props": {},
+         "obs": ortstage(date(2026, 10, 22), 2, lambda t: 50)},
+        {"id": 13, "layer": "Kfz_1-Tag", "thing": c, "props": {"zaehlfelder": ["1472-Z.7"]},
+         "obs": ortstage(date(2026, 10, 1), 25, lambda t: 2000 + t.day)},  # bis 25.10.
+    ]
+    log = hh.hole(Q_TAG, pfade)
+    zeile = next(z for z in log if "Tageswerten" in z)
+    assert ("3 Datastreams mit Tageswerten, 36 Tage geholt ab Beginn (0 verworfen, 0 mit "
+            "widersprüchlichen Werten)") in zeile
+    assert "tage_2026.csv.gz" in zeile
+    meta = json.loads((pfade.roh / "hamburg_kfz" / "stellen.json").read_text())
+    assert set(meta["tagesdatastreams"]) == {"kfz", "sv"}
+    meta["abgerufen"] = "2026-10-29T00:00:00Z"  # frisch_tage 1: Tage bis 27.10. (Ortszeit)
+    (pfade.roh / "hamburg_kfz" / "stellen.json").write_text(json.dumps(meta))
+    bericht = hh.Bericht()
+    r = hh.lese(Q_TAG, pfade, bericht)
+    assert [s.kennung for s in r.stellen] == ["0248931", "0249912"]
+    assert r.stellen[1].fahrstreifen == ["Zählfeld 1472-Z.7"] and r.stellen[1].lat == 53.61
+    assert set(r.tageswerte) == {"kfz", "sv"} and r.von == date(2026, 10, 1)
+    summe, n = tagessummen(r, "kfz")
+    tw = aus_tageswerten(r, "kfz")
+    i = r.index
+    # Stelle A: Tageswerte bis zum Tag vor der ersten Stunde, dann allein die Stunden
+    assert summe[0, i(date(2026, 10, 21))] == 1021 and tw[0, i(date(2026, 10, 21))]
+    assert n[0, i(date(2026, 10, 21))] == 0
+    assert summe[0, i(date(2026, 10, 24))] == 2400 and not tw[0, i(date(2026, 10, 24))]
+    assert summe[0, i(date(2026, 10, 26))] == -1  # nie mit dem Tageswert 1026 gefüllt
+    assert summe[0, i(date(2026, 10, 19))] == -1  # vor dem ersten Tageswert
+    # Schwerverkehr: Tageswerte 22. und 23.10., ab 24.10. Stunden
+    sv = tagessummen(r, "sv")[0]
+    assert sv[0, i(date(2026, 10, 23))] == 50 and sv[0, i(date(2026, 10, 24))] == 72
+    # Stelle C nur mit Tageswerten, auch am Tag der Rückstellung (25 Stunden)
+    assert summe[1, i(date(2026, 10, 25))] == 2025 and tw[1, i(date(2026, 10, 25))]
+    assert summe[1, i(date(2026, 10, 26))] == -1
+    # Der Tageswert von A für den 28.10. ist zu frisch (frisch_tage), die Reihe endet am 27.10.
+    assert r.tag(r.tage - 1) == date(2026, 10, 27)
+    assert bericht.tage == {"kfz": 8 + 25, "sv": 2} and bericht.tage_frisch == 1
+    assert bericht.tageswerte == {"kfz": 4 + 25, "sv": 2}
+    assert any("Tageswerte der Quelle: kfz: 2 Datastreams, sv: 1 Datastreams" in z
+               for z in bericht.zeilen())
+    # Verfahren: bis zum letzten Tag mit einem Tageswert in der Karte beide, danach Stunden
+    (v1, b1, t1), (v2, b2, t2) = r.verfahren
+    assert (v1, b1, v2, b2) == (date(2026, 10, 1), date(2026, 10, 25), date(2026, 10, 26),
+                                date(2026, 10, 27))
+    assert "Tageswerte der Quelle" in t1 and "Stundenwerte" in t1
+    assert t2.startswith("Stundenwerte") and "Tageswert" not in t2
+
+    # zweiter Lauf: Tage ab dem jüngsten Tag im Gedächtnis minus nachladen_tage (2), neue Stelle
+    # ganz
+    api.abrufe.clear()
+    d = thing("0249921", 10.02, 53.62, "Süd nach Nord", "Süd")
+    api.ds.append({"id": 14, "layer": "Kfz_1-Tag", "thing": d, "props": {},
+                   "obs": ortstage(date(2026, 9, 1), 5)})
+    api.ds[2]["obs"] = [(z, 1100 if z.startswith("2026-10-26T23") else w)  # 27.10. korrigiert
+                        for z, w in api.ds[2]["obs"]]
+    hh.hole(Q_TAG, pfade)
+    tage_urls = [urllib.parse.unquote(u) for u in api.abrufe if "1-Tag" in urllib.parse.unquote(u)]
+    assert any("phenomenonTime ge 2026-10-25T23:00:00Z" in u for u in tage_urls)  # 26.10. 0 Uhr
+    tg = hh.lies_tage(pfade.roh / "hamburg_kfz" / "gedaechtnis")
+    assert tg[("0249921", "kfz", "2026-09")][:5] == [1000] * 5
+    assert tg[("0248931", "kfz", "2026-10")][26] == 1100
+    assert tg[("0248931", "kfz", "2026-10")][19] == 1020  # Altes bleibt
+
+
+def test_site_mit_tageswerten(api, pfade):
+    a = thing("0248931", 10.0, 53.6, "Nordost nach Südwest", "Nordost")
+    api.ds = [{"id": 1, "layer": "Kfz_1-Stunde", "thing": a, "props": {},
+               "obs": stunden(utc(2026, 11, 1, 23), 2 * 24, lambda t: 10)},
+              {"id": 11, "layer": "Kfz_1-Tag", "thing": a, "props": {},
+               "obs": ortstage(date(2026, 10, 30), 3, lambda t: 300)}]
+    hh.hole(Q_TAG, pfade)
+    meta = json.loads((pfade.roh / "hamburg_kfz" / "stellen.json").read_text())
+    meta["abgerufen"] = "2026-11-10T00:00:00Z"
+    (pfade.roh / "hamburg_kfz" / "stellen.json").write_text(json.dumps(meta))
+    r = hh.lese(Q_TAG, pfade, hh.Bericht())
+    site.schreibe([(Q_TAG, r)], pfade, date(2026, 11, 12))
+    index = json.loads((pfade.karte / "dauer" / "index.json").read_text())
+    q = index["quellen"][0]
+    assert q["tageswerte"] == {"kfz": ["2026-10-30", "2026-11-01"]}
+    assert q["zeitraeume"] == {"kfz": ["2026-10-30", "2026-11-03"]}
+    assert index["tageswerte_bis"] == {"kfz": ["2026-11-01"]}
+    d = json.loads((pfade.karte / "dauer" / "0.json").read_text())["stellen"]["hamburg_kfz:0248931"]
+    # 30.10.–1.11. Tageswerte der Quelle, 2. und 3.11. die Summe der Stunden
+    assert d["tage"]["kfz"] == [300, 300, 300, 240, 240] and d["n"]["kfz"] == [0, 0, 0, 24, 24]
+    assert d["tageswerte_bis"] == {"kfz": "2026-11-01"}
+    assert [v["text"][:8] for v in q["verfahren"]] == ["Vor der ", "Stundenw"]

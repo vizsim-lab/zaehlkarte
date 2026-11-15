@@ -1,7 +1,8 @@
 # Hamburg: zwei Dienste derselben Wärmebildkameras (aVME-HH, Hamburger Radzählnetz), ein Adapter.
 # Stundenwerte hält die Quelle nur „für die letzten zwei Monate“ vor (Datensatzbeschreibung im
 # Transparenzportal, Stand November 2026) -> die Zählkarte hebt sie selbst auf (gedaechtnis/ im
-# Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt).
+# Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt). Davor die Tageswerte der
+# Quelle (Layer „1-Tag“, an den meisten Stellen seit 2020; ebenfalls im Gedächtnis aufgehoben).
 nr: 2
 status: live
 adapter: hamburg_sta
@@ -11,7 +12,7 @@ traeger: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswend
 art: >-
   Wärmebildkameras (Infrarot-Detektoren) an Kreuzungen; Stundenwerte je Zählstelle (eine
   Richtung an einem Knotenarm) für Kfz, an einem Teil der Stellen auch Schwerverkehr, wie die
-  Kamera ihn erkennt
+  Kamera ihn erkennt; davor Kfz-Tageswerte der Quelle seit 2020
 weg: offen über die SensorThings API der Urban Data Platform Hamburg
 portal: https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14
 api: https://iot.hamburg.de/v1.1
@@ -19,8 +20,13 @@ dienst: HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren
 layer:
   kfz: Anzahl_Kfz_Zaehlstelle_1-Stunde
   sv: Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde
-nachladen_tage: 14  # so weit zurück holt jeder Lauf die Stunden erneut (Werte ändern sich noch)
-frisch_tage: 7  # jüngere Stunden kommen noch nicht in die Karte
+# Tageswerte der Quelle je Ortstag – nur vor der ersten gezählten Stunde einer Stelle
+# (`Messreihe.tageswerte`). Schwerverkehr nicht: Seine Tageswerte beginnen am 01.03.2026, die
+# Stunden im Gedächtnis schon am 28.02.2026 – davor gibt es nichts.
+tageslayer:
+  kfz: Anzahl_Kfz_Zaehlstelle_1-Tag
+nachladen_tage: 14  # so weit zurück holt jeder Lauf Stunden und Tage erneut (Werte ändern sich noch)
+frisch_tage: 7  # jüngere Stunden und Tage kommen noch nicht in die Karte
 # Straßennamen für neue Stellen aus dem OSM-Abzug von Geofabrik (ODbL). Geladen wird er nur,
 # wenn neue Stellen ohne Namen auftauchen und noch keiner da ist, und dann behalten (Cache im
 # Workflow): Straßen ändern sich selten, und Geofabrik bittet, nicht dieselbe Datei immer
@@ -44,3 +50,20 @@ hinweise:
   - >-
     Die Quelle nennt keine Straßen. Der Name ist die nächste benannte Straße aus OpenStreetMap
     (© OpenStreetMap-Mitwirkende, ODbL) und kann an Kreuzungen danebenliegen.
+  - >-
+    Vor der ersten gezählten Stunde einer Zählstelle (meist bis 28.08.2026) stehen für Kfz die
+    Tageswerte der Quelle (Layer „1-Tag“, an den meisten Zählstellen seit 2020 oder 2021; laut
+    Quelle hält sie Tageswerte nur für das laufende und das letzte Jahr vor, die Zählkarte hebt
+    sie selbst auf). Ob an einem solchen Tag jede Stunde gezählt ist, lässt sich nicht prüfen.
+    Im Vergleich mit den Stunden seit Ende August 2026: An vollständig gezählten Tagen ist der
+    Tageswert an 72 % der Tage gleich der Summe der Stunden, sonst fast immer etwas größer (an
+    97 % der Tage höchstens 1 % Abstand); auch für Tage mit fehlenden Stunden liefert die Quelle
+    einen Tageswert – meist größer als die gezählten Stunden, manchmal genau ihre Summe. Die Tage
+    der Zeitumstellung 2026 liefert sie mit 24 statt 23 bzw. 25 Stunden; dort steht kein
+    Tageswert. Schwerverkehr nur aus Stunden (seit 28.02.2026).
+  - >-
+    Einzelne Tageswerte liegen weit über dem Üblichen (bis zu zehn Millionen Kfz an einem Tag,
+    Ende Januar 2021), und an manchen Zählstellen ändert sich das Niveau von einem Jahr zum
+    nächsten sprunghaft (bei rund jeder sechsten hat sich der Median eines Jahres gegenüber dem
+    Vorjahr mindestens verdoppelt oder halbiert). Die Quelle kennzeichnet keine Werte als
+    unplausibel; die Zählkarte übernimmt sie wie geliefert.

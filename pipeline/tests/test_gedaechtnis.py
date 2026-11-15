@@ -158,6 +158,28 @@ def test_holen_ablegen_und_nie_weniger(gd, tmp_path):
     assert (gd.release.ordner / "hamburg_kfz__stunden_2026-11.csv.gz").read_bytes() == vorher
 
 
+def test_tagesdateien_nie_weniger(gd, tmp_path):
+    """Tageswerte (Hamburg, `tage_JJJJ.csv.gz`): Umfang = gelieferte Tage, nie mit weniger."""
+    from datetime import date
+
+    gd.holen("dauerzaehlstellen")
+    ordner = tmp_path / "raw" / "hamburg_kfz" / "gedaechtnis"
+    g = {}
+    for d in range(1, 11):
+        modul_gedaechtnis.setze_tag(g, "0248931", "kfz", date(2025, 1, d), 100 + d)
+    assert modul_gedaechtnis.schreibe_tage(ordner, g) == ["tage_2025.csv.gz"]
+    assert gd.umfang(ordner / "tage_2025.csv.gz") == 10
+    gd.ablegen("dauerzaehlstellen")
+    assert set(gd.release.ids) == {"hamburg_kfz__tage_2025.csv.gz"}
+    gd.holen("dauerzaehlstellen")
+    assert modul_gedaechtnis.lies_tage(ordner) == g
+    g = {}
+    modul_gedaechtnis.setze_tag(g, "0248931", "kfz", date(2025, 1, 1), 5)
+    modul_gedaechtnis.schreibe_tage(ordner, g)  # nur noch ein Tag
+    with pytest.raises(SystemExit, match="weniger Werte"):
+        gd.ablegen("dauerzaehlstellen")
+
+
 def test_abgebrochene_ablage_und_ohne_holen(gd, tmp_path):
     # Abbruch nach dem Hochladen der neuen Fassung: X und X.neu liegen beide im Release
     gd.release.lege("hamburg_rad__stunden_2026-10.csv.gz",
