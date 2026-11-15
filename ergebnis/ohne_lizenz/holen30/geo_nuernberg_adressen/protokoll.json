@@ -1,0 +1,34 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Kemptener%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Kemptener%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Time-out'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Reutleser%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Reutleser%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Time-out'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Bartholom%C3%A4usstra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%2217%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "ende": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Bartholom%C3%A4usstra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%2217%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "typ": "application/json",
+  "bytes": 632,
+  "datei": "03_interpreter.json",
+  "sha256": "9a9da29575206c7f4db7ee1109d6ff7607471651c310a23b64dd4cbefb59f48a"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22L%C3%B6wenberger%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%22153%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22L%C3%B6wenberger%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%22153%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Time-out'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22An%20der%20Radrunde%22%5D%5B%22addr%3Ahousenumber%22%3D%22165%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22An%20der%20Radrunde%22%5D%5B%22addr%3Ahousenumber%22%3D%22165%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Time-out'>"
+ }
+]
