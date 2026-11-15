@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [ol5]
+        teil: [ol6]
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
@@ -29,6 +29,7 @@ jobs:
             dauer4) timeout 85m python3 tools/bw_dauer4.py ergebnis/bw/dauer4 || true ;;
             pruefe) tools/pruefe.sh dauer-bw-land bw_land_kfz || true ;;
             rand) timeout 20m python3 tools/bw_rand.py ergebnis/bw/rand || true ;;
+            ol6) timeout 30m python3 tools/bw_ol6.py ergebnis/bw/ol6 || true ;;
             ol5) timeout 30m python3 tools/bw_ol5.py ergebnis/bw/ol5 || true ;;
             ol4) timeout 50m python3 tools/bw_ol4.py ergebnis/bw/ol4 || true ;;
             ol3) timeout 40m python3 tools/bw_ol3.py ergebnis/bw/ol3 || true ;;
