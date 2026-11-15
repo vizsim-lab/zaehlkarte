@@ -14,6 +14,7 @@ wie tools/runde4_kreisweb.py) und kreise_web_protokoll.json. Nur über tools/rob
 """
 
 import gzip
+import html
 import json
 import pathlib
 import re
@@ -51,7 +52,7 @@ def infobox(text):
     """(Kreisschlüssel, Website) aus der Infobox eines Kreis-Artikels."""
     box = re.search(r'<table[^>]*class="[^"]*(?:infobox|float-right)[^"]*"[^>]*>(.*?)</table>',
                     text, re.S)
-    teil = box.group(1) if box else text[:120_000]
+    teil = html.unescape(box.group(1) if box else text[:120_000])  # „01&#160;0&#160;51“
     m = re.search(r"Kreisschlüssel.{0,400}?(\d{2})\s*(\d)\s*(\d{2})\b", teil, re.S)
     w = re.search(r'Website.{0,600}?href="(https?://[^"]+)"', teil, re.S)
     return ("".join(m.groups()) if m else None), (w.group(1) if w else None)
@@ -82,6 +83,8 @@ def titel(k):
 
 
 def artikel_pruefen(pfad, quelle, erwartet=None):
+    # Pfade kommen roh (UTF-8) oder kodiert aus der Seite – für den Abruf immer kodiert
+    pfad = urllib.parse.quote(urllib.parse.unquote(pfad), safe="()_-,.!'")
     url = WIKI + "/wiki/" + pfad
     try:
         text, end = hole(url)
@@ -111,17 +114,19 @@ def main():
               "tabellen": len(re.findall(r'<table[^>]*wikitable', text)),
               "hrefs_wiki": text.count('href="/wiki/'), "hrefs_punkt": text.count('href="./'),
               "probe": [m.group(1) for m in LINK.finditer(text)][:40]}
+        # je Zeile der Tabelle: Kreisschlüssel (erste Zelle) und der Link auf den Kreis-Artikel
         artikel = []
-        for pfad, inhalt in LINK.findall(text):
-            ti = urllib.parse.unquote(pfad).replace("_", " ")
-            if ":" in pfad or "Liste_" in pfad or not re.search(r"kreis|region", ti, re.I):
-                continue
-            if pfad not in artikel:
-                artikel.append(pfad)
+        for zeile in re.findall(r"<tr[^>]*>(.*?)</tr>", text, re.S):
+            ks = re.search(r"<td[^>]*>\s*(\d{5})\s*</td>", zeile)
+            links = [pf for pf, _ in LINK.findall(zeile) if ":" not in urllib.parse.unquote(pf)
+                     and "Liste_" not in pf]
+            if ks and links and ks.group(1) in KREISE:
+                artikel.append((links[0], ks.group(1)))
         p["artikel"] = len(artikel)
+        p["artikel_beispiele"] = artikel[:5]
         print(f"Liste: {len(text)} Zeichen, {len(artikel)} Kreis-Artikel", flush=True)
-        for i, pfad in enumerate(artikel):
-            artikel_pruefen(pfad, "wikipedia")
+        for i, (pfad, ks) in enumerate(artikel):
+            artikel_pruefen(pfad, "wikipedia", erwartet=ks)
             if i % 25 == 0:
                 schreib()
                 print(f"  {i}/{len(artikel)}: {len(kandidaten)} Kreise mit Website", flush=True)
