@@ -1,6 +1,6 @@
 {
  "version": 1,
- "erzeugt": "2026-11-09",
+ "erzeugt": "2026-11-15",
  "dateien": {
   "index": "index.json",
   "details": "details/{n}.json",
@@ -29,26 +29,6 @@
    "name": "Kinder/Jugendliche"
   }
  ],
- "stand": {
-  "in_karte": "in der Karte",
-  "offen": "offen, noch nicht in der Karte",
-  "geliefert": "auf Anfrage herausgegeben",
-  "kandidat": "erhoben – Anfrage aussichtsreich",
-  "aggregiert": "nur Summen oder Mittelwerte offen",
-  "nur_karte": "nur als Karte",
-  "automatisch": "automatische Zählungen offen",
-  "abgelehnt": "Anfrage gescheitert"
- },
- "stand_en": {
-  "in_karte": "on the map",
-  "offen": "open, not yet on the map",
-  "geliefert": "released on request",
-  "kandidat": "collected – request promising",
-  "aggregiert": "only totals or averages open",
-  "nur_karte": "only as a map",
-  "automatisch": "automatic counts open",
-  "abgelehnt": "request failed"
- },
  "quellen": [
   {
    "code": "berlin",
@@ -376,7 +356,7 @@
    "lizenzen": [
     {
      "code": "potsdam",
-     "titel": "Verkehrszählungen © LHP/NB-16-OGD/08.11.2026 (verändert: Werte aus den Zählplänen ausgelesen)",
+     "titel": "Verkehrszählungen © LHP/NB-16-OGD/15.11.2026 (verändert: Werte aus den Zählplänen ausgelesen)",
      "herausgeber": "Landeshauptstadt Potsdam, Bereich Verkehrsentwicklung",
      "lizenz": "Nutzungsbedingungen der LHP (NB-16-OGD) – Weiterverwendung nur nach diesen",
      "lizenz_url": "https://opendata.potsdam.de/terms/terms-of-use/",
@@ -516,23 +496,115 @@
    "lage": {
     "geokodiert": 18
    }
+  },
+  {
+   "code": "tuebingen",
+   "name": "Tübingen",
+   "land": "BW",
+   "traeger": "Universitätsstadt Tübingen, Fachabteilung Verkehrsplanung",
+   "art": "Zählungen an einzelnen Werktagen über 24 Stunden je Querschnitt, Kfz und an einigen Stellen Rad, 2011–2022 (Kernstadt: Vergleich zum Verkehrsversuch Mühlstraße; Teilorte: neue B 28)",
+   "weg": "Anlagen zur Vorlage 242/2022 im Ratsinformationssystem der Stadt (PDF)",
+   "portal": "https://www.tuebingen.de/gemeinderat/vo0050.asp?__kvonr=16692",
+   "lizenzen": [
+    {
+     "code": "tuebingen",
+     "titel": "Bericht Verkehrszählungen Juni/Juli 2022 (Vorlage 242/2022), Anlagen 1 und 3",
+     "herausgeber": "Universitätsstadt Tübingen, Fachabteilung Verkehrsplanung",
+     "lizenz": null,
+     "lizenz_url": null,
+     "herkunft_url": "https://www.tuebingen.de/gemeinderat/vo0050.asp?__kvonr=16692",
+     "ohne_lizenz": {
+      "herausgegeben": "als Anlagen zur Vorlage 242/2022 im Ratsinformationssystem der Stadt (PDF), ohne Lizenzangabe",
+      "geprueft": "2026-11-15"
+     }
+    },
+    {
+     "code": "lage",
+     "titel": "Lage der Zählstellen (OpenStreetMap, nach den Angaben der Tabellen und der Vorlage)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 25,
+   "zaehlungen": 47,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 41,
+    "sv": 0,
+    "rad": 18,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2011,
+   "bis": 2022,
+   "lage": {
+    "geokodiert": 47
+   }
+  },
+  {
+   "code": "neubulach",
+   "name": "Neubulach",
+   "land": "BW",
+   "traeger": "Stadt Neubulach (Verkehrszählungen zum Lärmaktionsplan, IGV und GEOVISTA)",
+   "art": "Videozählung am Donnerstag, 12.10.2023: ein Knotenpunkt über 24 Stunden, fünf Knotenpunkte und zwei Querschnitte von 15 bis 19 Uhr, nur Kfz (Krad, Pkw, Lkw ohne und mit Anhänger)",
+   "weg": "Kurzbericht als PDF auf der Website der Stadt",
+   "portal": "https://www.neubulach.de/ceasy/resource/?download=1&id=3956",
+   "lizenzen": [
+    {
+     "code": "neubulach",
+     "titel": "Kurzbericht Verkehrszählungen zur Fortschreibung des Lärmaktionsplans 2024",
+     "herausgeber": "Stadt Neubulach (Verkehrszählungen zum Lärmaktionsplan, IGV und GEOVISTA)",
+     "lizenz": null,
+     "lizenz_url": null,
+     "herkunft_url": "https://www.neubulach.de/ceasy/resource/?download=1&id=3956",
+     "ohne_lizenz": {
+      "herausgegeben": "als PDF (Kurzbericht, Januar 2024) auf der Website der Stadt, ohne Lizenzangabe",
+      "geprueft": "2026-11-15"
+     }
+    },
+    {
+     "code": "lage",
+     "titel": "Lage der Zählstellen (OpenStreetMap; Querschnitte nach dem Zählstellenplan im Bericht)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 8,
+   "zaehlungen": 8,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 8,
+    "sv": 8,
+    "rad": 0,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2023,
+   "bis": 2023,
+   "lage": {
+    "geokodiert": 8
+   }
   }
  ],
  "statistik": {
-  "stellen": 12120,
-  "zaehlungen": 29174,
+  "stellen": 12153,
+  "zaehlungen": 29229,
   "ohne_lage": 1509,
   "gruppen": {
-   "kfz": 18921,
-   "sv": 18239,
-   "rad": 18012,
+   "kfz": 18970,
+   "sv": 18247,
+   "rad": 18030,
    "fuss": 6016,
    "kind": 5618
   },
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "geokodiert": 21034,
+   "geokodiert": 21089,
    "gps": 4919,
    "uebertragen": 1412,
    "quelle": 1809
