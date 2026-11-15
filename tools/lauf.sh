@@ -105,5 +105,7 @@ vg250() {  # vg250 <branch>
 # timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm --nur-osm > ergebnis/moers_fuss_osm/lauf.txt 2>&1 || true
 # Dritter Versuch: Nominatim (strukturierte Suche, Geometrie der Straße) und Overpass mit
 # kleinerem Ausschnitt.
-mkdir -p ergebnis/moers_fuss_osm2
-timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm2 --nur-osm > ergebnis/moers_fuss_osm2/lauf.txt 2>&1 || true
+# geprüft (ergebnis/moers_fuss_osm2): Nominatim gesperrt (robots.txt), Overpass über
+# private.coffee: Steinstraße = Weg 10955855 (Fußgängerzone, 304 m) – Lage in der Quelldatei.
+# mkdir -p ergebnis/moers_fuss_osm2
+# timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm2 --nur-osm > ergebnis/moers_fuss_osm2/lauf.txt 2>&1 || true
