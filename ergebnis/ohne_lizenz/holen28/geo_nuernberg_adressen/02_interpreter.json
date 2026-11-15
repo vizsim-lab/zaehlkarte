@@ -1,0 +1,4017 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T15:22:01Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 333104886,
+  "lat": 49.4601062,
+  "lon": 11.0916100,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "18",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "cafe",
+    "brand": "Der Beck",
+    "brand:wikidata": "Q1192443",
+    "brand:wikipedia": "en:Der Beck",
+    "cafe": "yes",
+    "check_date:opening_hours": "2024-06-23",
+    "contact:email": "info@der-beck.de",
+    "contact:facebook": "https://www.facebook.com/derbeck.baeckerei",
+    "contact:instagram": "https://www.instagram.com/derbeck.baeckerei",
+    "contact:website": "https://www.der-beck.de",
+    "cuisine": "german;coffee_shop;pastry",
+    "diet:vegetarian": "yes",
+    "name": "Der Beck",
+    "opening_hours": "Mo-Fr 06:00-18:00; Sa 06:00-16:00; Su 07:00-17:00",
+    "phone": "+49 911 8019695",
+    "shop": "bakery",
+    "takeaway": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 333104893,
+  "lat": 49.4597474,
+  "lon": 11.0912480,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "16",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "clothes": "wedding",
+    "name": "Hochzeitsmoden Eckert",
+    "opening_hours": "Mo-We,Fr 10:00-18:00; Sa 10:00-15:00",
+    "shop": "clothes",
+    "website": "https://www.hochzeitsmoden-eckert.de/"
+  }
+},
+{
+  "type": "node",
+  "id": 333276300,
+  "lat": 49.4602753,
+  "lon": 11.0910876,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "check_date:opening_hours": "2026-01-10",
+    "description": "Waschmaschine 3,50€ / 25 min. Programm. \nTrockner 1,50€ / 12 min.\nWaschmittel 0,50€ pro Ladung.\nStand 08/2022",
+    "name": "Trommelwirbel",
+    "opening_hours": "Mo-Su,PH 06:00-22:00",
+    "self_service": "yes",
+    "shop": "laundry",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 372408058,
+  "lat": 49.4614078,
+  "lon": 11.0927312,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "28",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "pharmacy",
+    "check_date:opening_hours": "2026-06-17",
+    "dispensing": "yes",
+    "email": "kontakt@maxfeld-apotheke.de",
+    "fax": "+49 911 551409",
+    "healthcare": "pharmacy",
+    "name": "Maxfeld-Apotheke",
+    "opening_hours": "Sa 08:30-13:00; Mo-Fr 08:30-18:30",
+    "operator": "Dr. Christian Führling e.K.",
+    "phone": "+49 911 551319",
+    "website": "http://www.maxfeld-apotheke.de/",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 856544670,
+  "lat": 49.4595907,
+  "lon": 11.0910899,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "16",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "description": "Keine Dauerhafte Ausstellung, sondern durch Künstler im Einzelfall anzumieten.",
+    "name": "Cream Art & Design Gallery",
+    "tourism": "gallery",
+    "website": "https://cadg.gallery/"
+  }
+},
+{
+  "type": "node",
+  "id": 857181291,
+  "lat": 49.4611683,
+  "lon": 11.0919997,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "29",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "cafe",
+    "check_date:opening_hours": "2025-05-10",
+    "cuisine": "ice_cream",
+    "name": "Eiscafe Durazzo",
+    "opening_hours": "Mo-Sa 12:00-21:00; Su 12:30-21:30",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 857181416,
+  "lat": 49.4593722,
+  "lon": 11.0901284,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "13 a",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "male": "yes",
+    "name": "Sarko's Barbershop",
+    "opening_hours": "Mo-Sa 10:00-19:00",
+    "shop": "hairdresser",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1517553057,
+  "lat": 49.4623216,
+  "lon": 11.0935764,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "36",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "restaurant",
+    "check_date": "2026-06-17",
+    "check_date:opening_hours": "2026-06-17",
+    "cuisine": "indian",
+    "diet:vegan": "yes",
+    "diet:vegetarian": "yes",
+    "name": "panjabi shaan",
+    "opening_hours": "Mo-Su 11:00-14:30,17:00-23:30",
+    "phone": "+4991192919186",
+    "smoking": "no",
+    "toilets:wheelchair": "no",
+    "website": "https://www.panjabishaan.de",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 1528865632,
+  "lat": 49.4592114,
+  "lon": 11.0899792,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "13",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "restaurant",
+    "cuisine": "italian",
+    "indoor_seating": "yes",
+    "name": "Cattolica",
+    "opening_hours": "Mo-Su 11:00-23:00",
+    "outdoor_seating": "yes",
+    "phone": "+49 911 588980001",
+    "smoking": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1815697292,
+  "lat": 49.4663861,
+  "lon": 11.0505136,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "42",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 1815697332,
+  "lat": 49.4669260,
+  "lon": 11.0496680,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "36a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2126974634,
+  "lat": 49.4678834,
+  "lon": 11.0494871,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "25a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2126974638,
+  "lat": 49.4678886,
+  "lon": 11.0489178,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2126974639,
+  "lat": 49.4678902,
+  "lon": 11.0494080,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "25",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2126974640,
+  "lat": 49.4678914,
+  "lon": 11.0491991,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2126974643,
+  "lat": 49.4678953,
+  "lon": 11.0488387,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23c",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2126974645,
+  "lat": 49.4678981,
+  "lon": 11.0491200,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850915,
+  "lat": 49.3941755,
+  "lon": 11.0255681,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "1",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850917,
+  "lat": 49.3936604,
+  "lon": 11.0247554,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850921,
+  "lat": 49.3939622,
+  "lon": 11.0246711,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "blind:description": "Die Adressen \"Bei der Gerasmühle\" 11 und 12 nutzen den selben Eingang",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850922,
+  "lat": 49.3938486,
+  "lon": 11.0245817,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12a",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850926,
+  "lat": 49.3937906,
+  "lon": 11.0242757,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "14",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850927,
+  "lat": 49.3939049,
+  "lon": 11.0240210,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "16",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850930,
+  "lat": 49.3942858,
+  "lon": 11.0258970,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "1a",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850931,
+  "lat": 49.3943155,
+  "lon": 11.0255121,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "2",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850940,
+  "lat": 49.3944815,
+  "lon": 11.0251386,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "4",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850941,
+  "lat": 49.3939957,
+  "lon": 11.0253726,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "5",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850944,
+  "lat": 49.3939808,
+  "lon": 11.0251246,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850949,
+  "lat": 49.3939141,
+  "lon": 11.0253029,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "7",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850951,
+  "lat": 49.3937796,
+  "lon": 11.0249640,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2406850953,
+  "lat": 49.3938050,
+  "lon": 11.0252200,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "9",
+    "addr:postcode": "90453",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643211,
+  "lat": 49.4530175,
+  "lon": 11.1237239,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643223,
+  "lat": 49.4533171,
+  "lon": 11.1232230,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "4",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643225,
+  "lat": 49.4532790,
+  "lon": 11.1232906,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "4a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643226,
+  "lat": 49.4532554,
+  "lon": 11.1233326,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "4b",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643227,
+  "lat": 49.4532152,
+  "lon": 11.1233732,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643229,
+  "lat": 49.4531866,
+  "lon": 11.1234240,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643230,
+  "lat": 49.4531519,
+  "lon": 11.1234855,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6b",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643231,
+  "lat": 49.4531233,
+  "lon": 11.1235363,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643233,
+  "lat": 49.4530941,
+  "lon": 11.1235880,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2424643234,
+  "lat": 49.4530637,
+  "lon": 11.1236420,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8b",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444931116,
+  "lat": 49.4670162,
+  "lon": 11.0496181,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "36",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444931121,
+  "lat": 49.4669025,
+  "lon": 11.0498553,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "36b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444931124,
+  "lat": 49.4669033,
+  "lon": 11.0500316,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "38",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444931127,
+  "lat": 49.4668438,
+  "lon": 11.0503838,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "38a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444931312,
+  "lat": 49.4663729,
+  "lon": 11.0506731,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "42a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993546,
+  "lat": 49.4672749,
+  "lon": 11.0489130,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "32",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993548,
+  "lat": 49.4672753,
+  "lon": 11.0490107,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "34",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993560,
+  "lat": 49.4673195,
+  "lon": 11.0487442,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "28",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993562,
+  "lat": 49.4673199,
+  "lon": 11.0488279,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "30",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993570,
+  "lat": 49.4673649,
+  "lon": 11.0485837,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "24",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993572,
+  "lat": 49.4673652,
+  "lon": 11.0486649,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "26",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993578,
+  "lat": 49.4674070,
+  "lon": 11.0484159,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "20",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2444993582,
+  "lat": 49.4674074,
+  "lon": 11.0485006,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "22",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849474,
+  "lat": 49.4529578,
+  "lon": 11.1250882,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "11",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849478,
+  "lat": 49.4530019,
+  "lon": 11.1250192,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "11a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849479,
+  "lat": 49.4528487,
+  "lon": 11.1240055,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849484,
+  "lat": 49.4529867,
+  "lon": 11.1257435,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "13",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849488,
+  "lat": 49.4530318,
+  "lon": 11.1256729,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "13a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849490,
+  "lat": 49.4526735,
+  "lon": 11.1241040,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "14",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849492,
+  "lat": 49.4525304,
+  "lon": 11.1243448,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "14a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849493,
+  "lat": 49.4530752,
+  "lon": 11.1256048,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "15",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849496,
+  "lat": 49.4531206,
+  "lon": 11.1255336,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "15a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849498,
+  "lat": 49.4525380,
+  "lon": 11.1241606,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "16",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849501,
+  "lat": 49.4524142,
+  "lon": 11.1244380,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "16a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849503,
+  "lat": 49.4531516,
+  "lon": 11.1254392,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "17",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849506,
+  "lat": 49.4531950,
+  "lon": 11.1253711,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "17a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849508,
+  "lat": 49.4523899,
+  "lon": 11.1242539,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "18",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849511,
+  "lat": 49.4522414,
+  "lon": 11.1244664,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "18a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849513,
+  "lat": 49.4532390,
+  "lon": 11.1253021,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "19",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849516,
+  "lat": 49.4531512,
+  "lon": 11.1261012,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "19a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849521,
+  "lat": 49.4522614,
+  "lon": 11.1243241,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "20",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849524,
+  "lat": 49.4521676,
+  "lon": 11.1245272,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "20a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849527,
+  "lat": 49.4521383,
+  "lon": 11.1244122,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "20b",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849531,
+  "lat": 49.4527548,
+  "lon": 11.1243895,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "20c",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849536,
+  "lat": 49.4526934,
+  "lon": 11.1245336,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "20d",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849539,
+  "lat": 49.4531905,
+  "lon": 11.1260396,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849549,
+  "lat": 49.4532333,
+  "lon": 11.1259724,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849552,
+  "lat": 49.4525645,
+  "lon": 11.1247891,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "22",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849555,
+  "lat": 49.4532772,
+  "lon": 11.1259036,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849562,
+  "lat": 49.4533221,
+  "lon": 11.1258333,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849564,
+  "lat": 49.4533478,
+  "lon": 11.1257468,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "25",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849570,
+  "lat": 49.4533903,
+  "lon": 11.1256802,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "25a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849578,
+  "lat": 49.4523453,
+  "lon": 11.1256064,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "26",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849583,
+  "lat": 49.4534306,
+  "lon": 11.1256170,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "27",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849586,
+  "lat": 49.4534767,
+  "lon": 11.1255447,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "27a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849591,
+  "lat": 49.4527177,
+  "lon": 11.1258499,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "28",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849606,
+  "lat": 49.4527893,
+  "lon": 11.1259937,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "30",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849614,
+  "lat": 49.4528612,
+  "lon": 11.1261377,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "32",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849618,
+  "lat": 49.4529336,
+  "lon": 11.1262824,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "34",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849622,
+  "lat": 49.4530045,
+  "lon": 11.1264272,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "36",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849627,
+  "lat": 49.4530774,
+  "lon": 11.1265690,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "38",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849639,
+  "lat": 49.4531495,
+  "lon": 11.1267074,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "40",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849644,
+  "lat": 49.4532253,
+  "lon": 11.1268548,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "42",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849662,
+  "lat": 49.4527928,
+  "lon": 11.1253916,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "7",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849665,
+  "lat": 49.4528372,
+  "lon": 11.1253222,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "7a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849671,
+  "lat": 49.4528816,
+  "lon": 11.1252529,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "9",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2702849681,
+  "lat": 49.4529269,
+  "lon": 11.1251820,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "9a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2773963389,
+  "lat": 49.4524363,
+  "lon": 11.1248649,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "22a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2773963390,
+  "lat": 49.4522961,
+  "lon": 11.1249280,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "22b",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 2937380603,
+  "lat": 49.4545406,
+  "lon": 11.1285863,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "47",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3325902883,
+  "lat": 49.4586073,
+  "lon": 11.0899124,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6a",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "disused:shop": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3354888413,
+  "lat": 49.4675782,
+  "lon": 11.0491155,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3354888417,
+  "lat": 49.4676298,
+  "lon": 11.0491239,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3354925760,
+  "lat": 49.4675484,
+  "lon": 11.0494391,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "27",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3354925761,
+  "lat": 49.4676003,
+  "lon": 11.0494497,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "27a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3354925762,
+  "lat": 49.4676505,
+  "lon": 11.0494600,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "27b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3354925763,
+  "lat": 49.4672764,
+  "lon": 11.0502297,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "31",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3354925764,
+  "lat": 49.4673124,
+  "lon": 11.0502357,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "31a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3504794693,
+  "lat": 49.4610457,
+  "lon": 11.0925705,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "26",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "fast_food",
+    "check_date:opening_hours": "2026-06-17",
+    "cuisine": "kebab",
+    "name": "Didim Grill",
+    "opening_hours": "Mo-Su 09:00-22:00",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3703653927,
+  "lat": 49.4616732,
+  "lon": 11.0929567,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "30",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "email": "info@friseur-sarris.de",
+    "female": "yes",
+    "male": "yes",
+    "name": "Sarris",
+    "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-16:00",
+    "operator": "Vasilios Sarris",
+    "phone": "+49 911 555765",
+    "shop": "hairdresser",
+    "website": "https://friseur-sarris.de/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3835184161,
+  "lat": 49.4671864,
+  "lon": 11.0505500,
+  "tags": {
+    "addr:housenumber": "33",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3835184162,
+  "lat": 49.4672458,
+  "lon": 11.0505621,
+  "tags": {
+    "addr:housenumber": "33a",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3835184163,
+  "lat": 49.4672923,
+  "lon": 11.0505716,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "33b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3835184164,
+  "lat": 49.4671593,
+  "lon": 11.0508605,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "35",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3835184165,
+  "lat": 49.4672176,
+  "lon": 11.0508724,
+  "tags": {
+    "addr:housenumber": "35a",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3835184166,
+  "lat": 49.4672692,
+  "lon": 11.0508830,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "35b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3916554034,
+  "lat": 49.4592702,
+  "lon": 11.0900372,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "13",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "fast_food",
+    "check_date:opening_hours": "2023-04-23",
+    "cuisine": "chinese",
+    "name": "China Inn",
+    "opening_hours": "Mo-Fr 11:00-22:00; Su 12:00-22:00"
+  }
+},
+{
+  "type": "node",
+  "id": 3916554035,
+  "lat": 49.4587710,
+  "lon": 11.0891670,
+  "tags": {
+    "addr:housenumber": "1",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3916554036,
+  "lat": 49.4591550,
+  "lon": 11.0899555,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "11",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3916554037,
+  "lat": 49.4591784,
+  "lon": 11.0899783,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "13",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3916554038,
+  "lat": 49.4594358,
+  "lon": 11.0900190,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "13 a",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3916554039,
+  "lat": 49.4605788,
+  "lon": 11.0914473,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3916554040,
+  "lat": 49.4608713,
+  "lon": 11.0912018,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "23a",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849808,
+  "lat": 49.4678520,
+  "lon": 11.0473685,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "14a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849813,
+  "lat": 49.4678965,
+  "lon": 11.0473159,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "14",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849814,
+  "lat": 49.4678865,
+  "lon": 11.0470560,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12c",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849817,
+  "lat": 49.4679040,
+  "lon": 11.0469763,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849822,
+  "lat": 49.4679208,
+  "lon": 11.0468998,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849825,
+  "lat": 49.4679388,
+  "lon": 11.0468179,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849829,
+  "lat": 49.4680030,
+  "lon": 11.0466668,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "10b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849831,
+  "lat": 49.4680198,
+  "lon": 11.0465903,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "10a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849834,
+  "lat": 49.4680378,
+  "lon": 11.0465085,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999849853,
+  "lat": 49.4681598,
+  "lon": 11.0468872,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8c",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999850658,
+  "lat": 49.4681766,
+  "lon": 11.0468108,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999850664,
+  "lat": 49.4682206,
+  "lon": 11.0467398,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 3999850667,
+  "lat": 49.4682373,
+  "lon": 11.0466634,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870019813,
+  "lat": 49.4660837,
+  "lon": 11.0528209,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "50",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870022826,
+  "lat": 49.4659267,
+  "lon": 11.0531129,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "52",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870023030,
+  "lat": 49.4665046,
+  "lon": 11.0515044,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "48",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870023031,
+  "lat": 49.4666206,
+  "lon": 11.0513315,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "44",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870023034,
+  "lat": 49.4666681,
+  "lon": 11.0508232,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "42b",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße"
+  }
+},
+{
+  "type": "node",
+  "id": 4870023035,
+  "lat": 49.4665248,
+  "lon": 11.0504787,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "40a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870023036,
+  "lat": 49.4666529,
+  "lon": 11.0504768,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "40",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870520551,
+  "lat": 49.4671924,
+  "lon": 11.0525572,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "41",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "amenity": "school",
+    "check_date": "2024-09-14",
+    "description": "Berufsbereich Gärtner",
+    "name": "Staatliche Berufsschule I Fürth - Nebenstelle Nürnberg"
+  }
+},
+{
+  "type": "node",
+  "id": 4870520561,
+  "lat": 49.4683401,
+  "lon": 11.0453105,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4870520562,
+  "lat": 49.4673318,
+  "lon": 11.0525908,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "41",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "amenity": "school",
+    "check_date": "2024-09-14",
+    "description": "Berufsbereich Floristen",
+    "name": "Berufliche Schule Direktorat 5",
+    "website": "https://www.nuernberg.de/internet/berufsschule_5"
+  }
+},
+{
+  "type": "node",
+  "id": 4870520563,
+  "lat": 49.4669954,
+  "lon": 11.0518330,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "37",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße"
+  }
+},
+{
+  "type": "node",
+  "id": 5714095716,
+  "lat": 49.4611011,
+  "lon": 11.0919321,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "29",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "name": "Colin Vintage",
+    "opening_hours": "Tu-Sa 10:00-18:00",
+    "second_hand": "only",
+    "shop": "clothes"
+  }
+},
+{
+  "type": "node",
+  "id": 6000075485,
+  "lat": 49.4612761,
+  "lon": 11.0920575,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "29a",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "check_date": "2025-05-10",
+    "disused:shop": "yes",
+    "note": "Park Lane"
+  }
+},
+{
+  "type": "node",
+  "id": 6135372219,
+  "lat": 49.4613482,
+  "lon": 11.0920514,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "29a",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "name": "Hoffmann",
+    "opening_hours": "Mo-Fr 09:00-12:30,14:00-18:00; Sa 10:00-13:00",
+    "phone": "+49 911 552703",
+    "shop": "jewelry",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 7156953021,
+  "lat": 49.4621336,
+  "lon": 11.0933992,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "34",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "brand": "NORMA",
+    "brand:wikidata": "Q450180",
+    "brand:wikipedia": "de:Norma (Supermarkt)",
+    "name": "NORMA",
+    "opening_hours": "Mo-Sa 07:00-20:00; Su,PH off",
+    "shop": "supermarket",
+    "start_date": "2019-12-09",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 7993585906,
+  "lat": 49.4679870,
+  "lon": 11.0493011,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "14a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "craft": "scaffolder",
+    "name": "Gerüstbau Fuchs Lager"
+  }
+},
+{
+  "type": "node",
+  "id": 10549091412,
+  "lat": 49.4600347,
+  "lon": 11.0915379,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "18",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "name": "Hildegard Braukmann",
+    "opening_hours": "Mo-Fr 09:00-18:00",
+    "shop": "beauty"
+  }
+},
+{
+  "type": "node",
+  "id": 10549091426,
+  "lat": 49.4596546,
+  "lon": 11.0905407,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "15",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 10984335229,
+  "lat": 49.4565656,
+  "lon": 11.1326140,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "89",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 10984335232,
+  "lat": 49.4550178,
+  "lon": 11.1305261,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "74",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 11231199499,
+  "lat": 49.4522838,
+  "lon": 11.1255428,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "26",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "amenity": "restaurant",
+    "cuisine": "greek;german",
+    "name": "Zum Stamos",
+    "phone": "+49 911 5460554",
+    "website": "https://www.restaurant-zum-stamos.de/"
+  }
+},
+{
+  "type": "node",
+  "id": 12075243215,
+  "lat": 49.4590079,
+  "lon": 11.0903335,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "name": "Lorenzini",
+    "shop": "tattoo"
+  }
+},
+{
+  "type": "node",
+  "id": 12160289173,
+  "lat": 49.3937530,
+  "lon": 11.0247090,
+  "tags": {
+    "addr:housenumber": "10a",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 12160289174,
+  "lat": 49.3937299,
+  "lon": 11.0248682,
+  "tags": {
+    "addr:housenumber": "10b",
+    "addr:street": "Bei der Gerasmühle",
+    "entrance": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 13136710834,
+  "lat": 49.4601989,
+  "lon": 11.0910382,
+  "tags": {
+    "addr:housenumber": "21",
+    "addr:street": "Bayreuther Straße",
+    "name": "Viktoria Tours",
+    "opening_hours": "Mo-Fr 10:00-18:00; Sa 11:00-14:00; Su,PH off",
+    "shop": "travel_agency"
+  }
+},
+{
+  "type": "node",
+  "id": 13136710854,
+  "lat": 49.4605047,
+  "lon": 11.0919299,
+  "tags": {
+    "addr:housenumber": "22",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 13136710855,
+  "lat": 49.4603542,
+  "lon": 11.0917829,
+  "tags": {
+    "addr:housenumber": "20",
+    "addr:street": "Bayreuther Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 13248283576,
+  "lat": 49.4598851,
+  "lon": 11.0913802,
+  "tags": {
+    "addr:housenumber": "18",
+    "addr:street": "Bayreuther Straße",
+    "name": "Akdeniz",
+    "shop": "kiosk"
+  }
+},
+{
+  "type": "node",
+  "id": 13256150703,
+  "lat": 49.3939754,
+  "lon": 11.0246750,
+  "tags": {
+    "addr:housenumber": "11",
+    "addr:street": "Bei der Gerasmühle",
+    "blind:description": "Die Adressen \"Bei der Gerasmühle\" 11 und 12 nutzen den selben Eingang"
+  }
+},
+{
+  "type": "node",
+  "id": 13265790986,
+  "lat": 49.4614391,
+  "lon": 11.0927722,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:housenumber": "28",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "amenity": "dentist",
+    "healthcare": "dentist",
+    "name": "Zahnarzt Dr. Dennerlein",
+    "opening_hours": "Mo,Di 8:00-12:30,14:00-18-00; Mi,Fr 8:00-13:00, Do 8:00-17:00",
+    "website": "https://zahnarzt-dennerlein.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 33053821,
+  "center": {
+    "lat": 49.4615334,
+    "lon": 11.0928622
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "28a",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33053836,
+  "center": {
+    "lat": 49.4623559,
+    "lon": 11.0937586
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "36",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "0"
+  }
+},
+{
+  "type": "way",
+  "id": 33053859,
+  "center": {
+    "lat": 49.4619304,
+    "lon": 11.0932544
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "32",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33053900,
+  "center": {
+    "lat": 49.4616651,
+    "lon": 11.0929890
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "30",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33053941,
+  "center": {
+    "lat": 49.4620726,
+    "lon": 11.0935376
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "34",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "5",
+    "roof:levels": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 33053983,
+  "center": {
+    "lat": 49.4596507,
+    "lon": 11.0912045
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "16",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33053999,
+  "center": {
+    "lat": 49.4612767,
+    "lon": 11.0926089
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "26a",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33054057,
+  "center": {
+    "lat": 49.4599809,
+    "lon": 11.0915276
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "18",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33054078,
+  "center": {
+    "lat": 49.4614010,
+    "lon": 11.0927338
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "28",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33054143,
+  "center": {
+    "lat": 49.4617977,
+    "lon": 11.0931220
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "30a",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33054179,
+  "center": {
+    "lat": 49.4611316,
+    "lon": 11.0925485
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "26",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 33190749,
+  "center": {
+    "lat": 49.4561002,
+    "lon": 11.1326622
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "92",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:shape": "saltbox"
+  }
+},
+{
+  "type": "way",
+  "id": 33190751,
+  "center": {
+    "lat": 49.4555803,
+    "lon": 11.1316589
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "80",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 33190753,
+  "center": {
+    "lat": 49.4544032,
+    "lon": 11.1294852
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "64",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 33190755,
+  "center": {
+    "lat": 49.4537686,
+    "lon": 11.1282860
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "52",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33190756,
+  "center": {
+    "lat": 49.4536252,
+    "lon": 11.1280285
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "50",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33190757,
+  "center": {
+    "lat": 49.4533607,
+    "lon": 11.1275053
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "46",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 33190761,
+  "center": {
+    "lat": 49.4546100,
+    "lon": 11.1287507
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "49",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33190762,
+  "center": {
+    "lat": 49.4547309,
+    "lon": 11.1289776
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "51",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential"
+  }
+},
+{
+  "type": "way",
+  "id": 33190763,
+  "center": {
+    "lat": 49.4548646,
+    "lon": 11.1292388
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "53",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential"
+  }
+},
+{
+  "type": "way",
+  "id": 33190768,
+  "center": {
+    "lat": 49.4556373,
+    "lon": 11.1304867
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "73",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 33190769,
+  "center": {
+    "lat": 49.4563187,
+    "lon": 11.1319863
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "83a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:orientation": "across",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 33190770,
+  "center": {
+    "lat": 49.4565206,
+    "lon": 11.1322987
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "87",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "detached",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:shape": "hipped",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 33190771,
+  "center": {
+    "lat": 49.4561553,
+    "lon": 11.1316882
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "81",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "along",
+    "roof:shape": "hipped"
+  }
+},
+{
+  "type": "way",
+  "id": 33190772,
+  "center": {
+    "lat": 49.4559304,
+    "lon": 11.1312478
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "77",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "detached",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:shape": "hipped"
+  }
+},
+{
+  "type": "way",
+  "id": 33196535,
+  "center": {
+    "lat": 49.4534266,
+    "lon": 11.1235612
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "3",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes",
+    "height": "2.5",
+    "power": "substation",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
+  "id": 43344834,
+  "center": {
+    "lat": 49.4593058,
+    "lon": 11.0907272
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "14",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 43344842,
+  "center": {
+    "lat": 49.4591655,
+    "lon": 11.0905495
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "12",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:orientation": "along",
+    "roof:shape": "gabled",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 43344844,
+  "center": {
+    "lat": 49.4583852,
+    "lon": 11.0898266
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "yes",
+    "building:levels": "6",
+    "roof:shape": "flat",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 43344847,
+  "center": {
+    "lat": 49.4587453,
+    "lon": 11.0901401
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "yes",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 43344848,
+  "center": {
+    "lat": 49.4585990,
+    "lon": 11.0899428
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6a",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "office",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 43344850,
+  "center": {
+    "lat": 49.4590087,
+    "lon": 11.0904327
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "10",
+    "addr:postcode": "90489",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:shape": "gabled",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 72098745,
+  "center": {
+    "lat": 49.4598099,
+    "lon": 11.0905821
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "17",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 72098749,
+  "center": {
+    "lat": 49.4613015,
+    "lon": 11.0920489
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "29a",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "wikidata": "Q41427888"
+  }
+},
+{
+  "type": "way",
+  "id": 72098752,
+  "center": {
+    "lat": 49.4610433,
+    "lon": 11.0918054
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "27a",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 72098759,
+  "center": {
+    "lat": 49.4602426,
+    "lon": 11.0910114
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:colour": "tan",
+    "building:levels": "5",
+    "roof:levels": "1",
+    "roof:shape": "gabled",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 72098760,
+  "center": {
+    "lat": 49.4614332,
+    "lon": 11.0919759
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "31",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "4",
+    "roof:levels": "1",
+    "wikidata": "Q41427889"
+  }
+},
+{
+  "type": "way",
+  "id": 72098761,
+  "center": {
+    "lat": 49.4599722,
+    "lon": 11.0907418
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "19",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 78129820,
+  "center": {
+    "lat": 49.4533899,
+    "lon": 11.1279455
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "48",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "1",
+    "roof:levels": "1",
+    "roof:shape": "hipped"
+  }
+},
+{
+  "type": "way",
+  "id": 111103718,
+  "center": {
+    "lat": 49.4607835,
+    "lon": 11.0915760
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "25",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1"
+  }
+},
+{
+  "type": "way",
+  "id": 111103720,
+  "center": {
+    "lat": 49.4611749,
+    "lon": 11.0919364
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "29",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 111103721,
+  "center": {
+    "lat": 49.4609131,
+    "lon": 11.0916762
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "27",
+    "addr:postcode": "90409",
+    "addr:street": "Bayreuther Straße",
+    "building": "apartments",
+    "building:levels": "6",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 123212572,
+  "center": {
+    "lat": 49.3941866,
+    "lon": 11.0236014
+  },
+  "tags": {
+    "addr:housenumber": "18",
+    "addr:street": "Bei der Gerasmühle",
+    "building": "apartments",
+    "building:levels": "3",
+    "roof:levels": "1",
+    "roof:shape": "hipped"
+  }
+},
+{
+  "type": "way",
+  "id": 125551516,
+  "center": {
+    "lat": 49.4519587,
+    "lon": 11.1267969
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "26",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "leisure": "sports_centre",
+    "name": "SpVgg Mögeldorf 2000",
+    "phone": "+49 911 5434811",
+    "sport": "multi",
+    "website": "https://www.moegeldorf2000.de/",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 133600601,
+  "center": {
+    "lat": 49.4532852,
+    "lon": 11.1283531
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "48a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 133600643,
+  "center": {
+    "lat": 49.4547965,
+    "lon": 11.1302346
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "72",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 166665243,
+  "center": {
+    "lat": 49.4663669,
+    "lon": 11.0544299
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "45",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "building": "yes",
+    "building:levels": "3",
+    "name": "Stiftung Mittelfränkisches Blindenheim e.V."
+  }
+},
+{
+  "type": "way",
+  "id": 199732077,
+  "center": {
+    "lat": 49.4534337,
+    "lon": 11.1267874
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "33",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes",
+    "power": "substation"
+  }
+},
+{
+  "type": "way",
+  "id": 199732091,
+  "center": {
+    "lat": 49.4534994,
+    "lon": 11.1276684
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "46a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes",
+    "comment": "Habe ich das richtige haus erwischt oder gibt's da noch ein Gebäude unterm Baum, dass man im Luftbild nicht sieht?",
+    "power": "substation"
+  }
+},
+{
+  "type": "way",
+  "id": 199732137,
+  "center": {
+    "lat": 49.4534876,
+    "lon": 11.1283790
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "50a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential"
+  }
+},
+{
+  "type": "way",
+  "id": 234168227,
+  "center": {
+    "lat": 49.4534843,
+    "lon": 11.1237177
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "5",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "garages",
+    "height": "2.5",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
+  "id": 236465393,
+  "center": {
+    "lat": 49.4670152,
+    "lon": 11.0498976
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "36c",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "building": "yes",
+    "power": "substation"
+  }
+},
+{
+  "type": "way",
+  "id": 267094041,
+  "center": {
+    "lat": 49.4554322,
+    "lon": 11.1312750
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "76",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes",
+    "building:levels": "1",
+    "power": "substation",
+    "roof:shape": "flat"
+  }
+},
+{
+  "type": "way",
+  "id": 268704989,
+  "center": {
+    "lat": 49.4555970,
+    "lon": 11.1304134
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "71",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "house",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 268704990,
+  "center": {
+    "lat": 49.4555564,
+    "lon": 11.1303384
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "69",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "house",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 269444113,
+  "center": {
+    "lat": 49.4535712,
+    "lon": 11.1235881
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "1",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "area": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 275304356,
+  "center": {
+    "lat": 49.4540064,
+    "lon": 11.1274523
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "39",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 275304357,
+  "center": {
+    "lat": 49.4539684,
+    "lon": 11.1273599
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "37",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 275304549,
+  "center": {
+    "lat": 49.4549907,
+    "lon": 11.1294327
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "55",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential"
+  }
+},
+{
+  "type": "way",
+  "id": 275304550,
+  "center": {
+    "lat": 49.4550635,
+    "lon": 11.1295631
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "57",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential"
+  }
+},
+{
+  "type": "way",
+  "id": 275304551,
+  "center": {
+    "lat": 49.4552167,
+    "lon": 11.1297068
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "59",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 275304552,
+  "center": {
+    "lat": 49.4552569,
+    "lon": 11.1297819
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "61",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 275304553,
+  "center": {
+    "lat": 49.4553679,
+    "lon": 11.1299867
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "63",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 275304554,
+  "center": {
+    "lat": 49.4554082,
+    "lon": 11.1300632
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "65",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 275304557,
+  "center": {
+    "lat": 49.4554486,
+    "lon": 11.1301396
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "67",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "1",
+    "roof:orientation": "across",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 290177945,
+  "center": {
+    "lat": 49.4557537,
+    "lon": 11.1320267
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "82",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 290177946,
+  "center": {
+    "lat": 49.4562799,
+    "lon": 11.1319098
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "83",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:orientation": "across",
+    "roof:shape": "gabled",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 290177947,
+  "center": {
+    "lat": 49.4558089,
+    "lon": 11.1321284
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "84",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 290177948,
+  "center": {
+    "lat": 49.4563660,
+    "lon": 11.1320773
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "85",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:orientation": "along",
+    "roof:shape": "gabled",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 290177951,
+  "center": {
+    "lat": 49.4558640,
+    "lon": 11.1322300
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "86",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments"
+  }
+},
+{
+  "type": "way",
+  "id": 290177954,
+  "center": {
+    "lat": 49.4559192,
+    "lon": 11.1323317
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "88",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments",
+    "building:levels": "3",
+    "roof:levels": "2",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 290177955,
+  "center": {
+    "lat": 49.4560434,
+    "lon": 11.1325437
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "90",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:shape": "saltbox"
+  }
+},
+{
+  "type": "way",
+  "id": 290177956,
+  "center": {
+    "lat": 49.4561544,
+    "lon": 11.1327722
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "94",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "apartments",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:shape": "saltbox"
+  }
+},
+{
+  "type": "way",
+  "id": 290182458,
+  "center": {
+    "lat": 49.4543734,
+    "lon": 11.1284177
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "45",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "residential",
+    "building:levels": "2",
+    "roof:direction": "141",
+    "roof:levels": "1",
+    "roof:shape": "skillion"
+  }
+},
+{
+  "type": "way",
+  "id": 290182460,
+  "center": {
+    "lat": 49.4538551,
+    "lon": 11.1284419
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "54",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes",
+    "building:levels": "2",
+    "roof:levels": "2",
+    "roof:orientation": "along",
+    "roof:shape": "gabled"
+  }
+},
+{
+  "type": "way",
+  "id": 290182899,
+  "center": {
+    "lat": 49.4541514,
+    "lon": 11.1289784
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "58",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 290182900,
+  "center": {
+    "lat": 49.4541864,
+    "lon": 11.1290478
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "58a",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 290182901,
+  "center": {
+    "lat": 49.4542214,
+    "lon": 11.1291174
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "58b",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 290182902,
+  "center": {
+    "lat": 49.4542564,
+    "lon": 11.1291869
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "60",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 290182903,
+  "center": {
+    "lat": 49.4542971,
+    "lon": 11.1292655
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "62",
+    "addr:postcode": "90480",
+    "addr:street": "Dientzenhoferstraße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 407484555,
+  "center": {
+    "lat": 49.4327214,
+    "lon": 10.9793902
+  },
+  "tags": {
+    "addr:city": "Oberasbach",
+    "addr:housenumber": "10",
+    "addr:street": "Bayreuther Straße",
+    "building": "yes",
+    "building:levels": "3"
+  }
+},
+{
+  "type": "way",
+  "id": 443937058,
+  "center": {
+    "lat": 49.4321635,
+    "lon": 10.9782806
+  },
+  "tags": {
+    "addr:city": "Oberasbach",
+    "addr:country": "DE",
+    "addr:housenumber": "17",
+    "addr:postcode": "90522",
+    "addr:street": "Bayreuther Straße",
+    "addr:suburb": "Altenberg",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 495226971,
+  "center": {
+    "lat": 49.4664391,
+    "lon": 11.0520354
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "48a",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "building": "service"
+  }
+},
+{
+  "type": "way",
+  "id": 538368334,
+  "center": {
+    "lat": 49.4688932,
+    "lon": 11.0482553
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "3",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "building": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 538368343,
+  "center": {
+    "lat": 49.4689963,
+    "lon": 11.0475385
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "5",
+    "addr:postcode": "90425",
+    "addr:street": "Bielefelder Straße",
+    "building": "yes"
+  }
+},
+{
+  "type": "relation",
+  "id": 2814630,
+  "center": {
+    "lat": 49.4665287,
+    "lon": 11.0534805
+  },
+  "tags": {
+    "addr:housenumber": "43",
+    "addr:street": "Bielefelder Straße",
+    "building": "apartments",
+    "building:levels": "3",
+    "roof:levels": "1",
+    "roof:shape": "skillion",
+    "type": "multipolygon"
+  }
+}
+
+  ]
+}
