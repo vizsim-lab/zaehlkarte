@@ -52,5 +52,19 @@ pruefe_gd() {  # pruefe_gd <branch> <code> – mit dem Gedächtnis der Quelle au
 # Jahnallee, Lizenz beider Datensätze; Rohdateien gepackt für den Vergleich mit dem Gedächtnis
 # erkundet (ergebnis/leipzig_tage), dazu die Seiten der Datensätze (die CKAN-API sperrt
 # robots.txt; Lizenz nennen die Seiten nicht, die Metadaten je Ressource dl-de/by-2-0).
-# Prüfung mit dem Stand des Branch leipzig-tageswerte:
-pruefe_gd leipzig-tageswerte leipzig_rad
+# Prüfung mit dem Stand des Branch leipzig-tageswerte: geprüft (ergebnis/leipzig_rad), PR #30.
+#
+# Würzburg, Passantenzählung (15.11.2026): die älteren Datensätze je Standort und die Tagesdaten –
+# Felder, Zeitraum, Lizenz, Export (über die Abrufe der App, robots-Ausnahme von wuerzburg_fuss)
+erkunde_ods() {  # erkunde_ods <branch> <code> <datensatz> …
+  local ziel="$GITHUB_WORKSPACE/ergebnis/ods_$2"
+  mkdir -p "$ziel"
+  rm -rf app && git clone -q --depth 1 -b "$1" https://github.com/vizsim-lab/zaehlkarte app
+  local b="$1" c="$2"
+  shift 2
+  ( cd app/pipeline && uv sync --locked -q && timeout 30m uv run python "$GITHUB_WORKSPACE/tools/ods_erkunden.py" "$c" "$ziel" "$@" ) > "$ziel/lauf.txt" 2>&1 || true
+  echo "$b" > "$ziel/branch.txt"
+}
+erkunde_ods main wuerzburg_fuss passantenzaehlung_schoenbornstrasse passantenzaehlung_kaiserstrasse \
+  passantenzaehlung_spiegelstrasse passantenzaehlung_tagesdaten passantenzaehlung_stundendaten \
+  passantenzaehlung_wuerzburg
