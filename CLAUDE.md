@@ -130,8 +130,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **`data-tip` nur an Hinweis-Zeichen (ⓘ), nie an Knöpfen oder Links:** der Tooltip fängt
   Klicks darauf ab (Touch). Bedienelemente bekommen `title`/`aria-label`.
 - **REIN halten** (kein DOM, kein window): `js/data/modell.js`, `js/data/dauer.js`, `js/data/kommune.js`,
-  `js/ui/diagramme.js`, `js/utils/permalinkFormat.js`, `js/sprache/texte.js` – browserlos
-  getestet.
+  `js/ui/diagramme.js`, `js/utils/permalinkFormat.js`, `js/utils/platzRechnung.js`,
+  `js/sprache/texte.js` – browserlos getestet.
   Permalink-Kürzel sind Vertrag mit geteilten Links: nie umdeuten, nur ergänzen (die Sprache
   steht nicht im #-Teil, sondern in `?lang=`).
 - **Fremde Texte** (Namen, Bemerkungen aus den Daten) nur escaped ins HTML (`esc()`).
@@ -178,7 +178,10 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `werkzeuge/kmk_ferien.py` aus dem PDF nachtragen.
 - **Frontend:** `npm run dev`; vor jedem Push `npm run test:unit` und `npm run test:web`
   (Playwright sperrt das Netz außer dem Testserver – die Karte muss ohne Hintergrund laufen).
-  Neues Verhalten = neuer Test in `tests/web/`.
+  Neues Verhalten = neuer Test in `tests/web/`. Platz der schwebenden Panels regelt
+  `js/ui/platz.js` (docs/KARTE.md, „Platz für die Karte“): nie zwei Panels übereinander, die
+  Knopfleiste unten links rückt nie; eine neue Seitenleiste ist ein `.detail-panel`. Die Grenze
+  des Handy-Layouts (760 px, `MOBIL_BIS`) steht auch in `index.html` und `style.css`.
 - **Abrufe der Werkzeuge** (Branches `werkzeug/*`): nur, was robots.txt erlaubt – für die eigene
   Kennung, für `*` und für die Kennungen von Claude; prüfen mit `tools/robots.py` (RFC 9309 samt
   `*` und `$`, Crawl-delay), nicht mit `urllib.robotparser`. FragDenStaat und GovData sperren

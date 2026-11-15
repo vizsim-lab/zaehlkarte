@@ -43,6 +43,18 @@ function gemeindenEintrag(g) {
 
 const $ = (id) => document.getElementById(id);
 
+/** Legende auf- oder zuklappen (Klasse, Pfeil, aria-expanded) – von js/ui/platz.js, wenn eine
+ *  Seitenleiste Platz braucht. Von Hand (Titelzeile) meldet die Legende das als Ereignis
+ *  „legende-klappt“ (detail.vonHand), damit platz.js dann nichts mehr von selbst ändert. */
+export function klappeLegende(zu) {
+  const legende = $("legend");
+  if (!legende || legende.classList.contains("collapsed") === zu) return;
+  legende.classList.toggle("collapsed", zu);
+  const pfeil = legende.querySelector(".toggle-root");
+  pfeil?.classList.toggle("open", !zu);
+  pfeil?.setAttribute("aria-expanded", String(!zu));
+}
+
 const MODUS_TIPS = { "sv.anteil": "modus.sv.anteil_tip", "rad.anteil": "modus.rad.anteil_tip" };
 
 function setzeChips(container, attr, wert) {
@@ -68,6 +80,7 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     const pfeil = kopf.querySelector(".toggle-arrow");
     pfeil?.classList.toggle("open", !zu);
     pfeil?.setAttribute("aria-expanded", String(!zu));
+    if (ziel === legende) legende.dispatchEvent(new CustomEvent("legende-klappt", { detail: { zu, vonHand: true } }));
   });
   if (legende.classList.contains("collapsed")) {
     legende.querySelector(".toggle-root")?.classList.remove("open");

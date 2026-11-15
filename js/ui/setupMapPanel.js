@@ -1,7 +1,10 @@
 // setupMapPanel.js — die Karten-Bedienelemente unten links (aus vizsim/unfallkarte).
 //
-// Zwei Dinge, die zusammengehören, weil sie dieselbe Ecke des Bildschirms bespielen:
-// das einklappbare Panel (Basemap, Relief) und die Zoom-/Kompass-Steuerung darüber.
+// Zwei Dinge, die zusammengehören, weil sie dieselbe Ecke des Bildschirms bespielen: das
+// einklappbare Panel (Basemap, Relief) und die Zoom-/Kompass-Steuerung. Beide stehen als EINE
+// waagrechte Leiste unten links (Karten-Knopf, dann Plus, Minus, Kompass) unter der linken
+// Spalte aus Suche und Seitenleiste – die Seitenleisten enden darüber, die Leiste rückt nie
+// (bis November 2026 standen die Knöpfe senkrecht und sprangen neben lange Seitenleisten).
 
 import { NavigationControl } from "../lib/maplibre.js";
 import { setBasemap, setRelief } from "../map/basemapTerrain.js";
@@ -24,35 +27,6 @@ export function beschrifteSteuerung() {
       b.setAttribute("aria-label", t(schluessel));
     }
   }
-}
-
-/**
- * Bedienelemente unten links neben ein offenes Panel (Stelle, Datenlage) rücken – aber nur,
- * wenn das Panel so weit nach unten reicht, dass es sie verdecken würde; kurze Panels lassen
- * sie am linken Rand. Gemessen wird bei jeder Größenänderung der Panels, der Bedienelemente
- * (Karten-Panel auf/zu) und des Fensters. Die Knöpfe hängen unten fest, ihre Oberkante hängt
- * also nicht davon ab, ob sie gerade gerückt sind.
- */
-export function rueckeNebenPanels() {
-  const panels = [...document.querySelectorAll(".detail-panel")];
-  const stapel = ["#bottom-left-ui-container", ".map-settings-toggle", ".map-settings-panel"]
-    .map((sel) => document.querySelector(sel)).filter(Boolean);
-  const LUFT = 8;
-  const pruefe = () => {
-    const knoepfe = stapel.map((el) => el.getBoundingClientRect()).filter((r) => r.height > 0);
-    if (!knoepfe.length) return; // Handy mit offener Legende: Knöpfe ausgeblendet
-    const oben = Math.min(...knoepfe.map((r) => r.top));
-    const imWeg = panels.filter((p) => !p.hidden).map((p) => p.getBoundingClientRect())
-      .find((r) => r.height > 0 && r.bottom + LUFT > oben);
-    document.body.classList.toggle("steuerung-daneben", Boolean(imWeg));
-    if (imWeg) document.documentElement.style.setProperty("--steuerung-links", `${Math.round(imWeg.right + 10)}px`);
-  };
-  const groesse = new ResizeObserver(pruefe);
-  for (const el of [...panels, ...stapel]) groesse.observe(el);
-  const sichtbar = new MutationObserver(pruefe);
-  for (const p of panels) sichtbar.observe(p, { attributes: true, attributeFilter: ["hidden"] });
-  window.addEventListener("resize", pruefe);
-  pruefe();
 }
 
 /** Panel unten links: Basemap-Auswahl (Positron/OSM/Esri) und Relief. */
@@ -81,7 +55,7 @@ export function setupMapPanel(map) {
 /**
  * Zoom-/Kompass-Steuerung in den eigenen Container hängen.
  * Bewusst NICHT über map.addControl: die Steuerung soll in #bottom-left-ui-container
- * sitzen (über dem Panel-Button), nicht in MapLibres eigener Ecke. `nav.onAdd(map)`
+ * sitzen (rechts neben dem Panel-Button), nicht in MapLibres eigener Ecke. `nav.onAdd(map)`
  * ist dafür der API-konforme Weg.
  */
 export function addNavigationControl(map) {

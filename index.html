@@ -17,7 +17,8 @@
   <div id="map" aria-label="Karte" data-i18n-attr="aria-label:karte"></div>
 
   <div class="legend" id="legend">
-    <script>if (matchMedia("(max-width: 640px)").matches) document.currentScript.parentElement.classList.add("collapsed");</script>
+    <!-- Handy-Layout: Legende startet als Streifen (Grenze wie MOBIL_BIS in js/utils/platzRechnung.js) -->
+    <script>if (matchMedia("(max-width: 760px)").matches) document.currentScript.parentElement.classList.add("collapsed");</script>
     <div class="legend-header legend-title" data-toggle="legend-root">
       <div class="legend-kopf">
         <div class="legend-kopfzeile">
