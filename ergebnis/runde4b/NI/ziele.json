@@ -15,7 +15,7 @@
   "vorher": "erreicht",
   "gemeinden": 42,
   "herkunft": {
-   "https://www.landkreis-gifhorn.de/": "vorher_oder_liste",
+   "https://www.landkreis-gifhorn.de/": "wikipedia",
    "https://www.kreis-gifhorn.de/": "geraten",
    "https://www.lk-gifhorn.de/": "geraten",
    "https://www.lra-gifhorn.de/": "geraten",
@@ -39,7 +39,7 @@
   "vorher": "erreicht",
   "gemeinden": 8,
   "herkunft": {
-   "https://www.landkreis-goslar.de/": "vorher_oder_liste",
+   "https://www.landkreis-goslar.de/": "wikipedia",
    "https://www.kreis-goslar.de/": "geraten",
    "https://www.lk-goslar.de/": "geraten",
    "https://www.lra-goslar.de/": "geraten",
@@ -63,7 +63,7 @@
   "vorher": "erreicht",
   "gemeinden": 28,
   "herkunft": {
-   "https://www.landkreis-helmstedt.de/": "vorher_oder_liste",
+   "https://www.landkreis-helmstedt.de/": "wikipedia",
    "https://www.kreis-helmstedt.de/": "geraten",
    "https://www.lk-helmstedt.de/": "geraten",
    "https://www.lra-helmstedt.de/": "geraten",
@@ -87,7 +87,7 @@
   "vorher": "erreicht",
   "gemeinden": 12,
   "herkunft": {
-   "https://www.landkreis-northeim.de/": "vorher_oder_liste",
+   "https://www.landkreis-northeim.de/": "wikipedia",
    "https://www.kreis-northeim.de/": "geraten",
    "https://www.lk-northeim.de/": "geraten",
    "https://www.lra-northeim.de/": "geraten",
@@ -111,7 +111,7 @@
   "vorher": "erreicht",
   "gemeinden": 7,
   "herkunft": {
-   "https://www.landkreis-peine.de/": "vorher_oder_liste",
+   "https://www.landkreis-peine.de/": "wikipedia",
    "https://www.kreis-peine.de/": "geraten",
    "https://www.lk-peine.de/": "geraten",
    "https://www.lra-peine.de/": "geraten",
@@ -142,7 +142,7 @@
    "https://www.lra-wolfenbuettel.de/": "geraten",
    "https://www.wolfenbuettel.de/": "geraten",
    "https://www.landkreiswolfenbuettel.de/": "geraten",
-   "https://www.lkwf.de/": "vorher_oder_liste"
+   "https://www.lkwf.de/": "wikipedia"
   }
  },
  {
@@ -151,12 +151,12 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.landkreisgoettingen.de/",
    "https://www.landkreis-goettingen.de/",
    "https://www.kreis-goettingen.de/",
    "https://www.lk-goettingen.de/",
    "https://www.lra-goettingen.de/",
-   "https://www.goettingen.de/",
-   "https://www.landkreisgoettingen.de/"
+   "https://www.goettingen.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 40,
@@ -166,7 +166,7 @@
    "https://www.lk-goettingen.de/": "geraten",
    "https://www.lra-goettingen.de/": "geraten",
    "https://www.goettingen.de/": "geraten",
-   "https://www.landkreisgoettingen.de/": "geraten"
+   "https://www.landkreisgoettingen.de/": "wikipedia"
   }
  },
  {
@@ -205,12 +205,12 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.diepholz.de/",
    "https://www.kreis-diepholz.de/Die_Gr%c3%bcnen_Kommunalwahlflyer_SG_Kirchdorf.pdf",
    "https://www.landkreis-diepholz.de/",
    "https://www.kreis-diepholz.de/",
    "https://www.lk-diepholz.de/",
    "https://www.lra-diepholz.de/",
-   "https://www.diepholz.de/",
    "https://www.landkreisdiepholz.de/"
   ],
   "vorher": "erreicht",
@@ -220,7 +220,7 @@
    "https://www.kreis-diepholz.de/": "geraten",
    "https://www.lk-diepholz.de/": "geraten",
    "https://www.lra-diepholz.de/": "geraten",
-   "https://www.diepholz.de/": "geraten",
+   "https://www.diepholz.de/": "wikipedia",
    "https://www.landkreisdiepholz.de/": "geraten",
    "https://www.kreis-diepholz.de/Die_Gr%c3%bcnen_Kommunalwahlflyer_SG_Kirchdorf.pdf": "vorher_oder_liste"
   }
@@ -231,11 +231,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.hameln-pyrmont.de/",
    "https://www.landkreis-hameln-pyrmont.de/",
    "https://www.kreis-hameln-pyrmont.de/",
    "https://www.lk-hameln-pyrmont.de/",
    "https://www.lra-hameln-pyrmont.de/",
-   "https://www.hameln-pyrmont.de/",
    "https://www.landkreishamelnpyrmont.de/",
    "https://www.hamelnpyrmont.de/"
   ],
@@ -246,7 +246,7 @@
    "https://www.kreis-hameln-pyrmont.de/": "geraten",
    "https://www.lk-hameln-pyrmont.de/": "geraten",
    "https://www.lra-hameln-pyrmont.de/": "geraten",
-   "https://www.hameln-pyrmont.de/": "geraten",
+   "https://www.hameln-pyrmont.de/": "wikipedia",
    "https://www.landkreishamelnpyrmont.de/": "geraten",
    "https://www.hamelnpyrmont.de/": "geraten"
   }
@@ -257,12 +257,12 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.landkreishildesheim.de/",
    "https://www.landkreis-hildesheim.de/",
    "https://www.kreis-hildesheim.de/",
    "https://www.lk-hildesheim.de/",
    "https://www.lra-hildesheim.de/",
-   "https://www.hildesheim.de/",
-   "https://www.landkreishildesheim.de/"
+   "https://www.hildesheim.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 20,
@@ -272,7 +272,7 @@
    "https://www.lk-hildesheim.de/": "geraten",
    "https://www.lra-hildesheim.de/": "geraten",
    "https://www.hildesheim.de/": "geraten",
-   "https://www.landkreishildesheim.de/": "geraten"
+   "https://www.landkreishildesheim.de/": "wikipedia"
   }
  },
  {
@@ -291,7 +291,7 @@
   "vorher": "erreicht",
   "gemeinden": 39,
   "herkunft": {
-   "https://www.landkreis-holzminden.de/": "vorher_oder_liste",
+   "https://www.landkreis-holzminden.de/": "wikipedia",
    "https://www.kreis-holzminden.de/": "geraten",
    "https://www.lk-holzminden.de/": "geraten",
    "https://www.lra-holzminden.de/": "geraten",
@@ -317,7 +317,7 @@
   "herkunft": {
    "https://www.landkreis-nienburg.de/": "geraten",
    "https://www.kreis-nienburg.de/": "geraten",
-   "https://www.lk-nienburg.de/": "vorher_oder_liste",
+   "https://www.lk-nienburg.de/": "wikipedia",
    "https://www.lra-nienburg.de/": "geraten",
    "https://www.nienburg.de/": "geraten",
    "https://www.landkreisnienburg.de/": "geraten"
@@ -329,11 +329,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.schaumburg.de/",
    "https://www.landkreis-schaumburg.de/",
    "https://www.kreis-schaumburg.de/",
    "https://www.lk-schaumburg.de/",
    "https://www.lra-schaumburg.de/",
-   "https://www.schaumburg.de/",
    "https://www.landkreisschaumburg.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -343,7 +343,7 @@
    "https://www.kreis-schaumburg.de/": "geraten",
    "https://www.lk-schaumburg.de/": "geraten",
    "https://www.lra-schaumburg.de/": "geraten",
-   "https://www.schaumburg.de/": "geraten",
+   "https://www.schaumburg.de/": "wikipedia",
    "https://www.landkreisschaumburg.de/": "geraten"
   }
  },
@@ -363,7 +363,7 @@
   "vorher": "erreicht",
   "gemeinden": 21,
   "herkunft": {
-   "https://www.landkreis-celle.de/": "vorher_oder_liste",
+   "https://www.landkreis-celle.de/": "wikipedia",
    "https://www.kreis-celle.de/": "geraten",
    "https://www.lk-celle.de/": "geraten",
    "https://www.lra-celle.de/": "geraten",
@@ -387,7 +387,7 @@
   "vorher": "erreicht",
   "gemeinden": 29,
   "herkunft": {
-   "https://www.landkreis-cuxhaven.de/": "vorher_oder_liste",
+   "https://www.landkreis-cuxhaven.de/": "wikipedia",
    "https://www.kreis-cuxhaven.de/": "geraten",
    "https://www.lk-cuxhaven.de/": "geraten",
    "https://www.lra-cuxhaven.de/": "geraten",
@@ -411,7 +411,7 @@
   "vorher": "erreicht",
   "gemeinden": 42,
   "herkunft": {
-   "https://www.landkreis-harburg.de/": "vorher_oder_liste",
+   "https://www.landkreis-harburg.de/": "wikipedia",
    "https://www.kreis-harburg.de/": "geraten",
    "https://www.lk-harburg.de/": "geraten",
    "https://www.lra-harburg.de/": "geraten",
@@ -425,11 +425,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.luechow-dannenberg.de/",
    "https://www.landkreis-luechow-dannenberg.de/",
    "https://www.kreis-luechow-dannenberg.de/",
    "https://www.lk-luechow-dannenberg.de/",
    "https://www.lra-luechow-dannenberg.de/",
-   "https://www.luechow-dannenberg.de/",
    "https://www.landkreisluechowdannenberg.de/",
    "https://www.luechowdannenberg.de/"
   ],
@@ -440,7 +440,7 @@
    "https://www.kreis-luechow-dannenberg.de/": "geraten",
    "https://www.lk-luechow-dannenberg.de/": "geraten",
    "https://www.lra-luechow-dannenberg.de/": "geraten",
-   "https://www.luechow-dannenberg.de/": "geraten",
+   "https://www.luechow-dannenberg.de/": "wikipedia",
    "https://www.landkreisluechowdannenberg.de/": "geraten",
    "https://www.luechowdannenberg.de/": "geraten"
   }
@@ -461,7 +461,7 @@
   "vorher": "erreicht",
   "gemeinden": 43,
   "herkunft": {
-   "https://www.landkreis-lueneburg.de/": "vorher_oder_liste",
+   "https://www.landkreis-lueneburg.de/": "wikipedia",
    "https://www.kreis-lueneburg.de/": "geraten",
    "https://www.lk-lueneburg.de/": "geraten",
    "https://www.lra-lueneburg.de/": "geraten",
@@ -485,7 +485,7 @@
   "vorher": "erreicht",
   "gemeinden": 11,
   "herkunft": {
-   "https://www.landkreis-osterholz.de/": "vorher_oder_liste",
+   "https://www.landkreis-osterholz.de/": "wikipedia",
    "https://www.kreis-osterholz.de/": "geraten",
    "https://www.lk-osterholz.de/": "geraten",
    "https://www.lra-osterholz.de/": "geraten",
@@ -499,6 +499,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.lk-row.de/",
    "https://www.landkreis-rotenburg.de/",
    "https://www.kreis-rotenburg.de/",
    "https://www.lk-rotenburg.de/",
@@ -514,7 +515,8 @@
    "https://www.lk-rotenburg.de/": "geraten",
    "https://www.lra-rotenburg.de/": "geraten",
    "https://www.rotenburg.de/": "geraten",
-   "https://www.landkreisrotenburg.de/": "geraten"
+   "https://www.landkreisrotenburg.de/": "geraten",
+   "https://www.lk-row.de/": "wikipedia"
   }
  },
  {
@@ -523,13 +525,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.heidekreis.de/",
    "https://www.landkreis-heide.de/",
    "https://www.kreis-heide.de/",
    "https://www.lk-heide.de/",
    "https://www.lra-heide.de/",
    "https://www.heide.de/",
-   "https://www.landkreisheide.de/",
-   "https://www.heidekreis.de/"
+   "https://www.landkreisheide.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 23,
@@ -540,7 +542,7 @@
    "https://www.lra-heide.de/": "geraten",
    "https://www.heide.de/": "geraten",
    "https://www.landkreisheide.de/": "geraten",
-   "https://www.heidekreis.de/": "geraten"
+   "https://www.heidekreis.de/": "wikipedia"
   }
  },
  {
@@ -559,7 +561,7 @@
   "vorher": "erreicht",
   "gemeinden": 40,
   "herkunft": {
-   "https://www.landkreis-stade.de/": "vorher_oder_liste",
+   "https://www.landkreis-stade.de/": "wikipedia",
    "https://www.kreis-stade.de/": "geraten",
    "https://www.lk-stade.de/": "geraten",
    "https://www.lra-stade.de/": "geraten",
@@ -573,8 +575,8 @@
   "art": "kreis",
   "tk": "44",
   "web": [
-   "https://www.landkreis-uelzen.de/home.aspx",
    "https://www.landkreis-uelzen.de/",
+   "https://www.landkreis-uelzen.de/home.aspx",
    "https://www.kreis-uelzen.de/",
    "https://www.lk-uelzen.de/",
    "https://www.lra-uelzen.de/",
@@ -584,7 +586,7 @@
   "vorher": "erreicht",
   "gemeinden": 27,
   "herkunft": {
-   "https://www.landkreis-uelzen.de/": "geraten",
+   "https://www.landkreis-uelzen.de/": "wikipedia",
    "https://www.kreis-uelzen.de/": "geraten",
    "https://www.lk-uelzen.de/": "geraten",
    "https://www.lra-uelzen.de/": "geraten",
@@ -609,7 +611,7 @@
   "vorher": "erreicht",
   "gemeinden": 11,
   "herkunft": {
-   "https://www.landkreis-verden.de/": "vorher_oder_liste",
+   "https://www.landkreis-verden.de/": "wikipedia",
    "https://www.kreis-verden.de/": "geraten",
    "https://www.lk-verden.de/": "geraten",
    "https://www.lra-verden.de/": "geraten",
@@ -623,11 +625,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.ammerland.de/",
    "https://www.landkreis-ammerland.de/",
    "https://www.kreis-ammerland.de/",
    "https://www.lk-ammerland.de/",
    "https://www.lra-ammerland.de/",
-   "https://www.ammerland.de/",
    "https://www.landkreisammerland.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -637,7 +639,7 @@
    "https://www.kreis-ammerland.de/": "geraten",
    "https://www.lk-ammerland.de/": "geraten",
    "https://www.lra-ammerland.de/": "geraten",
-   "https://www.ammerland.de/": "geraten",
+   "https://www.ammerland.de/": "wikipedia",
    "https://www.landkreisammerland.de/": "geraten"
   }
  },
@@ -657,7 +659,7 @@
   "vorher": "erreicht",
   "gemeinden": 25,
   "herkunft": {
-   "https://www.landkreis-aurich.de/": "vorher_oder_liste",
+   "https://www.landkreis-aurich.de/": "wikipedia",
    "https://www.kreis-aurich.de/": "geraten",
    "https://www.lk-aurich.de/": "geraten",
    "https://www.lra-aurich.de/": "geraten",
@@ -671,6 +673,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.lkclp.de/",
    "https://kreis-cloppenburg.de/",
    "https://www.landkreis-cloppenburg.de/",
    "https://www.kreis-cloppenburg.de/",
@@ -688,7 +691,8 @@
    "https://www.lra-cloppenburg.de/": "geraten",
    "https://www.cloppenburg.de/": "geraten",
    "https://www.landkreiscloppenburg.de/": "geraten",
-   "https://kreis-cloppenburg.de/": "vorher_oder_liste"
+   "https://kreis-cloppenburg.de/": "vorher_oder_liste",
+   "https://www.lkclp.de/": "wikipedia"
   }
  },
  {
@@ -697,11 +701,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.emsland.de/",
    "https://www.landkreis-emsland.de/",
    "https://www.kreis-emsland.de/",
    "https://www.lk-emsland.de/",
    "https://www.lra-emsland.de/",
-   "https://www.emsland.de/",
    "https://www.landkreisemsland.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -711,7 +715,7 @@
    "https://www.kreis-emsland.de/": "geraten",
    "https://www.lk-emsland.de/": "geraten",
    "https://www.lra-emsland.de/": "geraten",
-   "https://www.emsland.de/": "geraten",
+   "https://www.emsland.de/": "wikipedia",
    "https://www.landkreisemsland.de/": "geraten"
   }
  },
@@ -721,11 +725,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.friesland.de/",
    "https://www.landkreis-friesland.de/",
    "https://www.kreis-friesland.de/",
    "https://www.lk-friesland.de/",
    "https://www.lra-friesland.de/",
-   "https://www.friesland.de/",
    "https://www.landkreisfriesland.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -735,7 +739,7 @@
    "https://www.kreis-friesland.de/": "geraten",
    "https://www.lk-friesland.de/": "geraten",
    "https://www.lra-friesland.de/": "geraten",
-   "https://www.friesland.de/": "geraten",
+   "https://www.friesland.de/": "wikipedia",
    "https://www.landkreisfriesland.de/": "geraten"
   }
  },
@@ -745,11 +749,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.grafschaft-bentheim.de/",
    "https://www.landkreis-grafschaft-bentheim.de/",
    "https://www.kreis-grafschaft-bentheim.de/",
    "https://www.lk-grafschaft-bentheim.de/",
    "https://www.lra-grafschaft-bentheim.de/",
-   "https://www.grafschaft-bentheim.de/",
    "https://www.landkreisgrafschaftbentheim.de/",
    "https://www.grafschaftbentheim.de/"
   ],
@@ -760,7 +764,7 @@
    "https://www.kreis-grafschaft-bentheim.de/": "geraten",
    "https://www.lk-grafschaft-bentheim.de/": "geraten",
    "https://www.lra-grafschaft-bentheim.de/": "geraten",
-   "https://www.grafschaft-bentheim.de/": "geraten",
+   "https://www.grafschaft-bentheim.de/": "wikipedia",
    "https://www.landkreisgrafschaftbentheim.de/": "geraten",
    "https://www.grafschaftbentheim.de/": "geraten"
   }
@@ -781,7 +785,7 @@
   "vorher": "erreicht",
   "gemeinden": 20,
   "herkunft": {
-   "https://www.landkreis-leer.de/": "vorher_oder_liste",
+   "https://www.landkreis-leer.de/": "wikipedia",
    "https://www.kreis-leer.de/": "geraten",
    "https://www.lk-leer.de/": "geraten",
    "https://www.lra-leer.de/": "geraten",
@@ -795,6 +799,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.oldenburg-kreis.de/",
    "https://www.landkreis-oldenburg.de/",
    "https://www.kreis-oldenburg.de/",
    "https://www.lk-oldenburg.de/",
@@ -810,7 +815,8 @@
    "https://www.lk-oldenburg.de/": "geraten",
    "https://www.lra-oldenburg.de/": "geraten",
    "https://www.oldenburg.de/": "geraten",
-   "https://www.landkreisoldenburg.de/": "geraten"
+   "https://www.landkreisoldenburg.de/": "geraten",
+   "https://www.oldenburg-kreis.de/": "wikipedia"
   }
  },
  {
@@ -829,7 +835,7 @@
   "vorher": "erreicht",
   "gemeinden": 34,
   "herkunft": {
-   "https://www.landkreis-osnabrueck.de/": "vorher_oder_liste",
+   "https://www.landkreis-osnabrueck.de/": "wikipedia",
    "https://www.kreis-osnabrueck.de/": "geraten",
    "https://www.lk-osnabrueck.de/": "geraten",
    "https://www.lra-osnabrueck.de/": "geraten",
@@ -853,7 +859,7 @@
   "vorher": "erreicht",
   "gemeinden": 10,
   "herkunft": {
-   "https://www.landkreis-vechta.de/": "vorher_oder_liste",
+   "https://www.landkreis-vechta.de/": "wikipedia",
    "https://www.kreis-vechta.de/": "geraten",
    "https://www.lk-vechta.de/": "geraten",
    "https://www.lra-vechta.de/": "geraten",
@@ -884,7 +890,7 @@
    "https://www.lra-wesermarsch.de/": "geraten",
    "https://www.wesermarsch.de/": "geraten",
    "https://www.landkreiswesermarsch.de/": "geraten",
-   "https://wesermarsch.de/": "vorher_oder_liste"
+   "https://wesermarsch.de/": "wikipedia"
   }
  },
  {
@@ -903,7 +909,7 @@
   "vorher": "erreicht",
   "gemeinden": 19,
   "herkunft": {
-   "https://www.landkreis-wittmund.de/": "vorher_oder_liste",
+   "https://www.landkreis-wittmund.de/": "wikipedia",
    "https://www.kreis-wittmund.de/": "geraten",
    "https://www.lk-wittmund.de/": "geraten",
    "https://www.lra-wittmund.de/": "geraten",
