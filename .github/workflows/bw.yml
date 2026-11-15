@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [ol2]
+        teil: [ol3]
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
@@ -29,6 +29,7 @@ jobs:
             dauer4) timeout 85m python3 tools/bw_dauer4.py ergebnis/bw/dauer4 || true ;;
             pruefe) tools/pruefe.sh dauer-bw-land bw_land_kfz || true ;;
             rand) timeout 20m python3 tools/bw_rand.py ergebnis/bw/rand || true ;;
+            ol3) timeout 40m python3 tools/bw_ol3.py ergebnis/bw/ol3 || true ;;
             ol2) timeout 25m python3 tools/bw_ol2.py ergebnis/bw/ol || true ;;
             ol) sudo apt-get install -y -q poppler-utils > /dev/null 2>&1; timeout 30m python3 tools/bw_ol.py ergebnis/bw/ol || true ;;
             dz_osm) timeout 20m python3 tools/bw_dz_osm.py ergebnis/bw/dz_osm 8035:Achern 8036:Appenweier 8385:Stetten 8386:Filderstadt 8491:Weisenbach 8528:Kippenheim 8554:Wollmatingen 8702:Hornberg 8708:Sasbach 8924:Stetten || true ;;
