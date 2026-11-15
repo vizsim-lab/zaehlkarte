@@ -1,0 +1,41 @@
+# Werkzeug für Baden-Württemberg (Branch werkzeug/bw, eigener Branch neben werkzeug/erkundung,
+# damit sich Läufe paralleler Sitzungen nicht in die Quere kommen): Landes-Dauerzählstellen
+# (tools/bw_dauer.py) und Abgleich der Radzählstellen mit OSM (tools/bw_rad_osm.py). Ergebnisse
+# nach ergebnis/bw/ in denselben Branch (Pushes mit GITHUB_TOKEN starten keinen neuen Lauf).
+name: Werkzeug BW
+on:
+  push:
+    branches: [werkzeug/bw]
+    paths: [tools/**, .github/workflows/bw.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  bw:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        teil: [dauer, rad_osm]
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          case "${{ matrix.teil }}" in
+            dauer) timeout 60m python3 tools/bw_dauer.py ergebnis/bw/dauer || true ;;
+            rad_osm)
+              gh release download dauerzaehlstellen -R vizsim-lab/zaehlkarte -p dauer.tar.gz -D "$RUNNER_TEMP"
+              tar -xzf "$RUNNER_TEMP/dauer.tar.gz" -C "$RUNNER_TEMP"
+              idx=$(find "$RUNNER_TEMP" -name index.json -path "*dauer*" | head -1)
+              timeout 20m python3 tools/bw_rad_osm.py "$idx" ergebnis/bw/rad_osm || true ;;
+          esac
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Ergebnis ablegen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ergebnis/bw
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Werkzeug BW ${{ matrix.teil }} $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3 4 5; do git pull -q --rebase origin werkzeug/bw && git push -q origin HEAD:werkzeug/bw && break; sleep $((i * 7)); done
