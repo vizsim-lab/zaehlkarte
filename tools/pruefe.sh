@@ -11,3 +11,8 @@ zeit=""
 [ -x /usr/bin/time ] && zeit="/usr/bin/time -v"
 ( cd app/pipeline && uv sync --locked -q && $zeit timeout 70m uv run python "$GITHUB_WORKSPACE/tools/quelle_pruefen.py" "$2" "$ziel" ) > "$ziel/lauf_ganz.txt" 2>&1 || true
 tail -c 30000 "$ziel/lauf_ganz.txt" > "$ziel/lauf.txt" && rm -f "$ziel/lauf_ganz.txt"
+# kleine Zustandsdateien des Adapters (etwa der Abrufplan von BAYSIS) mit ablegen
+for f in stand.json abruf.json; do
+  [ -f "app/pipeline/data/raw/$2/$f" ] && cp "app/pipeline/data/raw/$2/$f" "$ziel/"
+done
+true
