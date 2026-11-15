@@ -1200,6 +1200,49 @@ body.steuerung-daneben .map-settings-panel { left: var(--steuerung-links, 400px)
 .tr-legende i { display: inline-block; width: 10px; height: 10px; margin: 0 5px -1px 0; border-radius: 2px; }
 .detail-kennwerte td.is-leer { color: var(--ui-text-muted); }
 
+/* ───── Steckbrief einer Kommune (js/ui/kommune.js) ─────
+   Je Zählart und Verkehrsart eine Zeile: Name | Zeitstrahl | Umfang, auf einer gemeinsamen Achse.
+   Kurzzeitzählungen: ein Kästchen je Jahr (dunkler = mehr Zählungen, Lücken bleiben leer);
+   Dauerzählstellen: ein Balken vom ersten bis zum letzten Tag, hell mit nur Tageswerten der Quelle. */
+.kz-achse, .kz-zeile { display: grid; grid-template-columns: 122px minmax(0, 1fr) 46px; gap: 8px; align-items: center; }
+.kz-achse { margin: 4px 0 -4px; font-size: 10.5px; color: var(--ui-text-muted); font-variant-numeric: tabular-nums; }
+.kz-achse-skala { position: relative; height: 14px; }
+.kz-achse-skala span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.kz-achse-skala span:first-child { transform: none; }
+.kz-achse-skala span:last-child { transform: translateX(-100%); }
+.kz-familie { margin-top: 12px; }
+.kz-familie-kopf { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 8px; }
+.kz-familie-name { font-weight: 700; font-size: 12.5px; color: var(--ui-text-strong); }
+.kz-umfang { margin: 1px 0 3px; color: var(--ui-text-muted); font-size: 11.5px; }
+.kz-familie-kopf + .kz-zeile, .kz-familie-kopf + .kz-hinweis { margin-top: 3px; }
+.kz-stand {
+  margin-left: auto; padding: 1px 8px; border-radius: 999px; background: var(--ui-hover);
+  color: #374151; font-size: 11px; font-weight: 600; white-space: nowrap;
+}
+.kz-stand--karte { background: #e3eefb; color: #1d4f91; }
+.kz-zeile {
+  width: calc(100% + 12px); margin: 0 -6px; padding: 5px 6px; box-sizing: border-box;
+  border: 0; border-radius: 8px; background: none; color: var(--ui-text); font: inherit; text-align: left; cursor: pointer;
+}
+.kz-zeile:hover { background: var(--ui-hover); }
+.kz-zeile.is-aktiv { background: #eef4fc; box-shadow: inset 3px 0 0 #2a78d6; }
+.kz-zeile:focus-visible { outline: 2px solid var(--ui-accent); outline-offset: 1px; }
+.kz-name { font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kz-spur { position: relative; display: flex; height: 10px; border-radius: 3px; background: #eef0f3; overflow: hidden; }
+.kz-jahr { flex: 1 1 0; min-width: 0; }
+.kz-jahr + .kz-jahr { border-left: 1px solid #fff; }
+.kz-balken { position: absolute; top: 0; bottom: 0; background: #2a78d6; }
+.kz-balken--tw { background: rgba(42, 120, 214, .38); }
+.kz-n { text-align: right; font-size: 11.5px; color: var(--ui-text-muted); font-variant-numeric: tabular-nums; }
+.kz-quellen { margin: 3px 0 0; }
+.kz-hinweis { margin: 3px 0 0; color: var(--ui-text-muted); font-size: 11px; }
+.kz-tipp { margin: 10px 0 0; color: var(--ui-text-muted); font-size: 11px; }
+.kz-link { display: inline-block; margin-top: 3px; font-size: 11.5px; text-align: left; }
+.kz-datenlage { margin-top: 12px; padding-top: 8px; border-top: 1px solid var(--ui-divider); }
+.kz-datenlage > summary { cursor: pointer; font-weight: 600; font-size: 12px; color: var(--ui-text-strong); }
+.kz-datenlage .detail-abschnitt:first-of-type { margin-top: 8px; }
+.kz-belege { margin: 0 0 6px; }
+
 @media (max-width: 640px) {
   .detail-panel {
     top: auto; left: 0; right: 0; bottom: 0; width: auto; max-width: none;

@@ -18,9 +18,17 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 - Je Zählstelle alle Zählungen, der **Tagesgang** jeder Zählung, der Verlauf über die Jahre,
   die Rohdatei und die Lizenz; Download als CSV (nur Quellen mit Lizenz, siehe
   [Quellen ohne Lizenz](QUELLEN.md#quellen-ohne-lizenz)).
-- **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
-  herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen, für beide
-  Familien getrennt.
+- **Kommunen und ihr Steckbrief**: Die Punkte der Kommunen zeigen in beiden Ansichten, wie es
+  dort steht – blau, sobald Zählungen einer Familie in der Karte sind, sonst grün (offen oder auf
+  Anfrage herausgegeben), orange (eine Anfrage ist aussichtsreich) oder grau. Ein Klick öffnet
+  den **Steckbrief**: für beide Familien je Verkehrsart eine Zeile mit Zeitstrahl und Umfang –
+  Kurzzeitzählungen als Kästchen je Jahr (je dunkler, desto mehr Zählungen; Lücken bleiben leer),
+  Dauerzählstellen als Balken vom ersten bis zum letzten vollständig gezählten Tag (hell, solange
+  es nur Tageswerte der Quelle gibt). Ein Klick auf eine Zeile stellt Familie und Verkehrsart um
+  und zeigt die Stellen. Darunter die Datenlage beider Familien mit Belegen, Kontakt und
+  Anfragetext, die Kurzzeitzählungen der Kommune als CSV und ein Permalink (`k=`, der
+  Gemeinde- oder Kreisschlüssel). Aus der Seitenleiste einer Stelle führt ein Link zum Steckbrief
+  ihrer Kommune.
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
   Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen, die Dauerzählstellen des
   Landes Baden-Württemberg an Autobahnen, Bundes- und Landesstraßen und die Rad-Zählstellen von
@@ -123,13 +131,13 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   (Kfz, Lkw/Schwerverkehr, Rad, Fuß); die Karte öffnet mit Kfz. Die Stufen für Fuß trennen Rad-
   und Fußwege (Bochum: meist 100 bis 500 am Tag) von Fußgängerzonen (Augsburg: rund 17.600,
   Würzburg: im Median 14.000 bis 25.000 je Standort).
-- **Datenlage:** Die Ebene „Datenlage je Kommune“ folgt der Familie – bei den Dauerzählstellen
-  mit eigenem Stand je Kommune und eigenen Belegen; beide Familien nutzen dieselben Stände (in der
-  Karte, offen, herausgegeben, aussichtsreich, ohne Lizenz, nur Summen, nichts offen …).
-  „Hinzoomen“ wechselt dabei auf die Verkehrsart, die die Quellen der Kommune zählen (in Leipzig
-  etwa auf Rad). Kommunen, von denen nur Dauerzählstellen bekannt sind (etwa die Rad-Zählstellen
-  hessischer Städte und Kreise), stehen nur dort. Zählstellen des Landes (Baden-Württemberg)
-  gehören zu keiner Kommune und stehen nicht in der Datenlage.
+- **Datenlage und Steckbrief:** Je Kommune hat jede Familie ihren eigenen Stand und ihre
+  Belege; beide nutzen dieselben Stände (in der Karte, offen, herausgegeben, aussichtsreich, ohne
+  Lizenz, nur Summen, nichts offen …). Der Steckbrief zählt zu einer Kommune die Stellen ihrer
+  eigenen Quellen ganz – auch jenseits der Grenze (Hamburg zählt auch in Norderstedt) –, aus
+  Bündeln (MobiData BW, VMZ Niedersachsen) und von Quellen des Landes die Stellen, die in ihr
+  liegen (Gemeinde der Stelle aus VG250; ein Kreis umfasst seine Gemeinden). So zeigt etwa
+  Stuttgart neben den Rad-Zählstellen der Stadt die Kfz-Zählstellen des Landes.
 - Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
   (eine Stunde nur bei mindestens 75 % gültigen Messintervallen und nur, wenn alle Fahrstreifen
   gültig sind). Ab 2025 gibt es nur die neue Qualitätssicherung je Fahrstreifen; die Zählkarte

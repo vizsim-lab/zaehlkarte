@@ -57,8 +57,10 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   gehören zu keiner Kommune), `was`, `situation`, `links`; bei den Kurzzeitzählungen dazu
   `empfehlung`, `weg`, `anfrage`. Eine Liste von Ständen für beide Familien (`datenlage.STAND`:
   in_karte, offen, geliefert, kandidat, ohne_lizenz, aggregiert, nur_karte, abgelehnt,
-  nichts_offen). Die Karte zeigt je Familie nur Kommunen mit deren Block; Kommunen, von denen nur
-  Dauerzählstellen bekannt sind, haben keinen Block `kurzzeit:`. Kontakte nur als
+  nichts_offen). Kommunen, von denen nur Dauerzählstellen bekannt sind, haben keinen Block
+  `kurzzeit:`. Die Karte zeigt alle Kommunen in beiden Ansichten, gefärbt nach dem besten Stand
+  beider Familien; der Steckbrief (Klick, `js/ui/kommune.js`) zeigt je Familie und Verkehrsart,
+  was in der Karte ist – welche Stellen zu einer Kommune gehören, regelt `js/data/kommune.js`. Kontakte nur als
   Funktionsadressen (keine Namen einzelner Beschäftigter), aus der FragDenStaat-Behördendatenbank;
   die Anfragevorlage (`anfrage_vorlage.yaml`) ist für alle gleich – nur die angefragte Stelle ist
   „Stadt {kommune}“ oder `anfrage.an` (etwa „Gemeinde Mühltal“); einen Anfragetext gibt es nur
@@ -67,7 +69,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `gruppen`, `quellen`, `lieferungen`), Aufbau von `details/NN.json`, Dateinamen in
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und
   `tests/web/vertrag.spec.js` im selben Schritt mit. Datenlage: `datenlage.json` Version 2 (Kopf
-  von `pipeline/src/zaehlkarte/datenlage.py`) – mitziehen: `js/map/ebenen.js`, `main.js`,
+  von `pipeline/src/zaehlkarte/datenlage.py`) – mitziehen: `js/map/ebenen.js`,
+  `js/data/kommune.js`, `js/ui/kommune.js`, `main.js`,
   `tests/web/vertrag.spec.js` und die Fixture `tests/web/fixtures/datenlage.json` (die
   Browser-Tests lesen nur sie). Dauerzählstellen: Felder in
   `dauer/index.json` (`stellen.felder` samt `ags` = Gemeinde der Stelle, `gruppen` = Bits von
@@ -126,7 +129,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   OpenFreeMap nicht erreichbar ist.
 - **`data-tip` nur an Hinweis-Zeichen (ⓘ), nie an Knöpfen oder Links:** der Tooltip fängt
   Klicks darauf ab (Touch). Bedienelemente bekommen `title`/`aria-label`.
-- **REIN halten** (kein DOM, kein window): `js/data/modell.js`, `js/data/dauer.js`,
+- **REIN halten** (kein DOM, kein window): `js/data/modell.js`, `js/data/dauer.js`, `js/data/kommune.js`,
   `js/ui/diagramme.js`, `js/utils/permalinkFormat.js`, `js/sprache/texte.js` – browserlos
   getestet.
   Permalink-Kürzel sind Vertrag mit geteilten Links: nie umdeuten, nur ergänzen (die Sprache

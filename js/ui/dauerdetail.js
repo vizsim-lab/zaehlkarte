@@ -13,6 +13,7 @@ import {
 import { TAGE } from "../data/modell.js";
 import { datum, t, uhr, wochentag, zahl } from "../sprache/texte.js";
 import { TG, TR_FARBEN, tagesgang, tagesreihe } from "./diagramme.js";
+import { kommuneLink } from "./detail.js";
 import { lizenzHtml, ohneLizenzHtml } from "./lizenz.js";
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -20,7 +21,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 // Kurzzeitzählungen: erste Reihe blau, zweite orange)
 const FARBEN = ["#2a78d6", "#eb6834", "#1f9e6e", "#8a5cd1"];
 
-export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiStelle, beiSchliessen }) {
+export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, kommuneVon, beiKommune, beiTag, beiStelle, beiSchliessen }) {
   const el = document.getElementById("dauer-detail");
   let stelle = null;
   let detail = null;
@@ -29,6 +30,8 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
 
   el.addEventListener("click", (e) => {
     if (e.target.closest("[data-schliessen]")) { schliesse(); return; }
+    const kommune = e.target.closest("[data-kommune]");
+    if (kommune) { beiKommune?.(kommune.dataset.kommune); return; }
     const andere = e.target.closest("[data-stelle]");
     if (andere) {
       const s = gibDauer()?.jeId.get(andere.dataset.stelle);
@@ -93,7 +96,8 @@ export function erstelleDauerDetail({ gibDauer, gibZustand, gibTag, beiTag, beiS
         <div>
           <div class="pop-eyebrow">${esc(t("dd.typ"))} · ${esc(q?.name ?? stelle.quelle)} · ${esc(stelle.id.split(":").slice(1).join(":"))}</div>
           <h2 class="detail-titel">${esc(stelle.name)}</h2>
-          <div class="pop-meta" lang="de">${esc([stelle.abschnitt, stelle.richtung].filter(Boolean).join(" · "))}</div>${umschalter}
+          <div class="pop-meta" lang="de">${esc([stelle.abschnitt, stelle.richtung].filter(Boolean).join(" · "))}</div>
+          ${kommuneLink(kommuneVon?.(stelle))}${umschalter}
         </div>
         <button class="detail-zu" data-schliessen aria-label="${esc(t("schliessen"))}" type="button">×</button>
       </header>`;

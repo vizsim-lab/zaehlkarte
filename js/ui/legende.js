@@ -1,7 +1,10 @@
 // legende.js — die Legende rechts: Verkehrsart, Darstellung, Kennzahl, Klassen mit Zählern,
 // Filter, Datenlage, Quellen. Setzt nur ZUSTAND und ruft `geaendert()`; was die Karte daraus
-// macht, entscheidet main.js. Alles unter dem Familien-Umschalter folgt der Familie – auch die
-// Datenlage (je Kommune ein Stand für Kurzzeitzählungen und einer für Dauerzählstellen).
+// macht, entscheidet main.js. Was unter dem Familien-Umschalter steht, folgt der Familie – außer
+// der Datenlage: Die Kommunen stehen in beiden Ansichten, je Kommune der beste Stand beider
+// Zählarten; was es dort je Zählart gibt, zeigt der Steckbrief (Klick auf die Kommune).
+// Eine Auswahl der Quellen gibt es nicht mehr (bis November 2026: Häkchen je Kurzzeit-Quelle) –
+// welche Quelle wo zählt, zeigt der Steckbrief, und die Dauerzählstellen hatten nie eine.
 //
 // data-tip nur an reinen Hinweis-Zeichen (ⓘ), nie an Bedienelementen: der Tooltip fängt
 // Klicks darauf ab (Touch-Bedienung, js/ui/tooltip.js). Knöpfe tragen `title`.
@@ -12,7 +15,7 @@ import {
   DAUER_STUFEN, DAUER_THEMEN, gruppenName, hatThema, imJuengsten, kennzahlTextDauer, kennzahlTextJuengster,
   klassenDerQuellen, orteMitTageswerten, plusTage, quellenOhneTag, tageJeQuelle, tageSpanne, tageZwischen, tagtypen, zeitraumText,
 } from "../data/dauer.js";
-import { datenlageKlassen, datenlageStand } from "../map/ebenen.js";
+import { DATENLAGE_KLASSEN } from "../map/ebenen.js";
 import { datum, t, wochentag, zahl } from "../sprache/texte.js";
 import { lizenzHtml, ohneLizenzHtml } from "./lizenz.js";
 
@@ -141,12 +144,6 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     if (e.target.checked) zustand.tage.add(tag); else zustand.tage.delete(tag);
     geaendert();
   });
-  $("quellen-liste").addEventListener("change", (e) => {
-    const q = e.target.dataset.quelle;
-    if (!q) return;
-    if (e.target.checked) zustand.quellen.add(q); else zustand.quellen.delete(q);
-    geaendert();
-  });
   $("toggle-uebertragen").addEventListener("change", (e) => {
     zustand.uebertragen = e.target.checked;
     geaendert();
@@ -162,11 +159,6 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     $("tage-liste").innerHTML = Object.entries(TAGE).map(([k, name]) => `
       <label class="legend-item legend-item--check"><span class="label-wrapper">
         <input type="checkbox" data-tag="${k}"> ${esc(name)}</span><span class="count-badge" id="tag-n-${k}">0</span></label>`).join("");
-
-    // Quellen (Namen sind Ortsnamen und bleiben)
-    $("quellen-liste").innerHTML = manifest.quellen.map((q) => `
-      <label class="legend-item legend-item--check"><span class="label-wrapper">
-        <input type="checkbox" data-quelle="${esc(q.code)}"> ${esc(q.name)}</span><span class="count-badge" id="quelle-n-${esc(q.code)}">0</span></label>`).join("");
 
     // Quellen & Lizenzen aus dem Manifest (Beschreibungen der Quellen bleiben deutsch)
     const deutsch = t("quellen.deutsch");
@@ -198,17 +190,14 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     el.dataset.i18nAttr = `data-tip:${schluessel}`;
   }
 
-  /** Datenlage der gewählten Familie: Klassen mit Zählern und Erklärung. */
+  /** Datenlage: Klassen der Kommunen über beide Zählarten mit Zählern (`klasse`, ebenen.js). */
   function zeichneDatenlage() {
-    const familie = zustand.familie;
-    const klassen = datenlageKlassen(familie);
-    $("datenlage-legende").innerHTML = klassen.map((k) => {
-      const n = datenlage.features.filter((f) => k.stand.includes(datenlageStand(f.properties, familie))).length;
+    $("datenlage-legende").innerHTML = DATENLAGE_KLASSEN.map((k) => {
+      const n = datenlage.features.filter((f) => f.properties.klasse === k.id).length;
       return `
       <div class="legend-item"><span class="label-wrapper"><span class="punkt" style="background:${k.farbe}"></span>${esc(k.name)}</span>
       <span class="count-badge">${zahl(n)}</span></div>`;
     }).join("");
-    setzeTip($("datenlage-tip"), familie === "d" ? "datenlage.tip_d" : "datenlage.tip");
   }
 
   /** Statische Teile nach Zustand (Chips, Regler, Häkchen). */
@@ -265,7 +254,6 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     bis.value = zustand.jahre[1];
     zeichneJahre();
     legende.querySelectorAll("[data-tag]").forEach((c) => { c.checked = zustand.tage.has(c.dataset.tag); });
-    legende.querySelectorAll("[data-quelle]").forEach((c) => { c.checked = zustand.quellen.has(c.dataset.quelle); });
     $("toggle-uebertragen").checked = zustand.uebertragen;
   }
 
@@ -290,10 +278,6 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
     $("fc-zaehlungen").textContent = zahl(zahlen.zaehlungen);
     for (const [k, v] of Object.entries(zahlen.tage)) {
       const el = $(`tag-n-${k}`);
-      if (el) el.textContent = zahl(v);
-    }
-    for (const [k, v] of Object.entries(zahlen.quellen)) {
-      const el = $(`quelle-n-${k}`);
       if (el) el.textContent = zahl(v);
     }
   }

@@ -21,8 +21,9 @@ Verkehrsart auf einer Karte.
 - **Dauerzählstellen**: fest eingebaute Zähler mit Tagessummen über Jahre und Stundenwerten –
   Detektoren in Berlin, Wärmebildkameras in Hamburg, die Zählstellen des Landes
   Baden-Württemberg, Rad-Zählstellen vieler Städte und Passantenzählungen.
-- **Datenlage je Kommune**: wo es solche Zählungen offen gibt, wo sie auf Anfrage herausgegeben
-  wurden und wo eine Anfrage aussichtsreich ist – mit Belegen.
+- **Steckbrief je Kommune** (Klick auf ihren Punkt): was es dort gibt – je Familie und
+  Verkehrsart mit Zeitraum und Umfang –, dazu die Datenlage: wo es solche Zählungen offen gibt, wo
+  sie auf Anfrage herausgegeben wurden und wo eine Anfrage aussichtsreich ist, mit Belegen.
 - **CSV-Download** (nur Quellen mit Lizenz), Oberfläche auf Deutsch und Englisch.
 
 Nur gezählte Werte je Stunde oder je Tag an einer bestimmten Stelle, gleich, wer zählt.
