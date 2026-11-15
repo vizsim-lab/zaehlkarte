@@ -1,0 +1,6 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Clight_rail%7Csubway%7Ctram%7Cnarrow_gauge%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20tags%20geom%3Bnode%5B%22railway%22~%22%5E%28station%7Chalt%7Cstop%7Ctram_stop%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%3B",
+  "fehler": "TimeoutError('The read operation timed out')"
+ }
+]

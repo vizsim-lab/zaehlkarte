@@ -1,0 +1,6 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Brel%5B%22boundary%22%3D%22administrative%22%5D%5B%22admin_level%22~%22%5E%286%7C8%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20geom%3Bway%5B%22waterway%22%3D%22river%22%5D%5B%22name%22%3D%22Pegnitz%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20tags%20geom%3B",
+  "fehler": "<HTTPError 504: 'Gateway Timeout'>"
+ }
+]

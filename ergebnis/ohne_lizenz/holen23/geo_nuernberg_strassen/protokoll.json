@@ -1,0 +1,14 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3B%29%3Bout%20body%20geom%3B",
+  "ende": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3B%29%3Bout%20body%20geom%3B",
+  "typ": "application/json",
+  "bytes": 21684035,
+  "datei": "18_interpreter.json",
+  "sha256": "1d63a8847a8c98fc6ae53104b42ff7b3735832ce73b6531c3fa2f1dba71d3bd5"
+ },
+ {
+  "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A240%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3B%29%3Bout%20body%20geom%3B",
+  "fehler": "<HTTPError 504: 'Gateway Timeout'>"
+ }
+]
