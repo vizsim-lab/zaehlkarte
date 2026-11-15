@@ -144,6 +144,11 @@ jobs:
           path: pipeline/data/raw/moers_fuss
           key: dauer-moers-fuss-roh-${{ github.run_id }}
           restore-keys: dauer-moers-fuss-roh-
+      - uses: actions/cache@v6  # Bayern (BAYSIS): je Zählstelle und Monat eine Datei, neu nur die jüngsten Monate
+        with:
+          path: pipeline/data/raw/bayern_dauz
+          key: dauer-bayern-roh-${{ github.run_id }}
+          restore-keys: dauer-bayern-roh-
       - uses: actions/cache@v6  # Augsburg Radzählstationen: jeder Lauf holt die Datei neu, der Cache ist der Rückfall
         with:
           path: pipeline/data/raw/augsburg_rad
