@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [fl1_fritz, fl1_rest, fl1_mobilithek]
+        teil: [fl2_baysis, fl2_mobidata]
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
@@ -29,6 +29,8 @@ jobs:
             dauer4) timeout 85m python3 tools/bw_dauer4.py ergebnis/bw/dauer4 || true ;;
             pruefe) tools/pruefe.sh dauer-bw-land bw_land_kfz || true ;;
             rand) timeout 20m python3 tools/bw_rand.py ergebnis/bw/rand || true ;;
+            fl2_baysis) timeout 30m python3 tools/bw_fl2.py ergebnis/bw/fl2/baysis baysis || true ;;
+            fl2_mobidata) timeout 30m python3 tools/bw_fl2.py ergebnis/bw/fl2/mobidata mobidata || true ;;
             fl1_fritz) timeout 40m python3 tools/bw_fl1.py ergebnis/bw/fl1/fritz fritz || true ;;
             fl1_rest) timeout 30m python3 tools/bw_fl1.py ergebnis/bw/fl1/rest planegg mobidata baysis || true ;;
             fl1_mobilithek) timeout 30m python3 tools/bw_fl1.py ergebnis/bw/fl1/mobilithek mobilithek || true ;;
