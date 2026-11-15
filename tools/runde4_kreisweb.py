@@ -87,12 +87,24 @@ def wikipedia():
     text, _ = hole(LISTE)
     tabellen = re.findall(r'<table[^>]*class="[^"]*wikitable[^"]*"[^>]*>(.*?)</table>', text, re.S)
     artikel = []
+    p["tabellen"] = len(tabellen)
     for t in tabellen:
         for zeile in re.findall(r"<tr[^>]*>(.*?)</tr>", t, re.S):
-            m = re.search(r'<a href="(/wiki/[^"#?]+)"[^>]*title="([^"]+)"', zeile)
-            if m and m.group(1) not in artikel and not re.search(r":|Liste_", m.group(1)):
-                artikel.append(m.group(1))
+            # alle Artikel-Links der Zeile (der erste ist oft das Wappen, `Datei:`); bevorzugt der
+            # Link, dessen Titel nach einem Kreis klingt
+            links = [(h, urllib.parse.unquote(ti)) for h, ti in
+                     re.findall(r'<a [^>]*?href="(/wiki/[^"#?]+)"[^>]*?title="([^"]+)"', zeile)
+                     if not re.search(r":|Liste_", h)]
+            if not links:
+                continue
+            kreisig = [h for h, ti in links if re.search(r"kreis|region", ti, re.I)]
+            h = kreisig[0] if kreisig else links[0][0]
+            if h not in artikel:
+                artikel.append(h)
     p["artikel"] = len(artikel)
+    p["artikel_beispiele"] = [urllib.parse.unquote(a) for a in artikel[:8]]
+    schreib()
+    print(f"Wikipedia: {len(tabellen)} Tabellen, {len(artikel)} Artikel", flush=True)
     gefunden = 0
     for pfad in artikel:
         url = WIKI + pfad
@@ -119,11 +131,12 @@ def wikipedia():
             p.setdefault("schluessel_unbekannt", []).append(f"{urllib.parse.unquote(pfad)} {ks}")
         if gefunden % 25 == 0:
             schreib()
+            print(f"Wikipedia: {gefunden} Kreise mit Website", flush=True)
     p["mit_website"] = gefunden
 
 
 # ---------------------------------------------------------------- 2. OpenStreetMap
-ABFRAGE = """[out:json][timeout:300];
+ABFRAGE = """[out:json][timeout:120];
 area["ISO3166-2"="%s"][admin_level=4]->.land;
 (
   nwr(area.land)["office"="government"]["name"~"Landratsamt|Kreisverwaltung|Kreishaus|Landkreis|Kreis ",i];
@@ -134,24 +147,32 @@ out center tags;"""
 
 
 def overpass(abfrage):
-    for versuch in range(2):
-        for server in OVERPASS:
-            try:
-                inhalt, _, _ = R.oeffne(server, daten=urllib.parse.urlencode({"data": abfrage}).encode(),
-                                        kopf={"Content-Type": "application/x-www-form-urlencoded"},
-                                        zeit=360, grenze=80_000_000)
-                r = json.loads(inhalt)
-                if r.get("elements"):
-                    return r, server
-            except Exception as e:  # noqa: BLE001
-                protokoll.setdefault("overpass_fehler", []).append(f"{server}: {e!r}"[:200])
-        time.sleep(30)
+    for server in OVERPASS:  # ein Versuch je Server
+        try:
+            inhalt, _, _ = R.oeffne(server, daten=urllib.parse.urlencode({"data": abfrage}).encode(),
+                                    kopf={"Content-Type": "application/x-www-form-urlencoded"},
+                                    zeit=150, grenze=80_000_000)
+            r = json.loads(inhalt)
+            if r.get("elements"):
+                return r, server
+        except Exception as e:  # noqa: BLE001
+            protokoll.setdefault("overpass_fehler", []).append(f"{server}: {e!r}"[:200])
     return None, None
 
 
 def osm():
+    """Nur für Kreise ohne Kandidaten aus Wikipedia, mit Zeitbudget (Overpass antwortet auf ganze
+    Länder oft nicht – in der ersten Fassung lief der Schritt so in die 50 Minuten)."""
     p = protokoll.setdefault("osm", {})
+    ende = time.time() + 15 * 60
     for land, iso in ISO.items():
+        offen = [ks for ks in KREISE if ks.startswith(land) and not kandidaten.get(ks)]
+        if not offen:
+            p[iso] = "alle Kreise mit Kandidat"
+            continue
+        if time.time() > ende:
+            p[iso] = "Zeitbudget aufgebraucht"
+            continue
         r, server = overpass(ABFRAGE % iso)
         if r is None:
             p[iso] = "keine Antwort"

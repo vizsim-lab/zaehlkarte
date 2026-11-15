@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v7
-      - run: timeout 50m python3 tools/runde4_kreisweb.py ergebnis/runde4 > kreisweb_lauf.txt 2>&1 || true; tail -c 3000 kreisweb_lauf.txt; mv kreisweb_lauf.txt ergebnis/runde4/
+      - run: PYTHONUNBUFFERED=1 timeout 50m python3 tools/runde4_kreisweb.py ergebnis/runde4 > kreisweb_lauf.txt 2>&1 || true; tail -c 3000 kreisweb_lauf.txt; mv kreisweb_lauf.txt ergebnis/runde4/
       - if: always()
         run: |
           git config user.name "github-actions[bot]"
