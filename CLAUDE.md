@@ -69,7 +69,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `tests/web/vertrag.spec.js` und die Fixture `tests/web/fixtures/datenlage.json` (die
   Browser-Tests lesen nur sie). Dauerzählstellen: Felder in
   `dauer/index.json` (`stellen.felder`, `gruppen` = Bits von `g`, `dateien`, `kalender`,
-  `standardtag`, `juengster`, `quellen[].gruppen`/`zeitraeume`/`standardtag`/`lizenzen`), Aufbau von
+  `standardtag`, `juengster`, `tageswerte_bis`,
+  `quellen[].gruppen`/`zeitraeume`/`tageswerte`/`standardtag`/`lizenzen`), Aufbau von
   `dauer/tage/JJJJ.json` und `dauer/NN.json` (Kopf von `pipeline/src/zaehlkarte/dauer/site.py`)
   – mitziehen: `js/data/dauer.js`, `js/ui/dauerdetail.js`, `tests/web/vertrag.spec.js` und die
   Fixtures `tests/web/fixtures/dauer/`, und die Vertragsversion erhöhen (`VERSION` in
@@ -82,7 +83,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   sonst „nicht vollständig gezählt“ – nie auffüllen, keine Mittel über Tage, kein DTV. Liefert
   eine Quelle nur Tageswerte je Stelle und Datum, gilt ihr Tageswert wie geliefert, mit dem
   Hinweis, dass sich die Vollständigkeit nicht prüfen lässt – nie aus Wochen-, Monats- oder
-  Jahreswerten abgeleitet (Umsetzung offen: das Modell kennt bisher nur Stundenwerte). Was die
+  Jahreswerten abgeleitet. Im Modell: `Messreihe.tageswerte`, nur an Tagen vor der ersten
+  gezählten Stunde einer Stelle (ein Tag mit fehlender Stunde wird nie mit einem Tageswert
+  gefüllt); in der Karte „Tageswert der Quelle“, im CSV eine eigene Spalte. Was die
   Quelle als rekonstruiert, unplausibel oder geändert kennzeichnet (Berlins Rad-Datei: Zellfarbe;
   Eco-Counter: Status 4, „modified“), gilt als nicht gezählt; kennzeichnet sie es nicht (MobiData
   BW), steht das als Hinweis an der Quelle. Zählt eine Stelle Rad und Fuß oder Pkw gemeinsam,

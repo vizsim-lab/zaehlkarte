@@ -113,6 +113,17 @@ test("dauer/index.json, Jahres- und Detaildateien haben die erwarteten Felder", 
       expect(q.gruppen).toContain(g);
       expect(von >= q.von && von <= bis && bis <= q.bis).toBe(true);
     }
+    // Tageswerte der Quelle (Vertrag 4): erster und letzter Tag je Gruppe, im Zeitraum der Gruppe
+    for (const [g, [von, bis]] of Object.entries(q.tageswerte)) {
+      expect(q.gruppen).toContain(g);
+      expect(von >= q.zeitraeume[g][0] && von <= bis && bis <= q.zeitraeume[g][1]).toBe(true);
+    }
+  }
+  // je Gruppe mit Tageswerten und Stelle der letzte Tag, dessen Wert der Tageswert der Quelle ist
+  for (const [g, liste] of Object.entries(d.tageswerte_bis)) {
+    expect(d.gruppen).toContain(g);
+    expect(liste.length).toBe(d.stellen.werte.length);
+    expect(liste.every((x) => x === null || (x >= d.von && x <= d.bis))).toBe(true);
   }
   const jahr = await (await request.get(`/data/${d.dateien.tage.replace("{jahr}", d.bis.slice(0, 4))}`)).json();
   expect(Object.keys(jahr.werte).sort()).toEqual([...d.gruppen].sort());

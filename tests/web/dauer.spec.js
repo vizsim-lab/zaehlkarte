@@ -190,12 +190,12 @@ test("CSV der Dauerzählstellen: Tagessummen des Tags, leer statt 0", async ({ p
   expect(download.suggestedFilename()).toBe("dauerzaehlstellen_2025-06-03.csv");
   const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
   const zeilen = text.replace(/^﻿/, "").trim().split("\n");
-  expect(zeilen[0]).toBe("quelle;stelle;name;abschnitt;richtung;lon;lat;datum;tagtyp;kfz_tagessumme;lkw_tagessumme;sv_tagessumme;rad_tagessumme;lizenz");
+  expect(zeilen[0]).toBe("quelle;stelle;name;abschnitt;richtung;lon;lat;datum;tagtyp;kfz_tagessumme;kfz_tageswert_quelle;lkw_tagessumme;lkw_tageswert_quelle;sv_tagessumme;sv_tageswert_quelle;rad_tagessumme;rad_tageswert_quelle;lizenz");
   expect(zeilen).toHaveLength(5); // Hamburg beginnt erst am 15.6.
-  expect(zeilen[1]).toMatch(/^berlin_viz;berlin_viz:TE001;.*;2025-06-03;Schultag;;;;;dl-de\/by-2-0$/);
-  expect(zeilen[2]).toMatch(/;2025-06-03;Schultag;\d+;\d+;;;dl-de\/by-2-0$/);
+  expect(zeilen[1]).toMatch(/^berlin_viz;berlin_viz:TE001;.*;2025-06-03;Schultag;;;;;;;;;dl-de\/by-2-0$/);
+  expect(zeilen[2]).toMatch(/;2025-06-03;Schultag;\d+;;\d+;;;;;;dl-de\/by-2-0$/);
   // die Lizenz steht in jeder Zeile – bei Ettlingen nur nicht kommerziell; Lkw in der Spalte der Klasse
-  expect(zeilen[3]).toMatch(/^ettlingen;ettlingen:1263-2;Rastatter Straße;;Richtung Bruchhausen;.*;2025-06-03;Schultag;1142;64;;;CC BY-NC 4\.0$/);
+  expect(zeilen[3]).toMatch(/^ettlingen;ettlingen:1263-2;Rastatter Straße;;Richtung Bruchhausen;.*;2025-06-03;Schultag;1142;;64;;;;;;CC BY-NC 4\.0$/);
 });
 
 test("CSV am jüngsten Schultag: je Gruppe Tag und Tagessumme jeder Stelle", async ({ page }) => {
@@ -206,12 +206,12 @@ test("CSV am jüngsten Schultag: je Gruppe Tag und Tagessumme jeder Stelle", asy
   expect(download.suggestedFilename()).toBe("dauerzaehlstellen_juengster_schultag_2026-11-12.csv");
   const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
   const zeilen = text.replace(/^﻿/, "").trim().split("\n");
-  expect(zeilen[0]).toBe("quelle;stelle;name;abschnitt;richtung;lon;lat;kfz_juengster_schultag;kfz_tagessumme;lkw_juengster_schultag;lkw_tagessumme;sv_juengster_schultag;sv_tagessumme;rad_juengster_schultag;rad_tagessumme;lizenz");
+  expect(zeilen[0]).toBe("quelle;stelle;name;abschnitt;richtung;lon;lat;kfz_juengster_schultag;kfz_tagessumme;kfz_tageswert_quelle;lkw_juengster_schultag;lkw_tagessumme;lkw_tageswert_quelle;sv_juengster_schultag;sv_tagessumme;sv_tageswert_quelle;rad_juengster_schultag;rad_tagessumme;rad_tageswert_quelle;lizenz");
   expect(zeilen).toHaveLength(7); // alle sechs Stellen
-  expect(zeilen[1]).toMatch(/^berlin_viz;berlin_viz:TE001;.*;2025-06-30;16430;2025-06-30;821;;;;;dl-de\/by-2-0$/);
-  expect(zeilen[3]).toMatch(/^hamburg_kfz;.*;2025-07-10;8730;;;2025-07-10;339;;;dl-de\/by-2-0$/);
-  expect(zeilen[4]).toMatch(/^hamburg_rad;.*;;;;;;;2025-07-10;2040;dl-de\/by-2-0$/);
-  expect(zeilen[5]).toMatch(/^ettlingen;ettlingen:1263-2;.*;2025-07-10;1142;2025-07-10;64;;;;;CC BY-NC 4\.0$/);
+  expect(zeilen[1]).toMatch(/^berlin_viz;berlin_viz:TE001;.*;2025-06-30;16430;;2025-06-30;821;;;;;;;;dl-de\/by-2-0$/);
+  expect(zeilen[3]).toMatch(/^hamburg_kfz;.*;2025-07-10;8730;;;;;2025-07-10;339;;;;;dl-de\/by-2-0$/);
+  expect(zeilen[4]).toMatch(/^hamburg_rad;.*;;;;;;;;;;2025-07-10;2040;;dl-de\/by-2-0$/);
+  expect(zeilen[5]).toMatch(/^ettlingen;ettlingen:1263-2;.*;2025-07-10;1142;;2025-07-10;64;;;;;;;;CC BY-NC 4\.0$/);
 });
 
 test("Ohne Dauerzählstellen bleibt der Umschalter aus, die Karte läuft wie bisher", async ({ page }) => {
@@ -339,6 +339,67 @@ test("Fuß: eigener Chip, eigene Stufen, Seitenleiste mit Fuß", async ({ page }
   await expect(detail.locator(".detail-titel")).toHaveText("Alsterufer");
   await expect(detail).toContainText("Tagessummen Fuß");
   await expect(detail.locator(".detail-kennwerte")).toContainText("Fuß");
+  expect(fehler).toEqual([]);
+});
+
+/**
+ * Fixtures, in denen die Hamburger Rad-Zählstelle nur Tageswerte liefert (wie eine Quelle ohne
+ * Stunden): `tageswerte_bis` im Index und in den Details, keine Stunden, 0 gezählte Stunden.
+ */
+async function dauerMitTageswerten(page) {
+  const ID = "hamburg_rad:7433952";
+  await page.route(/\/data\/dauer\/.*\.json$/, (route) => {
+    const pfad = new URL(route.request().url()).pathname.replace(/^.*\/data\//, "");
+    let d;
+    try {
+      d = JSON.parse(readFileSync(new URL(pfad, FIXTURES), "utf8"));
+    } catch {
+      return route.fulfill({ status: 404, body: "" });
+    }
+    if (pfad.endsWith("dauer/index.json")) {
+      d.tageswerte_bis = { rad: d.stellen.werte.map((w) => (w[0] === ID ? w[8] : null)) };
+      const q = d.quellen.find((x) => x.code === "hamburg_rad");
+      q.tageswerte = { rad: [q.von, q.bis] };
+    } else if (d.stellen?.[ID]) {
+      const s = d.stellen[ID];
+      s.tageswerte_bis = { rad: "2025-07-10" };
+      s.n.rad = s.n.rad.map(() => 0);
+      s.stunden.rad = s.stunden.rad.map(() => null);
+    }
+    return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(d) });
+  });
+}
+
+test("Tageswerte der Quelle: Hinweis in der Legende, im Hover und in der Seitenleiste, eigene CSV-Spalte", async ({ page }) => {
+  await dauerMitTageswerten(page);
+  const fehler = await oeffne(page, "#f=d&t=rad.menge");
+  const legende = page.locator("#klassen-legende");
+  await expect(legende).toContainText("Rad, Tagessumme am jüngsten Schultag je Stelle");
+  await expect(legende.locator(".dauer-tw")).toContainText("Tageswerte der Quelle: Hamburg");
+  const popup = await hoverDauer(page, "hamburg_rad:7433952");
+  await expect(popup).toContainText("Rad, Tageswert der Quelle am");
+  await expect(popup).toContainText("2.040");
+  await klickeDauer(page, "hamburg_rad:7433952");
+  const detail = page.locator("#dauer-detail");
+  await expect(detail.locator(".detail-titel")).toHaveText("Alsterufer");
+  await expect(detail.locator(".dd-tw")).toHaveText("Tageswerte der Quelle (ohne Stunden, Vollständigkeit nicht prüfbar).");
+  await expect(detail).toContainText("Tageswerte Rad · 15.06.2025 – 10.07.2025");
+  await expect(detail.locator(".dd-juengster")).toContainText("Jüngster Schultag der Stelle mit einem Tageswert der Quelle");
+  await expect(detail.locator(".detail-kennwerte thead")).toContainText("Tageswert der Quelle");
+  await expect(detail.locator(".detail-kennwerte")).toContainText("2.040");
+  await expect(detail).toContainText("Für diesen Tag liefert die Quelle nur einen Tageswert, keine Stunden.");
+  await expect(detail).toContainText("Ob jede Stunde gezählt ist, lässt sich nicht prüfen.");
+  await expect(detail.locator(".detail-tag .tg-wrap")).toHaveCount(0); // kein Tagesgang ohne Stunden
+  await expect(detail.locator("[data-csv-stunden]")).toHaveCount(0);
+  // CSV der Tage: der Wert steht als Tageswert der Quelle, nicht als Tagessumme
+  const [download] = await Promise.all([page.waitForEvent("download"), detail.locator("[data-csv-tage]").click()]);
+  const csv = readFileSync(await download.path(), "utf8").replace(/^\ufeff/, "").split("\n");
+  expect(csv[0]).toBe("datum;tagtyp;rad_tagessumme;rad_gezaehlte_stunden;rad_tageswert_quelle");
+  expect(csv.find((z) => z.startsWith("2025-07-10;"))).toBe("2025-07-10;Schultag;;0;2040");
+  // Kfz: keine Quelle mit Tageswerten – kein Hinweis
+  await page.locator('#thema-chips [data-thema="kfz"]').click();
+  await expect(legende).toContainText("Kfz, Tagessumme am jüngsten Schultag je Stelle");
+  await expect(legende.locator(".dauer-tw")).toHaveCount(0);
   expect(fehler).toEqual([]);
 });
 

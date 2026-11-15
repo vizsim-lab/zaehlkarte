@@ -231,7 +231,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Bayerisches UIG
 
-**Dauerzählstellen (in der Karte):** Passantenzählung in der Annastraße: Stundenwerte seit Dezember 2020 (CC BY 4.0), in der Karte unter Fuß seit November 2026. Radzählstationen (12): offen nur Tageswerte seit September 2016 (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb nicht in der Karte
+**Dauerzählstellen (in der Karte):** Passantenzählung in der Annastraße: Stundenwerte seit Dezember 2020 (CC BY 4.0), in der Karte unter Fuß; zwölf Radzählstationen: nur Tageswerte seit September 2016 (CC BY 4.0), in der Karte als Tageswerte der Quelle (ohne Stunden, Vollständigkeit nicht prüfbar) – beide seit November 2026
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Stadt+Augsburg)
 
@@ -253,7 +253,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/) · [Radzählstationen (Stadt Augsburg)](https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen) · [Mobilithek: Passanten Annastraße](https://mobilithek.info/offers/-1747083335311792689)
+**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/) · [Radzählstationen (Stadt Augsburg)](https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen) · [Mobilithek: Radzählstationen](https://mobilithek.info/offers/-4859503742463304999) · [Mobilithek: Passanten Annastraße](https://mobilithek.info/offers/-1747083335311792689)
 
 
 ## Bad Hersfeld (HE) – erhoben – Anfrage aussichtsreich

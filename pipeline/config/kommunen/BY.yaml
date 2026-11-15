@@ -90,14 +90,15 @@
       - ["FragDenStaat 2017", "https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen/"]
   dauer:
     stand: in_karte
-    quellen: [augsburg_fuss]
+    quellen: [augsburg_fuss, augsburg_rad]
     was: >-
       Passantenzählung in der Annastraße: Stundenwerte seit Dezember 2020 (CC BY 4.0), in der Karte
-      unter Fuß seit November 2026. Radzählstationen (12): offen nur Tageswerte seit September 2016
-      (CC BY 4.0) – ohne Stunden lässt sich ein Tag nicht auf Vollständigkeit prüfen, deshalb
-      nicht in der Karte
+      unter Fuß; zwölf Radzählstationen: nur Tageswerte seit September 2016 (CC BY 4.0), in der
+      Karte als Tageswerte der Quelle (ohne Stunden, Vollständigkeit nicht prüfbar) – beide seit
+      November 2026
     links:
       - ["Radzählstationen (Stadt Augsburg)", "https://www.augsburg.de/buergerservice-rathaus/verkehr/radverkehr/radzaehlstationen"]
+      - ["Mobilithek: Radzählstationen", "https://mobilithek.info/offers/-4859503742463304999"]
       - ["Mobilithek: Passanten Annastraße", "https://mobilithek.info/offers/-1747083335311792689"]
 - ags: "09361000"
   name: Amberg

@@ -1,0 +1,118 @@
+# Rad: Radzählstationen der Stadt Augsburg (Radverkehrsbeauftragter) – Tageswerte je Station seit
+# September 2016, eine CSV auf augsburg.de (Mobilithek-Angebot -4859503742463304999, CC BY 4.0;
+# Werkzeug-Branch `werkzeug/erkundung`, Runde 17). Nur Tageswerte, keine Stunden: in der Karte als
+# Tageswerte der Quelle (CLAUDE.md, „Nur Zählwerte“). Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 24
+status: live
+adapter: augsburg_rad
+name: Augsburg (Radzählstationen)
+land: BY
+traeger: Stadt Augsburg, Radverkehrsbeauftragter
+art: >-
+  zwölf Radzählstationen der Stadt (Induktionsschleifen): nur Tageswerte je Station, keine Stunden
+weg: offen als CSV auf augsburg.de, verzeichnet in der Mobilithek
+portal: https://mobilithek.info/offers/-4859503742463304999
+datei: https://www.augsburg.de/fileadmin/user_upload/buergerservice_rathaus/Smart_City/opendata/fahrradzaehler_augsburg-seit-start.csv
+# In der Reihenfolge der Spalten; `name` genau wie im Kopf der Datei. Lage: Die Quelle nennt keine
+# Koordinaten, und in OpenStreetMap sind die Zähler nicht eingetragen – Punkte nach der
+# Beschreibung der Station über die OSM-Straßen (© OpenStreetMap-Mitwirkende, ODbL; AGENTS.md).
+stationen:
+  - name: Dieselbrücke
+    kennung: dieselbruecke
+    strasse: Dieselbrücke
+    lon: 10.886030
+    lat: 48.385615
+  - name: Friedberger Straße östlich Afrabrücke
+    kennung: friedberger-strasse
+    strasse: Friedberger Straße
+    abschnitt: östlich der Afrabrücke
+    lon: 10.938339
+    lat: 48.355208
+  - name: Friedrich-Ebert-Straße östlich Haltestelle Messe
+    kennung: friedrich-ebert-strasse
+    strasse: Friedrich-Ebert-Straße
+    abschnitt: östlich der Haltestelle Messe
+    lon: 10.891571
+    lat: 48.337795
+    hinweise:
+      - >-
+        Lage ungefähr: Welche Haltestelle gemeint ist („Messe DB“ oder „Messe Süd“, beide an der
+        Friedrich-Ebert-Straße), sagt die Quelle nicht – der Punkt liegt zwischen beiden.
+  - name: Färberstraße/Gollwitzerstr.
+    kennung: faerberstrasse
+    strasse: Färberstraße
+    abschnitt: an der Gollwitzerstraße
+    lon: 10.873798
+    lat: 48.361348
+  - name: Gögginger Straße südlich Rosenaustraße
+    kennung: goegginger-strasse
+    strasse: Gögginger Straße
+    abschnitt: südlich der Rosenaustraße
+    lon: 10.889373
+    lat: 48.359862
+  - name: Haunstetter Straße Höhe protestantischer Friedhof
+    kennung: haunstetter-strasse
+    strasse: Haunstetter Straße
+    abschnitt: Höhe protestantischer Friedhof
+    lon: 10.902079
+    lat: 48.354188
+  - name: Konrad Adenauer Allee Fahrradstraße
+    kennung: konrad-adenauer-allee
+    strasse: Konrad-Adenauer-Allee
+    abschnitt: Fahrradstraße
+    lon: 10.896457
+    lat: 48.362481
+  - name: Postillionstraße südl. Roggenstraße
+    kennung: postillionstrasse
+    strasse: Postillionstraße
+    abschnitt: südlich der Roggenstraße
+    lon: 10.893589
+    lat: 48.304486
+  - name: Rosenaustraße westlich Gögginger Straße
+    kennung: rosenaustrasse
+    strasse: Rosenaustraße
+    abschnitt: westlich der Gögginger Straße
+    lon: 10.889214
+    lat: 48.360657
+  - name: Südlich A8-Unterführung, Ostseite
+    kennung: a8-unterfuehrung-ost
+    strasse: Geh- und Radweg am Lech (Ostufer)
+    abschnitt: südlich der Unterführung der A8
+    lon: 10.889200
+    lat: 48.413400
+    hinweise:
+      - >-
+        Lage ungefähr: Geh- und Radweg am Ostufer des Lechs, rund 100 m südlich der Brücke der A8.
+  - name: Ulrichsbrücke
+    kennung: ulrichsbruecke
+    strasse: Ulrichsbrücke
+    lon: 10.913303
+    lat: 48.376111
+  - name: Wagenhalsstraße
+    kennung: wagenhalsstrasse
+    strasse: Wagenhalsstraße
+    lon: 10.907322
+    lat: 48.363319
+titel: >-
+  Augsburg: Radzählstationen (verändert: Tageswerte je Station übernommen, ohne den Tag der
+  Erstellung der Datei)
+herausgeber: Stadt Augsburg
+quellenvermerk: Stadt Augsburg
+lizenz: CC BY 4.0
+lizenz_url: https://creativecommons.org/licenses/by/4.0/
+hinweise:
+  - >-
+    Die Quelle liefert nur Tageswerte, keine Stunden: Ob an einem Tag jede Stunde gezählt ist,
+    lässt sich nicht prüfen. Die Karte zeigt den Tageswert, wie die Quelle ihn liefert (auch 0);
+    ein leerer Wert gilt als nicht gezählt.
+  - >-
+    Den letzten Tag der Datei – den Tag, an dem sie erstellt wurde – übernimmt die Zählkarte
+    nicht: Er ist nur zum Teil gezählt.
+  - >-
+    Die Datei endet am 11.08.2026; seither ist sie nicht fortgeschrieben (Stand 14.11.2026).
+  - >-
+    Lage nach der Beschreibung der Station über die Straßen in OpenStreetMap (© OpenStreetMap-
+    Mitwirkende, ODbL) – die Quelle nennt keine Koordinaten.
+  - >-
+    Die Quelle unterscheidet nicht zwischen einem Ausfall und null Rädern: An der Dieselbrücke
+    stehen 19 Tage mit 0 – in der Karte als Tageswerte, wie geliefert.

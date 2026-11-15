@@ -2,10 +2,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import {
-  DAUER_STUFEN, DAUER_THEMEN, amSelbenPunkt, ansichtDauer, ansichtJuengster, csvDauer, csvDauerJuengster, entpackeDauer,
-  featuresDauer, gruppeFuer, gruppenName, hatGruppe, hatThema, imJuengsten, klassenDerQuellen, plusTage, quellenOhneTag,
-  stundenAm, stundenDesTags, tagAusDetail, tagDerStelle, tagImZeitraum, tageJeQuelle, tageZwischen, tagtyp, tagtypen,
-  themaFuerKommune, themaIn, themaVon, wertAm, zaehleDauer,
+  DAUER_STUFEN, DAUER_THEMEN, amSelbenPunkt, ansichtDauer, ansichtJuengster, ausTageswert, csvDauer, csvDauerJuengster,
+  entpackeDauer, featuresDauer, gruppeFuer, gruppenName, hatGruppe, hatThema, imJuengsten, kennzahlTextDauer,
+  klassenDerQuellen, orteMitTageswerten, plusTage, quellenOhneTag, stundenAm, stundenDesTags, tagAusDetail, tagDerStelle,
+  tagImZeitraum, tageJeQuelle, tageZwischen, tagtyp, tagtypen, themaFuerKommune, themaIn, themaVon, wertAm, zaehleDauer,
 } from "../../js/data/dauer.js";
 import { standardZustand } from "../../js/data/modell.js";
 
@@ -120,11 +120,11 @@ test("Jüngster Schultag je Stelle: Standardansicht ohne gewählten Tag, Tag je 
   const gemischt = [{ stelle: e.stellen[0], tag: "2025-01-03", wert: 1 }, { stelle: e.stellen[1], tag: "2024-12-30", wert: 2 },
     { stelle: e.stellen[1], tag: null, wert: null }];
   assert.deepEqual(tageJeQuelle(e, gemischt).map((x) => [x.quelle.code, x.von, x.bis]), [["berlin_viz", "2024-12-30", "2025-01-03"]]);
-  // CSV: je Gruppe Tag und Tagessumme, leer statt 0, Lizenz in jeder Zeile
+  // CSV: je Gruppe Tag und Tagessumme (oder Tageswert der Quelle), leer statt 0, Lizenz in jeder Zeile
   const zeilen = csvDauerJuengster(e, () => "dl-de/by-2-0").replace(/^﻿/, "").trim().split("\n");
-  assert.equal(zeilen[0], "quelle;stelle;name;abschnitt;richtung;lon;lat;kfz_juengster_schultag;kfz_tagessumme;lkw_juengster_schultag;lkw_tagessumme;lizenz");
-  assert.match(zeilen[1], /^berlin_viz;berlin_viz:TE001;Clayallee;in Höhe 343;Richtung Süd;13\.26;52\.43;2025-01-03;30000;2025-01-02;2;dl-de\/by-2-0$/);
-  assert.match(zeilen[2], /;2025-01-03;8000;;;dl-de\/by-2-0$/);
+  assert.equal(zeilen[0], "quelle;stelle;name;abschnitt;richtung;lon;lat;kfz_juengster_schultag;kfz_tagessumme;kfz_tageswert_quelle;lkw_juengster_schultag;lkw_tagessumme;lkw_tageswert_quelle;lizenz");
+  assert.match(zeilen[1], /^berlin_viz;berlin_viz:TE001;Clayallee;in Höhe 343;Richtung Süd;13\.26;52\.43;2025-01-03;30000;;2025-01-02;2;;dl-de\/by-2-0$/);
+  assert.match(zeilen[2], /;2025-01-03;8000;;;;;dl-de\/by-2-0$/);
   // Quelle ohne Lizenz (lizenzVon -> null): nicht im Export
   assert.equal(csvDauerJuengster(e, () => null).replace(/^﻿/, "").trim().split("\n").length, 1);
 });
@@ -142,9 +142,9 @@ test("csvDauer: deutsche Spalten, leer statt 0, Lizenz", () => {
   const text = csvDauer(d, JAHR, "2025-01-04", () => "dl-de/by-2-0");
   assert.ok(text.startsWith("\ufeff")); // BOM für Excel
   const zeilen = text.trim().split("\n");
-  assert.equal(zeilen[0], "quelle;stelle;name;abschnitt;richtung;lon;lat;datum;tagtyp;kfz_tagessumme;lkw_tagessumme;lizenz");
+  assert.equal(zeilen[0], "quelle;stelle;name;abschnitt;richtung;lon;lat;datum;tagtyp;kfz_tagessumme;kfz_tageswert_quelle;lkw_tagessumme;lkw_tageswert_quelle;lizenz");
   assert.equal(zeilen.length, 3);
-  assert.match(zeilen[1], /;2025-01-04;Ferien;;4;dl-de\/by-2-0$/);
+  assert.match(zeilen[1], /;2025-01-04;Ferien;;;4;;dl-de\/by-2-0$/);
   assert.match(zeilen[2], /"A115; „Brücke“"/); // Semikolon im Namen -> in Anführungszeichen
   // Quelle ohne Lizenz (lizenzVon -> null): ihre Stellen bleiben weg
   assert.equal(csvDauer(d, JAHR, "2025-01-04", () => null).trim().split("\n").length, 1);
@@ -155,8 +155,8 @@ test("Details: Tagessumme, gezählte Stunden und Stundenwerte am Tag", () => {
     von: "2025-01-01", tage: { kfz: [10, null, 30] }, n: { kfz: [24, 20, 24] },
     stunden_von: "2025-01-02", stunden: { kfz: [Array(24).fill(1), null] },
   };
-  assert.deepEqual(tagAusDetail(detail, "kfz", "2025-01-02"), { wert: null, stunden: 20 });
-  assert.deepEqual(tagAusDetail(detail, "kfz", "2024-12-31"), { wert: null, stunden: 0 });
+  assert.deepEqual(tagAusDetail(detail, "kfz", "2025-01-02"), { wert: null, stunden: 20, tw: false });
+  assert.deepEqual(tagAusDetail(detail, "kfz", "2024-12-31"), { wert: null, stunden: 0, tw: false });
   assert.equal(stundenAm(detail, "kfz", "2025-01-01"), null); // vor stunden_von
   assert.equal(stundenAm(detail, "kfz", "2025-01-02").length, 24);
   assert.equal(stundenAm(detail, "kfz", "2025-01-03"), null);
@@ -201,7 +201,7 @@ test("Gruppen aus den Daten: Bits je Stelle, Thema, Quellen ohne Werte am Tag, T
   assert.deepEqual(tagtypen(e, "2025-01-08"), [{ land: null, typ: "s" }]); // nur Hamburg
   const csv = csvDauer(e, { werte: { kfz: [null, null, null], sv: [null, null, null], rad: [null, null, null] } },
     "2025-01-03", () => "dl-de/by-2-0");
-  assert.match(csv.split("\n")[0], /;tagtyp;kfz_tagessumme;sv_tagessumme;rad_tagessumme;lizenz$/);
+  assert.match(csv.split("\n")[0], /;tagtyp;kfz_tagessumme;kfz_tageswert_quelle;sv_tagessumme;sv_tageswert_quelle;rad_tagessumme;rad_tageswert_quelle;lizenz$/);
 });
 
 test("Zeitraum: über Jahre als Jahre, sonst als Tage", async () => {
@@ -298,4 +298,39 @@ test("Verkehrsart für eine Kommune: was ihre Quellen zählen (aus der Datenlage
   assert.equal(themaFuerKommune(e, ["mobidata_rad"], "kfz"), "rad"); // Karlsruhe: im Bündel MobiData BW
   assert.equal(themaFuerKommune(e, [], "kfz"), "kfz"); // keine Quelle (Kiel): bleibt
   assert.equal(themaFuerKommune(e, undefined, "rad"), "rad");
+});
+
+test("Tageswerte der Quelle: bis tageswerte_bis der Tageswert, danach die Summe der Stunden", () => {
+  // TE001: Tageswerte bis 2.1. (danach Stunden); TE002: nur Tageswerte
+  const e = entpackeDauer({
+    ...INDEX,
+    juengster: { kfz: [["2025-01-03", 30000], ["2025-01-03", 8000]], lkw: [null, null] },
+    tageswerte_bis: { kfz: ["2025-01-02", "2025-01-05"] },
+  });
+  assert.ok(ausTageswert(e, e.stellen[0], "kfz", "2025-01-02"));
+  assert.ok(!ausTageswert(e, e.stellen[0], "kfz", "2025-01-03"));
+  assert.ok(ausTageswert(e, e.stellen[1], "kfz", "2025-01-03"));
+  assert.ok(!ausTageswert(e, e.stellen[0], "lkw", "2025-01-02")); // Gruppe ohne Tageswerte
+  assert.ok(!ausTageswert(d, d.stellen[0], "kfz", "2025-01-02")); // Daten ohne Feld (Vertrag 3)
+  const z = zustand();
+  assert.deepEqual(ansichtDauer(e, z, JAHR, "2025-01-02").map((x) => [x.stelle.id, x.wert, x.tw]),
+    [["berlin_viz:TE001", 200, true], ["berlin_viz:TE002", 7000, true]]);
+  assert.deepEqual(ansichtDauer(e, z, JAHR, "2025-01-04").map((x) => [x.stelle.id, x.wert, x.tw]),
+    [["berlin_viz:TE001", null, false], ["berlin_viz:TE002", 9000, true]]); // ohne Wert kein Tageswert
+  const j = ansichtJuengster(e, z);
+  assert.deepEqual(j.map((x) => [x.stelle.id, x.tw]), [["berlin_viz:TE001", false], ["berlin_viz:TE002", true]]);
+  assert.deepEqual(orteMitTageswerten(e, j), ["Berlin"]);
+  assert.deepEqual(orteMitTageswerten(e, j.filter((x) => !x.tw)), []);
+  assert.equal(kennzahlTextDauer("Rad", "02.01.2025", true), "Rad, Tageswert der Quelle am 02.01.2025");
+  assert.equal(kennzahlTextDauer("Rad", "02.01.2025"), "Rad, Tagessumme am 02.01.2025");
+  // CSV: Tagessumme und Tageswert der Quelle in getrennten Spalten
+  const tag = csvDauer(e, JAHR, "2025-01-03", () => "CC BY 4.0").replace(/^\ufeff/, "").trim().split("\n");
+  assert.match(tag[1], /;2025-01-03;Ferien;30000;;3;;CC BY 4\.0$/);
+  assert.match(tag[2], /;2025-01-03;Ferien;;8000;;;CC BY 4\.0$/);
+  const juengst = csvDauerJuengster(e, () => "CC BY 4.0").replace(/^\ufeff/, "").trim().split("\n");
+  assert.match(juengst[2], /;2025-01-03;;8000;;;;CC BY 4\.0$/);
+  // Details: Tageswert der Quelle ohne gezählte Stunden
+  const detail = { von: "2025-01-01", tage: { kfz: [10, 20, 30] }, n: { kfz: [0, 0, 24] }, tageswerte_bis: { kfz: "2025-01-02" } };
+  assert.deepEqual(tagAusDetail(detail, "kfz", "2025-01-02"), { wert: 20, stunden: 0, tw: true });
+  assert.deepEqual(tagAusDetail(detail, "kfz", "2025-01-03"), { wert: 30, stunden: 24, tw: false });
 });

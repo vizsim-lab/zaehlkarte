@@ -8,11 +8,14 @@
 //
 // Eine Tagessumme gibt es nur, wenn jede Stunde des Tages gezählt ist – null heißt „nicht
 // vollständig gezählt“, nie 0. Keine Mittelwerte, keine Hochrechnung: gezeigt wird ein Tag.
+// Liefert eine Quelle für eine Stelle nur Tageswerte, steht ihr Tageswert da (`tageswerte_bis`:
+// bis zu diesem Tag ist ein Wert der Tageswert der Quelle, ob jede Stunde gezählt ist, lässt sich
+// nicht prüfen; danach die Summe der Stunden).
 import { datum, sprache, t } from "../sprache/texte.js";
 import { STUFENFARBEN, stufe } from "./modell.js";
 
 /** Vertrag mit dauer/index.json (`version`, VERSION in pipeline/src/zaehlkarte/dauer/site.py). */
-export const DAUER_VERSION = 3;
+export const DAUER_VERSION = 4;
 
 // Gruppen, wie die Quellen sie zählen – in den Daten nie ineinander gemischt: Berlins und
 // Ettlingens „Lkw“ und Hamburgs „Schwerverkehr“ sind je eine Klasse des Detektors, keine der
@@ -172,6 +175,15 @@ export function tagtypen(d, iso) {
   return new Set(liste.map((x) => x.typ)).size === 1 ? [{ land: null, typ: liste[0].typ }] : liste;
 }
 
+/**
+ * Ist der Wert einer Stelle am Tag der Tageswert der Quelle (keine Stunden, Vollständigkeit nicht
+ * prüfbar)? Bis `tageswerte_bis` je Gruppe und Stelle ja, danach Summe der Stunden.
+ */
+export function ausTageswert(d, s, g, iso) {
+  const bis = d?.tageswerte_bis?.[g]?.[s.index];
+  return Boolean(bis && iso && iso <= bis);
+}
+
 /** Tagessumme einer Stelle am Tag aus der Jahresdatei (null = nicht vollständig gezählt). */
 export function wertAm(jahr, stelle, g, iso) {
   const reihe = jahr?.werte?.[g]?.[stelle.index];
@@ -192,7 +204,8 @@ export function ansichtDauer(d, zustand, jahr, iso) {
     const z = d.zeitraeume?.get(s.quelle)?.[g];
     if (z && (iso < z[0] || iso > z[1])) continue;
     const v = wertAm(jahr, s, g, iso);
-    out.push({ stelle: s, gruppe: g, tag: iso, wert: v, stufe: v == null ? -1 : stufe(v, grenzen) });
+    out.push({ stelle: s, gruppe: g, tag: iso, wert: v, stufe: v == null ? -1 : stufe(v, grenzen),
+      tw: v != null && ausTageswert(d, s, g, iso) });
   }
   return out;
 }
@@ -215,9 +228,16 @@ export function ansichtJuengster(d, zustand) {
     const g = gruppeFuer(s, zustand.dthema);
     if (!g) continue;
     const j = juengsterVon(d, s, g);
-    out.push({ stelle: s, gruppe: g, tag: j?.[0] ?? null, wert: j?.[1] ?? null, stufe: j ? stufe(j[1], grenzen) : -1 });
+    out.push({ stelle: s, gruppe: g, tag: j?.[0] ?? null, wert: j?.[1] ?? null, stufe: j ? stufe(j[1], grenzen) : -1,
+      tw: Boolean(j) && ausTageswert(d, s, g, j[0]) });
   }
   return out;
+}
+
+/** Orte der Quellen, deren gezeigte Werte Tageswerte der Quelle sind (für den Hinweis der Legende). */
+export function orteMitTageswerten(d, eintraege) {
+  const codes = new Set(eintraege.filter((e) => e.tw).map((e) => e.stelle.quelle));
+  return d.quellenMeta.filter((q) => codes.has(q.code)).map(ort);
 }
 
 /** Je Quelle der Einträge mit Wert: frühester und jüngster gezeigter Tag – [{ quelle, ort, von, bis }]. */
@@ -288,9 +308,12 @@ export function tageSpanne(von, bis) {
   return sprache() === "de" ? `${anfang}–${datum(bis)}` : `${anfang} – ${datum(bis)}`;
 }
 
-/** Bezeichnung der gezeigten Kennzahl: „Kfz, Tagessumme am 26.06.2025“ (Name des Themas oder der Gruppe). */
-export function kennzahlTextDauer(name, datumText) {
-  return t("dauer.kennzahl", { gruppe: name, datum: datumText });
+/**
+ * Bezeichnung der gezeigten Kennzahl: „Kfz, Tagessumme am 26.06.2025“ (Name des Themas oder der
+ * Gruppe); `tw`: der Tageswert der Quelle („Rad, Tageswert der Quelle am …“).
+ */
+export function kennzahlTextDauer(name, datumText, tw = false) {
+  return t(tw ? "dauer.kennzahl_tw" : "dauer.kennzahl", { gruppe: name, datum: datumText });
 }
 
 /** „Kfz, Tagessumme am jüngsten Schultag je Stelle“. */
@@ -304,14 +327,18 @@ function csvFeld(v) {
   return /[";\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
+/** [Tagessumme, Tageswert der Quelle] eines Werts – je nach Herkunft steht er in einer der Spalten. */
+const zweiSpalten = (d, s, g, iso, v) => (v == null ? [null, null] : ausTageswert(d, s, g, iso) ? [null, v] : [v, null]);
+
 /**
- * CSV (Semikolon, UTF-8) aller Stellen, die am Tag bestehen: Tagessummen je Gruppe, leer =
- * nicht vollständig gezählt. Spalten und Werte deutsch, in jeder Sprache gleich.
+ * CSV (Semikolon, UTF-8) aller Stellen, die am Tag bestehen: je Gruppe die Tagessumme (alle
+ * Stunden gezählt) oder der Tageswert der Quelle (Quelle nur mit Tageswerten), leer = nicht
+ * vollständig gezählt. Spalten und Werte deutsch, in jeder Sprache gleich.
  * `lizenzVon(quelle)`: die Lizenz der Zeile (lizenzFuerCsv) – null: Quelle ohne Lizenz, weglassen.
  */
 export function csvDauer(d, jahr, iso, lizenzVon) {
   const kopf = ["quelle", "stelle", "name", "abschnitt", "richtung", "lon", "lat", "datum", "tagtyp",
-    ...d.gruppen.map((g) => `${g}_tagessumme`), "lizenz"];
+    ...d.gruppen.flatMap((g) => [`${g}_tagessumme`, `${g}_tageswert_quelle`]), "lizenz"];
   const zeilen = [kopf.join(";")];
   for (const s of d.stellen) {
     if (iso < s.von || iso > s.bis) continue;
@@ -321,7 +348,7 @@ export function csvDauer(d, jahr, iso, lizenzVon) {
     zeilen.push([
       s.quelle, s.id, s.name, s.abschnitt, s.richtung, s.lon, s.lat, iso,
       t(`tag.${tagtyp(d, q?.land, iso)}`, {}, "de"),
-      ...d.gruppen.map((g) => (hatGruppe(s, g) ? wertAm(jahr, s, g, iso) : null)),
+      ...d.gruppen.flatMap((g) => zweiSpalten(d, s, g, iso, hatGruppe(s, g) ? wertAm(jahr, s, g, iso) : null)),
       lizenz,
     ].map(csvFeld).join(";"));
   }
@@ -330,20 +357,23 @@ export function csvDauer(d, jahr, iso, lizenzVon) {
 
 /**
  * CSV (Semikolon, UTF-8) aller Stellen in der Standardansicht: je Gruppe der jüngste vollständig
- * gezählte Schultag und seine Tagessumme – leer, wo die Stelle die Gruppe nicht zählt oder an
- * keinem Schultag vollständig. Spalten und Werte deutsch, in jeder Sprache gleich.
- * `lizenzVon(quelle)` wie bei csvDauer – Stellen ohne Lizenz bleiben weg.
+ * gezählte Schultag und seine Tagessumme (oder der Tageswert der Quelle) – leer, wo die Stelle die
+ * Gruppe nicht zählt oder an keinem Schultag vollständig. Spalten und Werte deutsch, in jeder
+ * Sprache gleich. `lizenzVon(quelle)` wie bei csvDauer – Stellen ohne Lizenz bleiben weg.
  */
 export function csvDauerJuengster(d, lizenzVon) {
   const kopf = ["quelle", "stelle", "name", "abschnitt", "richtung", "lon", "lat",
-    ...d.gruppen.flatMap((g) => [`${g}_juengster_schultag`, `${g}_tagessumme`]), "lizenz"];
+    ...d.gruppen.flatMap((g) => [`${g}_juengster_schultag`, `${g}_tagessumme`, `${g}_tageswert_quelle`]), "lizenz"];
   const zeilen = [kopf.join(";")];
   for (const s of d.stellen) {
     const lizenz = lizenzVon(s.quelle);
     if (lizenz === null) continue; // ohne Lizenz: nicht im Export
     zeilen.push([
       s.quelle, s.id, s.name, s.abschnitt, s.richtung, s.lon, s.lat,
-      ...d.gruppen.flatMap((g) => juengsterVon(d, s, g) ?? [null, null]),
+      ...d.gruppen.flatMap((g) => {
+        const j = juengsterVon(d, s, g);
+        return j ? [j[0], ...zweiSpalten(d, s, g, j[0], j[1])] : [null, null, null];
+      }),
       lizenz,
     ].map(csvFeld).join(";"));
   }
@@ -356,11 +386,16 @@ export function stundenAm(detail, g, iso) {
   return detail.stunden[g][tageZwischen(detail.stunden_von, iso)] ?? null;
 }
 
-/** Tagessumme und gezählte Stunden einer Gruppe am Tag aus den Details. */
+/**
+ * Tagessumme und gezählte Stunden einer Gruppe am Tag aus den Details; `tw`: der Wert ist der
+ * Tageswert der Quelle (die Stelle hat an dem Tag keine Stunden).
+ */
 export function tagAusDetail(detail, g, iso) {
   const i = tageZwischen(detail.von, iso);
-  if (i < 0) return { wert: null, stunden: 0 };
-  return { wert: detail.tage?.[g]?.[i] ?? null, stunden: detail.n?.[g]?.[i] ?? 0 };
+  if (i < 0) return { wert: null, stunden: 0, tw: false };
+  const wert = detail.tage?.[g]?.[i] ?? null;
+  const bis = detail.tageswerte_bis?.[g];
+  return { wert, stunden: detail.n?.[g]?.[i] ?? 0, tw: wert != null && Boolean(bis) && iso <= bis };
 }
 
 /** Stunden, die es am Tag gibt: 23 am Tag der Umstellung auf Sommerzeit, sonst 24. */
