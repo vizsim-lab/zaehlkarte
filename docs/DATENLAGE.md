@@ -2117,7 +2117,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Informationsfreiheitssatzung Leipzig / Sächsisches UIG
 
-**Dauerzählstellen (in der Karte):** Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS – die Zählkarte hebt sie selbst auf, in der Karte seit November 2026; Tageswerte zweier Jahre ohne Stunden. Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten
+**Dauerzählstellen (in der Karte):** Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS, davor Tageswerte zweier Jahre (UTC-Tage) – die Zählkarte hebt beides selbst auf, in der Karte seit November 2026 (Tageswerte seit November 2024). Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten
 
 **Kontakt:** Verkehrs- und Tiefbauamt Leipzig · <vta@leipzig.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/49250/verkehrs-und-tiefbauamt-leipzig/)
 
@@ -2139,7 +2139,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/) · [Informationsfreiheitssatzung (L-IZ 2021)](https://www.l-iz.de/politik/leipzig/2021/10/evaluierungsbericht-zur-informationsfreiheitssatzung-warten-auf-das-saechsische-transparenzgesetz-417215) · [Radverkehr: Stundenwerte der letzten 31 Tage](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei) · [Radverkehr: Standorte](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-stationen-stadt-leipzig)
+**Belege:** [FragDenStaat 2023](https://fragdenstaat.de/anfrage/datengrundlage-verkehrsmengenkarten-der-stadt-leipzig/) · [Informationsfreiheitssatzung (L-IZ 2021)](https://www.l-iz.de/politik/leipzig/2021/10/evaluierungsbericht-zur-informationsfreiheitssatzung-warten-auf-das-saechsische-transparenzgesetz-417215) · [Radverkehr: Stundenwerte der letzten 31 Tage](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei) · [Radverkehr: Tageswerte der letzten 2 Jahre](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-tag-der-letzten-2-jahre-stadt-leipzi) · [Radverkehr: Standorte](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-stationen-stadt-leipzig)
 
 
 ## Lingen (Ems) (NI) – auf Anfrage herausgegeben

@@ -276,6 +276,24 @@ def aus_tageswerten(reihe: Messreihe, gruppe: str) -> np.ndarray:
     return (tw >= 0) & (np.arange(reihe.tage)[None, :] < erste[:, None])
 
 
+def verfahren_mit_tageswerten(reihe: Messreihe, vorher: str, stunden: str
+                              ) -> list[tuple[date, date, str]]:
+    """Abschnitte für `reihe.verfahren` einer Quelle mit Tageswerten vor den Stunden: bis zum
+    letzten Tag, an dem irgendeine Stelle einen Tageswert der Quelle zeigt, `vorher` (der Text
+    beschreibt beides), danach `stunden`; ohne Tageswerte nur `stunden`."""
+    ende = reihe.tag(reihe.tage - 1)
+    mit_tw = np.zeros(reihe.tage, dtype=bool)
+    for g in reihe.tageswerte:
+        mit_tw |= aus_tageswerten(reihe, g).any(axis=0)
+    if not mit_tw.any():
+        return [(reihe.von, ende, stunden)]
+    letzter = int(np.flatnonzero(mit_tw)[-1])
+    out = [(reihe.von, reihe.tag(letzter), vorher)]
+    if letzter < reihe.tage - 1:
+        out.append((reihe.tag(letzter + 1), ende, stunden))
+    return out
+
+
 def tagessummen(reihe: Messreihe, gruppe: str) -> tuple[np.ndarray, np.ndarray]:
     """(Summe [Stellen, Tage] mit -1 = nicht vollständig gezählt, gezählte Stunden [Stellen, Tage]).
 
