@@ -96,6 +96,9 @@ Hinweise kommen über das Issue-Formular „Zählung melden“.
 - **`ags`:** der Schlüssel der Kommune – eindeutig, aus dem Gemeindeverzeichnis des Statistischen
   Bundesamts (GV-ISys); die ersten beiden Ziffern sind das Land, die Datei muss dazu passen. Namen
   sind bundesweit nicht eindeutig. Regionale Feiertage ließen sich später über ihn zuordnen.
+  Bezirke der Stadtstaaten (und Stadtbezirke überhaupt) haben keinen eigenen Eintrag: Was ein
+  Bezirk zählt, steht in `situation` und `links` der Gemeinde (Beschluss vom 15.11.2026, keine
+  Schemaänderung).
 - **Blöcke je Familie:** `kurzzeit` und `dauer` sind beide optional, mindestens einer ist da. Die
   Karte zeigt je Familie nur Kommunen mit deren Block – Kommunen, von denen nur Dauerzählstellen
   bekannt sind, haben keinen Block `kurzzeit`.

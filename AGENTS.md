@@ -66,6 +66,18 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   ignoriert `q`). Behörden samt Funktionsadresse: `/api/v1/publicbody/?q=Stadt Freiburg`.
 - **Ratsinformationssysteme:** Antworten auf Anfragen nennen Zahl und Format der Zählungen
   (Dresden AF0915/25, München DAVe-Vorlage).
+- **Neue Absender und Begriffe (Runde 4, 15.11.2026,** Branch `werkzeug/runde4`, Auswertung im
+  Projekt-Doc `claude/recherche-runde4-2026-11.md`): Fuß-Zählungen heißen „Frequenzmessung“,
+  „Passantenfrequenz“, „Personenfrequenzmessung“ und kommen von Stadtmarketing,
+  Wirtschaftsförderung und Innenstadtmanagement – veröffentlicht fast nur Monatswerte. Zählwerte
+  sind nur Laser- und Kamerazählungen, nicht WLAN/Bluetooth (Ariadne in Siegburg) oder Handy- und
+  GPS-Daten (die Passantenzählungen der IHKs). „Verkehrsversuch“, „Kiezblock“, „Modalfilter“,
+  „Schulstraße“ bringen über 100 Versuche, teils mit Auswertung (Kurzzeit vorher/nachher). Die
+  Rad-Treffer der Runde waren meist schon in der Datenlage. Kreis-Webseiten: aus der Wikipedia-Liste
+  „Liste der Landkreise in Deutschland“ (Parsoid-Links; die Infobox hat eigene Tabellen und weiche
+  Trennstriche in „Kreis&shy;schlüssel“, Region Hannover und Städteregion Aachen haben einen
+  „Regionsschlüssel“) – `tools/kreise4b.py` fand 292 von 294 mit passendem Schlüssel. Bayerische
+  Kreise zeigen zu „Straßenverkehrszählungen; Durchführung“ nur den Standardtext des BayernPortals.
 - **Zählsoftware:** München und Wolfsburg nutzen DAVe (Open Source, Export in offene Formate),
   Lübeck die Plattform mytrafficdata (datacollect) – dort lohnt eine Anfrage nach dem Export
   statt nach PDFs.
@@ -271,6 +283,20 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   Abruf-Werkzeuge per robots.txt (die Websuche mit Filter auf govdata.de/open.nrw geht).
   FragDenStaat: die Links „/anhang/…“ liefern eine HTML-Seite, die Datei liegt unter
   media.frag-den-staat.de/files/foi/<Nachricht>/<Name>.
+- **Berichte zu Verkehrsversuchen, Kiezblocks, Schulstraßen und Gutachten zu Bebauungsplänen**
+  (Durchsicht 15.11.2026: 177 Seiten, 226 PDFs; `tools/versuche_lesen.py` und
+  `ergebnis/versuche/` auf `werkzeug/runde4`): Die Versuchsberichte nennen Zählwerte fast nur als
+  Summe über Zeitfenster (Landstuhl 6–10 und 15–19 Uhr, Reeperbahn Hamburg 6–19 Uhr, Carolabrücke
+  Dresden) oder zeigen sie als Grafik (Bellermannkiez, Samariterkiez, Komponistenviertel, Gronau
+  Epe, Ostbevern) – Werte je Stunde stehen in keinem. Die Gutachten zu Bebauungsplänen haben sie
+  (VERTEC: zwei Knoten über 24 Stunden, Hermeskeil 2020, Bernkastel-Kues/Ürzig 2025; Bad
+  Kreuznach 2016: Knotenstrom 5–19 Uhr und vier Wochenzählungen), aber Büro-Vermerke wie „jegliche
+  Verbreitung und Verwertung außerhalb der im UrhG gesetzten Grenzen ist ohne Zustimmung des
+  Urhebers unzulässig“, oft private Auftraggeber. Ob solche Vermerke als „untersagt“ im Sinne von
+  „Quellen ohne Lizenz“ (CLAUDE.md) gelten, entscheidet die Projektleitung (offen seit 15.11.2026);
+  bis dahin nicht übernehmen. Der Weg ist die Anfrage beim Auftraggeber nach den gelieferten
+  Zählwerten (Landstuhl, in der Datenlage). Pankow hat in der Antwort auf die Schriftliche Anfrage 19/26749 alle Zählungen von
+  Senat und Bezirk der letzten fünf Jahre gelistet – ein Register für gezielte Anfragen.
 - Nicht abrufbar (Stand November 2026): mobil.osnabrueck.de; wuppertal.de nur mit Playwright
   (`tools/laender2.py` auf `werkzeug/erkundung`), bau.bremen.de nur über das Abruf-Werkzeug. Der Datenhub Ulm
   braucht im Browser JavaScript, seine CKAN-API (`datenhub.ulm.de/ckan/api/3/action/…`) geht.
