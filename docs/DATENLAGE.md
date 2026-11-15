@@ -1,6 +1,6 @@
 # Datenlage: Verkehrszählungen je Kommune
 
-Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am 2026-11-14 aus
+Erzeugt von `zaehlkarte site` bzw. `zaehlkarte datenlage` am 2026-11-15 aus
 `pipeline/config/kommunen/` (je Land eine Datei) – nicht von Hand ändern. Dieselben
 Angaben zeigt die Karte unter „Datenlage je Kommune“ (Kurzzeitzählungen bzw.
 Dauerzählstellen). Kommunen, von denen nur Dauerzählstellen bekannt sind, haben keinen
@@ -1520,7 +1520,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, Hamburgisches Transparenzgesetz
 
-**Dauerzählstellen (in der Karte):** Wärmebildkameras an über 400 Kreuzungen: Stundenwerte je Zählstelle für Kfz, Schwerverkehr und Rad über die SensorThings API (dl-de/by-2-0), in der Karte als Dauerzählstellen
+**Dauerzählstellen (in der Karte):** Wärmebildkameras an über 400 Kreuzungen: Stundenwerte je Zählstelle für Kfz, Schwerverkehr und Rad, für Kfz und Rad davor Tageswerte seit 2020, über die SensorThings API (dl-de/by-2-0), in der Karte als Dauerzählstellen
 
 **Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Beh%C3%B6rde+f%C3%BCr+Verkehr+und+Mobilit%C3%A4tswende)
 

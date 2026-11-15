@@ -1,14 +1,15 @@
 """Gedächtnis der Dauerzählstellen im Release `dauerzaehlstellen` holen und ablegen.
 
 Manche Quellen halten ihre Stundenwerte nur einige Monate vor (Hamburg). Was ein Adapter selbst
-aufhebt, liegt in `pipeline/data/raw/<code>/gedaechtnis/`; der Workflow „Dauerzählstellen bauen“
+aufhebt (Stunden je Monat, Hamburgs Tageswerte je Jahr), liegt in
+`pipeline/data/raw/<code>/gedaechtnis/`; der Workflow „Dauerzählstellen bauen“
 holt es vor dem Abruf aus dem Release und legt danach ab, was sich geändert hat. Ein Asset heißt
 `<code>__<datei>` (etwa `hamburg_kfz__stunden_2026-11.csv.gz`).
 
 Ablegen ohne Verlustfenster: erst als `<name>.neu` hochladen, dann das alte Asset löschen und das
 neue umbenennen. Bricht ein Lauf dazwischen ab, liegt `<name>.neu` im Release – `holen` nimmt
 dann diese Fassung. Und nie mit weniger: Eine Datei, die weniger Werte enthält als beim Holen
-(Stunden mit Wert bzw. Stellen), wird nicht abgelegt – das Gedächtnis wächst nur.
+(Stunden bzw. Tage mit Wert, Stellen), wird nicht abgelegt – das Gedächtnis wächst nur.
 
 Zweite Kopie (`kopieren`, nach dem Ablegen): jede Fassung einer Datei, die es dort noch nicht
 gibt, als `<Zeitpunkt>__<Prüfsumme>__<code>__<datei>` in ein eigenes Release je Jahr
@@ -45,9 +46,10 @@ KOPIE_NOTIZ = (
     "Zweite Kopie des Gedächtnisses aus dem Release dauerzaehlstellen: jede Fassung einer Datei "
     "als <Zeitpunkt>__<Prüfsumme>__<code>__<datei>, nie überschrieben, nie gelöscht. "
     "Wiederherstellen: je <code>__<datei> die jüngste Fassung (pipeline/werkzeuge/gedaechtnis.py)."
-    " Stundenwerte wie geliefert – Hamburg: dl-de/by-2-0, Freie und Hansestadt Hamburg, Behörde "
-    "für Verkehr und Mobilitätswende; Leipzig: dl-de/by-2-0, Stadt Leipzig; strassen.json: "
-    "© OpenStreetMap-Mitwirkende, ODbL. Abgelegt vom Workflow „Dauerzählstellen bauen“.")
+    " Stunden- und Tageswerte wie geliefert – Hamburg: dl-de/by-2-0, Freie und Hansestadt "
+    "Hamburg, Behörde für Verkehr und Mobilitätswende; Leipzig: dl-de/by-2-0, Stadt Leipzig; "
+    "strassen.json: © OpenStreetMap-Mitwirkende, ODbL. Abgelegt vom Workflow "
+    "„Dauerzählstellen bauen“.")
 
 
 def gh(*args: str, ausgabe: bool = False) -> str:
@@ -73,7 +75,8 @@ def sha(pfad: Path) -> str:
 
 
 def umfang(pfad: Path) -> int:
-    """Wie viel eine Datei des Gedächtnisses enthält: Stunden mit Wert (CSV) bzw. Einträge."""
+    """Wie viel eine Datei des Gedächtnisses enthält: Stunden bzw. Tage mit Wert (CSV) oder
+    Einträge (JSON)."""
     if pfad.name.endswith(".csv.gz"):
         with gzip.open(pfad, "rt", encoding="utf-8", newline="") as f:
             r = csv.reader(f, delimiter=";")

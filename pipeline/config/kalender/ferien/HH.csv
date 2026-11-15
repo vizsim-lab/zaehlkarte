@@ -1,8 +1,54 @@
-# Schulferien Hamburg – aus den KMK-Ferienkalendern 2025/2026 bis 2027/2028 (erster und letzter
-# Ferientag; je Datei die Zeile „Hamburg“, ausgelesen mit pdftotext -layout). Gebraucht für die
-# Dauerzählstellen (Stundenwerte ab 2026). Bewegliche oder schulfreie Einzeltage, die die KMK
-# nicht aufführt, fehlen – ein „Schultag“ kann vor Ort also unterrichtsfrei gewesen sein.
+# Schulferien Hamburg – aus den KMK-Ferienkalendern 2019/2020 bis 2027/2028 (erster und letzter
+# Ferientag; je Kalender die Zeile „Hamburg“; 2019/20–2024/25 mit pipeline/werkzeuge/kmk_ferien.py
+# aus der Tabelle des PDFs, ab 2025/26 mit pdftotext -layout). Spalten „Ostern/Frühjahr“ als
+# Frühjahrsferien, „Himmelfahrt/Pfingsten“ wie in Hamburg; kursiv gesetzte schulfreie Einzeltage
+# (etwa Brückentage) stehen wie Ferien unter dem Namen ihrer Spalte. Gebraucht für die
+# Dauerzählstellen (Tageswerte der Quelle ab 2020, Stundenwerte ab 2026). Bewegliche oder
+# schulfreie Einzeltage, die die KMK nicht aufführt, fehlen – ein „Schultag“ kann vor Ort also
+# unterrichtsfrei gewesen sein. Nicht abgebildet: die pandemiebedingten Schulschließungen 2020
+# und 2021.
 von,bis,ferien,schuljahr,gebiet,quelle
+2019-10-04,2019-10-18,Herbstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2019-11-01,2019-11-01,Herbstferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2019-12-20,2020-01-03,Weihnachtsferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-01-31,2020-01-31,Winterferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-03-02,2020-03-13,Frühjahrsferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-05-18,2020-05-22,Himmelfahrt/Pfingsten,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-06-25,2020-08-05,Sommerferien,2019/2020,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER19_20.pdf
+2020-10-05,2020-10-16,Herbstferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2020-12-21,2021-01-04,Weihnachtsferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-01-29,2021-01-29,Winterferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-03-01,2021-03-12,Frühjahrsferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-05-10,2021-05-14,Himmelfahrt/Pfingsten,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-06-24,2021-08-04,Sommerferien,2020/2021,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2020_21-neu.pdf
+2021-10-04,2021-10-15,Herbstferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2021-12-23,2022-01-04,Weihnachtsferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-01-28,2022-01-28,Winterferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-03-07,2022-03-18,Frühjahrsferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-05-23,2022-05-27,Himmelfahrt/Pfingsten,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-07-07,2022-08-17,Sommerferien,2021/2022,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2021_22-neu.pdf
+2022-10-10,2022-10-21,Herbstferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2022-12-23,2023-01-06,Weihnachtsferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-01-27,2023-01-27,Winterferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-03-06,2023-03-17,Frühjahrsferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-05-15,2023-05-19,Himmelfahrt/Pfingsten,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-07-13,2023-08-23,Sommerferien,2022/2023,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2022_23-neu.pdf
+2023-10-02,2023-10-02,Herbstferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2023-10-16,2023-10-27,Herbstferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2023-12-22,2024-01-05,Weihnachtsferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-02-02,2024-02-02,Winterferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-03-18,2024-03-28,Frühjahrsferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-05-10,2024-05-10,Himmelfahrt/Pfingsten,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-05-21,2024-05-24,Himmelfahrt/Pfingsten,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-07-18,2024-08-28,Sommerferien,2023/2024,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2023_24-neu.pdf
+2024-10-04,2024-10-04,Herbstferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2024-10-21,2024-11-01,Herbstferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2024-12-20,2025-01-03,Weihnachtsferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-01-31,2025-01-31,Winterferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-03-10,2025-03-21,Frühjahrsferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-05-02,2025-05-02,Frühjahrsferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-05-26,2025-05-30,Himmelfahrt/Pfingsten,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
+2025-07-24,2025-09-03,Sommerferien,2024/2025,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2024_25.pdf
 2025-10-20,2025-10-31,Herbstferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
 2025-12-17,2026-01-02,Weihnachtsferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf
 2026-01-30,2026-01-30,Winterferien,2025/2026,alle,https://www.kmk.org/fileadmin/Dateien/pdf/Ferienkalender/FER2025_26.pdf

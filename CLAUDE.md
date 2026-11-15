@@ -25,7 +25,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Git (gitignored): Workflow „Dauerzählstellen bauen“ legt sie als Release-Asset
   `dauerzaehlstellen/dauer.tar.gz` ab, die CI holt es vor dem Build. Im selben Release liegt
   das **Gedächtnis** der Quellen, die Stundenwerte nur kurz vorhalten (Hamburg: zwei Monate,
-  Leipzig: 31 Tage):
+  Leipzig: 31 Tage; Hamburg dazu die Tageswerte, `tage_JJJJ.csv.gz`):
   Assets `<code>__<datei>` aus `pipeline/data/raw/<code>/gedaechtnis/`, geholt und abgelegt von
   `pipeline/werkzeuge/gedaechtnis.py` – nie löschen, nie mit weniger Werten ersetzen (sonst
   sind die Stunden verloren). Eine zweite Kopie jeder Fassung liegt je Jahr im Release

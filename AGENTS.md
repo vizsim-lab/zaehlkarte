@@ -577,10 +577,13 @@ robots.txt für alle Robots sperrt. Seitdem:
   diesem Tag ist ein Wert der Tageswert der Quelle), je Quelle `tageswerte`; die Karte schreibt
   „Tageswert der Quelle“ (Hover, Seitenleiste, Hinweis in der Legende), das CSV hat je Gruppe die
   Spalte `<gruppe>_tageswert_quelle` neben `<gruppe>_tagessumme`. Nie aus Wochen-, Monats- oder
-  Jahreswerten. Kandidaten: Hamburgs Layer „1-Tag“ (laufendes und letztes Jahr, vor dem
-  Gedächtnis), Leipzigs Tageswerte (zwei Jahre; die Stelle Jahnallee hat nur sie), Würzburgs
-  Passanten-Tagesdaten seit 2020, Planegg (Excel je Jahr, ohne Lizenz). Weichen die Tageswerte
-  einer Quelle von der Summe ihrer Stunden ab (Leipzig), steht das als Hinweis an der Quelle.
+  Jahreswerten. In der Karte: Augsburgs Radzählstationen (nur Tageswerte), Hamburg Kfz und Rad
+  (Layer „1-Tag“ seit 2020 vor den Stunden des Gedächtnisses, unten). Kandidaten: Leipzigs
+  Tageswerte (zwei Jahre; die Stelle Jahnallee hat nur sie), Würzburgs Passanten-Tagesdaten seit
+  2020, Planegg (Excel je Jahr, ohne Lizenz). Weichen die Tageswerte einer Quelle von der Summe
+  ihrer Stunden ab (Leipzig, Hamburg), steht das mit Zahlen als Hinweis an der Quelle – geprüft
+  dort, wo es beides gibt (Hamburg: Tageswerte aus dem Werkzeug-Lauf gegen die Stunden des
+  Gedächtnisses).
 - **Berlin (in der Karte, `berlin_viz`):** öffentlicher Azure-Container
   `https://mdhopendata.blob.core.windows.net/verkehrsdetektion`, Liste per
   `?restype=container&comp=list` (Content-MD5 je Datei; `fetch` lädt nur Geändertes). Aus
@@ -597,9 +600,38 @@ robots.txt für alle Robots sperrt. Seitdem:
   filtern (die Things tragen den Dienst nicht). Fallen:
   - **Rückreichweite:** laut Datensatzbeschreibung im Transparenzportal Stundenwerte nur „für die
     letzten zwei Monate“ (beobachtet: Kfz und Rad ab 29.08.2026, Schwerverkehr ab 28.02.2026),
-    Tageswerte das laufende und das letzte Jahr, Wochenwerte seit Beginn. Die Vollständigkeit
+    Tageswerte „für das aktuelle und das letzte Jahr“, Wochenwerte seit Beginn. Die Vollständigkeit
     eines Tags lässt sich nur an Stunden prüfen → die Zählkarte hebt die Stunden selbst auf
     (Gedächtnis, Monatsdateien im Release `dauerzaehlstellen`, `pipeline/werkzeuge/gedaechtnis.py`).
+  - **Tageswerte (Layer „…_1-Tag“, seit #28 in der Karte):** entgegen der Beschreibung (Stand
+    15.11.2026) seit 2020 – aus den alten Diensten übernommen (`resultTime` 02.03.2026), an
+    denselben Things wie die Stunden: Kfz 829 Datastreams (569 Stellen ab 2020, 114 ab 2021),
+    Rad 312 (145 ab 2020, 146 ab 2024), Schwerverkehr 341, aber erst ab 01.03.2026 – die Stunden im
+    Gedächtnis beginnen schon am 28.02., daher ohne Schwerverkehr (`tageslayer` in der
+    Quelldatei). Gedächtnis `tage_JJJJ.csv.gz` (je Stelle, Gruppe und Monat die Tage 1–31); der
+    erste Abruf holt alles (Kfz 1,44 Mio., Rad 0,46 Mio. Tageswerte, zusammen rund 5 Minuten aus
+    GitHub Actions; eine Seite mit 40 Datastreams ganz: 11 s, 4 MB), danach wie die Stunden ab
+    dem jüngsten Tag minus `nachladen_tage`. phenomenonTime = Ortstag in UTC
+    („2021-05-25T22:00:00Z/2021-05-26T21:59:59Z“, an den Tagen der Zeitumstellung 23 bzw. 25
+    Stunden) – **außer 2026**: 29.03. und 25.10.2026 haben 24 Stunden → verworfen (`ortstag`),
+    rund zwei je Datastream. Derselbe Tag zweimal kommt vor (gleicher Wert; verschiedene Werte:
+    nicht übernommen, 17 Tage). In der Karte nur vor der ersten gezählten Stunde (Kfz 1,38 Mio.,
+    Rad 0,44 Mio.); 31 Kfz-Stellen ohne Stunden (Datastreams leer, Tageswerte enden zwischen März
+    und August 2026) sind nur mit Tageswerten in der Karte. Werkzeug: `tools/hamburg_tage.py`,
+    Prüfung mit dem Gedächtnis aus dem Release `pruefe_hh` in `tools/lauf.sh` (werkzeug/dauer).
+  - **Tageswert und Stunden** (Gedächtnis seit 29.08.2026, alle Stellen): An vollständig gezählten
+    Tagen gleich der Summe der Stunden Kfz 72 %, Rad 79 %; sonst fast immer größer (Median der
+    Abweichung Kfz +0,25 %, Rad +0,56 %; Kfz 97 %, Rad 94 % aller Tage innerhalb ±1 %). Tage mit
+    fehlenden Stunden haben trotzdem einen Tageswert – meist größer als die gezählten Stunden
+    (Ausfälle der Stunden-Ebene, ganze Tage ohne Stunden: Kfz 6.312, Rad 2.484), manchmal genau
+    ihre Summe (Kfz 254, Rad 54 Tage: der Tageswert enthält nur einen Teil des Tags). Der
+    Tageslayer entsteht also nicht aus dem Stundenlayer; beides steht als Hinweis an der Quelle.
+  - **Ausreißer und Sprünge, nicht gekennzeichnet:** Knotenpunkt 0287 Ende Januar/Anfang Februar
+    2021 Millionen Kfz am Tag (bis 10,2 Mio.), Knotenpunkt 0296 am 09.07.2024 bis 0,9 Mio.; Rad
+    an Knotenpunkt 0286 am 11.07.2024 rund 40.000. Jahresmedian einer Stelle mindestens
+    verdoppelt oder halbiert gegenüber dem Vorjahr: Kfz 125 von 720 Stellen, Rad 46 von 298
+    (einzelne um das Hundertfache, etwa ganze Jahre fast ohne Zählung). Werte 0: Kfz 98, Rad
+    1.646. Die Zählkarte übernimmt alles wie geliefert (Hinweis an der Quelle).
   - Ganze Tage fehlen bei allen Stellen zugleich (Ausfälle der Plattform); Werte können sich
     noch nach ein paar Tagen ändern → jeder Lauf holt 14 Tage erneut, in die Karte kommen nur
     Stunden, die sieben Tage alt sind.
@@ -611,7 +643,10 @@ robots.txt für alle Robots sperrt. Seitdem:
     Seite Datastreams spart Abfragen; `$top` bis 20.000 geht.
   - Die alten Dienste `HH_STA_AutomatisierteVerkehrsmengenerfassung` und
     `HH_STA_HamburgerRadzaehlnetz` heißen „(veraltet)“, Tageswerte bis März 2026, Stundenwerte
-    nur noch bei 5 Datastreams (2021–2023) – keine Hamburger Historie aus Stunden.
+    nur noch bei 5 Datastreams (2021–2023) – keine Hamburger Historie aus Stunden. Ihre Tageswerte
+    stehen inzwischen in den neuen Diensten (oben).
+  - Transparenzportal: Die CKAN-API (`/api/`) sperrt robots.txt; die Seite des Datensatzes
+    (`/dataset/<name>`) ist erlaubt (Crawl-Delay 10 s, `tools/hamburg_portal.py`).
   - Lizenz dl-de/by-2-0 (beide Datensätze im Transparenzportal), Genauigkeit laut Quelle Kfz
     ±10 %, Schwerverkehrsanteil ±15 %, Rad ±10–20 %.
 - **Ettlingen (in der Karte, `ettlingen`, Adapter `readi_urbanpulse`):** Datensatz

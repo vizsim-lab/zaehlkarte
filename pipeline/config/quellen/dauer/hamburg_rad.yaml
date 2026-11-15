@@ -11,7 +11,8 @@ land: HH
 traeger: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
 art: >-
   Wärmebildkameras (Infrarot-Detektoren) des Hamburger Radzählnetzes; Stundenwerte je
-  Zählstelle (eine Richtung an einem Knotenarm oder ein Querschnitt ohne Richtung)
+  Zählstelle (eine Richtung an einem Knotenarm oder ein Querschnitt ohne Richtung), davor
+  Tageswerte der Quelle seit 2020
 weg: offen über die SensorThings API der Urban Data Platform Hamburg
 portal: https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20
 api: https://iot.hamburg.de/v1.1
@@ -48,3 +49,20 @@ hinweise:
   - >-
     Die Quelle nennt keine Straßen. Der Name ist die nächste benannte Straße aus OpenStreetMap
     (© OpenStreetMap-Mitwirkende, ODbL) und kann an Kreuzungen danebenliegen.
+  - >-
+    Vor der ersten gezählten Stunde einer Zählstelle (bis 28.08.2026) stehen die Tageswerte der
+    Quelle (Layer „1-Tag“, an knapp der Hälfte der Zählstellen seit 2020, an fast allen übrigen
+    seit 2024; laut Quelle hält sie Tageswerte nur für das laufende und das letzte Jahr vor, die
+    Zählkarte hebt sie selbst auf). Ob an einem solchen Tag jede Stunde gezählt ist, lässt sich
+    nicht prüfen. Im Vergleich mit den Stunden seit Ende August 2026: An vollständig gezählten
+    Tagen ist der Tageswert an 79 % der Tage gleich der Summe der Stunden, sonst fast immer etwas
+    größer (an 94 % der Tage höchstens 1 % Abstand); auch für Tage mit fehlenden Stunden liefert
+    die Quelle einen Tageswert – meist größer als die gezählten Stunden, manchmal genau ihre
+    Summe. Die Tage der Zeitumstellung 2026 liefert sie mit 24 statt 23 bzw. 25 Stunden; dort
+    steht kein Tageswert.
+  - >-
+    Einzelne Tageswerte liegen weit über dem Üblichen (rund 40.000 Fahrräder an einem Tag im Juli
+    2024), es gibt Tage mit 0, und an manchen Zählstellen ändert sich das Niveau von einem Jahr
+    zum nächsten sprunghaft (bei rund jeder siebten hat sich der Median eines Jahres gegenüber
+    dem Vorjahr mindestens verdoppelt oder halbiert). Die Quelle kennzeichnet keine Werte als
+    unplausibel; die Zählkarte übernimmt sie wie geliefert.

@@ -30,7 +30,8 @@
 #   neue Stelle den Abzug wieder.
 # - Hamburg und Leipzig halten Stundenwerte nur Wochen bis Monate vor (Leipzig: 31 Tage). Die
 #   Zählkarte hebt sie selbst auf
-#   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien) und legt sie im selben Release ab
+#   („Gedächtnis“: raw/<code>/gedaechtnis/, Monatsdateien; Hamburgs Tageswerte – Layer „1-Tag“,
+#   seit 2020 – als Jahresdateien, der erste Lauf holt sie ganz) und legt sie im selben Release ab
 #   (Assets `<code>__<datei>`): vor dem Abruf holen, danach ablegen, was sich geändert hat –
 #   nie mit weniger Werten (pipeline/werkzeuge/gedaechtnis.py). Scheitert das Holen, bricht der
 #   Lauf ab, bevor etwas überschrieben wird; hätte eine Datei weniger Werte, ebenso (vor dem Bau).
@@ -144,7 +145,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          notes="Kartendaten der Familie Dauerzählstellen (dauer.tar.gz, public/data/dauer/) und das Gedächtnis der Quellen, die ihre Stundenwerte nur Wochen bis Monate vorhalten (Assets <code>__<datei>; Monatsdateien mit den Stundenwerten wie geliefert – Hamburg: dl-de/by-2-0, Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende; Leipzig: dl-de/by-2-0, Stadt Leipzig; strassen.json: © OpenStreetMap-Mitwirkende, ODbL). Gebaut vom Workflow „Dauerzählstellen bauen“."
+          notes="Kartendaten der Familie Dauerzählstellen (dauer.tar.gz, public/data/dauer/) und das Gedächtnis der Quellen, die ihre Stundenwerte nur Wochen bis Monate vorhalten (Assets <code>__<datei>; Monatsdateien mit den Stundenwerten und, für Hamburg, Jahresdateien mit den Tageswerten, wie geliefert – Hamburg: dl-de/by-2-0, Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende; Leipzig: dl-de/by-2-0, Stadt Leipzig; strassen.json: © OpenStreetMap-Mitwirkende, ODbL). Gebaut vom Workflow „Dauerzählstellen bauen“."
           if gh release view dauerzaehlstellen > /dev/null 2>&1; then
             gh release edit dauerzaehlstellen --notes "$notes"
           else
