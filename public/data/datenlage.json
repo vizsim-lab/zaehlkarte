@@ -273,16 +273,16 @@
        "url": "https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-26749.pdf"
       },
       {
-       "titel": "Pankow: Kiezblock Komponistenviertel (MobilBericht)",
-       "url": "https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/stadtentwicklungsamt/mobilbericht/artikel.1295480.php"
+       "titel": "Pankow: Kiezblock Komponistenviertel, Abschlussbericht",
+       "url": "https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/stadtentwicklungsamt/mobilbericht/230110_abschlussbericht_kiezblock_komponistenviertel.pdf"
       },
       {
        "titel": "Mitte: Bellermannkiez, Evaluation der Zählung",
        "url": "https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/bellermannkiez-evaluation-zaehlung-online.pdf"
       },
       {
-       "titel": "Friedrichshain-Kreuzberg: Samariterkiez (2020)",
-       "url": "https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.1012814.php"
+       "titel": "Friedrichshain-Kreuzberg: Samariterkiez, Evaluationsbericht",
+       "url": "https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/verkehrsberuhigung_samariterkiez_evaluationsbericht.pdf"
       }
      ]
     },
@@ -3810,7 +3810,7 @@
      "quellen": [],
      "zaehlungen": null,
      "was": "Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch, in der Karte als Dauerzählstellen)",
-     "situation": "Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022); offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen Kleinen Anfragen in der Bürgerschaft.",
+     "situation": "Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022); offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen Kleinen Anfragen in der Bürgerschaft oder in Berichten zu Verkehrsversuchen – etwa der Bericht des LSBG zur Reeperbahn mit Kfz 6–19 Uhr (Osten und Westen) an vier Tagen 2019–2024 und Radfahrenden an zwei Zählstellen.",
      "empfehlung": "Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.",
      "weg": "FragDenStaat, Hamburgisches Transparenzgesetz",
      "anfrage": {
@@ -3837,6 +3837,10 @@
       {
        "titel": "Eimsbüttel: Gutachten Schulcampus Schnelsen",
        "url": "https://bauleitplanung.hamburg.de/file/b37ff444-6c5a-11eb-aaea-00505697774f/bf180600-4571-42e7-b8a2-0edfb4b6534e"
+      },
+      {
+       "titel": "LSBG: Verkehrsversuch Reeperbahn, Bericht",
+       "url": "https://lsbg.hamburg.de/resource/blob/1119512/ccf28254f7fb8e78d7afa063c7b5ed9a/reeperbahn-stadtauswaerts-verstetigung-verkehrsversuch-abgestimmte-planung-bericht-data.pdf"
       }
      ]
     },
@@ -6602,6 +6606,47 @@
      ]
     },
     "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.5688,
+     49.4102
+    ]
+   },
+   "properties": {
+    "ags": "07335022",
+    "name": "Landstuhl",
+    "land": "RP",
+    "recht": "Landestransparenzgesetz (LTranspG) – Antragsrecht auch gegenüber Gemeinden",
+    "kontakt": {
+     "fds": "https://fragdenstaat.de/behoerden/?q=Verbandsgemeinde+Landstuhl",
+     "fds_suche": true
+    },
+    "kurzzeit": {
+     "stand": "ohne_lizenz",
+     "quellen": [],
+     "zaehlungen": null,
+     "was": "Begleituntersuchung zum Verkehrsversuch Kaiserstraße (R+T, 2022, PDF): Knotenstromzählungen an sechs Knoten vom 15.05.2018 und 17.02.2022, Kfz und Schwerverkehr als Summe 6–10 und 15–19 Uhr; ohne Lizenz, mit Urheberrechtsvermerk des Büros",
+     "situation": "Für den Verkehrsversuch in der Kaiserstraße hat die Verbandsgemeindeverwaltung das Büro R+T Verkehrsplanung an sechs Knotenpunkten zählen lassen, vorher am 15. Mai 2018 und während des Versuchs am 17. Februar 2022. Der Bericht vom 14. April 2022 steht als PDF auf landstuhl.de: Kfz und Schwerverkehr je Knotenarm und Fahrbeziehung, aber nur als Summe der Stundengruppen 6–10 und 15–19 Uhr („Kfz/8h“); gezählt zeigt sie nur Plan 1, für den Vergleich sind alle Werte von 2022 mit einem Faktor von 11 % korrigiert. Eine Lizenz nennt der Bericht nicht; Texte, Fotos und Grafiken stehen unter dem Urheberrecht des Büros. Werte je Stunde enthält er nicht.",
+     "empfehlung": "Anfrage nach den Zählungen 2018 und 2022 je Stunde (oder Viertelstunde), Knotenpunkt und Fahrbeziehung, wie sie das Büro geliefert hat, mit Lizenz. Grundlage: Landestransparenzgesetz.",
+     "weg": "FragDenStaat, LTranspG RP",
+     "anfrage": {
+      "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Verbandsgemeindeverwaltung Landstuhl seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nFür den Verkehrsversuch Kaiserstraße hat R+T Verkehrsplanung am 15.05.2018 und am 17.02.2022 an Knotenpunkten gezählt (Begleituntersuchung vom 14.04.2022). Ich bitte vor allem um diese Zählungen mit den Werten je Intervall, Knotenpunkt und Fahrbeziehung.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+     },
+     "links": [
+      {
+       "titel": "Begleituntersuchung Verkehrsversuch Kaiserstraße (2022)",
+       "url": "https://www.landstuhl.de/verbandsgemeinde-landstuhl/die-verbandsgemeinde/die-ortsgemeinden/sickingenstadt-landstuhl/stadt/projekte/2022-04-14-rt-verkehrsversuch-landstuhl-gesamtbericht.pdf?cid=152m"
+      }
+     ]
+    },
+    "dauer": null,
+    "stand_k": "ohne_lizenz"
    }
   },
   {

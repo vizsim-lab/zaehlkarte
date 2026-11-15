@@ -99,6 +99,7 @@ FragDenStaat.
 | Landkreis Sächsische Schweiz-Osterzgebirge | SN | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen an den Kreisstraßen ab 2026 (Werte je Intervall und Richtung), mit Lizenz |
 | Landkreis Waldeck-Frankenberg | HE | – | vorhanden, Werte nicht offen |  |
 | Landshut | BY | – | vorhanden, Werte nicht offen |  |
+| Landstuhl | RP | vorhanden, aber ohne Lizenz |  | Anfrage nach den Zählungen 2018 und 2022 je Stunde (oder Viertelstunde), Knotenpunkt und Fahrbeziehung, wie sie das Büro geliefert hat, mit Lizenz |
 | Lastrup | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen der letzten Jahre als Export des Geräts (Werte je Stunde und Richtung), mit Lizenz |
 | Leer (Ostfriesland) | NI | – | nur Summen oder Mittelwerte offen |  |
 | Leipzig | SN | Anfrage gescheitert | in der Karte | Neu anfragen, aber gezielt nach den Zählauswertungen der Büros (Tabellen seit 2022) und den eigenen Zählungen – nicht nach einem Export der Karte |
@@ -1531,7 +1532,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Hamburg (HH) – nur Summen oder Mittelwerte offen
 
-**Lage:** Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022); offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen Kleinen Anfragen in der Bürgerschaft.
+**Lage:** Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022); offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen Kleinen Anfragen in der Bürgerschaft oder in Berichten zu Verkehrsversuchen – etwa der Bericht des LSBG zur Reeperbahn mit Kfz 6–19 Uhr (Osten und Westen) an vier Tagen 2019–2024 und Radfahrenden an zwei Zählstellen.
 
 **Empfehlung:** Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
 
@@ -1559,7 +1560,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Leistungsverzeichnis 2022 (Transparenzportal)](https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735) · [Bedarfszählstellen (Metadaten)](https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML) · [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html) · [Altona: Hegarstraße](https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/baustellen/hegarstrasse-999432) · [Eimsbüttel: Gutachten Schulcampus Schnelsen](https://bauleitplanung.hamburg.de/file/b37ff444-6c5a-11eb-aaea-00505697774f/bf180600-4571-42e7-b8a2-0edfb4b6534e) · [Verkehrsdaten Kfz Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14) · [Verkehrsdaten Rad Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)
+**Belege:** [Leistungsverzeichnis 2022 (Transparenzportal)](https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735) · [Bedarfszählstellen (Metadaten)](https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML) · [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html) · [Altona: Hegarstraße](https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/baustellen/hegarstrasse-999432) · [Eimsbüttel: Gutachten Schulcampus Schnelsen](https://bauleitplanung.hamburg.de/file/b37ff444-6c5a-11eb-aaea-00505697774f/bf180600-4571-42e7-b8a2-0edfb4b6534e) · [LSBG: Verkehrsversuch Reeperbahn, Bericht](https://lsbg.hamburg.de/resource/blob/1119512/ccf28254f7fb8e78d7afa063c7b5ed9a/reeperbahn-stadtauswaerts-verstetigung-verkehrsversuch-abgestimmte-planung-bericht-data.pdf) · [Verkehrsdaten Kfz Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14) · [Verkehrsdaten Rad Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)
 
 
 ## Hannover (NI) – Dauerzählstellen vorhanden, aber ohne Lizenz
@@ -2128,6 +2129,37 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Lage:** zwei Fahrrad-Dauerzählstellen der Stadt; Werte nicht als Daten veröffentlicht
 
 **Belege:** [Radverkehr (Stadt Landshut)](https://landshut.de/umwelt/mobilitaet/radverkehr)
+
+
+## Landstuhl (RP) – vorhanden, aber ohne Lizenz
+
+**Lage:** Für den Verkehrsversuch in der Kaiserstraße hat die Verbandsgemeindeverwaltung das Büro R+T Verkehrsplanung an sechs Knotenpunkten zählen lassen, vorher am 15. Mai 2018 und während des Versuchs am 17. Februar 2022. Der Bericht vom 14. April 2022 steht als PDF auf landstuhl.de: Kfz und Schwerverkehr je Knotenarm und Fahrbeziehung, aber nur als Summe der Stundengruppen 6–10 und 15–19 Uhr („Kfz/8h“); gezählt zeigt sie nur Plan 1, für den Vergleich sind alle Werte von 2022 mit einem Faktor von 11 % korrigiert. Eine Lizenz nennt der Bericht nicht; Texte, Fotos und Grafiken stehen unter dem Urheberrecht des Büros. Werte je Stunde enthält er nicht.
+
+**Empfehlung:** Anfrage nach den Zählungen 2018 und 2022 je Stunde (oder Viertelstunde), Knotenpunkt und Fahrbeziehung, wie sie das Büro geliefert hat, mit Lizenz. Grundlage: Landestransparenzgesetz.
+
+**Weg:** FragDenStaat, LTranspG RP
+
+**Kontakt:** [FragDenStaat](https://fragdenstaat.de/behoerden/?q=Verbandsgemeinde+Landstuhl)
+
+**Anfragetext** – Betreff: Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015
+
+```text
+Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Verbandsgemeindeverwaltung Landstuhl seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:
+
+1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),
+2. Datum und gezählte Uhrzeiten,
+3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).
+
+Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
+
+Für den Verkehrsversuch Kaiserstraße hat R+T Verkehrsplanung am 15.05.2018 und am 17.02.2022 an Knotenpunkten gezählt (Begleituntersuchung vom 14.04.2022). Ich bitte vor allem um diese Zählungen mit den Werten je Intervall, Knotenpunkt und Fahrbeziehung.
+
+Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
+
+Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
+```
+
+**Belege:** [Begleituntersuchung Verkehrsversuch Kaiserstraße (2022)](https://www.landstuhl.de/verbandsgemeinde-landstuhl/die-verbandsgemeinde/die-ortsgemeinden/sickingenstadt-landstuhl/stadt/projekte/2022-04-14-rt-verkehrsversuch-landstuhl-gesamtbericht.pdf?cid=152m)
 
 
 ## Lastrup (NI) – erhoben – Anfrage aussichtsreich

@@ -283,6 +283,20 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   Abruf-Werkzeuge per robots.txt (die Websuche mit Filter auf govdata.de/open.nrw geht).
   FragDenStaat: die Links „/anhang/…“ liefern eine HTML-Seite, die Datei liegt unter
   media.frag-den-staat.de/files/foi/<Nachricht>/<Name>.
+- **Berichte zu Verkehrsversuchen, Kiezblocks, Schulstraßen und Gutachten zu Bebauungsplänen**
+  (Durchsicht 15.11.2026: 177 Seiten, 226 PDFs; `tools/versuche_lesen.py` und
+  `ergebnis/versuche/` auf `werkzeug/runde4`): Die Versuchsberichte nennen Zählwerte fast nur als
+  Summe über Zeitfenster (Landstuhl 6–10 und 15–19 Uhr, Reeperbahn Hamburg 6–19 Uhr, Carolabrücke
+  Dresden) oder zeigen sie als Grafik (Bellermannkiez, Samariterkiez, Komponistenviertel, Gronau
+  Epe, Ostbevern) – Werte je Stunde stehen in keinem. Die Gutachten zu Bebauungsplänen haben sie
+  (VERTEC: zwei Knoten über 24 Stunden, Hermeskeil 2020, Bernkastel-Kues/Ürzig 2025; Bad
+  Kreuznach 2016: Knotenstrom 5–19 Uhr und vier Wochenzählungen), aber Büro-Vermerke wie „jegliche
+  Verbreitung und Verwertung außerhalb der im UrhG gesetzten Grenzen ist ohne Zustimmung des
+  Urhebers unzulässig“, oft private Auftraggeber. Ob solche Vermerke als „untersagt“ im Sinne von
+  „Quellen ohne Lizenz“ (CLAUDE.md) gelten, entscheidet die Projektleitung (offen seit 15.11.2026);
+  bis dahin nicht übernehmen. Der Weg ist die Anfrage beim Auftraggeber nach den gelieferten
+  Zählwerten (Landstuhl, in der Datenlage). Pankow hat in der Antwort auf die Schriftliche Anfrage 19/26749 alle Zählungen von
+  Senat und Bezirk der letzten fünf Jahre gelistet – ein Register für gezielte Anfragen.
 - Nicht abrufbar (Stand November 2026): mobil.osnabrueck.de; wuppertal.de nur mit Playwright
   (`tools/laender2.py` auf `werkzeug/erkundung`), bau.bremen.de nur über das Abruf-Werkzeug. Der Datenhub Ulm
   braucht im Browser JavaScript, seine CKAN-API (`datenhub.ulm.de/ckan/api/3/action/…`) geht.
