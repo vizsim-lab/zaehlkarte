@@ -186,6 +186,14 @@ def _zahl(v: int) -> str:
     return f"{v:,}".replace(",", ".")
 
 
+def _kategorien(summen: dict[str, int]) -> str:
+    namen = {"kfz": "Kfz", "rad": "Rad"}
+    da = [namen[g] for g in namen if g in summen]
+    fehlt = [namen[g] for g in namen if g not in summen]
+    text = " und ".join(da) + " – je Tag die Summe über 24 Stunden laut Tabelle"
+    return text + (f"; {fehlt[0]} für diesen Tag nicht genannt" if fehlt else "")
+
+
 def zaehlungen(kaesten_: list[Kasten], quelle: dict, bericht: Bericht) -> Iterator[Zaehlung]:
     """Kästen -> Zählungen (je Zählstelle und Tag eine, Kfz und Rad zusammen)."""
     stellen = quelle["stellen"]
@@ -260,8 +268,7 @@ def zaehlungen(kaesten_: list[Kasten], quelle: dict, bericht: Bericht) -> Iterat
             summen=summen,
             land=quelle["land"],
             richtungen=2 if richtungen != [None] else st.get("richtungen"),
-            kategorien=" und ".join({"kfz": "Kfz", "rad": "Rad"}[g] for g in summen)
-                       + " je 24 Stunden (Tabelle der Stadt)",
+            kategorien=_kategorien(summen),
             rohdatei=datei["url"],
             bemerkung=bemerkung,
             hinweise=list(st.get("hinweise", [])),

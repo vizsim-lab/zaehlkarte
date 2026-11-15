@@ -48,8 +48,8 @@ SEITE = (
     # Knoten 3: drei Arme, 15–19 Uhr gezählt, 24h hochgerechnet
     + _zeile([("3.1", "Wildbader Str.", {"4h": [17, 825, 16, 22], "24h": [51, 2460, 72, 103]}),
               ("3.2", "K 4371", {"4h": [6, 187, 12, 8], "24h": [18, 557, 54, 37]}),
-              ("3.3", "Wildbader Str. Ost", {"4h": [23, 988, 28, 30], "24h": [69, 2945, 126, 140]})],
-             200)
+              ("3.3", "Wildbader Str. Ost",
+               {"4h": [23, 988, 28, 30], "24h": [69, 2945, 126, 140]})], 200)
     # Querschnitt 2 (Block 7) und ein Knoten, dem ein Arm fehlt (ungerade Summe)
     + _zeile([("7.1", "Altbulacher Str.", {"4h": [17, 666, 37, 3]}),
               ("5.1", "Hauptstr.", {"4h": [1, 2, 0, 0]})], 300)

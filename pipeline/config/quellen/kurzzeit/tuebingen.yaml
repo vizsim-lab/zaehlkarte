@@ -10,7 +10,7 @@ status: live
 adapter: tuebingen_pdf
 name: Tübingen
 land: BW
-traeger: Universitätsstadt Tübingen (Bericht Verkehrszählungen Juni/Juli 2022)
+traeger: Universitätsstadt Tübingen, Fachabteilung Verkehrsplanung
 titel: Bericht Verkehrszählungen Juni/Juli 2022 (Vorlage 242/2022), Anlagen 1 und 3
 art: >-
   Zählungen an einzelnen Werktagen über 24 Stunden je Querschnitt, Kfz und an einigen Stellen
@@ -22,19 +22,19 @@ ohne_lizenz:
     als Anlagen zur Vorlage 242/2022 im Ratsinformationssystem der Stadt (PDF), ohne
     Lizenzangabe
   geprueft: 2026-11-15
-# Fassung vom August 2022, Prüfsumme wie bei Xanten
+# Vorlage vom 07.09.2022 (Tabellen Stand August 2022), Prüfsumme wie bei Xanten
 dateien:
   - datei: Anlage1_Zaehlungen_Kernstadt.pdf
-    titel: Bericht Verkehrszählungen Juni/Juli 2022 (Vorlage 242/2022), Anlage 1 – Zählungen Kernstadt
+    titel: Vorlage 242/2022, Anlage 1 (Zählungen Kernstadt)
     url: https://www.tuebingen.de/gemeinderat/getfile.asp?id=81457&type=do
     sha256: 3751d25ed41249ae47569c424a6d00dc7bfd18a446dc6815c1c22a3c1659aead
   - datei: Anlage3_Zaehlungen_Teilorte.pdf
-    titel: Bericht Verkehrszählungen Juni/Juli 2022 (Vorlage 242/2022), Anlage 3 – Zählungen Teilorte
+    titel: Vorlage 242/2022, Anlage 3 (Zählungen Teilorte)
     url: https://www.tuebingen.de/gemeinderat/getfile.asp?id=81490&type=do
     sha256: 1603be1e983120aec9824673b378395cbc24e00ea2776a02d715550dcf6fd4e5
 # Lage: Die Tabellen nennen Straße und Bezug („westl. Belthlestraße“), die Vorlage teils mehr
 # („Ecke Kielmeyerstraße“). Punkte aus OpenStreetMap (Overpass, November 2026), Genauigkeit:
-# kreuzung (am Knoten) | strasse (auf der Straße neben dem genannten Bezug, etwa 30 m) | bauwerk
+# kreuzung (am Knoten) | strasse (auf der Straße neben dem genannten Bezug, etwa 40 m) | bauwerk
 # (Brücke, Tunnelportal) | ungefaehr (Begründung im Hinweis).
 geokodierung:
   titel: Lage der Zählstellen (OpenStreetMap, nach den Angaben der Tabellen und der Vorlage)
@@ -43,92 +43,259 @@ geokodierung:
   herkunft_url: https://www.openstreetmap.org/copyright
 # Zählstellen: `kaesten` = Kästen der Tabellen („Straße | Zusatz“; Kfz- und Rad-Kasten einer Stelle
 # ergeben am selben Tag eine Zählung), `je_richtung` = je Richtung ein Kasten (Summe beider
-# Richtungen), `vermerk` = der Ort steht im Vermerk unter der Spalte (Teilorte). Nicht genannt und
-# damit nicht in der Karte: „Mühlstraße | nur Bus“ und „Kfz ohne Bus“ (Teilmengen der Stelle
-# Mühlstraße), Spalten ohne Datum und Hochrechnungen.
+# Richtungen), `vermerk` = der Ort steht im Vermerk unter der Spalte (Teilorte; am Hagellocher Weg
+# der Wert der Dauerzählstelle). Nicht genannt und damit nicht in der Karte: „Mühlstraße | nur
+# Bus“ und „Kfz ohne Bus“ (Teilmengen der Stelle Mühlstraße), Spalten ohne Datum und
+# Hochrechnungen. Genauigkeit „strasse“: etwa 40 m neben dem genannten Bezug.
 stellen:
   # Kernstadt Ost
   - id: kusterdinger
     name: Kusterdinger Straße (Neckarbrücke)
     kaesten: ["Kusterdinger Straße | Neckarbrücke"]
+    lon: 9.090063
+    lat: 48.526822
+    genauigkeit: bauwerk
+    hinweise:
+      - >-
+        Lage: Neckarbrücke der Kusterdinger Straße in Lustnau (Punkt über dem Fluss).
   - id: stuttgarter
     name: Stuttgarter Straße südlich der Adlerkreuzung
     je_richtung:
       Richtung Norden: "Stuttgarter Straße | südl. Adlerkreuzung nach Nord"
       Richtung Süden: "Stuttgarter Straße | südl. Adlerkreuzung nach Süd"
+    lon: 9.077815
+    lat: 48.530903
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: Südarm der Adler-Kreuzung (Wilhelmstraße/Stuttgarter Straße/Bebenhäuser
+        Straße/Pfrondorfer Straße), etwa 40 m südlich.
   - id: wilhelm_adler
     name: Wilhelmstraße westlich der Adlerkreuzung
     kaesten: ["Wilhelmstraße | westl. Adlerkreuzung"]
+    lon: 9.076744
+    lat: 48.531178
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: Wilhelmstraße etwa 45 m westlich der Adler-Kreuzung (zwischen den Fahrbahnen). Die
+        Vorlage spricht beim Rad vom „Ostarm“ der Kreuzung, die Tabelle von der Wilhelmstraße
+        westlich – sie ist der Westarm.
   - id: wilhelm_nordring
     name: Wilhelmstraße östlich des Nordrings
     kaesten: ["Wilhelmstraße | östl. Nordring"]
+    lon: 9.068726
+    lat: 48.530396
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („östl. Nordring“).
   # Kernstadt Mitte
   - id: wilhelm_lustnauer_tor
     name: Wilhelmstraße nördlich des Lustnauer Tors
     kaesten: ["Wilhelmstraße | nördl. Lustnauer Tor"]
+    lon: 9.058334
+    lat: 48.522437
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („nördl. Lustnauer Tor“).
   - id: stadtgraben
     name: Am Stadtgraben westlich des Lustnauer Tors
     kaesten: ["Am Stadtgraben | westl. Lustnauer Tor"]
+    lon: 9.057145
+    lat: 48.522364
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („westl. Lustnauer Tor“).
   - id: lustnauer_tor
     name: Lustnauer Tor zwischen Stadtgraben und Doblerstraße
     kaesten: ["Lustnauer Tor | zw. Stadtgr. und Doblerstr."]
+    lon: 9.057730
+    lat: 48.521720
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: Lustnauer Tor zwischen der Einmündung Am Stadtgraben und der Doblerstraße.
   - id: muehlstrasse
     name: Mühlstraße südlich des Lustnauer Tors
     kaesten: ["Mühlstraße | alle Kfz", "Mühlstraße | südl. Lustnauer Tor"]
+    lon: 9.057620
+    lat: 48.521160
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („südl. Lustnauer Tor“).
+      - >-
+        Den Ort nennt die Tabelle nur beim Rad; die Kfz („alle Kfz“, mit Bus) stehen hier am selben
+        Punkt.
   - id: eberhardsbruecke
     name: Eberhardsbrücke (Nordseite)
     kaesten: ["Eberhardsbrücke | Nordseite"]
+    lon: 9.058070
+    lat: 48.519377
+    genauigkeit: bauwerk
+    hinweise:
+      - >-
+        Lage: Nordende der Brücke („Nordseite“).
   - id: gartenstrasse
     name: Gartenstraße (Ecke Kielmeyerstraße)
     kaesten: ["Gartenstraße"]
+    lon: 9.067566
+    lat: 48.518790
+    genauigkeit: kreuzung
+    hinweise:
+      - >-
+        Lage nach der Vorlage: Dauerzählstelle in der Gartenstraße, Ecke Kielmeyerstraße.
   # Kernstadt West
   - id: westbahnhof
     name: Westbahnhofstraße westlich der Belthlestraße
     kaesten: ["Westbahnhofstraße | westl. Belthlestraße"]
+    lon: 9.047790
+    lat: 48.522792
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („westl. Belthlestraße“).
   - id: schleifmuehle
     name: Schleifmühleweg westlich der Rappstraße
     kaesten: ["Schleifmühleweg | westl. Rappstraße"]
+    lon: 9.046803
+    lat: 48.520634
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („westl. Rappstraße“).
   - id: hagellocher
     name: Hagellocher Weg westlich der Rosentalstraße
     kaesten: ["Hagellocher Weg | westl. Rosentalstraße"]
+    lon: 9.029174
+    lat: 48.524576
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („westl. Rosentalstraße“).
+  - id: hagellocher_dauerzaehlstelle
+    name: Hagellocher Weg, Ecke Am Weilersbach (Dauerzählstelle)
+    kaesten: ["Hagellocher Weg | westl. Rosentalstraße"]
+    vermerk: Dauerzählstelle
+    lon: 9.024928
+    lat: 48.526286
+    genauigkeit: kreuzung
+    hinweise:
+      - >-
+        Tageswert der Dauerzählstelle der Stadt; Lage nach der Vorlage („Ecke Am Weilersbach“,
+        rund 400 m westlich der Rosentalstraße) – die Tabelle führt den Wert unter „westl.
+        Rosentalstraße“ neben den Zählungen von 2019.
   - id: hegel
     name: Hegelstraße westlich der Derendinger Straße
     kaesten: ["Hegelstraße | westl. Derendinger Straße"]
+    lon: 9.050422
+    lat: 48.513720
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („westl. Derendinger Straße“).
   - id: schnarrenberg
     name: Schnarrenbergstraße nördlich der Herrenberger Straße
     kaesten: ["Schnarrenbergstraße | nördl. Herrenberger Str."]
+    lon: 9.050357
+    lat: 48.524262
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („nördl. Herrenberger Str.“).
   - id: tunnel
     name: B 296, Schloßbergtunnel (Nordportal)
     kaesten: ["B 296/Tunnel | Nordportal"]
+    lon: 9.043594
+    lat: 48.519553
+    genauigkeit: bauwerk
+    hinweise:
+      - >-
+        Lage: Nordportal des Schloßbergtunnels (B 296).
   # Teilorte
   - id: buehl_knollstrasse
     name: Bühl, Eugen-Bolz-Straße östlich der Knollstraße
     kaesten: ["Bühl | Eugen-Bolz-Straße"]
     vermerk: östl. Knollstr.
+    lon: 8.994279
+    lat: 48.482708
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („östl. Knollstr.“).
   - id: buehl_bonlanden
     name: Bühl, Eugen-Bolz-Straße westlich Bonlanden
     kaesten: ["Bühl | Eugen-Bolz-Straße"]
     vermerk: westl. Bonlanden
+    lon: 9.002372
+    lat: 48.484592
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: Eugen-Bolz-Straße etwa 40 m westlich der Einmündung der Straße „Bonlanden“.
   - id: hirschau
     name: Hirschau, Kingersheimer Straße östlich der Industriestraße
     kaesten: ["Hirschau | östl. Industriestraße"]
+    lon: 9.005543
+    lat: 48.501820
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage nach der Vorlage: Kingersheimer Straße (L 371) etwa 40 m östlich der Industriestraße.
   - id: kilchberg
     name: L 370 westlich Weilheim (Westarm des Knotens Weinbergstraße/Alte Landstraße)
     kaesten: ["Kilchberg | L 370"]
     vermerk: westl. Weilheim
+    lon: 9.030806
+    lat: 48.494873
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage nach der Vorlage: Westarm des Knotens Weinbergstraße/Alte Landstraße in Weilheim (L 370
+        Richtung Kilchberg), etwa 40 m vom Knoten; die Tabelle führt den Wert unter Kilchberg.
   - id: unterjesingen_parkplatz
     name: Unterjesingen, Parkplatz am östlichen Ortsende
     kaesten: ["Unterjesingen"]
     vermerk: Parkplatz Ost
+    lon: 8.989726
+    lat: 48.524615
+    genauigkeit: ungefaehr
+    hinweise:
+      - >-
+        Lage ungefähr: Jesinger Hauptstraße (B 296) am östlichen Ortsende, etwa 280 m vor der
+        Ortstafel – die Vorlage nennt nur den Parkplatz am östlichen Ortsende.
   - id: unterjesingen_rottenburger
-    name: Unterjesingen, Ostarm des Knotens Hauptstraße/Rottenburger Straße
+    name: Unterjesingen, Jesinger Hauptstraße östlich der Rottenburger Straße
     kaesten: ["Unterjesingen"]
     vermerk: östl. Rott. Str.
+    lon: 8.980945
+    lat: 48.526236
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage nach der Vorlage: Ostarm des Knotens Jesinger Hauptstraße/Rottenburger Straße, etwa 40
+        m östlich.
   - id: weinberg_friedhof
     name: Weinbergstraße am Alten Friedhof (Derendingen)
     kaesten: ["Weilheim | Weinbergstraße"]
     vermerk: Friedhof
+    lon: 9.045651
+    lat: 48.498053
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage nach der Vorlage: Weinbergstraße am Alten Friedhof in Derendingen (Punkt auf Höhe des
+        Friedhofs); die Tabelle führt den Wert unter Weilheim.
   - id: weinberg_alte_landstrasse
     name: Weilheim, Weinbergstraße östlich der Alten Landstraße
     kaesten: ["Weilheim | Weinbergstraße"]
     vermerk: östl. Alte Landstr.
+    lon: 9.032910
+    lat: 48.495339
+    genauigkeit: strasse
+    hinweise:
+      - >-
+        Lage: auf der Straße etwa 40 m neben dem Bezug der Tabelle („östl. Alte Landstr.“).

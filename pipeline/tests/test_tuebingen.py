@@ -40,7 +40,8 @@ def _kasten(oben: float, titel: str, zusatz: str, koepfe: list[str], werte: list
 def _seite() -> list[t.Wort]:
     ws = _woerter("Ost", 30, 20, 11.0, True)  # Überschrift ohne Zähltage: kein Kasten
     ws += _kasten(100, "Kusterdinger Straße", "Neckarbrücke",
-                  ["22.10.2015", "17.10.2019", "30.06.2022"], ["6.780", "6.275", "6.361"], "Kfz/24h")
+                  ["22.10.2015", "17.10.2019", "30.06.2022"], ["6.780", "6.275", "6.361"],
+                  "Kfz/24h")
     ws += _kasten(200, "Kusterdinger Straße", "Neckarbrücke",
                   ["22.10.2015", "17.10.2019", "30.06.2022"], ["259", "704", "1.669"], "Rad/24h")
     ws += _kasten(300, "Stuttgarter Straße", "südl. Adlerkreuzung nach Nord",
