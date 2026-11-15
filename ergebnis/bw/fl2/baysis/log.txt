@@ -1,0 +1,17 @@
+ok https://www.baysis.bayern.de/internet/verdat/dauz/index.html 24995 text/html
+ok https://www.baysis.bayern.de/internet/verdat/svz/zaehlstelle/index.html 25586 text/html
+ok https://www.baysis.bayern.de/internet/verdat/svz/index.html 26325 text/html
+ok https://www.baysis.bayern.de/internet/verdat/vdm/index.html 66251 text/html
+ok https://www.baysis.bayern.de/res/stmi/js/build.min.js 256848 text/javascript
+ok https://www.baysis.bayern.de/res/stmi/js/customer.js 1804 text/javascript
+ok https://www.baysis.bayern.de/res/stmi/js/readspeaker/ReadSpeaker.js?pids=embhl 9782 text/javascript
+Fehler 1 https://www.baysis.bayern.de/resources/js/baysis.js ValueError('zu groß')
+Fehler 2 https://www.baysis.bayern.de/resources/js/baysis.js ValueError('zu groß')
+Fehler 3 https://www.baysis.bayern.de/resources/js/baysis.js ValueError('zu groß')
+ok https://www.baysis.bayern.de/resources/js/imperia_sucks.js 353 text/javascript
+ok https://gisportal-stmb.bayern.de/server/rest/services?f=json 251 application/json; charset=UTF-8
+ok https://gisportal-stmb.bayern.de/server/rest/services/WMS?f=json 433 application/json; charset=UTF-8
+ok https://gisportal-stmb.bayern.de/server/rest/services/WFS?f=json 429 application/json; charset=UTF-8
+ok https://gisportal-stmb.bayern.de/server/rest/services/WMS/BAYSIS_Verkehrsdaten/MapServer?f=json 5221 application/json; charset=UTF-8
+ok https://gisportal-stmb.bayern.de/server/rest/services/WMS/BAYSIS_Verkehrsdaten/MapServer/layers?f=json 56955 application/json; charset=UTF-8
+ok https://gisportal-stmb.bayern.de/server/rest/services/WMS/BAYSIS_Verkehrsdaten/MapServer/0/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json 106910 application/json; charset=UTF-8

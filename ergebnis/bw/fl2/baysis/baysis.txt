@@ -1,0 +1,463 @@
+dauz.html: <button class="icon save-selected" title="Webanalyse ablehnen" onclick="declineMatomoConsent()">
+dauz.html: <ul data-role="accessibility-navigation">
+dauz.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+dauz.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+dauz.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+dauz.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+dauz.html: <a aria-controls="modBurgerNavigation" aria-label="Navigation einklappen" class="icon icon-cancel" data-role="close-burger-navigation" href="#" title="Navigation schließen">
+dauz.html: <div aria-label="Hauptnavigation" data-role="main-navigation" role="navigation">
+dauz.html: <a aria-controls="modBurgerNavigation" aria-expanded="false" aria-label="Navigation ausklappen" class="icon icon-menu" data-role="open-burger-navigation" href="#" title="Navigation anzeigen">
+dauz.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+dauz.html: <a class="icon icon-right" data-role="a-z" href="/hil/themenaz/index.php" title="Themen von A-Z">
+dauz.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+dauz.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+dauz.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+dauz.html um „Auswahl nach“: a title="Ausbauplan Staatsstraßen" href="/internet/ausbau/abp/index.html">Ausbauplan Staatsstraßen</a>
+            
+            </li>
+
+            </ul>
+            </li>
+        <li>
+            <a title="Veröffentlichungen" href="/internet/veroeffentlichung/index.html">Veröffentlichungen</a>
+            
+            </li>
+        <li>
+            <a title="Geodaten &amp; Dienste" href="/internet/geodaten_dienste/index.html">Geodaten &amp; Dienste</a>
+                            <ul class="nav-level-2">
+                       <li>
+            <a title="Web Feature Services (WFS)" href="/internet/geodaten_dienste/wfs/index.html">Web Feature Services (WFS)</a>
+            
+            </li>
+        <li>
+            <a title="Web Map Services (WMS)" href="/internet/geodaten_dienste/wms/index.html">Web Map Services (WMS)</a>
+            
+            </li>
+        <li>
+            <a title="Fachdienste" href="/internet/geodaten_dienste/fachdienste/index.html">Fachdienste</a>
+            
+            </li>
+        <li>
+            <a title="INSPIRE" href="/internet/geodaten_dienste/inspire/index.html">INSPIRE</a>
+            
+            </li>
+
+            </ul>
+            </li>
+
+            </ul>
+<!-- FTS: ***
+Domain 'internet' not found in the conifguration - will switch back to defaults.
+***
+***Switched to defaults only in Imperia FTS.
+ ** Domain "internet" is not described in the conf file!
+ --><!-- /srv/www/web-vh002/site -->
+                </div>
+
+                <div id="main">
+                    <div class="ym-grid linearize-level-1">
+                        <!-- [Start]:: .linearize-level-1 -->
+
+                        <!-- [Start]:: Aside Navigation /internet/verdat/dauz -->
+                        <aside class="ym-g960-4 ym-gl rs_skip"><!-- [Start]:: Aside Navigation /internet/verdat/dauz -->
+                            <div class="ym-cbox">
+                                <div class="modSidebarNavigation" role="navigation" aria-label="Nebennavigation">
+                                    <!-- FTS: ***
+Domain 'internet' not found in the conifguration - will switch back to defaults.
+***
+***Switched to defaults only in Imperia FTS.
+ ** Domain "internet" is not described in the conf file!
+ --><!-- /srv/www/web-vh002/site -->
+                                </div>
+                            </div>
+                        </aside>
+
+
+
+                        <article class="ym-g960-8 ym-gr" role="main">
+                            <!-- [Start]:: Article -->
+                            <!--IFTS_PARSE-->
+                            <div id="app" class="ym-cbox module">
+                                <div class="modContent">
+                                    <div id="readspeaker_player" class="rs_preserve rs_skip rsHome"> </div>
+                                    <!-- custom-blocks-from-catmeta (stmi_content_top): ct-sht -->
+
+	   <h1>Dauerzählstellen</h1>
+
+	   <p>Hier haben Sie folgende M&ouml;glichkeiten die Daten abzurufen:</p>
+
+<ul>
+	<li>Auswahl nach Z&auml;hlstellennummer</li>
+	<li>Auswahl nach Stra&szlig;e mit Auflistung aller Z&auml;hlstellen</li>
+</ul>
+
+
+
+
+        <dauzergebnisseinternet></dauzergebnisseinternet>
+
+
+
+
+                                    <!-- custom-blocks-from-catmeta (stmi_content_bottom):  -->
+<!--%  no custom block required -->
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- custom-blocks-from-catmeta (stmi_main_bottom): media_gallery -->
+
+
+                        </article>
+                        <!-- [End]:: Article -->
+                        <!--IFTS_NO_PARSE-->
+                        <aside class="ym-g960-4 ym-gl">
+
+
+
+                            <!-- custom-blocks-from-catmeta (stmi_sidebar_left_top):  -->
+<!--%  no custom block required -->
+
+
+							<!-- custom-blocks-from-catmeta (stmi_sidebar_left_bottom):  -->
+<!--%  no custom block required -->
+
+
+
+
+                        </aside>
+                        <!-- [End]:: Aside -->
+                    </div>
+                    <!-- [End]:: .linearize-level-1 -->
+                </div>
+                <!-- [End]:: #main -->
+            </div>
+            <!-- [End]::-ym-wbox -->
+        </div>
+        <!-- [End]:: .ym-wrapper -->
+        <div id="footer" class="ym-grid linearize-level-1">
+            <!-- [Start]:: #footer -->
+            <div class="modFooterToggle" role="tablist">
+                
+    <div class="ym-clearfix accordion acc-active">
+         <h2 class="acc-title">
+             <a aria-controls="modFooterToggleContent-2" class="ym-wrapper" href="#modFooterToggleContent-2" id="modFooterToggle-2" role="tab" tabindex="0" title="Linkliste auf-/zuklappen">Weiterführende Links</a>
+         </h2>
+
+         <div aria-expanded="true" aria-labelledby="modFooterToggle-2" class="ym-wrapper" id="modFooterToggleContent-2" role="tabpanel">
+            <ul aria-label="Direkt-Links" role="navigation">
+
+
+        <li class="ym-g960-3 ym-gl">
+            <span>Behörden</span>
+            <ul>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/" title="externe Webseite Bayerisches Staatsministerium für Wohnen, Bau und Verkehr">Bayerisches Staatsministerium für Wohnen, Bau und Verkehr</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.lbd.bayern.de/" title="externe Webseite Landesbaudirektion Bayern">Landesbaudirektion Bayern</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/min/geschaeftsbereich/regierungen/index.php" title="externe Webseite Regierungen">Regierungen</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/min/geschaeftsbereich/index.php" title="externe Webseite Staatliche Bauämter">Staatliche Bauämter</a>
+     
+svz_zaehlstelle.html: <button class="icon save-selected" title="Webanalyse ablehnen" onclick="declineMatomoConsent()">
+svz_zaehlstelle.html: <ul data-role="accessibility-navigation">
+svz_zaehlstelle.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+svz_zaehlstelle.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+svz_zaehlstelle.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+svz_zaehlstelle.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+svz_zaehlstelle.html: <a aria-controls="modBurgerNavigation" aria-label="Navigation einklappen" class="icon icon-cancel" data-role="close-burger-navigation" href="#" title="Navigation schließen">
+svz_zaehlstelle.html: <div aria-label="Hauptnavigation" data-role="main-navigation" role="navigation">
+svz_zaehlstelle.html: <a aria-controls="modBurgerNavigation" aria-expanded="false" aria-label="Navigation ausklappen" class="icon icon-menu" data-role="open-burger-navigation" href="#" title="Navigation anzeigen">
+svz_zaehlstelle.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+svz_zaehlstelle.html: <a class="icon icon-right" data-role="a-z" href="/hil/themenaz/index.php" title="Themen von A-Z">
+svz_zaehlstelle.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+svz_zaehlstelle.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+svz_zaehlstelle.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+svz_zaehlstelle.html um „Auswahl nach“: "/internet/geodaten_dienste/index.html">Geodaten &amp; Dienste</a>
+                            <ul class="nav-level-2">
+                       <li>
+            <a title="Web Feature Services (WFS)" href="/internet/geodaten_dienste/wfs/index.html">Web Feature Services (WFS)</a>
+            
+            </li>
+        <li>
+            <a title="Web Map Services (WMS)" href="/internet/geodaten_dienste/wms/index.html">Web Map Services (WMS)</a>
+            
+            </li>
+        <li>
+            <a title="Fachdienste" href="/internet/geodaten_dienste/fachdienste/index.html">Fachdienste</a>
+            
+            </li>
+        <li>
+            <a title="INSPIRE" href="/internet/geodaten_dienste/inspire/index.html">INSPIRE</a>
+            
+            </li>
+
+            </ul>
+            </li>
+
+            </ul>
+<!-- FTS: ***
+Domain 'internet' not found in the conifguration - will switch back to defaults.
+***
+***Switched to defaults only in Imperia FTS.
+ ** Domain "internet" is not described in the conf file!
+ --><!-- /srv/www/web-vh002/site -->
+                </div>
+
+                <div id="main">
+                    <div class="ym-grid linearize-level-1">
+                        <!-- [Start]:: .linearize-level-1 -->
+
+                        <!-- [Start]:: Aside Navigation /internet/verdat/svz/zaehlstelle -->
+                        <aside class="ym-g960-4 ym-gl rs_skip"><!-- [Start]:: Aside Navigation /internet/verdat/svz/zaehlstelle -->
+                            <div class="ym-cbox">
+                                <div class="modSidebarNavigation" role="navigation" aria-label="Nebennavigation">
+                                                <ul>
+                   <ul class="nav-level-1">
+                  <li class="active">
+        <a href="/internet/verdat/svz/zaehlstelle/index.html" title="Zählstellenauswahl">Zählstellenauswahl</a>
+        
+    </li>
+    <li>
+        <a href="/internet/verdat/svz/kennwerte/index.html" title="Kennwerte">Kennwerte</a>
+        
+    </li>
+
+
+    </ul>
+
+    </ul>
+<!-- FTS: ***
+Domain 'internet' not found in the conifguration - will switch back to defaults.
+***
+***Switched to defaults only in Imperia FTS.
+ ** Domain "internet" is not described in the conf file!
+ --><!-- /srv/www/web-vh002/site -->
+                                </div>
+                            </div>
+                        </aside>
+
+
+
+                        <article class="ym-g960-8 ym-gr" role="main">
+                            <!-- [Start]:: Article -->
+                            <!--IFTS_PARSE-->
+                            <div id="app" class="ym-cbox">
+                                <div class="modContent">
+                                    <div id="readspeaker_player" class="rs_preserve rs_skip rsHome"> </div>
+                                    <!-- custom-blocks-from-catmeta (stmi_content_top): ct-sht -->
+
+	   <h1>Zählstellenauswahl</h1>
+
+	   <p>Hier haben Sie folgende M&ouml;glichkeiten die Daten abzurufen:</p>
+
+<ul>
+	<li>Auswahl nach Z&auml;hlstelle und Jahr &uuml;ber die Z&auml;hlstellennummer</li>
+	<li>Auswahl nach Stra&szlig;e mit Auflistung aller Z&auml;hlstellen</li>
+	<li>Gesamtdatensatz der SVZ nach Jahr</li>
+</ul>
+
+
+
+
+        <svzergebnisseinternet></svzergebnisseinternet>
+
+
+
+
+                                    <!-- custom-blocks-from-catmeta (stmi_content_bottom):  -->
+<!--%  no custom block required -->
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- custom-blocks-from-catmeta (stmi_main_bottom): media_gallery -->
+
+
+                        </article>
+                        <!-- [End]:: Article -->
+                        <!--IFTS_NO_PARSE-->
+                        <aside class="ym-g960-4 ym-gl">
+
+
+
+                            <!-- custom-blocks-from-catmeta (stmi_sidebar_left_top):  -->
+<!--%  no custom block required -->
+
+
+							<!-- custom-blocks-from-catmeta (stmi_sidebar_left_bottom):  -->
+<!--%  no custom block required -->
+
+
+
+
+                        </aside>
+                        <!-- [End]:: Aside -->
+                    </div>
+                    <!-- [End]:: .linearize-level-1 -->
+                </div>
+                <!-- [End]:: #main -->
+            </div>
+            <!-- [End]::-ym-wbox -->
+        </div>
+        <!-- [End]:: .ym-wrapper -->
+        <div id="footer" class="ym-grid linearize-level-1">
+            <!-- [Start]:: #footer -->
+            <div class="modFooterToggle" role="tablist">
+                
+    <div class="ym-clearfix accordion acc-active">
+         <h2 class="acc-title">
+             <a aria-controls="modFooterToggleContent-2" class="ym-wrapper" href="#modFooterToggleContent-2" id="modFooterToggle-2" role="tab" tabindex="0" title="Linkliste auf-/zuklappen">Weiterführende Links</a>
+         </h2>
+
+         <div aria-expanded="true" aria-labelledby="modFooterToggle-2" class="ym-wrapper" id="modFooterToggleContent-2" role="tabpanel">
+            <ul aria-label="Direkt-Links" role="navigation">
+
+
+        <li class="ym-g960-3 ym-gl">
+            <span>Behörden</span>
+            <ul>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/" title="externe Webseite Bayerisches Staatsministerium für Wohnen, Bau und Verkehr">Bayerisches Staatsministerium für Wohnen, Bau und Verkehr</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.lbd.bayern.de/" title="externe Webseite Landesbaudirektion Bayern">Landesbaudirektion Bayern</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/min/geschaeftsbereich/regierungen/index.php" title="externe Webseite Regierungen">Regierungen</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/min/geschaeftsbereich/inde
+svz.html: <button class="icon save-selected" title="Webanalyse ablehnen" onclick="declineMatomoConsent()">
+svz.html: <ul data-role="accessibility-navigation">
+svz.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+svz.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+svz.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+svz.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+svz.html: <a aria-controls="modBurgerNavigation" aria-label="Navigation einklappen" class="icon icon-cancel" data-role="close-burger-navigation" href="#" title="Navigation schließen">
+svz.html: <div aria-label="Hauptnavigation" data-role="main-navigation" role="navigation">
+svz.html: <a aria-controls="modBurgerNavigation" aria-expanded="false" aria-label="Navigation ausklappen" class="icon icon-menu" data-role="open-burger-navigation" href="#" title="Navigation anzeigen">
+svz.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+svz.html: <a class="icon icon-right" data-role="a-z" href="/hil/themenaz/index.php" title="Themen von A-Z">
+svz.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+svz.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+svz.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+vdm.html: <button class="icon save-selected" title="Webanalyse ablehnen" onclick="declineMatomoConsent()">
+vdm.html: <ul data-role="accessibility-navigation">
+vdm.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+vdm.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+vdm.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+vdm.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+vdm.html: <a aria-controls="modBurgerNavigation" aria-label="Navigation einklappen" class="icon icon-cancel" data-role="close-burger-navigation" href="#" title="Navigation schließen">
+vdm.html: <div aria-label="Hauptnavigation" data-role="main-navigation" role="navigation">
+vdm.html: <a aria-controls="modBurgerNavigation" aria-expanded="false" aria-label="Navigation ausklappen" class="icon icon-menu" data-role="open-burger-navigation" href="#" title="Navigation anzeigen">
+vdm.html: <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite">
+vdm.html: <a class="icon icon-right" data-role="a-z" href="/hil/themenaz/index.php" title="Themen von A-Z">
+vdm.html: <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen">
+vdm.html: <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen">
+vdm.html: <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen">
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/bayern_vdm.jpg" target="_blank">
+vdm.html: <img alt="Bayern Vdm" data-node-id="/177/667/947/1059/1070" height="249" src="/media/internet/verdat/vdm/fittosize_250_249_340c4eae562e17b00b9ac6d602bffce0_bayern_vdm.jpg" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="250" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung3_zählstellen.png" target="_blank">
+vdm.html: <img alt="Abbildung3 Zählstellen" data-node-id="/177/667/947/1059/1060" height="80" src="/media/internet/verdat/vdm/fittosize_150_80_24408fed0f650f46f6de7e5066d7b97b_abbildung3_z__hlstellen.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="150" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung12_zählgruppen.png" target="_blank">
+vdm.html: <img alt="Abbildung12 Zählgruppen" data-node-id="/177/667/947/1059/1069" height="182" src="/media/internet/verdat/vdm/fittosize_300_182_3b4963983c8c55a9a4c94804867755f0_abbildung12_z__hlgruppen.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="300" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung6_fahrzeugarten.png" target="_blank">
+vdm.html: <img alt="Abbildung6 Fahrzeugarten" data-node-id="/177/667/947/1059/1063" height="260" src="/media/internet/verdat/vdm/fittosize_250_260_464ebd176ed2b94d959fb629e85acfd4_abbildung6_fahrzeugarten.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="250" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung4_gangliniedtvw.png" target="_blank">
+vdm.html: <img alt="Abbildung4 Gangliniedtvw" data-node-id="/177/667/947/1059/1061" height="154" src="/media/internet/verdat/vdm/fittosize_276_154_af0863cd6cfc07b9a2b6e6b1b0505836_abbildung4_gangliniedtvw.png" style="border-style:solid; border-width:0px; border-color:black; margin:5px; float:left" width="276" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung5_gangliniedtvu.png" target="_blank">
+vdm.html: <img alt="Abbildung5 Gangliniedtvu" data-node-id="/177/667/947/1059/1062" height="154" src="/media/internet/verdat/vdm/fittosize_283_154_49603f3d57af8cfba736f0a0ce86b821_abbildung5_gangliniedtvu.png" style="border-style:solid; border-width:0px; border-color:black; margin:5px; float:left" width="283" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung6_fahrzeugarten.png" target="_blank">
+vdm.html: <img alt="Abbildung6 Fahrzeugarten" data-node-id="/177/667/947/1059/1063" height="312" src="/media/internet/verdat/vdm/fittosize_300_312_d360a189433cba338f40fd0a1d20bfcf_abbildung6_fahrzeugarten.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="300" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung7_mittlere_tagesganglinie.png" target="_blank">
+vdm.html: <img alt="Abbildung7 Mittlere Tagesganglinie" data-node-id="/177/667/947/1059/1064" height="85" src="/media/internet/verdat/vdm/fittosize_139_85_089b89e3cd748200221b1037ebfec02a_abbildung7_mittlere_tagesganglinie.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="139" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung8_mittlere_tagesganglinie.png" target="_blank">
+vdm.html: <img alt="Abbildung8 Mittlere Tagesganglinie" data-node-id="/177/667/947/1059/1065" height="85" src="/media/internet/verdat/vdm/fittosize_141_85_c10aded1af871b5211dee8dee045356d_abbildung8_mittlere_tagesganglinie.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="141" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung9_mittlere_tagesganglinie.png" target="_blank">
+vdm.html: <img alt="Abbildung9 Mittlere Tagesganglinie" data-node-id="/177/667/947/1059/1066" height="85" src="/media/internet/verdat/vdm/fittosize_144_85_38ed328b2bb770fbe79ba40634cd7f4a_abbildung9_mittlere_tagesganglinie.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="144" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung10_verteilung_200_stunden.png" target="_blank">
+vdm.html: <img alt="Abbildung10 Verteilung 200 Stunden" data-node-id="/177/667/947/1059/1067" height="85" src="/media/internet/verdat/vdm/fittosize_137_85_7cc7aee63bb5d4b89f5156bb68479b87_abbildung10_verteilung_200_stunden.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="137" />
+vdm.html: <a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung11_dauerlinie.png" target="_blank">
+vdm.html: <img alt="Abbildung11 Dauerlinie" data-node-id="/177/667/947/1059/1068" height="129" src="/media/internet/verdat/vdm/fittosize_250_129_09ea5f4cce04d8bee57ca440e0ecca1e_abbildung11_dauerlinie.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="250" />
+_res_stmi_js_build.min.js @10910: 'ion(a,h){var j=h(b,c,d);return"string"!=typeof j||g||f[j]?g?!(i=j):void 0:(b.dataTypes.unshift(j),e(j),!1)}),i}var f={},g=a===Mb;return e(b.dataTypes[0])||!f["*"]&&e("*")}function Y(a,b){var c,d,e=oa.ajaxSettings.flatOptions||{};for(c in b)void 0!==b[c]&&((e[c]?a:d||(d={}))[c]=b[c]);return d&&oa.extend(!0,a,d),a}var Z=[],$=Object.getPrototypeOf,_=Z.slice,aa=Z.flat?function(a){return Z.flat.call(a)}:function(a){return Z.concat.apply([],a)},ba=Z.push,ca=Z.indexOf,da={},ea=da.toString,fa=da.hasOwnP'
+_res_stmi_js_build.min.js @75228: ',Hb=/([?&])_=[^&]*/,Ib=/^(.*?):[ \\t]*([^\\r\\n]*)$/gm,Jb=/^(?:GET|HEAD)$/,Kb=/^\\/\\//,Lb={},Mb={},Nb="*/".concat("*"),Ob=la.createElement("a");Ob.href=yb.href,oa.extend({active:0,lastModified:{},etag:{},ajaxSettings:{url:yb.href,type:"GET",isLocal:/^(?:about|app|app-storage|.+-extension|file|res|widget):$/.test(yb.protocol),global:!0,processData:!0,async:!0,contentType:"application/x-www-form-urlencoded; charset=UTF-8",accepts:{"*":Nb,text:"text/plain",html:"text/html",xml:"application/xml, text/xm'
+_res_stmi_js_build.min.js @75826: '},responseFields:{xml:"responseXML",text:"responseText",json:"responseJSON"},converters:{"* text":String,"text html":!0,"text json":JSON.parse,"text xml":oa.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(a,b){return b?Y(Y(a,oa.ajaxSettings),b):Y(oa.ajaxSettings,a)},ajaxPrefilter:W(Lb),ajaxTransport:W(Mb),ajax:function(b,c){function d(b,c,d,h){var j,m,n,u,v,w=c;k||(k=!0,i&&a.clearTimeout(i),e=void 0,g=h||"",x.readyState=0<b?4:0,j=200<=b&&b<300||304===b,d&&(u=function(a,b,c){for(var'
+_res_stmi_js_build.min.js @75868: 'responseText",json:"responseJSON"},converters:{"* text":String,"text html":!0,"text json":JSON.parse,"text xml":oa.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(a,b){return b?Y(Y(a,oa.ajaxSettings),b):Y(oa.ajaxSettings,a)},ajaxPrefilter:W(Lb),ajaxTransport:W(Mb),ajax:function(b,c){function d(b,c,d,h){var j,m,n,u,v,w=c;k||(k=!0,i&&a.clearTimeout(i),e=void 0,g=h||"",x.readyState=0<b?4:0,j=200<=b&&b<300||304===b,d&&(u=function(a,b,c){for(var d,e,f,g,h=a.contents,i=a.dataTypes;"*"==='
+_res_stmi_js_build.min.js @75890: 'sponseJSON"},converters:{"* text":String,"text html":!0,"text json":JSON.parse,"text xml":oa.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(a,b){return b?Y(Y(a,oa.ajaxSettings),b):Y(oa.ajaxSettings,a)},ajaxPrefilter:W(Lb),ajaxTransport:W(Mb),ajax:function(b,c){function d(b,c,d,h){var j,m,n,u,v,w=c;k||(k=!0,i&&a.clearTimeout(i),e=void 0,g=h||"",x.readyState=0<b?4:0,j=200<=b&&b<300||304===b,d&&(u=function(a,b,c){for(var d,e,f,g,h=a.contents,i=a.dataTypes;"*"===i[0];)i.shift(),void 0'
+_res_stmi_js_build.min.js @75907: 'erters:{"* text":String,"text html":!0,"text json":JSON.parse,"text xml":oa.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(a,b){return b?Y(Y(a,oa.ajaxSettings),b):Y(oa.ajaxSettings,a)},ajaxPrefilter:W(Lb),ajaxTransport:W(Mb),ajax:function(b,c){function d(b,c,d,h){var j,m,n,u,v,w=c;k||(k=!0,i&&a.clearTimeout(i),e=void 0,g=h||"",x.readyState=0<b?4:0,j=200<=b&&b<300||304===b,d&&(u=function(a,b,c){for(var d,e,f,g,h=a.contents,i=a.dataTypes;"*"===i[0];)i.shift(),void 0===d&&(d=a.mimeTy'
+_res_stmi_js_build.min.js @75927: 'ing,"text html":!0,"text json":JSON.parse,"text xml":oa.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(a,b){return b?Y(Y(a,oa.ajaxSettings),b):Y(oa.ajaxSettings,a)},ajaxPrefilter:W(Lb),ajaxTransport:W(Mb),ajax:function(b,c){function d(b,c,d,h){var j,m,n,u,v,w=c;k||(k=!0,i&&a.clearTimeout(i),e=void 0,g=h||"",x.readyState=0<b?4:0,j=200<=b&&b<300||304===b,d&&(u=function(a,b,c){for(var d,e,f,g,h=a.contents,i=a.dataTypes;"*"===i[0];)i.shift(),void 0===d&&(d=a.mimeType||b.getResponseHea'
+_res_stmi_js_build.min.js @75947: 'text json":JSON.parse,"text xml":oa.parseXML},flatOptions:{url:!0,context:!0}},ajaxSetup:function(a,b){return b?Y(Y(a,oa.ajaxSettings),b):Y(oa.ajaxSettings,a)},ajaxPrefilter:W(Lb),ajaxTransport:W(Mb),ajax:function(b,c){function d(b,c,d,h){var j,m,n,u,v,w=c;k||(k=!0,i&&a.clearTimeout(i),e=void 0,g=h||"",x.readyState=0<b?4:0,j=200<=b&&b<300||304===b,d&&(u=function(a,b,c){for(var d,e,f,g,h=a.contents,i=a.dataTypes;"*"===i[0];)i.shift(),void 0===d&&(d=a.mimeType||b.getResponseHeader("Content-Type"))'
+_res_stmi_js_build.min.js @77596: ':(w=u.state,m=u.data,j=!(n=u.error))):(n=w,!b&&w||(w="error",b<0&&(b=0))),x.status=b,x.statusText=(c||w)+"",j?r.resolveWith(p,[m,w,x]):r.rejectWith(p,[x,w,n]),x.statusCode(t),t=void 0,l&&q.trigger(j?"ajaxSuccess":"ajaxError",[x,o,j?m:n]),s.fireWith(p,[x,w]),l&&(q.trigger("ajaxComplete",[x,o]),--oa.active||oa.event.trigger("ajaxStop")))}"object"==typeof b&&(c=b,b=void 0),c=c||{};var e,f,g,h,i,j,k,l,m,n,o=oa.ajaxSetup({},c),p=o.context||o,q=o.context&&(p.nodeType||p.jquery)?oa(p):oa.event,r=oa.Def'
+_res_stmi_js_build.min.js @77610: 'u.data,j=!(n=u.error))):(n=w,!b&&w||(w="error",b<0&&(b=0))),x.status=b,x.statusText=(c||w)+"",j?r.resolveWith(p,[m,w,x]):r.rejectWith(p,[x,w,n]),x.statusCode(t),t=void 0,l&&q.trigger(j?"ajaxSuccess":"ajaxError",[x,o,j?m:n]),s.fireWith(p,[x,w]),l&&(q.trigger("ajaxComplete",[x,o]),--oa.active||oa.event.trigger("ajaxStop")))}"object"==typeof b&&(c=b,b=void 0),c=c||{};var e,f,g,h,i,j,k,l,m,n,o=oa.ajaxSetup({},c),p=o.context||o,q=o.context&&(p.nodeType||p.jquery)?oa(p):oa.event,r=oa.Deferred(),s=oa.C'
+_res_stmi_js_build.min.js @77669: ',x.status=b,x.statusText=(c||w)+"",j?r.resolveWith(p,[m,w,x]):r.rejectWith(p,[x,w,n]),x.statusCode(t),t=void 0,l&&q.trigger(j?"ajaxSuccess":"ajaxError",[x,o,j?m:n]),s.fireWith(p,[x,w]),l&&(q.trigger("ajaxComplete",[x,o]),--oa.active||oa.event.trigger("ajaxStop")))}"object"==typeof b&&(c=b,b=void 0),c=c||{};var e,f,g,h,i,j,k,l,m,n,o=oa.ajaxSetup({},c),p=o.context||o,q=o.context&&(p.nodeType||p.jquery)?oa(p):oa.event,r=oa.Deferred(),s=oa.Callbacks("once memory"),t=o.statusCode||{},u={},v={},w="can'
+_res_stmi_js_build.min.js @77721: ',[m,w,x]):r.rejectWith(p,[x,w,n]),x.statusCode(t),t=void 0,l&&q.trigger(j?"ajaxSuccess":"ajaxError",[x,o,j?m:n]),s.fireWith(p,[x,w]),l&&(q.trigger("ajaxComplete",[x,o]),--oa.active||oa.event.trigger("ajaxStop")))}"object"==typeof b&&(c=b,b=void 0),c=c||{};var e,f,g,h,i,j,k,l,m,n,o=oa.ajaxSetup({},c),p=o.context||o,q=o.context&&(p.nodeType||p.jquery)?oa(p):oa.event,r=oa.Deferred(),s=oa.Callbacks("once memory"),t=o.statusCode||{},u={},v={},w="canceled",x={readyState:0,getResponseHeader:function(a)'
+_res_stmi_js_build.min.js @77806: 's":"ajaxError",[x,o,j?m:n]),s.fireWith(p,[x,w]),l&&(q.trigger("ajaxComplete",[x,o]),--oa.active||oa.event.trigger("ajaxStop")))}"object"==typeof b&&(c=b,b=void 0),c=c||{};var e,f,g,h,i,j,k,l,m,n,o=oa.ajaxSetup({},c),p=o.context||o,q=o.context&&(p.nodeType||p.jquery)?oa(p):oa.event,r=oa.Deferred(),s=oa.Callbacks("once memory"),t=o.statusCode||{},u={},v={},w="canceled",x={readyState:0,getResponseHeader:function(a){var b;if(k){if(!h)for(h={};b=Ib.exec(g);)h[b[1].toLowerCase()+" "]=(h[b[1].toLowerCa'
+_res_stmi_js_build.min.js @79109: '){o.crossDomain=!0}}if(o.data&&o.processData&&"string"!=typeof o.data&&(o.data=oa.param(o.data,o.traditional)),X(Lb,o,c,x),k)return x;for(m in(l=oa.event&&o.global)&&0==oa.active++&&oa.event.trigger("ajaxStart"),o.type=o.type.toUpperCase(),o.hasContent=!Jb.test(o.type),f=o.url.replace(Gb,""),o.hasContent?o.data&&o.processData&&0===(o.contentType||"").indexOf("application/x-www-form-urlencoded")&&(o.data=o.data.replace(Fb,"+")):(n=o.url.slice(f.length),o.data&&(o.processData||"string"==typeof o.d'
+_res_stmi_js_build.min.js @80195: 'er(m,o.headers[m]);if(o.beforeSend&&(!1===o.beforeSend.call(p,x,o)||k))return x.abort();if(w="abort",s.add(o.complete),x.done(o.success),x.fail(o.error),e=X(Mb,o,c,x)){if(x.readyState=1,l&&q.trigger("ajaxSend",[x,o]),k)return x;o.async&&0<o.timeout&&(i=a.setTimeout(function(){x.abort("timeout")},o.timeout));try{k=!1,e.send(u,d)}catch(b){if(k)throw b;d(-1,b)}}else d(-1,"No Transport");return x},getJSON:function(a,b,c){return oa.get(a,b,c,"json")},getScript:function(a,b){return oa.get(a,void 0,b,"'
+_res_stmi_js_build.min.js @80607: 'n(a,b,c){return oa.get(a,b,c,"json")},getScript:function(a,b){return oa.get(a,void 0,b,"script")}}),oa.each(["get","post"],function(a,b){oa[b]=function(a,c,d,e){return ja(c)&&(e=e||d,d=c,c=void 0),oa.ajax(oa.extend({url:a,type:b,dataType:e,data:c,success:d},oa.isPlainObject(a)&&a))}}),oa.ajaxPrefilter(function(a){var b;for(b in a.headers)"content-type"===b.toLowerCase()&&(a.contentType=a.headers[b]||"")}),oa._evalUrl=function(a,b,c){return oa.ajax({url:a,type:"GET",dataType:"script",cache:!0,asy'
+_res_stmi_js_build.min.js @80696: 'cript")}}),oa.each(["get","post"],function(a,b){oa[b]=function(a,c,d,e){return ja(c)&&(e=e||d,d=c,c=void 0),oa.ajax(oa.extend({url:a,type:b,dataType:e,data:c,success:d},oa.isPlainObject(a)&&a))}}),oa.ajaxPrefilter(function(a){var b;for(b in a.headers)"content-type"===b.toLowerCase()&&(a.contentType=a.headers[b]||"")}),oa._evalUrl=function(a,b,c){return oa.ajax({url:a,type:"GET",dataType:"script",cache:!0,async:!1,global:!1,converters:{"text script":function(){}},dataFilter:function(a){oa.globalE'
+_res_stmi_js_build.min.js @80854: 'success:d},oa.isPlainObject(a)&&a))}}),oa.ajaxPrefilter(function(a){var b;for(b in a.headers)"content-type"===b.toLowerCase()&&(a.contentType=a.headers[b]||"")}),oa._evalUrl=function(a,b,c){return oa.ajax({url:a,type:"GET",dataType:"script",cache:!0,async:!1,global:!1,converters:{"text script":function(){}},dataFilter:function(a){oa.globalEval(a,b,c)}})},oa.fn.extend({wrapAll:function(a){var b;return this[0]&&(ja(a)&&(a=a.call(this[0])),b=oa(a,this[0].ownerDocument).eq(0).clone(!0),this[0].paren'
+_res_stmi_js_build.min.js @81865: '.childNodes)}),this}}),oa.expr.pseudos.hidden=function(a){return!oa.expr.pseudos.visible(a)},oa.expr.pseudos.visible=function(a){return!!(a.offsetWidth||a.offsetHeight||a.getClientRects().length)},oa.ajaxSettings.xhr=function(){try{return new a.XMLHttpRequest}catch(b){}};var Pb={0:200,1223:204},Qb=oa.ajaxSettings.xhr();ia.cors=!!Qb&&"withCredentials"in Qb,ia.ajax=Qb=!!Qb,oa.ajaxTransport(function(b){var c,d;if(ia.cors||Qb&&!b.crossDomain)return{send:function(e,f){var g,h=b.xhr();if(h.open(b.type'
+_res_stmi_js_build.min.js @81910: '=function(a){return!oa.expr.pseudos.visible(a)},oa.expr.pseudos.visible=function(a){return!!(a.offsetWidth||a.offsetHeight||a.getClientRects().length)},oa.ajaxSettings.xhr=function(){try{return new a.XMLHttpRequest}catch(b){}};var Pb={0:200,1223:204},Qb=oa.ajaxSettings.xhr();ia.cors=!!Qb&&"withCredentials"in Qb,ia.ajax=Qb=!!Qb,oa.ajaxTransport(function(b){var c,d;if(ia.cors||Qb&&!b.crossDomain)return{send:function(e,f){var g,h=b.xhr();if(h.open(b.type,b.url,b.async,b.username,b.password),b.xhrFi'
+_res_stmi_js_build.min.js @81967: 'seudos.visible=function(a){return!!(a.offsetWidth||a.offsetHeight||a.getClientRects().length)},oa.ajaxSettings.xhr=function(){try{return new a.XMLHttpRequest}catch(b){}};var Pb={0:200,1223:204},Qb=oa.ajaxSettings.xhr();ia.cors=!!Qb&&"withCredentials"in Qb,ia.ajax=Qb=!!Qb,oa.ajaxTransport(function(b){var c,d;if(ia.cors||Qb&&!b.crossDomain)return{send:function(e,f){var g,h=b.xhr();if(h.open(b.type,b.url,b.async,b.username,b.password),b.xhrFields)for(g in b.xhrFields)h[g]=b.xhrFields[g];for(g in b.'
+_res_stmi_js_build.min.js @82026: 'Height||a.getClientRects().length)},oa.ajaxSettings.xhr=function(){try{return new a.XMLHttpRequest}catch(b){}};var Pb={0:200,1223:204},Qb=oa.ajaxSettings.xhr();ia.cors=!!Qb&&"withCredentials"in Qb,ia.ajax=Qb=!!Qb,oa.ajaxTransport(function(b){var c,d;if(ia.cors||Qb&&!b.crossDomain)return{send:function(e,f){var g,h=b.xhr();if(h.open(b.type,b.url,b.async,b.username,b.password),b.xhrFields)for(g in b.xhrFields)h[g]=b.xhrFields[g];for(g in b.mimeType&&h.overrideMimeType&&h.overrideMimeType(b.mimeType'
+_res_stmi_js_build.min.js @82042: 'entRects().length)},oa.ajaxSettings.xhr=function(){try{return new a.XMLHttpRequest}catch(b){}};var Pb={0:200,1223:204},Qb=oa.ajaxSettings.xhr();ia.cors=!!Qb&&"withCredentials"in Qb,ia.ajax=Qb=!!Qb,oa.ajaxTransport(function(b){var c,d;if(ia.cors||Qb&&!b.crossDomain)return{send:function(e,f){var g,h=b.xhr();if(h.open(b.type,b.url,b.async,b.username,b.password),b.xhrFields)for(g in b.xhrFields)h[g]=b.xhrFields[g];for(g in b.mimeType&&h.overrideMimeType&&h.overrideMimeType(b.mimeType),b.crossDomain|'
+_res_stmi_js_build.min.js @82390: ',b.password),b.xhrFields)for(g in b.xhrFields)h[g]=b.xhrFields[g];for(g in b.mimeType&&h.overrideMimeType&&h.overrideMimeType(b.mimeType),b.crossDomain||e["X-Requested-With"]||(e["X-Requested-With"]="XMLHttpRequest"),e)h.setRequestHeader(g,e[g]);c=function(a){return function(){c&&(c=d=h.onload=h.onerror=h.onabort=h.ontimeout=h.onreadystatechange=null,"abort"===a?h.abort():"error"===a?"number"!=typeof h.status?f(0,"error"):f(h.status,h.statusText):f(Pb[h.status]||h.status,h.statusText,"text"!==(h'
+_res_stmi_js_build.min.js @83088: 'nabort=d:h.onreadystatechange=function(){4===h.readyState&&a.setTimeout(function(){c&&d()})},c=c("abort");try{h.send(b.hasContent&&b.data||null)}catch(e){if(c)throw e}},abort:function(){c&&c()}}}),oa.ajaxPrefilter(function(a){a.crossDomain&&(a.contents.script=!1)}),oa.ajaxSetup({accepts:{script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/\\b(?:java|ecma)script\\b/},converters:{"text script":function(a){return oa.globalEval(a),a}}})'
+_res_stmi_js_build.min.js @83157: 'ut(function(){c&&d()})},c=c("abort");try{h.send(b.hasContent&&b.data||null)}catch(e){if(c)throw e}},abort:function(){c&&c()}}}),oa.ajaxPrefilter(function(a){a.crossDomain&&(a.contents.script=!1)}),oa.ajaxSetup({accepts:{script:"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/\\b(?:java|ecma)script\\b/},converters:{"text script":function(a){return oa.globalEval(a),a}}}),oa.ajaxPrefilter("script",function(a){void 0===a.cache&&(a.cache=!1)'
+_res_stmi_js_build.min.js @83392: 'vascript, application/javascript, application/ecmascript, application/x-ecmascript"},contents:{script:/\\b(?:java|ecma)script\\b/},converters:{"text script":function(a){return oa.globalEval(a),a}}}),oa.ajaxPrefilter("script",function(a){void 0===a.cache&&(a.cache=!1),a.crossDomain&&(a.type="GET")}),oa.ajaxTransport("script",function(a){var b,c;if(a.crossDomain||a.scriptAttrs)return{send:function(d,e){b=oa("<script>").attr(a.scriptAttrs||{}).prop({charset:a.scriptCharset,src:a.url}).on("load error"'
+_res_stmi_js_build.min.js @83493: ':/\\b(?:java|ecma)script\\b/},converters:{"text script":function(a){return oa.globalEval(a),a}}}),oa.ajaxPrefilter("script",function(a){void 0===a.cache&&(a.cache=!1),a.crossDomain&&(a.type="GET")}),oa.ajaxTransport("script",function(a){var b,c;if(a.crossDomain||a.scriptAttrs)return{send:function(d,e){b=oa("<script>").attr(a.scriptAttrs||{}).prop({charset:a.scriptCharset,src:a.url}).on("load error",c=function(a){b.remove(),c=null,a&&e("error"===a.type?404:200,a.type)}),la.head.appendChild(b[0])},a'
+_res_stmi_js_build.min.js @83859: 'arset,src:a.url}).on("load error",c=function(a){b.remove(),c=null,a&&e("error"===a.type?404:200,a.type)}),la.head.appendChild(b[0])},abort:function(){c&&c()}}});var Rb,Sb=[],Tb=/(=)\\?(?=&|$)|\\?\\?/;oa.ajaxSetup({jsonp:"callback",jsonpCallback:function(){var a=Sb.pop()||oa.expando+"_"+zb.guid++;return this[a]=!0,a}}),oa.ajaxPrefilter("json jsonp",function(b,c,d){var e,f,g,h=!1!==b.jsonp&&(Tb.test(b.url)?"url":"string"==typeof b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencod'
+_res_stmi_js_build.min.js @83979: 'Child(b[0])},abort:function(){c&&c()}}});var Rb,Sb=[],Tb=/(=)\\?(?=&|$)|\\?\\?/;oa.ajaxSetup({jsonp:"callback",jsonpCallback:function(){var a=Sb.pop()||oa.expando+"_"+zb.guid++;return this[a]=!0,a}}),oa.ajaxPrefilter("json jsonp",function(b,c,d){var e,f,g,h=!1!==b.jsonp&&(Tb.test(b.url)?"url":"string"==typeof b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencoded")&&Tb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallba'
+_res_stmi_js_build.min.js @84040: '\\?(?=&|$)|\\?\\?/;oa.ajaxSetup({jsonp:"callback",jsonpCallback:function(){var a=Sb.pop()||oa.expando+"_"+zb.guid++;return this[a]=!0,a}}),oa.ajaxPrefilter("json jsonp",function(b,c,d){var e,f,g,h=!1!==b.jsonp&&(Tb.test(b.url)?"url":"string"==typeof b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencoded")&&Tb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Tb,"$1"+e):!1!==b.js'
+_res_stmi_js_build.min.js @84231: ',h=!1!==b.jsonp&&(Tb.test(b.url)?"url":"string"==typeof b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencoded")&&Tb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Tb,"$1"+e):!1!==b.jsonp&&(b.url+=(Ab.test(b.url)?"&":"?")+b.jsonp+"="+e),b.converters["script json"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=argume'
+_res_stmi_js_build.min.js @84250: 'b.test(b.url)?"url":"string"==typeof b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencoded")&&Tb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Tb,"$1"+e):!1!==b.jsonp&&(b.url+=(Ab.test(b.url)?"&":"?")+b.jsonp+"="+e),b.converters["script json"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(funct'
+_res_stmi_js_build.min.js @84267: 'l":"string"==typeof b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencoded")&&Tb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Tb,"$1"+e):!1!==b.jsonp&&(b.url+=(Ab.test(b.url)?"&":"?")+b.jsonp+"="+e),b.converters["script json"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(function(){void 0===f?'
+_res_stmi_js_build.min.js @84285: 'f b.data&&0===(b.contentType||"").indexOf("application/x-www-form-urlencoded")&&Tb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Tb,"$1"+e):!1!==b.jsonp&&(b.url+=(Ab.test(b.url)?"&":"?")+b.jsonp+"="+e),b.converters["script json"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(function(){void 0===f?oa(a).removeProp(e'
+_res_stmi_js_build.min.js @84337: 'on/x-www-form-urlencoded")&&Tb.test(b.data)&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Tb,"$1"+e):!1!==b.jsonp&&(b.url+=(Ab.test(b.url)?"&":"?")+b.jsonp+"="+e),b.converters["script json"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(function(){void 0===f?oa(a).removeProp(e):a[e]=f,b[e]&&(b.jsonpCallback=c.jsonpCallback,Sb.p'
+_res_stmi_js_build.min.js @84379: ')&&"data");if(h||"jsonp"===b.dataTypes[0])return e=b.jsonpCallback=ja(b.jsonpCallback)?b.jsonpCallback():b.jsonpCallback,h?b[h]=b[h].replace(Tb,"$1"+e):!1!==b.jsonp&&(b.url+=(Ab.test(b.url)?"&":"?")+b.jsonp+"="+e),b.converters["script json"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(function(){void 0===f?oa(a).removeProp(e):a[e]=f,b[e]&&(b.jsonpCallback=c.jsonpCallback,Sb.push(e)),g&&ja(f)&&f(g[0]),g=f=void 0}),"sc'
+_res_stmi_js_build.min.js @84602: 'ers["script json"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(function(){void 0===f?oa(a).removeProp(e):a[e]=f,b[e]&&(b.jsonpCallback=c.jsonpCallback,Sb.push(e)),g&&ja(f)&&f(g[0]),g=f=void 0}),"script"}),ia.createHTMLDocument=((Rb=la.implementation.createHTMLDocument("").body).innerHTML="<form></form><form></form>",2===Rb.childNodes.length),oa.parseHTML=function(a,b,c){return"string"!=typeof a?[]:("boolean"==typeof '
+_res_stmi_js_build.min.js @84618: '"]=function(){return g||oa.error(e+" was not called"),g[0]},b.dataTypes[0]="json",f=a[e],a[e]=function(){g=arguments},d.always(function(){void 0===f?oa(a).removeProp(e):a[e]=f,b[e]&&(b.jsonpCallback=c.jsonpCallback,Sb.push(e)),g&&ja(f)&&f(g[0]),g=f=void 0}),"script"}),ia.createHTMLDocument=((Rb=la.implementation.createHTMLDocument("").body).innerHTML="<form></form><form></form>",2===Rb.childNodes.length),oa.parseHTML=function(a,b,c){return"string"!=typeof a?[]:("boolean"==typeof b&&(c=b,b=!1),b|'
+_res_stmi_js_build.min.js @85370: 'hildNodes)));var d,e,f},oa.fn.load=function(a,b,c){var d,e,f,g=this,h=a.indexOf(" ");return-1<h&&(d=S(a.slice(h)),a=a.slice(0,h)),ja(b)?(c=b,b=void 0):b&&"object"==typeof b&&(e="POST"),0<g.length&&oa.ajax({url:a,type:e||"GET",dataType:"html",data:b}).done(function(a){f=arguments,g.html(d?oa("<div>").append(oa.parseHTML(a)).find(d):a)}).always(c&&function(a,b){g.each(function(){c.apply(this,f||[a.responseText,b,a])})}),this},oa.expr.pseudos.animated=function(a){return oa.grep(oa.timers,function(b'
+_res_stmi_js_build.min.js @88171: '==b.nodeType?(f=b.documentElement,Math.max(b.body["scroll"+a],f["scroll"+a],b.body["offset"+a],f["offset"+a],f["client"+a])):void 0===e?oa.css(b,c,h):oa.style(b,c,e,h)},b,g?e:void 0,g)}})}),oa.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(a,b){oa.fn[b]=function(a){return this.on(b,a)}}),oa.fn.extend({bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},delegate:function(a,b,c,d){return this.on(b,a,c,d)},unde'
+_res_stmi_js_build.min.js @88183: '?(f=b.documentElement,Math.max(b.body["scroll"+a],f["scroll"+a],b.body["offset"+a],f["offset"+a],f["client"+a])):void 0===e?oa.css(b,c,h):oa.style(b,c,e,h)},b,g?e:void 0,g)}})}),oa.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(a,b){oa.fn[b]=function(a){return this.on(b,a)}}),oa.fn.extend({bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},delegate:function(a,b,c,d){return this.on(b,a,c,d)},undelegate:funct'
+_res_stmi_js_build.min.js @88194: 'entElement,Math.max(b.body["scroll"+a],f["scroll"+a],b.body["offset"+a],f["offset"+a],f["client"+a])):void 0===e?oa.css(b,c,h):oa.style(b,c,e,h)},b,g?e:void 0,g)}})}),oa.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(a,b){oa.fn[b]=function(a){return this.on(b,a)}}),oa.fn.extend({bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},delegate:function(a,b,c,d){return this.on(b,a,c,d)},undelegate:function(a,b,c){'
+_res_stmi_js_build.min.js @88209: '.max(b.body["scroll"+a],f["scroll"+a],b.body["offset"+a],f["offset"+a],f["client"+a])):void 0===e?oa.css(b,c,h):oa.style(b,c,e,h)},b,g?e:void 0,g)}})}),oa.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(a,b){oa.fn[b]=function(a){return this.on(b,a)}}),oa.fn.extend({bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},delegate:function(a,b,c,d){return this.on(b,a,c,d)},undelegate:function(a,b,c){return 1===argu'
+_res_stmi_js_build.min.js @88221: '"scroll"+a],f["scroll"+a],b.body["offset"+a],f["offset"+a],f["client"+a])):void 0===e?oa.css(b,c,h):oa.style(b,c,e,h)},b,g?e:void 0,g)}})}),oa.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(a,b){oa.fn[b]=function(a){return this.on(b,a)}}),oa.fn.extend({bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},delegate:function(a,b,c,d){return this.on(b,a,c,d)},undelegate:function(a,b,c){return 1===arguments.length'
+_res_stmi_js_build.min.js @88235: '"scroll"+a],b.body["offset"+a],f["offset"+a],f["client"+a])):void 0===e?oa.css(b,c,h):oa.style(b,c,e,h)},b,g?e:void 0,g)}})}),oa.each(["ajaxStart","ajaxStop","ajaxComplete","ajaxError","ajaxSuccess","ajaxSend"],function(a,b){oa.fn[b]=function(a){return this.on(b,a)}}),oa.fn.extend({bind:function(a,b,c){return this.on(a,null,b,c)},unbind:function(a,b){return this.off(a,null,b)},delegate:function(a,b,c,d){return this.on(b,a,c,d)},undelegate:function(a,b,c){return 1===arguments.length?this.off(a,"*'
+_res_stmi_js_build.min.js @175982: 'te),i=0;i<l.length;i++)if((f=l.eq(i)).length){for(g=b.processTbody(k,f,!0),e=(d=n[i].normalized).length,h=0;h<e;h++)m[m.length]=d[h][a.columns].$row,a.appender&&(!a.pager||a.pager.removeRows||a.pager.ajax)||g.append(d[h][a.columns].$row);b.processTbody(k,g,!1)}a.appender&&a.appender(k,m),b.debug(a,"core")&&console.log("Rebuilt table"+b.benchmark(j)),c||a.appender||b.applyWidget(k),k.isUpdating&&a.$table.triggerHandler("updateComplete",k)},commonUpdate:function(a,c,d){a.$table.find(a.selectorRemo'
+_res_stmi_js_build.min.js @221081: '[c.name][e],this.settings.messages[c.name][e]=i.message,d="string"==typeof d&&{url:d}||d,h=a.param(a.extend({data:b},d.data)),i.old===h?i.valid:(i.old=h,f=this,this.startRequest(c),g={},g[c.name]=b,a.ajax(a.extend(!0,{mode:"abort",port:"validate"+c.name,dataType:"json",data:g,context:f.currentForm,success:function(a){var d,g,h,j=!0===a||"true"===a;f.settings.messages[c.name][e]=i.originalMessage,j?(h=f.formSubmitted,f.resetInternals(),f.toHide=f.errorsFor(c),f.formSubmitted=h,f.successList.push('
+_res_stmi_js_build.min.js @221606: '.showErrors()):(d={},g=a||f.defaultMessage(c,{method:e,parameters:b}),d[c.name]=i.message=g,f.invalid[c.name]=!0,f.showErrors(d)),i.valid=j,f.stopRequest(c,j)}},d)),"pending")}}});var b,c={};return a.ajaxPrefilter?a.ajaxPrefilter(function(a,b,d){var e=a.port;"abort"===a.mode&&(c[e]&&c[e].abort(),c[e]=d)}):(b=a.ajax,a.ajax=function(d){var e=("mode"in d?d:a.ajaxSettings).mode,f=("port"in d?d:a.ajaxSettings).port;return"abort"===e?(c[f]&&c[f].abort(),c[f]=b.apply(this,arguments),c[f]):b.apply(this,'
+_res_stmi_js_build.min.js @221622: 'd={},g=a||f.defaultMessage(c,{method:e,parameters:b}),d[c.name]=i.message=g,f.invalid[c.name]=!0,f.showErrors(d)),i.valid=j,f.stopRequest(c,j)}},d)),"pending")}}});var b,c={};return a.ajaxPrefilter?a.ajaxPrefilter(function(a,b,d){var e=a.port;"abort"===a.mode&&(c[e]&&c[e].abort(),c[e]=d)}):(b=a.ajax,a.ajax=function(d){var e=("mode"in d?d:a.ajaxSettings).mode,f=("port"in d?d:a.ajaxSettings).port;return"abort"===e?(c[f]&&c[f].abort(),c[f]=b.apply(this,arguments),c[f]):b.apply(this,arguments)}),a})'
+_res_stmi_js_build.min.js @221718: ',f.showErrors(d)),i.valid=j,f.stopRequest(c,j)}},d)),"pending")}}});var b,c={};return a.ajaxPrefilter?a.ajaxPrefilter(function(a,b,d){var e=a.port;"abort"===a.mode&&(c[e]&&c[e].abort(),c[e]=d)}):(b=a.ajax,a.ajax=function(d){var e=("mode"in d?d:a.ajaxSettings).mode,f=("port"in d?d:a.ajaxSettings).port;return"abort"===e?(c[f]&&c[f].abort(),c[f]=b.apply(this,arguments),c[f]):b.apply(this,arguments)}),a});var Gallery=function(){return{init:function(a,b,c,d){var e,f,g={},h=b,i=1,j=a.closest("aside").'
+_res_stmi_js_build.min.js @221725: 'Errors(d)),i.valid=j,f.stopRequest(c,j)}},d)),"pending")}}});var b,c={};return a.ajaxPrefilter?a.ajaxPrefilter(function(a,b,d){var e=a.port;"abort"===a.mode&&(c[e]&&c[e].abort(),c[e]=d)}):(b=a.ajax,a.ajax=function(d){var e=("mode"in d?d:a.ajaxSettings).mode,f=("port"in d?d:a.ajaxSettings).port;return"abort"===e?(c[f]&&c[f].abort(),c[f]=b.apply(this,arguments),c[f]):b.apply(this,arguments)}),a});var Gallery=function(){return{init:function(a,b,c,d){var e,f,g={},h=b,i=1,j=a.closest("aside").length>'
+_res_stmi_js_build.min.js @221764: '}},d)),"pending")}}});var b,c={};return a.ajaxPrefilter?a.ajaxPrefilter(function(a,b,d){var e=a.port;"abort"===a.mode&&(c[e]&&c[e].abort(),c[e]=d)}):(b=a.ajax,a.ajax=function(d){var e=("mode"in d?d:a.ajaxSettings).mode,f=("port"in d?d:a.ajaxSettings).port;return"abort"===e?(c[f]&&c[f].abort(),c[f]=b.apply(this,arguments),c[f]):b.apply(this,arguments)}),a});var Gallery=function(){return{init:function(a,b,c,d){var e,f,g={},h=b,i=1,j=a.closest("aside").length>0;blockScrolling=!1,calculateProps=func'
+_res_stmi_js_build.min.js @221801: 'rn a.ajaxPrefilter?a.ajaxPrefilter(function(a,b,d){var e=a.port;"abort"===a.mode&&(c[e]&&c[e].abort(),c[e]=d)}):(b=a.ajax,a.ajax=function(d){var e=("mode"in d?d:a.ajaxSettings).mode,f=("port"in d?d:a.ajaxSettings).port;return"abort"===e?(c[f]&&c[f].abort(),c[f]=b.apply(this,arguments),c[f]):b.apply(this,arguments)}),a});var Gallery=function(){return{init:function(a,b,c,d){var e,f,g={},h=b,i=1,j=a.closest("aside").length>0;blockScrolling=!1,calculateProps=function(){g.items=a.find(".es-carousel >'
+Ebene 0: dauerzaehlstellen | Feature Layer | Felder OBJECTID, Station, BASt4Nr, DauzName, Strassenbezeichnung, AoANummer, VNK, NNK, Art, Zaehlstellennummer, Richtung, NameAnfang, NameEnde, Strassenklasse, Ast, IstAst, last_edited_date, Status, DTV_Kfz, DTV_SV, DTV_LV, Zaehlart, FSOD, Jahr
+Ebene 11: svz2021 | Group Layer | Felder 
+Ebene 1: svz2021_zaehlstellen | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Zaehlart
+Ebene 2: svz2021_dtv_bab_25 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse
+Ebene 3: svz2021_dtv_bab_100 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse
+Ebene 4: svz2021_dtv_b_25 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse
+Ebene 5: svz2021_dtv_b_100 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse
+Ebene 6: svz2021_dtv_st_25 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse
+Ebene 7: svz2021_dtv_st_100 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse
+Ebene 8: svz2021_dtv_k_25 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse
+Ebene 9: svz2021_dtv_k_100 | Feature Layer | Felder OBJECTID, Strasse, Zaehlstelle, DTV_Kfz, DTV_LV, DTV_SV, Link, Zaehlart, Massstabsbereich, StrKlasse

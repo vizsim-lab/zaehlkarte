@@ -1,0 +1,1001 @@
+
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        
+
+        <meta charset="utf-8">
+        <title>Verkehrsdatenmanagement - Bayerisches Straßeninformationssystem</title>
+        <!-- Mobile viewport optimisation -->
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+        <link href="/res/stmi/img/favicons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+        <link href="/res/stmi/img/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+        <link href="/res/stmi/img/favicons/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png">
+        <link href="/res/stmi/img/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+        <link href="/res/stmi/img/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+        <link href="/res/stmi/img/favicons/manifest.json" rel="manifest">
+        <link color="#5BBAD5" href="/res/stmi/img/favicons/safari-pinned-tab.svg" rel="mask-icon">
+        <link href="/res/stmi/img/favicons/favicon.ico" rel="shortcut icon">
+        <meta content="#da532c" name="msapplication-TileColor">
+        <meta content="/res/stmi/img/favicons/mstile-144x144.png" name="msapplication-TileImage">
+        <meta content="/res/stmi/img/favicons/browserconfig.xml" name="msapplication-config">
+        <meta content="#ffffff" name="theme-color">
+        <link href="/resources/vendor/fontawesome-free-6.1.1-web/css/all.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/res/stmi/css/build.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/res/stmi/css/dc_stmb.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/res/stmi/css/customer.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="/res/stmi/css/print-plain.css" media="print" rel="stylesheet" type="text/css">
+        <link href="/resources/vendor/vue-formulate/css/snow.css" media="all" rel="stylesheet" type="text/css">
+        <link href="/resources/css/strassenbau.css" media="all" rel="stylesheet" type="text/css">
+        <link href="/resources/css/forms.css" media="all" rel="stylesheet" type="text/css">
+        <link href="/resources/css/vue_content.css" media="all" rel="stylesheet" type="text/css">
+<!-- Fehler -->
+        <meta name="X-Imperia-Live-Info" content="13808a08-0ade-75b4-795a-6a2d327269a3/644/645/874/890/923" />
+<!-- Fehler Ende -->
+<!-- Matomo -->
+<script>
+  if (document.cookie.indexOf('mtm_consent') == -1) {
+  document.cookie = 'hideCookieBar' + '=; expires=Thu, 01-Jan-70 00:00:01 GMT; path=/';
+}
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://webalytics.bayern.de/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->
+    </head>
+    <body>
+        <!--IFTS_NO_PARSE-->
+        <!-- modJsBar -->
+        <noscript>
+        <div class="modJsBar">
+            <div class="ym-wrapper">
+                <div class="ym-wbox">
+                    <p>
+                        Bitte aktivieren Sie JavaScript in Ihrem Browser, um den vollen Funktionsumfang dieser Seite nutzen zu können.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </noscript>
+        <!-- modJsBar End -->
+        <!-- modCookieBar -->
+
+        <div class="modCookieBar">
+            <div class="ym-wrapper">
+                <div class="ym-wbox">
+                        <p>
+    Sofern Sie uns Ihre Einwilligung erteilen, verwenden wir Cookies zur Nutzung unseres Webanalyse-Tools Matomo Analytics.
+    Durch einen Klick auf den Button „Webanalyse akzeptieren“ erteilen Sie uns Ihre Einwilligung dahingehend, dass wir zu Analysezwecken
+    Cookies (kleine Textdateien mit einer Gültigkeitsdauer von maximal zwei Jahren) setzen und die sich ergebenden Daten verarbeiten dürfen. Sie
+    können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft in unserer <a class="internal" href="/internet/datenschutz/index.html">
+    <strong>Datenschutzerklärung</strong></a> widerrufen. Hier finden Sie auch <strong>weitere Informationen</strong>.
+</p>
+                        <li style="padding-right: 1em">
+                                <button class="icon save-selected" style="margin-bottom: 1em" title="Webanalyse akzeptieren" onClick="setMatomoConsent()">Webanalyse akzeptieren</button>
+                                <button class="icon save-selected" title="Webanalyse ablehnen" onclick="declineMatomoConsent()">Webanalyse ablehnen</button>
+                         </li>
+                </div>
+            </div>
+        </div>
+        <!-- modCookieBar End -->
+
+        <!-- skip link navigation -->
+
+
+
+
+        <ul class="ym-skiplinks">
+            <li>
+                <a class="ym-skip" href="#nav">Gehe zur Navigation (Drücke Enter)</a>
+            </li>
+
+            <li>
+                <a class="ym-skip" href="#main">Gehe zum Hauptinhalt (Drücke Enter)</a>
+            </li>
+        </ul>
+
+        <div class="ym-wrapper">
+            <div class="ym-wbox">
+                <div class="modHeader" id="nav">
+                    <div class="logo" role="banner">
+                        <span class="hide-from-screen">Bayerisches Straßeninformationssystem</span> <a href="/internet" title="zur Startseite"><img alt="Bayerisches Straßeninformationssystem" src="/res/stmi/img/logo.jpg"></a>
+                    </div>
+
+                    <div class="header-navigation">
+                        <div class="header-navigation-fixed">
+                            <div class="modBurgerNavigation" id="modBurgerNavigation">
+                                <div class="burger-navigation-overlay" role="presentation">
+                                </div>
+
+                                <div class="burger-navigation-content">
+                                    <ul data-role="accessibility-navigation">
+                                        <li>
+                                            <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite"><span>zur Startseite</span></a>
+                                        </li>
+
+                                        <li class="accessibility">
+                                            <ul aria-label="Navigation Barrierefreiheit" role="navigation">
+                                                <li>
+                                                    <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen"><span>Schriftvergrößerung</span></a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen"><span>Kontrastverstärkung</span></a>
+                                                </li>
+
+                                                <li>
+                                                    <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen"><span>Einfacher Inhalt</span></a>
+                                                </li>
+
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <a aria-controls="modBurgerNavigation" aria-label="Navigation einklappen" class="icon icon-cancel" data-role="close-burger-navigation" href="#" title="Navigation schließen"><span>schließen</span></a>
+                                    <div aria-label="Hauptnavigation" data-role="main-navigation" role="navigation">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul aria-label="Kopfnavigation" class="header-navigation" role="navigation">
+                                <li>
+                                    <a aria-controls="modBurgerNavigation" aria-expanded="false" aria-label="Navigation ausklappen" class="icon icon-menu" data-role="open-burger-navigation" href="#" title="Navigation anzeigen"><span>Navigation anzeigen</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="icon icon-home" data-role="home" href="/internet" title="zur Startseite"><span>zur Startseite</span></a>
+                                </li>
+
+                                <li>
+                                    <a class="icon icon-right" data-role="a-z" href="/hil/themenaz/index.php" title="Themen von A-Z"><span>A-Z</span></a>
+                                </li>
+
+                                <li class="accessibility">
+                                    <ul aria-label="Navigation Barrierefreiheit" role="navigation">
+                                        <li>
+                                            <a class="icon icon-fontsize" data-role="fontsize" href="#" title="Schriftgröße anpassen"><span>Schriftvergrößerung</span></a>
+                                        </li>
+
+                                        <li>
+                                            <a class="icon icon-contrast" data-role="contrast" href="#" title="Kontrast anpassen"><span>Kontrastverstärkung</span></a>
+                                        </li>
+
+                                        <li>
+                                            <a class="icon icon-text" data-role="simple-content" data-simple-headline="Inhalt in Leichter Sprache" data-simple-text="" href="" role="contentinfo" title="Einfachen Inhalt anzeigen"><span>Einfacher Inhalt</span></a>
+                                        </li>
+
+                                        <li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!--form action="/cgi-bin/fts_search.pl" class="ym-searchform ym-clearfix" enctype="application/x-www-form-urlencoded" method="post" role="search"-->
+                            <form action="/suche.html" class="ym-searchform ym-clearfix" enctype="application/x-www-form-urlencoded" method="get" role="search" >
+                                <label class="ym-labelheading hide-from-screen" for="headersearch" id="headersearch-label">Suche</label> <input aria-labelledby="headersearch-label" class="ym-searchfield" id="headersearch" placeholder="Suchbegriff" type="text" name="search" autocomplete="off"> <button class="ym-searchbutton" title="Suchen" type="submit">Suchen</button>
+                            </form>
+                        </div>
+                    </div>
+                                        <img src="/media/internet/header_verkehrsdaten.jpg" alt="Header Verkehrsdaten" />
+                </div>
+                <!-- [End]:: #header -->
+
+
+                <div aria-label="Hauptnavigation" class="modMainNavigation show-level-2 optimize-line-breaks" role="navigation">
+                                    <ul class="nav-level-1 nav-level-1-limit-to-5">
+                       <li>
+            <a title="Straßeninformationen" href="/internet/strasseninformationen/index.html">Straßeninformationen</a>
+                            <ul class="nav-level-2">
+                       <li>
+            <a title="Abschnittsfolge" href="/internet/strasseninformationen/abschnittsfolge/index.html">Abschnittsfolge</a>
+            
+            </li>
+        <li>
+            <a title="Werkzeuge" href="/internet/strasseninformationen/werkzeuge/index.html">Werkzeuge</a>
+            
+            </li>
+
+            </ul>
+            </li>
+        <li class="active">
+            <a title="Verkehrsdaten" href="/internet/verdat/index.html">Verkehrsdaten</a>
+                            <ul class="nav-level-2">
+                       <li>
+            <a title="Straßenverkehrszählung" href="/internet/verdat/svz/index.html">Straßenverkehrszählung</a>
+                            <ul class="nav-level-3">
+                       <li>
+            <a title="Zählstellenauswahl" href="/internet/verdat/svz/zaehlstelle/index.html">Zählstellenauswahl</a>
+            
+            </li>
+        <li>
+            <a title="Kennwerte" href="/internet/verdat/svz/kennwerte/index.html">Kennwerte</a>
+            
+            </li>
+
+            </ul>
+            </li>
+        <li>
+            <a title="Dauerzählstellen" href="/internet/verdat/dauz/index.html">Dauerzählstellen</a>
+            
+            </li>
+        <li>
+            <a title="Verkehrsstatistik" href="/internet/verdat/statistik/index.html">Verkehrsstatistik</a>
+            
+            </li>
+        <li class="active">
+            <a title="Verkehrsdatenmanagement" href="/internet/verdat/vdm/index.html">Verkehrsdatenmanagement</a>
+            
+            </li>
+
+            </ul>
+            </li>
+        <li>
+            <a title="Ausbauprogramme" href="/internet/ausbau/index.html">Ausbauprogramme</a>
+                            <ul class="nav-level-2">
+                       <li>
+            <a title="Bundesverkehrswegeplan" href="/internet/ausbau/bvwp/index.html">Bundesverkehrswegeplan</a>
+            
+            </li>
+        <li>
+            <a title="Ausbauplan Staatsstraßen" href="/internet/ausbau/abp/index.html">Ausbauplan Staatsstraßen</a>
+            
+            </li>
+
+            </ul>
+            </li>
+        <li>
+            <a title="Veröffentlichungen" href="/internet/veroeffentlichung/index.html">Veröffentlichungen</a>
+            
+            </li>
+        <li>
+            <a title="Geodaten &amp; Dienste" href="/internet/geodaten_dienste/index.html">Geodaten &amp; Dienste</a>
+                            <ul class="nav-level-2">
+                       <li>
+            <a title="Web Feature Services (WFS)" href="/internet/geodaten_dienste/wfs/index.html">Web Feature Services (WFS)</a>
+            
+            </li>
+        <li>
+            <a title="Web Map Services (WMS)" href="/internet/geodaten_dienste/wms/index.html">Web Map Services (WMS)</a>
+            
+            </li>
+        <li>
+            <a title="Fachdienste" href="/internet/geodaten_dienste/fachdienste/index.html">Fachdienste</a>
+            
+            </li>
+        <li>
+            <a title="INSPIRE" href="/internet/geodaten_dienste/inspire/index.html">INSPIRE</a>
+            
+            </li>
+
+            </ul>
+            </li>
+
+            </ul>
+<!-- FTS: ***
+Domain 'internet' not found in the conifguration - will switch back to defaults.
+***
+***Switched to defaults only in Imperia FTS.
+ ** Domain "internet" is not described in the conf file!
+ --><!-- /srv/www/web-vh002/site -->
+                </div>
+
+                <div id="main">
+                    <div class="ym-grid linearize-level-1">
+                        <!-- [Start]:: .linearize-level-1 -->
+
+                        <!-- [Start]:: Aside Navigation /internet/verdat/vdm -->
+                        <aside class="ym-g960-4 ym-gl rs_skip"><!-- [Start]:: Aside Navigation /internet/verdat/vdm -->
+                            <div class="ym-cbox">
+                                <div class="modSidebarNavigation" role="navigation" aria-label="Nebennavigation">
+                                    <!-- FTS: ***
+Domain 'internet' not found in the conifguration - will switch back to defaults.
+***
+***Switched to defaults only in Imperia FTS.
+ ** Domain "internet" is not described in the conf file!
+ --><!-- /srv/www/web-vh002/site -->
+                                </div>
+                            </div>
+                        </aside>
+
+
+
+                        <article class="ym-g960-8 ym-gr" role="main">
+                            <!-- [Start]:: Article -->
+                            <!--IFTS_PARSE-->
+                            <div id="app" class="ym-cbox module">
+                                <div class="modContent">
+                                    <div id="readspeaker_player" class="rs_preserve rs_skip rsHome"> </div>
+                                    <!-- custom-blocks-from-catmeta (stmi_content_top): ct-sht -->
+
+	   <h1>Verkehrsdatenmanagement</h1>
+
+	   <p>Das Verkehrsdatenmanagement umfasst die Planung, Durchf&uuml;hrung, das Steuern sowie die Optimierung aller miteinander verbundenen Aufgaben in der Bayerischen Staatsbauverwaltung um einen qualitativ hochwertigen und zeitnahen, amtlichen Verkehrswert zur Verf&uuml;gung zu stellen. Dar&uuml;ber hinaus sollen die Voraussetzungen geschaffen werden, die in der Verwaltung vorliegenden Verkehrsdaten nicht nur hochwertig und schnell, sondern auch bedarfsorientiert bereitzustellen. Um diese Ziele zu realisieren, wurde das Verkehrsdatenmanagement, das im Wesentlichen die Bereiche Stra&szlig;enverkehrsz&auml;hlung, Dauerz&auml;hlstellen und die Sonderzahlungen betrifft, eingef&uuml;hrt.</p>
+
+
+
+
+    <p>Die Erhebung, Haltung, Auswertung, Hochrechnung und Fortschreibung von Verkehrsdaten ist in der Bayerischen Staatsbauverwaltung Grundlage f&uuml;r alle Planungsprozesse zur Herstellung, zum Umbau bzw. zur &Auml;nderung von Verkehrswegen und ihrer Ausstattung.<br />
+Qualitativ hochwertige Verkehrsdaten gehen in die Vor- und Entwurfsplanung ein. Sie sind wesentlicher Teil der Bedarfs- und Vorhabenbegr&uuml;ndung in den Baurechtsverfahren (Planfeststellungsverfahren) und Grundlage f&uuml;r L&auml;rmberechnungen, f&uuml;r verkehrliche Bewertungen und Entscheidungen.<br />
+Die im Verkehrsdatenmanagement relevanten Kenngr&ouml;&szlig;en aus der Stra&szlig;enverkehrsz&auml;hlung beziehen sich auf den Jahresmittelwert des t&auml;glichen Verkehrs.<br />
+In der Vergangenheit wurde f&uuml;r die Ermittlung des Mittelwertes die Z&auml;hlmethodik der Stra&szlig;enverkehrsz&auml;hlung (SVZ) im 5 Jahres-Rhythmus angewendet. Dieses Rechenverfahren bietet einen guten &Uuml;berblick &uuml;ber die Gesamtverkehrsentwicklung an den Z&auml;hlstellen.<br />
+Die Erfassung von Verkehrsdaten wurde in Bayern, durch die Zulassung von tempor&auml;ren Messsystemen, auf ein Verkehrsmonitoring umgestellt. Diese modifizierte Erfassungsmethodik der Stra&szlig;enverkehrsz&auml;hlung erm&ouml;glicht es jedes Jahr einen ausgew&auml;hlten Teil aller Z&auml;hlstellen des Landes zu erfassen und hochzurechnen. Der Gesamtdatensatz wird durch Fortschreibung der Verkehrsdaten aus den Vorjahren vervollst&auml;ndigt.<br />
+Die J&auml;hrlichkeit der Datenerfassung und die Ver&ouml;ffentlichung deren Ergebnisse bieten die M&ouml;glichkeit, aktuellere Verkehrsentwicklungen, z.B. durch Ver&auml;nderungen der Infrastruktur oder Verkehrsverlagerungen, zeitnah festzustellen und unmittelbar in die in die Verkehrsstatistik zu integrieren.</p>
+
+
+
+
+<!--start_accordion_headline_100_1-->
+<div class="modSidebarSubject" role="tablist">
+
+
+			    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-1" href="#modSidebarSubjectContent-1" id="modSidebarSubject-1" role="tab" tabindex="0" title="auf-/zuklappen"><span>Wer ist in Bayern für die Verkehrsdaten zuständig? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-1" class="toggle-content" id="modSidebarSubjectContent-1" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/bayern_vdm.jpg" target="_blank"><img alt="Bayern Vdm" data-node-id="/177/667/947/1059/1070" height="249" src="/media/internet/verdat/vdm/fittosize_250_249_340c4eae562e17b00b9ac6d602bffce0_bayern_vdm.jpg" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="250" /></a>F&uuml;r die Betreuung der Stra&szlig;enverkehrsz&auml;hlung, Dauerz&auml;hlstellen und der Sonderzahlungen auf Bundes- und Staatsstra&szlig;en ist der Baulasttr&auml;ger, das Staatliche Bauamt verantwortlich und zust&auml;ndig. F&uuml;r die Kreisstra&szlig;en ist in der Regel der Landkreis zust&auml;ndig, au&szlig;er es wurde mit dem Staatlichen Bauamt eine entsprechende &Uuml;bernahme vereinbart. Die detaillierte Information hierzu finden Sie auf der Internetseite des Staatlichen Bauamtes.<br />
+Organisatorisch werden die Bau&auml;mter vom Referat Verkehrsmanagement an der Landesbaudirektion Bayern&nbsp;unterst&uuml;tzt.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-2" href="#modSidebarSubjectContent-2" id="modSidebarSubject-2" role="tab" tabindex="0" title="auf-/zuklappen"><span> Wo wird der Verkehr erfasst und für welchem Bereich ist die Erfassung gültig? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-2" class="toggle-content" id="modSidebarSubjectContent-2" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung3_zählstellen.png" target="_blank"><img alt="Abbildung3 Zählstellen" data-node-id="/177/667/947/1059/1060" height="80" src="/media/internet/verdat/vdm/fittosize_150_80_24408fed0f650f46f6de7e5066d7b97b_abbildung3_z__hlstellen.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="150" /></a>Alle Stra&szlig;en sind l&uuml;ckenlos in Z&auml;hlabschnitte (oft wird als Synonym der Begriff &bdquo;Z&auml;hlstellenbereich&ldquo; verwendet) - das sind Stra&szlig;enabschnitte mit m&ouml;glichst gleichbleibender Verkehrsst&auml;rke - einzuteilen.<br />
+F&uuml;r jeden Z&auml;hlabschnitt ist eine Z&auml;hlstelle vorzusehen. In Bayern wird das Stra&szlig;ennetz der Bundes-, Staats- und Kreisstra&szlig;ennetz fast l&uuml;ckenlos erhoben.<br />
+Die einzurichtenden Z&auml;hlstellen sollen in ihrer Lage gegen&uuml;ber unver&auml;ndert beibehalten werden, damit sie mit den vorangegangenen Z&auml;hlungen vergleichbar bleiben.<br />
+Die Lage der Z&auml;hlstelle und die Z&auml;hlabschnitte sind langem&auml;&szlig;ig im BAYSIS-Kartenfenster ersichtlich.<br />
+Vor der Verwendung der SVZ-Daten, sollte genau gepr&uuml;ft werden, ob f&uuml;r die jeweilige Fragestellung die f&uuml;r den Z&auml;hstellenbereich verwendete Z&auml;hlstelle ausreichend genau ist. Dies gilt insbesondere, wenn die Daten f&uuml;r die verkehrs- und bautechnische Bemessung oder L&auml;rmbetrachtungen verwendet werden.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+
+
+</div>
+<!--end_accordion_headline_100_1-->
+
+
+
+
+
+
+    <p>Welche Arten der Verkehrserfassung werden in Bayern durchgef&uuml;hrt? (Z&auml;hlart)</p>
+
+
+
+
+<!--start_accordion_headline_100_5-->
+<div class="modSidebarSubject" role="tablist">
+
+
+			    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-1" href="#modSidebarSubjectContent-1" id="modSidebarSubject-1" role="tab" tabindex="0" title="auf-/zuklappen"><span>Manuelle Zählstelle (MZ) </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-1" class="toggle-content" id="modSidebarSubjectContent-1" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung12_zählgruppen.png" target="_blank"><img alt="Abbildung12 Zählgruppen" data-node-id="/177/667/947/1059/1069" height="182" src="/media/internet/verdat/vdm/fittosize_300_182_3b4963983c8c55a9a4c94804867755f0_abbildung12_z__hlgruppen.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="300" /></a>In Abh&auml;ngigkeit von der Art der Z&auml;hlstelle werden an bestimmten Tagen in definierten Zeitfenstern die Fahrzeuge vom Z&auml;hlpersonal per Strichliste erfasst. Die Z&auml;hlstellen werden in Abh&auml;ngigkeit von der Verkehrsst&auml;rke, die an dieser Z&auml;hlstelle erwartet wird in zwei Gruppen (A und B) eingeteilt.</p>
+
+<p>In der Abbildung ist die Einteilung in die jeweilige Z&auml;hlstellen-Gruppe (Zst.-Gruppe) sowie der jeweilige Z&auml;hlumfang und die Z&auml;hldauerdauer ersichtlich.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-2" href="#modSidebarSubjectContent-2" id="modSidebarSubject-2" role="tab" tabindex="0" title="auf-/zuklappen"><span>Temporäre Messstellen (TM) </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-2" class="toggle-content" id="modSidebarSubjectContent-2" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>in Bearbeitung</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-3" href="#modSidebarSubjectContent-3" id="modSidebarSubject-3" role="tab" tabindex="0" title="auf-/zuklappen"><span>Automatisierte Dauerzählstellen (DZ) </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-3" class="toggle-content" id="modSidebarSubjectContent-3" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>Die automatisierten Dauerz&auml;hlstellen bilden das &bdquo;R&uuml;ckgrat&ldquo; der Stra&szlig;enverkehrsz&auml;hlung.<br />
+An den fest installierten Einrichtungen wird der Verkehr auf Bundes-, Staats- und Kreisstra&szlig;en in Bayern permanent erfasst und bilden die Grundlage zur Hochrechnung der Kurzzeitz&auml;hlungen. Die Dauerz&auml;hlstellen detektieren mittels, in die Fahrbahn eingelegte Induktivschleifen Fahrzeuge in acht Fahrzeugarten. Durch die gemessenen Ver&auml;nderungen der Induktivit&auml;t k&ouml;nnen R&uuml;ckschl&uuml;sse auf die einzelnen Fahrzeugarten gezogen werden.<br />
+Zus&auml;tzlich liefern die Dauerz&auml;hlstellen vollst&auml;ndige Stundenwerte f&uuml;r jeden Tag der Woche &uuml;ber das gesamte Jahr &uuml;ber.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-4" href="#modSidebarSubjectContent-4" id="modSidebarSubject-4" role="tab" tabindex="0" title="auf-/zuklappen"><span>Was bedeutet der Begriff „Hochrechnung“ von Kurzzeitzählungen? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-4" class="toggle-content" id="modSidebarSubjectContent-4" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>Eine Hochrechnung ist eine gesch&auml;tzte Extrapolation eines Gesamtergebnisses aus einem Teilergebnis. Aufgrund der hohen Anzahl an Z&auml;hlstellen (ca. 9000) im bayerischen Stra&szlig;ennetz, wird dieses Verfahren im Verkehrsdatenmanagement angewendet, da eine Vollerhebung aus wirtschaftlichen und technischen Gr&uuml;nden nicht m&ouml;glich ist.<br />
+Die Berechnungsgrundlage zur Hochrechnung einer sog. Kurzzeitz&auml;hlung (Teilergebnis) auf einen Jahresmittelwert (DTV-Wert) liefern die automatischen Dauerz&auml;hlstellen.<br />
+Diese bilden das Fundament f&uuml;r die gesamte Verkehrsstatistik und ihre Qualit&auml;t hat ma&szlig;geblichen Einfluss auf die Qualit&auml;t der DTV-Werte. Die kontinuierliche Datenerfassung &uuml;ber 24 Stunden und an 365 Tagen, erm&ouml;glicht es &uuml;ber Ganglinien, die entsprechenden Kennwerte f&uuml;r die Hochrechnung zu referenzieren.<br />
+Je nach Erfassungszeitraum stehen bei Kurzzeitz&auml;hlungen im Verkehrsmonitoring mehrere Tage oder auch Wochen zur Verf&uuml;gung.<br />
+Eine detaillierte Beschreibung finden Sie im offiziellen BASt-Bericht zur Stra&szlig;enverkehrsz&auml;hlung im Internet. (www.bast.de)</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-5" href="#modSidebarSubjectContent-5" id="modSidebarSubject-5" role="tab" tabindex="0" title="auf-/zuklappen"><span>Was bedeutet der Begriff „Fortschreibung“ von Verkehrsdaten? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-5" class="toggle-content" id="modSidebarSubjectContent-5" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>Die Fortschreibung von Verkehrsdaten ist im Verkehrsdatenmanagement und in der j&auml;hrlichen Bereitstellung von Ergebnissen ein wichtiger Bestandteil.<br />
+Um das Ziel, allen Z&auml;hlstellen fl&auml;chendeckend eine plausible j&auml;hrliche DTV-Werte zuordnen zu k&ouml;nnen, werden die nicht gez&auml;hlten Z&auml;hlstellen mittels geeigneter Rechenverfahren auf Basis der letzten durchgef&uuml;hrten Z&auml;hlung in das Jahr der Ver&ouml;ffentlichung fortgeschrieben.<br />
+Grunds&auml;tzlich ist sicherzustellen, dass die Z&auml;hlstellen im Zeitraum von 5 Jahren einmal oder im Einzelfall bez&uuml;glich Ver&auml;nderungen im Stra&szlig;ennetz oder Verkehrsverlagerungen gez&auml;hlt werden. Die G&uuml;ltigkeit des fortgeschrieben Wertes ist stets auf Plausibilit&auml;t der &ouml;rtlichen Gegebenheiten zu pr&uuml;fen.<br />
+Eine detaillierte Beschreibung finden Sie im offiziellen BASt-Bericht zur Stra&szlig;enverkehrsz&auml;hlung im Internet. (www.bast.de)</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-6" href="#modSidebarSubjectContent-6" id="modSidebarSubject-6" role="tab" tabindex="0" title="auf-/zuklappen"><span>Welche Fahrzeugklassen werden in der Straßenverkehrszählung (SVZ) erfasst? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-6" class="toggle-content" id="modSidebarSubjectContent-6" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung6_fahrzeugarten.png" target="_blank"><img alt="Abbildung6 Fahrzeugarten" data-node-id="/177/667/947/1059/1063" height="260" src="/media/internet/verdat/vdm/fittosize_250_260_464ebd176ed2b94d959fb629e85acfd4_abbildung6_fahrzeugarten.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="250" /></a>Bei der Stra&szlig;enverkehrsz&auml;hlung ist nicht nur die Anzahl der Fahrzeuge von Interesse, sondern auch die Aufteilung der einzelnen Fahrzeugarten und -gruppen.<br />
+Die Qualit&auml;t von Z&auml;hlverfahren zeichnet sich neben der Vollst&auml;ndigkeit der Z&auml;hlung auch durch die F&auml;higkeit aus, verschiedene Fahrzeugarten korrekt zu differenzieren.<br />
+Die Dauerz&auml;hlstellen als Grundlage der Hochrechnung bilden mit Ihrer Aufl&ouml;sung von 8 + 1 Fahrzeugarten den Rahmen der Hochrechnung und Fortschreibung.<br />
+Bei den manuellen Z&auml;hlungen werden 6 Fahrzeugarten differenziert.<br />
+Im Verkehrsmonitoring werden f&uuml;nf Fahrzeugklassen ausgewiesen. In dieser Aggregationsstufe lassen sich die wesentlichen verkehrlichen Fragestellungen (z.B. nach dem durchschnittlichen t&auml;glichen Verkehr oder dem Schwerverkehrsanteil) beantworten.<br />
+Eine weitere Differenzierung ist m&ouml;glich, aber nur f&uuml;r besondere Fragestellungen erforderlich.<br />
+Bei der Seitenradartechnik ist die Anzahl und Zusammensetzung der Fahrzeugklassen vom eingesetzten Ger&auml;t abh&auml;ngig.<br />
+Die Herstellerangaben weisen Fahrzeugarten bis 8 Klassen aus. Die Ger&auml;te, die 8 Klassen erkennen k&ouml;nnen, unterscheiden die Fahrzeuge nicht nur nach ihrer L&auml;nge, sondern auch nach Anzahl und Abstand der Achsen sowie der Lage des Motors. Bei Z&auml;hlstellen mit hoher Verkehrsbelastung werden zur Gew&auml;hrleistung einer hohen Klassifikationsg&uuml;te gleichzeitig zwei Ger&auml;te eingesetzt, wobei jeweils nur die Daten des n&auml;chstgelegenen Fahrstreifens ausgewertet werden.<br />
+Um die Erfassungsqualit&auml;t der Z&auml;hlger&auml;te zu bestimmen, wird durch eine umfangreiche Pr&uuml;fung gem. TLS 2012 von der Bundesanstalt f&uuml;r Stra&szlig;enwesen (BASt) eine Zulassung mit einer Laufzeit von 5 Jahren erteilt. In der Bayerischen Staatsbauverwaltung kommen f&uuml;r die gesamte Verkehrserfassung nur zugelassene Ger&auml;te zum Einsatz.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-7" href="#modSidebarSubjectContent-7" id="modSidebarSubject-7" role="tab" tabindex="0" title="auf-/zuklappen"><span>Was versteht man unter Verkehrsbelastung? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-7" class="toggle-content" id="modSidebarSubjectContent-7" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>Unter Verkehrsbelastung ist die &bdquo;Durchschnittliche t&auml;gliche Verkehrsst&auml;rke [Kfz/24h]&ldquo; (DTV) sowie der &bdquo;DTV des Schwerverkehrs [Kfz/24h]&ldquo; (DTVsv) zu verstehen. Allerdings gibt es nicht nur einen DTV, sondern verschiedene DTV-Auspr&auml;gungen. Diese unterscheiden sich in den Fahrtzweckgruppen (d.h. Werktage, Urlaubswerktage, Sonn- und Feiertage) und in den Fahrzeuggruppen.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-8" href="#modSidebarSubjectContent-8" id="modSidebarSubject-8" role="tab" tabindex="0" title="auf-/zuklappen"><span>DTV aller Tage des Jahres? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-8" class="toggle-content" id="modSidebarSubjectContent-8" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>Der DTV-Wert f&uuml;r alle Tage ist die wohl die am h&auml;ufigsten verwendete Angabe der Verkehrsst&auml;rke. Hierbei handelt es sich um eine &uuml;ber das Kalenderjahr gemittelte t&auml;gliche Verkehrsst&auml;rke aller Kraftfahrzeuge. Durch die Mittelwertebildung werden Spitzen nivelliert und Schwankungen in der t&auml;glichen, w&ouml;chentlichen oder j&auml;hrlichen Ganglinie ausgeglichen. Der DTV ist unmittelbar &ndash; ohne Umrechnung auf eine Bemessungsverkehrsst&auml;rke &ndash; f&uuml;r die verkehrstechnische Dimensionierung nicht geeignet.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-9" href="#modSidebarSubjectContent-9" id="modSidebarSubject-9" role="tab" tabindex="0" title="auf-/zuklappen"><span> Was bedeutet der DTV für bestimmte Fahrzweckgruppen? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-9" class="toggle-content" id="modSidebarSubjectContent-9" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung4_gangliniedtvw.png" target="_blank"><img alt="Abbildung4 Gangliniedtvw" data-node-id="/177/667/947/1059/1061" height="154" src="/media/internet/verdat/vdm/fittosize_276_154_af0863cd6cfc07b9a2b6e6b1b0505836_abbildung4_gangliniedtvw.png" style="border-style:solid; border-width:0px; border-color:black; margin:5px; float:left" width="276" /></a><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung5_gangliniedtvu.png" target="_blank"><img alt="Abbildung5 Gangliniedtvu" data-node-id="/177/667/947/1059/1062" height="154" src="/media/internet/verdat/vdm/fittosize_283_154_49603f3d57af8cfba736f0a0ce86b821_abbildung5_gangliniedtvu.png" style="border-style:solid; border-width:0px; border-color:black; margin:5px; float:left" width="283" /></a></p>
+
+<p>&nbsp;</p>
+
+<p>F&uuml;r bestimmte Fragen sind die Verkehrsst&auml;rken bestimmter Tagesgruppen notwendig. In der SVZ werden durchschnittliche Verkehrsst&auml;rken f&uuml;r drei Tagesgruppen ermittelt. Betrachtet werden dabei alle Kraftfahrzeuge. Der DTV f&uuml;r bestimmte Fahrtzweckgruppen wird anhand der Ganglinie in Abbildung 5 erl&auml;utert:</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Werktage (DTV<sub>W</sub>):</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Durchschnittliche t&auml;gliche Verkehrsst&auml;rke an den Werktagen von Montag bis Samstag (ohne Feiertage) au&szlig;erhalb der Schulferien des jeweiligen Landes.<br />
+Abweichend zum DTV-Wert f&uuml;r alle Tage wird bei der SVZ der DTV-Wert f&uuml;r die Werktage nur mit den Werktagen (Montag bis Samstag) au&szlig;erhalb der Schulferien zur Mittelwertbildung hinzugezogen. Bei der Betrachtung des DTV-Werts f&uuml;r die Werktage ist zu beachten, dass dieser au&szlig;erhalb der SVZ oft den Samstag nicht beinhaltet und sich aus f&uuml;nf und nicht sechs Werktagen zusammensetzt. Zur Unterscheidung werden die werkt&auml;glichen DTV-Werte oft als DTV<sub>W</sub>5 (Montag bis Freitag) und DTV<sub>W</sub>6 (Montag bis Samstag) angegeben.<br />
+Der DTV<sub>W</sub> liegt bei ausgepr&auml;gtem Freizeitverkehr leicht unterhalb bzw. bei ausgepr&auml;gtem Berufs- und Wirtschaftsverkehr leicht &uuml;ber dem DTV aller Tage des Jahres. Beispiel f&uuml;r ein vom Berufs- und Wirtschaftsverkehr gepr&auml;gtes Verkehrsaufkommen zeigt die Ganglinie in Abbildung 4 (gr&uuml;n eingetragen ist der DTV-Wert aller Tage des Jahres, rot eingetragen ist der DTV<sub>W</sub>), w&auml;hrend die Ganglinie in Abbildung 5 ein Verkehrsauskommen mit sehr ausgepr&auml;gtem Freizeitverkehr zeigt.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Urlaubswerktage (DTV<sub>U</sub>):</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Durchschnittliche t&auml;gliche Verkehrsst&auml;rke an den Werktagen von Montag bis Samstag (ohne Feiertage) innerhalb der Schulferien des jeweiligen Landes.<br />
+Bei Stra&szlig;en mit ausgepr&auml;gten Berufs-, Wirtschafts- und Privatverkehr an Werktagen (z. B. Tages-Pendlerstrecken; siehe Abbildung 4) liegt der DTV<sub>U</sub> zumeist unterhalb des DTV<sub>W</sub>, da in der Urlaubszeit viele Erwerbst&auml;tige Urlaub haben und damit die t&auml;gliche Fahrt zwischen Wohnort und Arbeitsplatz entfallen. Hingegen sind bei Stra&szlig;en mit ausgepr&auml;gtem Freizeitverkehr (z. B. im nahen Zulauf der Urlaubsgebiete) (siehe Abbildung 5) der DTV<sub>U</sub> h&ouml;her als der DTV<sub>W</sub>.<br />
+Auch hier ist &ndash; analog zum DTV<sub>W</sub> &ndash; zu beachten, welche Tage zur Ermittlung herangezogen werden.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Sonn- und Feiertage (DTV<sub>S</sub>):</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Durchschnittliche t&auml;gliche Verkehrsst&auml;rke an den Sonn- und Feiertagen.<br />
+Der DTV<sub>S</sub> betrachtet &ndash; im Gegensatz zum DTV<sub>W</sub> und zum DTV<sub>U</sub> nur arbeitsfreie Tage (Sonn- und Feiertage). Dementsprechend ist der DTV<sub>S</sub> in der Regel auf Stra&szlig;en mit ausgepr&auml;gtem Tages-Pendlerverkehr niedriger als der DTV aller Tage und der DTV<sub>W</sub>. Abbildung 5 hingegen zeigt die Ganglinie einer Stra&szlig;e mit ausgepr&auml;gtem Verkehr an Sonn- und Feiertagen; der DTV<sub>S</sub> ist in Gelb eingetragen.</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Normalzeitbereich (DTV<sub>DiMiDo</sub>):</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>Durchschnittliche t&auml;gliche Verkehrsst&auml;rke der Dienstage, Mittwoche und Donnerstage im Normalzeitbereich.<br />
+Dieser Wert wurde erstmals in der SVZ 2015 ermittelt. Es handelt sich hierbei um den Mittelwert von 56 f&uuml;r das gesamte Bundesgebiet feststehenden Wochentagen die unbeeinflusst von Ferien, Feiertagen und winterlichen Witterungsbedingungen sind.</p>
+
+<p>&nbsp;</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-10" href="#modSidebarSubjectContent-10" id="modSidebarSubject-10" role="tab" tabindex="0" title="auf-/zuklappen"><span>Was bedeutet der DTV für bestimmte Fahrzeuggruppen? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-10" class="toggle-content" id="modSidebarSubjectContent-10" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung6_fahrzeugarten.png" target="_blank"><img alt="Abbildung6 Fahrzeugarten" data-node-id="/177/667/947/1059/1063" height="312" src="/media/internet/verdat/vdm/fittosize_300_312_d360a189433cba338f40fd0a1d20bfcf_abbildung6_fahrzeugarten.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="300" /></a>Bei der SVZ wird nach sieben Fahrzeugarten differenziert. Die Z&auml;hlung der Fahrr&auml;der ist den &Auml;mtern freigestellt.<br />
+Bei der Ermittlung von DTV-Werten werden stets nur die Daten der Kraftfahrzeuge (Fahrzeugarten 2 bis 7) verwendet. Falls hierbei ausnahmsweise Fahrr&auml;der ber&uuml;cksichtigt werden, ist dies explizit vermerkt.</p>
+
+<p><br />
+Bei der SVZ werden einige Fahrzeugarten zu Fahrzeuggruppen zusammengefasst und fahrzeuggruppenspezifische DTV-Werte ermittelt. Diese sind:</p>
+
+<ul>
+	<li>Schwerverkehr (SV):
+	<ul>
+		<li>Kraftomnibusse (Fahrzeugart 4)</li>
+		<li>Lastkraftwagen &ge; 3,5 t (Fahrzeugart 6)</li>
+		<li>Lastz&uuml;ge (Fahrzeugart 7)</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>Leichtverkehr (LV):
+	<ul>
+		<li>Motorisierte Zweir&auml;der (Fahrzeugart 2)</li>
+		<li>Personenkraftwagen (Fahrzeugart 3)</li>
+		<li>Lastkraftwagen &le; 3,5 t (Fahrzeugart 5)</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Bei vorangegangenen Stra&szlig;enverkehrsz&auml;hlungen (vor 2015) wurden zudem noch die folgenden Fahrzeuggruppen gebildet:</p>
+
+<ul>
+	<li>Personenverkehr (PV):
+	<ul>
+		<li>Motorisierte Zweir&auml;der (Fahrzeugart 2)</li>
+		<li>Personenkraftwagen (Fahrzeugart 3)</li>
+		<li>Kraftomnibusse (Fahrzeugart 4)</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<ul>
+	<li>G&uuml;terverkehr (GV):
+	<ul>
+		<li>Lastkraftwagen &le; 3,5 t (Fahrzeugart 5)</li>
+		<li>Lastz&uuml;ge (Fahrzeugart 7)</li>
+		<li>Lastkraftwagen &ge; 3,5 t (Fahrzeugart 6)</li>
+	</ul>
+	</li>
+</ul>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-11" href="#modSidebarSubjectContent-11" id="modSidebarSubject-11" role="tab" tabindex="0" title="auf-/zuklappen"><span> Was ist ein Ganglinien-Faktor? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-11" class="toggle-content" id="modSidebarSubjectContent-11" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung7_mittlere_tagesganglinie.png" target="_blank"><img alt="Abbildung7 Mittlere Tagesganglinie" data-node-id="/177/667/947/1059/1064" height="85" src="/media/internet/verdat/vdm/fittosize_139_85_089b89e3cd748200221b1037ebfec02a_abbildung7_mittlere_tagesganglinie.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="139" /></a><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung8_mittlere_tagesganglinie.png" target="_blank"><img alt="Abbildung8 Mittlere Tagesganglinie" data-node-id="/177/667/947/1059/1065" height="85" src="/media/internet/verdat/vdm/fittosize_141_85_c10aded1af871b5211dee8dee045356d_abbildung8_mittlere_tagesganglinie.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="141" /></a><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung9_mittlere_tagesganglinie.png" target="_blank"><img alt="Abbildung9 Mittlere Tagesganglinie" data-node-id="/177/667/947/1059/1066" height="85" src="/media/internet/verdat/vdm/fittosize_144_85_38ed328b2bb770fbe79ba40634cd7f4a_abbildung9_mittlere_tagesganglinie.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="144" /></a><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung10_verteilung_200_stunden.png" target="_blank"><img alt="Abbildung10 Verteilung 200 Stunden" data-node-id="/177/667/947/1059/1067" height="85" src="/media/internet/verdat/vdm/fittosize_137_85_7cc7aee63bb5d4b89f5156bb68479b87_abbildung10_verteilung_200_stunden.png" style="border-style: solid; border-width: 0px; border-color: black; margin: 0px;" width="137" /></a>Die Ganglinien-Faktoren (Spalte &bdquo;GL-Faktor&ldquo;) zeigen an, wie der Verkehr an bestimmten Tagen im Verh&auml;ltnis zur durchschnittlichen t&auml;gliche Verkehrsst&auml;rke an den Werktagen (DTVW) bzw. im Normalzeitbereich (DTVDiMiDo) ist.<br />
+In der SVZ gibt es folgende Ganglinien-Faktoren:</p>
+
+<ul>
+	<li>Ferienverkehrsfaktor fer</li>
+</ul>
+
+<p style="margin-left: 40px;"><br />
+Verh&auml;ltnis der durchschnittlichen t&auml;glichen Verkehrsst&auml;rke an Urlaubswerktagen zur durchschnittlichen t&auml;glichen Verkehrsst&auml;rke an Werktagen au&szlig;erhalb der Urlaubszeit. fer = DTVU / DTVW Strecken, die durch starken Ferienverkehr gepr&auml;gt sind, haben einen Ferienverkehrsfaktor fer &gt; 1,0.</p>
+
+<ul>
+	<li>Sonntagsfaktor bSo</li>
+</ul>
+
+<p style="margin-left: 40px;">Verh&auml;ltnis der durchschnittlichen t&auml;glichen Verkehrsst&auml;rke an Sonntagen im Normalzeitbereich (DTVSo,NZB) zur durchschnittlichen t&auml;glichen Verkehrsst&auml;rke an Dienstagen, Mittwochen und Donnerstagen im Normalzeitbereich<br />
+bSo = DTVSo,NZB / DTVDiMiDo<br />
+Strecken, die durch starken Ausflugverkehr gepr&auml;gt sind, haben einen Sonntagsfaktor bSo &gt; 1,0.</p>
+
+<ul>
+	<li>Freitagsfaktor bFr</li>
+</ul>
+
+<p style="margin-left: 40px;">Verh&auml;ltnis der durchschnittlichen t&auml;glichen Verkehrsst&auml;rke an Freitagen im Normalzeitbereich (DTVFr,NZB) zur durchschnittlichen t&auml;glichen Verkehrsst&auml;rke an Dienstagen, Mittwochen und Donnerstagen im Normalzeitbereich<br />
+bFr = DTVFr,NZB / DTVDiMiDo<br />
+Strecken, die durch starken Wochenpendlerverkehr gepr&auml;gt sind, haben einen Freitagsfaktor bFr &gt; 1,0.<br />
+<br />
+Abbildung 7 zeigt die (mittlere) Tagesganglinie (f&uuml;r jede Richtung) &uuml;ber eine Woche f&uuml;r eine Z&auml;hlstelle mit geringem Sonntagsfaktor. Auffallend sind die deutlich geringen Verkehrsst&auml;rken am Sonntag (und Samstag) im Vergleich zu den Verkehrsst&auml;rken unter der Woche (Montag bis Freitag). Markant sind auch die ausgepr&auml;gten Spitzen in den Hauptverkehrszeiten.</p>
+
+<p style="margin-left: 40px;"><br />
+Im Gegensatz dazu sind diese Spitzen bei der in Abbildung 8 dargestellten Tagesganglinie weniger kr&auml;ftig ausgebildet. Hier ist zudem der Wochenverlauf diametral anders: die Normalwerktage (Dienstag, Mittwoch und Donnerstag) sind im Vergleich zu den Verkehrsst&auml;rken am Wochenende schwach ausgepr&auml;gt. Diese Z&auml;hlstelle weist folglich einen hohen Sonntagsfaktor auf, der auf hohen Wochenendausflugsverkehr schlie&szlig;en l&auml;sst.</p>
+
+<p style="margin-left: 40px;"><br />
+Einen ausgepr&auml;gten Freitagsfaktor zeigt die in Abbildung 9 dargestellt Z&auml;hlstelle. Hier sind die Wochenendpendler am Freitag von Bayern nach Sachsen urs&auml;chlich. An dieser Z&auml;hlstelle sind entsprechend am Sonntagabend und am Montagvormittag &uuml;berdurchschnittliche Spitzen in der Verkehrsst&auml;rke zu verzeichnen. Bemerkenswert ist zudem die relativ hohe Verkehrsst&auml;rke in der Nacht vom Sonntag auf Montag in Fahrtrichtung S&uuml;d. Abbildung 10 zeigt an dieser Z&auml;hlstelle die Verteilung der 200 Stunden mit den h&ouml;chsten Verkehrsst&auml;rken des Jahres. Hier zeigt sich, dass an dieser Z&auml;hlstelle rund 80 % der 200 h&ouml;chsten Stunden an einem Freitag auftreten.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-12" href="#modSidebarSubjectContent-12" id="modSidebarSubject-12" role="tab" tabindex="0" title="auf-/zuklappen"><span>Was ist der Bemessungsverkehr? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-12" class="toggle-content" id="modSidebarSubjectContent-12" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p><a class="cke-saved-href" data-widget="mamasset" href="/media/internet/verdat/vdm/abbildung11_dauerlinie.png" target="_blank"><img alt="Abbildung11 Dauerlinie" data-node-id="/177/667/947/1059/1068" height="129" src="/media/internet/verdat/vdm/fittosize_250_129_09ea5f4cce04d8bee57ca440e0ecca1e_abbildung11_dauerlinie.png" style="border-style:solid; border-width:0px; border-color:black; margin:0px; float:left" width="250" /></a>Die (verkehrstechnische) Bewertung der Verkehrsqualit&auml;t und die (verkehrstechnische) Bemessung einer Verkehrsanlage entsprechend dem Handbuch f&uuml;r die Bemessung von Stra&szlig;enverkehrsanlagen (HBS 2015) [10] erfordern Kenntnisse &uuml;ber die ma&szlig;gebende Verkehrsnachfrage. Diese wird in den HBS als Bemessungsverkehrsst&auml;rke qB bezeichnet. Als Bemessungsverkehrsst&auml;rke wird allgemein die Verkehrsst&auml;rke der n-ten Stunde eines Jahres definiert. Dabei wird die Bemessungsstunde ermittelt, indem die st&uuml;ndlichen Verkehrsst&auml;rken einer Richtung oder eines Stroms aller 8760 Stunden eines Jahres als sogenannte Dauerlinie absteigend sortiert werden und die n-ten Stunden ausgew&auml;hlt wird. Gem&auml;&szlig; den HBS wird die als ma&szlig;gebend erachtete n-te Stunde vom Baulasttr&auml;ger festgelegt. Mit der Einf&uuml;hrung des HBS durch das Bundesministerium f&uuml;r Verkehr und digitale Infrastruktur bzw. der Obersten Baubeh&ouml;rde im Bayerischen Staatsministerium des Innern, f&uuml;r Bau und Verkehr wurde festgelegt, dass f&uuml;r die Bundesfern- und Staatsstra&szlig;en sowie die von den Staatlichen Bau&auml;mtern verwalteten Kreisstra&szlig;en, f&uuml;r die verkehrstechnische Bemessung in der Regel die Verkehrsst&auml;rke in der 50. h&ouml;chstbelasteten Stunde des Jahres als die Bemessungsverkehrsst&auml;rke qB zu Grunde zu legen ist. In der SVZ ist diese Bemessungsverkehrsst&auml;rke qB enthalten und als ma&szlig;gebende st&uuml;ndliche Verkehrsst&auml;rke (MSV) bezeichnet. An dieser Stelle sei nochmals darauf hingewiesen, dass vor der Verwendung gepr&uuml;ft werden soll, ob aufgrund der Lage der Z&auml;hlstelle, die Daten einschl&auml;gig oder ausreichend genau sind.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-13" href="#modSidebarSubjectContent-13" id="modSidebarSubject-13" role="tab" tabindex="0" title="auf-/zuklappen"><span>Was sind die Geräuschkennwerte? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-13" class="toggle-content" id="modSidebarSubjectContent-13" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>F&uuml;r die L&auml;rmberechnung gem&auml;&szlig; den Richtlinien f&uuml;r den L&auml;rmschutz an Stra&szlig;en, Ausgabe 2019 (RLS-19) werden unter anderem Verkehrsst&auml;rken und Lkw-Anteile ben&ouml;tigt. Die ma&szlig;gebende st&uuml;ndliche Verkehrsst&auml;rke (Kennwerte M der RLS-19) und die ma&szlig;gebliche Lkw-Anteil (Kennwert p1 und p2 der RLS-19) f&uuml;r unterschiedliche Zeitbereiche (Tag von 6 bis 22 Uhr; Nacht von 22 bis 6 Uhr) sind in den Spalten &bdquo;Ger&auml;uschkennwerte&ldquo; angegeben.<br />
+Zudem ist dort der Mittelungspegel (Lm(25)) f&uuml;r die beiden Zeitbereiche Tag und Nacht enthalten. Hier ist zu beachten, dass f&uuml;r die Berechnung des Emissionspegels (Lm,E) bei abweichenden Randbedingungen die entsprechenden Korrekturen f&uuml;r Abstand, zul&auml;ssige H&ouml;chstgeschwindigkeiten, Stra&szlig;enoberfl&auml;chen, Steigung und Gef&auml;lle sowie Schallausbreitung bzw. Reflektion vorzunehmen sind.<br />
+F&uuml;r die Berechnung des p-Wertes wird in den Stra&szlig;enverkehrsz&auml;hlungen der gesamte Schwerverkehr (Lkw mit mehr als 3,5 t zul. Gesamtgewicht, Lastz&uuml;ge und Busse) einbezogen. Die Tonnagegrenze zur Unterscheidung zwischen Pkw und Lkw liegt nach den RLS-90 zwar bei 2,8 t. Bis zur SVZ 2005 wurde der &bdquo;Lkw&ldquo;-Anteil anhand von der BASt ver&ouml;ffentlichten Faktoren auf die 2,8 t Tonnagegrenze umgerechnet [1]. Eine vom damaligen Bundesministerium f&uuml;r Verkehr, Bau und Stadtentwicklung (BMVBS) beauftragte Untersuchung im Jahr 2002 kam allerdings zum Ergebnis, dass die Anwendung der in der SVZ definierten Tonnagegrenze von 3,5 t l&auml;rmtechnisch zu keinen signifikanten Unterschiede f&uuml;hrt und deshalb diese Werte f&uuml;r Berechnungen nach den RLS-90 verwendeten werden k&ouml;nnen [8].<br />
+Neben den f&uuml;r die L&auml;rmberechnung gem&auml;&szlig; den RLS-90 erforderlichen Zeitbereichen Tag (06-22 Uhr) und Nacht (22-06 Uhr), werden in der SVZ auch die oben genannten Werte f&uuml;r die Tagesbereiche Day (06-18 Uhr) und Evening (18-22 Uhr) angegeben. Diese Tagesbereiche werden f&uuml;r die L&auml;rmminderungsplanung gem&auml;&szlig; den EU-Umgebungsl&auml;rmrichtlinien [9] (umgesetzt in deutsches Recht in &sect;&sect; 47a bis 47f BImSchG) ben&ouml;tigt.<br />
+Grunds&auml;tzlich gilt auch bei der Verwendung der L&auml;rmkennwerte aus der SVZ, dass gepr&uuml;ft werden soll, ob aufgrund der Lage der Z&auml;hlstelle, die Daten einschl&auml;gig oder ausreichend genau sind.</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+		    <!-- start accordion_element_text -->
+			<div class="accordion toggle-box">
+			    <h3 class="acc-title toggle-title">
+                    <a aria-controls="modSidebarSubjectContent-14" href="#modSidebarSubjectContent-14" id="modSidebarSubject-14" role="tab" tabindex="0" title="auf-/zuklappen"><span>Wo finde ich die SVZ-Ergebnisse? </span></a>
+                </h3>
+		        <div aria-expanded="false" aria-labelledby="modSidebarSubject-14" class="toggle-content" id="modSidebarSubjectContent-14" role="tabpanel">
+		            <ul>
+		                <li class="ym-clearfix">
+		 					<p>Die Ergebnisse der SVZ sind auf verschiedenen Wegen verf&uuml;gbar. Neben den Ver&ouml;ffentlichungen der BASt in gedruckter Form [4] und im&nbsp;<a href="https://www.bast.de/DE/Statistik/Verkehrsdaten.html">Internet der BASt</a>, bietet das Bayerische Stra&szlig;eninformationssystem BAYSIS einen umfangreichen Zugriff auf diese wichtigen Verkehrsdaten. Sowohl in&nbsp;BAYSIS im Internet&nbsp;als auch im&nbsp;Intranet&nbsp;sind die Ergebnisse aller Stra&szlig;enverkehrsz&auml;hlungen ver&ouml;ffentlicht. &Uuml;ber eine Datenabfrage k&ouml;nnen die Werte auf einzelnen Stra&szlig;en oder gezielt Z&auml;hlstellennummern abgefragt werden. Die Abfrage kann dann anschlie&szlig;end noch weiter verfeinert werden, z .B. hinsichtlich der Jahre der SVZ.&emsp;</p>
+
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		    <!-- end accordion_element_text -->
+
+
+</div>
+<!--end_accordion_headline_100_5-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <!-- custom-blocks-from-catmeta (stmi_content_bottom):  -->
+<!--%  no custom block required -->
+
+                                </div>
+                            </div>
+
+
+
+                            <!-- custom-blocks-from-catmeta (stmi_main_bottom): media_gallery -->
+
+
+                        </article>
+                        <!-- [End]:: Article -->
+                        <!--IFTS_NO_PARSE-->
+                        <aside class="ym-g960-4 ym-gl">
+
+
+
+                            <!-- custom-blocks-from-catmeta (stmi_sidebar_left_top):  -->
+<!--%  no custom block required -->
+
+
+							<!-- custom-blocks-from-catmeta (stmi_sidebar_left_bottom):  -->
+<!--%  no custom block required -->
+
+
+
+
+                        </aside>
+                        <!-- [End]:: Aside -->
+                    </div>
+                    <!-- [End]:: .linearize-level-1 -->
+                </div>
+                <!-- [End]:: #main -->
+            </div>
+            <!-- [End]::-ym-wbox -->
+        </div>
+        <!-- [End]:: .ym-wrapper -->
+        <div id="footer" class="ym-grid linearize-level-1">
+            <!-- [Start]:: #footer -->
+            <div class="modFooterToggle" role="tablist">
+                
+    <div class="ym-clearfix accordion acc-active">
+         <h2 class="acc-title">
+             <a aria-controls="modFooterToggleContent-2" class="ym-wrapper" href="#modFooterToggleContent-2" id="modFooterToggle-2" role="tab" tabindex="0" title="Linkliste auf-/zuklappen">Weiterführende Links</a>
+         </h2>
+
+         <div aria-expanded="true" aria-labelledby="modFooterToggle-2" class="ym-wrapper" id="modFooterToggleContent-2" role="tabpanel">
+            <ul aria-label="Direkt-Links" role="navigation">
+
+
+        <li class="ym-g960-3 ym-gl">
+            <span>Behörden</span>
+            <ul>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/" title="externe Webseite Bayerisches Staatsministerium für Wohnen, Bau und Verkehr">Bayerisches Staatsministerium für Wohnen, Bau und Verkehr</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.lbd.bayern.de/" title="externe Webseite Landesbaudirektion Bayern">Landesbaudirektion Bayern</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/min/geschaeftsbereich/regierungen/index.php" title="externe Webseite Regierungen">Regierungen</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.stmb.bayern.de/min/geschaeftsbereich/index.php" title="externe Webseite Staatliche Bauämter">Staatliche Bauämter</a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="ym-g960-3 ym-gl">
+            <span>Anwendungen</span>
+            <ul>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.bayerninfo.de/" title="externe Webseite Bayern Info">Bayern Info</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.radlland-bayern.de/" title="externe Webseite Bayernnetz für Radler">Bayernnetz für Radler</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.freistaat.bayern/" title="externe Webseite Bayern Portal">Bayern Portal</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.sichermobil.bayern.de/" title="externe Webseite Bayern mobil sicher ans Ziel">Bayern mobil sicher ans Ziel</a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="ym-g960-3 ym-gl">
+            <span>Themen</span>
+            <ul>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.radoffensive.bayern.de/" title="externe Webseite Radoffensive Bayern">Radoffensive Bayern</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.wir-bewegen.bayern.de/" title="externe Webseite Werkzeugkasten Mobilität">Werkzeugkasten Mobilität</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.bienen-highway.bayern.de/" title="externe Webseite Bienen-Highways">Bienen-Highways</a>
+                </li>
+
+                <li>
+                <a class="icon icon-external" target="_blank" href="https://www.ich-bau-bayern.de/index.html" title="externe Webseite Karriere">Karriere</a>
+                </li>
+
+            </ul>
+        </li>
+
+
+            </ul>
+        </div>
+    </div>
+
+
+            </div>
+
+            <div class="modFooter">
+  <div class="ym-wrapper">
+     <ul aria-label="Footer-Navigation" role="navigation">
+                        <li role="contentinfo" title="Urheberrechtlich geschützt durch die Landesbaudirektion Bayern">© Landesbaudirektion Bayern
+                        </li>
+
+
+                        <li>
+                            <a title="mehr Informationen zum Artikel" class="toggle-more" href="/internet/impressum/index.html">Impressum</a>
+                        </li>
+
+                        <li>
+                            <a title="mehr Informationen zum Artikel" class="toggle-more" href="/internet/datenschutz/index.html">Datenschutz</a>
+                        </li>
+
+                        <li>
+                            <a title="mehr Informationen zum Artikel" class="toggle-more" href="/internet/barrierefreiheit/index.html">Barrierefreiheit</a>
+                        </li>
+
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- FTS: ***
+Domain 'internet' not found in the conifguration - will switch back to defaults.
+***
+***Switched to defaults only in Imperia FTS.
+ ** Domain "internet" is not described in the conf file!
+ --><!-- /srv/www/web-vh002/site -->
+
+        </div>
+        <!-- [End]:: #footer -->
+        <script src="/res/stmi/js/build.min.js"></script>
+        <script src="/res/stmi/js/customer.js"></script>
+        <!--<script src="/res/stmi/js/readspeaker/ReadSpeaker.js?pids=embhl"></script>-->
+        <!--<script>
+            document.getElementById( "readspeaker_url_de_1" ).href = '//app.readspeaker.com/cgi-bin/rsent?customerid=9366&amp;readid=main&amp;lang=de_de&amp;voice=de_hans&amp;url=http%3A%2F%2F' + window.location.hostname + window.location.pathname;
+            document.getElementById( "readspeaker_url_de_2" ).href = '//app.readspeaker.com/cgi-bin/rsent?customerid=9366&amp;readid=main&amp;lang=de_de&amp;voice=de_hans&amp;url=http%3A%2F%2F' + window.location.hostname + window.location.pathname;
+       </script>-->
+
+
+
+
+
+
+    
+
+    <script src="/resources/js/baysis.js" type="text/javascript"></script>
+    <script src="/resources/js/imperia_sucks.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.baysis_context = "INTERNET"
+    </script>
+
+    </body>
+</html>
