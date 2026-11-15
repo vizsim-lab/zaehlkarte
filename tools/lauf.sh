@@ -66,5 +66,20 @@ erkunde_ods() {  # erkunde_ods <branch> <code> <datensatz> …
   echo "$b" > "$ziel/branch.txt"
 }
 # erkundet (ergebnis/ods_wuerzburg_fuss): Tagesdaten seit 2020 (Ortstage), die Datensätze je
-# Standort nur 24 Stunden. Prüfung mit dem Stand des Branch wuerzburg-passanten-tage:
-pruefe wuerzburg-passanten-tage wuerzburg_fuss
+# Standort nur 24 Stunden. Prüfung mit dem Stand des Branch wuerzburg-passanten-tage: geprüft
+# (ergebnis/wuerzburg_fuss), PR #31.
+#
+# Gemeinde je Dauerzählstelle (15.11.2026, Branch gemeinden): VG250 des BKG – robots.txt,
+# Verzeichnisse, Datei, Prüfsumme, Felder; dann die Stellen des Release-Assets und die
+# Kurzzeit-Stellen mit zaehlkarte.gemeinden zuordnen (tools/vg250_erkunden.py, ergebnis/vg250).
+vg250() {  # vg250 <branch>
+  local ziel="$GITHUB_WORKSPACE/ergebnis/vg250"
+  mkdir -p "$ziel"
+  rm -rf app && git clone -q --depth 1 -b "$1" https://github.com/vizsim-lab/zaehlkarte app
+  git -C app rev-parse HEAD > "$ziel/stand.txt"
+  gh release download dauerzaehlstellen -R vizsim-lab/zaehlkarte -p dauer.tar.gz -D "$RUNNER_TEMP" --clobber
+  tar -xzf "$RUNNER_TEMP/dauer.tar.gz" -C "$RUNNER_TEMP" dauer/index.json
+  ( cd app/pipeline && uv sync --locked -q && timeout 40m uv run python "$GITHUB_WORKSPACE/tools/vg250_erkunden.py" "$ziel" "$RUNNER_TEMP/dauer/index.json" "$GITHUB_WORKSPACE/app/public/data/index.json" ) > "$ziel/lauf.txt" 2>&1 || true
+  tail -c 20000 "$ziel/lauf.txt" > "$ziel/lauf_ende.txt"
+}
+vg250 gemeinden
