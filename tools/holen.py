@@ -7,6 +7,8 @@ Text (pdftotext -layout) daneben, und ein Protokoll (URL, Ziel, Typ, Größe, sh
 Aufruf: python3 tools/holen.py <ziel> <liste>
 Liste: je Zeile „name | url“ (# Kommentar); name = Ordner im Ziel. Mit „| folge=<regex> | max=<n>“
 werden danach bis zu n Links der Seite geholt, deren Ziel auf den Ausdruck passt (gleicher Host).
+„| zeit=<s>“ verlängert die Wartezeit (Overpass), „| ersatz=<url>“ wird nur geholt, wenn die erste
+Adresse scheitert (zweiter Overpass-Server).
 """
 
 import hashlib
@@ -37,7 +39,7 @@ def dateiname(url: str, typ: str, n: int) -> str:
     return f"{n:02d}_{name}"
 
 
-def auftraege() -> list[tuple[str, str, str | None, int]]:
+def auftraege() -> list[tuple[str, str, str | None, int, dict]]:
     out = []
     for zeile in LISTE.read_text(encoding="utf-8").splitlines():
         zeile = zeile.strip()
@@ -45,7 +47,7 @@ def auftraege() -> list[tuple[str, str, str | None, int]]:
             continue
         teile = [t.strip() for t in re.split(r"\s\|\s", zeile)]  # „ | “ trennt, „|“ im Ausdruck nicht
         opt = dict(t.split("=", 1) for t in teile[2:] if "=" in t)
-        out.append((teile[0], teile[1], opt.get("folge"), int(opt.get("max", "20"))))
+        out.append((teile[0], teile[1], opt.get("folge"), int(opt.get("max", "20")), opt))
     return out
 
 
@@ -65,7 +67,7 @@ def main():
     liste = auftraege()
     n = 0
     while liste:
-        name, url, folge, maximal = liste.pop(0)
+        name, url, folge, maximal, opt = liste.pop(0)
         n += 1
         ordner = ZIEL / name
         ordner.mkdir(parents=True, exist_ok=True)
@@ -73,7 +75,16 @@ def main():
         try:
             if not R.erlaubt(url):
                 raise R.Gesperrt(url)
-            inhalt, ende, typ = R.oeffne(url, zeit=120, grenze=80_000_000)
+            try:
+                inhalt, ende, typ = R.oeffne(url, zeit=int(opt.get("zeit", 120)), grenze=80_000_000)
+            except Exception as e1:  # noqa: BLE001
+                if not opt.get("ersatz"):
+                    raise
+                eintrag["fehler_erst"] = repr(e1)[:300]
+                url = eintrag["url_ersatz"] = opt["ersatz"]
+                if not R.erlaubt(url):
+                    raise R.Gesperrt(url)
+                inhalt, ende, typ = R.oeffne(url, zeit=int(opt.get("zeit", 120)), grenze=80_000_000)
             datei = ordner / dateiname(ende, typ, n)
             datei.write_bytes(inhalt)
             eintrag |= {"ende": ende, "typ": typ, "bytes": len(inhalt), "datei": datei.name,
@@ -84,7 +95,7 @@ def main():
             if folge:
                 neu = links(inhalt, ende, folge, maximal)
                 eintrag["gefolgt"] = neu
-                liste[:0] = [(name, u, None, 0) for u in neu]
+                liste[:0] = [(name, u, None, 0, {}) for u in neu]
             print(name, url, "ok", len(inhalt))
         except Exception as e:  # noqa: BLE001
             eintrag["fehler"] = repr(e)[:300]
