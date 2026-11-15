@@ -1,0 +1,7 @@
+# Quellen, Runde 31 (15.11.2026): Kevelaer – „Ergebnisse der Verkehrszählungen“ 2019 (büro stadtVerkehr,
+# PDF ohne Lizenz), die Seite der Verkehrsuntersuchung 2019–2024 mit ihren Berichten (Zählstellenplan)
+# und die Straßen im Kernort aus OpenStreetMap (Overpass) für die Lage der Zählstellen.
+kevelaer_bericht | https://www.kevelaer.de/dokumente/leben-in-kevelaer/mobilitaet/ergebnisse-der-verkehrszaehlungen-2019.pdf?cid=7j
+kevelaer_seite | https://www.kevelaer.de/:translation/en/kevelaer-de/startseite/leben-in-kevelaer/mobilitaet/verkehrsuntersuchung-2019-2024 | folge=dokumente/leben-in-kevelaer/mobilitaet/[^\"']*\.pdf | max=12
+kevelaer_seite_de | https://www.kevelaer.de/kevelaer-de/startseite/leben-in-kevelaer/mobilitaet/verkehrsuntersuchung-2019-2024 | folge=dokumente/leben-in-kevelaer/mobilitaet/[^\"']*\.pdf | max=12
+geo_kevelaer_strassen | https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22junction%22%3D%22roundabout%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3B%29%3Bout%20body%20geom%3B | zeit=150 | ersatz=https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3B%28way%5B%22highway%22%5D%5B%22name%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22highway%22%5D%5B%22ref%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3Bway%5B%22junction%22%3D%22roundabout%22%5D%2851.55%2C6.19%2C51.62%2C6.31%29%3B%29%3Bout%20body%20geom%3B
