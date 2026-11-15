@@ -1,0 +1,1366 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T10:58:32Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 580748,
+  "lat": 49.3913676,
+  "lon": 11.2018885,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12751",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12752",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12750",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Ost",
+    "ref": "53"
+  }
+},
+{
+  "type": "node",
+  "id": 584250,
+  "lat": 49.4485317,
+  "lon": 11.2346271,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12753",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12754",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60615",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg",
+    "ref": "51"
+  }
+},
+{
+  "type": "node",
+  "id": 2718171,
+  "lat": 49.4653300,
+  "lon": 11.2261315,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10826",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "10827",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60469",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg",
+    "ref": "88"
+  }
+},
+{
+  "type": "node",
+  "id": 5890932,
+  "lat": 49.4755242,
+  "lon": 11.1788929,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg / Behringersdorf",
+    "ref": "86"
+  }
+},
+{
+  "type": "node",
+  "id": 5890934,
+  "lat": 49.4696739,
+  "lon": 11.1860528,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10827",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "10828",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "10826",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Mögeldorf",
+    "ref": "87"
+  }
+},
+{
+  "type": "node",
+  "id": 5905102,
+  "lat": 49.4128245,
+  "lon": 11.1970647,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12752",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60615",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12751",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Fischbach",
+    "ref": "52"
+  }
+},
+{
+  "type": "node",
+  "id": 5913529,
+  "lat": 49.3427607,
+  "lon": 11.2039479,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Dreieck Nürnberg / Feucht",
+    "ref": "54",
+    "wikidata": "Q785585",
+    "wikipedia": "de:Autobahndreieck Nürnberg/Feucht"
+  }
+},
+{
+  "type": "node",
+  "id": 5913535,
+  "lat": 49.3516217,
+  "lon": 11.2035469,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Dreieck Nürnberg / Feucht",
+    "ref": "54"
+  }
+},
+{
+  "type": "node",
+  "id": 7424819,
+  "lat": 49.5574076,
+  "lon": 11.0019398,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10831",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "10832",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "10830",
+    "highway": "motorway_junction",
+    "name": "Kreuz Fürth/Erlangen",
+    "name:etymology:wikidata": "Q785758",
+    "ref": "83"
+  }
+},
+{
+  "type": "node",
+  "id": 7431110,
+  "lat": 49.5401688,
+  "lon": 11.0247592,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10830",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "10831",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60471",
+    "highway": "motorway_junction",
+    "name": "Erlangen-Tennenlohe",
+    "name:etymology:wikidata": "Q2403591",
+    "ref": "84"
+  }
+},
+{
+  "type": "node",
+  "id": 7431117,
+  "lat": 49.5364203,
+  "lon": 11.0376891,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10830",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "10831",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60471",
+    "highway": "motorway_junction",
+    "name": "Erlangen-Tennenlohe",
+    "name:etymology:wikidata": "Q2403591",
+    "ref": "84"
+  }
+},
+{
+  "type": "node",
+  "id": 14670734,
+  "lat": 49.4994382,
+  "lon": 11.1348137,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10829",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60471",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "10828",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Nord",
+    "ref": "85"
+  }
+},
+{
+  "type": "node",
+  "id": 15848366,
+  "lat": 49.3666743,
+  "lon": 11.1898474,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12451",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12452",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12450",
+    "highway": "motorway_junction",
+    "name": "Feucht",
+    "ref": "48"
+  }
+},
+{
+  "type": "node",
+  "id": 15848368,
+  "lat": 49.3815434,
+  "lon": 11.1304727,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12453",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12454",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "31801",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Süd",
+    "ref": "46"
+  }
+},
+{
+  "type": "node",
+  "id": 15848380,
+  "lat": 49.4247308,
+  "lon": 11.0646095,
+  "tags": {
+    "highway": "motorway_junction",
+    "loc_name": "Nürnberg-Südring",
+    "noname": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 15934546,
+  "lat": 49.3720550,
+  "lon": 11.1287108,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11912",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "11913",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11911",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Süd",
+    "ref": "58"
+  }
+},
+{
+  "type": "node",
+  "id": 18327531,
+  "lat": 49.4771269,
+  "lon": 11.1765936,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg / Behringersdorf",
+    "ref": "86"
+  }
+},
+{
+  "type": "node",
+  "id": 20946687,
+  "lat": 49.5416281,
+  "lon": 10.9930128,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12462",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12463",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60537",
+    "highway": "motorway_junction",
+    "name": "Erlangen-Eltersdorf",
+    "ref": "35"
+  }
+},
+{
+  "type": "node",
+  "id": 20946725,
+  "lat": 49.4840088,
+  "lon": 11.0040079,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12460",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12461",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "20121",
+    "destination": "Fürth-Poppenreuth;Fürth-Stadtmitte",
+    "highway": "motorway_junction",
+    "name": "Fürth-Poppenreuth",
+    "ref": "38"
+  }
+},
+{
+  "type": "node",
+  "id": 20946763,
+  "lat": 49.4094729,
+  "lon": 11.0565924,
+  "tags": {
+    "highway": "motorway_junction",
+    "noname": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 21179540,
+  "lat": 49.4974686,
+  "lon": 10.9986295,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "13.0",
+    "TMC:cid_58:tabcd_1:LocationCode": "12461",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "8144",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12460",
+    "highway": "motorway_junction",
+    "name": "Fürth-Ronhof",
+    "ref": "37"
+  }
+},
+{
+  "type": "node",
+  "id": 21263908,
+  "lat": 49.4419186,
+  "lon": 11.0009263,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Kleinreuth"
+  }
+},
+{
+  "type": "node",
+  "id": 21298202,
+  "lat": 49.3935818,
+  "lon": 11.1890664,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11914",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "11915",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11913",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Ost",
+    "ref": "60"
+  }
+},
+{
+  "type": "node",
+  "id": 21299061,
+  "lat": 49.4021703,
+  "lon": 11.2900949,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11915",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60656",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11914",
+    "highway": "motorway_junction",
+    "name": "Kreuz Altdorf",
+    "ref": "61"
+  }
+},
+{
+  "type": "node",
+  "id": 21300290,
+  "lat": 49.4060260,
+  "lon": 11.3071928,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11915",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60656",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11914",
+    "highway": "motorway_junction",
+    "name": "Kreuz Altdorf",
+    "ref": "61"
+  }
+},
+{
+  "type": "node",
+  "id": 21317553,
+  "lat": 49.5353881,
+  "lon": 10.9925684,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "13.0",
+    "TMC:cid_58:tabcd_1:LocationCode": "60537",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12462",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "8144",
+    "highway": "motorway_junction",
+    "name": "Fuchswald"
+  }
+},
+{
+  "type": "node",
+  "id": 21317556,
+  "lat": 49.5322704,
+  "lon": 10.9926061,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "13.0",
+    "TMC:cid_58:tabcd_1:LocationCode": "60536",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60537",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "8144",
+    "highway": "motorway_junction",
+    "name": "Gründlach"
+  }
+},
+{
+  "type": "node",
+  "id": 21484354,
+  "lat": 49.4212973,
+  "lon": 11.0436299,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Schweinau"
+  }
+},
+{
+  "type": "node",
+  "id": 24836651,
+  "lat": 49.4084058,
+  "lon": 11.2927868,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10825",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60468",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60467",
+    "highway": "motorway_junction",
+    "name": "Kreuz Altdorf",
+    "ref": "89"
+  }
+},
+{
+  "type": "node",
+  "id": 25708696,
+  "lat": 49.4299513,
+  "lon": 11.0224319,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Gebersdorf"
+  }
+},
+{
+  "type": "node",
+  "id": 25921008,
+  "lat": 49.3619076,
+  "lon": 11.1993784,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12451",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12452",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12450",
+    "highway": "motorway_junction",
+    "name": "Feucht",
+    "ref": "48"
+  }
+},
+{
+  "type": "node",
+  "id": 26583544,
+  "lat": 49.4645810,
+  "lon": 11.0154526,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "20121",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12460",
+    "highway": "motorway_junction",
+    "name": "Nürnberg / Fürth",
+    "ref": "39"
+  }
+},
+{
+  "type": "node",
+  "id": 26608001,
+  "lat": 49.3945613,
+  "lon": 11.0891828,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12455",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12456",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12454",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Hafen-Süd",
+    "ref": "44"
+  }
+},
+{
+  "type": "node",
+  "id": 26609271,
+  "lat": 49.3513094,
+  "lon": 11.2011702,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12450",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12451",
+    "highway": "motorway_junction",
+    "name": "Dreieck Nürnberg / Feucht",
+    "ref": "49",
+    "wikidata": "Q785585",
+    "wikipedia": "de:Autobahndreieck Nürnberg/Feucht"
+  }
+},
+{
+  "type": "node",
+  "id": 26752171,
+  "lat": 49.3230774,
+  "lon": 11.0476613,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11910",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "11911",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11909",
+    "highway": "motorway_junction",
+    "name": "Schwabach-Süd",
+    "ref": "56"
+  }
+},
+{
+  "type": "node",
+  "id": 27260567,
+  "lat": 49.3269320,
+  "lon": 11.0772814,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Schwabach-Penzendorf"
+  }
+},
+{
+  "type": "node",
+  "id": 29127856,
+  "lat": 49.4358678,
+  "lon": 11.0062563,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Kleinreuth"
+  }
+},
+{
+  "type": "node",
+  "id": 29209356,
+  "lat": 49.4535277,
+  "lon": 11.0330627,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "28085",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "28086",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "28084",
+    "highway": "motorway_junction",
+    "old_name": "Nürnberg-Westring"
+  }
+},
+{
+  "type": "node",
+  "id": 31172474,
+  "lat": 49.4681898,
+  "lon": 11.0160648,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "20121",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12460",
+    "highway": "motorway_junction",
+    "name": "Nürnberg / Fürth",
+    "ref": "39"
+  }
+},
+{
+  "type": "node",
+  "id": 33117208,
+  "lat": 49.4054869,
+  "lon": 11.0483388,
+  "tags": {
+    "highway": "motorway_junction",
+    "noname": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 33678610,
+  "lat": 49.3214388,
+  "lon": 11.0456180,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11910",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "11911",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11909",
+    "highway": "motorway_junction",
+    "name": "Schwabach-Süd",
+    "ref": "56"
+  }
+},
+{
+  "type": "node",
+  "id": 36814048,
+  "lat": 49.5543753,
+  "lon": 10.9926943,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12463",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12464",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12462",
+    "highway": "motorway_junction",
+    "name": "Kreuz Fürth/Erlangen",
+    "name:etymology:wikidata": "Q785758",
+    "ref": "34"
+  }
+},
+{
+  "type": "node",
+  "id": 40790404,
+  "lat": 49.4713562,
+  "lon": 11.1836835,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10828",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "10829",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "10827",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Mögeldorf",
+    "ref": "87"
+  }
+},
+{
+  "type": "node",
+  "id": 83813026,
+  "lat": 49.5013699,
+  "lon": 11.1292482,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10829",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60471",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "10828",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Nord",
+    "ref": "85"
+  }
+},
+{
+  "type": "node",
+  "id": 160447522,
+  "lat": 49.4461338,
+  "lon": 10.9996994,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Leyh/Höfen"
+  }
+},
+{
+  "type": "node",
+  "id": 167037491,
+  "lat": 49.4495715,
+  "lon": 10.9959347,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Leyh/Höfen"
+  }
+},
+{
+  "type": "node",
+  "id": 241790489,
+  "lat": 49.4062289,
+  "lon": 11.1958391,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Fischbach",
+    "ref": "52"
+  }
+},
+{
+  "type": "node",
+  "id": 246016267,
+  "lat": 49.3959622,
+  "lon": 11.0800020,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12455",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12456",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12454",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Hafen-Süd",
+    "ref": "44"
+  }
+},
+{
+  "type": "node",
+  "id": 248217699,
+  "lat": 49.3823402,
+  "lon": 11.1436599,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11912",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "11913",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11911",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Süd",
+    "ref": "58"
+  }
+},
+{
+  "type": "node",
+  "id": 248484684,
+  "lat": 49.3933742,
+  "lon": 11.1133559,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12454",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12455",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12453",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Münchener Straße",
+    "old_name": "Nürnberg-Zollhaus",
+    "ref": "45",
+    "wikidata": "Q27070650"
+  }
+},
+{
+  "type": "node",
+  "id": 249160021,
+  "lat": 49.5434220,
+  "lon": 10.9929055,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12462",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12463",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60537",
+    "highway": "motorway_junction",
+    "name": "Erlangen-Eltersdorf",
+    "ref": "35"
+  }
+},
+{
+  "type": "node",
+  "id": 249214545,
+  "lat": 49.4554642,
+  "lon": 11.2521919,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10826",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "10827",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60469",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg",
+    "ref": "88"
+  }
+},
+{
+  "type": "node",
+  "id": 249309205,
+  "lat": 49.3756719,
+  "lon": 11.1411839,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Münchener Straße",
+    "ref": "45"
+  }
+},
+{
+  "type": "node",
+  "id": 249313753,
+  "lat": 49.3681242,
+  "lon": 11.1745528,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12452",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "31801",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12451",
+    "highway": "motorway_junction",
+    "name": "Wendelstein",
+    "ref": "47"
+  }
+},
+{
+  "type": "node",
+  "id": 249326581,
+  "lat": 49.4533314,
+  "lon": 10.9852404,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Fürth-Süd"
+  }
+},
+{
+  "type": "node",
+  "id": 249502871,
+  "lat": 49.4976709,
+  "lon": 11.1399933,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10829",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60471",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "10828",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Nord",
+    "ref": "85"
+  }
+},
+{
+  "type": "node",
+  "id": 249720678,
+  "lat": 49.4487501,
+  "lon": 11.0001943,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "AS N-Leyh/Höfen"
+  }
+},
+{
+  "type": "node",
+  "id": 250042929,
+  "lat": 49.5010233,
+  "lon": 11.2867431,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "8.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12754",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12755",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12753",
+    "highway": "motorway_junction",
+    "name": "Lauf",
+    "ref": "50"
+  }
+},
+{
+  "type": "node",
+  "id": 250043371,
+  "lat": 49.4965279,
+  "lon": 11.2825354,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "8.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12754",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12755",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12753",
+    "highway": "motorway_junction",
+    "name": "Lauf",
+    "ref": "50"
+  }
+},
+{
+  "type": "node",
+  "id": 250098542,
+  "lat": 49.5189376,
+  "lon": 11.3072682,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12755",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60616",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12754",
+    "highway": "motorway_junction",
+    "name": "Lauf/Hersbruck",
+    "ref": "49"
+  }
+},
+{
+  "type": "node",
+  "id": 251829695,
+  "lat": 49.4046890,
+  "lon": 11.0725887,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12456",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "20120",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12455",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Hafen-Ost",
+    "ref": "43"
+  }
+},
+{
+  "type": "node",
+  "id": 253902615,
+  "lat": 49.3999934,
+  "lon": 11.3037709,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "10825",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60468",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60467",
+    "highway": "motorway_junction",
+    "name": "Kreuz Altdorf",
+    "ref": "89"
+  }
+},
+{
+  "type": "node",
+  "id": 255415856,
+  "lat": 49.3277840,
+  "lon": 11.0744979,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "8.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "35219",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "21436",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "35218",
+    "highway": "motorway_junction",
+    "name": "Schwabach-Penzendorf"
+  }
+},
+{
+  "type": "node",
+  "id": 263409480,
+  "lat": 49.4658613,
+  "lon": 10.9588630,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Fürth-Fürberg"
+  }
+},
+{
+  "type": "node",
+  "id": 263409729,
+  "lat": 49.4695993,
+  "lon": 10.9524783,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Fürth-Fürberg"
+  }
+},
+{
+  "type": "node",
+  "id": 267016802,
+  "lat": 49.4249535,
+  "lon": 11.0331088,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Schweinau"
+  }
+},
+{
+  "type": "node",
+  "id": 267758323,
+  "lat": 49.3970694,
+  "lon": 11.2067000,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11914",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "11915",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11913",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Ost",
+    "ref": "60"
+  }
+},
+{
+  "type": "node",
+  "id": 269602253,
+  "lat": 49.4323937,
+  "lon": 11.0139158,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Gebersdorf"
+  }
+},
+{
+  "type": "node",
+  "id": 302926710,
+  "lat": 49.5511582,
+  "lon": 11.3223298,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "60616",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12756",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12755",
+    "highway": "motorway_junction",
+    "name": "Wolfshöhe",
+    "noref": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 303388828,
+  "lat": 49.4322203,
+  "lon": 11.0629773,
+  "tags": {
+    "highway": "motorway_junction",
+    "loc_name": "Nürnberg-Südring",
+    "noname": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 305789414,
+  "lat": 49.5478754,
+  "lon": 11.3215935,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "60616",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12756",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12755",
+    "highway": "motorway_junction",
+    "name": "Wolfshöhe",
+    "noref": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 374217538,
+  "lat": 49.4548564,
+  "lon": 10.9800432,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Zirndorf"
+  }
+},
+{
+  "type": "node",
+  "id": 374220576,
+  "lat": 49.4581383,
+  "lon": 10.9715389,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Zirndorf"
+  }
+},
+{
+  "type": "node",
+  "id": 1487924731,
+  "lat": 49.4510801,
+  "lon": 10.9927985,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Fürth-Süd"
+  }
+},
+{
+  "type": "node",
+  "id": 1529939907,
+  "lat": 49.4499878,
+  "lon": 11.0422154,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "28085",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "28086",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "28084",
+    "highway": "motorway_junction",
+    "old_name": "Nürnberg-Westring"
+  }
+},
+{
+  "type": "node",
+  "id": 1538874372,
+  "lat": 49.3721145,
+  "lon": 11.1595561,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "31801",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12453",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12452",
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Langwasser",
+    "ref": "47"
+  }
+},
+{
+  "type": "node",
+  "id": 1538874373,
+  "lat": 49.3735673,
+  "lon": 11.1504090,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "31801",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12453",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12452",
+    "highway": "motorway_junction",
+    "name": "Wendelstein",
+    "ref": "47"
+  }
+},
+{
+  "type": "node",
+  "id": 1549558846,
+  "lat": 49.3913967,
+  "lon": 11.1722498,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Langwasser",
+    "ref": "59"
+  }
+},
+{
+  "type": "node",
+  "id": 1552821031,
+  "lat": 49.3916771,
+  "lon": 11.1744116,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Nürnberg-Langwasser",
+    "ref": "59"
+  }
+},
+{
+  "type": "node",
+  "id": 1558232299,
+  "lat": 49.4104423,
+  "lon": 11.0690720,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "13.0",
+    "TMC:cid_58:tabcd_1:LocationCode": "20120",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12456",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Hafen",
+    "noref": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1558232404,
+  "lat": 49.4153685,
+  "lon": 11.0595154,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Hafen"
+  }
+},
+{
+  "type": "node",
+  "id": 1559194374,
+  "lat": 49.3750619,
+  "lon": 11.1426137,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12453",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12454",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "31801",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Süd",
+    "ref": "46"
+  }
+},
+{
+  "type": "node",
+  "id": 1583881888,
+  "lat": 49.4785162,
+  "lon": 11.0082367,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12460",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12461",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "20121",
+    "destination": "Fürth-Poppenreuth;Fürth-Stadtmitte",
+    "highway": "motorway_junction",
+    "name": "Fürth-Poppenreuth",
+    "ref": "38"
+  }
+},
+{
+  "type": "node",
+  "id": 1598684558,
+  "lat": 49.4931426,
+  "lon": 11.0005633,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "13.0",
+    "TMC:cid_58:tabcd_1:LocationCode": "12461",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "8144",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12460",
+    "highway": "motorway_junction",
+    "name": "Fürth-Ronhof",
+    "ref": "37"
+  }
+},
+{
+  "type": "node",
+  "id": 2165044456,
+  "lat": 49.4639538,
+  "lon": 11.2486685,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12753",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "12754",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "60615",
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg",
+    "ref": "51"
+  }
+},
+{
+  "type": "node",
+  "id": 2325640860,
+  "lat": 49.5174942,
+  "lon": 10.9919574,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "negative",
+    "TMC:cid_58:tabcd_1:LCLversion": "13.0",
+    "TMC:cid_58:tabcd_1:LocationCode": "8144",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60536",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12461",
+    "highway": "motorway_junction",
+    "name": "Fürth-Steinach",
+    "ref": "36"
+  }
+},
+{
+  "type": "node",
+  "id": 2579448523,
+  "lat": 49.5142152,
+  "lon": 10.9925740,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "13.0",
+    "TMC:cid_58:tabcd_1:LocationCode": "8144",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60536",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12461",
+    "highway": "motorway_junction",
+    "name": "Fürth-Steinach",
+    "ref": "36"
+  }
+},
+{
+  "type": "node",
+  "id": 2802833984,
+  "lat": 49.5160642,
+  "lon": 11.3045305,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "12755",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "60616",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "12754",
+    "highway": "motorway_junction",
+    "name": "Lauf/Hersbruck",
+    "ref": "49"
+  }
+},
+{
+  "type": "node",
+  "id": 5483135729,
+  "lat": 49.3317865,
+  "lon": 11.0587251,
+  "tags": {
+    "TMC:cid_58:tabcd_1:Class": "Point",
+    "TMC:cid_58:tabcd_1:Direction": "positive",
+    "TMC:cid_58:tabcd_1:LCLversion": "9.00",
+    "TMC:cid_58:tabcd_1:LocationCode": "11911",
+    "TMC:cid_58:tabcd_1:NextLocationCode": "11912",
+    "TMC:cid_58:tabcd_1:PrevLocationCode": "11910",
+    "highway": "motorway_junction",
+    "name": "Roth",
+    "ref": "57"
+  }
+},
+{
+  "type": "node",
+  "id": 6771793389,
+  "lat": 49.3322440,
+  "lon": 11.0634954,
+  "tags": {
+    "highway": "motorway_junction"
+  }
+},
+{
+  "type": "node",
+  "id": 7028551354,
+  "lat": 49.3335328,
+  "lon": 11.0608204,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Roth",
+    "ref": "57"
+  }
+},
+{
+  "type": "node",
+  "id": 13378568730,
+  "lat": 49.3931257,
+  "lon": 11.1867815,
+  "tags": {
+    "highway": "motorway_junction",
+    "name": "Kreuz Nürnberg-Ost",
+    "ref": "60"
+  }
+}
+
+  ]
+}
