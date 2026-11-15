@@ -9,19 +9,24 @@ bekommt jede Dauerzählstelle beim Bau den Schlüssel der Gemeinde, in der sie l
 dauer/index.json); ein Kreis der Datenlage umfasst die Stellen mit seinem Kreisschlüssel (die
 ersten fünf Ziffern).
 
-Gelesen wird nur die Ebene der Gemeinden (`VG250_GEM`) aus dem ZIP „Ebenen“ in geografischen
-Koordinaten (geo84) – als Shapefile, ohne weitere Bibliothek (Formtyp Polygon). Eine Stelle gehört
-zur Gemeinde, deren Fläche sie enthält (bei Land- und Wasserfläche zugleich zur Landfläche). Liegt
-sie knapp außerhalb jeder Fläche – VG250 ist generalisiert, Zählstellen stehen auch auf Brücken über
-Grenzflüsse –, gehört sie zur nächsten Gemeinde im Umkreis von `RAND_M` Metern; sonst bleibt `ags`
-leer. Die Datei ist über ihre Prüfsumme gepinnt; eine neue Fassung (jährlich zum 01.01.) kommt nur
-mit neuer URL und Prüfsumme in die Konfiguration.
+Gelesen wird nur die Ebene der Gemeinden (`VG250_GEM`) aus dem ZIP „Ebenen“ – als Shapefile, ohne
+weitere Bibliothek (Formtyp Polygon). Das BKG liefert VG250 nur projiziert (2026: UTM Zone 32 auf
+ETRS89, Gauß-Krüger); die Lage der Stellen (Länge/Breite, WGS84 ≈ ETRS89 auf unter einen Meter)
+rechnet `_tm` in die Projektion der Datei um, die ihre .prj nennt (Transversale Mercator auf dem
+Ellipsoid GRS 80, Krüger-Reihe – auf Millimeter genau, weit mehr als VG250 braucht). Gauß-Krüger
+(Bessel, anderes Datum) lehnt `lese_zip` ab. Eine Stelle gehört zur Gemeinde, deren Fläche sie
+enthält (bei Land- und Wasserfläche zugleich zur Landfläche). Liegt sie knapp außerhalb jeder
+Fläche – VG250 ist generalisiert, Zählstellen stehen auch auf Brücken über Grenzflüsse –, gehört sie
+zur nächsten Gemeinde im Umkreis von `RAND_M` Metern; sonst bleibt `ags` leer. Die Datei ist über
+ihre Prüfsumme gepinnt; eine neue Fassung (jährlich zum 01.01.) kommt nur mit neuer URL und
+Prüfsumme in die Konfiguration.
 """
 
 from __future__ import annotations
 
 import hashlib
 import math
+import re
 import struct
 import urllib.parse
 import zipfile
@@ -133,23 +138,75 @@ def _innen(x: float, y: float, ringe: list[Ring]) -> bool:
     return kreuzt % 2 == 1
 
 
-def _abstand_m(x: float, y: float, ringe: list[Ring]) -> float:
-    """Kürzester Abstand zum Rand in Metern (Breitenkreis-Näherung, für kurze Wege genau genug)."""
-    kx = math.cos(math.radians(y)) * GRAD_M
+def _abstand(x: float, y: float, ringe: list[Ring], kx: float, ky: float) -> float:
+    """Kürzester Abstand zum Rand in Metern; `kx`, `ky`: Meter je Einheit der Koordinaten."""
     best = math.inf
     for r in ringe:
-        ax, ay = (r[:-1, 0] - x) * kx, (r[:-1, 1] - y) * GRAD_M
-        dx, dy = (r[1:, 0] - x) * kx - ax, (r[1:, 1] - y) * GRAD_M - ay
+        ax, ay = (r[:-1, 0] - x) * kx, (r[:-1, 1] - y) * ky
+        dx, dy = (r[1:, 0] - x) * kx - ax, (r[1:, 1] - y) * ky - ay
         l2 = dx * dx + dy * dy
         t = np.clip(-(ax * dx + ay * dy) / np.where(l2 == 0, 1, l2), 0, 1)
         best = min(best, float(np.hypot(ax + t * dx, ay + t * dy).min()))
     return best
 
 
+@dataclass(frozen=True)
+class Projektion:
+    """Transversale Mercator (UTM und ähnliche) auf einem Ellipsoid – Parameter aus der .prj."""
+
+    meridian: float  # Mittelmeridian in Grad
+    faktor: float  # Maßstab am Mittelmeridian
+    rechts: float  # False Easting (UTM: 500000, mit Zonenkennziffer 32500000)
+    hoch: float  # False Northing
+    a: float  # große Halbachse
+    f: float  # Abplattung
+
+    def __call__(self, lon: float, lat: float) -> tuple[float, float]:
+        """Länge/Breite -> Rechts-/Hochwert (Krüger-Reihe bis n³, nach Karney 2011)."""
+        n = self.f / (2 - self.f)
+        a_ = self.a / (1 + n) * (1 + n * n / 4 + n ** 4 / 64)
+        alpha = (n / 2 - 2 * n * n / 3 + 5 * n ** 3 / 16, 13 * n * n / 48 - 3 * n ** 3 / 5,
+                 61 * n ** 3 / 240)
+        e = 2 * math.sqrt(n) / (1 + n)
+        phi, lam = math.radians(lat), math.radians(lon - self.meridian)
+        t = math.sinh(math.atanh(math.sin(phi)) - e * math.atanh(e * math.sin(phi)))
+        xi, eta = math.atan2(t, math.cos(lam)), math.atanh(math.sin(lam) / math.sqrt(1 + t * t))
+        x = eta + sum(al * math.cos(2 * j * xi) * math.sinh(2 * j * eta)
+                      for j, al in enumerate(alpha, start=1))
+        y = xi + sum(al * math.sin(2 * j * xi) * math.cosh(2 * j * eta)
+                     for j, al in enumerate(alpha, start=1))
+        return self.rechts + self.faktor * a_ * x, self.hoch + self.faktor * a_ * y
+
+
+def projektion(prj: str) -> Projektion | None:
+    """Projektion aus dem WKT einer .prj; None bei geografischen Koordinaten. Nur Transversale
+    Mercator auf GRS 80 (ETRS89) – sonst ValueError (etwa Gauß-Krüger auf Bessel)."""
+    if "PROJCS" not in prj:
+        return None
+
+    def zahl(name: str) -> float:
+        m = re.search(rf'PARAMETER\["{name}",\s*([-+0-9.eE]+)\]', prj, re.IGNORECASE)
+        if not m:
+            raise ValueError(f".prj ohne Parameter {name}")
+        return float(m[1])
+
+    if not re.search(r'PROJECTION\["Transverse_Mercator"\]', prj, re.IGNORECASE):
+        raise ValueError(f"Projektion nicht unterstützt: {prj[:120]}")
+    ellipsoid = re.search(r'SPHEROID\["[^"]*",\s*([0-9.]+),\s*([0-9.]+)', prj)
+    if not ellipsoid or abs(float(ellipsoid[1]) - 6378137) > 0.5 or abs(
+            float(ellipsoid[2]) - 298.257222101) > 1e-3:
+        raise ValueError(f"Ellipsoid nicht GRS 80 (Datum ETRS89 erwartet): {prj[:120]}")
+    if abs(zahl("Latitude_Of_Origin")) > 1e-9:
+        raise ValueError(".prj: Breite des Ursprungs ungleich 0")
+    return Projektion(zahl("Central_Meridian"), zahl("Scale_Factor"), zahl("False_Easting"),
+                      zahl("False_Northing"), float(ellipsoid[1]), 1 / float(ellipsoid[2]))
+
+
 @dataclass
 class Gemeinden:
-    """Die Gemeindeflächen (je Fläche Schlüssel, Name, Land/Wasser, Umriss, Ringe) und die Angaben
-    zur Quelle für die Karte (`meta`, wie ein Eintrag in `lizenzen`)."""
+    """Die Gemeindeflächen (je Fläche Schlüssel, Name, Land/Wasser, Umriss, Ringe in den Koordinaten
+    der Datei), ihre Projektion (None: Länge/Breite) und die Angaben zur Quelle für die Karte
+    (`meta`, wie ein Eintrag in `lizenzen`)."""
 
     ags: list[str]
     namen: list[str]
@@ -157,25 +214,29 @@ class Gemeinden:
     box: np.ndarray
     ringe: list[list[Ring]]
     meta: dict
+    proj: Projektion | None = None
 
     def name(self, ags: str) -> str:
         return next((n for a, n in zip(self.ags, self.namen, strict=True) if a == ags), ags)
 
     def finde(self, lon: float, lat: float, rand_m: float = RAND_M) -> tuple[str | None, str]:
         """(Schlüssel, Art) – Art „innen“, „rand“ (bis `rand_m` außerhalb) oder „ohne“."""
+        x, y = self.proj(lon, lat) if self.proj else (lon, lat)
         b = self.box
-        kandidaten = np.flatnonzero((b[:, 0] <= lon) & (lon <= b[:, 2])
-                                    & (b[:, 1] <= lat) & (lat <= b[:, 3]))
-        innen = [i for i in kandidaten if _innen(lon, lat, self.ringe[i])]
+        kandidaten = np.flatnonzero((b[:, 0] <= x) & (x <= b[:, 2])
+                                    & (b[:, 1] <= y) & (y <= b[:, 3]))
+        innen = [i for i in kandidaten if _innen(x, y, self.ringe[i])]
         if innen:
             innen.sort(key=lambda i: not self.land[i])  # Landfläche vor Wasserfläche
             return self.ags[innen[0]], "innen"
-        dy = rand_m / GRAD_M
-        dx = dy / max(math.cos(math.radians(lat)), 0.1)
-        nah = np.flatnonzero((b[:, 0] - dx <= lon) & (lon <= b[:, 2] + dx)
-                             & (b[:, 1] - dy <= lat) & (lat <= b[:, 3] + dy))
+        # Meter je Einheit: projiziert 1, sonst je Grad (Breitenkreis-Näherung)
+        kx, ky = ((1.0, 1.0) if self.proj
+                  else (max(math.cos(math.radians(lat)), 0.1) * GRAD_M, GRAD_M))
+        dx, dy = rand_m / kx, rand_m / ky
+        nah = np.flatnonzero((b[:, 0] - dx <= x) & (x <= b[:, 2] + dx)
+                             & (b[:, 1] - dy <= y) & (y <= b[:, 3] + dy))
         if nah.size:
-            abstand, i = min((_abstand_m(lon, lat, self.ringe[i]), i) for i in nah)
+            abstand, i = min((_abstand(x, y, self.ringe[i], kx, ky), i) for i in nah)
             if abstand <= rand_m:
                 return self.ags[i], "rand"
         return None, "ohne"
@@ -188,7 +249,7 @@ class Gemeinden:
 
 
 def lese_zip(pfad: Path, meta: dict | None = None, ebene: str = EBENE) -> Gemeinden:
-    """Die Gemeinden aus dem ZIP (Shapefile `ebene` in geografischen Koordinaten)."""
+    """Die Gemeinden aus dem ZIP (Shapefile `ebene`, Koordinaten laut .prj)."""
     with zipfile.ZipFile(pfad) as z:
         namen = {Path(n).name.upper(): n for n in z.namelist()}
 
@@ -197,10 +258,9 @@ def lese_zip(pfad: Path, meta: dict | None = None, ebene: str = EBENE) -> Gemein
             return z.read(name) if name else None
 
         shp, dbf, prj, cpg = lies("shp"), lies("dbf"), lies("prj"), lies("cpg")
-    if shp is None or dbf is None:
-        raise ValueError(f"{pfad.name}: {ebene}.shp/.dbf fehlt")
-    if prj is not None and b"PROJCS" in prj:
-        raise ValueError(f"{pfad.name}: {ebene} in projizierten Koordinaten – erwartet geo84")
+    if shp is None or dbf is None or prj is None:
+        raise ValueError(f"{pfad.name}: {ebene}.shp/.dbf/.prj fehlt")
+    proj = projektion(prj.decode("latin-1"))
     kodierung = (cpg or b"latin-1").decode("ascii").strip() or "latin-1"
     if kodierung.isdigit():
         kodierung = f"cp{kodierung}"
@@ -217,13 +277,15 @@ def lese_zip(pfad: Path, meta: dict | None = None, ebene: str = EBENE) -> Gemein
         box.append(form[0])
         ringe.append(form[1])
     return Gemeinden(ags, namen_g, np.array(land, dtype=bool),
-                     np.array(box, dtype=float).reshape(-1, 4), ringe, meta or {})
+                     np.array(box, dtype=float).reshape(-1, 4), ringe, meta or {}, proj)
 
 
 def meta(cfg: dict) -> dict:
-    """Angaben für die Karte („Quellen & Lizenzen“), aufgebaut wie ein Eintrag in `lizenzen`."""
+    """Angaben für die Karte („Quellen & Lizenzen“), aufgebaut wie ein Eintrag in `lizenzen`; dazu
+    der Quellenvermerk, in dem die Karte „BKG“ und die Lizenz verlinkt (Nutzungsbedingungen)."""
     return {"code": "gemeinden", "titel": cfg["titel"], "herausgeber": cfg["herausgeber"],
-            "lizenz": cfg["lizenz"], "lizenz_url": cfg["lizenz_url"], "herkunft_url": cfg["portal"],
+            "herausgeber_url": cfg["herausgeber_url"], "lizenz": cfg["lizenz"],
+            "lizenz_url": cfg["lizenz_url"], "herkunft_url": cfg["portal"],
             "quellenvermerk": cfg["quellenvermerk"], "stand": str(cfg["stand"])}
 
 

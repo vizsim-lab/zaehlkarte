@@ -20,7 +20,18 @@ from zaehlkarte.dauer import site
 from zaehlkarte.dauer.modell import Dauerstelle, Messreihe
 
 GEO84 = b'GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137,298.257223563]]]'
-UTM = b'PROJCS["ETRS_1989_UTM_Zone_32N",GEOGCS["GCS_ETRS_1989"]]'
+UTM = (b'PROJCS["ETRS_1989_UTM_Zone_32N",GEOGCS["GCS_ETRS_1989",DATUM["D_ETRS_1989",'
+       b'SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],'
+       b'UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],'
+       b'PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],'
+       b'PARAMETER["Central_Meridian",9.0],PARAMETER["Scale_Factor",0.9996],'
+       b'PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]')
+GK3 = (b'PROJCS["DHDN_3_Degree_Gauss_Zone_3",GEOGCS["GCS_Deutsches_Hauptdreiecksnetz",'
+       b'DATUM["D_Deutsches_Hauptdreiecksnetz",SPHEROID["Bessel_1841",6377397.155,299.1528128]],'
+       b'PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],'
+       b'PROJECTION["Gauss_Kruger"],PARAMETER["False_Easting",3500000.0],'
+       b'PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",9.0],'
+       b'PARAMETER["Scale_Factor",1.0],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]')
 
 
 def quadrat(x0: float, y0: float, x1: float, y1: float) -> list[tuple[float, float]]:
@@ -114,16 +125,33 @@ def test_rand_und_ohne(grenzen):
     assert ags == ["09162000", None] and arten == ["innen", "ohne"]
 
 
-def test_projizierte_koordinaten_abgelehnt(tmp_path):
+def test_utm_zone_32(tmp_path):
+    """VG250 kommt projiziert (UTM 32 auf ETRS89): die Stellen werden umgerechnet. Brandenburger
+    Tor: Rechtswert 796987,274, Hochwert 5827473,090 (pyproj, EPSG:25832)."""
+    x, y = gm.projektion(UTM.decode())(13.377704, 52.516275)
+    assert (round(x, 2), round(y, 2)) == (796987.27, 5827473.09)
     pfad = tmp_path / "utm.zip"
-    zip_datei(pfad, FORMEN, prj=UTM)
-    with pytest.raises(ValueError, match="projizierten"):
+    zip_datei(pfad, [({"AGS": "11000000", "GEN": "Berlin", "GF": 4},
+                      [quadrat(796000.0, 5826000.0, 798000.0, 5828000.0)])], prj=UTM)
+    g = gm.lese_zip(pfad)
+    assert g.finde(13.377704, 52.516275) == ("11000000", "innen")
+    # rund 150 m östlich der Fläche: am Rand; rund 1 km: ohne Gemeinde
+    lon_150 = 13.377704 + (798150 - 796987.27) / 67_900
+    assert g.finde(lon_150, 52.516275) == ("11000000", "rand")
+    assert g.finde(13.377704 + 0.03, 52.516275) == (None, "ohne")
+
+
+def test_gauss_krueger_abgelehnt(tmp_path):
+    pfad = tmp_path / "gk3.zip"
+    zip_datei(pfad, FORMEN, prj=GK3)
+    with pytest.raises(ValueError, match="nicht unterstützt"):
         gm.lese_zip(pfad)
 
 
 def _konfiguration(pfade: Pfade, summe: str) -> dict:
     cfg = {"url": "https://daten.example/vg/vg250_01-01.geo84.shape.ebenen.zip", "sha256": summe,
-           "stand": "2026-01-01", "titel": "VG250", "herausgeber": "BKG", "lizenz": "dl-de/by-2-0",
+           "stand": "2026-01-01", "titel": "VG250", "herausgeber": "BKG",
+           "herausgeber_url": "https://www.bkg.bund.de", "lizenz": "dl-de/by-2-0",
            "lizenz_url": "https://www.govdata.de/dl-de/by-2-0", "portal": "https://gdz.example",
            "quellenvermerk": "© BKG (2026) dl-de/by-2-0"}
     pfade.config.mkdir(parents=True, exist_ok=True)
