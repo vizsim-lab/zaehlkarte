@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [pruefe]
+        teil: [rand]
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
@@ -28,6 +28,7 @@ jobs:
             dauer3) timeout 80m python3 tools/bw_dauer3.py ergebnis/bw/dauer3 2016 2020 2024 || true ;;
             dauer4) timeout 85m python3 tools/bw_dauer4.py ergebnis/bw/dauer4 || true ;;
             pruefe) tools/pruefe.sh dauer-bw-land bw_land_kfz || true ;;
+            rand) timeout 20m python3 tools/bw_rand.py ergebnis/bw/rand || true ;;
             dz_osm) timeout 20m python3 tools/bw_dz_osm.py ergebnis/bw/dz_osm 8035:Achern 8036:Appenweier 8385:Stetten 8386:Filderstadt 8491:Weisenbach 8528:Kippenheim 8554:Wollmatingen 8702:Hornberg 8708:Sasbach 8924:Stetten || true ;;
             rad_osm)
               gh release download dauerzaehlstellen -R vizsim-lab/zaehlkarte -p dauer.tar.gz -D "$RUNNER_TEMP"
