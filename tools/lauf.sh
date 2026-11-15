@@ -65,6 +65,6 @@ erkunde_ods() {  # erkunde_ods <branch> <code> <datensatz> …
   ( cd app/pipeline && uv sync --locked -q && timeout 30m uv run python "$GITHUB_WORKSPACE/tools/ods_erkunden.py" "$c" "$ziel" "$@" ) > "$ziel/lauf.txt" 2>&1 || true
   echo "$b" > "$ziel/branch.txt"
 }
-erkunde_ods main wuerzburg_fuss passantenzaehlung_schoenbornstrasse passantenzaehlung_kaiserstrasse \
-  passantenzaehlung_spiegelstrasse passantenzaehlung_tagesdaten passantenzaehlung_stundendaten \
-  passantenzaehlung_wuerzburg
+# erkundet (ergebnis/ods_wuerzburg_fuss): Tagesdaten seit 2020 (Ortstage), die Datensätze je
+# Standort nur 24 Stunden. Prüfung mit dem Stand des Branch wuerzburg-passanten-tage:
+pruefe wuerzburg-passanten-tage wuerzburg_fuss
