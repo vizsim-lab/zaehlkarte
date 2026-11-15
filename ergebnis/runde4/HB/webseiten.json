@@ -1,0 +1,53 @@
+[
+ {
+  "ags": "04011000",
+  "name": "Bremen, Stadt",
+  "art": "gemeinde",
+  "einw": 588413,
+  "vorher": "erreicht",
+  "auch": [],
+  "web": "https://www.bremen.de/",
+  "titel": "Bremen - Informationen, Veranstaltungen, Tipps & mehr",
+  "generator": "",
+  "sitemap_urls": 11401,
+  "sitemaps": 4,
+  "treffer": [
+   "https://www.bremen.de/visitenkarte/polizeirevier-neustadt-polizeistation-neustadt-schulstrasse"
+  ],
+  "suche": [],
+  "start_treffer": [],
+  "versuche": [],
+  "herkunft": "liste_oder_geraten",
+  "neu_treffer": 1
+ },
+ {
+  "ags": "04012000",
+  "name": "Bremerhaven, Stadt",
+  "art": "gemeinde",
+  "einw": 118502,
+  "vorher": "nicht_erreicht",
+  "auch": [],
+  "web": null,
+  "titel": "",
+  "generator": "",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
+  "suche": [],
+  "start_treffer": [],
+  "versuche": [
+   [
+    "https://www.bremerhaven.de/",
+    "robots.txt oder nicht erreichbar"
+   ],
+   [
+    "https://www.stadt-bremerhaven.de/",
+    "robots.txt oder nicht erreichbar"
+   ],
+   [
+    "https://www.gemeinde-bremerhaven.de/",
+    "robots.txt oder nicht erreichbar"
+   ]
+  ]
+ }
+]
