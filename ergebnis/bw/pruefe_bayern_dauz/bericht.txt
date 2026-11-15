@@ -1,0 +1,365 @@
+== Abruf
+Gemeinden: vg250_01-01.utm32s.shape.ebenen.zip geholt (67 MB)
+bayern_dauz: 80 Zählstellen; monate 1800, monate_leer 173, neu 75, stammdaten 76; 153 Anfragen (1342 MB), 0 Ablehnungen; jüngster Tag 2026-09-30; offen 160 Abschnitte älterer Monate; abgebrochen (Zeitbudget aufgebraucht) – der nächste Lauf holt den Rest
+Fehler: []
+Dauer: 2722 s
+Rohdaten: 1957 Dateien, 24.6 MB
+{
+ "abgerufen": "2026-11-15T20:20:07Z",
+ "stellen": 80,
+ "monate": 1800,
+ "monate_leer": 173,
+ "neu": 75,
+ "stammdaten": 76,
+ "anfragen": 153,
+ "ablehnungen": 0,
+ "megabyte": 1342.4,
+ "kodierung": {
+  "gzip": 2,
+  "ohne": 151
+ },
+ "neuester_tag": "2026-09-30",
+ "offene_abschnitte": 160,
+ "status": "abgebrochen (Zeitbudget aufgebraucht) – der nächste Lauf holt den Rest"
+}
+
+== Lesen
+74 Zählstellen, 148 Richtungen in der Karte; 1752 Monatsdateien, 1171368 Stundenzeilen (0 unlesbar); Stunden in der Karte: kfz 2152185, sv 2139742; Zeilen um 2 Uhr am Tag der Sommerzeit verworfen: 584; jüngster Tag 2026-09-30
+Prüfkennzeichen (Werte): '-' 4265531, 's' 299644, 'a' 70272, 'u' 26396, 'k' 22753, 'z' 876
+Fahrzeugarten (lkW_Unterscheidung): 8+1 74
+ohne Stammdaten (nicht in der Karte): 9478 (St 2218); 9710 (St 2340); 9850 (St 2350); 9872 (St 2110); 9910 (St 2078); 9920 (St 2072)
+ohne Werte (nicht in der Karte): St 2277 9721
+Reihe 2024-12-01 – 2026-09-30, 148 Stellen
+=== Gruppe kfz
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+9116-1 | K LI 16 Nonnenhorn | None | 2024-12-01 – 2026-09-30 | 648 | 2026-09-30 | 4188
+9116-2 | K LI 16 Nonnenhorn | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 5165
+9208-1 | K CO 27 Lautertal-Rottenbach | None | 2024-12-01 – 2026-09-30 | 451 | 2026-09-30 | 320
+9208-2 | K CO 27 Lautertal-Rottenbach | None | 2024-12-01 – 2026-09-30 | 451 | 2026-09-30 | 289
+9276-1 | St 2660 Barbing | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 3753
+9276-2 | St 2660 Barbing | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 3721
+9281-1 | St 2397 Maxhütte-Haidhof | None | 2024-12-01 – 2026-09-30 | 654 | 2026-09-30 | 5632
+9281-2 | St 2397 Maxhütte-Haidhof | None | 2024-12-01 – 2026-09-30 | 655 | 2026-09-30 | 5686
+9300-1 | St 2615 Ergoldsbach | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 2924
+9300-2 | St 2615 Ergoldsbach | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 2900
+9391-1 | St 2580 Ottenhofen | None | 2024-12-01 – 2026-09-30 | 615 | 2026-09-30 | 6747
+9391-2 | St 2580 Ottenhofen | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 7001
+9400-1 | St 2136 Bodenmais | None | 2025-01-01 – 2026-09-30 | 577 | 2026-09-30 | 2392
+9400-2 | St 2136 Bodenmais | None | 2025-01-01 – 2026-09-30 | 632 | 2026-09-30 | 2339
+9405-1 | St 2584 Halbergmoos (Gesamt) | None | None – None | 0 | None | None
+9405-2 | St 2584 Halbergmoos (Gesamt) | None | None – None | 0 | None | None
+9406-1 | St 2584 Halbergmoos (B301) | None | None – None | 0 | None | None
+9406-2 | St 2584 Halbergmoos (B301) | None | None – None | 0 | None | None
+9407-1 | St 2584 Halbergmoos (A92) | None | None – None | 0 | None | None
+9407-2 | St 2584 Halbergmoos (A92) | None | None – None | 0 | None | None
+9413-1 | St 2580 Flughafentangente (o) | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-29 | 6951
+9413-2 | St 2580 Flughafentangente (o) | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-29 | 7002
+9441-1 | St 2111 Frontenhausen | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 5145
+9441-2 | St 2111 Frontenhausen | None | 2024-12-01 – 2026-09-30 | 664 | 2026-09-30 | 5075
+9450-1 | St 2025 Jettingen-Scheppach | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 3881
+9450-2 | St 2025 Jettingen-Scheppach | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 3884
+9451-1 | St 2096 Grabenstätt | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 3457
+9451-2 | St 2096 Grabenstätt | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 3571
+9463-1 | St 1066 Feuchtwangen (n) | None | 2024-12-01 – 2026-09-30 | 563 | 2026-09-30 | 3739
+9463-2 | St 1066 Feuchtwangen (n) | None | 2024-12-01 – 2026-09-30 | 563 | 2026-09-30 | 3806
+9464-1 | St 2008 Osterreuten | None | 2025-01-01 – 2026-09-30 | 629 | 2026-09-30 | 2577
+9464-2 | St 2008 Osterreuten | None | 2025-01-01 – 2026-09-30 | 630 | 2026-09-30 | 2508
+9465-1 | St 2007 Burgberg | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 2366
+9465-2 | St 2007 Burgberg | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 2296
+9466-1 | St 2092 Ullading | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 473
+9466-2 | St 2092 Ullading | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 448
+9467-1 | St 2092 Bergham | None | 2024-12-01 – 2026-09-30 | 637 | 2026-09-30 | 1765
+9467-2 | St 2092 Bergham | None | 2024-12-01 – 2026-09-30 | 637 | 2026-09-30 | 1799
+9468-1 | St 2095 Weisham | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 2186
+9468-2 | St 2095 Weisham | None | 2024-12-01 – 2026-09-30 | 652 | 2026-09-30 | 2145
+9469-1 | St 2027 Zollhaus | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 3850
+9469-2 | St 2027 Zollhaus | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 3955
+9470-1 | St 2057 Wessobrunn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 1946
+9470-2 | St 2057 Wessobrunn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 1945
+9471-1 | St 2109 Baumgarten | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 1601
+9471-2 | St 2109 Baumgarten | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 1619
+9472-1 | St 2167 Ziegelhütte | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 1593
+9472-2 | St 2167 Ziegelhütte | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 1598
+9473-1 | St 2141 Ottending | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 915
+9473-2 | St 2141 Ottending | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 826
+9474-1 | St 2220 Deining-Bahnhof | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 1240
+9474-2 | St 2220 Deining-Bahnhof | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 1271
+9475-1 | St 2388 Jettingsdorf | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 565
+9475-2 | St 2388 Jettingsdorf | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 545
+9476-1 | St 2149 Walderbach | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 824
+9476-2 | St 2149 Walderbach | None | 2024-12-01 – 2026-09-30 | 663 | 2026-09-30 | 821
+9477-1 | St 2262 Burgebrach | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 3359
+9477-2 | St 2262 Burgebrach | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 3309
+9479-1 | St 2260 Mühlhausen | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 2985
+9479-2 | St 2260 Mühlhausen | None | 2024-12-01 – 2026-09-30 | 654 | 2026-09-30 | 2828
+9480-1 | St 2255 Rügland | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 1636
+9480-2 | St 2255 Rügland | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 1603
+9481-1 | St 2336 Kraftsbuch | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 663
+9481-2 | St 2336 Kraftsbuch | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 629
+9482-1 | St 2282 Kleinwenkheim | None | 2024-12-01 – 2026-09-30 | 652 | 2026-09-30 | 1035
+9482-2 | St 2282 Kleinwenkheim | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 1030
+9483-1 | St 2012 Obergünzburg | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 2410
+9483-2 | St 2012 Obergünzburg | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 2427
+9484-1 | St 2376 Häfeliswald | None | 2024-12-01 – 2026-09-30 | 645 | 2026-09-30 | 890
+9484-2 | St 2376 Häfeliswald | None | 2024-12-01 – 2026-09-30 | 647 | 2026-09-30 | 966
+9485-1 | St 2073 Ascholding | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 925
+9485-2 | St 2073 Ascholding | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 924
+9486-1 | St 2045 Pöttmes | None | 2024-12-01 – 2026-09-30 | 649 | 2026-09-30 | 2631
+9486-2 | St 2045 Pöttmes | None | 2024-12-01 – 2026-09-30 | 649 | 2026-09-30 | 2632
+9487-1 | St 2020 Grafertshofen | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 2324
+9487-2 | St 2020 Grafertshofen | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 2167
+9488-1 | St 2397 Zeitlarn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 4992
+9488-2 | St 2397 Zeitlarn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 5370
+9489-1 | St 2520 Bodelsberg | None | 2024-12-01 – 2026-09-30 | 647 | 2026-09-30 | 1108
+9489-2 | St 2520 Bodelsberg | None | 2024-12-01 – 2026-09-30 | 648 | 2026-09-30 | 1168
+9490-1 | St 2082 Kirchheim b. München | None | 2024-12-01 – 2026-09-30 | 655 | 2026-09-30 | 7021
+9490-2 | St 2082 Kirchheim b. München | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 7473
+9491-1 | St 2054 Allershausen | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 4616
+9491-2 | St 2054 Allershausen | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 4247
+9492-1 | St 2052 Wagenhofen | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 4115
+9492-2 | St 2052 Wagenhofen | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 4203
+9493-1 | St 2057 Polling (N) | None | 2024-12-01 – 2026-09-30 | 601 | 2026-09-30 | 977
+9493-2 | St 2057 Polling (N) | None | 2024-12-01 – 2026-09-30 | 602 | 2026-09-30 | 1592
+9494-1 | St 2069 Alling | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 4698
+9494-2 | St 2069 Alling | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 4548
+9495-1 | St 2312 Rohrbrunn | None | 2024-12-01 – 2026-09-30 | 616 | 2026-09-30 | 987
+9495-2 | St 2312 Rohrbrunn | None | 2024-12-01 – 2026-09-30 | 616 | 2026-09-30 | 998
+9501-1 | St 2309 Miltenberg M1 | None | 2024-12-01 – 2026-09-30 | 664 | 2026-09-30 | 8396
+9501-2 | St 2309 Miltenberg M1 | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 7422
+9502-1 | St 2309 Miltenberg M2 | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 4794
+9502-2 | St 2309 Miltenberg M2 | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 4928
+9503-1 | St 2309 Miltenberg M3 | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 7875
+9503-2 | St 2309 Miltenberg M3 | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 8377
+9558-1 | St 2230 Essing | None | 2025-09-06 – 2026-08-31 | 314 | 2026-08-31 | 2972
+9558-2 | St 2230 Essing | None | 2025-09-06 – 2026-08-31 | 314 | 2026-08-31 | 2992
+9574-1 | St 2191 Marktzeuln-Zettlitz (N) | None | 2024-12-01 – 2026-09-30 | 646 | 2026-09-30 | 1849
+9574-2 | St 2191 Marktzeuln-Zettlitz (N) | None | 2024-12-01 – 2026-09-30 | 646 | 2026-09-30 | 2156
+9630-1 | St 2259 Hemhofen | None | 2024-12-01 – 2026-09-30 | 664 | 2026-09-30 | 4661
+9630-2 | St 2259 Hemhofen | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 4701
+9631-1 | St 2240 Heßdorf | None | 2024-12-01 – 2026-09-30 | 621 | 2026-09-30 | 7670
+9631-2 | St 2240 Heßdorf | None | 2024-12-01 – 2026-09-30 | 619 | 2026-09-30 | 5501
+9633-1 | St 2240 Uttenreuth | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 5892
+9633-2 | St 2240 Uttenreuth | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 5618
+9636-1 | St 2241 Schwaig b. Nürnberg | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 8487
+9636-2 | St 2241 Schwaig b. Nürnberg | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 6977
+9637-1 | St 2245 Zirndorf-Wintersdorf | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 5787
+9637-2 | St 2245 Zirndorf-Wintersdorf | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 6007
+9638-1 | St 2401 Nürnberg-Altenfurt | None | 2024-12-01 – 2026-09-30 | 630 | 2026-09-30 | 4276
+9638-2 | St 2401 Nürnberg-Altenfurt | None | 2024-12-01 – 2026-09-30 | 632 | 2026-09-30 | 4224
+9639-1 | St 2406 Nürnberg-Worzeldorf | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 4478
+9639-2 | St 2406 Nürnberg-Worzeldorf | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 5233
+9640-1 | St 2225 Wendelstein (n) | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 6927
+9640-2 | St 2225 Wendelstein (n) | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 7229
+9642-1 | St 2409 Rednitzhembach | None | 2024-12-01 – 2026-09-30 | 625 | 2026-09-30 | 3565
+9642-2 | St 2409 Rednitzhembach | None | 2024-12-01 – 2026-09-30 | 609 | 2026-09-30 | 4000
+9643-1 | St 2345 Gröbenzell | None | 2024-12-01 – 2026-09-30 | 655 | 2026-09-30 | 7665
+9643-2 | St 2345 Gröbenzell | None | 2024-12-01 – 2026-09-30 | 449 | 2026-09-30 | 7450
+9644-1 | St 2063 Karlsfeld | None | 2024-12-01 – 2025-08-31 | 271 | 2025-08-31 | 7544
+9644-2 | St 2063 Karlsfeld | None | 2024-12-01 – 2025-08-31 | 271 | 2025-08-31 | 7298
+9645-1 | St 2342 Oberschleißheim-Flugplatz | None | 2024-12-01 – 2026-03-24 | 459 | 2026-03-23 | 5790
+9645-2 | St 2342 Oberschleißheim-Flugplatz | None | 2024-12-01 – 2026-03-24 | 462 | 2026-03-23 | 6112
+9646-1 | K M 13 Ismaning-Süd | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 3976
+9646-2 | K M 13 Ismaning-Süd | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 4353
+9647-1 | St 2079 Neubiberg | None | 2024-12-01 – 2026-08-02 | 602 | 2026-08-02 | 6897
+9647-2 | St 2079 Neubiberg | None | 2024-12-01 – 2026-08-02 | 603 | 2026-08-02 | 6970
+9648-1 | K M 15 Planegg-Martinsried | None | 2024-12-01 – 2026-09-30 | 652 | 2026-09-30 | 4585
+9648-2 | K M 15 Planegg-Martinsried | None | 2024-12-01 – 2026-09-30 | 442 | 2026-09-30 | 4748
+9649-1 | St 2068 Seefeld-Oberalting | None | 2024-12-01 – 2026-09-30 | 663 | 2026-09-30 | 5282
+9649-2 | St 2068 Seefeld-Oberalting | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 5057
+9652-1 | St 2242 Fürth-Mannhof | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 4598
+9652-2 | St 2242 Fürth-Mannhof | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 4679
+9700-1 | St 2544 Planegg | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 8679
+9700-2 | St 2544 Planegg | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 8438
+9702-1 | K M 11 Grünwald | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 7329
+9702-2 | K M 11 Grünwald | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 7455
+9704-1 | K M 22 Ottobrunn | None | 2024-12-01 – 2026-09-30 | 580 | 2026-09-30 | 7043
+9704-2 | K M 22 Ottobrunn | None | 2024-12-01 – 2026-09-30 | 612 | 2026-09-30 | 6985
+9705-1 | K M 2 Unterhaching | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 5546
+9705-2 | K M 2 Unterhaching | None | 2024-12-01 – 2026-09-30 | 663 | 2026-09-30 | 5530
+9708-1 | K M 18 Feldkirchen | None | 2024-12-01 – 2026-08-23 | 624 | 2026-08-23 | 3641
+9708-2 | K M 18 Feldkirchen | None | 2024-12-01 – 2026-08-23 | 626 | 2026-08-23 | 3697
+9721-1 | St 2277 Bergrheinfeld | None | None – None | 0 | None | None
+9721-2 | St 2277 Bergrheinfeld | None | None – None | 0 | None | None
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2024: 2024-12-31: 130/132
+2025: 2025-01-01: 134/138, 2025-12-31: 136/136
+2026: 2026-01-01: 130/136
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2024: 
+2025: 2025-03-30: voll 62/62, gezählte Stunden [23]; 2025-10-26: voll 0/138, gezählte Stunden [23]
+2026: 2026-03-29: voll 134/134, gezählte Stunden [23]
+== Vollständige Tage je Jahr (alle Stellen)
+2024: 4088 von 4152 Tagen mit Werten
+2025: 48460 von 49517 Tagen mit Werten
+2026: 35684 von 36172 Tagen mit Werten
+=== Gruppe sv
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+9116-1 | K LI 16 Nonnenhorn | None | 2024-12-01 – 2026-09-30 | 648 | 2026-09-30 | 114
+9116-2 | K LI 16 Nonnenhorn | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 140
+9208-1 | K CO 27 Lautertal-Rottenbach | None | 2024-12-01 – 2026-09-30 | 451 | 2026-09-30 | 18
+9208-2 | K CO 27 Lautertal-Rottenbach | None | 2024-12-01 – 2026-09-30 | 451 | 2026-09-30 | 17
+9276-1 | St 2660 Barbing | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 405
+9276-2 | St 2660 Barbing | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 367
+9281-1 | St 2397 Maxhütte-Haidhof | None | 2024-12-01 – 2026-09-30 | 654 | 2026-09-30 | 305
+9281-2 | St 2397 Maxhütte-Haidhof | None | 2024-12-01 – 2026-09-30 | 655 | 2026-09-30 | 315
+9300-1 | St 2615 Ergoldsbach | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 263
+9300-2 | St 2615 Ergoldsbach | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 268
+9391-1 | St 2580 Ottenhofen | None | 2024-12-01 – 2026-09-30 | 615 | 2026-09-30 | 718
+9391-2 | St 2580 Ottenhofen | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 719
+9400-1 | St 2136 Bodenmais | None | 2025-01-01 – 2026-09-30 | 573 | 2026-09-30 | 233
+9400-2 | St 2136 Bodenmais | None | 2025-01-01 – 2026-09-30 | 632 | 2026-09-30 | 137
+9405-1 | St 2584 Halbergmoos (Gesamt) | None | None – None | 0 | None | None
+9405-2 | St 2584 Halbergmoos (Gesamt) | None | None – None | 0 | None | None
+9406-1 | St 2584 Halbergmoos (B301) | None | None – None | 0 | None | None
+9406-2 | St 2584 Halbergmoos (B301) | None | None – None | 0 | None | None
+9407-1 | St 2584 Halbergmoos (A92) | None | None – None | 0 | None | None
+9407-2 | St 2584 Halbergmoos (A92) | None | None – None | 0 | None | None
+9413-1 | St 2580 Flughafentangente (o) | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-29 | 736
+9413-2 | St 2580 Flughafentangente (o) | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-29 | 725
+9441-1 | St 2111 Frontenhausen | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 471
+9441-2 | St 2111 Frontenhausen | None | 2024-12-01 – 2026-09-30 | 663 | 2026-09-30 | 462
+9450-1 | St 2025 Jettingen-Scheppach | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 447
+9450-2 | St 2025 Jettingen-Scheppach | None | 2024-12-01 – 2026-09-30 | 654 | 2026-09-30 | 458
+9451-1 | St 2096 Grabenstätt | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 247
+9451-2 | St 2096 Grabenstätt | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 252
+9463-1 | St 1066 Feuchtwangen (n) | None | 2024-12-01 – 2026-09-30 | 563 | 2026-09-30 | 577
+9463-2 | St 1066 Feuchtwangen (n) | None | 2024-12-01 – 2026-09-30 | 563 | 2026-09-30 | 632
+9464-1 | St 2008 Osterreuten | None | 2025-01-01 – 2026-09-30 | 629 | 2026-09-30 | 113
+9464-2 | St 2008 Osterreuten | None | 2025-01-01 – 2026-09-30 | 630 | 2026-09-30 | 100
+9465-1 | St 2007 Burgberg | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 86
+9465-2 | St 2007 Burgberg | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 91
+9466-1 | St 2092 Ullading | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 26
+9466-2 | St 2092 Ullading | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 28
+9467-1 | St 2092 Bergham | None | 2024-12-01 – 2026-09-30 | 637 | 2026-09-30 | 128
+9467-2 | St 2092 Bergham | None | 2024-12-01 – 2026-09-30 | 637 | 2026-09-30 | 130
+9468-1 | St 2095 Weisham | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 112
+9468-2 | St 2095 Weisham | None | 2024-12-01 – 2026-09-30 | 652 | 2026-09-30 | 104
+9469-1 | St 2027 Zollhaus | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 230
+9469-2 | St 2027 Zollhaus | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 233
+9470-1 | St 2057 Wessobrunn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 126
+9470-2 | St 2057 Wessobrunn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 116
+9471-1 | St 2109 Baumgarten | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 132
+9471-2 | St 2109 Baumgarten | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 136
+9472-1 | St 2167 Ziegelhütte | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 78
+9472-2 | St 2167 Ziegelhütte | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 88
+9473-1 | St 2141 Ottending | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 55
+9473-2 | St 2141 Ottending | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 56
+9474-1 | St 2220 Deining-Bahnhof | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 98
+9474-2 | St 2220 Deining-Bahnhof | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 100
+9475-1 | St 2388 Jettingsdorf | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 27
+9475-2 | St 2388 Jettingsdorf | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 26
+9476-1 | St 2149 Walderbach | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 54
+9476-2 | St 2149 Walderbach | None | 2024-12-01 – 2026-09-30 | 663 | 2026-09-30 | 49
+9477-1 | St 2262 Burgebrach | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 145
+9477-2 | St 2262 Burgebrach | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 145
+9479-1 | St 2260 Mühlhausen | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 179
+9479-2 | St 2260 Mühlhausen | None | 2024-12-01 – 2026-09-30 | 654 | 2026-09-30 | 173
+9480-1 | St 2255 Rügland | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 85
+9480-2 | St 2255 Rügland | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 88
+9481-1 | St 2336 Kraftsbuch | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 48
+9481-2 | St 2336 Kraftsbuch | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 48
+9482-1 | St 2282 Kleinwenkheim | None | 2024-12-01 – 2026-09-30 | 646 | 2026-09-30 | 58
+9482-2 | St 2282 Kleinwenkheim | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 55
+9483-1 | St 2012 Obergünzburg | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 135
+9483-2 | St 2012 Obergünzburg | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 138
+9484-1 | St 2376 Häfeliswald | None | 2024-12-01 – 2026-09-30 | 645 | 2026-09-30 | 30
+9484-2 | St 2376 Häfeliswald | None | 2024-12-01 – 2026-09-30 | 647 | 2026-09-30 | 32
+9485-1 | St 2073 Ascholding | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 64
+9485-2 | St 2073 Ascholding | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 60
+9486-1 | St 2045 Pöttmes | None | 2024-12-01 – 2026-09-30 | 649 | 2026-09-30 | 186
+9486-2 | St 2045 Pöttmes | None | 2024-12-01 – 2026-09-30 | 649 | 2026-09-30 | 186
+9487-1 | St 2020 Grafertshofen | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 121
+9487-2 | St 2020 Grafertshofen | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 113
+9488-1 | St 2397 Zeitlarn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 242
+9488-2 | St 2397 Zeitlarn | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 277
+9489-1 | St 2520 Bodelsberg | None | 2024-12-01 – 2026-09-30 | 647 | 2026-09-30 | 53
+9489-2 | St 2520 Bodelsberg | None | 2024-12-01 – 2026-09-30 | 648 | 2026-09-30 | 57
+9490-1 | St 2082 Kirchheim b. München | None | 2024-12-01 – 2026-09-30 | 655 | 2026-09-30 | 737
+9490-2 | St 2082 Kirchheim b. München | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 758
+9491-1 | St 2054 Allershausen | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 345
+9491-2 | St 2054 Allershausen | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 328
+9492-1 | St 2052 Wagenhofen | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 217
+9492-2 | St 2052 Wagenhofen | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 227
+9493-1 | St 2057 Polling (N) | None | 2024-12-01 – 2026-09-30 | 601 | 2026-09-30 | 40
+9493-2 | St 2057 Polling (N) | None | 2024-12-01 – 2026-09-30 | 602 | 2026-09-30 | 55
+9494-1 | St 2069 Alling | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 264
+9494-2 | St 2069 Alling | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 253
+9495-1 | St 2312 Rohrbrunn | None | 2024-12-01 – 2026-09-30 | 616 | 2026-09-30 | 74
+9495-2 | St 2312 Rohrbrunn | None | 2024-12-01 – 2026-09-30 | 616 | 2026-09-30 | 79
+9501-1 | St 2309 Miltenberg M1 | None | 2024-12-01 – 2026-09-30 | 664 | 2026-09-30 | 650
+9501-2 | St 2309 Miltenberg M1 | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 611
+9502-1 | St 2309 Miltenberg M2 | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 311
+9502-2 | St 2309 Miltenberg M2 | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 313
+9503-1 | St 2309 Miltenberg M3 | None | 2024-12-01 – 2026-09-30 | 657 | 2026-09-30 | 557
+9503-2 | St 2309 Miltenberg M3 | None | 2024-12-01 – 2026-09-30 | 651 | 2026-09-30 | 552
+9558-1 | St 2230 Essing | None | 2025-09-06 – 2026-08-31 | 314 | 2026-08-31 | 224
+9558-2 | St 2230 Essing | None | 2025-09-06 – 2026-08-31 | 314 | 2026-08-31 | 227
+9574-1 | St 2191 Marktzeuln-Zettlitz (N) | None | 2024-12-01 – 2026-09-30 | 646 | 2026-09-30 | 88
+9574-2 | St 2191 Marktzeuln-Zettlitz (N) | None | 2024-12-01 – 2026-09-30 | 646 | 2026-09-30 | 105
+9630-1 | St 2259 Hemhofen | None | 2024-12-01 – 2026-09-30 | 664 | 2026-09-30 | 190
+9630-2 | St 2259 Hemhofen | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 189
+9631-1 | St 2240 Heßdorf | None | 2024-12-01 – 2026-09-30 | 619 | 2026-09-30 | 396
+9631-2 | St 2240 Heßdorf | None | 2024-12-01 – 2026-09-30 | 619 | 2026-09-30 | 283
+9633-1 | St 2240 Uttenreuth | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 230
+9633-2 | St 2240 Uttenreuth | None | 2024-12-01 – 2026-09-30 | 653 | 2026-09-30 | 173
+9636-1 | St 2241 Schwaig b. Nürnberg | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 369
+9636-2 | St 2241 Schwaig b. Nürnberg | None | 2024-12-01 – 2026-09-30 | 658 | 2026-09-30 | 347
+9637-1 | St 2245 Zirndorf-Wintersdorf | None | 2024-12-01 – 2026-09-30 | 620 | 2026-09-30 | 203
+9637-2 | St 2245 Zirndorf-Wintersdorf | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 213
+9638-1 | St 2401 Nürnberg-Altenfurt | None | 2024-12-01 – 2026-09-30 | 630 | 2026-09-30 | 273
+9638-2 | St 2401 Nürnberg-Altenfurt | None | 2024-12-01 – 2026-09-30 | 632 | 2026-09-30 | 259
+9639-1 | St 2406 Nürnberg-Worzeldorf | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 248
+9639-2 | St 2406 Nürnberg-Worzeldorf | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 266
+9640-1 | St 2225 Wendelstein (n) | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 448
+9640-2 | St 2225 Wendelstein (n) | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 461
+9642-1 | St 2409 Rednitzhembach | None | 2024-12-01 – 2026-09-30 | 625 | 2026-09-30 | 159
+9642-2 | St 2409 Rednitzhembach | None | 2024-12-01 – 2026-09-30 | 609 | 2026-09-30 | 188
+9643-1 | St 2345 Gröbenzell | None | 2024-12-01 – 2026-09-30 | 655 | 2026-09-30 | 272
+9643-2 | St 2345 Gröbenzell | None | 2024-12-01 – 2026-09-28 | 431 | 2026-09-28 | 283
+9644-1 | St 2063 Karlsfeld | None | 2024-12-01 – 2025-08-31 | 271 | 2025-08-31 | 349
+9644-2 | St 2063 Karlsfeld | None | 2024-12-01 – 2025-08-31 | 271 | 2025-08-31 | 299
+9645-1 | St 2342 Oberschleißheim-Flugplatz | None | 2024-12-01 – 2026-03-24 | 459 | 2026-03-23 | 201
+9645-2 | St 2342 Oberschleißheim-Flugplatz | None | 2024-12-01 – 2026-03-24 | 462 | 2026-03-23 | 229
+9646-1 | K M 13 Ismaning-Süd | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 201
+9646-2 | K M 13 Ismaning-Süd | None | 2024-12-01 – 2026-09-30 | 662 | 2026-09-30 | 214
+9647-1 | St 2079 Neubiberg | None | 2024-12-01 – 2026-08-02 | 602 | 2026-08-02 | 211
+9647-2 | St 2079 Neubiberg | None | 2024-12-01 – 2026-08-02 | 603 | 2026-08-02 | 207
+9648-1 | K M 15 Planegg-Martinsried | None | 2024-12-01 – 2026-09-30 | 645 | 2026-09-30 | 278
+9648-2 | K M 15 Planegg-Martinsried | None | 2026-07-01 – 2026-09-30 | 89 | 2026-09-30 | 276
+9649-1 | St 2068 Seefeld-Oberalting | None | 2024-12-01 – 2026-09-30 | 663 | 2026-09-30 | 183
+9649-2 | St 2068 Seefeld-Oberalting | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 183
+9652-1 | St 2242 Fürth-Mannhof | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 247
+9652-2 | St 2242 Fürth-Mannhof | None | 2024-12-01 – 2026-09-30 | 656 | 2026-09-30 | 239
+9700-1 | St 2544 Planegg | None | 2024-12-01 – 2026-09-30 | 597 | 2026-09-30 | 548
+9700-2 | St 2544 Planegg | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 517
+9702-1 | K M 11 Grünwald | None | 2024-12-01 – 2026-09-30 | 659 | 2026-09-30 | 337
+9702-2 | K M 11 Grünwald | None | 2024-12-01 – 2026-09-30 | 660 | 2026-09-30 | 337
+9704-1 | K M 22 Ottobrunn | None | 2024-12-01 – 2026-09-30 | 560 | 2026-09-30 | 159
+9704-2 | K M 22 Ottobrunn | None | 2024-12-01 – 2026-09-30 | 606 | 2026-09-30 | 162
+9705-1 | K M 2 Unterhaching | None | 2024-12-01 – 2026-09-30 | 661 | 2026-09-30 | 235
+9705-2 | K M 2 Unterhaching | None | 2024-12-01 – 2026-09-30 | 663 | 2026-09-30 | 236
+9708-1 | K M 18 Feldkirchen | None | 2024-12-01 – 2026-08-23 | 624 | 2026-08-23 | 263
+9708-2 | K M 18 Feldkirchen | None | 2024-12-01 – 2026-08-23 | 626 | 2026-08-23 | 260
+9721-1 | St 2277 Bergrheinfeld | None | None – None | 0 | None | None
+9721-2 | St 2277 Bergrheinfeld | None | None – None | 0 | None | None
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2024: 2024-12-31: 129/131
+2025: 2025-01-01: 133/137, 2025-12-31: 134/135
+2026: 2026-01-01: 129/135
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2024: 
+2025: 2025-03-30: voll 61/61, gezählte Stunden [23]; 2025-10-26: voll 0/137, gezählte Stunden [23]
+2026: 2026-03-29: voll 134/134, gezählte Stunden [23]
+== Vollständige Tage je Jahr (alle Stellen)
+2024: 4043 von 4114 Tagen mit Werten
+2025: 48090 von 49160 Tagen mit Werten
+2026: 35569 von 36068 Tagen mit Werten
+== Kartendaten (nur bayern_dauz)
+bayern_dauz: 140 Stellen mit vollständigen Tagen, 8 ohne
+Gemeinden: keine Grenzen – ags leer (zaehlkarte dauer fetch holt sie)
+14 Dateien, 9.5 MB, 10 Detail-Dateien
+bayern_dauz: vollständige Tage je Jahr (Stellen × Tage) – 2024: 4088, 2025: 48460, 2026: 35684
+bayern_dauz: kfz-Tagessummen, Quintilgrenzen [1340, 2570, 4040, 5630], Median 3275, Maximum 17200
+bayern_dauz: sv-Tagessummen, Quintilgrenzen [40, 100, 190, 300], Median 137, Maximum 1782
+index.json quellen: [{"code": "bayern_dauz", "name": "Bayern (Kfz, Dauerzählstellen an Staats- und Kreisstraßen)", "land": "BY", "traeger": "Freistaat Bayern, Bayerische Straßenbauverwaltung (Zentralstelle für Verkehrsmanagement)", "art": "fest eingebaute Zählgeräte (Induktivschleifen, TLS 8+1) an Staats- und Kreisstraßen: Stundenwerte je Fahrtrichtung für Kfz und Schwerverkehr", "weg": "offen über die Seite „Dauerzählstellen“ von BAYSIS (Abfrage je Zählstelle), verzeichnet in der Mobilithek", "portal": "https://www.baysis.bayern.de/internet/verdat/dauz/index.html", "archiv": null, "quellenvermerk": "Bayerische Straßenbauverwaltung - BAYSIS (www.baysis.bayern.de)", "lizenzen": [{"code": "bayern_dauz", "titel": "BAYSIS – Dauerzählstellen, Stundenwerte (verändert: nur Zählstellen an Staats- und Kreisstraßen, Stunden je Fahrtrichtung zu Tagessummen zusammengefasst)", "herausgeber": "Bayerische Straßenbauverwaltung – Zentralstelle für Verkehrsmanagement", "lizenz": "GeoNutzV", "lizenz_url": "https://www.gesetze-im-internet.de/geonutzv/", "herkunft_url": "https://www.baysis.bayern.de/internet/verdat/dauz/index.html"}], "hinweise": ["Nur die Zählstellen an Staats- und Kreisstraßen – die an Autobahnen und Bundesstraßen (die meisten der rund 200 bayerischen Dauerzählstellen) nimmt die Zählkarte nicht auf.", "Je Fahrtrichtung eine Stelle (beide am selben Punkt). Eine Stunde zählt nur, wenn BAYSIS sie als korrekt kennzeichnet („-“, auch „u“: korrekt, aber unregelmäßig); Ausfälle (a), fehlerhafte Werte (d)
+index.json lizenzen: null
