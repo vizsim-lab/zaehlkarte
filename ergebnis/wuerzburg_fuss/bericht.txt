@@ -1,15 +1,22 @@
 == Abruf
 passantenzaehlung_stundendaten: 59605 Zeilen geladen (Stand 2026-05-18T02:05:33.481000+00:00)
+passantenzaehlung_tagesdaten: 4912 Zeilen geladen (Stand 2026-05-18T00:05:04.919000+00:00)
 Fehler: []
-Dauer: 12 s
-robots.txt: 3 Abrufe für wuerzburg_rad, wuerzburg_fuss trotz Sperre (https://opendata.wuerzburg.de/api/explore/) – Ausnahme laut robots.yaml: Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt es nur über diese Wege (Anfrage: noch nicht gestellt)
-Rohdaten: 3 Dateien, 2.1 MB
+Dauer: 15 s
+robots.txt: 5 Abrufe für wuerzburg_rad, wuerzburg_fuss trotz Sperre (https://opendata.wuerzburg.de/api/explore/) – Ausnahme laut robots.yaml: Opendatasoft sperrt /api/ und /explore/dataset/*/download für alle Robots; die Daten gibt es nur über diese Wege (Anfrage: noch nicht gestellt)
+Rohdaten: 4 Dateien, 2.2 MB
 {
  "export.csv": {
   "url": "https://opendata.wuerzburg.de/api/explore/v2.1/catalog/datasets/passantenzaehlung_stundendaten/exports/csv?select=timestamp%2Cpedestrians_count%2Clocation_id&delimiter=%3B&timezone=UTC",
   "stand": "2026-09-03T12:58:13.213000+00:00|2026-05-18T02:05:33.481000+00:00",
   "datensaetze": 59605,
-  "abgerufen": "2026-11-14T21:57:27Z"
+  "abgerufen": "2026-11-15T09:17:15Z"
+ },
+ "tage.csv": {
+  "url": "https://opendata.wuerzburg.de/api/explore/v2.1/catalog/datasets/passantenzaehlung_tagesdaten/exports/csv?select=timestamp%2Cpedestrians_count%2Clocation_id&delimiter=%3B&timezone=UTC",
+  "stand": "2026-09-03T12:58:10.866000+00:00|2026-05-18T00:05:04.919000+00:00",
+  "datensaetze": 4912,
+  "abgerufen": "2026-11-15T09:17:17Z"
  }
 }
 
@@ -23,33 +30,51 @@ theme: ['TRAN']
 territory: ['Stadt Würzburg']
 geographic_reference: ['de_80_096630000000']
 Kopf export.csv: ﻿timestamp;pedestrians_count;location_id | 2026-05-17T22:00:00+00:00;28;135 | 2026-05-17T22:00:00+00:00;22;470 | 2026-05-17T22:00:00+00:00;36;476 | 2026-05-17T21:00:00+00:00;55;135 | 2026-05-17T21:00:00+00:00;55;470
+Kopf tage.csv: ﻿timestamp;pedestrians_count;location_id | 2026-05-17;9526;135 | 2026-05-17;8788;470 | 2026-05-17;11053;476 | 2026-05-16;53947;135 | 2026-05-16;22894;470
 == Lesen
 59605 Zeilen (0 unlesbar, 0 ohne alle Werte, 0 Stunden doppelt), 3 Zählstellen, 59599 Stunden in der Karte; jüngster Wert 2026-05-18
 135: 2023-12-31T23:00 bis 2026-05-17T22:00 (UTC)
 470: 2023-12-31T23:00 bis 2026-05-17T22:00 (UTC)
 476: 2023-12-31T23:00 bis 2026-05-17T22:00 (UTC)
-Reihe 2024-01-01 – 2026-05-18, 3 Stellen
+Tageswerte der Quelle: 4912 Zeilen (0 unlesbar, 0 Tage widersprüchlich), in der Karte 2401
+135: Tageswerte 2020-01-01 bis 2026-05-17
+470: Tageswerte 2022-09-07 bis 2026-05-17
+476: Tageswerte 2022-09-29 bis 2026-05-17
+Reihe 2020-01-01 – 2026-05-18, 3 Stellen
 === Gruppe fuss
 == Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
-135 | Schönbornstraße | None | 2024-01-01 – 2026-05-18 | 534 | 2026-05-17 | 25105
-470 | Spiegelstraße | None | 2024-01-01 – 2026-05-18 | 588 | 2026-05-17 | 14335
-476 | Kaiserstraße | None | 2024-01-01 – 2026-05-18 | 643 | 2026-05-17 | 21822
+135 | Schönbornstraße | None | 2024-01-01 – 2026-05-18 | 1995 | 2026-05-17 | 24979
+470 | Spiegelstraße | None | 2024-01-01 – 2026-05-18 | 1069 | 2026-05-17 | 14503
+476 | Kaiserstraße | None | 2024-01-01 – 2026-05-18 | 1102 | 2026-05-17 | 21810
 == Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2020: 2020-01-01: 1/0, 2020-12-31: 1/0
+2021: 2021-01-01: 1/0, 2021-12-31: 1/0
+2022: 2022-01-01: 1/0, 2022-12-31: 3/0
+2023: 2023-01-01: 3/0, 2023-12-31: 3/0
 2024: 2024-01-01: 3/3, 2024-12-31: 3/3
 2025: 2025-01-01: 3/3, 2025-12-31: 0/0
 2026: 2026-01-01: 0/0
 == Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2020: 2020-03-29: voll 1/0, gezählte Stunden []; 2020-10-25: voll 1/0, gezählte Stunden []
+2021: 2021-03-28: voll 1/0, gezählte Stunden []; 2021-10-31: voll 1/0, gezählte Stunden []
+2022: 2022-03-27: voll 1/0, gezählte Stunden []; 2022-10-30: voll 3/0, gezählte Stunden []
+2023: 2023-03-26: voll 3/0, gezählte Stunden []; 2023-10-29: voll 3/0, gezählte Stunden []
 2024: 2024-03-31: voll 3/3, gezählte Stunden [23]; 2024-10-27: voll 0/3, gezählte Stunden [23]
 2025: 2025-03-30: voll 1/3, gezählte Stunden [22, 23]; 2025-10-26: voll 0/3, gezählte Stunden [23]
 2026: 2026-03-29: voll 0/3, gezählte Stunden [22]
 == Vollständige Tage je Jahr (alle Stellen)
+2020: 366 von 0 Tagen mit Werten
+2021: 365 von 0 Tagen mit Werten
+2022: 575 von 0 Tagen mit Werten
+2023: 1095 von 0 Tagen mit Werten
 2024: 880 von 1098 Tagen mit Werten
 2025: 667 von 1089 Tagen mit Werten
 2026: 218 von 348 Tagen mit Werten
 == Kartendaten (nur wuerzburg_fuss)
 wuerzburg_fuss: 3 Stellen mit vollständigen Tagen, 0 ohne
-5 Dateien, 0.1 MB, 1 Detail-Dateien
-wuerzburg_fuss: vollständige Tage je Jahr (Stellen × Tage) – 2024: 880, 2025: 667, 2026: 218
-wuerzburg_fuss: fuss-Tagessummen, Quintilgrenzen [12110, 16880, 21740, 25740], Median 19746, Maximum 67169
-index.json quellen: [{"code": "wuerzburg_fuss", "name": "Würzburg (Passantenzählung)", "land": "BY", "traeger": "Stadt Würzburg", "art": "Passantenzählung in der Innenstadt (Laserscanner): Personen je Stunde und Standort, beide Richtungen zusammen; Januar 2024 bis Mai 2026", "weg": "offen im Open-Data-Portal der Stadt (Opendatasoft)", "portal": "https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/", "archiv": null, "quellenvermerk": "Stadt Würzburg; hystreet.com GmbH", "lizenzen": [{"code": "wuerzburg_fuss", "titel": "Passantenzählung – Stundendaten, Stadt Würzburg (verändert: Stundenwerte zu Tagessummen zusammengefasst)", "herausgeber": "Stadt Würzburg", "lizenz": "dl-de/by-2-0", "lizenz_url": "https://www.govdata.de/dl-de/by-2-0", "herkunft_url": "https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/"}], "hinweise": ["Gemessen von hystreet.com (Laserscanner); die Stadt veröffentlicht die Werte unter dl-de/by-2-0 und nennt hystreet.com GmbH als Quelle.", "Der Datensatz endet am 17.05.2026; seither ist er nicht fortgeschrieben (Stand 14.11.2026).", "Die Quelle kennzeichnet die Stunden von 0 bis 20 Uhr fast durchweg als „unverifiziert“, die Abendstunden fast nie. Die Zählkarte zählt beide – ungeprüfte Rohwerte wie bei anderen Quellen. Ausfälle stehen darin teils als 0 (etwa eine Stunde mit 0 Passanten am Mittag).", "Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind."], "stellen": 3, "von": "2024-01-01", "bis":
+9 Dateien, 0.2 MB, 1 Detail-Dateien
+wuerzburg_fuss: vollständige Tage je Jahr (Stellen × Tage) – 2020: 366, 2021: 365, 2022: 575, 2023: 1095, 2024: 880, 2025: 667, 2026: 218
+wuerzburg_fuss: davon Tageswerte der Quelle (fuss): 2401
+wuerzburg_fuss: fuss-Tagessummen, Quintilgrenzen [11420, 17600, 22620, 27100], Median 20724, Maximum 67169
+index.json quellen: [{"code": "wuerzburg_fuss", "name": "Würzburg (Passantenzählung)", "land": "BY", "traeger": "Stadt Würzburg", "art": "Passantenzählung in der Innenstadt (Laserscanner): Personen je Stunde und Standort, beide Richtungen zusammen; Januar 2024 bis Mai 2026, davor Tageswerte der Quelle seit 2020", "weg": "offen im Open-Data-Portal der Stadt (Opendatasoft)", "portal": "https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/", "archiv": null, "quellenvermerk": "Stadt Würzburg; hystreet.com GmbH", "lizenzen": [{"code": "wuerzburg_fuss", "titel": "Passantenzählung – Stundendaten und Tagesdaten, Stadt Würzburg (verändert: Stundenwerte zu Tagessummen zusammengefasst)", "herausgeber": "Stadt Würzburg", "lizenz": "dl-de/by-2-0", "lizenz_url": "https://www.govdata.de/dl-de/by-2-0", "herkunft_url": "https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/"}], "hinweise": ["Gemessen von hystreet.com (Laserscanner); die Stadt veröffentlicht die Werte unter dl-de/by-2-0 und nennt hystreet.com GmbH als Quelle.", "Der Datensatz endet am 17.05.2026; seither ist er nicht fortgeschrieben (Stand 15.11.2026). Gezählt wird weiter – die Stadt zeigt je Standort nur die letzten 24 Stunden.", "Vor der ersten gezählten Stunde (bis 31.12.2023) stehen die Tageswerte der Quelle (Datensatz „Tagesdaten“, je Ortstag; Schönbornstraße seit 01.01.2020, Spiegel- und Kaiserstraße seit September 2022). Ob an einem solchen Tag jede Stunde gezählt ist, lässt sich nicht prüfen.
 index.json lizenzen: null
