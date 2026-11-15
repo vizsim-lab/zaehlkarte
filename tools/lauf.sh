@@ -23,7 +23,7 @@ pruefe() {  # pruefe <branch> <code>
 # Hamburg mit Tageswerten der Quelle (Branch hamburg-tageswerte): mit dem Gedächtnis der Stunden
 # aus dem Release – wie der erste Lauf nach dem Merge (Stunden 14 Tage neu, Tageswerte ganz);
 # Speicherbedarf mit /usr/bin/time; die Tagesdateien des Gedächtnisses nach ergebnis/<code>/.
-pruefe_hh() {  # pruefe_hh <branch> <code>
+pruefe_gd() {  # pruefe_gd <branch> <code> – mit dem Gedächtnis der Quelle aus dem Release
   local ziel="$GITHUB_WORKSPACE/ergebnis/$2"
   mkdir -p "$ziel/gedaechtnis"
   rm -rf app && git clone -q --depth 1 -b "$1" https://github.com/vizsim-lab/zaehlkarte app
@@ -50,9 +50,7 @@ pruefe_hh() {  # pruefe_hh <branch> <code>
 #
 # Leipzig, Tageswerte „pro Tag der letzten 2 Jahre“ (15.11.2026): Format, Zeitraum, Lieferungen,
 # Jahnallee, Lizenz beider Datensätze; Rohdateien gepackt für den Vergleich mit dem Gedächtnis
-# erkundet (ergebnis/leipzig_tage): die CKAN-API sperrt robots.txt -> die Seiten der Datensätze
-mkdir -p ergebnis/leipzig_tage
-timeout 10m python3 tools/seiten.py ergebnis/leipzig_tage \
-  https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-tag-der-letzten-2-jahre-stadt-leipzi \
-  https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei \
-  > ergebnis/leipzig_tage/seiten_lauf.txt 2>&1 || true
+# erkundet (ergebnis/leipzig_tage), dazu die Seiten der Datensätze (die CKAN-API sperrt
+# robots.txt; Lizenz nennen die Seiten nicht, die Metadaten je Ressource dl-de/by-2-0).
+# Prüfung mit dem Stand des Branch leipzig-tageswerte:
+pruefe_gd leipzig-tageswerte leipzig_rad
