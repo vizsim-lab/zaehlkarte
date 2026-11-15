@@ -5,12 +5,12 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.dithmarschen.de/",
    "https://www.dithmarschen.de/startseite",
    "https://www.landkreis-dithmarschen.de/",
    "https://www.kreis-dithmarschen.de/",
    "https://www.lk-dithmarschen.de/",
    "https://www.lra-dithmarschen.de/",
-   "https://www.dithmarschen.de/",
    "https://www.landkreisdithmarschen.de/"
   ],
   "vorher": "erreicht",
@@ -20,7 +20,7 @@
    "https://www.kreis-dithmarschen.de/": "geraten",
    "https://www.lk-dithmarschen.de/": "geraten",
    "https://www.lra-dithmarschen.de/": "geraten",
-   "https://www.dithmarschen.de/": "geraten",
+   "https://www.dithmarschen.de/": "wikipedia",
    "https://www.landkreisdithmarschen.de/": "geraten",
    "https://www.dithmarschen.de/startseite": "vorher_oder_liste"
   }
@@ -31,6 +31,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-rz.de/",
    "https://www.landkreis-herzogtum-lauenburg.de/",
    "https://www.kreis-herzogtum-lauenburg.de/",
    "https://www.lk-herzogtum-lauenburg.de/",
@@ -48,7 +49,8 @@
    "https://www.lra-herzogtum-lauenburg.de/": "geraten",
    "https://www.herzogtum-lauenburg.de/": "geraten",
    "https://www.landkreisherzogtumlauenburg.de/": "geraten",
-   "https://www.herzogtumlauenburg.de/": "geraten"
+   "https://www.herzogtumlauenburg.de/": "geraten",
+   "https://www.kreis-rz.de/": "wikipedia"
   }
  },
  {
@@ -57,11 +59,11 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.nordfriesland.de/",
    "https://www.kreis-nordfriesland.de/",
    "https://www.landkreis-nordfriesland.de/",
    "https://www.lk-nordfriesland.de/",
    "https://www.lra-nordfriesland.de/",
-   "https://www.nordfriesland.de/",
    "https://www.landkreisnordfriesland.de/"
   ],
   "vorher": "erreicht",
@@ -71,7 +73,7 @@
    "https://www.kreis-nordfriesland.de/": "vorher_oder_liste",
    "https://www.lk-nordfriesland.de/": "geraten",
    "https://www.lra-nordfriesland.de/": "geraten",
-   "https://www.nordfriesland.de/": "geraten",
+   "https://www.nordfriesland.de/": "wikipedia",
    "https://www.landkreisnordfriesland.de/": "geraten"
   }
  },
@@ -81,6 +83,7 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.kreis-oh.de/",
    "https://www.landkreis-ostholstein.de/",
    "https://www.kreis-ostholstein.de/",
    "https://www.lk-ostholstein.de/",
@@ -96,7 +99,8 @@
    "https://www.lk-ostholstein.de/": "geraten",
    "https://www.lra-ostholstein.de/": "geraten",
    "https://www.ostholstein.de/": "geraten",
-   "https://www.landkreisostholstein.de/": "geraten"
+   "https://www.landkreisostholstein.de/": "geraten",
+   "https://www.kreis-oh.de/": "wikipedia"
   }
  },
  {
@@ -116,7 +120,7 @@
   "gemeinden": 49,
   "herkunft": {
    "https://www.landkreis-pinneberg.de/": "geraten",
-   "https://www.kreis-pinneberg.de/": "vorher_oder_liste",
+   "https://www.kreis-pinneberg.de/": "wikipedia",
    "https://www.lk-pinneberg.de/": "geraten",
    "https://www.lra-pinneberg.de/": "geraten",
    "https://www.pinneberg.de/": "geraten",
@@ -140,7 +144,7 @@
   "gemeinden": 85,
   "herkunft": {
    "https://www.landkreis-ploen.de/": "geraten",
-   "https://www.kreis-ploen.de/": "vorher_oder_liste",
+   "https://www.kreis-ploen.de/": "wikipedia",
    "https://www.lk-ploen.de/": "geraten",
    "https://www.lra-ploen.de/": "geraten",
    "https://www.ploen.de/": "geraten",
@@ -153,8 +157,8 @@
   "art": "kreis",
   "tk": "43",
   "web": [
-   "https://www.kreis-rendsburg-eckernfoerde.de/startseite",
    "https://www.kreis-rendsburg-eckernfoerde.de/",
+   "https://www.kreis-rendsburg-eckernfoerde.de/startseite",
    "https://www.landkreis-rendsburg-eckernfoerde.de/",
    "https://www.lk-rendsburg-eckernfoerde.de/",
    "https://www.lra-rendsburg-eckernfoerde.de/",
@@ -166,7 +170,7 @@
   "gemeinden": 165,
   "herkunft": {
    "https://www.landkreis-rendsburg-eckernfoerde.de/": "geraten",
-   "https://www.kreis-rendsburg-eckernfoerde.de/": "vorher_oder_liste",
+   "https://www.kreis-rendsburg-eckernfoerde.de/": "wikipedia",
    "https://www.lk-rendsburg-eckernfoerde.de/": "geraten",
    "https://www.lra-rendsburg-eckernfoerde.de/": "geraten",
    "https://www.rendsburg-eckernfoerde.de/": "geraten",
@@ -181,11 +185,11 @@
   "art": "kreis",
   "tk": "43",
   "web": [
+   "https://www.schleswig-flensburg.de/",
    "https://www.landkreis-schleswig-flensburg.de/",
    "https://www.kreis-schleswig-flensburg.de/",
    "https://www.lk-schleswig-flensburg.de/",
    "https://www.lra-schleswig-flensburg.de/",
-   "https://www.schleswig-flensburg.de/",
    "https://www.landkreisschleswigflensburg.de/",
    "https://www.schleswigflensburg.de/"
   ],
@@ -196,7 +200,7 @@
    "https://www.kreis-schleswig-flensburg.de/": "geraten",
    "https://www.lk-schleswig-flensburg.de/": "geraten",
    "https://www.lra-schleswig-flensburg.de/": "geraten",
-   "https://www.schleswig-flensburg.de/": "geraten",
+   "https://www.schleswig-flensburg.de/": "wikipedia",
    "https://www.landkreisschleswigflensburg.de/": "geraten",
    "https://www.schleswigflensburg.de/": "geraten"
   }
@@ -221,7 +225,7 @@
    "https://www.kreis-segeberg.de/": "geraten",
    "https://www.lk-segeberg.de/": "geraten",
    "https://www.lra-segeberg.de/": "geraten",
-   "https://www.segeberg.de/": "vorher_oder_liste",
+   "https://www.segeberg.de/": "wikipedia",
    "https://www.landkreissegeberg.de/": "geraten"
   }
  },
@@ -231,8 +235,8 @@
   "art": "kreis",
   "tk": "43",
   "web": [
-   "https://www.steinburg.de/startseite.html",
    "https://www.steinburg.de/",
+   "https://www.steinburg.de/startseite.html",
    "https://www.landkreis-steinburg.de/",
    "https://www.kreis-steinburg.de/",
    "https://www.lk-steinburg.de/",
@@ -246,7 +250,7 @@
    "https://www.kreis-steinburg.de/": "geraten",
    "https://www.lk-steinburg.de/": "geraten",
    "https://www.lra-steinburg.de/": "geraten",
-   "https://www.steinburg.de/": "vorher_oder_liste",
+   "https://www.steinburg.de/": "wikipedia",
    "https://www.landkreissteinburg.de/": "geraten",
    "https://www.steinburg.de/startseite.html": "vorher_oder_liste"
   }
@@ -268,7 +272,7 @@
   "gemeinden": 55,
   "herkunft": {
    "https://www.landkreis-stormarn.de/": "geraten",
-   "https://www.kreis-stormarn.de/": "vorher_oder_liste",
+   "https://www.kreis-stormarn.de/": "wikipedia",
    "https://www.lk-stormarn.de/": "geraten",
    "https://www.lra-stormarn.de/": "geraten",
    "https://www.stormarn.de/": "geraten",
