@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [fl6]
+        teil: [fl7]
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
@@ -30,6 +30,7 @@ jobs:
             pruefe) tools/pruefe.sh dauer-bw-land bw_land_kfz || true ;;
             pruefe_planegg) tools/pruefe.sh dauer-fuss-land planegg_rad || true ;;
             rand) timeout 20m python3 tools/bw_rand.py ergebnis/bw/rand || true ;;
+            fl7) timeout 80m python3 tools/bw_fl7.py ergebnis/bw/fl7 || true ;;
             fl6) timeout 60m python3 tools/bw_fl6.py ergebnis/bw/fl6 || true ;;
             fl5) timeout 30m python3 tools/bw_fl5.py ergebnis/bw/fl5 || true ;;
             fl4) timeout 20m python3 tools/bw_fl4.py ergebnis/bw/fl4 || true ;;
