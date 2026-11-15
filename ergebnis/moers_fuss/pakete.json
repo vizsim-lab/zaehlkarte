@@ -1,0 +1,994 @@
+[
+ {
+  "name": "fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022",
+  "titel": "Besuchszahlen Steinstraße - nach Stunden (Stadt Moers)",
+  "lizenz": null,
+  "beschreibung": "Frequenzmessungen in Innenstädten haben sich in den letzten 20 Jahren immer stärker etabliert. Mit Unterstützung der städtischen Wirtschaftsförderung und der ENNI Stadt und Service Niederrhein hat die MoersMarketing den ersten \r\n4-fach-Laser zur Personenzählung im Mai 2022 in der Stadt Moers installieren lassen.\r\nDer Laser ist in einer Höhe von rund 10 Metern angebracht und misst rund um die Uhr beide Bewegungsrichtungen. Dank modernster Technik kann er dabei zwischen Erwachsenen und Kindern unterscheiden. Gemessen werden Personen ab einer Größe von 90 cm. Als Kinder zählen Personen <150 cm. \r\nDer Datensatz wird regelmäßig aktualisiert.",
+  "herausgeber": "https://www.offenesdatenportal.de/organization/20a7743d-057b-4e0e-a341-cf0adaf1502a",
+  "geaendert": "2026-11-11T14:51:18.127789",
+  "ressourcen": [
+   {
+    "id": "0e7e4038-b837-4984-b38a-fc064c51786d",
+    "titel": "Besucherzahlen Moers im Juni 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0e7e4038-b837-4984-b38a-fc064c51786d/download/besucherzahlen-moers-juni-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:19:03.489804",
+    "erstellt": "2026-11-11T14:18:50.139452"
+   },
+   {
+    "id": "c821f3ad-7715-4d92-83b9-1bdbb683cedd",
+    "titel": "Besuchszahlen Moers im Januar 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/c821f3ad-7715-4d92-83b9-1bdbb683cedd/download/besucherzahlen-moers-januar-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:41:56.032704",
+    "erstellt": "2026-11-11T13:41:53.627445"
+   },
+   {
+    "id": "253dd79e-4c19-4d4c-a459-7cbfe05e0d0a",
+    "titel": "Besucherzahlen Moers im Januar 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/253dd79e-4c19-4d4c-a459-7cbfe05e0d0a/download/besucherzahlen-moers-januar-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:47:05.385435",
+    "erstellt": "2026-11-11T14:47:02.544683"
+   },
+   {
+    "id": "8f145eef-edef-4d77-a2f5-722250fb0235",
+    "titel": "Besucherzahlen Moers ab 5. Mai 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/8f145eef-edef-4d77-a2f5-722250fb0235/download/besucherzahlen-moers-mai-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:41:53.611870",
+    "erstellt": "2026-11-11T13:20:43.686760"
+   },
+   {
+    "id": "621fcb79-010a-43a1-8a66-15a40d38ba35",
+    "titel": "Besuchszahlen Moers im Dezember 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/621fcb79-010a-43a1-8a66-15a40d38ba35/download/besucherzahlen-moers-dezember-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:47:05.912495",
+    "erstellt": "2026-11-11T13:47:03.288260"
+   },
+   {
+    "id": "22d88ac3-6d10-45e3-adaf-060c58af5ad8",
+    "titel": "Besucherzahlen Moers im Dezember 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/22d88ac3-6d10-45e3-adaf-060c58af5ad8/download/besucherzahlen-moers-dezember-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:29:48.654161",
+    "erstellt": "2026-11-11T14:29:46.683005"
+   },
+   {
+    "id": "f951145b-5b96-4342-b3af-6c4100c85bd3",
+    "titel": "Besuchszahlen Moers im Oktober 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f951145b-5b96-4342-b3af-6c4100c85bd3/download/besucherzahlen-moers-oktober-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-10-20T07:12:22.509470",
+    "erstellt": "2026-10-20T07:12:20.363648"
+   },
+   {
+    "id": "be93fc0b-a403-4cb4-8584-c94c5c2bb796",
+    "titel": "Besucherzahlen Moers im März 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/be93fc0b-a403-4cb4-8584-c94c5c2bb796/download/besucherzahlen-moers-marz-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:47:55.594825",
+    "erstellt": "2026-11-11T14:47:53.108065"
+   },
+   {
+    "id": "f7bbbd1a-c690-47d4-a36b-b1251db676a2",
+    "titel": "Besucherzahlen Moers im Juni 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f7bbbd1a-c690-47d4-a36b-b1251db676a2/download/besucherzahlen-moers-juni-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:49:21.090029",
+    "erstellt": "2026-11-11T14:49:18.631862"
+   },
+   {
+    "id": "6e0f5957-50db-4b88-b3b4-5cda5529a664",
+    "titel": "Besucherzahlen Moers im Februar 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/6e0f5957-50db-4b88-b3b4-5cda5529a664/download/besucherzahlen-moers-februar-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:47:28.818116",
+    "erstellt": "2026-11-11T14:47:26.012257"
+   },
+   {
+    "id": "089127b2-882b-49a9-835a-f3163f4ae790",
+    "titel": "Besucherzahlen Moers im September 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/089127b2-882b-49a9-835a-f3163f4ae790/download/besucherzahlen-moers-september-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:28:21.070842",
+    "erstellt": "2026-11-11T14:28:19.222047"
+   },
+   {
+    "id": "8862fd15-27fe-4f3e-beaf-05c59b29d4aa",
+    "titel": "Besucherzahlen Moers im Juli 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/8862fd15-27fe-4f3e-beaf-05c59b29d4aa/download/besucherzahlen-moers-juli-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:27:22.425667",
+    "erstellt": "2026-11-11T14:27:20.372823"
+   },
+   {
+    "id": "3cae65aa-12cb-42a2-8949-696393f7acef",
+    "titel": "Besuchszahlen Moers im Februar 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/3cae65aa-12cb-42a2-8949-696393f7acef/download/besucherzahlen-moers-februar-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:42:53.635756",
+    "erstellt": "2026-11-11T13:42:21.649072"
+   },
+   {
+    "id": "91fdaab8-68a0-4d26-a959-59cc1138b69e",
+    "titel": "Besuchszahlen Moers im August 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/91fdaab8-68a0-4d26-a959-59cc1138b69e/download/besucherzahlen-moers-august-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:45:18.810874",
+    "erstellt": "2026-11-11T13:45:17.087574"
+   },
+   {
+    "id": "104b5b42-f6f1-4a1a-b540-ce3dc487eae5",
+    "titel": "Besucherzahlen Moers im Juli 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/104b5b42-f6f1-4a1a-b540-ce3dc487eae5/download/besucherzahlen-moers-juli-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-10-20T07:07:08.297529",
+    "erstellt": "2026-10-20T07:07:06.208587"
+   },
+   {
+    "id": "bedd516b-be56-40dd-a994-a2dc5ed5c814",
+    "titel": "Besuchszahlen Moers im August 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/bedd516b-be56-40dd-a994-a2dc5ed5c814/download/besucherzahlen-moers-august-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-10-20T07:08:46.789224",
+    "erstellt": "2026-10-20T07:08:44.887031"
+   },
+   {
+    "id": "b222831a-5435-4c27-935e-109cda7dfdf3",
+    "titel": "Besucherzahlen Moers im Januar 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/b222831a-5435-4c27-935e-109cda7dfdf3/download/besucherzahlen-moers-januar-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:23:46.164541",
+    "erstellt": "2026-11-11T14:23:44.065393"
+   },
+   {
+    "id": "d7f3afd0-f61d-49d2-8cbb-3a5e5d00d0c5",
+    "titel": "Besucherzahlen Moers im August 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/d7f3afd0-f61d-49d2-8cbb-3a5e5d00d0c5/download/besucherzahlen-moers-august-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:19:50.128885",
+    "erstellt": "2026-11-11T14:19:47.987998"
+   },
+   {
+    "id": "46341da9-372f-4940-9651-48712d289fe5",
+    "titel": "Besucherzahlen Moers im April 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46341da9-372f-4940-9651-48712d289fe5/download/besucherzahlen-moers-april-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:17:50.872680",
+    "erstellt": "2026-11-11T14:17:48.444730"
+   },
+   {
+    "id": "ead453d8-4371-458c-92b4-ebd5f6f433b0",
+    "titel": "Besucherzahlen Moers im Oktober 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/ead453d8-4371-458c-92b4-ebd5f6f433b0/download/besucherzahlen-moers-oktober-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:20:55.168897",
+    "erstellt": "2026-11-11T14:20:53.027543"
+   },
+   {
+    "id": "fc4e5b01-3dcd-4bde-99a0-d6734a40d5bf",
+    "titel": "Besuchszahlen Moers im April 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/fc4e5b01-3dcd-4bde-99a0-d6734a40d5bf/download/besucherzahlen-moers-april-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:43:21.145802",
+    "erstellt": "2026-11-11T13:43:19.216736"
+   },
+   {
+    "id": "a2ad2eb0-74a8-482f-a755-f8e1fcd4d84e",
+    "titel": "Besucherzahlen Moers im Mai 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/a2ad2eb0-74a8-482f-a755-f8e1fcd4d84e/download/besucherzahlen-moers-mai-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:48:52.522234",
+    "erstellt": "2026-11-11T14:48:49.451977"
+   },
+   {
+    "id": "153e07e9-4600-47e8-920d-8ba2e0f04024",
+    "titel": "Besuchszahlen Moers im Oktober 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/153e07e9-4600-47e8-920d-8ba2e0f04024/download/besucherzahlen-moers-oktober-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:46:13.824387",
+    "erstellt": "2026-11-11T13:46:12.138424"
+   },
+   {
+    "id": "1b03b5c8-3f6f-482d-ac56-3a4bd60b7c51",
+    "titel": "Besucherzahlen Moers im Oktober 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/1b03b5c8-3f6f-482d-ac56-3a4bd60b7c51/download/besucherzahlen-moers-oktober-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:51:18.141662",
+    "erstellt": "2026-11-11T14:51:13.168590"
+   },
+   {
+    "id": "57d1fcd4-45da-46da-bcec-d87642446ab8",
+    "titel": "Besucherzahlen Moers im Juni 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/57d1fcd4-45da-46da-bcec-d87642446ab8/download/besucherzahlen-moers-juni-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-10-20T07:06:30.212192",
+    "erstellt": "2026-10-20T07:02:31.500471"
+   },
+   {
+    "id": "46db5b54-b95b-4ff6-91e7-a187945951b8",
+    "titel": "Besuchszahlen Moers im September 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46db5b54-b95b-4ff6-91e7-a187945951b8/download/besucherzahlen-moers-september-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-10-20T07:10:45.143419",
+    "erstellt": "2026-10-20T07:10:42.938741"
+   },
+   {
+    "id": "6debc243-80c5-44f2-a605-597e726812be",
+    "titel": "Besucherzahlen Moers im Januar 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/6debc243-80c5-44f2-a605-597e726812be/download/besucherzahlen-moers-januar-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:16:12.141430",
+    "erstellt": "2026-11-11T14:16:10.108082"
+   },
+   {
+    "id": "46fac171-0069-4158-8d13-c012499f1b9f",
+    "titel": "Besucherzahlen Moers im August 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46fac171-0069-4158-8d13-c012499f1b9f/download/besucherzahlen-moers-august-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:27:52.446799",
+    "erstellt": "2026-11-11T14:27:50.558262"
+   },
+   {
+    "id": "5b456d10-0ce1-4a02-a61b-aca457411478",
+    "titel": "Besucherzahlen Moers im Februar 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/5b456d10-0ce1-4a02-a61b-aca457411478/download/besucherzahlen-moers-februar-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:16:42.621762",
+    "erstellt": "2026-11-11T14:16:40.898858"
+   },
+   {
+    "id": "0b70d78b-75e0-46d4-8425-a58ea8ff9c9c",
+    "titel": "Besucherzahlen Moers im September 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0b70d78b-75e0-46d4-8425-a58ea8ff9c9c/download/besucherzahlen-moers-september-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:50:49.479698",
+    "erstellt": "2026-11-11T14:50:46.569985"
+   },
+   {
+    "id": "819a13eb-d6c2-402c-8f03-5f03208a7542",
+    "titel": "Besucherzahlen Moers im Mai 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/819a13eb-d6c2-402c-8f03-5f03208a7542/download/besucherzahlen-moers-mai-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:25:46.608713",
+    "erstellt": "2026-11-11T14:25:44.289421"
+   },
+   {
+    "id": "46a01b41-758b-430f-b154-c4a661c471ff",
+    "titel": "Besucherzahlen Moers im November 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46a01b41-758b-430f-b154-c4a661c471ff/download/besucherzahlen-moers-november-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:29:17.414438",
+    "erstellt": "2026-11-11T14:29:15.578883"
+   },
+   {
+    "id": "bd0dd182-72c9-472d-874d-24ca7fd6601a",
+    "titel": "Besuchszahlen Moers im September 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/bd0dd182-72c9-472d-874d-24ca7fd6601a/download/besucherzahlen-moers-september-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:45:44.917812",
+    "erstellt": "2026-11-11T13:45:42.819594"
+   },
+   {
+    "id": "833cc3ad-d85e-4cfa-9453-9d60c149fa47",
+    "titel": "Besucherzahlen Moers im Dezember 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/833cc3ad-d85e-4cfa-9453-9d60c149fa47/download/besucherzahlen-moers-dezember-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:21:56.660622",
+    "erstellt": "2026-11-11T14:21:53.189009"
+   },
+   {
+    "id": "a1524f97-604f-442e-89d6-ffbe113bc3b9",
+    "titel": "Besucherzahlen Moers im November 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/a1524f97-604f-442e-89d6-ffbe113bc3b9/download/besucherzahlen-moers-november-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:21:22.558186",
+    "erstellt": "2026-11-11T14:21:20.467158"
+   },
+   {
+    "id": "0cc3676d-f3e8-44b3-9e51-06d7886e66ae",
+    "titel": "Besuchszahlen Moers im Juni 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0cc3676d-f3e8-44b3-9e51-06d7886e66ae/download/besucherzahlen-moers-juni-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:44:20.747486",
+    "erstellt": "2026-11-11T13:44:18.866185"
+   },
+   {
+    "id": "076758fb-ec56-4ba4-a5b6-a1d3a2c1c538",
+    "titel": "Besucherzahlen Moers im August 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/076758fb-ec56-4ba4-a5b6-a1d3a2c1c538/download/besucherzahlen-moers-august-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:50:22.473520",
+    "erstellt": "2026-11-11T14:50:19.742593"
+   },
+   {
+    "id": "059f7501-196a-452e-900d-31aa16f84054",
+    "titel": "Besucherzahlen Moers im März 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/059f7501-196a-452e-900d-31aa16f84054/download/besucherzahlen-moers-marz-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:17:17.377532",
+    "erstellt": "2026-11-11T14:17:15.610438"
+   },
+   {
+    "id": "0192863e-c6a8-46ab-a1fa-cb50e361662e",
+    "titel": "Besucherzahlen Moers im Mai 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0192863e-c6a8-46ab-a1fa-cb50e361662e/download/besucherzahlen-moers-mai-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:18:19.460350",
+    "erstellt": "2026-11-11T14:18:16.963179"
+   },
+   {
+    "id": "81a1c249-a8fd-4a07-b3d9-2cc67ca6827c",
+    "titel": "Besucherzahlen Moers im Juli 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/81a1c249-a8fd-4a07-b3d9-2cc67ca6827c/download/besucherzahlen-moers-juli-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:19:16.238000",
+    "erstellt": "2026-11-11T14:19:14.183622"
+   },
+   {
+    "id": "0fdcb40d-e8d1-4e88-b7c6-59b75d98b14b",
+    "titel": "Besuchszahlen Moers im Dezember 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0fdcb40d-e8d1-4e88-b7c6-59b75d98b14b/download/besucherzahlen-moers-dezember-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-10-20T07:15:06.787588",
+    "erstellt": "2026-10-20T07:15:04.450162"
+   },
+   {
+    "id": "9560dada-5335-4de9-bb73-8a1b4b356cda",
+    "titel": "Besuchszahlen Moers im November 2022 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/9560dada-5335-4de9-bb73-8a1b4b356cda/download/besucherzahlen-moers-november-2022-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-10-20T07:13:45.562039",
+    "erstellt": "2026-10-20T07:13:43.209689"
+   },
+   {
+    "id": "575746e3-d36d-4362-88e4-ef1af1c9e52c",
+    "titel": "Besucherzahlen Moers im April 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/575746e3-d36d-4362-88e4-ef1af1c9e52c/download/besucherzahlen-moers-april-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:25:13.700130",
+    "erstellt": "2026-11-11T14:25:11.860529"
+   },
+   {
+    "id": "4d64315b-460e-47fa-a910-54ab97a269e2",
+    "titel": "Besucherzahlen Moers im Juni 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/4d64315b-460e-47fa-a910-54ab97a269e2/download/besucherzahlen-moers-juni-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:26:25.245065",
+    "erstellt": "2026-11-11T14:26:23.253353"
+   },
+   {
+    "id": "3f42b35e-8f91-4552-8047-6aec1649f8ef",
+    "titel": "Besucherzahlen Moers im September 2024 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/3f42b35e-8f91-4552-8047-6aec1649f8ef/download/besucherzahlen-moers-september-2024-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:20:27.123813",
+    "erstellt": "2026-11-11T14:20:25.283196"
+   },
+   {
+    "id": "60e3fdbb-9571-4816-978e-d5ae62b2f22e",
+    "titel": "Besucherzahlen Moers im Juli 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/60e3fdbb-9571-4816-978e-d5ae62b2f22e/download/besucherzahlen-moers-juli-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:49:51.628501",
+    "erstellt": "2026-11-11T14:49:49.436261"
+   },
+   {
+    "id": "907d5d08-07c3-47ab-8ab5-14604927a3ca",
+    "titel": "Besuchszahlen Moers im Mai 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/907d5d08-07c3-47ab-8ab5-14604927a3ca/download/besucherzahlen-moers-mai-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:43:50.489531",
+    "erstellt": "2026-11-11T13:43:48.532421"
+   },
+   {
+    "id": "34eb65a7-88f2-4a78-b612-ad24177ec11f",
+    "titel": "Besucherzahlen Moers im April 2026 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/34eb65a7-88f2-4a78-b612-ad24177ec11f/download/besucherzahlen-moers-april-2026-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:48:30.077442",
+    "erstellt": "2026-11-11T14:48:27.606522"
+   },
+   {
+    "id": "d2297e72-cfe4-4218-bb2f-e25bd12a0781",
+    "titel": "Besuchszahlen Moers im November 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/d2297e72-cfe4-4218-bb2f-e25bd12a0781/download/besucherzahlen-moers-november-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:46:38.990351",
+    "erstellt": "2026-11-11T13:46:37.195395"
+   },
+   {
+    "id": "f9ac5871-7c6c-4035-92d3-f0a16c2b5a71",
+    "titel": "Besuchszahlen Moers im Juli 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f9ac5871-7c6c-4035-92d3-f0a16c2b5a71/download/besucherzahlen-moers-juli-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:44:44.626576",
+    "erstellt": "2026-11-11T13:44:42.638734"
+   },
+   {
+    "id": "e059e456-ac89-461c-8f47-a94e9ad113eb",
+    "titel": "Besucherzahlen Moers im Februar 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/e059e456-ac89-461c-8f47-a94e9ad113eb/download/besucherzahlen-moers-februar-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:24:12.359950",
+    "erstellt": "2026-11-11T14:24:10.471346"
+   },
+   {
+    "id": "4905a668-f943-403d-bb67-07f426a5ea1c",
+    "titel": "Besuchszahlen Moers im März 2023 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/4905a668-f943-403d-bb67-07f426a5ea1c/download/besucherzahlen-moers-maerz-2023-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:42:55.502930",
+    "erstellt": "2026-11-11T13:42:53.653593"
+   },
+   {
+    "id": "48c5dc89-6ff6-45b6-ba7d-4d31b59f3159",
+    "titel": "Besucherzahlen Moers im März 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/48c5dc89-6ff6-45b6-ba7d-4d31b59f3159/download/besucherzahlen-moers-marz-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:24:47.016752",
+    "erstellt": "2026-11-11T14:24:44.887532"
+   },
+   {
+    "id": "f642b72d-aded-438f-9ae4-3a4458830a2b",
+    "titel": "Besucherzahlen Moers im Oktober 2025 nach Stunden",
+    "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f642b72d-aded-438f-9ae4-3a4458830a2b/download/besucherzahlen-moers-oktober-2025-stundlich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:28:49.701533",
+    "erstellt": "2026-11-11T14:28:47.804957"
+   }
+  ]
+ },
+ {
+  "name": "besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers",
+  "titel": "Besuchszahlen Steinstraße - nach Tagen (Stadt Moers)",
+  "lizenz": null,
+  "beschreibung": "Frequenzmessungen in Innenstädten haben sich in den letzten 20 Jahren immer stärker etabliert. Mit Unterstützung der städtischen Wirtschaftsförderung und der ENNI Stadt und Service Niederrhein hat die MoersMarketing den ersten 4-fach-Laser zur Personenzählung im Mai 2022 in der Stadt Moers installieren lassen. Der Laser ist in einer Höhe von rund 10 Metern angebracht und misst rund um die Uhr beide Bewegungsrichtungen. Dank modernster Technik kann er dabei zwischen Erwachsenen und Kindern unterscheiden. Gemessen werden Personen ab einer Größe von 90 cm. Als Kinder zählen Personen <150 cm.\r\nDer Datensatz wird regelmäßig aktualisiert.",
+  "herausgeber": "https://www.offenesdatenportal.de/organization/20a7743d-057b-4e0e-a341-cf0adaf1502a",
+  "geaendert": "2026-11-11T14:45:20.661753",
+  "ressourcen": [
+   {
+    "id": "f03e73bc-3e1a-4414-9ee2-cfc5f9e04a5f",
+    "titel": "Besucherzahlen Moers im Oktober 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/f03e73bc-3e1a-4414-9ee2-cfc5f9e04a5f/download/besucherzahlen-moers-oktober-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:11:23.648740",
+    "erstellt": "2026-11-11T14:11:22.009486"
+   },
+   {
+    "id": "5e5ad7ec-b741-408e-b639-c49f532f1d7a",
+    "titel": "Besucherzahlen Moers im Januar 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/5e5ad7ec-b741-408e-b639-c49f532f1d7a/download/besucherzahlen-moers-januar-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:06:55.602894",
+    "erstellt": "2026-11-11T14:06:53.751382"
+   },
+   {
+    "id": "e3774422-0985-4e94-9505-6269ee24fd38",
+    "titel": "Besucherzahlen Moers im Februar 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/e3774422-0985-4e94-9505-6269ee24fd38/download/besucherzahlen-moers-februar-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:41:26.584500",
+    "erstellt": "2026-11-11T14:41:24.818828"
+   },
+   {
+    "id": "b4a6d17a-8366-4493-b52f-3aa238ade380",
+    "titel": "Besuchszahlen Moers im Februar 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/b4a6d17a-8366-4493-b52f-3aa238ade380/download/besucherzahlen-moers-februar-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:58:56.100932",
+    "erstellt": "2026-11-11T13:58:27.951008"
+   },
+   {
+    "id": "061eb672-9e3c-4b16-8216-da34d80c9319",
+    "titel": "Besucherzahlen Moers im Juli 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/061eb672-9e3c-4b16-8216-da34d80c9319/download/besucherzahlen-moers-juli-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:10:00.391177",
+    "erstellt": "2026-11-11T14:09:58.458272"
+   },
+   {
+    "id": "f05ac115-772e-4a14-9f8f-dfb618897344",
+    "titel": "Besucherzahlen Moers im November 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/f05ac115-772e-4a14-9f8f-dfb618897344/download/besucherzahlen-moers-november-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:12:10.677073",
+    "erstellt": "2026-11-11T14:12:08.520010"
+   },
+   {
+    "id": "834a4fa1-249d-4d2f-a666-951cdc6782df",
+    "titel": "Besucherzahlen Moers im April 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/834a4fa1-249d-4d2f-a666-951cdc6782df/download/besucherzahlen-moers-april-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:42:30.658727",
+    "erstellt": "2026-11-11T14:42:28.551327"
+   },
+   {
+    "id": "57c34688-1552-424f-985a-32cbe7c7edaf",
+    "titel": "Besucherzahlen Moers im August 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/57c34688-1552-424f-985a-32cbe7c7edaf/download/besucherzahlen-moers-august-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:10:28.975802",
+    "erstellt": "2026-11-11T14:10:27.187770"
+   },
+   {
+    "id": "cacac992-144d-407a-8677-87a13bb17fbe",
+    "titel": "Besuchszahlen Moers im Juli 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/cacac992-144d-407a-8677-87a13bb17fbe/download/besucherzahlen-moers-juli-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:01:09.831393",
+    "erstellt": "2026-11-11T14:00:46.060919"
+   },
+   {
+    "id": "a91e6c13-dda7-4ffe-a58c-55173e4f36ba",
+    "titel": "Besucherzahlen Moers im September 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a91e6c13-dda7-4ffe-a58c-55173e4f36ba/download/besucherzahlen-moers-september-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:10:55.893776",
+    "erstellt": "2026-11-11T14:10:53.994265"
+   },
+   {
+    "id": "0f0da42b-10e9-415f-9c15-7a6b23e4fa16",
+    "titel": "Besuchszahlen Moers im Oktober 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/0f0da42b-10e9-415f-9c15-7a6b23e4fa16/download/besucherzahlen-moers-oktober-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:02:12.316296",
+    "erstellt": "2026-11-11T14:02:10.648263"
+   },
+   {
+    "id": "e1a8f7da-f532-48d2-8fc1-14c77f095c5b",
+    "titel": "Besucherzahlen Moers im Oktober 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/e1a8f7da-f532-48d2-8fc1-14c77f095c5b/download/besucherzahlen-moers-oktober-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:45:20.676747",
+    "erstellt": "2026-11-11T14:45:18.410287"
+   },
+   {
+    "id": "3710df13-739e-4094-b057-c15a63ee7c47",
+    "titel": "Besucherzahlen Moers im Januar 2025 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/3710df13-739e-4094-b057-c15a63ee7c47/download/besucherzahlen-moers-januar-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:32:46.381260",
+    "erstellt": "2026-11-11T14:32:44.792013"
+   },
+   {
+    "id": "978031c2-9f00-4581-9a21-e62541cff7de",
+    "titel": "Besucherzahlen Moers im September 2025 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/978031c2-9f00-4581-9a21-e62541cff7de/download/besucherzahlen-moers-september-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:36:35.217678",
+    "erstellt": "2026-11-11T14:36:33.704292"
+   },
+   {
+    "id": "e4650a47-40ae-49c1-98d6-cf95360af8e0",
+    "titel": "Besucherzahlen Moers im Juli 2025 nach Tage",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/e4650a47-40ae-49c1-98d6-cf95360af8e0/download/besucherzahlen-moers-juli-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:35:26.821722",
+    "erstellt": "2026-11-11T14:35:25.219402"
+   },
+   {
+    "id": "9e88dc47-3b98-46c0-96c1-aebcab7e0bde",
+    "titel": "Besucherzahlen Moers im Juli 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9e88dc47-3b98-46c0-96c1-aebcab7e0bde/download/besucherzahlen-moers-juli-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:44:02.989642",
+    "erstellt": "2026-11-11T14:44:00.549348"
+   },
+   {
+    "id": "580d4242-95aa-416f-9847-30046211ef55",
+    "titel": "Besucherzahlen Moers im Juni 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/580d4242-95aa-416f-9847-30046211ef55/download/besucherzahlen-moers-juni-2022-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:09:07.923965",
+    "erstellt": "2026-11-11T13:09:06.539763"
+   },
+   {
+    "id": "0064e0e7-aab4-479b-88b9-b9bf2529c91e",
+    "titel": "Besuchszahlen Moers im April 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/0064e0e7-aab4-479b-88b9-b9bf2529c91e/download/besucherzahlen-moers-april-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:59:22.983113",
+    "erstellt": "2026-11-11T13:59:21.277689"
+   },
+   {
+    "id": "8b681822-14a3-4824-9d10-18bf4f023f94",
+    "titel": "Besucherzahlen Moers im Mai 2025 nach Tage",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/8b681822-14a3-4824-9d10-18bf4f023f94/download/besucherzahlen-moers-mai-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:34:32.289618",
+    "erstellt": "2026-11-11T14:34:30.772507"
+   },
+   {
+    "id": "a8288848-a9fe-4495-aa74-ad55aa3839c5",
+    "titel": "Besuchszahlen Moers im August 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a8288848-a9fe-4495-aa74-ad55aa3839c5/download/besucherzahlen-moers-august-2022-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:10:10.679203",
+    "erstellt": "2026-11-11T13:10:09.437374"
+   },
+   {
+    "id": "bebaed98-cd53-4ea1-bbad-ddc981d8cf38",
+    "titel": "Besuchszahlen Moers im September 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/bebaed98-cd53-4ea1-bbad-ddc981d8cf38/download/besucherzahlen-moers-september-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:01:40.679934",
+    "erstellt": "2026-11-11T14:01:38.570040"
+   },
+   {
+    "id": "3bac4ea3-eec3-42fb-9eab-86dbcbbba25a",
+    "titel": "Besucherzahlen Moers im Mai 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/3bac4ea3-eec3-42fb-9eab-86dbcbbba25a/download/besucherzahlen-moers-mai-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:43:08.505903",
+    "erstellt": "2026-11-11T14:43:06.458276"
+   },
+   {
+    "id": "198d3a05-ec47-4767-b82a-b44eeee098f8",
+    "titel": "Besucherzahlen Moers im Februar 2025 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/198d3a05-ec47-4767-b82a-b44eeee098f8/download/besucherzahlen-moers-februar-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:33:07.460341",
+    "erstellt": "2026-11-11T14:33:05.738960"
+   },
+   {
+    "id": "da4b8d33-4f5a-4800-be5a-e0e1424b79cb",
+    "titel": "Besucherzahlen Moers im März 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/da4b8d33-4f5a-4800-be5a-e0e1424b79cb/download/besucherzahlen-moers-marz-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:07:52.334886",
+    "erstellt": "2026-11-11T14:07:50.837904"
+   },
+   {
+    "id": "804b4e75-192c-4a5e-b5b6-78259e7a4bc1",
+    "titel": "Besucherzahlen Moers im März 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/804b4e75-192c-4a5e-b5b6-78259e7a4bc1/download/besucherzahlen-moers-marz-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:41:52.696487",
+    "erstellt": "2026-11-11T14:41:50.590745"
+   },
+   {
+    "id": "eeb0ba89-e5e3-4570-905b-8c030f8f5995",
+    "titel": "Besucherzahlen Moers im Juni 2025 nach Tage",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/eeb0ba89-e5e3-4570-905b-8c030f8f5995/download/besucherzahlen-moers-juni-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:34:59.251970",
+    "erstellt": "2026-11-11T14:34:57.659768"
+   },
+   {
+    "id": "33f69ee1-0909-4151-b74a-cc84f8bb0b0d",
+    "titel": "Besuchszahlen Moers im Juni 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/33f69ee1-0909-4151-b74a-cc84f8bb0b0d/download/besucherzahlen-moers-juni-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:00:19.217412",
+    "erstellt": "2026-11-11T14:00:17.262579"
+   },
+   {
+    "id": "5081e85f-6032-42b6-9397-fb93830694a9",
+    "titel": "Besuchszahlen Moers im Mai 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/5081e85f-6032-42b6-9397-fb93830694a9/download/besucherzahlen-moers-mai-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:59:51.346029",
+    "erstellt": "2026-11-11T13:59:49.872430"
+   },
+   {
+    "id": "d96d61ee-8169-4432-860a-a4e53f8e4c20",
+    "titel": "Besuchszahlen Moers im September 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/d96d61ee-8169-4432-860a-a4e53f8e4c20/download/besucherzahlen-moers-september-2022-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:11:03.630408",
+    "erstellt": "2026-11-11T13:11:02.233707"
+   },
+   {
+    "id": "cd1b832b-8acb-4934-8a95-884eda057f01",
+    "titel": "Besuchszahlen Moers im November 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/cd1b832b-8acb-4934-8a95-884eda057f01/download/besucherzahlen-moers-november-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:02:39.851805",
+    "erstellt": "2026-11-11T14:02:38.247492"
+   },
+   {
+    "id": "8f43cb89-2965-4f2f-a6fb-965dc0c9675f",
+    "titel": "Besuchszahlen Moers im Oktober 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/8f43cb89-2965-4f2f-a6fb-965dc0c9675f/download/besucherzahlen-moers-oktober-2022-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:11:34.580946",
+    "erstellt": "2026-11-11T13:11:33.321529"
+   },
+   {
+    "id": "5eb00a6d-0438-47e9-9728-2f6b977f746e",
+    "titel": "Besucherzahlen Moers im Mai 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/5eb00a6d-0438-47e9-9728-2f6b977f746e/download/besucherzahlen-moers-mai-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:09:02.886573",
+    "erstellt": "2026-11-11T14:09:00.462405"
+   },
+   {
+    "id": "c15f5bd2-08be-497e-ae49-3a62c67346e9",
+    "titel": "Besucherzahlen Moers im August 2025 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/c15f5bd2-08be-497e-ae49-3a62c67346e9/download/besucherzahlen-moers-august-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:36:02.313927",
+    "erstellt": "2026-11-11T14:35:59.852567"
+   },
+   {
+    "id": "7a536d29-ef49-4c73-9c8b-af4a36e5687f",
+    "titel": "Besucherzahlen Moers im Oktober 2025 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/7a536d29-ef49-4c73-9c8b-af4a36e5687f/download/besucherzahlen-moers-oktober-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:37:03.498991",
+    "erstellt": "2026-11-11T14:37:01.828037"
+   },
+   {
+    "id": "91fbd92b-0654-4d62-996d-5cba8d0dc8ea",
+    "titel": "Besucherzahlen Moers im Juli 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/91fbd92b-0654-4d62-996d-5cba8d0dc8ea/download/besucherzahlen-moers-juli-2022-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:09:37.221906",
+    "erstellt": "2026-11-11T13:09:35.946963"
+   },
+   {
+    "id": "c457110c-b752-4297-8c0c-54727fc6883b",
+    "titel": "Besucherzahlen Moers im Juni 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/c457110c-b752-4297-8c0c-54727fc6883b/download/besucherzahlen-moers-juni-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:09:34.120008",
+    "erstellt": "2026-11-11T14:09:31.885947"
+   },
+   {
+    "id": "a15b5b8a-887d-45a5-bf74-93d68fada1dc",
+    "titel": "Besuchszahlen Moers im Januar 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a15b5b8a-887d-45a5-bf74-93d68fada1dc/download/besucherzahlen-moers-januar-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:57:59.400650",
+    "erstellt": "2026-11-11T13:57:57.793703"
+   },
+   {
+    "id": "87b16881-2995-4406-83cb-cd780cca533c",
+    "titel": "Besuchszahlen Moers im November 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/87b16881-2995-4406-83cb-cd780cca533c/download/besucherzahlen-moers-november-2022-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:12:04.222093",
+    "erstellt": "2026-11-11T13:12:02.952854"
+   },
+   {
+    "id": "9a4a14b0-61ab-44e6-b0d4-fc42f5a7442b",
+    "titel": "Besucherzahlen Moers im August 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9a4a14b0-61ab-44e6-b0d4-fc42f5a7442b/download/besucherzahlen-moers-august-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:44:26.223354",
+    "erstellt": "2026-11-11T14:44:23.626746"
+   },
+   {
+    "id": "1a8f1bba-746c-44bf-a129-703d35b50706",
+    "titel": "Besucherzahlen Moers im Dezember 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/1a8f1bba-746c-44bf-a129-703d35b50706/download/besucherzahlen-moers-dezember-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:13:39.483795",
+    "erstellt": "2026-11-11T14:13:35.749853"
+   },
+   {
+    "id": "ff31d4ae-787f-4b30-a3b7-3453a0b5b3cf",
+    "titel": "Besuchszahlen Moers im August 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/ff31d4ae-787f-4b30-a3b7-3453a0b5b3cf/download/besucherzahlen-moers-august-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:01:11.533094",
+    "erstellt": "2026-11-11T14:01:09.856434"
+   },
+   {
+    "id": "99f3a648-4fb1-4fab-943b-136872887c3a",
+    "titel": "Besucherzahlen Moers im Januar 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/99f3a648-4fb1-4fab-943b-136872887c3a/download/besucherzahlen-moers-januar-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:40:58.837202",
+    "erstellt": "2026-11-11T14:40:57.113719"
+   },
+   {
+    "id": "9b4769b3-640c-4d5e-a181-e1dd60dfa4a6",
+    "titel": "Besucherzahlen Moers im April 2025 nach Tage",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9b4769b3-640c-4d5e-a181-e1dd60dfa4a6/download/besucherzahlen-moers-april-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:34:06.804160",
+    "erstellt": "2026-11-11T14:34:05.074435"
+   },
+   {
+    "id": "2972b9f2-e13b-4cda-b21b-530a719d2f8c",
+    "titel": "Besucherzahlen Moers im Dezember 2025 nach Tage",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/2972b9f2-e13b-4cda-b21b-530a719d2f8c/download/besucherzahlen-moers-dezember-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:37:54.664957",
+    "erstellt": "2026-11-11T14:37:50.619785"
+   },
+   {
+    "id": "d837890d-9b4a-4a14-9518-f5446410a6f2",
+    "titel": "Besucherzahlen Moers im September 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/d837890d-9b4a-4a14-9518-f5446410a6f2/download/besucherzahlen-moers-september-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:44:50.628295",
+    "erstellt": "2026-11-11T14:44:48.222630"
+   },
+   {
+    "id": "a76f0793-7594-44ce-b514-d2e144760762",
+    "titel": "Besucherzahlen Moers ab 5. Mai 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a76f0793-7594-44ce-b514-d2e144760762/download/besucherzahlen-moers-mai-2022-taglich-1.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:07:53.181671",
+    "erstellt": "2026-11-11T13:07:51.858867"
+   },
+   {
+    "id": "dba410f4-478a-43d3-8672-f90526d47f1a",
+    "titel": "Besucherzahlen Moers im April 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/dba410f4-478a-43d3-8672-f90526d47f1a/download/besucherzahlen-moers-april-2023-taglich-1.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:08:32.829818",
+    "erstellt": "2026-11-11T14:08:31.255203"
+   },
+   {
+    "id": "876422a7-65cd-438a-a04a-8d4d116efb7c",
+    "titel": "Besuchszahlen Moers im März 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/876422a7-65cd-438a-a04a-8d4d116efb7c/download/besucherzahlen-moers-maerz-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:58:57.596020",
+    "erstellt": "2026-11-11T13:58:56.116876"
+   },
+   {
+    "id": "20674e13-505b-4e06-ab58-f07350d9f831",
+    "titel": "Besucherzahlen Moers im März 2025 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/20674e13-505b-4e06-ab58-f07350d9f831/download/besucherzahlen-moers-marz-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:33:40.660681",
+    "erstellt": "2026-11-11T14:33:39.216393"
+   },
+   {
+    "id": "9cbd1727-ce12-4b5f-b599-a75c5c29707d",
+    "titel": "Besuchszahlen Moers im Dezember 2022 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9cbd1727-ce12-4b5f-b599-a75c5c29707d/download/besucherzahlen-moers-dezember-2022-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T13:12:35.769283",
+    "erstellt": "2026-11-11T13:12:34.101970"
+   },
+   {
+    "id": "1fb33959-41c5-43f2-9159-fd0a9c33150d",
+    "titel": "Besucherzahlen Moers im Juni 2026 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/1fb33959-41c5-43f2-9159-fd0a9c33150d/download/besucherzahlen-moers-juni-2026-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:43:33.252241",
+    "erstellt": "2026-11-11T14:43:31.049613"
+   },
+   {
+    "id": "c1193d2e-f657-493c-aa55-0c3402c245af",
+    "titel": "Besucherzahlen Moers im November 2025 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/c1193d2e-f657-493c-aa55-0c3402c245af/download/besucherzahlen-moers-november-2025-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:37:28.578141",
+    "erstellt": "2026-11-11T14:37:26.815799"
+   },
+   {
+    "id": "f8b422fb-361f-4c7c-9f6f-73ab3c60d675",
+    "titel": "Besucherzahlen Moers im Februar 2024 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/f8b422fb-361f-4c7c-9f6f-73ab3c60d675/download/besucherzahlen-moers-februar-2024-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:07:24.256911",
+    "erstellt": "2026-11-11T14:07:21.928863"
+   },
+   {
+    "id": "9ce09824-10ed-4afc-82dd-b3d05d190540",
+    "titel": "Besuchszahlen Moers im Dezember 2023 nach Tagen",
+    "url": "https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9ce09824-10ed-4afc-82dd-b3d05d190540/download/besucherzahlen-moers-dezember-2023-taglich.csv",
+    "format": "CSV",
+    "lizenz": null,
+    "geaendert": "2026-11-11T14:03:06.009568",
+    "erstellt": "2026-11-11T14:03:03.449810"
+   }
+  ]
+ }
+]
