@@ -1,0 +1,346 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<WMS_Capabilities version="1.3.0" updateSequence="0" xmlns="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sld="http://www.opengis.net/sld" xsi:schemaLocation="http://www.opengis.net/wms https://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.opengis.net/sld https://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>WMS Verkehrszählstellen Hamburg</Title>
+    <Abstract>Dieser Web Map Service (WMS) stellt die Verkehrszählstellen in Hamburg für den Kfz-, Rad- und Fußverkehr dar.
+
+Zur genaueren Beschreibung der Daten und Datenverantwortung nutzen Sie bitte den Verweis zur Datensatzbeschreibung.</Abstract>
+    <OnlineResource xlink:type="simple" xlink:href="http://www.geoinfo.hamburg.de"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson></ContactPerson>
+        <ContactOrganization>LGV Hamburg</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Geobasisinfrastruktur</ContactPosition>
+      <ContactAddress>
+        <AddressType>postal</AddressType>
+        <Address>Neuenfelder Straße 19</Address>
+        <City>Hamburg</City>
+        <StateOrProvince>HH</StateOrProvince>
+        <PostCode>21109</PostCode>
+        <Country>Germany</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone></ContactVoiceTelephone>
+      <ContactFacsimileTelephone></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress>udp-hilfe@gv.hamburg.de</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>Datenlizenz Deutschland Namensnennung 2.0, Quellenvermerk: Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende (BVM)</Fees>
+    <AccessConstraints></AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>image/png; subtype=8bit</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/x-ms-bmp</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>text/plain</Format>
+        <Format>text/html</Format>
+        <Format>application/gml+xml; version=2.1</Format>
+        <Format>application/gml+xml; version=3.0</Format>
+        <Format>application/gml+xml; version=3.1</Format>
+        <Format>application/gml+xml; version=3.2</Format>
+        <Format>text/xml; subtype=gml/2.1.2</Format>
+        <Format>text/xml; subtype=gml/3.0.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.2.1</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <sld:GetLegendGraphic>
+        <Format>image/png</Format>
+        <Format>image/png; subtype=8bit</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/x-ms-bmp</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </sld:GetLegendGraphic>
+    </Request>
+    <Exception>
+      <Format>BLANK</Format>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+    </Exception>
+    <inspire_vs:ExtendedCapabilities xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0" xmlns="http://www.deegree.org/services/metadata" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://inspire.ec.europa.eu/schemas/common/1.0 http://inspire.ec.europa.eu/schemas/common/1.0/common.xsd http://inspire.ec.europa.eu/schemas/inspire_vs/1.0 http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd">
+      <inspire_common:MetadataUrl>
+        <inspire_common:URL>https://metaver.de/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=DC9D851A-8ECF-453E-94EE-BEE567F2499C&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full</inspire_common:URL>
+        <inspire_common:MediaType>application/vnd.ogc.csw.GetRecordByIdResponse_xml</inspire_common:MediaType>
+      
+      </inspire_common:MetadataUrl>
+      <inspire_common:SupportedLanguages>
+        <inspire_common:DefaultLanguage>
+          <inspire_common:Language>ger</inspire_common:Language>
+        
+        </inspire_common:DefaultLanguage>
+      
+      </inspire_common:SupportedLanguages>
+      <inspire_common:ResponseLanguage>
+        <inspire_common:Language>ger</inspire_common:Language>
+      
+      </inspire_common:ResponseLanguage>
+    
+    </inspire_vs:ExtendedCapabilities>
+    <soapwms:ExtendedCapabilities xmlns:soapwms="http://schemas.deegree.org/extensions/services/wms/1.3.0" xmlns:wms="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="http://schemas.deegree.org/extensions/services/wms/1.3.0 https://schemas.deegree.org/extensions/services/wms/1.3.0/soapwms.xsd">
+      <soapwms:SOAP>
+        <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen"/>
+        <soapwms:Constraint name="SOAPVersion">
+          <soapwms:Value>1.1</soapwms:Value>
+          <soapwms:Value>1.2</soapwms:Value>
+        </soapwms:Constraint>
+        <soapwms:SupportedOperations>
+          <soapwms:Operation name="GetCapabilities"/>
+          <soapwms:Operation name="GetMap"/>
+          <soapwms:Operation name="GetFeatureInfo"/>
+        </soapwms:SupportedOperations>
+      </soapwms:SOAP>
+    </soapwms:ExtendedCapabilities>
+    <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+      <Name>verkehrszaehlstellen</Name>
+      <Title>WMS Verkehrszählstellen Hamburg</Title>
+      <Abstract>WMS Verkehrszählstellen Hamburg</Abstract>
+      <CRS>CRS:84</CRS>
+      <CRS>EPSG:25832</CRS>
+      <CRS>EPSG:25833</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:4258</CRS>
+      <CRS>EPSG:31467</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:3044</CRS>
+      <CRS>EPSG:3034</CRS>
+      <CRS>EPSG:3035</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>9.73298067</westBoundLongitude>
+        <eastBoundLongitude>10.33813197</eastBoundLongitude>
+        <southBoundLatitude>53.41620538</southBoundLatitude>
+        <northBoundLatitude>53.71712928</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="9.73298067" miny="53.41620538" maxx="10.33813197" maxy="53.71712928"/>
+      <BoundingBox CRS="EPSG:25832" minx="548710.00000000" miny="5919394.00000000" maxx="588316.00000000" maxy="5952303.00000000"/>
+      <BoundingBox CRS="EPSG:25833" minx="150122.19388426" miny="5928740.19032314" maxx="192412.55423269" maxy="5964913.55884829"/>
+      <BoundingBox CRS="EPSG:4326" minx="53.41620538" miny="9.73298067" maxx="53.71712928" maxy="10.33813197"/>
+      <BoundingBox CRS="EPSG:4258" minx="53.41620538" miny="9.73298067" maxx="53.71712928" maxy="10.33813197"/>
+      <BoundingBox CRS="EPSG:31467" minx="5921323.35479140" miny="3548800.37549454" maxx="5954245.87949810" maxy="3588422.51503058"/>
+      <BoundingBox CRS="EPSG:3857" minx="1083470.45216689" miny="7060358.80961467" maxx="1150835.58694718" maxy="7116764.94812069"/>
+      <BoundingBox CRS="EPSG:3044" minx="5919393.99999994" miny="548710.00000000" maxx="5952303.00000000" maxy="588316.00000002"/>
+      <BoundingBox CRS="EPSG:3034" minx="2952311.54590753" miny="3982840.67126118" maxx="2984672.03626570" maxy="4021586.10999186"/>
+      <BoundingBox CRS="EPSG:3035" minx="3367639.82846175" miny="4303246.27595566" maxx="3401109.27996840" maxy="4343329.19006322"/>
+      <AuthorityURL name="LGV">
+        <OnlineResource xlink:type="simple" xlink:href="http://www.geoinfo.hamburg.de"/>
+      </AuthorityURL>
+      <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>fussverkehr_zaehlstellen</Name>
+        <Title>Fußverkehr-Zählstellen</Title>
+        <Abstract>Fußverkehr-Zählstellen</Abstract>
+        <CRS>CRS:84</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:31467</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>9.74630421</westBoundLongitude>
+          <eastBoundLongitude>10.24681434</eastBoundLongitude>
+          <southBoundLatitude>53.43649962</southBoundLatitude>
+          <northBoundLatitude>53.71113419</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="9.74630421" miny="53.43649962" maxx="10.24681434" maxy="53.71113419"/>
+        <BoundingBox CRS="EPSG:25832" minx="549573.00000000" miny="5921544.00000000" maxx="582299.00000000" maxy="5951645.00000000"/>
+        <BoundingBox CRS="EPSG:25833" minx="151164.43780083" miny="5931391.29348710" maxx="186354.86672596" maxy="5964184.02816155"/>
+        <BoundingBox CRS="EPSG:4326" minx="53.43649962" miny="9.74630421" maxx="53.71113419" maxy="10.24681434"/>
+        <BoundingBox CRS="EPSG:4258" minx="53.43649962" miny="9.74630421" maxx="53.71113419" maxy="10.24681434"/>
+        <BoundingBox CRS="EPSG:31467" minx="5923474.22237734" miny="3549663.72649837" maxx="5953587.56006326" maxy="3582403.08887953"/>
+        <BoundingBox CRS="EPSG:3857" minx="1084953.62126764" miny="7064150.23800171" maxx="1140670.15493648" maxy="7115637.27996150"/>
+        <BoundingBox CRS="EPSG:3044" minx="5921543.99999996" miny="549573.00000000" maxx="5951645.00000000" maxy="582299.00000001"/>
+        <BoundingBox CRS="EPSG:3034" minx="2954472.57518897" miny="3983703.97911476" maxx="2984024.03820105" maxy="4015758.25357257"/>
+        <BoundingBox CRS="EPSG:3035" minx="3369874.80974900" miny="4304139.70956950" maxx="3400439.10998242" maxy="4337300.78149519"/>
+        <AuthorityURL name="LGV">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.geoinfo.hamburg.de"/>
+        </AuthorityURL>
+        <Identifier authority="LGV">https://registry.gdi-de.org/id/de.hh/04ede102-67cd-4fc1-b2ca-1716845b695a</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://metaver.de/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>fussverkehr_zaehlstellen</Name>
+          <Title>fussverkehr_zaehlstellen</Title>
+          <LegendURL width="186" height="81">
+            <Format>image/png</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=fussverkehr_zaehlstellen&amp;style=fussverkehr_zaehlstellen&amp;format=image/png"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="186" height="81">
+            <Format>image/png</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=fussverkehr_zaehlstellen&amp;style=fussverkehr_zaehlstellen&amp;format=image/png"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>kfz_zaehlstellen</Name>
+        <Title>Kfz-Zählstellen</Title>
+        <Abstract>Kfz-Zählstellen</Abstract>
+        <CRS>CRS:84</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:31467</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>9.73298067</westBoundLongitude>
+          <eastBoundLongitude>10.33813197</eastBoundLongitude>
+          <southBoundLatitude>53.41620538</southBoundLatitude>
+          <northBoundLatitude>53.71712928</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="9.73298067" miny="53.41620538" maxx="10.33813197" maxy="53.71712928"/>
+        <BoundingBox CRS="EPSG:25832" minx="548710.00000000" miny="5919394.00000000" maxx="588316.00000000" maxy="5952303.00000000"/>
+        <BoundingBox CRS="EPSG:25833" minx="150122.19388426" miny="5928740.19032314" maxx="192412.55423269" maxy="5964913.55884829"/>
+        <BoundingBox CRS="EPSG:4326" minx="53.41620538" miny="9.73298067" maxx="53.71712928" maxy="10.33813197"/>
+        <BoundingBox CRS="EPSG:4258" minx="53.41620538" miny="9.73298067" maxx="53.71712928" maxy="10.33813197"/>
+        <BoundingBox CRS="EPSG:31467" minx="5921323.35479140" miny="3548800.37549454" maxx="5954245.87949810" maxy="3588422.51503058"/>
+        <BoundingBox CRS="EPSG:3857" minx="1083470.45216689" miny="7060358.80961467" maxx="1150835.58694718" maxy="7116764.94812069"/>
+        <BoundingBox CRS="EPSG:3044" minx="5919393.99999994" miny="548710.00000000" maxx="5952303.00000000" maxy="588316.00000002"/>
+        <BoundingBox CRS="EPSG:3034" minx="2952311.54590753" miny="3982840.67126118" maxx="2984672.03626570" maxy="4021586.10999186"/>
+        <BoundingBox CRS="EPSG:3035" minx="3367639.82846175" miny="4303246.27595566" maxx="3401109.27996840" maxy="4343329.19006322"/>
+        <AuthorityURL name="LGV">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.geoinfo.hamburg.de"/>
+        </AuthorityURL>
+        <Identifier authority="LGV">https://registry.gdi-de.org/id/de.hh/04ede102-67cd-4fc1-b2ca-1716845b695a</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://metaver.de/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>kfz_zaehlstellen</Name>
+          <Title>kfz_zaehlstellen</Title>
+          <LegendURL width="186" height="81">
+            <Format>image/png</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=kfz_zaehlstellen&amp;style=kfz_zaehlstellen&amp;format=image/png"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="186" height="81">
+            <Format>image/png</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=kfz_zaehlstellen&amp;style=kfz_zaehlstellen&amp;format=image/png"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" cascaded="0" opaque="0" noSubsets="0" fixedWidth="0" fixedHeight="0">
+        <Name>radverkehr_zaehlstellen</Name>
+        <Title>Radverkehr-Zählstellen</Title>
+        <Abstract>Radverkehr-Zählstellen</Abstract>
+        <CRS>CRS:84</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:31467</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>9.73790828</westBoundLongitude>
+          <eastBoundLongitude>10.24039248</eastBoundLongitude>
+          <southBoundLatitude>53.42201617</southBoundLatitude>
+          <northBoundLatitude>53.71118529</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="9.73790828" miny="53.42201617" maxx="10.24039248" maxy="53.71118529"/>
+        <BoundingBox CRS="EPSG:25832" minx="549032.00000000" miny="5919925.00000000" maxx="581875.00000000" maxy="5951645.00000000"/>
+        <BoundingBox CRS="EPSG:25833" minx="150488.23415897" miny="5929811.85532130" maxx="185931.90209836" maxy="5964229.74450745"/>
+        <BoundingBox CRS="EPSG:4326" minx="53.42201617" miny="9.73790828" maxx="53.71118529" maxy="10.24039248"/>
+        <BoundingBox CRS="EPSG:4258" minx="53.42201617" miny="9.73790828" maxx="53.71118529" maxy="10.24039248"/>
+        <BoundingBox CRS="EPSG:31467" minx="5921854.57006442" miny="3549122.51026099" maxx="5953587.55609565" maxy="3581978.93440887"/>
+        <BoundingBox CRS="EPSG:3857" minx="1084018.99079416" miny="7061444.21238636" maxx="1139955.27679467" maxy="7115646.89095850"/>
+        <BoundingBox CRS="EPSG:3044" minx="5919924.99999996" miny="549032.00000000" maxx="5951645.00000000" maxy="581875.00000001"/>
+        <BoundingBox CRS="EPSG:3034" minx="2952913.06072446" miny="3983159.13992379" maxx="2984031.32857198" maxy="4015348.21787781"/>
+        <BoundingBox CRS="EPSG:3035" minx="3368261.59247840" miny="4303575.83233781" maxx="3400446.68609889" maxy="4336876.62853616"/>
+        <AuthorityURL name="LGV">
+          <OnlineResource xlink:type="simple" xlink:href="http://www.geoinfo.hamburg.de"/>
+        </AuthorityURL>
+        <Identifier authority="LGV">https://registry.gdi-de.org/id/de.hh/04ede102-67cd-4fc1-b2ca-1716845b695a</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://metaver.de/csw?Service=CSW&amp;Request=GetRecordById&amp;Version=2.0.2&amp;id=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>radverkehr_zaehlstellen</Name>
+          <Title>radverkehr_zaehlstellen</Title>
+          <LegendURL width="186" height="81">
+            <Format>image/png</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=radverkehr_zaehlstellen&amp;style=radverkehr_zaehlstellen&amp;format=image/png"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="186" height="81">
+            <Format>image/png</Format>
+            <OnlineResource xlink:type="simple" xlink:href="https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?request=GetLegendGraphic&amp;version=1.3.0&amp;service=WMS&amp;layer=radverkehr_zaehlstellen&amp;style=radverkehr_zaehlstellen&amp;format=image/png"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

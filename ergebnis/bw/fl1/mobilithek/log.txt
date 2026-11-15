@@ -1,0 +1,39 @@
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/798871611185745920 10174 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/-4266012713253267478 6338 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/-6470273619834216294 6775 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/-8628280793063448106 10525 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/748506312813203456 8622 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/748508537744674816 8628 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/983406200238284800 9707 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/-489044378979458875 7575 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/-1595922270408040459 12529 application/json
+ok https://mobilithek.info/mdp-api/mdp-msa-metadata/v2/offers/-781197459961221857 7859 application/json
+ok https://www.baysis.bayern.de/internet/verdat/dauz/index.html 24995 text/html
+ok https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS 48815 text/xml
+ok https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS 48815 text/xml
+ok https://gisportal-stmb.bayern.de/server/services/WFS/BAYSIS_Verkehrsdaten/MapServer/WFSServer?REQUEST=GetCapabilities&SERVICE=WFS 16654 text/xml; charset=UTF-8
+ok https://www.geoportal.rlp.de/mapbender/extensions/mobilemap/map.php?layerid=55478 1371 text/html
+ok https://www.geoportal.rlp.de/mapbender/php/wms.php?layer_id=55478&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS 6360 application/xhtml+xml; charset=UTF-8
+ok https://www.geoportal.rlp.de/mapbender/plugins/mb_downloadFeedClient.php?url=http%3A%2F%2Flocalhost%2Fmapbender%2Fphp%2Fmod_inspireDownloadFeed.php%3Fid%3Dd4f95998-6cf4-2af9-67db-99bccebc90da%26type%3DSERVICE%26generateFrom%3Dwfs%26wfsid%3D376 14764 text/html; charset=UTF-8
+ok https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php?languageCode=de&resource=layer&layout=tabs&id=55478 14151 text/html; charset=UTF-8
+ok https://www.geoportal.rlp.de/mapbender/php/wfs.php?FEATURETYPE_ID=1700&REQUEST=GetCapabilities&SERVICE=WFS&INSPIRE=1 9632 application/xhtml+xml; charset=UTF-8
+ok https://www.geoportal.rlp.de/mapbender/php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da 10424 text/html; charset=UTF-8
+ok https://www.geoportal.rlp.de/map?LAYER%5Bzoom%5D=1&LAYER%5Bid%5D=55478 37255 text/html; charset=utf-8
+gesperrt /983406200238284800/DiSTILL-Verkehrsdaten_2010-2021_Lausitz.zip
+Fehler 1 http://metaver.de/trefferanzeige?docuuid=A237E480-6B59-4AF6-963A-BAABDC15AAC7 <HTTPError 429: 'Too Many Requests'>
+Fehler 2 http://metaver.de/trefferanzeige?docuuid=A237E480-6B59-4AF6-963A-BAABDC15AAC7 <HTTPError 429: 'Too Many Requests'>
+Fehler 3 http://metaver.de/trefferanzeige?docuuid=A237E480-6B59-4AF6-963A-BAABDC15AAC7 <HTTPError 429: 'Too Many Requests'>
+ok https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2016-07-15.zip 13954 application/zip
+ok https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2017-01-06.zip 13098 application/zip
+ok https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&REQUEST=GetCapabilities 31672 text/xml;charset=UTF-8
+ok https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?SERVICE=WMS&REQUEST=GetCapabilities 20817 text/xml;charset=UTF-8
+ok https://api.hamburg.de/datasets/v1/verkehrszaehlstellen 3507 application/json
+ok https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=csv 251359 application/zip
+ok https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=json 361342 application/zip
+Fehler 1 http://metaver.de/trefferanzeige?docuuid=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8 <HTTPError 429: 'Too Many Requests'>
+Fehler 2 http://metaver.de/trefferanzeige?docuuid=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8 <HTTPError 429: 'Too Many Requests'>
+Fehler 3 http://metaver.de/trefferanzeige?docuuid=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8 <HTTPError 429: 'Too Many Requests'>
+ok https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen 2549678 application/gml+xml; version=3.1
+ok https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen 2371 application/gml+xml; version=3.1
+ok https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/d8394bf8-2ad2-447c-bf74-403bb0b543f9/download/odala_crowdflowobserved_historic_data.csv 6360450 text/csv
+ok https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/c8c6dbdb-3995-4d94-8f21-33590a4f7c50/download/odala_crowdflowobserved_city_of_kiel_latest.json 2082 application/json

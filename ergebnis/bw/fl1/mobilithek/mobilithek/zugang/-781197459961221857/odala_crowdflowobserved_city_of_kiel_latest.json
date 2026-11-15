@@ -1,0 +1,87 @@
+[ {
+  "id" : "urn:ngsi-ld:CrowdFlowObserved:HOPac67b2cd4516",
+  "type" : "CrowdFlowObserved",
+  "peopleCountHighRange" : {
+    "type" : "Property",
+    "value" : 30
+  },
+  "peopleCountLowerRange" : {
+    "type" : "Property",
+    "value" : 8
+  },
+  "peopleCountMediumRange" : {
+    "type" : "Property",
+    "value" : 15
+  },
+  "location" : {
+    "type" : "GeoProperty",
+    "value" : {
+      "type" : "Point",
+      "coordinates" : [ 10.1024033252149, 54.3282081950327 ]
+    }
+  },
+  "name" : {
+    "type" : "Property",
+    "value" : "WSAQN2"
+  },
+  "ngsi-ld:observedAt" : {
+    "type" : "DateTime",
+    "value" : "2024-03-25T10:47:22.094Z"
+  },
+  "https://uri.fiware.org/ns/data-models#TimeInstant" : {
+    "type" : "DateTime",
+    "value" : "2024-03-25T10:47:22.094Z"
+  },
+  "https://uri.fiware.org/ns/data-models#dateObserved" : {
+    "type" : "DateTime",
+    "value" : "2024-03-25T10:47:22.094Z"
+  },
+  "source" : {
+    "type" : "Property",
+    "value" : "www.hopu.eu"
+  },
+  "@context" : [ "https://schema.lab.fiware.org/ld/context" ]
+}, {
+  "id" : "urn:ngsi-ld:CrowdFlowObserved:HOPac67b2ce4e9a",
+  "type" : "CrowdFlowObserved",
+  "peopleCountHighRange" : {
+    "type" : "Property",
+    "value" : 19
+  },
+  "peopleCountLowerRange" : {
+    "type" : "Property",
+    "value" : 4
+  },
+  "peopleCountMediumRange" : {
+    "type" : "Property",
+    "value" : 11
+  },
+  "location" : {
+    "type" : "GeoProperty",
+    "value" : {
+      "type" : "Point",
+      "coordinates" : [ 10.1022657195715, 54.3279312182754 ]
+    }
+  },
+  "name" : {
+    "type" : "Property",
+    "value" : "WSAQN1"
+  },
+  "ngsi-ld:observedAt" : {
+    "type" : "DateTime",
+    "value" : "2024-03-25T10:47:26.489Z"
+  },
+  "https://uri.fiware.org/ns/data-models#TimeInstant" : {
+    "type" : "DateTime",
+    "value" : "2024-03-25T10:47:26.489Z"
+  },
+  "https://uri.fiware.org/ns/data-models#dateObserved" : {
+    "type" : "DateTime",
+    "value" : "2024-03-25T10:47:26.489Z"
+  },
+  "source" : {
+    "type" : "Property",
+    "value" : "www.hopu.eu"
+  },
+  "@context" : [ "https://schema.lab.fiware.org/ld/context" ]
+} ]

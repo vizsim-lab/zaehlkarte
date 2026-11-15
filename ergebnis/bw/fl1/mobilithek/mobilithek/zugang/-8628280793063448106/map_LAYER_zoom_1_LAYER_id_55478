@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+
+<input type="hidden" name="csrfmiddlewaretoken" value="1s1tABQ4iUXu0rnXqDqwvQOOj6MdtoYZkNeIKgnOx35EJfBBVIyfssxIZStWv5Mq">
+
+
+<html lang="de">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Geoportal RLP  </title>
+    <link rel="stylesheet" href="/static/Geoportal/fontawesome-5/css/all.css">
+    <link rel="icon" href="/static/useroperations/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/useroperations/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/useroperations/css/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/static/useroperations/css/forms.css" media="all" />
+    <script type="text/javascript" src="/static/searchCatalogue/js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="/static/searchCatalogue/vendor/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="/static/searchCatalogue/vendor/zebra/javascript/zebra_datepicker.js"></script>
+    <script id="all-script" type="text/javascript" src="/static/searchCatalogue/js/all.js"></script>
+    <script type="text/javascript" src="/static/useroperations/js/frontpage.js"></script>
+    <!--[if lt IE 9]>
+	<script src="/static/useroperations/js/html5shiv.js"></script>
+	<script src="/static/useroperations/js/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    
+    
+<link rel="stylesheet" type="text/css" href="/static/useroperations/css/favourite_wmcs.css" media="all" />
+
+</head>
+
+<header>
+
+<div class="header">
+    <div class="upper-header">
+        
+        <div class="language-selector-wrapper">
+            <img alt="Die deutsche Flagge, stellt die deutsche Sprache dar" class="flag-selector active-language" data-id="de" title="Deutsch" src="/static/useroperations/images/de_flag.png">
+            <img alt="Die Flagge des vereinigten Königreiches, stellt die englische Sprache dar" class="flag-selector " data-id="en" title="English" src="/static/useroperations/images/uk_flag.png">
+        </div>
+        
+    </div>
+    <div class="left-header">
+        <a href="/"><img alt="Logo der Geodateninfrastruktur" id="logo_gdi" src="/static/useroperations/images/logo-gdi.png" title="Geoportal Rheinland-Pfalz" /></a>
+    </div>
+    <div class="middle-header">
+	<div id="spatial-search-text" class="spatial-search-text">
+                Räumlicher Filter aktiviert! <a href="/mediawiki/index.php/Suchverfahren#R.C3.A4umlicher_Filter" > Was ist das?</a>
+        </div>
+        <div class="middle-header-top">
+            <input type="text" id="geoportal-search-field" class="simple-search-field -js-simple-search-field" placeholder="Suchbegriff">
+            <div id="geoportal-empty-search-button" class="empty-search-button">
+                    <i class="fas fa-times"></i>
+            </div>
+            <div id="geoportal-search-button" class="search-submit-button">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="simple-search-autocomplete -js-simple-search-autocomplete"></div>
+        </div>
+        <div id="middle-header-bottom">
+            <div class="inline">
+                <input class="spatial-checkbox-item" id="spatial-checkbox" type="checkbox" title="Räumlicher Filter">
+                <label class="spatial-checkbox-item" for="spatial-checkbox">Räumlichen Filter benutzen</label>
+            </div>
+        </div>
+    </div>
+    <div class="right-header">
+        <div class="right-header-bottom">
+            <!--<a href="/"><img id="logo-gdi-rp" src="/static/useroperations/images/logo-gdi.png" title="GDI-RP Rheinland Pfalz"/></a>-->
+            <!--<a href="http://www.rlp.de" target="_blank"><img id="logo-country" src="/static/useroperations/images/logo-rlp.png" title="Rheinland Pfalz"/></a>-->
+        </div>
+    </div>
+</div>
+</header>
+
+<body>
+    <nav>
+    <div class="map-viewer-toggler" onclick="toggleMapviewer()" data-gui="Geoportal-RLP">
+        <i class="far fa-map" alt="Eine liegende Karte" title="Kartenviewer öffnen/schließen"></i>
+    </div>
+    <div class="map-viewer-overlay closed">
+        
+
+
+	<div class="mapbender">
+        <div class="map-sidebar">
+            <div class="map-sidebar-actions">
+                <div class="map-viewer-selector" title="Kartenviewer wechseln">
+					<i class="fas fa-exchange-alt"></i>
+		        </div>
+                <div class="map-viewer-list">
+				
+                	<div class="map-viewer-list-entry" data-resource="Geoportal-RLP_2019">Modern</div>
+				
+                	<div class="map-viewer-list-entry" data-resource="Geoportal-RLP">Klassik</div>
+				
+                	<div class="map-viewer-list-entry" data-resource="https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/index.html?wmc_id=current">Mobil</div>
+				
+                </div>
+				
+				<div id="scroll-to-bottom" class="scroll-to-bottom" title="Zum Seitenanende">
+					<i class="fa fa-arrow-down"></i>
+				</div>
+            </div>
+            <div class="map-applications-list">
+                
+                <div class="map-applications-list-entry" data-id="Geoportal-RLP">Geoportal-RLP</div>
+                
+            </div>
+        </div>
+
+		
+			<iframe id="mapviewer" frameborder="no" src="about:blank" data-resource="https://www.geoportal.rlp.de/mapbender/frames/index.php?lang=de&gui_id=Geoportal-RLP&LAYER[visible]=1&LAYER[querylayer]=1" name="geop_map" width="2000px" height="700px"></iframe>
+		
+	</div>
+	<div id="scroll-to-top" class="scroll-to-top hidden" title="Zum Seitenanfang">
+		<i class="fa fa-arrow-up"></i>
+	</div>
+
+
+    </div>
+    <div class="sidebar-toggler">
+        <i class="fas fa-bars" alt="Drei horizontale Linien untereinander" title="Menü ein-/ausklappen"></i>
+    </div>
+    <div id="sidebar" class="sidebar-wrapper ">
+        <div class="sidebar-title">
+            Menü
+        </div>
+        <div class="sidebar-content">
+            <a href="/" class="sidebar-area">
+                <div class="sidebar-area-title current-page">
+                    <div class="sidebar-area-title-icon">
+                        <i class="fas fa-home" alt="Ein stilisiertes Haus"></i>
+                    </div>
+                    <div class="sidebar-area-title-text">
+                        Home
+                    </div>
+                </div>
+            </a>
+        <div class="sidebar-area login-status">
+            <div class="sidebar-area-title" onclick="toggleSubMenu(this)">
+                <div class="sidebar-area-title-icon">
+                    
+                        <i class="far fa-user-circle" alt="Eine nicht ausgefüllte stilisierte Person in einem Kreis"></i>
+                    
+                </div>
+                <div class="sidebar-area-title-text">
+                    
+                        Mein Profil
+                    
+                </div>
+            </div>
+            <div class="sidebar-area-content">
+                
+                <div>Nicht angemeldet</div>
+                    <a href="/login/"><div class="sidebar-list-element ">Anmelden</div></a>
+                    <a href="/register/"><div class="sidebar-list-element ">Registrierung</div></a>
+                
+            </div>
+        </div>
+
+        <a style="color:white;text-decoration:none;" href="/article/Meldungen/">
+	        <div class="sidebar-area" id="news">
+                <div class="sidebar-area-title ">
+                    <div class="sidebar-area-title-icon">
+                        <i class="far fa-newspaper" alt="Eine Zeitung" ></i>
+                    </div>
+                    <div class="sidebar-area-title-text menuMeldungen">Meldungen
+                    </div>
+                </div>
+            </div>
+        </a>
+	
+        <div class="sidebar-area" id="mapviewer-sidebar" onclick="toggleMapviewer()" mobile_wmc="11721">
+            <div class="sidebar-area-title">
+                <div class="sidebar-area-title-icon">
+                    <i class="far fa-map" alt="Eine liegende Karte"></i>
+                </div>
+                <div class="sidebar-area-title-text">
+                    Kartenviewer
+                </div>
+            </div>
+        </div>
+
+        
+            <div class="sidebar-area">
+                    <div class="sidebar-area-title " onclick=" toggleSubMenu(this) ">
+                        <div class="sidebar-area-title-icon">
+                            <img alt="Ein Navigationsmenüsymbol" width="40px" title="Geoportal" src="/static/useroperations/images/icn_geoportal.png">
+                        </div>
+                        <div class="sidebar-area-title-text">
+                            Geoportal
+                        </div>
+                    </div>
+                    <div class="sidebar-area-content">
+                        
+                            
+                                
+                                    <a href="/article/Informationen" target=""><div class="sidebar-list-element ">Informationen</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/article/Das-Geoportal-RLP" target=""><div class="sidebar-list-element ">Das Geoportal RLP</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/linked_open_data" target=""><div class="sidebar-list-element ">LinkedData</div></a>
+                                
+                            
+                        
+                    </div>
+            </div>
+        
+            <div class="sidebar-area">
+                    <div class="sidebar-area-title " onclick=" toggleSubMenu(this) ">
+                        <div class="sidebar-area-title-icon">
+                            <img alt="Ein Navigationsmenüsymbol" width="40px" title="Hilfe" src="/static/useroperations/images/icn_help.png">
+                        </div>
+                        <div class="sidebar-area-title-text">
+                            Hilfe
+                        </div>
+                    </div>
+                    <div class="sidebar-area-content">
+                        
+                            
+                                
+                                    <a href="/article/Basics" target=""><div class="sidebar-list-element ">Basiswissen</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/article/Datennutzer" target=""><div class="sidebar-list-element ">Datennutzer</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/article/Datenbereitsteller" target=""><div class="sidebar-list-element ">Datenbereitsteller</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/article/Grundlagen" target=""><div class="sidebar-list-element ">Grundlagen</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/article/FAQ" target=""><div class="sidebar-list-element ">FAQ</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/mediawiki" target="_blank"><div class="sidebar-list-element ">Wiki</div></a>
+                                
+                            
+                        
+                            
+                                
+                                    <a href="/feedback" target=""><div class="sidebar-list-element ">Feedback</div></a>
+                                
+                            
+                        
+                    </div>
+            </div>
+        
+    </div>
+    </div>
+    </nav>
+
+    
+    <div id="info-overlay" class="modalDialog">
+
+    </div>
+    <div class="search-overlay-content">
+    </div>
+    <div id="body-content" class="body-content  sidebar-open ">
+
+    
+<div class="quickstart-container">
+    <a class="quickstart search" title="Suche nach allen Karten starten" data-resource="wmc">
+        <div class="quickstart-header">
+            <i class="fas fa-map" alt="Eine liegende Karte im Hintergrund. Ein großes Plus im Vordergrund." title="Web Map Context" ></i>
+            <span>Karten</span>
+        </div>
+        <span class="quickstart-body">534</span>
+    </a>
+    <a class="quickstart search" title="Suche nach allen Kartenebenen" data-resource="wms">
+        <div class="quickstart-header">
+            <i class="fas fa-layer-group" alt="Eine liegende Karte" title="Darstellungsdienste" ></i>
+            <span>Kartenebenen</span>
+        </div>
+        <span class="quickstart-body">27.241</span>
+    </a>
+    <a class="quickstart search" title="Suche nach allen Datensätzen" data-resource="dataset">
+        <div class="quickstart-header">
+            <i class="fas fa-globe" title="Datensätze"></i>
+            <span>Datensätze</span>
+        </div>
+        <span class="quickstart-body">16.955</span>
+    </a>
+</div>
+<div class="quickstart-container">
+    <a class="quickstart" href="/organizations/" title="Suche nach allen Organisationen starten">
+        <div class="quickstart-header">
+            <i class="fas fa-city" alt="Ein Organisationssymbol" title="Organisationen" ></i>
+            <span>Organisationen</span>
+        </div>
+        <span class="quickstart-body">214</span>
+    </a>
+    <a class="quickstart" href="/apps/" title="Zeige alle Anwendungen">
+        <div class="quickstart-header">
+            <i class="fas fa-cogs" alt="Ein Anwendungssymbol" title="Anwendungen"></i>
+            <span>Anwendungen</span>
+        </div>
+        <span class="quickstart-body">36</span>
+    </a>
+    <a class="quickstart" href="/categories/" title="Alle anzeigen">
+        <div class="quickstart-header">
+            <i class="fas fa-filter" alt="Ein Filtersymbol" title="Filtern mittels Kategorien und Themen" ></i>
+            <span>Kategorien und Themen</span>
+        </div>
+        <span class="quickstart-body">48</span>
+    </a>
+</div>
+
+<div class="landing-page-headline">
+    <h2>Meistgenutzte Karten</h2>
+</div>
+<div class="tile-wrapper favourite-wmcs">
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=11721">
+                <div class="tile-title">
+                    Liegenschaften RP
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=11721">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>606</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 11721" name="sharepopup11721">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Inhalte aus dem Amtlichen Liegenschaftskataster-Informationssystem (ALKIS) mit den Themen Gebäude, Flurstücke und Nutzung. Diese sind in einzelnen Ebenen strukturiert. Zu den Flurstücken sind Sachdaten, wie Flurstückskennzeichen, Lagebezeichnung, amtliche Fläche und tatsächliche Nutzung abfragbar (GetFeatureInfo).
+In den weiteren Kartenebenen sind mit den Ergebnissen der amtlichen Bodenschätzung und öffentlich-rechtlichen und sonstigen Festlegungen rechtliche Einstufungen von Flächen nach besonderen Kriterien dargestellt. Sie umfassen öffentlich-rechtliche Hinweise auf Baulasten, Denkmäler, Naturschutzgebiete, Wasserschutzgebiete, Weinlagen und Bodenordnungsverfahren.
+Die Zuordnung, Einstufung und Abgrenzung obliegt den hierfür zuständigen Stellen. Im Liegenschaftskataster haben diese Angaben nur nachrichtlichen Charakter.
+ALKIS ist eine wichtige Grundlage zur privaten, kommunalen und behördlichen Planung und hilft
+die Sicherung des Eigentums an Grund und Boden zu garantieren. Es handelt sich nicht um die
+Präsentation der Amtlichen Liegenschaftskarte.
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=2506">
+                <div class="tile-title">
+                    Bodenrichtwerte Basisdienst 2026
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=2506">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>318</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 2506" name="sharepopup2506">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Was kostet mein Grundstück? Zusammenstellung von Informationen zur Einsicht  von Bodenrichtwerten (BORIS.RLP Basisdienst) mit Liegenschaften, Luftbild, Verwaltungsgrenzen und Gemarkungsdurchschnittlichen Bodenwertniveaus.     --     Bodenrichtwert - was ist das? Der Bodenrichtwert ist der durchschnittliche Lagewert des Bodens (EUR/qm) für die Mehrzahl von Grundstücken (Bodenrichtwertzone), für die im Wesentlichen gleiche Nutzungs- und Wertverhältnisse vorliegen.
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=36393">
+                <div class="tile-title">
+                    Hintergrund für die Darstellung von Bebauungsplänen
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=36393">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>120</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 36393" name="sharepopup36393">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Als Hintergrund, zum Beispiel für die Darstellung von Bebauungsplänen, kann die Graustufendarstellung einer weltweit einheitlichen Webkarte genutzt werden. (TopPlusOpen)
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=27581">
+                <div class="tile-title">
+                    Bebauungspläne Rheinland-Pfalz
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=27581">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>77</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 27581" name="sharepopup27581">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Umringe der im GeoPortal.rlp registrierten interoperabel nutzbaren Bebauungspläne der Kommunen in Rheinland-Pfalz. Als weiteren Layer enthält die Zusammenstellung auch die sich aktuell in einer Offenlage befindlichen Bauleitpläne.
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=31514">
+                <div class="tile-title">
+                    Historische Luftbilder Rheinland-Pfalz
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=31514">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>46</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 31514" name="sharepopup31514">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Keine Beschreibung verfügbar
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=26157">
+                <div class="tile-title">
+                    Historische Karten
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=26157">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>37</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 26157" name="sharepopup26157">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Kartenkombination mit historischen Basiskarten aus Rheinland-Pfalz
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=30881">
+                <div class="tile-title">
+                    Umlegung RP
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=30881">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>18</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 30881" name="sharepopup30881">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Starten Sie das Suchmodul. Die Karte bietet eine Übersicht der Umlegungsverfahren der gemäß § 46 BauGB mit der Umlegung betrauten Stellen der Vermessungs- und Katasterverwaltung Rheinland-Pfalz. Beschreibende Informationen zu den Umlegungsverfahren sind abfragbar. Vereinfachte Umlegungsverfahren und Verfahren der Umlegungsausschüsse der Städte Mainz, Trier, Koblenz, Kaiserslautern, Ludwigshafen am Rhein und Worms werden nicht dargestellt. Datengrundlage ist das Amtliche Liegenschaftskataster-Informationssystem (ALKIS) und das Automatisierte Geschäftsbuch der Vermessungs- und Katasterverwaltung Rheinland-Pfalz. Der Dienst ist monatsaktuell. Die geometrische Qualität ist abhängig von der Entstehung der zugrundeliegenden Daten des Liegenschaftskatasters.
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=2959">
+                <div class="tile-title">
+                    (Nicht nur) für Behörden - Geobasisdaten
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=2959">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>17</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 2959" name="sharepopup2959">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Die enthaltenen Geobasisdaten waren früher nur im Landesintranet verfügbar. Inzwischen sind sie frei abrufbar (Open Data). Daher entfällt diese Kartenkombination zukünftig.
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=38061">
+                <div class="tile-title">
+                    Bodenrichtwerte 2026 Premiumdienst - Freischaltung erforderlich
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=38061">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>14</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 38061" name="sharepopup38061">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Kartenzusammenstellung mit Bodenrichtwerten 2026 mit beschreibenden Merkmalen - BORIS.RLP Premiumdienst eine kostenpflichtige Freischaltung ist erforderlich, Liegenschaften, Luftbild, Verwaltungsgrenzen und Gemarkungsdurchschnittlichen Bodenwertniveaus. Die Freischaltung kann beantragt werden unter: https://geoshop.rlp.de/bodenrichtwert-premiumdienst.html
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div class="tile">
+            <div class="tile-header" data-id="WMC=36489">
+                <div class="tile-title">
+                    Denkmalliste RLP 2026
+                </div>
+                <div class="tile-header-img">
+                    <img alt="Vorschau der Kartenzusammenstellung" title="Vorschau der Kartenzusammenstellung" class="tile-img" src="https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&amp;id=36489">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <div class="sub-tile-container">
+                        <div title="Anzahl Aufrufe diese Woche" class="view-count">
+                            <i class="fas fa-eye"></i>
+                            <span>12</span>
+                        </div>
+                        <div class="placeholder">
+                        </div>
+                        <div title="Share" class="share-button popup-landing">
+                          <span class="popuptext-landing 36489" name="sharepopup36489">Link zur Karte wurde in Zwischenablage kopiert</span>
+                            <i class="fa fa-share-alt"></i>
+                        </div>
+                        <div title="Im mobilen Kartenviewer öffnen" class="mobile-button">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    
+                        Das Verzeichnis der Kulturdenkmäler stellt den gesamten Bestand der zum jetzigen Zeitpunkt erfassten Denkmäler des Landes Rheinland-Pfalz vor. Das Verzeichnis erhebt keinen Anspruch auf Vollständigkeit. Weitere Informationen finden Sie unter: https://gdke.rlp.de/
+                    
+                </div>
+            </div>
+        </div>
+    
+        <div id="show-all-tile" class="tile">
+            <div id="show-all-tile-content" class="tile-header">
+                <div class="tile-title">Alle anzeigen</div>
+                <div class="tile-header-img">
+                    <img alt="Logo der Geodateninfrastruktur" class="tile-img" src="/static/useroperations/images/logo-gdi.png">
+                </div>
+            </div>
+            <div class="tile-content">
+                <div class="tile-content-abstract">
+                    <hr>
+                    Starten Sie eine Suche und entdecken Sie viele weitere Karten und Informationen. Auf gehts!
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+    </div>
+
+</body>
+
+<footer>
+    <div class="left-footer">
+        <a target="_blank" href="https://www.rlp.de/"><img alt="Wappen von Rheinland-Pfalz" id="logo_country" src="/static/useroperations/images/logo-country.png" title="Geoportal Rheinland-Pfalz" /></a>
+    </div>
+    <div class="footer-col-wrapper">
+        <div id="footer-legal" class="footer-col">
+            <ul class="footer-list">
+                <li><a href="/article/Kontakt">Kontakt</a></li>
+                <li><a href="/article/Impressum">Impressum</a></li>
+                <li><a href="/article/Datenschutz">Datenschutz</a></li>
+                <li><a href="/article/Rechtshinweis">Rechtshinweis</a></li>
+                <li><a href="/article/Transparenzgesetz">Transparenzgesetz</a></li>
+                <li><a href="/article/Barrierefreiheit">Erklärung zur Barrierefreiheit</a></li>
+            </ul>
+        </div>
+        <div id="footer-news-api" class="footer-col">
+            <ul class="footer-list">
+                <li><a class="image-text-container" target="_blank" href="http://www.geoportal.rlp.de/mapbender/geoportal/news/georss.xml">
+                    <i class="fas fa-rss-square icn-rss" title="RSS Newsfeed"></i>
+                    RSS Newsfeed
+                </a></li>
+                <li><a class="image-text-container" href="/news/twitter">
+                    <i class="fab fa-twitter-square icn-twitter" title="Twitter"></i>
+                    Twitter
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right-footer">
+        <a href="/"><img alt="Das Logo des Geoportals Rheinland-Pfalz" id="logo_geoportal" src="/static/useroperations/images/logo-geoportal.png" title="Geoportal Rheinland-Pfalz" /></a>
+    </div>
+</footer>

@@ -1,0 +1,368 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de"><head><title>Metadaten</title><meta name="description" content="Metadaten" xml:lang="de" /><meta name="keywords" content="Metadaten" xml:lang="de" /><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0;"><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="pragma" content="no-cache"><meta http-equiv="expires" content="0"><meta http-equiv="content-language" content="de" /><meta http-equiv="content-style-type" content="text/css" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></head><body><link type="text/css" href="../css/metadata_responsiv.css" rel="Stylesheet" /><link type="text/css" href="../extensions/jquery-ui-1.8.1.custom/css/custom-theme/jquery-ui-1.8.5.custom.css" rel="Stylesheet" /><script type="text/javascript" src="../extensions/jquery-ui-1.8.1.custom/js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="../extensions/jquery-ui-1.8.1.custom/js/jquery-ui-1.8.1.custom.min.js"></script><script type="text/javascript">showCapabilitiesUrl = function (url,title) {hideCapabilitiesUrl();var $capabilitiesUrlPopup = $('<div><input size="40" type="text" value="' + url + '"/></div>');$capabilitiesUrlPopup.dialog({title: title,bgiframe: true,autoOpen: true,resizable: false,modal: true,width: innerWidth * 0.8,height: 110});};hideCapabilitiesUrl = function () {if($('capabilitiesUrl.Popup').size() > 0) {$('capabilitiesUrl.Popup').dialog('destroy');}};</script><script type="text/javascript">$(function() {	$("#tabs").tabs();});</script><div style="padding:10px;display:block;text-align:center;"><a href="javascript:window.close()">Fenster schließen</a>
+</div><div vocab="http://schema.org/" typeof="Map" class="demo"><div id="tabs"><ul><li><a href="#tabs-1">Übersicht</a></li><li><a href="#tabs-2">Eigenschaften</a></li><li><a href="#tabs-3">Kontakt</a></li><li><a href="#tabs-4">Nutzungsbedingungen</a></li><li><a href="#tabs-5">Qualität</a></li><li><a href="#tabs-6">Schnittstellen</a></li></ul><div id="tabs-1"><table>
+	<tr>
+		<th>
+			Titel
+		</th>
+		<td>
+			<span property="name"><em>Langzeitzählstellen 2016</em></span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Aktualität
+		</th>
+		<td>
+			2025-11-28 15:11:57
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Art der Ressource
+		</th>
+		<td>
+			<img src='../img/osgeo_graphics/Layer.png' alt='Kartenebene - Bild' title='Kartenebene'> - Kartenebene
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Ressourcenidentifikator
+		</th>
+		<td>
+			55478
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Name der Ressource
+		</th>
+		<td>
+			Langzeitzaehlstellen_2016
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Informationen zum Dienst
+		</th>
+		<td>
+			<a href='?resource=wms&id=3147&layout=tabs&languageCode=de'>3147</a>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Voransicht
+		</th>
+		<td>
+			<img class='responsivimg' src = '../geoportal/mod_showPreview.php?resource=layer&id=55478'><span hidden="hidden" property="exampleOfWork" typeof="CreativeWork"><span hidden="hidden" property="thumbnailUrl">https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php/../../geoportal/mod_showPreview.php?resource=layer&id=55478</span></span><img class='responsivimg' src = '../geoportal/mod_showPreview.php?resource=layerlegend&id=55478'>	<tr>
+		<th>
+			Organisation
+		</th>
+		<td>
+			<img src='https://lbm.rlp.de/_assets/07505e6cfd94277c9ba17a46f103c403/images/lbm.png'  height='30'>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Zusammenfassung
+		</th>
+		<td>
+			<span property="description"><em>Langzeitäehlstellen</em></span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			
+		</th>
+		<td>
+			<span hidden="hidden" property="url">https://www.geoportal.rlp.de/portal/karten.html?LAYER[zoom]=1&LAYER[id]=55478&LAYER[visible]=0&LAYER[querylayer]=0</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			
+		</th>
+		<td>
+			<span hidden="hidden" property="identifier" href="https://www.geoportal.rlp.de/layer/55478"></span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<button onclick='window.open("https://www.geoportal.rlp.de/portal/karten.html?LAYER[zoom]=1&LAYER[id]=55478&LAYER[visible]=0&LAYER[querylayer]=0", 
+  "windowname1", 
+  "width=1024, height=768, scrollbars=yes, resizable=yes");'
+   return false;><img src='../img/osgeo_graphics/layer-wms-add.png'>Karte anzeigen</button>
+		</th>
+		<td>
+			
+		</td>
+	</tr>
+	<tr>
+		<th>
+			
+		</th>
+		<td>
+			<span hidden="hidden" property="contentLocation" typeof="Place"><span hidden="hidden" property="hasMap" href=""></span></span>
+		</td>
+	</tr>
+</table>
+</div><div id="tabs-2"><table>
+	<tr>
+		<th>
+			Abfragbarkeit
+		</th>
+		<td>
+			<img src='../img/osgeo_graphics/select.png' title='Ebene abfragbar' alt='Ebene abfragbar'>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Koordinatenreferenzsysteme (mit BBOX)
+		</th>
+		<td>
+			EPSG:4326 epsg:25832 EPSG:31466 EPSG:31467 EPSG:3857 EPSG:31468 
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Eckpunkte in geogr. Koordinaten
+		</th>
+		<td>
+			4.711504,48.905636,9.807128,51.022424
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Ausdehnung
+		</th>
+		<td>
+			<img src='https://www.geoportal.rlp.de/cgi-bin/mapserv?map=/data/mapbender/tools/wms_extent/extents.map&VERSION=1.1.1&REQUEST=GetMap&SERVICE=WMS&LAYERS=demis,ows_layer_target,extent,metadata_polygon&STYLES=&SRS=EPSG:4326&BBOX=4.4567228,48.7938788,10.0619092,51.1285452&WIDTH=120&HEIGHT=120&FORMAT=image/png&BGCOLOR=0xffffff&TRANSPARENT=TRUE&EXCEPTIONS=application/vnd.ogc.se_inimage&minx=4.711504&miny=48.905636&maxx=9.807128&maxy=51.022424'>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Verknüpfte Metadaten
+		</th>
+		<td>
+			<img src='../img/gnome/edit-select-all.png' title='Metadaten über Registry angereichert'/><a href='../php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da'>d4f95998-6cf4-2af9-67db-99bccebc90da</a> <a href='../php/mod_dataISOMetadata.php?outputFormat=iso19139&id=d4f95998-6cf4-2af9-67db-99bccebc90da&validate=true'>Validierung</a> <a href='../php/mod_dataISOMetadata.php?outputFormat=rdf&id=d4f95998-6cf4-2af9-67db-99bccebc90da&CN=false'><img style='border: none;' src='../img/rdf_w3c_icon.48.gif' title='INSPIRE Service Metadaten - RDF/XML (BETA)' style='width:34px;height:34px' alt='' /></a>  <a href='../plugins/mb_downloadFeedClient.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_inspireDownloadFeed.php%3Fid%3Dd4f95998-6cf4-2af9-67db-99bccebc90da%26type%3DSERVICE%26generateFrom%3Dwfs%26wfsid%3D376'><img src='../img/osgeo_graphics/geosilk/vector_download.png' title='Download von GML-Daten über INSPIRE Downloaddienst'/></a><br></table>
+</div><div id="tabs-3"><h4>Publizierende Stelle</h4><span property="publisher" typeof="Organization"><table>
+	<tr>
+		<th>
+			Logo
+		</th>
+		<td>
+			<span hidden="hidden" property="logo" typeof="URL">https://lbm.rlp.de/_assets/07505e6cfd94277c9ba17a46f103c403/images/lbm.png</span><img src='https://lbm.rlp.de/_assets/07505e6cfd94277c9ba17a46f103c403/images/lbm.png'  height='30'>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Organisation
+		</th>
+		<td>
+			<span property="legalName">Landesbetrieb Mobilität Rheinland-Pfalz</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Adresse
+		</th>
+		<td>
+			Friedrich-Ebert-Ring 14-20
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Ort
+		</th>
+		<td>
+			56068 Koblenz
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Email
+		</th>
+		<td>
+			<span property="email">lbm (at) lbm.rlp.de</span>
+		</td>
+	</tr>
+</table>
+</span><h4>Technisch verantwortliche Stelle</h4><span property="provider" typeof="Organization"><table>
+	<tr>
+		<th>
+			Organisation
+		</th>
+		<td>
+			<span property="legalName">Landesbetrieb Mobilität RLP</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Ansprechpartner
+		</th>
+		<td>
+			Matthias Noll
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Adresse
+		</th>
+		<td>
+			
+		</td>
+	</tr>
+	<tr>
+		<th>
+			
+		</th>
+		<td>
+			56068 Koblenz
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Telefon
+		</th>
+		<td>
+			
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Email
+		</th>
+		<td>
+			<span property="email"><a href="mailto:Matthias.Noll@lbm.rlp.de" target=_blank>Matthias.Noll@lbm.rlp.de</a></span>
+		</td>
+	</tr>
+</table>
+</span></div><div id="tabs-4"><table>
+	<tr>
+		<th>
+			Angaben zu Kosten/Gebühren/Lizenzen
+		</th>
+		<td>
+			<b>Lizenz:</b><br><a href='https://www.govdata.de/dl-de/by-2-0' target=_blank><img style='border: none;' src='https://www.geoportal.rlp.de/metadata/dl_de_nn_v2_150.png' dl-de-by-2.0></a><br><br><img src='../img/od_80x15_blue.png' /><br>Datenlizenz Deutschland Namensnennung 2.0<br>
+		</td>
+	</tr>
+
+		</td>
+	</tr>
+</table>
+</div><div id="tabs-5"><table>
+	<tr>
+		<th>
+			Status
+		</th>
+		<td>
+			<img src='../img/trafficlights/wait.bmp' height='24px' width='24px'  alt='Beschreibung hat sich geändert - Aktualisierung nötig' title='Beschreibung hat sich geändert - Aktualisierung nötig'>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Änderungen
+		</th>
+		<td>
+			<input type=button value='Anzeige' onclick="var newWindow = window.open('../php/mod_showCapDiff.php?serviceType=wms&id=3147','Capabilities Diff','width=700,height=300,scrollbars');newWindow.focus();">
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Letzte Aktualisierung
+		</th>
+		<td>
+			352 Tage
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Verfügbarkeit
+		</th>
+		<td>
+			95.2 %
+		</td>
+	</tr>
+</table>
+</div><div id="tabs-6"><table>
+	<tr>
+		<th>
+			Geoportal Capabilities
+		</th>
+		<td>
+			<table class='lesscsstable'>	<tr class='lesscss'>
+		<th class='lesscss'>
+			Zugriffspunkt Einzelebene
+		</th>
+		<td class='lesscss'>
+			<img class='normalizeicon' src='../img/gnome/edit-select-all.png'><a onclick='' class='linkjs' href = '../php/wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS' target=_blank>Dokument anzeigen</a><br /><img class='normalizeicon' src='../img/osgeo_graphics/geosilk/link.png'><a class='linkjs' onclick='showCapabilitiesUrl("https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php/../wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS","Zugriffspunkt Einzelebene");'>Link anzeigen</a>
+		</td>
+	</tr>
+	<tr class='lesscss'>
+		<th class='lesscss'>
+			Zugriffspunkt mit Unterebenen
+		</th>
+		<td class='lesscss'>
+			<img class='normalizeicon' src='../img/gnome/edit-select-all.png'><a class='linkjs' href = '../php/wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS&withChilds=1' target=_blank>Dokument anzeigen</a><br /><img class='normalizeicon' src='../img/osgeo_graphics/geosilk/link.png'><a class='linkjs' onclick='showCapabilitiesUrl("https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php/../wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS&withChilds=1","Zugriffspunkt mit Unterebenen");'>Link anzeigen</a>
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Original Capabilities
+		</th>
+		<td>
+			<img class='normalizeicon' src='../img/gnome/edit-select-all.png'><a class='linkjs' href = 'https://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/https-wms/langzeitzst.map&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS' target=_blank>Dokument anzeigen</a><br /><img class='normalizeicon' src='../img/osgeo_graphics/geosilk/link.png'><a class='linkjs' onclick='showCapabilitiesUrl("https://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/https-wms/langzeitzst.map&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS","Geoportal Capabilities");'>Link anzeigen</a>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			INSPIRE Capabilities URL
+		</th>
+		<td>
+			<img class='normalizeicon' src='../img/gnome/edit-select-all.png'><a class='linkjs' href = '../php/wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&INSPIRE=1&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS' target=_blank>Dokument anzeigen</a><br /><img class='normalizeicon' src='../img/osgeo_graphics/geosilk/link.png'><a class='linkjs' onclick='showCapabilitiesUrl("https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php/../wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&INSPIRE=1&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS","INSPIRE Capabilities URL");'>Link anzeigen</a>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			INSPIRE Service Metadaten
+		</th>
+		<td>
+			<table class='lesscsstable'>	<tr>
+		<th class='lesscss2'>
+			<img  src='../img/inspire_tr_36.png'>
+		</th>
+		<td>
+			<img class='normalizeicon' src='../img/gnome/edit-select-all.png'><a class='linkjs' href='../php/mod_layerISOMetadata.php?SERVICE=WMS&outputFormat=iso19139&Id=55478' target=_blank >Dokument anzeigen</a><br/><img class='normalizeicon' src='../img/osgeo_graphics/geosilk/link.png'><a class='linkjs' onclick='showCapabilitiesUrl("https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php/../mod_layerISOMetadata.php?SERVICE=WMS&outputFormat=iso19139&Id=55478","");'>Link anzeigen</a>
+		</td>
+	</tr>
+	<tr>
+		<th class='lesscss2'>
+			<img style='border: none;width:34px;height:34px' src='../img/rdf_w3c_icon.48.gif' title='INSPIRE Service Metadaten - RDF/XML (BETA)' alt='' />
+		</th>
+		<td>
+			<img class='normalizeicon' src='../img/gnome/edit-select-all.png'><a class='linkjs' href='../php/mod_layerISOMetadata.php?SERVICE=WMS&CN=false&outputFormat=rdf&Id=55478' target=_blank >Dokument anzeigen</a><br /><img class='normalizeicon' src='../img/osgeo_graphics/geosilk/link.png'><a class='linkjs' onclick='showCapabilitiesUrl("https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php/../mod_layerISOMetadata.php?SERVICE=WMS&CN=false&outputFormat=rdf&Id=55478","");'>Link anzeigen</a>
+		</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			Validierung gegen INSPIRE Geoportal
+		</th>
+		<td>
+			<a class='linkjs' href='../php/mod_layerISOMetadata.php?SERVICE=WMS&outputFormat=iso19139&Id=55478&validate=true' target=_blank title='Validierung gegen INSPIRE Geoportal'>Validierung starten</a>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			KML
+		</th>
+		<td>
+			<a href='../php/mod_interfaceWms4Kml.php?id=55478'><img style='border: none;width:34px;height:34px' src='../img/misc/kml_icon.gif' title='KML' alt='' /></a>
+		</td>
+	</tr>
+</table>
+</div></div></div></body></html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dctype="http://purl.org/dc/dcmitype/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:vcard="http://www.w3.org/2006/vcard/ns#" xml:lang="de"><head><title>Metadaten</title><meta name="description" content="Metadaten" xml:lang="de" /><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0;"><meta name="keywords" content="Metadaten" xml:lang="de" /><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="pragma" content="no-cache"><meta http-equiv="expires" content="0"><meta http-equiv="content-language" content="de" /><meta http-equiv="content-style-type" content="text/css" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge" /></head><body><link type="text/css" href="../css/metadata_responsiv.css" rel="Stylesheet" /><link type="text/css" href="../extensions/jquery-ui-1.8.1.custom/css/custom-theme/jquery-ui-1.8.5.custom.css" rel="Stylesheet" /><script type="text/javascript" src="../extensions/jquery-ui-1.8.1.custom/js/jquery-1.4.2.min.js"></script><script type="text/javascript" src="../extensions/jquery-ui-1.8.1.custom/js/jquery-ui-1.8.1.custom.min.js"></script><script type="text/javascript">$(function() {	$("#tabs").tabs();});</script><div style="padding:10px;display:block;text-align:center;"><a href="javascript:window.close()">Fenster schließen</a></div><div class="demo"><div vocab="http://schema.org/" typeof="Dataset" id="tabs"><ul><li><a href="#tabs-1">Übersicht</a></li><li><a href="#tabs-2">Eigenschaften</a></li><li><a href="#tabs-3">Kontakt</a></li><li><a href="#tabs-4">Nutzungsbedingungen</a></li><li><a href="#tabs-5">Qualität</a></li><li><a href="#tabs-6">Schnittstellen</a></li></ul><div id="tabs-1"><fieldset><legend>Metadaten</legend><table>
+	<tr>
+		<th>
+			<b>Metadatenidentifikator</b>: 
+		</th>
+		<td>
+			<span  property="identifier">d4f95998-6cf4-2af9-67db-99bccebc90da</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Datum der Metadaten</b>: 
+		</th>
+		<td>
+			<span >2023-12-06</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Sprache der Metadaten</b>: 
+		</th>
+		<td>
+			<span >ger</span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Identifikation</legend><table>
+	<tr>
+		<th>
+			<b>Ressourcenbezeichnung</b>: 
+		</th>
+		<td>
+			<span  property="name">Langzeitzählstellen</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Ressourcenüberblick</b>: 
+		</th>
+		<td>
+			<span  property="description">Langzeitzählstellen Rheinland-Pfalz</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Art der Ressource</b>: 
+		</th>
+		<td>
+			<span >dataset</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Unique resource identifier</b>: 
+		</th>
+		<td>
+			<span >http://www.lbm.rlp.de/registry/spatial/dataset/d4f95998-6cf4-2af9-67db-99bccebc90da</span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Ausdehnung</legend><img src='https://www.geoportal.rlp.de/cgi-bin/mapserv?map=/data/mapbender/tools/wms_extent/extents.map&VERSION=1.1.1&REQUEST=GetMap&SERVICE=WMS&LAYERS=demis,ows_layer_target,extent,metadata_polygon&STYLES=&SRS=EPSG:4326&BBOX=4.456357,48.79394,10.060703,51.12726&WIDTH=120&HEIGHT=120&FORMAT=image/png&BGCOLOR=0xffffff&TRANSPARENT=TRUE&EXCEPTIONS=application/vnd.ogc.se_inimage&minx=4.7111&miny=48.9046&maxx=9.80596&maxy=51.0212&metadata_uuid=d4f95998-6cf4-2af9-67db-99bccebc90da'></fieldset><fieldset property="producer" typeof="Organization"><legend>Kontakt</legend><table>
+	<tr>
+		<th>
+			<b>Name der verantwortlichen Stelle</b>: 
+		</th>
+		<td>
+			<span  property="legalName">LBM-Zentrale</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>E-Mail Adresse der verantwortlichen Stelle</b>: 
+		</th>
+		<td>
+			<span  property="email">lbm (at) lbm.rlp.de</span>
+		</td>
+	</tr>
+</table>
+</fieldset></div><div id="tabs-2"><fieldset><legend>Allgemein</legend><table>
+	<tr>
+		<th>
+			<b>Sprache</b>: 
+		</th>
+		<td>
+			<span >ger</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>ISO Themengebiet</b>: 
+		</th>
+		<td>
+			<span >transportation</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Suchbegriff</b>: 
+		</th>
+		<td>
+			<span  property="keywords">inspireidentifiziert,Transport networks</span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Geographische Ausdehnung</legend><table>
+	<tr>
+		<th>
+			<b>Koordinatenreferenzsystem</b>: 
+		</th>
+		<td>
+			<span >urn:ogc:def:crs:EPSG:31466</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Geographische Ausdehnung</b>: 
+		</th>
+		<td>
+			<span  property="spatialCoverage/Place/GeoShape/box">4.7111 48.9046 9.80596 51.0212</span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Zeitliche Ausdehnung</legend><table>
+	<tr>
+		<th>
+			<b>Zeitliche Ausdehnung - von</b>: 
+		</th>
+		<td>
+			<span >2016-01-01</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Zeitliche Ausdehnung - bis</b>: 
+		</th>
+		<td>
+			<span >2025-11-15</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Datum der Veröffentlichung</b>: 
+		</th>
+		<td>
+			<span  property="datePublished"></span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Datum der letzten Überarbeitung</b>: 
+		</th>
+		<td>
+			<span  property="dateModified">2025-11-15</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Datum der Erstellung</b>: 
+		</th>
+		<td>
+			<span  property="dateCreated"></span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Format</legend><table>
+	<tr>
+		<th>
+			<b>Datenablageformat</b>: 
+		</th>
+		<td>
+			<span >Database</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Zeichensatz</b>: 
+		</th>
+		<td>
+			<span >utf8</span>
+		</td>
+	</tr>
+</table>
+</fieldset></div><div id="tabs-3"><fieldset property="provider" typeof="Organization"><legend>Daten-/Dienstanbieter</legend><table>
+	<tr>
+		<th>
+			<b>Name der verantwortlichen Stelle</b>: 
+		</th>
+		<td>
+			<span  property="legalName">LBM-Zentrale</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Rolle der verantwortlichen Stelle</b>: 
+		</th>
+		<td>
+			<span >pointOfContact</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>E-Mail Adresse der verantwortlichen Stelle</b>: 
+		</th>
+		<td>
+			<span  property="email">lbm (at) lbm.rlp.de</span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset property="publisher" typeof="Organization"><legend>Anbieter der Metadaten</legend><table>
+	<tr>
+		<th>
+			<b>Name der Kontaktstelle für Metadaten</b>: 
+		</th>
+		<td>
+			<span  property="legalName">LBM-Zentrale</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Metadatenkontakt E-Mail</b>: 
+		</th>
+		<td>
+			<span  property="email">lbm (at) lbm.rlp.de</span>
+		</td>
+	</tr>
+</table>
+</fieldset></div><div id="tabs-4"><fieldset><legend>Bedingungen</legend><table>
+	<tr>
+		<th>
+			<b>Nutzungsbedingungen</b>: 
+		</th>
+		<td>
+			<span ></span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Zugangsbeschränkungen</legend><table>
+	<tr>
+		<th>
+			<b>Code für Zugangsbeschränkungen</b>: 
+		</th>
+		<td>
+			<span >otherRestrictions</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Andere Zugangsbeschränkungen</b>: 
+		</th>
+		<td>
+			<span >Lizenz: dl-de-by-2.0 - Datenlizenz Deutschland Namensnennung 2.0 - https://www.govdata.de/dl-de/by-2-0 - Quellenvermerk: Source note required by license, but not given!,{"id":"dl-de-by-2.0","name":"Datenlizenz Deutschland Namensnennung 2.0","url":"https:\/\/www.govdata.de\/dl-de\/by-2-0","quelle":"Source note required by license, but not given!"}</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>License URL</b>: 
+		</th>
+		<td>
+			<span  property="license" typeof="URL" href="https://www.govdata.de/dl-de/by-2-0">https://www.govdata.de/dl-de/by-2-0</span>
+		</td>
+	</tr>
+</table>
+</fieldset></div><div id="tabs-5"><fieldset><legend>Herkunft</legend><table>
+	<tr>
+		<th>
+			<b>Herkunft</b>: 
+		</th>
+		<td>
+			<span >Eingesessen mit GPS</span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Auflösung</legend><table>
+	<tr>
+		<th>
+			<b>Vergleichsmaßstab</b>: 
+		</th>
+		<td>
+			<span ></span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Bodenauflösung</b>: 
+		</th>
+		<td>
+			<span >0.10</span>
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Gültigkeit</legend><table>
+	<tr>
+		<th>
+			<b>Titel der Spezifikation</b>: 
+		</th>
+		<td>
+			<span >VERORDNUNG (EG) Nr. 1205/2008 DER KOMMISSION vom 3. Dezember 2008 zur Durchführung der Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates hinsichtlich Metadaten,VERORDNUNG (EU) Nr. 1253/2013 DER KOMMISSION vom 21. Oktober 2013 zur Änderung der Verordnung (EU) Nr. 1089/2010 zur Durchführung der Richtlinie 2007/2/EG hinsichtlich der Interoperabilität von Geodatensätzen und -diensten,VERORDNUNG (EU) Nr. 102/2011 DER KOMMISSION vom 4. Februar 2011 zur Änderung der Verordnung (EU) Nr. 1089/2010 zur Durchführung der Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates hinsichtlich der Interoperabilität von Geodatensätzen und -diensten,VERORDNUNG (EG) Nr. 1089/2010 DER KOMMISSION vom 23. November 2010 zur Durchführung der Richtlinie 2007/2/EG des Europäischen Parlaments und des Rates hinsichtlich der Interoperabilität von Geodatensätzen und -diensten</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Datum der Spezifikation</b>: 
+		</th>
+		<td>
+			<span >2008-12-04,2013-12-10,2011-02-05,2010-12-08</span>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>Grad der Konformität</b>: 
+		</th>
+		<td>
+			<span >true,false,false,false</span>
+		</td>
+	</tr>
+</table>
+</fieldset></div><div id="tabs-6"><fieldset><legend>Online access</legend><table>
+	<tr>
+		<th>
+			<b>Adresse zur Ressource</b>: 
+		</th>
+		<td>
+			
+		</td>
+	</tr>
+</table>
+</fieldset><fieldset><legend>Metadaten</legend><table>
+	<tr>
+		<th>
+			<b>ISO19139</b>: 
+		</th>
+		<td>
+			<a href='/mapbender/php/mod_exportIso19139.php/../../php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da&outputFormat=iso19139' target='_blank'>Metadaten</a>
+		</td>
+	</tr>
+	<tr>
+		<th>
+			<b>RDF</b>: 
+		</th>
+		<td>
+			<a href='/mapbender/php/mod_exportIso19139.php/../../php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da&outputFormat=rdf' target='_blank'>Geo-DCAT Metadata</a>
+		</td>
+	</tr>
+</table>
+</fieldset></div></div></div></div></body></html>

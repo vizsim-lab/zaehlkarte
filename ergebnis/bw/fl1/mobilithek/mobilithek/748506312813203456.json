@@ -1,0 +1,261 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-1779113623",
+ "publicationId": "748506312813203456",
+ "title": "Verkehrsdaten für Messquerschnitte und Fahrstreifen (dynamisch)",
+ "description": "Darstellung von verkehrsmenge (q) und Geschwindigkeit (v) für PKW/LKW in Schleswig-Holstein (dynamisch)",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+ "dataCategoryDetail": [
+  "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_VOLUME"
+ ],
+ "keyword": [],
+ "temporalCoverage": {
+  "begin": null,
+  "end": null
+ },
+ "language": [
+  "https://w3id.org/idsa/code/DE"
+ ],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": true,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": null
+ },
+ "accrualPeriodicity": "https://w3id.org/idsa/code/EVERY_1_MINUTE",
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Landesbetrieb Straßenbau und Verkehr Schleswig-Holstein (LBV.SH)",
+   "emailAddress": "http://www.lbv-sh.de"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Landesbetrieb Straßenbau und Verkehr Schleswig-Holstein (LBV.SH)",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+ "standardLicense": "http://dcat-ap.de/def/licenses/dl-zero-de/2.0",
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DEF",
+    "name": "Schleswig-Holstein"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (MULTIPOLYGON (((9.42015 54.83196, 9.42293 54.82322, 9.44265 54.8047, 9.49195 54.82264, 9.58314 54.85427, 9.8626 54.75358, 9.91535 54.78915, 9.9495 54.77874, 10.03117 54.63657, 9.93783 54.48087, 10.09937 54.47048, 10.16852 54.43284, 10.17416 54.34575, 10.23333 54.41007, 10.34737 54.43177, 10.71375 54.30507, 10.92506 54.37749, 11.08283 54.38556, 11.08495 54.43153, 11.01368 54.45815, 11.02531 54.47447, 11.06278 54.52705, 11.22354 54.50046, 11.24602 54.47447, 11.30074 54.41122, 11.15715 54.40373, 11.08899 54.35348, 11.08612 54.20556, 11.04188 54.17475, 10.77995 54.0767, 10.76489 54.0277, 10.84089 53.99189, 10.90366 53.95682, 10.76306 53.862, 10.76296 53.81115, 10.77023 53.74937, 10.92546 53.68873, 10.95192 53.64762, 10.901 53.57473, 10.83477 53.56714, 10.78623 53.50213, 10.63928 53.44817, 10.59505 53.36393, 10.46918 53.38584, 10.30795 53.4332, 10.23668 53.49635, 10.16603 53.55111, 10.18964 53.61027, 10.15226 53.7118, 10.07143 53.69702, 9.94538 53.65293, 9.8626 53.60746, 9.76283 53.60761, 9.7301 53.55758, 9.56276 53.61286, 9.48589 53.70766, 9.27273 53.86766, 9.19975 53.8801, 8.9635 53.89917, 8.83259 54.02393, 8.9679 54.05241, 8.92908 54.11974, 8.85034 54.132, 8.80945 54.18576, 8.8448 54.26633, 8.69159 54.28927, 8.64295 54.32136, 8.69706 54.38457, 8.8721 54.41672, 8.93134 54.46326, 8.84548 54.49243, 8.85151 54.61055, 8.65462 54.80853, 8.63593 54.91168, 9.1131 54.8736, 9.22352 54.85127, 9.27178 54.80999, 9.36776 54.8242, 9.42015 54.83196)), ((10.95359 53.89843, 10.89671 53.88801, 10.88366 53.90003, 10.90523 53.92877, 10.9514 53.92402, 10.95359 53.89843)), ((8.67121 54.49484, 8.62397 54.48897, 8.58671 54.52297, 8.59829 54.53432, 8.6878 54.55713, 8.71091 54.55348, 8.69683 54.51601, 8.67121 54.49484)), ((8.56749 54.68062, 8.48613 54.68021, 8.4023 54.70038, 8.39501 54.71507, 8.43669 54.74834, 8.53493 54.75574, 8.58827 54.7412, 8.59664 54.71874, 8.56749 54.68062)), ((8.57712 54.54495, 8.54254 54.54042, 8.51645 54.57187, 8.56658 54.59625, 8.57712 54.54495)), ((8.38084 54.89223, 8.45592 54.87685, 8.46425 54.86327, 8.41637 54.84689, 8.33953 54.87885, 8.29741 54.85007, 8.28647 54.85985, 8.29677 54.91121, 8.33709 54.97305, 8.36076 54.95882, 8.36297 54.90906, 8.38084 54.89223)), ((8.44125 55.0171, 8.36656 54.9878, 8.35679 54.99667, 8.39805 55.05428, 8.43861 55.04593, 8.44125 55.0171)), ((8.40437 54.61466, 8.36686 54.60607, 8.28937 54.66732, 8.33975 54.69621, 8.36315 54.65061, 8.40437 54.61466)), ((8.32026 54.7856, 8.29235 54.73534, 8.26265 54.76116, 8.2749 54.79798, 8.32026 54.7856))))"
+ },
+ "created": "2024-07-12T08:08:26.109Z",
+ "modified": "2024-07-12T08:08:26.109Z",
+ "geoReferenceMethod": [
+  "https://w3id.org/mdp/schema/geo_reference_method#METHOD_OTHER"
+ ],
+ "networkCoverage": [
+  "https://w3id.org/mdp/schema/network_coverage#REGIONAL_ROADS"
+ ],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_MOTORCYCLE"
+ ],
+ "mdpBrokering": true,
+ "deltaDelivery": false,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "",
+ "contentData": [
+  {
+   "accessUrl": null,
+   "endpointDocumentation": null,
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/XML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#DATEX_2",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": null,
+   "fileName": null,
+   "creationDate": null,
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": false,
+   "masterSchema": {
+    "title": "",
+    "accessURL": "/schemas/DATEX_2/Version_1.2/20110617_containermodel_schema.xsd",
+    "description": "",
+    "modified": null,
+    "instance": {
+     "fileName": null,
+     "mediaType": null,
+     "byteSize": 0
+    },
+    "validFrom": null,
+    "validTo": null
+   },
+   "schema": [],
+   "schemaProfileName": "Version_1.2"
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": {
+    "title": "VISIBLE",
+    "accessURL": "VISIBLE",
+    "description": "VISIBLE",
+    "modified": "VISIBLE",
+    "instance": {
+     "fileName": "VISIBLE",
+     "mediaType": "VISIBLE",
+     "byteSize": "VISIBLE"
+    },
+    "validFrom": "VISIBLE",
+    "validTo": "VISIBLE"
+   },
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}

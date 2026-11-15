@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<WMS_Capabilities version="1.3.0" xmlns="http://www.opengis.net/wms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:esri_wms="http://www.esri.com/wms" xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?version=1.3.0%26service=WMS%26request=GetSchemaExtension">
+	<Service>
+		<Name><![CDATA[WMS]]></Name>
+		<Title><![CDATA[BAYSIS Verkehrsdaten]]></Title>
+		<Abstract><![CDATA[Der Web Map Service des Bayerischen Straßeninformationssystems (BAYSIS) liefert Daten zur Straßenverkehrszählung 2021.]]></Abstract>
+		<KeywordList><Keyword><![CDATA[BAYSIS, Verkehrsdaten, Verkehrsmengen, Dauerzählstellen]]></Keyword></KeywordList>
+		<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?"/>
+		<ContactInformation>
+			<ContactPersonPrimary>
+				<ContactPerson><![CDATA[Referat 77 Straßeninformationssysteme]]></ContactPerson>
+				<ContactOrganization><![CDATA[Landesbaudirektion Bayern]]></ContactOrganization>
+			</ContactPersonPrimary>
+			<ContactPosition><![CDATA[]]></ContactPosition>
+			<ContactAddress>
+				<AddressType><![CDATA[postal]]></AddressType>
+				<Address><![CDATA[Schwere-Reiter-Str. 41]]></Address>
+				<City><![CDATA[München]]></City>
+				<StateOrProvince><![CDATA[DE-BY]]></StateOrProvince>
+				<PostCode><![CDATA[80797]]></PostCode>
+				<Country><![CDATA[DE]]></Country>
+			</ContactAddress>
+			<ContactVoiceTelephone><![CDATA[+49-89-558918-350]]></ContactVoiceTelephone>
+			<ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+			<ContactElectronicMailAddress><![CDATA[baysis@lbd.bayern.de]]></ContactElectronicMailAddress>
+		</ContactInformation>
+		<Fees><![CDATA[none]]></Fees>
+		<AccessConstraints><![CDATA[Creative Commons Namensnennung 4.0 Lizenz. Die Namensnennung der Bayerischen Straßenbauverwaltung als Rechteinhaberin hat in folgender Weise zu erfolgen: Datenquelle: Bayerische Straßenbauverwaltung - BAYSIS (https://www.baysis.bayern.de).]]></AccessConstraints>
+		<MaxWidth>4096</MaxWidth>
+		<MaxHeight>4096</MaxHeight>
+	</Service>
+	<Capability>
+		<Request>
+			<GetCapabilities>
+				<Format>application/vnd.ogc.wms_xml</Format>
+				<Format>text/xml</Format>
+				<DCPType>
+					<HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?"/></Get></HTTP>
+				</DCPType>
+			</GetCapabilities>
+			<GetMap>
+				<Format>image/bmp</Format>
+				<Format>image/jpeg</Format>
+				<Format>image/tiff</Format>
+				<Format>image/png</Format>
+				<Format>image/png8</Format>
+				<Format>image/png24</Format>
+				<Format>image/png32</Format>
+				<Format>image/gif</Format>
+				<Format>image/svg+xml</Format>
+				<DCPType>
+					<HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?"/></Get></HTTP>
+				</DCPType>
+			</GetMap>
+			<GetFeatureInfo>
+				<Format>application/vnd.esri.wms_raw_xml</Format>
+				<Format>application/vnd.esri.wms_featureinfo_xml</Format>
+				<Format>application/vnd.ogc.wms_xml</Format>
+				<Format>application/geo+json</Format>
+				<Format>text/xml</Format>
+				<Format>text/html</Format>
+				<Format>text/plain</Format>
+				<DCPType>
+					<HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?"/></Get></HTTP>
+				</DCPType>
+			</GetFeatureInfo>
+			<esri_wms:GetStyles>
+				<Format>application/vnd.ogc.sld+xml</Format>
+				<DCPType>
+					<HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?"/></Get></HTTP>
+				</DCPType>
+			</esri_wms:GetStyles>
+		</Request>
+		<Exception>
+			<Format>application/vnd.ogc.se_xml</Format>
+			<Format>application/vnd.ogc.se_inimage</Format>
+			<Format>application/vnd.ogc.se_blank</Format>
+			<Format>text/xml</Format>
+			<Format>XML</Format>
+		</Exception>
+		<Layer>
+			<Title><![CDATA[BAYSIS_Verkehrsdaten]]></Title>
+			<CRS>CRS:84</CRS>
+			<CRS>EPSG:4326</CRS>
+			<CRS>EPSG:25832</CRS>
+			<CRS>EPSG:31467</CRS>
+			<!-- alias 31467 -->
+			<CRS>EPSG:31463</CRS>
+			<CRS>EPSG:31469</CRS>
+			<!-- alias 31469 -->
+			<CRS>EPSG:31465</CRS>
+			<CRS>EPSG:25833</CRS>
+			<CRS>EPSG:3857</CRS>
+			<!-- alias 3857 -->
+			<CRS>EPSG:102100</CRS>
+			<CRS>EPSG:4258</CRS>
+			<CRS>EPSG:31468</CRS>
+			<!-- alias 31468 -->
+			<CRS>EPSG:31464</CRS>
+			<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+			<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+			<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+			<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+			<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+			<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+			<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+			<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+			<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+			<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+			<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+			<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+			<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+			<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+			<Layer queryable="1">
+				<Title><![CDATA[SVZ 2021]]></Title>
+				<Abstract><![CDATA[Ergebnisse der Straßenverkehrszählung 2021]]></Abstract>
+				<CRS>CRS:84</CRS>
+				<CRS>EPSG:4326</CRS>
+				<CRS>EPSG:25832</CRS>
+				<CRS>EPSG:31467</CRS>
+				<!-- alias 31467 -->
+				<CRS>EPSG:31463</CRS>
+				<CRS>EPSG:31469</CRS>
+				<!-- alias 31469 -->
+				<CRS>EPSG:31465</CRS>
+				<CRS>EPSG:25833</CRS>
+				<CRS>EPSG:3857</CRS>
+				<!-- alias 3857 -->
+				<CRS>EPSG:102100</CRS>
+				<CRS>EPSG:4258</CRS>
+				<CRS>EPSG:31468</CRS>
+				<!-- alias 31468 -->
+				<CRS>EPSG:31464</CRS>
+				<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+				<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+				<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+				<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+				<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+				<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+				<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+				<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+				<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+				<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+				<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+				<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+				<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+				<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_k_100</Name>
+					<Title><![CDATA[2021 DTV K 1 : 100.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 100.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Kreisstraßen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/ed298ff5-8706-4b58-8dcf-4253d6695e88</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=ca0a6858-0e8e-4487-9f31-77900c8c8009"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV K 1 : 100.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_k_100" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>23624.456845</MinScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_k_25</Name>
+					<Title><![CDATA[2021 DTV K 1 : 25.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 25.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Kreisstraßen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/fb15a5ad-08d1-4643-b08d-840e688e29cf</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=68ed210f-adf3-4b8f-82e8-f00ae6a1d492"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV K 1 : 25.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_k_25" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>0.944940</MinScaleDenominator>
+					<MaxScaleDenominator>23623.511905</MaxScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_st_100</Name>
+					<Title><![CDATA[2021 DTV St 1 : 100.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 100.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Staatsstraßen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/57cb6ddb-b58a-442d-a84c-41b5801fbee1</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=6c981258-c67d-4e76-95da-d935e436a093"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV St 1 : 100.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_st_100" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>23624.456845</MinScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_st_25</Name>
+					<Title><![CDATA[2021 DTV St 1 : 25.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 25.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Staatsstraßen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/c6250e81-ce71-4f9f-89c1-877b8ca151ae</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=feb61810-6c2c-45d2-bcd0-4a75d97979c1"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV St 1 : 25.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_st_25" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>0.944940</MinScaleDenominator>
+					<MaxScaleDenominator>23623.511905</MaxScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_b_100</Name>
+					<Title><![CDATA[2021 DTV B 1 : 100.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 100.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Bundesstraßen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/9d61e1ef-3bab-4abf-be0a-1451dae62479</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=292808ff-fc1c-4acc-b11c-53ffb01f28b3"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV B 1 : 100.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_b_100" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>23624.456845</MinScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_b_25</Name>
+					<Title><![CDATA[2021 DTV BAB 1 : 25.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 25.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Bundesstraßen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/845689bf-6739-438f-9f27-d15fda00f346</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=dbd3a316-14ce-42b2-877d-a9d6e367378e"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV BAB 1 : 25.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_b_25" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>0.944940</MinScaleDenominator>
+					<MaxScaleDenominator>23623.511905</MaxScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_bab_100</Name>
+					<Title><![CDATA[2021 DTV BAB 1 : 100.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 100.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Bundesautobahnen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/d1e09031-e650-4ecd-a64d-47d379fc68b8</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=f9001ddc-384b-489e-ac5d-f6472d0e14d7"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV BAB 1 : 100.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_bab_100" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>23624.456845</MinScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_dtv_bab_25</Name>
+					<Title><![CDATA[2021 DTV BAB 1 : 25.000]]></Title>
+					<Abstract><![CDATA[Für den Maßstab 1 : 25.000 optimierte Bänderdarstellung der durchschnittlichen täglichen Verkehrsstärke in Kraftfahrzeugen pro 24 Stunden (Kfz/24h oder Kfz/d) auf Bundesautobahnen der SVZ im Jahr 2021.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.979646</westBoundLongitude><eastBoundLongitude>13.993744</eastBoundLongitude><southBoundLatitude>47.296027</southBoundLatitude><northBoundLatitude>50.555150</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.979646" miny="47.296027" maxx="13.993744" maxy="50.555150"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:25832" minx="498558.131300" miny="5248731.322200" maxx="854466.102600" maxy="5600357.765800"/>
+					<BoundingBox CRS="EPSG:31467" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31463" minx="5250296.785732" miny="3498557.730083" maxx="5602024.285779" maxy="3854564.888174"/>
+					<BoundingBox CRS="EPSG:31469" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:31465" minx="5240457.647687" miny="5045695.367212" maxx="5619354.254742" maxy="5428537.616434"/>
+					<BoundingBox CRS="EPSG:25833" minx="45821.932352" miny="5238894.925262" maxx="428557.487711" maxy="5617682.916676"/>
+					<BoundingBox CRS="EPSG:3857" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:102100" minx="999609.584095" miny="5990527.726544" maxx="1557776.458231" maxy="6542978.933853"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.296027" miny="8.979646" maxx="50.555150" maxy="13.993744"/>
+					<BoundingBox CRS="EPSG:31468" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<BoundingBox CRS="EPSG:31464" minx="5241007.247272" miny="4272100.249868" maxx="5606381.686226" maxy="4641587.895967"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/845689bf-6739-438f-9f27-d15fda00f346</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=dbd3a316-14ce-42b2-877d-a9d6e367378e"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[2021 DTV BAB 1 : 25.000]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_dtv_bab_25" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>0.944940</MinScaleDenominator>
+					<MaxScaleDenominator>23623.511905</MaxScaleDenominator>
+				</Layer>
+				<Layer queryable="1">
+					<Name>svz2021_zaehlstellen</Name>
+					<Title><![CDATA[Zählstellen 2021]]></Title>
+					<Abstract><![CDATA[An diesen Zählstellen werden Zählungen des Verkehrs in einem von der BASt festgelegten Zeitraum durchgeführt.]]></Abstract>
+					<CRS>CRS:84</CRS>
+					<CRS>EPSG:4326</CRS>
+					<CRS>EPSG:25832</CRS>
+					<CRS>EPSG:31467</CRS>
+					<!-- alias 31467 -->
+					<CRS>EPSG:31463</CRS>
+					<CRS>EPSG:31469</CRS>
+					<!-- alias 31469 -->
+					<CRS>EPSG:31465</CRS>
+					<CRS>EPSG:25833</CRS>
+					<CRS>EPSG:3857</CRS>
+					<!-- alias 3857 -->
+					<CRS>EPSG:102100</CRS>
+					<CRS>EPSG:4258</CRS>
+					<CRS>EPSG:31468</CRS>
+					<!-- alias 31468 -->
+					<CRS>EPSG:31464</CRS>
+					<EX_GeographicBoundingBox><westBoundLongitude>8.999064</westBoundLongitude><eastBoundLongitude>13.991225</eastBoundLongitude><southBoundLatitude>47.317881</southBoundLatitude><northBoundLatitude>50.545027</northBoundLatitude></EX_GeographicBoundingBox>
+					<BoundingBox CRS="CRS:84" minx="8.999064" miny="47.317881" maxx="13.991225" maxy="50.545027"/>
+					<BoundingBox CRS="EPSG:4326" minx="47.317881" miny="8.999064" maxx="50.545027" maxy="13.991225"/>
+					<BoundingBox CRS="EPSG:25832" minx="499933.650000" miny="5251161.930000" maxx="854362.400000" maxy="5599232.160000"/>
+					<BoundingBox CRS="EPSG:31467" minx="5252728.093461" miny="3499933.631537" maxx="5600898.357726" maxy="3854461.155318"/>
+					<BoundingBox CRS="EPSG:31463" minx="5252728.093461" miny="3499933.631537" maxx="5600898.357726" maxy="3854461.155318"/>
+					<BoundingBox CRS="EPSG:31469" minx="5242886.270470" miny="5047258.667297" maxx="5618117.966327" maxy="5428343.626268"/>
+					<BoundingBox CRS="EPSG:31465" minx="5242886.270470" miny="5047258.667297" maxx="5618117.966327" maxy="5428343.626268"/>
+					<BoundingBox CRS="EPSG:25833" minx="47384.795207" miny="5241322.848828" maxx="428363.551611" maxy="5616446.981162"/>
+					<BoundingBox CRS="EPSG:3857" minx="1001771.173362" miny="5994115.527028" maxx="1557496.096688" maxy="6541205.470619"/>
+					<BoundingBox CRS="EPSG:102100" minx="1001771.173362" miny="5994115.527028" maxx="1557496.096688" maxy="6541205.470619"/>
+					<BoundingBox CRS="EPSG:4258" minx="47.317881" miny="8.999064" maxx="50.545027" maxy="13.991225"/>
+					<BoundingBox CRS="EPSG:31468" minx="5243437.480417" miny="4273569.788955" maxx="5605200.384064" maxy="4641438.929710"/>
+					<BoundingBox CRS="EPSG:31464" minx="5243437.480417" miny="4273569.788955" maxx="5605200.384064" maxy="4641438.929710"/>
+					<AuthorityURL name="LBD">
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+					</AuthorityURL>
+					<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/b944b0a5-88d8-4ea5-bc69-a9dd89a63dff</Identifier>
+					<MetadataURL type="TC211">
+						<Format>text/xml</Format>
+						<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=98522005-515d-440a-9bdb-57964b168c27"/>
+					</MetadataURL>
+					<Style>
+						<Name>default</Name>
+						<Title><![CDATA[Zählstellen 2021]]></Title>
+						<LegendURL width="18" height="18">
+							<Format>image/png</Format>
+							<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=svz2021_zaehlstellen" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+						</LegendURL>
+					</Style>
+					<MinScaleDenominator>0.944940</MinScaleDenominator>
+				</Layer>
+			</Layer>
+			<Layer queryable="1">
+				<Name>dauerzaehlstellen</Name>
+				<Title><![CDATA[Dauerzählstellen]]></Title>
+				<Abstract><![CDATA[Zur permanenten Zählung des Straßenverkehrs sind in Bayern automatische Dauerzählstellen im Einsatz. Der Großteil befindet sich an Bundesautobahnen und Bundesstraßen, ein kleiner Teil an Staats- und Kreisstraßen. Diese Messgeräte erfassen das Verkehrsgeschehen das ganze Jahr über rund um die Uhr und können je nach Bauart bis zu acht Fahrzeugarten unterscheiden. Die Langzeitdaten der automatischen Dauerzählstellen bilden die Grundlage für die Hochrechnungsfaktoren der manuellen Straßenverkehrszählung.]]></Abstract>
+				<CRS>CRS:84</CRS>
+				<CRS>EPSG:4326</CRS>
+				<CRS>EPSG:25832</CRS>
+				<CRS>EPSG:31467</CRS>
+				<!-- alias 31467 -->
+				<CRS>EPSG:31463</CRS>
+				<CRS>EPSG:31469</CRS>
+				<!-- alias 31469 -->
+				<CRS>EPSG:31465</CRS>
+				<CRS>EPSG:25833</CRS>
+				<CRS>EPSG:3857</CRS>
+				<!-- alias 3857 -->
+				<CRS>EPSG:102100</CRS>
+				<CRS>EPSG:4258</CRS>
+				<CRS>EPSG:31468</CRS>
+				<!-- alias 31468 -->
+				<CRS>EPSG:31464</CRS>
+				<EX_GeographicBoundingBox><westBoundLongitude>8.999064</westBoundLongitude><eastBoundLongitude>13.991225</eastBoundLongitude><southBoundLatitude>47.315027</southBoundLatitude><northBoundLatitude>50.545027</northBoundLatitude></EX_GeographicBoundingBox>
+				<BoundingBox CRS="CRS:84" minx="8.999064" miny="47.315027" maxx="13.991225" maxy="50.545027"/>
+				<BoundingBox CRS="EPSG:4326" minx="47.315027" miny="8.999064" maxx="50.545027" maxy="13.991225"/>
+				<BoundingBox CRS="EPSG:25832" minx="499933.650000" miny="5250843.719300" maxx="854362.399900" maxy="5599232.160500"/>
+				<BoundingBox CRS="EPSG:31467" minx="5252409.791137" miny="3499933.631537" maxx="5600898.358226" maxy="3854461.155395"/>
+				<BoundingBox CRS="EPSG:31463" minx="5252409.791137" miny="3499933.631537" maxx="5600898.358226" maxy="3854461.155395"/>
+				<BoundingBox CRS="EPSG:31469" minx="5242569.363435" miny="5047234.047438" maxx="5618117.966826" maxy="5428343.626208"/>
+				<BoundingBox CRS="EPSG:31465" minx="5242569.363435" miny="5047234.047438" maxx="5618117.966826" maxy="5428343.626208"/>
+				<BoundingBox CRS="EPSG:25833" minx="47360.182433" miny="5241006.033032" maxx="428363.551552" maxy="5616446.981662"/>
+				<BoundingBox CRS="EPSG:3857" minx="1001771.173362" miny="5993646.940550" maxx="1557496.096585" maxy="6541205.471407"/>
+				<BoundingBox CRS="EPSG:102100" minx="1001771.173362" miny="5993646.940550" maxx="1557496.096585" maxy="6541205.471407"/>
+				<BoundingBox CRS="EPSG:4258" minx="47.315027" miny="8.999064" maxx="50.545027" maxy="13.991225"/>
+				<BoundingBox CRS="EPSG:31468" minx="5243119.841324" miny="4273557.508628" maxx="5605200.384564" maxy="4641438.929631"/>
+				<BoundingBox CRS="EPSG:31464" minx="5243119.841324" miny="4273557.508628" maxx="5605200.384564" maxy="4641438.929631"/>
+				<AuthorityURL name="LBD">
+					<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://https://www.baysis.bayern.de/"/>
+				</AuthorityURL>
+				<Identifier authority="LBD">https://registry.gdi-de.org/id/de.by/240306e9-5e7c-4aed-9270-482753010f46</Identifier>
+				<MetadataURL type="TC211">
+					<Format>text/xml</Format>
+					<OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://geoportal.bayern.de/csw/gdi?REQUEST=GetRecordById&amp;VERSION=2.0.2&amp;service=CSW&amp;outputschema=csw:IsoRecord&amp;elementsetname=full&amp;ID=240306e9-5e7c-4aed-9270-482753010f46"/>
+				</MetadataURL>
+				<Style>
+					<Name>default</Name>
+					<Title><![CDATA[Dauerzählstellen]]></Title>
+					<LegendURL width="156" height="90">
+						<Format>image/png</Format>
+						<OnlineResource xlink:href="https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Dauerzaehlstellen" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+					</LegendURL>
+				</Style>
+				<MinScaleDenominator>0.944940</MinScaleDenominator>
+			</Layer>
+		</Layer>
+	</Capability>
+</WMS_Capabilities>

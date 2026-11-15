@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" xmlns:app="http://www.deegree.org/app" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.deegree.org/app" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <import namespace="http://www.opengis.net/gml" schemaLocation="http://schemas.opengis.net/gml/3.1.1/base/gml.xsd"/>
+  <element name="fussverkehr_zaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="string"/>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="date"/>
+            <element name="letzte_zaehlung_text" minOccurs="0" type="string"/>
+            <element name="geom" type="gml:PointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="kfz_zaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="string"/>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="date"/>
+            <element name="letzte_zaehlung_text" minOccurs="0" type="string"/>
+            <element name="geom" type="gml:PointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+  <element name="radverkehr_zaehlstellen" substitutionGroup="gml:_Feature">
+    <complexType>
+      <complexContent>
+        <extension base="gml:AbstractFeatureType">
+          <sequence>
+            <element name="zaehlstelle" minOccurs="0" type="string"/>
+            <element name="bezeichnung" minOccurs="0" type="string"/>
+            <element name="letzte_zaehlung" minOccurs="0" type="date"/>
+            <element name="letzte_zaehlung_text" minOccurs="0" type="string"/>
+            <element name="geom" type="gml:PointPropertyType"/>
+          </sequence>
+        </extension>
+      </complexContent>
+    </complexType>
+  </element>
+</schema>

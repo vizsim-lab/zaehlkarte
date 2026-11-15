@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wfs:WFS_Capabilities xmlns:gml="http://www.opengis.net/gml" xmlns:wfs="http://www.opengis.net/wfs" xmlns:ows="http://www.opengis.net/ows" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogc="http://www.opengis.net/ogc" xmlns="http://www.opengis.net/wfs" version="1.1.0" xsi:schemaLocation="http://www.opengis.net/wfs http://schemas.opengis.net/wfs/1.1.0/wfs.xsd" updateSequence="1741263041" xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0">
+  <ows:ServiceIdentification>
+    <ows:Title>Langzeitzaelstellen_wfs</ows:Title>
+    <ows:Abstract/>
+    <!--WARNING: Optional metadata "ows_abstract" was missing for ows:Abstract-->
+    <!--WARNING: Optional metadata "ows_keywordlist" was missing for ows:KeywordList-->
+    <ows:ServiceType codeSpace="OGC">OGC WFS</ows:ServiceType>
+    <ows:ServiceTypeVersion>1.1.0</ows:ServiceTypeVersion>
+    <ows:Fees>none</ows:Fees>
+    <ows:AccessConstraints>none</ows:AccessConstraints>
+  </ows:ServiceIdentification>
+  <ows:ServiceProvider>
+    <ows:ProviderName>LBM-RLP</ows:ProviderName>
+    <ows:ProviderSite xlink:type="simple" xlink:href=""/>
+    <!--WARNING: Optional metadata "ows_service_onlineresource" was missing for ows:ProviderSite/@xlink:href-->
+    <ows:ServiceContact>
+      <ows:IndividualName>Daniel Boden</ows:IndividualName>
+      <ows:PositionName>Technischer Ansprechpartner</ows:PositionName>
+      <ows:ContactInfo>
+        <ows:Phone>
+          <ows:Voice>0261/3029 3552</ows:Voice>
+          <ows:Facsimile>0261/3029 3552</ows:Facsimile>
+        </ows:Phone>
+        <ows:Address>
+          <ows:DeliveryPoint>Friedrich-Ebert-Ring 14-20</ows:DeliveryPoint>
+          <ows:City>Koblenz</ows:City>
+          <ows:AdministrativeArea>DE-RP</ows:AdministrativeArea>
+          <ows:PostalCode>56073</ows:PostalCode>
+          <ows:Country>DE</ows:Country>
+          <ows:ElectronicMailAddress>Daniel.Boden@lbm.rlp.de</ows:ElectronicMailAddress>
+        </ows:Address>
+        <ows:OnlineResource xlink:type="simple" xlink:href="https://www.geoportal.rlp.de/mapbender/php/wfs.php?FEATURETYPE_ID=1700&amp;REQUEST=GetCapabilities&amp;SERVICE=WFS&amp;INSPIRE=1&amp;INSPIRE=1"/>
+        <!--WARNING: Optional metadata "ows_service_onlineresource" was missing for ows:OnlineResource/@xlink:href-->
+        <ows:HoursOfService>4</ows:HoursOfService>
+        <ows:ContactInstructions>none</ows:ContactInstructions>
+      </ows:ContactInfo>
+      <ows:Role>Testrolle</ows:Role>
+    </ows:ServiceContact>
+  </ows:ServiceProvider>
+  <ows:OperationsMetadata>
+    <ows:Operation name="GetCapabilities">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:type="simple" xlink:href="https://www.geoportal.rlp.de/mapbender/php/wfs.php?FEATURETYPE_ID=1700&amp;REQUEST=GetCapabilities&amp;SERVICE=WFS&amp;INSPIRE=1&amp;INSPIRE=1"/>
+          <ows:Post xlink:type="simple" xlink:href="https://www.geoportal.rlp.de/mapbender/php/wfs.php?FEATURETYPE_ID=1700&amp;REQUEST=GetCapabilities&amp;SERVICE=WFS&amp;INSPIRE=1&amp;INSPIRE=1"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="service">
+        <ows:Value>WFS</ows:Value>
+      </ows:Parameter>
+      <ows:Parameter name="AcceptVersions">
+        <ows:Value>1.0.0</ows:Value>
+        <ows:Value>1.1.0</ows:Value>
+      </ows:Parameter>
+      <ows:Parameter name="AcceptFormats">
+        <ows:Value>text/xml</ows:Value>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="DescribeFeatureType">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:type="simple" xlink:href="http://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/wfs/lzg.map&amp;"/>
+          <ows:Post xlink:type="simple" xlink:href="http://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/wfs/lzg.map&amp;"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="outputFormat">
+        <ows:Value>XMLSCHEMA</ows:Value>
+        <ows:Value>text/xml; subtype=gml/2.1.2</ows:Value>
+        <ows:Value>text/xml; subtype=gml/3.1.1</ows:Value>
+      </ows:Parameter>
+    </ows:Operation>
+    <ows:Operation name="GetFeature">
+      <ows:DCP>
+        <ows:HTTP>
+          <ows:Get xlink:type="simple" xlink:href="http://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/wfs/lzg.map&amp;"/>
+          <ows:Post xlink:type="simple" xlink:href="http://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/wfs/lzg.map&amp;"/>
+        </ows:HTTP>
+      </ows:DCP>
+      <ows:Parameter name="resultType">
+        <ows:Value>results</ows:Value>
+        <ows:Value>hits</ows:Value>
+      </ows:Parameter>
+      <ows:Parameter name="outputFormat">
+        <ows:Value>text/xml; subtype=gml/3.1.1</ows:Value>
+        <ows:Value>SHAPEZIP</ows:Value>
+        <ows:Value>text/csv</ows:Value>
+        <ows:Value>application/json; subtype=geojson</ows:Value>
+      </ows:Parameter>
+    </ows:Operation>
+  <ows:ExtendedCapabilities><inspire_dls:ExtendedCapabilities xmlns:inspire_dls="http://inspire.ec.europa.eu/schemas/inspire_dls/1.0"><inspire_common:MetadataUrl xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="inspire_common:resourceLocatorType"><inspire_common:URL xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0">https://www.geoportal.rlp.de/mapbender/php/mod_featuretypeISOMetadata.php?SERVICE=WFS&amp;outputFormat=iso19139&amp;Id=1700</inspire_common:URL><inspire_common:MediaType xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0">application/vnd.iso.19139+xml</inspire_common:MediaType></inspire_common:MetadataUrl><inspire_common:SupportedLanguages><inspire_common:DefaultLanguage><inspire_common:Language>ger</inspire_common:Language></inspire_common:DefaultLanguage><inspire_common:SupportedLanguage><inspire_common:Language>ger</inspire_common:Language></inspire_common:SupportedLanguage></inspire_common:SupportedLanguages><inspire_common:ResponseLanguage><inspire_common:Language>ger</inspire_common:Language></inspire_common:ResponseLanguage><inspire_dls:SpatialDataSetIdentifier><inspire_common:Code>d4f95998-6cf4-2af9-67db-99bccebc90da</inspire_common:Code><inspire_common:Namespace>http://www.lbm.rlp.de/registry/spatial/dataset/</inspire_common:Namespace></inspire_dls:SpatialDataSetIdentifier></inspire_dls:ExtendedCapabilities></ows:ExtendedCapabilities></ows:OperationsMetadata>
+  <FeatureTypeList>
+    <Operations>
+      <Operation>Query</Operation>
+    </Operations>
+    <FeatureType>
+      <Name>Langzeitzaehlstellen</Name>
+      <Title>Langzeitzaehlstellen_2016</Title>
+      <DefaultSRS>urn:ogc:def:crs:epsg::31466</DefaultSRS>
+      <OtherSRS>urn:ogc:def:crs:epsg::31467</OtherSRS>
+      <OtherSRS>urn:ogc:def:crs:epsg::31468</OtherSRS>
+      <OtherSRS>urn:ogc:def:crs:epsg::31466</OtherSRS>
+      <OtherSRS>urn:ogc:def:crs:epsg::4326</OtherSRS>
+      <OutputFormats>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>SHAPEZIP</Format>
+        <Format>text/csv</Format>
+        <Format>application/json; subtype=geojson</Format>
+      </OutputFormats>
+      <ows:WGS84BoundingBox dimensions="2">
+        <ows:LowerCorner>5.502367 49.088601</ows:LowerCorner>
+        <ows:UpperCorner>9.366646 50.905555</ows:UpperCorner>
+      </ows:WGS84BoundingBox><MetadataURL type="ISO19115:2003" format="text/xml">https://www.geoportal.rlp.de/mapbender/php/mod_dataISOMetadata.php?outputFormat=iso19139&amp;id=d4f95998-6cf4-2af9-67db-99bccebc90da</MetadataURL>
+      <MetadataURL format="text/xml" type="ISO19115:2003">http://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/wfs/lzg.map&amp;request=GetMetadata&amp;layer=Langzeitzaehlstellen</MetadataURL>
+    </FeatureType>
+  </FeatureTypeList>
+  <ogc:Filter_Capabilities>
+    <ogc:Spatial_Capabilities>
+      <ogc:GeometryOperands>
+        <ogc:GeometryOperand>gml:Point</ogc:GeometryOperand>
+        <ogc:GeometryOperand>gml:LineString</ogc:GeometryOperand>
+        <ogc:GeometryOperand>gml:Polygon</ogc:GeometryOperand>
+        <ogc:GeometryOperand>gml:Envelope</ogc:GeometryOperand>
+      </ogc:GeometryOperands>
+      <ogc:SpatialOperators>
+        <ogc:SpatialOperator name="Equals"/>
+        <ogc:SpatialOperator name="Disjoint"/>
+        <ogc:SpatialOperator name="Touches"/>
+        <ogc:SpatialOperator name="Within"/>
+        <ogc:SpatialOperator name="Overlaps"/>
+        <ogc:SpatialOperator name="Crosses"/>
+        <ogc:SpatialOperator name="Intersects"/>
+        <ogc:SpatialOperator name="Contains"/>
+        <ogc:SpatialOperator name="DWithin"/>
+        <ogc:SpatialOperator name="Beyond"/>
+        <ogc:SpatialOperator name="BBOX"/>
+      </ogc:SpatialOperators>
+    </ogc:Spatial_Capabilities>
+    <ogc:Scalar_Capabilities>
+      <ogc:LogicalOperators/>
+      <ogc:ComparisonOperators>
+        <ogc:ComparisonOperator>LessThan</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>GreaterThan</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>LessThanEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>GreaterThanEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>EqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>NotEqualTo</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>Like</ogc:ComparisonOperator>
+        <ogc:ComparisonOperator>Between</ogc:ComparisonOperator>
+      </ogc:ComparisonOperators>
+    </ogc:Scalar_Capabilities>
+    <ogc:Id_Capabilities>
+      <ogc:EID/>
+      <ogc:FID/>
+    </ogc:Id_Capabilities>
+  </ogc:Filter_Capabilities>
+</wfs:WFS_Capabilities>

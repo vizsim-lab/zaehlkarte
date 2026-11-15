@@ -1,0 +1,263 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/1719913336",
+ "publicationId": "983406200238284800",
+ "title": "Straßenverkehrszählungsdaten der Lausitz",
+ "description": "Beinhaltet die Verkehrsstärke, den Verkehr je Fahrstreifen sowie den Belastungsgrad der Autobahnen, Bundesstraßen sowie Land-, Staats- und Kreisstraßen in der Lausitz der Jahre 2010, 2015, 2021. ",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#MOBILITY_PARAMETERS",
+ "dataCategoryDetail": [
+  "https://w3id.org/mdp/schema/data_categories_detail#ROAD_TRAFFIC_COUNTS"
+ ],
+ "keyword": [],
+ "temporalCoverage": {
+  "begin": null,
+  "end": null
+ },
+ "language": [
+  "https://w3id.org/idsa/code/DE"
+ ],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": false,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": false
+ },
+ "accrualPeriodicity": null,
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "IPG Infrastruktur- und Projektentwicklungsgesellschaft mbH",
+   "emailAddress": "https://www.ipg-potsdam.de/"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "IPG Infrastruktur- und Projektentwicklungsgesellschaft mbH",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+ "standardLicense": "http://dcat-ap.de/def/licenses/cc-by-de/3.0",
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": "IPG Infrastruktur- und Projektentwicklungsgesellschaft mbH, 2026",
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DED2C",
+    "name": "Bautzen"
+   },
+   {
+    "code": "DE402",
+    "name": "Cottbus, Kreisfreie Stadt"
+   },
+   {
+    "code": "DE406",
+    "name": "Dahme-Spreewald"
+   },
+   {
+    "code": "DE407",
+    "name": "Elbe-Elster"
+   },
+   {
+    "code": "DED2D",
+    "name": "Görlitz"
+   },
+   {
+    "code": "DE40B",
+    "name": "Oberspreewald-Lausitz"
+   },
+   {
+    "code": "DE40G",
+    "name": "Spree-Neiße"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (POLYGON ((14.49122 51.04353, 14.41509 51.02507, 14.31787 51.0547, 14.19817 51.08225, 13.9656 51.0616, 13.92423 51.07044, 13.87222 51.1486, 13.76616 51.17521, 13.80814 51.31156, 13.8459 51.34579, 13.83531 51.37679, 14.00175 51.38452, 14.10794 51.51416, 14.16332 51.54104, 14.32836 51.51954, 14.44777 51.54207, 14.5107 51.42831, 14.46921 51.33939, 14.57727 51.32166, 14.69166 51.18074, 14.50404 51.07444, 14.49122 51.04353)), POLYGON ((14.08849 51.8783, 14.13236 51.72386, 14.10401 51.66934, 14.19202 51.6187, 14.15679 51.57558, 14.16332 51.54104, 14.10794 51.51416, 14.00175 51.38452, 13.83531 51.37679, 13.69125 51.37401, 13.71195 51.44564, 13.66199 51.52055, 13.84767 51.55672, 13.8822 51.61417, 13.79809 51.73713, 13.82586 51.75132, 13.83377 51.84878, 13.86473 51.88664, 14.08849 51.8783)), POLYGON ((13.50709 51.79203, 13.55429 51.75286, 13.69205 51.73535, 13.75724 51.75792, 13.79809 51.73713, 13.8822 51.61417, 13.84767 51.55672, 13.66199 51.52055, 13.71195 51.44564, 13.69125 51.37401, 13.54719 51.37859, 13.40816 51.44277, 13.26468 51.39298, 13.21015 51.40474, 13.19302 51.54223, 13.14039 51.6038, 13.05103 51.64768, 13.16444 51.70612, 13.15091 51.85961, 13.20481 51.87949, 13.26052 51.82382, 13.37153 51.82817, 13.50709 51.79203)), POLYGON ((13.69974 52.37788, 13.73952 52.36956, 13.75123 52.32424, 13.83998 52.30186, 13.83763 52.22573, 13.87855 52.12591, 13.96624 52.13106, 14.2547 52.03766, 14.36521 52.06566, 14.446 52.02636, 14.38071 51.99615, 14.37765 51.93785, 14.24766 51.91146, 14.18681 51.86262, 14.08849 51.8783, 13.86473 51.88664, 13.83377 51.84878, 13.82586 51.75132, 13.79809 51.73713, 13.75724 51.75792, 13.69205 51.73535, 13.55429 51.75286, 13.50709 51.79203, 13.54522 51.81654, 13.55144 51.90795, 13.42552 51.9347, 13.42654 51.96051, 13.62631 52.00961, 13.64734 52.04013, 13.54996 52.10151, 13.56484 52.21119, 13.47157 52.24452, 13.4966 52.29825, 13.42099 52.37625, 13.44791 52.41434, 13.6567 52.35054, 13.69974 52.37788)), POLYGON ((14.97418 51.36395, 15.03355 51.26941, 14.99569 51.12516, 14.89909 50.94956, 14.82336 50.87055, 14.76856 50.82354, 14.6188 50.8578, 14.63815 50.92261, 14.57442 50.92402, 14.58915 50.98779, 14.49122 51.04353, 14.50404 51.07444, 14.69166 51.18074, 14.57727 51.32166, 14.46921 51.33939, 14.5107 51.42831, 14.44777 51.54207, 14.56367 51.57376, 14.66003 51.55265, 14.72986 51.58178, 14.74085 51.53022, 14.95227 51.46244, 14.97418 51.36395)), POLYGON ((14.27349 51.79503, 14.31087 51.82117, 14.30613 51.86392, 14.36964 51.85367, 14.37201 51.82993, 14.40606 51.80117, 14.44598 51.81451, 14.49427 51.79068, 14.42935 51.7358, 14.44292 51.70387, 14.37566 51.69747, 14.30257 51.70215, 14.3099 51.72281, 14.27602 51.73914, 14.28746 51.77177, 14.27349 51.79503)), POLYGON ((14.71672 52.00119, 14.70106 51.91786, 14.59998 51.82596, 14.75204 51.66326, 14.7592 51.61396, 14.72986 51.58178, 14.66003 51.55265, 14.56367 51.57376, 14.44777 51.54207, 14.32836 51.51954, 14.16332 51.54104, 14.15679 51.57558, 14.19202 51.6187, 14.10401 51.66934, 14.13236 51.72386, 14.08849 51.8783, 14.18681 51.86262, 14.24766 51.91146, 14.37765 51.93785, 14.38071 51.99615, 14.446 52.02636, 14.47955 52.04649, 14.52039 52.00865, 14.61132 52.03064, 14.71672 52.00119), (14.27349 51.79503, 14.28746 51.77177, 14.27602 51.73914, 14.3099 51.72281, 14.30257 51.70215, 14.37566 51.69747, 14.44292 51.70387, 14.42935 51.7358, 14.49427 51.79068, 14.44598 51.81451, 14.40606 51.80117, 14.37201 51.82993, 14.36964 51.85367, 14.30613 51.86392, 14.31087 51.82117, 14.27349 51.79503)))"
+ },
+ "created": "2026-04-21T13:02:15.341Z",
+ "modified": "2026-04-21T13:02:15.341Z",
+ "geoReferenceMethod": [
+  "https://w3id.org/mdp/schema/geo_reference_method#WGS84"
+ ],
+ "networkCoverage": [
+  "https://w3id.org/mdp/schema/network_coverage#REGIONAL_ROADS",
+  "https://w3id.org/mdp/schema/network_coverage#MOTORWAYS"
+ ],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+  "https://w3id.org/mdp/schema/transport_mode#SCHEDULED_BUS",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_MOTORCYCLE"
+ ],
+ "mdpBrokering": false,
+ "deltaDelivery": null,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "",
+ "contentData": [
+  {
+   "accessUrl": "/983406200238284800/DiSTILL-Verkehrsdaten_2010-2021_Lausitz.zip",
+   "endpointDocumentation": null,
+   "accessProtocol": null,
+   "mediaType": "https://www.iana.org/assignments/media-types/application/json",
+   "dataModel": null,
+   "dataFormatAdditionalDescription": "",
+   "description": "",
+   "byteSize": 6233553,
+   "fileName": "DiSTILL-Verkehrsdaten_2010-2021_Lausitz.zip",
+   "creationDate": "2026-04-21T12:53:10Z",
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": null,
+   "masterSchema": null,
+   "schema": [],
+   "schemaProfileName": null
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": "VISIBLE",
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}

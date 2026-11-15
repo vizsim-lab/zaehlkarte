@@ -1,0 +1,243 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-649210154",
+ "publicationId": "798871611185745920",
+ "title": "Daten der Dauerzählstellen (DAUZ) in Bayern",
+ "description": "Daten von ca. 175 automatisierten Dauerzählstellen auf Bundes-, Staats- und Kreisstraßen in Bayern. Die Dauerzählstellen detektieren mittels Induktivschleifen. Die Klassifizierung erfolgt nach TLS-Fahrzeugarten (8+1). Die Dauerzählstellen liefern vollständige Stundenwerte für jeden Tag der Woche über das gesamte Jahr. ",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#REALTIME_TRAFFIC_DATA",
+ "dataCategoryDetail": [
+  "https://w3id.org/mdp/schema/data_categories_detail#TRAFFIC_VOLUME"
+ ],
+ "keyword": [
+  "HVD",
+  "Verkehrsdaten, Statistik, Straßendaten"
+ ],
+ "temporalCoverage": {
+  "begin": "2024-11-28",
+  "end": null
+ },
+ "language": [
+  "https://w3id.org/idsa/code/DE"
+ ],
+ "contractOffer": {
+  "contractStart": "2024-12-16",
+  "contractEnd": null,
+  "providerApprovalRequired": false,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": null
+ },
+ "accrualPeriodicity": "https://w3id.org/idsa/code/CONTINUOUS",
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Bayerische Straßenbauverwaltung - Zentralstelle für Verkehrsmanagement",
+   "emailAddress": "www.bayerninfo.de"
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Bayerische Straßenbauverwaltung - Zentralstelle für Verkehrsmanagement",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+ "standardLicense": "http://dcat-ap.de/def/licenses/geonutz/20130319",
+ "customLicenseAsResource": null,
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [
+   {
+    "code": "DE2",
+    "name": "Bayern"
+   }
+  ],
+  "polygon": "GEOMETRYCOLLECTION (POLYGON ((10.45053 50.40186, 10.59076 50.32912, 10.61012 50.22799, 10.7292 50.23001, 10.81267 50.26466, 10.73648 50.3202, 10.74028 50.35929, 10.94572 50.38647, 11.03729 50.35152, 11.1207 50.35826, 11.18994 50.27119, 11.25049 50.29011, 11.27682 50.37124, 11.26594 50.47942, 11.40122 50.51758, 11.43091 50.44101, 11.48157 50.43162, 11.52534 50.38395, 11.60329 50.39877, 11.83701 50.3974, 11.91932 50.42473, 12.02138 50.3395, 12.1009 50.31803, 12.12728 50.28509, 12.11139 50.24552, 12.16068 50.21985, 12.20444 50.17132, 12.20652 50.11358, 12.26126 50.083, 12.2608 50.05816, 12.4815 49.97546, 12.49203 49.9363, 12.55099 49.90509, 12.46346 49.78847, 12.40152 49.75837, 12.51586 49.67998, 12.59378 49.54219, 12.63599 49.51865, 12.63376 49.47619, 12.79174 49.34986, 12.93187 49.34404, 13.01076 49.30647, 13.17091 49.17358, 13.19894 49.13117, 13.3763 49.06482, 13.41665 48.98004, 13.49318 48.95058, 13.55158 48.96779, 13.67285 48.8876, 13.73596 48.8768, 13.83951 48.7716, 13.79611 48.7136, 13.81937 48.61293, 13.72709 48.51302, 13.51337 48.59098, 13.43843 48.54889, 13.44987 48.50526, 13.40162 48.37149, 13.27713 48.3024, 13.17704 48.29439, 13.03692 48.26127, 12.94468 48.20669, 12.87572 48.19709, 12.75156 48.11281, 12.86018 47.99664, 12.87579 47.96261, 12.93888 47.93604, 12.99537 47.85542, 12.91804 47.72201, 13.02804 47.71399, 13.08378 47.66872, 13.04606 47.5205, 13.00844 47.47168, 12.91903 47.49477, 12.80383 47.55905, 12.79017 47.63067, 12.6958 47.68222, 12.61397 47.67111, 12.57503 47.63232, 12.50472 47.62962, 12.42904 47.68912, 12.33805 47.69709, 12.26407 47.68489, 12.25335 47.72412, 12.22836 47.72096, 12.17222 47.69503, 12.1946 47.61679, 12.06066 47.61874, 11.82889 47.58556, 11.63288 47.59245, 11.55857 47.51511, 11.41022 47.49532, 11.39562 47.47201, 11.42143 47.44485, 11.33283 47.44425, 11.26506 47.40418, 11.20839 47.43053, 11.0165 47.39637, 10.9912 47.39613, 10.95779 47.44936, 10.88427 47.48404, 10.8862 47.53685, 10.78738 47.51978, 10.63704 47.56468, 10.55315 47.5372, 10.45444 47.5558, 10.44031 47.50839, 10.46831 47.43701, 10.38325 47.3546, 10.31008 47.30182, 10.17835 47.27011, 10.21751 47.3546, 10.19751 47.3843, 10.10207 47.3666, 10.08401 47.44765, 9.99953 47.48302, 9.96781 47.54624, 9.85961 47.53945, 9.79363 47.58277, 9.6965 47.53136, 9.55872 47.54189, 9.69215 47.61042, 9.85083 47.67162, 9.95493 47.65387, 10.03718 47.67869, 10.07729 47.63927, 10.12996 47.68973, 10.09185 47.78568, 10.13193 47.82009, 10.1065 47.85503, 10.11014 47.93715, 10.09191 47.95527, 10.10421 47.97436, 10.11495 47.97626, 10.13646 48.10846, 10.09536 48.16401, 10.05785 48.27958, 9.99761 48.35012, 10.03269 48.4572, 10.1339 48.45487, 10.23078 48.51051, 10.27825 48.5161, 10.31085 48.54907, 10.27235 48.69198, 10.36297 48.66722, 10.48726 48.69666, 10.42369 48.7445, 10.45376 48.90438, 10.41015 48.97746, 10.25676 49.05949, 10.2307 49.09679, 10.24365 49.14465, 10.13509 49.216, 10.14612 49.28266, 10.11197 49.38491, 10.13416 49.41223, 10.11833 49.47317, 10.08372 49.54356, 10.0188 49.4908, 9.95493 49.48229, 9.92211 49.50029, 9.90825 49.56429, 9.83953 49.56227, 9.86067 49.6147, 9.81397 49.70894, 9.63811 49.70177, 9.64874 49.79148, 9.4715 49.77973, 9.32498 49.76062, 9.35012 49.71554, 9.40409 49.71459, 9.41092 49.66351, 9.29593 49.64494, 9.2241 49.58015, 9.10301 49.57746, 9.07717 49.62027, 9.14073 49.73841, 9.11961 49.78829, 9.03608 49.8465, 9.05008 49.86631, 9.01609 49.99134, 9.02897 50.0294, 8.97817 50.04735, 8.99056 50.06712, 9.03266 50.11147, 9.15724 50.11524, 9.22451 50.14568, 9.35943 50.12903, 9.40498 50.08773, 9.50854 50.10636, 9.50981 50.23381, 9.62315 50.22904, 9.73276 50.30439, 9.73291 50.35615, 9.77446 50.42127, 9.86753 50.40222, 9.93566 50.41961, 9.95493 50.42369, 10.04134 50.51647, 10.10473 50.55549, 10.20334 50.54809, 10.32859 50.48859, 10.39977 50.40382, 10.45053 50.40186)))"
+ },
+ "created": "2024-11-28T08:12:46.902Z",
+ "modified": "2024-12-16T08:56:07.809Z",
+ "geoReferenceMethod": [
+  "https://w3id.org/mdp/schema/geo_reference_method#ASB"
+ ],
+ "networkCoverage": [
+  "https://w3id.org/mdp/schema/network_coverage#REGIONAL_ROADS"
+ ],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_CAR",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_TRUCK",
+  "https://w3id.org/mdp/schema/transport_mode#SCHEDULED_BUS",
+  "https://w3id.org/mdp/schema/transport_mode#INDIVIDUAL_MOTORCYCLE"
+ ],
+ "mdpBrokering": false,
+ "deltaDelivery": null,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": "Die technische und inhaltliche Qualitätssicherung erfolgt durch das zuständige Staatliche Bauamt und die Zentralstelle Verkehrsmanagement bei der Landesbaudirektion Bayern. ",
+ "contentData": [
+  {
+   "accessUrl": "https://www.baysis.bayern.de/internet/verdat/dauz/index.html",
+   "endpointDocumentation": "https://www.baysis.bayern.de/internet/verdat/dauz/index.html",
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/CSV",
+   "dataModel": null,
+   "dataFormatAdditionalDescription": "Excel",
+   "description": "Auswahl der Zählstelle über Zählstellennummer oder Straßenname",
+   "byteSize": null,
+   "fileName": null,
+   "creationDate": "2024-11-28T08:12:46.983Z",
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": null,
+   "masterSchema": null,
+   "schema": [],
+   "schemaProfileName": null
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": false,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": null,
+ "originatedFrom": null,
+ "originatedFromUri": null,
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": "VISIBLE",
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": {
+    "code": "VISIBLE",
+    "name": "VISIBLE"
+   },
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": "VISIBLE",
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": false,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": [
+  "http://data.europa.eu/bna/c_b79e35eb"
+ ]
+}

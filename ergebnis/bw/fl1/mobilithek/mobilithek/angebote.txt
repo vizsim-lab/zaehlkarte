@@ -1,0 +1,279 @@
+## 798871611185745920 Daten der Dauerzählstellen (DAUZ) in Bayern (ZVM)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe False | Zeitraum {'begin': '2024-11-28', 'end': None} | https://w3id.org/idsa/code/CONTINUOUS
+  - https://www.baysis.bayern.de/internet/verdat/dauz/index.html | http://publications.europa.eu/resource/authority/file-type/CSV | None | None | None | Auswahl der Zählstelle über Zählstellennummer oder Straßenname
+  Daten von ca. 175 automatisierten Dauerzählstellen auf Bundes-, Staats- und Kreisstraßen in Bayern. Die Dauerzählstellen detektieren mittels Induktivschleifen. Die Klassifizierung erfolgt nach TLS-Fahrzeugarten (8+1). Die Dauerzählstellen liefern vollständige Stundenwerte für jeden Tag der Woche über das gesamte Jahr. 
+## -4266012713253267478 Dauerzählstellen (StMB Bayern)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe None | Zeitraum {'begin': None, 'end': None} | https://w3id.org/mdp/schema/frequency#OTHER
+  - https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS | http://publications.europa.eu/resource/authority/file-type/WMS_SRVC | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | BAYSIS Verkehrsdaten | None | Der Web Map Service des Bayerischen Straßeninformationssystems (BAYSIS) liefert Daten zur Straßenverkehrszählung 2021.
+  Zur permanenten Zählung des Straßenverkehrs sind in Bayern automatische Dauerzählstellen im Einsatz. Der Großteil befindet sich an Bundesautobahnen und Bundesstraßen, ein kleiner Teil an Staats- und Kreisstraßen. Diese Messgeräte erfassen das Verkehrsgeschehen das ganze Jahr über rund um die Uhr und können je nach Bauart bis zu acht Fahrzeugarten unterscheiden. Die Langzeitdaten der automatischen Dauerzählstellen bilden die Grundlage für die Hochrechnungsfaktoren der manuellen Straßenverkehrszählung.
+## -6470273619834216294 Zählstellen 2021 (StMB Bayern)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe None | Zeitraum {'begin': None, 'end': None} | https://w3id.org/mdp/schema/frequency#OTHER
+  - https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS | http://publications.europa.eu/resource/authority/file-type/WMS_SRVC | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | BAYSIS Verkehrsdaten | None | Der Web Map Service des Bayerischen Straßeninformationssystems (BAYSIS) liefert Daten zur Straßenverkehrszählung 2021.
+  - https://gisportal-stmb.bayern.de/server/services/WFS/BAYSIS_Verkehrsdaten/MapServer/WFSServer?REQUEST=GetCapabilities&SERVICE=WFS | http://publications.europa.eu/resource/authority/file-type/WFS_SRVC | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | BAYSIS Verkehrsdaten WFS | None | Der Web Feature Service des Bayerischen Straßeninformationssystems (BAYSIS) liefert Daten zur Straßenverkehrszählung 2021.
+  An diesen Zählstellen werden Zählungen des Verkehrs in einem von der BASt festgelegten Zeitraum durchgeführt.
+## -8628280793063448106 Langzeitzählstellen (LBM Rheinland-Pfalz)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe None | Zeitraum {'begin': None, 'end': None} | None
+  - https://www.geoportal.rlp.de/mapbender/extensions/mobilemap/map.php?layerid=55478 | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#INSPIRE_DATA_SPECIFICATION | Online Karte | None | Langzeitzählstellen 2016 - Vorschau im integrierten Kartenviewer
+  - https://www.geoportal.rlp.de/mapbender/php/wms.php?layer_id=55478&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS | http://publications.europa.eu/resource/authority/file-type/WMS_SRVC | https://w3id.org/mdp/schema/data_model#INSPIRE_DATA_SPECIFICATION | WMS Schnittstelle | None | Ebene: Langzeitzählstellen 2016
+  - https://www.geoportal.rlp.de/mapbender/plugins/mb_downloadFeedClient.php?url=http%3A%2F%2Flocalhost%2Fmapbender%2Fphp%2Fmod_inspireDownloadFeed.php%3Fid%3Dd4f95998-6cf4-2af9-67db-99bccebc90da%26type%3DSERVICE%26generateFrom%3Dwfs%26wfsid%3D376 | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#INSPIRE_DATA_SPECIFICATION | Vektordownload nach EU-Standard | None | INSPIRE Downloaddienst (predefined ATOM) für Datensatz: Langzeitzählstellen - basierend auf WFS Datenquelle
+  - https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php?languageCode=de&resource=layer&layout=tabs&id=55478 | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#INSPIRE_DATA_SPECIFICATION | Originäre Metadaten für Kartenebene | None | Kartenebene: Langzeitzählstellen 2016 - Anzeige der originären Metadaten
+  - https://www.geoportal.rlp.de/mapbender/php/wfs.php?FEATURETYPE_ID=1700&REQUEST=GetCapabilities&SERVICE=WFS&INSPIRE=1 | http://publications.europa.eu/resource/authority/file-type/WFS_SRVC | https://w3id.org/mdp/schema/data_model#INSPIRE_DATA_SPECIFICATION | WFS Schnittstelle | None | Objektart: Langzeitzaehlstellen - WFS
+  - https://www.geoportal.rlp.de/mapbender/php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#INSPIRE_DATA_SPECIFICATION | Original Metadaten HTML | None | None
+  - https://www.geoportal.rlp.de/map?LAYER%5Bzoom%5D=1&LAYER%5Bid%5D=55478 | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#INSPIRE_DATA_SPECIFICATION | GeoPortal.rlp | None | Langzeitzählstellen 2016 - Anzeige im GeoPortal.rlp
+  Langzeitzählstellen Rheinland-Pfalz
+## 748506312813203456 Verkehrsdaten Messquerschnitte dynamisch (LBV.SH)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung True | Freigabe True | Zeitraum {'begin': None, 'end': None} | https://w3id.org/idsa/code/EVERY_1_MINUTE
+  - None | http://publications.europa.eu/resource/authority/file-type/XML | https://w3id.org/mdp/schema/data_model#DATEX_2 | None | None | None
+  Darstellung von verkehrsmenge (q) und Geschwindigkeit (v) für PKW/LKW in Schleswig-Holstein (dynamisch)
+## 748508537744674816 Verkehrsdaten Messquerschnitte statisch (LBV.SH)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung True | Freigabe True | Zeitraum {'begin': None, 'end': None} | https://w3id.org/mdp/schema/frequency#ON_OCCURRENCE
+  - None | http://publications.europa.eu/resource/authority/file-type/XML | https://w3id.org/mdp/schema/data_model#DATEX_2 | None | None | None
+  Darstellung von Verkehrsmenge (q) und Geschwindigkeit (v) für PKW/LKW in Schleswig-Holstein (statisch)
+## 983406200238284800 Straßenverkehrszählungsdaten der Lausitz (IPG)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe False | Zeitraum {'begin': None, 'end': None} | None
+  - /983406200238284800/DiSTILL-Verkehrsdaten_2010-2021_Lausitz.zip | https://www.iana.org/assignments/media-types/application/json | None | DiSTILL-Verkehrsdaten_2010-2021_Lausitz.zip | 6233553 | 
+  Beinhaltet die Verkehrsstärke, den Verkehr je Fahrstreifen sowie den Belastungsgrad der Autobahnen, Bundesstraßen sowie Land-, Staats- und Kreisstraßen in der Lausitz der Jahre 2010, 2015, 2021. 
+## -489044378979458875 Fußgängerzählstellen Hamburg
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe None | Zeitraum {'begin': None, 'end': None} | https://w3id.org/mdp/schema/frequency#OTHER
+  - http://metaver.de/trefferanzeige?docuuid=A237E480-6B59-4AF6-963A-BAABDC15AAC7 | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Metadatenbeschreibung aus dem MetaVer | 178 | None
+  - https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2016-07-15.zip | http://publications.europa.eu/resource/authority/file-type/GML | https://w3id.org/mdp/schema/data_model#GML | Download Fußgängerzählstellen Hamburg, 2016-07 (GML) | 2061 | None
+  - https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2017-01-06.zip | http://publications.europa.eu/resource/authority/file-type/GML | https://w3id.org/mdp/schema/data_model#GML | Download Fußgängerzählstellen Hamburg, 2017-01 (GML) | 2061 | None
+  Dieser Datensatz wird nicht mehr gepflegt. Aktuelle Daten finden Sie unter "Verkehrszählstellen Hamburg".
+## -1595922270408040459 Verkehrszählstellen Hamburg
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe None | Zeitraum {'begin': None, 'end': None} | https://w3id.org/mdp/schema/frequency#OTHER
+  - https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&REQUEST=GetCapabilities | https://w3id.org/mdp/schema/media_type#MEDIA_OTHER | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Dienst "WFS Verkehrszählstellen Hamburg" (GetCapabilities) | 1293 | None
+  - https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?SERVICE=WMS&REQUEST=GetCapabilities | https://w3id.org/mdp/schema/media_type#MEDIA_OTHER | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Dienst "WMS Verkehrszählstellen Hamburg" (GetCapabilities) | 1293 | None
+  - https://api.hamburg.de/datasets/v1/verkehrszaehlstellen | https://w3id.org/mdp/schema/media_type#MEDIA_OTHER | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | OGC API - Features (OAF) Landing Page | 3516 | None
+  - https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=csv | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Download Verkehrszählstellen Hamburg (CSV) | 1293 | None
+  - https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=json | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Download Verkehrszählstellen Hamburg (GeoJSON) | 1293 | None
+  - http://metaver.de/trefferanzeige?docuuid=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8 | http://publications.europa.eu/resource/authority/file-type/HTML | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Metadatenbeschreibung aus dem MetaVer | 178 | None
+  - https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen | http://publications.europa.eu/resource/authority/file-type/GML | https://w3id.org/mdp/schema/data_model#GML | Download WFS Verkehrszählstellen Hamburg, GML | 1293 | None
+  - https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen | https://w3id.org/mdp/schema/media_type#MEDIA_OTHER | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Download WFS-Schemadatei Verkehrszählstellen Hamburg (XSD) | 1293 | None
+  Der Datensatz enthält Verkehrszählstellen in Hamburg für den Kfz-, Rad- und Fußverkehr. Inhalt der Daten ist der Ort, die Lagebezeichnung und das Datum der letzten Zählung.Es erfolgt keine Unterscheidung der Zählstellen nach der Erhebungsmethode oder Regelmäßigkeit der Verkehrszählungen. Verzeichnet sind alle Zählstellen, an denen Daten sowohl aus dauerhaften Zählungen über Infrarotsensoren oder Induktivschleifen, als auch aus temporären Zählungen mittels Geräten oder manuelle Zählungen vorliegen.Die Ergebnisse der Verkehrszählungen (Verkehrsstärken) werden über diesen Dienst nicht bereitgestellt. Für die Abfrage von Verkehrsstärken können über die Schlagwortsuche „Verkehrsstärken“ entsprechende Datensätze gefunden und genutzt werden.Mit dem Übergang der Bundesautobahnen und Bundesstraßen Freie Strecke an die Autobahn GmbH des Bundes am 01.01.2021 werden die Zähldaten für diese Strecken nicht mehr durch die BVM veröffentlicht.
+## -781197459961221857 Digitale Personenzählung Kiel (ODALA)
+  Lizenz https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA | Vermittlung False | Freigabe None | Zeitraum {'begin': None, 'end': None} | None
+  - https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/d8394bf8-2ad2-447c-bf74-403bb0b543f9/download/odala_crowdflowobserved_historic_data.csv | http://publications.europa.eu/resource/authority/file-type/CSV | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Historische digitale Personenzählung in der Landeshauptstadt Kiel (ODALA; Sensorik) | 6360450 | None
+  - https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/c8c6dbdb-3995-4d94-8f21-33590a4f7c50/download/odala_crowdflowobserved_city_of_kiel_latest.json | https://w3id.org/mdp/schema/media_type#MEDIA_OTHER | https://w3id.org/mdp/schema/data_model#MODEL_OTHER | Zuletzt gemessene Werte digitaler Personenzählung in der Landeshauptstadt Kiel (ODALA; Sensorik) - Datei | 2082 | None
+  **Allgemein**  In diesem Datensatz werden unterschiedliche Werte zur digitalen Personenzählung bereitgestellt. Die Sensoren Messen Verbindungen mit WLAN und Bluetooth Low Energy (BLE) in der Nähe. Die Daten werden DSGVO-konform auf dem Gerät erfasst und verarbeitet. Es werden lediglich die aggregierten und anonymisierten Verbindungen als Daten bereitgestellt.  Die Daten werden im Rahmen des [ODALA-Förderprojektes](https://odalaproject.eu/) bereitgestellt.  **Datenmodell**  Die Daten können unterschiedliche Sensortypen und -hersteller umfassen. Um die Daten zu harmonisieren, werden diese in ein einheitliches Datenmodell zusammengefasst. Nicht jeder Sensor misst alle angegebenen Werte. Die Daten sind im Datenmodell "CrowdFlowObserved" bereitgestellt.  https://gitlab.com/hopu-smart-cities/fiware/datamodels/-/blob/master/crowd-flow/datamodel-ngsi-ld.json  Dieses baut auf dem Smart Data Model "CriowdFlowObserved" auf:  https://github.com/smart-data-models/dataModel.Transportation/blob/master/CrowdFlowObserved/doc/spec.md   **Gemessene und berechnete Werte**  * peopleCountLowerRange (Durchschnitt 1 Minute) * peopleCountMediumRange (Durchschnitt 5 Minuten) * peopleCountHighRange (Durchschnitt 10 Minuten)
+Zugang 798871611185745920: https://www.baysis.bayern.de/internet/verdat/dauz/index.html -> https://www.baysis.bayern.de/internet/verdat/dauz/index.html | text/html | 24995 Byte | index.html
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-57x57.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-60x60.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-72x72.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-76x76.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-114x114.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-120x120.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-144x144.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-152x152.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/apple-touch-icon-180x180.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/favicon-32x32.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/android-chrome-192x192.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/favicon-96x96.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/favicon-16x16.png
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/manifest.json
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/safari-pinned-tab.svg
+    link https://www.baysis.bayern.de/res/stmi/img/favicons/favicon.ico
+    link https://www.baysis.bayern.de/resources/vendor/fontawesome-free-6.1.1-web/css/all.min.css
+    link https://www.baysis.bayern.de/res/stmi/css/build.min.css
+    link https://www.baysis.bayern.de/res/stmi/css/dc_stmb.css
+    link https://www.baysis.bayern.de/res/stmi/css/customer.css
+    link https://www.baysis.bayern.de/res/stmi/css/print-plain.css
+    link https://www.baysis.bayern.de/resources/vendor/vue-formulate/css/snow.css
+    link https://www.baysis.bayern.de/resources/css/strassenbau.css
+    link https://www.baysis.bayern.de/resources/css/forms.css
+    link https://www.baysis.bayern.de/resources/css/vue_content.css
+    link https://www.baysis.bayern.de/internet/datenschutz/index.html
+    link https://www.baysis.bayern.de/internet
+    link https://www.baysis.bayern.de/res/stmi/img/logo.jpg
+    link https://www.baysis.bayern.de/hil/themenaz/index.php
+    link https://www.baysis.bayern.de/cgi-bin/fts_search.pl
+    link https://www.baysis.bayern.de/suche.html
+    link https://www.baysis.bayern.de/media/internet/header_verkehrsdaten.jpg
+    link https://www.baysis.bayern.de/internet/strasseninformationen/index.html
+    link https://www.baysis.bayern.de/internet/strasseninformationen/abschnittsfolge/index.html
+    link https://www.baysis.bayern.de/internet/strasseninformationen/werkzeuge/index.html
+    link https://www.baysis.bayern.de/internet/verdat/index.html
+    link https://www.baysis.bayern.de/internet/verdat/svz/index.html
+    link https://www.baysis.bayern.de/internet/verdat/svz/zaehlstelle/index.html
+    link https://www.baysis.bayern.de/internet/verdat/svz/kennwerte/index.html
+    link https://www.baysis.bayern.de/internet/verdat/dauz/index.html
+    link https://www.baysis.bayern.de/internet/verdat/statistik/index.html
+    link https://www.baysis.bayern.de/internet/verdat/vdm/index.html
+    link https://www.baysis.bayern.de/internet/ausbau/index.html
+    link https://www.baysis.bayern.de/internet/ausbau/bvwp/index.html
+    link https://www.baysis.bayern.de/internet/ausbau/abp/index.html
+    link https://www.baysis.bayern.de/internet/veroeffentlichung/index.html
+    link https://www.baysis.bayern.de/internet/geodaten_dienste/index.html
+    link https://www.baysis.bayern.de/internet/geodaten_dienste/wfs/index.html
+    link https://www.baysis.bayern.de/internet/geodaten_dienste/wms/index.html
+    link https://www.baysis.bayern.de/internet/geodaten_dienste/fachdienste/index.html
+    link https://www.baysis.bayern.de/internet/geodaten_dienste/inspire/index.html
+    link https://www.stmb.bayern.de/
+    link https://www.lbd.bayern.de/
+    link https://www.stmb.bayern.de/min/geschaeftsbereich/regierungen/index.php
+    link https://www.stmb.bayern.de/min/geschaeftsbereich/index.php
+    link https://www.bayerninfo.de/
+    link https://www.radlland-bayern.de/
+    link https://www.freistaat.bayern/
+    link https://www.sichermobil.bayern.de/
+    link https://www.radoffensive.bayern.de/
+    link https://www.wir-bewegen.bayern.de/
+    link https://www.bienen-highway.bayern.de/
+    link https://www.ich-bau-bayern.de/index.html
+    link https://www.baysis.bayern.de/internet/impressum/index.html
+    link https://www.baysis.bayern.de/internet/barrierefreiheit/index.html
+    link https://www.baysis.bayern.de/res/stmi/js/build.min.js
+    link https://www.baysis.bayern.de/res/stmi/js/customer.js
+    link https://www.baysis.bayern.de/res/stmi/js/readspeaker/ReadSpeaker.js?pids=embhl
+    link https://app.readspeaker.com/cgi-bin/rsent?customerid=9366&readid=main&lang=de_de&voice=de_hans&url=http%3A%2F%2F
+    link https://www.baysis.bayern.de/resources/js/baysis.js
+    link https://www.baysis.bayern.de/resources/js/imperia_sucks.js
+Zugang -4266012713253267478: https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS -> https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS | text/xml | 48815 Byte | WMSServer_REQUEST_GetCapabilities_SERVICE_WMS
+Zugang -6470273619834216294: https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS -> https://gisportal-stmb.bayern.de/server/services/WMS/BAYSIS_Verkehrsdaten/MapServer/WMSServer?REQUEST=GetCapabilities&SERVICE=WMS | text/xml | 48815 Byte | WMSServer_REQUEST_GetCapabilities_SERVICE_WMS
+Zugang -6470273619834216294: https://gisportal-stmb.bayern.de/server/services/WFS/BAYSIS_Verkehrsdaten/MapServer/WFSServer?REQUEST=GetCapabilities&SERVICE=WFS -> https://gisportal-stmb.bayern.de/server/services/WFS/BAYSIS_Verkehrsdaten/MapServer/WFSServer?REQUEST=GetCapabilities&SERVICE=WFS | text/xml; charset=UTF-8 | 16654 Byte | WFSServer_REQUEST_GetCapabilities_SERVICE_WFS
+Zugang -8628280793063448106: https://www.geoportal.rlp.de/mapbender/extensions/mobilemap/map.php?layerid=55478 -> https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/index.html?layerid=55478 | text/html | 1371 Byte | map.php_layerid_55478
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/libs/bootstrap/css/bootstrap-custom.min.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/libs/openlayers/6.4.3/ol.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/libs/jquery/jquery.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/libs/jquery-template/jquery.loadTemplate.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/libs/bootstrap/js/bootstrap.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/libs/proj4js/proj4.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/libs/openlayers/6.4.3/ol.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/mobilemap2/scripts/netgis/client.js
+Zugang -8628280793063448106: https://www.geoportal.rlp.de/mapbender/php/wms.php?layer_id=55478&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS -> https://www.geoportal.rlp.de/mapbender/php/wms.php?layer_id=55478&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS | application/xhtml+xml; charset=UTF-8 | 6360 Byte | wms.php_layer_id_55478_REQUEST_GetCapabilities_VERSION_1.1.1_SERVICE_WMS
+Zugang -8628280793063448106: https://www.geoportal.rlp.de/mapbender/plugins/mb_downloadFeedClient.php?url=http%3A%2F%2Flocalhost%2Fmapbender%2Fphp%2Fmod_inspireDownloadFeed.php%3Fid%3Dd4f95998-6cf4-2af9-67db-99bccebc90da%26type%3DSERVICE%26generateFrom%3Dwfs%26wfsid%3D376 -> https://www.geoportal.rlp.de/mapbender/plugins/mb_downloadFeedClient.php?url=http%3A%2F%2Flocalhost%2Fmapbender%2Fphp%2Fmod_inspireDownloadFeed.php%3Fid%3Dd4f95998-6cf4-2af9-67db-99bccebc90da%26type%3DSERVICE%26generateFrom%3Dwfs%26wfsid%3D376 | text/html; charset=UTF-8 | 14764 Byte | mb_downloadFeedClient.php_url_http_localhost_mapbender_php_mod_inspireDownloadFeed.php_id_d4f95998-6cf4-2af9-67db-99bcce
+    link https://www.geoportal.rlp.de/mapbender/extensions/OpenLayers-2.13.1/theme/default/style.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.12.1/jquery-ui.min.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/bootstrap-3.3.6-dist/css/bootstrap.min.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/bootstrap-select-1.9.3/dist/css/bootstrap-select.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/OpenLayers-2.13.1/OpenLayers.mobile.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/OpenLayers-2.13.1/OpenLayers.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-1.12.0.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.12.1/jquery-ui.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/bootstrap-3.3.6-dist/js/bootstrap.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/bootstrap-select-1.9.3/dist/js/bootstrap-select.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/bootstrap-select-1.9.3/dist/js/i18n/defaults-de_DE.js
+    link https://www.geoportal.rlp.de/mapbender/javascripts/mb_downloadFeedClient.php
+    link https://www.geoportal.rlp.de/mapbender/img/misc/inspire_eu_klein.png
+    link https://www.geoportal.rlp.de/mapbender/img/misc/eu.png
+    link https://www.geoportal.rlp.de/mapbender/img/inspire_tr_36.png
+    link https://www.geoportal.rlp.de/mapbender/img/misc/delete.png
+    link https://www.geoportal.rlp.de/mapbender/img/misc/refresh.png
+Zugang -8628280793063448106: https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php?languageCode=de&resource=layer&layout=tabs&id=55478 -> https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php?languageCode=de&resource=layer&layout=tabs&id=55478 | text/html; charset=UTF-8 | 14151 Byte | mod_showMetadata.php_languageCode_de_resource_layer_layout_tabs_id_55478
+    link https://www.geoportal.rlp.de/mapbender/css/metadata_responsiv.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.8.1.custom/css/custom-theme/jquery-ui-1.8.5.custom.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.8.1.custom/js/jquery-1.4.2.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.8.1.custom/js/jquery-ui-1.8.1.custom.min.js
+    link https://www.geoportal.rlp.de/mapbender/img/osgeo_graphics/Layer.png
+    link https://www.geoportal.rlp.de/mapbender/php/mod_showMetadata.php?resource=wms&id=3147&layout=tabs&languageCode=de
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=layer&id=55478
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=layerlegend&id=55478
+    link https://lbm.rlp.de/_assets/07505e6cfd94277c9ba17a46f103c403/images/lbm.png
+    link https://www.geoportal.rlp.de/layer/55478
+    link https://www.geoportal.rlp.de/mapbender/img/osgeo_graphics/layer-wms-add.png
+    link https://www.geoportal.rlp.de/mapbender/img/osgeo_graphics/select.png
+    link https://www.geoportal.rlp.de/cgi-bin/mapserv?map=/data/mapbender/tools/wms_extent/extents.map&VERSION=1.1.1&REQUEST=GetMap&SERVICE=WMS&LAYERS=demis,ows_layer_target,extent,metadata_polygon&STYLES=&SRS=EPSG:4326&BBOX=4.4567228,48.7938788,10.0619092,51.1285452&WIDTH=120&HEIGHT=120&FORMAT=image/png&BGCOLOR=0xffffff&TRANSPARENT=TRUE&EXCEPTIONS=application/vnd.ogc.se_inimage&minx=4.711504&miny=48.905636&maxx=9.807128&maxy=51.022424
+    link https://www.geoportal.rlp.de/mapbender/img/gnome/edit-select-all.png
+    link https://www.geoportal.rlp.de/mapbender/php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da
+    link https://www.geoportal.rlp.de/mapbender/php/mod_dataISOMetadata.php?outputFormat=iso19139&id=d4f95998-6cf4-2af9-67db-99bccebc90da&validate=true
+    link https://www.geoportal.rlp.de/mapbender/php/mod_dataISOMetadata.php?outputFormat=rdf&id=d4f95998-6cf4-2af9-67db-99bccebc90da&CN=false
+    link https://www.geoportal.rlp.de/mapbender/img/rdf_w3c_icon.48.gif
+    link https://www.geoportal.rlp.de/mapbender/plugins/mb_downloadFeedClient.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_inspireDownloadFeed.php%3Fid%3Dd4f95998-6cf4-2af9-67db-99bccebc90da%26type%3DSERVICE%26generateFrom%3Dwfs%26wfsid%3D376
+    link https://www.geoportal.rlp.de/mapbender/img/osgeo_graphics/geosilk/vector_download.png
+    link https://www.govdata.de/dl-de/by-2-0
+    link https://www.geoportal.rlp.de/metadata/dl_de_nn_v2_150.png
+    link https://www.geoportal.rlp.de/mapbender/img/od_80x15_blue.png
+    link https://www.geoportal.rlp.de/mapbender/img/trafficlights/wait.bmp
+    link https://www.geoportal.rlp.de/mapbender/php/wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS
+    link https://www.geoportal.rlp.de/mapbender/img/osgeo_graphics/geosilk/link.png
+    link https://www.geoportal.rlp.de/mapbender/php/wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS&withChilds=1
+    link https://lbm-geo.rlp.de/cgi-bin/mapserv?map=/home/planer/https-wms/langzeitzst.map&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS
+    link https://www.geoportal.rlp.de/mapbender/php/wms.php?layer_id=55478&PHPSESSID=084reqvudk1dua3u858q10f2r9&INSPIRE=1&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS
+    link https://www.geoportal.rlp.de/mapbender/img/inspire_tr_36.png
+    link https://www.geoportal.rlp.de/mapbender/php/mod_layerISOMetadata.php?SERVICE=WMS&outputFormat=iso19139&Id=55478
+    link https://www.geoportal.rlp.de/mapbender/php/mod_layerISOMetadata.php?SERVICE=WMS&CN=false&outputFormat=rdf&Id=55478
+    link https://www.geoportal.rlp.de/mapbender/php/mod_layerISOMetadata.php?SERVICE=WMS&outputFormat=iso19139&Id=55478&validate=true
+    link https://www.geoportal.rlp.de/mapbender/php/mod_interfaceWms4Kml.php?id=55478
+    link https://www.geoportal.rlp.de/mapbender/img/misc/kml_icon.gif
+Zugang -8628280793063448106: https://www.geoportal.rlp.de/mapbender/php/wfs.php?FEATURETYPE_ID=1700&REQUEST=GetCapabilities&SERVICE=WFS&INSPIRE=1 -> https://www.geoportal.rlp.de/mapbender/php/wfs.php?FEATURETYPE_ID=1700&REQUEST=GetCapabilities&SERVICE=WFS&INSPIRE=1 | application/xhtml+xml; charset=UTF-8 | 9632 Byte | wfs.php_FEATURETYPE_ID_1700_REQUEST_GetCapabilities_SERVICE_WFS_INSPIRE_1
+Zugang -8628280793063448106: https://www.geoportal.rlp.de/mapbender/php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da -> https://www.geoportal.rlp.de/mapbender/php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da | text/html; charset=UTF-8 | 10424 Byte | mod_exportIso19139.php_url_https_www.geoportal.rlp.de_mapbender_php_mod_dataISOMetadata.php_outputFormat_iso19139_id_d4f
+    link https://www.geoportal.rlp.de/mapbender/css/metadata_responsiv.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.8.1.custom/css/custom-theme/jquery-ui-1.8.5.custom.css
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.8.1.custom/js/jquery-1.4.2.min.js
+    link https://www.geoportal.rlp.de/mapbender/extensions/jquery-ui-1.8.1.custom/js/jquery-ui-1.8.1.custom.min.js
+    link https://www.geoportal.rlp.de/cgi-bin/mapserv?map=/data/mapbender/tools/wms_extent/extents.map&VERSION=1.1.1&REQUEST=GetMap&SERVICE=WMS&LAYERS=demis,ows_layer_target,extent,metadata_polygon&STYLES=&SRS=EPSG:4326&BBOX=4.456357,48.79394,10.060703,51.12726&WIDTH=120&HEIGHT=120&FORMAT=image/png&BGCOLOR=0xffffff&TRANSPARENT=TRUE&EXCEPTIONS=application/vnd.ogc.se_inimage&minx=4.7111&miny=48.9046&maxx=9.80596&maxy=51.0212&metadata_uuid=d4f95998-6cf4-2af9-67db-99bccebc90da
+    link https://www.govdata.de/dl-de/by-2-0
+    link https://www.geoportal.rlp.de/mapbender/php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da&outputFormat=iso19139
+    link https://www.geoportal.rlp.de/mapbender/php/mod_exportIso19139.php?url=https%3A%2F%2Fwww.geoportal.rlp.de%2Fmapbender%2Fphp%2Fmod_dataISOMetadata.php%3FoutputFormat%3Diso19139%26id%3Dd4f95998-6cf4-2af9-67db-99bccebc90da&outputFormat=rdf
+Zugang -8628280793063448106: https://www.geoportal.rlp.de/map?LAYER%5Bzoom%5D=1&LAYER%5Bid%5D=55478 -> https://www.geoportal.rlp.de/map?LAYER%5Bzoom%5D=1&LAYER%5Bid%5D=55478 | text/html; charset=utf-8 | 37255 Byte | map_LAYER_zoom_1_LAYER_id_55478
+    link https://www.geoportal.rlp.de/static/Geoportal/fontawesome-5/css/all.css
+    link https://www.geoportal.rlp.de/static/useroperations/images/favicon.ico
+    link https://www.geoportal.rlp.de/static/useroperations/css/base.css
+    link https://www.geoportal.rlp.de/static/useroperations/css/forms.css
+    link https://www.geoportal.rlp.de/static/searchCatalogue/js/jquery-3.7.1.min.js
+    link https://www.geoportal.rlp.de/static/searchCatalogue/vendor/leaflet/leaflet.js
+    link https://www.geoportal.rlp.de/static/searchCatalogue/vendor/zebra/javascript/zebra_datepicker.js
+    link https://www.geoportal.rlp.de/static/searchCatalogue/js/all.js
+    link https://www.geoportal.rlp.de/static/useroperations/js/frontpage.js
+    link https://www.geoportal.rlp.de/static/useroperations/js/html5shiv.js
+    link https://www.geoportal.rlp.de/static/useroperations/js/html5shiv-printshiv.js
+    link https://www.geoportal.rlp.de/static/useroperations/css/favourite_wmcs.css
+    link https://www.geoportal.rlp.de/static/useroperations/images/de_flag.png
+    link https://www.geoportal.rlp.de/static/useroperations/images/uk_flag.png
+    link https://www.geoportal.rlp.de/
+    link https://www.geoportal.rlp.de/static/useroperations/images/logo-gdi.png
+    link https://www.geoportal.rlp.de/mediawiki/index.php/Suchverfahren
+    link http://www.rlp.de
+    link https://www.geoportal.rlp.de/static/useroperations/images/logo-rlp.png
+    link https://www.geoportal.rlp.de/login/
+    link https://www.geoportal.rlp.de/register/
+    link https://www.geoportal.rlp.de/article/Meldungen/
+    link https://www.geoportal.rlp.de/static/useroperations/images/icn_geoportal.png
+    link https://www.geoportal.rlp.de/article/Informationen
+    link https://www.geoportal.rlp.de/article/Das-Geoportal-RLP
+    link https://www.geoportal.rlp.de/linked_open_data
+    link https://www.geoportal.rlp.de/static/useroperations/images/icn_help.png
+    link https://www.geoportal.rlp.de/article/Basics
+    link https://www.geoportal.rlp.de/article/Datennutzer
+    link https://www.geoportal.rlp.de/article/Datenbereitsteller
+    link https://www.geoportal.rlp.de/article/Grundlagen
+    link https://www.geoportal.rlp.de/article/FAQ
+    link https://www.geoportal.rlp.de/mediawiki
+    link https://www.geoportal.rlp.de/feedback
+    link https://www.geoportal.rlp.de/organizations/
+    link https://www.geoportal.rlp.de/apps/
+    link https://www.geoportal.rlp.de/categories/
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=11721
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=2506
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=36393
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=27581
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=31514
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=26157
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=30881
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=2959
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=38061
+    link https://www.geoportal.rlp.de/mapbender/geoportal/mod_showPreview.php?resource=wmc&id=36489
+    link https://www.rlp.de/
+    link https://www.geoportal.rlp.de/static/useroperations/images/logo-country.png
+    link https://www.geoportal.rlp.de/article/Kontakt
+    link https://www.geoportal.rlp.de/article/Impressum
+    link https://www.geoportal.rlp.de/article/Datenschutz
+    link https://www.geoportal.rlp.de/article/Rechtshinweis
+    link https://www.geoportal.rlp.de/article/Transparenzgesetz
+    link https://www.geoportal.rlp.de/article/Barrierefreiheit
+    link http://www.geoportal.rlp.de/mapbender/geoportal/news/georss.xml
+    link https://www.geoportal.rlp.de/news/twitter
+    link https://www.geoportal.rlp.de/static/useroperations/images/logo-geoportal.png
+Zugang 983406200238284800: /983406200238284800/DiSTILL-Verkehrsdaten_2010-2021_Lausitz.zip: Gesperrt('/983406200238284800/DiSTILL-Verkehrsdaten_2010-2021_Lausitz.zip')
+Zugang -489044378979458875: http://metaver.de/trefferanzeige?docuuid=A237E480-6B59-4AF6-963A-BAABDC15AAC7: <HTTPError 429: 'Too Many Requests'>
+Zugang -489044378979458875: https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2016-07-15.zip -> https://www.daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2016-07-15.zip | application/zip | 13954 Byte | Fussgaengerzaehlstellen_HH_2016-07-15.zip
+Zugang -489044378979458875: https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2017-01-06.zip -> https://www.daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2017-01-06.zip | application/zip | 13098 Byte | Fussgaengerzaehlstellen_HH_2017-01-06.zip
+Zugang -1595922270408040459: https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&REQUEST=GetCapabilities -> https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&REQUEST=GetCapabilities | text/xml;charset=UTF-8 | 31672 Byte | HH_WFS_Verkehrszaehlstellen_SERVICE_WFS_REQUEST_GetCapabilities
+Zugang -1595922270408040459: https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?SERVICE=WMS&REQUEST=GetCapabilities -> https://geodienste.hamburg.de/HH_WMS_Verkehrszaehlstellen?SERVICE=WMS&REQUEST=GetCapabilities | text/xml;charset=UTF-8 | 20817 Byte | HH_WMS_Verkehrszaehlstellen_SERVICE_WMS_REQUEST_GetCapabilities
+Zugang -1595922270408040459: https://api.hamburg.de/datasets/v1/verkehrszaehlstellen -> https://api.hamburg.de/datasets/v1/verkehrszaehlstellen | application/json | 3507 Byte | verkehrszaehlstellen
+Zugang -1595922270408040459: https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=csv -> https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=csv | application/zip | 251359 Byte | download_url_https_geodienste.hamburg.de_HH_WFS_Verkehrszaehlstellen_f_csv
+Zugang -1595922270408040459: https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=json -> https://geodienste.hamburg.de/download?url=https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen&f=json | application/zip | 361342 Byte | download_url_https_geodienste.hamburg.de_HH_WFS_Verkehrszaehlstellen_f_json
+Zugang -1595922270408040459: http://metaver.de/trefferanzeige?docuuid=7E0B7C8A-20D5-4BFB-A9DA-C892638F74C8: <HTTPError 429: 'Too Many Requests'>
+Zugang -1595922270408040459: https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen -> https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=GetFeature&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen | application/gml+xml; version=3.1 | 2549678 Byte | HH_WFS_Verkehrszaehlstellen_SERVICE_WFS_VERSION_1.1.0_REQUEST_GetFeature_typename_app_kfz_zaehlstellen_app_radverkehr_za
+Zugang -1595922270408040459: https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen -> https://geodienste.hamburg.de/HH_WFS_Verkehrszaehlstellen?SERVICE=WFS&VERSION=1.1.0&REQUEST=DescribeFeatureType&typename=app:kfz_zaehlstellen,app:radverkehr_zaehlstellen,app:fussverkehr_zaehlstellen | application/gml+xml; version=3.1 | 2371 Byte | HH_WFS_Verkehrszaehlstellen_SERVICE_WFS_VERSION_1.1.0_REQUEST_DescribeFeatureType_typename_app_kfz_zaehlstellen_app_radv
+Zugang -781197459961221857: https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/d8394bf8-2ad2-447c-bf74-403bb0b543f9/download/odala_crowdflowobserved_historic_data.csv -> https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/d8394bf8-2ad2-447c-bf74-403bb0b543f9/download/odala_crowdflowobserved_historic_data.csv | text/csv | 6360450 Byte | odala_crowdflowobserved_historic_data.csv
+Zugang -781197459961221857: https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/c8c6dbdb-3995-4d94-8f21-33590a4f7c50/download/odala_crowdflowobserved_city_of_kiel_latest.json -> https://opendata.schleswig-holstein.de/dataset/1afa7e98-902d-40eb-ab09-9e636371abcc/resource/c8c6dbdb-3995-4d94-8f21-33590a4f7c50/download/odala_crowdflowobserved_city_of_kiel_latest.json | application/json | 2082 Byte | odala_crowdflowobserved_city_of_kiel_latest.json

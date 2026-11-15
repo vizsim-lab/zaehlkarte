@@ -1,0 +1,14 @@
+{
+ "https://mobilithek.info": "<!DOCTYPE html>\n<html lang=\"\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta content=\"origin\" name=\"referrer\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0\">\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png\">\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png\">\n    <link rel=\"icon\" href=\"/favicon.ico\">\n    <title>Mobilithek.info - Mobilitätsdaten Deutschland</title>\n    <meta name=\"description\" content=\"Die Mobilithek bietet Zugang zu offenen Mobilitätsdaten (open data) und ist nationaler Zugangspunkt und Marktplatz für Mobilitätsdaten. \">\n    <script type=\"module\" crossorigin src=\"/assets/index-DbBkSjqS.js\"></script>\n    <link rel=\"stylesheet\" crossorigin href=\"/assets/index-BZ1Z8fij.css\">\n  </head>\n  <body>\n    <noscript>\n      <strong>We're sorry but Mobilithek.info - Mobilitätsdaten Deutschland doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>\n    </noscript>\n    <div id=\"app\"></div>\n  </body>\n</html>\n",
+ "https://www.baysis.bayern.de": "(HTTP 404)",
+ "https://gisportal-stmb.bayern.de": "(HTTP 404)",
+ "https://www.geoportal.rlp.de": "User-agent: SemrushBot\nDisallow: /\n\nUser-agent: GPTBot/1.3\nDisallow: /\n\nUser-agent: Sogou web spider/4.0\nDisallow:/\n",
+ "://": "(nicht erreichbar: ValueError(\"unknown url type: ':///robots.txt'\"))",
+ "http://metaver.de": "(HTTP 429)",
+ "https://metaver.de": "(HTTP 429)",
+ "https://daten-hamburg.de": "(HTTP 404)",
+ "https://www.daten-hamburg.de": "(HTTP 404)",
+ "https://geodienste.hamburg.de": "User-agent: spatineo\r\nDisallow: /\r\n",
+ "https://api.hamburg.de": "User-agent: spatineo\r\nDisallow: /\r\n",
+ "https://opendata.schleswig-holstein.de": "User-agent: AwarioRssBot\nUser-agent: AwarioSmartBot\nUser-agent: BLEXBot\nUser-agent: DataForSeoBot\nUser-agent: PetalBot\nUser-agent: SemrushBot\nUser-agent: SEOkicks\nDisallow: /\n\nUser-agent: *\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-delay: 10"
+}

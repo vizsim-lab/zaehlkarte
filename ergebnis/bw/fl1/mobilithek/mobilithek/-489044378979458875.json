@@ -1,0 +1,282 @@
+{
+ "id": "http://localhost:8080/catalog/-1305288727/-1980489185/-51840165",
+ "publicationId": "-489044378979458875",
+ "title": "Fußgängerzählstellen Hamburg",
+ "description": "Dieser Datensatz wird nicht mehr gepflegt. Aktuelle Daten finden Sie unter \"Verkehrszählstellen Hamburg\".",
+ "dataCategory": "https://w3id.org/mdp/schema/data_categories#CAT_OTHER",
+ "dataCategoryDetail": [],
+ "keyword": [
+  "Hamburgisches Transparenzgesetz  HmbTG ",
+  "Transparenzportal Hamburg",
+  "Hamburgisches Geodateninfrastrukturgesetz  HmbGDIG ",
+  "Geodaten"
+ ],
+ "temporalCoverage": {
+  "begin": null,
+  "end": null
+ },
+ "language": [],
+ "contractOffer": {
+  "contractStart": null,
+  "contractEnd": null,
+  "providerApprovalRequired": null,
+  "napApprovalRequired": null,
+  "providerApprovalAnonymousAccessRequired": null
+ },
+ "accrualPeriodicity": "https://w3id.org/mdp/schema/frequency#OTHER",
+ "agents": {
+  "publisher": {
+   "id": null,
+   "name": "Behörde für Verkehr und Mobilitätswende (BVM)",
+   "emailAddress": null
+  },
+  "sovereign": {
+   "id": null,
+   "name": "Behörde für Verkehr und Mobilitätswende (BVM)",
+   "emailAddress": null
+  },
+  "contactPoint": null
+ },
+ "rights": "https://w3id.org/mdp/schema/license#LICENSE_FREE_USE_OPEN_DATA",
+ "standardLicense": null,
+ "customLicenseAsResource": {
+  "title": "Datenlizenz Deutschland - Namensnennung - 2.0",
+  "accessURL": "http://www.govdata.de/dl-de/by-2-0",
+  "description": null,
+  "modified": null,
+  "instance": {
+   "fileName": "Datenlizenz Deutschland - Namensnennung - 2.0",
+   "mediaType": null,
+   "byteSize": null
+  },
+  "validFrom": null,
+  "validTo": null
+ },
+ "conditionForUse": null,
+ "sourceNote": null,
+ "spatialCoverage": {
+  "nuts": [],
+  "polygon": "POLYGON ((10.326304 53.394985, 10.326304 53.964153, 8.420551 53.964153, 8.420551 53.394985, 10.326304 53.394985))"
+ },
+ "created": "2026-10-21T17:57:31.337Z",
+ "modified": "2026-10-21T17:57:31.337Z",
+ "geoReferenceMethod": [],
+ "networkCoverage": [],
+ "roadNetworkCoverageDescription": null,
+ "transportMode": [],
+ "mdpBrokering": false,
+ "deltaDelivery": null,
+ "accessRights": "http://publications.europa.eu/resource/authority/access-right/PUBLIC",
+ "status": null,
+ "contentStandard": [],
+ "samples": [],
+ "qualityDescription": null,
+ "contentData": [
+  {
+   "accessUrl": "http://metaver.de/trefferanzeige?docuuid=A237E480-6B59-4AF6-963A-BAABDC15AAC7",
+   "endpointDocumentation": "http://metaver.de/trefferanzeige?docuuid=A237E480-6B59-4AF6-963A-BAABDC15AAC7",
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/HTML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#MODEL_OTHER",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": 178,
+   "fileName": "Metadatenbeschreibung aus dem MetaVer",
+   "creationDate": "2026-10-21T17:57:31.343Z",
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": null,
+   "masterSchema": null,
+   "schema": [],
+   "schemaProfileName": null
+  },
+  {
+   "accessUrl": "https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2016-07-15.zip",
+   "endpointDocumentation": "https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2016-07-15.zip",
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/GML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#GML",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": 2061,
+   "fileName": "Download Fußgängerzählstellen Hamburg, 2016-07 (GML)",
+   "creationDate": "2026-10-21T17:57:31.343Z",
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": null,
+   "masterSchema": null,
+   "schema": [],
+   "schemaProfileName": null
+  },
+  {
+   "accessUrl": "https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2017-01-06.zip",
+   "endpointDocumentation": "https://daten-hamburg.de/transport_verkehr/fussgaengerzaehlstellen/Fussgaengerzaehlstellen_HH_2017-01-06.zip",
+   "accessProtocol": null,
+   "mediaType": "http://publications.europa.eu/resource/authority/file-type/GML",
+   "dataModel": "https://w3id.org/mdp/schema/data_model#GML",
+   "dataFormatAdditionalDescription": null,
+   "description": null,
+   "byteSize": 2061,
+   "fileName": "Download Fußgängerzählstellen Hamburg, 2017-01 (GML)",
+   "creationDate": "2026-10-21T17:57:31.343Z",
+   "commMethod": null,
+   "retentionPeriod": null,
+   "deltaDelivery": null,
+   "masterSchema": null,
+   "schema": [],
+   "schemaProfileName": null
+  }
+ ],
+ "limitedAccessOrg": null,
+ "virusCheckEnabled": null,
+ "schemaValidationEnabled": null,
+ "legalCheckEnabled": null,
+ "declarations": {
+  "declRights": null,
+  "relevantToMDVPBefG": null,
+  "rolePBefG": null,
+  "fulfillmentAgentForOrg": null,
+  "declNAPsend": null,
+  "declNAPreceive": null,
+  "declUseOfPersData": null,
+  "relevantToIVSG": null,
+  "declToNA": null,
+  "relevantToMFUND": null,
+  "mFUNDProjectName": null,
+  "mFUNDProjectNumber": null,
+  "relevantToEGov": null,
+  "declGovData": null,
+  "relevantToDNG": null
+ },
+ "themes": [
+  "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+ ],
+ "originalId": "33e88ba7-e2dc-41a1-b5d7-934fc0d598bc",
+ "originatedFrom": "https://w3id.org/mdp/schema/portal#TP_HB",
+ "originatedFromUri": "http://suche.transparenz.hamburg.de/dataset/fussgaengerzaehlstellen-hamburg7",
+ "fieldsVisibility": {
+  "id": "VISIBLE",
+  "title": "VISIBLE",
+  "description": "VISIBLE",
+  "dataCategory": "VISIBLE",
+  "dataCategoryDetail": "VISIBLE",
+  "keyword": "VISIBLE",
+  "temporalCoverage": {
+   "begin": "VISIBLE",
+   "end": "VISIBLE"
+  },
+  "language": "VISIBLE",
+  "contractOffer": {
+   "contractStart": "VISIBLE",
+   "contractEnd": "VISIBLE",
+   "providerApprovalRequired": "VISIBLE",
+   "napApprovalRequired": "HIDDEN",
+   "providerApprovalAnonymousAccessRequired": "VISIBLE"
+  },
+  "accrualPeriodicity": "VISIBLE",
+  "agents": {
+   "publisher": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "sovereign": {
+    "id": "HIDDEN",
+    "name": "VISIBLE",
+    "emailAddress": "VISIBLE"
+   },
+   "contactPoint": "HIDDEN"
+  },
+  "rights": "VISIBLE",
+  "standardLicense": "VISIBLE",
+  "customLicenseAsResource": {
+   "title": "VISIBLE",
+   "accessURL": "VISIBLE",
+   "description": "VISIBLE",
+   "modified": "VISIBLE",
+   "instance": {
+    "fileName": "VISIBLE",
+    "mediaType": "VISIBLE",
+    "byteSize": "VISIBLE"
+   },
+   "validFrom": "VISIBLE",
+   "validTo": "VISIBLE"
+  },
+  "conditionForUse": "VISIBLE",
+  "sourceNote": "VISIBLE",
+  "spatialCoverage": {
+   "nuts": "VISIBLE",
+   "polygon": "VISIBLE"
+  },
+  "created": "VISIBLE",
+  "modified": "VISIBLE",
+  "geoReferenceMethod": "VISIBLE",
+  "networkCoverage": "VISIBLE",
+  "roadNetworkCoverageDescription": "VISIBLE",
+  "transportMode": "VISIBLE",
+  "mdpBrokering": "VISIBLE",
+  "deltaDelivery": "VISIBLE",
+  "accessRights": "VISIBLE",
+  "status": "HIDDEN",
+  "contentStandard": "VISIBLE",
+  "samples": "VISIBLE",
+  "qualityDescription": "VISIBLE",
+  "contentData": {
+   "accessUrl": "VISIBLE",
+   "endpointDocumentation": "VISIBLE",
+   "accessProtocol": "HIDDEN",
+   "mediaType": "VISIBLE",
+   "dataModel": "VISIBLE",
+   "dataFormatAdditionalDescription": "VISIBLE",
+   "description": "VISIBLE",
+   "byteSize": "VISIBLE",
+   "fileName": "VISIBLE",
+   "creationDate": "VISIBLE",
+   "commMethod": "HIDDEN",
+   "retentionPeriod": "VISIBLE",
+   "deltaDelivery": "VISIBLE",
+   "masterSchema": "VISIBLE",
+   "schema": "VISIBLE",
+   "schemaProfileName": "VISIBLE"
+  },
+  "limitedAccessOrg": "HIDDEN",
+  "virusCheckEnabled": "HIDDEN",
+  "schemaValidationEnabled": "HIDDEN",
+  "legalCheckEnabled": "HIDDEN",
+  "declarations": {
+   "declRights": "HIDDEN",
+   "relevantToMDVPBefG": "VISIBLE",
+   "rolePBefG": "HIDDEN",
+   "fulfillmentAgentForOrg": "HIDDEN",
+   "declNAPsend": "HIDDEN",
+   "declNAPreceive": "HIDDEN",
+   "declUseOfPersData": "HIDDEN",
+   "relevantToIVSG": "HIDDEN",
+   "declToNA": "HIDDEN",
+   "relevantToMFUND": "HIDDEN",
+   "mFUNDProjectName": "HIDDEN",
+   "mFUNDProjectNumber": "HIDDEN",
+   "relevantToEGov": "HIDDEN",
+   "declGovData": "HIDDEN",
+   "relevantToDNG": "HIDDEN"
+  },
+  "themes": "VISIBLE",
+  "originalId": "VISIBLE",
+  "originatedFrom": "VISIBLE",
+  "originatedFromUri": "VISIBLE",
+  "harvested": "VISIBLE",
+  "dynamicFields": "VISIBLE",
+  "feedback": "HIDDEN",
+  "lastDeclToNA": "VISIBLE",
+  "lastNoteDate": "VISIBLE",
+  "irregularSince": "VISIBLE",
+  "hvdCategory": "VISIBLE"
+ },
+ "harvested": true,
+ "dynamicFields": {},
+ "feedback": null,
+ "lastDeclToNA": null,
+ "lastNoteDate": null,
+ "irregularSince": null,
+ "hvdCategory": []
+}
