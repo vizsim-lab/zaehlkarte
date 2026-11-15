@@ -60,6 +60,20 @@
     weg: "offen"
     links:
       - ["offenesdatenportal.de", "https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021"]
+  dauer:
+    stand: in_karte
+    quellen: [moers_fuss]
+    was: >-
+      Personenzählung in der Fußgängerzone Steinstraße (Laser der MoersMarketing GmbH):
+      Stundenwerte seit Mai 2022 (Datenlizenz Deutschland – Zero), in der Karte unter Fuß – seit
+      November 2026
+    situation: >-
+      Die MoersMarketing GmbH zählt mit der Wirtschaftsförderung der Stadt seit Mai 2022 die zu Fuß
+      Gehenden in der Steinstraße (ein Laser, beide Richtungen, Erwachsene und Kinder getrennt) und
+      veröffentlicht je Monat eine Datei mit Stunden- und eine mit Tageswerten. Stunden, die die
+      Datei als geschätzt kennzeichnet, zählt die Karte nicht.
+    links:
+      - ["offenesdatenportal.de: Besuchszahlen Steinstraße – nach Stunden", "https://www.offenesdatenportal.de/dataset/fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022"]
 - ags: "05966024"
   name: Olpe
   lage: [7.85312, 51.03474]

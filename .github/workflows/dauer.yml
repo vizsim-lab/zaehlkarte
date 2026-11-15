@@ -2,8 +2,9 @@
 # SensorThings API; Ettlingen: Datastore; Dauerzählstellen des Landes Baden-Württemberg über
 # MobiData BW; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
 # München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum, Bonn,
-# Düsseldorf, Dresden und der VMZ Niedersachsen; Fuß in Augsburg), Kartendaten nach
-# public/data/dauer/ schreiben und als Release-Asset „dauerzaehlstellen/dauer.tar.gz“ ablegen –
+# Düsseldorf, Dresden und der VMZ Niedersachsen; Fuß in Augsburg, Würzburg und Moers),
+# Kartendaten nach public/data/dauer/ schreiben und als Release-Asset
+# „dauerzaehlstellen/dauer.tar.gz“ ablegen –
 # nicht ins Git (zu groß, ändert sich laufend). Danach startet der Workflow die CI auf main neu:
 # Der Deploy-Job holt das Asset und liefert es aus.
 #
@@ -23,6 +24,8 @@
 #   nur das laufende Jahr und das Vorjahr.
 #   Landes-Dauerzählstellen BW: Monats-ZIPs und Jahresarchive 2016–2024 (rund 550 MB) im Cache,
 #   neu nur, was laut DCAT-Dokument ein neues Datum hat (das Land ersetzt ältere Monate).
+#   Moers (Fuß): die Monatsdateien im Cache, neu nur neue oder geänderte (laut DCAT-Dokument;
+#   Crawl-delay 10 s – der erste Lauf braucht für alle rund zehn Minuten).
 #   Gemeindegrenzen (VG250 des BKG, für `ags` je Stelle; pipeline/config/gemeinden.yaml): einmal
 #   je Fassung geladen (Schlüssel aus der Prüfsumme in gemeinden.yaml). Fehlen sie, baut der Lauf
 #   trotzdem – nur ohne Gemeinde je Stelle (Warnung „FEHLER gemeinden“).
@@ -136,6 +139,11 @@ jobs:
           path: pipeline/data/raw/augsburg_fuss
           key: dauer-fuss-roh-${{ github.run_id }}
           restore-keys: dauer-fuss-roh-
+      - uses: actions/cache@v6  # Fuß, Moers: Monatsdateien, neu nur neue oder geänderte
+        with:
+          path: pipeline/data/raw/moers_fuss
+          key: dauer-moers-fuss-roh-${{ github.run_id }}
+          restore-keys: dauer-moers-fuss-roh-
       - uses: actions/cache@v6  # Augsburg Radzählstationen: jeder Lauf holt die Datei neu, der Cache ist der Rückfall
         with:
           path: pipeline/data/raw/augsburg_rad
