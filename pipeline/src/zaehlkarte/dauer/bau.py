@@ -24,6 +24,7 @@ from zaehlkarte.dauer import (
     hamburg_sta,
     leipzig_rad,
     mobidata_eco,
+    moers_fuss,
     muenchen_rad,
     muenster_rad,
     ods_eco,
@@ -44,7 +45,7 @@ ADAPTER = {"berlin_viz": berlin_viz, "hamburg_sta": hamburg_sta,
            "bochum_rad": bochum_rad, "bonn_rad": bonn_rad, "duesseldorf_rad": duesseldorf_rad,
            "vmz_rad": vmz_rad, "dresden_rad": dresden_rad, "augsburg_fuss": augsburg_fuss,
            "ods_stunden": ods_stunden, "augsburg_rad": augsburg_rad, "bw_land": bw_land,
-           "planegg_rad": planegg_rad}
+           "planegg_rad": planegg_rad, "moers_fuss": moers_fuss}
 
 
 def mit_gedaechtnis(pfade: Pfade | None = None) -> list[str]:

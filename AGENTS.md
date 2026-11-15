@@ -1157,6 +1157,34 @@ robots.txt für alle Robots sperrt. Seitdem:
       Lauf nicht zu sammeln. Monatsübersicht `passantenzaehlung_wuerzburg` seit April 2019 (nur
       Monatssummen). Erkundet mit `tools/ods_erkunden.py` (`werkzeug/dauer`,
       `ergebnis/ods_wuerzburg_fuss/`, Abrufe der App mit der robots-Ausnahme der Quelle).
+    - **Moers** (`moers_fuss`, dl-de/zero-2-0 – das DCAT-Dokument nennt keine Lizenz, die Seiten
+      des Datensatzes und jeder Ressource Zero 2.0; Open.NRW führt die Kopien über opendata.ruhr
+      als „other-closed“): Laser der MoersMarketing GmbH in der Steinstraße seit 5. Mai 2022, zwei
+      Datensätze auf offenesdatenportal.de (seit 11.11.2026 gesammelt: „nach Stunden“, Name
+      `fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022`, und „nach Tagen“;
+      früher je Jahr einer), je Monat eine CSV, 54 Monate bis Oktober 2026. Ressourcen nur
+      vollständig im DCAT-Dokument; robots.txt sperrt `/api/`, Crawl-delay 10 s. Vier
+      Spaltenfolgen: bis Juli 2023 deutsch („Fußgänger insgesamt“, Windows-1252, Mai 2022 und
+      März 2023 mit Tabulator; Februar 2023 englisch mit Tabulator), ab August 2023 englisch
+      („pedestrians count“, UTF-8 mit BOM), ab September 2024 mit `collection_type` (`measured`,
+      `modelled`; leer an 150 Nachtstunden mit Werten 0–7 bis Februar 2025 – zählt wie
+      gemessen). Zeit mit Abstand zu UTC („2024-06-01 00:00:00 +0200“), beide Stunden 2 Uhr der
+      Rückstellung getrennt. Fallen:
+      Juli 2022 hat in den Zeilen eine leere Spalte `incidents`, die der Kopf nicht hat; Februar
+      2023 „Steinstraße“ und „ Moers“ in zwei Spalten (Kopf mit leerer letzter Spalte) – der Leser
+      sucht die Zeit in der Zeile, der Wert steht zwei Spalten dahinter. Die Datei „August 2024“
+      ist eine Kopie des August 2023; 1.–4. Mai 2022 nur Nullen (vor dem Einbau, `ab`). `modelled`
+      an 138 Tagen (fast nur 5 und 6 Uhr, 2026 an 121 Tagen) – nicht gezählt. 26./27.09.2023
+      33 Stunden 0, nicht gekennzeichnet – wie geliefert, Hinweis. Die Tagesdatei ist an allen
+      1.553 geprüften Tagen die Summe der Stunden (samt geschätzter) – nicht übernommen.
+      Erwachsene/Kinder (unter 150 cm) und Richtungen (Neumarkt, Neuer Wall) stehen in der Datei,
+      in der Karte nur alle zusammen. Volle Tage: 1.472; Median 13.510, höchster 56.531
+      (02.09.2023). Lage: Mitte der Fußgängerzone (OSM-Weg 10955855, 304 m vom Neumarkt bis zum
+      Neuer Wall) – Overpass über die Fläche „Moers“ und mit größerem Ausschnitt lief bei allen
+      drei Servern in die Zeitgrenze, mit kleinem Ausschnitt (nur Wege mit Namen) über
+      private.coffee; Nominatim sperrt robots.txt für die Kennungen des Werkzeugs. Erkundet mit
+      `tools/moers_fuss_erkunden.py` und `tools/moers_fuss_lizenz.py` (`werkzeug/dauer`,
+      `ergebnis/moers_fuss/`, `ergebnis/moers_fuss_lizenz/`, `ergebnis/moers_fuss_osm2/`).
     - **Geprüft, nichts für Fuß** (15.11.2026; `werkzeug/bw`, `tools/bw_fl1.py`, `bw_fl2.py`,
       `ergebnis/bw/fl1/`, `fl2/`): Freiburgs FR.ITZ-Datensatz „Fahrrad-Zählstellen Zeitreihe“
       (ID 3800, dl-de/by-2-0, 01.01.2015–02.04.2026, 653.041 Zeilen) hat zwar die Spalte „Art der

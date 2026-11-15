@@ -1,0 +1,60 @@
+# Fußverkehr: Personenzählung der MoersMarketing GmbH (mit der Wirtschaftsförderung der Stadt und
+# der ENNI Stadt & Service Niederrhein) in der Steinstraße, einem Laser in rund 10 m Höhe, seit
+# 5. Mai 2022 – je Monat eine CSV auf offenesdatenportal.de (Datenlizenz Deutschland – Zero 2.0
+# auf der Seite des Datensatzes und jeder Ressource; das DCAT-Dokument nennt keine Lizenz).
+# Erkundet im Werkzeug-Branch `werkzeug/dauer` (tools/moers_fuss_erkunden.py,
+# tools/moers_fuss_lizenz.py; ergebnis/moers_fuss/, ergebnis/moers_fuss_lizenz/,
+# ergebnis/moers_fuss_osm2/). Aufbau und Fallen im Adapter und in AGENTS.md.
+nr: 27
+status: live
+adapter: moers_fuss
+name: Moers (Fußgänger Steinstraße)
+land: NW
+traeger: MoersMarketing GmbH (Stadt Moers)
+art: >-
+  Personenzählung in der Fußgängerzone Steinstraße (Laser): zu Fuß Gehende je Stunde, beide
+  Richtungen zusammen, seit Mai 2022
+weg: offen auf offenesdatenportal.de (je Monat eine CSV)
+portal: https://www.offenesdatenportal.de/dataset/fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022
+# Metadaten aus dem DCAT-Dokument des Datensatzes (die CKAN-API sperrt das Portal per robots.txt,
+# die HTML-Seite zeigt nicht alle Ressourcen), Crawl-delay 10 s; nur neue oder geänderte Dateien
+ckan: https://www.offenesdatenportal.de
+paket: fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022
+dateien: 'stundlich(-\d+)?\.csv$'  # die Monatsdateien „nach Stunden“
+# Vom 1. bis 4. Mai 2022 nur Nullen; der Laser zählt laut Titel der ersten Datei „ab 5. Mai 2022“
+ab: 2022-05-05
+lage:  # die Datei nennt nur „Steinstraße, Moers“; Mitte der Fußgängerzone laut OpenStreetMap
+  # (Weg 10955855, 304 m vom Neumarkt bis zum Neuer Wall; Overpass, ergebnis/moers_fuss_osm2/)
+  kennung: steinstrasse
+  name: Steinstraße
+  abschnitt: zwischen Neumarkt und Neuer Wall
+  lon: 6.62707
+  lat: 51.45125
+  hinweise:
+    - >-
+      Lage: Mitte der Fußgängerzone Steinstraße laut OpenStreetMap (© OpenStreetMap-Mitwirkende,
+      ODbL) – den genauen Ort des Lasers nennt die Quelle nicht, nur die beiden Richtungen
+      (Neumarkt, Neuer Wall).
+titel: >-
+  Besuchszahlen Steinstraße – nach Stunden (Stadt Moers) (verändert: ohne geschätzte Stunden,
+  zu Tagessummen zusammengefasst)
+herausgeber: Stadt Moers, MoersMarketing GmbH
+quellenvermerk: Stadt Moers; MoersMarketing GmbH
+lizenz: dl-de/zero-2-0
+lizenz_url: https://www.govdata.de/dl-de/zero-2-0
+hinweise:
+  - >-
+    Gezählt werden Personen ab 90 cm Größe, beide Richtungen; die Datei trennt Erwachsene und
+    Kinder (unter 150 cm) – die Zählkarte zeigt alle zusammen.
+  - >-
+    Seit September 2024 kennzeichnet die Datei geschätzte Stunden („modelled“, nicht gemessen):
+    Sie gelten als nicht gezählt, der Tag als nicht vollständig – meist 5 und 6 Uhr, 2025 an
+    14 Tagen, 2026 an 121 der 304 Tage bis Oktober. Vor September 2024 kennzeichnet die Datei
+    nicht, ob eine Stunde gemessen oder geschätzt ist.
+  - >-
+    Die Datei „August 2024“ enthält den August 2023 (dieselben Werte) – der August 2024 fehlt.
+  - >-
+    Am 26. und 27. September 2023 steht 33 Stunden lang 0 (vermutlich ein Ausfall, die Quelle
+    kennzeichnet ihn nicht) – Werte wie geliefert.
+  - >-
+    Die Zählkarte prüft nur, ob jede Stunde gezählt ist – nicht, ob die Werte plausibel sind.

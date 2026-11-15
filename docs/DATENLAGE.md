@@ -163,7 +163,7 @@ FragDenStaat.
 | Berg | BW | in der Karte |  | in der Karte |
 | Berlin | BE | in der Karte | in der Karte | in der Karte |
 | Konstanz | BW | in der Karte | in der Karte | Für mobile Zählungen ab 2021, Knotenpunkt- und Querschnittszählungen des Kfz-Verkehrs und die genaue Lage der Geräte lohnt eine Anfrage nach dem Landesinformationsfreiheitsgesetz Baden-Württemberg. |
-| Moers | NW | in der Karte |  | Keine Anfrage nötig |
+| Moers | NW | in der Karte | in der Karte | Keine Anfrage nötig |
 | Münster | NW | in der Karte | in der Karte | Für ganze Zählfenster, Zählungen ab 2021 und die Frage, was die Rad-Spalte erfasst, lohnt eine Anfrage nach dem IFG NRW. |
 | Olpe | NW | in der Karte |  | Keine Anfrage nötig |
 | Potsdam | BB | in der Karte |  | Für Stunden- oder Viertelstundenwerte (ganzer Verlauf 7–10 und 15–18 Uhr) und für Jahre ohne Pläne im Portal (2020–2022, ab 2024) lohnt eine Anfrage nach dem Akteneinsichts- und Informationszugangsgesetz Brandenburg. |
@@ -3459,6 +3459,13 @@ Verkehrsdetektion der VIZ: Stundenwerte je Messquerschnitt von 2015 bis Juni 202
 sechs Rad-Zählstellen (Eco-Counter) über MobiData BW, in der Karte als Dauerzählstellen; die Verkehrszähldaten der Stadt (Kfz, CC BY 4.0) gibt es über die Mobilithek nur nach Vermittlung
 
 **Belege:** [MobiData BW: Rad-Zählstellen (Eco-Counter)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler) · [Mobilithek: Verkehrszähldaten Konstanz (dynamisch)](https://mobilithek.info/offers/922430355709591552)
+
+
+## Moers – Dauerzählstellen in der Karte
+
+Die MoersMarketing GmbH zählt mit der Wirtschaftsförderung der Stadt seit Mai 2022 die zu Fuß Gehenden in der Steinstraße (ein Laser, beide Richtungen, Erwachsene und Kinder getrennt) und veröffentlicht je Monat eine Datei mit Stunden- und eine mit Tageswerten. Stunden, die die Datei als geschätzt kennzeichnet, zählt die Karte nicht.
+
+**Belege:** [offenesdatenportal.de: Besuchszahlen Steinstraße – nach Stunden](https://www.offenesdatenportal.de/dataset/fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022)
 
 
 ## Münster – Dauerzählstellen in der Karte
