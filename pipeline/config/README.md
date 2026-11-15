@@ -16,6 +16,7 @@ Datei am falschen Ort liegt.
 | `recht.yaml` | Rechtslage je Land (kurz, mit Belegen im Kopf) |
 | `anfrage_vorlage.yaml` | Vorlage für Anfragen auf FragDenStaat, für alle Kommunen gleich |
 | `robots.yaml` | Ausnahmen von robots.txt (Format im Kopf der Datei) |
+| `gemeinden.yaml` | Gemeindegrenzen (VG250 des BKG, URL und sha256): die Gemeinde je Dauerzählstelle (`ags`, `src/zaehlkarte/gemeinden.py`) |
 | `kalender/ferien/<LAND>.csv` | Schulferien je Land aus den KMK-Ferienkalendern |
 | `berlin_rohdateien_2019-2025.txt` | welche Berliner Rohdateien einzeln online liegen (`rohdatei_liste` der Quelle `berlin`) |
 

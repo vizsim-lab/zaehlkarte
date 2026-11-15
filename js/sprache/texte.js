@@ -293,6 +293,8 @@ export const TEXTE = {
     "quellen.dauer": "Dauerzählstellen",
     "quellen.dauer_umfang": "{stellen} Stellen, {zeitraum}",
     "quellen.dauer_stand": "Stand: {datum} (jede Woche neu gebaut)",
+    "quellen.gemeinden": "Gemeindegrenzen",
+    "quellen.gemeinden_text": "ordnen jede Dauerzählstelle der Gemeinde zu, in der sie liegt",
   },
 
   en: {
@@ -569,6 +571,8 @@ export const TEXTE = {
     "quellen.dauer": "Permanent counters",
     "quellen.dauer_umfang": "{stellen} sites, {zeitraum}",
     "quellen.dauer_stand": "As of {datum} (rebuilt every week)",
+    "quellen.gemeinden": "Municipal boundaries",
+    "quellen.gemeinden_text": "assign each permanent counter to the municipality it lies in",
   },
 };
 

@@ -96,7 +96,15 @@ test("dauer/index.json, Jahres- und Detaildateien haben die erwarteten Felder", 
   test.skip(vorMerge && d.version < DAUER_VERSION,
     `Release-Asset mit Vertrag ${d.version}, dieser Stand erwartet ${DAUER_VERSION} – nach dem Merge baut „Dauerzählstellen bauen“ es neu`);
   expect(d.version, "Vertrag des Release-Assets (neu bauen: Workflow „Dauerzählstellen bauen“)").toBe(DAUER_VERSION);
-  expect(d.stellen.felder).toEqual(["id", "quelle", "name", "abschnitt", "richtung", "lon", "lat", "von", "bis", "g", "chunk"]);
+  expect(d.stellen.felder).toEqual(["id", "quelle", "name", "abschnitt", "richtung", "lon", "lat", "von", "bis", "g", "ags", "chunk"]);
+  // Gemeinde je Stelle (Vertrag 5): Gemeindeschlüssel aus VG250 oder null; die Grenzen als Quelle
+  const iAgs = d.stellen.felder.indexOf("ags");
+  expect(d.stellen.werte.every((w) => w[iAgs] === null || /^\d{8}$/.test(w[iAgs]))).toBe(true);
+  if (d.gemeinden !== null) {
+    expect(d.stellen.werte.some((w) => w[iAgs] !== null)).toBe(true);
+    for (const k of ["titel", "herausgeber", "lizenz", "lizenz_url", "herkunft_url", "quellenvermerk"]) expect(d.gemeinden[k]).toMatch(/\S/);
+    expect(d.gemeinden.stand).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+  }
   expect(Object.keys(d.dateien)).toEqual(["tage", "details"]);
   const bekannt = ["kfz", "lkw", "sv", "rad", "fuss"];
   expect(d.gruppen.length).toBeGreaterThan(0);
@@ -158,7 +166,7 @@ test("dauer/index.json, Jahres- und Detaildateien haben die erwarteten Felder", 
     const { g, i, tag, wert } = gefunden;
     expect(jahr.werte[g][i][Math.round((Date.parse(tag) - Date.parse(`${tag.slice(0, 4)}-01-01`)) / 86_400_000)]).toBe(wert);
   }
-  const [id, , , , , , , von, , maske, chunk] = d.stellen.werte[0];
+  const { id, von, g: maske, chunk } = Object.fromEntries(felder.map((k, j) => [k, d.stellen.werte[0][j]]));
   const gruppe = d.gruppen.find((_, i) => (maske & (1 << i)) !== 0);
   const details = await (await request.get(`/data/${d.dateien.details.replace("{n}", chunk)}`)).json();
   const s = details.stellen[id];

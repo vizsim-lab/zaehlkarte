@@ -70,8 +70,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   von `pipeline/src/zaehlkarte/datenlage.py`) – mitziehen: `js/map/ebenen.js`, `main.js`,
   `tests/web/vertrag.spec.js` und die Fixture `tests/web/fixtures/datenlage.json` (die
   Browser-Tests lesen nur sie). Dauerzählstellen: Felder in
-  `dauer/index.json` (`stellen.felder`, `gruppen` = Bits von `g`, `dateien`, `kalender`,
-  `standardtag`, `juengster`, `tageswerte_bis`,
+  `dauer/index.json` (`stellen.felder` samt `ags` = Gemeinde der Stelle, `gruppen` = Bits von
+  `g`, `dateien`, `kalender`, `standardtag`, `juengster`, `tageswerte_bis`, `gemeinden`,
   `quellen[].gruppen`/`zeitraeume`/`tageswerte`/`standardtag`/`lizenzen`), Aufbau von
   `dauer/tage/JJJJ.json` und `dauer/NN.json` (Kopf von `pipeline/src/zaehlkarte/dauer/site.py`)
   – mitziehen: `js/data/dauer.js`, `js/ui/dauerdetail.js`, `tests/web/vertrag.spec.js` und die
@@ -106,6 +106,12 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   und Neubulach über ihre Prüfsumme
   (sha256 in der Quelldatei). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
   die Quelldatei mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
+- **Gemeinde je Dauerzählstelle:** `ags` aus den Gemeindegrenzen VG250 des BKG
+  (`config/gemeinden.yaml`, über sha256 gepinnt, dl-de/by-2-0 mit Quellenvermerk in der Karte;
+  `zaehlkarte.gemeinden`, ohne Geo-Bibliothek). Die Lage entscheidet nur bei Bündeln und Quellen
+  des Landes oder Bundes, zu welcher Kommune eine Stelle gehört – die eigenen Quellen einer Kommune
+  (`dauer.quellen`) gehören ganz zu ihr, auch Stellen jenseits der Grenze (Hamburg zählt auch in
+  Norderstedt).
 - **Abrufe der Pipeline nur über `zaehlkarte.abruf`** (robots.txt nach RFC 9309 für die Kennung
   `zaehlkarte-pipeline`, Crawl-delay, Weiterleitungen), nie `requests` direkt; CKAN-Portale ohne
   ihre API über `zaehlkarte.ckan`. Was robots.txt sperrt, holt die Pipeline nur mit einer

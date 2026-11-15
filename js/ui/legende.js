@@ -22,6 +22,22 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
  *  Quelle ohne Lizenz dazu, wie die Kommune die Werte herausgegeben hat, und „Entfernen lassen“. */
 const lizenzEintrag = (l) => `<li>${l.herkunft_url ? `<a href="${esc(l.herkunft_url)}" target="_blank" rel="noopener">${esc(l.titel)}</a>` : esc(l.titel)}${l.herausgeber ? `, ${esc(l.herausgeber)}` : ""} – ${lizenzHtml(l)}${ohneLizenzHtml(l)}</li>`;
 
+/** Gemeindegrenzen (dauer/index.json, `gemeinden`): wofür, Quelle, Lizenz und der Quellenvermerk –
+ *  „BKG“ und die Lizenz darin verlinkt, wie es die Nutzungsbedingungen des BKG verlangen. */
+function gemeindenEintrag(g) {
+  if (!g) return "";
+  const link = (url, text) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
+  // URLs im Vermerk (Datenquellen) als Link, im übrigen Text „BKG“ und der Name der Lizenz
+  const vermerk = String(g.quellenvermerk ?? "").split(/(https:\/\/\S+)/).map((x, i) => (i % 2 ? link(x, x)
+    : esc(x).replace("BKG", link(g.herausgeber_url, "BKG")).replace(esc(g.lizenz), link(g.lizenz_url, g.lizenz)))).join("");
+  return `
+      <div class="quelle-eintrag" id="quelle-gemeinden">
+        <div class="quelle-name">${esc(t("quellen.gemeinden"))}</div>
+        <div class="pop-meta">${esc(t("quellen.gemeinden_text"))}</div>
+        <ul lang="de">${lizenzEintrag(g)}<li>${vermerk}</li></ul>
+      </div>`;
+}
+
 const $ = (id) => document.getElementById(id);
 
 const MODUS_TIPS = { "sv.anteil": "modus.sv.anteil_tip", "rad.anteil": "modus.rad.anteil_tip" };
@@ -359,7 +375,8 @@ export function erstelleLegende({ manifest, daten, zustand, geaendert, datenlage
         <div class="quelle-name">${esc(q.name)} <span class="pop-meta">${esc(t("quellen.dauer_umfang", { stellen: zahl(q.stellen), zeitraum: zeitraumText(q.von, q.bis) }))}</span></div>
         <div class="pop-meta" lang="de">${esc(q.art ?? "")}${q.weg ? ` · ${esc(q.weg)}` : ""}</div>
         <ul lang="de">${q.lizenzen.map(lizenzEintrag).join("")}</ul>
-      </div>`).join("");
+      </div>`).join("")
+      + gemeindenEintrag(dauer.gemeinden);
     const ziel = $("quellen-text");
     ziel.insertBefore(block, ziel.lastElementChild);
   }
