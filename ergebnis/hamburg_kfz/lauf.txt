@@ -1,18 +1,18 @@
 	Command being timed: "timeout 50m uv run python /home/runner/work/zaehlkarte/zaehlkarte/tools/quelle_pruefen.py hamburg_kfz /home/runner/work/zaehlkarte/zaehlkarte/ergebnis/hamburg_kfz"
-	User time (seconds): 16.97
-	System time (seconds): 0.85
-	Percent of CPU this job got: 8%
-	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:42.52
+	User time (seconds): 24.46
+	System time (seconds): 1.02
+	Percent of CPU this job got: 11%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:39.50
 	Average shared text size (kbytes): 0
 	Average unshared data size (kbytes): 0
 	Average stack size (kbytes): 0
 	Average total size (kbytes): 0
-	Maximum resident set size (kbytes): 1302468
+	Maximum resident set size (kbytes): 1301880
 	Average resident set size (kbytes): 0
 	Major (requiring I/O) page faults: 0
-	Minor (reclaiming a frame) page faults: 333562
-	Voluntary context switches: 804
-	Involuntary context switches: 204
+	Minor (reclaiming a frame) page faults: 336627
+	Voluntary context switches: 757
+	Involuntary context switches: 201
 	Swaps: 0
 	File system inputs: 0
 	File system outputs: 159920
