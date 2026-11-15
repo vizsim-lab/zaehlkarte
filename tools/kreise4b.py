@@ -48,14 +48,36 @@ def hole(url):
     return inhalt.decode("utf-8", "replace"), end
 
 
+UNSICHTBAR = dict.fromkeys(map(ord, "\u00ad\u200b\u200c\u200d\u2060\ufeff"))  # „Kreis&shy;schlüssel“
+SCHLUESSEL = re.compile(r"kreis\s*schl(?:ü|ue)ssel\D{0,40}?(\d{2})\s?(\d)\s?(\d{2})(?!\d)", re.I)
+WEB_LABEL = re.compile(r"(?:Website|Webpräsenz|Internetseite|Internetauftritt|Homepage)", re.I)
+EXTERN = re.compile(r'href="(https?://(?![a-z-]+\.wikipedia\.org|[a-z.]*wikimedia\.org|'
+                    r'[a-z.]*wikidata\.org|geohack|tools\.wmflabs)[^"]+)"', re.I)
+
+
 def infobox(text):
-    """(Kreisschlüssel, Website) aus der Infobox eines Kreis-Artikels."""
-    box = re.search(r'<table[^>]*class="[^"]*(?:infobox|float-right)[^"]*"[^>]*>(.*?)</table>',
-                    text, re.S)
-    teil = html.unescape(box.group(1) if box else text[:120_000])  # „01&#160;0&#160;51“
-    m = re.search(r"Kreisschlüssel.{0,400}?(\d{2})\s*(\d)\s*(\d{2})\b", teil, re.S)
-    w = re.search(r'Website.{0,600}?href="(https?://[^"]+)"', teil, re.S)
-    return ("".join(m.groups()) if m else None), (w.group(1) if w else None)
+    """(Kreisschlüssel, Website) aus der Infobox eines Kreis-Artikels.
+
+    Runde 4b, erster Lauf: kein einziger Schlüssel – die Infobox enthält eigene Tabellen (Wappen,
+    Karte), `<table…>(.*?)</table>` schnitt sie vor dem Schlüssel ab, und die Beschriftung trägt
+    weiche Trennstriche. Daher: im ganzen Anfang des Artikels suchen, Tags entfernen, unsichtbare
+    Zeichen weg; die Website ist der erste externe Link hinter der Beschriftung.
+    """
+    roh = html.unescape(text[:400_000]).translate(UNSICHTBAR)  # „01&#160;0&#160;51“
+    flach = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", roh))
+    m = SCHLUESSEL.search(flach)
+    ks = "".join(m.groups()) if m else None
+    web = None
+    ab = 0
+    if m:  # hinter dem Schlüssel suchen (Infobox), sonst im ganzen Anfang
+        stelle = re.search(r"kreis\s*schl(?:ü|ue)ssel", roh, re.I)
+        ab = stelle.start() if stelle else 0
+    for lab in WEB_LABEL.finditer(roh, ab):
+        w = EXTERN.search(roh, lab.end(), lab.end() + 3000)
+        if w:
+            web = w.group(1)
+            break
+    return ks, web
 
 
 def neu(ks, web, quelle, **mehr):
@@ -92,8 +114,18 @@ def artikel_pruefen(pfad, quelle, erwartet=None):
         protokoll.setdefault("fehler_artikel", []).append(f"{pfad}: {e!r}"[:160])
         return None
     ks, web = infobox(text)
+    proben = ZIEL / "proben"  # ein paar Artikel zum Nachsehen, falls der Parser wieder irrt
+    proben.mkdir(exist_ok=True)
+    if len(list(proben.glob("*.html.gz"))) < 4:
+        (proben / (pfad[:60].replace("%", "_") + ".html.gz")).write_bytes(
+            gzip.compress(text.encode()))
     if erwartet and ks != erwartet:
         protokoll.setdefault("schluessel_passt_nicht", []).append(f"{pfad}: {ks} statt {erwartet}")
+        if len(protokoll.setdefault("schluessel_ausschnitte", [])) < 8:
+            flach = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html.unescape(text[:400_000])))
+            i = flach.lower().find("schlüssel")
+            protokoll["schluessel_ausschnitte"].append(
+                f"{pfad}: {flach[max(0, i - 80):i + 120] if i >= 0 else '(kein „schlüssel“)'}")
         return None
     if ks in KREISE and web:
         neu(ks, web, quelle, artikel=urllib.parse.unquote(pfad))

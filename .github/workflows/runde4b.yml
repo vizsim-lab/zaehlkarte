@@ -43,6 +43,8 @@ jobs:
       - name: Kreise prüfen und lesen
         run: |
           git pull -q --rebase origin werkzeug/runde4 || true
+          # ohne neue Kreis-Webseiten nichts zu tun (erster Lauf: Parser fand keinen Schlüssel)
+          python3 -c "import json,sys; sys.exit(0 if json.load(open('ergebnis/runde4b/kreise_web.json')) else 1)" || { echo "kreise_web.json leer – übersprungen"; exit 0; }
           mkdir -p ergebnis/runde4b/${{ matrix.land }}
           PYTHONUNBUFFERED=1 timeout 60m python3 tools/kreise4b_land.py ergebnis/runde4b/${{ matrix.land }} ${{ matrix.land }} > ergebnis/runde4b/${{ matrix.land }}/lauf.txt 2>&1 || true
           PYTHONUNBUFFERED=1 timeout 45m python3 tools/runde4_lesen.py ergebnis/runde4b/${{ matrix.land }} 40 > ergebnis/runde4b/${{ matrix.land }}/lesen_lauf.txt 2>&1 || true
