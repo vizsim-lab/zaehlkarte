@@ -682,7 +682,7 @@
      "quellen": [
       "mobidata_rad"
      ],
-     "was": "Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte",
+     "was": "Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte. Die Zeitreihe in FR.ITZ hat trotz der Spalte „Art der Nutzung (Fahrrad/Fußgänger)“ nur Radverkehr, die Zählstellen nur als Nummern (Stand November 2026)",
      "situation": null,
      "links": [
       {
@@ -1966,10 +1966,12 @@
     "kontakt": null,
     "kurzzeit": null,
     "dauer": {
-     "stand": "aggregiert",
-     "quellen": [],
-     "was": "Rad-Zählstelle Amtmannstraße seit Mai 2021: je Jahr eine Excel-Datei mit Tageswerten je Richtung, ohne Lizenzangabe",
-     "situation": "Die Gemeinde zählt den Radverkehr in der Amtmannstraße und stellt je Jahr eine Excel-Datei ein (ein Blatt je Monat, je Tag die Räder Richtung Krailling und Richtung Planegg). Stundenwerte und eine Lizenz fehlen – ob ein Tag vollständig gezählt ist, lässt sich so nicht prüfen.",
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "planegg_rad"
+     ],
+     "was": "Rad-Zählstelle Amtmannstraße/Münchner Straße: Tageswerte je Richtung seit Mai 2021, je Jahr eine Excel-Datei ohne Lizenzangabe – in der Karte als Tageswerte der Quelle, mit Hinweis",
+     "situation": "Die Gemeinde zählt den Radverkehr seit Dezember 2020 an der Amtmannstraße/Münchner Straße und stellt je Jahr eine Excel-Datei ein (ein Blatt je Monat, je Tag die Räder Richtung Krailling und Richtung Planegg). Stundenwerte und eine Lizenz fehlen – ob ein Tag vollständig gezählt ist, lässt sich nicht prüfen. In den Blättern „Februar 2025“ und „Februar 2026“ stehen die Daten des Januars; die Werte gehören zum Februar.",
      "links": [
       {
        "titel": "Fahrradzählstelle Amtmannstraße",
@@ -1977,7 +1979,7 @@
       }
      ]
     },
-    "stand_d": "aggregiert"
+    "stand_d": "ohne_lizenz"
    }
   },
   {

@@ -125,7 +125,7 @@ FragDenStaat.
 | Paderborn | NW | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Anfrage nach den gezählten Werten der Zählung 2018 (je Intervall und Strom) und allen Zählungen seit 2015 an die Stadt Paderborn |
 | Pforzheim | BW | – | in der Karte |  |
 | Pfungstadt | HE | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen für das Verkehrskonzept |
-| Planegg | BY | – | nur Summen oder Mittelwerte offen |  |
+| Planegg | BY | – | vorhanden, aber ohne Lizenz |  |
 | Plön | SH | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen dieser Geräte (Werte je Stunde und Richtung), mit Lizenz |
 | Ratingen | NW | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen an 33 Kreuzungen (Oktober 2024) und allen weiteren seit 2015 |
 | Regensburg | BY | erhoben – Anfrage aussichtsreich | vorhanden, Werte nicht offen | Anfrage nach allen Zählungen seit 2015 (Werte je Intervall, Strom bzw |
@@ -1197,7 +1197,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 **Weg:** FragDenStaat, LIFG BW
 
-**Dauerzählstellen (in der Karte):** Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte
+**Dauerzählstellen (in der Karte):** Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte. Die Zeitreihe in FR.ITZ hat trotz der Spalte „Art der Nutzung (Fahrrad/Fußgänger)“ nur Radverkehr, die Zählstellen nur als Nummern (Stand November 2026)
 
 **Kontakt:** Stadt Freiburg im Breisgau · <buergerberatung@stadt.freiburg.de> · [FragDenStaat](https://fragdenstaat.de/behoerde/9204/stadt-freiburg-im-breisgau/)
 
@@ -2820,9 +2820,9 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Belege:** [Pressemitteilung April 2023](https://www.pfungstadt.de/buergerservice/news-und-pressemeldungen/news/2025-und-aelter/verkehrszaehlung-befragung-ende-april/)
 
 
-## Planegg (BY) – Dauerzählstellen nur Summen oder Mittelwerte offen
+## Planegg (BY) – Dauerzählstellen vorhanden, aber ohne Lizenz
 
-**Lage:** Die Gemeinde zählt den Radverkehr in der Amtmannstraße und stellt je Jahr eine Excel-Datei ein (ein Blatt je Monat, je Tag die Räder Richtung Krailling und Richtung Planegg). Stundenwerte und eine Lizenz fehlen – ob ein Tag vollständig gezählt ist, lässt sich so nicht prüfen.
+**Lage:** Die Gemeinde zählt den Radverkehr seit Dezember 2020 an der Amtmannstraße/Münchner Straße und stellt je Jahr eine Excel-Datei ein (ein Blatt je Monat, je Tag die Räder Richtung Krailling und Richtung Planegg). Stundenwerte und eine Lizenz fehlen – ob ein Tag vollständig gezählt ist, lässt sich nicht prüfen. In den Blättern „Februar 2025“ und „Februar 2026“ stehen die Daten des Januars; die Werte gehören zum Februar.
 
 **Belege:** [Fahrradzählstelle Amtmannstraße](https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse)
 
