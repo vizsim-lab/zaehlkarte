@@ -116,3 +116,67 @@ def test_stunde():
     assert ods_stunden.stunde("2026-07-13T12:00:00+02:00") == datetime(2026, 7, 13, 10)
     assert ods_stunden.stunde("2026-07-13T10:15:00+00:00") is None
     assert ods_stunden.stunde("kein Datum") is None
+
+
+def test_tageswerte_vor_den_stunden(tmp_path):
+    """Würzburg: Tagesdaten seit 2020, Stunden erst seit 2024 – die Tageswerte gelten nur vor der
+    ersten gezählten Stunde einer Stelle; ein Tag mit fehlender Stunde bleibt nicht gezählt."""
+    from zaehlkarte.dauer.modell import aus_tageswerten
+
+    q = WUERZBURG | {"tage": {"datensatz": "pt", "zeit": "timestamp",
+                              "werte": ["pedestrians_count"]}}
+    kopf = "timestamp;pedestrians_count;unverified;location_id;location_name"
+    erster = date(2024, 1, 2)  # erste Stunde (Winterzeit: 23 Uhr UTC am Vortag)
+    z = [f"{_iso(t)};100;1;135;Schönbornstraße" for t in _stunden(erster, 1)]
+    z += [f"{_iso(t)};100;1;135;Schönbornstraße" for t in _stunden(date(2024, 1, 3), 1)[1:]]
+    pfade = _schreibe(tmp_path, "wuerzburg_fuss", kopf, z)
+    tage = ["timestamp;pedestrians_count;location_id",
+            "2023-12-30;25000;135", "2023-12-31;0;135",  # 0 bleibt 0
+            "2024-01-01;24000;135", "2024-01-02;9999;135",  # ab der ersten Stunde: Stunden
+            "2024-01-03;7777;135",  # fehlende Stunde wird nie gefüllt
+            "2023-12-31;12000;470",  # Stelle nur mit Tageswerten
+            "2023-12-29;5;135", "2023-12-29;6;135",  # derselbe Tag, verschieden: nicht gezählt
+            "2023-12-28;;135", "kein Tag;1;135", "2023-12-28;1;999"]
+    (pfade.roh / "wuerzburg_fuss" / ods_stunden.TAGE).write_text("\n".join(tage) + "\n",
+                                                                  encoding="utf-8")
+    bericht = ods_stunden.Bericht()
+    reihe = ods_stunden.lese(q, pfade, bericht)
+    assert reihe.von == date(2023, 12, 30)  # 29.12. widersprüchlich: leer, abgeschnitten
+    assert set(reihe.tageswerte) == {"fuss"}
+    assert [s.kennung for s in reihe.stellen] == ["135", "470"]
+    summen, n = tagessummen(reihe, "fuss")
+    tw = aus_tageswerten(reihe, "fuss")
+    i = reihe.index
+    assert summen[0, i(date(2023, 12, 30))] == 25000 and tw[0, i(date(2023, 12, 30))]
+    assert summen[0, i(date(2023, 12, 31))] == 0
+    assert summen[0, i(date(2024, 1, 1))] == 24000 and n[0, i(date(2024, 1, 1))] == 0
+    assert summen[0, i(erster)] == 2400 and not tw[0, i(erster)]
+    assert summen[0, i(date(2024, 1, 3))] == -1
+    assert summen[1, i(date(2023, 12, 31))] == 12000 and tw[1].sum() == 1
+    assert bericht.tage_gelesen == 11 and bericht.tage_unlesbar == 3
+    assert bericht.tage_widerspruch == 1 and bericht.tageswerte == 3 + 1
+    assert bericht.tage_zeitraum["135"] == ["2023-12-29", "2024-01-03"]
+    assert any("Tageswerte der Quelle: 11 Zeilen" in z for z in bericht.zeilen())
+    (v1, b1, t1), (v2, _, t2) = reihe.verfahren
+    assert (v1, b1, v2) == (date(2023, 12, 30), date(2024, 1, 1), erster)
+    assert "„pt“" in t1 and t2.startswith("Stundenwerte")
+
+
+def test_hole_mit_tagesdaten(tmp_path, monkeypatch):
+    aufrufe = []
+    monkeypatch.setattr(ods_stunden.ods, "metadaten", lambda basis, ds: {"metas": {}})
+    monkeypatch.setattr(ods_stunden.ods, "hole_export",
+                        lambda basis, ds, select, ordner, name: aufrufe.append((ds, select, name))
+                        or "ok")
+    q = WUERZBURG | {"tage": {"datensatz": "pt", "zeit": "timestamp",
+                              "werte": ["pedestrians_count"]}}
+    assert ods_stunden.hole(q, Pfade(pipeline=tmp_path, repo=tmp_path)) == ["ok", "ok"]
+    assert aufrufe == [("p", "timestamp,pedestrians_count,location_id", "export.csv"),
+                       ("pt", "timestamp,pedestrians_count,location_id", "tage.csv")]
+
+
+def test_tag():
+    assert ods_stunden.tag("2020-01-01") == date(2020, 1, 1)
+    assert ods_stunden.tag("2020-01-01T00:00:00+00:00") == date(2020, 1, 1)
+    assert ods_stunden.tag("2020-01-01T12:00:00") is None
+    assert ods_stunden.tag("Januar") is None
