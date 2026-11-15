@@ -17,13 +17,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [dauer2]
+        teil: [dauer3]
     steps:
       - uses: actions/checkout@v7
       - run: |
           case "${{ matrix.teil }}" in
             dauer) timeout 60m python3 tools/bw_dauer.py ergebnis/bw/dauer || true ;;
             dauer2) timeout 60m python3 tools/bw_dauer2.py ergebnis/bw/dauer2 || true ;;
+            dauer3) timeout 80m python3 tools/bw_dauer3.py ergebnis/bw/dauer3 2016 2020 2024 || true ;;
             rad_osm)
               gh release download dauerzaehlstellen -R vizsim-lab/zaehlkarte -p dauer.tar.gz -D "$RUNNER_TEMP"
               tar -xzf "$RUNNER_TEMP/dauer.tar.gz" -C "$RUNNER_TEMP"
