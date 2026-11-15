@@ -1,0 +1,56 @@
+== Abruf
+Gemeinden: vg250_01-01.utm32s.shape.ebenen.zip geholt (67 MB)
+planegg_rad: 6 Jahresdateien (2021, 2022, 2023, 2024, 2025, 2026)
+Fehler: []
+Dauer: 22 s
+Rohdaten: 7 Dateien, 0.6 MB
+{
+ "abgerufen": "2026-11-15T16:50:41Z",
+ "seite": "https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse",
+ "dateien": {
+  "2021": "https://www.planegg.de/_Resources/Persistent/6/c/3/5/6c35aeab141ab53dfe6596d67d9a318110f2c176/2021_Fahrrad%20Amtmannstra%C3%9Fe.xlsx",
+  "2022": "https://www.planegg.de/_Resources/Persistent/0/e/d/6/0ed686592496320b67e0e0c47d03fa85af268305/2022_Fahrrad%20Amtmannstra%C3%9Fe.xlsx",
+  "2023": "https://www.planegg.de/_Resources/Persistent/2/3/1/8/2318d3bfb2613065757c100f271a9f15b6711d67/2023_Fahrrad%20Amtmannstra%C3%9Fe.xlsx",
+  "2024": "https://www.planegg.de/_Resources/Persistent/7/b/d/a/7bdaaeacbcc06bac7ec2fc829d3879bcf563c1d1/2024_Fahrrad%20Amtmannstra%C3%9Fe.xlsx",
+  "2025": "https://www.planegg.de/_Resources/Persistent/d/6/2/1/d6213a27b90457caf8d92f59c9b1e50b048c6189/2025_Fahrrad%20Amtmannstra%C3%9Fe.xlsx",
+  "2026": "https://www.planegg.de/_Resources/Persistent/d/4/d/2/d4d207f3e03cabdf3c4b3926318a8b71cc617604/2026_Fahrrad%20Amtmannstra%C3%9Fe.xlsx"
+ }
+}
+
+== Lesen
+Jahre 2021, 2022, 2023, 2024, 2025, 2026: 61 Blätter, 1857 Tageszeilen, 1857 Tageswerte in der Karte (widersprüchlich: 0, ohne Zahl in einer Richtung: 0, mit 0: 0); 2021-05-01 bis 2026-05-31
+Monat laut Blatt (monat_laut_blatt): Februar 2025 (28), Februar 2026 (28)
+Reihe 2021-05-01 – 2026-05-31, 1 Stellen
+=== Gruppe rad
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+amtmannstrasse | Amtmannstraße | an der Münchner Straße | None – None | 1857 | 2026-05-31 | 418
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2021: 2021-12-31: 1/0
+2022: 2022-01-01: 1/0, 2022-12-31: 1/0
+2023: 2023-01-01: 1/0, 2023-12-31: 1/0
+2024: 2024-01-01: 1/0, 2024-12-31: 1/0
+2025: 2025-01-01: 1/0, 2025-12-31: 1/0
+2026: 2026-01-01: 1/0
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2021: 2021-10-31: voll 1/0, gezählte Stunden []
+2022: 2022-03-27: voll 1/0, gezählte Stunden []; 2022-10-30: voll 1/0, gezählte Stunden []
+2023: 2023-03-26: voll 1/0, gezählte Stunden []; 2023-10-29: voll 1/0, gezählte Stunden []
+2024: 2024-03-31: voll 1/0, gezählte Stunden []; 2024-10-27: voll 1/0, gezählte Stunden []
+2025: 2025-03-30: voll 1/0, gezählte Stunden []; 2025-10-26: voll 1/0, gezählte Stunden []
+2026: 2026-03-29: voll 1/0, gezählte Stunden []
+== Vollständige Tage je Jahr (alle Stellen)
+2021: 245 von 0 Tagen mit Werten
+2022: 365 von 0 Tagen mit Werten
+2023: 365 von 0 Tagen mit Werten
+2024: 366 von 0 Tagen mit Werten
+2025: 365 von 0 Tagen mit Werten
+2026: 151 von 0 Tagen mit Werten
+== Kartendaten (nur planegg_rad)
+planegg_rad: 1 Stellen mit vollständigen Tagen, 0 ohne
+Gemeinden: keine Grenzen – ags leer (zaehlkarte dauer fetch holt sie)
+8 Dateien, 0.0 MB, 1 Detail-Dateien
+planegg_rad: vollständige Tage je Jahr (Stellen × Tage) – 2021: 245, 2022: 365, 2023: 365, 2024: 366, 2025: 365, 2026: 151
+planegg_rad: davon Tageswerte der Quelle (rad): 1857
+planegg_rad: rad-Tagessummen, Quintilgrenzen [240, 370, 470, 570], Median 418, Maximum 881
+index.json quellen: [{"code": "planegg_rad", "name": "Planegg (Fahrradzählstelle Amtmannstraße)", "land": "BY", "traeger": "Gemeinde Planegg", "art": "eine Rad-Zählstelle der Gemeinde (seit Dezember 2020): nur Tageswerte je Richtung, keine Stunden", "weg": "offen als Excel-Datei je Jahr auf der Website der Gemeinde, ohne Lizenzangabe", "portal": "https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse", "archiv": null, "quellenvermerk": null, "lizenzen": [{"code": "planegg_rad", "titel": "Gemeinde Planegg: Fahrradzählstelle Amtmannstraße, Zähldaten 2021–2026 (verändert: beide Richtungen je Tag summiert)", "herausgeber": "Gemeinde Planegg", "lizenz": null, "lizenz_url": null, "herkunft_url": "https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse", "ohne_lizenz": {"herausgegeben": "als Excel-Datei je Jahr („Zähldaten 2021“ bis „Zähldaten 2026“) auf der Seite der Fahrradzählstelle, ohne Lizenzangabe", "geprueft": "2026-11-15"}}], "hinweise": ["Die Quelle liefert nur Tageswerte je Richtung (Richtung Krailling, Richtung Planegg), keine Stunden: Ob an einem Tag jede Stunde gezählt ist, lässt sich nicht prüfen. Die Karte zeigt die Summe beider Richtungen, wie die Spalte „gesamt“ der Quelle.", "In den Blättern „Februar 2025“ und „Februar 2026“ stehen die Daten 1.–28. Januar; die Werte gehören nach dem Wochenrhythmus zum Februar. Die Zählkarte legt sie auf den 1.–28. Februar.", "Lage: zwischen den beiden Zählgeräten, die in OpenStreetMap an de
+index.json lizenzen: null
