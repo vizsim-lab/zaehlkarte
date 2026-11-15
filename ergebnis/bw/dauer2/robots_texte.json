@@ -1,0 +1,4 @@
+{
+ "https://mobidata-bw.de": "User-agent: *\n\nDisallow: /dataset/rate/\nDisallow: /revision/\nDisallow: /dataset/*/history\nDisallow: /api/\nCrawl-Delay: 10\n\n\n\n",
+ "https://www.bast.de": "User-agent: *\nDisallow: /SiteGlobals/\nDisallow: /DE/Service/\nDisallow: /EN/Service/\nAllow: /SiteGlobals/Modules/\nAllow: /SiteGlobals/StyleBundles/\nAllow: /SiteGlobals/Frontend/\nCrawl-delay: 30"
+}
