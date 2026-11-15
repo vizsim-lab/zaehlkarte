@@ -2524,9 +2524,9 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Neubulach (BW) – vorhanden, aber ohne Lizenz
 
-**Lage:** Für die Fortschreibung des Lärmaktionsplans hat die Stadt ein Büro zählen lassen: an Querschnitten über 24 Stunden, an Knotenpunkten vormittags und nachmittags je vier Stunden (hochgerechnet anhand der 24-Stunden-Zählungen). Der Kurzbericht mit den Werten steht als PDF auf der Website der Stadt, ohne Lizenzangabe.
+**Lage:** Für die Fortschreibung des Lärmaktionsplans hat die Stadt am 12.10.2023 per Video zählen lassen: einen Knotenpunkt über 24 Stunden, die übrigen fünf Knotenpunkte und zwei Querschnitte von 15 bis 19 Uhr (im Bericht auf 24 Stunden und den DTV hochgerechnet). Der Kurzbericht mit den Werten je Arm steht als PDF auf der Website der Stadt, ohne Lizenzangabe. In der Karte stehen nur die gezählten Werte; Rad ist laut Bericht erfasst, aber nicht veröffentlicht.
 
-**Empfehlung:** Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw. Strom und Fahrzeugart), mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
+**Empfehlung:** Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw. Strom und Fahrzeugart, auch Rad), mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
 
 **Weg:** FragDenStaat, LIFG BW
 
@@ -2543,7 +2543,7 @@ Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stad
 
 Bitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.
 
-Ich bitte um die Zählungen aus dem Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als Export mit den Werten je Intervall.
+Ich bitte um die Zählungen aus dem Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als Export mit den Werten je Intervall, einschließlich des Radverkehrs.
 
 Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.
 
@@ -3238,7 +3238,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Tübingen (BW) – vorhanden, aber ohne Lizenz
 
-**Lage:** Zur Vorlage 242/2022 („Bericht Verkehrszählungen Juni/Juli 2022“) stehen die Zählungen als Anlagen im Ratsinformationssystem: je Querschnitt Kfz und Rad in 24 Stunden, für die Kernstadt mit Vergleich zu 2019 (Verkehrsversuch), für die Teilorte gegen den DTV 2019. Eine Lizenz nennen die Unterlagen nicht; Zählungen anderer Jahre sind nicht veröffentlicht.
+**Lage:** Zur Vorlage 242/2022 („Bericht Verkehrszählungen Juni/Juli 2022“) stehen die Zählungen als Anlagen im Ratsinformationssystem: je Querschnitt Kfz und Rad in 24 Stunden, für die Kernstadt mit Vergleich zu 2019 (Verkehrsversuch), für die Teilorte gegen den DTV 2019. Eine Lizenz nennen die Unterlagen nicht; Zählungen anderer Jahre sind nicht veröffentlicht. In der Karte stehen die Werte gezählter Tage; Hochrechnungen von 16 auf 24 Stunden, Mittel über Tage (Dauerzählstellen) und der DTV fehlen dort.
 
 **Empfehlung:** Anfrage nach den Zählungen 2019 und 2022 (und später) als Export – Werte je Intervall und Richtung – mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.
 
@@ -3266,7 +3266,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Vorlage 242/2022: Bericht Verkehrszählungen](https://www.tuebingen.de/gemeinderat/vo0050.php?__kvonr=16692) · [Anlage 1: Zählungen Kernstadt](https://www.tuebingen.de/gemeinderat/getfile.asp?id=81457&type=do) · [Eco-Counter-Fahrradzähler (MobiData BW)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
+**Belege:** [Vorlage 242/2022: Bericht Verkehrszählungen](https://www.tuebingen.de/gemeinderat/vo0050.php?__kvonr=16692) · [Anlage 1: Zählungen Kernstadt](https://www.tuebingen.de/gemeinderat/getfile.asp?id=81457&type=do) · [Anlage 3: Zählungen Teilorte](https://www.tuebingen.de/gemeinderat/getfile.asp?id=81490&type=do) · [Eco-Counter-Fahrradzähler (MobiData BW)](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler)
 
 
 ## Ulm (BW) – nichts offen
