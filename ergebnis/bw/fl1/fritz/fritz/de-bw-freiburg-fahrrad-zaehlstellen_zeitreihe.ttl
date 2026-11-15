@@ -1,0 +1,49 @@
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+
+<https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe#dist-csv>
+        a                 dcat:Distribution ;
+        dct:description   "de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe" ;
+        dct:format        <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+        dct:language      <http://publications.europa.eu/resource/authority/language/DEU> ;
+        dct:license       <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
+        dct:modified      "2026-07-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dct:title         "Fahrrad-Zählstellen Zeitreihe" ;
+        adms:status       <http://purl.org/adms/status/Completed> ;
+        dcat:accessURL    <https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe> ;
+        dcat:downloadURL  <https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe/content.csv> .
+
+<https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe>
+        a                             dcat:Dataset ;
+        dcatde:contributorID          <http://dcat-ap.de/def/contributors/stadtFreiburgImBreisgau> ;
+        dcatde:maintainer             [ a          foaf:Person ;
+                                        foaf:name  "Nicole Kühn"
+                                      ] ;
+        dcatde:politicalGeocodingLevelURI
+                <http://dcat-ap.de/def/politicalGeocoding/Level/municipality> ;
+        dcatde:politicalGeocodingURI  <http://dcat-ap.de/def/politicalGeocoding/regionalKey/083110000000> ;
+        dct:description               "Fahrrad-Zählstellen Zeitreihe" ;
+        dct:identifier                "3800" ;
+        dct:language                  <http://publications.europa.eu/resource/authority/language/DEU> ;
+        dct:modified                  "2026-07-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+        dct:publisher                 [ a          foaf:Organization ;
+                                        foaf:name  "Stadt Freiburg i. Br."
+                                      ] ;
+        dct:spatial                   <https://www.geonames.org/6555728> ;
+        dct:temporal                  [ a               dct:PeriodOfTime ;
+                                        dcat:endDate    "2025-12-31T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                                        dcat:startDate  "2015-01-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime>
+                                      ] ;
+        dct:title                     "Fahrrad-Zählstellen Zeitreihe" ;
+        dcat:contactPoint             [ a               vcard:Individual ;
+                                        vcard:fn        "Nicole Kühn" ;
+                                        vcard:hasEmail  "statistik@freiburg.de"
+                                      ] ;
+        dcat:distribution             <https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe#dist-csv> ;
+        dcat:keyword                  "Datetime" , "Art der Nutzung (Fahrrad/Fußgänger)" , "Anzahl Fahrräder" , "Stunde" , "Fahrrad-Zählstelle" , "Fahrrad-Zählstelle Richtung (in, out, all)" , "Datum" ;
+        dcat:theme                    <http://publications.europa.eu/resource/authority/data-theme/TRAN> .

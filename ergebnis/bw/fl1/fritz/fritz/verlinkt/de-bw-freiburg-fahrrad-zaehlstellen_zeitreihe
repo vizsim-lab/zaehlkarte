@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta charset="utf-8"/>
+		<title>Fahrrad-Zählstellen Zeitreihe</title>
+		<style>
+			body {
+				font-family: Sans-Serif;
+				font-size: 11pt;
+			}
+			table {
+				border: 1px solid grey;
+			}
+			.rootTable {
+				margin-left: 2em;
+			}
+			.innerTable {
+				margin-left: 0.5em;
+				margin-top: 0.5em;
+			}
+			th {
+				text-align: left;
+				vertical-align: top;
+				padding: 0.1em;
+				padding-right: 15px;
+			}
+			td {
+				padding: 0.1em;
+			}
+			ul {
+				margin-top: 0.1em;
+				margin-bottom: 0.1em;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>
+			<a href="/duva2dcat/">Dateien</a>
+			&raquo;
+			<a href="/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe">Fahrrad-Zählstellen Zeitreihe</a>
+		</h3>
+		<table class="rootTable">
+			<tr>
+				<th>ID</th>
+				<td>3800</td>
+			</tr>
+			<tr>
+				<th>Beschreibung</th>
+				<td>Fahrrad-Zählstellen Zeitreihe</td>
+			</tr>
+			<tr>
+				<th>Letzte Änderung</th>
+				<td>14.07.2026</td>
+			</tr>
+			<tr>
+				<th>Zeitbezug - Von</th>
+				<td>01.01.2015 00:00</td>
+			</tr>
+			<tr>
+				<th>Zeitbezug - Bis</th>
+				<td>31.12.2025 00:00</td>
+			</tr>
+			<tr>
+				<th>Raumbezug</th>
+				<td>Freiburg, Gesamtstadt</td>
+			</tr>
+			<tr>
+				<th>Sachgebiet</th>
+				<td>Verkehr</td>
+			</tr>
+			<tr>
+				<th>Erhebung</th>
+				<td>Garten- und Tiefbauamt Freiburg</td>
+			</tr>
+			<tr>
+				<th>Kurzname</th>
+				<td>de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe</td>
+			</tr>
+			<tr>
+				<th>Download</th>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe/content.csv"/>
+					Datei herunterladen
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<th>Schlagwörter</th>
+				<td>
+					<span>
+						
+							<span>Datum,</span>
+						
+						
+							<span>Stunde,</span>
+						
+						
+							<span>Datetime,</span>
+						
+						
+							<span>Fahrrad-Zählstelle,</span>
+						
+						
+							<span>Anzahl Fahrräder,</span>
+						
+						
+							<span>Fahrrad-Zählstelle Richtung (in, out, all),</span>
+						
+						
+							<span>Art der Nutzung (Fahrrad/Fußgänger)</span>
+						
+					</span>
+				</td>
+			</tr>
+			<tr>
+				<th>Kontakt</th>
+				<td>
+					<table class="rootTable">
+						<tr>
+							<th>Voller Name</th>
+							<td>Nicole Kühn</td>
+						</tr>
+						<tr>
+							<th>E-Mail</th>
+							<td>statistik@freiburg.de</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<th>Datensatz Details</th>
+				<td>
+
+					<table class="rootTable">
+						<tr>
+							<th>Format</th>
+							<td>http://publications.europa.eu/resource/authority/file-type/CSV</td>
+						</tr>
+						<tr>
+							<th>Sprache</th>
+							<td>http://publications.europa.eu/resource/authority/language/DEU</td>
+						</tr>
+						<tr>
+							<th>Lizenz</th>
+							<td>http://dcat-ap.de/def/licenses/dl-by-de/2.0</td>
+						</tr>
+						<tr>
+							<th>Political Geocoding URI</th>
+							<td>http://dcat-ap.de/def/politicalGeocoding/regionalKey/083110000000</td>
+						</tr>
+						<tr>
+							<th>Political Geocoding Level URI</th>
+							<td>http://dcat-ap.de/def/politicalGeocoding/Level/municipality</td>
+						</tr>
+						<tr>
+							<th>Spatial URI</th>
+							<td>https://www.geonames.org/6555728</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

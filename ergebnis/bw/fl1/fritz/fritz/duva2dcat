@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta charset="utf-8"/>
+		<title>Liste der verfügbaren Dateien - 50 Einträge</title>
+		<style>
+			body {
+				font-family: Sans-Serif;
+				font-size: 11pt;
+			}
+			table {
+				border: 1px solid grey;
+			}
+			.rootTable {
+				margin-left: 2em;
+			}
+			.innerTable {
+				margin-left: 0.5em;
+				margin-top: 0.5em;
+			}
+			th {
+				text-align: left;
+				vertical-align: top;
+				padding: 0.1em;
+				padding-right: 15px;
+			}
+			td {
+				padding: 0.1em;
+			}
+			ul {
+				margin-top: 0.1em;
+				margin-bottom: 0.1em;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Auflistung der im <a href="/duva2dcat/dcat/catalog">DCAT-Katalog</a> enthaltenen Dateien</p>
+		<table>
+			<tr>
+				<th>Datei</th>
+				<th>Letzte Änderung</th>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-abstimmungsergebnisse_im_freiburger_gemeinderat">Abstimmungsergebnisse im Freiburger Gemeinderat</a>
+				</td>
+				<td>13.11.2023</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-amtliches_adressverzeichnis_stadt_freiburg">Amtliches Adressverzeichnis Stadt Freiburg</a>
+				</td>
+				<td>02.06.2025</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-armutsgefaehrdungsquote_nach_stadtbezirken">Armutsgefährdungsquote nach Stadtbezirken</a>
+				</td>
+				<td>13.08.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-armutsgefaehrdungsquote_nach_stadtteilen">Armutsgefährdungsquote nach Stadtteilen</a>
+				</td>
+				<td>26.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-bevoelkerungsbestand_nach_ausgewaehlten_merkmalen_alterseinzeljahre_geschlecht_deutsch_-_gesamtstadt">Bevölkerungsbestand nach ausgewählten Merkmalen (Alterseinzeljahre, Geschlecht, deutsch) - Gesamtstadt</a>
+				</td>
+				<td>12.03.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-bevoelkerungsbestand_nach_ausgewaehlten_merkmalen_altersgruppen_geschlecht_deutscheu_-_postleitzahlen">Bevölkerungsbestand nach ausgewählten Merkmalen (Altersgruppen, Geschlecht, deutsch/EU) - Postleitzahlen</a>
+				</td>
+				<td>04.02.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-bevoelkerungsbewegungen_geburten_sterbefaelle_wanderungen_-_monatliche_uebersicht">Bevölkerungsbewegungen (Geburten, Sterbefälle, Wanderungen) - monatliche Übersicht</a>
+				</td>
+				<td>04.09.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-ergebnishaushalt_ordentliche_ertraegeaufwendungen_ohne_aktivierte_eigenleistungen_doppelhaushalt_20212022">Ergebnishaushalt (Ordentliche Erträge/Aufwendungen ohne aktivierte Eigenleistungen) Doppelhaushalt 2021/2022</a>
+				</td>
+				<td>02.12.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-ergebnishaushalt_ordentliche_ertraegeaufwendungen_ohne_aktivierte_eigenleistungen_doppelhaushalt_20232024">Ergebnishaushalt (Ordentliche Erträge/Aufwendungen ohne aktivierte Eigenleistungen) Doppelhaushalt 2023/2024</a>
+				</td>
+				<td>06.12.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-ergebnishaushalt_ordentliche_ertraegeaufwendungen_ohne_aktivierte_eigenleistungen_doppelhaushalt_20252026">Ergebnishaushalt (Ordentliche Erträge/Aufwendungen ohne aktivierte Eigenleistungen) Doppelhaushalt 2025/2026</a>
+				</td>
+				<td>31.12.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-europawahl_2024_auf_basis_wahlbezirke_absolutwerte">Europawahl 2024 (auf Basis Wahlbezirke) Absolutwerte</a>
+				</td>
+				<td>14.01.2025</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe">Fahrrad-Zählstellen Zeitreihe</a>
+				</td>
+				<td>14.07.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-flaeche_nach_nutzungsart_und_kleinraeumiger_gliederung_-_zeitreihe">Fläche nach Nutzungsart und Kleinräumiger Gliederung - Zeitreihe</a>
+				</td>
+				<td>03.06.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-freiburg-umfrage_2022_ergebnisse_stadtbezirke">Freiburg-Umfrage 2022 Ergebnisse Stadtbezirke</a>
+				</td>
+				<td>20.05.2025</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-freiburg-umfrage_2024_ergebnisse_stadtbezirke">Freiburg-Umfrage 2024 Ergebnisse Stadtbezirke</a>
+				</td>
+				<td>20.05.2025</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-freiburg-umfrage_zeitreihe_ergebnisse_bthh">Freiburg-Umfrage Zeitreihe Ergebnisse BTHH</a>
+				</td>
+				<td>20.05.2025</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-freiburg-umfrage_zufriedenheit_2024_ergebnisse_stadtbezirke">Freiburg-Umfrage Zufriedenheit 2024 Ergebnisse Stadtbezirke</a>
+				</td>
+				<td>31.10.2024</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-gebaeude-_wohnungs-_und_haushaltsdaten_nach_wohnsegmenten_und_stadtbezirken">Gebäude-, Wohnungs- und Haushaltsdaten nach Wohnsegmenten und Stadtbezirken</a>
+				</td>
+				<td>05.09.2025</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-geburtenziffern_auf_ebene_der_gesamtstadt">Geburtenziffern auf Ebene der Gesamtstadt</a>
+				</td>
+				<td>07.09.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-geburtenziffern_auf_ebene_der_stadtbezirke">Geburtenziffern auf Ebene der Stadtbezirke</a>
+				</td>
+				<td>07.09.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_fuer_indikatoren_gesamtstadt_-_wahlbeteiligung_und_wahlergebnisse_bei_bundestags-_landtags-_und_europawahlen_seit_2009">Grunddaten für Indikatoren Gesamtstadt - Wahlbeteiligung und Wahlergebnisse bei Bundestags-, Landtags- und Europawahlen seit 2009</a>
+				</td>
+				<td>04.10.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_fuer_indikatoren_stadtbezirke_-_wahlbeteiligung_und_wahlergebnisse_bei_bundestags-_landtags-_und_europawahlen_seit_2009">Grunddaten für Indikatoren Stadtbezirke - Wahlbeteiligung und Wahlergebnisse bei Bundestags-, Landtags- und Europawahlen seit 2009</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_bautaetigkeit">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Bautätigkeit</a>
+				</td>
+				<td>26.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_bevoelkerungsbestand">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Bevölkerungsbestand</a>
+				</td>
+				<td>19.05.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_bevoelkerungsbewegungen">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Bevölkerungsbewegungen</a>
+				</td>
+				<td>26.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_flaeche">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Fläche</a>
+				</td>
+				<td>26.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_gebaeudebestand">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Gebäudebestand</a>
+				</td>
+				<td>26.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_geburtenziffern">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Geburtenziffern</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_haushalte">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Haushalte</a>
+				</td>
+				<td>26.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_kita">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - KITA</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_migrationshintergrund">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Migrationshintergrund</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_pkw">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Pkw</a>
+				</td>
+				<td>08.04.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_religion">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Religion</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_soziales">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Soziales</a>
+				</td>
+				<td>31.12.2023</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_gesamtstadt_-_soziales_armutsgefaehrdungsquote">Grunddaten zur Indikatorenbildung auf Ebene der Gesamtstadt - Soziales (Armutsgefährdungsquote)</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_stadtbezirke_-_arbeitsmarktwirtschaft">Grunddaten zur Indikatorenbildung auf Ebene der Stadtbezirke - Arbeitsmarkt/Wirtschaft</a>
+				</td>
+				<td>28.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_stadtbezirke_-_bautaetigkeit">Grunddaten zur Indikatorenbildung auf Ebene der Stadtbezirke - Bautätigkeit</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_stadtbezirke_-_flaeche">Grunddaten zur Indikatorenbildung auf Ebene der Stadtbezirke - Fläche</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_stadtbezirke_-_gebaeudebestand">Grunddaten zur Indikatorenbildung auf Ebene der Stadtbezirke - Gebäudebestand</a>
+				</td>
+				<td>27.09.2022</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-grunddaten_zur_indikatorenbildung_auf_ebene_der_stadtbezirke_-_soziales_armutsgefaehrdungsquote">Grunddaten zur Indikatorenbildung auf Ebene der Stadtbezirke - Soziales (Armutsgefährdungsquote)</a>
+				</td>
+				<td>31.12.2025</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-indikatoren_auf_ebene_der_gesamtstadt">Indikatoren auf Ebene der Gesamtstadt</a>
+				</td>
+				<td>23.09.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-indikatoren_auf_ebene_der_stadtbezirke">Indikatoren auf Ebene der Stadtbezirke</a>
+				</td>
+				<td>23.09.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-kindergesundheitsatlas_umwelt_klima_wetter_und_infrastruktur">Kindergesundheitsatlas: Umwelt, Klima, Wetter und Infrastruktur</a>
+				</td>
+				<td>14.07.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-kita-statistik_-_plaetze_und_gruppen_in_kindertageseinrichtungen">KITA-Statistik - Plätze und Gruppen in Kindertageseinrichtungen</a>
+				</td>
+				<td>12.08.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-park_schwimmbad_spiel-_und_sportplaetze_je_statistischer_bezirke_200m_und_400m_-_zeitreihe">Park, Schwimmbad, Spiel- und Sportplätze je Statistischer Bezirke (200m und 400m) - Zeitreihe</a>
+				</td>
+				<td>31.12.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-spielplaetze_nach_anzahl_kinder_im_einzugsbereich_200m_und_400m">Spielplätze nach Anzahl Kinder im Einzugsbereich (200m und 400m)</a>
+				</td>
+				<td>31.12.2024</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-spielplaetze_nach_anzahl_kinder_mit_durchschnittliche_wegdistanz">Spielplätze nach Anzahl Kinder mit durchschnittliche Wegdistanz</a>
+				</td>
+				<td>17.09.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-statistische_indizes_der_stadt_freiburg_auf_ebene_der_statistischen_bezirke">Statistische Indizes der Stadt Freiburg auf Ebene der statistischen Bezirke</a>
+				</td>
+				<td>07.09.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-wahlergebnisse_bundestags_landtags-_und_europawahl_auf_ebene_der_stadtbezirke_-_zeitreihe">Wahlergebnisse (Bundestags, Landtags- und Europawahl) auf Ebene der Stadtbezirke - Zeitreihe</a>
+				</td>
+				<td>13.08.2026</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="/duva2dcat/dataset/de-bw-freiburg-wohnungsnotfallhilfe_und_obdachlosigkeit">Wohnungsnotfallhilfe und Obdachlosigkeit</a>
+				</td>
+				<td>12.07.2022</td>
+			</tr>
+		</table>
+	</body>
+</html>

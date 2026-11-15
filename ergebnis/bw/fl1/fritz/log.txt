@@ -1,0 +1,14 @@
+ok https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html 3495 text/html;charset=UTF-8
+ok https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.rdf 3892 application/rdf+xml;charset=UTF-8
+ok https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.ttl 3670 text/turtle;charset=UTF-8
+ok https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.jsonld 5616 application/ld+json
+Fehler 1 https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.json <HTTPError 404: ''>
+Fehler 2 https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.json <HTTPError 404: ''>
+Fehler 3 https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.json <HTTPError 404: ''>
+ok https://fritz.freiburg.de/duva2dcat/ 14052 text/html;charset=UTF-8
+Fehler 1 https://fritz.freiburg.de/duva2dcat/catalog.html <HTTPError 404: ''>
+Fehler 2 https://fritz.freiburg.de/duva2dcat/catalog.html <HTTPError 404: ''>
+Fehler 3 https://fritz.freiburg.de/duva2dcat/catalog.html <HTTPError 404: ''>
+ok https://fritz.freiburg.de/duva2dcat/catalog.rdf 290988 application/rdf+xml;charset=UTF-8
+ok https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe 3495 text/html;charset=UTF-8
+ok https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe/content.csv 29017866 text/csv

@@ -1,0 +1,158 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "foaf:Organization",
+    "name" : "Stadt Freiburg i. Br."
+  }, {
+    "@id" : "_:b1",
+    "@type" : "foaf:Person",
+    "name" : "Nicole Kühn"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "dct:PeriodOfTime",
+    "endDate" : "2025-12-31T00:00:00",
+    "startDate" : "2015-01-01T00:00:00"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "vcard:Individual",
+    "fn" : "Nicole Kühn",
+    "hasEmail" : "statistik@freiburg.de"
+  }, {
+    "@id" : "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe",
+    "@type" : "dcat:Dataset",
+    "contributorID" : "http://dcat-ap.de/def/contributors/stadtFreiburgImBreisgau",
+    "maintainer" : "_:b1",
+    "politicalGeocodingLevelURI" : "http://dcat-ap.de/def/politicalGeocoding/Level/municipality",
+    "politicalGeocodingURI" : "http://dcat-ap.de/def/politicalGeocoding/regionalKey/083110000000",
+    "description" : "Fahrrad-Zählstellen Zeitreihe",
+    "identifier" : "3800",
+    "language" : "http://publications.europa.eu/resource/authority/language/DEU",
+    "modified" : "2026-07-14",
+    "publisher" : "_:b0",
+    "spatial" : "https://www.geonames.org/6555728",
+    "temporal" : "_:b2",
+    "title" : "Fahrrad-Zählstellen Zeitreihe",
+    "contactPoint" : "_:b3",
+    "distribution" : "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe#dist-csv",
+    "keyword" : [ "Datetime", "Art der Nutzung (Fahrrad/Fußgänger)", "Anzahl Fahrräder", "Stunde", "Fahrrad-Zählstelle", "Fahrrad-Zählstelle Richtung (in, out, all)", "Datum" ],
+    "theme" : "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+  }, {
+    "@id" : "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe#dist-csv",
+    "@type" : "dcat:Distribution",
+    "description" : "de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe",
+    "format" : "http://publications.europa.eu/resource/authority/file-type/CSV",
+    "language" : "http://publications.europa.eu/resource/authority/language/DEU",
+    "license" : "http://dcat-ap.de/def/licenses/dl-by-de/2.0",
+    "modified" : "2026-07-14",
+    "title" : "Fahrrad-Zählstellen Zeitreihe",
+    "status" : "http://purl.org/adms/status/Completed",
+    "accessURL" : "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe",
+    "downloadURL" : "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe/content.csv"
+  } ],
+  "@context" : {
+    "status" : {
+      "@id" : "http://www.w3.org/ns/adms#status",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "format" : {
+      "@id" : "http://purl.org/dc/terms/format",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "downloadURL" : {
+      "@id" : "http://www.w3.org/ns/dcat#downloadURL",
+      "@type" : "@id"
+    },
+    "language" : {
+      "@id" : "http://purl.org/dc/terms/language",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "accessURL" : {
+      "@id" : "http://www.w3.org/ns/dcat#accessURL",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "politicalGeocodingURI" : {
+      "@id" : "http://dcat-ap.de/def/dcatde/politicalGeocodingURI",
+      "@type" : "@id"
+    },
+    "contributorID" : {
+      "@id" : "http://dcat-ap.de/def/dcatde/contributorID",
+      "@type" : "@id"
+    },
+    "keyword" : {
+      "@id" : "http://www.w3.org/ns/dcat#keyword"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher",
+      "@type" : "@id"
+    },
+    "temporal" : {
+      "@id" : "http://purl.org/dc/terms/temporal",
+      "@type" : "@id"
+    },
+    "theme" : {
+      "@id" : "http://www.w3.org/ns/dcat#theme",
+      "@type" : "@id"
+    },
+    "maintainer" : {
+      "@id" : "http://dcat-ap.de/def/dcatde/maintainer",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "http://purl.org/dc/terms/identifier"
+    },
+    "spatial" : {
+      "@id" : "http://purl.org/dc/terms/spatial",
+      "@type" : "@id"
+    },
+    "contactPoint" : {
+      "@id" : "http://www.w3.org/ns/dcat#contactPoint",
+      "@type" : "@id"
+    },
+    "distribution" : {
+      "@id" : "http://www.w3.org/ns/dcat#distribution",
+      "@type" : "@id"
+    },
+    "politicalGeocodingLevelURI" : {
+      "@id" : "http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI",
+      "@type" : "@id"
+    },
+    "hasEmail" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#hasEmail"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
+    "endDate" : {
+      "@id" : "http://www.w3.org/ns/dcat#endDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "startDate" : {
+      "@id" : "http://www.w3.org/ns/dcat#startDate",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "schema" : "http://schema.org/",
+    "dct" : "http://purl.org/dc/terms/",
+    "adms" : "http://www.w3.org/ns/adms#",
+    "dcatde" : "http://dcat-ap.de/def/dcatde/",
+    "vcard" : "http://www.w3.org/2006/vcard/ns#",
+    "dcat" : "http://www.w3.org/ns/dcat#",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}
