@@ -1,4 +1,4 @@
-# Werkzeug für Baden-Württemberg (Branch werkzeug/bw, eigener Branch neben werkzeug/erkundung,
+# Werkzeug für Baden-Württemberg und die Landes-Dauerzählstellen (Branch werkzeug/bw, eigener Branch neben werkzeug/erkundung,
 # damit sich Läufe paralleler Sitzungen nicht in die Quere kommen): Landes-Dauerzählstellen
 # (tools/bw_dauer.py) und Abgleich der Radzählstellen mit OSM (tools/bw_rad_osm.py). Ergebnisse
 # nach ergebnis/bw/ in denselben Branch (Pushes mit GITHUB_TOKEN starten keinen neuen Lauf).
@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [ol6]
+        teil: [fl1_fritz, fl1_rest, fl1_mobilithek]
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
@@ -29,6 +29,9 @@ jobs:
             dauer4) timeout 85m python3 tools/bw_dauer4.py ergebnis/bw/dauer4 || true ;;
             pruefe) tools/pruefe.sh dauer-bw-land bw_land_kfz || true ;;
             rand) timeout 20m python3 tools/bw_rand.py ergebnis/bw/rand || true ;;
+            fl1_fritz) timeout 40m python3 tools/bw_fl1.py ergebnis/bw/fl1/fritz fritz || true ;;
+            fl1_rest) timeout 30m python3 tools/bw_fl1.py ergebnis/bw/fl1/rest planegg mobidata baysis || true ;;
+            fl1_mobilithek) timeout 30m python3 tools/bw_fl1.py ergebnis/bw/fl1/mobilithek mobilithek || true ;;
             ol6) timeout 30m python3 tools/bw_ol6.py ergebnis/bw/ol6 || true ;;
             ol5) timeout 30m python3 tools/bw_ol5.py ergebnis/bw/ol5 || true ;;
             ol4) timeout 50m python3 tools/bw_ol4.py ergebnis/bw/ol4 || true ;;
