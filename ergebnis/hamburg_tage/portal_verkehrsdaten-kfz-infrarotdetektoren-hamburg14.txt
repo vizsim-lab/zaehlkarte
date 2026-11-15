@@ -1,0 +1,438 @@
+https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14 -> https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14
+
+
+
+Verkehrsdaten Kfz (Infrarotdetektoren) Hamburg
+
+Transparenzportal Hamburg
+
+Transparenzportal
+
+Servicemenü
+
+Kontakt
+
+News
+
+Drucken
+
+Schließen
+
+Öffnen
+
+Themen
+
+Schließen
+
+Mehr anzeigen
+
+Transparenzportal
+
+Über uns
+
+Mehr anzeigen
+
+zurück
+
+Über uns
+
+Das Team des Transparenzportals
+
+Das Staatsarchiv
+
+Die Technik
+
+Änderungsprotokoll
+
+Die Nutzungsstatistik
+
+Das Transparenzportal
+
+Mehr anzeigen
+
+zurück
+
+Das Transparenzportal
+
+Das Hamburgische Transparenzgesetz
+
+Gesetzestext des HmbTG
+
+Die Auskunftspflicht nach HmbTG
+
+Mehr Transparenz in Hamburg
+
+Die Informationsgegenstände
+
+Open Data
+
+Verwendung der Daten aus dem Transparenzportal
+
+News
+
+Mehr anzeigen
+
+zurück
+
+News
+
+10 Jahre Transparenzportal Hamburg
+
+Hochwertige Datensätze (HVD) im Transparenzportal
+
+Strategie zur Aufarbeitung des Kolonialzeit-Erbes
+
+Relaunch des Transparenzportals
+
+Unter der Motorhaube des Transparenzportals
+
+Transparenzportal
+
+Suche
+
+Suche
+
+Transparenzportal Hamburg
+
+-->
+
+Suchen
+
+Erweiterte Suche
+
+Erweiterte Suche
+
+Zurück zur Trefferliste
+
+Verkehrsdaten Kfz (Infrarotdetektoren) Hamburg
+
+Veröffentlichende Stelle
+
+Behörde für Verkehr und Mobilitätswende (BVM)
+
+Veröffentlichungsdatum
+
+03.03.2026
+
+Beschreibung
+
+Allgemeine Informationen:
+Der Datensatz umfasst Verkehrsdaten aller Standorte in Hamburg, an denen der Kraftfahrzeugverkehr (Kfz-Verkehr) mittels Infrarotdetektoren an 24h am Tag und allen Tagen des Jahres erfasst wird.
+Einige der Standorte enthalten zusätzlich den Anteil des Schwerverkehrs.
+
+Der Datensatz enthält sowohl die Verkehrsstärken einzelner Zählfelder als auch aus mehreren Zählfeldern aggregierte Zählstellen in Echtzeit.
+
+Die Daten der Zählfelder werden in 5-Minuten-Intervallen bereitgestellt.
+Die Daten der Zählstellen liegen aggregiert in 5-Minuten, 15- und 60-Minuten-Intervallen sowie in Tages- und Wochenwerten vor. Die Daten der Zählstellen werden außerdem in den entsprechenden Geoportalen der FHH, z.B. in Geo-Online und dem Verkehrsportal, visualisiert. Die Daten der Zählfelder sowie die Daten der 5-Minuten-Aggregate der Zählstellen werden nicht visualisiert.
+
+Neben den Echtzeitdaten sind auch historische Daten in folgendem Umfang verfügbar:
+Zählfelder: Alle Daten der 5-Minuten-Intervalle für die letzten 8 Wochen
+Zählstellen:
+alle Daten für die letzten sieben Tage in 5-Minten-Intervallen, alle Daten für die letzten zwei Wochen in 15-Minuten-Intervallen, alle Daten für die letzten zwei Monate für die 60-Minutenintervalle, alle Daten für das aktuelle und das letzte Jahr in Tagesintervallen sowie alle Daten seit Beginn der Erfassung in Wochenintervallen.
+
+Informationen zur Technik:
+Die Infrarotdetektoren sind in der Regel an Lichtsignalanlagen, zu einem geringen Teil aber auch an anderen Masten, installiert. Die Detektoren erfassen und zählen den Verkehr über die Wärmeabstrahlung der einzelnen Verkehrsteilnehmenden. Da ausschließlich Infrarotbilder ausgewertet werden, ist der Datenschutz zu jeder Zeit gewährleistet.
+
+Hinweise zur Datenqualität:
+Die Daten werden in Echtzeit an die Urban Data Platform der FHH übertragen. So sind diese zeitnah für alle Nutzenden und Interessierten verfügbar. Durch die Echtzeitkomponente sind allerdings verschiedene Rahmenbedingungen zu beachten: Die Daten sind nicht umfassend qualitätsgesichert. Ungewöhnliche Abweichungen von den zu erwartenden Daten und Datenlücken werden zwar automatisch vom System erkannt, können aber nicht in Echtzeit korrigiert werden. Lücken, die z.B. durch einen Abriss der Datenübertragung auftreten, können im Nachhinein noch nachgeliefert werden. Unter Umständen und bei längeren Ausfällen können folglich noch nach ein paar Tagen Änderungen in den historischen Daten erfolgen.
+
+Es handelt sich bei den hier veröffentlichten Daten nicht um amtlich geprüfte Daten der FHH. Werden derartige Daten benötigt, kann z.B. der Datensatz "Verkehrsstärken Hamburg" herangezogen werden, der die „Durchschnittlichen (werk)täglichen Verkehre“ in der Entwicklung der letzten Jahre enthält.
+Wie bei jeder Verkehrszählung, egal ob automatisiert oder manuell, gibt es gewisse Toleranzen in der Messgenauigkeit. Anspruch an das hier verwendete System sind Genauigkeiten von +/- 10% bei der Erfassung der Verkehrsstärken und +/- 15% bei der Angabe des Schwerverkehrsanteils.
+
+Weitere Informationen zum Echtzeitdienst:
+
+Der Echtzeitdatendienst enthält die Standorte der Zählstellen für das Kfz-Aufkommen, das mit Infrarotdetektoren erfasst wird. Die Daten werden im JSON-Format über die SensorThings API (STA) bereitgestellt. Für jede Zählstelle in der SensorThings API (STA) wurde ein Objekt in der Entität "Thing" angelegt. Für jede zeitliche Auflösungsebene bei den Zählstellen bzw. jeder verkehrlichen Bezugsgröße steht ein Objekt in der Entität "Datastreams". Die Echtzeitdaten zur Anzahl Kfz je Zählstelle und Zeitintervall wird in der STA in der Entität "Observations" veröffentlicht.
+
+Es werden folgende räumlichen und zeitlichen Ebenen differenziert:
+
+-Zählfeld 5-Min
+-Zählstelle 5-Min, 15-Min, 1-Stunde, 1-Tag, 1-Woche: Anzahl Kfz
+
+Alle Zeitangaben sind in der koordinierten Weltzeit (UTC) angegeben.
+
+In der Entität Datastreams gibt es im JSON-Objekt unter dem "key" "properties" weitere "key-value-Paare". In Anlehnung an die Service- und Layerstruktur im GIS haben wir Service und Layer als zusätzliche "key-value-Paare" unter dem JSON-Objekt properties eingeführt. Hier ein Beispiel:
+
+{
+"properties":{
+"serviceName": "HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren",
+"layerName": "Anzahl_Kfz_Zaehlstelle_15-Min",
+"key":"value"}
+}
+
+Verfügbare Layer im layerName sind:
+*Anzahl_Kfz_Zaehlfeld_5-Min
+*Anzahl_Kfz_Zaehlstelle_5-Min
+* Anzahl_Kfz_Zaehlstelle_15-Min
+* Anzahl_Kfz_Zaehlstelle_1-Stunde
+* Anzahl_Kfz_Zaehlstelle_1-Tag
+* Anzahl_Kfz_Zaehlstelle_1-Woche
+
+*Anzahl_Schwerverkehr_Zaehlfeld_5-Min
+*Anzahl_Schwerverkehr_Zaehlstelle_5-Min
+* Anzahl_Schwerverkehr_Zaehlstelle_15-Min
+* Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde
+* Anzahl_Schwerverkehr_Zaehlstelle_1-Tag
+* Anzahl_Schwerverkehr_Zaehlstelle_1-Woche
+
+Mit Hilfe dieser "key-value-Paare" können dann Filter für die REST-Anfrage definiert werden, bspw.
+https://iot.hamburg.de/v1.1/Datastreams?$filter=properties/serviceName eq 'HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren' and properties/layerName eq 'Anzahl_Kfz_Zaehlstelle_15-Min'
+
+Die Echtzeitdaten kann man auch über einen MQTT-Broker erhalten. Die dafür notwendigen IDs können über eine REST-Anfrage bezogen werden und dann für das Abonnement auf einen Datastream verwendet werden:
+
+MQTT-Broker: iot.hamburg.de
+Topic: v1.1/Datastream({id})/Observations
+
+Schlagwörter
+
+Belegungsgrad,
+
+Geodaten,
+
+Infrarot,
+
+Infrarotdetektoren,
+
+Infrarotkamera,
+
+Kamera,
+
+Kfz,
+
+Verkehrsdaten,
+
+Verkehrsmengen,
+
+Verkehrsmengenerfassung,
+
+Verkehrsstärken,
+
+Wärmebild,
+
+Wärmebildkamera,
+
+Zählstellen,
+
+aVME,
+
+mobilithek_category_MOBILITY_PARAMETERS,
+
+mobilithek_subcategory_ROAD_TRAFFIC_COUNTS
+
+Kartenlink
+
+Zur Kartenansicht
+
+Ressourcen (16)
+
+Download Verkehrsstärken, Entwicklung und Echtzeitdaten des Kfz-Verkehrs (Format: HTML)
+Verkehrsstärken, Entwicklung und Echtzeitdaten des Kfz-Verkehrs
+
+HTML
+(Größe:
+
+0.26 MB)
+
+Download Beschreibung SensorThings API (STA) (Format: STA)
+Beschreibung SensorThings API (STA)
+
+STA
+(Größe:
+
+0.13 MB)
+
+Download Beschreibung STA MQTT-Broker (Format: MQTT)
+Beschreibung STA MQTT-Broker
+
+MQTT
+(Größe:
+
+0.13 MB)
+
+Download STA Gesamtserviceabfrage: Zählfelder inkl. letzte 3 Beobachtungswerte (JSON) (Format: JSON)
+STA Gesamtserviceabfrage: Zählfelder inkl. letzte 3 Beobachtungswerte (JSON)
+
+JSON
+(Größe:
+
+1.4 MB)
+
+Download STA Standortabfrage: Zählstellen (Infrarotdetektoren) (Format: JSON)
+STA Standortabfrage: Zählstellen (Infrarotdetektoren)
+
+JSON
+(Größe:
+
+0.14 MB)
+
+Download STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 5-Min-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 5-Min-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 15-Min-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 15-Min-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 1-Stunde-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 1-Stunde-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 1-Tages-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 1-Tages-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 1-Woche-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Kfz-Aufkommen je Zählstelle je 1-Woche-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 5-Min-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 5-Min-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 15-Min-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 15-Min-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 1-Stunde-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 1-Stunde-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.43 MB)
+
+Download STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 1-Tages-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 1-Tages-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.43 MB)
+
+Download STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 1-Woche-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Schwerverkehr-Aufkommen je Zählstelle je 1-Woche-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download Metadatenbeschreibung aus dem MetaVer (Format: HTML)
+Metadatenbeschreibung aus dem MetaVer
+
+HTML
+(Größe:
+
+0.17 KB)
+
+Info-Spalte
+
+Drucken
+
+Feedback
+
+Teilen
+
+Kapitelfunktion schließen
+
+Kapitelfunktion schließen
+
+Datentyp
+
+Datensatz
+
+Informations­gegenstand
+
+Geodaten
+
+Kategorie
+
+Transport & Verkehr
+
+Zeitbezug
+
+von
+
+01.11.2020
+
+bis
+
+kein Enddatum gesetzt
+
+Metadaten nach ODG
+
+Download (JSON)
+
+Metadaten nach DCAT-AP.de
+
+Download (N3)
+
+Download (RDF)
+
+Download (TTL)
+
+Download (XML)
+
+Download (JSONLD)
+
+Lizenz
+
+Datenlizenz Deutschland Namensnennung 2.0
+
+Namensnennung
+
+Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+
+Ältere Version
+
+22.01.2026
+
+Transparenzportal Hamburg
+
+Das Transparenzportal Hamburg ist das im Hamburgischen Transparenzgesetz (HmbTG) geforderte Informationsregister, über das alle per Gesetz veröffentlichungspflichtigen Informationen anonym recherchiert werden können. Es ist der zentrale Zugang zu aktuellen Daten und Informationen der Hamburger Verwaltung und stellt, um die leichte Auffindbarkeit der gesuchten Inhalte zu gewährleisten, eine Suche über den Volltext aller Datensätze bereit.
+
+Unterseiten
+
+Über uns
+
+Das Transparenzportal
+
+News
+
+Servicemenü
+
+Erklärung zur Barrierefreiheit
+
+Impressum
+
+Datenschutzerklärung
+
+www.transparenz.hamburg.de
+

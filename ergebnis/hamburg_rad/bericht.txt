@@ -1,0 +1,359 @@
+== Abruf
+hamburg_rad: 312 Datastreams, 105809 Stunden geholt ab 2026-10-31T21:00:00+00:00 (0 verworfen), Gedächtnis geändert: stunden_2026-11.csv.gz
+hamburg_rad: 312 Datastreams mit Tageswerten, 464420 Tage geholt ab Beginn (614 verworfen, 7 mit widersprüchlichen Werten), Gedächtnis geändert: tage_2020.csv.gz, tage_2021.csv.gz, tage_2022.csv.gz, tage_2023.csv.gz, tage_2024.csv.gz, tage_2025.csv.gz, tage_2026.csv.gz
+Fehler: []
+Dauer: 91 s
+Rohdaten: 14 Dateien, 2.8 MB
+== Lesen
+rad: 312 Datastreams; 312 Zählstellen
+Stunden in der Karte: rad 460725; noch nicht übernommen (jünger als frisch_tage): 51491
+Gedächtnis: 4 Monate (2026-08 bis 2026-11)
+Tageswerte der Quelle: rad: 312 Datastreams; Gedächtnis 7 Jahre (2020 bis 2026), gelesen rad 462264; in der Karte (vor der ersten gezählten Stunde der Stelle): rad 440604; noch nicht übernommen (jünger als frisch_tage): 2156
+Straßennamen aus OSM: 309, nach Kennung benannt: 3
+Reihe 2020-01-01 – 2026-11-08, 312 Stellen
+=== Gruppe rad
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+0002980 | Osdorfer Landstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2179 | 2026-11-07 | 1239
+0002981 | Osdorfer Landstraße | Knotenpunkt 0002, Arm West | 2026-08-29 – 2026-11-08 | 2178 | 2026-11-07 | 613
+0002982 | Osdorfer Landstraße | Knotenpunkt 0002, Arm West | 2026-08-29 – 2026-11-08 | 2177 | 2026-11-07 | 622
+0003960 | Neue Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2399 | 2026-11-07 | 1031
+0003961 | Neue Straße | Knotenpunkt 0003, Arm Süd | 2026-08-29 – 2026-11-08 | 2398 | 2026-11-07 | 541
+0003962 | Neue Straße | Knotenpunkt 0003, Arm Süd | 2026-08-29 – 2026-11-08 | 2399 | 2026-11-07 | 523
+0005940 | Klaus-Groth-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 778 | 2026-11-07 | 1413
+0005941 | Klaus-Groth-Straße | Knotenpunkt 0005, Arm Ost | 2026-08-29 – 2026-11-08 | 779 | 2026-11-07 | 790
+0005942 | Klaus-Groth-Straße | Knotenpunkt 0005, Arm Ost | 2026-08-29 – 2026-11-08 | 779 | 2026-11-07 | 641
+0006910 | Brandshofer Deich | Querschnitt | 2026-08-29 – 2026-11-08 | 778 | 2026-11-07 | 1668
+0006911 | Brandshofer Deich | Knotenpunkt 0006, Arm Nordwest | 2026-08-29 – 2026-11-08 | 778 | 2026-11-07 | 835
+0006912 | Brandshofer Deich | Knotenpunkt 0006, Arm Nordwest | 2026-08-29 – 2026-11-08 | 779 | 2026-11-07 | 828
+0007910 | Dratelnstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 831 | 2026-11-07 | 1277
+0007911 | Dratelnstraße | Knotenpunkt 0007, Arm Nordwest | 2026-08-29 – 2026-11-08 | 830 | 2026-11-07 | 675
+0007912 | Dratelnstraße | Knotenpunkt 0007, Arm Nordwest | 2026-08-29 – 2026-11-08 | 831 | 2026-11-07 | 603
+0008920 | Brücke des 17. Juni | Querschnitt | 2026-08-29 – 2026-11-08 | 786 | 2026-11-07 | 1398
+0008921 | Brücke des 17. Juni | Knotenpunkt 0008, Arm Nord | 2026-08-29 – 2026-11-08 | 786 | 2026-11-07 | 722
+0008922 | Brücke des 17. Juni | Knotenpunkt 0008, Arm Nord | 2026-08-29 – 2026-11-08 | 786 | 2026-11-07 | 672
+0009980 | Zählstelle 0009980 | Querschnitt | 2026-08-29 – 2026-11-08 | 741 | 2026-11-07 | 215
+0009981 | Zählstelle 0009981 | Knotenpunkt 0009, Arm West | 2026-08-29 – 2026-11-08 | 741 | 2026-11-07 | 102
+0009982 | Zählstelle 0009982 | Knotenpunkt 0009, Arm West | 2026-08-29 – 2026-11-08 | 740 | 2026-11-07 | 108
+0010920 | Eppendorfer Weg | Querschnitt | 2026-08-29 – 2026-11-08 | 739 | 2026-11-07 | 1186
+0010921 | Eppendorfer Weg | Knotenpunkt 0010, Arm Nord | 2026-08-29 – 2026-11-08 | 739 | 2026-11-07 | 710
+0010922 | Eppendorfer Weg | Knotenpunkt 0010, Arm Nord | 2026-08-29 – 2026-11-08 | 739 | 2026-11-07 | 493
+0011910 | Dakarweg | Querschnitt | 2026-08-29 – 2026-11-08 | 716 | 2026-11-07 | 1329
+0011911 | Dakarweg | Knotenpunkt 0011, Arm Nordwest | 2026-08-29 – 2026-11-08 | 716 | 2026-11-07 | 629
+0011912 | Dakarweg | Knotenpunkt 0011, Arm Nordwest | 2026-08-29 – 2026-11-08 | 715 | 2026-11-07 | 701
+0109940 | Wandsbeker Marktstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2154 | 2026-11-07 | 2457
+0109941 | Wandsbeker Marktstraße | Knotenpunkt 0109, Arm Ost | 2026-08-29 – 2026-11-08 | 2153 | 2026-11-07 | 1257
+0109942 | Wandsbeker Marktstraße | Knotenpunkt 0109, Arm Ost | 2026-08-29 – 2026-11-08 | 2154 | 2026-11-07 | 1199
+0117930 | Zweibrückenstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2327 | 2026-11-07 | 969
+0117931 | Zweibrückenstraße | Knotenpunkt 0117, Arm Nordost | 2026-08-29 – 2026-11-08 | 2326 | 2026-11-07 | 220
+0117932 | Zweibrückenstraße | Knotenpunkt 0117, Arm Nordost | 2026-08-29 – 2026-11-08 | 2326 | 2026-11-07 | 702
+0211950 | Frohmestraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2268 | 2026-11-07 | 762
+0211951 | Frohmestraße | Knotenpunkt 0211, Arm Südost | 2026-08-29 – 2026-11-08 | 2268 | 2026-11-07 | 512
+0211952 | Frohmestraße | Knotenpunkt 0211, Arm Südost | 2026-08-29 – 2026-11-08 | 2268 | 2026-11-07 | 200
+0219960 | Lokstedter Steindamm | Querschnitt | 2026-08-29 – 2026-11-08 | 809 | 2026-11-07 | 1612
+0219961 | Lokstedter Steindamm | Knotenpunkt 0219, Arm Süd | 2026-08-29 – 2026-11-08 | 808 | 2026-11-07 | 753
+0219962 | Lokstedter Steindamm | Knotenpunkt 0219, Arm Süd | 2026-08-29 – 2026-11-08 | 808 | 2026-11-07 | 861
+0259920 | Messeplatz | Querschnitt | 2026-08-29 – 2026-11-08 | 656 | 2026-11-07 | 3542
+0259921 | Messeplatz | Knotenpunkt 0259, Arm Nord | 2026-08-29 – 2026-11-08 | 814 | 2026-11-07 | 1637
+0259922 | Messeplatz | Knotenpunkt 0259, Arm Nord | 2026-08-29 – 2026-11-08 | 462 | 2026-11-07 | 2121
+0264910 | Stresemannstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 739 | 2026-11-07 | 2630
+0264911 | Stresemannstraße | Knotenpunkt 0264, Arm Nordwest | 2026-08-29 – 2026-11-08 | 739 | 2026-11-07 | 1317
+0264912 | Stresemannstraße | Knotenpunkt 0264, Arm Nordwest | 2026-08-29 – 2026-11-08 | 738 | 2026-11-07 | 1319
+0269950 | Schröderstiftstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2458 | 2026-11-07 | 1849
+0269951 | Schröderstiftstraße | Knotenpunkt 0269, Arm Südost | 2026-08-29 – 2026-11-08 | 2457 | 2026-11-07 | 501
+0269952 | Schröderstiftstraße | Knotenpunkt 0269, Arm Südost | 2026-08-29 – 2026-11-08 | 2458 | 2026-11-07 | 1257
+0285920 | Sternstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 697 | 2026-11-07 | 649
+0285921 | Sternstraße | Knotenpunkt mit Neuer Kamp, Arm Nord | 2026-08-29 – 2026-11-08 | 697 | 2026-11-07 | 378
+0285922 | Sternstraße | Knotenpunkt mit Neuer Kamp, Arm Nord | 2026-08-29 – 2026-11-08 | 696 | 2026-11-07 | 272
+0285940 | Neuer Kamp | Querschnitt | 2026-08-29 – 2026-11-08 | 2260 | 2026-11-07 | 2681
+0285941 | Neuer Kamp | Knotenpunkt mit Sternstraße, Arm Ost | 2026-08-29 – 2026-11-08 | 2261 | 2026-11-07 | 1921
+0285942 | Neuer Kamp | Knotenpunkt mit Sternstraße, Arm Ost | 2026-08-29 – 2026-11-08 | 2261 | 2026-11-07 | 858
+0285981 | Neuer Kamp | Knotenpunkt mit Sternstraße, Arm West | 2026-08-29 – 2026-11-04 | 2266 | 2026-11-03 | 2050
+0286940 | Ehrenbergstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2227 | 2026-11-07 | 1553
+0286941 | Ehrenbergstraße | Knotenpunkt 0286, Arm Ost | 2026-08-29 – 2026-11-08 | 2226 | 2026-11-07 | 704
+0286942 | Ehrenbergstraße | Knotenpunkt 0286, Arm Ost | 2026-08-29 – 2026-11-08 | 2227 | 2026-11-07 | 898
+0287980 | Lessingtunnel | Querschnitt | 2026-08-29 – 2026-11-08 | 778 | 2026-11-07 | 4385
+0287981 | Lessingtunnel | Knotenpunkt 0287, Arm West | 2026-08-29 – 2026-11-08 | 779 | 2026-11-07 | 2454
+0287982 | Lessingtunnel | Knotenpunkt 0287, Arm West | 2026-08-29 – 2026-11-08 | 840 | 2026-11-07 | 2093
+0295910 | Leinpfad | Querschnitt | 2026-08-29 – 2026-11-08 | 2420 | 2026-11-07 | 2772
+0295911 | Leinpfad | Knotenpunkt mit Krugkoppel, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2420 | 2026-11-07 | 1499
+0295912 | Leinpfad | Knotenpunkt mit Krugkoppel, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2420 | 2026-11-07 | 1238
+0295970 | Krugkoppel | Querschnitt | 2026-08-29 – 2026-11-08 | 238 | 2026-11-07 | 7374
+0295971 | Krugkoppel | Knotenpunkt mit Leinpfad, Arm Südwest | 2026-08-29 – 2026-11-08 | 239 | 2026-11-07 | 3667
+0295972 | Krugkoppel | Knotenpunkt mit Leinpfad, Arm Südwest | 2026-08-29 – 2026-11-08 | 237 | 2026-11-07 | 3733
+0297980 | Kennedybrücke | Querschnitt | 2026-08-29 – 2026-11-08 | 939 | 2026-11-07 | 4568
+0297981 | Kennedybrücke | Knotenpunkt 0297, Arm West | 2026-08-29 – 2026-11-08 | 2264 | 2026-11-07 | 2231
+0297982 | Kennedybrücke | Knotenpunkt 0297, Arm West | 2026-08-29 – 2026-11-08 | 2264 | 2026-11-07 | 2174
+0307930 | Mundsburger Damm | Querschnitt | 2026-08-29 – 2026-11-08 | 690 | 2026-11-07 | 2978
+0307931 | Mundsburger Damm | Knotenpunkt 0307, Arm Nordost | 2026-08-29 – 2026-11-08 | 691 | 2026-11-07 | 1725
+0307932 | Mundsburger Damm | Knotenpunkt 0307, Arm Nordost | 2026-08-29 – 2026-11-08 | 691 | 2026-11-07 | 1265
+0309920 | Wilhelmsburger Brücke | Querschnitt | 2026-08-29 – 2026-11-08 | 735 | 2026-11-07 | 1581
+0309921 | Wilhelmsburger Brücke | Knotenpunkt 0309, Arm Nord | 2026-08-29 – 2026-11-08 | 736 | 2026-11-07 | 784
+0309922 | Wilhelmsburger Brücke | Knotenpunkt 0309, Arm Nord | 2026-08-29 – 2026-11-08 | 736 | 2026-11-07 | 790
+0311910 | Adolph-Schönfelder-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2266 | 2026-11-07 | 1185
+0311911 | Adolph-Schönfelder-Straße | Knotenpunkt mit Hamburger Straße / Wagnerstraße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2266 | 2026-11-07 | 764
+0311912 | Adolph-Schönfelder-Straße | Knotenpunkt mit Hamburger Straße / Wagnerstraße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2266 | 2026-11-07 | 374
+0311950 | Wagnerstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2263 | 2026-11-07 | 1032
+0311951 | Wagnerstraße | Knotenpunkt mit Adolph-Schönfelder-Straße / Hamburger Straße, Arm Südost | 2026-08-29 – 2026-11-08 | 2263 | 2026-11-07 | 689
+0311952 | Wagnerstraße | Knotenpunkt mit Adolph-Schönfelder-Straße / Hamburger Straße, Arm Südost | 2026-08-29 – 2026-11-08 | 2263 | 2026-11-07 | 360
+0311970 | Hamburger Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 848 | 2026-11-07 | 3745
+0311971 | Hamburger Straße | Knotenpunkt mit Adolph-Schönfelder-Straße / Wagnerstraße, Arm Südwest | 2026-08-29 – 2026-11-08 | 849 | 2026-11-07 | 1998
+0311972 | Hamburger Straße | Knotenpunkt mit Adolph-Schönfelder-Straße / Wagnerstraße, Arm Südwest | 2026-08-29 – 2026-11-08 | 849 | 2026-11-07 | 1734
+0322920 | Herbert-Weichmann-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2401 | 2026-11-07 | 2264
+0322921 | Herbert-Weichmann-Straße | Knotenpunkt 0322, Arm Nord | 2026-08-29 – 2026-11-08 | 2399 | 2026-11-07 | 1164
+0322922 | Herbert-Weichmann-Straße | Knotenpunkt 0322, Arm Nord | 2026-08-29 – 2026-11-08 | 2401 | 2026-11-07 | 1104
+0333960 | Freihafenelbbrücke | Querschnitt | 2026-08-29 – 2026-10-01 | 661 | 2026-09-30 | 39
+0333961 | Freihafenelbbrücke | Knotenpunkt 0333, Arm Süd | 2026-08-29 – 2026-10-01 | 477 | 2026-09-30 | 16
+0333962 | Freihafenelbbrücke | Knotenpunkt 0333, Arm Süd | 2026-08-29 – 2026-10-01 | 644 | 2026-09-30 | 15
+0337950 | Ausschläger Allee | Querschnitt | 2026-08-29 – 2026-11-08 | 815 | 2026-11-07 | 415
+0337951 | Ausschläger Allee | Knotenpunkt 0337, Arm Südost | 2026-08-29 – 2026-11-08 | 817 | 2026-11-07 | 214
+0337952 | Ausschläger Allee | Knotenpunkt 0337, Arm Südost | 2026-08-29 – 2026-11-08 | 817 | 2026-11-07 | 200
+0356970 | An der Alster | Querschnitt | 2026-08-29 – 2026-11-08 | 238 | 2026-11-07 | 2604
+0356972 | An der Alster | Knotenpunkt 0356, Arm Südwest | 2026-08-29 – 2026-11-08 | 675 | 2026-11-07 | 1710
+0375910 | Wilstorfer Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2261 | 2026-11-07 | 797
+0375911 | Wilstorfer Straße | Knotenpunkt mit Moorstraße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2261 | 2026-11-07 | 502
+0375912 | Wilstorfer Straße | Knotenpunkt mit Moorstraße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 1800 | 2026-11-07 | 281
+0375940 | Moorstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2289 | 2026-11-07 | 757
+0375941 | Moorstraße | Knotenpunkt mit Wilstorfer Straße, Arm Ost | 2026-08-29 – 2026-11-08 | 2289 | 2026-11-07 | 404
+0375942 | Moorstraße | Knotenpunkt mit Wilstorfer Straße, Arm Ost | 2026-08-29 – 2026-11-08 | 2290 | 2026-11-07 | 363
+0375950 | Wilstorfer Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2332 | 2026-11-07 | 971
+0375951 | Wilstorfer Straße | Knotenpunkt mit Moorstraße, Arm Südost | 2026-08-29 – 2026-11-08 | 2331 | 2026-11-07 | 501
+0375952 | Wilstorfer Straße | Knotenpunkt mit Moorstraße, Arm Südost | 2026-08-29 – 2026-11-08 | 2331 | 2026-11-07 | 481
+0384970 | Eißendorfer Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 708 | 2026-11-07 | 827
+0384971 | Eißendorfer Straße | Knotenpunkt 0384, Arm Südwest | 2026-08-29 – 2026-11-08 | 709 | 2026-11-07 | 423
+0384972 | Eißendorfer Straße | Knotenpunkt 0384, Arm Südwest | 2026-08-29 – 2026-11-08 | 707 | 2026-11-07 | 407
+0393930 | Lohbrügger Markt | Querschnitt | 2026-08-29 – 2026-11-08 | 740 | 2026-11-07 | 464
+0393931 | Lohbrügger Markt | Knotenpunkt 0393, Arm Nordost | 2026-08-29 – 2026-11-08 | 736 | 2026-11-07 | 252
+0393932 | Lohbrügger Markt | Knotenpunkt 0393, Arm Nordost | 2026-08-29 – 2026-11-08 | 810 | 2026-11-07 | 220
+6058930 | Elbgaustraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2250 | 2026-11-07 | 1205
+6058931 | Elbgaustraße | Knotenpunkt 6058, Arm Nordost | 2026-08-29 – 2026-11-08 | 2251 | 2026-11-07 | 489
+6058932 | Elbgaustraße | Knotenpunkt 6058, Arm Nordost | 2026-08-29 – 2026-11-08 | 2251 | 2026-11-07 | 730
+6085970 | Berner Heerweg | Querschnitt | 2026-08-29 – 2026-11-08 | 2250 | 2026-11-07 | 723
+6085971 | Berner Heerweg | Knotenpunkt 6085, Arm Südwest | 2026-08-29 – 2026-11-08 | 2251 | 2026-11-07 | 366
+6085972 | Berner Heerweg | Knotenpunkt 6085, Arm Südwest | 2026-08-29 – 2026-11-08 | 2251 | 2026-11-07 | 365
+6111920 | Fuhlsbüttler Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2260 | 2026-11-07 | 1144
+6111921 | Fuhlsbüttler Straße | Knotenpunkt 6111, Arm Nord | 2026-08-29 – 2026-11-08 | 2259 | 2026-11-07 | 424
+6111922 | Fuhlsbüttler Straße | Knotenpunkt 6111, Arm Nord | 2026-08-29 – 2026-11-08 | 2260 | 2026-11-07 | 691
+6117940 | Langenfort | Querschnitt | 2026-08-29 – 2026-11-08 | 2461 | 2026-11-07 | 796
+6117941 | Langenfort | Knotenpunkt 6117, Arm Ost | 2026-08-29 – 2026-11-08 | 2462 | 2026-11-07 | 382
+6117942 | Langenfort | Knotenpunkt 6117, Arm Ost | 2026-08-29 – 2026-11-08 | 2461 | 2026-11-07 | 428
+6125980 | Alte Wöhr | Querschnitt | 2026-08-29 – 2026-11-08 | 2390 | 2026-11-07 | 789
+6125981 | Alte Wöhr | Knotenpunkt 6125, Arm West | 2026-08-29 – 2026-11-08 | 2389 | 2026-11-07 | 230
+6125982 | Alte Wöhr | Knotenpunkt 6125, Arm West | 2026-08-29 – 2026-11-08 | 2389 | 2026-11-07 | 559
+6195920 | Sülldorfer Kirchenweg | Querschnitt | 2026-08-29 – 2026-11-08 | 2267 | 2026-11-07 | 612
+6195921 | Sülldorfer Kirchenweg | Knotenpunkt mit Blankeneser Bahnhofstraße / Blankeneser Landstraße, Arm Nord | 2026-08-29 – 2026-11-08 | 2269 | 2026-11-07 | 335
+6195922 | Sülldorfer Kirchenweg | Knotenpunkt mit Blankeneser Bahnhofstraße / Blankeneser Landstraße, Arm Nord | 2026-08-29 – 2026-11-08 | 2268 | 2026-11-07 | 276
+6195960 | Blankeneser Bahnhofstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 772 | 2026-11-07 | 707
+6195961 | Blankeneser Bahnhofstraße | Knotenpunkt mit Blankeneser Landstraße / Sülldorfer Kirchenweg, Arm Süd | 2026-08-29 – 2026-11-08 | 772 | 2026-11-07 | 383
+6195962 | Blankeneser Bahnhofstraße | Knotenpunkt mit Blankeneser Landstraße / Sülldorfer Kirchenweg, Arm Süd | 2026-08-29 – 2026-11-08 | 773 | 2026-11-07 | 326
+6195980 | Blankeneser Landstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 604 | 2026-11-07 | 375
+6195981 | Blankeneser Landstraße | Knotenpunkt mit Blankeneser Bahnhofstraße / Sülldorfer Kirchenweg, Arm West | 2026-08-29 – 2026-11-08 | 678 | 2026-11-07 | 180
+6195982 | Blankeneser Landstraße | Knotenpunkt mit Blankeneser Bahnhofstraße / Sülldorfer Kirchenweg, Arm West | 2026-08-29 – 2026-11-08 | 696 | 2026-11-07 | 208
+6247950 | Theodor-Heuss-Platz | Querschnitt | 2026-08-29 – 2026-11-08 | 759 | 2026-11-07 | 5850
+6247951 | Theodor-Heuss-Platz | Knotenpunkt 6247, Arm Südost | 2026-08-29 – 2026-11-08 | 759 | 2026-11-07 | 2740
+6247952 | Theodor-Heuss-Platz | Knotenpunkt 6247, Arm Südost | 2026-08-29 – 2026-11-08 | 418 | 2026-11-07 | 3328
+6253980 | Königstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 702 | 2026-11-07 | 1300
+6253981 | Königstraße | Knotenpunkt 6253, Arm West | 2026-08-29 – 2026-11-08 | 702 | 2026-11-07 | 708
+6253982 | Königstraße | Knotenpunkt 6253, Arm West | 2026-08-29 – 2026-11-08 | 676 | 2026-11-07 | 612
+6274980 | Bei den St. Pauli-Landungsbrücken | Querschnitt | 2026-08-29 – 2026-11-08 | 756 | 2026-11-07 | 2357
+6274981 | Bei den St. Pauli-Landungsbrücken | Knotenpunkt 6274, Arm West | 2026-08-29 – 2026-11-08 | 759 | 2026-11-07 | 1089
+6274982 | Bei den St. Pauli-Landungsbrücken | Knotenpunkt 6274, Arm West | 2026-08-29 – 2026-11-08 | 751 | 2026-11-07 | 1263
+6283960 | Neuer Jungfernstieg | Querschnitt | 2026-08-29 – 2026-11-08 | 699 | 2026-11-07 | 3413
+6283961 | Neuer Jungfernstieg | Knotenpunkt 6283, Arm Süd | 2026-08-29 – 2026-11-08 | 2357 | 2026-11-07 | 1788
+6283962 | Neuer Jungfernstieg | Knotenpunkt 6283, Arm Süd | 2026-08-29 – 2026-11-08 | 700 | 2026-11-07 | 1157
+6304980 | Chemnitzstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 842 | 2026-11-07 | 3592
+6304981 | Chemnitzstraße | Knotenpunkt 6304, Arm West | 2026-08-29 – 2026-11-08 | 843 | 2026-11-07 | 1914
+6304982 | Chemnitzstraße | Knotenpunkt 6304, Arm West | 2026-08-29 – 2026-11-08 | 843 | 2026-11-07 | 1684
+6320980 | Reeperbahn | Querschnitt | 2026-08-29 – 2026-11-08 | 690 | 2026-11-07 | 1847
+6320981 | Reeperbahn | Knotenpunkt 6320, Arm West | 2026-08-29 – 2026-11-08 | 664 | 2026-11-07 | 869
+6320982 | Reeperbahn | Knotenpunkt 6320, Arm West | 2026-08-29 – 2026-11-08 | 838 | 2026-11-07 | 1130
+6370940 | Osterstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2260 | 2026-11-07 | 2985
+6370941 | Osterstraße | Knotenpunkt 6370, Arm Ost | 2026-08-29 – 2026-11-08 | 2261 | 2026-11-07 | 1412
+6370942 | Osterstraße | Knotenpunkt 6370, Arm Ost | 2026-08-29 – 2026-11-08 | 2260 | 2026-11-07 | 1563
+6381910 | Wördemanns Weg | Querschnitt | 2026-08-29 – 2026-11-08 | 705 | 2026-11-07 | 1391
+6381911 | Wördemanns Weg | Knotenpunkt 6381, Arm Nordwest | 2026-08-29 – 2026-11-08 | 690 | 2026-11-07 | 716
+6381912 | Wördemanns Weg | Knotenpunkt 6381, Arm Nordwest | 2026-08-29 – 2026-11-08 | 814 | 2026-11-07 | 698
+6408960 | Dammtordamm | Querschnitt | 2026-08-29 – 2026-11-08 | 1901 | 2026-11-07 | 2968
+6408961 | Dammtordamm | Knotenpunkt 6408, Arm Süd | 2026-08-29 – 2026-11-08 | 1900 | 2026-11-07 | 1356
+6408962 | Dammtordamm | Knotenpunkt 6408, Arm Süd | 2026-08-29 – 2026-11-08 | 1901 | 2026-11-07 | 1598
+6414970 | Maria-Louisen-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 418 | 2026-11-07 | 2644
+6414971 | Maria-Louisen-Straße | Knotenpunkt 6414, Arm Südwest | 2026-08-29 – 2026-11-08 | 736 | 2026-11-07 | 1283
+6414972 | Maria-Louisen-Straße | Knotenpunkt 6414, Arm Südwest | 2026-08-29 – 2026-11-08 | 811 | 2026-11-07 | 1235
+6655960 | Fuhlsbüttler Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2158 | 2026-11-07 | 1054
+6655961 | Fuhlsbüttler Straße | Knotenpunkt 6655, Arm Süd | 2026-08-29 – 2026-11-08 | 2159 | 2026-11-07 | 478
+6655962 | Fuhlsbüttler Straße | Knotenpunkt 6655, Arm Süd | 2026-08-29 – 2026-11-08 | 2159 | 2026-11-07 | 567
+6716940 | Hasselbrookstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2256 | 2026-11-07 | 725
+6716941 | Hasselbrookstraße | Knotenpunkt 6716, Arm Ost | 2026-08-29 – 2026-11-08 | 2256 | 2026-11-07 | 338
+6716942 | Hasselbrookstraße | Knotenpunkt 6716, Arm Ost | 2026-08-29 – 2026-11-08 | 2256 | 2026-11-07 | 382
+6779940 | Hartwicusstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2258 | 2026-11-07 | 724
+6779941 | Hartwicusstraße | Knotenpunkt 6779, Arm Ost | 2026-08-29 – 2026-11-08 | 2257 | 2026-11-07 | 452
+6779942 | Hartwicusstraße | Knotenpunkt 6779, Arm Ost | 2026-08-29 – 2026-11-08 | 2258 | 2026-11-07 | 275
+6848980 | Veritaskai | Querschnitt | 2026-08-29 – 2026-11-08 | 840 | 2026-11-07 | 594
+6848981 | Veritaskai | Knotenpunkt 6848, Arm West | 2026-08-29 – 2026-11-08 | 841 | 2026-11-07 | 353
+6848982 | Veritaskai | Knotenpunkt 6848, Arm West | 2026-08-29 – 2026-11-08 | 838 | 2026-11-07 | 236
+6894920 | Kirchdorfer Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2379 | 2026-11-07 | 218
+6894921 | Kirchdorfer Straße | Knotenpunkt mit Otto-Brenner-Straße, Arm Nord | 2026-08-29 – 2026-11-08 | 2378 | 2026-11-07 | 93
+6894922 | Kirchdorfer Straße | Knotenpunkt mit Otto-Brenner-Straße, Arm Nord | 2026-08-29 – 2026-11-08 | 2378 | 2026-11-07 | 124
+6894950 | Otto-Brenner-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2264 | 2026-11-07 | 319
+6894951 | Otto-Brenner-Straße | Knotenpunkt mit Kirchdorfer Straße, Arm Südost | 2026-08-29 – 2026-11-08 | 2264 | 2026-11-07 | 160
+6894952 | Otto-Brenner-Straße | Knotenpunkt mit Kirchdorfer Straße, Arm Südost | 2026-08-29 – 2026-11-08 | 2263 | 2026-11-07 | 158
+6999940 | Ludwig-Erhard-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 777 | 2026-11-07 | 3755
+6999941 | Ludwig-Erhard-Straße | Knotenpunkt 6999, Arm Ost | 2026-08-29 – 2026-11-08 | 779 | 2026-11-07 | 1713
+6999942 | Ludwig-Erhard-Straße | Knotenpunkt 6999, Arm Ost | 2026-08-29 – 2026-11-08 | 778 | 2026-11-07 | 2058
+7068920 | Oberer Landweg | Querschnitt | 2026-08-29 – 2026-11-08 | 2226 | 2026-11-07 | 1191
+7068921 | Oberer Landweg | Knotenpunkt 7068, Arm Nord | 2026-08-29 – 2026-11-08 | 2225 | 2026-11-07 | 590
+7068922 | Oberer Landweg | Knotenpunkt 7068, Arm Nord | 2026-08-29 – 2026-11-08 | 2226 | 2026-11-07 | 611
+7124960 | Eulenkamp | Querschnitt | 2026-08-29 – 2026-11-08 | 740 | 2026-11-07 | 437
+7124961 | Eulenkamp | Knotenpunkt 7124, Arm Süd | 2026-08-29 – 2026-11-08 | 741 | 2026-11-07 | 175
+7124962 | Eulenkamp | Knotenpunkt 7124, Arm Süd | 2026-08-29 – 2026-11-08 | 741 | 2026-11-07 | 252
+7197910 | Billstedter Hauptstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 821 | 2026-11-07 | 281
+7197911 | Billstedter Hauptstraße | Knotenpunkt mit Reclamstraße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 822 | 2026-11-07 | 139
+7197912 | Billstedter Hauptstraße | Knotenpunkt mit Reclamstraße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2347 | 2026-11-07 | 118
+7197930 | Reclamstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 711 | 2026-11-07 | 133
+7197931 | Reclamstraße | Knotenpunkt mit Billstedter Hauptstraße, Arm Nordost | 2026-08-29 – 2026-11-08 | 2260 | 2026-11-07 | 54
+7197932 | Reclamstraße | Knotenpunkt mit Billstedter Hauptstraße, Arm Nordost | 2026-08-29 – 2026-11-08 | 711 | 2026-11-07 | 65
+7197950 | Billstedter Hauptstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 442 | 2026-11-07 | 251
+7197951 | Billstedter Hauptstraße | Knotenpunkt mit Reclamstraße, Arm Südost | 2026-08-29 – 2026-11-08 | 774 | 2026-11-07 | 142
+7197952 | Billstedter Hauptstraße | Knotenpunkt mit Reclamstraße, Arm Südost | 2026-08-29 – 2026-11-08 | 772 | 2026-11-07 | 78
+7241920 | Tangstedter Landstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 1602 | 2026-11-07 | 403
+7241921 | Tangstedter Landstraße | Knotenpunkt mit Am Ohlmoorgraben / Gehlengraben / Krohnstieg, Arm Nord | 2026-08-29 – 2026-11-08 | 1602 | 2026-11-07 | 220
+7241922 | Tangstedter Landstraße | Knotenpunkt mit Am Ohlmoorgraben / Gehlengraben / Krohnstieg, Arm Nord | 2026-08-29 – 2026-11-08 | 1600 | 2026-11-07 | 212
+7241940 | Gehlengraben | Querschnitt | 2026-08-29 – 2026-11-08 | 1748 | 2026-11-07 | 870
+7241941 | Gehlengraben | Knotenpunkt mit Am Ohlmoorgraben / Krohnstieg / Tangstedter Landstraße, Arm Ost | 2026-08-29 – 2026-11-08 | 1748 | 2026-11-07 | 462
+7241942 | Gehlengraben | Knotenpunkt mit Am Ohlmoorgraben / Krohnstieg / Tangstedter Landstraße, Arm Ost | 2026-08-29 – 2026-11-08 | 1747 | 2026-11-07 | 406
+7241960 | Am Ohlmoorgraben | Querschnitt | 2026-08-29 – 2026-11-08 | 1704 | 2026-11-07 | 493
+7241961 | Am Ohlmoorgraben | Knotenpunkt mit Gehlengraben / Krohnstieg / Tangstedter Landstraße, Arm Süd | 2026-08-29 – 2026-11-08 | 1705 | 2026-11-07 | 255
+7241962 | Am Ohlmoorgraben | Knotenpunkt mit Gehlengraben / Krohnstieg / Tangstedter Landstraße, Arm Süd | 2026-08-29 – 2026-11-08 | 1704 | 2026-11-07 | 250
+7241980 | Krohnstieg | Querschnitt | 2026-08-29 – 2026-11-08 | 1711 | 2026-11-07 | 1114
+7241981 | Krohnstieg | Knotenpunkt mit Am Ohlmoorgraben / Gehlengraben / Tangstedter Landstraße, Arm West | 2026-08-29 – 2026-11-08 | 1710 | 2026-11-07 | 571
+7241982 | Krohnstieg | Knotenpunkt mit Am Ohlmoorgraben / Gehlengraben / Tangstedter Landstraße, Arm West | 2026-08-29 – 2026-11-08 | 1711 | 2026-11-07 | 570
+7271980 | Paul-Ehrlich-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 707 | 2026-11-07 | 1599
+7271981 | Paul-Ehrlich-Straße | Knotenpunkt 7271, Arm West | 2026-08-29 – 2026-11-08 | 707 | 2026-11-07 | 786
+7271982 | Paul-Ehrlich-Straße | Knotenpunkt 7271, Arm West | 2026-08-29 – 2026-11-08 | 709 | 2026-11-07 | 808
+7297940 | Lobuschstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2119 | 2026-11-07 | 3238
+7297941 | Lobuschstraße | Knotenpunkt 7297, Arm Ost | 2026-08-29 – 2026-11-08 | 2119 | 2026-11-07 | 1543
+7297942 | Lobuschstraße | Knotenpunkt 7297, Arm Ost | 2026-08-29 – 2026-11-08 | 2118 | 2026-11-07 | 1700
+7302960 | Alte Holstenstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2304 | 2026-11-07 | 868
+7302961 | Alte Holstenstraße | Knotenpunkt 7302, Arm Süd | 2026-08-29 – 2026-11-08 | 2304 | 2026-11-07 | 419
+7302962 | Alte Holstenstraße | Knotenpunkt 7302, Arm Süd | 2026-08-29 – 2026-11-08 | 2304 | 2026-11-07 | 443
+7414960 | Kollaustraße | Querschnitt | 2026-08-29 – 2026-11-08 | 2368 | 2026-11-07 | 1677
+7414961 | Kollaustraße | Knotenpunkt 7414, Arm Süd | 2026-08-29 – 2026-11-08 | 2368 | 2026-11-07 | 887
+7414962 | Kollaustraße | Knotenpunkt 7414, Arm Süd | 2026-08-29 – 2026-11-08 | 2368 | 2026-11-07 | 811
+7430910 | Neuenfelder Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2331 | 2026-11-07 | 243
+7430911 | Neuenfelder Straße | Knotenpunkt 7430, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2139 | 2026-11-07 | 152
+7430912 | Neuenfelder Straße | Knotenpunkt 7430, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2330 | 2026-11-07 | 97
+7431960 | Alsterufer | Querschnitt | 2026-08-29 – 2026-11-08 | 2354 | 2026-11-07 | 3465
+7431961 | Alsterufer | Knotenpunkt 7431, Arm Süd | 2026-08-29 – 2026-11-08 | 2353 | 2026-11-07 | 1881
+7431962 | Alsterufer | Knotenpunkt 7431, Arm Süd | 2026-08-29 – 2026-11-08 | 2354 | 2026-11-07 | 1576
+7432910 | Bogenstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 982 | 2026-11-07 | 2346
+7432911 | Bogenstraße | Knotenpunkt mit Kaiser-Friedrich-Ufer, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2307 | 2026-11-07 | 1179
+7432912 | Bogenstraße | Knotenpunkt mit Kaiser-Friedrich-Ufer, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2307 | 2026-11-07 | 1063
+7432970 | Kaiser-Friedrich-Ufer | Querschnitt | 2026-08-29 – 2026-11-08 | 2263 | 2026-11-07 | 3542
+7432971 | Kaiser-Friedrich-Ufer | Knotenpunkt mit Bogenstraße, Arm Südwest | 2026-08-29 – 2026-11-08 | 2264 | 2026-11-07 | 1817
+7432972 | Kaiser-Friedrich-Ufer | Knotenpunkt mit Bogenstraße, Arm Südwest | 2026-08-29 – 2026-11-08 | 2263 | 2026-11-07 | 1728
+7433910 | Hoheluftchaussee | Querschnitt | 2026-08-29 – 2026-11-08 | 2269 | 2026-11-07 | 2461
+7433911 | Hoheluftchaussee | Knotenpunkt mit Eppendorfer Weg, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2269 | 2026-11-07 | 1612
+7433912 | Hoheluftchaussee | Knotenpunkt mit Eppendorfer Weg, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2269 | 2026-11-07 | 860
+7433930 | Eppendorfer Weg | Querschnitt | 2026-08-29 – 2026-11-08 | 768 | 2026-11-07 | 1866
+7433931 | Eppendorfer Weg | Knotenpunkt mit Hoheluftchaussee, Arm Nordost | 2026-08-29 – 2026-11-08 | 769 | 2026-11-07 | 921
+7433932 | Eppendorfer Weg | Knotenpunkt mit Hoheluftchaussee, Arm Nordost | 2026-08-29 – 2026-11-08 | 768 | 2026-11-07 | 957
+7433950 | Hoheluftchaussee | Querschnitt | 2026-08-29 – 2026-11-08 | 2417 | 2026-11-07 | 4119
+7433951 | Hoheluftchaussee | Knotenpunkt mit Eppendorfer Weg, Arm Südost | 2026-08-29 – 2026-11-08 | 2417 | 2026-11-07 | 2072
+7433952 | Hoheluftchaussee | Knotenpunkt mit Eppendorfer Weg, Arm Südost | 2026-08-29 – 2026-11-08 | 2417 | 2026-11-07 | 2018
+7433970 | Eppendorfer Weg | Querschnitt | 2026-08-29 – 2026-11-08 | 2270 | 2026-11-07 | 2237
+7433971 | Eppendorfer Weg | Knotenpunkt mit Hoheluftchaussee, Arm Südwest | 2026-08-29 – 2026-11-08 | 2270 | 2026-11-07 | 1115
+7433972 | Eppendorfer Weg | Knotenpunkt mit Hoheluftchaussee, Arm Südwest | 2026-08-29 – 2026-11-08 | 2180 | 2026-11-07 | 1119
+7434930 | Hamburger Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2347 | 2026-11-07 | 2383
+7434931 | Hamburger Straße | Knotenpunkt 7434, Arm Nordost | 2026-08-29 – 2026-11-08 | 2347 | 2026-11-07 | 1225
+7434932 | Hamburger Straße | Knotenpunkt 7434, Arm Nordost | 2026-08-29 – 2026-11-08 | 2346 | 2026-11-07 | 1185
+7435920 | Heegbarg | Querschnitt | 2026-08-29 – 2026-11-08 | 2118 | 2026-11-07 | 697
+7435921 | Heegbarg | Knotenpunkt mit Saseler Damm, Arm Nord | 2026-08-29 – 2026-11-08 | 2117 | 2026-11-07 | 337
+7435922 | Heegbarg | Knotenpunkt mit Saseler Damm, Arm Nord | 2026-08-29 – 2026-11-08 | 2119 | 2026-11-07 | 364
+7435940 | Saseler Damm | Querschnitt | 2026-08-29 – 2026-11-08 | 2248 | 2026-11-07 | 511
+7435941 | Saseler Damm | Knotenpunkt mit Heegbarg, Arm Ost | 2026-08-29 – 2026-11-08 | 2249 | 2026-11-07 | 364
+7435942 | Saseler Damm | Knotenpunkt mit Heegbarg, Arm Ost | 2026-08-29 – 2026-11-08 | 2247 | 2026-11-07 | 109
+7435960 | Heegbarg | Querschnitt | 2026-08-29 – 2026-11-08 | 2275 | 2026-11-07 | 812
+7435961 | Heegbarg | Knotenpunkt mit Saseler Damm, Arm Süd | 2026-08-29 – 2026-11-08 | 2276 | 2026-11-07 | 276
+7435962 | Heegbarg | Knotenpunkt mit Saseler Damm, Arm Süd | 2026-08-29 – 2026-11-08 | 2275 | 2026-11-07 | 505
+7435980 | Saseler Damm | Querschnitt | 2026-08-29 – 2026-11-08 | 698 | 2026-11-07 | 900
+7435981 | Saseler Damm | Knotenpunkt mit Heegbarg, Arm West | 2026-08-29 – 2026-11-08 | 699 | 2026-11-07 | 433
+7435982 | Saseler Damm | Knotenpunkt mit Heegbarg, Arm West | 2026-08-29 – 2026-11-08 | 697 | 2026-11-07 | 461
+7436960 | Hermann-Blohm-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2350 | 2026-11-07 | 1714
+7436961 | Hermann-Blohm-Straße | Knotenpunkt 7436, Arm Süd | 2026-08-29 – 2026-11-08 | 2350 | 2026-11-07 | 885
+7436962 | Hermann-Blohm-Straße | Knotenpunkt 7436, Arm Süd | 2026-08-29 – 2026-11-08 | 2350 | 2026-11-07 | 831
+7438910 | Bundesstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 711 | 2026-11-07 | 1079
+7438911 | Bundesstraße | Knotenpunkt 7438, Arm Nordwest | 2026-08-29 – 2026-11-08 | 736 | 2026-11-07 | 751
+7438912 | Bundesstraße | Knotenpunkt 7438, Arm Nordwest | 2026-08-29 – 2026-11-08 | 697 | 2026-11-07 | 452
+7462910 | Loher Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 2221 | 2026-11-07 | 212
+7462911 | Loher Straße | Knotenpunkt mit Rahlstedter Straße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2222 | 2026-11-07 | 102
+7462912 | Loher Straße | Knotenpunkt mit Rahlstedter Straße, Arm Nordwest | 2026-08-29 – 2026-11-08 | 2222 | 2026-11-07 | 108
+7462970 | Rahlstedter Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 1781 | 2026-11-07 | 432
+7462971 | Rahlstedter Straße | Knotenpunkt mit Loher Straße, Arm Südwest | 2026-08-29 – 2026-11-08 | 2157 | 2026-11-07 | 199
+7462972 | Rahlstedter Straße | Knotenpunkt mit Loher Straße, Arm Südwest | 2026-08-29 – 2026-11-08 | 2158 | 2026-11-07 | 229
+7565960 | Kleekamp | Querschnitt | 2026-08-29 – 2026-11-08 | 739 | 2026-11-07 | 478
+7565961 | Kleekamp | Knotenpunkt 7565, Arm Süd | 2026-08-29 – 2026-11-08 | 738 | 2026-11-07 | 200
+7565962 | Kleekamp | Knotenpunkt 7565, Arm Süd | 2026-08-29 – 2026-11-08 | 738 | 2026-11-07 | 277
+7586980 | Bahrenfelder Kirchenweg | Querschnitt | 2026-08-29 – 2026-11-08 | 625 | 2026-11-07 | 332
+7586981 | Bahrenfelder Kirchenweg | Knotenpunkt 7586, Arm West | 2026-08-29 – 2026-11-08 | 625 | 2026-11-07 | 137
+7586982 | Bahrenfelder Kirchenweg | Knotenpunkt 7586, Arm West | 2026-08-29 – 2026-11-08 | 625 | 2026-11-07 | 189
+7783920 | Ritterstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 574 | 2026-11-07 | 697
+7783921 | Ritterstraße | Knotenpunkt 7783, Arm Nord | 2026-08-29 – 2026-11-08 | 681 | 2026-11-07 | 356
+7783922 | Ritterstraße | Knotenpunkt 7783, Arm Nord | 2026-08-29 – 2026-11-08 | 684 | 2026-11-07 | 343
+7784970 | Ballindamm | Querschnitt | 2026-08-29 – 2026-11-08 | 483 | 2026-11-07 | 2389
+7784971 | Ballindamm | Knotenpunkt 7784, Arm Südwest | 2026-08-29 – 2026-11-08 | 396 | 2026-11-07 | 1254
+7784972 | Ballindamm | Knotenpunkt 7784, Arm Südwest | 2026-08-29 – 2026-11-08 | 707 | 2026-11-07 | 1305
+7785930 | Steindamm | Querschnitt | 2026-08-29 – 2026-11-08 | 740 | 2026-11-07 | 895
+7785931 | Steindamm | Knotenpunkt 7785, Arm Nordost | 2026-08-29 – 2026-11-08 | 814 | 2026-11-07 | 456
+7785932 | Steindamm | Knotenpunkt 7785, Arm Nordost | 2026-08-29 – 2026-11-08 | 741 | 2026-11-07 | 436
+7786960 | Bei St. Annen | Querschnitt | 2026-08-29 – 2026-11-08 | 696 | 2026-11-07 | 1330
+7786961 | Bei St. Annen | Knotenpunkt 7786, Arm Süd | 2026-08-29 – 2026-11-08 | 683 | 2026-11-07 | 552
+7786962 | Bei St. Annen | Knotenpunkt 7786, Arm Süd | 2026-08-29 – 2026-11-08 | 697 | 2026-11-07 | 750
+7787960 | Paul-Sorge-Straße | Querschnitt | 2026-08-29 – 2026-11-08 | 840 | 2026-11-07 | 942
+7787961 | Paul-Sorge-Straße | Knotenpunkt 7787, Arm Süd | 2026-08-29 – 2026-11-08 | 839 | 2026-11-07 | 479
+7787962 | Paul-Sorge-Straße | Knotenpunkt 7787, Arm Süd | 2026-08-29 – 2026-11-08 | 840 | 2026-11-07 | 464
+7788920 | Grandweg | Querschnitt | 2026-08-29 – 2026-11-08 | 816 | 2026-11-07 | 1409
+7788921 | Grandweg | Knotenpunkt 7788, Arm Nord | 2026-08-29 – 2026-11-08 | 434 | 2026-11-07 | 794
+7788922 | Grandweg | Knotenpunkt 7788, Arm Nord | 2026-08-29 – 2026-11-08 | 815 | 2026-11-07 | 675
+7789960 | Lokstedter Grenzstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 844 | 2026-11-07 | 667
+7789961 | Lokstedter Grenzstraße | Knotenpunkt 7789, Arm Süd | 2026-08-29 – 2026-11-08 | 844 | 2026-11-07 | 364
+7789962 | Lokstedter Grenzstraße | Knotenpunkt 7789, Arm Süd | 2026-08-29 – 2026-11-08 | 843 | 2026-11-07 | 308
+7790910 | Schlüterstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 844 | 2026-11-07 | 1058
+7790911 | Schlüterstraße | Knotenpunkt 7790, Arm Nordwest | 2026-08-29 – 2026-11-08 | 450 | 2026-11-07 | 611
+7790912 | Schlüterstraße | Knotenpunkt 7790, Arm Nordwest | 2026-08-29 – 2026-11-08 | 844 | 2026-11-07 | 514
+7791910 | Langenfelder Damm | Querschnitt | 2026-08-29 – 2026-11-08 | 684 | 2026-11-07 | 1669
+7791911 | Langenfelder Damm | Knotenpunkt 7791, Arm Nordwest | 2026-08-29 – 2026-11-08 | 674 | 2026-11-07 | 878
+7791912 | Langenfelder Damm | Knotenpunkt 7791, Arm Nordwest | 2026-08-29 – 2026-11-08 | 841 | 2026-11-07 | 793
+7792910 | Warnstedtstraße | Querschnitt | 2026-08-29 – 2026-11-08 | 835 | 2026-11-07 | 1175
+7792911 | Warnstedtstraße | Knotenpunkt 7792, Arm Nordwest | 2026-08-29 – 2026-11-08 | 836 | 2026-11-07 | 571
+7792912 | Warnstedtstraße | Knotenpunkt 7792, Arm Nordwest | 2026-08-29 – 2026-11-08 | 836 | 2026-11-07 | 602
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2020: 2020-01-01: 22/0, 2020-12-31: 144/0
+2021: 2021-01-01: 136/0, 2021-12-31: 134/0
+2022: 2022-01-01: 134/0, 2022-12-31: 156/0
+2023: 2023-01-01: 156/0, 2023-12-31: 154/0
+2024: 2024-01-01: 154/0, 2024-12-31: 298/0
+2025: 2025-01-01: 298/0, 2025-12-31: 296/0
+2026: 2026-01-01: 297/0
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2020: 2020-03-29: voll 21/0, gezählte Stunden []; 2020-10-25: voll 132/0, gezählte Stunden []
+2021: 2021-03-28: voll 142/0, gezählte Stunden []; 2021-10-31: voll 137/0, gezählte Stunden []
+2022: 2022-03-27: voll 0/0, gezählte Stunden []; 2022-10-30: voll 155/0, gezählte Stunden []
+2023: 2023-03-26: voll 153/0, gezählte Stunden []; 2023-10-29: voll 155/0, gezählte Stunden []
+2024: 2024-03-31: voll 156/0, gezählte Stunden []; 2024-10-27: voll 257/0, gezählte Stunden []
+2025: 2025-03-30: voll 298/0, gezählte Stunden []; 2025-10-26: voll 296/0, gezählte Stunden []
+2026: 2026-03-29: voll 0/0, gezählte Stunden []; 2026-10-25: voll 0/309, gezählte Stunden [23]
+== Vollständige Tage je Jahr (alle Stellen)
+2020: 27861 von 0 Tagen mit Werten
+2021: 50571 von 0 Tagen mit Werten
+2022: 53082 von 0 Tagen mit Werten
+2023: 56495 von 0 Tagen mit Werten
+2024: 70877 von 0 Tagen mit Werten
+2025: 108703 von 0 Tagen mit Werten
+2026: 91224 von 19799 Tagen mit Werten
+== Kartendaten (nur hamburg_rad)
+hamburg_rad: 312 Stellen mit vollständigen Tagen, 0 ohne
+14 Dateien, 7.6 MB, 6 Detail-Dateien
+hamburg_rad: vollständige Tage je Jahr (Stellen × Tage) – 2020: 27861, 2021: 50571, 2022: 53082, 2023: 56495, 2024: 70877, 2025: 108703, 2026: 91224
+hamburg_rad: davon Tageswerte der Quelle (rad): 440604
+hamburg_rad: rad-Tagessummen, Quintilgrenzen [240, 510, 890, 1610], Median 679, Maximum 41181
+index.json quellen: [{"code": "hamburg_rad", "name": "Hamburg (Rad, Wärmebildkameras)", "land": "HH", "traeger": "Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende", "art": "Wärmebildkameras (Infrarot-Detektoren) des Hamburger Radzählnetzes; Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm oder ein Querschnitt ohne Richtung)", "weg": "offen über die SensorThings API der Urban Data Platform Hamburg", "portal": "https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20", "archiv": null, "quellenvermerk": "Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende", "lizenzen": [{"code": "hamburg_rad", "titel": "Verkehrsdaten Rad Infrarotdetektoren Hamburg (verändert: Stundenwerte zu Tagessummen zusammengefasst, Straßennamen aus OpenStreetMap ergänzt)", "herausgeber": "Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende", "lizenz": "dl-de/by-2-0", "lizenz_url": "https://www.govdata.de/dl-de/by-2-0", "herkunft_url": "https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20"}], "hinweise": ["Laut Quelle nicht umfassend qualitätsgesichert und nicht amtlich geprüft; Lücken können noch nach ein paar Tagen nachgeliefert werden. Angestrebte Genauigkeit laut Quelle: ±10 % auf Geh- und Radwegen und Radfahrstreifen, ±20 % im Mischverkehr; an Zählstellen, die mehrere Zählfelder zusammenfassen, bis ±20 %.", "Die Zählkarte übernimmt Stunden erst nach sieben Tagen und prüft nur, ob je
+index.json lizenzen: null

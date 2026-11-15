@@ -1,0 +1,406 @@
+https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20 -> https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20
+
+
+
+Verkehrsdaten Rad (Infrarotdetektoren) Hamburg
+
+Transparenzportal Hamburg
+
+Transparenzportal
+
+Servicemenü
+
+Kontakt
+
+News
+
+Drucken
+
+Schließen
+
+Öffnen
+
+Themen
+
+Schließen
+
+Mehr anzeigen
+
+Transparenzportal
+
+Über uns
+
+Mehr anzeigen
+
+zurück
+
+Über uns
+
+Das Team des Transparenzportals
+
+Das Staatsarchiv
+
+Die Technik
+
+Änderungsprotokoll
+
+Die Nutzungsstatistik
+
+Das Transparenzportal
+
+Mehr anzeigen
+
+zurück
+
+Das Transparenzportal
+
+Das Hamburgische Transparenzgesetz
+
+Gesetzestext des HmbTG
+
+Die Auskunftspflicht nach HmbTG
+
+Mehr Transparenz in Hamburg
+
+Die Informationsgegenstände
+
+Open Data
+
+Verwendung der Daten aus dem Transparenzportal
+
+News
+
+Mehr anzeigen
+
+zurück
+
+News
+
+10 Jahre Transparenzportal Hamburg
+
+Hochwertige Datensätze (HVD) im Transparenzportal
+
+Strategie zur Aufarbeitung des Kolonialzeit-Erbes
+
+Relaunch des Transparenzportals
+
+Unter der Motorhaube des Transparenzportals
+
+Transparenzportal
+
+Suche
+
+Suche
+
+Transparenzportal Hamburg
+
+-->
+
+Suchen
+
+Erweiterte Suche
+
+Erweiterte Suche
+
+Zurück zur Trefferliste
+
+Verkehrsdaten Rad (Infrarotdetektoren) Hamburg
+
+Veröffentlichende Stelle
+
+Behörde für Verkehr und Mobilitätswende (BVM)
+
+Veröffentlichungsdatum
+
+02.03.2026
+
+Beschreibung
+
+Allgemeine Informationen:
+Der Datensatz umfasst Verkehrsdaten aller Standorte in Hamburg, an denen der Radverkehr mittels Infrarotdetektoren an 24h am Tag und allen Tagen des Jahres erfasst wird.
+
+Der Datensatz enthält sowohl die Verkehrsstärken einzelner Zählfelder als auch aus mehreren Zählfeldern aggregierte Zählstellen in Echtzeit.
+Der schematische Aufbau der Datenerfassung und Datenaggregation ist in einem separaten Dokument beschrieben, welches in den Verweisen zu finden ist.
+
+Die Daten der Zählfelder werden in 5-Minuten-Intervallen bereitgestellt.
+Die Daten der Zählstellen liegen aggregiert in 5-Minuten, 15- und 60-Minuten-Intervallen sowie in Tages- und Wochenwerten vor. Die Daten der Zählstellen werden außerdem in den entsprechenden Geoportalen der FHH, z.B. in Geo-Online und dem Verkehrsportal, visualisiert. Die Daten der Zählfelder sowie die Daten der 5-Minuten-Aggregate der Zählstellen werden nicht visualisiert.
+
+Neben den Echtzeitdaten sind auch historische Daten in folgendem Umfang verfügbar:
+Zählfelder: Die Daten der 5-Minuten-Intervalle für die letzten 8 Wochen
+Zählstellen: alle Daten für die letzten sieben Tage in 5-Minten-Intervallen, alle Daten für die letzten zwei Wochen in 15-Minuten-Intervallen, alle Daten für die letzten zwei Monate für die 60-Minutenintervalle, alle Daten für das aktuelle und das letzte Jahr in Tagesintervallen sowie alle Daten seit Beginn der Erfassung in Wochenintervallen.
+
+Informationen zur Technik:
+Die Infrarotdetektoren sind in der Regel an Beleuchtungsmasten, zum Teil aber auch an anderen Masten, installiert. Die Detektoren erfassen und zählen den Verkehr über die Wärmeabstrahlung der einzelnen Verkehrsteilnehmenden. Da ausschließlich Infrarotbilder ausgewertet werden, ist der Datenschutz zu jeder Zeit gewährleistet.
+
+Hinweise zur Datenqualität:
+Die Daten werden in Echtzeit an die Urban Data Platform der FHH übertragen. So sind diese zeitnah für alle Nutzenden und Interessierten verfügbar. Durch die Echtzeitkomponente sind allerdings verschiedene Rahmenbedingungen zu beachten: Die Daten sind nicht umfassend qualitätsgesichert. Ungewöhnliche Abweichungen von den zu erwartenden Daten und Datenlücken werden zwar automatisch vom System erkannt, können aber nicht in Echtzeit korrigiert werden. Lücken, die z.B. durch einen Abriss der Datenübertragung auftreten, können im Nachhinein noch nachgeliefert werden. Unter Umständen und bei längeren Ausfällen können folglich noch nach ein paar Tagen Änderungen in den historischen Daten erfolgen.
+Die Daten erhalten deswegen täglich eine Aktualisierung für die folgenden Zeiträume:
+
+Es handelt sich bei den hier veröffentlichten Daten nicht um amtlich geprüfte Daten der FHH.
+
+Wie bei jeder Verkehrszählung, egal ob automatisiert oder manuell, gibt es gewisse Toleranzen in der Messgenauigkeit. Anspruch an das hier verwendete System sind Genauigkeiten für die Zählfelder von +/- 10% bei der Erfassung des Radverkehrs auf Gehwegen, Radwegen und Radverkehrsstreifen sowie +/-20% bei der Erfassung des Radverkehrs im Mischverkehr mit Kraftfahrzeugen. Da Zählstellen aus einer Kombination verschiedener Zählfelder gebildet werden, kann die Abweichung bis zu +/-20% betragen.
+
+Weitere Informationen zum Echtzeitdienst:
+
+Der Echtzeitdatendienst enthält die aktiven Standorte der Zählfelder und Zählstellen über die mittels Infrarotdetektoren das aktuelle Fahrradaufkommen am Standort ermittelt wird. Die Daten werden im JSON-Format über die SensorThings API (STA) bereitgestellt . Für jedes Zählfeld und jede Zählstelle in der SensorThings API (STA) steht ein Objekt in der Entität "Thing". Für jede zeitliche (jeweiliges Zeitintervall) und räumliche Auflösungsebene (Zählfelder/Zählstellen) steht ein Objekt in der Entität "Datastreams". Die Echtzeitdaten zur Anzahl Fahrräder je Zeitintervall und Raumeinheit wird in der STA in der Entität "Observations" veröffentlicht.
+
+-Zählfeld 5-Min
+-Zählstelle 5-Min, 15-Min, 1-Stunde, 1-Tag, 1-Woche: Anzahl Fahrräder
+
+Alle Zeitangaben sind in der koordinierten Weltzeit (UTC) angegeben.
+
+In der Entität Datastreams gibt es im JSON-Objekt unter dem "key" "properties" weitere "key-value-Paare". In Anlehnung an die Service- und Layerstruktur im GIS haben wir Service und Layer als zusätzliche "key-value-Paare" unter dem JSON-Objekt properties eingeführt. Hier ein Beispiel:
+
+{
+"properties":{
+"serviceName": "HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren",
+"layerName": "Anzahl_Fahrraeder_Zaehlfeld_5-Min",
+"key":"value"}
+}
+
+Verfügbare Layer im layerName sind:
+* Anzahl_Fahrraeder_Zaehlfeld_5-Min
+*Anzahl_Fahrraeder_Zaehlstelle_5-Min
+* Anzahl_Fahrraeder_Zaehlstelle_15-Min
+* Anzahl_Fahrraeder_Zaehlstelle_1-Stunde
+* Anzahl_Fahrraeder_Zaehlstelle_1-Tag
+* Anzahl_Fahrraeder_Zaehlstelle_1-Woche
+
+Mit Hilfe dieser "key-value-Paare" können dann Filter für die REST-Anfrage definiert werden, bspw.
+https://iot.hamburg.de/v1.0/Datastreams?$filter=properties/serviceName eq 'HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren' and properties/layerName eq 'Anzahl_Fahrraeder_Zaehlfeld_5-Min'
+
+Die Echtzeitdaten kann man auch über einen MQTT-Broker erhalten. Die dafür notwendigen IDs können über eine REST-Anfrage bezogen werden und dann für das Abonnement auf einen Datastream verwendet werden:
+
+MQTT-Broker: iot.hamburg.de
+Topic: v1.0/Datastream({id})/Observations
+
+Schlagwörter
+
+Belegungsgrad,
+
+Geodaten,
+
+HaRaZäN,
+
+Infrarot,
+
+Infrarotdetektoren,
+
+Infrarotkamera,
+
+Kamera,
+
+Rad,
+
+Radverkehr,
+
+Radverkehrsmengen,
+
+Radzählnetz,
+
+Verkehrsaufkommen,
+
+Verkehrsdaten,
+
+Verkehrsmengen,
+
+Verkehrsmengenerfassung,
+
+Verkehrsstärken,
+
+Wärmebild,
+
+Wärmebildkamera,
+
+Zählstellen,
+
+mobilithek_category_MOBILITY_PARAMETERS,
+
+mobilithek_subcategory_BIKE_TRAFFIC_COUNTS
+
+Kartenlink
+
+Zur Kartenansicht
+
+Ressourcen (12)
+
+Download Schematischer Aufbau der Datenerfassung und -aggregation (Format: PDF)
+Schematischer Aufbau der Datenerfassung und -aggregation
+
+PDF
+(Größe:
+
+84.5 KB)
+
+Download Verkehrsstärken, Entwicklung und Echtzeitdaten des Radverkehrs (Format: HTML)
+Verkehrsstärken, Entwicklung und Echtzeitdaten des Radverkehrs
+
+HTML
+(Größe:
+
+0.26 MB)
+
+Download Beschreibung STA MQTT-Broker (Format: MQTT)
+Beschreibung STA MQTT-Broker
+
+MQTT
+(Größe:
+
+0.13 MB)
+
+Download Beschreibung SensorThings API (STA) (Format: STA)
+Beschreibung SensorThings API (STA)
+
+STA
+(Größe:
+
+0.13 MB)
+
+Download STA Gesamtserviceabfrage: Zählfelder und Zählstellen mit den letzten 3 Beobachtungswerten (JSON) (Format: JSON)
+STA Gesamtserviceabfrage: Zählfelder und Zählstellen mit den letzten 3 Beobachtungswerten (JSON)
+
+JSON
+(Größe:
+
+1.2 MB)
+
+Download STA Standortabfrage: Zählfeder und Zählstellen (Infrarotdetektoren) (Format: JSON)
+STA Standortabfrage: Zählfeder und Zählstellen (Infrarotdetektoren)
+
+JSON
+(Größe:
+
+0.14 MB)
+
+Download STA Layerabfrage: Fahrradaufkommen je Zählfeld je 5-Min-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Fahrradaufkommen je Zählfeld je 5-Min-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.43 MB)
+
+Download STA Layerabfrage: Fahrradaufkommen je Zählstelle je 15-Min-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Fahrradaufkommen je Zählstelle je 15-Min-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Fahrradaufkommen je Zählstelle je Tagesintervall (JSON) (Format: JSON)
+STA Layerabfrage: Fahrradaufkommen je Zählstelle je Tagesintervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Fahrradaufkommen je Zählstelle je Wochenintervall (JSON) (Format: JSON)
+STA Layerabfrage: Fahrradaufkommen je Zählstelle je Wochenintervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download STA Layerabfrage: Fahrradaufkommen je Zähstelle je 1-Stunden-Intervall (JSON) (Format: JSON)
+STA Layerabfrage: Fahrradaufkommen je Zähstelle je 1-Stunden-Intervall (JSON)
+
+JSON
+(Größe:
+
+0.42 MB)
+
+Download Metadatenbeschreibung aus dem MetaVer (Format: HTML)
+Metadatenbeschreibung aus dem MetaVer
+
+HTML
+(Größe:
+
+0.17 KB)
+
+Info-Spalte
+
+Drucken
+
+Feedback
+
+Teilen
+
+Kapitelfunktion schließen
+
+Kapitelfunktion schließen
+
+Datentyp
+
+Datensatz
+
+Informations­gegenstand
+
+Geodaten
+
+Kategorie
+
+Transport & Verkehr
+
+Zeitbezug
+
+von
+
+01.01.2020
+
+bis
+
+kein Enddatum gesetzt
+
+Metadaten nach ODG
+
+Download (JSON)
+
+Metadaten nach DCAT-AP.de
+
+Download (N3)
+
+Download (RDF)
+
+Download (TTL)
+
+Download (XML)
+
+Download (JSONLD)
+
+Lizenz
+
+Datenlizenz Deutschland Namensnennung 2.0
+
+Namensnennung
+
+Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende
+
+Ältere Version
+
+30.01.2025
+
+Transparenzportal Hamburg
+
+Das Transparenzportal Hamburg ist das im Hamburgischen Transparenzgesetz (HmbTG) geforderte Informationsregister, über das alle per Gesetz veröffentlichungspflichtigen Informationen anonym recherchiert werden können. Es ist der zentrale Zugang zu aktuellen Daten und Informationen der Hamburger Verwaltung und stellt, um die leichte Auffindbarkeit der gesuchten Inhalte zu gewährleisten, eine Suche über den Volltext aller Datensätze bereit.
+
+Unterseiten
+
+Über uns
+
+Das Transparenzportal
+
+News
+
+Servicemenü
+
+Erklärung zur Barrierefreiheit
+
+Impressum
+
+Datenschutzerklärung
+
+www.transparenz.hamburg.de
+
