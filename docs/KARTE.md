@@ -31,7 +31,8 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   ihrer Kommune.
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
   Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen, die Dauerzählstellen des
-  Landes Baden-Württemberg an Autobahnen, Bundes- und Landesstraßen und die Rad-Zählstellen von
+  Landes Baden-Württemberg an Autobahnen, Bundes- und Landesstraßen, die des Freistaats Bayern an
+  Staats- und Kreisstraßen und die Rad-Zählstellen von
   Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
   Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen und dem Land in
   Baden-Württemberg und in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau
@@ -148,7 +149,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   Monate der Quelle; ein Klick in die Tagesreihe wählt den Tag.
 - **Lkw/Schwerverkehr:** Berlin und Ettlingen zählen „Lkw“, Hamburg „Schwerverkehr“, die
   Dauerzählstellen des Landes Baden-Württemberg „Schwerverkehr“ (an 41 Autobahn-Stellen mit nur
-  zwei Klassen bis 2025 die Lkw-ähnlichen als „Lkw“) – jeweils
+  zwei Klassen bis 2025 die Lkw-ähnlichen als „Lkw“), die Bayerns „Schwerverkehr“ – jeweils
   die Klasse, die der Detektor bzw. die Kamera von Pkw unterscheidet, je Quelle anders
   abgegrenzt und nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen. Ein Chip zeigt
   beide: jede Stelle in ihrer Klasse und mit deren Namen, nie zusammengezählt; die Legende nennt,
@@ -202,6 +203,16 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   steht 2–3 Uhr nur einmal da (gekennzeichnet) – der Tag ist nicht vollständig. Die Dateien nennen
   keine Koordinaten: Die Lage ist die des passenden Abschnitts in der Zählstellenkarte des
   Landes; 13 von 206 Zählstellen ohne passenden Abschnitt fehlen.
+- Bayern, Dauerzählstellen an Staats- und Kreisstraßen (BAYSIS): Stundenwerte je Fahrtrichtung
+  für Kfz und Schwerverkehr (8+1 Fahrzeugarten), beide Richtungen am selben Punkt – die
+  Seitenleiste schaltet um. Eine Stunde zählt nur, wenn BAYSIS sie als korrekt kennzeichnet
+  (auch „unregelmäßig“) – Ausfälle, fehlerhafte Werte und Schätzwerte nicht. Am Tag der
+  Rückstellung der Uhr steht 2–3 Uhr nur einmal da – der Tag ist nicht vollständig. Lage aus der
+  Zählstellenkarte von BAYSIS. Die Zählstellen an Autobahnen und Bundesstraßen nimmt die Karte
+  nicht auf; 2 von 80 an Staats- und Kreisstraßen fehlen (die Schnittstelle kennt sie nicht).
+  Die Werte erscheinen mit rund sechs Wochen Verzug. Die Zeit vor den jüngsten zwei Jahren füllt
+  sich über einige Wochen: Der Server lehnt schnelle Folgen von Anfragen ab, die Zählkarte fragt
+  langsam und je Lauf höchstens eine Dreiviertelstunde.
 - Rad-Zählstellen (Berlin, Münster, Aachen, München, Baden-Württemberg über MobiData BW,
   Würzburg, Rhein-Kreis Neuss, Neuss, Dortmund, Essen, Bochum, Bonn, Düsseldorf, Leipzig,
   Rostock):
