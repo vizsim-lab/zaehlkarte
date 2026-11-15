@@ -1,0 +1,1501 @@
+{
+ "version": 0.6,
+ "generator": "Overpass API 0.7.62.11 87bfad18",
+ "osm3s": {
+  "timestamp_osm_base": "2026-07-15T15:22:01Z",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+ },
+ "elements": [
+  {
+   "type": "way",
+   "id": 4277358,
+   "bounds": {
+    "minlat": 51.450166,
+    "minlon": 6.6290499,
+    "maxlat": 51.4503018,
+    "maxlon": 6.6291342
+   },
+   "geometry": [
+    {
+     "lat": 51.4503018,
+     "lon": 6.6290499
+    },
+    {
+     "lat": 51.4502777,
+     "lon": 6.6290649
+    },
+    {
+     "lat": 51.4502445,
+     "lon": 6.6290855
+    },
+    {
+     "lat": 51.450166,
+     "lon": 6.6291342
+    }
+   ],
+   "tags": {
+    "access:lanes": "|bus",
+    "bus:lanes": "|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "2",
+    "lanes:bus": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "turn:lanes": "through;right|"
+   }
+  },
+  {
+   "type": "way",
+   "id": 4281163,
+   "bounds": {
+    "minlat": 51.453246,
+    "minlon": 6.6277647,
+    "maxlat": 51.4533561,
+    "maxlon": 6.6277714
+   },
+   "geometry": [
+    {
+     "lat": 51.4533561,
+     "lon": 6.6277714
+    },
+    {
+     "lat": 51.453246,
+     "lon": 6.6277647
+    }
+   ],
+   "tags": {
+    "access:lanes": "||no",
+    "bicycle": "no",
+    "bus:lanes": "||designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "turn:lanes": "left|through|"
+   }
+  },
+  {
+   "type": "way",
+   "id": 4403249,
+   "bounds": {
+    "minlat": 51.4517132,
+    "minlon": 6.6250156,
+    "maxlat": 51.4528416,
+    "maxlon": 6.6254063
+   },
+   "geometry": [
+    {
+     "lat": 51.4528416,
+     "lon": 6.6254063
+    },
+    {
+     "lat": 51.4523032,
+     "lon": 6.6252133
+    },
+    {
+     "lat": 51.4521244,
+     "lon": 6.6251534
+    },
+    {
+     "lat": 51.4519627,
+     "lon": 6.6250992
+    },
+    {
+     "lat": 51.4517132,
+     "lon": 6.6250156
+    }
+   ],
+   "tags": {
+    "cycleway:both": "no",
+    "de:strassenschluessel": "05170000002432251",
+    "hgv": "delivery",
+    "highway": "residential",
+    "lit": "yes",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "name": "Neumarkt",
+    "parking:both": "no",
+    "sidewalk": "right",
+    "surface": "asphalt",
+    "zone:maxspeed": "30"
+   }
+  },
+  {
+   "type": "way",
+   "id": 4403250,
+   "bounds": {
+    "minlat": 51.4516561,
+    "minlon": 6.6253206,
+    "maxlat": 51.4529239,
+    "maxlon": 6.6259672
+   },
+   "geometry": [
+    {
+     "lat": 51.4516561,
+     "lon": 6.6253206
+    },
+    {
+     "lat": 51.4518772,
+     "lon": 6.6254255
+    },
+    {
+     "lat": 51.451902,
+     "lon": 6.6254373
+    },
+    {
+     "lat": 51.4521676,
+     "lon": 6.6255699
+    },
+    {
+     "lat": 51.4529239,
+     "lon": 6.6259672
+    }
+   ],
+   "tags": {
+    "de:strassenschluessel": "05170000002432251",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Neumarkt",
+    "surface": "sett"
+   }
+  },
+  {
+   "type": "way",
+   "id": 9888768,
+   "bounds": {
+    "minlat": 51.4529916,
+    "minlon": 6.6270226,
+    "maxlat": 51.4531806,
+    "maxlon": 6.627839
+   },
+   "geometry": [
+    {
+     "lat": 51.4531744,
+     "lon": 6.6270226
+    },
+    {
+     "lat": 51.4531806,
+     "lon": 6.6273327
+    },
+    {
+     "lat": 51.4531398,
+     "lon": 6.6275241
+    },
+    {
+     "lat": 51.4531157,
+     "lon": 6.6276117
+    },
+    {
+     "lat": 51.4530902,
+     "lon": 6.6276804
+    },
+    {
+     "lat": 51.4530635,
+     "lon": 6.6277431
+    },
+    {
+     "lat": 51.4529916,
+     "lon": 6.627839
+    }
+   ],
+   "tags": {
+    "bicycle": "no",
+    "de:strassenschluessel": "05170000002432249",
+    "foot": "no",
+    "highway": "secondary_link",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "turn": "right"
+   }
+  },
+  {
+   "type": "way",
+   "id": 10955855,
+   "bounds": {
+    "minlat": 51.450687,
+    "minlon": 6.6250156,
+    "maxlat": 51.4517132,
+    "maxlon": 6.6290632
+   },
+   "geometry": [
+    {
+     "lat": 51.450687,
+     "lon": 6.6290632
+    },
+    {
+     "lat": 51.4507216,
+     "lon": 6.6289311
+    },
+    {
+     "lat": 51.4507324,
+     "lon": 6.6288897
+    },
+    {
+     "lat": 51.4509999,
+     "lon": 6.6279118
+    },
+    {
+     "lat": 51.4510138,
+     "lon": 6.6278478
+    },
+    {
+     "lat": 51.4511031,
+     "lon": 6.627438
+    },
+    {
+     "lat": 51.4511118,
+     "lon": 6.6273997
+    },
+    {
+     "lat": 51.4513063,
+     "lon": 6.626939
+    },
+    {
+     "lat": 51.451389,
+     "lon": 6.626685
+    },
+    {
+     "lat": 51.4514564,
+     "lon": 6.6264192
+    },
+    {
+     "lat": 51.4515359,
+     "lon": 6.6260265
+    },
+    {
+     "lat": 51.4516561,
+     "lon": 6.6253206
+    },
+    {
+     "lat": 51.4517028,
+     "lon": 6.6250712
+    },
+    {
+     "lat": 51.4517132,
+     "lon": 6.6250156
+    }
+   ],
+   "tags": {
+    "bicycle": "no",
+    "de:strassenschluessel": "05170000002432511",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Steinstraße",
+    "name:etymology:description": "Der Name dieser Straße bezieht sich auf den Steinbelag, da diese erste Hauptstraße in der Stadt mit einem Steinbelag bedeckt war.",
+    "name:etymology:wikidata": "Q3328263",
+    "name:etymology:wikipedia": "de:Pflaster (Bodenbelag)",
+    "name:start_date": "1441",
+    "smoothness": "good",
+    "surface": "paving_stones"
+   }
+  },
+  {
+   "type": "way",
+   "id": 37705158,
+   "bounds": {
+    "minlat": 51.4511185,
+    "minlon": 6.6292024,
+    "maxlat": 51.4511441,
+    "maxlon": 6.6292045
+   },
+   "geometry": [
+    {
+     "lat": 51.4511441,
+     "lon": 6.6292024
+    },
+    {
+     "lat": 51.4511185,
+     "lon": 6.6292045
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|bus",
+    "access:lanes:forward": "|bus",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "|designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "4",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 67304672,
+   "bounds": {
+    "minlat": 51.4510539,
+    "minlon": 6.6291968,
+    "maxlat": 51.4511185,
+    "maxlon": 6.6292045
+   },
+   "geometry": [
+    {
+     "lat": 51.4511185,
+     "lon": 6.6292045
+    },
+    {
+     "lat": 51.4510539,
+     "lon": 6.6291968
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|bus",
+    "access:lanes:forward": "|bus",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "|designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "4",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "sidewalk:both": "separate",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 78243586,
+   "bounds": {
+    "minlat": 51.4504753,
+    "minlon": 6.6290091,
+    "maxlat": 51.450687,
+    "maxlon": 6.6290632
+   },
+   "geometry": [
+    {
+     "lat": 51.450687,
+     "lon": 6.6290632
+    },
+    {
+     "lat": 51.4506115,
+     "lon": 6.6290247
+    },
+    {
+     "lat": 51.4505677,
+     "lon": 6.6290171
+    },
+    {
+     "lat": 51.4505441,
+     "lon": 6.629013
+    },
+    {
+     "lat": 51.4504753,
+     "lon": 6.6290091
+    }
+   ],
+   "tags": {
+    "access:lanes": "|bus",
+    "bus:lanes": "|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "2",
+    "lanes:bus": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "turn:lanes": "through;right|"
+   }
+  },
+  {
+   "type": "way",
+   "id": 183782146,
+   "bounds": {
+    "minlat": 51.4511441,
+    "minlon": 6.629202,
+    "maxlat": 51.4511555,
+    "maxlon": 6.6292024
+   },
+   "geometry": [
+    {
+     "lat": 51.4511555,
+     "lon": 6.629202
+    },
+    {
+     "lat": 51.4511441,
+     "lon": 6.6292024
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|bus",
+    "access:lanes:forward": "|bus",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "|designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "4",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 187741956,
+   "bounds": {
+    "minlat": 51.451902,
+    "minlon": 6.6253363,
+    "maxlat": 51.4519201,
+    "maxlon": 6.6254373
+   },
+   "geometry": [
+    {
+     "lat": 51.4519201,
+     "lon": 6.6253363
+    },
+    {
+     "lat": 51.451902,
+     "lon": 6.6254373
+    }
+   ],
+   "tags": {
+    "de:strassenschluessel": "05170000002432251",
+    "highway": "pedestrian",
+    "name": "Neumarkt",
+    "surface": "paving_stones"
+   }
+  },
+  {
+   "type": "way",
+   "id": 187741957,
+   "bounds": {
+    "minlat": 51.4516561,
+    "minlon": 6.6250712,
+    "maxlat": 51.4519285,
+    "maxlon": 6.6254255
+   },
+   "geometry": [
+    {
+     "lat": 51.4517028,
+     "lon": 6.6250712
+    },
+    {
+     "lat": 51.4519285,
+     "lon": 6.625143
+    },
+    {
+     "lat": 51.4518772,
+     "lon": 6.6254255
+    },
+    {
+     "lat": 51.4516561,
+     "lon": 6.6253206
+    },
+    {
+     "lat": 51.4517028,
+     "lon": 6.6250712
+    }
+   ],
+   "tags": {
+    "area": "yes",
+    "de:strassenschluessel": "05170000002432251",
+    "highway": "pedestrian",
+    "lit": "yes",
+    "name": "Neumarkt",
+    "surface": "paving_stones"
+   }
+  },
+  {
+   "type": "way",
+   "id": 206836848,
+   "bounds": {
+    "minlat": 51.451165,
+    "minlon": 6.6285832,
+    "maxlat": 51.4522009,
+    "maxlon": 6.6292435
+   },
+   "geometry": [
+    {
+     "lat": 51.451165,
+     "lon": 6.6292019
+    },
+    {
+     "lat": 51.4512148,
+     "lon": 6.6292435
+    },
+    {
+     "lat": 51.4512821,
+     "lon": 6.6292418
+    },
+    {
+     "lat": 51.4513453,
+     "lon": 6.6292316
+    },
+    {
+     "lat": 51.4514248,
+     "lon": 6.6292083
+    },
+    {
+     "lat": 51.4515028,
+     "lon": 6.6291777
+    },
+    {
+     "lat": 51.4515866,
+     "lon": 6.6291338
+    },
+    {
+     "lat": 51.4517373,
+     "lon": 6.6290413
+    },
+    {
+     "lat": 51.4518366,
+     "lon": 6.6289605
+    },
+    {
+     "lat": 51.4519129,
+     "lon": 6.628894
+    },
+    {
+     "lat": 51.4519992,
+     "lon": 6.628808
+    },
+    {
+     "lat": 51.4520814,
+     "lon": 6.6287336
+    },
+    {
+     "lat": 51.4521718,
+     "lon": 6.628647
+    },
+    {
+     "lat": 51.4522009,
+     "lon": 6.6285832
+    }
+   ],
+   "tags": {
+    "access:lanes": "|bus",
+    "bus:lanes": "|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt",
+    "width:lanes": "3|3"
+   }
+  },
+  {
+   "type": "way",
+   "id": 206836849,
+   "bounds": {
+    "minlat": 51.4518801,
+    "minlon": 6.6285795,
+    "maxlat": 51.4522009,
+    "maxlon": 6.6287971
+   },
+   "geometry": [
+    {
+     "lat": 51.4522009,
+     "lon": 6.6285832
+    },
+    {
+     "lat": 51.4521407,
+     "lon": 6.6285795
+    },
+    {
+     "lat": 51.4520536,
+     "lon": 6.6286542
+    },
+    {
+     "lat": 51.4519714,
+     "lon": 6.6287219
+    },
+    {
+     "lat": 51.4518801,
+     "lon": 6.6287971
+    }
+   ],
+   "tags": {
+    "access:lanes": "|no",
+    "bus:lanes": "|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "2",
+    "lanes:bus": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 206836850,
+   "bounds": {
+    "minlat": 51.4503094,
+    "minlon": 6.6290632,
+    "maxlat": 51.450687,
+    "maxlon": 6.6291146
+   },
+   "geometry": [
+    {
+     "lat": 51.4503094,
+     "lon": 6.6291146
+    },
+    {
+     "lat": 51.4504229,
+     "lon": 6.6290886
+    },
+    {
+     "lat": 51.4504878,
+     "lon": 6.6290809
+    },
+    {
+     "lat": 51.4505566,
+     "lon": 6.6290848
+    },
+    {
+     "lat": 51.4506144,
+     "lon": 6.6290938
+    },
+    {
+     "lat": 51.450687,
+     "lon": 6.6290632
+    }
+   ],
+   "tags": {
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 206836851,
+   "bounds": {
+    "minlat": 51.450166,
+    "minlon": 6.6291146,
+    "maxlat": 51.4503094,
+    "maxlon": 6.6291342
+   },
+   "geometry": [
+    {
+     "lat": 51.450166,
+     "lon": 6.6291342
+    },
+    {
+     "lat": 51.4502495,
+     "lon": 6.6291228
+    },
+    {
+     "lat": 51.4503094,
+     "lon": 6.6291146
+    }
+   ],
+   "tags": {
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 206850872,
+   "bounds": {
+    "minlat": 51.4523968,
+    "minlon": 6.6282843,
+    "maxlat": 51.4525302,
+    "maxlon": 6.6284074
+   },
+   "geometry": [
+    {
+     "lat": 51.4525302,
+     "lon": 6.6282843
+    },
+    {
+     "lat": 51.452483,
+     "lon": 6.6283222
+    },
+    {
+     "lat": 51.4523968,
+     "lon": 6.6284074
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|no",
+    "access:lanes:forward": "||no",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "||designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "5",
+    "lanes:backward": "2",
+    "lanes:forward": "3",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "sidewalk:both": "separate",
+    "surface": "asphalt",
+    "turn:lanes:forward": "left|through|",
+    "width:lanes:backward": "2.5|3",
+    "width:lanes:forward": "2.5|3|2.5"
+   }
+  },
+  {
+   "type": "way",
+   "id": 206850873,
+   "bounds": {
+    "minlat": 51.4525302,
+    "minlon": 6.6280808,
+    "maxlat": 51.4528396,
+    "maxlon": 6.6282843
+   },
+   "geometry": [
+    {
+     "lat": 51.4525302,
+     "lon": 6.6282843
+    },
+    {
+     "lat": 51.4526501,
+     "lon": 6.628236
+    },
+    {
+     "lat": 51.4528396,
+     "lon": 6.6280808
+    }
+   ],
+   "tags": {
+    "access:lanes": "||no",
+    "bicycle": "no",
+    "bus:lanes": "||designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt",
+    "turn:lanes": "left|through;right|"
+   }
+  },
+  {
+   "type": "way",
+   "id": 209443569,
+   "bounds": {
+    "minlat": 51.4529916,
+    "minlon": 6.6277647,
+    "maxlat": 51.453246,
+    "maxlon": 6.627839
+   },
+   "geometry": [
+    {
+     "lat": 51.453246,
+     "lon": 6.6277647
+    },
+    {
+     "lat": 51.4532288,
+     "lon": 6.6277663
+    },
+    {
+     "lat": 51.4531665,
+     "lon": 6.6277743
+    },
+    {
+     "lat": 51.4529916,
+     "lon": 6.627839
+    }
+   ],
+   "tags": {
+    "access:lanes": "|no",
+    "bicycle": "no",
+    "bus:lanes": "|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 209443570,
+   "bounds": {
+    "minlat": 51.4525302,
+    "minlon": 6.627839,
+    "maxlat": 51.4529916,
+    "maxlon": 6.6282843
+   },
+   "geometry": [
+    {
+     "lat": 51.4529916,
+     "lon": 6.627839
+    },
+    {
+     "lat": 51.4528926,
+     "lon": 6.6279094
+    },
+    {
+     "lat": 51.4527188,
+     "lon": 6.6280347
+    },
+    {
+     "lat": 51.4526213,
+     "lon": 6.6281442
+    },
+    {
+     "lat": 51.4525302,
+     "lon": 6.6282843
+    }
+   ],
+   "tags": {
+    "access:lanes": "|bus",
+    "bicycle": "no",
+    "bus:lanes": "|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 221871588,
+   "bounds": {
+    "minlat": 51.4515495,
+    "minlon": 6.6287971,
+    "maxlat": 51.4518801,
+    "maxlon": 6.6290113
+   },
+   "geometry": [
+    {
+     "lat": 51.4518801,
+     "lon": 6.6287971
+    },
+    {
+     "lat": 51.4517937,
+     "lon": 6.6288542
+    },
+    {
+     "lat": 51.451696,
+     "lon": 6.6289228
+    },
+    {
+     "lat": 51.4515495,
+     "lon": 6.6290113
+    }
+   ],
+   "tags": {
+    "access:lanes": "|no|no",
+    "bus:lanes": "|designated|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:bus": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt",
+    "width:lanes": "3|3|2.5"
+   }
+  },
+  {
+   "type": "way",
+   "id": 222957447,
+   "bounds": {
+    "minlat": 51.4528396,
+    "minlon": 6.6280173,
+    "maxlat": 51.4529089,
+    "maxlon": 6.6280808
+   },
+   "geometry": [
+    {
+     "lat": 51.4528396,
+     "lon": 6.6280808
+    },
+    {
+     "lat": 51.4529089,
+     "lon": 6.6280173
+    }
+   ],
+   "tags": {
+    "access:lanes": "||no",
+    "bicycle": "no",
+    "bus:lanes": "||designated",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt",
+    "turn:lanes": "left|through|"
+   }
+  },
+  {
+   "type": "way",
+   "id": 222957448,
+   "bounds": {
+    "minlat": 51.4529089,
+    "minlon": 6.6279162,
+    "maxlat": 51.4533612,
+    "maxlon": 6.6280173
+   },
+   "geometry": [
+    {
+     "lat": 51.4529089,
+     "lon": 6.6280173
+    },
+    {
+     "lat": 51.4529964,
+     "lon": 6.6279692
+    },
+    {
+     "lat": 51.4531379,
+     "lon": 6.6279358
+    },
+    {
+     "lat": 51.4531746,
+     "lon": 6.6279272
+    },
+    {
+     "lat": 51.4532374,
+     "lon": 6.6279237
+    },
+    {
+     "lat": 51.4532562,
+     "lon": 6.6279229
+    },
+    {
+     "lat": 51.4533612,
+     "lon": 6.6279162
+    }
+   ],
+   "tags": {
+    "bicycle": "no",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt",
+    "turn:lanes": "left|left|through"
+   }
+  },
+  {
+   "type": "way",
+   "id": 307049834,
+   "bounds": {
+    "minlat": 51.4511555,
+    "minlon": 6.6292019,
+    "maxlat": 51.451165,
+    "maxlon": 6.629202
+   },
+   "geometry": [
+    {
+     "lat": 51.451165,
+     "lon": 6.6292019
+    },
+    {
+     "lat": 51.4511555,
+     "lon": 6.629202
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|bus",
+    "access:lanes:forward": "|bus",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "|designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "4",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 339911179,
+   "bounds": {
+    "minlat": 51.4503018,
+    "minlon": 6.6290091,
+    "maxlat": 51.4504753,
+    "maxlon": 6.6290499
+   },
+   "geometry": [
+    {
+     "lat": 51.4504753,
+     "lon": 6.6290091
+    },
+    {
+     "lat": 51.4504126,
+     "lon": 6.6290221
+    },
+    {
+     "lat": 51.4503129,
+     "lon": 6.6290471
+    },
+    {
+     "lat": 51.4503018,
+     "lon": 6.6290499
+    }
+   ],
+   "tags": {
+    "access:lanes": "|bus",
+    "bus:lanes": "|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "2",
+    "lanes:bus": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "surface": "asphalt",
+    "turn:lanes": "through;right|"
+   }
+  },
+  {
+   "type": "way",
+   "id": 340000622,
+   "bounds": {
+    "minlat": 51.4509922,
+    "minlon": 6.629179,
+    "maxlat": 51.4510539,
+    "maxlon": 6.6291968
+   },
+   "geometry": [
+    {
+     "lat": 51.4510539,
+     "lon": 6.6291968
+    },
+    {
+     "lat": 51.4509922,
+     "lon": 6.629179
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|bus",
+    "access:lanes:forward": "|bus",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "|designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "4",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "sidewalk:both": "separate",
+    "surface": "asphalt"
+   }
+  },
+  {
+   "type": "way",
+   "id": 340000623,
+   "bounds": {
+    "minlat": 51.450687,
+    "minlon": 6.6290632,
+    "maxlat": 51.4509922,
+    "maxlon": 6.629179
+   },
+   "geometry": [
+    {
+     "lat": 51.4509922,
+     "lon": 6.629179
+    },
+    {
+     "lat": 51.4509046,
+     "lon": 6.6291491
+    },
+    {
+     "lat": 51.4508353,
+     "lon": 6.6291255
+    },
+    {
+     "lat": 51.4508133,
+     "lon": 6.6291162
+    },
+    {
+     "lat": 51.450687,
+     "lon": 6.6290632
+    }
+   ],
+   "tags": {
+    "bus:lanes:forward": "|designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:backward": "1",
+    "lanes:bus": "1",
+    "lanes:forward": "2",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "sidewalk:both": "separate",
+    "surface": "asphalt",
+    "turn:lanes:forward": "through|"
+   }
+  },
+  {
+   "type": "way",
+   "id": 369250556,
+   "bounds": {
+    "minlat": 51.451165,
+    "minlon": 6.6290113,
+    "maxlat": 51.4515495,
+    "maxlon": 6.6292019
+   },
+   "geometry": [
+    {
+     "lat": 51.4515495,
+     "lon": 6.6290113
+    },
+    {
+     "lat": 51.4514683,
+     "lon": 6.6290497
+    },
+    {
+     "lat": 51.451401,
+     "lon": 6.6290759
+    },
+    {
+     "lat": 51.4513299,
+     "lon": 6.6291015
+    },
+    {
+     "lat": 51.4512634,
+     "lon": 6.6291279
+    },
+    {
+     "lat": 51.4512323,
+     "lon": 6.6291382
+    },
+    {
+     "lat": 51.4511951,
+     "lon": 6.6291533
+    },
+    {
+     "lat": 51.451165,
+     "lon": 6.6292019
+    }
+   ],
+   "tags": {
+    "access:lanes": "|no|no",
+    "bus:lanes": "|designated|designated",
+    "cycleway:left": "no",
+    "cycleway:right": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "3",
+    "lanes:bus": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "oneway": "yes",
+    "sidewalk:left": "no",
+    "sidewalk:right": "separate",
+    "surface": "asphalt",
+    "width:lanes": "3|3|2.5"
+   }
+  },
+  {
+   "type": "way",
+   "id": 1175534196,
+   "bounds": {
+    "minlat": 51.4522592,
+    "minlon": 6.6284074,
+    "maxlat": 51.4523968,
+    "maxlon": 6.6285334
+   },
+   "geometry": [
+    {
+     "lat": 51.4523968,
+     "lon": 6.6284074
+    },
+    {
+     "lat": 51.4522592,
+     "lon": 6.6285334
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|no",
+    "access:lanes:forward": "||no",
+    "bridge": "yes",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "||designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "5",
+    "lanes:backward": "2",
+    "lanes:forward": "3",
+    "layer": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "sidewalk:both": "separate",
+    "surface": "asphalt",
+    "turn:lanes:forward": "left|through|",
+    "width:lanes:backward": "2.5|3",
+    "width:lanes:forward": "2.5|3|2.5"
+   }
+  },
+  {
+   "type": "way",
+   "id": 1329344121,
+   "bounds": {
+    "minlat": 51.4528416,
+    "minlon": 6.6254063,
+    "maxlat": 51.4529374,
+    "maxlon": 6.6254479
+   },
+   "geometry": [
+    {
+     "lat": 51.4529374,
+     "lon": 6.6254479
+    },
+    {
+     "lat": 51.4528416,
+     "lon": 6.6254063
+    }
+   ],
+   "tags": {
+    "cycleway:both": "no",
+    "de:strassenschluessel": "05170000002432251",
+    "hgv": "delivery",
+    "highway": "residential",
+    "lit": "yes",
+    "maxspeed": "30",
+    "maxweight": "3.5",
+    "name": "Neumarkt",
+    "parking:both": "no",
+    "sidewalk": "right",
+    "surface": "asphalt",
+    "zone:maxspeed": "30"
+   }
+  },
+  {
+   "type": "way",
+   "id": 1420441680,
+   "bounds": {
+    "minlat": 51.4522009,
+    "minlon": 6.6285334,
+    "maxlat": 51.4522592,
+    "maxlon": 6.6285832
+   },
+   "geometry": [
+    {
+     "lat": 51.4522592,
+     "lon": 6.6285334
+    },
+    {
+     "lat": 51.4522009,
+     "lon": 6.6285832
+    }
+   ],
+   "tags": {
+    "access:lanes:backward": "|no",
+    "access:lanes:forward": "||no",
+    "bridge": "yes",
+    "bus:lanes:backward": "|designated",
+    "bus:lanes:forward": "||designated",
+    "cycleway:both": "separate",
+    "de:strassenschluessel": "05170000002432249",
+    "highway": "secondary",
+    "lanes": "5",
+    "lanes:backward": "2",
+    "lanes:forward": "3",
+    "layer": "1",
+    "lit": "yes",
+    "maxspeed": "30",
+    "name": "Neuer Wall",
+    "name:etymology:description": "Der Straßenname Neuer Wall verdeutlicht, dass man hier erstmals die seit dem 18. Jahrhun­ dert (siehe \"Kastell\") unangetasteten Wallanlagen durch diese neue Verkehrsader als städtebau­ lich starken Eingriff angeschnitten hat.",
+    "name:etymology:wikidata": "Q1416685",
+    "name:etymology:wikipedia": "de:Wallanlage",
+    "name:start_date": "1972-04-10",
+    "sidewalk:both": "separate",
+    "surface": "asphalt",
+    "turn:lanes:forward": "left|through|",
+    "width:lanes:backward": "2.5|3",
+    "width:lanes:forward": "2.5|3|2.5"
+   }
+  }
+ ]
+}

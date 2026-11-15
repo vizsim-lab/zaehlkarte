@@ -1,0 +1,48 @@
+== robots.txt
+  https://www.offenesdatenportal.de/dataset/fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022: erlaubt
+  https://www.offenesdatenportal.de/dataset/besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers: erlaubt
+  https://www.offenesdatenportal.de/dataset/fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022/resource/1b03b5c8-3f6f-482d-ac56-3a4bd60b7c51: erlaubt
+  https://www.offenesdatenportal.de/dataset/besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers/resource/e1a8f7da-f532-48d2-8fc1-14c77f095c5b: erlaubt
+  https://maps.mail.ru/osm/tools/overpass/api/interpreter: erlaubt
+  https://overpass.private.coffee/api/interpreter: erlaubt
+  https://overpass.kumi.systems/api/interpreter: erlaubt
+== Seiten
+== OpenStreetMap (Nominatim, strukturierte Suche in Moers)
+   https://nominatim.openstreetmap.org/search: GESPERRT
+   Steinstraße: gesperrt
+   Neuer Wall: gesperrt
+   Neumarkt: gesperrt
+== OpenStreetMap (Overpass)
+   https://maps.mail.ru/osm/tools/overpass/api/interpreter: Fehler <HTTPError 504: 'Gateway Timeout'>
+   https://overpass.private.coffee/api/interpreter: 31 Elemente
+   way 4277358: highway=secondary, name=Neuer Wall | 4 Punkte: 6.629050,51.450302 6.629065,51.450278 6.629086,51.450244 6.629134,51.450166
+   way 4281163: highway=secondary, name=Neuer Wall | 2 Punkte: 6.627771,51.453356 6.627765,51.453246
+   way 4403249: highway=residential, name=Neumarkt | 5 Punkte: 6.625406,51.452842 6.625213,51.452303 6.625153,51.452124 6.625099,51.451963 6.625016,51.451713
+   way 4403250: highway=pedestrian, name=Neumarkt | 5 Punkte: 6.625321,51.451656 6.625426,51.451877 6.625437,51.451902 6.625570,51.452168 6.625967,51.452924
+   way 9888768: highway=secondary_link, name=Neuer Wall | 7 Punkte: 6.627023,51.453174 6.627333,51.453181 6.627524,51.453140 6.627612,51.453116 6.627680,51.453090 6.627743,51.453063 6.627839,51.452992
+   way 10955855: highway=pedestrian, name=Steinstraße | 14 Punkte: 6.629063,51.450687 6.628931,51.450722 6.628890,51.450732 6.627912,51.451000 6.627848,51.451014 6.627438,51.451103 6.627400,51.451112 6.626939,51.451306 6.626685,51.451389 6.626419,51.451456 6.626027,51.451536 6.625321,51.451656
+   way 37705158: highway=secondary, name=Neuer Wall | 2 Punkte: 6.629202,51.451144 6.629205,51.451118
+   way 67304672: highway=secondary, name=Neuer Wall | 2 Punkte: 6.629205,51.451118 6.629197,51.451054
+   way 78243586: highway=secondary, name=Neuer Wall | 5 Punkte: 6.629063,51.450687 6.629025,51.450612 6.629017,51.450568 6.629013,51.450544 6.629009,51.450475
+   way 183782146: highway=secondary, name=Neuer Wall | 2 Punkte: 6.629202,51.451155 6.629202,51.451144
+   way 187741956: highway=pedestrian, name=Neumarkt | 2 Punkte: 6.625336,51.451920 6.625437,51.451902
+   way 187741957: area=yes, highway=pedestrian, name=Neumarkt | 5 Punkte: 6.625071,51.451703 6.625143,51.451929 6.625426,51.451877 6.625321,51.451656 6.625071,51.451703
+   way 206836848: highway=secondary, name=Neuer Wall | 14 Punkte: 6.629202,51.451165 6.629244,51.451215 6.629242,51.451282 6.629232,51.451345 6.629208,51.451425 6.629178,51.451503 6.629134,51.451587 6.629041,51.451737 6.628960,51.451837 6.628894,51.451913 6.628808,51.451999 6.628734,51.452081
+   way 206836849: highway=secondary, name=Neuer Wall | 5 Punkte: 6.628583,51.452201 6.628579,51.452141 6.628654,51.452054 6.628722,51.451971 6.628797,51.451880
+   way 206836850: highway=secondary, name=Neuer Wall | 6 Punkte: 6.629115,51.450309 6.629089,51.450423 6.629081,51.450488 6.629085,51.450557 6.629094,51.450614 6.629063,51.450687
+   way 206836851: highway=secondary, name=Neuer Wall | 3 Punkte: 6.629134,51.450166 6.629123,51.450249 6.629115,51.450309
+   way 206850872: highway=secondary, name=Neuer Wall | 3 Punkte: 6.628284,51.452530 6.628322,51.452483 6.628407,51.452397
+   way 206850873: highway=secondary, name=Neuer Wall | 3 Punkte: 6.628284,51.452530 6.628236,51.452650 6.628081,51.452840
+   way 209443569: highway=secondary, name=Neuer Wall | 4 Punkte: 6.627765,51.453246 6.627766,51.453229 6.627774,51.453167 6.627839,51.452992
+   way 209443570: highway=secondary, name=Neuer Wall | 5 Punkte: 6.627839,51.452992 6.627909,51.452893 6.628035,51.452719 6.628144,51.452621 6.628284,51.452530
+   way 221871588: highway=secondary, name=Neuer Wall | 4 Punkte: 6.628797,51.451880 6.628854,51.451794 6.628923,51.451696 6.629011,51.451549
+   way 222957447: highway=secondary, name=Neuer Wall | 2 Punkte: 6.628081,51.452840 6.628017,51.452909
+   way 222957448: highway=secondary, name=Neuer Wall | 7 Punkte: 6.628017,51.452909 6.627969,51.452996 6.627936,51.453138 6.627927,51.453175 6.627924,51.453237 6.627923,51.453256 6.627916,51.453361
+   way 307049834: highway=secondary, name=Neuer Wall | 2 Punkte: 6.629202,51.451165 6.629202,51.451155
+   way 339911179: highway=secondary, name=Neuer Wall | 4 Punkte: 6.629009,51.450475 6.629022,51.450413 6.629047,51.450313 6.629050,51.450302
+   way 340000622: highway=secondary, name=Neuer Wall | 2 Punkte: 6.629197,51.451054 6.629179,51.450992
+   way 340000623: highway=secondary, name=Neuer Wall | 5 Punkte: 6.629179,51.450992 6.629149,51.450905 6.629125,51.450835 6.629116,51.450813 6.629063,51.450687
+   way 369250556: highway=secondary, name=Neuer Wall | 8 Punkte: 6.629011,51.451549 6.629050,51.451468 6.629076,51.451401 6.629101,51.451330 6.629128,51.451263 6.629138,51.451232 6.629153,51.451195 6.629202,51.451165
+   way 1175534196: highway=secondary, name=Neuer Wall | 2 Punkte: 6.628407,51.452397 6.628533,51.452259
+   way 1329344121: highway=residential, name=Neumarkt | 2 Punkte: 6.625448,51.452937 6.625406,51.452842
+   way 1420441680: highway=secondary, name=Neuer Wall | 2 Punkte: 6.628533,51.452259 6.628583,51.452201
