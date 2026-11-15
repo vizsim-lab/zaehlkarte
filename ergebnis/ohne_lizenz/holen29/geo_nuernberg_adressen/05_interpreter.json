@@ -1,0 +1,90 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T11:55:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2117110204,
+  "lat": 49.5177177,
+  "lon": 11.2716040,
+  "tags": {
+    "addr:city": "Lauf an der Pegnitz",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "91207",
+    "addr:street": "Peter-Vischer-Straße"
+  }
+},
+{
+  "type": "node",
+  "id": 2671932369,
+  "lat": 49.4510461,
+  "lon": 11.0811605,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "90403",
+    "addr:street": "Peter-Vischer-Straße",
+    "entrance": "main"
+  }
+},
+{
+  "type": "node",
+  "id": 4823264892,
+  "lat": 49.4510403,
+  "lon": 11.0810186,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "90403",
+    "addr:street": "Peter-Vischer-Straße",
+    "amenity": "restaurant",
+    "check_date": "2026-01-08",
+    "contact:website": "https://katzentempel.de/standorte/nuernberg/",
+    "cuisine": "burger",
+    "delivery": "yes",
+    "diet:vegan": "only",
+    "diet:vegetarian": "yes",
+    "dog": "no",
+    "email": "nuernberg@katzentempel.de",
+    "highchair": "yes",
+    "internet_access": "wlan",
+    "internet_access:fee": "customers",
+    "name": "Katzentempel",
+    "opening_hours": "Mo-Fr 10:00-20:00; Sa,Su,PH 09:00-20:00",
+    "payment:cash": "yes",
+    "payment:debit_cards": "yes",
+    "phone": "+49 911 25313564",
+    "source": "survey",
+    "theme": "cat",
+    "toilets": "yes",
+    "toilets:wheelchair": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 59586772,
+  "center": {
+    "lat": 49.3349599,
+    "lon": 11.0314627
+  },
+  "tags": {
+    "addr:city": "Schwabach",
+    "addr:country": "DE",
+    "addr:housenumber": "21",
+    "addr:postcode": "91126",
+    "addr:street": "Peter-Vischer-Straße",
+    "building": "yes"
+  }
+}
+
+  ]
+}

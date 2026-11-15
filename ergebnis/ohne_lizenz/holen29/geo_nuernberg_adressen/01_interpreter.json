@@ -1,0 +1,45 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.4 2390de5a",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-15T11:46:20Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 2126048096,
+  "lat": 49.5133433,
+  "lon": 11.2681520,
+  "tags": {
+    "addr:city": "Lauf an der Pegnitz",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "91207",
+    "addr:street": "Nordring"
+  }
+},
+{
+  "type": "way",
+  "id": 213594720,
+  "center": {
+    "lat": 49.4692865,
+    "lon": 11.0690117
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90408",
+    "addr:street": "Nordring",
+    "building": "apartments",
+    "building:levels": "4",
+    "roof:levels": "1",
+    "roof:material": "roof_tiles",
+    "roof:shape": "gabled"
+  }
+}
+
+  ]
+}

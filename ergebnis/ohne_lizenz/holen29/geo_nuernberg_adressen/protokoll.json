@@ -1,0 +1,40 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Nordring%22%5D%5B%22addr%3Ahousenumber%22%3D%226%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Nordring%22%5D%5B%22addr%3Ahousenumber%22%3D%226%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "ende": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Nordring%22%5D%5B%22addr%3Ahousenumber%22%3D%226%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "typ": "application/json",
+  "bytes": 951,
+  "datei": "01_interpreter.json",
+  "sha256": "3a154f73f25b3a7d896af6a8eca70a0f7dfd4059bba6a0a48923778a10dd7886"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Bartholom%C3%A4usstra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%2217%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Bartholom%C3%A4usstra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%2217%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Timeout'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22L%C3%B6wenberger%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%22153%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22L%C3%B6wenberger%20Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%22153%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Timeout'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22An%20der%20Radrunde%22%5D%5B%22addr%3Ahousenumber%22%3D%22165%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22An%20der%20Radrunde%22%5D%5B%22addr%3Ahousenumber%22%3D%22165%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Timeout'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Peter-Vischer-Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%2221%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Peter-Vischer-Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%2221%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "ende": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A60%5D%3Bnwr%5B%22addr%3Astreet%22%3D%22Peter-Vischer-Stra%C3%9Fe%22%5D%5B%22addr%3Ahousenumber%22%3D%2221%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20center%20tags%3B",
+  "typ": "application/json",
+  "bytes": 2099,
+  "datei": "05_interpreter.json",
+  "sha256": "bb398ae738e1034c0150829c36981c98a112ba65843450249d4a47a5640f6760"
+ }
+]
