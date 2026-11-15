@@ -13,7 +13,8 @@ Stil und
 Aufbau des Frontends wie `vizsim/unfallkarte`,
 ZDA-Leser aus `vizsim/berlin-traffic-counts_schulwege`, Quellenverwaltung wie `vizsim/svz`.
 Auswertungen (etwa der Schulweg-Verdacht) gehören NICHT hierher, sondern in die Schulwege-Karte.
-Überblick: `README.md`. Quellenfinden und Sackgassen: `AGENTS.md`.
+Überblick: `README.md` (schlank), Einzelheiten in `docs/` (QUELLEN, KARTE, ENTWICKLUNG, LOGO).
+Quellenfinden und Sackgassen: `AGENTS.md`.
 Diese Datei = die Regeln, die in jeder Session gelten.
 
 ## Repo-Layout
