@@ -64,6 +64,7 @@ dauer site   -> public/data/dauer/       index.json, tage/JJJJ.json, NN.json (ni
 | `dauer/hamburg_sta.py` | Hamburg: Wärmebildkameras über SensorThings, Gedächtnis (Monatsdateien), UTC -> Ortszeit |
 | `dauer/readi_urbanpulse.py` | Ettlingen: Datastore von re@di (UrbanPulse-Ströme je Fahrtrichtung), Kfz als Summe der Klassen |
 | `dauer/mobidata_eco.py` | Rad-Zählstellen in Baden-Württemberg (Eco-Counter, gebündelt von MobiData BW), Stundenwerte in Ortszeit |
+| `dauer/bw_land.py` | Baden-Württemberg: Dauerzählstellen des Landes (BASt-Bestandsband als CSV, Monats- und Jahres-ZIPs nach Datum im DCAT-Dokument), Fahrstreifen je Richtung, Prüfkennzeichen, Lage aus der Zählstellenkarte |
 | `dauer/muenster_rad.py` | Münster: Rad-Zählstellen (Eco-Counter) aus dem GitHub-Repository der Stadt, Status je Viertelstunde |
 | `dauer/aachen_rad.py` | Aachen: Radzählstellen je Kanal (UTC), Standorte aus dem PDF |
 | `dauer/berlin_rad.py` | Berlin: Rad-Zählstellen aus der Excel-Datei der Senatsverwaltung, Markierungen per Zellfarbe |

@@ -428,10 +428,17 @@ def setze_datei(reihe: Messreihe, d: Datei, index: dict[tuple[str, int], int],
     felder = [z.split(";") for z in d.zeilen]
     feld = np.array([f[:breite] + [""] * (breite - len(f)) if len(f) < breite else f[:breite]
                      for f in felder])
-    datum = feld[:, 0]
-    tag = np.array([f"20{x[:2]}-{x[2:4]}-{x[4:6]}" for x in datum], dtype="datetime64[D]")
-    eingefuegt = np.array([x[6:].strip().lower() == "i" for x in datum])
     stunde = np.array([int(x[:2]) - 1 for x in feld[:, 1]], dtype=np.int64)  # Ende -> Beginn
+    if not ((stunde >= 0) & (stunde <= 23)).all():
+        bericht.fehler.append(f"{d.name}: Uhrzeit außerhalb 01:00–24:00")
+        feld, stunde = feld[(stunde >= 0) & (stunde <= 23)], stunde[(stunde >= 0) & (stunde <= 23)]
+    datum = feld[:, 0]
+    try:
+        tag = np.array([f"20{x[:2]}-{x[2:4]}-{x[4:6]}" for x in datum], dtype="datetime64[D]")
+    except ValueError:
+        bericht.fehler.append(f"{d.name}: Datum nicht lesbar")
+        return
+    eingefuegt = np.array([x[6:].strip().lower() == "i" for x in datum], dtype=bool)
     bericht.datensaetze += len(feld)
     bericht.eingefuegt += int(eingefuegt.sum())
     for g, spalten in gruppen:

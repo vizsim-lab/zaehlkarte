@@ -11,7 +11,7 @@ land: BW
 traeger: Land Baden-Württemberg, Verkehrsministerium
 art: >-
   fest eingebaute Zählgeräte (TLS, 8+1 Fahrzeugarten) an Autobahnen, Bundes- und Landesstraßen,
-  je eine an einer Kreis- und einer Gemeindestraße; Stundenwerte je Fahrstreifen für Kfz und
+  eine an einer Kreis-, zwei an Gemeindestraßen; Stundenwerte je Fahrstreifen für Kfz und
   Schwerverkehr, an Zählstellen mit nur zwei Klassen statt des Schwerverkehrs die Lkw-ähnlichen
 weg: offen bei MobiData BW (ein ZIP je Monat seit 2025, je Jahr 2016–2024)
 portal: https://mobidata-bw.de/dataset/stundenwerte_dauerzaehlstellen
@@ -40,11 +40,12 @@ hinweise:
     kennzeichnet („-“, auch „u“: korrekt, aber unregelmäßig, etwa bei Großveranstaltungen).
     Ausfälle (a), fehlerhafte Werte (d), Schätzwerte (s, k), nachträglich eingefügte Stunden (i)
     und Kennzeichen, die die Formatbeschreibung der BASt nicht nennt (h, t, S), gelten als nicht
-    gezählt – je nach Monat rund ein Zehntel bis ein Drittel der Stunden.
+    gezählt – je nach Monat rund ein Zehntel bis ein Drittel der Stunden, oft ein ganzer Monat an
+    einer Stelle und an manchen Monatsgrenzen die erste oder letzte Stunde an vielen Stellen.
   - >-
     Schwerverkehr ist die Gruppe der Zählgeräte (Lkw ohne und mit Anhänger, Sattelzüge, Busse);
-    an Zählstellen, die nur zwei Klassen unterscheiden (Autobahnen bis 2025), stehen statt des
-    Schwerverkehrs die Lkw-ähnlichen Fahrzeuge als Lkw. Beides nicht der Schwerverkehr der
+    an Zählstellen, die nur zwei Klassen unterscheiden (41 an Autobahnen, bis Dezember 2025),
+    stehen statt des Schwerverkehrs die Lkw-ähnlichen Fahrzeuge als Lkw. Beides nicht der Schwerverkehr der
     Kurzzeitzählungen.
   - >-
     Ortszeit. Am Tag der Rückstellung der Uhr enthält die Quelle für 2–3 Uhr nur einen Wert, der

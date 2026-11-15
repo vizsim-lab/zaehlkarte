@@ -17,7 +17,8 @@ Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Ve
   herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen, für beide
   Familien getrennt.
 - **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
-  Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen und die Rad-Zählstellen von
+  Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen, die Dauerzählstellen des
+  Landes Baden-Württemberg an Autobahnen, Bundes- und Landesstraßen und die Rad-Zählstellen von
   Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
   Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen und dem Land in
   Baden-Württemberg und in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau
@@ -61,6 +62,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
 | Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; in der Karte rund 1.120 Zählstellen, Straßennamen aus OpenStreetMap | vollständig gezählte Tage: Kfz und Rad ab 09.09.2026, Schwerverkehr ab 01.03.2026; wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
 | Ettlingen (Stadt Ettlingen) | automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der Karte als Kfz (Summe der Klassen) und Lkw (Lkw und Lkw mit Anhänger); 10 Richtungen an 5 Stellen mit vollständigen Tagen | ab 20.08.2026 (ältere Werte ab Mai 2025 nicht übernommen); wöchentlich ergänzt | offen im [Open-Data-Portal re@di](https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen) (Datastore) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.de) – nur nicht kommerziell, „Stadt Ettlingen“ |
+| Baden-Württemberg (Verkehrsministerium, über MobiData BW) | Dauerzählstellen des Landes an Autobahnen, Bundes- und Landesstraßen: Stundenwerte je Fahrstreifen, in der Karte je Fahrtrichtung Kfz und Schwerverkehr (Gruppe der Zählgeräte), an Autobahn-Stellen mit nur zwei Klassen statt des Schwerverkehrs die Lkw-ähnlichen; nur Stunden, die die Quelle auf allen Fahrstreifen als korrekt kennzeichnet; Lage aus der Zählstellenkarte des Landes; 193 Zählstellen (je Richtung eine Stelle), 13 ohne Lage fehlen | 2016 – August 2026 (die Autobahn-Stellen mit nur zwei Klassen bis Dezember 2025); neue Monate mit rund zwei Monaten Verzug, wöchentlich geprüft | offen auf [MobiData BW](https://mobidata-bw.de/dataset/stundenwerte_dauerzaehlstellen) (ZIP je Monat und Jahr); Lage aus der [Karte der Straßenverkehrszählung](https://mobidata-bw.de/dataset/karte_strassenverkehrszaehlung) | dl-de/by-2-0, „Verkehrsministerium Baden-Württemberg (MobiData BW)“ |
 | Baden-Württemberg: 27 Städte und Landkreise und das Land (gebündelt von MobiData BW) | Rad-Zählstellen, meist Eco-Counter: Stundenwerte je Zählstelle, beide Richtungen zusammen; in der Karte 179 Zählstellen (eine davon des Landes, in Bad Wimpfen) | 2013 – Anfang November 2026; wöchentlich ergänzt (die jüngsten drei Tage erst beim nächsten Bau) | offen auf [MobiData BW](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler) (Monatsdateien) | dl-de/by-2-0, „MobiData BW“ |
 | Münster (Stadt Münster) | Rad-Zählstellen (Eco-Counter): 15-Minuten-Werte je Kanal mit Status, in der Karte Stundenwerte je Zählstelle aus Rohwerten und geprüften Werten; 23 Zählstellen | 2019–2026; wöchentlich ergänzt | offen im [GitHub-Repository der Stadt](https://github.com/od-ms/radverkehr-zaehlstellen) (nächtlich aktualisiert), Lage im [Open-Data-Portal](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten) | dl-de/by-2-0, „Stadt Münster“ |
 | Aachen (Stadt Aachen) | Radzählstellen: Stundenwerte je Richtung (UTC), in der Karte die Summe je Zählstelle; 26 Zählstellen | 2025–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen) (CSV je Jahr, Standorte als PDF) | dl-de/zero-2-0 |
@@ -167,7 +169,9 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Standardtag. Die Seitenleiste zeigt die Tagessummen über alle Jahre (gefärbt nach Schultag,
   Ferien, Wochenende/Feiertag) und den Tagesgang des Tags – Stundenwerte für die jüngsten 12
   Monate der Quelle; ein Klick in die Tagesreihe wählt den Tag.
-- **Lkw/Schwerverkehr:** Berlin und Ettlingen zählen „Lkw“, Hamburg „Schwerverkehr“ – jeweils
+- **Lkw/Schwerverkehr:** Berlin und Ettlingen zählen „Lkw“, Hamburg „Schwerverkehr“, die
+  Dauerzählstellen des Landes Baden-Württemberg „Schwerverkehr“ (an 41 Autobahn-Stellen mit nur
+  zwei Klassen bis 2025 die Lkw-ähnlichen als „Lkw“) – jeweils
   die Klasse, die der Detektor bzw. die Kamera von Pkw unterscheidet, je Quelle anders
   abgegrenzt und nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen. Ein Chip zeigt
   beide: jede Stelle in ihrer Klasse und mit deren Namen, nie zusammengezählt; die Legende nennt,
@@ -180,7 +184,8 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   Karte, offen, herausgegeben, aussichtsreich, ohne Lizenz, nur Summen, nichts offen …).
   „Hinzoomen“ wechselt dabei auf die Verkehrsart, die die Quellen der Kommune zählen (in Leipzig
   etwa auf Rad). Kommunen, von denen nur Dauerzählstellen bekannt sind (etwa die Rad-Zählstellen
-  hessischer Städte und Kreise), stehen nur dort.
+  hessischer Städte und Kreise), stehen nur dort. Zählstellen des Landes (Baden-Württemberg)
+  gehören zu keiner Kommune und stehen nicht in der Datenlage.
 - Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
   (eine Stunde nur bei mindestens 75 % gültigen Messintervallen und nur, wenn alle Fahrstreifen
   gültig sind). Ab 2025 gibt es nur die neue Qualitätssicherung je Fahrstreifen; die Zählkarte
@@ -203,6 +208,15 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   zwischen ihnen um. Die Werte vor dem 20.08.2026 (laufende Tageszähler ohne Fahrtrichtung)
   sind nicht übernommen. Lizenz CC BY-NC 4.0: Weiterverwendung nur nicht kommerziell; die
   Lizenz steht an der Quelle, in der Seitenleiste und in jeder Zeile des CSV-Exports.
+- Baden-Württemberg, Dauerzählstellen des Landes: Stundenwerte je Fahrstreifen, abgeleitet aus
+  den Lieferungen an die BASt; in der Karte je Fahrtrichtung die Summe ihrer Fahrstreifen (beide
+  Richtungen am selben Punkt, die Seitenleiste schaltet um). Eine Stunde zählt nur, wenn die
+  Quelle sie auf allen Fahrstreifen der Richtung als korrekt kennzeichnet – Ausfälle,
+  fehlerhafte Werte, Schätzwerte (oft einen ganzen Monat an einer Stelle) und eingefügte Stunden
+  nicht; je Monat sind 55–94 % der Tage je Richtung vollständig. Am Tag der Rückstellung der Uhr
+  steht 2–3 Uhr nur einmal da (gekennzeichnet) – der Tag ist nicht vollständig. Die Dateien nennen
+  keine Koordinaten: Die Lage ist die des passenden Abschnitts in der Zählstellenkarte des
+  Landes; 13 von 206 Zählstellen ohne passenden Abschnitt fehlen.
 - Rad-Zählstellen (Berlin, Münster, Aachen, München, Baden-Württemberg über MobiData BW,
   Würzburg, Rhein-Kreis Neuss, Neuss, Dortmund, Essen, Bochum, Bonn, Düsseldorf, Leipzig,
   Rostock):

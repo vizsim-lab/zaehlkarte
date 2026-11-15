@@ -1,5 +1,6 @@
 # Dauerzählstellen bauen: Rohdaten holen (Berlin: Archiv der Verkehrsdetektion; Hamburg:
-# SensorThings API; Ettlingen: Datastore; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
+# SensorThings API; Ettlingen: Datastore; Dauerzählstellen des Landes Baden-Württemberg über
+# MobiData BW; Rad-Zählstellen von MobiData BW, Münster, Aachen, Berlin,
 # München, Würzburg, Rhein-Kreis Neuss, Dortmund, Essen, Leipzig, Rostock, Bochum, Bonn,
 # Düsseldorf, Dresden und der VMZ Niedersachsen; Fuß in Augsburg), Kartendaten nach
 # public/data/dauer/ schreiben und als Release-Asset „dauerzaehlstellen/dauer.tar.gz“ ablegen –
@@ -20,6 +21,8 @@
 #   Dortmund), Essens Quartale und Düsseldorfs Jahresdateien nur bei Änderung; Bonns
 #   Jahresdateien holt jeder Lauf neu. VMZ Niedersachsen und Dresden: Jahresdateien im Cache, neu
 #   nur das laufende Jahr und das Vorjahr.
+#   Landes-Dauerzählstellen BW: Monats-ZIPs und Jahresarchive 2016–2024 (rund 550 MB) im Cache,
+#   neu nur, was laut DCAT-Dokument ein neues Datum hat (das Land ersetzt ältere Monate).
 # - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
 #   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus
 #   pipeline/config/robots.yaml – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
@@ -119,6 +122,11 @@ jobs:
           path: pipeline/data/raw/dresden_rad
           key: dauer-dresden-roh-${{ github.run_id }}
           restore-keys: dauer-dresden-roh-
+      - uses: actions/cache@v6  # Landes-Dauerzählstellen BW: ZIPs seit 2016, neu nur geänderte
+        with:
+          path: pipeline/data/raw/bw_land_kfz
+          key: dauer-bw-land-roh-${{ github.run_id }}
+          restore-keys: dauer-bw-land-roh-
       - uses: actions/cache@v6  # Fuß, Augsburg: jeder Lauf holt die Datei neu, der Cache ist der Rückfall
         with:
           path: pipeline/data/raw/augsburg_fuss
