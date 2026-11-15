@@ -1,7 +1,8 @@
 # Hamburg: zwei Dienste derselben Wärmebildkameras (aVME-HH, Hamburger Radzählnetz), ein Adapter.
 # Stundenwerte hält die Quelle nur „für die letzten zwei Monate“ vor (Datensatzbeschreibung im
 # Transparenzportal, Stand November 2026) -> die Zählkarte hebt sie selbst auf (gedaechtnis/ im
-# Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt).
+# Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt). Davor die Tageswerte der
+# Quelle (Layer „1-Tag“, an den meisten Stellen seit 2020; ebenfalls im Gedächtnis aufgehoben).
 nr: 3
 status: live
 adapter: hamburg_sta
@@ -17,6 +18,10 @@ api: https://iot.hamburg.de/v1.1
 dienst: HH_STA_Verkehrsdaten_Rad_Infrarotdetektoren
 layer:
   rad: Anzahl_Fahrraeder_Zaehlstelle_1-Stunde
+# Tageswerte der Quelle je Ortstag – nur vor der ersten gezählten Stunde einer Stelle
+# (`Messreihe.tageswerte`)
+tageslayer:
+  rad: Anzahl_Fahrraeder_Zaehlstelle_1-Tag
 nachladen_tage: 14
 frisch_tage: 7
 # Straßennamen für neue Stellen aus dem OSM-Abzug von Geofabrik (ODbL). Geladen wird er nur,

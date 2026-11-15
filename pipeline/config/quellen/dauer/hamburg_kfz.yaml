@@ -1,7 +1,8 @@
 # Hamburg: zwei Dienste derselben Wärmebildkameras (aVME-HH, Hamburger Radzählnetz), ein Adapter.
 # Stundenwerte hält die Quelle nur „für die letzten zwei Monate“ vor (Datensatzbeschreibung im
 # Transparenzportal, Stand November 2026) -> die Zählkarte hebt sie selbst auf (gedaechtnis/ im
-# Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt).
+# Rohdatenordner, vom Workflow im Release `dauerzaehlstellen` abgelegt). Davor die Tageswerte der
+# Quelle (Layer „1-Tag“, an den meisten Stellen seit 2020; ebenfalls im Gedächtnis aufgehoben).
 nr: 2
 status: live
 adapter: hamburg_sta
@@ -19,8 +20,13 @@ dienst: HH_STA_Verkehrsdaten_Kfz_Infrarotdetektoren
 layer:
   kfz: Anzahl_Kfz_Zaehlstelle_1-Stunde
   sv: Anzahl_Schwerverkehr_Zaehlstelle_1-Stunde
-nachladen_tage: 14  # so weit zurück holt jeder Lauf die Stunden erneut (Werte ändern sich noch)
-frisch_tage: 7  # jüngere Stunden kommen noch nicht in die Karte
+# Tageswerte der Quelle je Ortstag – nur vor der ersten gezählten Stunde einer Stelle
+# (`Messreihe.tageswerte`). Schwerverkehr nicht: Seine Tageswerte beginnen am 01.03.2026, die
+# Stunden im Gedächtnis schon am 28.02.2026 – davor gibt es nichts.
+tageslayer:
+  kfz: Anzahl_Kfz_Zaehlstelle_1-Tag
+nachladen_tage: 14  # so weit zurück holt jeder Lauf Stunden und Tage erneut (Werte ändern sich noch)
+frisch_tage: 7  # jüngere Stunden und Tage kommen noch nicht in die Karte
 # Straßennamen für neue Stellen aus dem OSM-Abzug von Geofabrik (ODbL). Geladen wird er nur,
 # wenn neue Stellen ohne Namen auftauchen und noch keiner da ist, und dann behalten (Cache im
 # Workflow): Straßen ändern sich selten, und Geofabrik bittet, nicht dieselbe Datei immer
