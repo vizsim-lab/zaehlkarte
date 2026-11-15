@@ -73,7 +73,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 | Dortmund (Stadtplanungs- und Bauordnungsamt) | Dauerzählstelle Radverkehr Schnettkerbrücke (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte Stundenwerte; Lage aus OpenStreetMap | 2018–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/) (Opendatasoft) | dl-de/zero-2-0 |
 | Essen (Amt für Stadtplanung und Bauordnung) | automatische Radverkehrszählungen an Grugatrasse und Huyssenallee: Stundenwerte je Richtung, in der Karte die Summe je Zählstelle; 2 Zählstellen | 2021 – Juni 2026 (2018–2020 unter geschlossener Lizenz, nicht übernommen); vierteljährlich ergänzt | offen auf [Open.NRW](https://open.nrw/dataset/radverkehrszahlungen-e) (eine CSV je Quartal) | dl-de/by-2-0, „Stadt Essen“ |
 | Bochum (Stadt Bochum) | Zählstellen für Rad- und Fußverkehr (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte Rad und Fuß (eigene Kanäle) als Stundenwerte je Zählstelle; 8 Zählstellen, 5 davon mit Fuß | 2018–2026; wöchentlich ergänzt | offen im [GitLab der Stadt auf openCode.de](https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter) (eine CSV je Zählstelle) | dl-de/by-2-0, „Stadt Bochum“ – laut Stadt nicht für Produkte oder Services im direkten Wettbewerb zu Eco-Counter |
-| Leipzig (Verkehrs- und Tiefbauamt) | Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte je Zählstelle; die Quelle hält nur 31 Tage vor, die Zählkarte hebt sie auf (Gedächtnis); 25 Zählstellen | vollständig gezählte Tage ab 09.10.2026 (der erste Abruf reichte 31 Tage zurück); wöchentlich ergänzt | offen im WFS des Geoportals ([Datensatz](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei)) | dl-de/by-2-0, „Stadt Leipzig“ |
+| Leipzig (Verkehrs- und Tiefbauamt) | Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte je Zählstelle, davor Tageswerte der Quelle (UTC-Tage); die Quelle hält Stunden nur 31 Tage, Tageswerte zwei Jahre vor, die Zählkarte hebt beides auf (Gedächtnis); 26 Zählstellen | Tageswerte ab 14.11.2024, Stunden ab 08.10.2026; wöchentlich ergänzt | offen im WFS des Geoportals ([Stunden](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei), [Tage](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-tag-der-letzten-2-jahre-stadt-leipzi)) | dl-de/by-2-0, „Stadt Leipzig“ |
 | Rostock (Hanse- und Universitätsstadt Rostock) | Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle, beide Richtungen zusammen, in der Karte Stundenwerte; 17 Zählstellen | 2012–2026; wöchentlich ergänzt | offen auf [OpenData.HRO](https://www.opendata-hro.de/dataset/radmonitore) (eine CSV) | CC0 1.0 |
 | Bonn (Bundesstadt Bonn) | Fahrradmessstellen (Eco-Counter): Stundenwerte je Zählstelle, die Brücken je Seite; Summen der Brücken nicht übernommen; 14 Zählstellen, Lage aus OpenStreetMap | 2020–2025 ohne 2022 (nur je Kanal); einmal im Jahr ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025) (eine CSV je Jahr) | CC0 1.0 |
 | Düsseldorf (Landeshauptstadt Düsseldorf) | Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung, in der Karte die Summe je Zählstelle; Stellen, die nur Summen anderer sind, nicht übernommen; 19 Zählstellen | 2020–2025 ohne 2022 (nicht veröffentlicht); einmal im Jahr ergänzt | offen über [Open.NRW](https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d) (eine CSV je Zählstelle und Jahr), Lage aus den [Standorten der Stadt](https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d) | dl-de/by-2-0, „Landeshauptstadt Düsseldorf“ |
@@ -150,12 +150,15 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
   2–3 Uhr zweimal, mit Hinweis); führt eine Quelle dann nur eine dieser Stunden, ist der Tag
   nicht vollständig gezählt.
 - **Tageswerte der Quelle:** Liefert eine Quelle für eine Stelle nur Tageswerte (Augsburgs
-  Radzählstationen; Hamburg vor den Stunden, die die Zählkarte seit August 2026 aufhebt), zeigt
-  die Karte deren Tageswert wie geliefert – „Tageswert der Quelle“ im
+  Radzählstationen; Hamburg und Leipzig vor den Stunden, die die Zählkarte seit August bzw.
+  Oktober 2026 aufhebt), zeigt die Karte deren Tageswert wie geliefert – „Tageswert der Quelle“ im
   Hover, in der Seitenleiste und als Hinweis in der Legende, ohne Tagesgang; ob jede Stunde
   gezählt ist, lässt sich dort nicht prüfen. Tageswerte gelten nur vor der ersten gezählten
   Stunde einer Stelle, nie als Ersatz fehlender Stunden, und nie aus Wochen-, Monats- oder
-  Jahreswerten. Im CSV stehen sie in einer eigenen Spalte (`<gruppe>_tageswert_quelle`).
+  Jahreswerten. Der Tag der Quelle kann vom Kalendertag 0–24 Uhr abweichen (Leipzig: UTC-Tag,
+  1 bis 1 Uhr, im Sommer 2 bis 2 Uhr) – das steht im Verfahren der Seitenleiste und als Hinweis
+  an der Quelle, umgerechnet wird nichts. Im CSV stehen sie in einer eigenen Spalte
+  (`<gruppe>_tageswert_quelle`).
 - Standard: je Stelle die Tagessumme ihres **jüngsten vollständig gezählten Schultags** – so
   stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume sich nicht überschneiden
   (Berlins Detektoren enden im Juni 2025, der Rhein-Kreis Neuss im Juli 2026; Berlins
@@ -300,9 +303,10 @@ Release-Asset `dauerzaehlstellen/dauer.tar.gz` ab – Daten, die sich laufend ä
 nicht ins Git. Eine Quelle, die scheitert, hält die anderen nicht auf; sie steht als Warnung am
 Lauf. Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die Kurzzeitzählungen.
 
-**Gedächtnis:** Hamburg hält Stundenwerte nur zwei Monate vor, Leipzig 31 Tage. Was die
-Zählkarte davon aufhebt (Monatsdateien je Quelle, `<code>__stunden_JJJJ-MM.csv.gz`, für Hamburg
-dazu die Tageswerte je Jahr `<code>__tage_JJJJ.csv.gz` und die Straßennamen
+**Gedächtnis:** Hamburg hält Stundenwerte nur zwei Monate vor, Leipzig 31 Tage (Tageswerte:
+Hamburg laut Beschreibung das laufende und das letzte Jahr, Leipzig zwei Jahre). Was die
+Zählkarte davon aufhebt (Monatsdateien je Quelle, `<code>__stunden_JJJJ-MM.csv.gz`, die
+Tageswerte je Jahr `<code>__tage_JJJJ.csv.gz` und für Hamburg die Straßennamen
 `<code>__strassen.json`), liegt im selben Release. Der Workflow holt es
 vor dem Abruf und legt danach ab, was sich geändert hat – nie mit weniger Werten
 (`pipeline/werkzeuge/gedaechtnis.py`). Wer diese Assets löscht, verliert die Stunden, die die

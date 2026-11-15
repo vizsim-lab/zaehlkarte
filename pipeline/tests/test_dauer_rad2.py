@@ -365,6 +365,111 @@ def test_leipzig_hole_gedaechtnis_und_lese(pfade, monkeypatch):
 
 
 # ---------------------------------------------------------------- Werkzeug: KMK-Ferien
+def lz_tage_csv(zeilen: list[tuple]) -> str:
+    out = ["FID,objectid,stationname,stationid,phenomenontime,count,fme_tstamp,geom"]
+    for oid, k, tag, w, *lieferung in zeilen:
+        stempel = lieferung[0] if lieferung else "2026-11-15T04:11:30.803"
+        out.append(f"t.{oid},{oid},X,de.sn.stlp.statisch.rad.{k},{tag},{w},{stempel},"
+                   "POINT (316626.38 5690467.49)")
+    return "\n".join(out) + "\n"
+
+
+def test_leipzig_lies_tage():
+    werte, weg = leipzig_rad.lies_tage(lz_tage_csv([
+        (1, "100040870", "2026-10-20", 3000),
+        (2, "100040870", "2026-10-21T00:00:00", 3100),  # auch mit Uhrzeit 0 Uhr
+        (3, "100040870", "2026-10-22", 1, "2026-11-14T04:11:30.803"),
+        (4, "100040870", "2026-10-22", 3200),  # jüngere Lieferung gilt
+        (5, "100040870", "2026-10-23", 5),
+        (6, "100040870", "2026-10-23", 6),  # dieselbe Lieferung, verschieden: weg
+        (7, "100040870", "2026-10-24T12:00:00", 7),  # kein Tag
+        (8, "100040870", "2026-10-25", ""),  # kein Wert
+        (9, "300023813", "2026-10-25", 0),  # 0 bleibt 0
+    ]))
+    assert sorted(werte) == [("100040870", date(2026, 10, 20), 3000),
+                             ("100040870", date(2026, 10, 21), 3100),
+                             ("100040870", date(2026, 10, 22), 3200),
+                             ("300023813", date(2026, 10, 25), 0)]
+    assert weg == {"Zeit": 1, "Wert": 1, "doppelt mit verschiedenen Werten": 2}
+
+
+def test_leipzig_tageswerte_vor_den_stunden(pfade, monkeypatch):
+    """Tageswerte (UTC-Tage) nur vor der ersten gezählten Stunde einer Stelle; Jahnallee nur
+    mit Tageswerten; das Fenster wandert, das Gedächtnis behält alles."""
+    from zaehlkarte.dauer.modell import aus_tageswerten
+
+    q = {"code": "leipzig_rad", "land": "SN", "wfs": "https://lz.example/wfs",
+         "ebenen": {"standorte": "OpenData:standort", "stunden": "OpenData:stunde",
+                    "tage": "OpenData:tag"}}
+    standorte = ("FID,objectid,stationname,stationid,installationdate,fme_tstamp,geom\n"
+                 "s.1,1,Manetstraße,de.sn.stlp.statisch.rad.100040870,2017-10-25,x,"
+                 "POINT (316626.3845562657 5690467.490876849)\n"
+                 "s.2,2,Jahnallee,de.sn.stlp.statisch.rad.300023813,2020-03-05,x,"
+                 "POINT (315111.74339898885 5690900.46350202)\n")
+    lauf = {"n": 0}
+
+    def stunden() -> str:  # Stunden am 24. und 25.10. (Rückstellung)
+        z, oid = [], 0
+        for d in (date(2026, 10, 24), RUECK):
+            for h in range(24):
+                for _ in range(2 if (d == RUECK and h == 2) else 1):
+                    oid += 1
+                    z.append((oid, "100040870", f"{d}T{h:02d}:00:00", 10))
+        return lz_csv(z)
+
+    def tage() -> str:  # erster Abruf 18.–25.10., zweiter 20.–26.10. (das Fenster wandert)
+        von = date(2026, 10, 18) if lauf["n"] == 0 else date(2026, 10, 20)
+        z = []
+        for i in range(8 if lauf["n"] == 0 else 7):
+            d = von + timedelta(days=i)
+            z.append((2 * i, "100040870", d.isoformat(), 1000 + d.day))
+            z.append((2 * i + 1, "300023813", d.isoformat(), 0 if d.day == 19 else 500))
+        return lz_tage_csv(z)
+
+    class Antwort:
+        def __init__(self, text):
+            self.text, self.encoding = text, None
+
+        def raise_for_status(self):
+            pass
+
+    import requests
+
+    def get(url, params=None, **k):
+        name = params["typeName"]
+        return Antwort(standorte if name.endswith("standort") else
+                       tage() if name.endswith(":tag") else stunden())
+
+    monkeypatch.setattr(requests, "get", get)
+    log = leipzig_rad.hole(q, pfade)
+    assert "16 Tageswerte geholt (2026-10-18 bis 2026-10-25; verworfen: keine)" in log[1]
+    assert "Gedächtnis 0 -> 16 Tage, geändert: tage_2026.csv.gz" in log[1]
+    lauf["n"] = 1
+    log = leipzig_rad.hole(q, pfade)
+    assert "Gedächtnis 16 -> 18 Tage" in log[1]  # 26.10. dazu, 18./19.10. bleiben
+    b = leipzig_rad.Bericht()
+    r = leipzig_rad.lese(q, pfade, b)
+    assert [s.name for s in r.stellen] == ["Manetstraße", "Jahnallee"]
+    assert r.von == date(2026, 10, 18)
+    summe, n = tagessummen(r, "rad")
+    tw = aus_tageswerten(r, "rad")
+    i = r.index
+    # Manetstraße: Tageswerte bis zum 23.10., ab der ersten Stunde (24.10.) allein die Stunden
+    assert summe[0, i(date(2026, 10, 18))] == 1018 and tw[0, i(date(2026, 10, 23))]
+    assert summe[0, i(date(2026, 10, 24))] == 240 and not tw[0, i(date(2026, 10, 24))]
+    assert summe[0, i(RUECK)] == 250
+    assert summe[0, i(date(2026, 10, 26))] == -1  # nie mit dem Tageswert gefüllt
+    # Jahnallee nur mit Tageswerten, auch 0
+    assert summe[1, i(date(2026, 10, 19))] == 0 and summe[1, i(date(2026, 10, 26))] == 500
+    assert tw[1].sum() == 9 and n[1].sum() == 0
+    assert b.tageswerte == 6 + 9 and b.tage == 18 and b.jahre == ["2026"]
+    assert any("Tageswerte der Quelle (UTC-Tage): 18 im Gedächtnis" in z for z in b.zeilen())
+    # Verfahren: bis zum letzten Tag mit einem Tageswert in der Karte (Jahnallee, 26.10.)
+    ((v1, b1, t1),) = r.verfahren
+    assert (v1, b1) == (date(2026, 10, 18), date(2026, 10, 26))
+    assert "UTC-Tag" in t1 and "Stundenwerte" in t1
+
+
 def test_kmk_zweizeilige_zelle_neben_strich():
     """Eine Zeile zwischen zwei Ländern, gleich weit von beiden: Sie gehört zu dem Land, dessen
     eigene Zeile in der Spalte leer ist – „--“ (keine Ferien) zählt als belegt."""

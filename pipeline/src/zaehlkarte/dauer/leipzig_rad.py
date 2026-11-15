@@ -17,11 +17,16 @@ Aufbau (Stand November 2026, Werkzeug-Branch `werkzeug/dauer2`, tools/rad_erkund
 - Weil die Quelle nur 31 Tage vorhält, hebt die Zählkarte die Stunden selbst auf (Gedächtnis wie
   Hamburg, `gedaechtnis.py`: je UTC-Monat eine Datei, vom Workflow im Release abgelegt). Jeder
   Abruf übernimmt alle gelieferten Stunden; ein neuer Wert ersetzt den alten derselben Stunde.
-- Standorte: Ebene `radverkehr_dauerzaehlstelle_standort_statisch`. Eine Stelle (Jahnallee)
-  liefert keine Stunden und fehlt deshalb in der Karte.
-- Tageswerte zweier Jahre gibt es auch (`…_anzahl_tag_zeitreihe`) – ohne Stunden lässt sich ein
-  Tag nicht auf Vollständigkeit prüfen (Konzept, Entscheidung 5); sie weichen zudem meist etwas
-  von der Summe der Stundenwerte ab. Nicht übernommen.
+- Standorte: Ebene `radverkehr_dauerzaehlstelle_standort_statisch`.
+- Tageswerte (Ebene `…_anzahl_tag_zeitreihe`, „pro Tag der letzten 2 Jahre“, Quelldatei:
+  `ebenen.tage`): `phenomenontime` ein Datum, `count`, je Lieferung (`fme_tstamp`) das ganze
+  Fenster. Der Tag ist der **UTC-Tag**: Wo es Stunden gibt, ist jeder Tageswert genau die Summe
+  der 24 Stunden des UTC-Tags (1 bis 1 Uhr, im Sommer 2 bis 2 Uhr Ortszeit; geprüft am
+  15.11.2026 an 927 Tagen) – daher wichen sie von der Summe 0 bis 24 Uhr ab. Sie kommen als
+  Tageswerte der Quelle in die Reihe (`Messreihe.tageswerte`), nur vor der ersten gezählten
+  Stunde einer Stelle, mit dem UTC-Tag im Verfahren und als Hinweis. Das Fenster wandert → die
+  Zählkarte hebt auch sie auf (`gedaechtnis/tage_JJJJ.csv.gz`). Die Stelle Jahnallee liefert
+  keine Stunden, nur Tageswerte.
 """
 
 from __future__ import annotations
@@ -32,18 +37,27 @@ import json
 import re
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, date, datetime, timedelta
 from zoneinfo import ZoneInfo
 
 from zaehlkarte.config import Pfade
 from zaehlkarte.dauer import gedaechtnis
-from zaehlkarte.dauer.modell import Dauerstelle, Messreihe, kuerze, setze_utc
+from zaehlkarte.dauer.modell import (
+    Dauerstelle,
+    Messreihe,
+    aus_tageswerten,
+    kuerze,
+    setze_tage,
+    setze_utc,
+    verfahren_mit_tageswerten,
+)
 from zaehlkarte.koordinaten import utm_zu_wgs84
 
 ORT = ZoneInfo("Europe/Berlin")
 GEDAECHTNIS = True  # hebt die Stunden selbst auf (bau.mit_gedaechtnis, `zaehlkarte dauer frische`)
 PUNKT = re.compile(r"POINT\s*\(\s*([-\d.]+)\s+([-\d.]+)\s*\)")
 ZEIT = re.compile(r"^(\d{4}-\d{2}-\d{2})[T ](\d{2}):00(?::00(?:\.0+)?)?(Z|[+-]\d{2}:?\d{2})?$")
+TAG = re.compile(r"^(\d{4}-\d{2}-\d{2})(?:[T ]00:00(?::00(?:\.0+)?)?)?$")
 
 
 @dataclass
@@ -52,11 +66,20 @@ class Bericht:
     ohne_lage: list[str] = field(default_factory=list)
     monate: list[str] = field(default_factory=list)
     stunden: int = 0
+    jahre: list[str] = field(default_factory=list)  # Gedächtnis der Tageswerte
+    tage: int = 0  # Tageswerte im Gedächtnis
+    tageswerte: int = 0  # davon in der Karte (vor der ersten gezählten Stunde der Stelle)
+    tage_widerspruch: int = 0
 
     def zeilen(self) -> list[str]:
         z = [f"{self.stellen} Zählstellen; Stunden in der Karte: rad {self.stunden}; Gedächtnis: "
              f"{len(self.monate)} Monate ({self.monate[0] if self.monate else '–'} bis "
              f"{self.monate[-1] if self.monate else '–'})"]
+        if self.jahre:
+            z.append(f"Tageswerte der Quelle (UTC-Tage): {self.tage} im Gedächtnis "
+                     f"({self.jahre[0]} bis {self.jahre[-1]}), in der Karte {self.tageswerte}"
+                     + (f"; widersprüchlich: {self.tage_widerspruch}"
+                        if self.tage_widerspruch else ""))
         if self.ohne_lage:
             z.append(f"ohne Lage (nicht in der Karte): {', '.join(self.ohne_lage)}")
         return z
@@ -125,6 +148,34 @@ def lies_stunden(text: str) -> tuple[list[tuple[str, datetime, int]], Counter]:
     return out, weg
 
 
+def lies_tage(text: str) -> tuple[list[tuple[str, date, int]], Counter]:
+    """CSV der Tagesebene -> [(Kennung, Tag der Quelle = UTC-Tag, Anzahl)], verworfene Zeilen je
+    Grund. Dieselbe Stelle und derselbe Tag mehrmals: es gilt die jüngste Lieferung, darin zählt
+    ein gleicher Wert einmal, verschiedene gar nicht."""
+    weg: Counter = Counter()
+    je: dict[tuple[str, str], list[tuple[str, int]]] = defaultdict(list)
+    for z in csv.DictReader(io.StringIO(text)):
+        m = TAG.match((z.get("phenomenontime") or "").strip())
+        w = (z.get("count") or "").strip()
+        if not m:
+            weg["Zeit"] += 1
+            continue
+        if not re.fullmatch(r"\d+(?:\.0+)?", w):
+            weg["Wert"] += 1
+            continue
+        je[(kennung(z["stationid"]), m[1])].append(((z.get("fme_tstamp") or "")[:10],
+                                                     int(float(w))))
+    out = []
+    for (k, tag), alle in je.items():
+        juengste = max(lieferung for lieferung, _ in alle)
+        werte = {w for lieferung, w in alle if lieferung == juengste}
+        if len(werte) > 1:
+            weg["doppelt mit verschiedenen Werten"] += len(alle)
+            continue
+        out.append((k, date.fromisoformat(tag), werte.pop()))
+    return out, weg
+
+
 def lies_standorte(text: str) -> dict[str, tuple[str, float, float]]:
     """CSV der Standorte -> Kennung: (Name, lon, lat)."""
     out = {}
@@ -135,21 +186,25 @@ def lies_standorte(text: str) -> dict[str, tuple[str, float, float]]:
     return out
 
 
-def hole(q: dict, pfade: Pfade) -> list[str]:
-    """Standorte und die Stunden der letzten 31 Tage holen und ins Gedächtnis übernehmen."""
+def _ebene(q: dict, name: str) -> str:
     from zaehlkarte import abruf
 
+    r = abruf.hole(q["wfs"], params={
+        "service": "WFS", "version": "2.0.0", "request": "GetFeature",
+        "typeName": q["ebenen"][name], "outputFormat": "csv"}, timeout=300)
+    r.encoding = "utf-8"
+    return r.text
+
+
+def hole(q: dict, pfade: Pfade) -> list[str]:
+    """Standorte und die Stunden der letzten 31 Tage holen und ins Gedächtnis übernehmen, danach
+    die Tageswerte der letzten zwei Jahre (Quelldatei: `ebenen.tage`) – scheitern sie, sind die
+    Stunden schon aufgehoben."""
     ordner = pfade.roh / q["code"]
     gordner = ordner / "gedaechtnis"
     gordner.mkdir(parents=True, exist_ok=True)
     jetzt = datetime.now(UTC).replace(microsecond=0)
-    texte = {}
-    for name in ("standorte", "stunden"):
-        r = abruf.hole(q["wfs"], params={
-            "service": "WFS", "version": "2.0.0", "request": "GetFeature",
-            "typeName": q["ebenen"][name], "outputFormat": "csv"}, timeout=300)
-        r.encoding = "utf-8"
-        texte[name] = r.text
+    texte = {name: _ebene(q, name) for name in ("standorte", "stunden")}
     werte, weg = lies_stunden(texte["stunden"])
     if not werte:
         raise ValueError(f"{q['code']}: keine Stundenwerte geliefert ({dict(weg)})")
@@ -165,9 +220,23 @@ def hole(q: dict, pfade: Pfade) -> list[str]:
         "von": min(t for _, t, _ in werte).isoformat(),
         "bis": max(t for _, t, _ in werte).isoformat(), "verworfen": dict(weg),
     }, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    return [f"{q['code']}: {len(werte)} Stunden geholt (verworfen: {dict(weg) or 'keine'}), "
-            f"Gedächtnis {vorher} -> {nachher} Stunden, "
-            f"geändert: {', '.join(geaendert) or 'nichts'}"]
+    log = [f"{q['code']}: {len(werte)} Stunden geholt (verworfen: {dict(weg) or 'keine'}), "
+           f"Gedächtnis {vorher} -> {nachher} Stunden, "
+           f"geändert: {', '.join(geaendert) or 'nichts'}"]
+    if "tage" in q["ebenen"]:
+        tage, weg_t = lies_tage(_ebene(q, "tage"))
+        tg = gedaechtnis.lies_tage(gordner)
+        vorher = sum(v is not None for w in tg.values() for v in w)
+        for k, t, w in tage:
+            gedaechtnis.setze_tag(tg, k, "rad", t, w)
+        geaendert = gedaechtnis.schreibe_tage(gordner, tg)
+        nachher = sum(v is not None for w in tg.values() for v in w)
+        log.append(f"{q['code']}: {len(tage)} Tageswerte geholt "
+                   f"({min(t for _, t, _ in tage) if tage else '–'} bis "
+                   f"{max(t for _, t, _ in tage) if tage else '–'}; verworfen: "
+                   f"{dict(weg_t) or 'keine'}), Gedächtnis {vorher} -> {nachher} Tage, geändert: "
+                   f"{', '.join(geaendert) or 'nichts'}")
+    return log
 
 
 def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
@@ -177,9 +246,12 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
                          "`zaehlkarte dauer fetch`")
     lage = lies_standorte((ordner / "standorte.csv").read_text(encoding="utf-8"))
     g = gedaechtnis.lies(ordner / "gedaechtnis")
+    tg = gedaechtnis.lies_tage(ordner / "gedaechtnis") if "tage" in q["ebenen"] else {}
     bericht.monate = sorted({tag[:7] for _, _, tag in g})
+    bericht.jahre = sorted({monat[:4] for _, _, monat in tg})
     stellen: list[Dauerstelle] = []
-    for k in sorted({st for st, gr, _ in g if gr == "rad"}, key=lambda x: (len(x), x)):
+    kennungen = {st for st, gr, _ in g if gr == "rad"} | {st for st, gr, _ in tg if gr == "rad"}
+    for k in sorted(kennungen, key=lambda x: (len(x), x)):
         if k not in lage:
             bericht.ohne_lage.append(k)
             continue
@@ -192,13 +264,30 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
                          "`zaehlkarte dauer fetch`")
     bericht.stellen = len(stellen)
     idx = {s.kennung: i for i, s in enumerate(stellen)}
-    s_, t_, w_ = gedaechtnis.felder(g, "rad", idx)
-    von = (t_.min().astype(datetime) - timedelta(days=1)).date()
-    bis = (t_.max().astype(datetime) + timedelta(days=1)).date()
-    reihe = Messreihe.leer(q["code"], von, bis, stellen, ("rad",))
-    bericht.stunden = setze_utc(reihe, "rad", s_, t_, w_)
+    stunden = gedaechtnis.felder(g, "rad", idx)
+    tage = gedaechtnis.tagesfelder(tg, "rad", idx)
+    raender: list[date] = []
+    if stunden is not None:
+        raender += [(stunden[1].min().astype(datetime) - timedelta(days=1)).date(),
+                    (stunden[1].max().astype(datetime) + timedelta(days=1)).date()]
+    if tage is not None:
+        raender += [tage[1].min().astype(date), tage[1].max().astype(date)]
+    reihe = Messreihe.leer(q["code"], min(raender), max(raender), stellen, ("rad",),
+                           tagesgruppen=("rad",) if tage is not None else ())
+    if stunden is not None:
+        bericht.stunden = setze_utc(reihe, "rad", *stunden)
+    if tage is not None:
+        bericht.tage = len(tage[0])
+        _, bericht.tage_widerspruch = setze_tage(reihe, "rad", *tage)
     kuerze(reihe)
-    reihe.verfahren = [(reihe.von, reihe.tag(reihe.tage - 1),
-                        "Stundenwerte je Zählstelle, von der Zählkarte aufgehoben (die Quelle hält "
-                        "nur 31 Tage vor)")]
+    if tage is not None:
+        bericht.tageswerte = int(aus_tageswerten(reihe, "rad").sum())
+    stunden_text = ("Stundenwerte je Zählstelle, von der Zählkarte aufgehoben (die Quelle hält "
+                    "nur 31 Tage vor)")
+    reihe.verfahren = verfahren_mit_tageswerten(
+        reihe,
+        "Vor der ersten gezählten Stunde einer Zählstelle die Tageswerte der Quelle, von der "
+        "Zählkarte aufgehoben – Summen über den UTC-Tag, also 1 bis 1 Uhr (im Sommer 2 bis 2 Uhr) "
+        "Ortszeit statt 0 bis 24 Uhr; ob jede Stunde gezählt ist, lässt sich nicht prüfen. Danach "
+        + stunden_text, stunden_text)
     return reihe

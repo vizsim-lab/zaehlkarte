@@ -68,6 +68,7 @@ from zaehlkarte.dauer.modell import (
     kuerze,
     setze_tage,
     setze_utc,
+    verfahren_mit_tageswerten,
 )
 
 UA = abruf.UA
@@ -465,23 +466,13 @@ def _stellen(q: dict, listen: list[list[dict]], namen: dict[str, dict],
 
 def _verfahren(q: dict, reihe: Messreihe) -> list[tuple[date, date, str]]:
     frisch = int(q.get("frisch_tage", 7))
-    stunden = (f"Stundenwerte je Zählstelle wie geliefert (UTC, in Ortszeit umgerechnet); die "
-               f"jüngsten {frisch} Tage noch nicht übernommen")
-    ende = reihe.tag(reihe.tage - 1)
-    mit_tw = np.zeros(reihe.tage, dtype=bool)
-    for g in reihe.tageswerte:
-        mit_tw |= aus_tageswerten(reihe, g).any(axis=0)
-    if not mit_tw.any():
-        return [(reihe.von, ende, stunden)]
-    letzter = int(np.flatnonzero(mit_tw)[-1])
-    out = [(reihe.von, reihe.tag(letzter),
-            "Vor der ersten gezählten Stunde einer Zählstelle die Tageswerte der Quelle (Layer "
-            "„1-Tag“, je Tag wie geliefert – ob jede Stunde gezählt ist, lässt sich nicht "
-            "prüfen); danach Stundenwerte je Zählstelle wie geliefert (UTC, in Ortszeit "
-            "umgerechnet)")]
-    if letzter < reihe.tage - 1:
-        out.append((reihe.tag(letzter + 1), ende, stunden))
-    return out
+    return verfahren_mit_tageswerten(
+        reihe,
+        "Vor der ersten gezählten Stunde einer Zählstelle die Tageswerte der Quelle (Layer "
+        "„1-Tag“, je Tag wie geliefert – ob jede Stunde gezählt ist, lässt sich nicht prüfen); "
+        "danach Stundenwerte je Zählstelle wie geliefert (UTC, in Ortszeit umgerechnet)",
+        f"Stundenwerte je Zählstelle wie geliefert (UTC, in Ortszeit umgerechnet); die jüngsten "
+        f"{frisch} Tage noch nicht übernommen")
 
 
 def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:

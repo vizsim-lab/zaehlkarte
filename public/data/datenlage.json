@@ -6634,12 +6634,16 @@
      "quellen": [
       "leipzig_rad"
      ],
-     "was": "Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS – die Zählkarte hebt sie selbst auf, in der Karte seit November 2026; Tageswerte zweier Jahre ohne Stunden. Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten",
+     "was": "Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte nur der letzten 31 Tage im WFS, davor Tageswerte zweier Jahre (UTC-Tage) – die Zählkarte hebt beides selbst auf, in der Karte seit November 2026 (Tageswerte seit November 2024). Die 24 Kfz-Dauerzählstellen nur im Dashboard, nicht als Daten",
      "situation": null,
      "links": [
       {
        "titel": "Radverkehr: Stundenwerte der letzten 31 Tage",
        "url": "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei"
+      },
+      {
+       "titel": "Radverkehr: Tageswerte der letzten 2 Jahre",
+       "url": "https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-tag-der-letzten-2-jahre-stadt-leipzi"
       },
       {
        "titel": "Radverkehr: Standorte",
