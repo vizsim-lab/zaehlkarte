@@ -1,0 +1,854 @@
+[
+ {
+  "ags": "05154",
+  "name": "Kleve",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-kleve.de/",
+   "https://www.landkreis-kleve.de/",
+   "https://www.lk-kleve.de/",
+   "https://www.lra-kleve.de/",
+   "https://www.kleve.de/",
+   "https://www.landkreiskleve.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 16,
+  "herkunft": {
+   "https://www.landkreis-kleve.de/": "geraten",
+   "https://www.kreis-kleve.de/": "vorher_oder_liste",
+   "https://www.lk-kleve.de/": "geraten",
+   "https://www.lra-kleve.de/": "geraten",
+   "https://www.kleve.de/": "geraten",
+   "https://www.landkreiskleve.de/": "geraten"
+  }
+ },
+ {
+  "ags": "05158",
+  "name": "Mettmann",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-mettmann.de/",
+   "https://www.landkreis-mettmann.de/",
+   "https://www.lk-mettmann.de/",
+   "https://www.lra-mettmann.de/",
+   "https://www.mettmann.de/",
+   "https://www.landkreismettmann.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-mettmann.de/": "geraten",
+   "https://www.kreis-mettmann.de/": "vorher_oder_liste",
+   "https://www.lk-mettmann.de/": "geraten",
+   "https://www.lra-mettmann.de/": "geraten",
+   "https://www.mettmann.de/": "geraten",
+   "https://www.landkreismettmann.de/": "geraten"
+  }
+ },
+ {
+  "ags": "05162",
+  "name": "Rhein-Kreis Neuss",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.rhein-kreis-neuss.de/",
+   "https://www.landkreis-rhein-neuss.de/",
+   "https://www.kreis-rhein-neuss.de/",
+   "https://www.lk-rhein-neuss.de/",
+   "https://www.lra-rhein-neuss.de/",
+   "https://www.rhein-neuss.de/",
+   "https://www.landkreisrheinneuss.de/",
+   "https://www.rheinkreisneuss.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 8,
+  "herkunft": {
+   "https://www.landkreis-rhein-neuss.de/": "geraten",
+   "https://www.kreis-rhein-neuss.de/": "geraten",
+   "https://www.lk-rhein-neuss.de/": "geraten",
+   "https://www.lra-rhein-neuss.de/": "geraten",
+   "https://www.rhein-neuss.de/": "geraten",
+   "https://www.landkreisrheinneuss.de/": "geraten",
+   "https://www.rhein-kreis-neuss.de/": "vorher_oder_liste",
+   "https://www.rheinkreisneuss.de/": "geraten"
+  }
+ },
+ {
+  "ags": "05166",
+  "name": "Viersen",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-viersen.de",
+   "https://www.landkreis-viersen.de/",
+   "https://www.kreis-viersen.de/",
+   "https://www.lk-viersen.de/",
+   "https://www.lra-viersen.de/",
+   "https://www.viersen.de/",
+   "https://www.landkreisviersen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 9,
+  "herkunft": {
+   "https://www.landkreis-viersen.de/": "geraten",
+   "https://www.kreis-viersen.de/": "geraten",
+   "https://www.lk-viersen.de/": "geraten",
+   "https://www.lra-viersen.de/": "geraten",
+   "https://www.viersen.de/": "geraten",
+   "https://www.landkreisviersen.de/": "geraten",
+   "https://www.kreis-viersen.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05170",
+  "name": "Wesel",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-wesel.de",
+   "https://www.landkreis-wesel.de/",
+   "https://www.kreis-wesel.de/",
+   "https://www.lk-wesel.de/",
+   "https://www.lra-wesel.de/",
+   "https://www.wesel.de/",
+   "https://www.landkreiswesel.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 13,
+  "herkunft": {
+   "https://www.landkreis-wesel.de/": "geraten",
+   "https://www.kreis-wesel.de/": "geraten",
+   "https://www.lk-wesel.de/": "geraten",
+   "https://www.lra-wesel.de/": "geraten",
+   "https://www.wesel.de/": "geraten",
+   "https://www.landkreiswesel.de/": "geraten",
+   "https://www.kreis-wesel.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05334",
+  "name": "Städteregion Aachen",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.staedteregion-aachen.de",
+   "https://www.landkreis-staedteregion-aachen.de/",
+   "https://www.kreis-staedteregion-aachen.de/",
+   "https://www.lk-staedteregion-aachen.de/",
+   "https://www.lra-staedteregion-aachen.de/",
+   "https://www.staedteregion-aachen.de/",
+   "https://www.landkreisstaedteregionaachen.de/",
+   "https://www.staedteregionaachen.de/"
+  ],
+  "vorher": "neu",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-staedteregion-aachen.de/": "geraten",
+   "https://www.kreis-staedteregion-aachen.de/": "geraten",
+   "https://www.lk-staedteregion-aachen.de/": "geraten",
+   "https://www.lra-staedteregion-aachen.de/": "geraten",
+   "https://www.staedteregion-aachen.de/": "geraten",
+   "https://www.landkreisstaedteregionaachen.de/": "geraten",
+   "https://www.staedteregionaachen.de/": "geraten",
+   "https://www.staedteregion-aachen.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05358",
+  "name": "Düren",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-dueren.de",
+   "https://www.landkreis-dueren.de/",
+   "https://www.kreis-dueren.de/",
+   "https://www.lk-dueren.de/",
+   "https://www.lra-dueren.de/",
+   "https://www.dueren.de/",
+   "https://www.landkreisdueren.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 15,
+  "herkunft": {
+   "https://www.landkreis-dueren.de/": "geraten",
+   "https://www.kreis-dueren.de/": "geraten",
+   "https://www.lk-dueren.de/": "geraten",
+   "https://www.lra-dueren.de/": "geraten",
+   "https://www.dueren.de/": "geraten",
+   "https://www.landkreisdueren.de/": "geraten",
+   "https://www.kreis-dueren.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05362",
+  "name": "Rhein-Erft-Kreis",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.rhein-erft-kreis.de",
+   "https://www.landkreis-rhein-erft.de/",
+   "https://www.kreis-rhein-erft.de/",
+   "https://www.lk-rhein-erft.de/",
+   "https://www.lra-rhein-erft.de/",
+   "https://www.rhein-erft.de/",
+   "https://www.landkreisrheinerft.de/",
+   "https://www.rhein-erft-kreis.de/",
+   "https://www.rheinerftkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-rhein-erft.de/": "geraten",
+   "https://www.kreis-rhein-erft.de/": "geraten",
+   "https://www.lk-rhein-erft.de/": "geraten",
+   "https://www.lra-rhein-erft.de/": "geraten",
+   "https://www.rhein-erft.de/": "geraten",
+   "https://www.landkreisrheinerft.de/": "geraten",
+   "https://www.rhein-erft-kreis.de/": "geraten",
+   "https://www.rheinerftkreis.de/": "geraten",
+   "https://www.rhein-erft-kreis.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05366",
+  "name": "Euskirchen",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-euskirchen.de",
+   "https://www.landkreis-euskirchen.de/",
+   "https://www.kreis-euskirchen.de/",
+   "https://www.lk-euskirchen.de/",
+   "https://www.lra-euskirchen.de/",
+   "https://www.euskirchen.de/",
+   "https://www.landkreiseuskirchen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 11,
+  "herkunft": {
+   "https://www.landkreis-euskirchen.de/": "geraten",
+   "https://www.kreis-euskirchen.de/": "geraten",
+   "https://www.lk-euskirchen.de/": "geraten",
+   "https://www.lra-euskirchen.de/": "geraten",
+   "https://www.euskirchen.de/": "geraten",
+   "https://www.landkreiseuskirchen.de/": "geraten",
+   "https://www.kreis-euskirchen.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05370",
+  "name": "Heinsberg",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-heinsberg.de/startseite.html",
+   "https://www.kreis-heinsberg.de",
+   "https://www.landkreis-heinsberg.de/",
+   "https://www.kreis-heinsberg.de/",
+   "https://www.lk-heinsberg.de/",
+   "https://www.lra-heinsberg.de/",
+   "https://www.heinsberg.de/",
+   "https://www.landkreisheinsberg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-heinsberg.de/": "geraten",
+   "https://www.kreis-heinsberg.de/": "geraten",
+   "https://www.lk-heinsberg.de/": "geraten",
+   "https://www.lra-heinsberg.de/": "geraten",
+   "https://www.heinsberg.de/": "geraten",
+   "https://www.landkreisheinsberg.de/": "geraten",
+   "https://www.kreis-heinsberg.de/startseite.html": "vorher_oder_liste",
+   "https://www.kreis-heinsberg.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05374",
+  "name": "Oberbergischer Kreis",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.obk.de/obk/",
+   "https://www.obk.de/",
+   "https://www.landkreis-oberbergischer.de/",
+   "https://www.kreis-oberbergischer.de/",
+   "https://www.lk-oberbergischer.de/",
+   "https://www.lra-oberbergischer.de/",
+   "https://www.oberbergischer.de/",
+   "https://www.landkreisoberbergischer.de/",
+   "https://www.oberbergischer-kreis.de/",
+   "https://www.oberbergischerkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 13,
+  "herkunft": {
+   "https://www.landkreis-oberbergischer.de/": "geraten",
+   "https://www.kreis-oberbergischer.de/": "geraten",
+   "https://www.lk-oberbergischer.de/": "geraten",
+   "https://www.lra-oberbergischer.de/": "geraten",
+   "https://www.oberbergischer.de/": "geraten",
+   "https://www.landkreisoberbergischer.de/": "geraten",
+   "https://www.oberbergischer-kreis.de/": "geraten",
+   "https://www.oberbergischerkreis.de/": "geraten",
+   "https://www.obk.de/obk/": "vorher_oder_liste",
+   "https://www.obk.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05378",
+  "name": "Rheinisch-Bergischer Kreis",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.rbk-direkt.de",
+   "https://www.landkreis-rheinisch-bergischer.de/",
+   "https://www.kreis-rheinisch-bergischer.de/",
+   "https://www.lk-rheinisch-bergischer.de/",
+   "https://www.lra-rheinisch-bergischer.de/",
+   "https://www.rheinisch-bergischer.de/",
+   "https://www.landkreisrheinischbergischer.de/",
+   "https://www.rheinisch-bergischer-kreis.de/",
+   "https://www.rheinischbergischerkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 8,
+  "herkunft": {
+   "https://www.landkreis-rheinisch-bergischer.de/": "geraten",
+   "https://www.kreis-rheinisch-bergischer.de/": "geraten",
+   "https://www.lk-rheinisch-bergischer.de/": "geraten",
+   "https://www.lra-rheinisch-bergischer.de/": "geraten",
+   "https://www.rheinisch-bergischer.de/": "geraten",
+   "https://www.landkreisrheinischbergischer.de/": "geraten",
+   "https://www.rheinisch-bergischer-kreis.de/": "geraten",
+   "https://www.rheinischbergischerkreis.de/": "geraten",
+   "https://www.rbk-direkt.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05382",
+  "name": "Rhein-Sieg-Kreis",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.rhein-sieg-kreis.de",
+   "https://www.landkreis-rhein-sieg.de/",
+   "https://www.kreis-rhein-sieg.de/",
+   "https://www.lk-rhein-sieg.de/",
+   "https://www.lra-rhein-sieg.de/",
+   "https://www.rhein-sieg.de/",
+   "https://www.landkreisrheinsieg.de/",
+   "https://www.rhein-sieg-kreis.de/",
+   "https://www.rheinsiegkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 19,
+  "herkunft": {
+   "https://www.landkreis-rhein-sieg.de/": "geraten",
+   "https://www.kreis-rhein-sieg.de/": "geraten",
+   "https://www.lk-rhein-sieg.de/": "geraten",
+   "https://www.lra-rhein-sieg.de/": "geraten",
+   "https://www.rhein-sieg.de/": "geraten",
+   "https://www.landkreisrheinsieg.de/": "geraten",
+   "https://www.rhein-sieg-kreis.de/": "geraten",
+   "https://www.rheinsiegkreis.de/": "geraten",
+   "https://www.rhein-sieg-kreis.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05554",
+  "name": "Borken",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-borken.de/de/index.php",
+   "https://www.kreis-borken.de",
+   "https://www.landkreis-borken.de/",
+   "https://www.kreis-borken.de/",
+   "https://www.lk-borken.de/",
+   "https://www.lra-borken.de/",
+   "https://www.borken.de/",
+   "https://www.landkreisborken.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 17,
+  "herkunft": {
+   "https://www.landkreis-borken.de/": "geraten",
+   "https://www.kreis-borken.de/": "geraten",
+   "https://www.lk-borken.de/": "geraten",
+   "https://www.lra-borken.de/": "geraten",
+   "https://www.borken.de/": "geraten",
+   "https://www.landkreisborken.de/": "geraten",
+   "https://www.kreis-borken.de/de/index.php": "vorher_oder_liste",
+   "https://www.kreis-borken.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05558",
+  "name": "Coesfeld",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-coesfeld.de",
+   "https://www.landkreis-coesfeld.de/",
+   "https://www.kreis-coesfeld.de/",
+   "https://www.lk-coesfeld.de/",
+   "https://www.lra-coesfeld.de/",
+   "https://www.coesfeld.de/",
+   "https://www.landkreiscoesfeld.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 11,
+  "herkunft": {
+   "https://www.landkreis-coesfeld.de/": "geraten",
+   "https://www.kreis-coesfeld.de/": "geraten",
+   "https://www.lk-coesfeld.de/": "geraten",
+   "https://www.lra-coesfeld.de/": "geraten",
+   "https://www.coesfeld.de/": "geraten",
+   "https://www.landkreiscoesfeld.de/": "geraten",
+   "https://www.kreis-coesfeld.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05562",
+  "name": "Recklinghausen",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-re.de/Inhalte/index.asp",
+   "https://www.kreis-re.de",
+   "https://www.landkreis-recklinghausen.de/",
+   "https://www.kreis-recklinghausen.de/",
+   "https://www.lk-recklinghausen.de/",
+   "https://www.lra-recklinghausen.de/",
+   "https://www.recklinghausen.de/",
+   "https://www.landkreisrecklinghausen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-recklinghausen.de/": "geraten",
+   "https://www.kreis-recklinghausen.de/": "geraten",
+   "https://www.lk-recklinghausen.de/": "geraten",
+   "https://www.lra-recklinghausen.de/": "geraten",
+   "https://www.recklinghausen.de/": "geraten",
+   "https://www.landkreisrecklinghausen.de/": "geraten",
+   "https://www.kreis-re.de/Inhalte/index.asp": "vorher_oder_liste",
+   "https://www.kreis-re.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05566",
+  "name": "Steinfurt",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-steinfurt.de/kv_steinfurt/Home/",
+   "https://www.kreis-steinfurt.de",
+   "https://www.landkreis-steinfurt.de/",
+   "https://www.kreis-steinfurt.de/",
+   "https://www.lk-steinfurt.de/",
+   "https://www.lra-steinfurt.de/",
+   "https://www.steinfurt.de/",
+   "https://www.landkreissteinfurt.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 24,
+  "herkunft": {
+   "https://www.landkreis-steinfurt.de/": "geraten",
+   "https://www.kreis-steinfurt.de/": "geraten",
+   "https://www.lk-steinfurt.de/": "geraten",
+   "https://www.lra-steinfurt.de/": "geraten",
+   "https://www.steinfurt.de/": "geraten",
+   "https://www.landkreissteinfurt.de/": "geraten",
+   "https://www.kreis-steinfurt.de/kv_steinfurt/Home/": "vorher_oder_liste",
+   "https://www.kreis-steinfurt.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05570",
+  "name": "Warendorf",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-warendorf.de/aktuelles/startseite",
+   "https://www.kreis-warendorf.de",
+   "https://www.landkreis-warendorf.de/",
+   "https://www.kreis-warendorf.de/",
+   "https://www.lk-warendorf.de/",
+   "https://www.lra-warendorf.de/",
+   "https://www.warendorf.de/",
+   "https://www.landkreiswarendorf.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 13,
+  "herkunft": {
+   "https://www.landkreis-warendorf.de/": "geraten",
+   "https://www.kreis-warendorf.de/": "geraten",
+   "https://www.lk-warendorf.de/": "geraten",
+   "https://www.lra-warendorf.de/": "geraten",
+   "https://www.warendorf.de/": "geraten",
+   "https://www.landkreiswarendorf.de/": "geraten",
+   "https://www.kreis-warendorf.de/aktuelles/startseite": "vorher_oder_liste",
+   "https://www.kreis-warendorf.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05754",
+  "name": "Gütersloh",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-guetersloh.de",
+   "https://www.landkreis-guetersloh.de/",
+   "https://www.kreis-guetersloh.de/",
+   "https://www.lk-guetersloh.de/",
+   "https://www.lra-guetersloh.de/",
+   "https://www.guetersloh.de/",
+   "https://www.landkreisguetersloh.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 13,
+  "herkunft": {
+   "https://www.landkreis-guetersloh.de/": "geraten",
+   "https://www.kreis-guetersloh.de/": "geraten",
+   "https://www.lk-guetersloh.de/": "geraten",
+   "https://www.lra-guetersloh.de/": "geraten",
+   "https://www.guetersloh.de/": "geraten",
+   "https://www.landkreisguetersloh.de/": "geraten",
+   "https://www.kreis-guetersloh.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05758",
+  "name": "Herford",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-herford.de",
+   "https://www.landkreis-herford.de/",
+   "https://www.kreis-herford.de/",
+   "https://www.lk-herford.de/",
+   "https://www.lra-herford.de/",
+   "https://www.herford.de/",
+   "https://www.landkreisherford.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 9,
+  "herkunft": {
+   "https://www.landkreis-herford.de/": "geraten",
+   "https://www.kreis-herford.de/": "geraten",
+   "https://www.lk-herford.de/": "geraten",
+   "https://www.lra-herford.de/": "geraten",
+   "https://www.herford.de/": "geraten",
+   "https://www.landkreisherford.de/": "geraten",
+   "https://www.kreis-herford.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05762",
+  "name": "Höxter",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-hoexter.de",
+   "https://www.landkreis-hoexter.de/",
+   "https://www.kreis-hoexter.de/",
+   "https://www.lk-hoexter.de/",
+   "https://www.lra-hoexter.de/",
+   "https://www.hoexter.de/",
+   "https://www.landkreishoexter.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-hoexter.de/": "geraten",
+   "https://www.kreis-hoexter.de/": "geraten",
+   "https://www.lk-hoexter.de/": "geraten",
+   "https://www.lra-hoexter.de/": "geraten",
+   "https://www.hoexter.de/": "geraten",
+   "https://www.landkreishoexter.de/": "geraten",
+   "https://www.kreis-hoexter.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05766",
+  "name": "Lippe",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-lippe.de/kreis-lippe/index.php",
+   "https://www.kreis-lippe.de",
+   "https://www.landkreis-lippe.de/",
+   "https://www.kreis-lippe.de/",
+   "https://www.lk-lippe.de/",
+   "https://www.lra-lippe.de/",
+   "https://www.lippe.de/",
+   "https://www.landkreislippe.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 16,
+  "herkunft": {
+   "https://www.landkreis-lippe.de/": "geraten",
+   "https://www.kreis-lippe.de/": "geraten",
+   "https://www.lk-lippe.de/": "geraten",
+   "https://www.lra-lippe.de/": "geraten",
+   "https://www.lippe.de/": "geraten",
+   "https://www.landkreislippe.de/": "geraten",
+   "https://www.kreis-lippe.de/kreis-lippe/index.php": "vorher_oder_liste",
+   "https://www.kreis-lippe.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05770",
+  "name": "Minden-Lübbecke",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.minden-luebbecke.de",
+   "https://www.landkreis-minden-luebbecke.de/",
+   "https://www.kreis-minden-luebbecke.de/",
+   "https://www.lk-minden-luebbecke.de/",
+   "https://www.lra-minden-luebbecke.de/",
+   "https://www.minden-luebbecke.de/",
+   "https://www.landkreismindenluebbecke.de/",
+   "https://www.mindenluebbecke.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 11,
+  "herkunft": {
+   "https://www.landkreis-minden-luebbecke.de/": "geraten",
+   "https://www.kreis-minden-luebbecke.de/": "geraten",
+   "https://www.lk-minden-luebbecke.de/": "geraten",
+   "https://www.lra-minden-luebbecke.de/": "geraten",
+   "https://www.minden-luebbecke.de/": "geraten",
+   "https://www.landkreismindenluebbecke.de/": "geraten",
+   "https://www.mindenluebbecke.de/": "geraten",
+   "https://www.minden-luebbecke.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05774",
+  "name": "Paderborn",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-paderborn.de",
+   "https://www.landkreis-paderborn.de/",
+   "https://www.kreis-paderborn.de/",
+   "https://www.lk-paderborn.de/",
+   "https://www.lra-paderborn.de/",
+   "https://www.paderborn.de/",
+   "https://www.landkreispaderborn.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-paderborn.de/": "geraten",
+   "https://www.kreis-paderborn.de/": "geraten",
+   "https://www.lk-paderborn.de/": "geraten",
+   "https://www.lra-paderborn.de/": "geraten",
+   "https://www.paderborn.de/": "geraten",
+   "https://www.landkreispaderborn.de/": "geraten",
+   "https://www.kreis-paderborn.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05954",
+  "name": "Ennepe-Ruhr-Kreis",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.enkreis.de",
+   "https://www.landkreis-ennepe-ruhr.de/",
+   "https://www.kreis-ennepe-ruhr.de/",
+   "https://www.lk-ennepe-ruhr.de/",
+   "https://www.lra-ennepe-ruhr.de/",
+   "https://www.ennepe-ruhr.de/",
+   "https://www.landkreisenneperuhr.de/",
+   "https://www.ennepe-ruhr-kreis.de/",
+   "https://www.enneperuhrkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 9,
+  "herkunft": {
+   "https://www.landkreis-ennepe-ruhr.de/": "geraten",
+   "https://www.kreis-ennepe-ruhr.de/": "geraten",
+   "https://www.lk-ennepe-ruhr.de/": "geraten",
+   "https://www.lra-ennepe-ruhr.de/": "geraten",
+   "https://www.ennepe-ruhr.de/": "geraten",
+   "https://www.landkreisenneperuhr.de/": "geraten",
+   "https://www.ennepe-ruhr-kreis.de/": "geraten",
+   "https://www.enneperuhrkreis.de/": "geraten",
+   "https://www.enkreis.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05958",
+  "name": "Hochsauerlandkreis",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.hochsauerlandkreis.de/hochsauerlandkreis",
+   "https://hochsauerlandkreis.de",
+   "https://www.landkreis-hochsauerland.de/",
+   "https://www.kreis-hochsauerland.de/",
+   "https://www.lk-hochsauerland.de/",
+   "https://www.lra-hochsauerland.de/",
+   "https://www.hochsauerland.de/",
+   "https://www.landkreishochsauerland.de/",
+   "https://www.hochsauerlandkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 12,
+  "herkunft": {
+   "https://www.landkreis-hochsauerland.de/": "geraten",
+   "https://www.kreis-hochsauerland.de/": "geraten",
+   "https://www.lk-hochsauerland.de/": "geraten",
+   "https://www.lra-hochsauerland.de/": "geraten",
+   "https://www.hochsauerland.de/": "geraten",
+   "https://www.landkreishochsauerland.de/": "geraten",
+   "https://www.hochsauerlandkreis.de/": "geraten",
+   "https://www.hochsauerlandkreis.de/hochsauerlandkreis": "vorher_oder_liste",
+   "https://hochsauerlandkreis.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05962",
+  "name": "Märkischer Kreis",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.maerkischer-kreis.de",
+   "https://www.landkreis-maerkischer.de/",
+   "https://www.kreis-maerkischer.de/",
+   "https://www.lk-maerkischer.de/",
+   "https://www.lra-maerkischer.de/",
+   "https://www.maerkischer.de/",
+   "https://www.landkreismaerkischer.de/",
+   "https://www.maerkischer-kreis.de/",
+   "https://www.maerkischerkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 15,
+  "herkunft": {
+   "https://www.landkreis-maerkischer.de/": "geraten",
+   "https://www.kreis-maerkischer.de/": "geraten",
+   "https://www.lk-maerkischer.de/": "geraten",
+   "https://www.lra-maerkischer.de/": "geraten",
+   "https://www.maerkischer.de/": "geraten",
+   "https://www.landkreismaerkischer.de/": "geraten",
+   "https://www.maerkischer-kreis.de/": "geraten",
+   "https://www.maerkischerkreis.de/": "geraten",
+   "https://www.maerkischer-kreis.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05966",
+  "name": "Olpe",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://kreis-olpe.de/",
+   "https://www.landkreis-olpe.de/",
+   "https://www.kreis-olpe.de/",
+   "https://www.lk-olpe.de/",
+   "https://www.lra-olpe.de/",
+   "https://www.olpe.de/",
+   "https://www.landkreisolpe.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 7,
+  "herkunft": {
+   "https://www.landkreis-olpe.de/": "geraten",
+   "https://www.kreis-olpe.de/": "geraten",
+   "https://www.lk-olpe.de/": "geraten",
+   "https://www.lra-olpe.de/": "geraten",
+   "https://www.olpe.de/": "geraten",
+   "https://www.landkreisolpe.de/": "geraten",
+   "https://kreis-olpe.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05970",
+  "name": "Siegen-Wittgenstein",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.siegen-wittgenstein.de",
+   "https://www.landkreis-siegen-wittgenstein.de/",
+   "https://www.kreis-siegen-wittgenstein.de/",
+   "https://www.lk-siegen-wittgenstein.de/",
+   "https://www.lra-siegen-wittgenstein.de/",
+   "https://www.siegen-wittgenstein.de/",
+   "https://www.landkreissiegenwittgenstein.de/",
+   "https://www.siegenwittgenstein.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 11,
+  "herkunft": {
+   "https://www.landkreis-siegen-wittgenstein.de/": "geraten",
+   "https://www.kreis-siegen-wittgenstein.de/": "geraten",
+   "https://www.lk-siegen-wittgenstein.de/": "geraten",
+   "https://www.lra-siegen-wittgenstein.de/": "geraten",
+   "https://www.siegen-wittgenstein.de/": "geraten",
+   "https://www.landkreissiegenwittgenstein.de/": "geraten",
+   "https://www.siegenwittgenstein.de/": "geraten",
+   "https://www.siegen-wittgenstein.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05974",
+  "name": "Soest",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-soest.de",
+   "https://www.landkreis-soest.de/",
+   "https://www.kreis-soest.de/",
+   "https://www.lk-soest.de/",
+   "https://www.lra-soest.de/",
+   "https://www.soest.de/",
+   "https://www.landkreissoest.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 14,
+  "herkunft": {
+   "https://www.landkreis-soest.de/": "geraten",
+   "https://www.kreis-soest.de/": "geraten",
+   "https://www.lk-soest.de/": "geraten",
+   "https://www.lra-soest.de/": "geraten",
+   "https://www.soest.de/": "geraten",
+   "https://www.landkreissoest.de/": "geraten",
+   "https://www.kreis-soest.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "05978",
+  "name": "Unna",
+  "art": "kreis",
+  "tk": "43",
+  "web": [
+   "https://www.kreis-unna.de",
+   "https://www.landkreis-unna.de/",
+   "https://www.kreis-unna.de/",
+   "https://www.lk-unna.de/",
+   "https://www.lra-unna.de/",
+   "https://www.unna.de/",
+   "https://www.landkreisunna.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 10,
+  "herkunft": {
+   "https://www.landkreis-unna.de/": "geraten",
+   "https://www.kreis-unna.de/": "geraten",
+   "https://www.lk-unna.de/": "geraten",
+   "https://www.lra-unna.de/": "geraten",
+   "https://www.unna.de/": "geraten",
+   "https://www.landkreisunna.de/": "geraten",
+   "https://www.kreis-unna.de": "vorher_oder_liste"
+  }
+ }
+]
