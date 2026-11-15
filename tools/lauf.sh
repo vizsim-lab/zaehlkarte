@@ -89,5 +89,12 @@ vg250() {  # vg250 <branch>
 # (HTML-Suche), Ressourcen aus dem DCAT-Dokument, alle Dateien „nach Stunden“ und „nach
 # Tagen“ gepackt nach ergebnis/moers_fuss/roh/ (tools/moers_fuss_erkunden.py, nur stdlib,
 # robots.txt über tools/robots.py, Crawl-delay 10 s).
-mkdir -p ergebnis/moers_fuss
-timeout 60m python3 tools/moers_fuss_erkunden.py ergebnis/moers_fuss > ergebnis/moers_fuss/lauf.txt 2>&1 || true
+# geprüft (ergebnis/moers_fuss): 54 Monatsdateien je Datensatz, DCAT ohne Lizenz.
+# mkdir -p ergebnis/moers_fuss
+# timeout 60m python3 tools/moers_fuss_erkunden.py ergebnis/moers_fuss > ergebnis/moers_fuss/lauf.txt 2>&1 || true
+#
+# Moers, Fußgänger Steinstraße, zweiter Schritt (15.11.2026): Lizenz aus den HTML-Seiten der
+# Datensätze und einer Ressource (das DCAT-Dokument nennt keine), Lage aus OpenStreetMap
+# (tools/moers_fuss_lizenz.py).
+mkdir -p ergebnis/moers_fuss_lizenz
+timeout 20m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_lizenz > ergebnis/moers_fuss_lizenz/lauf.txt 2>&1 || true
