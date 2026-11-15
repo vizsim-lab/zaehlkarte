@@ -72,6 +72,13 @@ test("Umschalter lädt die Dauerzählstellen: alle Quellen am jüngsten Schultag
   // Quellen & Lizenzen: jede Familie mit ihrem eigenen Stand (die Fixture ist vom 12.11.2026)
   await expect(page.locator("#quellen-dauer")).toContainText("Stand: 12.11.2026 (jede Woche neu gebaut)");
   await expect(page.locator("#quellen-text")).toContainText(/Stand der Kurzzeitzählungen: \d\d\.\d\d\.\d{4}\./);
+  // Gemeindegrenzen (VG250, Vertrag 5): Quelle, Lizenz, Quellenvermerk mit „BKG“ und Lizenz verlinkt
+  const gem = page.locator("#quelle-gemeinden");
+  await expect(gem).toContainText("Gemeindegrenzen");
+  await expect(gem).toContainText("© BKG (2026) dl-de/by-2-0, Datenquellen:");
+  await expect(gem.locator('a[href="https://www.bkg.bund.de"]')).toHaveText("BKG");
+  await expect(gem.locator('li a[href="https://www.govdata.de/dl-de/by-2-0"]')).toHaveCount(2);
+  await expect(gem.locator('a[href$="datenquellen_vg_nuts.pdf"]')).toHaveCount(1);
   await expect(page.locator('[data-section="filter"]')).toBeHidden();
   await expect(page.locator("#art-wahl")).toBeHidden();
   // Lkw (Berlin, Ettlingen) und Schwerverkehr (Hamburg) unter einem Chip, kein eigener Lkw-Chip

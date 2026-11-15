@@ -71,7 +71,10 @@ gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/
 Es gilt die Lizenz der jeweiligen Quelle (Tabellen oben, in der Karte je Zählung und je
 Dauerzählstelle, im CSV-Export in jeder Zeile); Namensnennung erforderlich. Wo eine Quelle
 keine Lage oder keine Straßennamen nennt, stammen sie aus OpenStreetMap
-(© OpenStreetMap-Mitwirkende, ODbL; vermerkt an der Quelle).
+(© OpenStreetMap-Mitwirkende, ODbL; vermerkt an der Quelle). In welcher Gemeinde eine
+Dauerzählstelle liegt, ergeben die Verwaltungsgebiete 1 : 250 000 (VG250) des Bundesamts für
+Kartographie und Geodäsie (© BKG (2026) dl-de/by-2-0, [Datenquellen](https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/datenquellen_vg_nuts.pdf);
+`pipeline/config/gemeinden.yaml`, in der Karte unter „Quellen & Lizenzen“).
 
 ### Quellen ohne Lizenz
 

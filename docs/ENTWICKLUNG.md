@@ -55,6 +55,9 @@ Dauerzählstellen baut der Workflow „Dauerzählstellen bauen“ (wöchentlich,
 Release-Asset `dauerzaehlstellen/dauer.tar.gz` ab – Daten, die sich laufend ändern, gehören
 nicht ins Git. Eine Quelle, die scheitert, hält die anderen nicht auf; sie steht als Warnung am
 Lauf. Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die Kurzzeitzählungen.
+Jede Dauerzählstelle bekommt beim Bau den Schlüssel der Gemeinde, in der sie liegt (`ags`, aus
+den Gemeindegrenzen VG250 des BKG, `pipeline/config/gemeinden.yaml`; einmal je Fassung geladen,
+im Actions-Cache). Fehlen die Grenzen, baut der Lauf trotzdem – ohne Gemeinde je Stelle.
 
 ## Gedächtnis
 

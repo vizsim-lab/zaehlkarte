@@ -23,6 +23,9 @@
 #   nur das laufende Jahr und das Vorjahr.
 #   Landes-Dauerzählstellen BW: Monats-ZIPs und Jahresarchive 2016–2024 (rund 550 MB) im Cache,
 #   neu nur, was laut DCAT-Dokument ein neues Datum hat (das Land ersetzt ältere Monate).
+#   Gemeindegrenzen (VG250 des BKG, für `ags` je Stelle; pipeline/config/gemeinden.yaml): einmal
+#   je Fassung geladen (Schlüssel aus der Prüfsumme in gemeinden.yaml). Fehlen sie, baut der Lauf
+#   trotzdem – nur ohne Gemeinde je Stelle (Warnung „FEHLER gemeinden“).
 # - Jeder Abruf nur, wenn robots.txt ihn erlaubt, mit dem verlangten Abstand (pipeline/src/
 #   zaehlkarte/abruf.py; Aachen und München: 10 Sekunden). Ausnahmen nur aus
 #   pipeline/config/robots.yaml – der Bericht nennt jeden Abruf, der nur dank einer Ausnahme ging.
@@ -52,7 +55,7 @@ on:
     - cron: "41 5 * * 1"
   push:
     branches: [main]
-    paths: [pipeline/src/zaehlkarte/dauer/**, pipeline/src/zaehlkarte/abruf.py, pipeline/src/zaehlkarte/ckan.py, pipeline/src/zaehlkarte/kalender.py, pipeline/src/zaehlkarte/config.py, pipeline/config/**, pipeline/werkzeuge/gedaechtnis.py, .github/workflows/dauer.yml]
+    paths: [pipeline/src/zaehlkarte/dauer/**, pipeline/src/zaehlkarte/gemeinden.py, pipeline/src/zaehlkarte/abruf.py, pipeline/src/zaehlkarte/ckan.py, pipeline/src/zaehlkarte/kalender.py, pipeline/src/zaehlkarte/config.py, pipeline/config/**, pipeline/werkzeuge/gedaechtnis.py, .github/workflows/dauer.yml]
 
 permissions:
   contents: write
@@ -145,6 +148,10 @@ jobs:
             pipeline/data/raw/wuerzburg_fuss
           key: dauer-ods2-roh-${{ github.run_id }}
           restore-keys: dauer-ods2-roh-
+      - uses: actions/cache@v6  # Gemeindegrenzen (VG250): je Fassung einmal laden
+        with:
+          path: pipeline/data/raw/vg250
+          key: vg250-${{ hashFiles('pipeline/config/gemeinden.yaml') }}
       - uses: actions/cache@v6  # OSM-Abzug Hamburg (Straßennamen neuer Stellen): einmal laden, dann behalten
         with:
           path: pipeline/data/raw/osm

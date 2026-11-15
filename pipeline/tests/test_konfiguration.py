@@ -55,7 +55,7 @@ def test_ordner():
     still weg: je Quelle `quellen/<familie>/<code>.yaml`, je Land `kommunen/<LAND>.yaml` und
     `kalender/ferien/<LAND>.csv`."""
     oben = {"README.md", "quellen", "kommunen", "kalender", "recht.yaml", "anfrage_vorlage.yaml",
-            "robots.yaml"}
+            "robots.yaml", "gemeinden.yaml"}
     oben |= {q["rohdatei_liste"] for q in KURZZEIT.values() if "rohdatei_liste" in q}
     assert {p.name for p in CONFIG.iterdir()} <= oben, {p.name for p in CONFIG.iterdir()} - oben
 
@@ -221,6 +221,24 @@ def test_pruefsummen():
     assert alle
     for pfad, wert in alle:
         assert isinstance(wert, str) and re.fullmatch(r"[0-9a-f]{64}", wert), pfad
+
+
+def test_gemeinden():
+    """Gemeindegrenzen (gemeinden.yaml): gepinnt über die Prüfsumme, mit Lizenz und Quellenvermerk
+    – die Karte nennt sie unter „Quellen & Lizenzen“; nur die Schlüssel, die gemeinden.py liest."""
+    g = CFG["gemeinden"]
+    assert set(g) == {"url", "sha256", "stand", "titel", "herausgeber", "herausgeber_url",
+                      "lizenz", "lizenz_url", "portal", "quellenvermerk"}
+    assert re.fullmatch(r"[0-9a-f]{64}", g["sha256"])
+    assert isinstance(g["stand"], date)
+    for k in ("url", "herausgeber_url", "lizenz_url", "portal"):
+        assert URL.match(g[k]), k
+    assert g["url"].endswith(".zip")
+    for k in ("titel", "herausgeber", "lizenz"):
+        assert str(g[k]).strip(), k
+    # Quellenvermerk laut Nutzungsbedingungen: „© BKG (Jahr) dl-de/by-2-0, Datenquellen: …“
+    assert re.match(r"© BKG \(\d{4}\) " + re.escape(g["lizenz"]) + ", Datenquellen: https://",
+                    g["quellenvermerk"])
 
 
 # --- Rechtslage und Anfragevorlage -----------------------------------------------------------

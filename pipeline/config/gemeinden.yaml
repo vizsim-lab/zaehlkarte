@@ -1,0 +1,28 @@
+# Gemeindegrenzen für die Gemeinde je Dauerzählstelle (`ags` in dauer/index.json,
+# src/zaehlkarte/gemeinden.py): Verwaltungsgebiete 1 : 250 000 (VG250) des BKG, Ebenen, Stand
+# 01.01.2026, UTM Zone 32 auf ETRS89 (EPSG:25832). Gelesen wird nur die Ebene der Gemeinden
+# (VG250_GEM). Die Karte zeigt so im Steckbrief einer Kommune auch die Zählstellen von Bündeln
+# (MobiData BW, VMZ Niedersachsen) und des Landes, die in ihr liegen.
+#
+# Erkundet am 15.11.2026 (Werkzeug-Branch werkzeug/dauer, tools/vg250_erkunden.py,
+# ergebnis/vg250): robots.txt von daten.gdz.bkg.bund.de antwortet 404 (alles erlaubt); seit 2026
+# gibt es VG250 nicht mehr in geografischen Koordinaten (geo84), nur projiziert (gk3, tm32,
+# utm32s); 67,4 MB, MD5 wie die .md5-Datei des Servers; 11.094 Flächen, alle 2.320
+# Dauerzählstellen liegen in einer Gemeinde.
+# Neue Fassung (jährlich zum 01.01.): URL, sha256, `stand` und das Jahr im Quellenvermerk ändern.
+# Nutzungsbedingungen und Quellenvermerk:
+# https://sgx.geodatenzentrum.de/web_public/gdz/lizenz/deu/nutzungsbedingungen_vg250.pdf
+url: https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/2026/vg250_01-01.utm32s.shape.ebenen.zip
+sha256: a21bd17e3616fded6a1cae3311f6b0e8f156ba3939d113b8b760fec5664dd529
+stand: 2026-01-01
+titel: >-
+  Verwaltungsgebiete 1 : 250 000 (VG250), Stand 01.01.2026 (verändert: Dauerzählstellen der
+  Gemeinde zugeordnet, in der sie liegen)
+herausgeber: Bundesamt für Kartographie und Geodäsie (BKG)
+herausgeber_url: https://www.bkg.bund.de
+lizenz: dl-de/by-2-0
+lizenz_url: https://www.govdata.de/dl-de/by-2-0
+portal: https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/2026/
+quellenvermerk: >-
+  © BKG (2026) dl-de/by-2-0, Datenquellen:
+  https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/datenquellen_vg_nuts.pdf
