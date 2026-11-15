@@ -83,4 +83,11 @@ vg250() {  # vg250 <branch>
   tail -c 20000 "$ziel/lauf.txt" > "$ziel/lauf_ende.txt"
 }
 # Erster Lauf: robots.txt 404 (alles erlaubt), 2026 kein geo84 – zweiter Lauf mit UTM 32:
-vg250 gemeinden
+# geprüft (ergebnis/vg250), PR #35.
+#
+# Moers, Fußgänger Steinstraße (15.11.2026): Datensätze auf offenesdatenportal.de finden
+# (HTML-Suche), Ressourcen aus dem DCAT-Dokument, alle Dateien „nach Stunden“ und „nach
+# Tagen“ gepackt nach ergebnis/moers_fuss/roh/ (tools/moers_fuss_erkunden.py, nur stdlib,
+# robots.txt über tools/robots.py, Crawl-delay 10 s).
+mkdir -p ergebnis/moers_fuss
+timeout 60m python3 tools/moers_fuss_erkunden.py ergebnis/moers_fuss > ergebnis/moers_fuss/lauf.txt 2>&1 || true
