@@ -1,0 +1,3797 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-01T08:52:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 317336155,
+  "lat": 49.4466595,
+  "lon": 11.0736515,
+  "tags": {
+    "entrance": "yes",
+    "entrance_marker:subway": "yes",
+    "level": "0",
+    "name": "Verkehrsmuseum",
+    "public_transport": "entrance",
+    "railway": "subway_entrance",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 332607221,
+  "lat": 49.3565559,
+  "lon": 11.0528111,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "bus_routes": "62;662;N6",
+    "covered": "yes",
+    "departures_board": "timetable",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:height": "0.14",
+    "lit": "yes",
+    "name": "Katzwang Hallenbad",
+    "operator": "VAG;Wutzer",
+    "passenger_information_display": "yes",
+    "platform:width": "4.4",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:09564:1854:0:2",
+    "shelter": "yes",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 332607224,
+  "lat": 49.3555677,
+  "lon": 11.0530157,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "bus_routes": "62;662;N6",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:height": "0.17",
+    "lit": "yes",
+    "name": "Katzwang Hallenbad",
+    "operator": "VAG;Wutzer",
+    "platform:width": "5.8",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:09564:1854:0:1",
+    "shelter": "yes",
+    "tactile_paving": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 343429972,
+  "lat": 49.4123400,
+  "lon": 11.1439594,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "bus_routes": "56;57;501;N4",
+    "check_date": "2024-10-23",
+    "check_date:lit": "2024-10-23",
+    "departures_board": "timetable",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:height": "0.11",
+    "lit": "no",
+    "mapillary": "780664659554965",
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "operator": "VAG",
+    "platform:width": "2.6",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:09564:1565:0:1",
+    "shelter": "yes",
+    "tactile_paving": "yes",
+    "toilets:wheelchair": "no",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "node",
+  "id": 376975468,
+  "lat": 49.4154875,
+  "lon": 11.0569330,
+  "tags": {
+    "name": "Besucherplattform Schleuse Nürnberg",
+    "tourism": "viewpoint"
+  }
+},
+{
+  "type": "node",
+  "id": 586436369,
+  "lat": 49.5167142,
+  "lon": 11.2690769,
+  "tags": {
+    "covered": "yes",
+    "leisure": "swimming_pool",
+    "length": "25",
+    "name": "Hallenbad",
+    "operator": "Landkreis Nürnberger Land",
+    "sport": "swimming",
+    "swimming_pool": "swimming",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 724917563,
+  "lat": 49.3290592,
+  "lon": 11.0230264,
+  "tags": {
+    "addr:city": "Schwabach",
+    "addr:country": "DE",
+    "addr:housenumber": "1a",
+    "addr:postcode": "91126",
+    "addr:street": "Ludwigstraße",
+    "amenity": "pub",
+    "brewery": "Spalter",
+    "contact:phone": "+49 9122 13060",
+    "name": "Metrodrom",
+    "opening_hours": "Th 19:00-01:00; Fr-Sa 19:00-0:00",
+    "smoking": "outside",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 753776939,
+  "lat": 49.5353476,
+  "lon": 11.3100535,
+  "tags": {
+    "ele": "340",
+    "hiking": "yes",
+    "information": "guidepost",
+    "name": "Deponie",
+    "ref": "2491",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 754032190,
+  "lat": 49.4465396,
+  "lon": 11.0815770,
+  "tags": {
+    "amenity": "pub",
+    "layer": "-1",
+    "name": "Metropolitan",
+    "smoking": "yes",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 826254990,
+  "lat": 49.4955943,
+  "lon": 11.0508314,
+  "tags": {
+    "description": "vermutl. TETRA-BOS-Basisstation",
+    "man_made": "tower",
+    "name": "Metro",
+    "tower:construction": "freestanding",
+    "tower:type": "communication"
+  }
+},
+{
+  "type": "node",
+  "id": 914609512,
+  "lat": 49.3903316,
+  "lon": 11.3132509,
+  "tags": {
+    "board_type": "history",
+    "check_date": "2022-05-20",
+    "information": "board",
+    "name": "Festspielstadt Altdorf - Historische Universität - Metropolregion Nürnberg",
+    "tourism": "information",
+    "traffic_sign": "DE:386.3"
+  }
+},
+{
+  "type": "node",
+  "id": 1114783658,
+  "lat": 49.4494454,
+  "lon": 11.0036719,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "75",
+    "addr:postcode": "90431",
+    "addr:street": "Virnsberger Straße",
+    "amenity": "clinic",
+    "healthcare": "clinic",
+    "level": "3",
+    "name": "Metropol Medical Clinic",
+    "wikidata": "Q96746918"
+  }
+},
+{
+  "type": "node",
+  "id": 1114783661,
+  "lat": 49.4495483,
+  "lon": 11.0037416,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "75",
+    "addr:postcode": "90431",
+    "addr:street": "Virnsberger Straße",
+    "alt_name": "apoforte-Apotheke",
+    "amenity": "pharmacy",
+    "dispensing": "yes",
+    "healthcare": "pharmacy",
+    "name": "Apotheke im Metropol Medical Center"
+  }
+},
+{
+  "type": "node",
+  "id": 1539285608,
+  "lat": 49.4455031,
+  "lon": 11.0743607,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90443",
+    "addr:street": "Lessingstraße",
+    "air_conditioning": "no",
+    "alt_name": "Museum für Kommunikation Nürnberg",
+    "amenity": "library",
+    "fee": "yes",
+    "fee:icom_member": "no",
+    "internet_access": "wlan",
+    "level": "1",
+    "loc_name": "Verkehrsmuseum",
+    "name": "DB Museum",
+    "name:de": "Deutsche Bahn Museum",
+    "note:opening_hours": "Hat an Montagen in der Adventszeit geöffnet",
+    "old_name": "Verkehrsmuseum",
+    "opening_hours": "Mo-Tu off; We-Fr 09:00-17:00; Sa,Su,PH 10:00-18:00; Jan 01 off; May 01 off; Dec 24 off; Dec 25 off; Dec 31 off",
+    "payment:account_cards": "yes",
+    "payment:credit_cards": "yes",
+    "ref:isil": "DE-N31",
+    "tourism": "museum",
+    "website": "https://www.dbmuseum.de/",
+    "wheelchair": "yes",
+    "wikidata": "Q458915",
+    "wikipedia": "de:Verkehrsmuseum Nürnberg"
+  }
+},
+{
+  "type": "node",
+  "id": 1580437678,
+  "lat": 49.4585152,
+  "lon": 11.0968851,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8",
+    "addr:postcode": "90489",
+    "addr:street": "Stresemannplatz",
+    "amenity": "cinema",
+    "name": "Metropolis",
+    "phone": "+49 911 538848",
+    "wheelchair": "no",
+    "wikidata": "Q50843595"
+  }
+},
+{
+  "type": "node",
+  "id": 1580437683,
+  "lat": 49.4585674,
+  "lon": 11.0968685,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "8",
+    "addr:postcode": "90489",
+    "addr:street": "Stresemannplatz",
+    "amenity": "restaurant",
+    "internet_access": "no",
+    "name": "Metropolis",
+    "opening_hours": "Su-Th 18:00-24:00; Fr-Sa 18:00-01:00",
+    "phone": "+49 911 538848",
+    "smoking": "no",
+    "smoking:outside": "yes",
+    "smoking_hours": "00:30+",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 1581856814,
+  "lat": 49.4123442,
+  "lon": 11.1434967,
+  "tags": {
+    "bench": "yes",
+    "bin": "yes",
+    "bus": "yes",
+    "bus_routes": "56;57;501;N4",
+    "departures_board": "timetable",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:height": "0.13",
+    "lit": "yes",
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "operator": "VAG",
+    "platform:width": "3",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:09564:1565:0:2",
+    "shelter": "yes",
+    "tactile_paving": "yes",
+    "toilets:wheelchair": "no",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1583648704,
+  "lat": 49.4794183,
+  "lon": 11.2524936,
+  "tags": {
+    "addr:city": "Röthenbach a.d.Pegnitz",
+    "addr:country": "DE",
+    "addr:housenumber": "23",
+    "addr:postcode": "90552",
+    "addr:street": "Kirchhoffstraße",
+    "amenity": "restaurant",
+    "cuisine": "german",
+    "email": "info@restaurantmetropol.de",
+    "name": "Restaurant Metropol",
+    "phone": "+49 911 80099988",
+    "toilets:wheelchair": "no",
+    "website": "https://www.restaurantmetropol.de/",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 1622589626,
+  "lat": 49.4133992,
+  "lon": 11.1434634,
+  "tags": {
+    "bus": "yes",
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "operator": "VAG",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 1769214504,
+  "lat": 49.5564638,
+  "lon": 10.9697039,
+  "tags": {
+    "information": "board",
+    "name": "Schleuse Kriegenbrunn",
+    "source": "survey",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 2336982709,
+  "lat": 49.3846360,
+  "lon": 11.0646139,
+  "tags": {
+    "description": "Waterway=Lock Fallhöhe=19,5 m UKW-Kanal=20 Phone=+49 09131-480087-411 Bootsschleppe mit Transportwagen",
+    "name": "Schleuse Eibach",
+    "waterway:sign": "notice"
+  }
+},
+{
+  "type": "node",
+  "id": 2765637122,
+  "lat": 49.5558083,
+  "lon": 10.9605828,
+  "tags": {
+    "bench": "no",
+    "bin": "yes",
+    "bus": "yes",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:height": "0.10",
+    "name": "Schleusenstraße",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "operator": "EStW",
+    "platform:width": "1.9",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:09562:3649:0:1",
+    "shelter": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 3164330618,
+  "lat": 49.4489244,
+  "lon": 11.0708779,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "5",
+    "addr:postcode": "90402",
+    "addr:street": "Zirkelschmiedsgasse",
+    "alt_name": "Bucht",
+    "description": "Geschäftsstelle Piratenpartei Deutschland des Kreisverband Metropolregion Nürnberg und des Bezirksverbandes Mitelfranken",
+    "name": "Piratenpartei Metropolregion Nürnberg",
+    "office": "political_party",
+    "toilets:wheelchair": "no",
+    "website": "https://piraten-nbg.de",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "node",
+  "id": 3851938460,
+  "lat": 49.3716432,
+  "lon": 11.1601691,
+  "tags": {
+    "check_date": "2023-05-25",
+    "information": "board",
+    "name": "Markt Feucht Zeidelwesen - Metropolregion Nürnberg",
+    "tourism": "information",
+    "traffic_sign": "DE:386.3"
+  }
+},
+{
+  "type": "node",
+  "id": 3914845957,
+  "lat": 49.5558076,
+  "lon": 10.9604609,
+  "tags": {
+    "bus": "yes",
+    "name": "Schleusenstraße",
+    "public_transport": "stop_position"
+  }
+},
+{
+  "type": "node",
+  "id": 4179364321,
+  "lat": 49.4325193,
+  "lon": 11.1301460,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "336",
+    "addr:postcode": "90480",
+    "addr:street": "Regensburger Straße",
+    "leisure": "fitness_centre",
+    "name": "Metropol Fitness"
+  }
+},
+{
+  "type": "node",
+  "id": 5109591622,
+  "lat": 49.4128223,
+  "lon": 11.1439901,
+  "tags": {
+    "bus": "yes",
+    "mapillary": "307522750778057",
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "operator": "VAG",
+    "public_transport": "stop_position",
+    "survey:date": "2018-05-22"
+  }
+},
+{
+  "type": "node",
+  "id": 5109625722,
+  "lat": 49.4123221,
+  "lon": 11.1437088,
+  "tags": {
+    "bus": "yes",
+    "mapillary": "808605143388839",
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "operator": "VAG",
+    "public_transport": "stop_position",
+    "survey:date": "2018-11-21"
+  }
+},
+{
+  "type": "node",
+  "id": 5109625723,
+  "lat": 49.4127811,
+  "lon": 11.1439522,
+  "tags": {
+    "bench": "no",
+    "bin": "no",
+    "bus": "yes",
+    "bus_routes": "96",
+    "departures_board": "timetable",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:height": "0.12",
+    "lit": "no",
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "operator": "VAG",
+    "platform:width": "2",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:09564:1565:0:3",
+    "shelter": "no",
+    "tactile_paving": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 5109635621,
+  "lat": 49.4134285,
+  "lon": 11.1435753,
+  "tags": {
+    "bench": "no",
+    "bin": "no",
+    "bus": "yes",
+    "bus_routes": "96",
+    "departures_board": "timetable",
+    "highway": "bus_stop",
+    "kerb": "raised",
+    "kerb:height": "0.12",
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "operator": "VAG",
+    "platform:width": "2.5",
+    "public_transport": "platform",
+    "ref:IFOPT": "de:09564:1565:0:4",
+    "shelter": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 6369107006,
+  "lat": 49.4497567,
+  "lon": 11.0555425,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "11",
+    "addr:postcode": "90429",
+    "addr:street": "Eberhardshofstraße",
+    "alt_name": "Metroproletan – Archiv & Bibliothek",
+    "check_date": "2025-12-08",
+    "check_date:opening_hours": "2023-08-25",
+    "name": "Metroproletan",
+    "office": "ngo",
+    "opening_hours": "Th 19:00-22:00",
+    "wheelchair": "no"
+  }
+},
+{
+  "type": "node",
+  "id": 10867922393,
+  "lat": 49.3662128,
+  "lon": 11.1124201,
+  "tags": {
+    "ele": "345",
+    "information": "guidepost",
+    "name": "Schleuse 64",
+    "ref": "1903",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 12187826611,
+  "lat": 49.4762654,
+  "lon": 10.9764254,
+  "tags": {
+    "addr:city": "Fürth",
+    "addr:country": "DE",
+    "addr:housenumber": "15",
+    "addr:postcode": "90766",
+    "addr:street": "Scherbsgraben",
+    "leisure": "sports_centre",
+    "name": "Hallenbad Fürth",
+    "sport": "swimming",
+    "website": "https://www.infra-fuerth.de/privatkunden/leistungen/schwimmbaeder/hallenbad-fuerth"
+  }
+},
+{
+  "type": "node",
+  "id": 12262722165,
+  "lat": 49.3415399,
+  "lon": 11.3118788,
+  "tags": {
+    "ele": "419",
+    "hiking": "yes",
+    "information": "guidepost",
+    "name": "Schleuse 35",
+    "ref": "3838",
+    "tourism": "information"
+  }
+},
+{
+  "type": "node",
+  "id": 12278717697,
+  "lat": 49.3416504,
+  "lon": 11.3127758,
+  "tags": {
+    "addr:city": "Burgthann",
+    "addr:country": "DE",
+    "addr:housename": "Schleusenwärterhaus",
+    "addr:housenumber": "35",
+    "addr:postcode": "90559",
+    "addr:street": "Am Kanal",
+    "amenity": "restaurant",
+    "brewery": "Spalter Bier",
+    "contact:email": "schleuse35@gmx.de",
+    "contact:phone": "+49 9183 901466",
+    "indoor_seating": "yes",
+    "name": "Biergarten Schleuse 35",
+    "opening_hours": "Mo-Su 11:00-20:00",
+    "outdoor_seating": "yes",
+    "seasonal": "yes",
+    "website": "https://www.schleuse35-burgthann.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 4840379,
+  "center": {
+    "lat": 49.5561563,
+    "lon": 10.9649465
+  },
+  "tags": {
+    "access": "no",
+    "highway": "residential",
+    "name": "Schleusenstraße",
+    "note": "Straßen gesperrt wegen Neubau Schleuse Kriegenbrunn",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38",
+    "was:motor_vehicle": "destination;agricultural;forestry"
+  }
+},
+{
+  "type": "way",
+  "id": 16488157,
+  "center": {
+    "lat": 49.4150337,
+    "lon": 11.0579505
+  },
+  "tags": {
+    "CEMT": "Vb",
+    "boat": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse Nürnberg",
+    "maxlength": "190",
+    "maxwidth": "12",
+    "name": "Schleuse Nürnberg",
+    "note": "Schleuse Nürnberg",
+    "obstacle": "lock",
+    "opening_hours": "24/7",
+    "phone": "+49 9131 480087311",
+    "river:waterway_distance": "69.1",
+    "seamark:type": "lock_basin",
+    "source": "elwis.de",
+    "vhf": "66",
+    "waterway": "canal"
+  }
+},
+{
+  "type": "way",
+  "id": 23311139,
+  "center": {
+    "lat": 49.5565407,
+    "lon": 10.9687338
+  },
+  "tags": {
+    "access": "no",
+    "cycleway:both": "no",
+    "highway": "residential",
+    "name": "Schleusenstraße",
+    "note": "Straßen gesperrt wegen Neubau Schleuse Kriegenbrunn",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38",
+    "was:motor_vehicle": "destination;agricultural;forestry"
+  }
+},
+{
+  "type": "way",
+  "id": 23392419,
+  "center": {
+    "lat": 49.4040347,
+    "lon": 11.0084712
+  },
+  "tags": {
+    "cycleway:both": "separate",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed:type": "DE:urban",
+    "name": "Faber-Castell-Allee",
+    "parking:lane:both": "no",
+    "sidewalk": "both",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 26641336,
+  "center": {
+    "lat": 49.3908577,
+    "lon": 11.0741641
+  },
+  "tags": {
+    "landuse": "landfill",
+    "name": "Reststoffdeponie Nürnberg-Süd",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 28078519,
+  "center": {
+    "lat": 49.3793050,
+    "lon": 11.1654567
+  },
+  "tags": {
+    "landuse": "landfill",
+    "name": "Giftgas-Sarkophag Muna",
+    "source": "survey;local knowledge"
+  }
+},
+{
+  "type": "way",
+  "id": 28712590,
+  "center": {
+    "lat": 49.3729872,
+    "lon": 11.0997362
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 67",
+    "lock_ref": "67",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_67_in_nuernberg-worze-27841/",
+    "width": "4.7",
+    "wikidata": "Q41411305",
+    "wikimedia_commons": "Category:Schleuse 67 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#067"
+  }
+},
+{
+  "type": "way",
+  "id": 32458970,
+  "center": {
+    "lat": 49.3368927,
+    "lon": 11.0765316
+  },
+  "tags": {
+    "landuse": "landfill",
+    "name": "Ehemalige Hausmülldeponie Schwabach/Neuses"
+  }
+},
+{
+  "type": "way",
+  "id": 32702632,
+  "center": {
+    "lat": 49.4445867,
+    "lon": 11.0730502
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90443",
+    "addr:street": "Lessingstraße",
+    "building": "yes",
+    "building:colour": "white",
+    "building:levels": "1",
+    "fee": "yes",
+    "height": "7",
+    "museum": "railway",
+    "name": "DB Museum - Fahrzeughalle 2",
+    "opening_hours": "Tu-Fr 09:00-17:00, Sa-Su 10:00-18:00",
+    "operator": "Deutsche Bahn Stiftung",
+    "roof:angle": "15",
+    "roof:colour": "white",
+    "roof:shape": "gabled",
+    "source": "HiRes aerial imagery"
+  }
+},
+{
+  "type": "way",
+  "id": 33683401,
+  "center": {
+    "lat": 49.5566772,
+    "lon": 10.9719524
+  },
+  "tags": {
+    "access": "private",
+    "highway": "residential",
+    "name": "Schleusenstraße",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38",
+    "was:motor_vehicle": "destination;agricultural;forestry"
+  }
+},
+{
+  "type": "way",
+  "id": 35108068,
+  "center": {
+    "lat": 49.3567494,
+    "lon": 11.0520400
+  },
+  "tags": {
+    "access": "yes",
+    "amenity": "parking",
+    "covered": "no",
+    "fee": "no",
+    "hgv": "no",
+    "lit": "yes",
+    "name": "Hallenbad",
+    "opening_hours": "24/7",
+    "parking": "surface",
+    "supervised": "no",
+    "surface": "paving_stones"
+  }
+},
+{
+  "type": "way",
+  "id": 35479048,
+  "center": {
+    "lat": 49.3644898,
+    "lon": 11.1702273
+  },
+  "tags": {
+    "addr:city": "Wendelstein",
+    "addr:country": "DE",
+    "addr:housenumber": "19",
+    "addr:postcode": "90530",
+    "addr:street": "Alte Salzstraße",
+    "building": "yes",
+    "building:material": "sandstone",
+    "description": "Schleusenwärterhaus, Ludwig-Donau-Main-Kanal",
+    "historic": "yes",
+    "name": "Schleusenwärterhaus 63",
+    "roof:shape": "gabled",
+    "source": "Yahoo",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_63_in_roethenbach_b_s-27849/",
+    "wikidata": "Q102199446",
+    "wikimedia_commons": "File:2020 LDMK Schleusenwärterhaus Schleuse 63 02.jpg"
+  }
+},
+{
+  "type": "way",
+  "id": 35482205,
+  "center": {
+    "lat": 49.5565137,
+    "lon": 10.9698707
+  },
+  "tags": {
+    "access": "no",
+    "bridge": "yes",
+    "cycleway:both": "no",
+    "highway": "residential",
+    "layer": "1",
+    "name": "Schleusenstraße",
+    "note": "Straßen gesperrt wegen Neubau Schleuse Kriegenbrunn",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38",
+    "was:motor_vehicle": "destination;agricultural;forestry"
+  }
+},
+{
+  "type": "way",
+  "id": 35482206,
+  "center": {
+    "lat": 49.5565370,
+    "lon": 10.9706620
+  },
+  "tags": {
+    "access": "no",
+    "cycleway:both": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "name": "Schleusenstraße",
+    "note": "Straßen gesperrt wegen Neubau Schleuse Kriegenbrunn",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38",
+    "was:motor_vehicle": "destination;agricultural;forestry"
+  }
+},
+{
+  "type": "way",
+  "id": 36005307,
+  "center": {
+    "lat": 49.5554539,
+    "lon": 10.9698214
+  },
+  "tags": {
+    "CEMT": "Vb",
+    "boat": "yes",
+    "description": "18,3 m Fallhöhe Bootstreppe Fernsteuerzentrale auch für die Schleusen Erlangen, Nürnberg und Eibach; Main-Donau-Kanal",
+    "lock": "yes",
+    "lock_name": "Schleuse Kriegenbrunn",
+    "maxlength": "190",
+    "maxwidth": "12",
+    "name": "Schleuse Kriegenbrunn",
+    "note": "Schleuse Kriegenbrunn",
+    "obstacle": "lock",
+    "opening_hours": "24/7",
+    "phone": "+49 9131 480087211",
+    "river:waterway_distance": "48.7",
+    "seamark:type": "lock_basin",
+    "source": "elwis.de",
+    "vhf": "65",
+    "waterway": "canal",
+    "waterway:sign": "notice",
+    "wikidata": "Q50107667"
+  }
+},
+{
+  "type": "way",
+  "id": 39743407,
+  "center": {
+    "lat": 49.3434748,
+    "lon": 11.3197835
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 33",
+    "lock_ref": "33",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "source": "landsat",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_33_in_ruebleinshof-27939/",
+    "width": "4.7",
+    "wikidata": "Q41390502",
+    "wikimedia_commons": "Category:Schleuse 33 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Kanalschleuse 33"
+  }
+},
+{
+  "type": "way",
+  "id": 39748888,
+  "center": {
+    "lat": 49.3414965,
+    "lon": 11.3166934
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 34",
+    "lock_ref": "34",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "source": "landsat",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_34_in_ruebleinshof-27941/",
+    "width": "4.7",
+    "wikidata": "Q41390500",
+    "wikimedia_commons": "Category:Schleuse 34 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#034"
+  }
+},
+{
+  "type": "way",
+  "id": 39748893,
+  "center": {
+    "lat": 49.3415380,
+    "lon": 11.3127866
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 35",
+    "lock_ref": "35",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "source": "landsat",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_35_in_ruebleinshof-27937/",
+    "width": "4.7",
+    "wikidata": "Q41390504",
+    "wikimedia_commons": "Category:Schleuse 35 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#035"
+  }
+},
+{
+  "type": "way",
+  "id": 39748895,
+  "center": {
+    "lat": 49.3399786,
+    "lon": 11.3090220
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 36",
+    "lock_ref": "36",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "source": "landsat",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_36_bei_pfeifferhuette-27935/",
+    "width": "4.7",
+    "wikidata": "Q41392518",
+    "wikimedia_commons": "Category:Schleuse 36 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#036"
+  }
+},
+{
+  "type": "way",
+  "id": 39748897,
+  "center": {
+    "lat": 49.3390785,
+    "lon": 11.3019223
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 37",
+    "lock_ref": "37",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "source": "landsat",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_37_bei_pfeifferhuette-27933/",
+    "width": "4.7",
+    "wikidata": "Q41392505",
+    "wikimedia_commons": "Category:Schleuse 37 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#037"
+  }
+},
+{
+  "type": "way",
+  "id": 39748900,
+  "center": {
+    "lat": 49.3376207,
+    "lon": 11.2927573
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 39",
+    "lock_ref": "39",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_39_in_pfeifferhuette-27929/",
+    "width": "4.7",
+    "wikidata": "Q41392507",
+    "wikimedia_commons": "Category:Schleuse 39 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#039"
+  }
+},
+{
+  "type": "way",
+  "id": 39748904,
+  "center": {
+    "lat": 49.3372375,
+    "lon": 11.2973786
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 38",
+    "lock_ref": "38",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_38_in_pfeifferhuette-27931/",
+    "width": "4.7",
+    "wikidata": "Q41392521",
+    "wikimedia_commons": "Category:Schleuse 38 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#038"
+  }
+},
+{
+  "type": "way",
+  "id": 39748905,
+  "center": {
+    "lat": 49.3394189,
+    "lon": 11.2887603
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 40",
+    "lock_ref": "40",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_40_in_pfeifferhuette-27927/",
+    "width": "4.7",
+    "wikidata": "Q41392513",
+    "wikimedia_commons": "Category:Schleuse 40 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#040"
+  }
+},
+{
+  "type": "way",
+  "id": 39748907,
+  "center": {
+    "lat": 49.3398377,
+    "lon": 11.2843712
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 41",
+    "lock_ref": "41",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_41_bei_pfeifferhuette-27925/",
+    "width": "4.7",
+    "wikidata": "Q41392511",
+    "wikimedia_commons": "Category:Schleuse 41 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#041"
+  }
+},
+{
+  "type": "way",
+  "id": 39748910,
+  "center": {
+    "lat": 49.3395115,
+    "lon": 11.2793060
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 42",
+    "lock_ref": "42",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_42_bei_lindelburg-27923/",
+    "width": "4.7",
+    "wikidata": "Q41392516",
+    "wikimedia_commons": "Category:Schleuse 42 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#042"
+  }
+},
+{
+  "type": "way",
+  "id": 39748913,
+  "center": {
+    "lat": 49.3395502,
+    "lon": 11.2743627
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 43",
+    "lock_ref": "43",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_43_bei_lindelburg-27921/",
+    "width": "4.7",
+    "wikidata": "Q41392509",
+    "wikimedia_commons": "Category:Schleuse 43 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#043"
+  }
+},
+{
+  "type": "way",
+  "id": 39748915,
+  "center": {
+    "lat": 49.3396172,
+    "lon": 11.2693161
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 44",
+    "lock_ref": "44",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_44_bei_lindelburg-27919/",
+    "width": "4.7",
+    "wikidata": "Q41392561",
+    "wikimedia_commons": "Category:Schleuse 44 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#044"
+  }
+},
+{
+  "type": "way",
+  "id": 39748917,
+  "center": {
+    "lat": 49.3393012,
+    "lon": 11.2644020
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 45",
+    "lock_ref": "45",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_45_bei_schwarzenbruck-27917/",
+    "width": "4.7",
+    "wikidata": "Q41392553",
+    "wikimedia_commons": "Category:Schleuse 45 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#045"
+  }
+},
+{
+  "type": "way",
+  "id": 39748918,
+  "center": {
+    "lat": 49.3383506,
+    "lon": 11.2584912
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 46",
+    "lock_ref": "46",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_46_bei_schwarzenbruck-27915/",
+    "width": "4.7",
+    "wikidata": "Q41392549",
+    "wikimedia_commons": "Category:Schleuse 46 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#046"
+  }
+},
+{
+  "type": "way",
+  "id": 39748920,
+  "center": {
+    "lat": 49.3387410,
+    "lon": 11.2546015
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 47",
+    "lock_ref": "47",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_47_bei_schwarzenbruck-27913/",
+    "width": "4.7",
+    "wikidata": "Q41392544",
+    "wikimedia_commons": "Category:Schleuse 47 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#047"
+  }
+},
+{
+  "type": "way",
+  "id": 39748923,
+  "center": {
+    "lat": 49.3391489,
+    "lon": 11.2506760
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 48",
+    "lock_ref": "48",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_48_bei_schwarzenbruck-27911/",
+    "width": "4.7",
+    "wikidata": "Q41392545",
+    "wikimedia_commons": "Category:Schleuse 48 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#048"
+  }
+},
+{
+  "type": "way",
+  "id": 39748925,
+  "center": {
+    "lat": 49.3391489,
+    "lon": 11.2465155
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 49",
+    "lock_ref": "49",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_49_bei_schwarzenbruck-27909/",
+    "width": "4.7",
+    "wikidata": "Q41392557",
+    "wikimedia_commons": "Category:Schleuse 49 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#049"
+  }
+},
+{
+  "type": "way",
+  "id": 39748927,
+  "center": {
+    "lat": 49.3403207,
+    "lon": 11.2422889
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 50",
+    "lock_ref": "50",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_50_bei_schwarzenbruck-27875/",
+    "width": "4.7",
+    "wikidata": "Q41392552",
+    "wikimedia_commons": "Category:Schleuse 50 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#050"
+  }
+},
+{
+  "type": "way",
+  "id": 39757070,
+  "center": {
+    "lat": 49.3448322,
+    "lon": 11.2330693
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 52",
+    "lock_ref": "52",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_52_bei_schwarzenbruck-27871/",
+    "width": "4.7",
+    "wikidata": "Q41392535",
+    "wikimedia_commons": "Category:Schleuse 52 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#052"
+  }
+},
+{
+  "type": "way",
+  "id": 39757072,
+  "center": {
+    "lat": 49.3508973,
+    "lon": 11.2090013
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "ft_link": "www.freietonne.de?edit=4088",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 58",
+    "lock_ref": "58",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_58_bei_schwarzenbruck-27859/",
+    "width": "4.7",
+    "wikidata": "Q41373418",
+    "wikimedia_commons": "Category:Schleuse 58 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#058"
+  }
+},
+{
+  "type": "way",
+  "id": 39757076,
+  "center": {
+    "lat": 49.3459764,
+    "lon": 11.2283021
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 53",
+    "lock_ref": "53",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_53_bei_schwarzenbruck-27869/",
+    "width": "4.7",
+    "wikidata": "Q41373222",
+    "wikimedia_commons": "Category:Schleuse 53 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#053"
+  }
+},
+{
+  "type": "way",
+  "id": 39757078,
+  "center": {
+    "lat": 49.3527226,
+    "lon": 11.2055222
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "ft_link": "www.freietonne.de?edit=4080",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 59",
+    "lock_ref": "59",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_59_bei_feucht-27857/",
+    "width": "4.7",
+    "wikidata": "Q41373402",
+    "wikimedia_commons": "Category:Schleuse 59 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#059"
+  }
+},
+{
+  "type": "way",
+  "id": 39757079,
+  "center": {
+    "lat": 49.3489266,
+    "lon": 11.2173906
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "ft_link": "www.freietonne.de?edit=6529",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 56",
+    "lock_ref": "56",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_56_bei_schwarzenbruck-27865/",
+    "width": "4.7",
+    "wikidata": "Q41373408",
+    "wikimedia_commons": "Category:Schleuse 56 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#056"
+  }
+},
+{
+  "type": "way",
+  "id": 39757080,
+  "center": {
+    "lat": 49.3498291,
+    "lon": 11.2125978
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "ft_link": "www.freietonne.de?edit=3915",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 57",
+    "lock_ref": "57",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_57_bei_schwarzenbruck-27861/",
+    "width": "4.7",
+    "wikidata": "Q41373411",
+    "wikimedia_commons": "Category:Schleuse 57 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#057"
+  }
+},
+{
+  "type": "way",
+  "id": 39757083,
+  "center": {
+    "lat": 49.3607780,
+    "lon": 11.1962148
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse mit Wärterhaus",
+    "ft_link": "www.freietonne.de?edit=3906",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 61",
+    "lock_ref": "61",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_61_bei_roethenbach_b-27855/",
+    "width": "4.7",
+    "wikidata": "Q41373415",
+    "wikimedia_commons": "Category:Schleuse 61 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#061"
+  }
+},
+{
+  "type": "way",
+  "id": 39757089,
+  "center": {
+    "lat": 49.3691216,
+    "lon": 11.1087627
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 65",
+    "lock_ref": "65",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_65_in_nuernberg-worze-27845/",
+    "width": "4.7",
+    "wikidata": "Q55042559",
+    "wikimedia_commons": "Category:Schleuse 65 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#065"
+  }
+},
+{
+  "type": "way",
+  "id": 39757090,
+  "center": {
+    "lat": 49.3468850,
+    "lon": 11.2245747
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 54",
+    "lock_ref": "54",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_54_bei_schwarzenbruck-27867/",
+    "width": "4.7",
+    "wikidata": "Q41373400",
+    "wikimedia_commons": "Category:Schleuse 54 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#054"
+  }
+},
+{
+  "type": "way",
+  "id": 39757095,
+  "center": {
+    "lat": 49.3591205,
+    "lon": 11.2038292
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "ft_link": "www.freietonne.de?edit=3907",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 60",
+    "lock_ref": "60",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_60_bei_feucht-27853/",
+    "width": "4.7",
+    "wikidata": "Q41373406",
+    "wikimedia_commons": "Category:Schleuse 60 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#060"
+  }
+},
+{
+  "type": "way",
+  "id": 39757105,
+  "center": {
+    "lat": 49.3435874,
+    "lon": 11.2382240
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 51",
+    "lock_ref": "51",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_51_bei_schwarzenbruck-27873/",
+    "width": "4.7",
+    "wikidata": "Q41392559",
+    "wikimedia_commons": "Category:Schleuse 51 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#051"
+  }
+},
+{
+  "type": "way",
+  "id": 39757107,
+  "center": {
+    "lat": 49.3713406,
+    "lon": 11.1038657
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 66",
+    "lock_ref": "66",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_66_in_nuernberg-worze-27843/",
+    "width": "4.7",
+    "wikidata": "Q55042738",
+    "wikimedia_commons": "Category:Schleuse 66 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#066"
+  }
+},
+{
+  "type": "way",
+  "id": 39757117,
+  "center": {
+    "lat": 49.3660488,
+    "lon": 11.1124993
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 64",
+    "lock_ref": "64",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_64_im_kleinschwarzenl-30655/",
+    "width": "4.7",
+    "wikidata": "Q55042312",
+    "wikimedia_commons": "Category:Schleuse 64 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#064"
+  }
+},
+{
+  "type": "way",
+  "id": 39757124,
+  "center": {
+    "lat": 49.3647075,
+    "lon": 11.1701153
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 63",
+    "lock_ref": "63",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_63_in_roethenbach_b_s-27849/",
+    "width": "4.7",
+    "wikidata": "Q41373413",
+    "wikimedia_commons": "Category:Schleuse 63 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#063"
+  }
+},
+{
+  "type": "way",
+  "id": 39825547,
+  "center": {
+    "lat": 49.3722728,
+    "lon": 11.1017991
+  },
+  "tags": {
+    "foot": "designated",
+    "highway": "path",
+    "horse": "no",
+    "lit": "no",
+    "name": "Schleusen",
+    "smoothness": "good",
+    "surface": "compacted",
+    "vehicle": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 39825549,
+  "center": {
+    "lat": 49.3764075,
+    "lon": 11.0969006
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 68",
+    "lock_ref": "68",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/",
+    "width": "4.7",
+    "wikidata": "Q41411307",
+    "wikimedia_commons": "Category:Schleuse 68 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#068"
+  }
+},
+{
+  "type": "way",
+  "id": 39825552,
+  "center": {
+    "lat": 49.3802111,
+    "lon": 11.0954519
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 69",
+    "lock_ref": "69",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_69_bei_nuernberg-worz-27837/",
+    "width": "4.7",
+    "wikidata": "Q41411321",
+    "wikimedia_commons": "Category:Schleuse 69 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#069"
+  }
+},
+{
+  "type": "way",
+  "id": 39825554,
+  "center": {
+    "lat": 49.3871008,
+    "lon": 11.0924648
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 70",
+    "lock_ref": "70",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_70_bei_eibach-27835/",
+    "width": "4.7",
+    "wikidata": "Q41411323",
+    "wikimedia_commons": "Category:Schleuse 70 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#070"
+  }
+},
+{
+  "type": "way",
+  "id": 39825556,
+  "center": {
+    "lat": 49.3939709,
+    "lon": 11.0842600
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 71",
+    "lock_ref": "71",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_71_im_eibacher_forst-27833/",
+    "width": "4.7",
+    "wikidata": "Q41411325",
+    "wikimedia_commons": "Category:Schleuse 71 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#071"
+  }
+},
+{
+  "type": "way",
+  "id": 39825560,
+  "center": {
+    "lat": 49.4035612,
+    "lon": 11.0800884
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 72",
+    "lock_ref": "72",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_72_in_nuernberg-garte-27831/",
+    "width": "4.7",
+    "wikidata": "Q41411200",
+    "wikimedia_commons": "Category:Schleuse 72 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#072"
+  }
+},
+{
+  "type": "way",
+  "id": 39825563,
+  "center": {
+    "lat": 49.4121076,
+    "lon": 11.0749649
+  },
+  "tags": {
+    "building": "detached",
+    "building:levels": "1",
+    "building:material": "sandstone",
+    "description": "Schleusenwärterhaus, Ludwig-Donau-Main-Kanal, mit veränderter Dachkonstruktion",
+    "historic": "yes",
+    "name": "Schleusenwärterhaus Schleuse 73",
+    "note": "Der Name steht so am Gebäude",
+    "roof:levels": "2",
+    "roof:shape": "gabled",
+    "start_date": "1845",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleusenwaerterhaus_73_in_nue-27829/",
+    "wikidata": "Q56143077",
+    "wikimedia_commons": "Category:Schleuse 73 (Ludwig-Donau-Main-Kanal)"
+  }
+},
+{
+  "type": "way",
+  "id": 42210674,
+  "center": {
+    "lat": 49.3556293,
+    "lon": 11.0521144
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "6",
+    "addr:postcode": "90453",
+    "addr:street": "Helmut-Bloß-Straße",
+    "building": "sports_centre",
+    "leisure": "sports_centre",
+    "name": "Hallenbad Katzwang",
+    "phone": "+49 9122 76611",
+    "sport": "swimming",
+    "website": "https://nuernbergbad.nuernberg.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 44584790,
+  "center": {
+    "lat": 49.3772041,
+    "lon": 11.0967506
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "track",
+    "name": "Schleusen",
+    "smoothness": "good",
+    "surface": "compacted",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 44584791,
+  "center": {
+    "lat": 49.3744700,
+    "lon": 11.0984223
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "yes",
+    "highway": "path",
+    "horse": "no",
+    "lit": "no",
+    "motor_vehicle": "no",
+    "name": "Schleusen",
+    "oneway": "no",
+    "smoothness": "good",
+    "surface": "compacted",
+    "traffic_sign": "DE:260;DE:258",
+    "width": "1.5"
+  }
+},
+{
+  "type": "way",
+  "id": 46339039,
+  "center": {
+    "lat": 49.5367676,
+    "lon": 11.3115741
+  },
+  "tags": {
+    "landuse": "landfill",
+    "name": "Bauschutt-Recycling Bär"
+  }
+},
+{
+  "type": "way",
+  "id": 46339051,
+  "center": {
+    "lat": 49.5354680,
+    "lon": 11.3155159
+  },
+  "tags": {
+    "alt_name": "Deponie Neunkirchen am Sand",
+    "landuse": "landfill",
+    "name": "Kreismülldeponie Nürnberger Land",
+    "operator": "Landkreis Nürnberger Land"
+  }
+},
+{
+  "type": "way",
+  "id": 60962784,
+  "center": {
+    "lat": 49.3791022,
+    "lon": 11.0960305
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "track",
+    "name": "Schleusen",
+    "smoothness": "good",
+    "surface": "compacted",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 68249324,
+  "center": {
+    "lat": 49.3838555,
+    "lon": 11.0940071
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "track",
+    "name": "Schleusen",
+    "smoothness": "good",
+    "surface": "compacted",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 68249325,
+  "center": {
+    "lat": 49.3764274,
+    "lon": 11.0971020
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "path",
+    "name": "Schleusen",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "way",
+  "id": 99352589,
+  "center": {
+    "lat": 49.3714914,
+    "lon": 11.1039889
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "66",
+    "addr:postcode": "90455",
+    "addr:street": "Schleusen",
+    "building": "detached",
+    "building:levels": "1",
+    "building:material": "sandstone",
+    "description": "Schleusenwärterhaus, Ludwig-Donau-Main-Kanal",
+    "historic": "yes",
+    "name": "Schleusenwärterhaus 66",
+    "roof:levels": "1",
+    "roof:shape": "gabled",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_66_in_nuernberg-worze-27843/",
+    "wikidata": "Q56114248",
+    "wikimedia_commons": "Category:Schleuse 66 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#066"
+  }
+},
+{
+  "type": "way",
+  "id": 104788389,
+  "center": {
+    "lat": 49.3994749,
+    "lon": 11.2976271
+  },
+  "tags": {
+    "landuse": "landfill",
+    "name": "Wertstoffhof Winkelhaid Typ B"
+  }
+},
+{
+  "type": "way",
+  "id": 116146342,
+  "center": {
+    "lat": 49.4447737,
+    "lon": 11.0727823
+  },
+  "tags": {
+    "access": "customers",
+    "leisure": "playground",
+    "name": "Spielplatz Verkehrsmuseum",
+    "source": "survey",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 122698568,
+  "center": {
+    "lat": 49.4703765,
+    "lon": 11.1036331
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "85",
+    "addr:postcode": "90491",
+    "addr:street": "Elbinger Straße",
+    "leisure": "water_park",
+    "name": "Hallenbad Nordost",
+    "opening_hours": "Mo-We 07:00-22:00; Th off; Fr-Sa 07:00-22:00; Su 08:00-22:00",
+    "operator": "Stadt Nürnberg",
+    "phone": "+49 911 515025",
+    "source": "Bing",
+    "sport": "swimming",
+    "website": "https://nuernbergbad.nuernberg.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 123620332,
+  "center": {
+    "lat": 49.3884070,
+    "lon": 11.3289584
+  },
+  "tags": {
+    "landuse": "landfill",
+    "name": "Erddeponie \"Tongrube\"",
+    "operator": "VEOLIA"
+  }
+},
+{
+  "type": "way",
+  "id": 139924731,
+  "center": {
+    "lat": 49.4331656,
+    "lon": 11.0370258
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "1",
+    "addr:postcode": "90431",
+    "addr:street": "Dr.-Ingeborg-Bausenwein-Straße",
+    "alt_name": "Tillyhalle",
+    "leisure": "stadium",
+    "name": "Kia Metropol Arena",
+    "operator": "Stadt Nürnberg",
+    "start_date": "2021",
+    "website": "https://kia-metropol-arena.de",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 142460152,
+  "center": {
+    "lat": 49.3906815,
+    "lon": 11.0885741
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "track",
+    "name": "Schleusen",
+    "smoothness": "good",
+    "surface": "compacted",
+    "tracktype": "grade2"
+  }
+},
+{
+  "type": "way",
+  "id": 142460153,
+  "center": {
+    "lat": 49.4032802,
+    "lon": 11.0794526
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "footway",
+    "lit": "no",
+    "name": "Schleusen",
+    "smoothness": "good",
+    "surface": "compacted",
+    "traffic_sign": "DE:239"
+  }
+},
+{
+  "type": "way",
+  "id": 144868172,
+  "center": {
+    "lat": 49.4143563,
+    "lon": 10.9869458
+  },
+  "tags": {
+    "highway": "residential",
+    "lane_markings": "no",
+    "name": "Faber-Castell-Straße",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 147270601,
+  "center": {
+    "lat": 49.4057059,
+    "lon": 11.0077654
+  },
+  "tags": {
+    "cycleway:left": "separate",
+    "cycleway:right": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Faber-Castell-Allee",
+    "parking:lane:both": "parallel",
+    "parking:lane:both:parallel": "street_side",
+    "sidewalk:left": "separate",
+    "sidewalk:right": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 158385597,
+  "center": {
+    "lat": 49.4173094,
+    "lon": 11.0213715
+  },
+  "tags": {
+    "alt_name": "Faberschloss",
+    "building": "yes",
+    "castle_type": "stately",
+    "heritage": "yes",
+    "historic": "castle",
+    "loc_name": "Steiner Schloss",
+    "name": "Schloss Faber-Castell",
+    "source": "HiRes aerial imagery",
+    "wikidata": "Q1390181",
+    "wikipedia": "de:Faberschloss"
+  }
+},
+{
+  "type": "way",
+  "id": 191902685,
+  "center": {
+    "lat": 49.5336166,
+    "lon": 10.9709779
+  },
+  "tags": {
+    "landuse": "landfill"
+  }
+},
+{
+  "type": "way",
+  "id": 200889341,
+  "center": {
+    "lat": 49.5123354,
+    "lon": 10.9823831
+  },
+  "tags": {
+    "addr:city": "Fürth",
+    "addr:country": "DE",
+    "addr:housenumber": "36",
+    "addr:postcode": "90765",
+    "addr:street": "Hans-Sachs-Straße",
+    "building": "yes",
+    "leisure": "swimming_pool",
+    "name": "Hallenbad Stadeln",
+    "opening_hours": "Mo off; Tu off; We 10:00-22:00; Th 10:00-20:00; Fr 09:00-22:00; Sa 08:00-15:00; Su 08:00-15:00",
+    "sport": "swimming",
+    "website": "http://baederland-fuerth.de/hallenbad-stadeln/"
+  }
+},
+{
+  "type": "way",
+  "id": 205361117,
+  "center": {
+    "lat": 49.4431536,
+    "lon": 11.2758871
+  },
+  "tags": {
+    "disused": "yes",
+    "landuse": "landfill"
+  }
+},
+{
+  "type": "way",
+  "id": 205945847,
+  "center": {
+    "lat": 49.4876190,
+    "lon": 11.3221965
+  },
+  "tags": {
+    "landuse": "landfill"
+  }
+},
+{
+  "type": "way",
+  "id": 232100899,
+  "center": {
+    "lat": 49.5565266,
+    "lon": 10.9693411
+  },
+  "tags": {
+    "access": "no",
+    "cycleway:both": "no",
+    "highway": "residential",
+    "name": "Schleusenstraße",
+    "note": "Straßen gesperrt wegen Neubau Schleuse Kriegenbrunn",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38",
+    "was:motor_vehicle": "destination;agricultural;forestry"
+  }
+},
+{
+  "type": "way",
+  "id": 274444385,
+  "center": {
+    "lat": 49.4152604,
+    "lon": 11.0206779
+  },
+  "tags": {
+    "landuse": "industrial",
+    "man_made": "works",
+    "name": "Faber-Castell"
+  }
+},
+{
+  "type": "way",
+  "id": 376471652,
+  "center": {
+    "lat": 49.3873738,
+    "lon": 11.0924581
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "designated",
+    "highway": "path",
+    "name": "Schleusen",
+    "surface": "unpaved"
+  }
+},
+{
+  "type": "way",
+  "id": 494736835,
+  "center": {
+    "lat": 49.3657167,
+    "lon": 11.1130256
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "path",
+    "lit": "no",
+    "name": "Schleusen",
+    "segregated": "no",
+    "smoothness": "intermediate",
+    "surface": "gravel"
+  }
+},
+{
+  "type": "way",
+  "id": 529392289,
+  "center": {
+    "lat": 49.3579390,
+    "lon": 11.2127996
+  },
+  "tags": {
+    "barrier": "fence",
+    "landuse": "landfill",
+    "name": "Bauschuttdeponie",
+    "operator": "Kreitmeier GmbH",
+    "source": "DOP_LVA_BY_01"
+  }
+},
+{
+  "type": "way",
+  "id": 608368480,
+  "center": {
+    "lat": 49.4120360,
+    "lon": 11.0747691
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "demolished:waterway": "canal",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 73",
+    "lock_ref": "73",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "website": "https://www.ludwig-donau-main-kanal.de/",
+    "wikidata": "Q41411204",
+    "wikimedia_commons": "Category:Schleuse 73 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste der Schleusen im Ludwig-Donau-Main-Kanal#073"
+  }
+},
+{
+  "type": "way",
+  "id": 804569537,
+  "center": {
+    "lat": 49.3875348,
+    "lon": 11.0923739
+  },
+  "tags": {
+    "bicycle": "yes",
+    "foot": "designated",
+    "highway": "path",
+    "lit": "no",
+    "name": "Schleusen",
+    "segregated": "no",
+    "smoothness": "good",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "way",
+  "id": 837464268,
+  "center": {
+    "lat": 49.4212151,
+    "lon": 11.1124707
+  },
+  "tags": {
+    "area": "yes",
+    "disused:landuse": "landfill",
+    "name": "Ehemalige Deponie Bauernfeindstraße"
+  }
+},
+{
+  "type": "way",
+  "id": 916348126,
+  "center": {
+    "lat": 49.4742403,
+    "lon": 11.2482496
+  },
+  "tags": {
+    "industrial": "recycling",
+    "landuse": "landfill",
+    "name": "Wertstoffhof"
+  }
+},
+{
+  "type": "way",
+  "id": 970725204,
+  "center": {
+    "lat": 49.3480959,
+    "lon": 11.2210018
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "check_date": "2025-01-30",
+    "description": "Schleuse mit Wärterhaus",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 55",
+    "lock_ref": "55",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_55_bei_schwarzenbruck-27863/",
+    "width": "4.7",
+    "wikidata": "Q41373417",
+    "wikimedia_commons": "Category:Schleuse 55 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#055"
+  }
+},
+{
+  "type": "way",
+  "id": 986412170,
+  "center": {
+    "lat": 49.3939513,
+    "lon": 11.0845127
+  },
+  "tags": {
+    "bicycle": "no",
+    "foot": "designated",
+    "highway": "track",
+    "name": "Schleusen",
+    "surface": "compacted"
+  }
+},
+{
+  "type": "way",
+  "id": 1023353784,
+  "center": {
+    "lat": 49.3847404,
+    "lon": 11.0641159
+  },
+  "tags": {
+    "CEMT": "Vb",
+    "boat": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse Eibach",
+    "maxlength": "190",
+    "maxwidth": "12",
+    "name": "Schleuse Eibach",
+    "note": "Schleuse Eibach",
+    "obstacle": "lock",
+    "opening_hours": "24/7",
+    "phone": "+49 9131 480087411",
+    "river:waterway_distance": "72.8",
+    "seamark:type": "lock_basin",
+    "source": "elwis.de",
+    "vhf": "20",
+    "waterway": "canal",
+    "wikidata": "Q50107664"
+  }
+},
+{
+  "type": "way",
+  "id": 1125644808,
+  "center": {
+    "lat": 49.4044328,
+    "lon": 11.0084839
+  },
+  "tags": {
+    "cycleway:left": "separate",
+    "cycleway:right": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Faber-Castell-Allee",
+    "parking:both": "no",
+    "sidewalk:left": "separate",
+    "sidewalk:right": "yes",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1125644809,
+  "center": {
+    "lat": 49.4069065,
+    "lon": 11.0068101
+  },
+  "tags": {
+    "cycleway:left": "separate",
+    "cycleway:right": "no",
+    "highway": "residential",
+    "lane_markings": "no",
+    "lit": "yes",
+    "maxspeed": "50",
+    "name": "Faber-Castell-Allee",
+    "sidewalk:left": "separate",
+    "sidewalk:right": "yes",
+    "surface": "asphalt",
+    "width": "6"
+  }
+},
+{
+  "type": "way",
+  "id": 1203275379,
+  "center": {
+    "lat": 49.4496836,
+    "lon": 11.0032454
+  },
+  "tags": {
+    "healthcare": "centre",
+    "name": "Metropol Medical Center",
+    "website": "https://www.mmc-nuernberg.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 1312615504,
+  "center": {
+    "lat": 49.5521165,
+    "lon": 10.9712713
+  },
+  "tags": {
+    "construction": "lock",
+    "landuse": "construction",
+    "name": "Neubau Schleuse Kriegenbrunn"
+  }
+},
+{
+  "type": "way",
+  "id": 1315459906,
+  "center": {
+    "lat": 49.3636694,
+    "lon": 11.1828488
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 62",
+    "lock_ref": "62",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_62_bei_roethenbach_b-27851/",
+    "width": "4.7",
+    "wikidata": "Q41373404",
+    "wikimedia_commons": "Category:Schleuse 62 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#062"
+  }
+},
+{
+  "type": "way",
+  "id": 1316140550,
+  "center": {
+    "lat": 49.4160550,
+    "lon": 11.0716366
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "demolished:waterway": "canal",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 74",
+    "lock_ref": "74",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "start_date": "1845",
+    "website": "https://www.ludwig-donau-main-kanal.de/",
+    "wikidata": "Q41411207",
+    "wikimedia_commons": "Category:Schleuse 74 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#074"
+  }
+},
+{
+  "type": "way",
+  "id": 1334591377,
+  "center": {
+    "lat": 49.4035609,
+    "lon": 11.0800882
+  },
+  "tags": {
+    "name": "Schleuse 72",
+    "natural": "water",
+    "note": "Schleusenkammer-Wasserfläche, Ludwig-Donau-Main-Kanal",
+    "water": "lock"
+  }
+},
+{
+  "type": "way",
+  "id": 1344522004,
+  "center": {
+    "lat": 49.3459195,
+    "lon": 11.2285245
+  },
+  "tags": {
+    "abbr_name": "LDMK",
+    "description": "Schleuse",
+    "historic": "yes",
+    "lock": "yes",
+    "lock_name": "Schleuse 53",
+    "lock_ref": "53",
+    "maxwidth": "4.2",
+    "name": "Ludwig-Donau-Main-Kanal",
+    "operator": "Wasserwirtschaftsamt Nürnberg",
+    "operator:short": "WWA-N",
+    "reg_name": "Alter Kanal",
+    "short_name": "Ludwigskanal",
+    "was:usage": "transportation",
+    "waterway": "canal",
+    "website": "https://www.ludwig-donau-main-kanal.de/poi/schleuse_53_bei_schwarzenbruck-27869/",
+    "width": "4.7",
+    "wikidata": "Q41373222",
+    "wikimedia_commons": "Category:Schleuse 53 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#053"
+  }
+},
+{
+  "type": "way",
+  "id": 1414477918,
+  "center": {
+    "lat": 49.5556974,
+    "lon": 10.9608479
+  },
+  "tags": {
+    "highway": "residential",
+    "motor_vehicle": "destination;agricultural;forestry",
+    "name": "Schleusenstraße",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38"
+  }
+},
+{
+  "type": "way",
+  "id": 1414477924,
+  "center": {
+    "lat": 49.5567814,
+    "lon": 10.9726250
+  },
+  "tags": {
+    "highway": "residential",
+    "motor_vehicle": "destination;agricultural;forestry",
+    "name": "Schleusenstraße",
+    "surface": "asphalt",
+    "traffic_sign": "DE:260,1020-30,1026-38"
+  }
+},
+{
+  "type": "way",
+  "id": 1478609794,
+  "center": {
+    "lat": 49.3243218,
+    "lon": 11.0307693
+  },
+  "tags": {
+    "construction": "leisure",
+    "landuse": "construction",
+    "name": "Ersatzneubau Hallenbad Schwabach",
+    "source:name": "Bauschild"
+  }
+},
+{
+  "type": "way",
+  "id": 1524823065,
+  "center": {
+    "lat": 49.5554659,
+    "lon": 10.9702660
+  },
+  "tags": {
+    "construction:boat": "yes",
+    "construction:lock": "yes",
+    "construction:seamark:type": "lock_basin",
+    "construction:waterway": "canal",
+    "construction:waterway:sign": "notice",
+    "lock_name": "Schleuse Kriegenbrunn",
+    "maxlength": "190",
+    "maxwidth": "12",
+    "name": "Schleuse Kriegenbrunn",
+    "obstacle": "lock",
+    "river:waterway_distance": "48.7",
+    "wikidata": "Q50107667"
+  }
+},
+{
+  "type": "relation",
+  "id": 3535596,
+  "center": {
+    "lat": 49.4128753,
+    "lon": 11.1437267
+  },
+  "tags": {
+    "name": "Langwasser Bad",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "operator": "VAG",
+    "public_transport": "stop_area",
+    "type": "public_transport"
+  }
+},
+{
+  "type": "relation",
+  "id": 5805861,
+  "center": {
+    "lat": 49.5697253,
+    "lon": 10.9875393
+  },
+  "tags": {
+    "from": "Hüttendorf Tulpenweg",
+    "name": "Stadtbus 281 Hüttendorf/Tulpenweg - Schleusenstr - Gostenhofer Str.- Neumühle - ER/Hugenottenplatz",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "public_transport:version": "2",
+    "ref": "281",
+    "route": "bus",
+    "to": "Erlangen Hugenottenplatz",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 5805874,
+  "center": {
+    "lat": 49.5697253,
+    "lon": 10.9875393
+  },
+  "tags": {
+    "from": "Hüttendorf Tulpenweg",
+    "name": "Stadtbus 281 Hüttendorf/Tulpenweg - Schleusenstr - Gostenhofer Str. - Gerätewerk - ER/Hugenottenplatz",
+    "network": "Verkehrsverbund Großraum Nürnberg",
+    "network:short": "VGN",
+    "network:wikidata": "Q2516463",
+    "network:wikipedia": "de:Verkehrsverbund Großraum Nürnberg",
+    "note": "Fährt meist ohne Abstecher zu Sportplatz oder Industriepark",
+    "public_transport:version": "2",
+    "ref": "281",
+    "route": "bus",
+    "to": "Erlangen Hugenottenplatz",
+    "type": "route"
+  }
+},
+{
+  "type": "relation",
+  "id": 8480955,
+  "center": {
+    "lat": 49.4097403,
+    "lon": 11.3683843
+  },
+  "tags": {
+    "name": "Schleusen, Ludwig-Donau-Main-Kanal",
+    "type": "waterway",
+    "waterway": "canal",
+    "wikidata": "Q27742517",
+    "wikimedia_commons": "Category:Canal locks of Ludwig Canal",
+    "wikipedia": "de:Liste der Schleusen im Ludwig-Donau-Main-Kanal"
+  }
+},
+{
+  "type": "relation",
+  "id": 18320832,
+  "center": {
+    "lat": 49.3392139,
+    "lon": 11.2465000
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 49, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-12",
+    "type": "site",
+    "wikidata": "Q41392557",
+    "wikimedia_commons": "Category:Schleuse 49 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#049"
+  }
+},
+{
+  "type": "relation",
+  "id": 18408515,
+  "center": {
+    "lat": 49.3448728,
+    "lon": 11.2330478
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 52, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-15",
+    "type": "site",
+    "wikidata": "Q41392535",
+    "wikimedia_commons": "Category:Schleuse 52 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#052"
+  }
+},
+{
+  "type": "relation",
+  "id": 18410642,
+  "center": {
+    "lat": 49.3391051,
+    "lon": 11.3018914
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 37, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-33",
+    "type": "site",
+    "wikidata": "Q41392505",
+    "wikimedia_commons": "Category:Schleuse 37 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#037"
+  }
+},
+{
+  "type": "relation",
+  "id": 18410762,
+  "center": {
+    "lat": 49.3387447,
+    "lon": 11.2546088
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 47, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-10",
+    "type": "site",
+    "wikidata": "Q41392544",
+    "wikimedia_commons": "Category:Schleuse 47 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#047"
+  }
+},
+{
+  "type": "relation",
+  "id": 18410872,
+  "center": {
+    "lat": 49.3392950,
+    "lon": 11.2643612
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 45, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-8",
+    "type": "site",
+    "wikidata": "Q41392553",
+    "wikimedia_commons": "Category:Schleuse 45 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#045"
+  }
+},
+{
+  "type": "relation",
+  "id": 18410927,
+  "center": {
+    "lat": 49.3382498,
+    "lon": 11.2584799
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 46, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-9",
+    "type": "site",
+    "wikidata": "Q41392549",
+    "wikimedia_commons": "Category:Schleuse 46 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#046"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411215,
+  "center": {
+    "lat": 49.3398368,
+    "lon": 11.2843653
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 41, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-37",
+    "type": "site",
+    "wikidata": "Q41392511",
+    "wikimedia_commons": "Category:Schleuse 41 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#041"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411273,
+  "center": {
+    "lat": 49.3395578,
+    "lon": 11.2743297
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 43, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-39",
+    "type": "site",
+    "wikidata": "Q41392509",
+    "wikimedia_commons": "Category:Schleuse 43 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#043"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411321,
+  "center": {
+    "lat": 49.3435937,
+    "lon": 11.2382040
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 51, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-14",
+    "type": "site",
+    "wikidata": "Q41392559",
+    "wikimedia_commons": "Category:Schleuse 51 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#051"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411354,
+  "center": {
+    "lat": 49.3396063,
+    "lon": 11.2692907
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 44, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-6",
+    "type": "site",
+    "wikidata": "Q41392561",
+    "wikimedia_commons": "Category:Schleuse 44 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#044"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411640,
+  "center": {
+    "lat": 49.3509393,
+    "lon": 11.2089855
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 58, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-141",
+    "type": "site",
+    "wikidata": "Q41373418",
+    "wikimedia_commons": "Category:Schleuse 58 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#058"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411653,
+  "center": {
+    "lat": 49.3480960,
+    "lon": 11.2210051
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 55, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-138",
+    "type": "site",
+    "wikidata": "Q41373417",
+    "wikimedia_commons": "Category:Schleuse 55 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#055"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411661,
+  "center": {
+    "lat": 49.3591335,
+    "lon": 11.2038135
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 60, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-144",
+    "type": "site",
+    "wikidata": "Q41373406",
+    "wikimedia_commons": "Category:Schleuse 60 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#060"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411665,
+  "center": {
+    "lat": 49.3646362,
+    "lon": 11.1703116
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 63 mit Lände Röthenbach, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-149",
+    "type": "site",
+    "wikidata": "Q41373413",
+    "wikimedia_commons": "Category:Schleuse 63 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#063"
+  }
+},
+{
+  "type": "relation",
+  "id": 18411670,
+  "center": {
+    "lat": 49.3608190,
+    "lon": 11.1962006
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 61, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-145",
+    "type": "site",
+    "wikidata": "Q41373415",
+    "wikimedia_commons": "Category:Schleuse 61 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#061"
+  }
+},
+{
+  "type": "relation",
+  "id": 18412123,
+  "center": {
+    "lat": 49.3660529,
+    "lon": 11.1124938
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 64, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-453-2",
+    "type": "site",
+    "wikidata": "Q55042312",
+    "wikimedia_commons": "Category:Schleuse 64 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#064"
+  }
+},
+{
+  "type": "relation",
+  "id": 18412141,
+  "center": {
+    "lat": 49.3713697,
+    "lon": 11.1038525
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 66, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-453-4",
+    "type": "site",
+    "wikidata": "Q55042738",
+    "wikimedia_commons": "Category:Schleuse 66 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#066"
+  }
+},
+{
+  "type": "relation",
+  "id": 18412175,
+  "center": {
+    "lat": 49.3760762,
+    "lon": 11.0970635
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 68 mit Lände Worzeldorf, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-2264",
+    "type": "site",
+    "wikidata": "Q41411307",
+    "wikimedia_commons": "Category:Schleuse 68 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#068"
+  }
+},
+{
+  "type": "relation",
+  "id": 18412217,
+  "center": {
+    "lat": 49.3802153,
+    "lon": 11.0954358
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 69, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-2377",
+    "type": "site",
+    "wikidata": "Q41411321",
+    "wikimedia_commons": "Category:Schleuse 69 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#069"
+  }
+},
+{
+  "type": "relation",
+  "id": 18412226,
+  "center": {
+    "lat": 49.3871052,
+    "lon": 11.0925061
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 70, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-2378",
+    "type": "site",
+    "wikidata": "Q41411323",
+    "wikimedia_commons": "Category:Schleuse 70 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#070"
+  }
+},
+{
+  "type": "relation",
+  "id": 18412235,
+  "center": {
+    "lat": 49.4035849,
+    "lon": 11.0801456
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 72, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-1528",
+    "type": "site",
+    "wikidata": "Q41411200",
+    "wikimedia_commons": "Category:Schleuse 72 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#072"
+  }
+},
+{
+  "type": "relation",
+  "id": 18416848,
+  "center": {
+    "lat": 49.3415159,
+    "lon": 11.3166824
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 34, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-117-40",
+    "type": "site",
+    "wikidata": "Q41390500",
+    "wikimedia_commons": "Category:Schleuse 34 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#034"
+  }
+},
+{
+  "type": "relation",
+  "id": 18416948,
+  "center": {
+    "lat": 49.3691852,
+    "lon": 11.1087343
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 65, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-453-3",
+    "type": "site",
+    "wikidata": "Q55042559",
+    "wikimedia_commons": "Category:Schleuse 65 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#065"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417177,
+  "center": {
+    "lat": 49.3434752,
+    "lon": 11.3197833
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 33, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-117-39",
+    "type": "site",
+    "wikidata": "Q41390502",
+    "wikimedia_commons": "Category:Schleuse 33 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Kanalschleuse 33"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417178,
+  "center": {
+    "lat": 49.3415476,
+    "lon": 11.3127737
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 35, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-117-41",
+    "type": "site",
+    "wikidata": "Q41390504",
+    "wikimedia_commons": "Category:Schleuse 35 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#035"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417193,
+  "center": {
+    "lat": 49.3399654,
+    "lon": 11.3090062
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 36, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-32",
+    "type": "site",
+    "wikidata": "Q41392518",
+    "wikimedia_commons": "Category:Schleuse 36 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#036"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417195,
+  "center": {
+    "lat": 49.3371828,
+    "lon": 11.2972478
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 38, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-34",
+    "type": "site",
+    "wikidata": "Q41392521",
+    "wikimedia_commons": "Category:Schleuse 38 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#038"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417203,
+  "center": {
+    "lat": 49.3376276,
+    "lon": 11.2927333
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 39, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-35",
+    "type": "site",
+    "wikidata": "Q41392507",
+    "wikimedia_commons": "Category:Schleuse 39 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#039"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417205,
+  "center": {
+    "lat": 49.3394247,
+    "lon": 11.2887446
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 40, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-36",
+    "type": "site",
+    "wikidata": "Q41392513",
+    "wikimedia_commons": "Category:Schleuse 40 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#040"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417591,
+  "center": {
+    "lat": 49.3395127,
+    "lon": 11.2793100
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 42, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-38",
+    "type": "site",
+    "wikidata": "Q41392516",
+    "wikimedia_commons": "Category:Schleuse 42 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#042"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417594,
+  "center": {
+    "lat": 49.3391448,
+    "lon": 11.2506806
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 48, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-11",
+    "type": "site",
+    "wikidata": "Q41392545",
+    "wikimedia_commons": "Category:Schleuse 48 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#048"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417595,
+  "center": {
+    "lat": 49.3403182,
+    "lon": 11.2422909
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 50, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-74-157-13",
+    "type": "site",
+    "wikidata": "Q41392552",
+    "wikimedia_commons": "Category:Schleuse 50 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#050"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417603,
+  "center": {
+    "lat": 49.3459788,
+    "lon": 11.2283317
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 53, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-1",
+    "type": "site",
+    "wikidata": "Q41373222",
+    "wikimedia_commons": "Category:Schleuse 53 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#053"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417606,
+  "center": {
+    "lat": 49.3468929,
+    "lon": 11.2245557
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 54, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-137",
+    "type": "site",
+    "wikidata": "Q41373400",
+    "wikimedia_commons": "Category:Schleuse 54 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#054"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417607,
+  "center": {
+    "lat": 49.3489263,
+    "lon": 11.2173720
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 56, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-139",
+    "type": "site",
+    "wikidata": "Q41373408",
+    "wikimedia_commons": "Category:Schleuse 56 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#056"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417608,
+  "center": {
+    "lat": 49.3498274,
+    "lon": 11.2126048
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 57, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-140",
+    "type": "site",
+    "wikidata": "Q41373411",
+    "wikimedia_commons": "Category:Schleuse 57 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#057"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417613,
+  "center": {
+    "lat": 49.3527506,
+    "lon": 11.2055074
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 59, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-142",
+    "type": "site",
+    "wikidata": "Q41373402",
+    "wikimedia_commons": "Category:Schleuse 59 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#059"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417614,
+  "center": {
+    "lat": 49.3636662,
+    "lon": 11.1828423
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 62, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-76-151-146",
+    "type": "site",
+    "wikidata": "Q41373404",
+    "wikimedia_commons": "Category:Schleuse 62 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#062"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417615,
+  "center": {
+    "lat": 49.3730698,
+    "lon": 11.0995810
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 67, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-2263",
+    "type": "site",
+    "wikidata": "Q41411305",
+    "wikimedia_commons": "Category:Schleuse 67 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#067"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417617,
+  "center": {
+    "lat": 49.3939523,
+    "lon": 11.0842920
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 71, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-2736",
+    "type": "site",
+    "wikidata": "Q41411325",
+    "wikimedia_commons": "Category:Schleuse 71 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#071"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417624,
+  "center": {
+    "lat": 49.4120036,
+    "lon": 11.0747953
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 73, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-1602",
+    "type": "site",
+    "wikidata": "Q41411204",
+    "wikimedia_commons": "Category:Schleuse 73 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste der Schleusen im Ludwig-Donau-Main-Kanal#073"
+  }
+},
+{
+  "type": "relation",
+  "id": 18417626,
+  "center": {
+    "lat": 49.4160734,
+    "lon": 11.0715604
+  },
+  "tags": {
+    "heritage": "4",
+    "heritage:operator": "BLfD",
+    "name": "Baudenkmal Schleuse 74, Ludwig-Donau-Main-Kanal",
+    "ref:BLfD": "D-5-64-000-2735",
+    "type": "site",
+    "wikidata": "Q41411207",
+    "wikimedia_commons": "Category:Schleuse 74 (Ludwig-Donau-Main-Kanal)",
+    "wikipedia": "de:Liste_der_Schleusen_im_Ludwig-Donau-Main-Kanal#074"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,1846 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-07-15T15:22:01Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 821822453,
+  "lat": 49.4788691,
+  "lon": 11.0965166,
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "node",
+  "id": 4717324817,
+  "lat": 49.4715038,
+  "lon": 11.0850335,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "37",
+    "addr:postcode": "90409",
+    "addr:street": "Schleifweg",
+    "leisure": "sports_centre",
+    "name": "Fitnessland",
+    "website": "https://fitnessland-nuernberg.de/"
+  }
+},
+{
+  "type": "node",
+  "id": 5548762683,
+  "lat": 49.4736267,
+  "lon": 11.0756350,
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "102",
+    "addr:postcode": "90425",
+    "addr:street": "Kilianstraße",
+    "email": "info@formula.de",
+    "leisure": "sports_centre",
+    "name": "Formula Nürnberg",
+    "phone": "+49 911 3663030",
+    "sport": "motor",
+    "website": "https://www.formula.de/"
+  }
+},
+{
+  "type": "node",
+  "id": 13289180068,
+  "lat": 49.4789247,
+  "lon": 11.0965178,
+  "tags": {
+    "access": "yes",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "table_tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 10124301,
+  "center": {
+    "lat": 49.4788055,
+    "lon": 11.0767494
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "operator": "FC Bayern Kickers",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 10125567,
+  "center": {
+    "lat": 49.4831791,
+    "lon": 11.0998975
+  },
+  "tags": {
+    "leisure": "stadium"
+  }
+},
+{
+  "type": "way",
+  "id": 10396221,
+  "center": {
+    "lat": 49.4712426,
+    "lon": 11.0498054
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 10396223,
+  "center": {
+    "lat": 49.4714866,
+    "lon": 11.0517493
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 22952030,
+  "center": {
+    "lat": 49.4734732,
+    "lon": 11.0951619
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Tennisclub Noris Weiß-Blau",
+    "source": "yahoo",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 23177633,
+  "center": {
+    "lat": 49.5070044,
+    "lon": 11.0990793
+  },
+  "tags": {
+    "leisure": "pitch",
+    "operator": "ASV Buchenbühl",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 23305164,
+  "center": {
+    "lat": 49.4812897,
+    "lon": 11.0525401
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 27544648,
+  "center": {
+    "lat": 49.4797571,
+    "lon": 11.0771532
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "operator": "FC Bayern Kickers",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 30965624,
+  "center": {
+    "lat": 49.4883746,
+    "lon": 11.0922776
+  },
+  "tags": {
+    "check_date:surface": "2025-04-23",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 30965625,
+  "center": {
+    "lat": 49.4874411,
+    "lon": 11.0886363
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "field_hockey",
+    "surface": "artificial_turf"
+  }
+},
+{
+  "type": "way",
+  "id": 30965631,
+  "center": {
+    "lat": 49.4865910,
+    "lon": 11.0905966
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965632,
+  "center": {
+    "lat": 49.4865395,
+    "lon": 11.0908139
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965633,
+  "center": {
+    "lat": 49.4864886,
+    "lon": 11.0910289
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965634,
+  "center": {
+    "lat": 49.4864368,
+    "lon": 11.0912523
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965636,
+  "center": {
+    "lat": 49.4869323,
+    "lon": 11.0879681
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965637,
+  "center": {
+    "lat": 49.4867946,
+    "lon": 11.0884101
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965638,
+  "center": {
+    "lat": 49.4866643,
+    "lon": 11.0885959
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965639,
+  "center": {
+    "lat": 49.4876110,
+    "lon": 11.0894699
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "HiRes aerial imagery",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965640,
+  "center": {
+    "lat": 49.4875494,
+    "lon": 11.0897123
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "HiRes aerial imagery",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965641,
+  "center": {
+    "lat": 49.4873070,
+    "lon": 11.0892878
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "HiRes aerial imagery",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965642,
+  "center": {
+    "lat": 49.4872453,
+    "lon": 11.0895302
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "HiRes aerial imagery",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965643,
+  "center": {
+    "lat": 49.4870082,
+    "lon": 11.0891087
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "HiRes aerial imagery",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965644,
+  "center": {
+    "lat": 49.4869465,
+    "lon": 11.0893512
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "HiRes aerial imagery",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965645,
+  "center": {
+    "lat": 49.4886753,
+    "lon": 11.0843015
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965646,
+  "center": {
+    "lat": 49.4886478,
+    "lon": 11.0845146
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965647,
+  "center": {
+    "lat": 49.4886202,
+    "lon": 11.0847276
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965648,
+  "center": {
+    "lat": 49.4885928,
+    "lon": 11.0849405
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965649,
+  "center": {
+    "lat": 49.4883623,
+    "lon": 11.0842027
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965650,
+  "center": {
+    "lat": 49.4883349,
+    "lon": 11.0844180
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965651,
+  "center": {
+    "lat": 49.4882478,
+    "lon": 11.0848667
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965652,
+  "center": {
+    "lat": 49.4881289,
+    "lon": 11.0842386
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965653,
+  "center": {
+    "lat": 49.4870463,
+    "lon": 11.0851618
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965654,
+  "center": {
+    "lat": 49.4869966,
+    "lon": 11.0853886
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965656,
+  "center": {
+    "lat": 49.4869462,
+    "lon": 11.0856190
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 30965657,
+  "center": {
+    "lat": 49.4868987,
+    "lon": 11.0858362
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 42200811,
+  "center": {
+    "lat": 49.4705432,
+    "lon": 11.0521898
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 42953922,
+  "center": {
+    "lat": 49.4803656,
+    "lon": 11.0773737
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "old_name": "Breitenlohner Tennisplätze",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 61847784,
+  "center": {
+    "lat": 49.4910874,
+    "lon": 11.0422901
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 61847785,
+  "center": {
+    "lat": 49.4910862,
+    "lon": 11.0437126
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 61847786,
+  "center": {
+    "lat": 49.4904138,
+    "lon": 11.0435166
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 61894228,
+  "center": {
+    "lat": 49.4726531,
+    "lon": 11.0799226
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "116",
+    "addr:postcode": "90425",
+    "addr:street": "Kilianstraße",
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "City Fitness",
+    "opening_hours": "Mo-Fr 09:00-22:30;Sa-Su 09:30-19:30",
+    "roof:shape": "flat",
+    "source": "yahoo",
+    "website": "www.city-fitness.de"
+  }
+},
+{
+  "type": "way",
+  "id": 68084786,
+  "center": {
+    "lat": 49.4871392,
+    "lon": 11.0897944
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Club am Marienberg e. V.",
+    "sport": "multi",
+    "website": "https://www.club-am-marienberg.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 68237489,
+  "center": {
+    "lat": 49.4789532,
+    "lon": 11.0943032
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 68237490,
+  "center": {
+    "lat": 49.4784723,
+    "lon": 11.0936133
+  },
+  "tags": {
+    "description": "Bolzplatz",
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 69311144,
+  "center": {
+    "lat": 49.4776813,
+    "lon": 11.0933591
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "beachvolleyball",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 69312126,
+  "center": {
+    "lat": 49.4784883,
+    "lon": 11.0958987
+  },
+  "tags": {
+    "description": "Nur ein Korb, kein richtiges Spielfeld",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "basketball",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 80488049,
+  "center": {
+    "lat": 49.4888016,
+    "lon": 11.0970715
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "15",
+    "addr:postcode": "90411",
+    "addr:street": "Andernacher Straße",
+    "building": "yes",
+    "check_date": "2025-07-05",
+    "email": "info@sportpark-nord.com",
+    "leisure": "sports_centre",
+    "name": "Sportpark Nord",
+    "opening_hours": "Mo-Fr 09:00-24:00; Sa 13:00-20:00; So,Ph 09:00-20:00; Öffnungszeiten Sauna Mo-Fr 16:00-24:00; Sa 13:00-20:00; So,Ph 09:00-20:00",
+    "phone": "+49 911 9564030",
+    "sport": "squash;fitness;badminton;padel;table_tennis",
+    "website": "https://sportpark-nord.com/",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 92415650,
+  "center": {
+    "lat": 49.4806490,
+    "lon": 11.0517456
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 92415651,
+  "center": {
+    "lat": 49.4806547,
+    "lon": 11.0519787
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 92415652,
+  "center": {
+    "lat": 49.4806604,
+    "lon": 11.0522125
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 92415655,
+  "center": {
+    "lat": 49.4806646,
+    "lon": 11.0524970
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 92415656,
+  "center": {
+    "lat": 49.4806719,
+    "lon": 11.0527379
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 96645343,
+  "center": {
+    "lat": 49.4871569,
+    "lon": 11.0846863
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "Bing",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 96700402,
+  "center": {
+    "lat": 49.4735303,
+    "lon": 11.0455178
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 103712562,
+  "center": {
+    "lat": 49.5070599,
+    "lon": 11.0976604
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "Bing",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 103712578,
+  "center": {
+    "lat": 49.5071370,
+    "lon": 11.0980440
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "Bing",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 103712585,
+  "center": {
+    "lat": 49.5067221,
+    "lon": 11.0979169
+  },
+  "tags": {
+    "leisure": "pitch",
+    "source": "Bing",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 103712588,
+  "center": {
+    "lat": 49.5070415,
+    "lon": 11.1003612
+  },
+  "tags": {
+    "leisure": "pitch",
+    "operator": "ASV Buchenbühl",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 106575144,
+  "center": {
+    "lat": 49.4820982,
+    "lon": 11.0981067
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 106575145,
+  "center": {
+    "lat": 49.4824614,
+    "lon": 11.0982204
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 106575146,
+  "center": {
+    "lat": 49.4820675,
+    "lon": 11.0974557
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis"
+  }
+},
+{
+  "type": "way",
+  "id": 129468343,
+  "center": {
+    "lat": 49.4813820,
+    "lon": 11.0523943
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "19",
+    "addr:postcode": "90425",
+    "addr:street": "Schnepfenreuther Hauptstraße",
+    "alt_name": "TBJ 1888 Nürnberg",
+    "leisure": "sports_centre",
+    "name": "Turnerbund St. Johannis 1888 Nürnberg",
+    "sport": "multi",
+    "website": "https://www.tbj1888.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 144869068,
+  "center": {
+    "lat": 49.4708710,
+    "lon": 11.0529663
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "70",
+    "addr:postcode": "90425",
+    "addr:street": "Zeisigweg",
+    "building": "yes",
+    "leisure": "sports_centre",
+    "name": "Avia Arena",
+    "sport": "multi",
+    "wheelchair": "limited"
+  }
+},
+{
+  "type": "way",
+  "id": 149787157,
+  "center": {
+    "lat": 49.4828947,
+    "lon": 11.0979354
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Sportanlage ASN Pfeil Phönix"
+  }
+},
+{
+  "type": "way",
+  "id": 149787158,
+  "center": {
+    "lat": 49.4836086,
+    "lon": 11.0976172
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 149787159,
+  "center": {
+    "lat": 49.4829163,
+    "lon": 11.0975825
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 149787160,
+  "center": {
+    "lat": 49.4830838,
+    "lon": 11.0982954
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 149793168,
+  "center": {
+    "lat": 49.4821132,
+    "lon": 11.0993895
+  },
+  "tags": {
+    "leisure": "pitch"
+  }
+},
+{
+  "type": "way",
+  "id": 149793170,
+  "center": {
+    "lat": 49.4814741,
+    "lon": 11.0992433
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 153342045,
+  "center": {
+    "lat": 49.5075943,
+    "lon": 11.0533248
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "equestrian"
+  }
+},
+{
+  "type": "way",
+  "id": 162261681,
+  "center": {
+    "lat": 49.4744482,
+    "lon": 11.0486892
+  },
+  "tags": {
+    "building": "yes",
+    "leisure": "sports_centre",
+    "sport": "multi"
+  }
+},
+{
+  "type": "way",
+  "id": 168659147,
+  "center": {
+    "lat": 49.4887296,
+    "lon": 11.0914207
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 168659148,
+  "center": {
+    "lat": 49.4880204,
+    "lon": 11.0909466
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 171836629,
+  "center": {
+    "lat": 49.4892444,
+    "lon": 11.0918839
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "beachvolleyball",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 197595147,
+  "center": {
+    "lat": 49.4910931,
+    "lon": 11.0428367
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "TSV Nürnberg-Buch 1921",
+    "sport": "multi",
+    "website": "https://www.tsv-buch.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 197595149,
+  "center": {
+    "lat": 49.4917530,
+    "lon": 11.0420991
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 229475521,
+  "center": {
+    "lat": 49.4806044,
+    "lon": 11.0995070
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "Tuspo Nürnberg",
+    "operator": "Tuspo 1888 Nürnberg e. V.",
+    "sport": "multi",
+    "website": "https://tuspo-nuernberg.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 236323840,
+  "center": {
+    "lat": 49.4708281,
+    "lon": 11.0523978
+  },
+  "tags": {
+    "int_name": "SV St. Johannis 07",
+    "leisure": "sports_centre",
+    "name": "SV St. Johannis 07 e.V.",
+    "sport": "multi",
+    "website": "https://www.sv-johannis07.de/",
+    "wikidata": "Q2208649"
+  }
+},
+{
+  "type": "way",
+  "id": 236323844,
+  "center": {
+    "lat": 49.4713854,
+    "lon": 11.0509715
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "TSV Johannis 1883 Nürnberg e.V.",
+    "website": "http://www.johannis83.de"
+  }
+},
+{
+  "type": "way",
+  "id": 236323847,
+  "center": {
+    "lat": 49.4709004,
+    "lon": 11.0505216
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 236323848,
+  "center": {
+    "lat": 49.4717086,
+    "lon": 11.0526540
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "soccer",
+    "surface": "dirt"
+  }
+},
+{
+  "type": "way",
+  "id": 247363312,
+  "center": {
+    "lat": 49.4820218,
+    "lon": 11.0504512
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "soccer",
+    "surface": "artificial_turf"
+  }
+},
+{
+  "type": "way",
+  "id": 247534909,
+  "center": {
+    "lat": 49.4813993,
+    "lon": 11.0508948
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 247534910,
+  "center": {
+    "lat": 49.4807914,
+    "lon": 11.0508359
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "soccer",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 264535923,
+  "center": {
+    "lat": 49.5069441,
+    "lon": 11.0996392
+  },
+  "tags": {
+    "addr:city": "Nürnberg",
+    "addr:country": "DE",
+    "addr:housenumber": "9",
+    "addr:postcode": "90411",
+    "addr:street": "Wildenfelsweg",
+    "leisure": "sports_centre",
+    "name": "ASV Buchenbühl",
+    "sport": "multi",
+    "website": "https://www.asv-buchenbuehl.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 317645611,
+  "center": {
+    "lat": 49.4733402,
+    "lon": 11.0954055
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645612,
+  "center": {
+    "lat": 49.4729841,
+    "lon": 11.0956354
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645613,
+  "center": {
+    "lat": 49.4732459,
+    "lon": 11.0944988
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645614,
+  "center": {
+    "lat": 49.4739581,
+    "lon": 11.0956346
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645615,
+  "center": {
+    "lat": 49.4736325,
+    "lon": 11.0945174
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645617,
+  "center": {
+    "lat": 49.4728934,
+    "lon": 11.0947802
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645618,
+  "center": {
+    "lat": 49.4729459,
+    "lon": 11.0953027
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645619,
+  "center": {
+    "lat": 49.4732733,
+    "lon": 11.0947836
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645620,
+  "center": {
+    "lat": 49.4730084,
+    "lon": 11.0958767
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645621,
+  "center": {
+    "lat": 49.4736610,
+    "lon": 11.0948039
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645622,
+  "center": {
+    "lat": 49.4728698,
+    "lon": 11.0945431
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645623,
+  "center": {
+    "lat": 49.4729219,
+    "lon": 11.0950614
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 317645624,
+  "center": {
+    "lat": 49.4733084,
+    "lon": 11.0950971
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 324877636,
+  "center": {
+    "lat": 49.4800493,
+    "lon": 11.0999474
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 430913810,
+  "center": {
+    "lat": 49.4828363,
+    "lon": 11.0535812
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "soccer",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 462566911,
+  "center": {
+    "lat": 49.4750574,
+    "lon": 11.0601773
+  },
+  "tags": {
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 462979164,
+  "center": {
+    "lat": 49.4705115,
+    "lon": 11.0853910
+  },
+  "tags": {
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 462981580,
+  "center": {
+    "lat": 49.4710785,
+    "lon": 11.0894520
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 463048747,
+  "center": {
+    "lat": 49.4719531,
+    "lon": 11.0929932
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 463049170,
+  "center": {
+    "lat": 49.4750450,
+    "lon": 11.0887144
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 463070724,
+  "center": {
+    "lat": 49.4817240,
+    "lon": 11.0734032
+  },
+  "tags": {
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 463072169,
+  "center": {
+    "lat": 49.4805694,
+    "lon": 11.0678308
+  },
+  "tags": {
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 463072600,
+  "center": {
+    "lat": 49.4805174,
+    "lon": 11.0706866
+  },
+  "tags": {
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 463073380,
+  "center": {
+    "lat": 49.4803998,
+    "lon": 11.0691043
+  },
+  "tags": {
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 478721505,
+  "center": {
+    "lat": 49.4784947,
+    "lon": 11.0960698
+  },
+  "tags": {
+    "description": "Nur ein Korb, kein richtiges Spielfeld",
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "basketball",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 486362366,
+  "center": {
+    "lat": 49.4831473,
+    "lon": 11.0999219
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "soccer",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 603060201,
+  "center": {
+    "lat": 49.4700758,
+    "lon": 11.0554275
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "no",
+    "sport": "basketball",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 705111759,
+  "center": {
+    "lat": 49.4783923,
+    "lon": 11.0947784
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 705111760,
+  "center": {
+    "lat": 49.4787758,
+    "lon": 11.0948935
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 705111761,
+  "center": {
+    "lat": 49.4782144,
+    "lon": 11.0936650
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 705111762,
+  "center": {
+    "lat": 49.4787127,
+    "lon": 11.0942748
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 996237459,
+  "center": {
+    "lat": 49.4772977,
+    "lon": 11.0771742
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 1071656724,
+  "center": {
+    "lat": 49.4904606,
+    "lon": 11.0443886
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "beachvolleyball",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 1089834975,
+  "center": {
+    "lat": 49.4868894,
+    "lon": 11.0881892
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "tennis",
+    "surface": "clay"
+  }
+},
+{
+  "type": "way",
+  "id": 1212224110,
+  "center": {
+    "lat": 49.4783951,
+    "lon": 11.0663525
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool",
+    "lit": "no"
+  }
+},
+{
+  "type": "way",
+  "id": 1242603696,
+  "center": {
+    "lat": 49.4942635,
+    "lon": 11.0573850
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "equestrian",
+    "surface": "sand"
+  }
+},
+{
+  "type": "way",
+  "id": 1312775240,
+  "center": {
+    "lat": 49.4871478,
+    "lon": 11.0900886
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "padel"
+  }
+},
+{
+  "type": "way",
+  "id": 1312775241,
+  "center": {
+    "lat": 49.4873310,
+    "lon": 11.0901948
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "padel"
+  }
+},
+{
+  "type": "way",
+  "id": 1312775242,
+  "center": {
+    "lat": 49.4870983,
+    "lon": 11.0902959
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "padel"
+  }
+},
+{
+  "type": "way",
+  "id": 1312775243,
+  "center": {
+    "lat": 49.4872814,
+    "lon": 11.0904022
+  },
+  "tags": {
+    "leisure": "pitch",
+    "lit": "yes",
+    "sport": "padel"
+  }
+},
+{
+  "type": "way",
+  "id": 1343702929,
+  "center": {
+    "lat": 49.4848256,
+    "lon": 11.0462662
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 1343702930,
+  "center": {
+    "lat": 49.4777993,
+    "lon": 11.0537430
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 1348695586,
+  "center": {
+    "lat": 49.5075776,
+    "lon": 11.0566603
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer"
+  }
+},
+{
+  "type": "way",
+  "id": 1369733687,
+  "center": {
+    "lat": 49.4798555,
+    "lon": 11.0986988
+  },
+  "tags": {
+    "leisure": "pitch",
+    "sport": "soccer",
+    "surface": "grass"
+  }
+},
+{
+  "type": "way",
+  "id": 1377201198,
+  "center": {
+    "lat": 49.4860745,
+    "lon": 11.0509620
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "swimming_pool"
+  }
+},
+{
+  "type": "way",
+  "id": 1478593830,
+  "center": {
+    "lat": 49.4790106,
+    "lon": 11.0770741
+  },
+  "tags": {
+    "leisure": "sports_centre",
+    "name": "FC Bayern Kickers",
+    "website": "https://baki1907.de/"
+  }
+},
+{
+  "type": "way",
+  "id": 1515321658,
+  "center": {
+    "lat": 49.4891824,
+    "lon": 11.0901480
+  },
+  "tags": {
+    "access": "private",
+    "leisure": "pitch",
+    "sport": "equestrian"
+  }
+}
+
+  ]
+}

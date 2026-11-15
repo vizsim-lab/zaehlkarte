@@ -1,0 +1,12 @@
+[
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brel%2862780%29%3Bout%20geom%3B",
+  "fehler_erst": "TimeoutError('The read operation timed out')",
+  "url_ersatz": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brel%2862780%29%3Bout%20geom%3B",
+  "ende": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A120%5D%3Brel%2862780%29%3Bout%20geom%3B",
+  "typ": "application/json",
+  "bytes": 217467,
+  "datei": "01_interpreter.json",
+  "sha256": "40a1522baf287b3ae41c3720fb388f092f5a9da4780d939b4630957ba718c462"
+ }
+]
