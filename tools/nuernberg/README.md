@@ -38,8 +38,9 @@ Python mit shapely, pyproj, numpy, pdfplumber und PyYAML; Zwischenstände in `ar
    einzelner Plan nur, wo die Regel unsicher ist und der Planpunkt an der genannten Straße liegt.
    Einzelne Pläne mit falschem Etikett (rund 10 km daneben: 7, 271, 275, 452) bleiben so draußen.
 6. `vereinheitliche.py` – Varianten einer Nummer (Namen in verschiedenen Jahren) teilen sich die
-   Lage, wo sie dieselbe Stelle meinen; abweichende Namen derselben Nummer (`GLEICH`: 10d, 12a,
-   29/9) bekommen die Lage der übrigen und einen Hinweis.
+   Lage, wo sie dieselbe Stelle meinen (dieselbe Straße und unter 400 m, sonst unter 150 m); es
+   gilt die genaueste, bei gleicher Genauigkeit die von einem Plan bestätigte. Abweichende Namen
+   derselben Nummer (`GLEICH`: 10d, 12a, 29/9) bekommen die Lage der übrigen und einen Hinweis.
 7. `export_orte.py` – der Block `orte:` (je Nummer eine Lage oder eine Liste mit `wenn`) samt
    Hinweisen zur Genauigkeit; prüft, dass jeder Name die bestimmte Lage bekommt (Auswahl wie im
    Adapter).

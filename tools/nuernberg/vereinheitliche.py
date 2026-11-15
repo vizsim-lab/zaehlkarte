@@ -26,7 +26,9 @@ for nr, es in je.items():
         r = RANG.get(e["genauigkeit"], 9)
         if e["genauigkeit"] == "plan" and abs(e.get("plan_jahre") or 1) < 2:
             r = 2  # nur ein Plan: schwächer als eine ausdrückliche Beschreibung
-        return (r, -len(O.zerlege(e["name"])[2]), -len(e["jahre"]))
+        # bei gleichem Rang zuerst die Variante, die ein Plan bestätigt (≤ 150 m)
+        bestaetigt = e.get("abstand_plan") is not None and e["abstand_plan"] <= 150
+        return (r, not bestaetigt, -len(O.zerlege(e["name"])[2]), -len(e["jahre"]))
     lead = min(gut, key=rang)
     for e in es:
         if e is lead:
