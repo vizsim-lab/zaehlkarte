@@ -203,16 +203,18 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   steht 2–3 Uhr nur einmal da (gekennzeichnet) – der Tag ist nicht vollständig. Die Dateien nennen
   keine Koordinaten: Die Lage ist die des passenden Abschnitts in der Zählstellenkarte des
   Landes; 13 von 206 Zählstellen ohne passenden Abschnitt fehlen.
-- Bayern, Dauerzählstellen an Staats- und Kreisstraßen (BAYSIS): Stundenwerte je Fahrtrichtung
-  für Kfz und Schwerverkehr (8+1 Fahrzeugarten), beide Richtungen am selben Punkt – die
-  Seitenleiste schaltet um. Eine Stunde zählt nur, wenn BAYSIS sie als korrekt kennzeichnet
-  (auch „unregelmäßig“) – Ausfälle, fehlerhafte Werte und Schätzwerte nicht. Am Tag der
-  Rückstellung der Uhr steht 2–3 Uhr nur einmal da – der Tag ist nicht vollständig. Lage aus der
-  Zählstellenkarte von BAYSIS. Die Zählstellen an Autobahnen und Bundesstraßen nimmt die Karte
-  nicht auf; 2 von 80 an Staats- und Kreisstraßen fehlen (die Schnittstelle kennt sie nicht).
-  Die Werte erscheinen mit rund sechs Wochen Verzug. Die Zeit vor den jüngsten zwei Jahren füllt
-  sich über einige Wochen: Der Server lehnt schnelle Folgen von Anfragen ab, die Zählkarte fragt
-  langsam und je Lauf höchstens eine Dreiviertelstunde.
+- Bayern, Dauerzählstellen an Staats- und Kreisstraßen (BAYSIS): Stundenwerte je Fahrtrichtung für
+  Kfz und Schwerverkehr (8+1 Fahrzeugarten), beide Richtungen am selben Punkt – die Seitenleiste
+  schaltet um. Eine Stunde zählt nur, wenn BAYSIS sie als korrekt kennzeichnet (auch
+  „unregelmäßig“) – Ausfälle, fehlerhafte Werte und Schätzwerte nicht; je Monat sind 90–98 % der
+  Tage je Richtung vollständig (Dezember 2024 bis September 2026). Am Tag der Rückstellung der Uhr
+  steht 2–3 Uhr nur einmal da – der Tag ist nicht vollständig. Lage aus der Zählstellenkarte von
+  BAYSIS. Die Zählstellen an Autobahnen und Bundesstraßen nimmt die Karte nicht auf; von den 80 an
+  Staats- und Kreisstraßen fehlen zwei, die die Schnittstelle nicht kennt, und drei in
+  Hallbergmoos, für die BAYSIS keine Stunde als gezählt kennzeichnet. Die Werte erscheinen mit rund
+  sechs Wochen Verzug. Die Zeit vor den jüngsten zwei Jahren füllt sich über einige Wochen: Der
+  Server lehnt schnelle Folgen von Anfragen ab, die Zählkarte fragt langsam und je Lauf höchstens
+  eine Dreiviertelstunde.
 - Rad-Zählstellen (Berlin, Münster, Aachen, München, Baden-Württemberg über MobiData BW,
   Würzburg, Rhein-Kreis Neuss, Neuss, Dortmund, Essen, Bochum, Bonn, Düsseldorf, Leipzig,
   Rostock):

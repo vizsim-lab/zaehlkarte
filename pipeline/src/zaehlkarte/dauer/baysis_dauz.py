@@ -78,6 +78,7 @@ class Bericht:
     ohne_stamm: list[str] = field(default_factory=list)
     ohne_lage: list[str] = field(default_factory=list)
     ohne_werte: list[str] = field(default_factory=list)
+    ohne_gezaehlt: list[str] = field(default_factory=list)
     monate: int = 0
     gelesen: int = 0
     unlesbar: int = 0
@@ -88,9 +89,10 @@ class Bericht:
     bis: str | None = None
 
     def zeilen(self) -> list[str]:
-        z = [f"{self.zaehlstellen} Zählstellen, {self.richtungen} Richtungen in der Karte; "
-             f"{self.monate} Monatsdateien, {self.gelesen} Stundenzeilen ({self.unlesbar} "
-             f"unlesbar); Stunden in der Karte: "
+        z = [f"{self.zaehlstellen} Zählstellen, {self.richtungen} Richtungen mit Stammdaten und "
+             f"Lage (in der Karte die mit einem vollständig gezählten Tag); {self.monate} "
+             f"Monatsdateien, {self.gelesen} Stundenzeilen ({self.unlesbar} unlesbar); "
+             f"gezählte Stunden: "
              + ", ".join(f"{g} {n}" for g, n in sorted(self.stunden.items()))
              + f"; Zeilen um 2 Uhr am Tag der Sommerzeit verworfen: {self.sommerzeit}; "
                f"jüngster Tag {self.bis}",
@@ -99,7 +101,8 @@ class Bericht:
              "Fahrzeugarten (lkW_Unterscheidung): " + ", ".join(
                  f"{k} {n}" for k, n in self.lkw_klassen.most_common())]
         for name, liste in (("ohne Stammdaten", self.ohne_stamm), ("ohne Lage", self.ohne_lage),
-                            ("ohne Werte", self.ohne_werte)):
+                            ("ohne Werte", self.ohne_werte),
+                            ("ohne gezählten Wert", self.ohne_gezaehlt)):
             if liste:
                 z.append(f"{name} (nicht in der Karte): {'; '.join(liste)}")
         return z
@@ -551,12 +554,19 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
         if not zeilen:
             bericht.ohne_werte.append(f"{stamm[nr].get('strasse')} {nr}")
             continue
+        gezaehlt = False
         for (gruppe, r), (tage, stunden, werte) in _zeilen_als_felder(zeilen, bericht).items():
             g = "kfz" if gruppe == "kfz" else gruppe_lkw[nr]
             stelle = np.full(len(tage), index[(nr, r)], dtype=np.int64)
             n, verworfen = setze_lokal(reihe, g, stelle, tage, stunden, werte, rueck="einfach")
             bericht.stunden[g] += n
             bericht.sommerzeit += verworfen
+            gezaehlt |= bool((werte >= 0).any())
+        if not gezaehlt:  # Zeilen, aber keine als gezählt gekennzeichnete Stunde (Hallbergmoos)
+            kz = Counter(_wert(z.get(kenn)) for z in zeilen for _, kenn in SPALTEN.values())
+            bericht.ohne_gezaehlt.append(
+                f"{stamm[nr].get('strasse')} {stamm[nr].get('zaehlstellenbezeichnug')} {nr} "
+                f"(Kennzeichen: " + ", ".join(f"{k!r} {n}" for k, n in kz.most_common(3)) + ")")
     for g in [g for g in reihe.werte if g != "kfz" and (reihe.werte[g] < 0).all()]:
         del reihe.werte[g]  # eine Gruppe ohne einen gezählten Wert (etwa nur ohne Werte)
     kuerze(reihe)

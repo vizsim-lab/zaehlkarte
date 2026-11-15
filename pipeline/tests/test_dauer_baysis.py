@@ -186,6 +186,23 @@ def test_lese(tmp_path):
     assert any("2 Zählstellen, 4 Richtungen" in z for z in bericht.zeilen())
 
 
+def test_lese_ohne_gezaehlten_wert(tmp_path):
+    """Eine Zählstelle mit Zeilen, aber ohne gezählte Stunde (alle Werte Schätzwerte) steht im
+    Bericht mit ihren Kennzeichen; die Karte nimmt sie nicht auf (kein vollständiger Tag)."""
+    s = ("s", "s", "s", "s")
+    werte = {"9639": {"2025-10": _tag(date(2025, 10, 24))},
+             "9648": {"2025-10": _tag(date(2025, 10, 24), **{f"h{h}": s for h in range(1, 25)})}}
+    stamm = {"9639": _stamm("9639", "St 2406", "Worzeldorf", "A", "B"),
+             "9648": _stamm("9648", "K M 15", "Planegg-Martinsried", "C", "D")}
+    bericht = bd.Bericht()
+    reihe = bd.lese(Q, _pfade(tmp_path, werte, stamm), bericht)
+    assert bericht.ohne_gezaehlt == ["K M 15 Planegg-Martinsried 9648 (Kennzeichen: 's' 96)"]
+    assert any(z.startswith("ohne gezählten Wert (nicht in der Karte): K M 15") for z in
+               bericht.zeilen())
+    kfz, _ = tagessummen(reihe, "kfz")
+    assert kfz[:, 0].tolist() == [240, 480, -1, -1]
+
+
 def test_lese_sommerzeit(tmp_path):
     """Frühjahr: die Zeile 03 (2–3 Uhr) gibt es nicht – verworfen, der Tag hat 23 Stunden."""
     tag = date(2025, 3, 30)

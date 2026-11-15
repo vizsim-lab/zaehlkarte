@@ -1261,7 +1261,16 @@ robots.txt für alle Robots sperrt. Seitdem:
       Lauf ohne neue Monate fragt dreimal (zwei Listen, eine „Probe“ – die Zählstelle nahe am
       jüngsten Tag, die am längsten nicht gefragt wurde); erst wenn die Probe neue Monate findet,
       werden die übrigen Zählstellen je einmal gefragt. Die ältere Zeit ab 2022 füllt sich über
-      mehrere Läufe (Cache des Workflows). Die Stationssuche des Diensts SibPublic
+      mehrere Läufe (Cache des Workflows). Prüfung mit dem Adapter am 15.11.2026
+      (`ergebnis/bw/pruefe_bayern_dauz/`, 45 Minuten): mit 15 Sekunden Pause 153 Anfragen ohne
+      eine Ablehnung – die Listen, 76 Stammdaten und für 75 Zählstellen die jüngsten 24 Monate;
+      die Schnittstelle packt ihre Antworten nicht (1,3 GB für die 153 Anfragen, ein 24-Monats-
+      Block rund 18 MB in fünf Sekunden). Je Monat 90–98 % der Tage je Richtung vollständig; die
+      meisten nicht gezählten Stunden sind Schätzwerte („s“, rund 6 % der Werte, dazu „a“
+      1,5 % und „k“ 0,5 %). Drei Zählstellen in Hallbergmoos (9405 „Gesamt“, 9406 und
+      9407 an den Ästen zur B 301 und zur A 92, St 2584) haben Zeilen, aber keine als gezählt
+      gekennzeichnete Stunde – nicht in der Karte, der Bericht nennt ihre Kennzeichen. Die
+      Stationssuche des Diensts SibPublic
       (`…/SibPublic/MapServer/exts/SibPublic/Stationssuche`) antwortet auf `station`,
       `strassenBezeichnung` ohne Leerzeichen und `abschnitt` mit 500; die Internet-Fassung der
       Anwendung rechnet Stationen über `/services/linearReferencingAPI/api/ListAbschnittsfolge`
