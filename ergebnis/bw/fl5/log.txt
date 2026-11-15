@@ -1,0 +1,11 @@
+9639_stammdaten ok 2740 application/json; charset=utf-8
+9639_verfügbarkeit ok 97281 application/json; charset=utf-8
+9648_stammdaten ok 2727 application/json; charset=utf-8
+9648_verfügbarkeit ok 97281 application/json; charset=utf-8
+9639_stundenwerte ok 64509 application/json; charset=utf-8
+9639_tagwerte ok 94312 application/json; charset=utf-8
+9639_stunden_iso ok 217440 application/json; charset=utf-8
+9639_stunden_de ok 217440 application/json; charset=utf-8
+9639_tage_jahr ok 391669 application/json; charset=utf-8
+ok https://gisportal-stmb.bayern.de/server/rest/services/WMS/BAYSIS_Verkehrsdaten/MapServer/0/query?where=1%3D1&outFields=Zaehlstellennummer,Strassenbezeichnung,Strassenklasse,Status&returnGeometry=true&outSR=4326&f=geojson 33125
+ok https://www.baysis.bayern.de/internet/impressum/index.html 28476
