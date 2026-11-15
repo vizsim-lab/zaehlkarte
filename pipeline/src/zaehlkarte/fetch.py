@@ -173,7 +173,7 @@ def _xanten_pdf(code: str, q: dict, pfade: Pfade) -> list[str]:
 
 def _pdf_dateien(code: str, q: dict, pfade: Pfade) -> list[str]:
     """PDFs aus `dateien` (URL und Prüfsumme) nach data/raw/<code>/ (Tübingen, Neubulach,
-    Nürnberg)."""
+    Nürnberg, Kevelaer)."""
     return [lade_geprueft(d["url"], pfade.roh / code / d["datei"], d.get("sha256"))
             for d in q["dateien"]]
 
@@ -223,6 +223,7 @@ ABRUF: dict[str, Callable[[str, dict, Pfade], list[str]]] = {
     "tuebingen_pdf": _pdf_dateien,
     "neubulach_pdf": _pdf_dateien,
     "nuernberg_pdf": _pdf_dateien,
+    "kevelaer_pdf": _pdf_dateien,
 }
 
 

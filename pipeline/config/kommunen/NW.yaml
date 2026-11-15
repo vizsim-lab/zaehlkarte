@@ -379,21 +379,23 @@
   kontakt: {fds_suche: "Stadt Kevelaer"}
   kurzzeit:
     stand: ohne_lizenz
+    quellen: [kevelaer]
     was: >-
       Zählung im September 2019 für die Verkehrsuntersuchung im Kernort: 16 Knotenpunkte (6–10 und
-      15–19 Uhr, Viertelstunden je Strom) und 13 Querschnitte (24 Stunden, Video) als PDF – ohne
-      Lizenzangabe
+      15–19 Uhr, Viertelstunden je Strom) und 13 Querschnitte (24 Stunden, Video) als PDF, ohne
+      Lizenz (in der Karte)
     situation: >-
       Für die Verkehrsuntersuchung im Kernort hat ein Planungsbüro im September 2019 an 16
       Knotenpunkten (6–10 und 15–19 Uhr) und 13 Querschnitten (24 Stunden, per Video) gezählt. Die
       „Ergebnisse der Verkehrszählungen“ (74 Seiten) stehen auf kevelaer.de: je Knotenpunkt und
       Viertelstunde die Ströme nach Pkw, Krad, Lieferwagen und Lkw, je Querschnitt Stundenwerte, dazu
-      DTV und Spitzenstunden. Das ist eine Zählung, wie sie die Karte zeigt (ähnlich der aus Xanten);
-      eine Lizenz nennt die Stadt aber nicht, darum ist sie noch nicht in der Karte.
+      DTV und Spitzenstunden. Eine Lizenz nennt die Stadt nicht; die Zählwerte sind daraus in der
+      Karte (Kfz und Lkw je Stunde), die Seiten, die im PDF nur Bilder sind, abgeschrieben und wie
+      alle anderen gegen die Summen des Berichts geprüft.
     empfehlung: >-
       Bitte an die Stadt, die Zählung unter eine offene Lizenz zu stellen (etwa Datenlizenz
-      Deutschland – Zero), am besten mit der Tabelle des Büros – dann kommt sie in die Karte. Dazu die
-      Frage nach weiteren Zählungen seit 2015. Grundlage: IFG NRW.
+      Deutschland – Zero), am besten mit der Tabelle des Büros. Dazu die Frage nach weiteren
+      Zählungen seit 2015. Grundlage: IFG NRW.
     weg: "FragDenStaat, IFG NRW"
     anfrage:
       zusatz: >-
@@ -401,6 +403,7 @@
         veröffentlicht. Ich bitte um diese Zählung in der Tabellenform des Büros, um die Bedingungen
         ihrer Weiterverwendung und um alle weiteren Zählungen.
     links:
+      - ["Verkehrsuntersuchung 2019–2024 (kevelaer.de)", "https://www.kevelaer.de/kevelaer-de/startseite/leben-in-kevelaer/mobilitaet/verkehrsuntersuchung-2019-2024"]
       - ["Ergebnisse der Verkehrszählungen 2019 (PDF)", "https://www.kevelaer.de/dokumente/leben-in-kevelaer/mobilitaet/ergebnisse-der-verkehrszaehlungen-2019.pdf?cid=7j"]
 - ags: "05754044"
   name: Verl
