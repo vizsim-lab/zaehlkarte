@@ -97,6 +97,12 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   Abweichungen zwischen ihnen stehen als Hinweis an der Zählung. Die Lage stammt aus
   OpenStreetMap (nach dem Namen der Zählstelle) und den Zählstellenplänen der Berichte; die
   Genauigkeit steht im Hinweis.
+- Kevelaer: Die Knotenpunkte sind 6–10 und 15–19 Uhr gezählt (in der Karte unter „stärkste
+  Stunde“), die Querschnitte 24 Stunden. Kfz = Pkw, Krad, Lieferwagen und Lkw; Schwerverkehr =
+  die Art „Lkw“ (Lieferwagen nicht; Busse und Lastzüge sind keine eigenen Arten). Seiten, die im
+  PDF nur Bilder sind, sind abgeschrieben; ein Zählfenster kommt nur in die Karte, wenn es die
+  Summen des Berichts trifft. Der Bericht nennt für die meisten Knotenpunkte „Do. 17.09.2019“ –
+  der 17.09.2019 war ein Dienstag; es gilt das Datum (Hinweis an der Zählung).
 
 ## Dauerzählstellen
 

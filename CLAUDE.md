@@ -48,7 +48,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `uv run zaehlkarte site`; nur `datenlage.json` und `DATENLAGE.md` nach geänderten
   Datenlage-Texten: `uv run zaehlkarte datenlage`), `pipeline/geokodierung/berlin_ergaenzung.csv`
   (Workflow „Berlin geokodieren“), `pipeline/geokodierung/moers.csv`
-  (`werkzeuge/geokodiere_moers.py`).
+  (`werkzeuge/geokodiere_moers.py`), `pipeline/abschriften/kevelaer.csv` (Abschrift der Bildseiten,
+  `werkzeuge/abschrift_kevelaer.py`).
 - **Datenlage** (`config/kommunen/<LAND>.yaml`, Aufbau in `pipeline/config/README.md`): je
   Kommune `ags` (amtlicher Gemeindeschlüssel, bei Kreisen der Kreisschlüssel – der Schlüssel der
   Kommune, das Land steckt darin), `name`, `lage`, und je Familie ein Block `kurzzeit:` bzw.
@@ -106,7 +107,7 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.
 - **Rohdaten bleiben unverändert**; Berlin-Archive und Geokodierung sind auf Commits gepinnt,
   Münster-ZIP und -Positionen, die Konstanzer CSVs und die PDFs aus Xanten, Tübingen,
-  Neubulach und Nürnberg über ihre Prüfsumme
+  Neubulach, Nürnberg und Kevelaer über ihre Prüfsumme
   (sha256 in der Quelldatei). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
   die Quelldatei mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
 - **Gemeinde je Dauerzählstelle:** `ags` aus den Gemeindegrenzen VG250 des BKG

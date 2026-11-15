@@ -201,6 +201,27 @@ test("Stelle aus Nürnberg: Kfz 6–22 Uhr laut Bericht, ohne Lizenz, nur unter 
   expect(z.every((x) => x.w16 && x.fenster === "6–22" && x.w == null && x.w24 == null)).toBe(true);
 });
 
+test("Stellen aus Kevelaer: Knotenpunkt 6–10 und 15–19 Uhr, Querschnitt 24 Stunden, ohne Lizenz", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&a=sp");
+  await klickeStelle(page, (x) => x.quelle === "kevelaer" && x.name.startsWith("Wettener Straße/Gewerbering"));
+  const detail = page.locator("#detail");
+  await expect(detail.locator(".ohne-lizenz")).toHaveText("ohne Lizenz");
+  await expect(detail).toContainText("kevelaer.de");
+  await expect(detail.getByRole("link", { name: "Entfernen lassen" })).toBeVisible();
+  await expect(detail.locator(".detail-hinweise")).toContainText("war ein Dienstag");
+  await expect(detail.locator("svg.tg")).toBeVisible();
+  await expect(detail.locator("[data-csv]")).toHaveCount(0);
+  await oeffne(page, "#t=kfz.menge&a=w24");
+  await klickeStelle(page, (x) => x.quelle === "kevelaer" && x.name.startsWith("Geldener Straße"));
+  await expect(detail.locator(".detail-kennwerte")).toContainText("4.238"); // Summenzeile des Berichts
+  await expect(detail.locator(".detail-hinweise")).toContainText("Zählstellenplan im Zwischenbericht");
+  const z = await page.evaluate(() => window.__app.daten.stellen
+    .filter((s) => s.quelle === "kevelaer").flatMap((s) => s.zaehlungen));
+  expect(z.length).toBe(29);
+  expect(z.filter((x) => x.w24).length).toBe(13); // 13 Querschnitte über 24 Stunden
+  expect(z.filter((x) => x.fenster === "6–10, 15–19").length).toBe(16);
+});
+
 test("Stelle aus Olpe: Radarmessung je Fahrzeug, Lizenz je Datensatz", async ({ page }) => {
   await oeffne(page, "#t=kfz.menge&a=w24");
   await klickeStelle(page, (x) => x.quelle === "olpe" && x.name === "Zum Honigsack 35");

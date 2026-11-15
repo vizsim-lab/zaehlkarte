@@ -77,7 +77,7 @@ FragDenStaat.
 | Karben | HE | vorhanden, aber ohne Lizenz |  | Anfrage nach den Rohdaten aller Messungen seit 2018 in derselben Form, mit Standort und Zeitraum je Messung und einer Lizenz |
 | Karlsruhe | BW | auf Anfrage herausgegeben | in der Karte | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015, als Excel wie 2023 |
 | Kassel | HE | vorhanden, aber ohne Lizenz | vorhanden, Werte nicht offen | Anfrage nach allen Knotenstrom- und Seitenradarzählungen seit 2015 in derselben Form (Excel) samt Lizenz |
-| Kevelaer | NW | vorhanden, aber ohne Lizenz |  | Bitte an die Stadt, die Zählung unter eine offene Lizenz zu stellen (etwa Datenlizenz Deutschland – Zero), am besten mit der Tabelle des Büros – dann kommt sie in die Karte |
+| Kevelaer | NW | vorhanden, aber ohne Lizenz |  | Bitte an die Stadt, die Zählung unter eine offene Lizenz zu stellen (etwa Datenlizenz Deutschland – Zero), am besten mit der Tabelle des Büros |
 | Kiel | SH | auf Anfrage herausgegeben | vorhanden, Werte nicht offen | Anfrage nach allen Knotenpunkt- und Querschnittszählungen seit 2015 mit den gezählten Werten je Intervall (nicht der Hochrechnung), maschinenlesbar |
 | Kirchheim unter Teck | BW | – | in der Karte |  |
 | Koblenz | RP | – | vorhanden, Werte nicht offen |  |
@@ -1796,9 +1796,9 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Kevelaer (NW) – vorhanden, aber ohne Lizenz
 
-**Lage:** Für die Verkehrsuntersuchung im Kernort hat ein Planungsbüro im September 2019 an 16 Knotenpunkten (6–10 und 15–19 Uhr) und 13 Querschnitten (24 Stunden, per Video) gezählt. Die „Ergebnisse der Verkehrszählungen“ (74 Seiten) stehen auf kevelaer.de: je Knotenpunkt und Viertelstunde die Ströme nach Pkw, Krad, Lieferwagen und Lkw, je Querschnitt Stundenwerte, dazu DTV und Spitzenstunden. Das ist eine Zählung, wie sie die Karte zeigt (ähnlich der aus Xanten); eine Lizenz nennt die Stadt aber nicht, darum ist sie noch nicht in der Karte.
+**Lage:** Für die Verkehrsuntersuchung im Kernort hat ein Planungsbüro im September 2019 an 16 Knotenpunkten (6–10 und 15–19 Uhr) und 13 Querschnitten (24 Stunden, per Video) gezählt. Die „Ergebnisse der Verkehrszählungen“ (74 Seiten) stehen auf kevelaer.de: je Knotenpunkt und Viertelstunde die Ströme nach Pkw, Krad, Lieferwagen und Lkw, je Querschnitt Stundenwerte, dazu DTV und Spitzenstunden. Eine Lizenz nennt die Stadt nicht; die Zählwerte sind daraus in der Karte (Kfz und Lkw je Stunde), die Seiten, die im PDF nur Bilder sind, abgeschrieben und wie alle anderen gegen die Summen des Berichts geprüft.
 
-**Empfehlung:** Bitte an die Stadt, die Zählung unter eine offene Lizenz zu stellen (etwa Datenlizenz Deutschland – Zero), am besten mit der Tabelle des Büros – dann kommt sie in die Karte. Dazu die Frage nach weiteren Zählungen seit 2015. Grundlage: IFG NRW.
+**Empfehlung:** Bitte an die Stadt, die Zählung unter eine offene Lizenz zu stellen (etwa Datenlizenz Deutschland – Zero), am besten mit der Tabelle des Büros. Dazu die Frage nach weiteren Zählungen seit 2015. Grundlage: IFG NRW.
 
 **Weg:** FragDenStaat, IFG NRW
 
@@ -1822,7 +1822,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Ergebnisse der Verkehrszählungen 2019 (PDF)](https://www.kevelaer.de/dokumente/leben-in-kevelaer/mobilitaet/ergebnisse-der-verkehrszaehlungen-2019.pdf?cid=7j)
+**Belege:** [Verkehrsuntersuchung 2019–2024 (kevelaer.de)](https://www.kevelaer.de/kevelaer-de/startseite/leben-in-kevelaer/mobilitaet/verkehrsuntersuchung-2019-2024) · [Ergebnisse der Verkehrszählungen 2019 (PDF)](https://www.kevelaer.de/dokumente/leben-in-kevelaer/mobilitaet/ergebnisse-der-verkehrszaehlungen-2019.pdf?cid=7j)
 
 
 ## Kiel (SH) – auf Anfrage herausgegeben
