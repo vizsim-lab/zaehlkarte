@@ -317,7 +317,7 @@ orte:
   "124": {lon: 11.076292, lat: 49.450022, genauigkeit: hausnummer}
   "125": {lon: 11.054402, lat: 49.465244, genauigkeit: strasse, hinweise: *strasse}
   "126": {lon: 11.034002, lat: 49.420923, genauigkeit: plan, hinweise: *plan}
-  "127": {lon: 11.105773, lat: 49.460649, genauigkeit: kreuzung}
+  "127": {lon: 11.104894, lat: 49.46032, genauigkeit: hausnummer}
   "127/1": {lon: 11.105905, lat: 49.4607, genauigkeit: kreuzung}
   "127/3": {lon: 11.105894, lat: 49.460509, genauigkeit: kreuzung}
   "128": {lon: 11.116116, lat: 49.45855, genauigkeit: bruecke}
@@ -366,7 +366,9 @@ orte:
   "180/8": {lon: 11.045211, lat: 49.38785, genauigkeit: kreuzung_ohne_richtung, hinweise: *kreuzung}
   "182": {lon: 11.010611, lat: 49.447404, genauigkeit: hausnummer}
   "183": {lon: 11.066979, lat: 49.375964, genauigkeit: strasse, hinweise: *strasse}
-  "186": {lon: 11.060601, lat: 49.480036, genauigkeit: kreuzung}
+  "186":
+    - {wenn: "westl. Erlanger Str.", lon: 11.060601, lat: 49.480036, genauigkeit: kreuzung}
+    - {lon: 11.053967, lat: 49.478146, genauigkeit: hausnummer}
   "187": {lon: 11.079779, lat: 49.456148, genauigkeit: kreuzung}
   "187/4": {lon: 11.079167, lat: 49.45583, genauigkeit: kreuzung}
   "187/5": {lon: 11.080517, lat: 49.455832, genauigkeit: kreuzung}
