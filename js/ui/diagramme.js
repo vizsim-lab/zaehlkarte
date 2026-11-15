@@ -84,6 +84,11 @@ export function tagesgang(reihen, opt = TG) {
   return { svg, max, x, y };
 }
 
+/** Ungefähre Breite einer Achsenbeschriftung in Pixeln (.tg-tick: 9,5 px, Ziffern gleich breit). */
+export function textBreite(text) {
+  return [...String(text)].reduce((s, c) => s + (/[0-9]/.test(c) ? 5.3 : 2.8), 0);
+}
+
 // Tagtypen der Tagesreihe: Schultag kräftig, Ferien heller, Wochenende/Feiertag grau –
 // eine Farbfamilie wie die Karte, damit die Reihe nicht nach Kategorien „schreit“.
 export const TR_FARBEN = { s: "#256abf", f: "#6da7ec", h: "#9ca3af", w: "#9ca3af", u: "#9ca3af" };
@@ -97,19 +102,23 @@ export const TR_FARBEN = { s: "#256abf", f: "#6da7ec", h: "#9ca3af", w: "#9ca3af
  */
 export function tagesreihe(werte, typen, von, gewaehlt = -1, format = (v) => zahl(v),
   opt = { breite: 340, hoehe: 112, l: 42, r: 10, o: 8, u: 20 }) {
-  const { breite, hoehe, l, r, o, u } = opt;
-  const w = breite - l - r;
+  const { breite, hoehe, r, o, u } = opt;
   const h = hoehe - o - u;
   const n = werte.length;
   const mit = werte.filter((v) => v != null);
   if (!n || !mit.length) return { svg: "", x: () => 0, index: () => -1 };
   const { max, schritt } = achse(Math.max(...mit));
+  const ticks = [];
+  for (let v = 0; v <= max + 1e-9; v += schritt * 2) ticks.push({ v, text: format(v) });
+  // Rand links nach der längsten Beschriftung (Ausreißer einer Quelle: „10.000.000“)
+  const l = Math.max(opt.l, Math.ceil(8 + Math.max(...ticks.map((tk) => textBreite(tk.text)))));
+  const w = breite - l - r;
   const x = (i) => l + ((i + 0.5) / n) * w;
   const y = (v) => o + h - (v / max) * h;
   const teile = [];
-  for (let v = 0; v <= max + 1e-9; v += schritt * 2) {
+  for (const { v, text } of ticks) {
     teile.push(`<line class="tg-raster" x1="${l}" x2="${l + w}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}"/>`);
-    teile.push(`<text class="tg-tick" x="${l - 6}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">${esc(format(v))}</text>`);
+    teile.push(`<text class="tg-tick" x="${l - 6}" y="${(y(v) + 3.5).toFixed(1)}" text-anchor="end">${esc(text)}</text>`);
   }
   // Jahresanfänge als Achse; Beschriftung höchstens jedes zweite Jahr, wenn es eng wird
   const jahr0 = Number(von.slice(0, 4));
