@@ -3411,9 +3411,9 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Würzburg (BY) – Dauerzählstellen in der Karte
 
-**Lage:** sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 und die Passantenzählung an drei Standorten der Innenstadt (Laserscanner von hystreet.com, Stundenwerte Januar 2024 bis Mai 2026), beide dl-de/by-2-0 – in der Karte als Dauerzählstellen. Ältere Stundenwerte der Passantenzählung (Schönbornstraße seit April 2019, Kaiser- und Spiegelstraße seit Oktober 2022) stehen in eigenen Datensätzen je Standort, noch nicht in der Karte
+**Lage:** sechs Rad-Zählstellen der Stadt (Eco-Counter) seit 2015 und die Passantenzählung an drei Standorten der Innenstadt (Laserscanner von hystreet.com, Stundenwerte Januar 2024 bis Mai 2026, davor Tageswerte seit 2020), beide dl-de/by-2-0 – in der Karte als Dauerzählstellen. Stundenwerte vor 2024 gibt es nicht offen: Die Datensätze je Standort zeigen nur die letzten 24 Stunden
 
-**Belege:** [Fahrradzählung Würzburg](https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/) · [Passantenzählung – Stundendaten](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/) · [Mobilithek: Passantenzählung Würzburg (Stundendaten)](https://mobilithek.info/offers/-8264466313321172654)
+**Belege:** [Fahrradzählung Würzburg](https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/) · [Passantenzählung – Stundendaten](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/) · [Passantenzählung – Tagesdaten](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_tagesdaten/) · [Mobilithek: Passantenzählung Würzburg (Stundendaten)](https://mobilithek.info/offers/-8264466313321172654)
 
 
 ## Zweibrücken (RP) – erhoben – Anfrage aussichtsreich

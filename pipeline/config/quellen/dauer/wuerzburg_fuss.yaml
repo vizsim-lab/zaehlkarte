@@ -1,8 +1,10 @@
 # Fußverkehr: Passantenzählung der Stadt Würzburg (Laserscanner von hystreet.com in der
 # Innenstadt), Stundendaten im Open-Data-Portal der Stadt (Opendatasoft; Mobilithek-Angebot
 # -8264466313321172654, dl-de/by-2-0). Der Abruf braucht die robots-Ausnahme des Portals
-# (Beschluss der Projektleitung, 14.11.2026; config/robots.yaml). Ältere Stundenwerte stehen in
-# eigenen Datensätzen je Standort (AGENTS.md, „Würzburg“) – noch nicht übernommen.
+# (Beschluss der Projektleitung, 14.11.2026; config/robots.yaml). Davor die Tagesdaten seit 2020
+# (Datensatz `passantenzaehlung_tagesdaten`, Ortstage) als Tageswerte der Quelle. Die Datensätze je
+# Standort (`passantenzaehlung_schoenbornstrasse` usw.) halten nur die letzten 24 Stunden vor
+# (AGENTS.md, „Würzburg“).
 nr: 23
 status: live
 adapter: ods_stunden
@@ -11,7 +13,7 @@ land: BY
 traeger: Stadt Würzburg
 art: >-
   Passantenzählung in der Innenstadt (Laserscanner): Personen je Stunde und Standort, beide
-  Richtungen zusammen; Januar 2024 bis Mai 2026
+  Richtungen zusammen; Januar 2024 bis Mai 2026, davor Tageswerte der Quelle seit 2020
 weg: offen im Open-Data-Portal der Stadt (Opendatasoft)
 portal: https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/
 basis: https://opendata.wuerzburg.de
@@ -20,13 +22,17 @@ gruppe: fuss
 zeit: timestamp
 werte: [pedestrians_count]  # alle Passanten (beide Richtungen, Erwachsene und Kinder)
 stelle: location_id
+tage:  # Tageswerte der Quelle je Ortstag – nur vor der ersten gezählten Stunde einer Stelle
+  datensatz: passantenzaehlung_tagesdaten
+  zeit: timestamp  # Datum
+  werte: [pedestrians_count]
 stellen:  # Lage: Mittelpunkt der Zählfläche laut Datensatz (`geo_point_2d`)
   "135": {kennung: "135", name: Schönbornstraße, lon: 9.931060, lat: 49.795490}
   "470": {kennung: "470", name: Spiegelstraße, lon: 9.934114, lat: 49.795127}
   "476": {kennung: "476", name: Kaiserstraße, lon: 9.933888, lat: 49.798499}
 titel: >-
-  Passantenzählung – Stundendaten, Stadt Würzburg (verändert: Stundenwerte zu Tagessummen
-  zusammengefasst)
+  Passantenzählung – Stundendaten und Tagesdaten, Stadt Würzburg (verändert: Stundenwerte zu
+  Tagessummen zusammengefasst)
 herausgeber: Stadt Würzburg
 quellenvermerk: Stadt Würzburg; hystreet.com GmbH
 lizenz: dl-de/by-2-0
@@ -36,7 +42,15 @@ hinweise:
     Gemessen von hystreet.com (Laserscanner); die Stadt veröffentlicht die Werte unter
     dl-de/by-2-0 und nennt hystreet.com GmbH als Quelle.
   - >-
-    Der Datensatz endet am 17.05.2026; seither ist er nicht fortgeschrieben (Stand 14.11.2026).
+    Der Datensatz endet am 17.05.2026; seither ist er nicht fortgeschrieben (Stand 15.11.2026).
+    Gezählt wird weiter – die Stadt zeigt je Standort nur die letzten 24 Stunden.
+  - >-
+    Vor der ersten gezählten Stunde (bis 31.12.2023) stehen die Tageswerte der Quelle (Datensatz
+    „Tagesdaten“, je Ortstag; Schönbornstraße seit 01.01.2020, Spiegel- und Kaiserstraße seit
+    September 2022). Ob an einem solchen Tag jede Stunde gezählt ist, lässt sich nicht prüfen.
+    Die Quelle führt die Tagesdaten durchweg als geprüft, die Stunden zum großen Teil als
+    ungeprüft: Wo es beides gibt (2024–2026), ist der Tageswert an 64 % der vollständig gezählten
+    Tage gleich der Summe der Stunden, an 76 % höchstens 1 % davon entfernt.
   - >-
     Die Quelle kennzeichnet die Stunden von 0 bis 20 Uhr fast durchweg als „unverifiziert“, die
     Abendstunden fast nie. Die Zählkarte zählt beide – ungeprüfte Rohwerte wie bei anderen

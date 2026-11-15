@@ -579,8 +579,9 @@ robots.txt für alle Robots sperrt. Seitdem:
   Spalte `<gruppe>_tageswert_quelle` neben `<gruppe>_tagessumme`. Nie aus Wochen-, Monats- oder
   Jahreswerten. In der Karte: Augsburgs Radzählstationen (nur Tageswerte), Hamburg Kfz und Rad
   (Layer „1-Tag“ seit 2020 vor den Stunden des Gedächtnisses, unten), Leipzig (zwei Jahre,
-  UTC-Tage; die Stelle Jahnallee hat nur sie). Kandidaten: Würzburgs Passanten-Tagesdaten seit
-  2020, Planegg (Excel je Jahr, ohne Lizenz). Weichen die Tageswerte einer Quelle von der Summe
+  UTC-Tage; die Stelle Jahnallee hat nur sie), Würzburgs Passanten (Tagesdaten seit 2020 vor den
+  Stunden ab 2024; `tage` im Adapter `ods_stunden`). Kandidat: Planegg (Excel je Jahr, ohne
+  Lizenz). Weichen die Tageswerte einer Quelle von der Summe
   ihrer Stunden ab (Leipzig, Hamburg), steht das mit Zahlen als Hinweis an der Quelle – geprüft
   dort, wo es beides gibt (Tageswerte aus dem Werkzeug-Lauf gegen die Stunden des Gedächtnisses).
   **Den Tag der Quelle prüfen:** Ortstag (0–24 Uhr) oder UTC-Tag? Hamburg: Ortstag (phenomenonTime),
@@ -1058,11 +1059,20 @@ robots.txt für alle Robots sperrt. Seitdem:
       Würzburg Rad); Ausfälle stehen teils als 0 (Schönbornstraße 15.05.2026, 12 Uhr: 0 zwischen
       3.822 und 4.790) – Hinweis an der Quelle. Die Verteilung des Kennzeichens zeigt
       `tools/quelle_pruefen.py` (Abschnitt „Kennzeichen“, Branch `werkzeug/dauer`).
-      Nicht übernommen: ältere Stundenwerte je Standort in eigenen Datensätzen
-      (`passantenzaehlung_schoenbornstrasse` seit April 2019, `passantenzaehlung_kaiserstrasse`
-      und `passantenzaehlung_spiegelstrasse` seit Oktober 2022; Felder unbekannt, Überschneidung
-      mit den Stundendaten klären), Tageswerte seit 2020 (`passantenzaehlung_tagesdaten`) und eine
-      Monatsübersicht (`passantenzaehlung_wuerzburg`).
+      **Tagesdaten** (`passantenzaehlung_tagesdaten`, seit #31 als Tageswerte der Quelle vor den
+      Stunden): 4.912 Zeilen, Schönbornstraße 01.01.2020–17.05.2026, Spiegelstraße ab 07.09.2022,
+      Kaiserstraße ab 29.09.2022, je 31 Tage Lücke, keine Doppelten; `timestamp` ein Datum, der
+      Tag ist der **Ortstag** (gleich der Summe der Stunden 0–24 Uhr an 1.137 Tagen, des UTC-Tags an
+      3); `unverified` durchweg 0 – die Tagesdaten sind geprüft, die Stunden großenteils nicht: an
+      64 % der vollständig gezählten Tage 2024–2026 gleich der Summe der Stunden, 76 % innerhalb
+      ±1 %, 89 % ±5 % (Ausreißer an Tagen mit Ausfall in den Stunden, etwa 0 am Mittag). In der
+      Karte 2.401 Tageswerte (135: 1.461 aus 2020–2023, 470: 481, 476: 459). Die Datensätze je
+      Standort (`passantenzaehlung_schoenbornstrasse`, `…_kaiserstrasse`, `…_spiegelstrasse`)
+      halten nur die **letzten 24 Stunden** vor (Felder `timestamp`, `pedestrians_count`, Wetter;
+      die Stunden des laufenden Tags nach der aktuellen stehen als 0 da) – mit dem wöchentlichen
+      Lauf nicht zu sammeln. Monatsübersicht `passantenzaehlung_wuerzburg` seit April 2019 (nur
+      Monatssummen). Erkundet mit `tools/ods_erkunden.py` (`werkzeug/dauer`,
+      `ergebnis/ods_wuerzburg_fuss/`, Abrufe der App mit der robots-Ausnahme der Quelle).
     - Weitere Kandidaten: Freiburg (FR.ITZ, Rad und Fuß getrennt), die Personen-Kanäle im Bündel
       von MobiData BW (Ludwigsburg, Reutlingen, Böblingen).
   - **Nicht aufgenommen (zweite Runde):** Oldenburg (Tag,
