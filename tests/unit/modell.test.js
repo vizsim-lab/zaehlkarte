@@ -20,12 +20,12 @@ const INDEX = {
     ],
   },
   zaehlungen: {
-    felder: ["stelle", "datum", "tag", "fenster", "g", "w", "w24", "sp", "l"],
+    felder: ["stelle", "datum", "tag", "fenster", "g", "w", "w16", "w24", "sp", "l"],
     werte: [
-      [0, "2010-05-05", "s", "7–19", 1 | 4 | 8 | 16, [20000, null, 800, 900, 120], null, [2500, null, 90, 100, 30], 1],
-      [0, "2020-05-05", "s", "15–19", 1 | 4, null, null, [2600, null, 120, null, null], 0],
-      [1, "2024-07-11", "f", "0–24", 1 | 2 | 4 | 8, [12000, 1500, 300, 200, null], [16000, 1900, 400, 250, null], [1600, 200, 40, 30, null], null],
-      [2, "1995-03-01", null, "7–19", 1, [3000, null, null, null, null], null, [400, null, null, null, null], 1],
+      [0, "2010-05-05", "s", "7–19", 1 | 4 | 8 | 16, [20000, null, 800, 900, 120], null, null, [2500, null, 90, 100, 30], 1],
+      [0, "2020-05-05", "s", "15–19", 1 | 4, null, null, null, [2600, null, 120, null, null], 0],
+      [1, "2024-07-11", "f", "0–24", 1 | 2 | 4 | 8, [12000, 1500, 300, 200, null], [15000, 1800, 380, 240, null], [16000, 1900, 400, 250, null], [1600, 200, 40, 30, null], null],
+      [2, "1995-03-01", null, "7–19", 1, [3000, null, null, null, null], null, null, [400, null, null, null, null], 1],
     ],
   },
 };
@@ -52,6 +52,8 @@ test("Stufen: Grenze gehört zur oberen Stufe", () => {
 test("Kennwerte je Verkehrsart: Menge, Schwerverkehrs- und Radanteil", () => {
   const z = daten.zaehlungen[2];
   assert.equal(kennwert(z, "kfz", "menge", "w24"), 16000);
+  assert.equal(kennwert(z, "kfz", "menge", "w16"), 15000);
+  assert.equal(kennwert(daten.zaehlungen[0], "kfz", "menge", "w16"), null); // 7–19 Uhr: keine Summe 6–22
   assert.equal(kennwert(z, "sv", "menge", "w"), 1500);
   assert.equal(kennwert(z, "sv", "anteil", "w"), 1500 / 12000);
   assert.equal(kennwert(z, "rad", "anteil", "w"), 300 / 12300);
@@ -106,6 +108,7 @@ test("Zähler und CSV", () => {
   const zeilen = text.trim().split("\n");
   assert.equal(zeilen.length, 5);
   assert.ok(text.startsWith("\ufeffquelle;stelle;name"));
+  assert.ok(zeilen[0].endsWith(";kfz_6_22;sv_6_22;rad_6_22;fuss_6_22;kind_6_22;lizenz"));
   assert.ok(!zeilen[0].includes("schulweg"));
   // Quelle ohne Lizenz (CLAUDE.md): ihre Zählungen bleiben weg, die anderen tragen ihre Lizenz
   const ohne = csv(daten, z, (quelle) => (quelle === "ravensburg" ? null : "dl-de/by-2-0")).trim().split("\n");

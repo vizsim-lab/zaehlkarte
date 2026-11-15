@@ -171,6 +171,8 @@ export function erstelleDetail({ manifest, daten, gibZustand, kommuneVon, beiKom
       ? `<div class="tg-legende">${reihen.map((r) => `<span><i style="background:${r.farbe}"></i>${esc(r.name)}</span>`).join("")}</div>`
       : "";
 
+    // Spalte 6–22 Uhr nur, wo die Zählung dort einen Wert hat (Nürnberg, ganztägige Zählungen)
+    const mit16 = GRUPPEN.some((g) => wert(x, g, "w16") != null);
     const kennzeilen = GRUPPEN.filter((g) => hat(x, g)).map((g) => {
       const st = d.stunden?.[g] ? proStunde(d.h0, d.stunden[g]) : null;
       let spitze = "–";
@@ -185,7 +187,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, kommuneVon, beiKom
         if (s) spitze = `${zahl(s.werte[g])} <span class="pop-unit">${esc(uhr(`${zeit(s.von)}–${zeit(s.bis)}`))}</span>`;
       }
       const f = (v) => (v == null ? "–" : zahl(v));
-      return `<tr><td>${esc(GRUPPEN_NAMEN[g])}</td><td>${f(wert(x, g, "w"))}</td><td>${f(wert(x, g, "w24"))}</td><td>${spitze}</td></tr>`;
+      return `<tr><td>${esc(GRUPPEN_NAMEN[g])}</td><td>${f(wert(x, g, "w"))}</td>${mit16 ? `<td>${f(wert(x, g, "w16"))}</td>` : ""}<td>${f(wert(x, g, "w24"))}</td><td>${spitze}</td></tr>`;
     });
 
     const zpGruppen = GRUPPEN.filter((g) => spitzen.some((p) => p.werte?.[g] != null) || d.fenstersummen?.[g] != null);
@@ -205,7 +207,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, kommuneVon, beiKom
     const hinweise = (d.hinweise ?? []).map((h) => `<li>${esc(h)}</li>`).join("");
     const tagText = [TAGE[x.tag ?? "u"], d.tagname ? name(d.tagname) : null].filter(Boolean).join(": ");
     // ohne Stundenwerte: Tagessummen (Tabelle), Zählplan mit Spitzenstunden (Potsdam) oder nur die
-    // Summe über das Zählfenster (Neubulach)
+    // Summe über das Zählfenster (Neubulach, Nürnberg)
     const ohneStunden = d.summen ? "detail.nur_summen"
       : spitzen.length ? "detail.nur_zaehlplan"
         : zpZeilen.length ? "detail.nur_fenstersumme" : "detail.keine_stunden";
@@ -216,7 +218,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, kommuneVon, beiKom
       <div class="pop-meta">${esc(t("detail.je_stunde", { fenster: uhr(x.fenster) }))}</div>`
       : `<div class="pop-meta">${esc(t(ohneStunden))}</div>`}
       <table class="pop-table detail-kennwerte">
-        <thead><tr><td></td><td>${esc(t("art.w"))}</td><td>${esc(t("art.w24_kurz"))}</td><td>${esc(t("art.sp"))}</td></tr></thead>
+        <thead><tr><td></td><td>${esc(t("art.w"))}</td>${mit16 ? `<td>${esc(t("art.w16"))}</td>` : ""}<td>${esc(t("art.w24_kurz"))}</td><td>${esc(t("art.sp"))}</td></tr></thead>
         <tbody>${kennzeilen.join("")}</tbody>
       </table>
       ${zaehlplan}

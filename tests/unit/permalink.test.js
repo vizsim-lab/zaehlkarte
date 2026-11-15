@@ -87,3 +87,11 @@ test("k: Steckbrief einer Kommune (Gemeinde- oder Kreisschlüssel); eine Stelle 
   assert.equal(dekodiere("#k=08119", std()).kommune, "08119");
   assert.equal(dekodiere("#k=0551", std()).kommune, null);
 });
+
+test("Kennzahl 6–22 Uhr (a=w16) hin und zurück", () => {
+  const z = std();
+  z.art = "w16";
+  const hash = kodiere(z, std(), null, null);
+  assert.equal(hash, "a=w16");
+  assert.equal(dekodiere(`#${hash}`, std(), QUELLEN).zustand.art, "w16");
+});

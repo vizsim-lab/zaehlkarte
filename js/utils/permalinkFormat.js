@@ -3,7 +3,7 @@
 //
 // Kürzel sind ein Vertrag mit geteilten Links: nie umdeuten, nur ergänzen.
 //   t  Verkehrsart.Darstellung  kfz.menge | sv.menge | sv.anteil | rad.menge | rad.anteil | fuss.menge
-//   a  Kennzahl-Art    w (7–19 Uhr) | w24 | sp (stärkste Stunde)
+//   a  Kennzahl-Art    w (7–19 Uhr) | w24 | sp (stärkste Stunde) | w16 (6–22 Uhr)
 //   j  Jahre           1990-2025
 //   d  Zähltage        Teilmenge von "sfhwu" (Schultag, Ferien, Feiertag, Wochenende, unbekannt)
 //   q  Quellen         bis November 2026 die gewählten Kurzzeit-Quellen – die Auswahl gibt es
@@ -23,7 +23,7 @@
 import { DAUER_THEMEN, themaVon } from "../data/dauer.js";
 import { TAGE, THEMEN } from "../data/modell.js";
 
-const ARTEN = ["w", "w24", "sp"];
+const ARTEN = ["w", "w24", "sp", "w16"];
 
 export function kodiere(zustand, standard, karte, stelle, kommune = null) {
   const p = new URLSearchParams();

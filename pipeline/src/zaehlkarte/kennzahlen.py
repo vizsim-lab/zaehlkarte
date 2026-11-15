@@ -26,6 +26,16 @@ def summe(z: Zaehlung, gruppe: str, von: int, bis: int) -> int | None:
     return sum(r[h] for h in range(von, bis))
 
 
+def summe6_22(z: Zaehlung, gruppe: str) -> int | None:
+    """Summe von 6 bis 22 Uhr (16 Stunden): aus den Stundenwerten, oder die Summe der Quelle, wenn
+    ihr Zählfenster genau 6–22 Uhr ist (Nürnberg). Nie aus anderen Fenstern hochgerechnet."""
+    if z.stunden.get(gruppe):
+        return summe(z, gruppe, 6, 22)
+    if z.fenster == [(6 * 60, 22 * 60)]:
+        return z.fenstersummen.get(gruppe)
+    return None
+
+
 def tag24(z: Zaehlung, gruppe: str) -> int | None:
     """Summe über 24 Stunden: aus den Stundenwerten oder der gelieferten Tagessumme."""
     if gruppe in z.summen:
