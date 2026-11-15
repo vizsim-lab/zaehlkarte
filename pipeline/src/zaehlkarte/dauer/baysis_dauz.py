@@ -177,6 +177,8 @@ class Abrufer:
         self.ende = uhr() + 60 * float(q.get("budget_minuten", 40))
         self.anfragen = 0
         self.ablehnungen = 0
+        self.bytes = 0  # Größe der Antworten (entpackt)
+        self.kodierung: Counter = Counter()  # Content-Encoding der Antworten (gzip oder ohne)
 
     def json(self, url: str, nutzlast: dict | None = None, timeout: float = 300):
         import requests
@@ -195,6 +197,8 @@ class Abrufer:
                                    kopf={"Content-Type": "application/json",
                                          "Accept": "application/json"}, timeout=timeout)
                 self.anfragen += 1
+                self.bytes += len(r.content)
+                self.kodierung[r.headers.get("Content-Encoding") or "ohne"] += 1
                 self.schlafe(self.pause)
                 return r.json()
             except (requests.ConnectionError, requests.Timeout) as e:
@@ -406,12 +410,14 @@ def hole(q: dict, pfade: Pfade, *, abrufer: Abrufer | None = None,
     (ordner / "abruf.json").write_text(json.dumps({
         "abgerufen": lauf, "stellen": len(stellen), **dict(sorted(n.items())),
         "anfragen": a.anfragen, "ablehnungen": a.ablehnungen,
+        "megabyte": round(a.bytes / 1e6, 1), "kodierung": dict(a.kodierung),
         "neuester_tag": stand["neuester_tag"], "offene_abschnitte": offen,
         "status": status}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     teile = ", ".join(f"{k} {v}" for k, v in sorted(n.items()))
     return [f"{q['code']}: {len(stellen)} Zählstellen; {teile or 'nichts Neues gefragt'}; "
-            f"{a.anfragen} Anfragen, {a.ablehnungen} Ablehnungen; jüngster Tag "
-            f"{stand['neuester_tag']}; offen {offen} Abschnitte älterer Monate; {status}"]
+            f"{a.anfragen} Anfragen ({a.bytes / 1e6:.0f} MB), {a.ablehnungen} Ablehnungen; "
+            f"jüngster Tag {stand['neuester_tag']}; offen {offen} Abschnitte älterer Monate; "
+            f"{status}"]
 
 
 def _zeilen_als_felder(zeilen: list[dict], bericht: Bericht) -> dict[tuple[str, int], tuple]:

@@ -111,6 +111,8 @@ def test_abrufer_wiederholt_und_bricht_ab(monkeypatch):
                       requests.ConnectionError("x"), requests.ConnectionError("x")])
 
     class Antwort:
+        content, headers = b'{"ok": true}', {"Content-Encoding": "gzip"}
+
         def json(self):
             return {"ok": True}
 
@@ -127,7 +129,7 @@ def test_abrufer_wiederholt_und_bricht_ab(monkeypatch):
     assert schlaf == [60, 7]  # erst eine Minute nach der Ablehnung, dann die Pause
     with pytest.raises(bd.Abbruch, match="3 Ablehnungen"):
         a.json(Q["api"], {"zaehlstellennummer": "9639"})
-    assert (a.anfragen, a.ablehnungen) == (1, 4)
+    assert (a.anfragen, a.ablehnungen, a.bytes, a.kodierung) == (1, 4, 12, {"gzip": 1})
     uhr = iter([0.0, 10_000.0])
     b = bd.Abrufer({**Q, "budget_minuten": 1}, schlafe=schlaf.append, uhr=lambda: next(uhr))
     with pytest.raises(bd.Abbruch, match="Zeitbudget"):
@@ -203,7 +205,8 @@ class Server:
     def __init__(self, stand: dict, abbruch_nach: int | None = None):
         self.stand, self.abbruch_nach = stand, abbruch_nach
         self.fragen: list[tuple] = []
-        self.anfragen = self.ablehnungen = 0
+        self.anfragen = self.ablehnungen = self.bytes = 0
+        self.kodierung: dict = {}
 
     def json(self, url, nutzlast=None, timeout=300):
         if self.abbruch_nach is not None and self.anfragen >= self.abbruch_nach:
