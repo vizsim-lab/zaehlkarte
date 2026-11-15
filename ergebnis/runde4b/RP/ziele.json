@@ -5,9 +5,9 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.kreis-ahrweiler.de/",
    "https://kreis-ahrweiler.de/",
    "https://www.landkreis-ahrweiler.de/",
-   "https://www.kreis-ahrweiler.de/",
    "https://www.lk-ahrweiler.de/",
    "https://www.lra-ahrweiler.de/",
    "https://www.ahrweiler.de/",
@@ -17,7 +17,7 @@
   "gemeinden": 74,
   "herkunft": {
    "https://www.landkreis-ahrweiler.de/": "geraten",
-   "https://www.kreis-ahrweiler.de/": "geraten",
+   "https://www.kreis-ahrweiler.de/": "wikipedia",
    "https://www.lk-ahrweiler.de/": "geraten",
    "https://www.lra-ahrweiler.de/": "geraten",
    "https://www.ahrweiler.de/": "geraten",
@@ -42,7 +42,7 @@
   "gemeinden": 118,
   "herkunft": {
    "https://www.landkreis-altenkirchen.de/": "geraten",
-   "https://www.kreis-altenkirchen.de/": "vorher_oder_liste",
+   "https://www.kreis-altenkirchen.de/": "wikipedia",
    "https://www.lk-altenkirchen.de/": "geraten",
    "https://www.lra-altenkirchen.de/": "geraten",
    "https://www.altenkirchen.de/": "geraten",
@@ -55,6 +55,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.kreis-badkreuznach.de/",
    "https://www.landkreis-bad-kreuznach.de/",
    "https://www.kreis-bad-kreuznach.de/",
    "https://www.lk-bad-kreuznach.de/",
@@ -72,7 +73,8 @@
    "https://www.lra-bad-kreuznach.de/": "geraten",
    "https://www.bad-kreuznach.de/": "geraten",
    "https://www.landkreisbadkreuznach.de/": "geraten",
-   "https://www.badkreuznach.de/": "geraten"
+   "https://www.badkreuznach.de/": "geraten",
+   "https://www.kreis-badkreuznach.de/": "wikipedia"
   }
  },
  {
@@ -91,7 +93,7 @@
   "vorher": "nicht_erreicht",
   "gemeinden": 96,
   "herkunft": {
-   "https://www.landkreis-birkenfeld.de/": "geraten",
+   "https://www.landkreis-birkenfeld.de/": "wikipedia",
    "https://www.kreis-birkenfeld.de/": "geraten",
    "https://www.lk-birkenfeld.de/": "geraten",
    "https://www.lra-birkenfeld.de/": "geraten",
@@ -105,11 +107,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.cochem-zell.de/",
    "https://www.landkreis-cochem-zell.de/",
    "https://www.kreis-cochem-zell.de/",
    "https://www.lk-cochem-zell.de/",
    "https://www.lra-cochem-zell.de/",
-   "https://www.cochem-zell.de/",
    "https://www.landkreiscochemzell.de/",
    "https://www.cochemzell.de/"
   ],
@@ -120,7 +122,7 @@
    "https://www.kreis-cochem-zell.de/": "geraten",
    "https://www.lk-cochem-zell.de/": "geraten",
    "https://www.lra-cochem-zell.de/": "geraten",
-   "https://www.cochem-zell.de/": "geraten",
+   "https://www.cochem-zell.de/": "wikipedia",
    "https://www.landkreiscochemzell.de/": "geraten",
    "https://www.cochemzell.de/": "geraten"
   }
@@ -131,6 +133,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.kvmyk.de/",
    "https://www.landkreis-mayen-koblenz.de/",
    "https://www.kreis-mayen-koblenz.de/",
    "https://www.lk-mayen-koblenz.de/",
@@ -148,7 +151,8 @@
    "https://www.lra-mayen-koblenz.de/": "geraten",
    "https://www.mayen-koblenz.de/": "geraten",
    "https://www.landkreismayenkoblenz.de/": "geraten",
-   "https://www.mayenkoblenz.de/": "geraten"
+   "https://www.mayenkoblenz.de/": "geraten",
+   "https://www.kvmyk.de/": "wikipedia"
   }
  },
  {
@@ -168,7 +172,7 @@
   "gemeinden": 62,
   "herkunft": {
    "https://www.landkreis-neuwied.de/": "geraten",
-   "https://www.kreis-neuwied.de/": "vorher_oder_liste",
+   "https://www.kreis-neuwied.de/": "wikipedia",
    "https://www.lk-neuwied.de/": "geraten",
    "https://www.lra-neuwied.de/": "geraten",
    "https://www.neuwied.de/": "geraten",
@@ -181,6 +185,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.kv-rhk.de/",
    "https://www.landkreis-rhein-hunsrueck.de/",
    "https://www.kreis-rhein-hunsrueck.de/",
    "https://www.lk-rhein-hunsrueck.de/",
@@ -200,7 +205,8 @@
    "https://www.rhein-hunsrueck.de/": "geraten",
    "https://www.landkreisrheinhunsrueck.de/": "geraten",
    "https://www.rhein-hunsrueck-kreis.de/": "geraten",
-   "https://www.rheinhunsrueckkreis.de/": "geraten"
+   "https://www.rheinhunsrueckkreis.de/": "geraten",
+   "https://www.kv-rhk.de/": "wikipedia"
   }
  },
  {
@@ -209,13 +215,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.rhein-lahn-kreis.de/",
    "https://www.landkreis-rhein-lahn.de/",
    "https://www.kreis-rhein-lahn.de/",
    "https://www.lk-rhein-lahn.de/",
    "https://www.lra-rhein-lahn.de/",
    "https://www.rhein-lahn.de/",
    "https://www.landkreisrheinlahn.de/",
-   "https://www.rhein-lahn-kreis.de/",
    "https://www.rheinlahnkreis.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -227,7 +233,7 @@
    "https://www.lra-rhein-lahn.de/": "geraten",
    "https://www.rhein-lahn.de/": "geraten",
    "https://www.landkreisrheinlahn.de/": "geraten",
-   "https://www.rhein-lahn-kreis.de/": "geraten",
+   "https://www.rhein-lahn-kreis.de/": "wikipedia",
    "https://www.rheinlahnkreis.de/": "geraten"
   }
  },
@@ -237,13 +243,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.westerwaldkreis.de/",
    "https://www.landkreis-westerwald.de/",
    "https://www.kreis-westerwald.de/",
    "https://www.lk-westerwald.de/",
    "https://www.lra-westerwald.de/",
    "https://www.westerwald.de/",
-   "https://www.landkreiswesterwald.de/",
-   "https://www.westerwaldkreis.de/"
+   "https://www.landkreiswesterwald.de/"
   ],
   "vorher": "nicht_erreicht",
   "gemeinden": 192,
@@ -254,7 +260,7 @@
    "https://www.lra-westerwald.de/": "geraten",
    "https://www.westerwald.de/": "geraten",
    "https://www.landkreiswesterwald.de/": "geraten",
-   "https://www.westerwaldkreis.de/": "geraten"
+   "https://www.westerwaldkreis.de/": "wikipedia"
   }
  },
  {
@@ -263,11 +269,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.bernkastel-wittlich.de/",
    "https://www.landkreis-bernkastel-wittlich.de/",
    "https://www.kreis-bernkastel-wittlich.de/",
    "https://www.lk-bernkastel-wittlich.de/",
    "https://www.lra-bernkastel-wittlich.de/",
-   "https://www.bernkastel-wittlich.de/",
    "https://www.landkreisbernkastelwittlich.de/",
    "https://www.bernkastelwittlich.de/"
   ],
@@ -278,7 +284,7 @@
    "https://www.kreis-bernkastel-wittlich.de/": "geraten",
    "https://www.lk-bernkastel-wittlich.de/": "geraten",
    "https://www.lra-bernkastel-wittlich.de/": "geraten",
-   "https://www.bernkastel-wittlich.de/": "geraten",
+   "https://www.bernkastel-wittlich.de/": "wikipedia",
    "https://www.landkreisbernkastelwittlich.de/": "geraten",
    "https://www.bernkastelwittlich.de/": "geraten"
   }
@@ -289,6 +295,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.bitburg-pruem.de/",
    "https://www.landkreis-eifelkreis-bitburg-pruem.de/",
    "https://www.kreis-eifelkreis-bitburg-pruem.de/",
    "https://www.lk-eifelkreis-bitburg-pruem.de/",
@@ -306,7 +313,8 @@
    "https://www.lra-eifelkreis-bitburg-pruem.de/": "geraten",
    "https://www.eifelkreis-bitburg-pruem.de/": "geraten",
    "https://www.landkreiseifelkreisbitburgpruem.de/": "geraten",
-   "https://www.eifelkreisbitburgpruem.de/": "geraten"
+   "https://www.eifelkreisbitburgpruem.de/": "geraten",
+   "https://www.bitburg-pruem.de/": "wikipedia"
   }
  },
  {
@@ -315,11 +323,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.vulkaneifel.de/",
    "https://www.landkreis-vulkaneifel.de/",
    "https://www.kreis-vulkaneifel.de/",
    "https://www.lk-vulkaneifel.de/",
    "https://www.lra-vulkaneifel.de/",
-   "https://www.vulkaneifel.de/",
    "https://www.landkreisvulkaneifel.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -329,7 +337,7 @@
    "https://www.kreis-vulkaneifel.de/": "geraten",
    "https://www.lk-vulkaneifel.de/": "geraten",
    "https://www.lra-vulkaneifel.de/": "geraten",
-   "https://www.vulkaneifel.de/": "geraten",
+   "https://www.vulkaneifel.de/": "wikipedia",
    "https://www.landkreisvulkaneifel.de/": "geraten"
   }
  },
@@ -339,11 +347,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.trier-saarburg.de/",
    "https://www.landkreis-trier-saarburg.de/",
    "https://www.kreis-trier-saarburg.de/",
    "https://www.lk-trier-saarburg.de/",
    "https://www.lra-trier-saarburg.de/",
-   "https://www.trier-saarburg.de/",
    "https://www.landkreistriersaarburg.de/",
    "https://www.triersaarburg.de/"
   ],
@@ -354,7 +362,7 @@
    "https://www.kreis-trier-saarburg.de/": "geraten",
    "https://www.lk-trier-saarburg.de/": "geraten",
    "https://www.lra-trier-saarburg.de/": "geraten",
-   "https://www.trier-saarburg.de/": "geraten",
+   "https://www.trier-saarburg.de/": "wikipedia",
    "https://www.landkreistriersaarburg.de/": "geraten",
    "https://www.triersaarburg.de/": "geraten"
   }
@@ -377,7 +385,7 @@
   "gemeinden": 69,
   "herkunft": {
    "https://www.landkreis-alzey-worms.de/": "geraten",
-   "https://www.kreis-alzey-worms.de/": "vorher_oder_liste",
+   "https://www.kreis-alzey-worms.de/": "wikipedia",
    "https://www.lk-alzey-worms.de/": "geraten",
    "https://www.lra-alzey-worms.de/": "geraten",
    "https://www.alzey-worms.de/": "geraten",
@@ -403,7 +411,7 @@
   "gemeinden": 48,
   "herkunft": {
    "https://www.landkreis-bad-duerkheim.de/": "geraten",
-   "https://www.kreis-bad-duerkheim.de/": "vorher_oder_liste",
+   "https://www.kreis-bad-duerkheim.de/": "wikipedia",
    "https://www.lk-bad-duerkheim.de/": "geraten",
    "https://www.lra-bad-duerkheim.de/": "geraten",
    "https://www.bad-duerkheim.de/": "geraten",
@@ -417,6 +425,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.donnersberg.de/",
    "https://www.landkreis-donnersberg.de/",
    "https://www.kreis-donnersberg.de/",
    "https://www.lk-donnersberg.de/",
@@ -434,7 +443,8 @@
    "https://www.lra-donnersberg.de/": "geraten",
    "https://www.donnersberg.de/": "geraten",
    "https://www.landkreisdonnersberg.de/": "geraten",
-   "https://www.donnersbergkreis.de/": "geraten"
+   "https://www.donnersbergkreis.de/": "geraten",
+   "http://www.donnersberg.de/": "wikipedia"
   }
  },
  {
@@ -454,7 +464,7 @@
   "gemeinden": 31,
   "herkunft": {
    "https://www.landkreis-germersheim.de/": "geraten",
-   "https://www.kreis-germersheim.de/": "vorher_oder_liste",
+   "https://www.kreis-germersheim.de/": "wikipedia",
    "https://www.lk-germersheim.de/": "geraten",
    "https://www.lra-germersheim.de/": "geraten",
    "https://www.germersheim.de/": "geraten",
@@ -467,6 +477,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.kaiserslautern-kreis.de/",
    "https://www.landkreis-kaiserslautern.de/",
    "https://www.kreis-kaiserslautern.de/",
    "https://www.lk-kaiserslautern.de/",
@@ -482,7 +493,8 @@
    "https://www.lk-kaiserslautern.de/": "geraten",
    "https://www.lra-kaiserslautern.de/": "geraten",
    "https://www.kaiserslautern.de/": "geraten",
-   "https://www.landkreiskaiserslautern.de/": "geraten"
+   "https://www.landkreiskaiserslautern.de/": "geraten",
+   "https://www.kaiserslautern-kreis.de/": "wikipedia"
   }
  },
  {
@@ -501,7 +513,7 @@
   "vorher": "erreicht",
   "gemeinden": 98,
   "herkunft": {
-   "https://www.landkreis-kusel.de/": "vorher_oder_liste",
+   "https://www.landkreis-kusel.de/": "wikipedia",
    "https://www.kreis-kusel.de/": "geraten",
    "https://www.lk-kusel.de/": "geraten",
    "https://www.lra-kusel.de/": "geraten",
@@ -515,11 +527,11 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.suedliche-weinstrasse.de/",
    "https://www.landkreis-suedliche-weinstrasse.de/",
    "https://www.kreis-suedliche-weinstrasse.de/",
    "https://www.lk-suedliche-weinstrasse.de/",
    "https://www.lra-suedliche-weinstrasse.de/",
-   "https://www.suedliche-weinstrasse.de/",
    "https://www.landkreissuedlicheweinstrasse.de/",
    "https://www.suedlicheweinstrasse.de/"
   ],
@@ -530,7 +542,7 @@
    "https://www.kreis-suedliche-weinstrasse.de/": "geraten",
    "https://www.lk-suedliche-weinstrasse.de/": "geraten",
    "https://www.lra-suedliche-weinstrasse.de/": "geraten",
-   "https://www.suedliche-weinstrasse.de/": "geraten",
+   "https://www.suedliche-weinstrasse.de/": "wikipedia",
    "https://www.landkreissuedlicheweinstrasse.de/": "geraten",
    "https://www.suedlicheweinstrasse.de/": "geraten"
   }
@@ -541,13 +553,13 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.rhein-pfalz-kreis.de/",
    "https://www.landkreis-rhein-pfalz.de/",
    "https://www.kreis-rhein-pfalz.de/",
    "https://www.lk-rhein-pfalz.de/",
    "https://www.lra-rhein-pfalz.de/",
    "https://www.rhein-pfalz.de/",
    "https://www.landkreisrheinpfalz.de/",
-   "https://www.rhein-pfalz-kreis.de/",
    "https://www.rheinpfalzkreis.de/"
   ],
   "vorher": "nicht_erreicht",
@@ -559,7 +571,7 @@
    "https://www.lra-rhein-pfalz.de/": "geraten",
    "https://www.rhein-pfalz.de/": "geraten",
    "https://www.landkreisrheinpfalz.de/": "geraten",
-   "https://www.rhein-pfalz-kreis.de/": "geraten",
+   "https://www.rhein-pfalz-kreis.de/": "wikipedia",
    "https://www.rheinpfalzkreis.de/": "geraten"
   }
  },
@@ -569,6 +581,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "http://www.mainz-bingen.de/",
    "https://www.landkreis-mainz-bingen.de/",
    "https://www.kreis-mainz-bingen.de/",
    "https://www.lk-mainz-bingen.de/",
@@ -586,7 +599,8 @@
    "https://www.lra-mainz-bingen.de/": "geraten",
    "https://www.mainz-bingen.de/": "geraten",
    "https://www.landkreismainzbingen.de/": "geraten",
-   "https://www.mainzbingen.de/": "geraten"
+   "https://www.mainzbingen.de/": "geraten",
+   "http://www.mainz-bingen.de/": "wikipedia"
   }
  },
  {
@@ -595,6 +609,7 @@
   "art": "kreis",
   "tk": "44",
   "web": [
+   "https://www.lksuedwestpfalz.de/",
    "https://www.landkreis-suedwestpfalz.de/",
    "https://www.kreis-suedwestpfalz.de/",
    "https://www.lk-suedwestpfalz.de/",
@@ -610,7 +625,8 @@
    "https://www.lk-suedwestpfalz.de/": "geraten",
    "https://www.lra-suedwestpfalz.de/": "geraten",
    "https://www.suedwestpfalz.de/": "geraten",
-   "https://www.landkreissuedwestpfalz.de/": "geraten"
+   "https://www.landkreissuedwestpfalz.de/": "geraten",
+   "https://www.lksuedwestpfalz.de/": "wikipedia"
   }
  }
 ]
