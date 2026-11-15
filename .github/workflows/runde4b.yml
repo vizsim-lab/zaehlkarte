@@ -1,0 +1,58 @@
+# Entwicklungswerkzeug, Runde 4b (15.11.2026): die Webseiten der 294 Landkreise aus der Wikipedia
+# (tools/kreise4b.py – in Runde 4 fand die Listenseite keine Artikel) und die Kreise je Land mit
+# den neuen Begriffen (tools/kreise4b_land.py, tools/runde4_lesen.py). Ergebnisse nach
+# ergebnis/runde4b/ in diesen Branch. Eigener Workflow, damit Runde 4 (Gemeinden und Verbände)
+# weiterläuft; die Pfade überschneiden sich nicht mit denen von runde4.yml.
+name: Erkundung Runde 4b (Kreise)
+on:
+  push:
+    branches: [werkzeug/runde4]
+    paths: [tools/kreise4b*, .github/workflows/runde4b.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  kreise:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - run: PYTHONUNBUFFERED=1 timeout 50m python3 tools/kreise4b.py ergebnis/runde4b > kreise4b_lauf.txt 2>&1 || true; tail -c 3000 kreise4b_lauf.txt; mkdir -p ergebnis/runde4b; mv kreise4b_lauf.txt ergebnis/runde4b/
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ergebnis
+          git commit -q -m "Runde 4b: Kreis-Webseiten $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3 4 5 6; do
+            git pull -q --rebase origin werkzeug/runde4 && git push -q origin HEAD:werkzeug/runde4 && break
+            sleep $((RANDOM % 15 + 5))
+          done
+  land:
+    needs: kreise
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 7
+      matrix:
+        land: [BW, BY, NI, NW, HE, RP, SH, SN, ST, TH, BB, MV, SL]
+    steps:
+      - uses: actions/checkout@v7
+      - run: sudo apt-get install -y -q poppler-utils > /dev/null
+      - name: Kreise prüfen und lesen
+        run: |
+          git pull -q --rebase origin werkzeug/runde4 || true
+          mkdir -p ergebnis/runde4b/${{ matrix.land }}
+          PYTHONUNBUFFERED=1 timeout 60m python3 tools/kreise4b_land.py ergebnis/runde4b/${{ matrix.land }} ${{ matrix.land }} > ergebnis/runde4b/${{ matrix.land }}/lauf.txt 2>&1 || true
+          PYTHONUNBUFFERED=1 timeout 45m python3 tools/runde4_lesen.py ergebnis/runde4b/${{ matrix.land }} 40 > ergebnis/runde4b/${{ matrix.land }}/lesen_lauf.txt 2>&1 || true
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ergebnis/runde4b/${{ matrix.land }}
+          git commit -q -m "Runde 4b: Kreise ${{ matrix.land }} $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3 4 5 6 7 8; do
+            git pull -q --rebase origin werkzeug/runde4 && git push -q origin HEAD:werkzeug/runde4 && break
+            sleep $((RANDOM % 20 + 5))
+          done
