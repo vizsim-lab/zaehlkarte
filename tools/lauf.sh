@@ -50,5 +50,9 @@ pruefe_hh() {  # pruefe_hh <branch> <code>
 #
 # Leipzig, Tageswerte „pro Tag der letzten 2 Jahre“ (15.11.2026): Format, Zeitraum, Lieferungen,
 # Jahnallee, Lizenz beider Datensätze; Rohdateien gepackt für den Vergleich mit dem Gedächtnis
+# erkundet (ergebnis/leipzig_tage): die CKAN-API sperrt robots.txt -> die Seiten der Datensätze
 mkdir -p ergebnis/leipzig_tage
-timeout 30m python3 tools/leipzig_tage.py ergebnis/leipzig_tage > ergebnis/leipzig_tage/lauf.txt 2>&1 || true
+timeout 10m python3 tools/seiten.py ergebnis/leipzig_tage \
+  https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-tag-der-letzten-2-jahre-stadt-leipzi \
+  https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei \
+  > ergebnis/leipzig_tage/seiten_lauf.txt 2>&1 || true
