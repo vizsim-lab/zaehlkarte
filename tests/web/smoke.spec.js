@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { klickeStelle, oeffne, zahl } from "./helpers.js";
+import { klappeDatenlageAuf, klickeStelle, oeffne, oeffneKommune, zahl } from "./helpers.js";
 
 test("lädt ohne Fehler und zeigt Stellen", async ({ page }) => {
   const fehler = await oeffne(page);
@@ -215,17 +215,75 @@ test("Bedienelemente unten links rücken nur neben ein Panel, das sie verdecken 
 });
 
 test("CSV-Export der Zählungen im Filter", async ({ page }) => {
-  await oeffne(page, "#t=rad.menge&q=ravensburg");
+  await oeffne(page, "#t=rad.menge&j=2024-2026");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);
   expect(download.suggestedFilename()).toMatch(/^zaehlungen_\d{4}-\d{2}-\d{2}\.csv$/);
   const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
   const zeilen = text.trim().split("\n");
   expect(zeilen[0]).toContain("quelle;stelle;name");
   expect(zeilen.length).toBeGreaterThan(50);
-  expect(zeilen.slice(1).every((z) => z.startsWith("ravensburg;"))).toBe(true);
+  const datum = zeilen[0].replace(/^\uFEFF/, "").split(";").indexOf("datum");
+  expect(zeilen.slice(1).every((z) => /^202[4-6]-/.test(z.split(";")[datum]))).toBe(true);
 });
 
-test("Datenlage: Klick auf eine Kommune zeigt Stand und Belege", async ({ page }) => {
+test("Keine Auswahl der Quellen mehr: alter Link mit q= zeigt alle Quellen", async ({ page }) => {
+  await oeffne(page, "#t=kfz.menge&q=ravensburg");
+  await expect(page.locator("#quellen-liste")).toHaveCount(0);
+  await expect(page.locator("[data-quelle]")).toHaveCount(0);
+  const quellen = await page.evaluate(() => [...new Set(window.__app.eintraege().map((e) => e.stelle.quelle))]);
+  expect(quellen.length).toBeGreaterThan(5);
+  await expect(page).not.toHaveURL(/q=/);
+});
+
+test("Steckbrief: Kurzzeitzählungen je Verkehrsart mit Jahren, Zeile stellt Verkehrsart und Zeitraum um, CSV der Kommune", async ({ page }) => {
+  const fehler = await oeffne(page, "#j=2010-2015");
+  const el = await oeffneKommune(page, "08436064"); // Ravensburg: Kurzzeitzählungen 2023–2026
+  const kurz = el.locator('[data-familie-block="k"]');
+  await expect(kurz.locator(".kz-stand")).toHaveText("in der Karte");
+  await expect(kurz.locator(".kz-zeile .kz-name")).toHaveText(["Kfz", "Schwerverkehr", "Rad", "Fuß"]);
+  await expect(kurz.locator(".kz-umfang")).toHaveText(/^\d+ Zählungen an \d+ Stellen$/);
+  await expect(kurz.locator('[data-thema="fuss"]')).toHaveAttribute("title", /^Fuß: \d+ Zählungen, 2023–2026 – in der Karte zeigen$/);
+  await expect(kurz.locator(".kz-quellen")).toHaveText("Quelle: Ravensburg");
+  // ein Kästchen je Jahr der Achse, gefüllt nur in Jahren mit Zählungen
+  const kaestchen = await kurz.locator('[data-thema="fuss"] .kz-jahr').evaluateAll((els) => els.map((x) => Boolean(x.getAttribute("style"))));
+  expect(kaestchen.slice(-4)).toEqual([true, true, true, true]);
+  // Zeile anklicken: Fuß; der Zeitraum 2010–2015 enthält keine Zählung aus Ravensburg – wieder alle Jahre
+  await kurz.locator('[data-thema="fuss"]').click();
+  await expect(page.locator('#thema-chips [data-thema="fuss"]')).toHaveClass(/is-active/);
+  await expect(page).toHaveURL(/t=fuss\.menge/);
+  await expect(page).not.toHaveURL(/j=/);
+  await expect(kurz.locator('[data-thema="fuss"]')).toHaveClass(/is-aktiv/);
+  await expect.poll(() => page.evaluate(() => window.__app.eintraege().filter((e) => e.stelle.quelle === "ravensburg").length)).toBeGreaterThan(50);
+  // CSV der Kommune: alle ihre Zählungen (alle Jahre), nur ihre Quelle
+  const [download] = await Promise.all([page.waitForEvent("download"), el.locator("[data-csv]").click()]);
+  expect(download.suggestedFilename()).toMatch(/^zaehlungen_08436064_\d{4}-\d{2}-\d{2}\.csv$/);
+  const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
+  const zeilen = text.trim().split("\n");
+  expect(zeilen.length).toBeGreaterThan(100);
+  expect(zeilen.slice(1).every((z) => z.startsWith("ravensburg;"))).toBe(true);
+  expect(fehler).toEqual([]);
+});
+
+test("Steckbrief aus der Seitenleiste einer Zählstelle", async ({ page }) => {
+  const fehler = await oeffne(page);
+  await klickeStelle(page, (x) => x.quelle === "xanten");
+  const link = page.locator("#detail [data-kommune]");
+  await expect(link).toHaveText("Xanten: was es dort gibt ›");
+  await link.click();
+  await expect(page.locator("#detail")).toBeHidden();
+  const el = page.locator("#kommune-detail");
+  await expect(el.locator(".detail-titel")).toHaveText("Xanten");
+  await expect(el.locator('[data-familie-block="k"] .kz-zeile .kz-name')).toHaveText(["Kfz", "Schwerverkehr"]);
+  await expect(el.locator('[data-familie-block="d"] .kz-stand')).toHaveText("noch nicht recherchiert");
+  await expect(page).toHaveURL(/k=05170052/);
+  // Klick in die leere Karte schließt den Steckbrief
+  await page.mouse.click(700, 880);
+  await expect(el).toBeHidden();
+  await expect(page).not.toHaveURL(/k=/);
+  expect(fehler).toEqual([]);
+});
+
+test("Klick auf eine Kommune öffnet ihren Steckbrief mit Stand und Belegen", async ({ page }) => {
   await oeffne(page);
   const p = await page.evaluate(async () => {
     const k = window.__app.karte;
@@ -234,14 +292,17 @@ test("Datenlage: Klick auf eine Kommune zeigt Stand und Belege", async ({ page }
     return k.project(f.geometry.coordinates);
   });
   await page.mouse.click(p.x, p.y);
-  const el = page.locator("#datenlage-detail");
+  const el = page.locator("#kommune-detail");
   await expect(el).toBeVisible();
-  await expect(el).toContainText("Rostock");
+  await expect(el.locator(".detail-titel")).toHaveText("Rostock");
+  await expect(el.locator('[data-familie-block="k"] .kz-stand')).toHaveText("auf Anfrage herausgegeben");
+  // Datenlage, Belege und Anfragetext stehen darunter (zugeklappt, sobald etwas in der Karte ist)
+  await klappeDatenlageAuf(el);
   await expect(el.locator('a[href$="fragdenstaat.de/anfrage/verkehrszahlung-14/"]')).toHaveCount(1);
   await expect(el.locator(".anfrage-text")).toHaveValue(/50 jüngsten Knotenpunktzählungen/);
 });
 
-test("Datenlage: Empfehlung und Anfragetext für Dresden", async ({ page }) => {
+test("Steckbrief: Empfehlung und Anfragetext für Dresden", async ({ page }) => {
   await oeffne(page);
   const p = await page.evaluate(async () => {
     const k = window.__app.karte;
@@ -250,7 +311,9 @@ test("Datenlage: Empfehlung und Anfragetext für Dresden", async ({ page }) => {
     return k.project(f.geometry.coordinates);
   });
   await page.mouse.click(p.x, p.y);
-  const el = page.locator("#datenlage-detail");
+  const el = page.locator("#kommune-detail");
+  await expect(el.locator(".detail-titel")).toHaveText("Dresden");
+  await klappeDatenlageAuf(el);
   await expect(el).toContainText("Empfehlung");
   await expect(el.locator(".anfrage-text")).toHaveValue(/AF0915\/25/);
   await expect(el.locator(".anfrage-text")).toHaveValue(/Stadt Dresden/);
@@ -272,7 +335,7 @@ test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export",
     ohne = m.quellen.flatMap((x) => x.lizenzen).filter((l) => l.ohne_lizenz).length;
     await route.fulfill({ response: antwort, json: m });
   });
-  const fehler = await oeffne(page, "#t=kfz.menge&q=ravensburg");
+  const fehler = await oeffne(page, "#t=kfz.menge");
   await klickeStelle(page, (x) => x.quelle === "ravensburg" && x.zaehlungen.some((z) => z.fenster === "0–24"));
   const detail = page.locator("#detail");
   await expect(detail.locator(".ohne-lizenz")).toHaveText("ohne Lizenz");
@@ -286,10 +349,16 @@ test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export",
   await expect(page.locator("#quellen-text .ohne-lizenz")).toHaveCount(ohne);
   await expect(page.locator("#quellen-text li", { hasText: "Ravensburg" }).locator(".ohne-lizenz")).toHaveCount(1);
   await expect(page.locator('#quellen-text a[href*="dl-de/by-2-0"]').first()).toBeAttached();
-  // CSV der Zählungen im Filter (nur Ravensburg): nur die Kopfzeile
+  // CSV der Zählungen im Filter: ohne Ravensburg, mit den übrigen Quellen
   await expect(page.locator("#export-csv")).toHaveAttribute("title", "Zählungen im Filter als CSV (nur Quellen mit Lizenz)");
   const [download] = await Promise.all([page.waitForEvent("download"), page.locator("#export-csv").click()]);
   const text = await (await download.createReadStream()).toArray().then((b) => Buffer.concat(b).toString("utf8"));
-  expect(text.replace(/^﻿/, "").trim().split("\n")).toEqual([expect.stringMatching(/^quelle;stelle;name;/)]);
+  const zeilen = text.replace(/^\ufeff/, "").trim().split("\n");
+  expect(zeilen.length).toBeGreaterThan(100);
+  expect(zeilen.some((z) => z.startsWith("ravensburg;"))).toBe(false);
+  // Steckbrief von Ravensburg: kein CSV der Kommune (ihre einzige Quelle hat keine Lizenz)
+  const el = await oeffneKommune(page, "08436064");
+  await expect(el.locator('[data-familie-block="k"] .kz-zeile')).toHaveCount(4);
+  await expect(el.locator("[data-csv]")).toHaveCount(0);
   expect(fehler).toEqual([]);
 });

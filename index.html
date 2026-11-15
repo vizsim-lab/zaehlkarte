@@ -103,8 +103,6 @@
           </div>
           <div class="legend-section-subtitle" data-i18n="filter.zaehltag">Zähltag</div>
           <div class="legend-items" id="tage-liste"></div>
-          <div class="legend-section-subtitle" data-i18n="filter.quellen">Quellen</div>
-          <div class="legend-items" id="quellen-liste"></div>
           <label class="legend-item legend-item--check">
             <span class="label-wrapper"><input type="checkbox" id="toggle-uebertragen"> <span data-i18n="filter.uebertragen">übernommene Lagen zeigen</span>
               <span class="info-icon" data-tip="Zählungen ohne eigene Koordinaten, verortet über andere Zählungen derselben Zählstellen-Kennung. Meist richtig, aber nicht geprüft." data-i18n-attr="data-tip:filter.uebertragen_tip">i</span></span>
@@ -116,9 +114,10 @@
       <div class="legend-section" data-section="datenlage">
         <div class="legend-section-title">
           <label><input type="checkbox" class="section-checkbox" id="toggle-datenlage"> <span data-i18n="datenlage.titel">Datenlage je Kommune</span></label>
-          <span class="info-icon" id="datenlage-tip" data-tip="Wo es solche Zählungen gibt: offen, auf Anfrage herausgegeben oder aussichtsreich für eine IFG-/UIG-Anfrage. Recherche Stand November 2026, unvollständig – Hinweise gern als Issue." data-i18n-attr="data-tip:datenlage.tip">i</span>
+          <span class="info-icon" id="datenlage-tip" data-tip="Wo es solche Zählungen gibt – je Kommune der beste Stand der beiden Zählarten (Kurzzeitzählungen, Dauerzählstellen): Zählungen in der Karte, offen oder auf Anfrage herausgegeben, aussichtsreich für eine IFG-/UIG-Anfrage, sonst grau. Recherche Stand November 2026, unvollständig – Hinweise gern als Issue." data-i18n-attr="data-tip:datenlage.tip">i</span>
         </div>
         <div class="legend-items" id="datenlage-legende"></div>
+        <div class="legend-hint" data-i18n="datenlage.hinweis">Klick auf eine Kommune zeigt, was es dort gibt: je Zählart und Verkehrsart mit Zeitraum.</div>
       </div>
 
       <div class="legend-section-divider"></div>
@@ -156,7 +155,7 @@
 
   <aside id="detail" class="detail-panel" hidden aria-label="Details zur Zählstelle" data-i18n-attr="aria-label:panel.detail"></aside>
   <aside id="dauer-detail" class="detail-panel" hidden aria-label="Details zur Dauerzählstelle" data-i18n-attr="aria-label:panel.dauer"></aside>
-  <aside id="datenlage-detail" class="detail-panel detail-panel--klein" hidden aria-label="Datenlage einer Kommune" data-i18n-attr="aria-label:panel.datenlage"></aside>
+  <aside id="kommune-detail" class="detail-panel kommune-panel" hidden aria-label="Steckbrief einer Kommune" data-i18n-attr="aria-label:panel.kommune"></aside>
 
   <button id="map-settings-toggle" class="map-settings-toggle" type="button" aria-expanded="false" aria-controls="map-settings-panel" aria-label="Karteneinstellungen" data-i18n-attr="aria-label:einstellungen">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>

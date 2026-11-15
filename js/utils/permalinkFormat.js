@@ -6,11 +6,13 @@
 //   a  Kennzahl-Art    w (7–19 Uhr) | w24 | sp (stärkste Stunde)
 //   j  Jahre           1990-2025
 //   d  Zähltage        Teilmenge von "sfhwu" (Schultag, Ferien, Feiertag, Wochenende, unbekannt)
-//   q  Quellen         berlin,ravensburg (fehlt = alle)
+//   q  Quellen         bis November 2026 die gewählten Kurzzeit-Quellen – die Auswahl gibt es
+//                      nicht mehr, alte Links zeigen alle Quellen (im selben Ausschnitt)
 //   u  übertragene Lagen zeigen: 0 | 1
 //   dl Ebene Datenlage: 0 | 1
 //   m  Kartenausschnitt zoom/lat/lon
 //   s  gewählte Stelle (id aus index.json bzw. dauer/index.json)
+//   k  Steckbrief einer Kommune: ihr Gemeinde- bzw. Kreisschlüssel (ags aus datenlage.json)
 //   f  Familie         k Kurzzeitzählungen (Standard) | d Dauerzählstellen
 //   z  gewählter Tag   JJJJ-MM-TT (Dauerzählstellen; fehlt = je Stelle ihr jüngster vollständig
 //                      gezählter Schultag – bis November 2026: der Standardtag der Daten, der
@@ -23,7 +25,7 @@ import { TAGE, THEMEN } from "../data/modell.js";
 
 const ARTEN = ["w", "w24", "sp"];
 
-export function kodiere(zustand, standard, karte, stelle) {
+export function kodiere(zustand, standard, karte, stelle, kommune = null) {
   const p = new URLSearchParams();
   if (zustand.familie === "d") {
     p.set("f", "d");
@@ -39,18 +41,16 @@ export function kodiere(zustand, standard, karte, stelle) {
   }
   const tage = Object.keys(TAGE).filter((t) => zustand.tage.has(t)).join("");
   if (tage !== Object.keys(TAGE).filter((t) => standard.tage.has(t)).join("")) p.set("d", tage || "-");
-  if (zustand.quellen.size !== standard.quellen.size || [...standard.quellen].some((q) => !zustand.quellen.has(q))) {
-    p.set("q", [...zustand.quellen].join(",") || "-");
-  }
   if (zustand.uebertragen !== standard.uebertragen) p.set("u", zustand.uebertragen ? "1" : "0");
   if (zustand.datenlage !== standard.datenlage) p.set("dl", zustand.datenlage ? "1" : "0");
   if (karte) p.set("m", `${karte.zoom.toFixed(2)}/${karte.lat.toFixed(5)}/${karte.lon.toFixed(5)}`);
   if (stelle) p.set("s", stelle);
+  else if (kommune) p.set("k", kommune);
   return p.toString().replaceAll("%2C", ",").replaceAll("%2F", "/").replaceAll("%3A", ":");
 }
 
-/** Hash -> { zustand (vollständig, Standard ergänzt), karte, stelle }; Ungültiges wird ignoriert. */
-export function dekodiere(hash, standard, bekannteQuellen) {
+/** Hash -> { zustand (vollständig, Standard ergänzt), karte, stelle, kommune }; Ungültiges wird ignoriert. */
+export function dekodiere(hash, standard) {
   const p = new URLSearchParams(String(hash ?? "").replace(/^#/, ""));
   const z = {
     ...standard,
@@ -77,9 +77,6 @@ export function dekodiere(hash, standard, bekannteQuellen) {
     if (von <= bis) z.jahre = [von, bis];
   }
   if (p.has("d")) z.tage = new Set([...p.get("d")].filter((t) => t in TAGE));
-  if (p.has("q")) {
-    z.quellen = new Set(p.get("q").split(",").filter((q) => bekannteQuellen.includes(q)));
-  }
   if (p.has("u")) z.uebertragen = p.get("u") !== "0";
   if (p.has("dl")) z.datenlage = p.get("dl") !== "0";
   let karte = null;
@@ -88,5 +85,6 @@ export function dekodiere(hash, standard, bekannteQuellen) {
     const [zoom, lat, lon] = m.slice(1).map(Number);
     if (zoom >= 0 && zoom <= 22 && Math.abs(lat) <= 85 && Math.abs(lon) <= 180) karte = { zoom, lat, lon };
   }
-  return { zustand: z, karte, stelle: p.get("s") || null };
+  const kommune = /^(\d{5}|\d{8})$/.test(p.get("k") ?? "") ? p.get("k") : null;
+  return { zustand: z, karte, stelle: p.get("s") || null, kommune };
 }

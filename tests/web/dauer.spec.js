@@ -6,7 +6,7 @@
 // Punkt (Kfz und Lkw, CC BY-NC). Jüngster Schultag: Berlin 30.6., Hamburg und Ettlingen 10.7.2025.
 import { readFileSync } from "node:fs";
 import { expect, test } from "@playwright/test";
-import { oeffne, zahl } from "./helpers.js";
+import { oeffne, oeffneKommune, zahl } from "./helpers.js";
 
 const FIXTURES = new URL("./fixtures/", import.meta.url);
 
@@ -437,7 +437,7 @@ test("Stellen am selben Punkt: Umschalter in der Seitenleiste, Lizenz CC BY-NC",
   expect(fehler).toEqual([]);
 });
 
-test("Datenlage: Kommunen nur mit Dauerzählstellen stehen nur bei den Dauerzählstellen", async ({ page }) => {
+test("Kommunen stehen in beiden Ansichten, gefärbt nach dem besten Stand beider Zählarten", async ({ page }) => {
   await dauer(page);
   const fehler = await oeffne(page, "#dl=1");
   const gezeigt = () => page.evaluate(async () => {
@@ -445,109 +445,126 @@ test("Datenlage: Kommunen nur mit Dauerzählstellen stehen nur bei den Dauerzäh
     await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
     return [...new Set(k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).map((f) => f.properties.ags))].sort();
   });
-  const { mitStand, nurDauer } = await page.evaluate(() => {
-    const fs = window.__app.datenlage.features.map((f) => f.properties);
-    return {
-      mitStand: fs.filter((p) => p.kurzzeit).map((p) => p.ags).sort(),
-      nurDauer: fs.filter((p) => !p.kurzzeit).map((p) => ({ ags: p.ags, land: p.land, dauer: !!p.dauer, stand_k: "stand_k" in p })),
-    };
-  });
-  expect(nurDauer.length).toBeGreaterThan(0);
-  expect(nurDauer.every((x) => x.dauer && !x.stand_k)).toBe(true);
-  // Kurzzeitzählungen: nur Kommunen mit deren Stand, die Zähler der Legende passen dazu
-  await expect.poll(gezeigt, { timeout: 20000 }).toEqual(mitStand);
-  const zaehler = async () => (await page.locator("#datenlage-legende .count-badge").allTextContents()).map(Number).reduce((a, b) => a + b, 0);
-  expect(await zaehler()).toBe(mitStand.length);
-  // Dauerzählstellen: dort stehen sie, mit ihrem Stand und ohne Anfragetext
-  await page.locator('[data-familie="d"]').click();
-  const { ags, land } = nurDauer[0];
-  // der Wechsel lädt erst die Dauerzählstellen (asynchron) – so lange warten, bis die Karte umgestellt ist
-  await expect.poll(gezeigt, { timeout: 20000 }).toContain(ags);
-  await page.evaluate((k) => window.__app.zeigeDatenlage(k), ags);
-  const el = page.locator("#datenlage-detail");
-  await expect(el.locator(".pop-eyebrow")).toHaveText(`Datenlage Dauerzählstellen · ${land}`);
-  await expect(el.locator(".anfrage-text")).toHaveCount(0);
-  // zurück zu den Kurzzeitzählungen: dort hat die Kommune keinen Eintrag – die Seitenleiste schließt
-  await page.locator('[data-familie="k"]').click();
-  await expect(el).toBeHidden();
-  expect(fehler).toEqual([]);
-});
-
-test("Datenlage: „hinzoomen“ wechselt auf die Verkehrsart, die die Kommune zählt", async ({ page }) => {
-  await dauer(page);
-  const fehler = await oeffne(page, "#f=d&t=rad.menge&dl=1");
-  await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
-  // Ettlingen zählt Kfz und Lkw, kein Rad: die Karte wechselt auf Kfz (Standard, ohne t= im Link) –
-  // welche Quellen zur Kommune gehören, sagt die Datenlage (`dauer.quellen`)
-  await page.evaluate(() => window.__app.zeigeDatenlage("08215017"));
-  await page.locator("#datenlage-detail [data-hinzoomen]").click();
-  await expect(page.locator('#thema-chips [data-thema="kfz"]')).toHaveClass(/is-active/);
-  await expect(page).not.toHaveURL(/t=rad/);
-  await expect.poll(() => page.evaluate(() => window.__app.dauerEintraege().filter((e) => e.stelle.quelle === "ettlingen").length)).toBeGreaterThan(0);
-  // Hamburg zählt beides: die gewählte Verkehrsart bleibt
-  await page.locator('#thema-chips [data-thema="rad"]').click();
-  await page.evaluate(() => window.__app.zeigeDatenlage("02000000"));
-  await page.locator("#datenlage-detail [data-hinzoomen]").click();
-  await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
-  await expect(page).toHaveURL(/t=rad\.menge/);
-  expect(fehler).toEqual([]);
-});
-
-test("Datenlage folgt der Familie: eigener Stand je Kommune für Dauerzählstellen", async ({ page }) => {
-  await dauer(page);
-  const fehler = await oeffne(page, "#f=d&dl=1");
-  await expect(page.locator("#toggle-datenlage")).toBeChecked();
+  const alle = await page.evaluate(() => window.__app.datenlage.features.map((f) => f.properties.ags).sort());
   const legende = page.locator("#datenlage-legende");
-  await expect(legende).toContainText("vorhanden, Werte nicht offen");
-  await expect(legende).not.toContainText("nur Summen, Karten, nichts offen oder abgelehnt");
-  // eine Stand-Liste für beide Familien: Köln hat bei den Dauerzählstellen nur Summen (grau),
-  // Osnabrück Werte ohne Lizenz (orange, wie „vorhanden, Werte nicht offen“)
-  await expect(legende).toContainText("nur Summen oder Mittelwerte, nichts offen oder abgelehnt");
-  await expect(legende).toContainText("vorhanden, Werte nicht offen oder ohne Lizenz");
-  expect(await page.locator("#datenlage-tip").getAttribute("data-tip")).toContain("Dauerzählstellen");
-  // die Ebene zeigt nur Kommunen mit einem Stand der Dauerzählstellen, die Zähler passen dazu
-  const n = await page.evaluate(async () => {
-    const k = window.__app.karte;
-    await new Promise((ok) => { k.once("idle", ok); k.triggerRepaint(); setTimeout(ok, 5000); });
-    const gezeigt = new Set(k.queryRenderedFeatures({ layers: ["datenlage-kreis"] }).map((f) => f.properties.name));
-    const mit = window.__app.datenlage.features.filter((f) => f.properties.dauer).map((f) => f.properties.name);
-    return { gezeigt: [...gezeigt].sort(), mit: mit.sort() };
+  const summe = async () => (await legende.locator(".count-badge").allTextContents()).map(Number).reduce((a, b) => a + b, 0);
+  // Kurzzeitzählungen: alle Kommunen, auch die nur mit Dauerzählstellen (Gießen)
+  await expect.poll(gezeigt, { timeout: 20000 }).toEqual(alle);
+  expect(alle).toContain("06531005");
+  expect(await summe()).toBe(alle.length);
+  await expect(legende).toContainText("Zählungen in der Karte");
+  expect(await page.locator("#datenlage-tip").getAttribute("data-tip")).toContain("beiden Zählarten");
+  await expect(page.locator("#legend")).toContainText("Klick auf eine Kommune zeigt, was es dort gibt");
+  // Klasse je Kommune über beide Zählarten: Hamburg und Rostock haben Dauerzählstellen in der Karte
+  const klassen = await page.evaluate(() => Object.fromEntries(window.__app.datenlage.features.map((f) => [f.properties.name, f.properties.klasse])));
+  expect(klassen).toMatchObject({
+    Hamburg: "in_karte", Rostock: "in_karte", Ettlingen: "in_karte", Xanten: "in_karte",
+    Kassel: "kandidat", "Gießen": "kandidat", Dresden: "kandidat", "Köln": "sonst",
   });
-  expect(n.gezeigt).toEqual(n.mit);
-  expect(n.mit).toContain("Ettlingen");
-  const summe = (await legende.locator(".count-badge").allTextContents()).map(Number).reduce((a, b) => a + b, 0);
-  expect(summe).toBe(n.mit.length);
-
-  // Ettlingen: in der Karte (Kurzzeitzählungen: nichts offen)
-  await page.evaluate(() => window.__app.zeigeDatenlage("08215017"));
-  const el = page.locator("#datenlage-detail");
-  await expect(el.locator(".pop-eyebrow")).toHaveText("Datenlage Dauerzählstellen · BW");
-  await expect(el.locator(".pop-meta").first()).toHaveText("in der Karte");
-  await expect(el).toContainText("automatische Zählstellen an sechs Straßen");
-  await expect(el.locator("[data-hinzoomen]")).toHaveText("Dauerzählstellen in der Karte – hinzoomen");
-  await expect(el.locator('a[href*="opendata.readi.de"]')).toHaveCount(1);
-  await expect(el.locator(".anfrage-text")).toHaveCount(0);
-  // Familie wechseln: dieselbe Kommune mit dem Stand der Kurzzeitzählungen
-  await page.locator('[data-familie="k"]').click();
-  await expect(el).toBeVisible();
-  await expect(el.locator(".pop-eyebrow")).toHaveText("Datenlage · BW");
-  await expect(el.locator(".pop-meta").first()).toHaveText("nichts offen");
-  await expect(page.locator("#datenlage-legende")).toContainText("nur Summen, Karten, nichts offen oder abgelehnt");
-
-  // Kassel bei den Dauerzählstellen: Werte nicht offen – Kontakt und Belege, aber kein Anfragetext
+  const blau = await legende.locator(".legend-item").first().locator(".count-badge").textContent();
+  expect(Number(blau)).toBe(Object.values(klassen).filter((k) => k === "in_karte").length);
+  // Dauerzählstellen: dieselben Kommunen, dieselbe Legende
   await page.locator('[data-familie="d"]').click();
-  await page.evaluate(() => window.__app.zeigeDatenlage("06611000")); // Kassel
-  await expect(el.locator(".pop-meta").first()).toHaveText("vorhanden, Werte nicht offen");
-  await expect(el).toContainText("Induktionsschleifen");
-  await expect(el.locator('a[href^="https://fragdenstaat.de/"]').first()).toBeVisible();
-  await expect(el.locator(".anfrage-text")).toHaveCount(0);
-  // eine Kommune ohne Stand der Dauerzählstellen schließt sich beim Wechsel zu ihnen
-  // (Xanten: nur Kurzzeitzählungen; Rostock hat seit den Radmonitoren einen Stand)
-  await page.locator('[data-familie="k"]').click();
-  await page.evaluate(() => window.__app.zeigeDatenlage("05170052")); // Xanten
-  await page.locator('[data-familie="d"]').click();
-  await expect(el).toBeHidden();
+  await expect(page.locator('[data-familie="d"]')).toHaveClass(/is-active/);
+  await expect.poll(gezeigt, { timeout: 20000 }).toEqual(alle);
+  expect(await summe()).toBe(alle.length);
   expect(fehler).toEqual([]);
+});
+
+test("Steckbrief: beide Zählarten, je Verkehrsart Zeitstrahl und Umfang; eine Zeile zeigt sie in der Karte", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page);
+  const el = await oeffneKommune(page, "02000000"); // Hamburg
+  await expect(el).toBeVisible();
+  await expect(el.locator(".detail-titel")).toHaveText("Hamburg");
+  await expect(el.locator(".pop-eyebrow")).toHaveText("Kommune · HH");
+  await expect(page).toHaveURL(/k=02000000/);
+  // Kurzzeitzählungen: nur Summen offen – keine Zeile; Dauerzählstellen: Kfz, Lkw/Schwerverkehr, Rad
+  const kurz = el.locator('[data-familie-block="k"]');
+  await expect(kurz.locator(".kz-stand")).toHaveText("nur Summen oder Mittelwerte offen");
+  await expect(kurz.locator(".kz-zeile")).toHaveCount(0);
+  const lang = el.locator('[data-familie-block="d"]');
+  await expect(lang.locator(".kz-stand")).toHaveText("in der Karte");
+  await expect(lang.locator(".kz-umfang")).toHaveText("2 Stellen");
+  await expect(lang.locator(".kz-zeile .kz-name")).toHaveText(["Kfz", "Lkw/Schwerverkehr", "Rad"]);
+  await expect(lang.locator(".kz-zeile .kz-n")).toHaveText(["1", "1", "1"]);
+  await expect(lang.locator('[data-thema="rad"]')).toHaveAttribute("title", "Rad: 1 Stellen, 15.06.2025 – 10.07.2025 – in der Karte zeigen");
+  await expect(lang.locator(".kz-quellen")).toContainText("Hamburg (Kfz, Wärmebildkameras), Hamburg (Rad, Wärmebildkameras)");
+  // eine Achse für alle Zeilen, der Balken liegt darauf
+  await expect(el.locator(".kz-achse-skala span").first()).toHaveText("2024");
+  await expect(lang.locator('[data-thema="rad"] .kz-balken')).toHaveCount(1);
+  // Datenlage zugeklappt (es ist etwas in der Karte), aufgeklappt mit Kontakt und Belegen
+  const dl = el.locator(".kz-datenlage");
+  await expect(dl).not.toHaveAttribute("open");
+  await dl.locator("summary").click();
+  await expect(dl).toContainText("Kurzzeitzählungen · nur Summen oder Mittelwerte offen");
+  await expect(dl).toContainText("Dauerzählstellen · in der Karte");
+  await expect(dl.locator(".detail-abschnitt", { hasText: "Kontakt" })).toBeVisible();
+  // Zeile anklicken: Familie und Verkehrsart wechseln, der Steckbrief bleibt und markiert die Zeile
+  await lang.locator('[data-thema="rad"]').click();
+  await expect(page.locator('[data-familie="d"]').first()).toHaveClass(/is-active/);
+  await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
+  await expect(page).toHaveURL(/f=d&t=rad\.menge/);
+  await expect(page).toHaveURL(/k=02000000/);
+  await expect(lang.locator('[data-thema="rad"]')).toHaveClass(/is-aktiv/);
+  await expect(el).toBeVisible();
+  await expect.poll(() => page.evaluate(() => window.__app.dauerEintraege().filter((e) => e.stelle.quelle === "hamburg_rad").length)).toBe(1);
+  // ein gewählter Tag außerhalb des Zeitraums der Zeile gilt nicht mehr: je Stelle ihr jüngster Schultag
+  await page.evaluate(() => window.__app.tagWechseln("2025-06-03"));
+  await expect(page).toHaveURL(/z=2025-06-03/);
+  await lang.locator('[data-thema="kfz"]').click();
+  await expect(page.locator('#thema-chips [data-thema="kfz"]')).toHaveClass(/is-active/);
+  await expect(page).not.toHaveURL(/z=/);
+  await expect(lang.locator('[data-thema="kfz"]')).toHaveClass(/is-aktiv/);
+  await expect(lang.locator('[data-thema="rad"]')).not.toHaveClass(/is-aktiv/);
+  expect(fehler).toEqual([]);
+});
+
+test("Steckbrief: Kommune ohne eigene Recherche einer Zählart, nichts in der Karte – Datenlage offen", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page);
+  const el = await oeffneKommune(page, "06531005"); // Gießen: nur Dauerzählstellen bekannt, Werte nicht offen
+  await expect(el.locator(".detail-kopf .pop-meta")).toHaveText("Noch keine Zählungen in der Karte");
+  await expect(el.locator('[data-familie-block="k"] .kz-stand')).toHaveText("noch nicht recherchiert");
+  await expect(el.locator('[data-familie-block="d"] .kz-stand')).toHaveText("vorhanden, Werte nicht offen");
+  await expect(el.locator(".kz-zeile")).toHaveCount(0);
+  await expect(el.locator(".kz-achse")).toHaveCount(0);
+  await expect(el.locator(".kz-datenlage")).toHaveAttribute("open", "");
+  await expect(el.locator(".anfrage-text")).toHaveCount(0); // einen Anfragetext gibt es nur bei Kurzzeitzählungen
+  await expect(el.locator('.kz-datenlage a[href^="http"]').first()).toBeVisible();
+  // Kassel: beide Zählarten recherchiert, Kurzzeit ohne Lizenz – Anfragetext, Kontakt, Rechtslage
+  await oeffneKommune(page, "06611000");
+  await expect(el.locator(".detail-titel")).toHaveText("Kassel");
+  await expect(el.locator('[data-familie-block="k"] .kz-stand')).toHaveText("vorhanden, aber ohne Lizenz");
+  await expect(el.locator(".anfrage-text")).toBeVisible();
+  await expect(el.locator(".detail-abschnitt", { hasText: "Rechtslage im Land" })).toBeVisible();
+  await expect(el).toContainText("Induktionsschleifen");
+  expect(fehler).toEqual([]);
+});
+
+test("Steckbrief aus der Seitenleiste einer Dauerzählstelle; Permalink k= öffnet ihn", async ({ page }) => {
+  await dauer(page);
+  const fehler = await oeffne(page, "#f=d");
+  await klickeDauer(page, "ettlingen:1263-2");
+  const detail = page.locator("#dauer-detail");
+  const link = detail.locator("[data-kommune]");
+  await expect(link).toHaveText("Ettlingen: was es dort gibt ›");
+  await link.click();
+  await expect(detail).toBeHidden();
+  const el = page.locator("#kommune-detail");
+  await expect(el.locator(".detail-titel")).toHaveText("Ettlingen");
+  await expect(el.locator('[data-familie-block="d"] .kz-zeile .kz-name')).toHaveText(["Kfz", "Lkw/Schwerverkehr"]);
+  await expect(el.locator('[data-familie-block="k"] .kz-stand')).toHaveText("nichts offen");
+  // Berliner Stellen: keine Kommune der Datenlage in der Fixture – kein Link
+  await klickeDauer(page, "berlin_viz:TE001");
+  await expect(el).toBeHidden();
+  await expect(detail.locator("[data-kommune]")).toHaveCount(0);
+  // Permalink: k= öffnet den Steckbrief (eine Stelle hätte Vorrang)
+  const neu = await page.context().newPage();
+  await dauer(neu);
+  const fehler2 = await oeffne(neu, "#k=13003000");
+  await expect(neu.locator("#kommune-detail .detail-titel")).toHaveText("Rostock");
+  expect([...fehler, ...fehler2]).toEqual([]);
 });
 
 test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export", async ({ page }) => {
@@ -582,22 +599,28 @@ test("Quelle ohne Lizenz: Hinweis, „Entfernen lassen“, nicht im CSV-Export",
   expect(fehler).toEqual([]);
 });
 
-test("Datenlage: Kommune ohne Lizenz mit Werten in der Karte – hinzoomen, Kontakt bleibt", async ({ page }) => {
+test("Steckbrief: Kommune ohne Lizenz mit Werten in der Karte – Zeile, Kontakt bleibt", async ({ page }) => {
   await dauer(page);
-  const fehler = await oeffne(page, "#f=d&dl=1");
   // Osnabrück (Stand ohne_lizenz) so, als stünden seine Werte schon in der Karte (hier: Hamburg Rad)
-  await page.evaluate(() => {
-    const f = window.__app.datenlage.features.find((x) => x.properties.ags === "03404000");
-    f.properties.dauer.quellen = ["hamburg_rad"];
-    window.__app.zeigeDatenlage("03404000");
+  const fehler = await oeffne(page, "", {
+    datenlage: (dl) => {
+      for (const f of dl.features) {
+        if (f.properties.ags === "03404000") f.properties.dauer.quellen = ["hamburg_rad"];
+        if (f.properties.ags === "02000000") f.properties.dauer.quellen = ["hamburg_kfz"];
+      }
+      return dl;
+    },
   });
-  const el = page.locator("#datenlage-detail");
-  await expect(el.locator(".detail-kopf .pop-meta")).toHaveText("vorhanden, aber ohne Lizenz");
-  await expect(el.locator("[data-hinzoomen]")).toBeVisible();
+  const el = await oeffneKommune(page, "03404000");
+  const lang = el.locator('[data-familie-block="d"]');
+  await expect(lang.locator(".kz-stand")).toHaveText("vorhanden, aber ohne Lizenz");
+  await expect(lang.locator(".kz-stand")).toHaveClass(/kz-stand--karte/);
+  await expect(lang.locator(".kz-zeile .kz-name")).toHaveText(["Rad"]);
   // eine Anfrage nach einer Lizenz lohnt weiter: Kontakt und Rechtslage bleiben
+  await el.locator(".kz-datenlage summary").click();
   await expect(el.locator(".detail-abschnitt", { hasText: "Kontakt" })).toBeVisible();
   await expect(el.locator(".detail-abschnitt", { hasText: "Rechtslage im Land" })).toBeVisible();
-  await el.locator("[data-hinzoomen]").click();
+  await lang.locator(".kz-zeile").click();
   await expect(page.locator('#thema-chips [data-thema="rad"]')).toHaveClass(/is-active/);
   expect(fehler).toEqual([]);
 });

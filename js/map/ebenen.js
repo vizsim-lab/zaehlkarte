@@ -5,39 +5,28 @@
 import { Popup } from "../lib/maplibre.js";
 import { TAGE, formatiere, kennzahlText } from "../data/modell.js";
 import { gruppenName, kennzahlTextDauer, tagtyp } from "../data/dauer.js";
+import { KOMMUNE_KLASSEN, klasseVon } from "../data/kommune.js";
 import { datum, lokal, t, wochentag, zahl } from "../sprache/texte.js";
 
 const LEER = { type: "FeatureCollection", features: [] };
 export const DATENLAGE_GRAU = "#9ca3af";
-const klasse = (id, farbe, stand, texte) => ({ id, farbe, stand, get name() { return t(`${texte}.${id}`); } });
-// Eine Liste von Ständen für beide Familien (datenlage.json, pipeline/src/zaehlkarte/datenlage.py);
-// die Karte fasst sie je Familie in vier Farben zusammen – die Namen der Klassen je Familie
-const klassen = (texte) => [
-  klasse("in_karte", "#2a78d6", ["in_karte"], texte),
-  klasse("offen", "#1baf7a", ["offen", "geliefert"], texte),
-  klasse("kandidat", "#eb6834", ["kandidat", "ohne_lizenz"], texte),
-  klasse("sonst", DATENLAGE_GRAU, ["aggregiert", "nur_karte", "nichts_offen", "abgelehnt"], texte),
-];
-export const DATENLAGE_KLASSEN = klassen("datenlage.klasse");
-// Dauerzählstellen: eigener Stand je Kommune – die Ebene zeigt dann nur Kommunen mit einem solchen
-export const DATENLAGE_KLASSEN_D = klassen("datenlage.d.klasse");
-/** Klassen der Datenlage der Familie (k Kurzzeitzählungen | d Dauerzählstellen). */
-export const datenlageKlassen = (familie) => (familie === "d" ? DATENLAGE_KLASSEN_D : DATENLAGE_KLASSEN);
-/** Stand einer Kommune in der Familie (flach: `stand_k`, `stand_d`; null ohne Eintrag). */
-export const datenlageStand = (p, familie) => (familie === "d" ? p.stand_d : p.stand_k) ?? null;
-/** Block einer Kommune in der Familie (`kurzzeit` bzw. `dauer`; null ohne Eintrag). */
-export const datenlageBlock = (p, familie) => (familie === "d" ? p.dauer : p.kurzzeit) ?? null;
+// Kommunen der Datenlage: eine Farbe je Klasse über beide Zählarten (js/data/kommune.js, klasseVon)
+// – blau, sobald Zählungen einer Zählart in der Karte sind; die Zählarten im Einzelnen zeigt der
+// Steckbrief (js/ui/kommune.js). Die Namen der Stände je Zählart kommen mit datenlage.json.
+const FARBEN = { in_karte: "#2a78d6", offen: "#1baf7a", kandidat: "#eb6834", sonst: DATENLAGE_GRAU };
+export const DATENLAGE_KLASSEN = KOMMUNE_KLASSEN.map((id) => ({ id, farbe: FARBEN[id], get name() { return t(`datenlage.klasse.${id}`); } }));
 
 /** Name eines Stands in der Familie und der gewählten Sprache (datenlage.stand bzw. stand_en). */
 export const standText = (datenlage, code, familie) =>
   lokal(datenlage, "stand")?.[familie === "d" ? "dauer" : "kurzzeit"]?.[code] ?? code;
 
-// Farbe der Datenlage je Familie: der flache Stand der Familie, Farbe seiner Klasse
-const farbe = (feld, kl) => ["match", ["get", feld], ...kl.flatMap((k) => [k.stand, k.farbe]), DATENLAGE_GRAU];
-const FARBE_K = farbe("stand_k", DATENLAGE_KLASSEN);
-const FARBE_D = farbe("stand_d", DATENLAGE_KLASSEN_D);
+const FARBE = ["match", ["get", "klasse"], ...DATENLAGE_KLASSEN.flatMap((k) => [k.id, k.farbe]), DATENLAGE_GRAU];
+// Zeichenreihenfolge: Kommunen mit Zählungen in der Karte oben
+const REIHENFOLGE = ["match", ["get", "klasse"], ...KOMMUNE_KLASSEN.flatMap((k, i) => [k, KOMMUNE_KLASSEN.length - i]), 0];
 
 export function fuegeEbenenHinzu(map, datenlage) {
+  // Klasse je Kommune über beide Zählarten (Farbe, Legende) – einmal beim Start
+  for (const f of datenlage.features) f.properties.klasse = klasseVon(f.properties);
   map.addSource("stellen", { type: "geojson", data: LEER });
   map.addSource("dauer", { type: "geojson", data: LEER });
   map.addSource("auswahl", { type: "geojson", data: LEER });
@@ -97,8 +86,9 @@ export function fuegeEbenenHinzu(map, datenlage) {
     type: "circle",
     source: "datenlage",
     maxzoom: 10,
+    layout: { "circle-sort-key": REIHENFOLGE },
     paint: {
-      "circle-color": FARBE_K,
+      "circle-color": FARBE,
       "circle-radius": ["interpolate", ["linear"], ["zoom"], 4, 4.5, 9, 9],
       "circle-stroke-color": "#ffffff",
       "circle-stroke-width": 1.5,
@@ -144,15 +134,11 @@ export function setzeAuswahl(map, stelle) {
     : LEER);
 }
 
-/** Ebene Datenlage: sichtbar oder nicht; je Familie nur Kommunen mit deren Stand (Kommunen, von
- * denen nur Dauerzählstellen bekannt sind, fehlen bei den Kurzzeitzählungen). */
-export function setzeDatenlage(map, sichtbar, familie = "k") {
+/** Ebene Datenlage: sichtbar oder nicht – alle Kommunen, gleich welche Zählart gewählt ist. */
+export function setzeDatenlage(map, sichtbar) {
   for (const id of ["datenlage-kreis", "datenlage-text"]) {
-    if (!map.getLayer(id)) continue;
-    map.setLayoutProperty(id, "visibility", sichtbar ? "visible" : "none");
-    map.setFilter(id, ["has", familie === "d" ? "stand_d" : "stand_k"]);
+    if (map.getLayer(id)) map.setLayoutProperty(id, "visibility", sichtbar ? "visible" : "none");
   }
-  if (map.getLayer("datenlage-kreis")) map.setPaintProperty("datenlage-kreis", "circle-color", familie === "d" ? FARBE_D : FARBE_K);
 }
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -160,6 +146,7 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 /** EIN Hover-Popup für Zählstellen, Dauerzählstellen und Datenlage (wie in der Unfallkarte). */
 export function bindeHover(map, { daten, manifest, datenlage, gibZustand, gibEintrag, gibDauer }) {
   const popup = new Popup({ closeButton: false, closeOnClick: false, maxWidth: "280px", offset: 10 });
+  const jeAgs = new Map(datenlage.features.map((f) => [f.properties.ags, f.properties]));
   const ebenen = ["stellen-kreis", "dauer-kreis", "datenlage-kreis"];
   map.on("mousemove", (e) => {
     const f = map.queryRenderedFeatures(e.point, { layers: ebenen.filter((id) => map.getLayer(id)) })[0];
@@ -187,12 +174,13 @@ export function bindeHover(map, { daten, manifest, datenlage, gibZustand, gibEin
         ${tag ? `<div class="pop-meta">${esc(TAGE[tagtyp(d, q?.land, tag)])}</div>` : ""}
         <div class="pop-pinhint">${esc(t("hover.dauer_details"))}</div>`;
     } else if (f.layer.id === "datenlage-kreis") {
-      const p = f.properties;
-      const familie = gibZustand().familie;
-      html = `<div class="pop-eyebrow">${esc(t(familie === "d" ? "hover.datenlage_d" : "hover.datenlage", { land: p.land ?? "" }))}</div>
-        <div class="pop-title">${esc(p.name)}</div>
-        <div class="pop-meta">${esc(standText(datenlage, datenlageStand(p, familie), familie))}</div>
-        <div class="pinhint pop-pinhint">${esc(t("hover.belege"))}</div>`;
+      // die Eigenschaften aus datenlage.json (in der Kartenquelle sind Objekte zu Text geworden)
+      const p = jeAgs.get(f.properties.ags) ?? f.properties;
+      const zeilen = [["k", p.kurzzeit], ["d", p.dauer]].filter(([, b]) => b).map(([fam, b]) =>
+        `<div class="pop-meta">${esc(t(fam === "d" ? "familie.d" : "familie.k"))}: ${esc(standText(datenlage, b.stand, fam))}</div>`);
+      html = `<div class="pop-eyebrow">${esc(t("hover.kommune", { land: p.land ?? "" }))}</div>
+        <div class="pop-title">${esc(p.name)}</div>${zeilen.join("")}
+        <div class="pinhint pop-pinhint">${esc(t("hover.kommune_klick"))}</div>`;
     } else {
       const z = gibZustand();
       const s = daten.stellen[f.properties.i];

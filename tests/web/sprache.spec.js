@@ -2,7 +2,7 @@
 // Die Oberfläche folgt der Sprache; Inhalte aus den Daten (Hinweise, Datenlage-Texte,
 // Anfragetexte) bleiben deutsch und tragen lang="de".
 import { expect, test } from "@playwright/test";
-import { klickeStelle, oeffne } from "./helpers.js";
+import { klickeStelle, oeffne, oeffneKommune } from "./helpers.js";
 
 test("Sprache: Deutsch ist Standard, EN schaltet um und bleibt gemerkt", async ({ page }) => {
   const fehler = await oeffne(page, "#t=kfz.menge");
@@ -21,6 +21,8 @@ test("Sprache: Deutsch ist Standard, EN schaltet um und bleibt gemerkt", async (
   await expect(page.locator("#klassen-legende")).toContainText("35,000 and more");
   await expect(page.locator("#tage-liste")).toContainText("School holidays");
   await expect(page.locator("#datenlage-legende")).toContainText("collected or without a licence – request promising");
+  await expect(page.locator("#datenlage-legende")).toContainText("counts on the map");
+  await expect(page.locator("#legend")).toContainText("Click a municipality to see what's there");
   await expect(page.locator("#fc-stellen")).toHaveText(/^\d{1,3}(,\d{3})*$/);
   await expect(page.locator("#search")).toHaveAttribute("placeholder", "Search address...");
   await expect(page.locator(".maplibregl-ctrl-zoom-in")).toHaveAttribute("title", "Zoom in");
@@ -60,11 +62,13 @@ test("Sprache EN: Stelle englisch, Hinweise aus den Daten deutsch; Wechsel zeich
   await expect(detail.locator("thead").first()).toContainText("Datum");
 });
 
-test("Sprache EN: Datenlage mit englischer Oberfläche, Anfragetext deutsch", async ({ page }) => {
+test("Sprache EN: Steckbrief mit englischer Oberfläche, Anfragetext deutsch", async ({ page }) => {
   await oeffne(page, "?lang=en");
-  await page.evaluate(() => window.__app.zeigeDatenlage("14612000")); // Dresden
-  const el = page.locator("#datenlage-detail");
+  const el = await oeffneKommune(page, "14612000"); // Dresden
   await expect(el).toBeVisible();
+  await expect(el.locator(".pop-eyebrow")).toHaveText("Municipality · SN");
+  await expect(el.locator(".kz-familie-name")).toHaveText(["Short-term counts", "Permanent counters"]);
+  await expect(el.locator(".kz-datenlage summary")).toHaveText("Data availability, contact and request");
   await expect(el).toContainText("Recommendation");
   await expect(el).toContainText("Request text");
   await expect(el).toContainText("The research notes are in German.");

@@ -14,13 +14,17 @@ import { lizenzHtml, ohneLizenzHtml } from "./lizenz.js";
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const SERIE_1 = "#2a78d6";
 const SERIE_2 = "#eb6834";
+/** Link zum Steckbrief der Kommune einer Stelle (leer ohne Kommune in der Datenlage). */
+export const kommuneLink = (k) => (k
+  ? `<button type="button" class="link-knopf kz-link" data-kommune="${esc(k.ags)}">${esc(t("kommune.link", { kommune: k.name }))} ›</button>`
+  : "");
 const ANSICHTEN = {
   kfz: ["kfz", "sv"],
   rad: ["rad"],
   fuss: ["fuss", "kind"],
 };
 
-export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, beiWechsel }) {
+export function erstelleDetail({ manifest, daten, gibZustand, kommuneVon, beiKommune, beiSchliessen, beiWechsel }) {
   const el = document.getElementById("detail");
   const quellen = Object.fromEntries(manifest.quellen.map((q) => [q.code, q]));
   let stelle = null;
@@ -31,6 +35,8 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
   el.addEventListener("click", (e) => {
     const zu = e.target.closest("[data-schliessen]");
     if (zu) { schliesse(); return; }
+    const kommune = e.target.closest("[data-kommune]");
+    if (kommune) { beiKommune?.(kommune.dataset.kommune); return; }
     const zeile = e.target.closest("[data-zaehlung]");
     if (zeile) { waehle(Number(zeile.dataset.zaehlung)); return; }
     const chip = e.target.closest("[data-ansicht]");
@@ -100,6 +106,7 @@ export function erstelleDetail({ manifest, daten, gibZustand, beiSchliessen, bei
           <div class="pop-eyebrow">${esc(typ)} · ${esc(q.name)} · ${esc(kennung)}</div>
           <h2 class="detail-titel">${esc(stelle.name)}</h2>
           <div class="pop-meta">${esc(anzahl)} · ${esc(t("detail.lage", { lage: t(`lage.${stelle.lage}`) }))}</div>
+          ${kommuneLink(kommuneVon?.(stelle))}
         </div>
         <button class="detail-zu" data-schliessen aria-label="${esc(t("schliessen"))}" type="button">×</button>
       </header>

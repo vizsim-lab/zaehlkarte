@@ -7,22 +7,25 @@
 // Stelle ihren jüngsten Schultag (alle Quellen zugleich); erst mit einem gewählten Tag (z=) kommt
 // dessen Jahresdatei dazu. Details einer Dauerstelle lädt dauerdetail.js beim Klick.
 // Sprache (DE Standard, EN wählbar): js/sprache/ – nach einem Wechsel wird neu gezeichnet.
+// Kommunen der Datenlage: in beiden Ansichten; ein Klick öffnet ihren Steckbrief (js/ui/kommune.js,
+// beide Zählarten) – eine Zeile dort stellt Zählart und Verkehrsart um und zeigt die Stellen.
 import { Map as Karte } from "./js/lib/maplibre.js";
 import { gibtDauer, ladeDauer, ladeStart } from "./js/data/laden.js";
-import { ansicht, csv, entpacke, features, lizenzFuerCsv, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
+import { TAGE, ansicht, csv, entpacke, features, lizenzFuerCsv, standardZustand, zaehleKlassen, zaehlen } from "./js/data/modell.js";
+import { dauerQuellenJeKommune, kommuneDerDauerstelle, kommuneDerStelle } from "./js/data/kommune.js";
 import {
   ansichtDauer, ansichtJuengster, csvDauer, csvDauerJuengster, entpackeDauer, featuresDauer, imJuengsten, tagDerStelle,
   tagImZeitraum, themaFuerKommune, themaIn, zaehleDauer,
 } from "./js/data/dauer.js";
 import { addBasemapTerrain } from "./js/map/basemapTerrain.js";
 import {
-  bindeHover, datenlageBlock, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeDauer, setzeFamilie, setzeStellen,
-  standText,
+  bindeHover, fuegeEbenenHinzu, setzeAuswahl, setzeDatenlage, setzeDauer, setzeFamilie, setzeStellen,
 } from "./js/map/ebenen.js";
-import { t, zahl } from "./js/sprache/texte.js";
+import { t } from "./js/sprache/texte.js";
 import { bindeUmschalter, ersteSprache, wendeAn } from "./js/sprache/umschalter.js";
 import { erstelleDauerDetail } from "./js/ui/dauerdetail.js";
 import { erstelleDetail } from "./js/ui/detail.js";
+import { erstelleKommune } from "./js/ui/kommune.js";
 import { erstelleLegende } from "./js/ui/legende.js";
 import { setupMobileLayout } from "./js/ui/mobileLayout.js";
 import { addNavigationControl, beschrifteSteuerung, rueckeNebenPanels, setupMapPanel } from "./js/ui/setupMapPanel.js";
@@ -61,7 +64,7 @@ async function start() {
 
   const daten = entpacke(index);
   const standard = standardZustand(daten.jahre, daten.quellen);
-  const aufruf = dekodiere(location.hash, standard, daten.quellen);
+  const aufruf = dekodiere(location.hash, standard);
   const zustand = aufruf.zustand;
   if (aufruf.karte) karte.jumpTo({ center: [aufruf.karte.lon, aufruf.karte.lat], zoom: aufruf.karte.zoom });
 
@@ -78,10 +81,15 @@ async function start() {
   // gewählter Tag (null im Standard: je Stelle ihr jüngster Schultag)
   const tagJetzt = () => (dauer && !imJuengsten(dauer, zustand) ? tagImZeitraum(dauer, zustand.tag) : null);
 
+  // Kommune einer Stelle (Link „was es dort gibt“ in der Seitenleiste): Kurzzeit über ihre Quelle,
+  // Dauer über die eigene Quelle oder die Gemeinde, in der sie liegt (js/data/kommune.js)
+  const dauerQuellen = dauerQuellenJeKommune(datenlage);
   const detail = erstelleDetail({
     manifest,
     daten,
     gibZustand: () => zustand,
+    kommuneVon: (s) => kommuneDerStelle(datenlage, s),
+    beiKommune: (ags) => oeffneKommune(ags),
     beiSchliessen: () => { setzeAuswahl(karte, null); merkeLink(); },
     beiWechsel: () => merkeLink(),
   });
@@ -89,9 +97,21 @@ async function start() {
     gibDauer: () => dauer,
     gibZustand: () => zustand,
     gibTag: (s) => (dauer ? tagDerStelle(dauer, zustand, s) : null),
+    kommuneVon: (s) => kommuneDerDauerstelle(datenlage, s, dauerQuellen),
+    beiKommune: (ags) => oeffneKommune(ags),
     beiTag: (iso) => tagWechseln(iso),
     beiStelle: (s) => oeffneDauer(s),
     beiSchliessen: () => { setzeAuswahl(karte, null); merkeLink(); },
+  });
+  const kommune = erstelleKommune({
+    datenlage, manifest, daten,
+    gibDauer: () => dauer,
+    holeDauer: () => holeDauer(),
+    gibtDauer: () => gibtDauer(),
+    gibZustand: () => zustand,
+    beiZeile: (z) => zeigeInKarte(z),
+    beiCsv: (p) => csvKommune(p),
+    beiSchliessen: () => merkeLink(),
   });
   const legende = erstelleLegende({
     manifest, daten, zustand, datenlage, geaendert: () => zeichne(),
@@ -123,14 +143,8 @@ async function start() {
     detail.schliesse();
     dauerDetail.schliesse();
     setzeAuswahl(karte, null);
-    // offene Datenlage einer Kommune: in der neuen Familie zeigen (ohne Eintrag dort: schließen)
-    if (!dlPanel.hidden && dlPanel.dataset.ags) {
-      const p = datenlage.features.find((x) => x.properties.ags === dlPanel.dataset.ags)?.properties;
-      if (!p || !datenlageBlock(p, f)) schliesseDatenlage();
-      else zeigeDatenlage(dlPanel.dataset.ags);
-    }
     legende.zeichne();
-    await zeichne();
+    await zeichne(); // ein offener Steckbrief bleibt (er zeigt beide Zählarten) und markiert die Zeile
   }
 
   /** Ein Tag für alle Stellen (auch aus der Standardansicht heraus: Tagesreihe, Sprung, Tag wählen). */
@@ -157,7 +171,7 @@ async function start() {
   async function zeichne() {
     const nr = ++zeichneNr;
     setzeFamilie(karte, zustand.familie);
-    setzeDatenlage(karte, zustand.datenlage, zustand.familie);
+    setzeDatenlage(karte, zustand.datenlage);
     if (zustand.familie === "d" && dauer) {
       const tag = tagJetzt();
       if (tag == null) {
@@ -186,6 +200,7 @@ async function start() {
       legende.zeichneKlassen(zaehleKlassen(eintraege), zaehlen(daten, zustand, eintraege));
       detail.aktualisiere();
     }
+    kommune.markiere();
     merkeLink();
     document.documentElement.dataset.gezeichnet = String(nr);
   }
@@ -196,117 +211,92 @@ async function start() {
     linkTimer = setTimeout(() => {
       const c = karte.getCenter();
       const stelle = zustand.familie === "d" ? dauerDetail.stelle?.id : detail.stelle?.id;
-      const hash = kodiere(zustand, standard, { zoom: karte.getZoom(), lat: c.lat, lon: c.lng }, stelle ?? null);
+      const hash = kodiere(zustand, standard, { zoom: karte.getZoom(), lat: c.lat, lon: c.lng }, stelle ?? null,
+        kommune.offen ? kommune.ags : null);
       history.replaceState(null, "", `#${hash}`); // ?lang= bleibt stehen
     }, 250);
   }
   karte.on("moveend", merkeLink);
 
-  const dlPanel = document.getElementById("datenlage-detail");
-  function schliesseDatenlage() {
-    dlPanel.hidden = true;
-  }
-
   function oeffneStelle(s, zaehlung = null) {
+    kommune.schliesse();
     detail.zeige(s, zaehlung ?? jeStelle.get(s.index)?.z.index ?? null);
     setzeAuswahl(karte, s);
-    dlPanel.hidden = true;
     merkeLink();
   }
 
   function oeffneDauer(s) {
+    kommune.schliesse();
     detail.schliesse();
     dauerDetail.zeige(s);
     setzeAuswahl(karte, s);
-    dlPanel.hidden = true;
     merkeLink();
   }
 
-  // Datenlage einer Kommune in der gewählten Familie: Oberfläche in der gewählten Sprache, die
-  // Recherche-Texte deutsch. Je Familie ein Block mit Stand, Text und Belegen; Empfehlung, Weg
-  // und Anfragetext gibt es nur bei den Kurzzeitzählungen. Die Kommune: ihr Gemeindeschlüssel.
-  function zeigeDatenlage(ags, { behalteScroll = false } = {}) {
-    const f = datenlage.features.find((x) => x.properties.ags === ags);
-    if (!f) return;
-    const p = f.properties;
-    // Dauerzählstellen – oder eine Kommune, von der nur sie bekannt sind
-    const familie = zustand.familie === "d" || !p.kurzzeit ? "d" : "k";
-    const b = datenlageBlock(p, familie);
-    const dl = familie === "d";
-    // in der Karte: mit Lizenz („in_karte“) oder ohne („ohne_lizenz“ mit Quellen) – Kontakt und
-    // Rechtslage, solange eine Anfrage noch etwas bringt, also auch bei Werten ohne Lizenz
-    const inKarte = b.quellen.length > 0;
-    const mitLizenz = b.stand === "in_karte";
-    const el = dlPanel;
-    const scroll = el.scrollTop;
-    const links = b.links.map((l) => `<li><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.titel)}</a></li>`).join("");
-    const k = p.kontakt;
-    const kontakt = k ? `<div class="detail-abschnitt">${esc(t("dl.kontakt"))}</div><p class="detail-text">
-        ${k.name ? `<span lang="de">${esc(k.name)}</span><br>` : ""}${k.email ? `<a href="mailto:${esc(k.email)}">${esc(k.email)}</a><br>` : ""}
-        ${k.fds ? `<a href="${esc(k.fds)}" target="_blank" rel="noopener">${esc(t(k.fds_suche ? "dl.fds_suche" : "dl.fds"))} →</a>` : ""}</p>` : "";
-    const a = dl ? null : b.anfrage;
-    const deutsch = t("dl.deutsch");
-    const recht = p.recht ? `<div class="detail-abschnitt">${esc(t("dl.recht"))}</div><p class="detail-text"><span lang="de">${esc(p.recht)}.</span> ${esc(t("dl.keine_beratung"))}</p>` : "";
-    const was = `<p class="detail-text" lang="de">${esc(b.was ?? "")}</p>`;
-    const lage = b.situation ? `<div class="detail-abschnitt">${esc(t("dl.lage"))}</div><p class="detail-text" lang="de">${esc(b.situation)}</p>` : "";
-    const inhalt = dl ? `
-      ${was}
-      ${inKarte ? `<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.d.in_karte"))}</button></p>` : ""}
-      ${lage}
-      ${mitLizenz ? "" : kontakt}
-      ${mitLizenz ? "" : recht}` : `
-      ${b.zaehlungen ? `${was}<p class="detail-text"><button type="button" class="link-knopf" data-hinzoomen>${esc(t("dl.in_karte", { n: zahl(b.zaehlungen) }))}</button></p>` : ""}
-      ${lage || (b.zaehlungen ? "" : was)}
-      ${b.empfehlung ? `<div class="detail-abschnitt">${esc(t("dl.empfehlung"))}</div><p class="detail-text" lang="de">${esc(b.empfehlung)}</p>` : ""}
-      ${b.weg ? `<p class="detail-text"><span class="pop-chip" lang="de">${esc(b.weg)}</span></p>` : ""}
-      ${kontakt}
-      ${a ? `<div class="detail-abschnitt">${esc(t("dl.anfrage"))}</div>
-        <p class="pop-meta">${esc(t("dl.anfrage_hinweis", { betreff: a.betreff }))}</p>
-        <textarea class="anfrage-text" readonly rows="9" lang="de" aria-label="${esc(t("dl.anfrage"))}">${esc(a.text)}</textarea>
-        <p class="detail-links"><button type="button" class="link-knopf" data-kopieren>${esc(t("dl.kopieren"))}</button>
-        ${k?.fds ? `<a href="${esc(k.fds)}" target="_blank" rel="noopener">${esc(t("dl.stellen"))}</a>` : ""}</p>` : ""}
-      ${recht}`;
-    el.innerHTML = `
-      <header class="detail-kopf">
-        <div><div class="pop-eyebrow">${esc(t(dl ? "hover.datenlage_d" : "hover.datenlage", { land: p.land ?? "" }))}</div>
-        <h2 class="detail-titel">${esc(p.name)}</h2>
-        <div class="pop-meta">${esc(standText(datenlage, b.stand, familie))}</div></div>
-        <button class="detail-zu" type="button" data-schliessen aria-label="${esc(t("schliessen"))}">×</button>
-      </header>
-      ${deutsch ? `<p class="pop-meta dl-sprache">${esc(deutsch)}</p>` : ""}
-      ${inhalt}
-      ${links ? `<div class="detail-abschnitt">${esc(t("dl.belege"))}</div><ul class="detail-hinweise" lang="de">${links}</ul>` : ""}
-      <div class="pop-foot"><a href="https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml" target="_blank" rel="noopener">${esc(t("dl.melden", { kommune: p.name }))}</a></div>`;
-    el.hidden = false;
-    el.scrollTop = behalteScroll ? scroll : 0;
-    el.querySelector("[data-schliessen]").onclick = schliesseDatenlage;
-    el.querySelector("[data-hinzoomen]")?.addEventListener("click", () => {
-      // Dauerzählstellen: auf die Verkehrsart wechseln, die die Quellen der Kommune zählen
-      // (Leipzig nur Rad) – die Quellen nennt die Datenlage, kein Abgleich über den Namen
-      if (dl && dauer) {
-        const thema = themaFuerKommune(dauer, b.quellen, zustand.dthema);
-        if (thema !== zustand.dthema) {
-          zustand.dthema = thema;
-          legende.zeichne();
-          zeichne();
-        }
-      }
-      karte.flyTo({ center: f.geometry.coordinates, zoom: 11 });
-      el.hidden = true;
-    });
-    el.querySelector("[data-kopieren]")?.addEventListener("click", async (e) => {
-      const feld = el.querySelector(".anfrage-text");
-      try {
-        await navigator.clipboard.writeText(feld.value);
-      } catch {
-        feld.select();
-        document.execCommand("copy");
-      }
-      e.target.textContent = t("dl.kopiert");
-    });
+  /** Steckbrief einer Kommune (Klick auf ihren Punkt, Link aus der Seitenleiste, Permalink k=). */
+  function oeffneKommune(ags) {
     detail.schliesse();
     dauerDetail.schliesse();
-    el.dataset.ags = ags;
+    setzeAuswahl(karte, null);
+    if (kommune.zeige(ags)) merkeLink();
+  }
+
+  /** Rand der Karte, den Steckbrief und Legende verdecken (für fitBounds). */
+  function kartenRand() {
+    const rand = { top: 70, bottom: 50, left: 50, right: 50 };
+    if (window.innerWidth <= 640) return rand;
+    const panel = document.getElementById("kommune-detail");
+    if (!panel.hidden) rand.left = Math.round(panel.getBoundingClientRect().right) + 30;
+    const leg = document.getElementById("legend");
+    if (!leg.classList.contains("collapsed")) rand.right = Math.round(window.innerWidth - leg.getBoundingClientRect().left) + 30;
+    if (window.innerWidth - rand.left - rand.right < 220) Object.assign(rand, { left: 50, right: 50 });
+    return rand;
+  }
+
+  /**
+   * Zeile des Steckbriefs: Zählart und Verkehrsart umstellen und die Stellen der Kommune zeigen.
+   * Liegt die Zeile außerhalb des gewählten Zeitraums (Kurzzeit: Jahre) bzw. Tages (Dauer), gilt
+   * wieder der ganze Zeitraum bzw. je Stelle ihr jüngster Schultag – sonst bliebe die Karte leer.
+   */
+  async function zeigeInKarte({ familie, thema, von, bis, umriss }) {
+    if (familie !== zustand.familie) await familieWechseln(familie);
+    if (familie !== zustand.familie) return; // Dauerzählstellen nicht verfügbar
+    if (familie === "d") {
+      zustand.dthema = thema;
+      if (zustand.tag && (zustand.tag < von || zustand.tag > bis)) zustand.tag = null;
+    } else {
+      zustand.thema = thema;
+      if (zustand.jahre[1] < Number(von) || zustand.jahre[0] > Number(bis)) zustand.jahre = [...daten.jahre];
+    }
+    legende.zeichne();
+    await zeichne();
+    if (window.innerWidth <= 640) kommune.schliesse(); // auf dem Handy die Karte frei machen
+    if (umriss) karte.fitBounds(umriss, { padding: kartenRand(), maxZoom: 14, duration: 700 });
+  }
+
+  /** Lizenz einer Kurzzeit-Zählung für den CSV-Export (null: Quelle ohne Lizenz, Zeile weglassen). */
+  function lizenzVon(quelle, lieferung) {
+    const q = manifest.quellen.find((x) => x.code === quelle);
+    const code = lieferung ? lieferung.split(":")[1] : quelle;
+    return lizenzFuerCsv(q.lizenzen.find((l) => l.code === code) ?? q.lizenzen[0]);
+  }
+
+  function ladeCsv(text, name) {
+    const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  /** Alle Kurzzeitzählungen einer Kommune (ihre Quellen, alle Jahre und Zähltage) als CSV. */
+  function csvKommune(p) {
+    const z = {
+      ...zustand, quellen: new Set(p.kurzzeit?.quellen ?? []), jahre: [...daten.jahre],
+      tage: new Set(Object.keys(TAGE)), uebertragen: true,
+    };
+    ladeCsv(csv(daten, z, lizenzVon), `zaehlungen_${p.ags}_${manifest.erzeugt}.csv`);
   }
 
   const popup = bindeHover(karte, {
@@ -320,10 +310,10 @@ async function start() {
     const ds = treffer.find((f) => f.layer.id === "dauer-kreis");
     if (ds && dauer) { oeffneDauer(dauer.stellen[ds.properties.i]); return; }
     const d = treffer.find((f) => f.layer.id === "datenlage-kreis");
-    if (d) { zeigeDatenlage(d.properties.ags); return; }
+    if (d) { oeffneKommune(d.properties.ags); return; }
     detail.schliesse();
     dauerDetail.schliesse();
-    schliesseDatenlage();
+    kommune.schliesse();
   });
 
   document.getElementById("export-csv").addEventListener("click", () => {
@@ -333,25 +323,10 @@ async function start() {
       // Quellen ohne Lizenz: null – ihre Stellen bleiben weg
       const lizenz = (quelle) => lizenzFuerCsv(dauer.quellenMeta.find((q) => q.code === quelle)?.lizenzen[0]);
       const text = tag == null ? csvDauerJuengster(dauer, lizenz) : csvDauer(dauer, dauerJahr, tag, lizenz);
-      const blob = new Blob([text], { type: "text/csv;charset=utf-8" });
-      const a = document.createElement("a");
-      a.href = URL.createObjectURL(blob);
-      a.download = tag == null ? `dauerzaehlstellen_juengster_schultag_${dauer.erzeugt}.csv` : `dauerzaehlstellen_${tag}.csv`;
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      ladeCsv(text, tag == null ? `dauerzaehlstellen_juengster_schultag_${dauer.erzeugt}.csv` : `dauerzaehlstellen_${tag}.csv`);
       return;
     }
-    const lizenzVon = (quelle, lieferung) => {
-      const q = manifest.quellen.find((x) => x.code === quelle);
-      const code = lieferung ? lieferung.split(":")[1] : quelle;
-      return lizenzFuerCsv(q.lizenzen.find((l) => l.code === code) ?? q.lizenzen[0]); // ohne Lizenz: null
-    };
-    const blob = new Blob([csv(daten, zustand, lizenzVon)], { type: "text/csv;charset=utf-8" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `zaehlungen_${manifest.erzeugt}.csv`;
-    a.click();
-    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    ladeCsv(csv(daten, zustand, lizenzVon), `zaehlungen_${manifest.erzeugt}.csv`);
   });
 
   setupPhotonGeocoder(karte);
@@ -379,7 +354,7 @@ async function start() {
     beschrifteSteuerung(); // Kompass entsteht erst kurz nach dem Einhängen
     legende.uebersetze();
     zeichne();
-    if (!dlPanel.hidden && dlPanel.dataset.ags) zeigeDatenlage(dlPanel.dataset.ags, { behalteScroll: true });
+    kommune.zeichne();
   });
 
   if (aufruf.stelle) {
@@ -388,9 +363,15 @@ async function start() {
       if (zustand.familie === "d") oeffneDauer(s); else oeffneStelle(s);
       if (!aufruf.karte) karte.jumpTo({ center: [s.lon, s.lat], zoom: 14 });
     }
+  } else if (aufruf.kommune) {
+    const f = datenlage.features.find((x) => x.properties.ags === aufruf.kommune);
+    if (f) {
+      oeffneKommune(aufruf.kommune);
+      if (!aufruf.karte) karte.jumpTo({ center: f.geometry.coordinates, zoom: 9 });
+    }
   }
   window.__app = {
-    karte, daten, zustand, manifest, datenlage, zeichne, oeffneStelle, zeigeDatenlage, detail, eintraege: () => eintraege,
+    karte, daten, zustand, manifest, datenlage, zeichne, oeffneStelle, oeffneKommune, kommune, detail, eintraege: () => eintraege,
     dauer: () => dauer, dauerDetail, oeffneDauer, familieWechseln, tagWechseln, dauerModus, dauerEintraege: () => dauerEintraege,
   };
   document.documentElement.dataset.bereit = "1";
