@@ -12,4 +12,189 @@ erlaubt https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/2025/
 https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/2025/: HTTP 200: ['../', 'vg250_01-01.ee.excel.ebenen.zip', 'vg250_01-01.gk3.shape.ebenen.zip', 'vg250_01-01.tm32.shape.ebenen.zip', 'vg250_01-01.utm32s.gpkg.ebenen.zip', 'vg250_01-01.utm32s.shape.ebenen.zip']
 erlaubt https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_1231/
 https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_1231/: HTTP 200: ['../', '1997/', '1998/', '1999/', '2000/', '2001/', '2002/', '2003/', '2004/', '2005/', '2006/', '2007/', '2008/', '2009/', '2010/', '2011/', '2012/', '2013/', '2014/', '2015/', '2016/', '2017/', '2018/', '2019/', '2020/', '2021/', '2022/', '2023/', '2024/', '2025/', 'aktuell/']
-Kandidaten: []
+--- tm32 vg250_ebenen_0101/VG250_GEM.prj: PROJCS["ETRS_1989_ETRS-TM32",GEOGCS["GCS_ETRS_1989",DATUM["D_ETRS_1989",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",9.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3044]]
+geladen https://daten.gdz.bkg.bund.de/produkte/vg/vg250_ebenen_0101/2026/vg250_01-01.utm32s.shape.ebenen.zip: 67.4 MB in 7 s, sha256 a21bd17e3616fded6a1cae3311f6b0e8f156ba3939d113b8b760fec5664dd529
+md5 eigen 19abb1eda644eea121ac037ca3c12e46, laut Server: 19abb1eda644eea121ac037ca3c12e46  vg250_01-01.utm32s.shape.ebenen.zip
+66 Dateien im ZIP: ['dokumentation/datenquellen_vg_nuts.pdf', 'dokumentation/nutzungsbedingungen_vg250.pdf', 'dokumentation/aktualitaet.txt', 'dokumentation/verwaltungsgliederung_vg.pdf', 'dokumentation/anlagen_vg.pdf', 'dokumentation/vg250.pdf', 'vg250_ebenen_0101/VGTB_VZ_GEM.dbf', 'vg250_ebenen_0101/VG250_GEM.shp', 'vg250_ebenen_0101/VG250_GEM.shx', 'vg250_ebenen_0101/VG250_GEM.prj', 'vg250_ebenen_0101/VG250_GEM.cpg', 'vg250_ebenen_0101/VGTB_VZ_GEM.cpg', 'vg250_ebenen_0101/VG250_GEM.dbf']
+--- dokumentation/aktualitaet.txt: 01.01.2026
+
+
+--- vg250_ebenen_0101/VG250_GEM.prj: PROJCS["ETRS_1989_UTM_Zone_32N",GEOGCS["GCS_ETRS_1989",DATUM["D_ETRS_1989",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",9.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",25832]]
+--- vg250_ebenen_0101/VG250_GEM.cpg: UTF-8
+Felder VG250_GEM: ['OBJID', 'BEGINN', 'ADE', 'GF', 'BSG', 'LKZ', 'ARS', 'AGS', 'SDV_ARS', 'GEN', 'BEZ', 'IBZ', 'BEM', 'NBD', 'SN_L', 'SN_R', 'SN_K', 'SN_V1', 'SN_V2', 'SN_G', 'FK_S3', 'NUTS', 'ARS_0', 'AGS_0', 'WSK', 'DLM_ID']
+gelesen: 11094 Flächen, 10939 Schlüssel, Land 10939, Punkte 1920836, 0.3 s
+  11000000: Berlin
+  02000000: Hamburg
+  05515000: Münster
+  08436064: Ravensburg
+  03355031: Reppenstedt
+  14612000: Dresden
+
+Dauer: 2320 Stellen zugeordnet in 0.1 s: Counter({'innen': 2320})
+
+berlin_viz (eine Kommune): 288 Stellen, {'innen': 288}
+  in Berlin (11000000): 287 von 288
+    außerhalb: berlin_viz:TE539 'Waltersdorfer Chaussee' -> 12061433 Schönefeld (innen)
+
+hamburg_kfz (eine Kommune): 829 Stellen, {'innen': 829}
+  in Hamburg (02000000): 807 von 829
+    außerhalb: hamburg_kfz:0214912 'Pinneberger Chaussee' -> 01056043 Rellingen (innen)
+    außerhalb: hamburg_kfz:0215920 'Niendorfer Straße' -> 01060063 Norderstedt (innen)
+    außerhalb: hamburg_kfz:0215921 'Niendorfer Straße' -> 01060063 Norderstedt (innen)
+    außerhalb: hamburg_kfz:0215922 'Niendorfer Straße' -> 01060063 Norderstedt (innen)
+    außerhalb: hamburg_kfz:0228920 'Glashütter Landstraße' -> 01060063 Norderstedt (innen)
+    außerhalb: hamburg_kfz:0228921 'Glashütter Landstraße' -> 01060063 Norderstedt (innen)
+    außerhalb: hamburg_kfz:0228922 'Glashütter Landstraße' -> 01060063 Norderstedt (innen)
+    außerhalb: hamburg_kfz:0243930 'Bergstedter Chaussee' -> 01062090 Ammersbek (innen)
+    außerhalb: hamburg_kfz:0243931 'Bergstedter Chaussee' -> 01062090 Ammersbek (innen)
+    außerhalb: hamburg_kfz:0243932 'Bergstedter Chaussee' -> 01062090 Ammersbek (innen)
+    außerhalb: hamburg_kfz:0249980 'Wedeler Landstraße' -> 01056050 Wedel (innen)
+    außerhalb: hamburg_kfz:0249981 'Wedeler Landstraße' -> 01056050 Wedel (innen)
+    außerhalb: hamburg_kfz:0249982 'Wedeler Landstraße' -> 01056050 Wedel (innen)
+    außerhalb: hamburg_kfz:0253980 'Schulauer Weg' -> 01056050 Wedel (innen)
+    außerhalb: hamburg_kfz:0253981 'Schulauer Weg' -> 01056050 Wedel (innen)
+    außerhalb: hamburg_kfz:0253982 'Schulauer Weg' -> 01056050 Wedel (innen)
+    außerhalb: hamburg_kfz:0317940 'Möllner Landstraße' -> 01062053 Oststeinbek (innen)
+    außerhalb: hamburg_kfz:0317941 'Möllner Landstraße' -> 01062053 Oststeinbek (innen)
+    außerhalb: hamburg_kfz:0317942 'Möllner Landstraße' -> 01062053 Oststeinbek (innen)
+    außerhalb: hamburg_kfz:0369960 'Ehestorfer Heuweg' -> 03353029 Rosengarten (innen)
+    außerhalb: hamburg_kfz:0369961 'Ehestorfer Heuweg' -> 03353029 Rosengarten (innen)
+    außerhalb: hamburg_kfz:0369962 'Ehestorfer Heuweg' -> 03353029 Rosengarten (innen)
+
+hamburg_rad (eine Kommune): 312 Stellen, {'innen': 312}
+  in Hamburg (02000000): 312 von 312
+
+ettlingen (eine Kommune): 10 Stellen, {'innen': 10}
+  in Ettlingen (08215017): 10 von 10
+
+mobidata_rad (28 Kommunen): 179 Stellen, {'innen': 179}
+  Ravensburg (08436064): 4
+  Weingarten (08436082): 3
+  Konstanz (08335043): 6
+  Stuttgart (08111000): 17
+  Freiburg im Breisgau (08311000): 17
+  Karlsruhe (08212000): 1
+  Ulm (08421000): 1
+  Heidelberg (08221000): 15
+  Mannheim (08222000): 17
+  Rems-Murr-Kreis (08119): 25
+  Ludwigsburg (08118048): 22
+  Ostalbkreis (08136): 12
+  Heilbronn (08121000): 8
+  Reutlingen (08415061): 8
+  Landkreis Heilbronn (08125): 7
+  Bad Wimpfen (08125007): 1
+  Tübingen (08416041): 4
+  Lörrach (08336050): 2
+  Landkreis Böblingen (08115): 2
+  Bad Säckingen (08337096): 2
+  Kirchheim unter Teck (08116033): 1
+  Offenburg (08317096): 1
+  Aalen (08136088): 1
+  Singen (Hohentwiel) (08335075): 1
+  Baden-Baden (08211000): 1
+  Emmendingen (08316011): 1
+  Pforzheim (08231000): 1
+  Neckarsulm (08125065): 2
+  in keiner verknüpften Kommune: 0 – Gemeinden: []
+
+muenster_rad (eine Kommune): 23 Stellen, {'innen': 23}
+  in Münster (05515000): 23 von 23
+
+aachen_rad (eine Kommune): 26 Stellen, {'innen': 26}
+  in Aachen (05334002): 26 von 26
+
+berlin_rad (eine Kommune): 33 Stellen, {'innen': 33}
+  in Berlin (11000000): 33 von 33
+
+muenchen_rad (eine Kommune): 6 Stellen, {'innen': 6}
+  in München (09162000): 6 von 6
+
+wuerzburg_rad (eine Kommune): 6 Stellen, {'innen': 6}
+  in Würzburg (09663000): 6 von 6
+
+rhein_kreis_neuss_rad (eine Kommune): 5 Stellen, {'innen': 5}
+  in Rhein-Kreis Neuss (05162): 5 von 5
+
+dortmund_rad (eine Kommune): 1 Stellen, {'innen': 1}
+  in Dortmund (05913000): 1 von 1
+
+essen_rad (eine Kommune): 2 Stellen, {'innen': 2}
+  in Essen (05113000): 2 von 2
+
+leipzig_rad (eine Kommune): 26 Stellen, {'innen': 26}
+  in Leipzig (14713000): 26 von 26
+
+rostock_rad (eine Kommune): 18 Stellen, {'innen': 18}
+  in Rostock (13003000): 17 von 18
+    außerhalb: rostock_rad:300023257 'Graaler Landweg' -> 13072072 Mönchhagen (innen)
+
+bochum_rad (eine Kommune): 8 Stellen, {'innen': 8}
+  in Bochum (05911000): 8 von 8
+
+bonn_rad (eine Kommune): 14 Stellen, {'innen': 14}
+  in Bonn (05314000): 14 von 14
+
+duesseldorf_rad (eine Kommune): 19 Stellen, {'innen': 19}
+  in Düsseldorf (05111000): 19 von 19
+
+vmz_rad (7 Kommunen): 74 Stellen, {'innen': 74}
+  Braunschweig (03101000): 9
+  Hannover (03241001): 15
+  Region Hannover (03241): 20
+  Verden (Aller) (03361012): 4
+  Samtgemeinde Gellersen (03355031): 3
+  Rotenburg (Wümme) (03357039): 1
+  Jemgum (03457012): 1
+  in keiner verknüpften Kommune: 36 – Gemeinden: [('Lüneburg', 2), ('Hinte', 1), ('Nordhorn', 1), ('Ostrhauderfehn', 1), ('Samern', 1), ('Aurich', 1), ('Bad Zwischenahn', 1), ('Wiefelstede', 1), ('Oldenburg (Oldb)', 1), ('Cloppenburg', 1), ('Quakenbrück', 1), ('Osnabrück', 1), ('Melle', 1), ('Lüchow (Wendland)', 1), ('Oerel', 1)]
+
+dresden_rad (eine Kommune): 38 Stellen, {'innen': 38}
+  in Dresden (14612000): 38 von 38
+
+augsburg_fuss (eine Kommune): 1 Stellen, {'innen': 1}
+  in Augsburg (09761000): 1 von 1
+
+neuss_rad (eine Kommune): 1 Stellen, {'innen': 1}
+  in Neuss (05162024): 1 von 1
+
+wuerzburg_fuss (eine Kommune): 3 Stellen, {'innen': 3}
+  in Würzburg (09663000): 3 von 3
+
+augsburg_rad (eine Kommune): 12 Stellen, {'innen': 12}
+  in Augsburg (09761000): 12 von 12
+
+bw_land_kfz (Land/Bund): 386 Stellen, {'innen': 386}
+  in Kommunen der Datenlage: [('Landkreis Heilbronn', 20), ('Landkreis Böblingen', 14), ('Rems-Murr-Kreis', 12), ('Karlsruhe', 10), ('Stuttgart', 8), ('Freiburg im Breisgau', 6), ('Ostalbkreis', 6), ('Mannheim', 4), ('Heidelberg', 4), ('Pforzheim', 4), ('Lörrach', 2), ('Ettlingen', 2), ('Bad Säckingen', 2), ('Heilbronn', 2), ('Reutlingen', 2), ('Tübingen', 2), ('Neckarsulm', 2), ('Aalen', 2), ('Emmendingen', 2), ('Ulm', 2)]
+
+Kurzzeit: 12153 Stellen in 1 s
+  berlin: {'drin': 11157, 'außerhalb': 55}
+    ('berlin:K10040', 'Oranienburger Chaussee (B96) / Schönfließer Str. (L30) / Fürstend. (Reinickendorf, 16548)', '12065096', 'Glienicke/Nordbahn', 'innen')
+    ('berlin:K10041', 'Oranienburger Chaussee (B96) / Hauptstraße (K 6501) (Reinickendorf, 16548)', '12065096', 'Glienicke/Nordbahn', 'innen')
+    ('berlin:K220708', 'Landesberger Chaussee / Hellersdorfer Weg - Alte Hellersdorfer Straße', '12060005', 'Ahrensfelde', 'innen')
+    ('berlin:K220711', 'Mahlsdorfer Straße / Böhlener Straße', '12064227', 'Hoppegarten', 'innen')
+    ('berlin:K2364', 'Fürstendamm - Schönfließer Straße / Oranienburger Chaussee', '12065096', 'Glienicke/Nordbahn', 'innen')
+    ('berlin:K2458', 'Stahnsdorfer Straße / Bernhard-Beyer-Straße', '12054000', 'Potsdam', 'innen')
+    ('berlin:K2685', 'Landsberger All.-Landsberger Ch. / Zossener Str.-Eichener Ch. (Hellersdorf, 126', '12060005', 'Ahrensfelde', 'innen')
+    ('berlin:K2932', 'Berliner Straße / Louis-Lewin-Straße', '12064227', 'Hoppegarten', 'innen')
+  ravensburg: {'drin': 96}
+  weingarten: {'drin': 8}
+  berg: {'drin': 1}
+  baienfurt: {'drin': 1}
+  baindt: {'drin': 1}
+  moers: {'drin': 140, 'außerhalb': 1}
+    ('moers:römerstraße273', 'Römerstraße 273', '05112000', 'Duisburg', 'innen')
+  olpe: {'drin': 12}
+  potsdam: {'drin': 202, 'außerhalb': 11}
+    ('potsdam:2450', 'AS Leest/Potsdamer Straße (O)', '12069656', 'Werder (Havel)', 'innen')
+    ('potsdam:2460', 'AS Leest/Potsdamer Straße (W)', '12069656', 'Werder (Havel)', 'innen')
+    ('potsdam:2970', 'Potsdamer Chaussee/Ritterfelddamm', '11000000', 'Berlin', 'innen')
+    ('potsdam:5100', 'Nuthestraße/A 115', '12069604', 'Stahnsdorf', 'innen')
+    ('potsdam:7050', 'Güterfelder Eck', '12069604', 'Stahnsdorf', 'innen')
+    ('potsdam:7051', 'Güterfelder Eck/Südrampe', '12069604', 'Stahnsdorf', 'innen')
+    ('potsdam:7052', 'Güterfelder Eck/Nordrampe', '12069604', 'Stahnsdorf', 'innen')
+    ('potsdam:7053', 'Güterfelder Eck/Kreisel', '12069604', 'Stahnsdorf', 'innen')
+  muenster: {'drin': 411}
+  konstanz: {'drin': 6}
+  xanten: {'drin': 18}
+  tuebingen: {'drin': 25}
+  neubulach: {'drin': 8}
