@@ -1766,12 +1766,14 @@
      "fds": "https://fragdenstaat.de/behoerde/52086/verkehrsplanungsamt-nuernberg/"
     },
     "kurzzeit": {
-     "stand": "geliefert",
-     "quellen": [],
-     "zaehlungen": null,
-     "was": "zählt seit 1967 jedes Jahr von Hand; 2025/26 eine Zählung in Halbstundenwerten herausgegeben (abgelehnt nur Tempodaten)",
-     "situation": "Zählt seit 1967 jedes Jahr von Hand. Eine Anfrage 2025/26 bekam eine Zählung in Halbstundenwerten; abgelehnt wurden nur Geschwindigkeitsdaten der Verkehrsüberwachung.",
-     "empfehlung": "Anfrage nach allen Zählungen seit 2015 in dieser Form, an das Verkehrsplanungsamt. Grundlage: Bayerisches Umweltinformationsgesetz.",
+     "stand": "ohne_lizenz",
+     "quellen": [
+      "nuernberg"
+     ],
+     "zaehlungen": 0,
+     "was": "jährliche Querschnittszählung: Berichte 2007–2025 als PDF mit Kfz 6–22 Uhr je Zählstelle, ohne Lizenz (in der Karte); 2025/26 eine Zählung in Halbstundenwerten auf Anfrage herausgegeben",
+     "situation": "Zählt seit 1967 jedes Jahr von Hand, am Dienstag und Mittwoch der vorletzten Schulwoche vor den Sommerferien, 6–22 Uhr in vier Intervallen à vier Stunden an zwei Tagen. Die Berichte (je Jahr ein PDF auf nuernberg.de, ohne Lizenzangabe) nennen je Zählstelle nur die Summe Kfz 6–22 Uhr, ab 2023 dazu Lkw und Lastzüge; die Werte 2007–2025 sind daraus in der Karte. Getrennt nach Richtung, Fahrzeugart und halber Stunde liegen sie beim Verkehrsplanungsamt („einsehbar“). Eine Anfrage 2025/26 bekam eine Zählung in Halbstundenwerten; abgelehnt wurden nur Geschwindigkeitsdaten der Verkehrsüberwachung.",
+     "empfehlung": "Anfrage nach allen Zählungen seit 2015 in Halbstundenwerten je Richtung und Fahrzeugart, an das Verkehrsplanungsamt, mit Lizenz. Grundlage: Bayerisches Umweltinformationsgesetz.",
      "weg": "FragDenStaat, Bayerisches UIG",
      "anfrage": {
       "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
@@ -1783,17 +1785,17 @@
        "url": "https://fragdenstaat.de/anfrage/anfrage-daten-verkehrszaehlung-und-geschwindigkeitsmessung/"
       },
       {
-       "titel": "Bericht Verkehrszählung 2018",
-       "url": "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/bericht_verkehrszahlung_2018.pdf"
+       "titel": "Verkehrszählungen (Berichte 2007–2025)",
+       "url": "https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html"
       },
       {
-       "titel": "Verkehrszählungen (Berichte bis 2025)",
-       "url": "https://www.nuernberg.de/internet/verkehrsplanung/verkehrszaehlungen.html"
+       "titel": "Bericht Verkehrszählung 2025",
+       "url": "https://www.nuernberg.de/imperia/md/verkehrsplanung/dokumente/vpl/verkehrszahlung_bericht_2025.pdf"
       }
      ]
     },
     "dauer": null,
-    "stand_k": "geliefert"
+    "stand_k": "ohne_lizenz"
    }
   },
   {

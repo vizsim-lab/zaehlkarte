@@ -14,7 +14,7 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 - **Kfz**, **Schwerverkehr** (Menge und Anteil an Kfz), **Rad** (Menge und Radanteil
   Rad / (Rad + Kfz)) und **Fuß** (bei nach Alter getrennten Zählungen auch
   Kinder/Jugendliche im Tagesgang).
-- Kennzahl wählbar: Summe 7–19 Uhr, Summe 24 Stunden oder die stärkste Stunde.
+- Kennzahl wählbar: Summe 7–19 Uhr, Summe 6–22 Uhr, Summe 24 Stunden oder die stärkste Stunde.
 - Je Zählstelle alle Zählungen, der **Tagesgang** jeder Zählung, der Verlauf über die Jahre,
   die Rohdatei und die Lizenz; Download als CSV (nur Quellen mit Lizenz, siehe
   [Quellen ohne Lizenz](QUELLEN.md#quellen-ohne-lizenz)).
@@ -49,7 +49,8 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
 ## Kurzzeitzählungen: Kennzahlen
 
 - Werte sind Summen über alle Richtungen. „7–19 Uhr“ nur, wo jede dieser Stunden gezählt ist;
-  „24 h“ nur bei 24-Stunden-Zählungen; „stärkste Stunde“ vergleicht auch kurze Zählfenster.
+  „6–22 Uhr“ ebenso, oder wo die Quelle genau diese Summe nennt (Nürnberg); „24 h“ nur bei
+  24-Stunden-Zählungen; „stärkste Stunde“ vergleicht auch kurze Zählfenster.
 - Je Stelle zeigt die Karte die jüngste Zählung im Filter, die die gewählte Kennzahl hat.
   Alle Zählungen einer Stelle stehen in der Seitenleiste.
 - `-1` in den Rohdaten heißt „nicht gezählt“ und wird nie als 0 gerechnet. Eine Richtung, die
@@ -87,6 +88,15 @@ Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen st
   5-Minuten-Dateien sind Geräteprotokolle: Jede Zeile steht kurz nach dem Ende ihres
   Intervalls und wird so zugeordnet. Die Lage nennt die Stadt nur als Straße, Brücke oder
   Hausnummer; die Punkte stammen aus OpenStreetMap, die Genauigkeit steht im Hinweis.
+- Nürnberg: Die Berichte der jährlichen Querschnittszählung nennen je Zählstelle nur die Summe
+  Kfz 6–22 Uhr – in der Karte erscheint Nürnberg nur unter „6–22 Uhr“ Kfz. Gezählt wird in
+  vier Schichten an zwei Tagen (Dienstag 10–14 und 18–22 Uhr, Mittwoch 6–10 und 14–18 Uhr); die
+  Zählung trägt das Datum des Dienstags. Lkw und Lastzüge (ab 2023) fehlen: ohne Busse ist das
+  nicht der Schwerverkehr der Karte. Fehlt der Wert einer Zählstelle im Bericht seines Jahres,
+  gilt der Wert für dieses Jahr aus dem frühesten späteren Bericht; Fußnoten der Berichte und
+  Abweichungen zwischen ihnen stehen als Hinweis an der Zählung. Die Lage stammt aus
+  OpenStreetMap (nach dem Namen der Zählstelle) und den Zählstellenplänen der Berichte; die
+  Genauigkeit steht im Hinweis.
 
 ## Dauerzählstellen
 

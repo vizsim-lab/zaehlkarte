@@ -17,7 +17,8 @@ Verkehrsart auf einer Karte.
 ## Was die Karte zeigt
 
 - **Kurzzeitzählungen** an Kreuzungen und Straßenabschnitten: Kfz, Schwerverkehr, Rad und Fuß –
-  als Summe 7–19 Uhr, über 24 Stunden oder als stärkste Stunde, mit dem Tagesgang jeder Zählung.
+  als Summe 7–19 Uhr, 6–22 Uhr, über 24 Stunden oder als stärkste Stunde, mit dem Tagesgang
+  jeder Zählung.
 - **Dauerzählstellen**: fest eingebaute Zähler mit Tagessummen über Jahre und Stundenwerten –
   Detektoren in Berlin, Wärmebildkameras in Hamburg, die Zählstellen des Landes
   Baden-Württemberg, Rad-Zählstellen vieler Städte und Passantenzählungen.
