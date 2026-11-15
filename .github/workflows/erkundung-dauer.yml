@@ -18,6 +18,8 @@ jobs:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.1.0
       - name: Lauf (tools/lauf.sh)
+        env:
+          GH_TOKEN: ${{ github.token }}  # Gedächtnis aus dem Release (nur lesen)
         run: bash tools/lauf.sh
       - if: always()
         run: |

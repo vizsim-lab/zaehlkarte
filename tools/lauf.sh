@@ -18,7 +18,33 @@ pruefe() {  # pruefe <branch> <code>
 # Neuss RS5: geprüft (ergebnis/neuss_rad)
 # Würzburg Passanten: geprüft (ergebnis/wuerzburg_fuss)
 # Augsburgs Radzählstationen: geprüft (ergebnis/augsburg_rad)
-# Hamburg, Layer „1-Tag“ (15.11.2026): Umfang, Zeitstempel, Vergleich mit den Stunden,
-# Datensatzbeschreibung, Dauer des ersten vollen Abrufs (tools/hamburg_tage.py, ohne App-Code)
-mkdir -p ergebnis/hamburg_tage
-timeout 60m python3 tools/hamburg_tage.py ergebnis/hamburg_tage 2>&1 | tail -40 > ergebnis/hamburg_tage/lauf.txt || true
+# Hamburg, Layer „1-Tag“ (15.11.2026): erkundet (tools/hamburg_tage.py, ergebnis/hamburg_tage)
+#
+# Hamburg mit Tageswerten der Quelle (Branch hamburg-tageswerte): mit dem Gedächtnis der Stunden
+# aus dem Release – wie der erste Lauf nach dem Merge (Stunden 14 Tage neu, Tageswerte ganz);
+# Speicherbedarf mit /usr/bin/time; die Tagesdateien des Gedächtnisses nach ergebnis/<code>/.
+pruefe_hh() {  # pruefe_hh <branch> <code>
+  local ziel="$GITHUB_WORKSPACE/ergebnis/$2"
+  mkdir -p "$ziel/gedaechtnis"
+  rm -rf app && git clone -q --depth 1 -b "$1" https://github.com/vizsim-lab/zaehlkarte app
+  git -C app rev-parse HEAD > "$ziel/stand.txt"
+  local roh="app/pipeline/data/raw/$2/gedaechtnis"
+  local tmp="$RUNNER_TEMP/gd_$2"
+  mkdir -p "$roh" "$tmp"
+  local rid
+  rid=$(gh api repos/vizsim-lab/zaehlkarte/releases/tags/dauerzaehlstellen -q .id)
+  for name in $(gh api --paginate "repos/vizsim-lab/zaehlkarte/releases/$rid/assets?per_page=100" -q '.[].name' | grep "^$2__"); do
+    gh release download dauerzaehlstellen -R vizsim-lab/zaehlkarte -p "$name" -D "$tmp" --clobber
+    mv "$tmp/$name" "$roh/${name#"$2"__}"
+  done
+  ls -la "$roh" > "$ziel/gedaechtnis_vorher.txt"
+  local zeit=""
+  [ -x /usr/bin/time ] && zeit="/usr/bin/time -v"
+  ( cd app/pipeline && uv sync --locked -q && $zeit timeout 50m uv run python "$GITHUB_WORKSPACE/tools/quelle_pruefen.py" "$2" "$ziel" ) > "$ziel/lauf_ganz.txt" 2>&1 || true
+  tail -c 20000 "$ziel/lauf_ganz.txt" > "$ziel/lauf.txt" && rm -f "$ziel/lauf_ganz.txt"
+  cp "$roh"/tage_*.csv.gz "$ziel/gedaechtnis/" 2>/dev/null || true
+  ls -la "$roh" > "$ziel/gedaechtnis_nachher.txt"
+}
+python3 tools/hamburg_portal.py ergebnis/hamburg_tage > ergebnis/hamburg_tage/portal_lauf.txt 2>&1 || true
+pruefe_hh hamburg-tageswerte hamburg_rad
+pruefe_hh hamburg-tageswerte hamburg_kfz
