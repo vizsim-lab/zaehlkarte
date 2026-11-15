@@ -96,5 +96,10 @@ vg250() {  # vg250 <branch>
 # Moers, Fußgänger Steinstraße, zweiter Schritt (15.11.2026): Lizenz aus den HTML-Seiten der
 # Datensätze und einer Ressource (das DCAT-Dokument nennt keine), Lage aus OpenStreetMap
 # (tools/moers_fuss_lizenz.py).
-mkdir -p ergebnis/moers_fuss_lizenz
-timeout 20m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_lizenz > ergebnis/moers_fuss_lizenz/lauf.txt 2>&1 || true
+# geprüft (ergebnis/moers_fuss_lizenz): dl-de/zero-2-0 auf beiden Datensatzseiten und je
+# Ressource; Overpass über die Fläche „Moers“: Zeitgrenze bei allen drei Servern.
+# mkdir -p ergebnis/moers_fuss_lizenz
+# timeout 20m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_lizenz > ergebnis/moers_fuss_lizenz/lauf.txt 2>&1 || true
+# Zweiter Versuch nur für die Lage, mit Ausschnitt:
+mkdir -p ergebnis/moers_fuss_osm
+timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm --nur-osm > ergebnis/moers_fuss_osm/lauf.txt 2>&1 || true

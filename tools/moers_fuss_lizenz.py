@@ -38,19 +38,19 @@ SEITEN = [
 OVERPASS = ("https://maps.mail.ru/osm/tools/overpass/api/interpreter",
             "https://overpass.private.coffee/api/interpreter",
             "https://overpass.kumi.systems/api/interpreter")
-ABFRAGE = """[out:json][timeout:90];
-area["name"="Moers"]["admin_level"="8"]->.a;
+# Ausschnitt um die Altstadt statt der Fläche „Moers“ (die lief bei allen drei Servern in die
+# Zeitgrenze, wie in Augsburg)
+ABFRAGE = """[out:json][timeout:60][bbox:51.4440,6.6150,51.4580,6.6450];
 (
-  way(area.a)["name"="Steinstraße"];
-  way(area.a)["name"="Neuer Wall"];
-  way(area.a)["name"="Neumarkt"];
-  node(area.a)["name"="Neumarkt"];
-  node(area.a)["man_made"~"surveillance|monitoring_station"];
-  node(area.a)["description"~"[Ll]aser|[Zz]ähl|hystreet"];
+  way["name"="Steinstraße"];
+  way["name"="Neuer Wall"];
+  way["name"="Neumarkt"];
+  node["name"="Neumarkt"];
+  node["man_made"~"surveillance|monitoring_station"];
 );
 out tags geom;"""
 
-ziel = Path(sys.argv[1])
+ziel = Path(sys.argv[1])  # mit --nur-osm: nur die Lage
 ziel.mkdir(parents=True, exist_ok=True)
 out: list[str] = []
 
@@ -93,7 +93,7 @@ try:
     for url in [BASIS + p for p in SEITEN] + list(OVERPASS):
         out.append(f"  {url}: {'erlaubt' if robots.erlaubt(url) else 'GESPERRT'}")
     out.append("== Seiten")
-    for i, pfad in enumerate(SEITEN):
+    for i, pfad in enumerate([] if "--nur-osm" in sys.argv else SEITEN):
         url = BASIS + urllib.parse.quote(pfad, safe="/-")
         try:
             if not robots.erlaubt(url):
