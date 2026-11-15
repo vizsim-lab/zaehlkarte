@@ -1,0 +1,127 @@
+# Neubulach (Landkreis Calw): Verkehrszählungen zur Fortschreibung des Lärmaktionsplans, Kurzbericht
+# des Büros IGV vom Januar 2024 als PDF auf der Website der Stadt, ohne Lizenzangabe – in der Karte
+# nach dem Beschluss vom 14.11.2026 („Quellen ohne Lizenz“, CLAUDE.md). Aufbau und Regeln im Kopf
+# des Adapters (src/zaehlkarte/adapters/neubulach_pdf.py); geprüft im Werkzeug-Branch
+# `werkzeug/bw` (tools/bw_ol.py, November 2026).
+nr: 14
+status: live
+adapter: neubulach_pdf
+name: Neubulach
+land: BW
+traeger: Stadt Neubulach (Verkehrszählungen zum Lärmaktionsplan, IGV und GEOVISTA)
+titel: Kurzbericht Verkehrszählungen zur Fortschreibung des Lärmaktionsplans 2024
+art: >-
+  Videozählung am Donnerstag, 12.10.2023: ein Knotenpunkt über 24 Stunden, fünf Knotenpunkte und
+  zwei Querschnitte von 15 bis 19 Uhr, nur Kfz (Krad, Pkw, Lkw ohne und mit Anhänger)
+weg: Kurzbericht als PDF auf der Website der Stadt
+portal: https://www.neubulach.de/ceasy/resource/?download=1&id=3956
+ohne_lizenz:
+  herausgegeben: als PDF (Kurzbericht, Januar 2024) auf der Website der Stadt, ohne Lizenzangabe
+  geprueft: 2026-11-15
+# Fassung vom Januar 2024 (Stand der Tabelle 22.12.2023), Prüfsumme wie bei Xanten
+dateien:
+  - datei: Kurzbericht_Verkehrszaehlungen_Laermaktionsplan_2024.pdf
+    titel: Kurzbericht Verkehrszählungen zur Fortschreibung des Lärmaktionsplans 2024
+    url: https://www.neubulach.de/ceasy/resource/?download=1&id=3956
+    sha256: aac41400181e53dbb36a43645e76e298f5ad5edf3311deaef4ca81c1435bcb08
+datum: 2023-10-12  # „Donnerstag, 12.10.2023, 0:00 - 23:59 Uhr“ (Kopf der Tabelle)
+# Lage: Knotenpunkte = gemeinsamer Knoten der Straßen in OpenStreetMap (Overpass, November 2026);
+# Querschnitte = Lage auf dem Zählstellenplan des Berichts (Abbildung 1), über die Knotenpunkte
+# des Plans auf Koordinaten umgerechnet (Q2: drei Knoten, Abweichung bis 3 m; Q3: Knoten 3 und
+# der Maßstab des Nachbarausschnitts) und auf die Straße gelegt.
+geokodierung:
+  titel: Lage der Zählstellen (OpenStreetMap; Querschnitte nach dem Zählstellenplan im Bericht)
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  herkunft_url: https://www.openstreetmap.org/copyright
+# block: erste Ziffer der Blöcke in der Tabelle (1–6 Knoten, 7 und 8 die Querschnitte 2 und 3);
+# zeile: 24h (Knoten 1, gezählt) oder 4h (gezählt von 15 bis 19 Uhr, `fenster`)
+stellen:
+  K1:
+    name: Julius-Heuß-Straße/Waldweg/Mathildenstraße
+    typ: K
+    block: 1
+    zeile: 24h
+    lon: 8.692139
+    lat: 48.661524
+    genauigkeit: kreuzung
+  K2:
+    name: Julius-Heuß-Straße/Gewerbestraße/Oberhaugstetter Straße
+    typ: K
+    block: 2
+    zeile: 4h
+    fenster: [15, 19]
+    lon: 8.692575
+    lat: 48.658795
+    genauigkeit: kreuzung
+    hinweise:
+      - >-
+        Der Strombelastungsplan im Bericht nennt für diesen Knoten 4.254 Kfz in den vier Stunden;
+        seine Ströme und die Tabelle ergeben 4.244.
+  K3:
+    name: Martinsmoos, Wildbader Straße/K 4369
+    typ: K
+    block: 3
+    zeile: 4h
+    fenster: [15, 19]
+    lon: 8.622149
+    lat: 48.638605
+    genauigkeit: kreuzung
+  K4:
+    name: Oberhaugstett, Hauptstraße/Schulstraße/Martinsmooser Straße
+    typ: K
+    block: 4
+    zeile: 4h
+    fenster: [15, 19]
+    lon: 8.676651
+    lat: 48.652947
+    genauigkeit: kreuzung
+  K5:
+    name: Oberhaugstett, Hauptstraße/Blumenstraße/Dorfwiesenweg
+    typ: K
+    block: 5
+    zeile: 4h
+    fenster: [15, 19]
+    lon: 8.681622
+    lat: 48.655202
+    genauigkeit: kreuzung
+    hinweise:
+      - Blumenstraße und Dorfwiesenweg münden 20 m versetzt in die Hauptstraße; der Punkt liegt dazwischen.
+  K6:
+    name: Calwer Straße/Dr.-Klein-Straße
+    typ: K
+    block: 6
+    zeile: 4h
+    fenster: [15, 19]
+    lon: 8.686832
+    lat: 48.666182
+    genauigkeit: kreuzung
+  Q2:
+    name: Oberhaugstetter Straße (K 4304), Ortsausgang Richtung Altbulach
+    typ: Q
+    block: 7
+    zeile: 4h
+    fenster: [15, 19]
+    lon: 8.701548
+    lat: 48.661673
+    genauigkeit: karte
+    hinweise:
+      - >-
+        Lage nach dem Zählstellenplan im Bericht (Abbildung 1), auf die Straße gelegt. Tabelle 1
+        des Berichts nennt „Oberhaugstetter Straße (Ortsausgang West)“, die Wertetabelle
+        „Altbulacher Str.“; der Plan zeigt den Querschnitt am Ortsausgang Richtung Altbulach.
+  Q3:
+    name: Martinsmoos, Wildbader Straße (K 4371), Ortsausgang Richtung Oberhaugstett
+    typ: Q
+    block: 8
+    zeile: 4h
+    fenster: [15, 19]
+    lon: 8.632419
+    lat: 48.640669
+    genauigkeit: karte
+    hinweise:
+      - >-
+        Lage nach dem Zählstellenplan im Bericht (Abbildung 1; Maßstab des Ausschnitts wie beim
+        Nachbarausschnitt Oberhaugstett), auf die Straße gelegt – zwischen den Ortstafeln am
+        östlichen Ortsausgang. Tabelle 1 des Berichts nennt „Ortsausgang West“, die Wertetabelle
+        „Rottweiler Str. W“; der Plan zeigt den Querschnitt am Ortsausgang Richtung Oberhaugstett.

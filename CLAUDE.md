@@ -101,7 +101,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   `-1`/fehlend heißt „nicht gezählt“, nie 0. Werte aus verschiedenen Zählfenstern nie
   ineinander umrechnen (keine Hochrechnung 7–19 -> 24 h); die Kennzahl-Art steht immer dabei.
 - **Rohdaten bleiben unverändert**; Berlin-Archive und Geokodierung sind auf Commits gepinnt,
-  Münster-ZIP und -Positionen, die Konstanzer CSVs und die Xantener PDFs über ihre Prüfsumme
+  Münster-ZIP und -Positionen, die Konstanzer CSVs und die PDFs aus Xanten, Tübingen
+  und Neubulach über ihre Prüfsumme
   (sha256 in der Quelldatei). Offenbare Tippfehler einer Quelle (etwa eine Koordinate) korrigiert
   die Quelldatei mit Vermerk (`lage`, Hinweis an der Quelle), nie die Rohdatei.
 - **Abrufe der Pipeline nur über `zaehlkarte.abruf`** (robots.txt nach RFC 9309 für die Kennung

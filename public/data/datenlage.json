@@ -1233,10 +1233,12 @@
     },
     "kurzzeit": {
      "stand": "ohne_lizenz",
-     "quellen": [],
-     "zaehlungen": null,
-     "was": "Bericht Verkehrszählungen Juni/Juli 2022 im Ratsinformationssystem: Kfz und Rad je Querschnitt in 24 Stunden (Kernstadt, Teilorte), ohne Lizenz",
-     "situation": "Zur Vorlage 242/2022 („Bericht Verkehrszählungen Juni/Juli 2022“) stehen die Zählungen als Anlagen im Ratsinformationssystem: je Querschnitt Kfz und Rad in 24 Stunden, für die Kernstadt mit Vergleich zu 2019 (Verkehrsversuch), für die Teilorte gegen den DTV 2019. Eine Lizenz nennen die Unterlagen nicht; Zählungen anderer Jahre sind nicht veröffentlicht.",
+     "quellen": [
+      "tuebingen"
+     ],
+     "zaehlungen": 47,
+     "was": "Bericht Verkehrszählungen Juni/Juli 2022 im Ratsinformationssystem: Kfz und Rad je Querschnitt in 24 Stunden (Kernstadt, Teilorte), ohne Lizenz – 47 Tageswerte an 25 Stellen (2011–2022) in der Karte mit Hinweis",
+     "situation": "Zur Vorlage 242/2022 („Bericht Verkehrszählungen Juni/Juli 2022“) stehen die Zählungen als Anlagen im Ratsinformationssystem: je Querschnitt Kfz und Rad in 24 Stunden, für die Kernstadt mit Vergleich zu 2019 (Verkehrsversuch), für die Teilorte gegen den DTV 2019. Eine Lizenz nennen die Unterlagen nicht; Zählungen anderer Jahre sind nicht veröffentlicht. In der Karte stehen die Werte gezählter Tage; Hochrechnungen von 16 auf 24 Stunden, Mittel über Tage (Dauerzählstellen) und der DTV fehlen dort.",
      "empfehlung": "Anfrage nach den Zählungen 2019 und 2022 (und später) als Export – Werte je Intervall und Richtung – mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.",
      "weg": "FragDenStaat, LIFG BW",
      "anfrage": {
@@ -1251,6 +1253,10 @@
       {
        "titel": "Anlage 1: Zählungen Kernstadt",
        "url": "https://www.tuebingen.de/gemeinderat/getfile.asp?id=81457&type=do"
+      },
+      {
+       "titel": "Anlage 3: Zählungen Teilorte",
+       "url": "https://www.tuebingen.de/gemeinderat/getfile.asp?id=81490&type=do"
       }
      ]
     },
@@ -1655,15 +1661,17 @@
     },
     "kurzzeit": {
      "stand": "ohne_lizenz",
-     "quellen": [],
-     "zaehlungen": null,
-     "was": "Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als PDF: Querschnitte über 24 Stunden, Knotenpunkte je zweimal vier Stunden, ohne Lizenz",
-     "situation": "Für die Fortschreibung des Lärmaktionsplans hat die Stadt ein Büro zählen lassen: an Querschnitten über 24 Stunden, an Knotenpunkten vormittags und nachmittags je vier Stunden (hochgerechnet anhand der 24-Stunden-Zählungen). Der Kurzbericht mit den Werten steht als PDF auf der Website der Stadt, ohne Lizenzangabe.",
-     "empfehlung": "Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw. Strom und Fahrzeugart), mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.",
+     "quellen": [
+      "neubulach"
+     ],
+     "zaehlungen": 8,
+     "was": "Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als PDF: ein Knotenpunkt über 24 Stunden, fünf Knotenpunkte und zwei Querschnitte von 15 bis 19 Uhr (12.10.2023), Kfz und Schwerverkehr, ohne Lizenz – in der Karte mit Hinweis",
+     "situation": "Für die Fortschreibung des Lärmaktionsplans hat die Stadt am 12.10.2023 per Video zählen lassen: einen Knotenpunkt über 24 Stunden, die übrigen fünf Knotenpunkte und zwei Querschnitte von 15 bis 19 Uhr (im Bericht auf 24 Stunden und den DTV hochgerechnet). Der Kurzbericht mit den Werten je Arm steht als PDF auf der Website der Stadt, ohne Lizenzangabe. In der Karte stehen nur die gezählten Werte; Rad ist laut Bericht erfasst, aber nicht veröffentlicht.",
+     "empfehlung": "Anfrage nach den Zählungen als Export (Werte je Intervall, Richtung bzw. Strom und Fahrzeugart, auch Rad), mit Lizenz. Grundlage: Landesinformationsfreiheitsgesetz.",
      "weg": "FragDenStaat, LIFG BW",
      "anfrage": {
       "betreff": "Ergebnisse von Verkehrszählungen (Knotenpunkte und Querschnitte) seit 2015",
-      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Neubulach seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIch bitte um die Zählungen aus dem Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als Export mit den Werten je Intervall.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
+      "text": "Bitte übermitteln Sie mir die Ergebnisse aller Verkehrszählungen, die die Stadt Neubulach seit dem 1. Januar 2015 an Knotenpunkten und Straßenquerschnitten durchgeführt hat oder hat durchführen lassen – von Hand, per Video oder Radar; Dauerzählstellen ausgenommen. Je Zählung bitte:\n\n1. Bezeichnung und Lage der Zählstelle (Koordinaten oder die beteiligten Straßen, gegebenenfalls Knotennummer),\n2. Datum und gezählte Uhrzeiten,\n3. die Zählwerte je Intervall (z. B. 15 oder 60 Minuten) und je Fahrtrichtung bzw. Verkehrsstrom, getrennt nach den erhobenen Verkehrsarten (Kfz nach Fahrzeugart, Rad, zu Fuß).\n\nBitte schicken Sie die Daten in dem maschinenlesbaren Format, in dem sie bei Ihnen vorliegen (z. B. CSV, XLSX oder Export der Zählsoftware); PDF-Berichte nur dort, wo es nichts anderes gibt. Eine Aufbereitung ist nicht nötig.\n\nIch bitte um die Zählungen aus dem Kurzbericht „Verkehrszählungen zur Fortschreibung des Lärmaktionsplans“ (Januar 2024) als Export mit den Werten je Intervall, einschließlich des Radverkehrs.\n\nBitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterverwenden und veröffentlichen darf – am liebsten unter einer offenen Lizenz wie der Datenlizenz Deutschland – Namensnennung 2.0.\n\nVerkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein."
      },
      "links": [
       {
