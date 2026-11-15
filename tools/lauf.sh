@@ -100,6 +100,10 @@ vg250() {  # vg250 <branch>
 # Ressource; Overpass über die Fläche „Moers“: Zeitgrenze bei allen drei Servern.
 # mkdir -p ergebnis/moers_fuss_lizenz
 # timeout 20m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_lizenz > ergebnis/moers_fuss_lizenz/lauf.txt 2>&1 || true
-# Zweiter Versuch nur für die Lage, mit Ausschnitt:
-mkdir -p ergebnis/moers_fuss_osm
-timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm --nur-osm > ergebnis/moers_fuss_osm/lauf.txt 2>&1 || true
+# Zweiter Versuch nur für die Lage, mit Ausschnitt: Overpass wieder Zeitgrenze (alle drei).
+# mkdir -p ergebnis/moers_fuss_osm
+# timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm --nur-osm > ergebnis/moers_fuss_osm/lauf.txt 2>&1 || true
+# Dritter Versuch: Nominatim (strukturierte Suche, Geometrie der Straße) und Overpass mit
+# kleinerem Ausschnitt.
+mkdir -p ergebnis/moers_fuss_osm2
+timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm2 --nur-osm > ergebnis/moers_fuss_osm2/lauf.txt 2>&1 || true

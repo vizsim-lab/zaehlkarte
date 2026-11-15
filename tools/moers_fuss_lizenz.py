@@ -39,16 +39,12 @@ OVERPASS = ("https://maps.mail.ru/osm/tools/overpass/api/interpreter",
             "https://overpass.private.coffee/api/interpreter",
             "https://overpass.kumi.systems/api/interpreter")
 # Ausschnitt um die Altstadt statt der Fläche „Moers“ (die lief bei allen drei Servern in die
-# Zeitgrenze, wie in Augsburg)
-ABFRAGE = """[out:json][timeout:60][bbox:51.4440,6.6150,51.4580,6.6450];
-(
-  way["name"="Steinstraße"];
-  way["name"="Neuer Wall"];
-  way["name"="Neumarkt"];
-  node["name"="Neumarkt"];
-  node["man_made"~"surveillance|monitoring_station"];
-);
+# Zeitgrenze, wie in Augsburg); zweiter Versuch noch kleiner, nur Wege mit Namen
+ABFRAGE = """[out:json][timeout:25][bbox:51.4480,6.6220,51.4550,6.6380];
+way["highway"]["name"~"^(Steinstraße|Neuer Wall|Neumarkt)$"];
 out tags geom;"""
+NOMINATIM = "https://nominatim.openstreetmap.org/search"
+STRASSEN = ["Steinstraße", "Neuer Wall", "Neumarkt"]
 
 ziel = Path(sys.argv[1])  # mit --nur-osm: nur die Lage
 ziel.mkdir(parents=True, exist_ok=True)
@@ -112,6 +108,38 @@ try:
         except Exception as e:  # noqa: BLE001
             out.append(f"-- {pfad}: Fehler {e!r}"[:300])
         schreib()
+    out.append("== OpenStreetMap (Nominatim, strukturierte Suche in Moers)")
+    out.append(f"   {NOMINATIM}: {'erlaubt' if robots.erlaubt(NOMINATIM + '?street=x') else 'GESPERRT'}")
+    funde = {}
+    for strasse in STRASSEN:
+        q = {"street": strasse, "city": "Moers", "country": "Deutschland", "format": "jsonv2",
+             "limit": 5, "extratags": 1, "polygon_geojson": 1}
+        url = f"{NOMINATIM}?{urllib.parse.urlencode(q)}"
+        try:
+            if not robots.erlaubt(url):
+                out.append(f"   {strasse}: gesperrt")
+                continue
+            inhalt, _, _ = robots.oeffne(url, zeit=60, grenze=5_000_000)
+            treffer = json.loads(inhalt)
+            funde[strasse] = treffer
+            for t in treffer:
+                g = t.get("geojson") or {}
+                koord = g.get("coordinates")
+                if g.get("type") == "LineString":
+                    punkte = " ".join(f"{x:.6f},{y:.6f}" for x, y in koord[:20])
+                elif g.get("type") == "MultiLineString":
+                    punkte = " | ".join(" ".join(f"{x:.6f},{y:.6f}" for x, y in linie[:12])
+                                        for linie in koord[:4])
+                else:
+                    punkte = str(koord)[:200]
+                out.append(f"   {strasse}: {t.get('osm_type')} {t.get('osm_id')} "
+                           f"{t.get('category')}/{t.get('type')} Mitte {t.get('lon')},{t.get('lat')} | "
+                           f"{t.get('display_name')} | {g.get('type')}: {punkte}")
+        except Exception as e:  # noqa: BLE001
+            out.append(f"   {strasse}: Fehler {e!r}"[:300])
+    (ziel / "nominatim.json").write_text(json.dumps(funde, ensure_ascii=False, indent=1),
+                                        encoding="utf-8")
+    schreib()
     out.append("== OpenStreetMap (Overpass)")
     antwort = None
     for server in OVERPASS:
@@ -120,7 +148,7 @@ try:
                 out.append(f"   {server}: gesperrt")
                 continue
             daten = urllib.parse.urlencode({"data": ABFRAGE}).encode()
-            inhalt, _, _ = robots.oeffne(server, daten=daten, zeit=180, grenze=20_000_000)
+            inhalt, _, _ = robots.oeffne(server, daten=daten, zeit=90, grenze=20_000_000)
             antwort = json.loads(inhalt)
             out.append(f"   {server}: {len(antwort.get('elements', []))} Elemente")
             break
