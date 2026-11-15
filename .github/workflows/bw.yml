@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        teil: [dauer4]
+        teil: [dz_osm]
     steps:
       - uses: actions/checkout@v7
       - run: |
@@ -26,6 +26,7 @@ jobs:
             dauer2) timeout 60m python3 tools/bw_dauer2.py ergebnis/bw/dauer2 || true ;;
             dauer3) timeout 80m python3 tools/bw_dauer3.py ergebnis/bw/dauer3 2016 2020 2024 || true ;;
             dauer4) timeout 85m python3 tools/bw_dauer4.py ergebnis/bw/dauer4 || true ;;
+            dz_osm) timeout 20m python3 tools/bw_dz_osm.py ergebnis/bw/dz_osm 8035:Achern 8036:Appenweier 8385:Stetten 8386:Filderstadt 8491:Weisenbach 8528:Kippenheim 8554:Wollmatingen 8702:Hornberg 8708:Sasbach 8924:Stetten || true ;;
             rad_osm)
               gh release download dauerzaehlstellen -R vizsim-lab/zaehlkarte -p dauer.tar.gz -D "$RUNNER_TEMP"
               tar -xzf "$RUNNER_TEMP/dauer.tar.gz" -C "$RUNNER_TEMP"
