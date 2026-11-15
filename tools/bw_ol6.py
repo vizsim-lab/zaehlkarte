@@ -33,6 +33,13 @@ ABFRAGEN = {
     # alle Straßen um die Kreuzung Wilhelmstraße/Stuttgarter Straße (Nordarm)
     "lustnau": ('[out:json][timeout:60];(way["highway"](48.5260,9.0740,48.5330,9.0820););'
                 'out body geom;'),
+    # Neckar und Bahn an den Brücken der Kusterdinger Straße
+    "neckar_lustnau": ('[out:json][timeout:60];(way["waterway"~"^(river|canal)$"]'
+                       '(48.518,9.085,48.530,9.100);way["railway"="rail"](48.518,9.085,48.530,9.100););'
+                       'out body geom;'),
+    # Hauptstraßen in Unterjesingen (der Name der Ortsdurchfahrt fehlt in ol4)
+    "unterjesingen": ('[out:json][timeout:60];(way["highway"~"^(primary|secondary|tertiary|trunk)'
+                      '(_link)?$"](48.518,8.955,48.535,9.000););out body geom;'),
 }
 LOG = []
 
