@@ -255,7 +255,7 @@
      ],
      "zaehlungen": 26595,
      "was": "rund 28.000 Zählungen 1990–2025 als ZDA-Rohdateien, Kfz, Rad, Fuß nach Alter",
-     "situation": null,
+     "situation": "In der Karte sind die Zählungen der Senatsverwaltung (ZDA-Rohdateien). Die Bezirke lassen daneben eigene Zählungen machen, vor allem für Kiezblocks und Verkehrskonzepte: Pankow (eine Antwort auf eine Schriftliche Anfrage listet die vom Senat und die vom Bezirk beauftragten Verkehrszählungen der letzten fünf Jahre; Kiezblocks Komponistenviertel und Arnimkiez 2021/2022), Mitte (Bellermannkiez, vorher 2022 und nachher 2024 an fünf Zählstellen), Friedrichshain-Kreuzberg (Samariterkiez 2020, Ostkreuz-Kiez). Offen sind davon nur Präsentationen und Berichte; die Werte je Intervall ließen sich nach dem Berliner Informationsfreiheitsgesetz beim jeweiligen Bezirksamt anfragen.",
      "empfehlung": null,
      "weg": null,
      "anfrage": null,
@@ -267,6 +267,22 @@
       {
        "titel": "FragDenStaat 2019",
        "url": "https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/"
+      },
+      {
+       "titel": "Pankow: Zählungen von Senat und Bezirk (Drucksache 19/26749)",
+       "url": "https://pardok.parlament-berlin.de/starweb/adis/citat/VT/19/SchrAnfr/S19-26749.pdf"
+      },
+      {
+       "titel": "Pankow: Kiezblock Komponistenviertel (MobilBericht)",
+       "url": "https://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/stadtentwicklungsamt/mobilbericht/artikel.1295480.php"
+      },
+      {
+       "titel": "Mitte: Bellermannkiez, Evaluation der Zählung",
+       "url": "https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung-entwurf-neubau/pdf/bellermannkiez-evaluation-zaehlung-online.pdf"
+      },
+      {
+       "titel": "Friedrichshain-Kreuzberg: Samariterkiez (2020)",
+       "url": "https://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2020/pressemitteilung.1012814.php"
       }
      ]
     },
@@ -2480,7 +2496,7 @@
      "quellen": [],
      "zaehlungen": null,
      "was": "zählt an Knoten und Querschnitten, auch Rad; 2017 auf Anfrage eine Liste der Erhebungen 2016 mit Übersichtsplänen – Werte nur gegen Aufbereitung (rund 5 Euro je Zählstelle und Tag)",
-     "situation": "Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag.",
+     "situation": "Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag. Gezählt wird auch für die Beiräte der Stadtteile, etwa 2024 in der Lüssumer Straße für den Beirat Blumenthal (Ergebnisse in einer Stellungnahme an den Beirat).",
      "empfehlung": "Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung). Grundlage: Bremer Informationsfreiheitsgesetz.",
      "weg": "FragDenStaat, BremIFG",
      "anfrage": {
@@ -2495,6 +2511,10 @@
       {
        "titel": "bau.bremen.de: Verkehrsdaten",
        "url": "https://bau.bremen.de/mobilitaet/verkehrsdaten-3841"
+      },
+      {
+       "titel": "Blumenthal: Verkehrszählung Lüssumer Straße (2024)",
+       "url": "https://www.ortsamt-blumenthal.bremen.de/sixcms/media.php/13/Stellungnahme_Verkehrsz%C3%A4hlung_L%C3%BCssumer-Stra%C3%9Fe.docx.pdf"
       }
      ]
     },
@@ -3790,7 +3810,7 @@
      "quellen": [],
      "zaehlungen": null,
      "was": "Bedarfszählungen (meist von Hand, 6–19 Uhr) offen nur als hochgerechnete Tageswerte je Zählstelle und Jahr; dazu Wärmebildkameras an über 400 Kreuzungen (automatisch, in der Karte als Dauerzählstellen)",
-     "situation": "Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen.",
+     "situation": "Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022); offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen Kleinen Anfragen in der Bürgerschaft.",
      "empfehlung": "Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.",
      "weg": "FragDenStaat, Hamburgisches Transparenzgesetz",
      "anfrage": {
@@ -3809,6 +3829,14 @@
       {
        "titel": "BMV",
        "url": "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"
+      },
+      {
+       "titel": "Altona: Hegarstraße",
+       "url": "https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/baustellen/hegarstrasse-999432"
+      },
+      {
+       "titel": "Eimsbüttel: Gutachten Schulcampus Schnelsen",
+       "url": "https://bauleitplanung.hamburg.de/file/b37ff444-6c5a-11eb-aaea-00505697774f/bf180600-4571-42e7-b8a2-0edfb4b6534e"
       }
      ]
     },

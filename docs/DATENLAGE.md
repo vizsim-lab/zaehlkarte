@@ -584,7 +584,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Bremen (HB) – erhoben – Anfrage aussichtsreich
 
-**Lage:** Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag.
+**Lage:** Bremen lässt an Knotenpunkten und Querschnitten zählen, dabei auch den Radverkehr. Online stehen nur Verkehrsmengenkarten aus der Straßenverkehrszählung des Bundes und eigenen Erhebungen. Auf eine Anfrage 2017 kam eine Liste der 2016 durchgeführten Erhebungen mit Erhebungszeiten und Übersichtsplänen; die Ergebnisse lägen nicht flächendeckend in der gewünschten Form vor, eine Aufbereitung koste geschätzt etwa 5 Euro je Zählstelle und Zähltag. Gezählt wird auch für die Beiräte der Stadtteile, etwa 2024 in der Lüssumer Straße für den Beirat Blumenthal (Ergebnisse in einer Stellungnahme an den Beirat).
 
 **Empfehlung:** Anfrage nach den Zählungen seit 2015 in der Form, in der sie vorliegen (ohne Aufbereitung). Grundlage: Bremer Informationsfreiheitsgesetz.
 
@@ -612,7 +612,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-bremen/) · [bau.bremen.de: Verkehrsdaten](https://bau.bremen.de/mobilitaet/verkehrsdaten-3841) · [Entwicklung der Radverkehrszahlen (Deputation, 2019)](https://bau.bremen.de/sixcms/media.php/13/S_TOP_30b_BdV_Entwicklung_Radverkehrszahlen.pdf)
+**Belege:** [FragDenStaat 2017](https://fragdenstaat.de/anfrage/orte-und-messwerte-der-zahlstellen-zum-verkehrsaufkommen-bremen/) · [bau.bremen.de: Verkehrsdaten](https://bau.bremen.de/mobilitaet/verkehrsdaten-3841) · [Blumenthal: Verkehrszählung Lüssumer Straße (2024)](https://www.ortsamt-blumenthal.bremen.de/sixcms/media.php/13/Stellungnahme_Verkehrsz%C3%A4hlung_L%C3%BCssumer-Stra%C3%9Fe.docx.pdf) · [Entwicklung der Radverkehrszahlen (Deputation, 2019)](https://bau.bremen.de/sixcms/media.php/13/S_TOP_30b_BdV_Entwicklung_Radverkehrszahlen.pdf)
 
 
 ## Bremerhaven (HB) – auf Anfrage herausgegeben
@@ -1531,7 +1531,7 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 
 ## Hamburg (HH) – nur Summen oder Mittelwerte offen
 
-**Lage:** Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen.
+**Lage:** Hamburg zählt anlassbezogen an Bedarfszählstellen, meist von Hand von 6 bis 19 Uhr an Normalwerktagen. Offen (dl-de/by-2-0) sind davon nur die hochgerechneten Tageswerte (DTV, DTVw) und der Schwerverkehrsanteil je Zählstelle, Richtung und Jahr, nicht die gezählten Werte. Laut Leistungsverzeichnis der Ausschreibung 2022 zählen die beauftragten Büros in 15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022); offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen Kleinen Anfragen in der Bürgerschaft.
 
 **Empfehlung:** Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
 
@@ -1559,7 +1559,7 @@ Bitte nennen Sie mir außerdem, unter welchen Bedingungen ich die Daten weiterve
 Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm und Luftschadstoffe und gehen in Lärmkartierung und Luftreinhalteplanung ein.
 ```
 
-**Belege:** [Leistungsverzeichnis 2022 (Transparenzportal)](https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735) · [Bedarfszählstellen (Metadaten)](https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML) · [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html) · [Verkehrsdaten Kfz Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14) · [Verkehrsdaten Rad Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)
+**Belege:** [Leistungsverzeichnis 2022 (Transparenzportal)](https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735) · [Bedarfszählstellen (Metadaten)](https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML) · [BMV](https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html) · [Altona: Hegarstraße](https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/baustellen/hegarstrasse-999432) · [Eimsbüttel: Gutachten Schulcampus Schnelsen](https://bauleitplanung.hamburg.de/file/b37ff444-6c5a-11eb-aaea-00505697774f/bf180600-4571-42e7-b8a2-0edfb4b6534e) · [Verkehrsdaten Kfz Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14) · [Verkehrsdaten Rad Infrarotdetektoren](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)
 
 
 ## Hannover (NI) – Dauerzählstellen vorhanden, aber ohne Lizenz

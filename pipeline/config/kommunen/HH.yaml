@@ -18,7 +18,10 @@
       15-Minuten-Intervallen (Kfz in zwei Klassen, Rad, Fuß) und tragen die Werte je Fahrbeziehung in
       die Zähldatenbank der Stadt ein. Dazu kommen automatische Dauerzählungen mit Wärmebildkameras
       an über 400 Kreuzungen; ihre Stundenwerte (Kfz, Schwerverkehr, Rad) zeigt die Karte als
-      Dauerzählstellen.
+      Dauerzählstellen. Die Bezirksämter beauftragen daneben eigene Gutachten mit Zählungen (etwa
+      Eimsbüttel für den Schulcampus Schnelsen, Altona eine Radzählung in der Hegarstraße 2022);
+      offen sind davon nur die Berichte. Einzelne Zählergebnisse stehen als Anlagen zu Schriftlichen
+      Kleinen Anfragen in der Bürgerschaft.
     empfehlung: >-
       Die gezählten Werte der Bedarfszählungen (je Intervall, Richtung und Fahrzeugart) nach dem
       Hamburgischen Transparenzgesetz anfragen – die Zählstellen sind mit Lage bekannt.
@@ -34,6 +37,8 @@
       - ["Leistungsverzeichnis 2022 (Transparenzportal)", "https://suche.transparenz.hamburg.de/dataset/technisches-leistungsverzeichnis-durchfuehrung-von-verkehrszaehlungen-fb-2022001735"]
       - ["Bedarfszählstellen (Metadaten)", "https://archiv.transparenz.hamburg.de/hmbtgarchive/HMDK/trefferanzeige_212656_snap_22.HTML"]
       - ["BMV", "https://www.bmv.de/SharedDocs/DE/Artikel/G/DKV/dkv-aVME-HH.html"]
+      - ["Altona: Hegarstraße", "https://www.hamburg.de/politik-und-verwaltung/bezirke/altona/themen/verkehr/baustellen/hegarstrasse-999432"]
+      - ["Eimsbüttel: Gutachten Schulcampus Schnelsen", "https://bauleitplanung.hamburg.de/file/b37ff444-6c5a-11eb-aaea-00505697774f/bf180600-4571-42e7-b8a2-0edfb4b6534e"]
   dauer:
     stand: in_karte
     quellen: [hamburg_kfz, hamburg_rad]
