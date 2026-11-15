@@ -1,0 +1,29 @@
+# Entwicklungswerkzeug (15.11.2026): die Berichte mit Zähltabellen aus der Durchsicht der
+# Verkehrsversuche holen (tools/holen.py mit tools/holen_versuche.txt) – Datei, Text (pdftotext)
+# und Protokoll je Bericht nach ergebnis/versuche/holen/, zum Entwickeln eines Adapters.
+name: Erkundung Verkehrsversuche, Berichte holen
+on:
+  push:
+    branches: [werkzeug/runde4]
+    paths: [tools/holen_versuche.txt, .github/workflows/versuche_holen.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  holen:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - run: sudo apt-get install -y -qq poppler-utils > /dev/null
+      - run: timeout 30m python3 tools/holen.py ergebnis/versuche/holen tools/holen_versuche.txt || true
+      - if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ergebnis/versuche/holen
+          git commit -q -m "Verkehrsversuche: Berichte geholt $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3 4 5 6; do
+            git pull -q --rebase origin werkzeug/runde4 && git push -q origin HEAD:werkzeug/runde4 && break
+            sleep $((RANDOM % 15 + 5))
+          done
