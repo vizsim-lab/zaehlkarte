@@ -1,0 +1,77 @@
+# Kevelaer: Verkehrszählung im September 2019 für die Verkehrsuntersuchung im Kernort (büro
+# stadtVerkehr), als PDF „Ergebnisse der Verkehrszählungen 2019“ auf kevelaer.de, ohne
+# Lizenzangabe – in der Karte nach dem Beschluss vom 14.11.2026 („Quellen ohne Lizenz“,
+# CLAUDE.md). Aufbau und Prüfungen im Kopf des Adapters (src/zaehlkarte/adapters/kevelaer_pdf.py).
+# Die Seiten, die im PDF nur Bilder sind, stehen in der Abschrift pipeline/abschriften/kevelaer.csv
+# (erzeugt von werkzeuge/abschrift_kevelaer.py, nicht von Hand ändern).
+nr: 16
+status: live
+adapter: kevelaer_pdf
+name: Kevelaer
+land: NW
+traeger: Stadt Kevelaer (Verkehrsuntersuchung im Kernort, büro stadtVerkehr)
+titel: Verkehrsuntersuchung Kernort – Ergebnisse der Verkehrszählungen 2019
+art: >-
+  Videozählung am 17. und 19.09.2019: 16 Knotenpunkte (6–10 und 15–19 Uhr, Viertelstunden je
+  Strom) und 13 Querschnitte (24 Stunden, Stundenwerte), nach Fahrzeugart, nur Kfz
+weg: offen auf kevelaer.de (PDF), ohne Lizenzangabe
+ohne_lizenz:
+  herausgegeben: >-
+    als PDF „Ergebnisse der Verkehrszählungen 2019“ auf kevelaer.de (Seite „Verkehrsuntersuchung
+    2019–2024“), ohne Lizenzangabe
+  geprueft: 2026-11-15
+portal: https://www.kevelaer.de/kevelaer-de/startseite/leben-in-kevelaer/mobilitaet/verkehrsuntersuchung-2019-2024
+hinweise:
+  - >-
+    Schwerverkehr ist hier die Fahrzeugart „Lkw“ des Berichts: Busse und Lastzüge sind keine
+    eigenen Arten, Lieferwagen zählen nicht dazu.
+  - >-
+    Bei 13 Knotenpunkten ist die Morgentabelle, bei 12 die Seite mit den Summen im PDF nur ein Bild.
+    Diese Werte sind abgeschrieben und wie alle anderen gegen die Summen des Berichts geprüft.
+# Fassung vom 15.11.2026 (Werkzeug-Branch werkzeug/erkundung, holen31), Prüfsumme wie bei Xanten
+dateien:
+  - datei: ergebnisse_verkehrszaehlungen_2019.pdf
+    titel: Ergebnisse der Verkehrszählungen 2019
+    url: https://www.kevelaer.de/dokumente/leben-in-kevelaer/mobilitaet/ergebnisse-der-verkehrszaehlungen-2019.pdf?cid=7j
+    sha256: 1769bb90a49db3aedc47ba4a702bddc140f606f15c5000f4b83b2c8206d46f03
+# Lage: Knotenpunkte = gemeinsamer Knoten der Straßen der Arme in OpenStreetMap (Overpass, holen31),
+# an Kreisverkehren (K1, K2, K15) dessen Mitte; Querschnitte = Lage auf dem Zählstellenplan im
+# Zwischenbericht (https://www.kevelaer.de/dokumente/leben-in-kevelaer/mobilitaet/zwischenbericht.pdf?cid=7v,
+# Abb. 2.3.1.2-2), über 13 Knotenpunkte auf Koordinaten umgerechnet (Abweichung der Knotenpunkte
+# 1–12 m) und auf die genannte Straße gelegt (höchstens 5 m entfernt). November 2026, Werkzeug
+# tools/kevelaer/lage.py im Branch werkzeug/erkundung.
+geokodierung:
+  titel: Lage der Zählstellen (OpenStreetMap; Querschnitte nach dem Zählstellenplan im Zwischenbericht)
+  lizenz: ODbL (abgeleitet aus OpenStreetMap)
+  lizenz_url: https://opendatacommons.org/licenses/odbl/
+  herkunft_url: https://www.openstreetmap.org/copyright
+orte:
+  K1: {lon: 6.262519, lat: 51.58108, genauigkeit: kreisverkehr}
+  K2: {lon: 6.257918, lat: 51.580739, genauigkeit: kreisverkehr}
+  K3: {lon: 6.262266, lat: 51.573842, genauigkeit: kreuzung, hinweise: &wellener ["Straßenname im Bericht „Wellener Landstraße“ – in OpenStreetMap „Weller Landstraße“ (L 491)."]}
+  K4: {lon: 6.251703, lat: 51.585328, genauigkeit: kreuzung}
+  K5: {lon: 6.25756, lat: 51.573133, genauigkeit: kreuzung, hinweise: *wellener}
+  K6: {lon: 6.243213, lat: 51.567265, genauigkeit: kreuzung}
+  K7: {lon: 6.231544, lat: 51.570054, genauigkeit: kreuzung, hinweise: &l261 ["Der Kopf der Seite nennt „Weller Landstraße L261“, die Arme derselben Seite und Knotenpunkt 6 „L361“ (so auch OpenStreetMap)."]}
+  K8: {lon: 6.222418, lat: 51.57516, genauigkeit: kreuzung, hinweise: *l261}
+  K9: {lon: 6.230223, lat: 51.581141, genauigkeit: kreuzung}
+  K10: {lon: 6.239952, lat: 51.578072, genauigkeit: kreuzung}
+  K11: {lon: 6.244243, lat: 51.580162, genauigkeit: kreuzung}
+  K12: {lon: 6.247954, lat: 51.581984, genauigkeit: kreuzung, hinweise: &geldener ["Straßenname im Bericht „Geldener Straße“ – in OpenStreetMap „Gelderner Straße“."]}
+  K13: {lon: 6.237027, lat: 51.583352, genauigkeit: kreuzung}
+  K14: {lon: 6.246571, lat: 51.58885, genauigkeit: kreuzung}
+  K15: {lon: 6.238616, lat: 51.584145, genauigkeit: kreisverkehr}
+  K16: {lon: 6.254915, lat: 51.590056, genauigkeit: kreuzung}
+  Q1: {lon: 6.258545, lat: 51.574803, genauigkeit: plan, hinweise: ["Lage nach dem Zählstellenplan im Zwischenbericht zur Verkehrsuntersuchung (Abb. 2.3.1.2-2), auf Koordinaten umgerechnet und auf die Straße gelegt (etwa ±30 m).", "Straßenname im Bericht „Geldener Straße“ – in OpenStreetMap „Gelderner Straße“."]}
+  Q2: &plan {lon: 6.255018, lat: 51.576615, genauigkeit: plan, hinweise: ["Lage nach dem Zählstellenplan im Zwischenbericht zur Verkehrsuntersuchung (Abb. 2.3.1.2-2), auf Koordinaten umgerechnet und auf die Straße gelegt (etwa ±30 m)."]}
+  Q3: {<<: *plan, lon: 6.241658, lat: 51.575879}
+  Q4: {<<: *plan, lon: 6.243074, lat: 51.578663}
+  Q5: {<<: *plan, lon: 6.242894, lat: 51.57168}
+  Q6: {<<: *plan, lon: 6.235904, lat: 51.594182}
+  Q7: {<<: *plan, lon: 6.256825, lat: 51.580566}
+  Q8: {<<: *plan, lon: 6.248325, lat: 51.5833}
+  Q9: {<<: *plan, lon: 6.244699, lat: 51.581408}
+  Q10: {<<: *plan, lon: 6.268455, lat: 51.579261}
+  Q11: {<<: *plan, lon: 6.25563, lat: 51.585336}
+  Q12: {<<: *plan, lon: 6.233989, lat: 51.588626}
+  Q13: {<<: *plan, lon: 6.233243, lat: 51.583336}
