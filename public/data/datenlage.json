@@ -2314,6 +2314,37 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     10.4136,
+     49.5011
+    ]
+   },
+   "properties": {
+    "ags": "09575",
+    "name": "Landkreis Neustadt a.d.Aisch-Bad Windsheim",
+    "land": "BY",
+    "recht": "kein Landes-IFG – Bayerisches UIG und städtische Informationsfreiheitssatzungen",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "erste Fahrradzählstation des Landkreises seit Juli 2023, am Aischtalradweg zwischen Lenkersheim und Bad Windsheim (zählt fortlaufend, je Richtung); Werte nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Fahrradzählstation „Aischtalradweg“ (Landkreis)",
+       "url": "https://www.kreis-nea.de/amt-verwaltung/veroeffentlichungen-formulare-co/aktuelles/fahrradzaehlstation-aischtalradweg"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      10.2303,
      50.0455
     ]
@@ -4000,6 +4031,37 @@
     },
     "dauer": null,
     "stand_k": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.2617,
+     53.5569
+    ]
+   },
+   "properties": {
+    "ags": "13071",
+    "name": "Landkreis Mecklenburgische Seenplatte",
+    "land": "MV",
+    "recht": "Informationsfreiheitsgesetz M-V",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "zwölf Rad-Zählstationen an den Radrouten des Kreises (etwa in Altentreptow und Rechlin), dort auch nach Stunde und Tag ausgewertet; Werte nur in Presseberichten, nicht als Daten veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Nordkurier: Kleine Kästen in der Seenplatte",
+       "url": "https://www.nordkurier.de/regional/mueritz/kleine-kasten-in-der-seenplatte-sorgen-fur-wichtige-verkehrs-daten-1172578"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
    }
   },
   {
@@ -6477,6 +6539,37 @@
       {
        "titel": "Zwei neue Fahrradzählstationen (Stadt Landau)",
        "url": "https://www.landau.de/Verwaltung-Politik/Pressemitteilungen/Landau-tritt-in-die-Pedale-Zwei-neue-Fahrradz%C3%A4hlstationen-markieren-Abschluss-des-F%C3%B6rderprojekts-Klimaschutz-durch-Radverkehr-Zus%C3%A4tzliche-Fahrradservicestation-in-der-Innenstadt.php?FID=2644.20496.1"
+      }
+     ]
+    },
+    "stand_d": "kandidat"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.2226,
+     50.3276
+    ]
+   },
+   "properties": {
+    "ags": "07137",
+    "name": "Landkreis Mayen-Koblenz",
+    "land": "RP",
+    "recht": "Landestransparenzgesetz (LTranspG) – Antragsrecht auch gegenüber Gemeinden",
+    "kontakt": null,
+    "kurzzeit": null,
+    "dauer": {
+     "stand": "kandidat",
+     "quellen": [],
+     "was": "30 Rad-Dauerzählstellen, eingerichtet ab 16. November 2026 an Radwegen und viel befahrenen Straßen (überwiegend Induktionsschleifen, vereinzelt Kamera oder Radar), Auswertung nach Richtung und Tageszeit; geplant ist eine interaktive Online-Karte mit Dashboards – Werte noch nicht veröffentlicht",
+     "situation": null,
+     "links": [
+      {
+       "titel": "Landkreis richtet 30 dauerhafte Radzählstellen ein (November 2026)",
+       "url": "https://www.kvmyk.de/aktuelles/pressemeldungen-2026/2026-11/landkreis-richtet-30-dauerhafte-radzaehlstellen-ein/"
       }
      ]
     },

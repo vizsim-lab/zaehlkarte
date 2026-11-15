@@ -92,7 +92,10 @@ FragDenStaat.
 | Landkreis Heilbronn | BW | – | in der Karte |  |
 | Landkreis Lüneburg | NI | erhoben – Anfrage aussichtsreich |  | Anfrage nach einem Export aller Zählungen mit den Leihgeräten (Werte je Stunde und Richtung), mit Lizenz |
 | Landkreis Marburg-Biedenkopf | HE | – | vorhanden, Werte nicht offen |  |
+| Landkreis Mayen-Koblenz | RP | – | vorhanden, Werte nicht offen |  |
+| Landkreis Mecklenburgische Seenplatte | MV | – | vorhanden, Werte nicht offen |  |
 | Landkreis München | BY | – | vorhanden, Werte nicht offen |  |
+| Landkreis Neustadt a.d.Aisch-Bad Windsheim | BY | – | vorhanden, Werte nicht offen |  |
 | Landkreis Sächsische Schweiz-Osterzgebirge | SN | erhoben – Anfrage aussichtsreich |  | Anfrage nach den Zählungen an den Kreisstraßen ab 2026 (Werte je Intervall und Richtung), mit Lizenz |
 | Landkreis Waldeck-Frankenberg | HE | – | vorhanden, Werte nicht offen |  |
 | Landshut | BY | – | vorhanden, Werte nicht offen |  |
@@ -2054,11 +2057,32 @@ Verkehrsmengen sind Umweltinformationen: Sie bestimmen die Belastung durch Lärm
 **Belege:** [Radzählstellen (Landkreis)](https://www.marburg-biedenkopf.de/microsites/klimaschutz/team-radverkehr/radinfrastruktur/index.php) · [Radverkehrsbericht 2024 (PDF)](https://www.marburg-biedenkopf.de/auto-und-verkehr/radverkehr/20250228_Bericht_2024_final_komprimiert.pdf)
 
 
+## Landkreis Mayen-Koblenz (RP) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** 30 Rad-Dauerzählstellen, eingerichtet ab 16. November 2026 an Radwegen und viel befahrenen Straßen (überwiegend Induktionsschleifen, vereinzelt Kamera oder Radar), Auswertung nach Richtung und Tageszeit; geplant ist eine interaktive Online-Karte mit Dashboards – Werte noch nicht veröffentlicht
+
+**Belege:** [Landkreis richtet 30 dauerhafte Radzählstellen ein (November 2026)](https://www.kvmyk.de/aktuelles/pressemeldungen-2026/2026-11/landkreis-richtet-30-dauerhafte-radzaehlstellen-ein/)
+
+
+## Landkreis Mecklenburgische Seenplatte (MV) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** zwölf Rad-Zählstationen an den Radrouten des Kreises (etwa in Altentreptow und Rechlin), dort auch nach Stunde und Tag ausgewertet; Werte nur in Presseberichten, nicht als Daten veröffentlicht
+
+**Belege:** [Nordkurier: Kleine Kästen in der Seenplatte](https://www.nordkurier.de/regional/mueritz/kleine-kasten-in-der-seenplatte-sorgen-fur-wichtige-verkehrs-daten-1172578)
+
+
 ## Landkreis München (BY) – Dauerzählstellen vorhanden, Werte nicht offen
 
 **Lage:** erste Fahrradzählstation des Landkreises, mit Display, an der Radhauptverbindung von München durch den Perlacher Forst nach Sauerlach (Linienstraße, Oberhaching); Werte nicht als Daten veröffentlicht
 
 **Belege:** [Fahrradzählstation (Landkreis München)](https://www.landkreis-muenchen.de/themen/mobilitaet/radverkehr/fahrradzaehlstation/)
+
+
+## Landkreis Neustadt a.d.Aisch-Bad Windsheim (BY) – Dauerzählstellen vorhanden, Werte nicht offen
+
+**Lage:** erste Fahrradzählstation des Landkreises seit Juli 2023, am Aischtalradweg zwischen Lenkersheim und Bad Windsheim (zählt fortlaufend, je Richtung); Werte nicht als Daten veröffentlicht
+
+**Belege:** [Fahrradzählstation „Aischtalradweg“ (Landkreis)](https://www.kreis-nea.de/amt-verwaltung/veroeffentlichungen-formulare-co/aktuelles/fahrradzaehlstation-aischtalradweg)
 
 
 ## Landkreis Sächsische Schweiz-Osterzgebirge (SN) – erhoben – Anfrage aussichtsreich
