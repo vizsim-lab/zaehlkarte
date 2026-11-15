@@ -109,3 +109,7 @@ vg250() {  # vg250 <branch>
 # private.coffee: Steinstraße = Weg 10955855 (Fußgängerzone, 304 m) – Lage in der Quelldatei.
 # mkdir -p ergebnis/moers_fuss_osm2
 # timeout 15m python3 tools/moers_fuss_lizenz.py ergebnis/moers_fuss_osm2 --nur-osm > ergebnis/moers_fuss_osm2/lauf.txt 2>&1 || true
+#
+# Moers, Fußgänger Steinstraße: Adapter des App-Branches `moers-fuss` gegen das Portal prüfen
+# (holen über abruf mit Crawl-delay 10 s – 54 Monatsdateien, rund zehn Minuten; lesen, Kartendaten).
+pruefe moers-fuss moers_fuss
