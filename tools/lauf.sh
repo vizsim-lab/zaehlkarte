@@ -45,7 +45,10 @@ pruefe_hh() {  # pruefe_hh <branch> <code>
   cp "$roh"/tage_*.csv.gz "$ziel/gedaechtnis/" 2>/dev/null || true
   ls -la "$roh" > "$ziel/gedaechtnis_nachher.txt"
 }
-# Datensatzbeschreibungen: geholt (ergebnis/hamburg_tage/portal_*.txt)
-# zweiter Lauf mit dem Stand des PR (Hinweise, Ferien Hamburg ab 2019/20)
-pruefe_hh hamburg-tageswerte hamburg_rad
-pruefe_hh hamburg-tageswerte hamburg_kfz
+# Datensatzbeschreibungen: geholt (ergebnis/hamburg_tage/portal_*.txt); zweiter Lauf mit dem
+# Stand von #28 geprüft (gemergt 15.11.).
+#
+# Leipzig, Tageswerte „pro Tag der letzten 2 Jahre“ (15.11.2026): Format, Zeitraum, Lieferungen,
+# Jahnallee, Lizenz beider Datensätze; Rohdateien gepackt für den Vergleich mit dem Gedächtnis
+mkdir -p ergebnis/leipzig_tage
+timeout 30m python3 tools/leipzig_tage.py ergebnis/leipzig_tage > ergebnis/leipzig_tage/lauf.txt 2>&1 || true
