@@ -66,6 +66,18 @@ Rad-Zählsäulen und -schleifen (Eco-Counter u. a.) gehören seit November 2026 
   ignoriert `q`). Behörden samt Funktionsadresse: `/api/v1/publicbody/?q=Stadt Freiburg`.
 - **Ratsinformationssysteme:** Antworten auf Anfragen nennen Zahl und Format der Zählungen
   (Dresden AF0915/25, München DAVe-Vorlage).
+- **Neue Absender und Begriffe (Runde 4, 15.11.2026,** Branch `werkzeug/runde4`, Auswertung im
+  Projekt-Doc `claude/recherche-runde4-2026-11.md`): Fuß-Zählungen heißen „Frequenzmessung“,
+  „Passantenfrequenz“, „Personenfrequenzmessung“ und kommen von Stadtmarketing,
+  Wirtschaftsförderung und Innenstadtmanagement – veröffentlicht fast nur Monatswerte. Zählwerte
+  sind nur Laser- und Kamerazählungen, nicht WLAN/Bluetooth (Ariadne in Siegburg) oder Handy- und
+  GPS-Daten (die Passantenzählungen der IHKs). „Verkehrsversuch“, „Kiezblock“, „Modalfilter“,
+  „Schulstraße“ bringen über 100 Versuche, teils mit Auswertung (Kurzzeit vorher/nachher). Die
+  Rad-Treffer der Runde waren meist schon in der Datenlage. Kreis-Webseiten: aus der Wikipedia-Liste
+  „Liste der Landkreise in Deutschland“ (Parsoid-Links; die Infobox hat eigene Tabellen und weiche
+  Trennstriche in „Kreis&shy;schlüssel“, Region Hannover und Städteregion Aachen haben einen
+  „Regionsschlüssel“) – `tools/kreise4b.py` fand 292 von 294 mit passendem Schlüssel. Bayerische
+  Kreise zeigen zu „Straßenverkehrszählungen; Durchführung“ nur den Standardtext des BayernPortals.
 - **Zählsoftware:** München und Wolfsburg nutzen DAVe (Open Source, Export in offene Formate),
   Lübeck die Plattform mytrafficdata (datacollect) – dort lohnt eine Anfrage nach dem Export
   statt nach PDFs.
