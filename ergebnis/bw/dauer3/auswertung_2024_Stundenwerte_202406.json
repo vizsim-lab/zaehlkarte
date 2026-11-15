@@ -1,0 +1,1876 @@
+{
+ "jahr": "2024_Stundenwerte_202406",
+ "eintraege": 198,
+ "namen": [
+  "Stundenwerte_202406/",
+  "Stundenwerte_202406/BW_62221202_2406.csv",
+  "Stundenwerte_202406/BW_63231101_2406.csv",
+  "Stundenwerte_202406/BW_64161001_2406.csv",
+  "Stundenwerte_202406/BW_64161002_2406.csv",
+  "Stundenwerte_202406/BW_64171004_2406.csv",
+  "Stundenwerte_202406/BW_64221203_2406.csv",
+  "Stundenwerte_202406/BW_64241100_2406.csv",
+  "Stundenwerte_202406/BW_65171005_2406.csv",
+  "Stundenwerte_202406/BW_65171009_2406.csv",
+  "Stundenwerte_202406/BW_65171010_2406.csv",
+  "Stundenwerte_202406/BW_65211100_2406.csv",
+  "Stundenwerte_202406/BW_65211103_2406.csv",
+  "Stundenwerte_202406/BW_66171001_2406.csv",
+  "Stundenwerte_202406/BW_66171013_2406.csv",
+  "Stundenwerte_202406/BW_66171025_2406.csv",
+  "Stundenwerte_202406/BW_66171214_2406.csv",
+  "Stundenwerte_202406/BW_66171219_2406.csv",
+  "Stundenwerte_202406/BW_66241207_2406.csv",
+  "Stundenwerte_202406/BW_67171016_2406.csv",
+  "Stundenwerte_202406/BW_67171018_2406.csv",
+  "Stundenwerte_202406/BW_67181055_2406.csv",
+  "Stundenwerte_202406/BW_67191057_2406.csv",
+  "Stundenwerte_202406/BW_67191058_2406.csv",
+  "Stundenwerte_202406/BW_67211217_2406.csv",
+  "Stundenwerte_202406/BW_67221084_2406.csv",
+  "Stundenwerte_202406/BW_67241104_2406.csv",
+  "Stundenwerte_202406/BW_67261200_2406.csv",
+  "Stundenwerte_202406/BW_68171019_2406.csv",
+  "Stundenwerte_202406/BW_68171020_2406.csv",
+  "Stundenwerte_202406/BW_68201104_2406.csv",
+  "Stundenwerte_202406/BW_68211001_2406.csv",
+  "Stundenwerte_202406/BW_68211002_2406.csv",
+  "Stundenwerte_202406/BW_68211003_2406.csv",
+  "Stundenwerte_202406/BW_68211059_2406.csv",
+  "Stundenwerte_202406/BW_68211102_2406.csv",
+  "Stundenwerte_202406/BW_68211201_2406.csv",
+  "Stundenwerte_202406/BW_68221091_2406.csv",
+  "Stundenwerte_202406/BW_68251095_2406.csv",
+  "Stundenwerte_202406/BW_68261103_2406.csv"
+ ],
+ "endungen": {
+  "": 1,
+  ".csv": 197
+ },
+ "ordner": {
+  "Stundenwerte_202406": 198
+ },
+ "aufbau": {
+  "1+1|KFZ;SV|46": 97,
+  "2+2|KFZ;SV|90": 33,
+  "3+3|KFZ;LK|26": 27,
+  "2+2|KFZ;LK|18": 12,
+  "3+3|KFZ;SV|134": 12,
+  "4+4|KFZ;SV|178": 4,
+  "1+2|KFZ;SV|68": 3,
+  "2+1|KFZ;SV|68": 3,
+  "3+2|KFZ;LK|22": 2,
+  "3+4|KFZ;SV|156": 1,
+  "2+3|KFZ;SV|112": 1,
+  "3+2|KFZ;SV|112": 1,
+  "4+2|KFZ;SV|134": 1
+ },
+ "kennungen": {
+  "KFZ|-": 358983,
+  "KFZ|S": 6,
+  "KFZ|a": 5760,
+  "KFZ|k": 57818,
+  "KFZ|s": 70971,
+  "KFZ|u": 3982,
+  "LK|-": 99676,
+  "LK|S": 6,
+  "LK|k": 806,
+  "LK|s": 55752,
+  "LK|u": 2160,
+  "SV|-": 258023,
+  "SV|a": 5760,
+  "SV|k": 4704,
+  "SV|s": 68811,
+  "SV|u": 1822
+ },
+ "status": {
+  "": 141840
+ },
+ "kodierung": {
+  "andere": 43,
+  "utf-8": 154
+ },
+ "tage_je_richtung": {
+  "mit_stunde": 9770,
+  "23": 604,
+  "24": 8237,
+  "weniger": 929
+ },
+ "fehler": [],
+ "koepfe": [
+  {
+   "datei": "Stundenwerte_202406/BW_62221202_2406.csv",
+   "kopf": [
+    "6222;8202;08;L;2310;Rosenmühle               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Miltenberg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_63231101_2406.csv",
+   "kopf": [
+    "6323;8801;08;B;27;Tauberbischofsheim       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Heilbronn;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_64161001_2406.csv",
+   "kopf": [
+    "6416;8161;08;A;6;Mannheim-Sandhofen       ;;;;;;;;;;;;",
+    "02;02;Kaiserslautern;O;;W;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_64161002_2406.csv",
+   "kopf": [
+    "6416;8002;08;A;6;Mannheim-Schönau         ;;;;;;;;;;;;",
+    "02;02;Kaiserslautern;O;;W;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_64171004_2406.csv",
+   "kopf": [
+    "6417;8004;08;A;5;Heddesheim               ;;;;;;;;;;;;",
+    "02;02;Heidelberg;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_64221203_2406.csv",
+   "kopf": [
+    "6422;8213;08;L;518;Walldürn                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Rosenberg/Odenwald;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_64241100_2406.csv",
+   "kopf": [
+    "6424;8375;08;B;290;Bad Mergentheim 2        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Crailsheim;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_65171005_2406.csv",
+   "kopf": [
+    "6517;8005;08;A;5;Dossenheim               ;;;;;;;;;;;;",
+    "02;02;Heidelberg;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_65171009_2406.csv",
+   "kopf": [
+    "6517;8009;08;A;656;Mannheim-Seckenheim      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Mannheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_65171010_2406.csv",
+   "kopf": [
+    "6517;8010;08;A;5;Eppelheim                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Karlsruhe;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_65211100_2406.csv",
+   "kopf": [
+    "6521;8620;08;B;27;Rittersbach              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Heilbronn;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_65211103_2406.csv",
+   "kopf": [
+    "6521;8623;08;B;292;Auerbach                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Mosbach,B27;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_66171001_2406.csv",
+   "kopf": [
+    "6617;8012;08;A;6;Brühl / Rohrbach         ;;;;;;;;;;;;",
+    "02;02;Mannheim;O;;W;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_66171013_2406.csv",
+   "kopf": [
+    "6617;8013;08;A;6;Ketsch                   ;;;;;;;;;;;;",
+    "02;02;Mannheim;O;;W;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_66171025_2406.csv",
+   "kopf": [
+    "6617;8017;08;A;6;AD Hockenheim            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "04;04;Mannheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;KFZFS7;K_KFZFS7;SVFS7;K_SVFS7;KFZFS8;K_KFZFS8;SVFS8;K_SVFS8;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6;MotFS7;K_MotFS7;PkwFS7;K_PkwFS7;LfwFS7;K_LfwFS7;PmAFS7;K_PmAFS7;BusFS7;K_BusFS7;LoAFS7;K_LoAFS7;LmAFS7;K_LmAFS7;SatFS7;K_SatFS7;SoFS7;K_SoFS7;MotFS8;K_MotFS8;PkwFS8;K_PkwFS8;LfwFS8;K_LfwFS8;PmAFS8;K_PmAFS8;BusFS8;K_BusFS8;LoAFS8;K_LoAFS8;LmAFS8;K_LmAFS8;SatFS8;K_SatFS8;SoFS8;K_SoFS8"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_66171214_2406.csv",
+   "kopf": [
+    "6617;8484;08;L;600A;Heidelberg 2             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Schwetzingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_66171219_2406.csv",
+   "kopf": [
+    "6617;8489;08;L;722;Talhaus                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Speyer;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_66241207_2406.csv",
+   "kopf": [
+    "6624;8207;08;L;1020;Hollenbach               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Ailringen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67171016_2406.csv",
+   "kopf": [
+    "6717;8016;08;A;6;Walldorf                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Mannheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67171018_2406.csv",
+   "kopf": [
+    "6717;8018;08;A;5;St. Leon                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67181055_2406.csv",
+   "kopf": [
+    "6718;8156;08;A;6;Balzfeld                 ;;;;;;;;;;;;;;;;",
+    "03;02;Mannheim;O;;W;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67191057_2406.csv",
+   "kopf": [
+    "6719;8157;08;A;6;Sinsheim                 ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Mannheim;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67191058_2406.csv",
+   "kopf": [
+    "6719;8158;08;A;6;Sinsheim-Steinsfurt      ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Mannheim;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67211217_2406.csv",
+   "kopf": [
+    "6721;8217;08;L;1096;Heuchlingen              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;BadFriedrichshall;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67221084_2406.csv",
+   "kopf": [
+    "6722;8084;08;A;81;Neuenstadt               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Stuttgart;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67241104_2406.csv",
+   "kopf": [
+    "6724;8634;08;B;19;Künzelsau                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;SchwäbischHall;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_67261200_2406.csv",
+   "kopf": [
+    "6726;8209;08;L;1040;Gaggstatt                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Vellberg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68171019_2406.csv",
+   "kopf": [
+    "6817;8019;08;A;5;Kronau                   ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68171020_2406.csv",
+   "kopf": [
+    "6817;8020;08;A;5;Büchenau                 ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68201104_2406.csv",
+   "kopf": [
+    "6820;8644;08;B;293;Schwaigern               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68211001_2406.csv",
+   "kopf": [
+    "6821;8042;08;A;81;Weinsberg                ;;;;;;;;;;;;",
+    "02;02;Singen;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68211002_2406.csv",
+   "kopf": [
+    "6821;8043;08;A;81;Grafenwald               ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68211003_2406.csv",
+   "kopf": [
+    "6821;8160;08;A;6;Biberach                 ;;;;;;;;;;;;;;;;",
+    "03;02;Mannheim;O;;W;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68211059_2406.csv",
+   "kopf": [
+    "6821;8059;08;A;6;Neckarsulm 1             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Heilbronn;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68211102_2406.csv",
+   "kopf": [
+    "6821;8382;08;B;27;Neckarsulm 2             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Stuttgart;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68211201_2406.csv",
+   "kopf": [
+    "6821;8383;08;L;1100;Flein                    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Ilsfeld;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68221091_2406.csv",
+   "kopf": [
+    "6822;8091;08;A;6;Schwabbach               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Heilbronn;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68251095_2406.csv",
+   "kopf": [
+    "6825;8168;08;A;6;Reussenberg              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Heilbronn;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_68261103_2406.csv",
+   "kopf": [
+    "6826;8827;08;B;290;Crailsheim-Süd           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Ellwangen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_69161021_2406.csv",
+   "kopf": [
+    "6916;8021;08;A;5;Karlsruhe-Hagsfeld       ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_69161100_2406.csv",
+   "kopf": [
+    "6917;8520;08;B;3;Karlsruhe 2              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Freiburg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_69171201_2406.csv",
+   "kopf": [
+    "6917;8212;08;L;559;Weingarten               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Weingarten;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_69201100_2406.csv",
+   "kopf": [
+    "6920;8824;08;B;27;Walheim                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Stuttgart;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_69211001_2406.csv",
+   "kopf": [
+    "6921;8044;08;A;81;T+R Wunnenstein          ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_69211085_2406.csv",
+   "kopf": [
+    "6921;8085;08;A;81;Ilsfeld                  ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_69211216_2406.csv",
+   "kopf": [
+    "6921;8666;08;L;1115;Grossbottwar             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Besigheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70161001_2406.csv",
+   "kopf": [
+    "7016;8001;08;A;5;Oberreut                 ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70161022_2406.csv",
+   "kopf": [
+    "7016;8023;08;A;5;Karlsruhe 1              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "04;04;WeilamRhein;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;KFZFS7;K_KFZFS7;SVFS7;K_SVFS7;KFZFS8;K_KFZFS8;SVFS8;K_SVFS8;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6;MotFS7;K_MotFS7;PkwFS7;K_PkwFS7;LfwFS7;K_LfwFS7;PmAFS7;K_PmAFS7;BusFS7;K_BusFS7;LoAFS7;K_LoAFS7;LmAFS7;K_LmAFS7;SatFS7;K_SatFS7;SoFS7;K_SoFS7;MotFS8;K_MotFS8;PkwFS8;K_PkwFS8;LfwFS8;K_LfwFS8;PmAFS8;K_PmAFS8;BusFS8;K_BusFS8;LoAFS8;K_LoAFS8;LmAFS8;K_LmAFS8;SatFS8;K_SatFS8;SoFS8;K_SoFS8"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70161027_2406.csv",
+   "kopf": [
+    "7016;8027;08;A;8;Palmbach                 ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70161031_2406.csv",
+   "kopf": [
+    "7016;8031;08;A;5;Rheinstetten             ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70171028_2406.csv",
+   "kopf": [
+    "7017;8128;08;A;8;Mutschelbach             ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70181077_2406.csv",
+   "kopf": [
+    "7018;8077;08;A;8;Pforzheim-Ost            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70181078_2406.csv",
+   "kopf": [
+    "7018;8079;08;A;8;Wurmberg                 ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70181079_2406.csv",
+   "kopf": [
+    "7018;8129;08;A;8;Ispringen                ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70191108_2406.csv",
+   "kopf": [
+    "7019;8678;08;B;10;Vaihingen (Enz)          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Pforzheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70201001_2406.csv",
+   "kopf": [
+    "7020;8087;08;A;81;Ludwigsburg              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;04;Singen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;KFZFS7;K_KFZFS7;SVFS7;K_SVFS7;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6;MotFS7;K_MotFS7;PkwFS7;K_PkwFS7;LfwFS7;K_LfwFS7;PmAFS7;K_PmAFS7;BusFS7;K_BusFS7;LoAFS7;K_LoAFS7;LmAFS7;K_LmAFS7;SatFS7;K_SatFS7;SoFS7;K_SoFS7"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70211001_2406.csv",
+   "kopf": [
+    "7021;8045;08;A;81;Freiberg am Neckar       ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70211086_2406.csv",
+   "kopf": [
+    "7021;8086;08;A;81;Pleidelsheim             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Stuttgart;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70221100_2406.csv",
+   "kopf": [
+    "7022;8390;08;B;14;Strümpfelbach            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Stuttgart;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70231203_2406.csv",
+   "kopf": [
+    "7023;8413;08;L;1066;Sulzbach (Murr)          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Sulzbach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_70261200_2406.csv",
+   "kopf": [
+    "7026;8630;08;L;1060;Lindenhof                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;SchwäbischHall;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71141102_2406.csv",
+   "kopf": [
+    "7114;8686;08;B;500;Rheinbrücke Iffezheim    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Baden-Baden;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71151105_2406.csv",
+   "kopf": [
+    "7115;8685;08;B;36;Rastatt                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Kehl;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71191075_2406.csv",
+   "kopf": [
+    "7119;8175;08;A;8;Rutesheim                ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71191076_2406.csv",
+   "kopf": [
+    "7119;8174;08;A;8;Heimsheim                ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71201003_2406.csv",
+   "kopf": [
+    "7120;8088;08;A;81;Korntal                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "04;04;Stuttgart;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;KFZFS7;K_KFZFS7;SVFS7;K_SVFS7;KFZFS8;K_KFZFS8;SVFS8;K_SVFS8;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6;MotFS7;K_MotFS7;PkwFS7;K_PkwFS7;LfwFS7;K_LfwFS7;PmAFS7;K_PmAFS7;BusFS7;K_BusFS7;LoAFS7;K_LoAFS7;LmAFS7;K_LmAFS7;SatFS7;K_SatFS7;SoFS7;K_SoFS7;MotFS8;K_MotFS8;PkwFS8;K_PkwFS8;LfwFS8;K_LfwFS8;PmAFS8;K_PmAFS8;BusFS8;K_BusFS8;LoAFS8;K_LoAFS8;LmAFS8;K_LmAFS8;SatFS8;K_SatFS8;SoFS8;K_SoFS8"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71201090_2406.csv",
+   "kopf": [
+    "7120;8090;08;A;81;Stammheim                ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71201100_2406.csv",
+   "kopf": [
+    "7120;8440;08;B;10;Stuttgart-Zuffenhausen   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71201227_2406.csv",
+   "kopf": [
+    "7120;8442;08;L;1177;Heimerdingen             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Pforzheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71211211_2406.csv",
+   "kopf": [
+    "7121;8431;08;L;1142;Hegnach                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Waiblingen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71221100_2406.csv",
+   "kopf": [
+    "7122;8826;08;B;14;Korb                     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Waiblingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71221107_2406.csv",
+   "kopf": [
+    "7122;8403;08;B;29;Grunbach                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Stuttgart;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_71268468_2406.csv",
+   "kopf": [
+    "7126;8468;08;B;29;Westumgehung Aalen       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Nördlingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72141207_2406.csv",
+   "kopf": [
+    "7214;8507;08;L;83;Bühl                     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;ASBühl;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72161100_2406.csv",
+   "kopf": [
+    "7216;8490;08;B;462;Weisenbach               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Freudenstadt;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72181202_2406.csv",
+   "kopf": [
+    "7218;8102;08;L;343;Schömberg                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Höfen/Enz;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72191001_2406.csv",
+   "kopf": [
+    "7219;8140;08;A;8;Warmbronn                ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72201011_2406.csv",
+   "kopf": [
+    "7220;8101;08;A;81;Böblingen                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72201073_2406.csv",
+   "kopf": [
+    "7220;8073;08;A;8;Stuttgart-Vaihingen      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "04;04;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;KFZFS7;K_KFZFS7;SVFS7;K_SVFS7;KFZFS8;K_KFZFS8;SVFS8;K_SVFS8;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6;MotFS7;K_MotFS7;PkwFS7;K_PkwFS7;LfwFS7;K_LfwFS7;PmAFS7;K_PmAFS7;BusFS7;K_BusFS7;LoAFS7;K_LoAFS7;LmAFS7;K_LmAFS7;SatFS7;K_SatFS7;SoFS7;K_SoFS7;MotFS8;K_MotFS8;PkwFS8;K_PkwFS8;LfwFS8;K_LfwFS8;PmAFS8;K_PmAFS8;BusFS8;K_BusFS8;LoAFS8;K_LoAFS8;LmAFS8;K_LmAFS8;SatFS8;K_SatFS8;SoFS8;K_SoFS8"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72201103_2406.csv",
+   "kopf": [
+    "7220;8453;08;B;27;Echterdingen 2           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Tübingen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72201203_2406.csv",
+   "kopf": [
+    "7220;8653;08;L;1180;Solitude                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Leonberg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72211101_2406.csv",
+   "kopf": [
+    "7221;8441;08;B;10;Stuttgart-Hedelfingen    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;03;Stuttgart;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72221100_2406.csv",
+   "kopf": [
+    "7222;8360;08;B;10;Plochingen               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Stuttgart;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_72241109_2406.csv",
+   "kopf": [
+    "7224;8405;08;B;29;Schwäbisch Gmünd         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Stuttgart;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73138904_2406.csv",
+   "kopf": [
+    "7313;8904;08;L;87;Freistett-Rheinau        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Grenzüberg.Rheinau;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73141035_2406.csv",
+   "kopf": [
+    "7314;8035;08;A;5;Achern                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;WeilamRhein;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73141101_2406.csv",
+   "kopf": [
+    "7314;8525;08;B;3;Achern-Önsbach           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Freiburg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73191003_2406.csv",
+   "kopf": [
+    "7319;8083;08;A;81;Ehningen                 ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73191004_2406.csv",
+   "kopf": [
+    "7319;8184;08;A;81;Hildrizhausen            ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Singen;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73211069_2406.csv",
+   "kopf": [
+    "7321;8179;08;A;8;Nellingen                ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73211075_2406.csv",
+   "kopf": [
+    "7321;8075;08;A;8;Denkendorf               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73221067_2406.csv",
+   "kopf": [
+    "7322;8180;08;A;8;Lindorf                  ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73231001_2406.csv",
+   "kopf": [
+    "7323;8181;08;A;8;Kirchheim unter Teck     ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73231077_2406.csv",
+   "kopf": [
+    "7323;8078;08;A;8;Aichelberg               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Karlsruhe;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73231100_2406.csv",
+   "kopf": [
+    "7323;8100;08;B;10;Göppingen                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Stuttgart;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_73251203_2406.csv",
+   "kopf": [
+    "7325;8201;08;L;1164;Waldhausen               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Geislingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74121100_2406.csv",
+   "kopf": [
+    "7412;8529;08;B;28;Kehl-Europabrücke        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Strassburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74131039_2406.csv",
+   "kopf": [
+    "7413;8039;08;A;5;Offenburg-Griesheim      ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74131040_2406.csv",
+   "kopf": [
+    "7413;8036;08;A;5;Appenweier               ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74151201_2406.csv",
+   "kopf": [
+    "7415;8511;08;L;401;Mitteltal                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Ruhestein;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74191001_2406.csv",
+   "kopf": [
+    "7419;8081;08;A;81;Gültstein                ;;;;;;;;;;;;",
+    "02;02;Singen;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74201120_2406.csv",
+   "kopf": [
+    "7420;8340;08;B;28;Tübingen West            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Rottenburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74211103_2406.csv",
+   "kopf": [
+    "7421;8301;08;B;312;Reutlingen               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Singen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_74248068_2406.csv",
+   "kopf": [
+    "7424;8068;08;A;8;Merklingen               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Stuttgart;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75121199_2406.csv",
+   "kopf": [
+    "7512;8535;08;L;75;Goldscheuer Nord         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Lahr;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75121202_2406.csv",
+   "kopf": [
+    "7512;8906;08;L;98;Altenheim Rheinbrücke    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Eschau(F);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75121299_2406.csv",
+   "kopf": [
+    "7512;8235;08;L;98;Goldscheuer Ost          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Eschau(F);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75128536_2406.csv",
+   "kopf": [
+    "7512;8536;08;L;75;Goldscheuer Süd          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Lahr;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75131041_2406.csv",
+   "kopf": [
+    "7513;8054;08;A;5;Offenburg                ;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Basel;N;;S;;;;;;;;;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4;KFZFS5;K_KFZFS5;LKFS5;K_LKFS5;KFZFS6;K_KFZFS6;LKFS6;K_LKFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75141101_2406.csv",
+   "kopf": [
+    "7514;8533;08;B;28;Oppenau-West             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Kehl;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75181028_2406.csv",
+   "kopf": [
+    "7518;8028;08;A;81;Horb                     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Singen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75181100_2406.csv",
+   "kopf": [
+    "7518;8828;08;B;28;Horb-Nord                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Horb;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75185236_2406.csv",
+   "kopf": [
+    "7512;8236;08;L;98;Goldscheuer West         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Altenheim-Eschau(F);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75191205_2406.csv",
+   "kopf": [
+    "7519;8205;08;L;389;Bodelshausen             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Rottenburg;S;;N;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75201101_2406.csv",
+   "kopf": [
+    "7520;8601;08;B;27;Tübingen Süd             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Rottweil;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75241100_2406.csv",
+   "kopf": [
+    "7524;8818;08;B;28;Heroldstatt              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;BadUrach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75251100_2406.csv",
+   "kopf": [
+    "7525;8810;08;B;10;Ulm-Nord                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Göppingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75251211_2406.csv",
+   "kopf": [
+    "7525;8211;08;L;1233;Tomerdingen              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Geislingen;S;;N;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_75261061_2406.csv",
+   "kopf": [
+    "7526;8061;08;A;7;Langenau                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Ulm;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_76161100_2406.csv",
+   "kopf": [
+    "7616;8690;08;B;294;Alpirsbach               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Freiburg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_76181001_2406.csv",
+   "kopf": [
+    "7618;8082;08;A;81;Mühlheim                 ;;;;;;;;;;;;",
+    "02;02;Singen;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_76221204_2406.csv",
+   "kopf": [
+    "7622;8104;08;L;249;Wasserstetten            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Hayingen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_77121205_2406.csv",
+   "kopf": [
+    "7712;8227;08;L;104;Rheinhausen              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Weisweil;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_77121499_2406.csv",
+   "kopf": [
+    "7712;8232;08;K;5345;Mahlberg                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Herbolzheim;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_77151102_2406.csv",
+   "kopf": [
+    "7715;8704;08;B;33;Gutach 2                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Offenburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_77151109_2406.csv",
+   "kopf": [
+    "7715;8701;08;B;33;Hornberg Tunnel          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Offenburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_77151110_2406.csv",
+   "kopf": [
+    "7715;8702;08;G;0;Hornberg                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Donaueschingen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_77161104_2406.csv",
+   "kopf": [
+    "7716;8526;08;B;462;Schramberg               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Rottweil,A81;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_77201201_2406.csv",
+   "kopf": [
+    "7720;8351;08;L;360;Onstmettingen            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Albstadt;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_78111200_2406.csv",
+   "kopf": [
+    "7811;8708;08;L;117;Grenzübergang Sasbach    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Marckolsheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_78121047_2406.csv",
+   "kopf": [
+    "7812;8047;08;A;5;Nimburg                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;WeilamRhein;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_78121210_2406.csv",
+   "kopf": [
+    "7812;8228;08;L;113;Riegel                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;A5ASRiegel;W;;O;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_78141204_2406.csv",
+   "kopf": [
+    "7814;8237;08;L;173;Simonswald               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Gutach;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_78171032_2406.csv",
+   "kopf": [
+    "7817;8032;08;A;81;Zimmern ob Rottweil      ;;;;;;;;;;;;",
+    "02;02;Singen;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_78171102_2406.csv",
+   "kopf": [
+    "7817;8712;08;B;27;Rottweil                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Donaueschingen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_78211104_2406.csv",
+   "kopf": [
+    "7821;8302;08;B;32;Sigmaringen              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Gammertingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79111100_2406.csv",
+   "kopf": [
+    "7911;8720;08;B;31;Breisach                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Colmar(F);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79121001_2406.csv",
+   "kopf": [
+    "7912;8050;08;A;5;March                    ;;;;;;;;;;;;",
+    "02;02;Basel;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79121102_2406.csv",
+   "kopf": [
+    "7912;8538;08;B;31a;March-Umkirch Ost        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Breisach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79121103_2406.csv",
+   "kopf": [
+    "7912;8537;08;B;31a;March-Umkirch West       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Breisach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79131106_2406.csv",
+   "kopf": [
+    "7913;8724;08;B;294;Waldkirch 2              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Freiburg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79131107_2406.csv",
+   "kopf": [
+    "7913;8527;08;B;3;Emmendingen              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;02;Freiburg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79131205_2406.csv",
+   "kopf": [
+    "7913;8725;08;L;186;Waldkirch 1              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;St.-Peter;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79151201_2406.csv",
+   "kopf": [
+    "7915;8581;08;L;173;Furtwangen               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Furtwangen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_79238321_2406.csv",
+   "kopf": [
+    "7822;8321;08;B;311;Ertingen 2               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Tuttlingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80111051_2406.csv",
+   "kopf": [
+    "8011;8055;08;A;5;Hartheim am Rhein        ;;;;;;;;;;;;",
+    "02;02;Basel;N;;S;;;;;;;;;;;;",
+    "02;00;KFZ;LK;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;LKFS1;K_LKFS1;KFZFS2;K_KFZFS2;LKFS2;K_LKFS2;KFZFS3;K_KFZFS3;LKFS3;K_LKFS3;KFZFS4;K_KFZFS4;LKFS4;K_LKFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80121049_2406.csv",
+   "kopf": [
+    "8012;8049;08;A;5;T+R Breisgau             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;02;WeilamRhein;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80121104_2406.csv",
+   "kopf": [
+    "8012;8531;08;B;3;Scherzingen              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;WeilamRhein;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80121203_2406.csv",
+   "kopf": [
+    "8012;8231;08;L;122;Ehrenkirchen             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Ehrenstetten;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80121206_2406.csv",
+   "kopf": [
+    "8012;8233;08;L;125;Pfaffenweiler            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Kirchhofen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80131100_2406.csv",
+   "kopf": [
+    "8013;8540;08;B;31;Freiburg Ost Tunnel      ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Freiburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80141100_2406.csv",
+   "kopf": [
+    "8014;8539;08;B;31;Falkensteig              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Freiburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80141101_2406.csv",
+   "kopf": [
+    "8014;8541;08;B;31;Hinterzarten             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Freiburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80151104_2406.csv",
+   "kopf": [
+    "8015;8542;08;B;31;Friedenweiler            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;02;Freiburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80171034_2406.csv",
+   "kopf": [
+    "8017;8034;08;A;864;Bad Dürrheim             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Donaueschingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80181102_2406.csv",
+   "kopf": [
+    "8018;8714;08;B;14;Tuttlingen               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Stockach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80231203_2406.csv",
+   "kopf": [
+    "8023;8733;08;L;284;Bad Schussenried         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Ravensburg;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_80241100_2406.csv",
+   "kopf": [
+    "8024;8816;08;B;30;Eberhardzell             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;01;BadWaldsee;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81111102_2406.csv",
+   "kopf": [
+    "8111;8051;08;B;378;Neuenburg-Rheinbrücke    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Mülhausen(F);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81121001_2406.csv",
+   "kopf": [
+    "8412;8961;08;A;861;Rheinfelden              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Sissach(CH);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81131200_2406.csv",
+   "kopf": [
+    "8113;8555;08;L;123;Münstertal               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Staufen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81161103_2406.csv",
+   "kopf": [
+    "8116;8544;08;B;31;Döggingen                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Freiburg;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81171100_2406.csv",
+   "kopf": [
+    "8117;8935;08;B;27;Neuhaus                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;01;Bargen(CH);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81181036_2406.csv",
+   "kopf": [
+    "8118;8746;08;A;81;Geisingen                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Singen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81191040_2406.csv",
+   "kopf": [
+    "8119;8040;08;A;98;Stockach                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;KreuzHegau;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_81261001_2406.csv",
+   "kopf": [
+    "8126;8041;08;A;96;Leutkirch-West           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Lindau;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82111052_2406.csv",
+   "kopf": [
+    "8211;8052;08;A;5;Neuenburg am Rhein       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Lyon(F);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82131100_2406.csv",
+   "kopf": [
+    "8213;8570;08;B;317;Schönau                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Lörrach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82141203_2406.csv",
+   "kopf": [
+    "8214;8204;08;L;150;St. Blasien              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Schopfheim;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82181108_2406.csv",
+   "kopf": [
+    "8218;8936;08;B;34;Bietingen                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;02;Herblingen(CH);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82201102_2406.csv",
+   "kopf": [
+    "8220;8552;08;B;33;Kloster Hegne            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Radolfzell;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82201112_2406.csv",
+   "kopf": [
+    "8220;8551;08;B;33;Radolfzell 2             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Singen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82201203_2406.csv",
+   "kopf": [
+    "8220;8553;08;L;220;Langenrain               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Güttingen;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82241001_2406.csv",
+   "kopf": [
+    "8224;8120;08;A;96;Wangen                   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Lindau;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_82261203_2406.csv",
+   "kopf": [
+    "8226;8753;08;L;318;Leutkirch                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Isny;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83111053_2406.csv",
+   "kopf": [
+    "8311;8053;08;A;5;Kleinkems                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;WeilamRhein;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83111102_2406.csv",
+   "kopf": [
+    "8316;8931;08;B;34;Erzingen                 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Basel(CH);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83121003_2406.csv",
+   "kopf": [
+    "8312;8003;08;A;98;Lörrach                  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Lörrach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83151001_2406.csv",
+   "kopf": [
+    "8315;8998;08;A;98;Lauchringen              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;01;Lörrach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83151101_2406.csv",
+   "kopf": [
+    "8315;8929;08;B;34;Waldshut Rheinbrücke     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Baden(CH);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83171101_2406.csv",
+   "kopf": [
+    "8317;8932;08;B;27;Lottstetten              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Eglisau(CH);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83171102_2406.csv",
+   "kopf": [
+    "8317;8933;08;B;27;Jestetten-Hardt          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Jestetten;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83201101_2406.csv",
+   "kopf": [
+    "8320;8944;08;B;33;Konstanz-Tägermoos       ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;02;Radolfzell;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83201203_2406.csv",
+   "kopf": [
+    "8320;8554;08;L;221;Wollmatingen             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Reichenau;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83211101_2406.csv",
+   "kopf": [
+    "8321;8311;08;B;31;Harlachen                ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Stockach,A98;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_83231208_2406.csv",
+   "kopf": [
+    "8323;8328;08;L;333;Walchesreute             ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Friedrichshafen;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84111099_2406.csv",
+   "kopf": [
+    "8411;8099;08;A;5;Weil am Rhein/GZA        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "04;02;Basel(CH);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84111101_2406.csv",
+   "kopf": [
+    "8411;8921;08;B;317;Weil-Friedlingen         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Basel(CH);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84111104_2406.csv",
+   "kopf": [
+    "8411;8925;08;B;34;Grenzacherhorn           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Basel(CH);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84111106_2406.csv",
+   "kopf": [
+    "8411;8922;08;B;3;Weil-Otterbach           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Basel(CH);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84111108_2406.csv",
+   "kopf": [
+    "8411;8924;08;G;0;Lörrach-Stetten          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Basel(CH);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84111109_2406.csv",
+   "kopf": [
+    "8311;8910;08;B;532;Palmrainbrücke           ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Mülhausen(F);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84131106_2406.csv",
+   "kopf": [
+    "8413;8106;08;B;518;Bad Säckingen 3 Grenze   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Stein(CH);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84141001_2406.csv",
+   "kopf": [
+    "8414;8116;08;A;98;Murg                     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Lörrach;O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84141102_2406.csv",
+   "kopf": [
+    "8414;8562;08;L;154;Bad Säckingen 1          ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Basel(CH);O;;W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84141206_2406.csv",
+   "kopf": [
+    "8414;8928;08;L;151;Laufenburg               ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "01;01;Schweiz;N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2"
+   ]
+  },
+  {
+   "datei": "Stundenwerte_202406/BW_84121001_2406.csv",
+   "kopf": [
+    "8412;8961;08;A;861;Rheinfelden              ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "03;03;Sissach(CH);N;;S;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "02;09;KFZ;SV;Mot;Pkw;Lfw;PmA;Bus;LoA;LmA;Sat;So;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "Datum;Uhrzeit;KFZFS1;K_KFZFS1;SVFS1;K_SVFS1;KFZFS2;K_KFZFS2;SVFS2;K_SVFS2;KFZFS3;K_KFZFS3;SVFS3;K_SVFS3;KFZFS4;K_KFZFS4;SVFS4;K_SVFS4;KFZFS5;K_KFZFS5;SVFS5;K_SVFS5;KFZFS6;K_KFZFS6;SVFS6;K_SVFS6;MotFS1;K_MotFS1;PkwFS1;K_PkwFS1;LfwFS1;K_LfwFS1;PmAFS1;K_PmAFS1;BusFS1;K_BusFS1;LoAFS1;K_LoAFS1;LmAFS1;K_LmAFS1;SatFS1;K_SatFS1;SoFS1;K_SoFS1;MotFS2;K_MotFS2;PkwFS2;K_PkwFS2;LfwFS2;K_LfwFS2;PmAFS2;K_PmAFS2;BusFS2;K_BusFS2;LoAFS2;K_LoAFS2;LmAFS2;K_LmAFS2;SatFS2;K_SatFS2;SoFS2;K_SoFS2;MotFS3;K_MotFS3;PkwFS3;K_PkwFS3;LfwFS3;K_LfwFS3;PmAFS3;K_PmAFS3;BusFS3;K_BusFS3;LoAFS3;K_LoAFS3;LmAFS3;K_LmAFS3;SatFS3;K_SatFS3;SoFS3;K_SoFS3;MotFS4;K_MotFS4;PkwFS4;K_PkwFS4;LfwFS4;K_LfwFS4;PmAFS4;K_PmAFS4;BusFS4;K_BusFS4;LoAFS4;K_LoAFS4;LmAFS4;K_LmAFS4;SatFS4;K_SatFS4;SoFS4;K_SoFS4;MotFS5;K_MotFS5;PkwFS5;K_PkwFS5;LfwFS5;K_LfwFS5;PmAFS5;K_PmAFS5;BusFS5;K_BusFS5;LoAFS5;K_LoAFS5;LmAFS5;K_LmAFS5;SatFS5;K_SatFS5;SoFS5;K_SoFS5;MotFS6;K_MotFS6;PkwFS6;K_PkwFS6;LfwFS6;K_LfwFS6;PmAFS6;K_PmAFS6;BusFS6;K_BusFS6;LoAFS6;K_LoAFS6;LmAFS6;K_LmAFS6;SatFS6;K_SatFS6;SoFS6;K_SoFS6"
+   ]
+  }
+ ],
+ "sonntage_02_03_04": {}
+}
