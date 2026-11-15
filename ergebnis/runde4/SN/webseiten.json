@@ -493,8 +493,8 @@
   "web": "https://www.leipzig.de/",
   "titel": "Startseite leipzig.de - Stadt LeipzigFacebookInstagramX / TwitterBlueskyLinkedInThreadsWhatsAppFacebookInstagramX / TwitterBlueskyLinkedInThreadsWhats",
   "generator": "",
-  "sitemap_urls": 4206,
-  "sitemaps": 15,
+  "sitemap_urls": 6206,
+  "sitemaps": 17,
   "treffer": [
    "https://www.leipzig.de/kontakt/bargeldloser-zahlungsverkehr",
    "https://www.leipzig.de/landingpages/abbruch-einer-zahlung",
@@ -998,7 +998,7 @@
   "web": "https://www.plauen.de/",
   "titel": "Stadt Plauen",
   "generator": "",
-  "sitemap_urls": 16327,
+  "sitemap_urls": 16178,
   "sitemaps": 1,
   "treffer": [
    "https://www.plauen.de/Sicherheit-und-Ordnung/FAQ-Geschwindigkeitsmessungen/",
@@ -1335,24 +1335,20 @@
   "einw": 33081,
   "vorher": "nicht_erreicht",
   "auch": [],
-  "web": "https://www.radebeul.de/",
-  "titel": "Radebeul - eine Stadt zum Genießen",
-  "generator": "EGOTEC 26.3.4.2/www.EGOTEC.com",
-  "sitemap_urls": 1111,
-  "sitemaps": 1,
-  "treffer": [
-   "https://www.radebeul.de/Kultur-und-Freizeit/Feste-und-Veranstaltungen/Veranstaltungskalender-Elbland/Lesung-mit-musikalischer-Begleitung-Juergen-Stegmann-liest-aus-William-und-Mary-Erzaehlung-von-Roald-Dahl",
-   "https://www.radebeul.de/Rathaus/Aktuelles/Aktuelle-Meldungen/Archiv-2021/Zwei-neue-mobile-Geschwindigkeitsmessanlagen-im-Einsatz",
-   "https://www.radebeul.de/Rathaus/Aktuelles/Aktuelle-Meldungen/Archiv-2026/Bargeldloser-Zahlungsverkehr-im-Radebeuler-Rathausareal-ab-1-Mai-2026",
-   "https://www.radebeul.de/Rathaus/Aktuelles/Aktuelles-aus-Obuchiw/Information-zu-Auszahlungen-von-Spenden-Ukraine-und-Obuchiw",
-   "https://www.radebeul.de/Rathaus/Stadtentwicklung/Rahmenplaene-Konzepte-und-Untersuchungen/Verkehrsentwicklungsplan",
-   "https://www.radebeul.de/radverkehrskonzept"
-  ],
+  "web": null,
+  "titel": "",
+  "generator": "",
+  "sitemap_urls": 0,
+  "sitemaps": 0,
+  "treffer": [],
   "suche": [],
   "start_treffer": [],
-  "versuche": [],
-  "herkunft": "liste_oder_geraten",
-  "neu_treffer": 0
+  "versuche": [
+   [
+    "https://radebeul.de/",
+    "<HTTPError 429: 'Too Many Requests'>"
+   ]
+  ]
  },
  {
   "ags": "14625240",
@@ -2760,7 +2756,7 @@
   "vorher": "erreicht",
   "auch": [],
   "web": "https://www.neustadt-in-sachsen.de/",
-  "titel": "neustadt-in-sachsen.de - Tourismus, Veranstaltungen, Neustadt, Sachsen, Stadt, Einwohner, Neustadt In Sachsen",
+  "titel": "neustadt-in-sachsen.de - Sachsen, Veranstaltungen, Neustadt, Stadt, Kultur, Geschichte, Neustadt In Sachsen",
   "generator": "",
   "sitemap_urls": 0,
   "sitemaps": 0,
@@ -2769,19 +2765,19 @@
    {
     "begriff": "Frequenzmessung",
     "url": "https://www.neustadt-in-sachsen.de/?keyword=Frequenzmessung",
-    "laenge": 56722,
+    "laenge": 56697,
     "treffer": 0
    },
    {
     "begriff": "Radzählstelle",
     "url": "https://www.neustadt-in-sachsen.de/?keyword=Radz%C3%A4hlstelle",
-    "laenge": 56717,
+    "laenge": 56712,
     "treffer": 0
    },
    {
     "begriff": "Verkehrsversuch",
     "url": "https://www.neustadt-in-sachsen.de/?keyword=Verkehrsversuch",
-    "laenge": 56697,
+    "laenge": 56727,
     "treffer": 0
    }
   ],
