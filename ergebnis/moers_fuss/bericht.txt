@@ -1,895 +1,322 @@
-== robots.txt
-https://www.offenesdatenportal.de: User-agent: *
-Disallow: /dataset/rate/
-Disallow: /revision/
-Disallow: /dataset/*/history
-Disallow: /api/
-Crawl-Delay: 10
+== Abruf
+Gemeinden: vg250_01-01.utm32s.shape.ebenen.zip geholt (67 MB)
+moers_fuss: 54 Monatsdateien, 54 neu geholt
+Fehler: []
+Dauer: 554 s
+Crawl-delay eingehalten: www.offenesdatenportal.de 8 min
+Rohdaten: 56 Dateien, 4.6 MB
+{
+ "abgerufen": "2026-11-15T17:47:01Z",
+ "paket": "fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022",
+ "titel": "Besuchszahlen Steinstraße - nach Stunden (Stadt Moers)",
+ "dateien": {
+  "besucherzahlen-moers-juni-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/57d1fcd4-45da-46da-bcec-d87642446ab8/download/besucherzahlen-moers-juni-2022-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juni 2022 nach Stunden",
+   "stand": "2026-10-20T07:06:30.212192"
+  },
+  "besucherzahlen-moers-juli-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/104b5b42-f6f1-4a1a-b540-ce3dc487eae5/download/besucherzahlen-moers-juli-2022-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juli 2022 nach Stunden",
+   "stand": "2026-10-20T07:07:08.297529"
+  },
+  "besucherzahlen-moers-august-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/bedd516b-be56-40dd-a994-a2dc5ed5c814/download/besucherzahlen-moers-august-2022-stundlich.csv",
+   "name": "Besuchszahlen Moers im August 2022 nach Stunden",
+   "stand": "2026-10-20T07:08:46.789224"
+  },
+  "besucherzahlen-moers-september-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46db5b54-b95b-4ff6-91e7-a187945951b8/download/besucherzahlen-moers-september-2022-stundlich.csv",
+   "name": "Besuchszahlen Moers im September 2022 nach Stunden",
+   "stand": "2026-10-20T07:10:45.143419"
+  },
+  "besucherzahlen-moers-oktober-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f951145b-5b96-4342-b3af-6c4100c85bd3/download/besucherzahlen-moers-oktober-2022-stundlich.csv",
+   "name": "Besuchszahlen Moers im Oktober 2022 nach Stunden",
+   "stand": "2026-10-20T07:12:22.509470"
+  },
+  "besucherzahlen-moers-november-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/9560dada-5335-4de9-bb73-8a1b4b356cda/download/besucherzahlen-moers-november-2022-stundlich.csv",
+   "name": "Besuchszahlen Moers im November 2022 nach Stunden",
+   "stand": "2026-10-20T07:13:45.562039"
+  },
+  "besucherzahlen-moers-dezember-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0fdcb40d-e8d1-4e88-b7c6-59b75d98b14b/download/besucherzahlen-moers-dezember-2022-stundlich.csv",
+   "name": "Besuchszahlen Moers im Dezember 2022 nach Stunden",
+   "stand": "2026-10-20T07:15:06.787588"
+  },
+  "besucherzahlen-moers-mai-2022-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/8f145eef-edef-4d77-a2f5-722250fb0235/download/besucherzahlen-moers-mai-2022-stundlich.csv",
+   "name": "Besucherzahlen Moers ab 5. Mai 2022 nach Stunden",
+   "stand": "2026-11-11T13:41:53.611870"
+  },
+  "besucherzahlen-moers-januar-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/c821f3ad-7715-4d92-83b9-1bdbb683cedd/download/besucherzahlen-moers-januar-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im Januar 2023 nach Stunden",
+   "stand": "2026-11-11T13:41:56.032704"
+  },
+  "besucherzahlen-moers-februar-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/3cae65aa-12cb-42a2-8949-696393f7acef/download/besucherzahlen-moers-februar-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im Februar 2023 nach Stunden",
+   "stand": "2026-11-11T13:42:53.635756"
+  },
+  "besucherzahlen-moers-maerz-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/4905a668-f943-403d-bb67-07f426a5ea1c/download/besucherzahlen-moers-maerz-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im März 2023 nach Stunden",
+   "stand": "2026-11-11T13:42:55.502930"
+  },
+  "besucherzahlen-moers-april-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/fc4e5b01-3dcd-4bde-99a0-d6734a40d5bf/download/besucherzahlen-moers-april-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im April 2023 nach Stunden",
+   "stand": "2026-11-11T13:43:21.145802"
+  },
+  "besucherzahlen-moers-mai-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/907d5d08-07c3-47ab-8ab5-14604927a3ca/download/besucherzahlen-moers-mai-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im Mai 2023 nach Stunden",
+   "stand": "2026-11-11T13:43:50.489531"
+  },
+  "besucherzahlen-moers-juni-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0cc3676d-f3e8-44b3-9e51-06d7886e66ae/download/besucherzahlen-moers-juni-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im Juni 2023 nach Stunden",
+   "stand": "2026-11-11T13:44:20.747486"
+  },
+  "besucherzahlen-moers-juli-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f9ac5871-7c6c-4035-92d3-f0a16c2b5a71/download/besucherzahlen-moers-juli-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im Juli 2023 nach Stunden",
+   "stand": "2026-11-11T13:44:44.626576"
+  },
+  "besucherzahlen-moers-august-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/91fdaab8-68a0-4d26-a959-59cc1138b69e/download/besucherzahlen-moers-august-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im August 2023 nach Stunden",
+   "stand": "2026-11-11T13:45:18.810874"
+  },
+  "besucherzahlen-moers-september-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/bd0dd182-72c9-472d-874d-24ca7fd6601a/download/besucherzahlen-moers-september-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im September 2023 nach Stunden",
+   "stand": "2026-11-11T13:45:44.917812"
+  },
+  "besucherzahlen-moers-oktober-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/153e07e9-4600-47e8-920d-8ba2e0f04024/download/besucherzahlen-moers-oktober-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im Oktober 2023 nach Stunden",
+   "stand": "2026-11-11T13:46:13.824387"
+  },
+  "besucherzahlen-moers-november-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/d2297e72-cfe4-4218-bb2f-e25bd12a0781/download/besucherzahlen-moers-november-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im November 2023 nach Stunden",
+   "stand": "2026-11-11T13:46:38.990351"
+  },
+  "besucherzahlen-moers-dezember-2023-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/621fcb79-010a-43a1-8a66-15a40d38ba35/download/besucherzahlen-moers-dezember-2023-stundlich.csv",
+   "name": "Besuchszahlen Moers im Dezember 2023 nach Stunden",
+   "stand": "2026-11-11T13:47:05.912495"
+  },
+  "besucherzahlen-moers-januar-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/6debc243-80c5-44f2-a605-597e726812be/download/besucherzahlen-moers-januar-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im Januar 2024 nach Stunden",
+   "stand": "2026-11-11T14:16:12.141430"
+  },
+  "besucherzahlen-moers-februar-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/5b456d10-0ce1-4a02-a61b-aca457411478/download/besucherzahlen-moers-februar-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im Februar 2024 nach Stunden",
+   "stand": "2026-11-11T14:16:42.621762"
+  },
+  "besucherzahlen-moers-marz-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/059f7501-196a-452e-900d-31aa16f84054/download/besucherzahlen-moers-marz-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im März 2024 nach Stunden",
+   "stand": "2026-11-11T14:17:17.377532"
+  },
+  "besucherzahlen-moers-april-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46341da9-372f-4940-9651-48712d289fe5/download/besucherzahlen-moers-april-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im April 2024 nach Stunden",
+   "stand": "2026-11-11T14:17:50.872680"
+  },
+  "besucherzahlen-moers-mai-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0192863e-c6a8-46ab-a1fa-cb50e361662e/download/besucherzahlen-moers-mai-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im Mai 2024 nach Stunden",
+   "stand": "2026-11-11T14:18:19.460350"
+  },
+  "besucherzahlen-moers-juni-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0e7e4038-b837-4984-b38a-fc064c51786d/download/besucherzahlen-moers-juni-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juni 2024 nach Stunden",
+   "stand": "2026-11-11T14:19:03.489804"
+  },
+  "besucherzahlen-moers-juli-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/81a1c249-a8fd-4a07-b3d9-2cc67ca6827c/download/besucherzahlen-moers-juli-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juli 2024 nach Stunden",
+   "stand": "2026-11-11T14:19:16.238000"
+  },
+  "besucherzahlen-moers-august-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/d7f3afd0-f61d-49d2-8cbb-3a5e5d00d0c5/download/besucherzahlen-moers-august-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im August 2024 nach Stunden",
+   "stand": "2026-11-11T14:19:50.128885"
+  },
+  "besucherzahlen-moers-september-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/3f42b35e-8f91-4552-8047-6aec1649f8ef/download/besucherzahlen-moers-september-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im September 2024 nach Stunden",
+   "stand": "2026-11-11T14:20:27.123813"
+  },
+  "besucherzahlen-moers-oktober-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/ead453d8-4371-458c-92b4-ebd5f6f433b0/download/besucherzahlen-moers-oktober-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im Oktober 2024 nach Stunden",
+   "stand": "2026-11-11T14:20:55.168897"
+  },
+  "besucherzahlen-moers-november-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/a1524f97-604f-442e-89d6-ffbe113bc3b9/download/besucherzahlen-moers-november-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im November 2024 nach Stunden",
+   "stand": "2026-11-11T14:21:22.558186"
+  },
+  "besucherzahlen-moers-dezember-2024-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/833cc3ad-d85e-4cfa-9453-9d60c149fa47/download/besucherzahlen-moers-dezember-2024-stundlich.csv",
+   "name": "Besucherzahlen Moers im Dezember 2024 nach Stunden",
+   "stand": "2026-11-11T14:21:56.660622"
+  },
+  "besucherzahlen-moers-januar-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/b222831a-5435-4c27-935e-109cda7dfdf3/download/besucherzahlen-moers-januar-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im Januar 2025 nach Stunden",
+   "stand": "2026-11-11T14:23:46.164541"
+  },
+  "besucherzahlen-moers-februar-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/e059e456-ac89-461c-8f47-a94e9ad113eb/download/besucherzahlen-moers-februar-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im Februar 2025 nach Stunden",
+   "stand": "2026-11-11T14:24:12.359950"
+  },
+  "besucherzahlen-moers-marz-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/48c5dc89-6ff6-45b6-ba7d-4d31b59f3159/download/besucherzahlen-moers-marz-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im März 2025 nach Stunden",
+   "stand": "2026-11-11T14:24:47.016752"
+  },
+  "besucherzahlen-moers-april-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/575746e3-d36d-4362-88e4-ef1af1c9e52c/download/besucherzahlen-moers-april-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im April 2025 nach Stunden",
+   "stand": "2026-11-11T14:25:13.700130"
+  },
+  "besucherzahlen-moers-mai-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/819a13eb-d6c2-402c-8f03-5f03208a7542/download/besucherzahlen-moers-mai-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im Mai 2025 nach Stunden",
+   "stand": "2026-11-11T14:25:46.608713"
+  },
+  "besucherzahlen-moers-juni-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/4d64315b-460e-47fa-a910-54ab97a269e2/download/besucherzahlen-moers-juni-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juni 2025 nach Stunden",
+   "stand": "2026-11-11T14:26:25.245065"
+  },
+  "besucherzahlen-moers-juli-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/8862fd15-27fe-4f3e-beaf-05c59b29d4aa/download/besucherzahlen-moers-juli-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juli 2025 nach Stunden",
+   "stand": "2026-11-11T14:27:22.425667"
+  },
+  "besucherzahlen-moers-august-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46fac171-0069-4158-8d13-c012499f1b9f/download/besucherzahlen-moers-august-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im August 2025 nach Stunden",
+   "stand": "2026-11-11T14:27:52.446799"
+  },
+  "besucherzahlen-moers-september-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/089127b2-882b-49a9-835a-f3163f4ae790/download/besucherzahlen-moers-september-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im September 2025 nach Stunden",
+   "stand": "2026-11-11T14:28:21.070842"
+  },
+  "besucherzahlen-moers-oktober-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f642b72d-aded-438f-9ae4-3a4458830a2b/download/besucherzahlen-moers-oktober-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im Oktober 2025 nach Stunden",
+   "stand": "2026-11-11T14:28:49.701533"
+  },
+  "besucherzahlen-moers-november-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46a01b41-758b-430f-b154-c4a661c471ff/download/besucherzahlen-moers-november-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im November 2025 nach Stunden",
+   "stand": "2026-11-11T14:29:17.414438"
+  },
+  "besucherzahlen-moers-dezember-2025-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/22d88ac3-6d10-45e3-adaf-060c58af5ad8/download/besucherzahlen-moers-dezember-2025-stundlich.csv",
+   "name": "Besucherzahlen Moers im Dezember 2025 nach Stunden",
+   "stand": "2026-11-11T14:29:48.654161"
+  },
+  "besucherzahlen-moers-januar-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/253dd79e-4c19-4d4c-a459-7cbfe05e0d0a/download/besucherzahlen-moers-januar-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im Januar 2026 nach Stunden",
+   "stand": "2026-11-11T14:47:05.385435"
+  },
+  "besucherzahlen-moers-februar-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/6e0f5957-50db-4b88-b3b4-5cda5529a664/download/besucherzahlen-moers-februar-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im Februar 2026 nach Stunden",
+   "stand": "2026-11-11T14:47:28.818116"
+  },
+  "besucherzahlen-moers-marz-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/be93fc0b-a403-4cb4-8584-c94c5c2bb796/download/besucherzahlen-moers-marz-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im März 2026 nach Stunden",
+   "stand": "2026-11-11T14:47:55.594825"
+  },
+  "besucherzahlen-moers-april-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/34eb65a7-88f2-4a78-b612-ad24177ec11f/download/besucherzahlen-moers-april-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im April 2026 nach Stunden",
+   "stand": "2026-11-11T14:48:30.077442"
+  },
+  "besucherzahlen-moers-mai-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/a2ad2eb0-74a8-482f-a755-f8e1fcd4d84e/download/besucherzahlen-moers-mai-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im Mai 2026 nach Stunden",
+   "stand": "2026-11-11T14:48:52.522234"
+  },
+  "besucherzahlen-moers-juni-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f7bbbd1a-c690-47d4-a36b-b1251db676a2/download/besucherzahlen-moers-juni-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juni 2026 nach Stunden",
+   "stand": "2026-11-11T14:49:21.090029"
+  },
+  "besucherzahlen-moers-juli-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/60e3fdbb-9571-4816-978e-d5ae62b2f22e/download/besucherzahlen-moers-juli-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im Juli 2026 nach Stunden",
+   "stand": "2026-11-11T14:49:51.628501"
+  },
+  "besucherzahlen-moers-august-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/076758fb-ec56-4ba4-a5b6-a1d3a2c1c538/download/besucherzahlen-moers-august-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im August 2026 nach Stunden",
+   "stand": "2026-11-11T14:50:22.473520"
+  },
+  "besucherzahlen-moers-september-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0b70d78b-75e0-46d4-8425-a58ea8ff9c9c/download/besucherzahlen-moers-september-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im September 2026 nach Stunden",
+   "stand": "2026-11-11T14:50:49.479698"
+  },
+  "besucherzahlen-moers-oktober-2026-stundlich.csv": {
+   "url": "https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/1b03b5c8-3f6f-482d-ac56-3a4bd60b7c51/download/besucherzahlen-moers-oktober-2026-stundlich.csv",
+   "name": "Besucherzahlen Moers im Oktober 2026 nach Stunden",
+   "stand": "2026-11-11T14:51:18.141662"
+  }
+ }
+}
 
-
-
-  /dataset/?q=Steinstra%C3%9Fe: erlaubt
-  /dataset/x.jsonld: erlaubt
-  /api/3/action/package_search: gesperrt
-  /dataset/x/resource/y/download/z.csv: erlaubt
-== Suche
-  'Steinstraße Moers' Seite 1: 2 Treffer, neu 2
-  'Steinstrasse Moers' Seite 1: 2 Treffer, neu 0
-  'Besucherzahlen Moers' Seite 1: 3 Treffer, neu 1
-  'Fußgängerinnen Moers' Seite 1: 2 Treffer, neu 0
-  'Frequenzmessung Moers' Seite 1: 2 Treffer, neu 0
-  'Fußgänger Steinstraße' Seite 1: 2 Treffer, neu 0
-alle Treffer: 3; passend: 2
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers
-nicht passend (erste 40): besucher-und-mitwirkende-der-veranstaltungen-der-moerser-musikschule-2012
-== fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022: Besuchszahlen Steinstraße - nach Stunden (Stadt Moers) | Lizenz None | geändert 2026-11-11T14:51:18.127789 | 54 Ressourcen
-   'Frequenzmessungen in Innenstädten haben sich in den letzten 20 Jahren immer stärker etabliert. Mit Unterstützung der städtischen Wirtschaftsförderung und der ENNI Stadt und Service Niederrhein hat die MoersMarketing den ersten \r\n4-fach-Laser zur Personenzählung im Mai 2022 in der Stadt Moers installieren lassen.\r\nDer Laser ist in einer Höhe von rund 10 Metern angebracht und misst rund um die Uhr beide Bewegungsrichtungen. Dank modernster Technik kann er dabei zwischen Erwachsenen und Kindern unterscheiden. Gemessen werden Personen ab einer Größe von 90 cm. Als Kinder zählen Personen <150 cm. \r'
-   - Besucherzahlen Moers im Juni 2024 nach Stunden | CSV | None | 2026-11-11T14:18:50.139452 / 2026-11-11T14:19:03.489804 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0e7e4038-b837-4984-b38a-fc064c51786d/download/besucherzahlen-moers-juni-2024-stundlich.csv
-   - Besuchszahlen Moers im Januar 2023 nach Stunden | CSV | None | 2026-11-11T13:41:53.627445 / 2026-11-11T13:41:56.032704 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/c821f3ad-7715-4d92-83b9-1bdbb683cedd/download/besucherzahlen-moers-januar-2023-stundlich.csv
-   - Besucherzahlen Moers im Januar 2026 nach Stunden | CSV | None | 2026-11-11T14:47:02.544683 / 2026-11-11T14:47:05.385435 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/253dd79e-4c19-4d4c-a459-7cbfe05e0d0a/download/besucherzahlen-moers-januar-2026-stundlich.csv
-   - Besucherzahlen Moers ab 5. Mai 2022 nach Stunden | CSV | None | 2026-11-11T13:20:43.686760 / 2026-11-11T13:41:53.611870 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/8f145eef-edef-4d77-a2f5-722250fb0235/download/besucherzahlen-moers-mai-2022-stundlich.csv
-   - Besuchszahlen Moers im Dezember 2023 nach Stunden | CSV | None | 2026-11-11T13:47:03.288260 / 2026-11-11T13:47:05.912495 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/621fcb79-010a-43a1-8a66-15a40d38ba35/download/besucherzahlen-moers-dezember-2023-stundlich.csv
-   - Besucherzahlen Moers im Dezember 2025 nach Stunden | CSV | None | 2026-11-11T14:29:46.683005 / 2026-11-11T14:29:48.654161 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/22d88ac3-6d10-45e3-adaf-060c58af5ad8/download/besucherzahlen-moers-dezember-2025-stundlich.csv
-   - Besuchszahlen Moers im Oktober 2022 nach Stunden | CSV | None | 2026-10-20T07:12:20.363648 / 2026-10-20T07:12:22.509470 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f951145b-5b96-4342-b3af-6c4100c85bd3/download/besucherzahlen-moers-oktober-2022-stundlich.csv
-   - Besucherzahlen Moers im März 2026 nach Stunden | CSV | None | 2026-11-11T14:47:53.108065 / 2026-11-11T14:47:55.594825 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/be93fc0b-a403-4cb4-8584-c94c5c2bb796/download/besucherzahlen-moers-marz-2026-stundlich.csv
-   - Besucherzahlen Moers im Juni 2026 nach Stunden | CSV | None | 2026-11-11T14:49:18.631862 / 2026-11-11T14:49:21.090029 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f7bbbd1a-c690-47d4-a36b-b1251db676a2/download/besucherzahlen-moers-juni-2026-stundlich.csv
-   - Besucherzahlen Moers im Februar 2026 nach Stunden | CSV | None | 2026-11-11T14:47:26.012257 / 2026-11-11T14:47:28.818116 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/6e0f5957-50db-4b88-b3b4-5cda5529a664/download/besucherzahlen-moers-februar-2026-stundlich.csv
-   - Besucherzahlen Moers im September 2025 nach Stunden | CSV | None | 2026-11-11T14:28:19.222047 / 2026-11-11T14:28:21.070842 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/089127b2-882b-49a9-835a-f3163f4ae790/download/besucherzahlen-moers-september-2025-stundlich.csv
-   - Besucherzahlen Moers im Juli 2025 nach Stunden | CSV | None | 2026-11-11T14:27:20.372823 / 2026-11-11T14:27:22.425667 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/8862fd15-27fe-4f3e-beaf-05c59b29d4aa/download/besucherzahlen-moers-juli-2025-stundlich.csv
-   - Besuchszahlen Moers im Februar 2023 nach Stunden | CSV | None | 2026-11-11T13:42:21.649072 / 2026-11-11T13:42:53.635756 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/3cae65aa-12cb-42a2-8949-696393f7acef/download/besucherzahlen-moers-februar-2023-stundlich.csv
-   - Besuchszahlen Moers im August 2023 nach Stunden | CSV | None | 2026-11-11T13:45:17.087574 / 2026-11-11T13:45:18.810874 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/91fdaab8-68a0-4d26-a959-59cc1138b69e/download/besucherzahlen-moers-august-2023-stundlich.csv
-   - Besucherzahlen Moers im Juli 2022 nach Stunden | CSV | None | 2026-10-20T07:07:06.208587 / 2026-10-20T07:07:08.297529 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/104b5b42-f6f1-4a1a-b540-ce3dc487eae5/download/besucherzahlen-moers-juli-2022-stundlich.csv
-   - Besuchszahlen Moers im August 2022 nach Stunden | CSV | None | 2026-10-20T07:08:44.887031 / 2026-10-20T07:08:46.789224 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/bedd516b-be56-40dd-a994-a2dc5ed5c814/download/besucherzahlen-moers-august-2022-stundlich.csv
-   - Besucherzahlen Moers im Januar 2025 nach Stunden | CSV | None | 2026-11-11T14:23:44.065393 / 2026-11-11T14:23:46.164541 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/b222831a-5435-4c27-935e-109cda7dfdf3/download/besucherzahlen-moers-januar-2025-stundlich.csv
-   - Besucherzahlen Moers im August 2024 nach Stunden | CSV | None | 2026-11-11T14:19:47.987998 / 2026-11-11T14:19:50.128885 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/d7f3afd0-f61d-49d2-8cbb-3a5e5d00d0c5/download/besucherzahlen-moers-august-2024-stundlich.csv
-   - Besucherzahlen Moers im April 2024 nach Stunden | CSV | None | 2026-11-11T14:17:48.444730 / 2026-11-11T14:17:50.872680 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46341da9-372f-4940-9651-48712d289fe5/download/besucherzahlen-moers-april-2024-stundlich.csv
-   - Besucherzahlen Moers im Oktober 2024 nach Stunden | CSV | None | 2026-11-11T14:20:53.027543 / 2026-11-11T14:20:55.168897 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/ead453d8-4371-458c-92b4-ebd5f6f433b0/download/besucherzahlen-moers-oktober-2024-stundlich.csv
-   - Besuchszahlen Moers im April 2023 nach Stunden | CSV | None | 2026-11-11T13:43:19.216736 / 2026-11-11T13:43:21.145802 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/fc4e5b01-3dcd-4bde-99a0-d6734a40d5bf/download/besucherzahlen-moers-april-2023-stundlich.csv
-   - Besucherzahlen Moers im Mai 2026 nach Stunden | CSV | None | 2026-11-11T14:48:49.451977 / 2026-11-11T14:48:52.522234 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/a2ad2eb0-74a8-482f-a755-f8e1fcd4d84e/download/besucherzahlen-moers-mai-2026-stundlich.csv
-   - Besuchszahlen Moers im Oktober 2023 nach Stunden | CSV | None | 2026-11-11T13:46:12.138424 / 2026-11-11T13:46:13.824387 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/153e07e9-4600-47e8-920d-8ba2e0f04024/download/besucherzahlen-moers-oktober-2023-stundlich.csv
-   - Besucherzahlen Moers im Oktober 2026 nach Stunden | CSV | None | 2026-11-11T14:51:13.168590 / 2026-11-11T14:51:18.141662 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/1b03b5c8-3f6f-482d-ac56-3a4bd60b7c51/download/besucherzahlen-moers-oktober-2026-stundlich.csv
-   - Besucherzahlen Moers im Juni 2022 nach Stunden | CSV | None | 2026-10-20T07:02:31.500471 / 2026-10-20T07:06:30.212192 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/57d1fcd4-45da-46da-bcec-d87642446ab8/download/besucherzahlen-moers-juni-2022-stundlich.csv
-   - Besuchszahlen Moers im September 2022 nach Stunden | CSV | None | 2026-10-20T07:10:42.938741 / 2026-10-20T07:10:45.143419 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46db5b54-b95b-4ff6-91e7-a187945951b8/download/besucherzahlen-moers-september-2022-stundlich.csv
-   - Besucherzahlen Moers im Januar 2024 nach Stunden | CSV | None | 2026-11-11T14:16:10.108082 / 2026-11-11T14:16:12.141430 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/6debc243-80c5-44f2-a605-597e726812be/download/besucherzahlen-moers-januar-2024-stundlich.csv
-   - Besucherzahlen Moers im August 2025 nach Stunden | CSV | None | 2026-11-11T14:27:50.558262 / 2026-11-11T14:27:52.446799 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46fac171-0069-4158-8d13-c012499f1b9f/download/besucherzahlen-moers-august-2025-stundlich.csv
-   - Besucherzahlen Moers im Februar 2024 nach Stunden | CSV | None | 2026-11-11T14:16:40.898858 / 2026-11-11T14:16:42.621762 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/5b456d10-0ce1-4a02-a61b-aca457411478/download/besucherzahlen-moers-februar-2024-stundlich.csv
-   - Besucherzahlen Moers im September 2026 nach Stunden | CSV | None | 2026-11-11T14:50:46.569985 / 2026-11-11T14:50:49.479698 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0b70d78b-75e0-46d4-8425-a58ea8ff9c9c/download/besucherzahlen-moers-september-2026-stundlich.csv
-   - Besucherzahlen Moers im Mai 2025 nach Stunden | CSV | None | 2026-11-11T14:25:44.289421 / 2026-11-11T14:25:46.608713 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/819a13eb-d6c2-402c-8f03-5f03208a7542/download/besucherzahlen-moers-mai-2025-stundlich.csv
-   - Besucherzahlen Moers im November 2025 nach Stunden | CSV | None | 2026-11-11T14:29:15.578883 / 2026-11-11T14:29:17.414438 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/46a01b41-758b-430f-b154-c4a661c471ff/download/besucherzahlen-moers-november-2025-stundlich.csv
-   - Besuchszahlen Moers im September 2023 nach Stunden | CSV | None | 2026-11-11T13:45:42.819594 / 2026-11-11T13:45:44.917812 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/bd0dd182-72c9-472d-874d-24ca7fd6601a/download/besucherzahlen-moers-september-2023-stundlich.csv
-   - Besucherzahlen Moers im Dezember 2024 nach Stunden | CSV | None | 2026-11-11T14:21:53.189009 / 2026-11-11T14:21:56.660622 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/833cc3ad-d85e-4cfa-9453-9d60c149fa47/download/besucherzahlen-moers-dezember-2024-stundlich.csv
-   - Besucherzahlen Moers im November 2024 nach Stunden | CSV | None | 2026-11-11T14:21:20.467158 / 2026-11-11T14:21:22.558186 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/a1524f97-604f-442e-89d6-ffbe113bc3b9/download/besucherzahlen-moers-november-2024-stundlich.csv
-   - Besuchszahlen Moers im Juni 2023 nach Stunden | CSV | None | 2026-11-11T13:44:18.866185 / 2026-11-11T13:44:20.747486 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0cc3676d-f3e8-44b3-9e51-06d7886e66ae/download/besucherzahlen-moers-juni-2023-stundlich.csv
-   - Besucherzahlen Moers im August 2026 nach Stunden | CSV | None | 2026-11-11T14:50:19.742593 / 2026-11-11T14:50:22.473520 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/076758fb-ec56-4ba4-a5b6-a1d3a2c1c538/download/besucherzahlen-moers-august-2026-stundlich.csv
-   - Besucherzahlen Moers im März 2024 nach Stunden | CSV | None | 2026-11-11T14:17:15.610438 / 2026-11-11T14:17:17.377532 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/059f7501-196a-452e-900d-31aa16f84054/download/besucherzahlen-moers-marz-2024-stundlich.csv
-   - Besucherzahlen Moers im Mai 2024 nach Stunden | CSV | None | 2026-11-11T14:18:16.963179 / 2026-11-11T14:18:19.460350 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0192863e-c6a8-46ab-a1fa-cb50e361662e/download/besucherzahlen-moers-mai-2024-stundlich.csv
-   - Besucherzahlen Moers im Juli 2024 nach Stunden | CSV | None | 2026-11-11T14:19:14.183622 / 2026-11-11T14:19:16.238000 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/81a1c249-a8fd-4a07-b3d9-2cc67ca6827c/download/besucherzahlen-moers-juli-2024-stundlich.csv
-   - Besuchszahlen Moers im Dezember 2022 nach Stunden | CSV | None | 2026-10-20T07:15:04.450162 / 2026-10-20T07:15:06.787588 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/0fdcb40d-e8d1-4e88-b7c6-59b75d98b14b/download/besucherzahlen-moers-dezember-2022-stundlich.csv
-   - Besuchszahlen Moers im November 2022 nach Stunden | CSV | None | 2026-10-20T07:13:43.209689 / 2026-10-20T07:13:45.562039 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/9560dada-5335-4de9-bb73-8a1b4b356cda/download/besucherzahlen-moers-november-2022-stundlich.csv
-   - Besucherzahlen Moers im April 2025 nach Stunden | CSV | None | 2026-11-11T14:25:11.860529 / 2026-11-11T14:25:13.700130 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/575746e3-d36d-4362-88e4-ef1af1c9e52c/download/besucherzahlen-moers-april-2025-stundlich.csv
-   - Besucherzahlen Moers im Juni 2025 nach Stunden | CSV | None | 2026-11-11T14:26:23.253353 / 2026-11-11T14:26:25.245065 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/4d64315b-460e-47fa-a910-54ab97a269e2/download/besucherzahlen-moers-juni-2025-stundlich.csv
-   - Besucherzahlen Moers im September 2024 nach Stunden | CSV | None | 2026-11-11T14:20:25.283196 / 2026-11-11T14:20:27.123813 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/3f42b35e-8f91-4552-8047-6aec1649f8ef/download/besucherzahlen-moers-september-2024-stundlich.csv
-   - Besucherzahlen Moers im Juli 2026 nach Stunden | CSV | None | 2026-11-11T14:49:49.436261 / 2026-11-11T14:49:51.628501 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/60e3fdbb-9571-4816-978e-d5ae62b2f22e/download/besucherzahlen-moers-juli-2026-stundlich.csv
-   - Besuchszahlen Moers im Mai 2023 nach Stunden | CSV | None | 2026-11-11T13:43:48.532421 / 2026-11-11T13:43:50.489531 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/907d5d08-07c3-47ab-8ab5-14604927a3ca/download/besucherzahlen-moers-mai-2023-stundlich.csv
-   - Besucherzahlen Moers im April 2026 nach Stunden | CSV | None | 2026-11-11T14:48:27.606522 / 2026-11-11T14:48:30.077442 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/34eb65a7-88f2-4a78-b612-ad24177ec11f/download/besucherzahlen-moers-april-2026-stundlich.csv
-   - Besuchszahlen Moers im November 2023 nach Stunden | CSV | None | 2026-11-11T13:46:37.195395 / 2026-11-11T13:46:38.990351 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/d2297e72-cfe4-4218-bb2f-e25bd12a0781/download/besucherzahlen-moers-november-2023-stundlich.csv
-   - Besuchszahlen Moers im Juli 2023 nach Stunden | CSV | None | 2026-11-11T13:44:42.638734 / 2026-11-11T13:44:44.626576 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f9ac5871-7c6c-4035-92d3-f0a16c2b5a71/download/besucherzahlen-moers-juli-2023-stundlich.csv
-   - Besucherzahlen Moers im Februar 2025 nach Stunden | CSV | None | 2026-11-11T14:24:10.471346 / 2026-11-11T14:24:12.359950 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/e059e456-ac89-461c-8f47-a94e9ad113eb/download/besucherzahlen-moers-februar-2025-stundlich.csv
-   - Besuchszahlen Moers im März 2023 nach Stunden | CSV | None | 2026-11-11T13:42:53.653593 / 2026-11-11T13:42:55.502930 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/4905a668-f943-403d-bb67-07f426a5ea1c/download/besucherzahlen-moers-maerz-2023-stundlich.csv
-   - Besucherzahlen Moers im März 2025 nach Stunden | CSV | None | 2026-11-11T14:24:44.887532 / 2026-11-11T14:24:47.016752 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/48c5dc89-6ff6-45b6-ba7d-4d31b59f3159/download/besucherzahlen-moers-marz-2025-stundlich.csv
-   - Besucherzahlen Moers im Oktober 2025 nach Stunden | CSV | None | 2026-11-11T14:28:47.804957 / 2026-11-11T14:28:49.701533 | https://www.offenesdatenportal.de/dataset/2fdb41f9-b414-4c36-b5e5-a2526efd682e/resource/f642b72d-aded-438f-9ae4-3a4458830a2b/download/besucherzahlen-moers-oktober-2025-stundlich.csv
-== besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers: Besuchszahlen Steinstraße - nach Tagen (Stadt Moers) | Lizenz None | geändert 2026-11-11T14:45:20.661753 | 54 Ressourcen
-   'Frequenzmessungen in Innenstädten haben sich in den letzten 20 Jahren immer stärker etabliert. Mit Unterstützung der städtischen Wirtschaftsförderung und der ENNI Stadt und Service Niederrhein hat die MoersMarketing den ersten 4-fach-Laser zur Personenzählung im Mai 2022 in der Stadt Moers installieren lassen. Der Laser ist in einer Höhe von rund 10 Metern angebracht und misst rund um die Uhr beide Bewegungsrichtungen. Dank modernster Technik kann er dabei zwischen Erwachsenen und Kindern unterscheiden. Gemessen werden Personen ab einer Größe von 90 cm. Als Kinder zählen Personen <150 cm.\r\nDer'
-   - Besucherzahlen Moers im Oktober 2024 nach Tagen | CSV | None | 2026-11-11T14:11:22.009486 / 2026-11-11T14:11:23.648740 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/f03e73bc-3e1a-4414-9ee2-cfc5f9e04a5f/download/besucherzahlen-moers-oktober-2024-taglich.csv
-   - Besucherzahlen Moers im Januar 2024 nach Tagen | CSV | None | 2026-11-11T14:06:53.751382 / 2026-11-11T14:06:55.602894 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/5e5ad7ec-b741-408e-b639-c49f532f1d7a/download/besucherzahlen-moers-januar-2024-taglich.csv
-   - Besucherzahlen Moers im Februar 2026 nach Tagen | CSV | None | 2026-11-11T14:41:24.818828 / 2026-11-11T14:41:26.584500 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/e3774422-0985-4e94-9505-6269ee24fd38/download/besucherzahlen-moers-februar-2026-taglich.csv
-   - Besuchszahlen Moers im Februar 2023 nach Tagen | CSV | None | 2026-11-11T13:58:27.951008 / 2026-11-11T13:58:56.100932 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/b4a6d17a-8366-4493-b52f-3aa238ade380/download/besucherzahlen-moers-februar-2023-taglich.csv
-   - Besucherzahlen Moers im Juli 2024 nach Tagen | CSV | None | 2026-11-11T14:09:58.458272 / 2026-11-11T14:10:00.391177 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/061eb672-9e3c-4b16-8216-da34d80c9319/download/besucherzahlen-moers-juli-2024-taglich.csv
-   - Besucherzahlen Moers im November 2024 nach Tagen | CSV | None | 2026-11-11T14:12:08.520010 / 2026-11-11T14:12:10.677073 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/f05ac115-772e-4a14-9f8f-dfb618897344/download/besucherzahlen-moers-november-2024-taglich.csv
-   - Besucherzahlen Moers im April 2026 nach Tagen | CSV | None | 2026-11-11T14:42:28.551327 / 2026-11-11T14:42:30.658727 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/834a4fa1-249d-4d2f-a666-951cdc6782df/download/besucherzahlen-moers-april-2026-taglich.csv
-   - Besucherzahlen Moers im August 2024 nach Tagen | CSV | None | 2026-11-11T14:10:27.187770 / 2026-11-11T14:10:28.975802 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/57c34688-1552-424f-985a-32cbe7c7edaf/download/besucherzahlen-moers-august-2024-taglich.csv
-   - Besuchszahlen Moers im Juli 2023 nach Tagen | CSV | None | 2026-11-11T14:00:46.060919 / 2026-11-11T14:01:09.831393 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/cacac992-144d-407a-8677-87a13bb17fbe/download/besucherzahlen-moers-juli-2023-taglich.csv
-   - Besucherzahlen Moers im September 2024 nach Tagen | CSV | None | 2026-11-11T14:10:53.994265 / 2026-11-11T14:10:55.893776 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a91e6c13-dda7-4ffe-a58c-55173e4f36ba/download/besucherzahlen-moers-september-2024-taglich.csv
-   - Besuchszahlen Moers im Oktober 2023 nach Tagen | CSV | None | 2026-11-11T14:02:10.648263 / 2026-11-11T14:02:12.316296 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/0f0da42b-10e9-415f-9c15-7a6b23e4fa16/download/besucherzahlen-moers-oktober-2023-taglich.csv
-   - Besucherzahlen Moers im Oktober 2026 nach Tagen | CSV | None | 2026-11-11T14:45:18.410287 / 2026-11-11T14:45:20.676747 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/e1a8f7da-f532-48d2-8fc1-14c77f095c5b/download/besucherzahlen-moers-oktober-2026-taglich.csv
-   - Besucherzahlen Moers im Januar 2025 nach Tagen | CSV | None | 2026-11-11T14:32:44.792013 / 2026-11-11T14:32:46.381260 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/3710df13-739e-4094-b057-c15a63ee7c47/download/besucherzahlen-moers-januar-2025-taglich.csv
-   - Besucherzahlen Moers im September 2025 nach Tagen | CSV | None | 2026-11-11T14:36:33.704292 / 2026-11-11T14:36:35.217678 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/978031c2-9f00-4581-9a21-e62541cff7de/download/besucherzahlen-moers-september-2025-taglich.csv
-   - Besucherzahlen Moers im Juli 2025 nach Tage | CSV | None | 2026-11-11T14:35:25.219402 / 2026-11-11T14:35:26.821722 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/e4650a47-40ae-49c1-98d6-cf95360af8e0/download/besucherzahlen-moers-juli-2025-taglich.csv
-   - Besucherzahlen Moers im Juli 2026 nach Tagen | CSV | None | 2026-11-11T14:44:00.549348 / 2026-11-11T14:44:02.989642 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9e88dc47-3b98-46c0-96c1-aebcab7e0bde/download/besucherzahlen-moers-juli-2026-taglich.csv
-   - Besucherzahlen Moers im Juni 2022 nach Tagen | CSV | None | 2026-11-11T13:09:06.539763 / 2026-11-11T13:09:07.923965 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/580d4242-95aa-416f-9847-30046211ef55/download/besucherzahlen-moers-juni-2022-taglich.csv
-   - Besuchszahlen Moers im April 2023 nach Tagen | CSV | None | 2026-11-11T13:59:21.277689 / 2026-11-11T13:59:22.983113 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/0064e0e7-aab4-479b-88b9-b9bf2529c91e/download/besucherzahlen-moers-april-2023-taglich.csv
-   - Besucherzahlen Moers im Mai 2025 nach Tage | CSV | None | 2026-11-11T14:34:30.772507 / 2026-11-11T14:34:32.289618 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/8b681822-14a3-4824-9d10-18bf4f023f94/download/besucherzahlen-moers-mai-2025-taglich.csv
-   - Besuchszahlen Moers im August 2022 nach Tagen | CSV | None | 2026-11-11T13:10:09.437374 / 2026-11-11T13:10:10.679203 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a8288848-a9fe-4495-aa74-ad55aa3839c5/download/besucherzahlen-moers-august-2022-taglich.csv
-   - Besuchszahlen Moers im September 2023 nach Tagen | CSV | None | 2026-11-11T14:01:38.570040 / 2026-11-11T14:01:40.679934 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/bebaed98-cd53-4ea1-bbad-ddc981d8cf38/download/besucherzahlen-moers-september-2023-taglich.csv
-   - Besucherzahlen Moers im Mai 2026 nach Tagen | CSV | None | 2026-11-11T14:43:06.458276 / 2026-11-11T14:43:08.505903 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/3bac4ea3-eec3-42fb-9eab-86dbcbbba25a/download/besucherzahlen-moers-mai-2026-taglich.csv
-   - Besucherzahlen Moers im Februar 2025 nach Tagen | CSV | None | 2026-11-11T14:33:05.738960 / 2026-11-11T14:33:07.460341 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/198d3a05-ec47-4767-b82a-b44eeee098f8/download/besucherzahlen-moers-februar-2025-taglich.csv
-   - Besucherzahlen Moers im März 2024 nach Tagen | CSV | None | 2026-11-11T14:07:50.837904 / 2026-11-11T14:07:52.334886 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/da4b8d33-4f5a-4800-be5a-e0e1424b79cb/download/besucherzahlen-moers-marz-2024-taglich.csv
-   - Besucherzahlen Moers im März 2026 nach Tagen | CSV | None | 2026-11-11T14:41:50.590745 / 2026-11-11T14:41:52.696487 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/804b4e75-192c-4a5e-b5b6-78259e7a4bc1/download/besucherzahlen-moers-marz-2026-taglich.csv
-   - Besucherzahlen Moers im Juni 2025 nach Tage | CSV | None | 2026-11-11T14:34:57.659768 / 2026-11-11T14:34:59.251970 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/eeb0ba89-e5e3-4570-905b-8c030f8f5995/download/besucherzahlen-moers-juni-2025-taglich.csv
-   - Besuchszahlen Moers im Juni 2023 nach Tagen | CSV | None | 2026-11-11T14:00:17.262579 / 2026-11-11T14:00:19.217412 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/33f69ee1-0909-4151-b74a-cc84f8bb0b0d/download/besucherzahlen-moers-juni-2023-taglich.csv
-   - Besuchszahlen Moers im Mai 2023 nach Tagen | CSV | None | 2026-11-11T13:59:49.872430 / 2026-11-11T13:59:51.346029 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/5081e85f-6032-42b6-9397-fb93830694a9/download/besucherzahlen-moers-mai-2023-taglich.csv
-   - Besuchszahlen Moers im September 2022 nach Tagen | CSV | None | 2026-11-11T13:11:02.233707 / 2026-11-11T13:11:03.630408 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/d96d61ee-8169-4432-860a-a4e53f8e4c20/download/besucherzahlen-moers-september-2022-taglich.csv
-   - Besuchszahlen Moers im November 2023 nach Tagen | CSV | None | 2026-11-11T14:02:38.247492 / 2026-11-11T14:02:39.851805 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/cd1b832b-8acb-4934-8a95-884eda057f01/download/besucherzahlen-moers-november-2023-taglich.csv
-   - Besuchszahlen Moers im Oktober 2022 nach Tagen | CSV | None | 2026-11-11T13:11:33.321529 / 2026-11-11T13:11:34.580946 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/8f43cb89-2965-4f2f-a6fb-965dc0c9675f/download/besucherzahlen-moers-oktober-2022-taglich.csv
-   - Besucherzahlen Moers im Mai 2024 nach Tagen | CSV | None | 2026-11-11T14:09:00.462405 / 2026-11-11T14:09:02.886573 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/5eb00a6d-0438-47e9-9728-2f6b977f746e/download/besucherzahlen-moers-mai-2024-taglich.csv
-   - Besucherzahlen Moers im August 2025 nach Tagen | CSV | None | 2026-11-11T14:35:59.852567 / 2026-11-11T14:36:02.313927 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/c15f5bd2-08be-497e-ae49-3a62c67346e9/download/besucherzahlen-moers-august-2025-taglich.csv
-   - Besucherzahlen Moers im Oktober 2025 nach Tagen | CSV | None | 2026-11-11T14:37:01.828037 / 2026-11-11T14:37:03.498991 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/7a536d29-ef49-4c73-9c8b-af4a36e5687f/download/besucherzahlen-moers-oktober-2025-taglich.csv
-   - Besucherzahlen Moers im Juli 2022 nach Tagen | CSV | None | 2026-11-11T13:09:35.946963 / 2026-11-11T13:09:37.221906 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/91fbd92b-0654-4d62-996d-5cba8d0dc8ea/download/besucherzahlen-moers-juli-2022-taglich.csv
-   - Besucherzahlen Moers im Juni 2024 nach Tagen | CSV | None | 2026-11-11T14:09:31.885947 / 2026-11-11T14:09:34.120008 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/c457110c-b752-4297-8c0c-54727fc6883b/download/besucherzahlen-moers-juni-2024-taglich.csv
-   - Besuchszahlen Moers im Januar 2023 nach Tagen | CSV | None | 2026-11-11T13:57:57.793703 / 2026-11-11T13:57:59.400650 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a15b5b8a-887d-45a5-bf74-93d68fada1dc/download/besucherzahlen-moers-januar-2023-taglich.csv
-   - Besuchszahlen Moers im November 2022 nach Tagen | CSV | None | 2026-11-11T13:12:02.952854 / 2026-11-11T13:12:04.222093 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/87b16881-2995-4406-83cb-cd780cca533c/download/besucherzahlen-moers-november-2022-taglich.csv
-   - Besucherzahlen Moers im August 2026 nach Tagen | CSV | None | 2026-11-11T14:44:23.626746 / 2026-11-11T14:44:26.223354 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9a4a14b0-61ab-44e6-b0d4-fc42f5a7442b/download/besucherzahlen-moers-august-2026-taglich.csv
-   - Besucherzahlen Moers im Dezember 2024 nach Tagen | CSV | None | 2026-11-11T14:13:35.749853 / 2026-11-11T14:13:39.483795 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/1a8f1bba-746c-44bf-a129-703d35b50706/download/besucherzahlen-moers-dezember-2024-taglich.csv
-   - Besuchszahlen Moers im August 2023 nach Tagen | CSV | None | 2026-11-11T14:01:09.856434 / 2026-11-11T14:01:11.533094 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/ff31d4ae-787f-4b30-a3b7-3453a0b5b3cf/download/besucherzahlen-moers-august-2023-taglich.csv
-   - Besucherzahlen Moers im Januar 2026 nach Tagen | CSV | None | 2026-11-11T14:40:57.113719 / 2026-11-11T14:40:58.837202 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/99f3a648-4fb1-4fab-943b-136872887c3a/download/besucherzahlen-moers-januar-2026-taglich.csv
-   - Besucherzahlen Moers im April 2025 nach Tage | CSV | None | 2026-11-11T14:34:05.074435 / 2026-11-11T14:34:06.804160 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9b4769b3-640c-4d5e-a181-e1dd60dfa4a6/download/besucherzahlen-moers-april-2025-taglich.csv
-   - Besucherzahlen Moers im Dezember 2025 nach Tage | CSV | None | 2026-11-11T14:37:50.619785 / 2026-11-11T14:37:54.664957 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/2972b9f2-e13b-4cda-b21b-530a719d2f8c/download/besucherzahlen-moers-dezember-2025-taglich.csv
-   - Besucherzahlen Moers im September 2026 nach Tagen | CSV | None | 2026-11-11T14:44:48.222630 / 2026-11-11T14:44:50.628295 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/d837890d-9b4a-4a14-9518-f5446410a6f2/download/besucherzahlen-moers-september-2026-taglich.csv
-   - Besucherzahlen Moers ab 5. Mai 2022 nach Tagen | CSV | None | 2026-11-11T13:07:51.858867 / 2026-11-11T13:07:53.181671 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/a76f0793-7594-44ce-b514-d2e144760762/download/besucherzahlen-moers-mai-2022-taglich-1.csv
-   - Besucherzahlen Moers im April 2024 nach Tagen | CSV | None | 2026-11-11T14:08:31.255203 / 2026-11-11T14:08:32.829818 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/dba410f4-478a-43d3-8672-f90526d47f1a/download/besucherzahlen-moers-april-2023-taglich-1.csv
-   - Besuchszahlen Moers im März 2023 nach Tagen | CSV | None | 2026-11-11T13:58:56.116876 / 2026-11-11T13:58:57.596020 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/876422a7-65cd-438a-a04a-8d4d116efb7c/download/besucherzahlen-moers-maerz-2023-taglich.csv
-   - Besucherzahlen Moers im März 2025 nach Tagen | CSV | None | 2026-11-11T14:33:39.216393 / 2026-11-11T14:33:40.660681 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/20674e13-505b-4e06-ab58-f07350d9f831/download/besucherzahlen-moers-marz-2025-taglich.csv
-   - Besuchszahlen Moers im Dezember 2022 nach Tagen | CSV | None | 2026-11-11T13:12:34.101970 / 2026-11-11T13:12:35.769283 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9cbd1727-ce12-4b5f-b599-a75c5c29707d/download/besucherzahlen-moers-dezember-2022-taglich.csv
-   - Besucherzahlen Moers im Juni 2026 nach Tagen | CSV | None | 2026-11-11T14:43:31.049613 / 2026-11-11T14:43:33.252241 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/1fb33959-41c5-43f2-9159-fd0a9c33150d/download/besucherzahlen-moers-juni-2026-taglich.csv
-   - Besucherzahlen Moers im November 2025 nach Tagen | CSV | None | 2026-11-11T14:37:26.815799 / 2026-11-11T14:37:28.578141 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/c1193d2e-f657-493c-aa55-0c3402c245af/download/besucherzahlen-moers-november-2025-taglich.csv
-   - Besucherzahlen Moers im Februar 2024 nach Tagen | CSV | None | 2026-11-11T14:07:21.928863 / 2026-11-11T14:07:24.256911 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/f8b422fb-361f-4c7c-9f6f-73ab3c60d675/download/besucherzahlen-moers-februar-2024-taglich.csv
-   - Besuchszahlen Moers im Dezember 2023 nach Tagen | CSV | None | 2026-11-11T14:03:03.449810 / 2026-11-11T14:03:06.009568 | https://www.offenesdatenportal.de/dataset/3cda9709-5166-4979-ad02-d1d3ac69aaa3/resource/9ce09824-10ed-4afc-82dd-b3d05d190540/download/besucherzahlen-moers-dezember-2023-taglich.csv
-== Downloads
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juni-2024-stundlich.csv: 84904 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-06-01 00:00:00 +0200;Saturday;42;15;cloudy;;16;26;42;0;16;26;0;0;12;6;6;30;10;20
-     Steinstraße, Moers;2024-06-01 01:00:00 +0200;Saturday;14;15;cloudy;;10;4;14;0;10;4;0;0;6;5;1;8;5;3
-     Steinstraße, Moers;2024-06-01 02:00:00 +0200;Saturday;5;15;cloudy;;3;2;5;0;3;2;0;0;4;3;1;1;0;1
-     … Steinstraße, Moers;2024-06-30 22:00:00 +0200;Sunday;77;18;cloudy;;27;50;76;1;27;49;0;1;35;19;16;42;8;34
-     … Steinstraße, Moers;2024-06-30 23:00:00 +0200;Sunday;11;17;rain;;7;4;10;1;7;3;0;1;6;5;1;5;2;3
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-januar-2023-stundlich.csv: 64746 Bytes, 745 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2023-01-01 00:00:00 +0100;Sunday;169;15;wind;107;62;164;5;104;60;3;2
-     Steinstra�e;2023-01-01 01:00:00 +0100;Sunday;66;15;wind;29;37;65;1;29;36;0;1
-     Steinstra�e;2023-01-01 02:00:00 +0100;Sunday;46;16;wind;19;27;45;1;18;27;1;0
-     … Steinstra�e;2023-01-31 22:00:00 +0100;Tuesday;49;6;partly-cloudy-night;18;31;49;0;18;31;0;0
-     … Steinstra�e;2023-01-31 23:00:00 +0100;Tuesday;15;6;partly-cloudy-night;3;12;15;0;3;12;0;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-januar-2026-stundlich.csv: 90935 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-01-01 00:00:00 +0100;Thursday;190;3;cloudy;;89;101;188;2;88;100;1;1;84;44;40;106;45;61;measured
-     Steinstraße, Moers;2026-01-01 01:00:00 +0100;Thursday;81;3;cloudy;;27;54;81;0;27;54;0;0;50;16;34;31;11;20;measured
-     Steinstraße, Moers;2026-01-01 02:00:00 +0100;Thursday;54;3;cloudy;;7;47;54;0;7;47;0;0;38;6;32;16;1;15;measured
-     … Steinstraße, Moers;2026-01-31 22:00:00 +0100;Saturday;90;6;cloudy;;33;57;90;0;33;57;0;0;40;26;14;50;7;43;measured
-     … Steinstraße, Moers;2026-01-31 23:00:00 +0100;Saturday;83;5;partly-cloudy-night;;18;65;83;0;18;65;0;0;29;10;19;54;8;46;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-mai-2022-stundlich.csv: 71034 Bytes, 745 Zeilen, BOM False
-     Lage	Zeitpunkt der Messung	Wochentag	Fu�g�nger insgesamt	Temperatur in �c	Wetterlage	Fu�g�nger insgesamt Richtung Neumarkt	Fu�g�nger insgesamt Richtung Neuer Wall	Erwachsene	Kinder	Erwachsene Richtung Neumarkt	Erwachsene Richtung Neuer Wall	Kinder Richtung Neumarkt	Kinder Richtung Neuer Wall
-     Steinstra�e, Moers	2022-05-01 00:00:00 +0200	Sunday	0			0	0	0	0	0	0	0	0
-     Steinstra�e, Moers	2022-05-01 01:00:00 +0200	Sunday	0			0	0	0	0	0	0	0	0
-     Steinstra�e, Moers	2022-05-01 02:00:00 +0200	Sunday	0			0	0	0	0	0	0	0	0
-     … Steinstra�e, Moers	2022-05-31 22:00:00 +0200	Tuesday	60	14	partly-cloudy-night	11	49	60	0	11	49	0	0
-     … Steinstra�e, Moers	2022-05-31 23:00:00 +0200	Tuesday	13	12	rain	10	3	13	0	10	3	0	0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-dezember-2023-stundlich.csv: 84974 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-12-01 00:00:00 +0100;Friday;14;0;cloudy;;11;3;14;0;11;3;0;0;5;5;0;9;6;3
-     Steinstraße, Moers;2023-12-01 01:00:00 +0100;Friday;6;0;cloudy;;2;4;6;0;2;4;0;0;1;1;0;5;1;4
-     Steinstraße, Moers;2023-12-01 02:00:00 +0100;Friday;4;0;cloudy;;2;2;4;0;2;2;0;0;2;1;1;2;1;1
-     … Steinstraße, Moers;2023-12-31 22:00:00 +0100;Sunday;53;9;rain;;24;29;50;3;23;27;1;2;27;15;12;26;9;17
-     … Steinstraße, Moers;2023-12-31 23:00:00 +0100;Sunday;191;8;rain;;106;85;186;5;104;82;2;3;95;59;36;96;47;49
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-dezember-2025-stundlich.csv: 93366 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-12-01 00:00:00 +0100;Monday;3;5;rain;;3;0;3;0;3;0;0;0;3;3;0;0;0;0;measured
-     Steinstraße, Moers;2025-12-01 01:00:00 +0100;Monday;4;5;cloudy;;3;1;4;0;3;1;0;0;3;2;1;1;1;0;measured
-     Steinstraße, Moers;2025-12-01 02:00:00 +0100;Monday;2;4;partly-cloudy-night;;0;2;2;0;0;2;0;0;2;0;2;0;0;0;measured
-     … Steinstraße, Moers;2025-12-31 22:00:00 +0100;Wednesday;133;3;cloudy;;87;46;133;0;87;46;0;0;51;36;15;82;51;31;measured
-     … Steinstraße, Moers;2025-12-31 23:00:00 +0100;Wednesday;133;1;partly-cloudy-night;;79;54;126;7;75;51;4;3;66;52;14;67;27;40;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-oktober-2022-stundlich.csv: 67453 Bytes, 746 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-10-01 00:00:00 +0200;Saturday;29;12;cloudy;17;12;29;0;17;12;0;0
-     Steinstra�e;2022-10-01 01:00:00 +0200;Saturday;14;12;cloudy;8;6;13;1;8;5;0;1
-     Steinstra�e;2022-10-01 02:00:00 +0200;Saturday;3;12;rain;3;0;3;0;3;0;0;0
-     … Steinstra�e;2022-10-31 22:00:00 +0100;Monday;142;15;partly-cloudy-night;66;76;140;2;65;75;1;1
-     … Steinstra�e;2022-10-31 23:00:00 +0100;Monday;88;15;partly-cloudy-night;52;36;88;0;52;36;0;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-marz-2026-stundlich.csv: 92369 Bytes, 744 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-03-01 00:00:00 +0100;Sunday;20;7;rain;;15;5;20;0;15;5;0;0;6;5;1;14;10;4;measured
-     Steinstraße, Moers;2026-03-01 01:00:00 +0100;Sunday;6;6;clear-night;;2;4;6;0;2;4;0;0;1;1;0;5;1;4;measured
-     Steinstraße, Moers;2026-03-01 02:00:00 +0100;Sunday;7;6;clear-night;;7;0;6;1;6;0;1;0;3;3;0;4;4;0;measured
-     … Steinstraße, Moers;2026-03-31 22:00:00 +0200;Tuesday;38;6;partly-cloudy-night;;16;22;38;0;16;22;0;0;19;8;11;19;8;11;measured
-     … Steinstraße, Moers;2026-03-31 23:00:00 +0200;Tuesday;20;6;cloudy;;11;9;20;0;11;9;0;0;6;4;2;14;7;7;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juni-2026-stundlich.csv: 90714 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-06-01 00:00:00 +0200;Monday;5;16;cloudy;;4;1;5;0;4;1;0;0;3;2;1;2;2;0;measured
-     Steinstraße, Moers;2026-06-01 01:00:00 +0200;Monday;12;15;partly-cloudy-night;;3;9;12;0;3;9;0;0;6;3;3;6;0;6;measured
-     Steinstraße, Moers;2026-06-01 02:00:00 +0200;Monday;8;15;clear-night;;4;4;8;0;4;4;0;0;3;1;2;5;3;2;measured
-     … Steinstraße, Moers;2026-06-30 22:00:00 +0200;Tuesday;140;21;cloudy;;54;86;136;4;52;84;2;2;64;39;25;76;15;61;measured
-     … Steinstraße, Moers;2026-06-30 23:00:00 +0200;Tuesday;33;20;cloudy;;13;20;33;0;13;20;0;0;14;9;5;19;4;15;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-februar-2026-stundlich.csv: 82649 Bytes, 673 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-02-01 00:00:00 +0100;Sunday;36;6;cloudy;;6;30;36;0;6;30;0;0;12;3;9;24;3;21;measured
-     Steinstraße, Moers;2026-02-01 01:00:00 +0100;Sunday;12;4;partly-cloudy-night;;8;4;12;0;8;4;0;0;7;6;1;5;2;3;measured
-     Steinstraße, Moers;2026-02-01 02:00:00 +0100;Sunday;10;4;partly-cloudy-night;;7;3;9;1;6;3;1;0;3;3;0;7;4;3;measured
-     … Steinstraße, Moers;2026-02-28 22:00:00 +0100;Saturday;110;7;partly-cloudy-night;;55;55;110;0;55;55;0;0;48;33;15;62;22;40;measured
-     … Steinstraße, Moers;2026-02-28 23:00:00 +0100;Saturday;60;7;clear-night;;21;39;60;0;21;39;0;0;22;8;14;38;13;25;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-september-2025-stundlich.csv: 92586 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-09-01 00:00:00 +0200;Monday;4;19;rain;;3;1;4;0;3;1;0;0;4;3;1;0;0;0;measured
-     Steinstraße, Moers;2025-09-01 01:00:00 +0200;Monday;4;19;rain;;2;2;4;0;2;2;0;0;2;2;0;2;0;2;measured
-     Steinstraße, Moers;2025-09-01 02:00:00 +0200;Monday;4;18;rain;;3;1;4;0;3;1;0;0;3;3;0;1;0;1;measured
-     … Steinstraße, Moers;2025-09-30 22:00:00 +0200;Tuesday;35;9;partly-cloudy-night;;20;15;35;0;20;15;0;0;15;9;6;20;11;9;measured
-     … Steinstraße, Moers;2025-09-30 23:00:00 +0200;Tuesday;22;11;partly-cloudy-night;;7;15;22;0;7;15;0;0;9;4;5;13;3;10;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juli-2025-stundlich.csv: 95185 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-07-01 00:00:00 +0200;Tuesday;16;22;clear-night;;12;4;15;1;11;4;1;0;9;7;2;7;5;2;measured
-     Steinstraße, Moers;2025-07-01 01:00:00 +0200;Tuesday;6;20;clear-night;;5;1;6;0;5;1;0;0;4;4;0;2;1;1;measured
-     Steinstraße, Moers;2025-07-01 02:00:00 +0200;Tuesday;3;18;clear-night;;3;0;3;0;3;0;0;0;2;2;0;1;1;0;measured
-     … Steinstraße, Moers;2025-07-31 22:00:00 +0200;Thursday;76;18;rain;;40;36;76;0;40;36;0;0;31;22;9;45;18;27;measured
-     … Steinstraße, Moers;2025-07-31 23:00:00 +0200;Thursday;25;17;rain;;10;15;25;0;10;15;0;0;9;3;6;16;7;9;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-februar-2023-stundlich.csv: 77205 Bytes, 673 Zeilen, BOM False
-     location	time of measurement	weekday	pedestrians count	temperature in �c	weather condition	incidents	towards Neumarkt pedestrians count	towards Neuer Wall pedestrians count	adult pedestrians count	child pedestrians count	adult towards Neumarkt pedestrians count	adult towards Neuer Wall pedestrians c
-     Steinstra�e	 Moers	2023-02-01 00:00:00 +0100	Wednesday	5	5	partly-cloudy-night		4	1	5	0	4	1	0	0	2	2	0	3	2	1
-     Steinstra�e	 Moers	2023-02-01 01:00:00 +0100	Wednesday	3	5	partly-cloudy-night		2	1	3	0	2	1	0	0	1	1	0	2	1	1
-     Steinstra�e	 Moers	2023-02-01 02:00:00 +0100	Wednesday	3	5	cloudy		2	1	3	0	2	1	0	0	2	2	0	1	0	1
-     … Steinstra�e	 Moers	2023-02-28 22:00:00 +0100	Tuesday	35	0	clear-night		10	25	35	0	10	25	0	0	11	4	7	24	6	18
-     … Steinstra�e	 Moers	2023-02-28 23:00:00 +0100	Tuesday	7	0	clear-night		4	3	7	0	4	3	0	0	3	3	0	4	1	3
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-august-2023-stundlich.csv: 88450 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-08-01 00:00:00 +0200;Tuesday;5;17;rain;;2;3;5;0;2;3;0;0;3;1;2;2;1;1
-     Steinstraße, Moers;2023-08-01 01:00:00 +0200;Tuesday;5;17;rain;;2;3;5;0;2;3;0;0;2;1;1;3;1;2
-     Steinstraße, Moers;2023-08-01 02:00:00 +0200;Tuesday;1;17;rain;;0;1;1;0;0;1;0;0;0;0;0;1;0;1
-     … Steinstraße, Moers;2023-08-31 22:00:00 +0200;Thursday;69;15;partly-cloudy-night;;23;46;69;0;23;46;0;0;23;12;11;46;11;35
-     … Steinstraße, Moers;2023-08-31 23:00:00 +0200;Thursday;36;14;rain;;16;20;36;0;16;20;0;0;18;11;7;18;5;13
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juli-2022-stundlich.csv: 73093 Bytes, 745 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2022-07-01 00:00:00 +0200;Friday;8;15;rain;;5;3;8;0;5;3;0
-     Steinstra�e, Moers;2022-07-01 01:00:00 +0200;Friday;5;15;rain;;4;1;5;0;4;1;0
-     Steinstra�e, Moers;2022-07-01 02:00:00 +0200;Friday;2;14;rain;;1;1;2;0;1;1;0
-     … Steinstra�e, Moers;2022-07-31 22:00:00 +0200;Sunday;75;20;cloudy;;43;32;75;0;43;32;0
-     … Steinstra�e, Moers;2022-07-31 23:00:00 +0200;Sunday;31;20;cloudy;;14;17;30;1;13;17;1
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-august-2022-stundlich.csv: 68270 Bytes, 745 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-08-01 00:00:00 +0200;Monday;13;19;cloudy;10;3;13;0;10;3;0;0
-     Steinstra�e;2022-08-01 01:00:00 +0200;Monday;1;19;partly-cloudy-night;1;0;1;0;1;0;0;0
-     Steinstra�e;2022-08-01 02:00:00 +0200;Monday;1;19;partly-cloudy-night;0;1;1;0;0;1;0;0
-     … Steinstra�e;2022-08-31 22:00:00 +0200;Wednesday;107;21;partly-cloudy-night;31;76;106;1;30;76;1;0
-     … Steinstra�e;2022-08-31 23:00:00 +0200;Wednesday;32;20;partly-cloudy-night;12;20;32;0;12;20;0;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-januar-2025-stundlich.csv: 90607 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-01-01 00:00:00 +0100;Wednesday;257;5;cloudy;;95;162;250;7;94;156;1;6;130;51;79;127;44;83;measured
-     Steinstraße, Moers;2025-01-01 01:00:00 +0100;Wednesday;120;5;cloudy;;34;86;118;2;34;84;0;2;66;24;42;54;10;44;measured
-     Steinstraße, Moers;2025-01-01 02:00:00 +0100;Wednesday;83;6;cloudy;;12;71;81;2;12;69;0;2;42;7;35;41;5;36;measured
-     … Steinstraße, Moers;2025-01-31 22:00:00 +0100;Friday;120;0;clear-night;;43;77;117;3;42;75;1;2;50;30;20;70;13;57;measured
-     … Steinstraße, Moers;2025-01-31 23:00:00 +0100;Friday;69;1;clear-night;;23;46;67;2;23;44;0;2;21;9;12;48;14;34;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-august-2024-stundlich.csv: 95066 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-08-01 00:00:00 +0200;Tuesday;5;17;rain;;2;3;5;0;2;3;0;0;3;1;2;2;1;1;measured
-     Steinstraße, Moers;2023-08-01 01:00:00 +0200;Tuesday;5;17;rain;;2;3;5;0;2;3;0;0;2;1;1;3;1;2;measured
-     Steinstraße, Moers;2023-08-01 02:00:00 +0200;Tuesday;1;17;rain;;0;1;1;0;0;1;0;0;0;0;0;1;0;1;measured
-     … Steinstraße, Moers;2023-08-31 22:00:00 +0200;Thursday;69;15;partly-cloudy-night;;23;46;69;0;23;46;0;0;23;12;11;46;11;35;measured
-     … Steinstraße, Moers;2023-08-31 23:00:00 +0200;Thursday;36;14;rain;;16;20;36;0;16;20;0;0;18;11;7;18;5;13;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-april-2024-stundlich.csv: 84046 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-04-01 00:00:00 +0200;Monday;12;12;cloudy;;4;8;12;0;4;8;0;0;5;3;2;7;1;6
-     Steinstraße, Moers;2024-04-01 01:00:00 +0200;Monday;15;12;partly-cloudy-night;;9;6;15;0;9;6;0;0;6;5;1;9;4;5
-     Steinstraße, Moers;2024-04-01 02:00:00 +0200;Monday;10;10;partly-cloudy-night;;4;6;10;0;4;6;0;0;2;0;2;8;4;4
-     … Steinstraße, Moers;2024-04-30 22:00:00 +0200;Tuesday;263;18;partly-cloudy-night;;106;157;259;4;102;157;4;0;126;60;66;137;46;91
-     … Steinstraße, Moers;2024-04-30 23:00:00 +0200;Tuesday;115;19;partly-cloudy-night;;40;75;113;2;40;73;0;2;52;20;32;63;20;43
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-oktober-2024-stundlich.csv: 94256 Bytes, 746 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-10-01 00:00:00 +0200;Tuesday;9;14;rain;;5;4;7;2;4;3;1;1;3;2;1;6;3;3;modelled
-     Steinstraße, Moers;2024-10-01 01:00:00 +0200;Tuesday;3;14;rain;;2;1;3;0;2;1;0;0;1;1;0;2;1;1;modelled
-     Steinstraße, Moers;2024-10-01 02:00:00 +0200;Tuesday;4;14;rain;;2;2;4;0;2;2;0;0;2;1;1;2;1;1;modelled
-     … Steinstraße, Moers;2024-10-31 22:00:00 +0100;Thursday;135;8;partly-cloudy-night;;50;85;135;0;50;85;0;0;42;21;21;93;29;64;measured
-     … Steinstraße, Moers;2024-10-31 23:00:00 +0100;Thursday;56;13;partly-cloudy-night;;22;34;56;0;22;34;0;0;26;15;11;30;7;23;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-april-2023-stundlich.csv: 68975 Bytes, 721 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-04-01 00:00:00 +0200;Saturday;28;10;rain;10;18;28;0;10;18;0;0
-     Steinstra�e, Moers;2023-04-01 01:00:00 +0200;Saturday;14;10;rain;9;5;14;0;9;5;0;0
-     Steinstra�e, Moers;2023-04-01 02:00:00 +0200;Saturday;17;10;rain;12;5;17;0;12;5;0;0
-     … Steinstra�e, Moers;2023-04-30 22:00:00 +0200;Sunday;129;13;cloudy;52;77;127;2;50;77;2;0
-     … Steinstra�e, Moers;2023-04-30 23:00:00 +0200;Sunday;113;12;cloudy;42;71;112;1;42;70;0;1
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-mai-2026-stundlich.csv: 93333 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-05-01 00:00:00 +0200;Friday;47;13;clear-night;;11;36;47;0;11;36;0;0;8;4;4;39;7;32;measured
-     Steinstraße, Moers;2026-05-01 01:00:00 +0200;Friday;16;13;clear-night;;8;8;16;0;8;8;0;0;4;2;2;12;6;6;measured
-     Steinstraße, Moers;2026-05-01 02:00:00 +0200;Friday;9;12;clear-night;;3;6;9;0;3;6;0;0;6;2;4;3;1;2;measured
-     … Steinstraße, Moers;2026-05-31 22:00:00 +0200;Sunday;108;19;cloudy;;48;60;105;3;47;58;1;2;36;19;17;72;29;43;measured
-     … Steinstraße, Moers;2026-05-31 23:00:00 +0200;Sunday;29;17;cloudy;;14;15;29;0;14;15;0;0;9;4;5;20;10;10;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-oktober-2023-stundlich.csv: 86721 Bytes, 746 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-10-01 00:00:00 +0200;Sunday;61;13;partly-cloudy-night;;25;36;61;0;25;36;0;0;31;16;15;30;9;21
-     Steinstraße, Moers;2023-10-01 01:00:00 +0200;Sunday;22;13;clear-night;;9;13;22;0;9;13;0;0;4;3;1;18;6;12
-     Steinstraße, Moers;2023-10-01 02:00:00 +0200;Sunday;8;12;cloudy;;1;7;8;0;1;7;0;0;0;0;0;8;1;7
-     … Steinstraße, Moers;2023-10-31 22:00:00 +0100;Tuesday;182;11;rain;;85;97;181;1;84;97;1;0;74;45;29;108;40;68
-     … Steinstraße, Moers;2023-10-31 23:00:00 +0100;Tuesday;94;11;rain;;34;60;94;0;34;60;0;0;31;15;16;63;19;44
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-oktober-2026-stundlich.csv: 92943 Bytes, 746 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-10-01 00:00:00 +0200;Thursday;11;21;cloudy;;10;1;11;0;10;1;0;0;7;7;0;4;3;1;measured
-     Steinstraße, Moers;2026-10-01 01:00:00 +0200;Thursday;5;20;cloudy;;1;4;4;1;1;3;0;1;1;0;1;4;1;3;measured
-     Steinstraße, Moers;2026-10-01 02:00:00 +0200;Thursday;5;19;cloudy;;3;2;5;0;3;2;0;0;2;1;1;3;2;1;measured
-     … Steinstraße, Moers;2026-10-31 22:00:00 +0100;Saturday;121;9;cloudy;;44;77;120;1;44;76;0;1;61;29;32;60;15;45;measured
-     … Steinstraße, Moers;2026-10-31 23:00:00 +0100;Saturday;107;9;cloudy;;45;62;105;2;45;60;0;2;62;30;32;45;15;30;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juni-2022-stundlich.csv: 71091 Bytes, 721 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2022-06-01 00:00:00 +0200;Wednesday;11;12;cloudy;7;4;11;0;7;4;0;0
-     Steinstra�e, Moers;2022-06-01 01:00:00 +0200;Wednesday;11;11;cloudy;4;7;10;1;4;6;0;1
-     Steinstra�e, Moers;2022-06-01 02:00:00 +0200;Wednesday;5;10;cloudy;1;4;5;0;1;4;0;0
-     … Steinstra�e, Moers;2022-06-30 22:00:00 +0200;Thursday;44;17;rain;26;18;44;0;26;18;0;0
-     … Steinstra�e, Moers;2022-06-30 23:00:00 +0200;Thursday;14;16;rain;4;10;14;0;4;10;0;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-september-2022-stundlich.csv: 65491 Bytes, 721 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-09-01 00:00:00 +0200;Thursday;13;19;partly-cloudy-night;8;5;13;0;8;5;0;0
-     Steinstra�e;2022-09-01 01:00:00 +0200;Thursday;4;19;partly-cloudy-night;3;1;4;0;3;1;0;0
-     Steinstra�e;2022-09-01 02:00:00 +0200;Thursday;4;18;partly-cloudy-night;1;3;4;0;1;3;0;0
-     … Steinstra�e;2022-09-30 22:00:00 +0200;Friday;88;13;cloudy;36;52;87;1;35;52;1;0
-     … Steinstra�e;2022-09-30 23:00:00 +0200;Friday;58;12;cloudy;25;33;57;1;25;32;0;1
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-januar-2024-stundlich.csv: 84929 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-01-01 00:00:00 +0100;Monday;362;9;partly-cloudy-night;;180;182;348;14;171;177;9;5;155;78;77;207;102;105
-     Steinstraße, Moers;2024-01-01 01:00:00 +0100;Monday;36;9;cloudy;;21;15;36;0;21;15;0;0;19;9;10;17;12;5
-     Steinstraße, Moers;2024-01-01 02:00:00 +0100;Monday;36;9;cloudy;;18;18;36;0;18;18;0;0;18;14;4;18;4;14
-     … Steinstraße, Moers;2024-01-31 22:00:00 +0100;Wednesday;36;7;cloudy;;23;13;36;0;23;13;0;0;22;13;9;14;10;4
-     … Steinstraße, Moers;2024-01-31 23:00:00 +0100;Wednesday;14;6;cloudy;;10;4;14;0;10;4;0;0;11;9;2;3;1;2
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-august-2025-stundlich.csv: 95102 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-08-01 00:00:00 +0200;Friday;21;17;partly-cloudy-night;;6;15;19;2;5;14;1;1;1;0;1;20;6;14;measured
-     Steinstraße, Moers;2025-08-01 01:00:00 +0200;Friday;4;17;partly-cloudy-night;;4;0;4;0;4;0;0;0;0;0;0;4;4;0;measured
-     Steinstraße, Moers;2025-08-01 02:00:00 +0200;Friday;2;17;partly-cloudy-night;;2;0;2;0;2;0;0;0;1;1;0;1;1;0;measured
-     … Steinstraße, Moers;2025-08-31 22:00:00 +0200;Sunday;61;19;rain;;26;35;61;0;26;35;0;0;34;21;13;27;5;22;measured
-     … Steinstraße, Moers;2025-08-31 23:00:00 +0200;Sunday;7;19;rain;;3;4;7;0;3;4;0;0;0;0;0;7;3;4;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-februar-2024-stundlich.csv: 79289 Bytes, 697 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-02-01 00:00:00 +0100;Thursday;5;7;cloudy;;3;2;5;0;3;2;0;0;1;1;0;4;2;2
-     Steinstraße, Moers;2024-02-01 01:00:00 +0100;Thursday;8;8;cloudy;;6;2;7;1;5;2;1;0;6;5;1;2;1;1
-     Steinstraße, Moers;2024-02-01 02:00:00 +0100;Thursday;1;8;rain;;0;1;1;0;0;1;0;0;0;0;0;1;0;1
-     … Steinstraße, Moers;2024-02-29 22:00:00 +0100;Thursday;55;9;cloudy;;30;25;55;0;30;25;0;0;27;19;8;28;11;17
-     … Steinstraße, Moers;2024-02-29 23:00:00 +0100;Thursday;8;7;cloudy;;5;3;8;0;5;3;0;0;3;3;0;5;2;3
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-september-2026-stundlich.csv: 91708 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-09-01 00:00:00 +0200;Tuesday;4;16;clear-night;;3;1;4;0;3;1;0;0;3;3;0;1;0;1;measured
-     Steinstraße, Moers;2026-09-01 01:00:00 +0200;Tuesday;6;16;clear-night;;5;1;6;0;5;1;0;0;4;4;0;2;1;1;measured
-     Steinstraße, Moers;2026-09-01 02:00:00 +0200;Tuesday;3;15;clear-night;;1;2;3;0;1;2;0;0;0;0;0;3;1;2;measured
-     … Steinstraße, Moers;2026-09-30 22:00:00 +0200;Wednesday;57;21;rain;;21;36;56;1;21;35;0;1;23;10;13;34;11;23;measured
-     … Steinstraße, Moers;2026-09-30 23:00:00 +0200;Wednesday;11;21;rain;;5;6;10;1;5;5;0;1;8;2;6;3;3;0;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-mai-2025-stundlich.csv: 95399 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-05-01 00:00:00 +0200;Thursday;57;14;cloudy;;26;31;57;0;26;31;0;0;14;7;7;43;19;24;measured
-     Steinstraße, Moers;2025-05-01 01:00:00 +0200;Thursday;19;12;partly-cloudy-night;;11;8;19;0;11;8;0;0;7;5;2;12;6;6;measured
-     Steinstraße, Moers;2025-05-01 02:00:00 +0200;Thursday;22;11;partly-cloudy-night;;5;17;22;0;5;17;0;0;7;1;6;15;4;11;measured
-     … Steinstraße, Moers;2025-05-31 22:00:00 +0200;Saturday;79;18;clear-night;;32;47;78;1;31;47;1;0;25;7;18;54;25;29;measured
-     … Steinstraße, Moers;2025-05-31 23:00:00 +0200;Saturday;40;20;rain;;9;31;40;0;9;31;0;0;12;4;8;28;5;23;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-november-2025-stundlich.csv: 90067 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-11-01 00:00:00 +0100;Saturday;52;12;clear-night;;15;37;51;1;15;36;0;1;15;6;9;37;9;28;measured
-     Steinstraße, Moers;2025-11-01 01:00:00 +0100;Saturday;26;11;clear-night;;15;11;26;0;15;11;0;0;9;9;0;17;6;11;measured
-     Steinstraße, Moers;2025-11-01 02:00:00 +0100;Saturday;4;11;clear-night;;0;4;4;0;0;4;0;0;0;0;0;4;0;4;measured
-     … Steinstraße, Moers;2025-11-30 22:00:00 +0100;Sunday;33;6;partly-cloudy-night;;10;23;33;0;10;23;0;0;23;8;15;10;2;8;measured
-     … Steinstraße, Moers;2025-11-30 23:00:00 +0100;Sunday;11;5;cloudy;;4;7;11;0;4;7;0;0;4;1;3;7;3;4;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-september-2023-stundlich.csv: 85987 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-09-01 00:00:00 +0200;Friday;45;13;partly-cloudy-night;;28;17;44;1;27;17;1;0;26;21;5;19;7;12
-     Steinstraße, Moers;2023-09-01 01:00:00 +0200;Friday;18;12;partly-cloudy-night;;9;9;18;0;9;9;0;0;5;4;1;13;5;8
-     Steinstraße, Moers;2023-09-01 02:00:00 +0200;Friday;19;11;partly-cloudy-night;;10;9;19;0;10;9;0;0;9;7;2;10;3;7
-     … Steinstraße, Moers;2023-09-30 22:00:00 +0200;Saturday;152;13;partly-cloudy-night;;57;95;151;1;56;95;1;0;74;36;38;78;21;57
-     … Steinstraße, Moers;2023-09-30 23:00:00 +0200;Saturday;90;14;partly-cloudy-night;;34;56;88;2;33;55;1;1;44;22;22;46;12;34
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-dezember-2024-stundlich.csv: 91163 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-12-01 00:00:00 +0100;Sunday;54;2;partly-cloudy-night;;15;39;54;0;15;39;0;0;31;10;21;23;5;18;measured
-     Steinstraße, Moers;2024-12-01 01:00:00 +0100;Sunday;28;2;partly-cloudy-night;;11;17;27;1;10;17;1;0;4;3;1;24;8;16;measured
-     Steinstraße, Moers;2024-12-01 02:00:00 +0100;Sunday;17;2;partly-cloudy-night;;16;1;17;0;16;1;0;0;8;8;0;9;8;1;measured
-     … Steinstraße, Moers;2024-12-31 22:00:00 +0100;Tuesday;109;4;cloudy;;87;22;109;0;87;22;0;0;39;34;5;70;53;17;measured
-     … Steinstraße, Moers;2024-12-31 23:00:00 +0100;Tuesday;206;4;cloudy;;137;69;201;5;132;69;5;0;115;81;34;91;56;35;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-november-2024-stundlich.csv: 89407 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-11-01 00:00:00 +0100;Friday;44;8;clear-night;;23;21;44;0;23;21;0;0;20;17;3;24;6;18;measured
-     Steinstraße, Moers;2024-11-01 01:00:00 +0100;Friday;8;7;partly-cloudy-night;;2;6;8;0;2;6;0;0;1;1;0;7;1;6;measured
-     Steinstraße, Moers;2024-11-01 02:00:00 +0100;Friday;13;7;partly-cloudy-night;;6;7;13;0;6;7;0;0;2;0;2;11;6;5;measured
-     … Steinstraße, Moers;2024-11-30 22:00:00 +0100;Saturday;307;3;cloudy;;61;246;301;6;61;240;0;6;108;34;74;199;27;172;measured
-     … Steinstraße, Moers;2024-11-30 23:00:00 +0100;Saturday;158;3;clear-night;;35;123;156;2;35;121;0;2;70;23;47;88;12;76;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juni-2023-stundlich.csv: 70948 Bytes, 721 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-06-01 00:00:00 +0200;Thursday;10;15;cloudy;7;3;7;3;7;0;0;3
-     Steinstra�e, Moers;2023-06-01 01:00:00 +0200;Thursday;6;16;clear-night;5;1;6;0;5;1;0;0
-     Steinstra�e, Moers;2023-06-01 02:00:00 +0200;Thursday;2;14;partly-cloudy-night;1;1;2;0;1;1;0;0
-     … Steinstra�e, Moers;2023-06-30 22:00:00 +0200;Friday;155;18;partly-cloudy-night;83;72;153;2;81;72;2;0
-     … Steinstra�e, Moers;2023-06-30 23:00:00 +0200;Friday;92;18;cloudy;23;69;92;0;23;69;0;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-august-2026-stundlich.csv: 93488 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-08-01 00:00:00 +0200;Saturday;27;20;cloudy;;5;22;27;0;5;22;0;0;9;4;5;18;1;17;measured
-     Steinstraße, Moers;2026-08-01 01:00:00 +0200;Saturday;9;19;partly-cloudy-night;;6;3;8;1;6;2;0;1;4;3;1;5;3;2;measured
-     Steinstraße, Moers;2026-08-01 02:00:00 +0200;Saturday;9;19;partly-cloudy-night;;3;6;8;1;3;5;0;1;4;1;3;5;2;3;measured
-     … Steinstraße, Moers;2026-08-31 22:00:00 +0200;Monday;75;17;partly-cloudy-night;;28;47;74;1;28;46;0;1;30;16;14;45;12;33;measured
-     … Steinstraße, Moers;2026-08-31 23:00:00 +0200;Monday;30;16;partly-cloudy-night;;12;18;29;1;12;17;0;1;9;5;4;21;7;14;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-marz-2024-stundlich.csv: 86105 Bytes, 744 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-03-01 00:00:00 +0100;Friday;7;9;partly-cloudy-night;;5;2;7;0;5;2;0;0;4;2;2;3;3;0
-     Steinstraße, Moers;2024-03-01 01:00:00 +0100;Friday;7;8;cloudy;;4;3;7;0;4;3;0;0;4;4;0;3;0;3
-     Steinstraße, Moers;2024-03-01 02:00:00 +0100;Friday;3;8;partly-cloudy-night;;2;1;3;0;2;1;0;0;1;1;0;2;1;1
-     … Steinstraße, Moers;2024-03-31 22:00:00 +0200;Sunday;87;11;partly-cloudy-night;;30;57;87;0;30;57;0;0;44;17;27;43;13;30
-     … Steinstraße, Moers;2024-03-31 23:00:00 +0200;Sunday;37;12;cloudy;;11;26;37;0;11;26;0;0;15;6;9;22;5;17
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-mai-2024-stundlich.csv: 87257 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-05-01 00:00:00 +0200;Wednesday;69;17;partly-cloudy-night;;30;39;69;0;30;39;0;0;22;14;8;47;16;31
-     Steinstraße, Moers;2024-05-01 01:00:00 +0200;Wednesday;31;17;cloudy;;15;16;30;1;14;16;1;0;6;4;2;25;11;14
-     Steinstraße, Moers;2024-05-01 02:00:00 +0200;Wednesday;5;16;partly-cloudy-night;;3;2;5;0;3;2;0;0;2;1;1;3;2;1
-     … Steinstraße, Moers;2024-05-31 22:00:00 +0200;Friday;124;16;rain;;46;78;123;1;46;77;0;1;56;28;28;68;18;50
-     … Steinstraße, Moers;2024-05-31 23:00:00 +0200;Friday;72;16;partly-cloudy-night;;35;37;71;1;35;36;0;1;30;17;13;42;18;24
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juli-2024-stundlich.csv: 88451 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-07-01 00:00:00 +0200;Monday;23;16;rain;;18;5;20;3;15;5;3;0;14;11;3;9;7;2
-     Steinstraße, Moers;2024-07-01 01:00:00 +0200;Monday;4;16;rain;;3;1;4;0;3;1;0;0;2;1;1;2;2;0
-     Steinstraße, Moers;2024-07-01 02:00:00 +0200;Monday;1;16;rain;;0;1;1;0;0;1;0;0;1;0;1;0;0;0
-     … Steinstraße, Moers;2024-07-31 22:00:00 +0200;Wednesday;100;22;cloudy;;40;60;98;2;39;59;1;1;50;26;24;50;14;36
-     … Steinstraße, Moers;2024-07-31 23:00:00 +0200;Wednesday;48;23;cloudy;;27;21;46;2;25;21;2;0;32;23;9;16;4;12
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-dezember-2022-stundlich.csv: 65692 Bytes, 745 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-12-01 00:00:00 +0100;Thursday;3;5;cloudy;3;0;3;0;3;0;0;0
-     Steinstra�e;2022-12-01 01:00:00 +0100;Thursday;4;6;cloudy;3;1;4;0;3;1;0;0
-     Steinstra�e;2022-12-01 02:00:00 +0100;Thursday;2;6;cloudy;1;1;2;0;1;1;0;0
-     … Steinstra�e;2022-12-31 22:00:00 +0100;Saturday;119;15;wind;53;66;111;8;51;60;2;6
-     … Steinstra�e;2022-12-31 23:00:00 +0100;Saturday;128;15;wind;54;74;121;7;50;71;4;3
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-november-2022-stundlich.csv: 64590 Bytes, 721 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-11-01 00:00:00 +0100;Tuesday;31;15;partly-cloudy-night;10;21;31;0;10;21;0;0
-     Steinstra�e;2022-11-01 01:00:00 +0100;Tuesday;13;16;cloudy;2;11;13;0;2;11;0;0
-     Steinstra�e;2022-11-01 02:00:00 +0100;Tuesday;14;16;rain;9;5;14;0;9;5;0;0
-     … Steinstra�e;2022-11-30 22:00:00 +0100;Wednesday;54;6;cloudy;12;42;54;0;12;42;0;0
-     … Steinstra�e;2022-11-30 23:00:00 +0100;Wednesday;30;5;cloudy;13;17;29;1;12;17;1;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-april-2025-stundlich.csv: 91035 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-04-01 00:00:00 +0200;Tuesday;4;6;clear-night;;2;2;4;0;2;2;0;0;4;2;2;0;0;0;measured
-     Steinstraße, Moers;2025-04-01 01:00:00 +0200;Tuesday;7;6;clear-night;;4;3;7;0;4;3;0;0;4;1;3;3;3;0;measured
-     Steinstraße, Moers;2025-04-01 02:00:00 +0200;Tuesday;11;4;partly-cloudy-night;;6;5;11;0;6;5;0;0;6;3;3;5;3;2;measured
-     … Steinstraße, Moers;2025-04-30 22:00:00 +0200;Wednesday;198;17;cloudy;;93;105;193;5;88;105;5;0;94;70;24;104;23;81;measured
-     … Steinstraße, Moers;2025-04-30 23:00:00 +0200;Wednesday;127;18;clear-night;;48;79;124;3;47;77;1;2;35;25;10;92;23;69;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juni-2025-stundlich.csv: 92131 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-06-01 00:00:00 +0200;Sunday;39;17;clear-night;;9;30;38;1;9;29;0;1;12;4;8;27;5;22;measured
-     Steinstraße, Moers;2025-06-01 01:00:00 +0200;Sunday;7;18;partly-cloudy-night;;0;7;6;1;0;6;0;1;2;0;2;5;0;5;measured
-     Steinstraße, Moers;2025-06-01 02:00:00 +0200;Sunday;12;17;rain;;7;5;12;0;7;5;0;0;9;7;2;3;0;3;measured
-     … Steinstraße, Moers;2025-06-30 22:00:00 +0200;Monday;101;26;clear-night;;42;59;99;2;40;59;2;0;35;18;17;66;24;42;measured
-     … Steinstraße, Moers;2025-06-30 23:00:00 +0200;Monday;33;24;clear-night;;12;21;33;0;12;21;0;0;7;5;2;26;7;19;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-september-2024-stundlich.csv: 91962 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-09-01 00:00:00 +0200;Sunday;540;19;clear-night;;230;310;534;6;227;307;3;3;275;171;104;265;59;206;measured
-     Steinstraße, Moers;2024-09-01 01:00:00 +0200;Sunday;52;19;clear-night;;31;21;50;2;29;21;2;0;27;23;4;25;8;17;measured
-     Steinstraße, Moers;2024-09-01 02:00:00 +0200;Sunday;33;18;clear-night;;12;21;33;0;12;21;0;0;11;5;6;22;7;15;measured
-     … Steinstraße, Moers;2024-09-30 22:00:00 +0200;Monday;41;15;cloudy;;21;20;41;0;21;20;0;0;18;12;6;23;9;14;modelled
-     … Steinstraße, Moers;2024-09-30 23:00:00 +0200;Monday;19;15;rain;;10;9;19;0;10;9;0;0;9;6;3;10;4;6;modelled
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juli-2026-stundlich.csv: 95111 Bytes, 745 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-07-01 00:00:00 +0200;Wednesday;12;19;partly-cloudy-night;;9;3;11;1;8;3;1;0;6;5;1;6;4;2;measured
-     Steinstraße, Moers;2026-07-01 01:00:00 +0200;Wednesday;4;17;partly-cloudy-night;;2;2;4;0;2;2;0;0;1;1;0;3;1;2;measured
-     Steinstraße, Moers;2026-07-01 02:00:00 +0200;Wednesday;1;17;clear-night;;1;0;1;0;1;0;0;0;1;1;0;0;0;0;measured
-     … Steinstraße, Moers;2026-07-31 22:00:00 +0200;Friday;193;22;cloudy;;70;123;187;6;67;120;3;3;67;36;31;126;34;92;measured
-     … Steinstraße, Moers;2026-07-31 23:00:00 +0200;Friday;78;21;partly-cloudy-night;;31;47;78;0;31;47;0;0;34;22;12;44;9;35;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-mai-2023-stundlich.csv: 72964 Bytes, 745 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-05-01 00:00:00 +0200;Monday;51;11;partly-cloudy-night;11;40;50;1;11;39;0;1
-     Steinstra�e, Moers;2023-05-01 01:00:00 +0200;Monday;16;10;partly-cloudy-night;13;3;16;0;13;3;0;0
-     Steinstra�e, Moers;2023-05-01 02:00:00 +0200;Monday;7;9;partly-cloudy-night;5;2;7;0;5;2;0;0
-     … Steinstra�e, Moers;2023-05-31 22:00:00 +0200;Wednesday;84;20;partly-cloudy-night;35;49;78;6;31;47;4;2
-     … Steinstra�e, Moers;2023-05-31 23:00:00 +0200;Wednesday;23;18;clear-night;11;12;22;1;10;12;1;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-april-2026-stundlich.csv: 90362 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-04-01 00:00:00 +0200;Wednesday;8;5;partly-cloudy-night;;3;5;8;0;3;5;0;0;6;1;5;2;2;0;measured
-     Steinstraße, Moers;2026-04-01 01:00:00 +0200;Wednesday;3;3;clear-night;;2;1;3;0;2;1;0;0;0;0;0;3;2;1;measured
-     Steinstraße, Moers;2026-04-01 02:00:00 +0200;Wednesday;1;3;clear-night;;0;1;1;0;0;1;0;0;1;0;1;0;0;0;measured
-     … Steinstraße, Moers;2026-04-30 22:00:00 +0200;Thursday;228;15;clear-night;;92;136;224;4;91;133;1;3;108;65;43;120;27;93;measured
-     … Steinstraße, Moers;2026-04-30 23:00:00 +0200;Thursday;102;14;clear-night;;44;58;98;4;43;55;1;3;33;21;12;69;23;46;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-november-2023-stundlich.csv: 83301 Bytes, 721 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-11-01 00:00:00 +0100;Wednesday;61;11;cloudy;;22;39;61;0;22;39;0;0;14;8;6;47;14;33
-     Steinstraße, Moers;2023-11-01 01:00:00 +0100;Wednesday;27;12;rain;;13;14;27;0;13;14;0;0;10;9;1;17;4;13
-     Steinstraße, Moers;2023-11-01 02:00:00 +0100;Wednesday;10;12;cloudy;;0;10;10;0;0;10;0;0;5;0;5;5;0;5
-     … Steinstraße, Moers;2023-11-30 22:00:00 +0100;Thursday;64;0;cloudy;;21;43;64;0;21;43;0;0;31;12;19;33;9;24
-     … Steinstraße, Moers;2023-11-30 23:00:00 +0100;Thursday;33;0;partly-cloudy-night;;4;29;33;0;4;29;0;0;8;2;6;25;2;23
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-juli-2023-stundlich.csv: 72962 Bytes, 745 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-07-01 00:00:00 +0200;Saturday;42;17;partly-cloudy-night;17;25;41;1;17;24;0;1
-     Steinstra�e, Moers;2023-07-01 01:00:00 +0200;Saturday;23;17;cloudy;8;15;23;0;8;15;0;0
-     Steinstra�e, Moers;2023-07-01 02:00:00 +0200;Saturday;11;18;cloudy;9;2;11;0;9;2;0;0
-     … Steinstra�e, Moers;2023-07-31 22:00:00 +0200;Monday;35;17;rain;19;16;35;0;19;16;0;0
-     … Steinstra�e, Moers;2023-07-31 23:00:00 +0200;Monday;17;17;rain;10;7;17;0;10;7;0;0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-februar-2025-stundlich.csv: 83623 Bytes, 673 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-02-01 00:00:00 +0100;Saturday;38;1;clear-night;;7;31;38;0;7;31;0;0;16;4;12;22;3;19;measured
-     Steinstraße, Moers;2025-02-01 01:00:00 +0100;Saturday;17;-1;clear-night;;7;10;16;1;7;9;0;1;5;5;0;12;2;10;measured
-     Steinstraße, Moers;2025-02-01 02:00:00 +0100;Saturday;6;-1;clear-night;;3;3;6;0;3;3;0;0;3;1;2;3;2;1;measured
-     … Steinstraße, Moers;2025-02-28 22:00:00 +0100;Friday;128;2;partly-cloudy-night;;52;76;126;2;51;75;1;1;54;32;22;74;20;54;measured
-     … Steinstraße, Moers;2025-02-28 23:00:00 +0100;Friday;49;3;partly-cloudy-night;;11;38;49;0;11;38;0;0;18;4;14;31;7;24;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-maerz-2023-stundlich.csv: 69267 Bytes, 744 Zeilen, BOM False
-     Lage	Zeitpunkt der Messung	Wochentag	Fu�g�nger insgesamt	Temperatur in �c	Wetterlage	Fu�g�nger insgesamt Richtung Neumarkt	Fu�g�nger insgesamt Richtung Neuer Wall	Erwachsene	Kinder	Erwachsene Richtung Neumarkt	Erwachsene Richtung Neuer Wall	Kinder Richtung Neumarkt	Kinder Richtung Neuer Wall
-     Steinstra�e, Moers	2023-03-01 00:00:00 +0100	Wednesday	2	-1	clear-night	0	2	2	0	0	2	0	0
-     Steinstra�e, Moers	2023-03-01 01:00:00 +0100	Wednesday	1	-1	clear-night	1	0	1	0	1	0	0	0
-     Steinstra�e, Moers	2023-03-01 02:00:00 +0100	Wednesday	2	-1	clear-night	1	1	2	0	1	1	0	0
-     … Steinstra�e, Moers	2023-03-31 22:00:00 +0200	Friday	115	11	rain	46	69	114	1	45	69	1	0
-     … Steinstra�e, Moers	2023-03-31 23:00:00 +0200	Friday	47	10	rain	5	42	47	0	5	42	0	0
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-marz-2025-stundlich.csv: 93825 Bytes, 744 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-03-01 00:00:00 +0100;Saturday;17;2;clear-night;;5;12;17;0;5;12;0;0;10;3;7;7;2;5;measured
-     Steinstraße, Moers;2025-03-01 01:00:00 +0100;Saturday;8;1;cloudy;;4;4;8;0;4;4;0;0;3;1;2;5;3;2;measured
-     Steinstraße, Moers;2025-03-01 02:00:00 +0100;Saturday;1;0;cloudy;;1;0;1;0;1;0;0;0;0;0;0;1;1;0;measured
-     … Steinstraße, Moers;2025-03-31 22:00:00 +0200;Monday;72;7;partly-cloudy-night;;28;44;70;2;26;44;2;0;29;8;21;43;20;23;measured
-     … Steinstraße, Moers;2025-03-31 23:00:00 +0200;Monday;18;8;partly-cloudy-night;;10;8;18;0;10;8;0;0;8;8;0;10;2;8;measured
-  fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022__besucherzahlen-moers-oktober-2025-stundlich.csv: 92248 Bytes, 746 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-10-01 00:00:00 +0200;Wednesday;9;8;partly-cloudy-night;;6;3;9;0;6;3;0;0;5;4;1;4;2;2;measured
-     Steinstraße, Moers;2025-10-01 01:00:00 +0200;Wednesday;2;7;clear-night;;1;1;2;0;1;1;0;0;1;1;0;1;0;1;measured
-     Steinstraße, Moers;2025-10-01 02:00:00 +0200;Wednesday;2;6;cloudy;;1;1;2;0;1;1;0;0;2;1;1;0;0;0;measured
-     … Steinstraße, Moers;2025-10-31 22:00:00 +0100;Friday;149;11;partly-cloudy-night;;72;77;148;1;72;76;0;1;70;39;31;79;33;46;measured
-     … Steinstraße, Moers;2025-10-31 23:00:00 +0100;Friday;103;11;clear-night;;36;67;102;1;36;66;0;1;37;18;19;66;18;48;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-oktober-2024-taglich.csv: 5269 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-10-01 00:00:00 +0200;Tuesday;12501;15;rain;;6131;6370;12040;461;5907;6133;224;237;5794;3674;2120;6707;2457;4250;mixed
-     Steinstraße, Moers;2024-10-02 00:00:00 +0200;Wednesday;12617;12;rain;;6268;6349;12155;462;6005;6150;263;199;5947;3637;2310;6670;2631;4039;measured
-     Steinstraße, Moers;2024-10-03 00:00:00 +0200;Thursday;4774;13;partly-cloudy-day;;2454;2320;4604;170;2359;2245;95;75;1948;1288;660;2826;1166;1660;measured
-     … Steinstraße, Moers;2024-10-30 00:00:00 +0100;Wednesday;12505;14;rain;;6202;6303;12049;456;5953;6096;249;207;5527;3404;2123;6978;2798;4180;measured
-     … Steinstraße, Moers;2024-10-31 00:00:00 +0100;Thursday;15980;15;partly-cloudy-day;;8061;7919;15358;622;7733;7625;328;294;7531;4891;2640;8449;3170;5279;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-januar-2024-taglich.csv: 4893 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-01-01 00:00:00 +0100;Monday;3319;9;rain;;1663;1656;3203;116;1601;1602;62;54;1579;1002;577;1740;661;1079
-     Steinstraße, Moers;2024-01-02 00:00:00 +0100;Tuesday;9565;12;rain;;4691;4874;9262;303;4540;4722;151;152;4555;2761;1794;5010;1930;3080
-     Steinstraße, Moers;2024-01-03 00:00:00 +0100;Wednesday;10209;12;rain;;5038;5171;9918;291;4886;5032;152;139;5050;3069;1981;5159;1969;3190
-     … Steinstraße, Moers;2024-01-30 00:00:00 +0100;Tuesday;13868;12;rain;;6884;6984;13398;470;6639;6759;245;225;6440;4165;2275;7428;2719;4709
-     … Steinstraße, Moers;2024-01-31 00:00:00 +0100;Wednesday;11854;7;rain;;5887;5967;11461;393;5682;5779;205;188;5282;3257;2025;6572;2630;3942
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-februar-2026-taglich.csv: 4668 Bytes, 29 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-02-01 00:00:00 +0100;Sunday;3881;8;rain;;1940;1941;3758;123;1868;1890;72;51;1601;985;616;2280;955;1325;mixed
-     Steinstraße, Moers;2026-02-02 00:00:00 +0100;Monday;12597;8;rain;;6253;6344;12182;415;6033;6149;220;195;5766;3485;2281;6831;2768;4063;measured
-     Steinstraße, Moers;2026-02-03 00:00:00 +0100;Tuesday;10233;4;snow;;5037;5196;9946;287;4885;5061;152;135;5105;2973;2132;5128;2064;3064;mixed
-     … Steinstraße, Moers;2026-02-27 00:00:00 +0100;Friday;18306;19;rain;;9169;9137;17597;709;8789;8808;380;329;9208;6074;3134;9098;3095;6003;mixed
-     … Steinstraße, Moers;2026-02-28 00:00:00 +0100;Saturday;16127;13;rain;;8179;7948;15618;509;7903;7715;276;233;7586;4969;2617;8541;3210;5331;mixed
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-februar-2023-taglich.csv: 4528 Bytes, 29 Zeilen, BOM False
-     location	time of measurement	weekday	pedestrians count	temperature in �c	weather condition	incidents	towards Neumarkt pedestrians count	towards Neuer Wall pedestrians count	adult pedestrians count	child pedestrians count	adult towards Neumarkt pedestrians count	adult towards Neuer Wall pedestrians c
-     Steinstra�e	 Moers	2023-02-01 00:00:00 +0100	Wednesday	10206	8	rain		5060	5146	9910	296	4907	5003	153	143	4717	2842	1875	5489	2218	3271
-     Steinstra�e	 Moers	2023-02-02 00:00:00 +0100	Thursday	9330	9	rain		4568	4762	9003	327	4387	4616	181	146	4384	2585	1799	4946	1983	2963
-     Steinstra�e	 Moers	2023-02-03 00:00:00 +0100	Friday	14451	10	rain		7154	7297	13968	483	6917	7051	237	246	6930	4611	2319	7521	2543	4978
-     … Steinstra�e	 Moers	2023-02-27 00:00:00 +0100	Monday	12442	7	clear-day		6230	6212	11978	464	5973	6005	257	207	6027	3858	2169	6415	2372	4043
-     … Steinstra�e	 Moers	2023-02-28 00:00:00 +0100	Tuesday	13607	6	clear-day		6759	6848	13090	517	6482	6608	277	240	6640	4411	2229	6967	2348	4619
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juli-2024-taglich.csv: 4992 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-07-01 00:00:00 +0200;Monday;15454;19;rain;;7619;7835;14890;564;7334;7556;285;279;6851;4229;2622;8603;3390;5213
-     Steinstraße, Moers;2024-07-02 00:00:00 +0200;Tuesday;12255;17;rain;;5953;6302;11919;336;5789;6130;164;172;5268;3460;1808;6987;2493;4494
-     Steinstraße, Moers;2024-07-03 00:00:00 +0200;Wednesday;10236;15;rain;;5046;5190;9922;314;4881;5041;165;149;4731;2809;1922;5505;2237;3268
-     … Steinstraße, Moers;2024-07-30 00:00:00 +0200;Tuesday;13019;31;partly-cloudy-day;;6370;6649;12525;494;6114;6411;256;238;5306;3253;2053;7713;3117;4596
-     … Steinstraße, Moers;2024-07-31 00:00:00 +0200;Wednesday;12632;25;rain;;6333;6299;12150;482;6048;6102;285;197;5789;3664;2125;6843;2669;4174
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-november-2024-taglich.csv: 5087 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-11-01 00:00:00 +0100;Friday;3707;11;cloudy;;1888;1819;3619;88;1835;1784;53;35;1575;994;581;2132;894;1238;measured
-     Steinstraße, Moers;2024-11-02 00:00:00 +0100;Saturday;22488;12;rain;;11371;11117;21687;801;10914;10773;457;344;9980;7194;2786;12508;4177;8331;measured
-     Steinstraße, Moers;2024-11-03 00:00:00 +0100;Sunday;5143;14;partly-cloudy-day;;2604;2539;4942;201;2500;2442;104;97;2055;1349;706;3088;1255;1833;measured
-     … Steinstraße, Moers;2024-11-29 00:00:00 +0100;Friday;26354;8;partly-cloudy-day;;13490;12864;25419;935;12995;12424;495;440;11668;8342;3326;14686;5148;9538;measured
-     … Steinstraße, Moers;2024-11-30 00:00:00 +0100;Saturday;27377;8;partly-cloudy-day;;14369;13008;26453;924;13860;12593;509;415;12026;8777;3249;15351;5592;9759;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-april-2026-taglich.csv: 5140 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-04-01 00:00:00 +0200;Wednesday;17043;13;clear-day;;8562;8481;16384;659;8220;8164;342;317;7645;5085;2560;9398;3477;5921;measured
-     Steinstraße, Moers;2026-04-02 00:00:00 +0200;Thursday;14319;11;rain;;7097;7222;13859;460;6864;6995;233;227;6908;4284;2624;7411;2813;4598;measured
-     Steinstraße, Moers;2026-04-03 00:00:00 +0200;Friday;4020;13;rain;;2092;1928;3867;153;2008;1859;84;69;1708;1107;601;2312;985;1327;measured
-     … Steinstraße, Moers;2026-04-29 00:00:00 +0200;Wednesday;13891;19;clear-day;;6899;6992;13324;567;6607;6717;292;275;6498;4066;2432;7393;2833;4560;measured
-     … Steinstraße, Moers;2026-04-30 00:00:00 +0200;Thursday;17127;21;clear-day;;8505;8622;16420;707;8114;8306;391;316;8251;5264;2987;8876;3241;5635;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-august-2024-taglich.csv: 5259 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-08-01 00:00:00 +0200;Tuesday;15841;21;rain;;8031;7810;15164;677;7659;7505;372;305;7174;4746;2428;8667;3285;5382;measured
-     Steinstraße, Moers;2023-08-02 00:00:00 +0200;Wednesday;10092;23;rain;;5012;5080;9775;317;4847;4928;165;152;4800;2935;1865;5292;2077;3215;measured
-     Steinstraße, Moers;2023-08-03 00:00:00 +0200;Thursday;11668;19;rain;;5819;5849;11251;417;5612;5639;207;210;5612;3432;2180;6056;2387;3669;measured
-     … Steinstraße, Moers;2023-08-30 00:00:00 +0200;Wednesday;8504;17;rain;;4197;4307;8272;232;4058;4214;139;93;3873;2328;1545;4631;1869;2762;measured
-     … Steinstraße, Moers;2023-08-31 00:00:00 +0200;Thursday;15085;19;rain;;7635;7450;14547;538;7344;7203;291;247;5293;3815;1478;9792;3820;5972;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juli-2023-taglich.csv: 3628 Bytes, 32 Zeilen, BOM False
-     Lage,Zeitpunkt der Messung,Wochentag,Fu�g�nger insgesamt,Temperatur,Wetterlage,Fu�g�nger insgesamt Richtung Neumarkt,Fu�g�nger insgesamt Richtung Neuer Wall,Erwachsene,Kinder,Erwachsene Richtung Neumarkt,Erwachsene Richtung Neuer Wall,Kinder Richtung Neumarkt,Kinder Richtung Neuer Wall
-     Steinstra�e, Moers,2023-07-01 00:00:00 +0200,Saturday,13596,21,rain,6813,6783,13127,469,6560,6567,253,216
-     Steinstra�e, Moers,2023-07-02 00:00:00 +0200,Sunday,4228,22,rain,2133,2095,4089,139,2058,2031,75,64
-     Steinstra�e, Moers,2023-07-03 00:00:00 +0200,Monday,14137,21,partly-cloudy-day,7120,7017,13541,596,6786,6755,334,262
-     … Steinstra�e, Moers,2023-07-30 00:00:00 +0200,Sunday,3745,22,rain,1889,1856,3634,111,1824,1810,65,46
-     … Steinstra�e, Moers,2023-07-31 00:00:00 +0200,Monday,10897,20,rain,5426,5471,10495,402,5212,5283,214,188
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-september-2024-taglich.csv: 5186 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-09-01 00:00:00 +0200;Sunday;33026;31;partly-cloudy-day;;19864;13162;31524;1502;18895;12629;969;533;12869;11096;1773;20157;8768;11389;measured
-     Steinstraße, Moers;2024-09-02 00:00:00 +0200;Monday;24147;30;rain;;13107;11040;23304;843;12598;10706;509;334;10339;8212;2127;13808;4895;8913;measured
-     Steinstraße, Moers;2024-09-03 00:00:00 +0200;Tuesday;32154;26;partly-cloudy-day;;17831;14323;30791;1363;17003;13788;828;535;14004;11692;2312;18150;6139;12011;measured
-     … Steinstraße, Moers;2024-09-29 00:00:00 +0200;Sunday;6373;14;partly-cloudy-day;;3318;3055;6141;232;3190;2951;128;104;2790;1820;970;3583;1498;2085;mixed
-     … Steinstraße, Moers;2024-09-30 00:00:00 +0200;Monday;9847;15;rain;;4995;4852;9520;327;4819;4701;176;151;4526;2850;1676;5321;2145;3176;modelled
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-oktober-2023-taglich.csv: 4934 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-10-01 00:00:00 +0200;Sunday;37299;24;partly-cloudy-day;;18979;18320;35864;1435;18181;17683;798;637;18079;15458;2621;19220;3521;15699
-     Steinstraße, Moers;2023-10-02 00:00:00 +0200;Monday;16710;25;partly-cloudy-day;;8384;8326;16076;634;8041;8035;343;291;7502;5091;2411;9208;3293;5915
-     Steinstraße, Moers;2023-10-03 00:00:00 +0200;Tuesday;2667;20;rain;;1322;1345;2591;76;1281;1310;41;35;1141;687;454;1526;635;891
-     … Steinstraße, Moers;2023-10-30 00:00:00 +0100;Monday;12905;15;rain;;6512;6393;12484;421;6274;6210;238;183;5957;3843;2114;6948;2669;4279
-     … Steinstraße, Moers;2023-10-31 00:00:00 +0100;Tuesday;16455;13;rain;;8189;8266;15876;579;7875;8001;314;265;7956;5204;2752;8499;2985;5514
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-oktober-2026-taglich.csv: 5272 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-10-01 00:00:00 +0200;Thursday;10097;21;rain;;4934;5163;9791;306;4769;5022;165;141;4674;2871;1803;5423;2063;3360;measured
-     Steinstraße, Moers;2026-10-02 00:00:00 +0200;Friday;17574;20;partly-cloudy-day;;8719;8855;16918;656;8380;8538;339;317;8398;5424;2974;9176;3295;5881;mixed
-     Steinstraße, Moers;2026-10-03 00:00:00 +0200;Saturday;5615;22;partly-cloudy-day;;2849;2766;5389;226;2727;2662;122;104;2659;1707;952;2956;1142;1814;measured
-     … Steinstraße, Moers;2026-10-30 00:00:00 +0100;Friday;18253;14;clear-day;;9149;9104;17542;711;8796;8746;353;358;8888;6024;2864;9365;3125;6240;mixed
-     … Steinstraße, Moers;2026-10-31 00:00:00 +0100;Saturday;17595;12;partly-cloudy-day;;8943;8652;16924;671;8574;8350;369;302;8411;5594;2817;9184;3349;5835;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-januar-2025-taglich.csv: 5119 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-01-01 00:00:00 +0100;Wednesday;2244;9;rain;;1053;1191;2198;46;1032;1166;21;25;1063;589;474;1181;464;717;measured
-     Steinstraße, Moers;2025-01-02 00:00:00 +0100;Thursday;17692;5;rain;;8755;8937;17036;656;8408;8628;347;309;8241;5397;2844;9451;3358;6093;measured
-     Steinstraße, Moers;2025-01-03 00:00:00 +0100;Friday;15873;3;snow;;7863;8010;15386;487;7614;7772;249;238;7231;4770;2461;8642;3093;5549;measured
-     … Steinstraße, Moers;2025-01-30 00:00:00 +0100;Thursday;7933;7;rain;;3883;4050;7739;194;3776;3963;107;87;3566;2084;1482;4367;1799;2568;measured
-     … Steinstraße, Moers;2025-01-31 00:00:00 +0100;Friday;16980;7;rain;;8429;8551;16388;592;8110;8278;319;273;7927;5072;2855;9053;3357;5696;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-september-2025-taglich.csv: 5213 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-09-01 00:00:00 +0200;Monday;13788;23;rain;;6805;6983;13322;466;6549;6773;256;210;6202;4010;2192;7586;2795;4791;measured
-     Steinstraße, Moers;2025-09-02 00:00:00 +0200;Tuesday;15986;22;rain;;7935;8051;15342;644;7598;7744;337;307;7583;4971;2612;8403;2964;5439;measured
-     Steinstraße, Moers;2025-09-03 00:00:00 +0200;Wednesday;13441;24;rain;;6695;6746;12938;503;6414;6524;281;222;6467;4114;2353;6974;2581;4393;measured
-     … Steinstraße, Moers;2025-09-29 00:00:00 +0200;Monday;13581;19;partly-cloudy-day;;6726;6855;13109;472;6463;6646;263;209;6368;4103;2265;7213;2623;4590;measured
-     … Steinstraße, Moers;2025-09-30 00:00:00 +0200;Tuesday;13708;15;rain;;6723;6985;13246;462;6472;6774;251;211;6521;4243;2278;7187;2480;4707;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juli-2025-taglich.csv: 5234 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-07-01 00:00:00 +0200;Tuesday;10656;36;clear-day;;5299;5357;10307;349;5122;5185;177;172;4546;2648;1898;6110;2651;3459;measured
-     Steinstraße, Moers;2025-07-02 00:00:00 +0200;Wednesday;7109;36;rain;;3574;3535;6945;164;3479;3466;95;69;3195;1894;1301;3914;1680;2234;measured
-     Steinstraße, Moers;2025-07-03 00:00:00 +0200;Thursday;16056;24;rain;;7983;8073;15445;611;7652;7793;331;280;6672;4287;2385;9384;3696;5688;measured
-     … Steinstraße, Moers;2025-07-30 00:00:00 +0200;Wednesday;14349;23;rain;;7224;7125;13763;586;6899;6864;325;261;6150;4087;2063;8199;3137;5062;measured
-     … Steinstraße, Moers;2025-07-31 00:00:00 +0200;Thursday;13124;22;rain;;6582;6542;12623;501;6325;6298;257;244;5826;3778;2048;7298;2804;4494;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juli-2026-taglich.csv: 5360 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-07-01 00:00:00 +0200;Wednesday;14360;26;clear-day;;7189;7171;13814;546;6889;6925;300;246;5945;3675;2270;8415;3514;4901;measured
-     Steinstraße, Moers;2026-07-02 00:00:00 +0200;Thursday;13037;24;rain;;6454;6583;12577;460;6217;6360;237;223;6216;3718;2498;6821;2736;4085;measured
-     Steinstraße, Moers;2026-07-03 00:00:00 +0200;Friday;17161;24;partly-cloudy-day;;8547;8614;16493;668;8208;8285;339;329;7918;5161;2757;9243;3386;5857;measured
-     … Steinstraße, Moers;2026-07-30 00:00:00 +0200;Thursday;9849;33;rain;;4982;4867;9498;351;4790;4708;192;159;4946;2953;1993;4903;2029;2874;measured
-     … Steinstraße, Moers;2026-07-31 00:00:00 +0200;Friday;16728;29;partly-cloudy-day;;8346;8382;16055;673;7998;8057;348;325;8332;5318;3014;8396;3028;5368;mixed
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juni-2022-taglich.csv: 3678 Bytes, 31 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2022-06-01 00:00:00 +0200;Wednesday;12530;19;rain;6298;6232;12014;516;6033;5981;265;251
-     Steinstra�e, Moers;2022-06-02 00:00:00 +0200;Thursday;14496;22;partly-cloudy-day;7296;7200;13878;618;6955;6923;341;277
-     Steinstra�e, Moers;2022-06-03 00:00:00 +0200;Friday;16852;26;partly-cloudy-day;8387;8465;16128;724;7997;8131;390;334
-     … Steinstra�e, Moers;2022-06-29 00:00:00 +0200;Wednesday;13154;28;partly-cloudy-day;6640;6514;12618;536;6367;6251;273;263
-     … Steinstra�e, Moers;2022-06-30 00:00:00 +0200;Thursday;12230;30;rain;6169;6061;11727;503;5902;5825;267;236
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-april-2023-taglich.csv: 3596 Bytes, 31 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-04-01 00:00:00 +0200;Saturday;7451;11;rain;3605;3846;7274;177;3522;3752;83;94
-     Steinstra�e, Moers;2023-04-02 00:00:00 +0200;Sunday;31606;9;rain;15986;15620;30389;1217;15301;15088;685;532
-     Steinstra�e, Moers;2023-04-03 00:00:00 +0200;Monday;15617;9;clear-day;7830;7787;15031;586;7505;7526;325;261
-     … Steinstra�e, Moers;2023-04-29 00:00:00 +0200;Saturday;19570;15;rain;9777;9793;18864;706;9408;9456;369;337
-     … Steinstra�e, Moers;2023-04-30 00:00:00 +0200;Sunday;6480;18;partly-cloudy-day;3465;3015;6196;284;3298;2898;167;117
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-mai-2025-taglich.csv: 5406 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-05-01 00:00:00 +0200;Thursday;5220;28;partly-cloudy-day;;2677;2543;5019;201;2574;2445;103;98;1578;1080;498;3642;1597;2045;measured
-     Steinstraße, Moers;2025-05-02 00:00:00 +0200;Friday;19212;28;rain;;9622;9590;18522;690;9251;9271;371;319;8803;5964;2839;10409;3658;6751;measured
-     Steinstraße, Moers;2025-05-03 00:00:00 +0200;Saturday;18045;19;rain;;9065;8980;17350;695;8689;8661;376;319;8430;5926;2504;9615;3139;6476;measured
-     … Steinstraße, Moers;2025-05-30 00:00:00 +0200;Friday;22389;25;partly-cloudy-day;;11175;11214;21527;862;10727;10800;448;414;10510;7114;3396;11879;4061;7818;measured
-     … Steinstraße, Moers;2025-05-31 00:00:00 +0200;Saturday;16721;26;rain;;8356;8365;16139;582;8045;8094;311;271;7404;5083;2321;9317;3273;6044;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-august-2022-taglich.csv: 3580 Bytes, 32 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-08-01 00:00:00 +0200;Monday;15358;25;rain;7647;7711;14652;706;7267;7385;380;326
-     Steinstra�e;2022-08-02 00:00:00 +0200;Tuesday;16563;30;partly-cloudy-day;8348;8215;15855;708;7985;7870;363;345
-     Steinstra�e;2022-08-03 00:00:00 +0200;Wednesday;10582;33;partly-cloudy-day;5386;5196;10221;361;5192;5029;194;167
-     … Steinstra�e;2022-08-30 00:00:00 +0200;Tuesday;15525;26;partly-cloudy-day;7774;7751;14909;616;7450;7459;324;292
-     … Steinstra�e;2022-08-31 00:00:00 +0200;Wednesday;15000;25;partly-cloudy-day;7547;7453;14421;579;7223;7198;324;255
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-september-2023-taglich.csv: 4935 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-09-01 00:00:00 +0200;Friday;30589;20;rain;;17329;13260;29668;921;16776;12892;553;368;13599;11563;2036;16990;5766;11224
-     Steinstraße, Moers;2023-09-02 00:00:00 +0200;Saturday;56531;23;partly-cloudy-day;;32627;23904;54430;2101;31330;23100;1297;804;28238;24371;3867;28293;8256;20037
-     Steinstraße, Moers;2023-09-03 00:00:00 +0200;Sunday;44764;23;partly-cloudy-day;;26975;17789;42729;2035;25669;17060;1306;729;21917;19488;2429;22847;7487;15360
-     … Steinstraße, Moers;2023-09-29 00:00:00 +0200;Friday;14418;22;rain;;7205;7213;13905;513;6920;6985;285;228;6609;4351;2258;7809;2854;4955
-     … Steinstraße, Moers;2023-09-30 00:00:00 +0200;Saturday;18375;19;partly-cloudy-day;;9294;9081;17653;722;8910;8743;384;338;8243;5771;2472;10132;3523;6609
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-mai-2026-taglich.csv: 5261 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-05-01 00:00:00 +0200;Friday;5627;23;clear-day;;2907;2720;5405;222;2793;2612;114;108;2155;1421;734;3472;1486;1986;measured
-     Steinstraße, Moers;2026-05-02 00:00:00 +0200;Saturday;18543;24;rain;;9382;9161;17869;674;9007;8862;375;299;8300;5576;2724;10243;3806;6437;mixed
-     Steinstraße, Moers;2026-05-03 00:00:00 +0200;Sunday;3246;20;rain;;1604;1642;3145;101;1553;1592;51;50;1316;803;513;1930;801;1129;measured
-     … Steinstraße, Moers;2026-05-30 00:00:00 +0200;Saturday;16878;26;partly-cloudy-day;;8499;8379;16298;580;8181;8117;318;262;7200;4924;2276;9678;3575;6103;measured
-     … Steinstraße, Moers;2026-05-31 00:00:00 +0200;Sunday;3869;24;rain;;1990;1879;3741;128;1924;1817;66;62;1690;1092;598;2179;898;1281;mixed
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-februar-2025-taglich.csv: 4814 Bytes, 29 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-02-01 00:00:00 +0100;Saturday;22765;6;clear-day;;11311;11454;21978;787;10881;11097;430;357;9849;7180;2669;12916;4131;8785;measured
-     Steinstraße, Moers;2025-02-02 00:00:00 +0100;Sunday;5249;6;partly-cloudy-day;;2676;2573;5091;158;2587;2504;89;69;2210;1408;802;3039;1268;1771;measured
-     Steinstraße, Moers;2025-02-03 00:00:00 +0100;Monday;13917;6;partly-cloudy-day;;6899;7018;13475;442;6682;6793;217;225;4819;3141;1678;9098;3758;5340;measured
-     … Steinstraße, Moers;2025-02-27 00:00:00 +0100;Thursday;11496;9;rain;;5717;5779;11159;337;5543;5616;174;163;5074;3114;1960;6422;2603;3819;measured
-     … Steinstraße, Moers;2025-02-28 00:00:00 +0100;Friday;15253;7;rain;;7598;7655;14783;470;7354;7429;244;226;7174;4550;2624;8079;3048;5031;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-marz-2024-taglich.csv: 4973 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-03-01 00:00:00 +0100;Friday;16683;11;rain;;8376;8307;16134;549;8072;8062;304;245;7625;5194;2431;9058;3182;5876
-     Steinstraße, Moers;2024-03-02 00:00:00 +0100;Saturday;21789;14;rain;;11011;10778;20971;818;10564;10407;447;371;9482;6693;2789;12307;4318;7989
-     Steinstraße, Moers;2024-03-03 00:00:00 +0100;Sunday;7040;17;partly-cloudy-day;;3516;3524;6737;303;3362;3375;154;149;3092;2032;1060;3948;1484;2464
-     … Steinstraße, Moers;2024-03-30 00:00:00 +0100;Saturday;18788;17;rain;;9481;9307;18182;606;9139;9043;342;264;8110;5829;2281;10678;3652;7026
-     … Steinstraße, Moers;2024-03-31 00:00:00 +0100;Sunday;3815;18;rain;;1935;1880;3693;122;1870;1823;65;57;1669;1052;617;2146;883;1263
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-marz-2026-taglich.csv: 5240 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-03-01 00:00:00 +0100;Sunday;5136;14;rain;;2580;2556;4933;203;2469;2464;111;92;2068;1339;729;3068;1241;1827;measured
-     Steinstraße, Moers;2026-03-02 00:00:00 +0100;Monday;14859;16;clear-day;;7510;7349;14310;549;7203;7107;307;242;6692;4372;2320;8167;3138;5029;measured
-     Steinstraße, Moers;2026-03-03 00:00:00 +0100;Tuesday;16104;17;clear-day;;8014;8090;15433;671;7654;7779;360;311;8013;5140;2873;8091;2874;5217;measured
-     … Steinstraße, Moers;2026-03-30 00:00:00 +0200;Monday;13122;11;rain;;6430;6692;12734;388;6231;6503;199;189;6443;4027;2416;6679;2403;4276;measured
-     … Steinstraße, Moers;2026-03-31 00:00:00 +0200;Tuesday;15287;11;rain;;7510;7777;14795;492;7250;7545;260;232;7282;4756;2526;8005;2754;5251;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juni-2025-taglich.csv: 5153 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-06-01 00:00:00 +0200;Sunday;3813;21;rain;;1958;1855;3664;149;1876;1788;82;67;1485;944;541;2328;1014;1314;measured
-     Steinstraße, Moers;2025-06-02 00:00:00 +0200;Monday;13326;19;rain;;6666;6660;12805;521;6398;6407;268;253;5895;3680;2215;7431;2986;4445;measured
-     Steinstraße, Moers;2025-06-03 00:00:00 +0200;Tuesday;15101;24;partly-cloudy-day;;7513;7588;14561;540;7216;7345;297;243;7039;4557;2482;8062;2956;5106;measured
-     … Steinstraße, Moers;2025-06-29 00:00:00 +0200;Sunday;3472;29;partly-cloudy-day;;1748;1724;3331;141;1673;1658;75;66;1057;669;388;2415;1079;1336;measured
-     … Steinstraße, Moers;2025-06-30 00:00:00 +0200;Monday;12344;32;partly-cloudy-day;;6111;6233;11922;422;5886;6036;225;197;5003;2915;2088;7341;3196;4145;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juni-2023-taglich.csv: 3692 Bytes, 31 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-06-01 00:00:00 +0200;Thursday;15279;20;partly-cloudy-day;7681;7598;14614;665;7333;7281;348;317
-     Steinstra�e, Moers;2023-06-02 00:00:00 +0200;Friday;17184;19;partly-cloudy-day;8572;8612;16496;688;8210;8286;362;326
-     Steinstra�e, Moers;2023-06-03 00:00:00 +0200;Saturday;17182;22;clear-day;8652;8530;16510;672;8303;8207;349;323
-     … Steinstra�e, Moers;2023-06-29 00:00:00 +0200;Thursday;12472;24;rain;6265;6207;12009;463;6019;5990;246;217
-     … Steinstra�e, Moers;2023-06-30 00:00:00 +0200;Friday;17413;22;rain;8752;8661;16744;669;8377;8367;375;294
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-mai-2023-taglich.csv: 3768 Bytes, 32 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-05-01 00:00:00 +0200;Monday;4551;19;rain;2286;2265;4386;165;2188;2198;98;67
-     Steinstra�e, Moers;2023-05-02 00:00:00 +0200;Tuesday;15242;13;partly-cloudy-day;7546;7696;14662;580;7240;7422;306;274
-     Steinstra�e, Moers;2023-05-03 00:00:00 +0200;Wednesday;15268;16;partly-cloudy-day;7753;7515;14596;672;7383;7213;370;302
-     … Steinstra�e, Moers;2023-05-30 00:00:00 +0200;Tuesday;17899;20;partly-cloudy-day;8923;8976;17218;681;8545;8673;378;303
-     … Steinstra�e, Moers;2023-05-31 00:00:00 +0200;Wednesday;14283;25;partly-cloudy-day;7196;7087;13753;530;6904;6849;292;238
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-september-2022-taglich.csv: 3389 Bytes, 31 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-09-01 00:00:00 +0200;Thursday;14157;26;partly-cloudy-day;7238;6919;13559;598;6867;6692;371;227
-     Steinstra�e;2022-09-02 00:00:00 +0200;Friday;38233;27;partly-cloudy-day;21796;16437;37051;1182;21028;16023;768;414
-     Steinstra�e;2022-09-03 00:00:00 +0200;Saturday;52551;27;rain;30380;22171;50654;1897;29155;21499;1225;672
-     … Steinstra�e;2022-09-29 00:00:00 +0200;Thursday;14641;16;rain;7414;7227;14045;596;7080;6965;334;262
-     … Steinstra�e;2022-09-30 00:00:00 +0200;Friday;18222;18;partly-cloudy-day;9111;9111;17491;731;8727;8764;384;347
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-november-2023-taglich.csv: 4718 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-11-01 00:00:00 +0100;Wednesday;3920;15;rain;;2030;1890;3797;123;1962;1835;68;55;1776;1233;543;2144;797;1347
-     Steinstraße, Moers;2023-11-02 00:00:00 +0100;Thursday;12490;15;rain;;6189;6301;12135;355;5993;6142;196;159;5789;3551;2238;6701;2638;4063
-     Steinstraße, Moers;2023-11-03 00:00:00 +0100;Friday;17737;12;rain;;8881;8856;17115;622;8544;8571;337;285;8304;5565;2739;9433;3316;6117
-     … Steinstraße, Moers;2023-11-29 00:00:00 +0100;Wednesday;15446;3;snow;;7801;7645;14906;540;7504;7402;297;243;7591;4824;2767;7855;2977;4878
-     … Steinstraße, Moers;2023-11-30 00:00:00 +0100;Thursday;18689;4;partly-cloudy-day;;9578;9111;18036;653;9211;8825;367;286;8411;5680;2731;10278;3898;6380
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-oktober-2022-taglich.csv: 3520 Bytes, 32 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-10-01 00:00:00 +0200;Saturday;14551;17;rain;7192;7359;14064;487;6938;7126;254;233
-     Steinstra�e;2022-10-02 00:00:00 +0200;Sunday;36405;18;rain;18262;18143;34906;1499;17444;17462;818;681
-     Steinstra�e;2022-10-03 00:00:00 +0200;Monday;4865;17;rain;2472;2393;4679;186;2377;2302;95;91
-     … Steinstra�e;2022-10-30 00:00:00 +0200;Sunday;5610;21;partly-cloudy-day;2863;2747;5396;214;2759;2637;104;110
-     … Steinstra�e;2022-10-31 00:00:00 +0100;Monday;18803;19;partly-cloudy-day;9525;9278;18026;777;9118;8908;407;370
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-mai-2024-taglich.csv: 4964 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-05-01 00:00:00 +0200;Wednesday;6380;27;rain;;3321;3059;6107;273;3172;2935;149;124;2327;1518;809;4053;1803;2250
-     Steinstraße, Moers;2024-05-02 00:00:00 +0200;Thursday;13743;26;rain;;6865;6878;13174;569;6573;6601;292;277;5880;3718;2162;7863;3147;4716
-     Steinstraße, Moers;2024-05-03 00:00:00 +0200;Friday;12409;14;rain;;6155;6254;12034;375;5961;6073;194;181;5514;3658;1856;6895;2497;4398
-     … Steinstraße, Moers;2024-05-30 00:00:00 +0200;Thursday;3689;18;rain;;1870;1819;3569;120;1793;1776;77;43;1659;1057;602;2030;813;1217
-     … Steinstraße, Moers;2024-05-31 00:00:00 +0200;Friday;21530;20;rain;;10809;10721;20721;809;10367;10354;442;367;10080;6941;3139;11450;3868;7582
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-august-2025-taglich.csv: 5367 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-08-01 00:00:00 +0200;Friday;13413;19;rain;;6689;6724;12934;479;6426;6508;263;216;6196;4061;2135;7217;2628;4589;measured
-     Steinstraße, Moers;2025-08-02 00:00:00 +0200;Saturday;10448;19;rain;;5154;5294;10132;316;4997;5135;157;159;4688;2999;1689;5760;2155;3605;measured
-     Steinstraße, Moers;2025-08-03 00:00:00 +0200;Sunday;4394;24;rain;;2300;2094;4227;167;2202;2025;98;69;1584;1096;488;2810;1204;1606;measured
-     … Steinstraße, Moers;2025-08-30 00:00:00 +0200;Saturday;18586;23;rain;;9367;9219;17811;775;8960;8851;407;368;8400;5883;2517;10186;3484;6702;measured
-     … Steinstraße, Moers;2025-08-31 00:00:00 +0200;Sunday;3793;25;rain;;1915;1878;3647;146;1833;1814;82;64;1450;961;489;2343;954;1389;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-oktober-2025-taglich.csv: 5184 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-10-01 00:00:00 +0200;Wednesday;14549;17;partly-cloudy-day;;7206;7343;14002;547;6909;7093;297;250;6376;4236;2140;8173;2970;5203;measured
-     Steinstraße, Moers;2025-10-02 00:00:00 +0200;Thursday;16241;16;partly-cloudy-day;;8133;8108;15680;561;7829;7851;304;257;7677;5011;2666;8564;3122;5442;measured
-     Steinstraße, Moers;2025-10-03 00:00:00 +0200;Friday;3276;14;rain;;1683;1593;3186;90;1628;1558;55;35;1451;920;531;1825;763;1062;measured
-     … Steinstraße, Moers;2025-10-30 00:00:00 +0100;Thursday;14430;13;rain;;7088;7342;13920;510;6817;7103;271;239;6646;4289;2357;7784;2799;4985;measured
-     … Steinstraße, Moers;2025-10-31 00:00:00 +0100;Friday;16890;13;partly-cloudy-day;;8473;8417;16328;562;8170;8158;303;259;8557;5704;2853;8333;2769;5564;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juli-2022-taglich.csv: 3874 Bytes, 32 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2022-07-01 00:00:00 +0200;Friday;16430;23;rain;8237;8193;15813;617;7902;7911;335;282
-     Steinstra�e, Moers;2022-07-02 00:00:00 +0200;Saturday;15870;27;partly-cloudy-day;8096;7774;15266;604;7745;7521;351;253
-     Steinstra�e, Moers;2022-07-03 00:00:00 +0200;Sunday;3907;27;partly-cloudy-day;2004;1903;3766;141;1929;1837;75;66
-     … Steinstra�e, Moers;2022-07-30 00:00:00 +0200;Saturday;16063;27;partly-cloudy-day;8160;7903;15440;623;7832;7608;328;295
-     … Steinstra�e, Moers;2022-07-31 00:00:00 +0200;Sunday;3077;27;rain;1542;1535;2947;130;1475;1472;67;63
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juni-2024-taglich.csv: 4858 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-06-01 00:00:00 +0200;Saturday;18307;21;rain;;9304;9003;17651;656;8944;8707;360;296;8668;5929;2739;9639;3375;6264
-     Steinstraße, Moers;2024-06-02 00:00:00 +0200;Sunday;4074;18;cloudy;;2062;2012;3952;122;1991;1961;71;51;1692;1068;624;2382;994;1388
-     Steinstraße, Moers;2024-06-03 00:00:00 +0200;Monday;13430;17;partly-cloudy-day;;6662;6768;12894;536;6385;6509;277;259;6216;3920;2296;7214;2742;4472
-     … Steinstraße, Moers;2024-06-29 00:00:00 +0200;Saturday;16479;27;rain;;8404;8075;15935;544;8100;7835;304;240;7340;4877;2463;9139;3527;5612
-     … Steinstraße, Moers;2024-06-30 00:00:00 +0200;Sunday;3417;21;rain;;1649;1768;3326;91;1604;1722;45;46;1419;872;547;1998;777;1221
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-januar-2023-taglich.csv: 3387 Bytes, 32 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2023-01-01 00:00:00 +0100;Sunday;2843;16;rain;1440;1403;2739;104;1384;1355;56;48
-     Steinstra�e;2023-01-02 00:00:00 +0100;Monday;11963;13;rain;5938;6025;11619;344;5746;5873;192;152
-     Steinstra�e;2023-01-03 00:00:00 +0100;Tuesday;16306;10;rain;8213;8093;15777;529;7926;7851;287;242
-     … Steinstra�e;2023-01-30 00:00:00 +0100;Monday;11063;8;rain;5505;5558;10703;360;5299;5404;206;154
-     … Steinstra�e;2023-01-31 00:00:00 +0100;Tuesday;11639;9;rain;5785;5854;11286;353;5593;5693;192;161
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-november-2022-taglich.csv: 3331 Bytes, 31 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-11-01 00:00:00 +0100;Tuesday;4842;17;rain;2443;2399;4673;169;2336;2337;107;62
-     Steinstra�e;2022-11-02 00:00:00 +0100;Wednesday;14045;16;rain;7021;7024;13473;572;6720;6753;301;271
-     Steinstra�e;2022-11-03 00:00:00 +0100;Thursday;11457;16;rain;5759;5698;11106;351;5574;5532;185;166
-     … Steinstra�e;2022-11-29 00:00:00 +0100;Tuesday;18061;9;rain;9187;8874;17426;635;8839;8587;348;287
-     … Steinstra�e;2022-11-30 00:00:00 +0100;Wednesday;18058;7;rain;9138;8920;17361;697;8769;8592;369;328
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-august-2026-taglich.csv: 5301 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-08-01 00:00:00 +0200;Saturday;17631;26;partly-cloudy-day;;9158;8473;17000;631;8805;8195;353;278;7266;5014;2252;10365;4144;6221;mixed
-     Steinstraße, Moers;2026-08-02 00:00:00 +0200;Sunday;3924;30;partly-cloudy-day;;1999;1925;3782;142;1921;1861;78;64;1159;753;406;2765;1246;1519;measured
-     Steinstraße, Moers;2026-08-03 00:00:00 +0200;Monday;11734;36;partly-cloudy-day;;5792;5942;11334;400;5579;5755;213;187;4850;2977;1873;6884;2815;4069;mixed
-     … Steinstraße, Moers;2026-08-30 00:00:00 +0200;Sunday;3613;23;rain;;1879;1734;3463;150;1800;1663;79;71;1414;935;479;2199;944;1255;measured
-     … Steinstraße, Moers;2026-08-31 00:00:00 +0200;Monday;13161;20;partly-cloudy-day;;6508;6653;12667;494;6256;6411;252;242;5904;3681;2223;7257;2827;4430;mixed
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-dezember-2024-taglich.csv: 5192 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-12-01 00:00:00 +0100;Sunday;8805;7;rain;;4742;4063;8489;316;4545;3944;197;119;3465;2430;1035;5340;2312;3028;measured
-     Steinstraße, Moers;2024-12-02 00:00:00 +0100;Monday;14011;12;rain;;7112;6899;13530;481;6854;6676;258;223;6321;4013;2308;7690;3099;4591;measured
-     Steinstraße, Moers;2024-12-03 00:00:00 +0100;Tuesday;18185;8;rain;;9091;9094;17595;590;8796;8799;295;295;7512;5197;2315;10673;3894;6779;measured
-     … Steinstraße, Moers;2024-12-30 00:00:00 +0100;Monday;17514;4;cloudy;;8824;8690;16965;549;8530;8435;294;255;8311;5279;3032;9203;3545;5658;measured
-     … Steinstraße, Moers;2024-12-31 00:00:00 +0100;Tuesday;8160;4;rain;;4117;4043;7885;275;3968;3917;149;126;3969;2497;1472;4191;1620;2571;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-august-2023-taglich.csv: 4964 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-08-01 00:00:00 +0200;Tuesday;15841;21;rain;;8031;7810;15164;677;7659;7505;372;305;7174;4746;2428;8667;3285;5382
-     Steinstraße, Moers;2023-08-02 00:00:00 +0200;Wednesday;10092;23;rain;;5012;5080;9775;317;4847;4928;165;152;4800;2935;1865;5292;2077;3215
-     Steinstraße, Moers;2023-08-03 00:00:00 +0200;Thursday;11668;19;rain;;5819;5849;11251;417;5612;5639;207;210;5612;3432;2180;6056;2387;3669
-     … Steinstraße, Moers;2023-08-30 00:00:00 +0200;Wednesday;8504;17;rain;;4197;4307;8272;232;4058;4214;139;93;3873;2328;1545;4631;1869;2762
-     … Steinstraße, Moers;2023-08-31 00:00:00 +0200;Thursday;15085;19;rain;;7635;7450;14547;538;7344;7203;291;247;5293;3815;1478;9792;3820;5972
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-januar-2026-taglich.csv: 5140 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-01-01 00:00:00 +0100;Thursday;1852;4;rain;;884;968;1808;44;859;949;25;19;860;484;376;992;400;592;measured
-     Steinstraße, Moers;2026-01-02 00:00:00 +0100;Friday;12259;3;snow;;6101;6158;11948;311;5937;6011;164;147;6179;3796;2383;6080;2305;3775;measured
-     Steinstraße, Moers;2026-01-03 00:00:00 +0100;Saturday;11311;1;snow;;5566;5745;11078;233;5457;5621;109;124;5438;3411;2027;5873;2155;3718;measured
-     … Steinstraße, Moers;2026-01-30 00:00:00 +0100;Friday;15762;5;rain;;7842;7920;15291;471;7591;7700;251;220;7278;4569;2709;8484;3273;5211;mixed
-     … Steinstraße, Moers;2026-01-31 00:00:00 +0100;Saturday;16959;7;rain;;8645;8314;16448;511;8352;8096;293;218;7764;5111;2653;9195;3534;5661;mixed
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-april-2025-taglich.csv: 5217 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-04-01 00:00:00 +0200;Tuesday;15588;14;partly-cloudy-day;;7710;7878;15049;539;7443;7606;267;272;7570;4879;2691;8018;2831;5187;mixed
-     Steinstraße, Moers;2025-04-02 00:00:00 +0200;Wednesday;14027;19;partly-cloudy-day;;6921;7106;13496;531;6648;6848;273;258;6253;4065;2188;7774;2856;4918;measured
-     Steinstraße, Moers;2025-04-03 00:00:00 +0200;Thursday;15354;21;partly-cloudy-day;;7590;7764;14759;595;7283;7476;307;288;6435;4223;2212;8919;3367;5552;measured
-     … Steinstraße, Moers;2025-04-29 00:00:00 +0200;Tuesday;15501;23;partly-cloudy-day;;7822;7679;14887;614;7492;7395;330;284;6644;4368;2276;8857;3454;5403;measured
-     … Steinstraße, Moers;2025-04-30 00:00:00 +0200;Wednesday;15174;25;partly-cloudy-day;;7671;7503;14569;605;7346;7223;325;280;5892;3850;2042;9282;3821;5461;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-dezember-2025-taglich.csv: 5299 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-12-01 00:00:00 +0100;Monday;17577;7;rain;;8866;8711;17047;530;8565;8482;301;229;7459;4753;2706;10118;4113;6005;measured
-     Steinstraße, Moers;2025-12-02 00:00:00 +0100;Tuesday;16426;7;rain;;8168;8258;15923;503;7911;8012;257;246;7225;4575;2650;9201;3593;5608;measured
-     Steinstraße, Moers;2025-12-03 00:00:00 +0100;Wednesday;16967;8;rain;;8600;8367;16389;578;8295;8094;305;273;7507;4880;2627;9460;3720;5740;measured
-     … Steinstraße, Moers;2025-12-30 00:00:00 +0100;Tuesday;20734;5;partly-cloudy-day;;10346;10388;20058;676;10014;10044;332;344;10428;6739;3689;10306;3607;6699;measured
-     … Steinstraße, Moers;2025-12-31 00:00:00 +0100;Wednesday;7206;4;rain;;3705;3501;6991;215;3585;3406;120;95;3416;2104;1312;3790;1601;2189;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-september-2026-taglich.csv: 5263 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-09-01 00:00:00 +0200;Tuesday;16405;22;rain;;8138;8267;15788;617;7823;7965;315;302;7749;4956;2793;8656;3182;5474;mixed
-     Steinstraße, Moers;2026-09-02 00:00:00 +0200;Wednesday;14386;22;partly-cloudy-day;;7103;7283;13767;619;6791;6976;312;307;6417;4081;2336;7969;3022;4947;measured
-     Steinstraße, Moers;2026-09-03 00:00:00 +0200;Thursday;12189;22;rain;;6055;6134;11743;446;5813;5930;242;204;4506;3221;1285;7683;2834;4849;measured
-     … Steinstraße, Moers;2026-09-29 00:00:00 +0200;Tuesday;14146;27;partly-cloudy-day;;6935;7211;13650;496;6696;6954;239;257;6210;3999;2211;7936;2936;5000;measured
-     … Steinstraße, Moers;2026-09-30 00:00:00 +0200;Wednesday;13385;27;rain;;6543;6842;12867;518;6283;6584;260;258;5892;3667;2225;7493;2876;4617;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-mai-2022-taglich-1.csv: 3640 Bytes, 32 Zeilen, BOM False
-     Lage	Zeitpunkt der Messung	Wochentag	Fu�g�nger insgesamt	Temperatur in �c	Wetterlage	Fu�g�nger insgesamt Richtung Neumarkt	Fu�g�nger insgesamt Richtung Neuer Wall	Erwachsene	Kinder	Erwachsene Richtung Neumarkt	Erwachsene Richtung Neuer Wall	Kinder Richtung Neumarkt	Kinder Richtung Neuer Wall
-     Steinstra�e, Moers	2022-05-01 00:00:00 +0200	Sunday	0			0	0	0	0	0	0	0	0
-     Steinstra�e, Moers	2022-05-02 00:00:00 +0200	Monday	0			0	0	0	0	0	0	0	0
-     Steinstra�e, Moers	2022-05-03 00:00:00 +0200	Tuesday	0			0	0	0	0	0	0	0	0
-     … Steinstra�e, Moers	2022-05-30 00:00:00 +0200	Monday	12739	16	partly-cloudy-day	6458	6281	12162	577	6145	6017	313	264
-     … Steinstra�e, Moers	2022-05-31 00:00:00 +0200	Tuesday	14323	21	rain	7121	7202	13746	577	6829	6917	292	285
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-april-2023-taglich-1.csv: 3596 Bytes, 31 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e, Moers;2023-04-01 00:00:00 +0200;Saturday;7451;11;rain;3605;3846;7274;177;3522;3752;83;94
-     Steinstra�e, Moers;2023-04-02 00:00:00 +0200;Sunday;31606;9;rain;15986;15620;30389;1217;15301;15088;685;532
-     Steinstra�e, Moers;2023-04-03 00:00:00 +0200;Monday;15617;9;clear-day;7830;7787;15031;586;7505;7526;325;261
-     … Steinstra�e, Moers;2023-04-29 00:00:00 +0200;Saturday;19570;15;rain;9777;9793;18864;706;9408;9456;369;337
-     … Steinstra�e, Moers;2023-04-30 00:00:00 +0200;Sunday;6480;18;partly-cloudy-day;3465;3015;6196;284;3298;2898;167;117
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-maerz-2023-taglich.csv: 3595 Bytes, 32 Zeilen, BOM False
-     Lage	Zeitpunkt der Messung	Wochentag	Fu�g�nger insgesamt	Temperatur in �c	Wetterlage	Fu�g�nger insgesamt Richtung Neumarkt	Fu�g�nger insgesamt Richtung Neuer Wall	Erwachsene	Kinder	Erwachsene Richtung Neumarkt	Erwachsene Richtung Neuer Wall	Kinder Richtung Neumarkt	Kinder Richtung Neuer Wall
-     Steinstra�e, Moers	2023-03-01 00:00:00 +0100	Wednesday	13066	9	clear-day	6581	6485	12568	498	6314	6254	267	231
-     Steinstra�e, Moers	2023-03-02 00:00:00 +0100	Thursday	13897	11	clear-day	6870	7027	13388	509	6587	6801	283	226
-     Steinstra�e, Moers	2023-03-03 00:00:00 +0100	Friday	15296	8	partly-cloudy-day	7523	7773	14809	487	7258	7551	265	222
-     … Steinstra�e, Moers	2023-03-30 00:00:00 +0200	Thursday	11221	16	rain	5647	5574	10884	337	5453	5431	194	143
-     … Steinstra�e, Moers	2023-03-31 00:00:00 +0200	Friday	11812	14	rain	5918	5894	11512	300	5763	5749	155	145
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-marz-2025-taglich.csv: 5370 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-03-01 00:00:00 +0100;Saturday;11154;5;partly-cloudy-day;;5615;5539;10892;262;5476;5416;139;123;5133;3286;1847;6021;2329;3692;measured
-     Steinstraße, Moers;2025-03-02 00:00:00 +0100;Sunday;5332;10;partly-cloudy-day;;2727;2605;5160;172;2637;2523;90;82;2309;1531;778;3023;1196;1827;measured
-     Steinstraße, Moers;2025-03-03 00:00:00 +0100;Monday;13890;12;clear-day;;6941;6949;13278;612;6602;6676;339;273;6374;4207;2167;7516;2734;4782;measured
-     … Steinstraße, Moers;2025-03-30 00:00:00 +0100;Sunday;3192;14;rain;;1618;1574;3098;94;1563;1535;55;39;1294;812;482;1898;806;1092;measured
-     … Steinstraße, Moers;2025-03-31 00:00:00 +0200;Monday;13250;13;partly-cloudy-day;;6591;6659;12829;421;6395;6434;196;225;5664;3708;1956;7586;2883;4703;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-dezember-2022-taglich.csv: 3483 Bytes, 32 Zeilen, BOM False
-     Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall
-     Steinstra�e;2022-12-01 00:00:00 +0100;Thursday;17370;7;cloudy;8779;8591;16766;604;8458;8308;321;283
-     Steinstra�e;2022-12-02 00:00:00 +0100;Friday;21333;5;rain;10922;10411;20706;627;10573;10133;349;278
-     Steinstra�e;2022-12-03 00:00:00 +0100;Saturday;25819;4;cloudy;13423;12396;24968;851;12957;12011;466;385
-     … Steinstra�e;2022-12-30 00:00:00 +0100;Friday;15849;13;rain;7805;8044;15388;461;7575;7813;230;231
-     … Steinstra�e;2022-12-31 00:00:00 +0100;Saturday;7699;16;rain;3842;3857;7450;249;3706;3744;136;113
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-juni-2026-taglich.csv: 5096 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2026-06-01 00:00:00 +0200;Monday;14192;23;partly-cloudy-day;;7024;7168;13655;537;6739;6916;285;252;6076;3928;2148;8116;3096;5020;mixed
-     Steinstraße, Moers;2026-06-02 00:00:00 +0200;Tuesday;10985;22;rain;;5334;5651;10671;314;5183;5488;151;163;5285;3107;2178;5700;2227;3473;measured
-     Steinstraße, Moers;2026-06-03 00:00:00 +0200;Wednesday;12979;19;rain;;6430;6549;12559;420;6210;6349;220;200;5905;3679;2226;7074;2751;4323;mixed
-     … Steinstraße, Moers;2026-06-29 00:00:00 +0200;Monday;13082;28;partly-cloudy-day;;6491;6591;12626;456;6246;6380;245;211;5172;3144;2028;7910;3347;4563;mixed
-     … Steinstraße, Moers;2026-06-30 00:00:00 +0200;Tuesday;14508;26;partly-cloudy-day;;7183;7325;13910;598;6876;7034;307;291;6702;4138;2564;7806;3045;4761;mixed
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-november-2025-taglich.csv: 5069 Bytes, 31 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2025-11-01 00:00:00 +0100;Saturday;2935;14;rain;;1478;1457;2849;86;1429;1420;49;37;1297;834;463;1638;644;994;mixed
-     Steinstraße, Moers;2025-11-02 00:00:00 +0100;Sunday;4892;14;rain;;2542;2350;4716;176;2443;2273;99;77;2188;1486;702;2704;1056;1648;measured
-     Steinstraße, Moers;2025-11-03 00:00:00 +0100;Monday;14111;13;rain;;6905;7206;13600;511;6636;6964;269;242;6674;4148;2526;7437;2757;4680;measured
-     … Steinstraße, Moers;2025-11-29 00:00:00 +0100;Saturday;27383;11;rain;;14288;13095;26392;991;13739;12653;549;442;12106;8603;3503;15277;5685;9592;measured
-     … Steinstraße, Moers;2025-11-30 00:00:00 +0100;Sunday;7614;11;rain;;4110;3504;7285;329;3931;3354;179;150;3068;2058;1010;4546;2052;2494;measured
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-februar-2024-taglich.csv: 4552 Bytes, 30 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2024-02-01 00:00:00 +0100;Thursday;13865;9;rain;;6893;6972;13401;464;6667;6734;226;238;6258;3914;2344;7607;2979;4628
-     Steinstraße, Moers;2024-02-02 00:00:00 +0100;Friday;14848;9;rain;;7283;7565;14438;410;7078;7360;205;205;6755;4413;2342;8093;2870;5223
-     Steinstraße, Moers;2024-02-03 00:00:00 +0100;Saturday;13210;11;rain;;6484;6726;12829;381;6284;6545;200;181;6125;3752;2373;7085;2732;4353
-     … Steinstraße, Moers;2024-02-28 00:00:00 +0100;Wednesday;11888;9;partly-cloudy-day;;5983;5905;11444;444;5740;5704;243;201;5303;3273;2030;6585;2710;3875
-     … Steinstraße, Moers;2024-02-29 00:00:00 +0100;Thursday;13104;12;rain;;6496;6608;12662;442;6250;6412;246;196;5719;3545;2174;7385;2951;4434
-  besucherzahlen-steinstrabe-2022-nach-tagen-stadt-moers__besucherzahlen-moers-dezember-2023-taglich.csv: 4882 Bytes, 32 Zeilen, BOM True
-     location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians c
-     Steinstraße, Moers;2023-12-01 00:00:00 +0100;Friday;22391;1;cloudy;;11612;10779;21695;696;11228;10467;384;312;10227;7208;3019;12164;4404;7760
-     Steinstraße, Moers;2023-12-02 00:00:00 +0100;Saturday;26197;1;snow;;13729;12468;25314;883;13238;12076;491;392;11975;8843;3132;14222;4886;9336
-     Steinstraße, Moers;2023-12-03 00:00:00 +0100;Sunday;8325;2;snow;;4531;3794;7987;338;4320;3667;211;127;3448;2511;937;4877;2020;2857
-     … Steinstraße, Moers;2023-12-30 00:00:00 +0100;Saturday;19989;10;rain;;10065;9924;19318;671;9702;9616;363;308;8952;6144;2808;11037;3921;7116
-     … Steinstraße, Moers;2023-12-31 00:00:00 +0100;Sunday;2589;10;rain;;1345;1244;2521;68;1305;1216;40;28;1147;739;408;1442;606;836
-geladen: 108 Dateien
+Kopf besucherzahlen-moers-april-2023-stundlich.csv: Lage;Zeitpunkt der Messung;Wochentag;Fu�g�nger insgesamt;Temperatur in �c;Wetterlage;Fu�g�nger insgesamt Richtung Neumarkt;Fu�g�nger insgesamt Richtung Neuer Wall;Erwachsene;Kinder;Erwachsene Richtung Neumarkt;Erwachsene Richtung Neuer Wall;Kinder Richtung Neumarkt;Kinder Richtung Neuer Wall | Steinstra�e, Moers;2023-04-01 00:00:00 +0200;Saturday;28;10;rain;10;18;28;0;10;18;0;0 | Steinstra�e, Moers;2023-04-01 01:00:00 +0200;Saturday;14;10;rain;9;5;14;0;9;5;0;0 | Steinstra�e, Moers;2023-04-01 02:00:00 +0200;Saturday;17;10;rain;12;5;17;0;12;5;0;0 | Steinstra�e, Moers;2023-04-01 03:00:00 +0200;Saturday;6;10;cloudy;3;3;6;0;3;3;0;0 | Steinstra�e, Moers;2023-04-01 04:00:00 +0200;Saturday;2;10;rain;2;0;2;0;2;0;0;0
+Kopf besucherzahlen-moers-april-2024-stundlich.csv: ﻿location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians count;child towards Neumarkt pedestrians count;child towards Neuer Wall pedestrians count;zone 1 pedestrians count;zone 1 towards Neumarkt pedestrians count;zone 1 towards Neuer Wall pedestrians count;zone 2 pedestrians count;zone 2 towards Neumarkt pedestrians count;zone 2 towards Neuer Wall pedestrians count | Steinstraße, Moers;2024-04-01 00:00:00 +0200;Monday;12;12;cloudy;;4;8;12;0;4;8;0;0;5;3;2;7;1;6 | Steinstraße, Moers;2024-04-01 01:00:00 +0200;Monday;15;12;partly-cloudy-night;;9;6;15;0;9;6;0;0;6;5;1;9;4;5 | Steinstraße, Moers;2024-04-01 02:00:00 +0200;Monday;10;10;partly-cloudy-night;;4;6;10;0;4;6;0;0;2;0;2;8;4;4 | Steinstraße, Moers;2024-04-01 03:00:00 +0200;Monday;5;10;cloudy;;1;4;5;0;1;4;0;0;1;0;1;4;1;3 | Steinstraße, Moers;2024-04-01 04:00:00 +0200;Monday;7;10;cloudy;;5;2;7;0;5;2;0;0;2;2;0;5;3;2
+Kopf besucherzahlen-moers-april-2025-stundlich.csv: ﻿location;time of measurement;weekday;pedestrians count;temperature in ºc;weather condition;incidents;towards Neumarkt pedestrians count;towards Neuer Wall pedestrians count;adult pedestrians count;child pedestrians count;adult towards Neumarkt pedestrians count;adult towards Neuer Wall pedestrians count;child towards Neumarkt pedestrians count;child towards Neuer Wall pedestrians count;zone 1 pedestrians count;zone 1 towards Neumarkt pedestrians count;zone 1 towards Neuer Wall pedestrians count;zone 2 pedestrians count;zone 2 towards Neumarkt pedestrians count;zone 2 towards Neuer Wall pedestrians count;collection_type | Steinstraße, Moers;2025-04-01 00:00:00 +0200;Tuesday;4;6;clear-night;;2;2;4;0;2;2;0;0;4;2;2;0;0;0;measured | Steinstraße, Moers;2025-04-01 01:00:00 +0200;Tuesday;7;6;clear-night;;4;3;7;0;4;3;0;0;4;1;3;3;3;0;measured | Steinstraße, Moers;2025-04-01 02:00:00 +0200;Tuesday;11;4;partly-cloudy-night;;6;5;11;0;6;5;0;0;6;3;3;5;3;2;measured | Steinstraße, Moers;2025-04-01 03:00:00 +0200;Tuesday;5;4;clear-night;;0;5;5;0;0;5;0;0;3;0;3;2;0;2;measured | Steinstraße, Moers;2025-04-01 04:00:00 +0200;Tuesday;12;3;clear-night;;4;8;12;0;4;8;0;0;5;0;5;7;4;3;measured
+== Lesen
+54 Monatsdateien, 39481 Zeilen (0 unlesbar), 38368 Stunden in der Karte; jüngster Wert 2026-10-31
+nicht gezählt: 268 geschätzt (modelled), 96 vor dem Beginn der Zählung, 0 Zeitpunkte doppelt mit verschiedenen Werten
+Zeilen außerhalb des Monats der Datei (nicht gezählt): besucherzahlen-moers-august-2024-stundlich.csv 744
+Reihe 2022-05-05 – 2026-10-31, 1 Stellen
+=== Gruppe fuss
+== Je Zählstelle: Kennung | Name | Abschnitt | erster/letzter Tag mit Wert | vollständige Tage | jüngster vollständiger Tag | Median der vollen Tage
+steinstrasse | Steinstraße | zwischen Neumarkt und Neuer Wall | 2022-05-05 – 2026-10-31 | 1472 | 2026-10-31 | 13510
+== Jahresgrenzen: Stellen mit vollständigem 31.12. bzw. 1.1. (von Stellen mit Werten)
+2022: 2022-12-31: 1/1
+2023: 2023-01-01: 1/1, 2023-12-31: 1/1
+2024: 2024-01-01: 1/1, 2024-12-31: 1/1
+2025: 2025-01-01: 1/1, 2025-12-31: 1/1
+2026: 2026-01-01: 1/1
+== Zeitumstellung: Stellen vollständig am Tag der Sommerzeit (23 h) / der Rückstellung
+2022: 2022-10-30: voll 1/1, gezählte Stunden [24]
+2023: 2023-03-26: voll 1/1, gezählte Stunden [23]; 2023-10-29: voll 1/1, gezählte Stunden [24]
+2024: 2024-03-31: voll 1/1, gezählte Stunden [23]; 2024-10-27: voll 1/1, gezählte Stunden [24]
+2025: 2025-03-30: voll 1/1, gezählte Stunden [23]; 2025-10-26: voll 1/1, gezählte Stunden [24]
+2026: 2026-03-29: voll 1/1, gezählte Stunden [23]; 2026-10-25: voll 1/1, gezählte Stunden [24]
+== Vollständige Tage je Jahr (alle Stellen)
+2022: 241 von 241 Tagen mit Werten
+2023: 365 von 365 Tagen mit Werten
+2024: 332 von 334 Tagen mit Werten
+2025: 351 von 365 Tagen mit Werten
+2026: 183 von 304 Tagen mit Werten
+== Kartendaten (nur moers_fuss)
+moers_fuss: 1 Stellen mit vollständigen Tagen, 0 ohne
+Gemeinden: keine Grenzen – ags leer (zaehlkarte dauer fetch holt sie)
+7 Dateien, 0.1 MB, 1 Detail-Dateien
+moers_fuss: vollständige Tage je Jahr (Stellen × Tage) – 2022: 241, 2023: 365, 2024: 332, 2025: 351, 2026: 183
+moers_fuss: fuss-Tagessummen, Quintilgrenzen [9370, 12730, 14300, 16810], Median 13510, Maximum 56531
+index.json quellen: [{"code": "moers_fuss", "name": "Moers (Fußgänger Steinstraße)", "land": "NW", "traeger": "MoersMarketing GmbH (Stadt Moers)", "art": "Personenzählung in der Fußgängerzone Steinstraße (Laser): zu Fuß Gehende je Stunde, beide Richtungen zusammen, seit Mai 2022", "weg": "offen auf offenesdatenportal.de (je Monat eine CSV)", "portal": "https://www.offenesdatenportal.de/dataset/fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022", "archiv": null, "quellenvermerk": "Stadt Moers; MoersMarketing GmbH", "lizenzen": [{"code": "moers_fuss", "titel": "Besuchszahlen Steinstraße – nach Stunden (Stadt Moers) (verändert: ohne geschätzte Stunden, zu Tagessummen zusammengefasst)", "herausgeber": "Stadt Moers, MoersMarketing GmbH", "lizenz": "dl-de/zero-2-0", "lizenz_url": "https://www.govdata.de/dl-de/zero-2-0", "herkunft_url": "https://www.offenesdatenportal.de/dataset/fubgangerinnen-und-fubganger-auf-der-steinstrabe-in-moers-im-mai-2022"}], "hinweise": ["Gezählt werden Personen ab 90 cm Größe, beide Richtungen; die Datei trennt Erwachsene und Kinder (unter 150 cm) – die Zählkarte zeigt alle zusammen.", "Seit September 2024 kennzeichnet die Datei geschätzte Stunden („modelled“, nicht gemessen): Sie gelten als nicht gezählt, der Tag als nicht vollständig – meist 5 und 6 Uhr, 2025 an 14 Tagen, 2026 an 121 der 304 Tage bis Oktober. Vor September 2024 kennzeichnet die Datei nicht, ob eine Stunde gemessen oder geschätzt ist.", "Die Datei „August 2024“ enthält den August 2023 (di
+index.json lizenzen: null
