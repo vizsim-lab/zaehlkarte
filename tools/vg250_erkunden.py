@@ -63,21 +63,30 @@ for pfad in ("", "vg250_ebenen_0101/", "vg250_ebenen_0101/aktuell/", "vg250_eben
         p(f"{url}: {e!r}")
 sichern()
 
-kandidaten = []
-for ordner in ("vg250_ebenen_0101/2026/", "vg250_ebenen_0101/aktuell/", "vg250_ebenen_0101/2025/"):
-    for n in listen.get(ordner, []):
-        if "geo84" in n and "shape" in n and n.endswith(".zip"):
-            kandidaten.append(BASIS + ordner + n)
-p("Kandidaten:", kandidaten)
-if not kandidaten:
-    sichern()
-    sys.exit(0)
-url = kandidaten[0]
+# 2026 gibt es kein geo84 mehr (erster Lauf): UTM 32 (utm32s) lesen, die .prj von tm32 zum Vergleich
+url = BASIS + "vg250_ebenen_0101/2026/vg250_01-01.utm32s.shape.ebenen.zip"
+for variante in ("tm32",):
+    u = url.replace("utm32s", variante)
+    d_ = Path("/tmp") / Path(u).name
+    try:
+        abruf.lade(u, d_)
+        with zipfile.ZipFile(d_) as z:
+            for n in z.namelist():
+                if n.upper().endswith("VG250_GEM.PRJ"):
+                    p(f"--- {variante} {n}:", z.read(n).decode("latin-1"))
+        d_.unlink()
+    except Exception as e:  # noqa: BLE001
+        p(f"{u}: {e!r}")
 datei = Path("/tmp") / Path(url).name
 t0 = time.time()
 abruf.lade(url, datei)
 summe = hashlib.sha256(datei.read_bytes()).hexdigest()
+md5 = hashlib.md5(datei.read_bytes()).hexdigest()
 p(f"geladen {url}: {datei.stat().st_size / 1e6:.1f} MB in {time.time() - t0:.0f} s, sha256 {summe}")
+try:
+    p(f"md5 eigen {md5}, laut Server: {abruf.hole(url + '.md5', timeout=60).text.strip()}")
+except Exception as e:  # noqa: BLE001
+    p(f"md5: {e!r}")
 with zipfile.ZipFile(datei) as z:
     namen = z.namelist()
     p(f"{len(namen)} Dateien im ZIP:", [n for n in namen if "GEM" in n.upper() or n.endswith(".txt")

@@ -82,4 +82,5 @@ vg250() {  # vg250 <branch>
   ( cd app/pipeline && uv sync --locked -q && timeout 40m uv run python "$GITHUB_WORKSPACE/tools/vg250_erkunden.py" "$ziel" "$RUNNER_TEMP/dauer/index.json" "$GITHUB_WORKSPACE/app/public/data/index.json" ) > "$ziel/lauf.txt" 2>&1 || true
   tail -c 20000 "$ziel/lauf.txt" > "$ziel/lauf_ende.txt"
 }
+# Erster Lauf: robots.txt 404 (alles erlaubt), 2026 kein geo84 – zweiter Lauf mit UTM 32:
 vg250 gemeinden
