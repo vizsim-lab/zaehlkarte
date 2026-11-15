@@ -52,7 +52,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   Kommune `ags` (amtlicher Gemeindeschlüssel, bei Kreisen der Kreisschlüssel – der Schlüssel der
   Kommune, das Land steckt darin), `name`, `lage`, und je Familie ein Block `kurzzeit:` bzw.
   `dauer:` mit `stand`, `quellen` (die Quellen der Familie, die die Kommune in die Karte bringen –
-  kein Abgleich über Namen), `was`, `situation`, `links`; bei den Kurzzeitzählungen dazu
+  kein Abgleich über Namen; Dauer-Quellen des Landes oder Bundes, `ebene` in der Quelldatei,
+  gehören zu keiner Kommune), `was`, `situation`, `links`; bei den Kurzzeitzählungen dazu
   `empfehlung`, `weg`, `anfrage`. Eine Liste von Ständen für beide Familien (`datenlage.STAND`:
   in_karte, offen, geliefert, kandidat, ohne_lizenz, aggregiert, nur_karte, abgelehnt,
   nichts_offen). Die Karte zeigt je Familie nur Kommunen mit deren Block; Kommunen, von denen nur

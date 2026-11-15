@@ -676,6 +676,67 @@ robots.txt für alle Robots sperrt. Seitdem:
   - Namen uneinheitlich („Strasse“, „Pforzheimer-Str-14“, „Rcihtung“) → Straße und Abschnitt je
     Sensor in der Quelldatei (`stellen`), die Richtung ohne den vorangestellten Straßennamen.
   - `classification` und `amount` sind unbrauchbar (fast überall „LKW+Anhänger“ bzw. 0).
+- **Baden-Württemberg, Dauerzählstellen des Landes (in der Karte seit November 2026,
+  `bw_land_kfz`, Adapter `bw_land`):** MobiData BW, Datensatz `stundenwerte_dauerzaehlstellen`
+  (Verkehrsministerium, dl-de/by-2-0): ein ZIP je Monat seit Januar 2025 (laut DCAT-Dokument,
+  rund zwei Monate Verzug; ältere Monate ersetzt das Land gelegentlich, am 08.05.2026 etwa
+  September bis Dezember 2025 und Februar 2026 – der Adapter lädt nach dem Datum der Ressource
+  neu), je Jahr 2016–2024 ein ZIP `Stundenwerte_JJJJ.zip` (45–54 MB; nicht im DCAT-Dokument, nur
+  in der Beschreibung des Datensatzes; 2024 ein ZIP aus Monats-ZIPs) und das Gesamtarchiv
+  `Stundenwerte_Archiv.zip` (468 MB, nicht gebraucht). Erkundet im Werkzeug-Branch `werkzeug/bw`
+  (`tools/bw_dauer.py` bis `bw_dauer4.py`, `pruefe.sh`). Fallen:
+  - **Format:** abgeleitet aus den Lieferungen an die BASt. Die Beschreibung des
+    [BASt-Bestandsbandformats](https://www.bast.de/DE/Publikationen/Daten/Verkehrstechnik/Downloads/DZ-Beschreibung.pdf)
+    (Version 2004) erklärt Kopfzeilen, Prüfkennzeichen und Statuskennung – MobiData verweist nur
+    allgemein auf „die Internetseite der BASt“. Je Stelle und Monat eine CSV mit drei Kopfzeilen
+    (Blatt, Nummer, Land, Straße, Name; Fahrstreifen, Fernziele, Himmelsrichtungen; Gruppen und
+    Arten) und einer Zeile Spaltennamen; die Fahrstreifen sind über die Fahrbahn durchnummeriert,
+    erst Richtung I, dann II. Kodierung UTF-8 oder Windows-1252 (rund ein Fünftel der Dateien);
+    einmal „BY_…“ statt „BW_…“ im Dateinamen (Juli 2018).
+  - **Prüfkennzeichen:** „-“ korrekt, „u“ korrekt, aber unregelmäßig (Großveranstaltungen),
+    „a“ Ausfall, „d“ fehlerhaft, „s“ Schätzwert wegen fehlender, „k“ wegen fehlerhafter Werte,
+    „z“ Zeitumstellung; dazu „h“, „t“ (ab 2026, „t“ nur in eingefügten Zeilen) und „S“, die die
+    Beschreibung nicht nennt. Schätzwerte stehen oft einen ganzen Monat an einer Stelle; an
+    manchen Monatsgrenzen trägt die erste oder letzte Stunde an rund der Hälfte der Stellen „k“
+    (01.06.2024, 30.11.2024, 31.12.2024, 01.01.2025 – Werkzeug-Branch, `tools/bw_rand.py`). In der
+    Karte zählt eine Stunde nur mit „-“ oder „u“ auf allen Fahrstreifen der Richtung: je Monat
+    55–94 % der Tage je Richtung vollständig (2016 um 90 %, seit 2022 meist 60–75 %). Die
+    Statuskennung „i“ (eingefügte Zeile, am Datum) gibt es erst ab 2026, dann auch bei Ausfällen.
+  - **Zeit:** Ortszeit, die Uhrzeit ist das Ende der Stunde (01:00 = 0–1 Uhr). Frühjahr: Zeile
+    03:00 mit 0 und „z“ (die Stunde gibt es nicht; ab 2026 mit „i“). Herbst: 2–3 Uhr nur eine
+    Zeile mit „z“ – bis 2022 im Median das Anderthalbfache eines Sonntags davor (wohl beide
+    Stunden), seit 2023 etwa eine; nicht gezählt, der Tag ist nicht vollständig.
+  - **Klassen:** 8+1-Geräte: Gruppen KFZ und SV (= LoA + LmA + Sat + Bus) -> `kfz`, `sv`. 41
+    Autobahn-Stellen 2017–2025 unterscheiden nur zwei Klassen: KFZ und LK (Lkw-ähnliche, im
+    Januar 2024 „LKW“ geschrieben) -> `lkw`. Sie enden im Dezember 2025 (2026: 160 statt 196
+    Stellen); 36 Autobahn-Stellen mit 8+1 Klassen laufen weiter.
+  - **Kennung:** die Zählstellennummer (vier Ziffern, Nummer der BASt). Das Kartenblatt davor
+    wechselt (Kappelberg-Tunnel 2026: 7121 -> 7221; Reutlingen, Großbottwar), die Straße bei
+    Umstufungen (Horb-Nord B 14 -> B 28, Lörrach-Stetten B 317 -> Gemeindestraße, Großbottwar
+    L 1115 -> B 328), der Name bei Autobahn-Stellen 2016 („Ma-Sa_W_V“). Die Fernziele beider
+    Richtungen stehen erst ab 2026 im Kopf, vorher nur eines – mal das der einen, mal das der
+    anderen Richtung – , deshalb ohne Fernziel nur die Himmelsrichtung.
+  - **Lage:** keine Koordinaten in den CSV. Die Dateinamen tragen meist die SVZ-Nummer eines
+    Abschnitts in den Grunddaten der Zählstellenkarte (`karte_strassenverkehrszaehlung`, CSV
+    `SVZ-Zaehlstellen_…_augmented_SVZ2024.csv`: svznr, zstart DZ/MZ/TM, Straße, Punkt,
+    Abschnitt von–bis), aber nicht verlässlich: Zwischen den Jahren springt sie bei rund zehn
+    Stellen auf Nachbarabschnitte, oft temporäre Messstellen (TM) oder andere Straßen (Riegel 2026:
+    K 5135 statt L 113). Regel im Adapter: Abschnitt aus den Dateinamen, Straße passt, nie TM, DZ
+    vor MZ, der häufigste; sonst der einzige freie DZ-Abschnitt der Straße auf dem Kartenblatt
+    (Simonswald, Tübingen West, Westumgehung Aalen). Ohne Lage bleiben 13 von 206 Stellen, davon
+    neun 2026 noch in Betrieb: A 5 Achern, B 27 Filderstadt und L.-E.-Stetten (ein freier
+    MZ-Abschnitt für beide), B 462 Weisenbach-Au, B 3 Kippenheim, L 221 Wollmatingen, L 117
+    Grenzübergang Sasbach, Hornberg und Lörrach-Stetten (Gemeindestraßen) – Lage beim Land
+    erfragen. Eine Overpass-Abfrage nach Verkehrszählstellen in ganz BW lief in die Zeitgrenze
+    (nicht weiter verfolgt).
+  - **Doppelte Dateien:** 2024 steht eine Stelle (8961) von Januar bis September unter zwei
+    Namen mit gleichem Inhalt (einmal gezählt); im Oktober 2024 drei Stellen (8928, 8935, 8936)
+    mit verschiedenem Inhalt – der Monat gilt dort als nicht gezählt.
+  - **Lauf:** der erste Abruf lädt 30 Dateien (550 MB) in gut fünf Minuten (Crawl-delay 10 s),
+    Lesen und Bauen rund drei Minuten bei höchstens 1,1 GB Speicher; danach nur neue oder
+    ersetzte ZIPs (Cache im Workflow). Kartendaten der Quelle: 56 MB, gepackt 15 MB.
+  - Daneben „Ergebnisse und Ganglinien“: Monats- und Jahres-DTV seit 2002 als Excel (Kandidat
+    für `vizsim/svz`) und Ganglinien nur als PDF-Grafik.
 - **Geprüft, nicht aufgenommen (Stand 12.11.2026,** Werkzeug-Branch `werkzeug/dauer`,
   `tools/dauer_staedte1.py`, `dauer_staedte2.py`):
   - **Osnabrück:** SensorThings `https://daten-api.osnabrueck.de/v1.1` mit KI-Sensoren an
@@ -1004,17 +1065,10 @@ robots.txt für alle Robots sperrt. Seitdem:
     `hessen-mobil.eco-counter.com` sperrt Abruf-Werkzeuge per robots.txt) und Bielefeld – dort
     hilft eine Anfrage (Eco-Counter-Kunden haben in Eco-Visio einen Export). Nur Summen:
     Mannheims Portal (Summe je Zähler), Stuttgarts Portal (Saisons).
-- **Nicht kommunal (dokumentiert, nicht in der Karte; seit 14.11.2026 Kandidaten):**
-  - **Baden-Württemberg, Verkehrsministerium:** „Stundenwerte der Dauerzählstellen in
-    Baden-Württemberg“ (MobiData `stundenwerte_dauerzaehlstellen`, dl-de/by-2-0): ein ZIP je
-    Monat (`…/vm/Stundenwerte_Dauerzaehlstellen_BW/Stundenwerte_JJJJMM.zip`, mindestens
-    2025-01 bis 2026-08, rund zwei Monate Verzug), darin je Stelle eine CSV mit Kopf (Nummer,
-    Straße, Name, Richtungen, Fahrstreifen) und je Stunde und Fahrstreifen KFZ, SV und die
-    TLS-Klassen Mot, Pkw, Lfw, PmA, Bus, LoA, LmA, Sat, Son mit Kennung `K_…`; 161 Stellen an
-    Autobahnen, Bundes- und Landesstraßen (je eine an einer Kreis- und einer Gemeindestraße) –
-    an Autobahnen und Bundesstraßen vermutlich dieselben Stellen wie bei der BASt (nicht geprüft).
-    Daneben „Ergebnisse und Ganglinien“: Monats- und Jahres-DTV seit 2002 als Excel (Kandidat für
-    `vizsim/svz`) und Ganglinien nur als PDF-Grafik.
+- **Nicht kommunal (dokumentiert, nicht in der Karte; seit 14.11.2026 Kandidaten):** Baden-
+  Württembergs Landes-Dauerzählstellen sind seit November 2026 in der Karte (oben). An
+  Autobahnen und Bundesstraßen sind es vermutlich dieselben Stellen wie bei der BASt (nicht
+  geprüft) – vor einer BASt-Quelle abgleichen, sonst stehen sie doppelt in der Karte.
   - **BASt:** Stundenwerte 2003–2024 je Jahr und Straßenart, Rohdaten je Monat
     (`DZ_JJJJ_MM_Rohdaten.zip`, rund 80 MB) – ohne formale Lizenz, nur die Bitte um
     Quellenangabe.

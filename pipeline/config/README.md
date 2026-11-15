@@ -29,6 +29,9 @@ Datei am falschen Ort liegt.
   sortiert danach und gibt `nr` nicht weiter.
 - **`status`:** `live` = in der Karte, `research` = bekannt, der Adapter fehlt noch, `blocked` =
   nicht nutzbar (Grund in `notiz`).
+- **`ebene`** (nur Dauerzählstellen): `land` oder `bund`, wenn keine Kommune die Zählstellen
+  betreibt (etwa die Dauerzählstellen des Landes Baden-Württemberg). Solche Quellen gehören zu
+  keiner Kommune der Datenlage; ohne `ebene` gehört jede Dauer-Quelle zu mindestens einer.
 - **`land`** wählt Rechtslage, Ferien und Feiertage. Welche weiteren Schlüssel eine Quelle hat,
   bestimmt ihr Adapter (Kopfkommentar des Adapters); Lizenz und Lizenz-URL stehen an der Quelle oder
   je Lieferung, eine Einschränkung mit Hinweis (`hinweise`) – oder, wo es keine Lizenz gibt, der
@@ -102,8 +105,9 @@ Hinweise kommen über das Issue-Formular „Zählung melden“.
 - **`quellen`:** die Quellen der Familie, die die Kommune in die Karte bringen – bei
   `stand: in_karte` immer (nur Quellen mit Lizenz), bei `ohne_lizenz`, sobald die Werte in der
   Karte sind (nur Quellen ohne Lizenz), sonst nie. Jede Kurzzeit-Quelle gehört zu genau einer
-  Kommune, eine Dauer-Quelle zu mindestens einer (Bündel wie MobiData BW zu mehreren). Die Karte
-  findet so die Quellen einer Kommune („hinzoomen“) ohne Abgleich über den Namen.
+  Kommune, eine Dauer-Quelle zu mindestens einer (Bündel wie MobiData BW zu mehreren) – außer
+  Quellen des Landes oder Bundes (`ebene`), die zu keiner gehören. Die Karte findet so die
+  Quellen einer Kommune („hinzoomen“) ohne Abgleich über den Namen.
 - **Texte:** `was` (kurz), `situation` (die Lage ausführlich), `links` (`[Titel, URL]`);
   rechtliche Aussagen nur mit Beleg. Bei den Kurzzeitzählungen außerhalb der Karte dazu
   `empfehlung` und `weg`.
