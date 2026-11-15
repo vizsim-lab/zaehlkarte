@@ -10,7 +10,7 @@ test("Handy: Legende startet zugeklappt und klappt auf", async ({ page }) => {
   await expect(legende).toHaveClass(/collapsed/);
   await expect(page.locator("#fc-stellen")).toBeVisible();
   await expect(page.locator("#thema-chips")).toBeHidden();
-  await page.locator(".legend-title").click();
+  await page.locator(".legend-heading").click(); // auf den Titel: mittig im Streifen liegt DE|EN
   await expect(legende).not.toHaveClass(/collapsed/);
   await expect(page.locator("#thema-chips")).toBeVisible();
   const box = await legende.boundingBox();

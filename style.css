@@ -41,10 +41,20 @@ body {
 /* ────────────── Legend Style ────────────── */
 
 .legend-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--ui-text-strong);
+}
+
+/* Kleines Zeichen vor dem Titel: gezeichnet im 32er-Raster, 1 Einheit = 1 px (scharf). */
+.legend-logo {
+  flex: none;
+  width: 28px;
+  height: 26px;
 }
 
 .legend-subtext {
@@ -842,6 +852,11 @@ body {
      einzeilig, Zähler und Zoom nebeneinander. Am Desktop bleibt alles wie gehabt. */
   .legend-heading {
     font-size: 18px;
+  }
+
+  .legend-logo {
+    width: 24px;
+    height: 22px;
   }
 
   .legend-subtext br {
