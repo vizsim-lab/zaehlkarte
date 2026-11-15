@@ -578,12 +578,14 @@ robots.txt für alle Robots sperrt. Seitdem:
   „Tageswert der Quelle“ (Hover, Seitenleiste, Hinweis in der Legende), das CSV hat je Gruppe die
   Spalte `<gruppe>_tageswert_quelle` neben `<gruppe>_tagessumme`. Nie aus Wochen-, Monats- oder
   Jahreswerten. In der Karte: Augsburgs Radzählstationen (nur Tageswerte), Hamburg Kfz und Rad
-  (Layer „1-Tag“ seit 2020 vor den Stunden des Gedächtnisses, unten). Kandidaten: Leipzigs
-  Tageswerte (zwei Jahre; die Stelle Jahnallee hat nur sie), Würzburgs Passanten-Tagesdaten seit
+  (Layer „1-Tag“ seit 2020 vor den Stunden des Gedächtnisses, unten), Leipzig (zwei Jahre,
+  UTC-Tage; die Stelle Jahnallee hat nur sie). Kandidaten: Würzburgs Passanten-Tagesdaten seit
   2020, Planegg (Excel je Jahr, ohne Lizenz). Weichen die Tageswerte einer Quelle von der Summe
   ihrer Stunden ab (Leipzig, Hamburg), steht das mit Zahlen als Hinweis an der Quelle – geprüft
-  dort, wo es beides gibt (Hamburg: Tageswerte aus dem Werkzeug-Lauf gegen die Stunden des
-  Gedächtnisses).
+  dort, wo es beides gibt (Tageswerte aus dem Werkzeug-Lauf gegen die Stunden des Gedächtnisses).
+  **Den Tag der Quelle prüfen:** Ortstag (0–24 Uhr) oder UTC-Tag? Hamburg: Ortstag (phenomenonTime),
+  Leipzig: UTC-Tag (jeder Tageswert genau die Summe der 24 Stunden des UTC-Tags). Ein anderer Tag
+  als 0–24 Uhr steht im Verfahren und als Hinweis an der Quelle – nie umgerechnet.
 - **Berlin (in der Karte, `berlin_viz`):** öffentlicher Azure-Container
   `https://mdhopendata.blob.core.windows.net/verkehrsdetektion`, Liste per
   `?restype=container&comp=list` (Content-MD5 je Datei; `fetch` lädt nur Geändertes). Aus
@@ -857,9 +859,21 @@ robots.txt für alle Robots sperrt. Seitdem:
     - **Leipzig:** WFS `radverkehr_dauerzaehlstelle_anzahl_stunde_zeitreihe` (31 Tage, Ortszeit
       ohne Versatz) → Gedächtnis wie Hamburg (`dauer/gedaechtnis.py`). Am Rückstelltag 2 Uhr
       zweimal (objectid folgt der Zeit); 0 Uhr des Folgetags kommt mit der nächsten Lieferung
-      (`fme_tstamp`) erneut, oft mit anderem Wert → es gilt die jüngste Lieferung. Die Tageswerte
-      (zwei Jahre) passen meist nicht genau zur Summe der Stunden; Jahnallee ohne Stunden. Lage in
-      UTM 33 (`koordinaten.utm_zu_wgs84`).
+      (`fme_tstamp`) erneut, oft mit anderem Wert → es gilt die jüngste Lieferung. Lage in UTM 33
+      (`koordinaten.utm_zu_wgs84`).
+      **Tageswerte** (`…_anzahl_tag_zeitreihe`, „pro Tag der letzten 2 Jahre bis einschließlich
+      gestern“, seit #30 in der Karte): `phenomenontime` ein Datum, eine Lieferung je Tag mit dem
+      ganzen Fenster (am 15.11.2026: 14.11.2024–14.11.2026, 14.794 Zeilen, 26 Stellen, keine
+      Doppelten). Der Tag ist der **UTC-Tag**: An allen 927 Tagen, deren 24 UTC-Stunden im
+      Gedächtnis stehen, ist der Tageswert genau deren Summe (die Stunden kommen in Ortszeit) –
+      daher wichen sie von der Summe 0 bis 24 Uhr ab (61 % höchstens 1 %, 98 % höchstens 10 %).
+      In der Karte als Tageswert der Quelle vor der ersten gezählten Stunde (bis 07.10.2026), mit
+      dem UTC-Tag im Verfahren; Gedächtnis `tage_JJJJ.csv.gz`, weil das Fenster wandert. Jahnallee
+      (300023813): keine Stunden, Tageswerte bis 20.09.2026, seit November 2025 fast nur 0 (213
+      Nullen) – wie geliefert, Hinweis. Lizenz: die Seiten der Datensätze nennen keine, die
+      Metadaten je Ressource beider Datensätze dl-de/by-2-0 (`ergebnis/rad12/leipzig.txt`,
+      `werkzeug/dauer2`); die CKAN-API sperrt robots.txt inzwischen, die Seiten nicht
+      (`tools/seiten.py`, `ergebnis/leipzig_tage/` in `werkzeug/dauer`).
     - **Rostock** (Radmonitore, CC0): eine CSV mit 5,4 Mio. Viertelstunden seit 2012, Zeit
       „2013/07/15 22:15:00+02“, keine Doppelten. Holbeinplatz und Lange Straße laut Quelle Summen
       zweier Querschnitte; Saarplatz Lindenpark („Steuergerät“) liegt täglich etwas über Saarplatz
