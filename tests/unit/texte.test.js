@@ -76,8 +76,12 @@ test("Bezeichnungen des Modells folgen dem Sprachwechsel", () => {
 });
 
 test("jeder Datenlage-Stand der Kartendaten hat eine englische Bezeichnung", () => {
-  const manifest = JSON.parse(readFileSync(new URL("../../public/data/manifest.json", import.meta.url), "utf-8"));
-  assert.deepEqual(Object.keys(manifest.stand_en).sort(), Object.keys(manifest.stand).sort());
+  // die Namen der Stände kommen mit datenlage.json (Version 2: je Familie), nicht mit manifest.json –
+  // ein Manifest aus der Zeit vor Version 2 trug sie noch
+  const dl = JSON.parse(readFileSync(new URL("../../public/data/datenlage.json", import.meta.url), "utf-8"));
+  for (const familie of ["kurzzeit", "dauer"]) {
+    assert.deepEqual(Object.keys(dl.stand_en[familie]).sort(), Object.keys(dl.stand[familie]).sort(), familie);
+  }
 });
 
 test("die deutschen Standardtexte in index.html sind die aus texte.js", () => {
