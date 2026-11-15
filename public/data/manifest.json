@@ -634,15 +634,61 @@
    "lage": {
     "geokodiert": 1650
    }
+  },
+  {
+   "code": "kevelaer",
+   "name": "Kevelaer",
+   "land": "NW",
+   "traeger": "Stadt Kevelaer (Verkehrsuntersuchung im Kernort, büro stadtVerkehr)",
+   "art": "Videozählung am 17. und 19.09.2019: 16 Knotenpunkte (6–10 und 15–19 Uhr, Viertelstunden je Strom) und 13 Querschnitte (24 Stunden, Stundenwerte), nach Fahrzeugart, nur Kfz",
+   "weg": "offen auf kevelaer.de (PDF), ohne Lizenzangabe",
+   "portal": "https://www.kevelaer.de/kevelaer-de/startseite/leben-in-kevelaer/mobilitaet/verkehrsuntersuchung-2019-2024",
+   "lizenzen": [
+    {
+     "code": "kevelaer",
+     "titel": "Verkehrsuntersuchung Kernort – Ergebnisse der Verkehrszählungen 2019",
+     "herausgeber": "Stadt Kevelaer (Verkehrsuntersuchung im Kernort, büro stadtVerkehr)",
+     "lizenz": null,
+     "lizenz_url": null,
+     "herkunft_url": "https://www.kevelaer.de/kevelaer-de/startseite/leben-in-kevelaer/mobilitaet/verkehrsuntersuchung-2019-2024",
+     "ohne_lizenz": {
+      "herausgegeben": "als PDF „Ergebnisse der Verkehrszählungen 2019“ auf kevelaer.de (Seite „Verkehrsuntersuchung 2019–2024“), ohne Lizenzangabe",
+      "geprueft": "2026-11-15"
+     }
+    },
+    {
+     "code": "lage",
+     "titel": "Lage der Zählstellen (OpenStreetMap; Querschnitte nach dem Zählstellenplan im Zwischenbericht)",
+     "herausgeber": null,
+     "lizenz": "ODbL (abgeleitet aus OpenStreetMap)",
+     "lizenz_url": "https://opendatacommons.org/licenses/odbl/",
+     "herkunft_url": "https://www.openstreetmap.org/copyright"
+    }
+   ],
+   "stellen": 29,
+   "zaehlungen": 29,
+   "ohne_lage": 0,
+   "gruppen": {
+    "kfz": 29,
+    "sv": 29,
+    "rad": 0,
+    "fuss": 0,
+    "kind": 0
+   },
+   "von": 2019,
+   "bis": 2019,
+   "lage": {
+    "geokodiert": 29
+   }
   }
  ],
  "statistik": {
-  "stellen": 12691,
-  "zaehlungen": 30879,
+  "stellen": 12720,
+  "zaehlungen": 30908,
   "ohne_lage": 1548,
   "gruppen": {
-   "kfz": 20620,
-   "sv": 18247,
+   "kfz": 20649,
+   "sv": 18276,
    "rad": 18030,
    "fuss": 6016,
    "kind": 5618
@@ -650,7 +696,7 @@
   "von": 1983,
   "bis": 2026,
   "lage": {
-   "geokodiert": 22739,
+   "geokodiert": 22768,
    "gps": 4919,
    "uebertragen": 1412,
    "quelle": 1809
