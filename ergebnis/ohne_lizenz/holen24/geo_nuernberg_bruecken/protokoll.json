@@ -1,0 +1,10 @@
+[
+ {
+  "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22bridge%22%5D%5B%22highway%22%5D%2849.43%2C10.98%2C49.49%2C11.20%29%3Bout%20body%20geom%3B",
+  "fehler": "<HTTPError 504: 'Gateway Time-out'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22bridge%22%5D%5B%22highway%22%5D%2849.43%2C10.98%2C49.49%2C11.20%29%3Bout%20body%20geom%3B",
+  "fehler": "TimeoutError('The read operation timed out')"
+ }
+]

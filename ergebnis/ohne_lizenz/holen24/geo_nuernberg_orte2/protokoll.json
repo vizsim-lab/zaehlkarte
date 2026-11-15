@@ -1,0 +1,10 @@
+[
+ {
+  "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3B%28nwr%5B%22name%22~%22Tor%24%7CTorturm%7CMetro%7CSportplatz%7COpernhaus%7CStaatstheater%7CVerkehrsmuseum%7CDB%20Museum%7CHallenbad%7CS%C3%BCdkaserne%7CSchleuse%7CPaketpost%7CLeiblsteg%7CSandreuth%7CSchloss%20Stein%7CFaber-Castell%7CBrautkehre%7CTal%C3%BCbergang%7CMuggenhof%7CKatzwang%7CFischbach%7CNeunhof%7CFinkenbrunn%7CHahnenbalz%7CBirnthon%7CLangwasser%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bnode%5B%22highway%22%3D%22motorway_junction%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3B%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Time-out'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3B%28nwr%5B%22name%22~%22Tor%24%7CTorturm%7CMetro%7CSportplatz%7COpernhaus%7CStaatstheater%7CVerkehrsmuseum%7CDB%20Museum%7CHallenbad%7CS%C3%BCdkaserne%7CSchleuse%7CPaketpost%7CLeiblsteg%7CSandreuth%7CSchloss%20Stein%7CFaber-Castell%7CBrautkehre%7CTal%C3%BCbergang%7CMuggenhof%7CKatzwang%7CFischbach%7CNeunhof%7CFinkenbrunn%7CHahnenbalz%7CBirnthon%7CLangwasser%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bnode%5B%22highway%22%3D%22motorway_junction%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3B%29%3Bout%20center%20tags%3B",
+  "fehler": "<HTTPError 504: 'Gateway Timeout'>"
+ }
+]

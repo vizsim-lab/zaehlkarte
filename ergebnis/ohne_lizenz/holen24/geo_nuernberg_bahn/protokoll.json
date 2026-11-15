@@ -1,0 +1,14 @@
+[
+ {
+  "url": "https://maps.mail.ru/osm/tools/overpass/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Clight_rail%7Csubway%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20tags%20geom%3B",
+  "fehler": "<HTTPError 504: 'Gateway Time-out'>"
+ },
+ {
+  "url": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Clight_rail%7Csubway%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20tags%20geom%3B",
+  "ende": "https://overpass.private.coffee/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3Bway%5B%22railway%22~%22%5E%28rail%7Clight_rail%7Csubway%29%24%22%5D%2849.32%2C10.95%2C49.56%2C11.33%29%3Bout%20tags%20geom%3B",
+  "typ": "application/json",
+  "bytes": 3974791,
+  "datei": "06_interpreter.json",
+  "sha256": "5f0ebe58b9d4e0dfcdeb28f827ba7a0a23976b681155bf4c9c34288f1b66bb48"
+ }
+]
