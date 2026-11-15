@@ -13,6 +13,18 @@ test("lädt ohne Fehler und zeigt Stellen", async ({ page }) => {
     .toBeGreaterThan(0);
 });
 
+test("Kopfzeile trägt das Zeichen, Favicons und Logo liegen bereit", async ({ page }) => {
+  await oeffne(page);
+  await expect(page.locator(".legend-heading .legend-logo")).toBeVisible();
+  await expect(page.locator(".legend-heading")).toHaveText("Zählkarte"); // Zeichen ohne eigenen Text
+  const links = await page.locator('link[rel="icon"], link[rel="apple-touch-icon"]')
+    .evaluateAll((ls) => ls.map((l) => l.href));
+  expect(links).toHaveLength(3);
+  for (const url of [...links, new URL("logo/zaehlkarte-logo.svg", page.url()).href]) {
+    expect((await page.request.get(url)).ok(), url).toBe(true);
+  }
+});
+
 test("Verkehrsart und Darstellung wechseln Legende und Link", async ({ page }) => {
   await oeffne(page);
   await page.locator('#thema-chips [data-thema="rad"]').click();

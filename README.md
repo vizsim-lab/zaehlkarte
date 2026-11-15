@@ -1,3 +1,8 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="public/logo/zaehlkarte-signet-weiss.svg">
+  <img src="public/logo/zaehlkarte-signet.svg" width="220" alt="Logo der Zählkarte: oben der Tagesgang eines Werktags, unten der eines Wochenendtags, dazwischen eine Straße mit Fußgänger, Rad und Auto">
+</picture>
+
 # Zählkarte – Verkehrszählungen je Stunde und Tag
 
 **Karte:** https://vizsim-lab.github.io/zaehlkarte/
@@ -273,6 +278,7 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
                             bonn_rad, duesseldorf_rad, leipzig_rad, rostock_rad), eigener Bau
 public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
 public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
+public/logo/         Logo, Signet und kleines Zeichen (SVG); Favicons und App-Icon in public/
 index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
   js/sprache/          Texte der Oberfläche DE/EN (texte.js) und der Umschalter
 tests/               unit/ (node --test), web/ (Playwright gegen den Build)
@@ -322,6 +328,15 @@ Ebenso, wenn die Schulferien eines Landes in drei Monaten enden (`zaehlkarte kal
 und Feiertage gibt es für alle 16 Länder, aus den KMK-Ferienkalendern bis 2027/28.
 
 Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
+
+## Logo
+
+Oben der Tagesgang eines Werktags mit Morgen- und Abendspitze, unten der eines Wochenendtags,
+dazwischen die Straße mit Fußgänger, Rad und Auto – stilisiert, keine Messwerte. In
+`public/logo/`: Logo mit Schriftzug, Signet und kleines Zeichen, je auch in Weiß
+(`-weiss.svg`); Favicons und App-Icon in `public/`. Unter etwa 64 px das kleine Zeichen
+nehmen, wie Favicon und Kopfzeile der Karte: Dort sind Fußgänger, Rad und Auto nicht mehr zu
+erkennen. Schrift: Inter Display SemiBold (SIL Open Font License 1.1), in Pfade umgewandelt.
 
 ## Lizenz
 

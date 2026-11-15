@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Zählkarte – Verkehrszählungen je Stunde und Tag</title>
   <meta name="description" content="Verkehrszählungen je Stunde und Tag auf einer Karte, gleich, wer zählt: Kurzzeitzählungen (Kfz, Schwerverkehr, Rad, Fuß) mit dem Tagesgang jeder Zählung, Dauerzählstellen mit Tagessummen und Stundenwerten – und wo es solche Daten gibt.">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="./style.css">
   <script type="module" src="./main.js"></script>
 </head>
@@ -18,7 +21,12 @@
     <div class="legend-header legend-title" data-toggle="legend-root">
       <div class="legend-kopf">
         <div class="legend-kopfzeile">
-          <div class="legend-heading">Zählkarte</div>
+          <div class="legend-heading">
+            <!-- Kleines Zeichen (wie das Favicon): oben ein Werktag, unten ein Wochenendtag, dazwischen
+                 die Straße. Das große Logo mit Fuß, Rad und Auto liegt in public/logo/. -->
+            <svg class="legend-logo" viewBox="2 3 28 26" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M3 13a1 1 0 0 1 2 0v0a1 1 0 0 1-2 0zM7 13a1 1 0 0 1 2 0v0a1 1 0 0 1-2 0zM11 5a1 1 0 0 1 2 0v8a1 1 0 0 1-2 0zM15 9a1 1 0 0 1 2 0v4a1 1 0 0 1-2 0zM19 4a1 1 0 0 1 2 0v9a1 1 0 0 1-2 0zM23 6a1 1 0 0 1 2 0v7a1 1 0 0 1-2 0zM27 12a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0zM3 21a1 1 0 0 1 2 0v0a1 1 0 0 1-2 0zM7 21a1 1 0 0 1 2 0v0a1 1 0 0 1-2 0zM11 21a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0zM15 21a1 1 0 0 1 2 0v6a1 1 0 0 1-2 0zM19 21a1 1 0 0 1 2 0v7a1 1 0 0 1-2 0zM23 21a1 1 0 0 1 2 0v5a1 1 0 0 1-2 0zM27 21a1 1 0 0 1 2 0v1a1 1 0 0 1-2 0zM3 15h26a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zM5 16h4v2h-4zM11 16h4v2h-4zM17 16h4v2h-4zM23 16h4v2h-4z"/></svg>
+            Zählkarte
+          </div>
           <div id="sprachwahl" class="sprachwahl" role="group" aria-label="Sprache wählen" data-i18n-attr="aria-label:sprache.wahl">
             <button type="button" class="is-active" data-sprache="de" lang="de" title="Deutsch" aria-pressed="true">DE</button>
             <button type="button" data-sprache="en" lang="en" title="English" aria-pressed="false">EN</button>
