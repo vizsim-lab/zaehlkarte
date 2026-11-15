@@ -1,0 +1,4460 @@
+[
+ {
+  "ags": "08115",
+  "name": "Böblingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-boeblingen.de/",
+   "https://www.kreis-boeblingen.de/",
+   "https://www.lk-boeblingen.de/",
+   "https://www.lra-boeblingen.de/",
+   "https://www.boeblingen.de/",
+   "https://www.landkreisboeblingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 26,
+  "herkunft": {
+   "https://www.landkreis-boeblingen.de/": "geraten",
+   "https://www.kreis-boeblingen.de/": "geraten",
+   "https://www.lk-boeblingen.de/": "geraten",
+   "https://www.lra-boeblingen.de/": "geraten",
+   "https://www.boeblingen.de/": "geraten",
+   "https://www.landkreisboeblingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08116",
+  "name": "Esslingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-esslingen.de/",
+   "https://www.kreis-esslingen.de/",
+   "https://www.lk-esslingen.de/",
+   "https://www.lra-esslingen.de/",
+   "https://www.esslingen.de/",
+   "https://www.landkreisesslingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 44,
+  "herkunft": {
+   "https://www.landkreis-esslingen.de/": "geraten",
+   "https://www.kreis-esslingen.de/": "geraten",
+   "https://www.lk-esslingen.de/": "geraten",
+   "https://www.lra-esslingen.de/": "geraten",
+   "https://www.esslingen.de/": "geraten",
+   "https://www.landkreisesslingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08117",
+  "name": "Göppingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-goeppingen.de/",
+   "https://www.kreis-goeppingen.de/",
+   "https://www.lk-goeppingen.de/",
+   "https://www.lra-goeppingen.de/",
+   "https://www.goeppingen.de/",
+   "https://www.landkreisgoeppingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 38,
+  "herkunft": {
+   "https://www.landkreis-goeppingen.de/": "geraten",
+   "https://www.kreis-goeppingen.de/": "geraten",
+   "https://www.lk-goeppingen.de/": "geraten",
+   "https://www.lra-goeppingen.de/": "geraten",
+   "https://www.goeppingen.de/": "geraten",
+   "https://www.landkreisgoeppingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08118",
+  "name": "Ludwigsburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ludwigsburg.de/",
+   "https://www.kreis-ludwigsburg.de/",
+   "https://www.lk-ludwigsburg.de/",
+   "https://www.lra-ludwigsburg.de/",
+   "https://www.ludwigsburg.de/",
+   "https://www.landkreisludwigsburg.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 39,
+  "herkunft": {
+   "https://www.landkreis-ludwigsburg.de/": "vorher_oder_liste",
+   "https://www.kreis-ludwigsburg.de/": "geraten",
+   "https://www.lk-ludwigsburg.de/": "geraten",
+   "https://www.lra-ludwigsburg.de/": "geraten",
+   "https://www.ludwigsburg.de/": "geraten",
+   "https://www.landkreisludwigsburg.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08119",
+  "name": "Rems-Murr-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.rems-murr-kreis.de/startseite",
+   "https://www.rems-murr-kreis.de",
+   "https://www.landkreis-rems-murr.de/",
+   "https://www.kreis-rems-murr.de/",
+   "https://www.lk-rems-murr.de/",
+   "https://www.lra-rems-murr.de/",
+   "https://www.rems-murr.de/",
+   "https://www.landkreisremsmurr.de/",
+   "https://www.rems-murr-kreis.de/",
+   "https://www.remsmurrkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 31,
+  "herkunft": {
+   "https://www.landkreis-rems-murr.de/": "geraten",
+   "https://www.kreis-rems-murr.de/": "geraten",
+   "https://www.lk-rems-murr.de/": "geraten",
+   "https://www.lra-rems-murr.de/": "geraten",
+   "https://www.rems-murr.de/": "geraten",
+   "https://www.landkreisremsmurr.de/": "geraten",
+   "https://www.rems-murr-kreis.de/": "geraten",
+   "https://www.remsmurrkreis.de/": "geraten",
+   "https://www.rems-murr-kreis.de/startseite": "vorher_oder_liste",
+   "https://www.rems-murr-kreis.de": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08125",
+  "name": "Heilbronn",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-heilbronn.de/",
+   "https://www.kreis-heilbronn.de/",
+   "https://www.lk-heilbronn.de/",
+   "https://www.lra-heilbronn.de/",
+   "https://www.heilbronn.de/",
+   "https://www.landkreisheilbronn.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 46,
+  "herkunft": {
+   "https://www.landkreis-heilbronn.de/": "vorher_oder_liste",
+   "https://www.kreis-heilbronn.de/": "geraten",
+   "https://www.lk-heilbronn.de/": "geraten",
+   "https://www.lra-heilbronn.de/": "geraten",
+   "https://www.heilbronn.de/": "geraten",
+   "https://www.landkreisheilbronn.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08126",
+  "name": "Hohenlohekreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-hohenlohe.de/",
+   "https://www.kreis-hohenlohe.de/",
+   "https://www.lk-hohenlohe.de/",
+   "https://www.lra-hohenlohe.de/",
+   "https://www.hohenlohe.de/",
+   "https://www.landkreishohenlohe.de/",
+   "https://www.hohenlohekreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 16,
+  "herkunft": {
+   "https://www.landkreis-hohenlohe.de/": "geraten",
+   "https://www.kreis-hohenlohe.de/": "geraten",
+   "https://www.lk-hohenlohe.de/": "geraten",
+   "https://www.lra-hohenlohe.de/": "geraten",
+   "https://www.hohenlohe.de/": "geraten",
+   "https://www.landkreishohenlohe.de/": "geraten",
+   "https://www.hohenlohekreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08127",
+  "name": "Schwäbisch Hall",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-schwaebisch-hall.de/",
+   "https://www.kreis-schwaebisch-hall.de/",
+   "https://www.lk-schwaebisch-hall.de/",
+   "https://www.lra-schwaebisch-hall.de/",
+   "https://www.schwaebisch-hall.de/",
+   "https://www.landkreisschwaebischhall.de/",
+   "https://www.schwaebischhall.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 30,
+  "herkunft": {
+   "https://www.landkreis-schwaebisch-hall.de/": "geraten",
+   "https://www.kreis-schwaebisch-hall.de/": "geraten",
+   "https://www.lk-schwaebisch-hall.de/": "geraten",
+   "https://www.lra-schwaebisch-hall.de/": "geraten",
+   "https://www.schwaebisch-hall.de/": "geraten",
+   "https://www.landkreisschwaebischhall.de/": "geraten",
+   "https://www.schwaebischhall.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08128",
+  "name": "Main-Tauber-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-main-tauber.de/",
+   "https://www.kreis-main-tauber.de/",
+   "https://www.lk-main-tauber.de/",
+   "https://www.lra-main-tauber.de/",
+   "https://www.main-tauber.de/",
+   "https://www.landkreismaintauber.de/",
+   "https://www.main-tauber-kreis.de/",
+   "https://www.maintauberkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 18,
+  "herkunft": {
+   "https://www.landkreis-main-tauber.de/": "geraten",
+   "https://www.kreis-main-tauber.de/": "geraten",
+   "https://www.lk-main-tauber.de/": "geraten",
+   "https://www.lra-main-tauber.de/": "geraten",
+   "https://www.main-tauber.de/": "geraten",
+   "https://www.landkreismaintauber.de/": "geraten",
+   "https://www.main-tauber-kreis.de/": "geraten",
+   "https://www.maintauberkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08135",
+  "name": "Heidenheim",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-heidenheim.de/",
+   "https://www.kreis-heidenheim.de/",
+   "https://www.lk-heidenheim.de/",
+   "https://www.lra-heidenheim.de/",
+   "https://www.heidenheim.de/",
+   "https://www.landkreisheidenheim.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 11,
+  "herkunft": {
+   "https://www.landkreis-heidenheim.de/": "geraten",
+   "https://www.kreis-heidenheim.de/": "geraten",
+   "https://www.lk-heidenheim.de/": "geraten",
+   "https://www.lra-heidenheim.de/": "geraten",
+   "https://www.heidenheim.de/": "geraten",
+   "https://www.landkreisheidenheim.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08136",
+  "name": "Ostalbkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ostalb.de/",
+   "https://www.kreis-ostalb.de/",
+   "https://www.lk-ostalb.de/",
+   "https://www.lra-ostalb.de/",
+   "https://www.ostalb.de/",
+   "https://www.landkreisostalb.de/",
+   "https://www.ostalbkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 42,
+  "herkunft": {
+   "https://www.landkreis-ostalb.de/": "geraten",
+   "https://www.kreis-ostalb.de/": "geraten",
+   "https://www.lk-ostalb.de/": "geraten",
+   "https://www.lra-ostalb.de/": "geraten",
+   "https://www.ostalb.de/": "geraten",
+   "https://www.landkreisostalb.de/": "geraten",
+   "https://www.ostalbkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08215",
+  "name": "Karlsruhe",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-karlsruhe.de/",
+   "https://www.kreis-karlsruhe.de/",
+   "https://www.lk-karlsruhe.de/",
+   "https://www.lra-karlsruhe.de/",
+   "https://www.karlsruhe.de/",
+   "https://www.landkreiskarlsruhe.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 32,
+  "herkunft": {
+   "https://www.landkreis-karlsruhe.de/": "vorher_oder_liste",
+   "https://www.kreis-karlsruhe.de/": "geraten",
+   "https://www.lk-karlsruhe.de/": "geraten",
+   "https://www.lra-karlsruhe.de/": "geraten",
+   "https://www.karlsruhe.de/": "geraten",
+   "https://www.landkreiskarlsruhe.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08216",
+  "name": "Rastatt",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-rastatt.de/startseite",
+   "https://www.landkreis-rastatt.de/",
+   "https://www.kreis-rastatt.de/",
+   "https://www.lk-rastatt.de/",
+   "https://www.lra-rastatt.de/",
+   "https://www.rastatt.de/",
+   "https://www.landkreisrastatt.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-rastatt.de/": "geraten",
+   "https://www.kreis-rastatt.de/": "geraten",
+   "https://www.lk-rastatt.de/": "geraten",
+   "https://www.lra-rastatt.de/": "geraten",
+   "https://www.rastatt.de/": "geraten",
+   "https://www.landkreisrastatt.de/": "geraten",
+   "https://www.landkreis-rastatt.de/startseite": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08225",
+  "name": "Neckar-Odenwald-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-neckar-odenwald.de/",
+   "https://www.kreis-neckar-odenwald.de/",
+   "https://www.lk-neckar-odenwald.de/",
+   "https://www.lra-neckar-odenwald.de/",
+   "https://www.neckar-odenwald.de/",
+   "https://www.landkreisneckarodenwald.de/",
+   "https://www.neckar-odenwald-kreis.de/",
+   "https://www.neckarodenwaldkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 27,
+  "herkunft": {
+   "https://www.landkreis-neckar-odenwald.de/": "geraten",
+   "https://www.kreis-neckar-odenwald.de/": "geraten",
+   "https://www.lk-neckar-odenwald.de/": "geraten",
+   "https://www.lra-neckar-odenwald.de/": "geraten",
+   "https://www.neckar-odenwald.de/": "geraten",
+   "https://www.landkreisneckarodenwald.de/": "geraten",
+   "https://www.neckar-odenwald-kreis.de/": "geraten",
+   "https://www.neckarodenwaldkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08226",
+  "name": "Rhein-Neckar-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://landkreis-rhein-neckar-kreis.de/",
+   "https://www.landkreis-rhein-neckar.de/",
+   "https://www.kreis-rhein-neckar.de/",
+   "https://www.lk-rhein-neckar.de/",
+   "https://www.lra-rhein-neckar.de/",
+   "https://www.rhein-neckar.de/",
+   "https://www.landkreisrheinneckar.de/",
+   "https://www.rhein-neckar-kreis.de/",
+   "https://www.rheinneckarkreis.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 54,
+  "herkunft": {
+   "https://www.landkreis-rhein-neckar.de/": "geraten",
+   "https://www.kreis-rhein-neckar.de/": "geraten",
+   "https://www.lk-rhein-neckar.de/": "geraten",
+   "https://www.lra-rhein-neckar.de/": "geraten",
+   "https://www.rhein-neckar.de/": "geraten",
+   "https://www.landkreisrheinneckar.de/": "geraten",
+   "https://www.rhein-neckar-kreis.de/": "geraten",
+   "https://www.rheinneckarkreis.de/": "geraten",
+   "https://landkreis-rhein-neckar-kreis.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08235",
+  "name": "Calw",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-calw.de/",
+   "https://www.landkreis-calw.de/",
+   "https://www.lk-calw.de/",
+   "https://www.lra-calw.de/",
+   "https://www.calw.de/",
+   "https://www.landkreiscalw.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-calw.de/": "geraten",
+   "https://www.kreis-calw.de/": "vorher_oder_liste",
+   "https://www.lk-calw.de/": "geraten",
+   "https://www.lra-calw.de/": "geraten",
+   "https://www.calw.de/": "geraten",
+   "https://www.landkreiscalw.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08236",
+  "name": "Enzkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-enz.de/",
+   "https://www.kreis-enz.de/",
+   "https://www.lk-enz.de/",
+   "https://www.lra-enz.de/",
+   "https://www.enz.de/",
+   "https://www.landkreisenz.de/",
+   "https://www.enzkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 28,
+  "herkunft": {
+   "https://www.landkreis-enz.de/": "geraten",
+   "https://www.kreis-enz.de/": "geraten",
+   "https://www.lk-enz.de/": "geraten",
+   "https://www.lra-enz.de/": "geraten",
+   "https://www.enz.de/": "geraten",
+   "https://www.landkreisenz.de/": "geraten",
+   "https://www.enzkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08237",
+  "name": "Freudenstadt",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-fds.de/startseite",
+   "https://www.landkreis-freudenstadt.de/",
+   "https://www.kreis-freudenstadt.de/",
+   "https://www.lk-freudenstadt.de/",
+   "https://www.lra-freudenstadt.de/",
+   "https://www.freudenstadt.de/",
+   "https://www.landkreisfreudenstadt.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 16,
+  "herkunft": {
+   "https://www.landkreis-freudenstadt.de/": "geraten",
+   "https://www.kreis-freudenstadt.de/": "geraten",
+   "https://www.lk-freudenstadt.de/": "geraten",
+   "https://www.lra-freudenstadt.de/": "geraten",
+   "https://www.freudenstadt.de/": "geraten",
+   "https://www.landkreisfreudenstadt.de/": "geraten",
+   "https://www.kreis-fds.de/startseite": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08315",
+  "name": "Breisgau-Hochschwarzwald",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.breisgau-hochschwarzwald.de/start",
+   "https://www.breisgau-hochschwarzwald.de/",
+   "https://www.landkreis-breisgau-hochschwarzwald.de/",
+   "https://www.kreis-breisgau-hochschwarzwald.de/",
+   "https://www.lk-breisgau-hochschwarzwald.de/",
+   "https://www.lra-breisgau-hochschwarzwald.de/",
+   "https://www.landkreisbreisgauhochschwarzwald.de/",
+   "https://www.breisgauhochschwarzwald.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 50,
+  "herkunft": {
+   "https://www.landkreis-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.kreis-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.lk-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.lra-breisgau-hochschwarzwald.de/": "geraten",
+   "https://www.breisgau-hochschwarzwald.de/": "vorher_oder_liste",
+   "https://www.landkreisbreisgauhochschwarzwald.de/": "geraten",
+   "https://www.breisgauhochschwarzwald.de/": "geraten",
+   "https://www.breisgau-hochschwarzwald.de/start": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08316",
+  "name": "Emmendingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-emmendingen.de/startseite",
+   "https://www.landkreis-emmendingen.de/",
+   "https://www.kreis-emmendingen.de/",
+   "https://www.lk-emmendingen.de/",
+   "https://www.lra-emmendingen.de/",
+   "https://www.emmendingen.de/",
+   "https://www.landkreisemmendingen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 24,
+  "herkunft": {
+   "https://www.landkreis-emmendingen.de/": "geraten",
+   "https://www.kreis-emmendingen.de/": "geraten",
+   "https://www.lk-emmendingen.de/": "geraten",
+   "https://www.lra-emmendingen.de/": "geraten",
+   "https://www.emmendingen.de/": "geraten",
+   "https://www.landkreisemmendingen.de/": "geraten",
+   "https://www.landkreis-emmendingen.de/startseite": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08317",
+  "name": "Ortenaukreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ortenau.de/",
+   "https://www.kreis-ortenau.de/",
+   "https://www.lk-ortenau.de/",
+   "https://www.lra-ortenau.de/",
+   "https://www.ortenau.de/",
+   "https://www.landkreisortenau.de/",
+   "https://www.ortenaukreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 52,
+  "herkunft": {
+   "https://www.landkreis-ortenau.de/": "geraten",
+   "https://www.kreis-ortenau.de/": "geraten",
+   "https://www.lk-ortenau.de/": "geraten",
+   "https://www.lra-ortenau.de/": "geraten",
+   "https://www.ortenau.de/": "geraten",
+   "https://www.landkreisortenau.de/": "geraten",
+   "https://www.ortenaukreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08325",
+  "name": "Rottweil",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-rottweil.de/willkommen",
+   "https://www.landkreis-rottweil.de/",
+   "https://www.kreis-rottweil.de/",
+   "https://www.lk-rottweil.de/",
+   "https://www.lra-rottweil.de/",
+   "https://www.rottweil.de/",
+   "https://www.landkreisrottweil.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 21,
+  "herkunft": {
+   "https://www.landkreis-rottweil.de/": "geraten",
+   "https://www.kreis-rottweil.de/": "geraten",
+   "https://www.lk-rottweil.de/": "geraten",
+   "https://www.lra-rottweil.de/": "geraten",
+   "https://www.rottweil.de/": "geraten",
+   "https://www.landkreisrottweil.de/": "geraten",
+   "https://www.landkreis-rottweil.de/willkommen": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08326",
+  "name": "Schwarzwald-Baar-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-schwarzwald-baar.de/",
+   "https://www.kreis-schwarzwald-baar.de/",
+   "https://www.lk-schwarzwald-baar.de/",
+   "https://www.lra-schwarzwald-baar.de/",
+   "https://www.schwarzwald-baar.de/",
+   "https://www.landkreisschwarzwaldbaar.de/",
+   "https://www.schwarzwald-baar-kreis.de/",
+   "https://www.schwarzwaldbaarkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 20,
+  "herkunft": {
+   "https://www.landkreis-schwarzwald-baar.de/": "geraten",
+   "https://www.kreis-schwarzwald-baar.de/": "geraten",
+   "https://www.lk-schwarzwald-baar.de/": "geraten",
+   "https://www.lra-schwarzwald-baar.de/": "geraten",
+   "https://www.schwarzwald-baar.de/": "geraten",
+   "https://www.landkreisschwarzwaldbaar.de/": "geraten",
+   "https://www.schwarzwald-baar-kreis.de/": "geraten",
+   "https://www.schwarzwaldbaarkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08327",
+  "name": "Tuttlingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-tuttlingen.de/",
+   "https://www.kreis-tuttlingen.de/",
+   "https://www.lk-tuttlingen.de/",
+   "https://www.lra-tuttlingen.de/",
+   "https://www.tuttlingen.de/",
+   "https://www.landkreistuttlingen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 35,
+  "herkunft": {
+   "https://www.landkreis-tuttlingen.de/": "vorher_oder_liste",
+   "https://www.kreis-tuttlingen.de/": "geraten",
+   "https://www.lk-tuttlingen.de/": "geraten",
+   "https://www.lra-tuttlingen.de/": "geraten",
+   "https://www.tuttlingen.de/": "geraten",
+   "https://www.landkreistuttlingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08335",
+  "name": "Konstanz",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-konstanz.de/",
+   "https://www.kreis-konstanz.de/",
+   "https://www.lk-konstanz.de/",
+   "https://www.lra-konstanz.de/",
+   "https://www.konstanz.de/",
+   "https://www.landkreiskonstanz.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-konstanz.de/": "geraten",
+   "https://www.kreis-konstanz.de/": "geraten",
+   "https://www.lk-konstanz.de/": "geraten",
+   "https://www.lra-konstanz.de/": "geraten",
+   "https://www.konstanz.de/": "geraten",
+   "https://www.landkreiskonstanz.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08336",
+  "name": "Lörrach",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.loerrach-landkreis.de/willkommen",
+   "https://www.loerrach-landkreis.de/",
+   "https://www.landkreis-loerrach.de/",
+   "https://www.kreis-loerrach.de/",
+   "https://www.lk-loerrach.de/",
+   "https://www.lra-loerrach.de/",
+   "https://www.loerrach.de/",
+   "https://www.landkreisloerrach.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 35,
+  "herkunft": {
+   "https://www.landkreis-loerrach.de/": "geraten",
+   "https://www.kreis-loerrach.de/": "geraten",
+   "https://www.lk-loerrach.de/": "geraten",
+   "https://www.lra-loerrach.de/": "geraten",
+   "https://www.loerrach.de/": "geraten",
+   "https://www.landkreisloerrach.de/": "geraten",
+   "https://www.loerrach-landkreis.de/willkommen": "vorher_oder_liste",
+   "https://www.loerrach-landkreis.de/": "vorher_oder_liste"
+  }
+ },
+ {
+  "ags": "08337",
+  "name": "Waldshut",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-waldshut.de/",
+   "https://www.kreis-waldshut.de/",
+   "https://www.lk-waldshut.de/",
+   "https://www.lra-waldshut.de/",
+   "https://www.waldshut.de/",
+   "https://www.landkreiswaldshut.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 32,
+  "herkunft": {
+   "https://www.landkreis-waldshut.de/": "vorher_oder_liste",
+   "https://www.kreis-waldshut.de/": "geraten",
+   "https://www.lk-waldshut.de/": "geraten",
+   "https://www.lra-waldshut.de/": "geraten",
+   "https://www.waldshut.de/": "geraten",
+   "https://www.landkreiswaldshut.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08415",
+  "name": "Reutlingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.kreis-reutlingen.de/",
+   "https://www.landkreis-reutlingen.de/",
+   "https://www.lk-reutlingen.de/",
+   "https://www.lra-reutlingen.de/",
+   "https://www.reutlingen.de/",
+   "https://www.landkreisreutlingen.de/"
+  ],
+  "vorher": "erreicht",
+  "gemeinden": 27,
+  "herkunft": {
+   "https://www.landkreis-reutlingen.de/": "geraten",
+   "https://www.kreis-reutlingen.de/": "vorher_oder_liste",
+   "https://www.lk-reutlingen.de/": "geraten",
+   "https://www.lra-reutlingen.de/": "geraten",
+   "https://www.reutlingen.de/": "geraten",
+   "https://www.landkreisreutlingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08416",
+  "name": "Tübingen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-tuebingen.de/",
+   "https://www.kreis-tuebingen.de/",
+   "https://www.lk-tuebingen.de/",
+   "https://www.lra-tuebingen.de/",
+   "https://www.tuebingen.de/",
+   "https://www.landkreistuebingen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 15,
+  "herkunft": {
+   "https://www.landkreis-tuebingen.de/": "geraten",
+   "https://www.kreis-tuebingen.de/": "geraten",
+   "https://www.lk-tuebingen.de/": "geraten",
+   "https://www.lra-tuebingen.de/": "geraten",
+   "https://www.tuebingen.de/": "geraten",
+   "https://www.landkreistuebingen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08417",
+  "name": "Zollernalbkreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-zollernalb.de/",
+   "https://www.kreis-zollernalb.de/",
+   "https://www.lk-zollernalb.de/",
+   "https://www.lra-zollernalb.de/",
+   "https://www.zollernalb.de/",
+   "https://www.landkreiszollernalb.de/",
+   "https://www.zollernalbkreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-zollernalb.de/": "geraten",
+   "https://www.kreis-zollernalb.de/": "geraten",
+   "https://www.lk-zollernalb.de/": "geraten",
+   "https://www.lra-zollernalb.de/": "geraten",
+   "https://www.zollernalb.de/": "geraten",
+   "https://www.landkreiszollernalb.de/": "geraten",
+   "https://www.zollernalbkreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08425",
+  "name": "Alb-Donau-Kreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-alb-donau.de/",
+   "https://www.kreis-alb-donau.de/",
+   "https://www.lk-alb-donau.de/",
+   "https://www.lra-alb-donau.de/",
+   "https://www.alb-donau.de/",
+   "https://www.landkreisalbdonau.de/",
+   "https://www.alb-donau-kreis.de/",
+   "https://www.albdonaukreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 55,
+  "herkunft": {
+   "https://www.landkreis-alb-donau.de/": "geraten",
+   "https://www.kreis-alb-donau.de/": "geraten",
+   "https://www.lk-alb-donau.de/": "geraten",
+   "https://www.lra-alb-donau.de/": "geraten",
+   "https://www.alb-donau.de/": "geraten",
+   "https://www.landkreisalbdonau.de/": "geraten",
+   "https://www.alb-donau-kreis.de/": "geraten",
+   "https://www.albdonaukreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08426",
+  "name": "Biberach",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-biberach.de/",
+   "https://www.kreis-biberach.de/",
+   "https://www.lk-biberach.de/",
+   "https://www.lra-biberach.de/",
+   "https://www.biberach.de/",
+   "https://www.landkreisbiberach.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 45,
+  "herkunft": {
+   "https://www.landkreis-biberach.de/": "geraten",
+   "https://www.kreis-biberach.de/": "geraten",
+   "https://www.lk-biberach.de/": "geraten",
+   "https://www.lra-biberach.de/": "geraten",
+   "https://www.biberach.de/": "geraten",
+   "https://www.landkreisbiberach.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08435",
+  "name": "Bodenseekreis",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-bodensee.de/",
+   "https://www.kreis-bodensee.de/",
+   "https://www.lk-bodensee.de/",
+   "https://www.lra-bodensee.de/",
+   "https://www.bodensee.de/",
+   "https://www.landkreisbodensee.de/",
+   "https://www.bodenseekreis.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 23,
+  "herkunft": {
+   "https://www.landkreis-bodensee.de/": "geraten",
+   "https://www.kreis-bodensee.de/": "geraten",
+   "https://www.lk-bodensee.de/": "geraten",
+   "https://www.lra-bodensee.de/": "geraten",
+   "https://www.bodensee.de/": "geraten",
+   "https://www.landkreisbodensee.de/": "geraten",
+   "https://www.bodenseekreis.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08436",
+  "name": "Ravensburg",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-ravensburg.de/",
+   "https://www.kreis-ravensburg.de/",
+   "https://www.lk-ravensburg.de/",
+   "https://www.lra-ravensburg.de/",
+   "https://www.ravensburg.de/",
+   "https://www.landkreisravensburg.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 39,
+  "herkunft": {
+   "https://www.landkreis-ravensburg.de/": "geraten",
+   "https://www.kreis-ravensburg.de/": "geraten",
+   "https://www.lk-ravensburg.de/": "geraten",
+   "https://www.lra-ravensburg.de/": "geraten",
+   "https://www.ravensburg.de/": "geraten",
+   "https://www.landkreisravensburg.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08437",
+  "name": "Sigmaringen",
+  "art": "kreis",
+  "tk": "44",
+  "web": [
+   "https://www.landkreis-sigmaringen.de/",
+   "https://www.kreis-sigmaringen.de/",
+   "https://www.lk-sigmaringen.de/",
+   "https://www.lra-sigmaringen.de/",
+   "https://www.sigmaringen.de/",
+   "https://www.landkreissigmaringen.de/"
+  ],
+  "vorher": "nicht_erreicht",
+  "gemeinden": 25,
+  "herkunft": {
+   "https://www.landkreis-sigmaringen.de/": "geraten",
+   "https://www.kreis-sigmaringen.de/": "geraten",
+   "https://www.lk-sigmaringen.de/": "geraten",
+   "https://www.lra-sigmaringen.de/": "geraten",
+   "https://www.sigmaringen.de/": "geraten",
+   "https://www.landkreissigmaringen.de/": "geraten"
+  }
+ },
+ {
+  "ags": "08111000",
+  "name": "Stuttgart, Landeshauptstadt",
+  "art": "gemeinde",
+  "einw": 609365,
+  "lon": 9.177734,
+  "lat": 48.775817,
+  "web": [
+   "https://www.gemeinde-stuttgart.de/de/",
+   "https://www.stuttgart.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08222000",
+  "name": "Mannheim, Universitätsstadt",
+  "art": "gemeinde",
+  "einw": 319536,
+  "lon": 8.466275,
+  "lat": 49.48778,
+  "web": [
+   "https://www.mannheim.de/de",
+   "https://www.mannheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08212000",
+  "name": "Karlsruhe, Stadt",
+  "art": "gemeinde",
+  "einw": 309247,
+  "lon": 8.405282,
+  "lat": 49.009626,
+  "web": [
+   "https://www.karlsruhe.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08311000",
+  "name": "Freiburg im Breisgau, Stadt",
+  "art": "gemeinde",
+  "einw": 238299,
+  "lon": 7.849877,
+  "lat": 47.994786,
+  "web": [
+   "https://www.freiburg.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08221000",
+  "name": "Heidelberg, Stadt",
+  "art": "gemeinde",
+  "einw": 156092,
+  "lon": 8.705543,
+  "lat": 49.410524,
+  "web": [
+   "https://www.heidelberg.de/hd/HD.html",
+   "https://heidelberg.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08231000",
+  "name": "Pforzheim, Stadt",
+  "art": "gemeinde",
+  "einw": 134422,
+  "lon": 8.699166,
+  "lat": 48.891285,
+  "web": [
+   "https://www.pforzheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08121000",
+  "name": "Heilbronn, Universitätsstadt",
+  "art": "gemeinde",
+  "einw": 132516,
+  "lon": 9.217953,
+  "lat": 49.140428,
+  "web": [
+   "https://www.heilbronn.de/startseite.html",
+   "https://www.heilbronn.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08421000",
+  "name": "Ulm, Universitätsstadt",
+  "art": "gemeinde",
+  "einw": 130288,
+  "lon": 9.990402,
+  "lat": 48.398454,
+  "web": [
+   "https://gemeindeulm.de/",
+   "http://www.ulm.de/ulm/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08415061",
+  "name": "Reutlingen, Stadt",
+  "art": "gemeinde",
+  "einw": 119040,
+  "lon": 9.212006,
+  "lat": 48.49208,
+  "web": [
+   "https://gemeinde-reutlingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116019",
+  "name": "Esslingen am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 95419,
+  "lon": 9.309565,
+  "lat": 48.741347,
+  "web": [
+   "https://www.esslingen-am-neckar.de/",
+   "https://www.stadt-esslingen-am-neckar.de/",
+   "https://www.gemeinde-esslingen-am-neckar.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08118048",
+  "name": "Ludwigsburg, Stadt",
+  "art": "gemeinde",
+  "einw": 93002,
+  "lon": 9.190393,
+  "lat": 48.896233,
+  "web": [
+   "https://www.stadt-ludwigsburg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08416041",
+  "name": "Tübingen, Universitätsstadt",
+  "art": "gemeinde",
+  "einw": 92607,
+  "lon": 9.054572,
+  "lat": 48.520863,
+  "web": [
+   "https://www.tuebingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08326074",
+  "name": "Villingen-Schwenningen, Stadt",
+  "art": "gemeinde",
+  "einw": 89766,
+  "lon": 8.459649,
+  "lat": 48.058255,
+  "web": [
+   "https://www.villingen-schwenningen.de/home/",
+   "https://www.villingen-schwenningen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08335043",
+  "name": "Konstanz, Universitätsstadt",
+  "art": "gemeinde",
+  "einw": 86691,
+  "lon": 9.175957,
+  "lat": 47.662757,
+  "web": [
+   "https://www.konstanz.de/start",
+   "https://www.konstanz.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08136088",
+  "name": "Aalen, Stadt",
+  "art": "gemeinde",
+  "einw": 67675,
+  "lon": 10.092337,
+  "lat": 48.835057,
+  "web": [
+   "https://www.aalen.de/startseite.1.htm",
+   "http://www.aalen.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08136065",
+  "name": "Schwäbisch Gmünd, Stadt",
+  "art": "gemeinde",
+  "einw": 63930,
+  "lon": 9.796508,
+  "lat": 48.802384,
+  "web": [
+   "https://www.schwaebisch-gmuend.de/",
+   "https://www.stadt-schwaebisch-gmuend.de/",
+   "https://www.gemeinde-schwaebisch-gmuend.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08317096",
+  "name": "Offenburg, Stadt",
+  "art": "gemeinde",
+  "einw": 63437,
+  "lon": 7.944214,
+  "lat": 48.469474,
+  "web": [
+   "https://www.offenburg.de/",
+   "https://www.stadt-offenburg.de/",
+   "https://www.gemeinde-offenburg.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08435016",
+  "name": "Friedrichshafen, Stadt",
+  "art": "gemeinde",
+  "einw": 62781,
+  "lon": 9.479614,
+  "lat": 47.652205,
+  "web": [
+   "https://www.friedrichshafen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115045",
+  "name": "Sindelfingen, Stadt",
+  "art": "gemeinde",
+  "einw": 61428,
+  "lon": 9.002211,
+  "lat": 48.709831,
+  "web": [
+   "https://www.sindelfingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08117026",
+  "name": "Göppingen, Stadt",
+  "art": "gemeinde",
+  "einw": 58678,
+  "lon": 9.653964,
+  "lat": 48.703267,
+  "web": [
+   "https://www.gemeinde-goeppingen.de/",
+   "http://www.goeppingen.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119079",
+  "name": "Waiblingen, Stadt",
+  "art": "gemeinde",
+  "einw": 57186,
+  "lon": 9.314525,
+  "lat": 48.83001,
+  "web": [
+   "https://www.waiblingen.de/willkommen",
+   "https://www.waiblingen.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08211000",
+  "name": "Baden-Baden, Stadt",
+  "art": "gemeinde",
+  "einw": 56952,
+  "lon": 8.239951,
+  "lat": 48.761794,
+  "web": [
+   "https://www.baden-baden.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08336050",
+  "name": "Lörrach, Stadt",
+  "art": "gemeinde",
+  "einw": 51274,
+  "lon": 7.659191,
+  "lat": 47.612096,
+  "web": [
+   "https://www.loerrach.de/willkommen",
+   "https://www.loerrach.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317065",
+  "name": "Lahr/Schwarzwald, Stadt",
+  "art": "gemeinde",
+  "einw": 51208,
+  "lon": 7.874292,
+  "lat": 48.339132,
+  "web": [
+   "https://www.lahr-schwarzwald.de/",
+   "https://www.stadt-lahr-schwarzwald.de/",
+   "https://www.gemeinde-lahr-schwarzwald.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08115003",
+  "name": "Böblingen, Stadt",
+  "art": "gemeinde",
+  "einw": 51204,
+  "lon": 9.009663,
+  "lat": 48.685296,
+  "web": [
+   "https://www.boeblingen.de/",
+   "https://www.stadt-boeblingen.de/",
+   "https://www.gemeinde-boeblingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08216043",
+  "name": "Rastatt, Stadt",
+  "art": "gemeinde",
+  "einw": 50753,
+  "lon": 8.202529,
+  "lat": 48.857703,
+  "web": [
+   "https://www.rastatt.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08135019",
+  "name": "Heidenheim an der Brenz, Stadt",
+  "art": "gemeinde",
+  "einw": 50612,
+  "lon": 10.154639,
+  "lat": 48.677736,
+  "web": [
+   "https://www.heidenheim-an-der-brenz.de/",
+   "https://www.stadt-heidenheim-an-der-brenz.de/",
+   "https://www.gemeinde-heidenheim-an-der-brenz.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08436064",
+  "name": "Ravensburg, Stadt",
+  "art": "gemeinde",
+  "einw": 50549,
+  "lon": 9.615089,
+  "lat": 47.78366,
+  "web": [
+   "https://www.ravensburg.de/",
+   "https://www.ravensburg.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115028",
+  "name": "Leonberg, Stadt",
+  "art": "gemeinde",
+  "einw": 49514,
+  "lon": 9.016776,
+  "lat": 48.800497,
+  "web": [
+   "https://www.leonberg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08335075",
+  "name": "Singen (Hohentwiel), Stadt",
+  "art": "gemeinde",
+  "einw": 48089,
+  "lon": 8.835117,
+  "lat": 47.759711,
+  "web": [
+   "https://www.singen.de/start",
+   "https://www.in-singen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215009",
+  "name": "Bruchsal, Stadt",
+  "art": "gemeinde",
+  "einw": 47578,
+  "lon": 8.5977,
+  "lat": 49.125785,
+  "web": [
+   "https://www.bruchsal.de/startseite",
+   "https://www.bruchsal.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08417079",
+  "name": "Albstadt, Stadt",
+  "art": "gemeinde",
+  "einw": 47047,
+  "lon": 9.026328,
+  "lat": 48.214156,
+  "web": [
+   "https://www.albstadt.de/",
+   "https://www.albstadt.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119020",
+  "name": "Fellbach, Stadt",
+  "art": "gemeinde",
+  "einw": 46659,
+  "lon": 9.278375,
+  "lat": 48.80685,
+  "web": [
+   "https://www.fellbach.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116077",
+  "name": "Filderstadt, Stadt",
+  "art": "gemeinde",
+  "einw": 46274,
+  "lon": 9.21973,
+  "lat": 48.67876,
+  "web": [
+   "https://www.filderstadt.de/",
+   "https://www.stadt-filderstadt.de/",
+   "https://www.gemeinde-filderstadt.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08226096",
+  "name": "Weinheim, Stadt",
+  "art": "gemeinde",
+  "einw": 45919,
+  "lon": 8.670732,
+  "lat": 49.550558,
+  "web": [
+   "https://www.weinheim.de/startseite",
+   "https://www.weinheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08416036",
+  "name": "Rottenburg am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 45579,
+  "lon": 8.936507,
+  "lat": 48.479475,
+  "web": [
+   "https://www.rottenburg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118079",
+  "name": "Bietigheim-Bissingen, Stadt",
+  "art": "gemeinde",
+  "einw": 43354,
+  "lon": 9.132652,
+  "lat": 48.948358,
+  "web": [
+   "https://www.bietigheim-bissingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08127076",
+  "name": "Schwäbisch Hall, Stadt",
+  "art": "gemeinde",
+  "einw": 42705,
+  "lon": 9.735145,
+  "lat": 49.112856,
+  "web": [
+   "https://www.schwaebisch-hall.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116033",
+  "name": "Kirchheim unter Teck, Stadt",
+  "art": "gemeinde",
+  "einw": 42382,
+  "lon": 9.453784,
+  "lat": 48.646093,
+  "web": [
+   "http://www.kirchheim-teck.de"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08119067",
+  "name": "Schorndorf, Stadt",
+  "art": "gemeinde",
+  "einw": 41469,
+  "lon": 9.528152,
+  "lat": 48.805051,
+  "web": [
+   "https://www.gemeinde-schorndorf.de/startseite",
+   "https://www.schorndorf.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116078",
+  "name": "Leinfelden-Echterdingen, Stadt",
+  "art": "gemeinde",
+  "einw": 41448,
+  "lon": 9.138976,
+  "lat": 48.693719,
+  "web": [
+   "https://www.leinfelden-echterdingen.de/",
+   "https://www.stadt-leinfelden-echterdingen.de/",
+   "https://www.gemeinde-leinfelden-echterdingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08116049",
+  "name": "Nürtingen, Stadt",
+  "art": "gemeinde",
+  "einw": 40898,
+  "lon": 9.343281,
+  "lat": 48.625847,
+  "web": [
+   "https://www.nuertingen.de/stadt-nuertingen/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116080",
+  "name": "Ostfildern, Stadt",
+  "art": "gemeinde",
+  "einw": 39794,
+  "lon": 9.301248,
+  "lat": 48.712327,
+  "web": [
+   "https://www.ostfildern.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317057",
+  "name": "Kehl, Stadt",
+  "art": "gemeinde",
+  "einw": 39708,
+  "lon": 7.813177,
+  "lat": 48.572447,
+  "web": [
+   "https://www.kehl.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119008",
+  "name": "Backnang, Stadt",
+  "art": "gemeinde",
+  "einw": 38615,
+  "lon": 9.424452,
+  "lat": 48.94691,
+  "web": [
+   "https://www.backnang.de"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08215017",
+  "name": "Ettlingen, Stadt",
+  "art": "gemeinde",
+  "einw": 38557,
+  "lon": 8.405904,
+  "lat": 48.942,
+  "web": [
+   "https://www.ettlingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226085",
+  "name": "Sinsheim, Stadt",
+  "art": "gemeinde",
+  "einw": 37105,
+  "lon": 8.878701,
+  "lat": 49.252996,
+  "web": [
+   "https://www.sinsheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08327050",
+  "name": "Tuttlingen, Stadt",
+  "art": "gemeinde",
+  "einw": 37093,
+  "lon": 8.818761,
+  "lat": 47.983725,
+  "web": [
+   "https://www.tuttlingen.de/",
+   "https://www.stadt-tuttlingen.de/",
+   "https://www.gemeinde-tuttlingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08127014",
+  "name": "Crailsheim, Stadt",
+  "art": "gemeinde",
+  "einw": 35905,
+  "lon": 10.071139,
+  "lat": 49.135752,
+  "web": [
+   "https://www.crailsheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08417002",
+  "name": "Balingen, Stadt",
+  "art": "gemeinde",
+  "einw": 35744,
+  "lon": 8.851588,
+  "lat": 48.274036,
+  "web": [
+   "https://www.balingen.de/",
+   "https://www.stadt-balingen.de/",
+   "https://www.gemeinde-balingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08336069",
+  "name": "Rheinfelden (Baden), Stadt",
+  "art": "gemeinde",
+  "einw": 34788,
+  "lon": 7.78365,
+  "lat": 47.561128,
+  "web": [
+   "https://www.rheinfelden.de/",
+   "https://www.rheinfelden.ch/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08426021",
+  "name": "Biberach an der Riß, Stadt",
+  "art": "gemeinde",
+  "einw": 34275,
+  "lon": 9.79203,
+  "lat": 48.097465,
+  "web": [
+   "https://www.biberach-an-der-riss.de/",
+   "https://www.stadt-biberach-an-der-riss.de/",
+   "https://www.gemeinde-biberach-an-der-riss.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08115021",
+  "name": "Herrenberg, Stadt",
+  "art": "gemeinde",
+  "einw": 34167,
+  "lon": 8.867369,
+  "lat": 48.595705,
+  "web": [
+   "https://www.herrenberg.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08118046",
+  "name": "Kornwestheim, Stadt",
+  "art": "gemeinde",
+  "einw": 34149,
+  "lon": 9.18586,
+  "lat": 48.86536,
+  "web": [
+   "https://www.kornwestheim.de/",
+   "https://www.stadt-kornwestheim.de/",
+   "https://www.gemeinde-kornwestheim.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08336091",
+  "name": "Weil am Rhein, Stadt",
+  "art": "gemeinde",
+  "einw": 32361,
+  "lon": 7.629579,
+  "lat": 47.594284,
+  "web": [
+   "https://www.weil-am-rhein.de/start",
+   "https://www.weil-am-rhein.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08335063",
+  "name": "Radolfzell am Bodensee, Stadt",
+  "art": "gemeinde",
+  "einw": 31689,
+  "lon": 8.968663,
+  "lat": 47.739107,
+  "web": [
+   "https://www.radolfzell-am-bodensee.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215007",
+  "name": "Bretten, Stadt",
+  "art": "gemeinde",
+  "einw": 30312,
+  "lon": 8.707641,
+  "lat": 49.036665,
+  "web": [
+   "https://www.bretten.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119085",
+  "name": "Winnenden, Stadt",
+  "art": "gemeinde",
+  "einw": 29844,
+  "lon": 9.396202,
+  "lat": 48.877185,
+  "web": [
+   "https://www.winnenden.de/",
+   "https://www.stadt-winnenden.de/",
+   "https://www.gemeinde-winnenden.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08316011",
+  "name": "Emmendingen, Stadt",
+  "art": "gemeinde",
+  "einw": 29530,
+  "lon": 7.847625,
+  "lat": 48.122053,
+  "web": [
+   "https://www.emmendingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08216015",
+  "name": "Gaggenau, Stadt",
+  "art": "gemeinde",
+  "einw": 29394,
+  "lon": 8.317525,
+  "lat": 48.807364,
+  "web": [
+   "https://www.gaggenau.de/startseite.1.htm"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08436081",
+  "name": "Wangen im Allgäu, Stadt",
+  "art": "gemeinde",
+  "einw": 28784,
+  "lon": 9.832354,
+  "lat": 47.685855,
+  "web": [
+   "https://www.wangen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118073",
+  "name": "Vaihingen an der Enz, Stadt",
+  "art": "gemeinde",
+  "einw": 28558,
+  "lon": 8.960417,
+  "lat": 48.933224,
+  "web": [
+   "https://www.vaihingen.de/startseite",
+   "https://www.vaihingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08216007",
+  "name": "Bühl, Stadt",
+  "art": "gemeinde",
+  "einw": 28433,
+  "lon": 8.136444,
+  "lat": 48.696265,
+  "web": [
+   "https://www.buehl.de/",
+   "https://www.stadt-buehl.de/",
+   "https://www.gemeinde-buehl.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08226098",
+  "name": "Wiesloch, Stadt",
+  "art": "gemeinde",
+  "einw": 27911,
+  "lon": 8.701276,
+  "lat": 49.293493,
+  "web": [
+   "https://www.wiesloch.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08117024",
+  "name": "Geislingen an der Steige, Stadt",
+  "art": "gemeinde",
+  "einw": 27781,
+  "lon": 9.835836,
+  "lat": 48.623045,
+  "web": [
+   "https://www.geislingen.de/de/uebersicht"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08425033",
+  "name": "Ehingen (Donau), Stadt",
+  "art": "gemeinde",
+  "einw": 27700,
+  "lon": 9.725211,
+  "lat": 48.283666,
+  "web": [
+   "https://www.ehingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119091",
+  "name": "Weinstadt, Stadt",
+  "art": "gemeinde",
+  "einw": 26926,
+  "lon": 9.385556,
+  "lat": 48.803451,
+  "web": [
+   "https://www.weinstadt.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317001",
+  "name": "Achern, Stadt",
+  "art": "gemeinde",
+  "einw": 26873,
+  "lon": 8.074429,
+  "lat": 48.628851,
+  "web": [
+   "https://www.achern.de/willkommen",
+   "https://www.achern.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226041",
+  "name": "Leimen, Stadt",
+  "art": "gemeinde",
+  "einw": 26815,
+  "lon": 8.688782,
+  "lat": 49.349054,
+  "web": [
+   "https://www.leimen.de/startseite",
+   "https://www.leimen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08236040",
+  "name": "Mühlacker, Stadt",
+  "art": "gemeinde",
+  "einw": 26793,
+  "lon": 8.8419,
+  "lat": 48.945605,
+  "web": [
+   "https://www.muehlacker.de/",
+   "https://www.muehlacker.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125065",
+  "name": "Neckarsulm, Stadt",
+  "art": "gemeinde",
+  "einw": 26470,
+  "lon": 9.223944,
+  "lat": 49.190147,
+  "web": [
+   "https://www.neckarsulm.de/startseite",
+   "https://www.neckarsulm.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118081",
+  "name": "Remseck am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 26089,
+  "lon": 9.279445,
+  "lat": 48.87067,
+  "web": [
+   "https://www.stadt-remseck.de/",
+   "https://www.stadt-remseck.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08126066",
+  "name": "Öhringen, Stadt",
+  "art": "gemeinde",
+  "einw": 25871,
+  "lon": 9.501119,
+  "lat": 49.200104,
+  "web": [
+   "https://www.oehringen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08237040",
+  "name": "Horb am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 25687,
+  "lon": 8.692721,
+  "lat": 48.445165,
+  "web": [
+   "https://www.horb-am-neckar.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215109",
+  "name": "Stutensee, Stadt",
+  "art": "gemeinde",
+  "einw": 25422,
+  "lon": 8.470789,
+  "lat": 49.063748,
+  "web": [
+   "https://www.stutensee.de/willkommen",
+   "https://www.stutensee.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08337126",
+  "name": "Waldshut-Tiengen, Stadt",
+  "art": "gemeinde",
+  "einw": 25084,
+  "lon": 8.271113,
+  "lat": 47.632439,
+  "web": [
+   "https://www.waldshut-tiengen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08436082",
+  "name": "Weingarten, Stadt",
+  "art": "gemeinde",
+  "einw": 25034,
+  "lon": 9.640669,
+  "lat": 47.807399,
+  "web": [
+   "https://weingarten.de/"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "08215090"
+  ]
+ },
+ {
+  "ags": "08325049",
+  "name": "Rottweil, Stadt",
+  "art": "gemeinde",
+  "einw": 25001,
+  "lon": 8.627337,
+  "lat": 48.167866,
+  "web": [
+   "https://www.rottweil.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08235085",
+  "name": "Calw, Stadt",
+  "art": "gemeinde",
+  "einw": 24750,
+  "lon": 8.741194,
+  "lat": 48.713372,
+  "web": [
+   "https://www.calw.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08136019",
+  "name": "Ellwangen (Jagst), Stadt",
+  "art": "gemeinde",
+  "einw": 24589,
+  "lon": 10.131979,
+  "lat": 48.962988,
+  "web": [
+   "https://www.ellwangen.de/buerger/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08237028",
+  "name": "Freudenstadt, Stadt",
+  "art": "gemeinde",
+  "einw": 24537,
+  "lon": 8.411368,
+  "lat": 48.463876,
+  "web": [
+   "https://www.freudenstadt.de/",
+   "https://www.stadt-freudenstadt.de/",
+   "https://www.gemeinde-freudenstadt.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08225058",
+  "name": "Mosbach, Stadt",
+  "art": "gemeinde",
+  "einw": 24393,
+  "lon": 9.146596,
+  "lat": 49.352037,
+  "web": [
+   "https://www.mosbach.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08436055",
+  "name": "Leutkirch im Allgäu, Stadt",
+  "art": "gemeinde",
+  "einw": 24325,
+  "lon": 10.024379,
+  "lat": 47.825064,
+  "web": [
+   "https://www.leutkirch-im-allgaeu.de/",
+   "https://www.stadt-leutkirch-im-allgaeu.de/",
+   "https://www.gemeinde-leutkirch-im-allgaeu.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08128007",
+  "name": "Bad Mergentheim, Stadt",
+  "art": "gemeinde",
+  "einw": 24084,
+  "lon": 9.773085,
+  "lat": 49.490973,
+  "web": [
+   "https://www.bad-mergentheim.de/de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08235046",
+  "name": "Nagold, Stadt",
+  "art": "gemeinde",
+  "einw": 23813,
+  "lon": 8.723706,
+  "lat": 48.550906,
+  "web": [
+   "https://www.nagold.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08415050",
+  "name": "Metzingen, Stadt",
+  "art": "gemeinde",
+  "einw": 23305,
+  "lon": 9.283998,
+  "lat": 48.536849,
+  "web": [
+   "https://www.metzingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08426070",
+  "name": "Laupheim, Stadt",
+  "art": "gemeinde",
+  "einw": 22836,
+  "lon": 9.883733,
+  "lat": 48.230018,
+  "web": [
+   "https://www.laupheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08128131",
+  "name": "Wertheim, Stadt",
+  "art": "gemeinde",
+  "einw": 22808,
+  "lon": 9.516823,
+  "lat": 49.759581,
+  "web": [
+   "https://www.wertheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08435059",
+  "name": "Überlingen, Stadt",
+  "art": "gemeinde",
+  "einw": 22799,
+  "lon": 9.159266,
+  "lat": 47.768547,
+  "web": [
+   "https://www.ueberlingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125026",
+  "name": "Eppingen, Stadt",
+  "art": "gemeinde",
+  "einw": 22796,
+  "lon": 8.909012,
+  "lat": 49.137701,
+  "web": [
+   "https://www.eppingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125006",
+  "name": "Bad Rappenau, Stadt",
+  "art": "gemeinde",
+  "einw": 22728,
+  "lon": 9.103117,
+  "lat": 49.240303,
+  "web": [
+   "https://www.badrappenau.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118011",
+  "name": "Ditzingen, Stadt",
+  "art": "gemeinde",
+  "einw": 22551,
+  "lon": 9.068779,
+  "lat": 48.827632,
+  "web": [
+   "https://www.ditzingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215106",
+  "name": "Waghäusel, Stadt",
+  "art": "gemeinde",
+  "einw": 22301,
+  "lon": 8.514287,
+  "lat": 49.250734,
+  "web": [
+   "https://www.waghaeusel.de/startseite",
+   "https://www.waghaeusel.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08117019",
+  "name": "Eislingen/Fils, Stadt",
+  "art": "gemeinde",
+  "einw": 22168,
+  "lon": 9.707697,
+  "lat": 48.700842,
+  "web": [
+   "https://www.eislingen.de/willkommen",
+   "https://www.eislingen.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226084",
+  "name": "Schwetzingen, Stadt",
+  "art": "gemeinde",
+  "einw": 21864,
+  "lon": 8.574386,
+  "lat": 49.384642,
+  "web": [
+   "https://www.schwetzingen.de/start"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08326012",
+  "name": "Donaueschingen, Stadt",
+  "art": "gemeinde",
+  "einw": 21734,
+  "lon": 8.497777,
+  "lat": 47.951414,
+  "web": [
+   "https://www.donaueschingen.de/",
+   "https://www.stadt-donaueschingen.de/",
+   "https://www.gemeinde-donaueschingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08316056",
+  "name": "Waldkirch, Stadt",
+  "art": "gemeinde",
+  "einw": 21725,
+  "lon": 7.961225,
+  "lat": 48.093941,
+  "web": [
+   "https://www.waldkirch.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08416025",
+  "name": "Mössingen, Stadt",
+  "art": "gemeinde",
+  "einw": 21658,
+  "lon": 9.057746,
+  "lat": 48.405779,
+  "web": [
+   "https://www.moessingen.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08315006",
+  "name": "Bad Krozingen, Stadt",
+  "art": "gemeinde",
+  "einw": 21620,
+  "lon": 7.699949,
+  "lat": 47.916377,
+  "web": [
+   "https://www.bad-krozingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226032",
+  "name": "Hockenheim, Stadt",
+  "art": "gemeinde",
+  "einw": 21599,
+  "lon": 8.547437,
+  "lat": 49.318938,
+  "web": [
+   "https://www.hockenheim.de/,Lde/175604.html"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215108",
+  "name": "Rheinstetten, Stadt",
+  "art": "gemeinde",
+  "einw": 21233,
+  "lon": 8.292901,
+  "lat": 48.959096,
+  "web": [
+   "https://www.rheinstetten.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08436009",
+  "name": "Bad Waldsee, Stadt",
+  "art": "gemeinde",
+  "einw": 20910,
+  "lon": 9.751276,
+  "lat": 47.92251,
+  "web": [
+   "https://www.bad-waldsee.de/buerger/de/startseite",
+   "https://www.bad-waldsee.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08435057",
+  "name": "Tettnang, Stadt",
+  "art": "gemeinde",
+  "einw": 20522,
+  "lon": 9.589453,
+  "lat": 47.671477,
+  "web": [
+   "https://www.tettnang.de/de/",
+   "https://www.tettnang.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08325053",
+  "name": "Schramberg, Stadt",
+  "art": "gemeinde",
+  "einw": 20415,
+  "lon": 8.386187,
+  "lat": 48.225467,
+  "web": [
+   "https://www.schramberg.de/de/index.php"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08315074",
+  "name": "Müllheim im Markgräflerland, Stadt",
+  "art": "gemeinde",
+  "einw": 20241,
+  "lon": 7.630871,
+  "lat": 47.808248,
+  "web": [
+   "https://www.muellheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08336081",
+  "name": "Schopfheim, Stadt",
+  "art": "gemeinde",
+  "einw": 20198,
+  "lon": 7.822962,
+  "lat": 47.650141,
+  "web": [
+   "https://www.schopfheim.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08415059",
+  "name": "Pfullingen, Stadt",
+  "art": "gemeinde",
+  "einw": 20032,
+  "lon": 9.226443,
+  "lat": 48.466279,
+  "web": [
+   "https://www.pfullingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317089",
+  "name": "Oberkirch, Stadt",
+  "art": "gemeinde",
+  "einw": 19977,
+  "lon": 8.077097,
+  "lat": 48.531805,
+  "web": [
+   "https://www.oberkirch.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125005",
+  "name": "Bad Friedrichshall, Stadt",
+  "art": "gemeinde",
+  "einw": 19910,
+  "lon": 9.215882,
+  "lat": 49.229477,
+  "web": [
+   "https://www.friedrichshall.de/de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08135016",
+  "name": "Giengen an der Brenz, Stadt",
+  "art": "gemeinde",
+  "einw": 19857,
+  "lon": 10.24167,
+  "lat": 48.623783,
+  "web": [
+   "https://www.giengen-an-der-brenz.de/",
+   "https://www.stadt-giengen-an-der-brenz.de/",
+   "https://www.gemeinde-giengen-an-der-brenz.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08417031",
+  "name": "Hechingen, Stadt",
+  "art": "gemeinde",
+  "einw": 19760,
+  "lon": 8.962947,
+  "lat": 48.351487,
+  "web": [
+   "https://www.hechingen.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118080",
+  "name": "Korntal-Münchingen, Stadt",
+  "art": "gemeinde",
+  "einw": 19666,
+  "lon": 9.12377,
+  "lat": 48.826004,
+  "web": [
+   "https://www.korntal-muenchingen.de/willkommen",
+   "https://www.korntal-muenchingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115050",
+  "name": "Weil der Stadt, Stadt",
+  "art": "gemeinde",
+  "einw": 19311,
+  "lon": 8.870105,
+  "lat": 48.751993,
+  "web": [
+   "https://www.weil-der-stadt.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115041",
+  "name": "Renningen, Stadt",
+  "art": "gemeinde",
+  "einw": 18728,
+  "lon": 8.936373,
+  "lat": 48.765313,
+  "web": [
+   "https://www.renningen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118076",
+  "name": "Sachsenheim, Stadt",
+  "art": "gemeinde",
+  "einw": 18549,
+  "lon": 9.063337,
+  "lat": 48.959506,
+  "web": [
+   "https://www.sachsenheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118019",
+  "name": "Gerlingen, Stadt",
+  "art": "gemeinde",
+  "einw": 18307,
+  "lon": 9.062047,
+  "lat": 48.800587,
+  "web": [
+   "http://www.gerlingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08225014",
+  "name": "Buchen (Odenwald), Stadt",
+  "art": "gemeinde",
+  "einw": 18293,
+  "lon": 9.323179,
+  "lat": 49.521795,
+  "web": [
+   "https://www.buchen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215101",
+  "name": "Pfinztal",
+  "art": "gemeinde",
+  "einw": 18291,
+  "lon": 8.541756,
+  "lat": 48.986457,
+  "web": [
+   "https://pfinztal.de/",
+   "http://www.pfinztal.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08337096",
+  "name": "Bad Säckingen, Stadt",
+  "art": "gemeinde",
+  "einw": 17924,
+  "lon": 7.948758,
+  "lat": 47.552535,
+  "web": [
+   "https://www.bad-saeckingen.de/startseite",
+   "https://www.bad-saeckingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08437100",
+  "name": "Bad Saulgau, Stadt",
+  "art": "gemeinde",
+  "einw": 17824,
+  "lon": 9.499183,
+  "lat": 48.013864,
+  "web": [
+   "https://www.bad-saulgau.de/de/index.php"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08335079",
+  "name": "Stockach, Stadt",
+  "art": "gemeinde",
+  "einw": 17547,
+  "lon": 9.00899,
+  "lat": 47.848855,
+  "web": [
+   "https://www.stockach.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08327049",
+  "name": "Trossingen, Stadt",
+  "art": "gemeinde",
+  "einw": 17538,
+  "lon": 8.632659,
+  "lat": 48.074438,
+  "web": [
+   "https://www.trossingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215102",
+  "name": "Eggenstein-Leopoldshafen",
+  "art": "gemeinde",
+  "einw": 16850,
+  "lon": 8.392996,
+  "lat": 49.08108,
+  "web": [
+   "https://www.eggenstein-leopoldshafen.de/",
+   "https://www.stadt-eggenstein-leopoldshafen.de/",
+   "https://www.gemeinde-eggenstein-leopoldshafen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08437104",
+  "name": "Sigmaringen, Stadt",
+  "art": "gemeinde",
+  "einw": 16756,
+  "lon": 9.214788,
+  "lat": 48.086623,
+  "web": [
+   "https://www.sigmaringen.de/"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "084375006"
+  ]
+ },
+ {
+  "ags": "08125013",
+  "name": "Brackenheim, Stadt",
+  "art": "gemeinde",
+  "einw": 16712,
+  "lon": 9.064886,
+  "lat": 49.078235,
+  "web": [
+   "https://www.brackenheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08425141",
+  "name": "Blaustein, Stadt",
+  "art": "gemeinde",
+  "einw": 16630,
+  "lon": 9.921863,
+  "lat": 48.416145,
+  "web": [
+   "https://www.blaustein.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08315015",
+  "name": "Breisach am Rhein, Stadt",
+  "art": "gemeinde",
+  "einw": 16617,
+  "lon": 7.583227,
+  "lat": 48.031142,
+  "web": [
+   "https://www.breisach.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08126046",
+  "name": "Künzelsau, Stadt",
+  "art": "gemeinde",
+  "einw": 16457,
+  "lon": 9.687069,
+  "lat": 49.277894,
+  "web": [
+   "https://www.kuenzelsau.de/start"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226095",
+  "name": "Walldorf, Stadt",
+  "art": "gemeinde",
+  "einw": 16219,
+  "lon": 8.642764,
+  "lat": 49.303151,
+  "web": [
+   "https://www.walldorf.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215096",
+  "name": "Karlsbad",
+  "art": "gemeinde",
+  "einw": 16137,
+  "lon": 8.50601,
+  "lat": 48.916735,
+  "web": [
+   "https://www.karlsbad.de/",
+   "https://www.karlsbad.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116071",
+  "name": "Wendlingen am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 16002,
+  "lon": 9.379528,
+  "lat": 48.672462,
+  "web": [
+   "https://www.wendlingen-am-neckar.de/",
+   "https://www.stadt-wendlingen-am-neckar.de/",
+   "https://www.gemeinde-wendlingen-am-neckar.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08119093",
+  "name": "Kernen im Remstal",
+  "art": "gemeinde",
+  "einw": 15907,
+  "lon": 9.317937,
+  "lat": 48.808537,
+  "web": [
+   "https://www.kernen-im-remstal.de/",
+   "https://www.stadt-kernen-im-remstal.de/",
+   "https://www.gemeinde-kernen-im-remstal.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08226018",
+  "name": "Eppelheim, Stadt",
+  "art": "gemeinde",
+  "einw": 15706,
+  "lon": 8.631011,
+  "lat": 49.401236,
+  "web": [
+   "https://www.eppelheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08117018",
+  "name": "Ebersbach an der Fils, Stadt",
+  "art": "gemeinde",
+  "einw": 15550,
+  "lon": 9.523452,
+  "lat": 48.714242,
+  "web": [
+   "https://www.ebersbach.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118078",
+  "name": "Freiberg am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 15482,
+  "lon": 9.195537,
+  "lat": 48.933909,
+  "web": [
+   "https://www.freiberg-an.de/de/startseite",
+   "https://www.freiberg-an.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08425072",
+  "name": "Langenau, Stadt",
+  "art": "gemeinde",
+  "einw": 15359,
+  "lon": 10.121087,
+  "lat": 48.499499,
+  "web": [
+   "https://www.langenau.de/willkommen"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "084255008"
+  ]
+ },
+ {
+  "ags": "08118049",
+  "name": "Marbach am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 15348,
+  "lon": 9.259828,
+  "lat": 48.939832,
+  "web": [
+   "https://www.schillerstadt-marbach.de/meta/start/",
+   "https://www.schillerstadt-marbach.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226076",
+  "name": "Sandhausen",
+  "art": "gemeinde",
+  "einw": 15331,
+  "lon": 8.658493,
+  "lat": 49.342601,
+  "web": [
+   "https://www.sandhausen.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08336105",
+  "name": "Grenzach-Wyhlen",
+  "art": "gemeinde",
+  "einw": 15262,
+  "lon": 7.658946,
+  "lat": 47.553081,
+  "web": [
+   "https://www.grenzach-wyhlen.de/",
+   "https://www.grenzach-wyhlen.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08237004",
+  "name": "Baiersbronn",
+  "art": "gemeinde",
+  "einw": 15256,
+  "lon": 8.371955,
+  "lat": 48.505528,
+  "web": [
+   "https://www.baiersbronn.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226082",
+  "name": "Schriesheim, Stadt",
+  "art": "gemeinde",
+  "einw": 15114,
+  "lon": 8.664038,
+  "lat": 49.47608,
+  "web": [
+   "https://www.schriesheim.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08436049",
+  "name": "Isny im Allgäu, Stadt",
+  "art": "gemeinde",
+  "einw": 15015,
+  "lon": 10.039361,
+  "lat": 47.692238,
+  "web": [
+   "https://www.isny-im-allgaeu.de/",
+   "https://www.stadt-isny-im-allgaeu.de/",
+   "https://www.gemeinde-isny-im-allgaeu.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08436010",
+  "name": "Bad Wurzach, Stadt",
+  "art": "gemeinde",
+  "einw": 14927,
+  "lon": 9.896525,
+  "lat": 47.908416,
+  "web": [
+   "https://www.bad-wurzach.de/stadt/de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226013",
+  "name": "Eberbach, Stadt",
+  "art": "gemeinde",
+  "einw": 14729,
+  "lon": 8.989557,
+  "lat": 49.461538,
+  "web": [
+   "https://www.eberbach.de/start"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215046",
+  "name": "Malsch",
+  "art": "gemeinde",
+  "einw": 14728,
+  "lon": 8.334952,
+  "lat": 48.879543,
+  "web": [
+   "https://www.malsch.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226105",
+  "name": "Edingen-Neckarhausen",
+  "art": "gemeinde",
+  "einw": 14714,
+  "lon": 8.611007,
+  "lat": 49.448784,
+  "web": [
+   "https://www.edingen-neckarhausen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08325045",
+  "name": "Oberndorf am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 14711,
+  "lon": 8.569312,
+  "lat": 48.290124,
+  "web": [
+   "https://www.oberndorf-am-neckar.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08415053",
+  "name": "Münsingen, Stadt",
+  "art": "gemeinde",
+  "einw": 14695,
+  "lon": 9.494863,
+  "lat": 48.411369,
+  "web": [
+   "https://www.muensingen.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226009",
+  "name": "Brühl",
+  "art": "gemeinde",
+  "einw": 14567,
+  "lon": 8.534338,
+  "lat": 49.395199,
+  "web": [
+   "https://www.bruehl-baden.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215097",
+  "name": "Kraichtal, Stadt",
+  "art": "gemeinde",
+  "einw": 14546,
+  "lon": 8.714528,
+  "lat": 49.122597,
+  "web": [
+   "https://www.kraichtal.de/webseitenauswahl",
+   "https://www.kraichtal.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116056",
+  "name": "Plochingen, Stadt",
+  "art": "gemeinde",
+  "einw": 14503,
+  "lon": 9.41695,
+  "lat": 48.713282,
+  "web": [
+   "https://www.plochingen.de/",
+   "https://www.stadt-plochingen.de/",
+   "https://www.gemeinde-plochingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08119044",
+  "name": "Murrhardt, Stadt",
+  "art": "gemeinde",
+  "einw": 14490,
+  "lon": 9.579648,
+  "lat": 48.980867,
+  "web": [
+   "https://www.murrhardt.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08435034",
+  "name": "Markdorf, Stadt",
+  "art": "gemeinde",
+  "einw": 14305,
+  "lon": 9.389138,
+  "lat": 47.72035,
+  "web": [
+   "https://www.markdorf.de/"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "084355003"
+  ]
+ },
+ {
+  "ags": "08119090",
+  "name": "Remshalden",
+  "art": "gemeinde",
+  "einw": 14291,
+  "lon": 9.442436,
+  "lat": 48.810023,
+  "web": [
+   "https://www.remshalden.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08216017",
+  "name": "Gernsbach, Stadt",
+  "art": "gemeinde",
+  "einw": 14264,
+  "lon": 8.337715,
+  "lat": 48.763758,
+  "web": [
+   "https://www.gernsbach.de/start"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08117051",
+  "name": "Uhingen, Stadt",
+  "art": "gemeinde",
+  "einw": 14203,
+  "lon": 9.585162,
+  "lat": 48.70652,
+  "web": [
+   "https://www.uhingen.de/",
+   "https://www.uhingen.de/start.html"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115024",
+  "name": "Holzgerlingen, Stadt",
+  "art": "gemeinde",
+  "einw": 14153,
+  "lon": 9.011719,
+  "lat": 48.637131,
+  "web": [
+   "https://www.holzgerlingen.de/de/index.php"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "081155004"
+  ]
+ },
+ {
+  "ags": "08128139",
+  "name": "Lauda-Königshofen, Stadt",
+  "art": "gemeinde",
+  "einw": 14150,
+  "lon": 9.70108,
+  "lat": 49.57011,
+  "web": [
+   "https://www.lauda-koenigshofen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08425039",
+  "name": "Erbach, Stadt",
+  "art": "gemeinde",
+  "einw": 14126,
+  "lon": 9.892784,
+  "lat": 48.326196,
+  "web": [
+   "https://www.erbach.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118050",
+  "name": "Markgröningen, Stadt",
+  "art": "gemeinde",
+  "einw": 14052,
+  "lon": 9.081072,
+  "lat": 48.905178,
+  "web": [
+   "https://www.markgroeningen.de/startseite",
+   "https://www.markgroeningen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226103",
+  "name": "St. Leon-Rot",
+  "art": "gemeinde",
+  "einw": 13978,
+  "lon": 8.599891,
+  "lat": 49.267197,
+  "web": [
+   "https://www.st-leon-rot.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317031",
+  "name": "Friesenheim",
+  "art": "gemeinde",
+  "einw": 13884,
+  "lon": 7.881795,
+  "lat": 48.373236,
+  "web": [
+   "https://www.friesenheim.de/,Lde/2509409.html"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215110",
+  "name": "Waldbronn",
+  "art": "gemeinde",
+  "einw": 13799,
+  "lon": 8.461134,
+  "lat": 48.931426,
+  "web": [
+   "https://www.waldbronn.de/start"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215066",
+  "name": "Philippsburg, Stadt",
+  "art": "gemeinde",
+  "einw": 13765,
+  "lon": 8.453544,
+  "lat": 49.236173,
+  "web": [
+   "https://www.philippsburg.de/startseite.html"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "082155006"
+  ]
+ },
+ {
+  "ags": "08327046",
+  "name": "Spaichingen, Stadt",
+  "art": "gemeinde",
+  "einw": 13750,
+  "lon": 8.739277,
+  "lat": 48.073153,
+  "web": [
+   "https://www.spaichingen.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125110",
+  "name": "Obersulm",
+  "art": "gemeinde",
+  "einw": 13741,
+  "lon": 9.384003,
+  "lat": 49.135333,
+  "web": [
+   "https://www.obersulm.de/de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08316009",
+  "name": "Denzlingen",
+  "art": "gemeinde",
+  "einw": 13734,
+  "lon": 7.883854,
+  "lat": 48.066785,
+  "web": [
+   "https://www.denzlingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08435035",
+  "name": "Meckenbeuren",
+  "art": "gemeinde",
+  "einw": 13717,
+  "lon": 9.562678,
+  "lat": 47.700637,
+  "web": [
+   "https://www.meckenbeuren.de/de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118003",
+  "name": "Asperg, Stadt",
+  "art": "gemeinde",
+  "einw": 13695,
+  "lon": 9.135236,
+  "lat": 48.905309,
+  "web": [
+   "https://www.asperg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317026",
+  "name": "Ettenheim, Stadt",
+  "art": "gemeinde",
+  "einw": 13670,
+  "lon": 7.812984,
+  "lat": 48.254555,
+  "web": [
+   "https://www.ettenheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215100",
+  "name": "Bad Schönborn",
+  "art": "gemeinde",
+  "einw": 13529,
+  "lon": 8.652877,
+  "lat": 49.219375,
+  "web": [
+   "https://www.bad-schoenborn.de/willkommen",
+   "https://www.bad-schoenborn.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08437088",
+  "name": "Pfullendorf, Stadt",
+  "art": "gemeinde",
+  "einw": 13496,
+  "lon": 9.255547,
+  "lat": 47.923774,
+  "web": [
+   "https://www.pfullendorf.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215064",
+  "name": "Östringen, Stadt",
+  "art": "gemeinde",
+  "einw": 13447,
+  "lon": 8.712417,
+  "lat": 49.218783,
+  "web": [
+   "https://www.oestringen.de/startseite",
+   "https://www.oestringen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125102",
+  "name": "Weinsberg, Stadt",
+  "art": "gemeinde",
+  "einw": 13406,
+  "lon": 9.285758,
+  "lat": 49.150258,
+  "web": [
+   "https://www.weinsberg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08128115",
+  "name": "Tauberbischofsheim, Stadt",
+  "art": "gemeinde",
+  "einw": 13341,
+  "lon": 9.662778,
+  "lat": 49.622047,
+  "web": [
+   "https://www.tauberbischofsheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226056",
+  "name": "Neckargemünd, Stadt",
+  "art": "gemeinde",
+  "einw": 13323,
+  "lon": 8.7973,
+  "lat": 49.394478,
+  "web": [
+   "https://www.neckargemuend.de/start",
+   "https://www.neckargemuend.de/"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "082265005"
+  ]
+ },
+ {
+  "ags": "08135020",
+  "name": "Herbrechtingen, Stadt",
+  "art": "gemeinde",
+  "einw": 13281,
+  "lon": 10.175775,
+  "lat": 48.621668,
+  "web": [
+   "https://www.herbrechtingen.de/",
+   "https://www.stadt-herbrechtingen.de/",
+   "https://www.gemeinde-herbrechtingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08226037",
+  "name": "Ketsch",
+  "art": "gemeinde",
+  "einw": 13154,
+  "lon": 8.526937,
+  "lat": 49.366957,
+  "web": [
+   "https://www.ketsch.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08337116",
+  "name": "Wehr, Stadt",
+  "art": "gemeinde",
+  "einw": 13102,
+  "lon": 7.904562,
+  "lat": 47.629747,
+  "web": [
+   "https://www.wehr.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08326003",
+  "name": "Bad Dürrheim, Stadt",
+  "art": "gemeinde",
+  "einw": 13084,
+  "lon": 8.530554,
+  "lat": 48.022026,
+  "web": [
+   "https://www.badduerrheim.de/",
+   "https://www.bad-duerrheim.info"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215084",
+  "name": "Ubstadt-Weiher",
+  "art": "gemeinde",
+  "einw": 13077,
+  "lon": 8.631072,
+  "lat": 49.160402,
+  "web": [
+   "https://www.ubstadt-weiher.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115015",
+  "name": "Gärtringen",
+  "art": "gemeinde",
+  "einw": 12895,
+  "lon": 8.901692,
+  "lat": 48.641924,
+  "web": [
+   "https://www.gaertringen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08315113",
+  "name": "Titisee-Neustadt, Stadt",
+  "art": "gemeinde",
+  "einw": 12873,
+  "lon": 8.208431,
+  "lat": 47.916511,
+  "web": [
+   "https://www.titisee-neustadt.de/startseite",
+   "https://www.titisee-neustadt.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226038",
+  "name": "Ladenburg, Stadt",
+  "art": "gemeinde",
+  "einw": 12820,
+  "lon": 8.610298,
+  "lat": 49.471947,
+  "web": [
+   "https://www.ladenburg.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08325057",
+  "name": "Sulz am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 12772,
+  "lon": 8.632773,
+  "lat": 48.366375,
+  "web": [
+   "https://www.sulz-am-neckar.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08315076",
+  "name": "Neuenburg am Rhein, Stadt",
+  "art": "gemeinde",
+  "einw": 12738,
+  "lon": 7.559796,
+  "lat": 47.813974,
+  "web": [
+   "https://www.neuenburg.de/531379.html",
+   "https://www.neuenburg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08415078",
+  "name": "Bad Urach, Stadt",
+  "art": "gemeinde",
+  "einw": 12705,
+  "lon": 9.400021,
+  "lat": 48.493051,
+  "web": [
+   "https://www.bad-urach.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226012",
+  "name": "Dossenheim",
+  "art": "gemeinde",
+  "einw": 12702,
+  "lon": 8.677836,
+  "lat": 49.451501,
+  "web": [
+   "https://www.dossenheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08425020",
+  "name": "Blaubeuren, Stadt",
+  "art": "gemeinde",
+  "einw": 12669,
+  "lon": 9.783757,
+  "lat": 48.412587,
+  "web": [
+   "https://www.blaubeuren.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08126011",
+  "name": "Bretzfeld",
+  "art": "gemeinde",
+  "einw": 12624,
+  "lon": 9.440237,
+  "lat": 49.177232,
+  "web": [
+   "https://www.bretzfeld.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215105",
+  "name": "Linkenheim-Hochstetten",
+  "art": "gemeinde",
+  "einw": 12601,
+  "lon": 8.408502,
+  "lat": 49.124733,
+  "web": [
+   "https://linkenheim-hochstetten.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08236046",
+  "name": "Niefern-Öschelbronn",
+  "art": "gemeinde",
+  "einw": 12583,
+  "lon": 8.798354,
+  "lat": 48.908786,
+  "web": [
+   "https://www.niefern-oeschelbronn.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215099",
+  "name": "Graben-Neudorf",
+  "art": "gemeinde",
+  "einw": 12496,
+  "lon": 8.496271,
+  "lat": 49.172696,
+  "web": [
+   "https://www.graben-neudorf.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116047",
+  "name": "Neuhausen auf den Fildern",
+  "art": "gemeinde",
+  "einw": 12449,
+  "lon": 9.278797,
+  "lat": 48.684669,
+  "web": [
+   "https://www.neuhausen-auf-den-fildern.de/",
+   "https://www.stadt-neuhausen-auf-den-fildern.de/",
+   "https://www.gemeinde-neuhausen-auf-den-fildern.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08226028",
+  "name": "Heddesheim",
+  "art": "gemeinde",
+  "einw": 12382,
+  "lon": 8.603136,
+  "lat": 49.504679,
+  "web": [
+   "https://www.heddesheim.de/willkommen",
+   "https://www.heddesheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08425071",
+  "name": "Laichingen, Stadt",
+  "art": "gemeinde",
+  "einw": 12371,
+  "lon": 9.685733,
+  "lat": 48.489445,
+  "web": [
+   "https://www.laichingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08335100",
+  "name": "Rielasingen-Worblingen",
+  "art": "gemeinde",
+  "einw": 12353,
+  "lon": 8.846,
+  "lat": 47.728398,
+  "web": [
+   "https://www.rielasingen-worblingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08326052",
+  "name": "St. Georgen im Schwarzwald, Stadt",
+  "art": "gemeinde",
+  "einw": 12262,
+  "lon": 8.332259,
+  "lat": 48.126225,
+  "web": [
+   "https://www.st-georgen-im-schwarzwald.de/",
+   "https://www.stadt-st-georgen-im-schwarzwald.de/",
+   "https://www.gemeinde-st-georgen-im-schwarzwald.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08435052",
+  "name": "Salem",
+  "art": "gemeinde",
+  "einw": 12252,
+  "lon": 9.310691,
+  "lat": 47.759725,
+  "web": [
+   "https://www.salem.de/"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "084355005"
+  ]
+ },
+ {
+  "ags": "08118071",
+  "name": "Tamm, Stadt",
+  "art": "gemeinde",
+  "einw": 12245,
+  "lon": 9.117204,
+  "lat": 48.920183,
+  "web": [
+   "https://www.tamm.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125056",
+  "name": "Lauffen am Neckar, Stadt",
+  "art": "gemeinde",
+  "einw": 12218,
+  "lon": 9.150312,
+  "lat": 49.076213,
+  "web": [
+   "https://www.lauffen-am-neckar.de/",
+   "https://www.stadt-lauffen-am-neckar.de/",
+   "https://www.gemeinde-lauffen-am-neckar.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08116072",
+  "name": "Wernau (Neckar), Stadt",
+  "art": "gemeinde",
+  "einw": 12210,
+  "lon": 9.421663,
+  "lat": 48.689366,
+  "web": [
+   "https://www.wernau.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226062",
+  "name": "Oftersheim",
+  "art": "gemeinde",
+  "einw": 12165,
+  "lon": 8.585149,
+  "lat": 49.368098,
+  "web": [
+   "https://www.oftersheim.de/start"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118007",
+  "name": "Besigheim, Stadt",
+  "art": "gemeinde",
+  "einw": 12159,
+  "lon": 9.140825,
+  "lat": 49.000174,
+  "web": [
+   "https://www.besigheim.de/",
+   "https://www.stadt-besigheim.de/",
+   "https://www.gemeinde-besigheim.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08315047",
+  "name": "Gundelfingen",
+  "art": "gemeinde",
+  "einw": 12146,
+  "lon": 7.8668,
+  "lat": 48.042406,
+  "web": [
+   "https://www.gundelfingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08316043",
+  "name": "Teningen",
+  "art": "gemeinde",
+  "einw": 12072,
+  "lon": 7.810263,
+  "lat": 48.126973,
+  "web": [
+   "https://www.teningen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08127025",
+  "name": "Gaildorf, Stadt",
+  "art": "gemeinde",
+  "einw": 12054,
+  "lon": 9.76983,
+  "lat": 49.00045,
+  "web": [
+   "https://www.gaildorf.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119042",
+  "name": "Leutenbach",
+  "art": "gemeinde",
+  "einw": 12036,
+  "lon": 9.392571,
+  "lat": 48.887529,
+  "web": [
+   "https://www.leutenbach.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08417013",
+  "name": "Burladingen, Stadt",
+  "art": "gemeinde",
+  "einw": 12025,
+  "lon": 9.1153,
+  "lat": 48.28913,
+  "web": [
+   "https://www.burladingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118070",
+  "name": "Steinheim an der Murr, Stadt",
+  "art": "gemeinde",
+  "einw": 11962,
+  "lon": 9.278099,
+  "lat": 48.965777,
+  "web": [
+   "https://www.steinheim-an-der-murr.de/",
+   "https://www.stadt-steinheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226031",
+  "name": "Hemsbach, Stadt",
+  "art": "gemeinde",
+  "einw": 11822,
+  "lon": 8.656453,
+  "lat": 49.592797,
+  "web": [
+   "https://www.hemsbach.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08125086",
+  "name": "Schwaigern, Stadt",
+  "art": "gemeinde",
+  "einw": 11784,
+  "lon": 9.056965,
+  "lat": 49.141683,
+  "web": [
+   "https://www.schwaigern.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08236071",
+  "name": "Remchingen",
+  "art": "gemeinde",
+  "einw": 11757,
+  "lon": 8.574545,
+  "lat": 48.94645,
+  "web": [
+   "https://www.remchingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08215059",
+  "name": "Oberderdingen, Stadt",
+  "art": "gemeinde",
+  "einw": 11753,
+  "lon": 8.80201,
+  "lat": 49.062716,
+  "web": [
+   "https://www.oberderdingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08216009",
+  "name": "Durmersheim",
+  "art": "gemeinde",
+  "einw": 11747,
+  "lon": 8.268461,
+  "lat": 48.931418,
+  "web": [
+   "https://www.durmersheim.de/web/index.html"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "082165003"
+  ]
+ },
+ {
+  "ags": "08125058",
+  "name": "Leingarten, Stadt",
+  "art": "gemeinde",
+  "einw": 11595,
+  "lon": 9.127562,
+  "lat": 49.143857,
+  "web": [
+   "https://www.leingarten.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08225109",
+  "name": "Walldürn, Stadt",
+  "art": "gemeinde",
+  "einw": 11562,
+  "lon": 9.368531,
+  "lat": 49.582516,
+  "web": [
+   "https://www.wallduern.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119041",
+  "name": "Korb",
+  "art": "gemeinde",
+  "einw": 11558,
+  "lon": 9.361341,
+  "lat": 48.841999,
+  "web": [
+   "https://www.korb.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08216049",
+  "name": "Sinzheim",
+  "art": "gemeinde",
+  "einw": 11547,
+  "lon": 8.163518,
+  "lat": 48.760234,
+  "web": [
+   "https://www.sinzheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119061",
+  "name": "Rudersberg",
+  "art": "gemeinde",
+  "einw": 11543,
+  "lon": 9.529647,
+  "lat": 48.883356,
+  "web": [
+   "https://www.rudersberg.de/de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08136010",
+  "name": "Bopfingen, Stadt",
+  "art": "gemeinde",
+  "einw": 11531,
+  "lon": 10.351593,
+  "lat": 48.857911,
+  "web": [
+   "https://www.bopfingen.de/",
+   "https://www.stadt-bopfingen.de/",
+   "https://www.gemeinde-bopfingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08135015",
+  "name": "Gerstetten",
+  "art": "gemeinde",
+  "einw": 11530,
+  "lon": 10.018422,
+  "lat": 48.622994,
+  "web": [
+   "https://www.gerstetten.de/willkommen",
+   "https://www.gerstetten.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226060",
+  "name": "Nußloch",
+  "art": "gemeinde",
+  "einw": 11392,
+  "lon": 8.69587,
+  "lat": 49.322794,
+  "web": [
+   "https://www.nussloch.de/startseite",
+   "https://www.nussloch.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08416048",
+  "name": "Ammerbuch",
+  "art": "gemeinde",
+  "einw": 11386,
+  "lon": 8.965685,
+  "lat": 48.554229,
+  "web": [
+   "https://www.ammerbuch.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317153",
+  "name": "Rheinau, Stadt",
+  "art": "gemeinde",
+  "einw": 11374,
+  "lon": 7.939856,
+  "lat": 48.664363,
+  "web": [
+   "https://www.rheinau.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08335022",
+  "name": "Engen, Stadt",
+  "art": "gemeinde",
+  "einw": 11351,
+  "lon": 8.772115,
+  "lat": 47.854017,
+  "web": [
+   "https://www.engen.de/start",
+   "https://www.engen.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08236072",
+  "name": "Straubenhardt",
+  "art": "gemeinde",
+  "einw": 11317,
+  "lon": 8.531485,
+  "lat": 48.854542,
+  "web": [
+   "https://www.straubenhardt.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08119084",
+  "name": "Welzheim, Stadt",
+  "art": "gemeinde",
+  "einw": 11268,
+  "lon": 9.63467,
+  "lat": 48.874336,
+  "web": [
+   "https://www.welzheim.de/stadt/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118067",
+  "name": "Schwieberdingen",
+  "art": "gemeinde",
+  "einw": 11258,
+  "lon": 9.073065,
+  "lat": 48.876494,
+  "web": [
+   "https://www.schwieberdingen.de/",
+   "https://www.stadt-schwieberdingen.de/",
+   "https://www.gemeinde-schwieberdingen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08415019",
+  "name": "Eningen unter Achalm",
+  "art": "gemeinde",
+  "einw": 11145,
+  "lon": 9.259408,
+  "lat": 48.486636,
+  "web": [
+   "https://www.eningen-unter-achalm.de/",
+   "https://www.stadt-eningen-unter-achalm.de/",
+   "https://www.gemeinde-eningen-unter-achalm.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08317034",
+  "name": "Gengenbach, Stadt",
+  "art": "gemeinde",
+  "einw": 11135,
+  "lon": 8.013343,
+  "lat": 48.405617,
+  "web": [
+   "https://www.stadt-gengenbach.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116015",
+  "name": "Denkendorf",
+  "art": "gemeinde",
+  "einw": 11123,
+  "lon": 9.31755,
+  "lat": 48.694154,
+  "web": [
+   "https://www.denkendorf.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08426097",
+  "name": "Riedlingen, Stadt",
+  "art": "gemeinde",
+  "einw": 11122,
+  "lon": 9.472452,
+  "lat": 48.153659,
+  "web": [
+   "https://www.riedlingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115042",
+  "name": "Rutesheim, Stadt",
+  "art": "gemeinde",
+  "einw": 11047,
+  "lon": 8.945152,
+  "lat": 48.809882,
+  "web": [
+   "https://www.rutesheim.de/",
+   "https://www.stadt-rutesheim.de/",
+   "https://www.gemeinde-rutesheim.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08417025",
+  "name": "Haigerloch, Stadt",
+  "art": "gemeinde",
+  "einw": 10919,
+  "lon": 8.804191,
+  "lat": 48.366535,
+  "web": [
+   "https://www.haigerloch.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08235006",
+  "name": "Altensteig, Stadt",
+  "art": "gemeinde",
+  "einw": 10849,
+  "lon": 8.601974,
+  "lat": 48.584389,
+  "web": [
+   "https://www.altensteig.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08316020",
+  "name": "Kenzingen, Stadt",
+  "art": "gemeinde",
+  "einw": 10829,
+  "lon": 7.769903,
+  "lat": 48.193031,
+  "web": [
+   "https://www.kenzingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08335028",
+  "name": "Gottmadingen",
+  "art": "gemeinde",
+  "einw": 10772,
+  "lon": 8.777019,
+  "lat": 47.735149,
+  "web": [
+   "https://www.gottmadingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08316017",
+  "name": "Herbolzheim, Stadt",
+  "art": "gemeinde",
+  "einw": 10741,
+  "lon": 7.777447,
+  "lat": 48.222221,
+  "web": [
+   "https://www.stadt-herbolzheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08118051",
+  "name": "Möglingen",
+  "art": "gemeinde",
+  "einw": 10730,
+  "lon": 9.126384,
+  "lat": 48.887185,
+  "web": [
+   "https://www.moeglingen.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08226063",
+  "name": "Plankstadt",
+  "art": "gemeinde",
+  "einw": 10714,
+  "lon": 8.593962,
+  "lat": 49.392183,
+  "web": [
+   "https://www.plankstadt.de/2235044"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08136042",
+  "name": "Lorch, Stadt",
+  "art": "gemeinde",
+  "einw": 10704,
+  "lon": 9.689403,
+  "lat": 48.797029,
+  "web": [
+   "https://www.lorch.de/",
+   "https://www.stadt-lorch.de/",
+   "https://www.gemeinde-lorch.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08215103",
+  "name": "Karlsdorf-Neuthard",
+  "art": "gemeinde",
+  "einw": 10673,
+  "lon": 8.545484,
+  "lat": 49.136151,
+  "web": [
+   "https://www.karlsdorf-neuthard.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08117015",
+  "name": "Donzdorf, Stadt",
+  "art": "gemeinde",
+  "einw": 10550,
+  "lon": 9.811046,
+  "lat": 48.686613,
+  "web": [
+   "https://www.donzdorf.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08417044",
+  "name": "Meßstetten, Stadt",
+  "art": "gemeinde",
+  "einw": 10521,
+  "lon": 8.963063,
+  "lat": 48.180918,
+  "web": [
+   "https://www.stadt-messstetten.de/",
+   "https://www.messstetten.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08316012",
+  "name": "Endingen am Kaiserstuhl, Stadt",
+  "art": "gemeinde",
+  "einw": 10517,
+  "lon": 7.701325,
+  "lat": 48.142314,
+  "web": [
+   "https://www.endingen.de/startseite",
+   "https://www.endingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08336084",
+  "name": "Steinen",
+  "art": "gemeinde",
+  "einw": 10500,
+  "lon": 7.73952,
+  "lat": 47.643739,
+  "web": [
+   "https://www.steinen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08115044",
+  "name": "Schönaich",
+  "art": "gemeinde",
+  "einw": 10483,
+  "lon": 9.062322,
+  "lat": 48.656516,
+  "web": [
+   "https://www.schoenaich.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08436008",
+  "name": "Aulendorf, Stadt",
+  "art": "gemeinde",
+  "einw": 10466,
+  "lon": 9.638492,
+  "lat": 47.951301,
+  "web": [
+   "https://www.aulendorf.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08317005",
+  "name": "Appenweier",
+  "art": "gemeinde",
+  "einw": 10367,
+  "lon": 7.978133,
+  "lat": 48.537224,
+  "web": [
+   "https://www.appenweier.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08315064",
+  "name": "Kirchzarten",
+  "art": "gemeinde",
+  "einw": 10364,
+  "lon": 7.955318,
+  "lat": 47.965089,
+  "web": [
+   "https://www.kirchzarten.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08235079",
+  "name": "Bad Wildbad, Stadt",
+  "art": "gemeinde",
+  "einw": 10359,
+  "lon": 8.549762,
+  "lat": 48.752251,
+  "web": [
+   "https://www.bad-wildbad.de/de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08136028",
+  "name": "Heubach, Stadt",
+  "art": "gemeinde",
+  "einw": 10241,
+  "lon": 9.934626,
+  "lat": 48.78878,
+  "web": [
+   "https://www.heubach.de/",
+   "https://www.stadt-heubach.de/",
+   "https://www.gemeinde-heubach.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08125069",
+  "name": "Neuenstadt am Kocher, Stadt",
+  "art": "gemeinde",
+  "einw": 10218,
+  "lon": 9.330987,
+  "lat": 49.237185,
+  "web": [
+   "https://www.neuenstadt-am-kocher.de/",
+   "https://www.stadt-neuenstadt-am-kocher.de/",
+   "https://www.gemeinde-neuenstadt-am-kocher.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08236004",
+  "name": "Birkenfeld",
+  "art": "gemeinde",
+  "einw": 10134,
+  "lon": 8.636435,
+  "lat": 48.870121,
+  "web": [
+   "https://www.stadt-birkenfeld.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08236076",
+  "name": "Königsbach-Stein",
+  "art": "gemeinde",
+  "einw": 10133,
+  "lon": 8.610536,
+  "lat": 48.966057,
+  "web": [
+   "https://www.koenigsbach-stein.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08117049",
+  "name": "Süßen, Stadt",
+  "art": "gemeinde",
+  "einw": 10115,
+  "lon": 9.757236,
+  "lat": 48.680177,
+  "web": [
+   "https://www.suessen.de/",
+   "https://www.stadt-suessen.de/",
+   "https://www.gemeinde-suessen.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08437076",
+  "name": "Mengen, Stadt",
+  "art": "gemeinde",
+  "einw": 10114,
+  "lon": 9.329165,
+  "lat": 48.048768,
+  "web": [
+   "https://www.mengen.de/"
+  ],
+  "vorher": "erreicht",
+  "auch": [
+   "084375002"
+  ]
+ },
+ {
+  "ags": "08235080",
+  "name": "Wildberg, Stadt",
+  "art": "gemeinde",
+  "einw": 10045,
+  "lon": 8.746753,
+  "lat": 48.625146,
+  "web": [
+   "https://www.wildberg.de/",
+   "https://www.stadt-wildberg.de/",
+   "https://www.gemeinde-wildberg.de/"
+  ],
+  "vorher": "nicht_erreicht"
+ },
+ {
+  "ags": "08415014",
+  "name": "Dettingen an der Erms",
+  "art": "gemeinde",
+  "einw": 10018,
+  "lon": 9.346973,
+  "lat": 48.529679,
+  "web": [
+   "https://www.dettingen-erms.de/willkommen",
+   "https://www.dettingen-erms.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "08116070",
+  "name": "Weilheim an der Teck, Stadt",
+  "art": "gemeinde",
+  "einw": 10007,
+  "lon": 9.537362,
+  "lat": 48.615689,
+  "web": [
+   "https://www.weilheim-teck.de/startseite",
+   "https://www.weilheim-teck.de"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "081255012",
+  "name": "GVV Schozach-Bottwartal",
+  "art": "verband",
+  "einw": 29930,
+  "web": [
+   "https://www.sg-schozach-bottwartal.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "081275006",
+  "name": "GVV Limpurger Land",
+  "art": "verband",
+  "einw": 21009,
+  "web": [
+   "https://www.limpurger-land.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082265006",
+  "name": "GVV Rauenberg",
+  "art": "verband",
+  "einw": 20879,
+  "web": [
+   "https://www.rauenberg.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "083155003",
+  "name": "GVV Dreisamtal",
+  "art": "verband",
+  "einw": 20762,
+  "web": [
+   "https://www.dreisamtal.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082265009",
+  "name": "GVV Waibstadt",
+  "art": "verband",
+  "einw": 20336,
+  "web": [
+   "https://www.waibstadt.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082375001",
+  "name": "GVV Dornstetten",
+  "art": "verband",
+  "einw": 19616,
+  "web": [
+   "https://www.dornstetten.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "081165003",
+  "name": "GVV Neckartenzlingen",
+  "art": "verband",
+  "einw": 18912,
+  "web": [
+   "https://www.neckartenzlingen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "084355004",
+  "name": "GVV Meersburg",
+  "art": "verband",
+  "einw": 18036,
+  "web": [
+   "https://www.meersburg.de/willkommen"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "081185003",
+  "name": "GVV Bönnigheim",
+  "art": "verband",
+  "einw": 17298,
+  "web": [
+   "https://www.boennigheim.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082355002",
+  "name": "GVV Althengstett",
+  "art": "verband",
+  "einw": 16894,
+  "web": [
+   "https://www.althengstett.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "083155016",
+  "name": "GVV Staufen-Münstertal",
+  "art": "verband",
+  "einw": 13414,
+  "web": [
+   "https://www.muenstertal-staufen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "081165002",
+  "name": "GVV Lenningen",
+  "art": "verband",
+  "einw": 13273,
+  "web": [
+   "https://www.lenningen.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082365006",
+  "name": "GVV Neulingen",
+  "art": "verband",
+  "einw": 12989,
+  "web": [
+   "https://www.neulingen.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "083275002",
+  "name": "GVV Heuberg",
+  "art": "verband",
+  "einw": 12426,
+  "web": [
+   "https://www.heuberg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "083165002",
+  "name": "GVV Elzach",
+  "art": "verband",
+  "einw": 12162,
+  "web": [
+   "https://www.elzach.de/,Lde/171505.html"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "084375001",
+  "name": "GVV Laucherttal",
+  "art": "verband",
+  "einw": 12058,
+  "web": [
+   "https://www.laucherttal.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082355005",
+  "name": "GVV Teinachtal",
+  "art": "verband",
+  "einw": 12013,
+  "web": [
+   "https://www.teinachtal.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "084365001",
+  "name": "GVV Altshausen",
+  "art": "verband",
+  "einw": 11715,
+  "web": [
+   "https://www.altshausen.de/de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082255007",
+  "name": "GVV Osterburken",
+  "art": "verband",
+  "einw": 11538,
+  "web": [
+   "https://www.osterburken.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082265007",
+  "name": "GVV Schönau",
+  "art": "verband",
+  "einw": 10750,
+  "web": [
+   "https://www.schoenau.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "083275001",
+  "name": "GVV Donau-Heuberg",
+  "art": "verband",
+  "einw": 10701,
+  "web": [
+   "https://www.donau-heuberg.de/"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "081265002",
+  "name": "GVV Krautheim",
+  "art": "verband",
+  "einw": 10682,
+  "web": [
+   "https://www.krautheim.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "083175006",
+  "name": "GVV Kappelrodeck",
+  "art": "verband",
+  "einw": 10678,
+  "web": [
+   "https://www.kappelrodeck.de/de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "082365007",
+  "name": "GVV Tiefenbronn",
+  "art": "verband",
+  "einw": 10493,
+  "web": [
+   "https://www.tiefenbronn.de/startseite"
+  ],
+  "vorher": "erreicht"
+ },
+ {
+  "ags": "VRS",
+  "name": "Verband Region Stuttgart",
+  "art": "verband",
+  "web": [
+   "https://www.region-stuttgart.org/"
+  ],
+  "vorher": "neu"
+ },
+ {
+  "ags": "MRN",
+  "name": "Metropolregion Rhein-Neckar",
+  "art": "verband",
+  "web": [
+   "https://www.m-r-n.com/"
+  ],
+  "vorher": "neu"
+ },
+ {
+  "ags": "TRK",
+  "name": "TechnologieRegion Karlsruhe",
+  "art": "verband",
+  "web": [
+   "https://technologieregion-karlsruhe.de/"
+  ],
+  "vorher": "neu"
+ }
+]
