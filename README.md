@@ -5,351 +5,50 @@
 
 # Zählkarte – Verkehrszählungen je Stunde und Tag
 
-**Karte:** https://vizsim-lab.github.io/zaehlkarte/
+Städte zählen ständig Verkehr: an Kreuzungen und Straßenabschnitten, von Hand, per Video oder mit
+fest eingebauten Zählern. Die Ergebnisse liegen meist in Schubladen. Die Zählkarte sammelt, was
+offen ist oder per Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je
+Verkehrsart auf einer Karte.
 
-Städte zählen ständig Verkehr: an Kreuzungen (Knotenstromzählung) und an Straßenabschnitten
-(Querschnitt), von Hand oder per Video, für Planungen, Ampeln und Lärmkarten. Die Ergebnisse
-liegen meist in Schubladen. Die Zählkarte sammelt, was offen ist oder per
-Informationsfreiheitsanfrage herausgegeben wurde, und zeigt die Zählwerte je Verkehrsart:
+**[Zur Karte →](https://vizsim-lab.github.io/zaehlkarte/)**
 
-- **Kfz**, **Schwerverkehr** (Menge und Anteil an Kfz), **Rad** (Menge und Radanteil
-  Rad / (Rad + Kfz)) und **Fuß** (bei nach Alter getrennten Zählungen auch
-  Kinder/Jugendliche im Tagesgang).
-- Kennzahl wählbar: Summe 7–19 Uhr, Summe 24 Stunden oder die stärkste Stunde.
-- Je Zählstelle alle Zählungen, der **Tagesgang** jeder Zählung, der Verlauf über die Jahre,
-  die Rohdatei und die Lizenz; Download als CSV (nur Quellen mit Lizenz, siehe unten).
-- **Datenlage**: je Kommune, ob es solche Zählungen offen gibt, ob sie auf Anfrage
-  herausgegeben wurden oder wo eine Anfrage aussichtsreich ist – mit Belegen, für beide
-  Familien getrennt.
-- **Dauerzählstellen** (Umschalter „Kurzzeitzählungen | Dauerzählstellen“ oben in der
-  Legende): fest eingebaute Zähler in Berlin, Hamburg und Ettlingen, die Dauerzählstellen des
-  Landes Baden-Württemberg an Autobahnen, Bundes- und Landesstraßen und die Rad-Zählstellen von
-  Berlin, Münster, Aachen, München, Würzburg, Dortmund, Essen, Bochum, Bonn, Düsseldorf,
-  Leipzig, Rostock, Dresden, dem Rhein-Kreis Neuss, 27 Städten und Landkreisen und dem Land in
-  Baden-Württemberg und in Niedersachsen die der VMZ Niedersachsen (Landesbehörde für Straßenbau
-  und Verkehr, Hannover, Region Hannover, Braunschweig und vier weitere Kommunen), dazu der
-  Radschnellweg RS5 in Neuss und Augsburgs Radzählstationen (nur Tageswerte); Fuß in Augsburg
-  (Passantenzählung Annastraße), Würzburg (Passantenzählung an drei Standorten der Innenstadt)
-  und Bochum (fünf Rad- und Fuß-Zählstellen).
-  Die Karte zeigt je Stelle die Tagessumme ihres jüngsten vollständig gezählten Schultags oder
-  eines wählbaren Tags (Kfz zuerst, Rad, Fuß und Lkw/Schwerverkehr über die Chips), die
-  Seitenleiste die Tagessummen der ganzen Reihe und den Tagesgang des Tags.
-- **Deutsch oder Englisch**: Umschalter DE/EN oben in der Legende (Deutsch ist Standard,
-  `?lang=en` öffnet englisch). Übersetzt ist die Oberfläche; Hinweise zu den Zählungen,
-  Quellenbeschreibungen, Datenlage-Texte und Anfragetexte bleiben deutsch.
+[![Die Zählkarte in Berlin Mitte: Zählstellen als Punkte nach Kfz-Menge, links die Zählstelle Spandauer Straße mit ihren Zählungen und dem Tagesgang einer Zählung, rechts die Legende](docs/bilder/karte.webp)](https://vizsim-lab.github.io/zaehlkarte/)
 
-Zwei Familien, beide nur mit gezählten Werten im Zeitverlauf: **Kurzzeitzählungen** (Werte je
-Zählung) und **Dauerzählstellen** (Stunden- und Tageswerte) – gleich, wer zählt: gesucht sind
-Werte je Stunde oder je Tag an einer bestimmten Stelle.
-Nicht gemeint sind Jahresmittel (DTV/DTVw), Verkehrsmengenkarten und Modellwerte – dafür gibt
-es [vizsim/svz](https://github.com/vizsim/svz). Liefert eine Quelle beides, nimmt jedes Repo
-seinen Teil: Hamburgs DTV-Tabelle gehört nach svz, die Stundenwerte der Wärmebildkameras hierher.
-Auswertungen wie der Schulweg-Verdacht aus den Berliner Fußgängerzählungen stehen in
-[vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege).
+## Was die Karte zeigt
 
-## Daten
+- **Kurzzeitzählungen** an Kreuzungen und Straßenabschnitten: Kfz, Schwerverkehr, Rad und Fuß –
+  als Summe 7–19 Uhr, über 24 Stunden oder als stärkste Stunde, mit dem Tagesgang jeder Zählung.
+- **Dauerzählstellen**: fest eingebaute Zähler mit Tagessummen über Jahre und Stundenwerten –
+  Detektoren in Berlin, Wärmebildkameras in Hamburg, die Zählstellen des Landes
+  Baden-Württemberg, Rad-Zählstellen vieler Städte und Passantenzählungen.
+- **Datenlage je Kommune**: wo es solche Zählungen offen gibt, wo sie auf Anfrage herausgegeben
+  wurden und wo eine Anfrage aussichtsreich ist – mit Belegen.
+- **CSV-Download** (nur Quellen mit Lizenz), Oberfläche auf Deutsch und Englisch.
 
-| Quelle | Was | Zeitraum | Weg | Lizenz |
-|---|---|---|---|---|
-| Berlin (SenMVKU) | rund 26.600 verortete Knoten- und Querschnittszählungen, 15/60-Minuten-Werte, Kfz nach Fahrzeugart, Rad, Fuß nach Alter | 1983–2025 | IFG-Anfragen [2019](https://fragdenstaat.de/anfrage/kfz-verkehrszahldaten-aus-berlin/) und [2025](https://fragdenstaat.de/anfrage/stundengenaue-ergebnisse-manueller-verkehrszaehlungen-in-berlin/) | CC BY-SA 3.0 DE (bis 2019), dl-de/by-2-0 (ab 2019) |
-| Ravensburg, Weingarten, Berg, Baienfurt, Baindt | 24-Stunden-Videozählungen an Kreuzungen, 15-Minuten-Werte, Pkw, Lkw, Rad, Fuß | 2023–2026 | offen auf [MobiData BW](https://mobidata-bw.de/dataset/zaehldaten-ravensburg) | dl-de/by-2-0 |
-| Moers (Stadt Moers) | rund 540 Tageszählungen an 140 Stellen mit Seitenradar-Messgeräten (meist zwei Tage am Stück), Kfz je Stunde, Schwerverkehr über die Länge | 2010–2022 | offen auf [offenesdatenportal.de](https://www.offenesdatenportal.de/dataset/verkehrszahlung-in-moers-2021) | dl-de/zero-2-0 |
-| Olpe (Kreisstadt Olpe, Ordnungsamt) | 13 Messungen an zwölf Stellen mit Radar-Messgeräten (ein bis zwei Wochen am Stück), je Fahrzeug Zeit, Richtung und Klasse – Kfz, Schwerverkehr, Rad je Stunde | 2025–2026 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.olpe.de/dataset/?q=Verkehrsmessung) (JSON) | dl-de/by-2-0, eine Messung CC BY 4.0 |
-| Münster (Stadt Münster) | rund 1.160 Kfz-Knotenpunktzählungen von Hand, je meist zwei Stunden (7–8 und 16–17 Uhr), nach Fahrzeugart | 2000–2020 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-manuelle-verkehrserhebung) (XLS und PDF) | dl-de/by-2-0, „Datenquelle: Stadt Münster“ |
-| Potsdam (Bereich Verkehrsentwicklung) | rund 470 Knotenpunktzählungen von Hand (7–10 und 15–18 Uhr), je Zählung Früh- und Nachmittagsspitzenstunde und Summe der sechs Stunden, Kfz, Schwerverkehr, Rad | 2010–2023 | offen auf dem [Open-Data-Portal der Stadt](https://opendata.potsdam.de/explore/dataset/verkehrszahlungen/) (ein PDF je Zählung) | [Nutzungsbedingungen der LHP](https://opendata.potsdam.de/terms/terms-of-use/), „© LHP/NB-16-OGD/Datum der Entnahme“ |
-| Xanten (Mobilitätskonzept, büro stadtVerkehr) | 18 Zählungen vom 25.08.2020 per Video: 12 Knotenpunkte (7–9 und 15–18 Uhr) und 6 Querschnitte (24 h), Viertelstunden nach Fahrzeugart, nur Kfz | 2020 | offen auf [opendata.ruhr](https://opendata.ruhr/dataset/mobilitatskonzept) (PDF) | dl-de/zero-2-0 |
-| Konstanz (Amt für Stadtplanung und Umwelt) | 83 Tageszählungen an sechs Stellen mit mobilen Zählgeräten (ein bis sechs Wochen am Stück), 5- oder 15-Minuten-Werte, Rad, Fuß, an zwei Stellen Kfz | 2020 | offen auf [Offene Daten Konstanz](https://offenedaten-konstanz.de/dataset/mobile-verkehrsz-hlungen-rad-und-fu-verkehr) | CC0 1.0 |
-| Tübingen (Universitätsstadt Tübingen) | 47 Tageswerte an 25 Querschnitten der Kernstadt und der Teilorte aus dem Bericht Verkehrszählungen Juni/Juli 2022: Kfz und an acht Stellen Rad in 24 Stunden, je Zähltag; Hochrechnungen, Mittel über Tage und DTV nicht übernommen | 2011–2022 | Anlagen 1 und 3 zur [Vorlage 242/2022](https://www.tuebingen.de/gemeinderat/vo0050.asp?__kvonr=16692) im Ratsinformationssystem (PDF) | ohne Lizenz (siehe unten) |
-| Neubulach (Lärmaktionsplan, Büro IGV) | Videozählung am 12.10.2023: ein Knotenpunkt über 24 Stunden, fünf Knotenpunkte und zwei Querschnitte von 15 bis 19 Uhr, Kfz und Schwerverkehr (je Knoten die Summe der Zufahrten); die Hochrechnungen des Berichts nicht übernommen | 2023 | [Kurzbericht](https://www.neubulach.de/ceasy/resource/?download=1&id=3956) auf der Website der Stadt (PDF) | ohne Lizenz (siehe unten) |
+Nur gezählte Werte je Stunde oder je Tag an einer bestimmten Stelle, gleich, wer zählt.
+Jahresmittel (DTV), Verkehrsmengenkarten und Modellwerte stehen in
+[vizsim/svz](https://github.com/vizsim/svz).
 
-**Dauerzählstellen:**
+## Mehr dazu
 
-| Quelle | Was | Zeitraum | Weg | Lizenz |
-|---|---|---|---|---|
-| Berlin (Verkehrsinformationszentrale) | Infrarot-Detektoren (TEU) an rund 250 Standorten; Stundenwerte je Richtung (Messquerschnitt) für Kfz und Lkw (Detektorklasse), in der Karte rund 290 Messquerschnitte | 2015 – Juni 2025 | offen im [Archiv der Digitalen Plattform Stadtverkehr](https://api.viz.berlin.de/daten/verkehrsdetektion) ([Datensatz](https://daten.berlin.de/datensaetze/verkehrsdetektion-berlin)) | dl-de/by-2-0, „Digitale Plattform Stadtverkehr Berlin / Verkehrsdetektion Berlin“ |
-| Hamburg (Behörde für Verkehr und Mobilitätswende) | Wärmebildkameras an Kreuzungen: Stundenwerte je Zählstelle (eine Richtung an einem Knotenarm) für Kfz, an 341 Stellen auch Schwerverkehr (Klasse der Kamera), dazu 312 Rad-Zählstellen; davor Tageswerte der Quelle (Kfz und Rad, als solche gekennzeichnet); in der Karte rund 1.140 Zählstellen, Straßennamen aus OpenStreetMap | Kfz und Rad seit 2020 (bis Ende August 2026 Tageswerte der Quelle, danach Stunden), Schwerverkehr ab März 2026; wöchentlich ergänzt | offen über die [SensorThings API](https://iot.hamburg.de/v1.1) ([Kfz](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-kfz-infrarotdetektoren-hamburg14), [Rad](https://suche.transparenz.hamburg.de/dataset/verkehrsdaten-rad-infrarotdetektoren-hamburg20)) | dl-de/by-2-0, „Freie und Hansestadt Hamburg, Behörde für Verkehr und Mobilitätswende“ |
-| Ettlingen (Stadt Ettlingen) | automatische Zählstellen an sechs Straßen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse, in der Karte als Kfz (Summe der Klassen) und Lkw (Lkw und Lkw mit Anhänger); 10 Richtungen an 5 Stellen mit vollständigen Tagen | ab 20.08.2026 (ältere Werte ab Mai 2025 nicht übernommen); wöchentlich ergänzt | offen im [Open-Data-Portal re@di](https://opendata.readi.de/dataset/automatisierte-verkehrszahlung-in-ettlingen) (Datastore) | [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/deed.de) – nur nicht kommerziell, „Stadt Ettlingen“ |
-| Baden-Württemberg (Verkehrsministerium, über MobiData BW) | Dauerzählstellen des Landes an Autobahnen, Bundes- und Landesstraßen: Stundenwerte je Fahrstreifen, in der Karte je Fahrtrichtung Kfz und Schwerverkehr (Gruppe der Zählgeräte), an Autobahn-Stellen mit nur zwei Klassen statt des Schwerverkehrs die Lkw-ähnlichen; nur Stunden, die die Quelle auf allen Fahrstreifen als korrekt kennzeichnet; Lage aus der Zählstellenkarte des Landes; 193 Zählstellen (je Richtung eine Stelle), 13 ohne Lage fehlen | 2016 – August 2026 (die Autobahn-Stellen mit nur zwei Klassen bis Dezember 2025); neue Monate mit rund zwei Monaten Verzug, wöchentlich geprüft | offen auf [MobiData BW](https://mobidata-bw.de/dataset/stundenwerte_dauerzaehlstellen) (ZIP je Monat und Jahr); Lage aus der [Karte der Straßenverkehrszählung](https://mobidata-bw.de/dataset/karte_strassenverkehrszaehlung) | dl-de/by-2-0, „Verkehrsministerium Baden-Württemberg (MobiData BW)“ |
-| Baden-Württemberg: 27 Städte und Landkreise und das Land (gebündelt von MobiData BW) | Rad-Zählstellen, meist Eco-Counter: Stundenwerte je Zählstelle, beide Richtungen zusammen; in der Karte 179 Zählstellen (eine davon des Landes, in Bad Wimpfen) | 2013 – Anfang November 2026; wöchentlich ergänzt (die jüngsten drei Tage erst beim nächsten Bau) | offen auf [MobiData BW](https://mobidata-bw.de/dataset/eco-counter-fahrradzahler) (Monatsdateien) | dl-de/by-2-0, „MobiData BW“ |
-| Münster (Stadt Münster) | Rad-Zählstellen (Eco-Counter): 15-Minuten-Werte je Kanal mit Status, in der Karte Stundenwerte je Zählstelle aus Rohwerten und geprüften Werten; 23 Zählstellen | 2019–2026; wöchentlich ergänzt | offen im [GitHub-Repository der Stadt](https://github.com/od-ms/radverkehr-zaehlstellen) (nächtlich aktualisiert), Lage im [Open-Data-Portal](https://opendata.stadt-muenster.de/dataset/verkehrsz%C3%A4hlung-fahrradverkehr-tagesaktuelle-daten) | dl-de/by-2-0, „Stadt Münster“ |
-| Aachen (Stadt Aachen) | Radzählstellen: Stundenwerte je Richtung (UTC), in der Karte die Summe je Zählstelle; 26 Zählstellen | 2025–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://offenedaten.aachen.de/dataset/radzaehlstellen-der-stadt-aachen) (CSV je Jahr, Standorte als PDF) | dl-de/zero-2-0 |
-| Berlin (Senatsverwaltung für Mobilität, Verkehr, Klimaschutz und Umwelt) | Rad-Zählstellen: Stundenwerte, meist je Richtung; farbig markierte Werte (rekonstruiert, unplausibel, keine Daten) nicht übernommen; 33 Zählstellen | 2012–2025; einmal im Jahr ergänzt | offen auf [berlin.de](https://www.berlin.de/sen/uvk/verkehr/verkehrsplanung/radverkehr/weitere-radinfrastruktur/zaehlstellen-und-fahrradbarometer/) (eine Excel-Datei) | dl-de/zero-2-0 |
-| München (Landeshauptstadt München) | Raddauerzählstellen: 15-Minuten-Werte je Richtung, in der Karte Stundenwerte je Zählstelle; 6 Zählstellen | Juni 2008 – September 2026; monatlich ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.muenchen.de/dataset/daten-der-raddauerzaehlstellen-muenchen-jahreszahlen) (Jahres- und Monatsdateien), Lage im Geoportal | dl-de/by-2-0 |
-| Würzburg (Stadt Würzburg) | Rad-Zählstellen (Eco-Counter): Stundenwerte je Zählstelle mit Status, in der Karte Rohwerte; 6 Zählstellen | 2015–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.wuerzburg.de/explore/dataset/fahrrad-zaehlung-daten/) (Opendatasoft) | dl-de/by-2-0, „Stadt Würzburg“ |
-| Rhein-Kreis Neuss | Radzählstationen auf Rhein- und Erft-Radweg (Eco-Counter): Stundenwerte je Kanal mit Status, in der Karte die Summe je Station; 5 Stationen | 2015 – Juli 2026 (seitdem nicht aktualisiert) | offen im [Open-Data-Portal des Kreises](https://opendata.rhein-kreis-neuss.de/explore/dataset/eco-counter-data/) (Opendatasoft) | CC0 1.0 |
-| Dortmund (Stadtplanungs- und Bauordnungsamt) | Dauerzählstelle Radverkehr Schnettkerbrücke (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte Stundenwerte; Lage aus OpenStreetMap | 2018–2026; wöchentlich ergänzt | offen im [Open-Data-Portal der Stadt](https://open-data.dortmund.de/explore/dataset/fb61-dauerzaehlstelle-radverkehr-schnettkerbruecke/) (Opendatasoft) | dl-de/zero-2-0 |
-| Essen (Amt für Stadtplanung und Bauordnung) | automatische Radverkehrszählungen an Grugatrasse und Huyssenallee: Stundenwerte je Richtung, in der Karte die Summe je Zählstelle; 2 Zählstellen | 2021 – Juni 2026 (2018–2020 unter geschlossener Lizenz, nicht übernommen); vierteljährlich ergänzt | offen auf [Open.NRW](https://open.nrw/dataset/radverkehrszahlungen-e) (eine CSV je Quartal) | dl-de/by-2-0, „Stadt Essen“ |
-| Bochum (Stadt Bochum) | Zählstellen für Rad- und Fußverkehr (Eco-Counter): 15-Minuten-Werte je Richtung, in der Karte Rad und Fuß (eigene Kanäle) als Stundenwerte je Zählstelle; 8 Zählstellen, 5 davon mit Fuß | 2018–2026; wöchentlich ergänzt | offen im [GitLab der Stadt auf openCode.de](https://gitlab.opencode.de/StadtBochum/open-data/radverkehr-zaehlstellen-eco-counter) (eine CSV je Zählstelle) | dl-de/by-2-0, „Stadt Bochum“ – laut Stadt nicht für Produkte oder Services im direkten Wettbewerb zu Eco-Counter |
-| Leipzig (Verkehrs- und Tiefbauamt) | Dauerzählstellen Radverkehr (Eco-Counter): Stundenwerte je Zählstelle, davor Tageswerte der Quelle (UTC-Tage); die Quelle hält Stunden nur 31 Tage, Tageswerte zwei Jahre vor, die Zählkarte hebt beides auf (Gedächtnis); 26 Zählstellen | Tageswerte ab 14.11.2024, Stunden ab 08.10.2026; wöchentlich ergänzt | offen im WFS des Geoportals ([Stunden](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-stunde-der-letzten-31-tage-stadt-lei), [Tage](https://opendata.leipzig.de/dataset/dauerzahlstellen-radverkehr-gesamtanzahl-der-fahrrader-pro-tag-der-letzten-2-jahre-stadt-leipzi)) | dl-de/by-2-0, „Stadt Leipzig“ |
-| Rostock (Hanse- und Universitätsstadt Rostock) | Radmonitore (Eco-Counter): 15-Minuten-Werte je Zählstelle, beide Richtungen zusammen, in der Karte Stundenwerte; 17 Zählstellen | 2012–2026; wöchentlich ergänzt | offen auf [OpenData.HRO](https://www.opendata-hro.de/dataset/radmonitore) (eine CSV) | CC0 1.0 |
-| Bonn (Bundesstadt Bonn) | Fahrradmessstellen (Eco-Counter): Stundenwerte je Zählstelle, die Brücken je Seite; Summen der Brücken nicht übernommen; 14 Zählstellen, Lage aus OpenStreetMap | 2020–2025 ohne 2022 (nur je Kanal); einmal im Jahr ergänzt | offen im [Open-Data-Portal der Stadt](https://opendata.bonn.de/dataset/fahrradmessstellen-ergebnisse-radz%C3%A4hlungen-2025) (eine CSV je Jahr) | CC0 1.0 |
-| Düsseldorf (Landeshauptstadt Düsseldorf) | Dauerzählstellen Radverkehr: Stundenwerte je Zählstelle und Richtung, in der Karte die Summe je Zählstelle; Stellen, die nur Summen anderer sind, nicht übernommen; 19 Zählstellen | 2020–2025 ohne 2022 (nicht veröffentlicht); einmal im Jahr ergänzt | offen über [Open.NRW](https://open.nrw/dataset/wetterabhangige-jahresubersicht-der-dauerzahlstellen-radverkehr-2025-d) (eine CSV je Zählstelle und Jahr), Lage aus den [Standorten der Stadt](https://open.nrw/dataset/standorte-der-dauerzahlstellen-radverkehr-in-dusseldorf-d) | dl-de/by-2-0, „Landeshauptstadt Düsseldorf“ |
-| Niedersachsen: Landesbehörde für Straßenbau und Verkehr, Hannover, Region Hannover, Braunschweig, Verden (Aller), Samtgemeinde Gellersen, Rotenburg (Wümme), Jemgum (VMZ Niedersachsen) | Rad-Zählstellen an Bundes-, Landes- und Kreisstraßen und in den Städten: Stundenwerte je Zählstelle, Richtungen und Straßenseiten wie die Quelle sie führt; Störungen der Quelle als nicht gezählt; 74 Zählstellen | 2017–2026 (Hannover seit 2017, die Landesbehörde seit Ende 2023); seit dem 25.10.2026 keine neuen Werte außer Jemgum und Rotenburg; wöchentlich ergänzt | offen in der [Zählstellenübersicht der VMZ Niedersachsen](https://www.vmz-niedersachsen.de/niedersachsen/radzaehler/) (Zählerabfrage) | ohne Lizenz (siehe unten) |
-| Dresden (Landeshauptstadt Dresden) | Rad-Dauerzählstellen: Stundenwerte je Richtung, in der Karte die Summe je Zählstelle; Zeilen mit krummen Minuten an den Umstelltagen nicht übernommen; 38 Zählstellen, 35 in Betrieb | September 2009 – 2026; wöchentlich ergänzt | offen über die [OGC-API des Themenstadtplans](https://kommisdd.dresden.de/net4/public/ogcapi/collections/L1780) (je Jahr eine CSV), [Open-Data-Portal](https://opendata.dresden.de/informationsportal/?open=1&result=12AF3111B61A442AAF4B04AC1E0FDD1D#app/mainpage////) | ohne Lizenz (siehe unten) |
-| Augsburg (Stadt Augsburg, Wirtschaftsförderung) | Passantenzählung in der Fußgängerzone Annastraße: Personen je Stunde, beide Richtungen zusammen; fehlende Stunden (fast nur nachts) bleiben nicht gezählt; 1 Zählstelle, Lage aus OpenStreetMap | Dezember 2020 – 2026; laufend ergänzt | offen als CSV auf augsburg.de, verzeichnet in der [Mobilithek](https://mobilithek.info/offers/-1747083335311792689) | CC BY 4.0, „Stadt Augsburg“ |
-| Neuss (Stadt Neuss) | Rad-Dauerzählstelle am Radschnellweg RS5 (Hammer Landstraße): ein Wert je Stunde, ohne Richtung; 1 Zählstelle, Lage ungefähr (der Datensatz nennt keine Koordinaten) | Juli 2026 – 2026; wöchentlich ergänzt | offen im [Open-Data-Portal des Rhein-Kreises Neuss](https://opendata.rhein-kreis-neuss.de/explore/dataset/stadt-neuss-radzaehlstelle-radschnellweg-hammer-landstrasse/) (Opendatasoft, täglich aktualisiert) | CC BY-SA 4.0, „Stadt Neuss“ (Weitergabe unter gleichen Bedingungen) |
-| Würzburg (Stadt Würzburg, Messung hystreet.com) | Passantenzählung an drei Standorten der Innenstadt (Schönborn-, Spiegel-, Kaiserstraße; Laserscanner): Personen je Stunde, beide Richtungen zusammen; als „unverifiziert“ gekennzeichnete Stunden zählen wie Rohwerte; davor Tageswerte der Quelle (Ortstage); Lage laut Datensatz | Tageswerte ab 2020 (Schönbornstraße) bzw. September 2022, Stunden Januar 2024 – Mai 2026 (seitdem nicht fortgeschrieben) | offen im Open-Data-Portal der Stadt ([Stunden](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_stundendaten/), [Tage](https://opendata.wuerzburg.de/explore/dataset/passantenzaehlung_tagesdaten/); Opendatasoft) | dl-de/by-2-0, „Stadt Würzburg; hystreet.com GmbH“ |
-| Augsburg (Stadt Augsburg, Radverkehrsbeauftragter) | Radzählstationen (Induktionsschleifen): nur Tageswerte je Station, in der Karte als Tageswerte der Quelle (Vollständigkeit nicht prüfbar); der Tag der Erstellung der Datei nicht übernommen; 12 Zählstellen, Lage aus OpenStreetMap nach der Beschreibung der Station | September 2016 – August 2026 (seitdem nicht fortgeschrieben) | offen als CSV auf augsburg.de, verzeichnet in der [Mobilithek](https://mobilithek.info/offers/-4859503742463304999) | CC BY 4.0, „Stadt Augsburg“ |
+- [Quellen](docs/QUELLEN.md): alle Quellen mit Zeitraum, Weg und Lizenz
+- [Was die Karte zeigt](docs/KARTE.md): Kennzahlen, Dauerzählstellen und die Eigenheiten jeder Quelle
+- [Datenlage](docs/DATENLAGE.md): je Kommune, was es gibt und wo eine Anfrage aussichtsreich ist
+- [Entwicklung](docs/ENTWICKLUNG.md): Aufbau, Pipeline, Karte und Workflows
+- [Logo](docs/LOGO.md)
 
-Die Zahlen je Quelle (Stellen, Zählungen, Jahre) stehen in der Karte unter „Quellen &
-Lizenzen“ und in `public/data/manifest.json`, die der Dauerzählstellen in
-`public/data/dauer/index.json`. Rund 1.500 Berliner Zählungen haben noch keine Lage
-(Straßennamen ohne eindeutige Kreuzung in OpenStreetMap); sie fehlen in der Karte.
+## Mitmachen
 
-**Lage in Berlin:** Koordinaten aus der Zähldatei (ab 2021), sonst die Geokodierung der Fuß-
-und Radzählungen aus [vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege)
-(Straßenkreuzungen aus OpenStreetMap), für die übrigen Zählungen derselbe Geocoder im Workflow
-„Berlin geokodieren“ (`pipeline/geokodierung/berlin_ergaenzung.csv`), sonst übernommen von
-Zählungen derselben Zählstellen-Kennung, wenn die eindeutig an einem Ort liegen (in der Karte
-abschaltbar).
-
-**Datenlage:** Recherche Stand November 2026, unvollständig. Hinweise auf weitere Zählungen
-gern über das Formular [„Zählungen melden“](https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml).
-
-## Kennzahlen – was die Karte zeigt
-
-- Werte sind Summen über alle Richtungen. „7–19 Uhr“ nur, wo jede dieser Stunden gezählt ist;
-  „24 h“ nur bei 24-Stunden-Zählungen; „stärkste Stunde“ vergleicht auch kurze Zählfenster.
-- Je Stelle zeigt die Karte die jüngste Zählung im Filter, die die gewählte Kennzahl hat.
-  Alle Zählungen einer Stelle stehen in der Seitenleiste.
-- `-1` in den Rohdaten heißt „nicht gezählt“ und wird nie als 0 gerechnet. Eine Richtung, die
-  für eine Verkehrsart gar nicht gezählt wurde, fällt aus der Summe – die Seitenleiste nennt das.
-- Werte aus verschiedenen Zählfenstern werden nie ineinander umgerechnet (keine Hochrechnung).
-- Der Zähltag ist eingeordnet (Schultag, Ferien, Feiertag, Wochenende – KMK-Ferienkalender),
-  weil Ferienzählungen deutlich niedriger liegen können; filterbar.
-- MobiData BW: Die Übersichtstabelle nennt in `KFZ_n` nur die Pkw (nachgerechnet an allen
-  Zählungen mit Excel); die Karte rechnet Kfz = Pkw + Lkw aus den Stundenwerten.
-- Moers: Seitenradar-Geräte zählen jedes Fahrzeug, das sie erfassen (auch Radfahrende lassen
-  sich nicht abtrennen); Schwerverkehr = Fahrzeuglänge ab 8 m. Die Lage ist aus der Adresse
-  der Messung geokodiert (OpenStreetMap), wo nur die Straße bekannt ist, liegt der Punkt in der
-  Straßenmitte.
-- Olpe: Die Geräte-Dateien haben UTC-Zeiten (die Karte rechnet in Ortszeit um) und je Tag einen
-  GPS-Punkt – auch für Tage nach der Messung; es zählen nur die Punkte aus der Zeit der
-  Fahrzeuge. Kfz = alle Klassen außer Radfahrern; Schwerverkehr = Lkw, Lkw mit Anhänger,
-  Sattelzüge, Busse; Rad = vom Gerät als Radfahrer erkannt (nur auf der Fahrbahn). Drei oder
-  mehr Stunden ohne jedes Fahrzeug, wo nach den übrigen Tagen Verkehr zu erwarten wäre, gelten
-  als Ausfall des Geräts („nicht gezählt“, mit Hinweis).
-- Münster: Je Zählung liegen nur die Spitzenstunden vor (meist 7–8 und 16–17 Uhr) – in der
-  Karte erscheinen die Zählungen deshalb nur unter „stärkste Stunde“. Kfz = Summe der
-  Fahrzeugarten; wo Formelfehler im Zählblatt Kfz-Zelle und Fahrzeugarten auseinanderlaufen
-  lassen, der größere Wert (mit Hinweis). Schwerverkehr = Bus + Lkw + Lastzug. Die Spalte
-  „Rad“ der Kfz-Zählung ist keine vollständige Radzählung (wo es eine eigene Radzählung gibt,
-  liegt sie deutlich darunter oder steht auf 0); sie fehlt in der Karte und steht im Hinweis
-  der Zählung.
-- Potsdam: Die Zählpläne (PDF) nennen je Zählung nur die Früh- und die Nachmittagsspitzenstunde
-  (nach Kfz bestimmt, im Halbstundenraster, z. B. 7:30–8:30 Uhr) und die Summe der sechs
-  gezählten Stunden – keine Stundenwerte. In der Karte erscheint Potsdam nur unter „stärkste
-  Stunde“ Kfz; Rad und Schwerverkehr in den Spitzenstunden und die 6-Stunden-Summen stehen in
-  der Seitenleiste. Weichen im Plan Spalte SUMME und Summe der Zufahrten voneinander ab, gilt
-  der größere Wert (mit Hinweis); Pläne mit errechneten Werten (Nachkommastellen) fehlen.
-- Konstanz: Je Kalendertag eine Zählung; eine Stunde zählt nur, wenn alle ihre 5- oder
-  15-Minuten-Werte da sind (die Geräte fielen öfter für Stunden oder Tage aus). Die
-  5-Minuten-Dateien sind Geräteprotokolle: Jede Zeile steht kurz nach dem Ende ihres
-  Intervalls und wird so zugeordnet. Die Lage nennt die Stadt nur als Straße, Brücke oder
-  Hausnummer; die Punkte stammen aus OpenStreetMap, die Genauigkeit steht im Hinweis.
-
-## Dauerzählstellen – was die Karte zeigt
-
-- Eine **Tagessumme** (0–24 Uhr, je Zählstelle – je nach Quelle eine Fahrtrichtung oder beide
-  zusammen) gibt es nur, wenn jede Stunde des Tages gezählt ist; sonst ist der Tag „nicht
-  vollständig gezählt“ (hohler Punkt) – nie aufgefüllt, nie hochgerechnet, keine Mittelwerte.
-  Am Tag der Umstellung auf Sommerzeit hat der Tag 23 Stunden, bei der Rückstellung 25 (Stunde
-  2–3 Uhr zweimal, mit Hinweis); führt eine Quelle dann nur eine dieser Stunden, ist der Tag
-  nicht vollständig gezählt.
-- **Tageswerte der Quelle:** Liefert eine Quelle für eine Stelle nur Tageswerte (Augsburgs
-  Radzählstationen; Hamburg und Leipzig vor den Stunden, die die Zählkarte seit August bzw.
-  Oktober 2026 aufhebt; Würzburgs Passanten vor 2024), zeigt die Karte deren Tageswert wie
-  geliefert – „Tageswert der Quelle“ im
-  Hover, in der Seitenleiste und als Hinweis in der Legende, ohne Tagesgang; ob jede Stunde
-  gezählt ist, lässt sich dort nicht prüfen. Tageswerte gelten nur vor der ersten gezählten
-  Stunde einer Stelle, nie als Ersatz fehlender Stunden, und nie aus Wochen-, Monats- oder
-  Jahreswerten. Der Tag der Quelle kann vom Kalendertag 0–24 Uhr abweichen (Leipzig: UTC-Tag,
-  1 bis 1 Uhr, im Sommer 2 bis 2 Uhr) – das steht im Verfahren der Seitenleiste und als Hinweis
-  an der Quelle, umgerechnet wird nichts. Im CSV stehen sie in einer eigenen Spalte
-  (`<gruppe>_tageswert_quelle`).
-- Standard: je Stelle die Tagessumme ihres **jüngsten vollständig gezählten Schultags** – so
-  stehen alle Quellen zugleich in der Karte, auch wenn ihre Zeiträume sich nicht überschneiden
-  (Berlins Detektoren enden im Juni 2025, der Rhein-Kreis Neuss im Juli 2026; Berlins
-  Rad-Zählstellen, Bonn und Düsseldorf liefern einmal im Jahr und enden im Dezember 2025, Essen
-  liefert vierteljährlich, München monatlich, die übrigen Quellen laufend). Der Tag steht bei
-  jedem Wert (Hover, Seitenleiste, CSV), die Legende nennt die Tage je Quelle – Stellen, die
-  nicht mehr zählen, zeigen ihren letzten Schultag, in Berlin auch Jahre zurück. Schultag und
-  Ferien gelten je Land.
-- „Tag wählen“ zeigt alle Stellen am selben Tag (zuerst der jüngste Schultag, an dem die meisten
-  Stellen vollständig sind); Pfeile, Datum und Regler wählen einen anderen. Hat eine Quelle an
-  dem Tag keine Werte, nennt die Legende ihren Zeitraum und springt auf Wunsch zu ihrem
-  Standardtag. Die Seitenleiste zeigt die Tagessummen über alle Jahre (gefärbt nach Schultag,
-  Ferien, Wochenende/Feiertag) und den Tagesgang des Tags – Stundenwerte für die jüngsten 12
-  Monate der Quelle; ein Klick in die Tagesreihe wählt den Tag.
-- **Lkw/Schwerverkehr:** Berlin und Ettlingen zählen „Lkw“, Hamburg „Schwerverkehr“, die
-  Dauerzählstellen des Landes Baden-Württemberg „Schwerverkehr“ (an 41 Autobahn-Stellen mit nur
-  zwei Klassen bis 2025 die Lkw-ähnlichen als „Lkw“) – jeweils
-  die Klasse, die der Detektor bzw. die Kamera von Pkw unterscheidet, je Quelle anders
-  abgegrenzt und nicht dasselbe wie der Schwerverkehr der Kurzzeitzählungen. Ein Chip zeigt
-  beide: jede Stelle in ihrer Klasse und mit deren Namen, nie zusammengezählt; die Legende nennt,
-  welche Stadt welche Klasse zählt. Welche Verkehrsarten es gibt, richtet sich nach den Quellen
-  (Kfz, Lkw/Schwerverkehr, Rad, Fuß); die Karte öffnet mit Kfz. Die Stufen für Fuß trennen Rad-
-  und Fußwege (Bochum: meist 100 bis 500 am Tag) von Fußgängerzonen (Augsburg: rund 17.600,
-  Würzburg: im Median 14.000 bis 25.000 je Standort).
-- **Datenlage:** Die Ebene „Datenlage je Kommune“ folgt der Familie – bei den Dauerzählstellen
-  mit eigenem Stand je Kommune und eigenen Belegen; beide Familien nutzen dieselben Stände (in der
-  Karte, offen, herausgegeben, aussichtsreich, ohne Lizenz, nur Summen, nichts offen …).
-  „Hinzoomen“ wechselt dabei auf die Verkehrsart, die die Quellen der Kommune zählen (in Leipzig
-  etwa auf Rad). Kommunen, von denen nur Dauerzählstellen bekannt sind (etwa die Rad-Zählstellen
-  hessischer Städte und Kreise), stehen nur dort. Zählstellen des Landes (Baden-Württemberg)
-  gehören zu keiner Kommune und stehen nicht in der Datenlage.
-- Berlin: bis 2024 die Werte je Messquerschnitt der alten Qualitätssicherung, wie geliefert
-  (eine Stunde nur bei mindestens 75 % gültigen Messintervallen und nur, wenn alle Fahrstreifen
-  gültig sind). Ab 2025 gibt es nur die neue Qualitätssicherung je Fahrstreifen; die Zählkarte
-  summiert dann nach derselben Regel. Für 2023–2024 liegen beide vor: 81 % der Stunden stimmen
-  auf ±2 % überein (Median-Abweichung 0 %). Ab 2021 sind deutlich weniger Tage vollständig
-  gezählt als davor. Messquerschnitte, die in den Stammdaten (Stand Juli 2022) fehlen – vor
-  allem neue mit „n“ am Ende der Kennung –, haben keine Lage und fehlen in der Karte.
-- Hamburg: Stundenwerte je Zählstelle wie geliefert (UTC, in Ortszeit umgerechnet; bei der
-  Rückstellung liegen zwei Stunden in 2–3 Uhr). Die Quelle hält Stundenwerte nur zwei Monate
-  vor; die Zählkarte hebt sie selbst auf (Gedächtnis, siehe unten) und übernimmt eine Stunde
-  erst, wenn sie sieben Tage alt ist (Lücken werden laut Quelle noch nachgeliefert). Ganze Tage
-  fehlen gelegentlich an allen Stellen zugleich. Vor der ersten gezählten Stunde einer Stelle
-  (meist bis 28.08.2026) stehen für Kfz und Rad die Tageswerte der Quelle (seit 2020; auch sie
-  hebt die Zählkarte auf, die Quelle hält sie nur für das laufende und das letzte Jahr vor). Sie
-  entstehen nicht aus den Stunden: Wo es beides gibt, ist der Tageswert an rund drei von vier
-  vollständig gezählten Tagen gleich der Summe der Stunden, sonst meist knapp darüber, und auch
-  Tage mit fehlenden Stunden haben einen Tageswert (manchmal nur für den gezählten Teil). Die
-  Quelle kennzeichnet keine unplausiblen Werte (es gibt Tage mit Millionen Kfz); die Zählkarte
-  übernimmt sie wie geliefert. Die Quelle nennt keine Straßen: Der Name ist die nächste benannte
-  Straße aus OpenStreetMap, die Kreuzung ergibt sich aus den übrigen Armen desselben
-  Knotenpunkts.
-- Ettlingen: Stundenwerte je Fahrtrichtung und Fahrzeugklasse (UTC, in Ortszeit umgerechnet);
-  Kfz ist die Summe der Klassen (Pkw, leichte Nutzfahrzeuge, Lkw, Lkw mit Anhänger, Motorrad),
-  Lkw die von Lkw und Lkw mit Anhänger.
-  Klassen ohne Fahrzeug liefert die Quelle nicht; eine Stunde ganz ohne Werte gilt als nicht
-  gezählt. Alle Richtungen eines Sensors haben dieselbe Lage – die Seitenleiste schaltet
-  zwischen ihnen um. Die Werte vor dem 20.08.2026 (laufende Tageszähler ohne Fahrtrichtung)
-  sind nicht übernommen. Lizenz CC BY-NC 4.0: Weiterverwendung nur nicht kommerziell; die
-  Lizenz steht an der Quelle, in der Seitenleiste und in jeder Zeile des CSV-Exports.
-- Baden-Württemberg, Dauerzählstellen des Landes: Stundenwerte je Fahrstreifen, abgeleitet aus
-  den Lieferungen an die BASt; in der Karte je Fahrtrichtung die Summe ihrer Fahrstreifen (beide
-  Richtungen am selben Punkt, die Seitenleiste schaltet um). Eine Stunde zählt nur, wenn die
-  Quelle sie auf allen Fahrstreifen der Richtung als korrekt kennzeichnet – Ausfälle,
-  fehlerhafte Werte, Schätzwerte (oft einen ganzen Monat an einer Stelle) und eingefügte Stunden
-  nicht; je Monat sind 55–94 % der Tage je Richtung vollständig. Am Tag der Rückstellung der Uhr
-  steht 2–3 Uhr nur einmal da (gekennzeichnet) – der Tag ist nicht vollständig. Die Dateien nennen
-  keine Koordinaten: Die Lage ist die des passenden Abschnitts in der Zählstellenkarte des
-  Landes; 13 von 206 Zählstellen ohne passenden Abschnitt fehlen.
-- Rad-Zählstellen (Berlin, Münster, Aachen, München, Baden-Württemberg über MobiData BW,
-  Würzburg, Rhein-Kreis Neuss, Neuss, Dortmund, Essen, Bochum, Bonn, Düsseldorf, Leipzig,
-  Rostock):
-  Zählschleifen oder -säulen, meist von Eco-Counter; in der Karte je Zählstelle die Summe ihrer
-  Richtungen – wo die Quelle jede Richtung als eigene Zählstelle führt (Berlin meist, Würzburg
-  am Greinberg), steht jede für sich. Gezählt ist nur, was die Quelle als Rohwert oder geprüften
-  Wert führt – Werte, die sie als rekonstruiert (Ausfall rechnerisch aufgefüllt), unplausibel,
-  gelöscht oder von Hand geändert kennzeichnet, gelten als nicht gezählt (Münster und Würzburg:
-  Status je Wert, Rhein-Kreis Neuss: „modified“, Berlin: Zellfarbe). Die übrigen Quellen führen
-  keinen Status: Aachen und München lassen Ausfälle leer; bei MobiData BW stecken nachweislich
-  rekonstruierte Werte in den Stundenwerten, bei Dortmund, Essen, Bochum, Bonn, Düsseldorf,
-  Leipzig, Rostock und am RS5 in Neuss lässt es sich nicht prüfen. Wo die Quelle einen Ausfall als 0 führt
-  (Würzburg-Heidingsfeld, Rhein-Kreis Neuss, Rostock, Bonn, Düsseldorf), erscheint der Tag als
-  gezählt (Hinweis an der Quelle).
-- Nicht in der Karte (Gründe in der Quelldatei und an der Quelle): Zählstellen, die Rad und Fuß
-  zusammen zählen, und Stellen, die nur die Summe anderer sind oder deren Gerät schon unter
-  anderen Stellen zählt (sonst doppelt: die Brücken-Summen in Bonn, drei
-  Stellen in Düsseldorf, je eine in Stuttgart und Rostock). Bochum zählt Fuß getrennt – in der
-  Karte stehen Rad und Fuß als eigene Verkehrsarten, ohne die Springorumtrasse Süd, an der laut
-  Stadt Rad-Kanäle fehlen.
-- Zeitumstellung bei den Rad-Zählstellen: Bei der Rückstellung der Uhr fassen MobiData BW,
-  Münster und Berlin beide Stunden 2–3 Uhr unter einer Uhrzeit zusammen; in München, Würzburg,
-  Dortmund, Essen, Bochum, Bonn, Düsseldorf, Rostock, im Rhein-Kreis Neuss und am RS5 in Neuss
-  fehlt eine davon
-  oder ist unvollständig – der Tag gilt als nicht vollständig gezählt. Leipzig führt beide
-  Stunden, Aachen liefert UTC.
-
-## Aufbau
-
-```
-pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> Kartendaten
-  config/              die einzige Quellenliste: je Quelle eine Datei, Datenlage je Land,
-                       Rechtslage, robots-Ausnahmen, Ferien (Aufbau: config/README.md)
-  src/zaehlkarte/adapters/  ein Adapter je Format (berlin_zda, mobidata_bw, muenster, moers_radar,
-                            olpe_radar, konstanz_mobil, potsdam_pdf, xanten_pdf,
-                            tuebingen_pdf, neubulach_pdf)
-  src/zaehlkarte/dauer/     Familie Dauerzählstellen (berlin_viz, hamburg_sta, readi_urbanpulse;
-                            Rad: mobidata_eco, muenster_rad, aachen_rad, berlin_rad,
-                            muenchen_rad, ods_eco, dortmund_rad, essen_rad, bochum_rad,
-                            bonn_rad, duesseldorf_rad, leipzig_rad, rostock_rad), eigener Bau
-public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
-public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
-public/logo/         Logo, Signet und kleines Zeichen (SVG); Favicons und App-Icon in public/
-index.html, main.js, js/, style.css   die Karte (Vite, MapLibre, Positron von OpenFreeMap)
-  js/sprache/          Texte der Oberfläche DE/EN (texte.js) und der Umschalter
-tests/               unit/ (node --test), web/ (Playwright gegen den Build)
-```
-
-```bash
-# Pipeline (aus pipeline/)
-uv sync
-uv run zaehlkarte fetch      # Rohdaten nach pipeline/data/raw/
-uv run zaehlkarte site       # Kartendaten nach public/data/
-uv run zaehlkarte datenlage  # nur datenlage.json und docs/DATENLAGE.md (geänderte Datenlage-Texte)
-uv run zaehlkarte dauer fetch && uv run zaehlkarte dauer site   # Dauerzählstellen
-uv run pytest && uvx ruff check
-
-# Karte (aus der Wurzel)
-npm ci
-npm run dev                  # http://localhost:5173
-npm run test:unit && npm run test:web
-```
-
-Eine neue Quelle: eine Datei in `pipeline/config/quellen/<familie>/` (Aufbau:
-[pipeline/config/README.md](pipeline/config/README.md)), Adapter in
-`src/zaehlkarte/adapters/` (liefert `Zaehlung`-Objekte, siehe `modell.py`), Test mit einer
-kleinen synthetischen Datei in `pipeline/tests/`. Wie man Quellen findet und was nicht
-funktioniert hat: [AGENTS.md](AGENTS.md).
-
-Die Daten erneuert der Workflow „Kartendaten neu bauen“ (monatlich und von Hand) als Pull
-Request; scheitert der Abruf einer Quelle, endet er rot ohne PR und nennt sie. Die
-Dauerzählstellen baut der Workflow „Dauerzählstellen bauen“ (wöchentlich, von Hand und bei
-Änderungen an `pipeline/src/zaehlkarte/dauer/` oder der Konfiguration) und legt sie als
-Release-Asset `dauerzaehlstellen/dauer.tar.gz` ab – Daten, die sich laufend ändern, gehören
-nicht ins Git. Eine Quelle, die scheitert, hält die anderen nicht auf; sie steht als Warnung am
-Lauf. Die CI holt das Asset vor dem Build; fehlt es, zeigt die Karte nur die Kurzzeitzählungen.
-
-**Gedächtnis:** Hamburg hält Stundenwerte nur zwei Monate vor, Leipzig 31 Tage (Tageswerte:
-Hamburg laut Beschreibung das laufende und das letzte Jahr, Leipzig zwei Jahre). Was die
-Zählkarte davon aufhebt (Monatsdateien je Quelle, `<code>__stunden_JJJJ-MM.csv.gz`, die
-Tageswerte je Jahr `<code>__tage_JJJJ.csv.gz` und für Hamburg die Straßennamen
-`<code>__strassen.json`), liegt im selben Release. Der Workflow holt es
-vor dem Abruf und legt danach ab, was sich geändert hat – nie mit weniger Werten
-(`pipeline/werkzeuge/gedaechtnis.py`). Wer diese Assets löscht, verliert die Stunden, die die
-Quelle nicht mehr hat. Darum liegt jede Fassung zusätzlich im Release
-`gedaechtnis-kopie-JJJJ` (eins je Jahr, nie überschrieben). Ist die jüngste Stunde einer Quelle
-älter als 10 Tage, wird der Wochenlauf rot (`zaehlkarte dauer frische`): Dann scheitert ihr Abruf
-seit mindestens einer Woche, und Leipzig etwa bleiben noch gut zwei Wochen bis zum Verlust.
-Ebenso, wenn die Schulferien eines Landes in drei Monaten enden (`zaehlkarte kalender`): Ferien
-und Feiertage gibt es für alle 16 Länder, aus den KMK-Ferienkalendern bis 2027/28.
-
-Jeder Push auf `main` wird nach grünen Tests nach GitHub Pages ausgeliefert.
-
-## Logo
-
-Oben der Tagesgang eines Werktags mit Morgen- und Abendspitze, unten der eines Wochenendtags,
-dazwischen die Straße mit Fußgänger, Rad und Auto – stilisiert, keine Messwerte. In
-`public/logo/`: Logo mit Schriftzug, Signet und kleines Zeichen, je auch in Weiß
-(`-weiss.svg`); Favicons und App-Icon in `public/`. Unter etwa 64 px das kleine Zeichen
-nehmen, wie Favicon und Kopfzeile der Karte: Dort sind Fußgänger, Rad und Auto nicht mehr zu
-erkennen. Schrift: Inter Display SemiBold (SIL Open Font License 1.1), in Pfade umgewandelt.
+Fehlen Zählungen einer Kommune? Gern über das Formular
+[„Zählungen melden“](https://github.com/vizsim-lab/zaehlkarte/issues/new?template=zaehlung-melden.yml).
 
 ## Lizenz
 
 - **Code:** AGPL-3.0-or-later. ZDA-Leser und Namensbereinigung stammen aus
   [vizsim/berlin-traffic-counts_schulwege](https://github.com/vizsim/berlin-traffic-counts_schulwege) (MIT).
-- **Daten:** die Lizenz der jeweiligen Quelle (Tabellen oben, in der Karte je Zählung und je
-  Dauerzählstelle, im CSV-Export in jeder Zeile); Namensnennung erforderlich.
-  **Quellen ohne Lizenz:** Hat eine öffentliche Stelle (Kommune, Kreis, Land) Zählwerte ohne
-  Lizenz veröffentlicht oder auf Anfrage herausgegeben, ohne Bedingungen zu stellen, zeigt die
-  Karte die Zahlen mit dem Hinweis „ohne Lizenz“ und dem Link zum Original – nicht im CSV-Export,
-  und wer sie weiterverwenden will, fragt den Herausgeber. Rechteinhaber können sie über das Formular
+- **Daten:** die Lizenz der jeweiligen Quelle (in der Karte je Zählung und je Dauerzählstelle, im
+  CSV-Export in jeder Zeile); Namensnennung erforderlich. Quellen ohne Lizenz zeigt die Karte mit
+  Hinweis und Link zum Original, nie im CSV-Export; Rechteinhaber können sie über das Formular
   [„Daten entfernen lassen“](https://github.com/vizsim-lab/zaehlkarte/issues/new?template=daten-entfernen.yml)
-  entfernen lassen; das geschieht umgehend. Abwägung in `AGENTS.md` („Rechtliches“). Wo eine Quelle
-  keine Lage oder keine Straßennamen nennt, stammen sie aus OpenStreetMap
-  (© OpenStreetMap-Mitwirkende, ODbL; vermerkt an der Quelle). Hintergrundkarte
-  © OpenStreetMap-Mitwirkende, OpenFreeMap; Relief: Mapterhorn.
+  entfernen lassen ([Einzelheiten](docs/QUELLEN.md#quellen-ohne-lizenz)).
+- Hintergrundkarte © OpenStreetMap-Mitwirkende, OpenFreeMap; Relief: Mapterhorn.
