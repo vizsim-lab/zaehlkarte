@@ -1,0 +1,60 @@
+# Rad: Fahrradzählstelle der Gemeinde Planegg (Landkreis München) an der Amtmannstraße/Münchner
+# Straße, seit Dezember 2020 in Betrieb – Tageswerte je Richtung seit Mai 2021, eine Excel-Datei je
+# Jahr auf planegg.de, ohne Lizenzangabe (CLAUDE.md, „Quellen ohne Lizenz“). Nur Tageswerte, keine
+# Stunden: in der Karte als Tageswerte der Quelle. Aufbau und Fallen im Adapter
+# (src/zaehlkarte/dauer/planegg_rad.py) und in AGENTS.md; geprüft im Werkzeug-Branch
+# `werkzeug/bw` (tools/bw_fl1.py, November 2026).
+nr: 26
+status: live
+adapter: planegg_rad
+name: Planegg (Fahrradzählstelle Amtmannstraße)
+land: BY
+traeger: Gemeinde Planegg
+art: >-
+  eine Rad-Zählstelle der Gemeinde (seit Dezember 2020): nur Tageswerte je Richtung, keine Stunden
+weg: offen als Excel-Datei je Jahr auf der Website der Gemeinde, ohne Lizenzangabe
+portal: https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse
+# Die Seite verlinkt „Zähldaten 2021“ … als /_Resources/Persistent/<Prüfsumme>/JJJJ_Fahrrad
+# Amtmannstraße.xlsx – der Pfad ändert sich mit jeder neuen Fassung, `hole` liest ihn von der Seite.
+seite: https://www.planegg.de/umwelt/mobilitaet/radverkehr/fahrradzaehlstelle-amtmannstrasse
+datei_muster: "/(\\d{4})_Fahrrad[^/]*\\.xlsx$"
+# Offenbare Fehler der Quelle (CLAUDE.md, „Rohdaten bleiben unverändert“): Diese Blätter tragen
+# die Daten 1.–28. Januar, haben aber 28 Zeilen mit eigenen Werten – die Vorlage des Januars. Die
+# Werte gehören zum Februar: Als Februar gelesen sind die Wochenenden schwächer als die Werktage
+# (2025: im Mittel 223 gegen 352 Räder, 2026: 255 gegen 390), als Januar gelesen stärker (360
+# gegen 297, 380 gegen 340) – an keiner anderen Stelle der Reihe. Dort gilt der Tag der Zeile im
+# Monat des Blatts (Hinweis unten).
+monat_laut_blatt: ["Februar 2025", "Februar 2026"]
+# Lage: die beiden Rad-Zählgeräte an der Amtmannstraße (St 2063), die in OpenStreetMap
+# eingetragen sind (Knoten 12526373278 und 12526373279, monitoring:bicycle, 12 m auseinander;
+# Overpass, November 2026, tools/bw_fl3.py) – Punkt dazwischen, rund 90 m südwestlich der
+# Einmündung in die Münchner Straße. Die Quelle nennt keine Koordinaten.
+stelle:
+  kennung: amtmannstrasse
+  strasse: Amtmannstraße
+  abschnitt: an der Münchner Straße
+  lon: 11.422915
+  lat: 48.100761
+titel: >-
+  Gemeinde Planegg: Fahrradzählstelle Amtmannstraße, Zähldaten 2021–2026 (verändert: beide
+  Richtungen je Tag summiert)
+herausgeber: Gemeinde Planegg
+ohne_lizenz:
+  herausgegeben: >-
+    als Excel-Datei je Jahr („Zähldaten 2021“ bis „Zähldaten 2026“) auf der Seite der
+    Fahrradzählstelle, ohne Lizenzangabe
+  geprueft: 2026-11-15
+hinweise:
+  - >-
+    Die Quelle liefert nur Tageswerte je Richtung (Richtung Krailling, Richtung Planegg), keine
+    Stunden: Ob an einem Tag jede Stunde gezählt ist, lässt sich nicht prüfen. Die Karte zeigt die
+    Summe beider Richtungen, wie die Spalte „gesamt“ der Quelle.
+  - >-
+    In den Blättern „Februar 2025“ und „Februar 2026“ stehen die Daten 1.–28. Januar; die Werte
+    gehören nach dem Wochenrhythmus zum Februar. Die Zählkarte legt sie auf den 1.–28. Februar.
+  - >-
+    Lage: zwischen den beiden Zählgeräten, die in OpenStreetMap an der Amtmannstraße eingetragen
+    sind (© OpenStreetMap-Mitwirkende, ODbL) – die Quelle nennt keine Koordinaten.
+  - >-
+    Die Gemeinde ergänzt die Datei des laufenden Jahres in Abständen (Stand 15.11.2026: bis Mai
+    2026).

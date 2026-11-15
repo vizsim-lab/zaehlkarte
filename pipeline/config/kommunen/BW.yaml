@@ -180,7 +180,9 @@
     quellen: [mobidata_rad]
     was: >-
       Rad-Zählstellen (Eco-Counter) über MobiData BW in der Karte; 25 Verkehrssensoren noch im
-      Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte
+      Testbetrieb (im Geoportal bisher nur Werte vom Mai 2024) – nicht in der Karte. Die
+      Zeitreihe in FR.ITZ hat trotz der Spalte „Art der Nutzung (Fahrrad/Fußgänger)“ nur
+      Radverkehr, die Zählstellen nur als Nummern (Stand November 2026)
     links:
       - ["MobiData BW: Rad-Zählstellen (Eco-Counter)", "https://mobidata-bw.de/dataset/eco-counter-fahrradzahler"]
       - ["FR.ITZ: Fahrrad-Zählstellen", "https://fritz.freiburg.de/duva2dcat/dataset/de-bw-freiburg-fahrrad-zaehlstellen_zeitreihe.html"]

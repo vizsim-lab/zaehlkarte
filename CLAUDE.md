@@ -194,8 +194,8 @@ Diese Datei = die Regeln, die in jeder Session gelten.
   startet er die CI auf `main` neu. Das Berliner Archiv, `iot.hamburg.de`,
   `opendata.readi.de` (Ettlingen) und die Rad-Quellen (MobiData BW, berlin.de, Open.NRW, die
   Portale von Münster, Aachen, München, Würzburg, Neuss, Dortmund, Leipzig, Rostock, Bonn und
-  Düsseldorf, Bochums GitLab, die VMZ Niedersachsen und Dresdens OGC-API) sind aus der Sandbox
-  ebenfalls nicht erreichbar (Werkzeug-Branch `werkzeug/dauer`, `tools/lauf.sh`); GitHub geht
-  (Münsters Repository).
+  Düsseldorf, Bochums GitLab, die VMZ Niedersachsen, Dresdens OGC-API und planegg.de) sind aus
+  der Sandbox ebenfalls nicht erreichbar (Werkzeug-Branch `werkzeug/dauer`, `tools/lauf.sh`);
+  GitHub geht (Münsters Repository).
 - Push auf `main` = Produktiv-Deploy nach GitHub Pages (nach grünen Frontend-Tests). Größere
   Umbauten auf einem Branch mit PR.

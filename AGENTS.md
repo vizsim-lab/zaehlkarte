@@ -1069,6 +1069,25 @@ robots.txt für alle Robots sperrt. Seitdem:
     der Fahrradstraße Konrad-Adenauer-Allee bzw. des Wegs Wagenhalsstraße (laut Stadt „hinter der
     City-Galerie“), Haunstetter Straße am nächsten zur Mitte des Protestantischen Friedhofs.
     Overpass antwortete abends oft nicht (Zeitgrenze, 504) – kleine Abfragen gingen eher durch.
+  - **Planegg, Fahrradzählstelle Amtmannstraße** (`planegg_rad`, Gemeinde Planegg, ohne
+    Lizenzangabe – Regel „Quellen ohne Lizenz“; Werkzeug-Branch `werkzeug/bw`, `tools/bw_fl1.py`,
+    `ergebnis/bw/fl1/rest/planegg/`): Die Seite der Zählstelle verlinkt je Jahr eine Excel-Datei
+    „JJJJ_Fahrrad Amtmannstraße.xlsx“ unter `/_Resources/Persistent/<Prüfsumme>/` – der Pfad
+    wechselt mit jeder Fassung, `hole` liest die Links von der Seite (planegg.de hat keine
+    robots.txt; aus der Sandbox nicht erreichbar). Je Monat ein Blatt, Kopf „Datum | Richtung
+    Krailling | Richtung Planegg | gesamt“ („gesamt“ eine Formel; Schreibweisen „Krailing“,
+    „Planegg “ mit Leerzeichen, Blätter „Aprill 2025“, „März  2025“), am Ende „Summe“ – 2025 von
+    März bis August mit denselben Zahlen (nicht fortgeschrieben, nicht verwendet). Stand
+    15.11.2026: 61 Blätter, 01.05.2021–31.05.2026, jeder Tag mit Zahlen in beiden Richtungen, kein
+    Tag mit 0. **Falle:** Die Blätter „Februar 2025“ und „Februar 2026“ tragen die Daten 1.–28.
+    Januar (Vorlage nicht angepasst), aber eigene Werte; als Februar gelesen sind die Wochenenden
+    schwächer als die Werktage (im Mittel 223 gegen 352 bzw. 255 gegen 390 Räder), als Januar
+    gelesen stärker – `monat_laut_blatt` in der Quelldatei legt sie auf den Februar, sonst gilt
+    eine Zeile mit falschem Monat als nicht gezählt. In der Karte die Summe beider Richtungen als
+    Tageswerte der Quelle (1.857 Tage). Lage: OSM hat die beiden Zählgeräte (Knoten 12526373278,
+    12526373279, `monitoring:bicycle`) an der Amtmannstraße (St 2063), rund 90 m südwestlich der
+    Münchner Straße (St 2344) – Punkt dazwischen (`tools/bw_fl3.py`, Overpass über kumi.systems
+    erst in der neunten Runde).
   - **Fuß (seit November 2026, Entscheidung der Projektleitung):**
     - **Augsburg** (`augsburg_fuss`, CC BY 4.0, Mobilithek-Angebot `-1747083335311792689` der
       Wirtschaftsförderung): eine CSV auf augsburg.de
@@ -1120,8 +1139,18 @@ robots.txt für alle Robots sperrt. Seitdem:
       Lauf nicht zu sammeln. Monatsübersicht `passantenzaehlung_wuerzburg` seit April 2019 (nur
       Monatssummen). Erkundet mit `tools/ods_erkunden.py` (`werkzeug/dauer`,
       `ergebnis/ods_wuerzburg_fuss/`, Abrufe der App mit der robots-Ausnahme der Quelle).
-    - Weitere Kandidaten: Freiburg (FR.ITZ, Rad und Fuß getrennt), die Personen-Kanäle im Bündel
-      von MobiData BW (Ludwigsburg, Reutlingen, Böblingen).
+    - **Geprüft, nichts für Fuß** (15.11.2026; `werkzeug/bw`, `tools/bw_fl1.py`, `bw_fl2.py`,
+      `ergebnis/bw/fl1/`, `fl2/`): Freiburgs FR.ITZ-Datensatz „Fahrrad-Zählstellen Zeitreihe“
+      (ID 3800, dl-de/by-2-0, 01.01.2015–02.04.2026, 653.041 Zeilen) hat zwar die Spalte „Art der
+      Nutzung (Fahrrad/Fußgänger)“, aber nur den Wert 1 (Fahrrad); die Zählstellen sind Nummern
+      1–18 ohne Namen und Lage, jeder Tag hat 24 Stunden (keine Zeitumstellung) – dieselben
+      Rad-Zähler wie im MobiData-Bündel, nichts Neues. Die Personen-Kanäle bei MobiData BW
+      (Böblingen, Römerstraße; Ludwigsburg und Reutlingen haben nur Pkw-Kanäle) stehen nur im
+      eingefrorenen älteren Format (`/daten/eco-counter/eco_counter_fahrradzaehler.csv`), und das
+      reicht nur vom 16. bis 23.06.2025 – zu wenig. Hamburgs „Fußgängerzählstellen“ (WFS
+      Verkehrszählstellen, 384 Punkte) sind nur Orte mit dem Datum der letzten Zählung; Kiels
+      „Digitale Personenzählung“ (ODALA, Mobilithek -781197459961221857) zählt WLAN- und
+      Bluetooth-Verbindungen, keine Personen.
   - **Nicht aufgenommen (zweite Runde):** Oldenburg (Tag,
     Monat, Jahr), Köln (nur Monatssummen 2009–2022, jüngere Werte nur bei Eco-Counter), Kiel (Rad:
     sechs Stationen, nur der Vortag und nur über die Vermittlung der Mobilithek mit Konto; das neue
@@ -1143,9 +1172,38 @@ robots.txt für alle Robots sperrt. Seitdem:
   - **BASt:** Stundenwerte 2003–2024 je Jahr und Straßenart, Rohdaten je Monat
     (`DZ_JJJJ_MM_Rohdaten.zip`, rund 80 MB) – ohne formale Lizenz, nur die Bitte um
     Quellenangabe.
-  - **Länder:** Schleswig-Holstein (BASt-Dateien je Stelle und Jahr im Landesportal, etwa
-    „Automatische Zählstelle Kiel-West“, dl-de/by-2-0), Bayern (BAYSIS), Nordrhein-Westfalen
-    (`opendata.strassen.nrw.de/Verkehrsdaten/Dauerzaehlungen/`), Brandenburg
-    (Verkehrsstärkedaten). Bielefeld: Rohdaten einer Verkehrszählstelle am Ostwestfalendamm im
-    BASt-Format (Open.NRW) – eine Stelle; ob die Stadt sie betreibt oder sie zum Zählnetz von Bund
-    und Land gehört, ist nicht geprüft.
+  - **Länder** (geprüft 15.11.2026 auf Wunsch des Nutzers: Landes-, Staats- und Kreisstraßen,
+    keine Autobahnen und Bundesstraßen; `werkzeug/bw`, `tools/bw_fl1.py`, `bw_fl2.py`,
+    `bw_fl4.py`, Ergebnisse `ergebnis/bw/fl1/`, `fl2/`, `fl4/`). Außer Baden-Württemberg
+    veröffentlicht kein Land Stunden- oder Tageswerte an Landesstraßen als Datei:
+    - **Schleswig-Holstein, Bayern (GovData):** Die rund 1.100 bzw. 1.200 Pakete „Automatische
+      Zählstelle … JJJJ“ (Landesportal, open.bydata) sind die Dateien der BASt
+      (`bast.de/videos/JJJJ/zstNNNN.zip`, Herausgeber BASt) – nur Autobahnen und Bundesstraßen.
+      Die Messquerschnitte des LBV.SH (q und v, DATEX II; Mobilithek 748506312813203456 und
+      748508537744674816) nur über die Vermittlung der Mobilithek mit Freigabe → nicht keyless.
+    - **Bayern, BAYSIS:** 212 automatische Dauerzählstellen (ArcGIS-Dienst
+      `gisportal-stmb.bayern.de/server/rest/services/WMS/BAYSIS_Verkehrsdaten/MapServer/0`:
+      Zaehlstellennummer, Strassenbezeichnung, Strassenklasse, Status; 132 an Bundes-, 72 an
+      Staats-, 8 an Kreisstraßen, 176 in Betrieb; die Abfrage liefert keine Geometrie). Die
+      Mobilithek (798871611185745920, Zentralstelle für Verkehrsmanagement,
+      „LICENSE_FREE_USE_OPEN_DATA“, ohne Vermittlung) nennt als Zugang die Seite
+      „Dauerzählstellen“ von BAYSIS:
+      Auswahl je Zählstelle, Stunden-, Tages-, Monats- und Jahreswerte samt Verfügbarkeit mit den
+      Prüfkennzeichen der BASt (s, k, a, d, u, z, -), Export als CSV. Die Seite ist eine
+      Web-Anwendung (`/resources/js/baysis.js`, 20 MB), die die Werte über eine eigene, nicht
+      dokumentierte Schnittstelle lädt (`/services/apiDAUZ/api/DAUZ`) – nicht abgefragt: Ob die
+      Zählkarte sie automatisch nutzen darf, entscheidet die Projektleitung; sonst bei der
+      Zentralstelle nach einem Download je Zählstelle und Jahr fragen. Der WFS der SVZ 2021 steht
+      unter CC BY 4.0 („Datenquelle: Bayerische Straßenbauverwaltung - BAYSIS“).
+    - **Nordrhein-Westfalen:** `opendata.strassen.nrw.de/Verkehrsdaten/Dauerzaehlungen/`
+      (dl-de/zero-2-0 laut Open.NRW) hat nur Monats- und Jahresberichte als PDF (DTV je Stelle,
+      höchster Tageswert mit Datum; 119 Stellen an Bundes-, 58 an Landes-, 2 an Kreisstraßen) →
+      `vizsim/svz`.
+    - **Rheinland-Pfalz:** „Langzeitzählstellen“ des LBM (Mobilithek -8628280793063448106) nur
+      als Orte (Stand 2016, WMS/WFS im GeoPortal.rlp), keine Werte.
+    - **Brandenburg, Sachsen, Sachsen-Anhalt, Lausitz:** nur Verkehrsstärken (DTV) der SVZ,
+      Zählstellenbereiche, Berichte als PDF bzw. die Orte der Dauerzählstellen (LSBB, INSPIRE).
+    - **Hessen:** Dauerzählstellen von Hessen Mobil (Mobilithek 756145735293898752 und
+      756140948292804608) „LICENSE_RESTRICTED_USE_FREE_OF_CHARGE“, nur mit Vermittlung.
+    - Bielefeld: Rohdaten einer Verkehrszählstelle am Ostwestfalendamm (B 61) im BASt-Format
+      (Open.NRW) – eine Stelle an einer Bundesstraße.
