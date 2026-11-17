@@ -443,7 +443,10 @@ def test_berlin_rad(pfade):
     b = berlin_rad.Bericht()
     r = berlin_rad.lese({"code": "berlin_rad", "land": "BE"}, pfade, b)
     assert [s.kennung for s in r.stellen] == ["02-MI-JAN-N"] and b.ohne_lage == ["99-XX-OHNE"]
-    assert r.stellen[0].name == "Jannowitzbrücke Nord" and r.stellen[0].lat == 52.513932
+    jan = r.stellen[0]
+    assert jan.name == "Jannowitzbrücke" and jan.lat == 52.513932
+    assert jan.richtung == "Richtung Norden" and jan.hinweise == []
+    assert b.richtung == {"Beschreibung": 1}
     assert b.markiert == {"0/unplausibel": 1, "rekonstruiert": 1}
     # 27.10.2025 steht in beiden Blättern: gleiche Werte zählen einmal; die Markierung im Blatt
     # 2025 macht den Wert dort ungültig, im Blatt 2026 nicht -> widersprüchlich, nicht gezählt
@@ -455,6 +458,30 @@ def test_berlin_rad(pfade):
     assert summe[0, i(date(2025, 10, 26))] == 240 and r.doppelt[0, i(date(2025, 10, 26))]
     assert summe[0, i(date(2025, 10, 27))] == LEER
     assert summe[0, i(date(2026, 3, 29))] == 230
+
+
+@pytest.mark.parametrize(("kennung", "beschreibung", "name", "richtung", "hinweis"), [
+    # Richtungszählstellen: Himmelsrichtung am Ende der Beschreibung, Kennung endet gleich
+    ("02-MI-JAN-N", "Jannowitzbrücke Nord", "Jannowitzbrücke", "Richtung Norden", None),
+    ("02-MI-JAN-S", "Jannowitzbrücke Süd", "Jannowitzbrücke", "Richtung Süden", None),
+    ("14-CW-JU-O", "Straße des 17. Juni Ost", "Straße des 17. Juni", "Richtung Osten", None),
+    ("18-TS-YOR-W", "Yorkstraße West", "Yorkstraße", "Richtung Westen", None),
+    ("16-SP-NO-O", "Nonnendammallee Ost", "Nonnendammallee", "Richtung Osten", None),
+    # Richtung nur in der Kennung
+    ("01-MI-AL-W", "Karl-Marx-Allee", "Karl-Marx-Allee", "Richtung Westen", "nur aus der Kennung"),
+    ("09-PA-SA-S", "Schönhauser Allee", "Schönhauser Allee", "Richtung Süden",
+     "nur aus der Kennung"),
+    # keine Richtung: Kürzel aus zwei Buchstaben, Name mit Himmelsrichtung im Wort
+    ("04-MI-NO", "Nordufer", "Nordufer", None, None),
+    ("12-PA-SCH", "Schwedter Steg", "Schwedter Steg", None, None),
+    ("99-XX-OST", "Westhafen", "Westhafen", None, None),
+    # widersprechen sich Beschreibung und Kennung, gilt die Beschreibung
+    ("99-XX-AB-S", "Irgendwo Nord", "Irgendwo", "Richtung Norden", "nennt eine andere"),
+])
+def test_berlin_rad_richtung(kennung, beschreibung, name, richtung, hinweis):
+    n, r, h = berlin_rad.name_und_richtung(kennung, beschreibung)
+    assert (n, r) == (name, richtung)
+    assert (h is None) if hinweis is None else (hinweis in h)
 
 
 # ----------------------------------------------------------------------------------- München

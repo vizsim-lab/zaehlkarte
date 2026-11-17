@@ -13,12 +13,22 @@ Aufbau (Stand November 2026, Datei vom 25.06.2026, Werkzeug-Branch `werkzeug/dau
   gezählt – rekonstruierte Werte kommen nicht in die Karte. Leere Zelle = nicht gezählt.
 - Rückstellung der Uhr: eine Zeile um 2 Uhr mit beiden Stunden (im Mittel 1,7-mal so viel wie 1 und
   3 Uhr, an anderen Sonntagen 0,9-mal; 2012–2025) -> `doppelt`. Sommerzeit: 2 Uhr leer.
-- Blatt „Standortdaten“: Kennung, Beschreibung (mit Richtung), Breite, Länge, Installationsdatum.
+- Blatt „Standortdaten“: Kennung, „Beschreibung - Fahrtrichtung“, Breite, Länge,
+  Installationsdatum. An den Standorten mit zwei Richtungszählstellen (berlin.de) steht die
+  Fahrtrichtung als Himmelsrichtung am Ende der Beschreibung („Jannowitzbrücke Nord“) und als
+  letzter Buchstabe der Kennung („02-MI-JAN-N“), bei zwei einzelnen Stellen nur in der Kennung
+  („01-MI-AL-W“ Karl-Marx-Allee, „09-PA-SA-S“ Schönhauser Allee). Ein Kürzel aus zwei Buchstaben
+  ist keine Richtung („04-MI-NO“, Nordufer). Dass es die Fahrtrichtung ist, zeigt auch der
+  Tagesgang 2025 (Di–Do): An den Ausfallstraßen hat die Richtung zur Innenstadt die Spitze am
+  Morgen (Frankfurter Allee West, Berliner Straße Süd, Mariendorfer Damm Nord, Nonnendammallee Ost;
+  6–10 Uhr 0,9- bis 1,4-mal so viel wie 15–19 Uhr, die Gegenrichtung 0,4- bis 0,6-mal), ebenso die
+  beiden Stellen mit der Richtung nur in der Kennung (1,8 und 1,3).
 """
 
 from __future__ import annotations
 
 import json
+import re
 from collections import Counter
 from dataclasses import dataclass, field
 from datetime import UTC, date, datetime
@@ -30,6 +40,12 @@ from zaehlkarte.config import Pfade
 from zaehlkarte.dauer.modell import LEER, Dauerstelle, Messreihe, kuerze, setze_lokal
 
 DATEI = "gesamtdatei-stundenwerte.xlsx"
+
+# Fahrtrichtung: Himmelsrichtung am Ende der Beschreibung, sonst letzter Buchstabe der Kennung
+HIMMEL = {"Nord": "Norden", "Ost": "Osten", "Süd": "Süden", "West": "Westen"}
+BUCHSTABE = {"N": "Nord", "O": "Ost", "S": "Süd", "W": "West"}
+_BESCHREIBUNG = re.compile(r"^(?P<name>.+?)\s+(?P<himmel>Nord|Ost|Süd|West)$")
+_KENNUNG = re.compile(r"-(?P<b>[NOSW])$")
 
 
 @dataclass
@@ -43,6 +59,7 @@ class Bericht:
     stellen: int = 0
     ohne_lage: list[str] = field(default_factory=list)
     stunden: int = 0
+    richtung: Counter = field(default_factory=Counter)  # woher -> Stellen
 
     def zeilen(self) -> list[str]:
         z = [f"Blätter {self.blaetter[0]}–{self.blaetter[-1]}: {self.zellen} Zellen, davon "
@@ -50,7 +67,9 @@ class Bericht:
              + ", ".join(f"{k} {n}" for k, n in self.markiert.most_common()),
              f"doppelte Stunden: {self.doppelt_gleich} gleich (einmal gezählt), "
              f"{self.doppelt_anders} verschieden (nicht gezählt); {self.stellen} Zählstellen; "
-             f"Stunden in der Karte: rad {self.stunden}"]
+             f"Stunden in der Karte: rad {self.stunden}",
+             f"Fahrtrichtung: {self.richtung['Beschreibung']} aus der Beschreibung, "
+             f"{self.richtung['Kennung']} nur aus der Kennung, {self.richtung['ohne']} ohne"]
         if self.ohne_lage:
             z.append(f"ohne Lage (nicht in der Karte): {', '.join(self.ohne_lage)}")
         return z
@@ -68,6 +87,28 @@ def hole(q: dict, pfade: Pfade) -> list[str]:
         "bytes": p.stat().st_size, "sha256": sha256(p),
     }, indent=1) + "\n", encoding="utf-8")
     return [f"{q['code']}: Gesamtdatei geholt ({p.stat().st_size / 1e6:.1f} MB)"]
+
+
+def name_und_richtung(kennung: str, beschreibung: str) -> tuple[str, str | None, str | None]:
+    """„Beschreibung - Fahrtrichtung“ und Kennung -> (Name, Richtung, Hinweis zur Richtung).
+
+    Die Richtung steht danach nicht mehr im Namen: „Jannowitzbrücke Nord“ -> „Jannowitzbrücke“,
+    „Richtung Norden“. Nennen Beschreibung und Kennung verschiedene Richtungen, gilt die
+    Beschreibung (die Spalte der Fahrtrichtung), mit Hinweis."""
+    b = _BESCHREIBUNG.match(beschreibung)
+    k = _KENNUNG.search(kennung)
+    aus_kennung = BUCHSTABE[k["b"]] if k else None
+    if b:
+        hinweis = None
+        if aus_kennung and aus_kennung != b["himmel"]:
+            hinweis = (f"Fahrtrichtung aus der Beschreibung der Quelle („{beschreibung}“); die "
+                       f"Kennung {kennung} nennt eine andere")
+        return b["name"], f"Richtung {HIMMEL[b['himmel']]}", hinweis
+    if aus_kennung:
+        return beschreibung, f"Richtung {HIMMEL[aus_kennung]}", (
+            f"Fahrtrichtung nur aus der Kennung {kennung} – die Beschreibung der Quelle nennt "
+            "keine")
+    return beschreibung, None, None
 
 
 def _markierung(zelle) -> str | None:
@@ -141,11 +182,14 @@ def lese(q: dict, pfade: Pfade, bericht: Bericht) -> Messreihe:
         if k not in orte:
             bericht.ohne_lage.append(k)
             continue
-        name, lat, lon = orte[k]
+        beschreibung, lat, lon = orte[k]
+        name, richtung, hinweis = name_und_richtung(k, beschreibung)
+        bericht.richtung["ohne" if richtung is None
+                         else "Beschreibung" if name != beschreibung else "Kennung"] += 1
         idx[k] = len(stellen)
         stellen.append(Dauerstelle(quelle=q["code"], kennung=k, name=name, abschnitt=None,
-                                   richtung=None, lon=round(lon, 6), lat=round(lat, 6),
-                                   land=q["land"]))
+                                   richtung=richtung, lon=round(lon, 6), lat=round(lat, 6),
+                                   land=q["land"], hinweise=[hinweis] if hinweis else []))
     bericht.stellen = len(stellen)
     eintraege = [(idx[k], t, w) for (k, t), w in werte.items() if k in idx]
     s = np.array([e[0] for e in eintraege], dtype=np.int64)
