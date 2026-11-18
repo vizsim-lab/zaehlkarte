@@ -6,7 +6,8 @@ import { DAUER_VERSION } from "../../js/data/dauer.js";
 test("index.json und manifest.json haben die erwarteten Felder", async ({ request }) => {
   const manifest = await (await request.get("/data/manifest.json")).json();
   expect(manifest.version).toBe(1);
-  expect(Object.keys(manifest.dateien)).toEqual(["index", "details", "datenlage"]);
+  // „stroeme“ (Werte je Strom für andere Werkzeuge) kommt mit dem nächsten Neubau der Daten
+  expect(Object.keys(manifest.dateien).filter((k) => k !== "stroeme")).toEqual(["index", "details", "datenlage"]);
   const index = await (await request.get(`/data/${manifest.dateien.index}`)).json();
   expect(index.stellen.felder).toEqual(["id", "quelle", "name", "typ", "lon", "lat", "lage", "chunk"]);
   expect(index.zaehlungen.felder).toEqual(["stelle", "datum", "tag", "fenster", "g", "w", "w16", "w24", "sp", "l"]);
@@ -36,6 +37,38 @@ test("index.json und manifest.json haben die erwarteten Felder", async ({ reques
   for (const q of manifest.quellen) {
     expect(q.lizenzen.length).toBeGreaterThan(0);
     for (const l of q.lizenzen) lizenzOderOhne(l);
+  }
+});
+
+test("stroeme/{quelle}-{jahr}.json: Werte je Strom (liest nicht die Karte, sondern andere Werkzeuge)", async ({ request }) => {
+  const manifest = await (await request.get("/data/manifest.json")).json();
+  test.skip(!manifest.dateien.stroeme, "die Kartendaten sind noch ohne Ströme gebaut");
+  expect(manifest.dateien.stroeme).toBe("stroeme/{quelle}-{jahr}.json");
+  const index = await (await request.get(`/data/${manifest.dateien.index}`)).json();
+  const ids = new Set(index.stellen.werte.map((s) => s[0]));
+  for (const [quelle, jahre] of Object.entries(manifest.stroeme)) {
+    expect(index.quellen).toContain(quelle);
+    const jahr = jahre[jahre.length - 1];
+    const datei = await (await request.get(`/data/${manifest.dateien.stroeme.replace("{quelle}", quelle).replace("{jahr}", jahr)}`)).json();
+    expect(datei.version).toBe(1);
+    expect(datei.quelle).toBe(quelle);
+    const [kennung, z] = Object.entries(datei.zaehlungen)[0];
+    expect(typeof kennung).toBe("string");
+    expect(Object.keys(z)).toEqual(["stelle", "datum", "tag", "fenster", "intervall", "lieferung", "h0", "arme", "stroeme"]);
+    expect(ids.has(z.stelle)).toBe(true);
+    expect(z.datum.slice(0, 4)).toBe(String(jahr));
+    for (const a of z.arme) {
+      expect(Object.keys(a)).toEqual(["nr", "name", "winkel"]);
+      if (a.winkel !== null) expect(a.winkel >= 0 && a.winkel < 360).toBe(true);
+    }
+    const nummern = new Set(z.arme.map((a) => a.nr));
+    for (const s of z.stroeme) {
+      expect(nummern.has(s.von) && nummern.has(s.nach)).toBe(true);
+      for (const [g, werte] of Object.entries(s.stunden)) {
+        expect(index.gruppen).toContain(g);
+        expect(Array.isArray(werte)).toBe(true);
+      }
+    }
   }
 });
 

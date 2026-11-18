@@ -21,7 +21,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **`pipeline/`** — uv-Paket `zaehlkarte` (Code `src/`, Config `config/`, Tests `tests/`,
   Rohdaten gitignored in `pipeline/data/`). CLI aus `pipeline/`: `uv run zaehlkarte fetch|build|site`.
 - **`public/data/`** — die Kartendaten (manifest, index, details/NN, datenlage), erzeugt von
-  `zaehlkarte site`, im Git. Vite kopiert `public/` unverändert nach `dist/`.
+  `zaehlkarte site`, im Git. Vite kopiert `public/` unverändert nach `dist/`. Daneben
+  `stroeme/<quelle>-<jahr>.json`: die Werte je Strom und die Arme mit Winkel, für Werkzeuge
+  außerhalb der Karte (etwa matsim-counts-snapper); die Karte liest sie nicht.
 - **`public/data/dauer/`** — Dauerzählstellen, erzeugt von `zaehlkarte dauer site`, NICHT im
   Git (gitignored): Workflow „Dauerzählstellen bauen“ legt sie als Release-Asset
   `dauerzaehlstellen/dauer.tar.gz` ab, die CI holt es vor dem Build. Im selben Release liegt
@@ -69,7 +71,9 @@ Diese Datei = die Regeln, die in jeder Session gelten.
 - **Frontend-Vertrag:** Feldnamen in `index.json` (`stellen.felder`, `zaehlungen.felder`,
   `gruppen`, `quellen`, `lieferungen`), Aufbau von `details/NN.json`, Dateinamen in
   `manifest.dateien`. Wer sie ändert, zieht `js/data/modell.js`, `js/ui/detail.js` und
-  `tests/web/vertrag.spec.js` im selben Schritt mit. Datenlage: `datenlage.json` Version 2 (Kopf
+  `tests/web/vertrag.spec.js` im selben Schritt mit. Der Aufbau von `stroeme/` (Kopf von
+  `pipeline/src/zaehlkarte/site.py`, `STROEME_VERSION`) ist Vertrag mit fremden Werkzeugen:
+  nur ergänzen, sonst die Version erhöhen; geprüft in `tests/web/vertrag.spec.js`. Datenlage: `datenlage.json` Version 2 (Kopf
   von `pipeline/src/zaehlkarte/datenlage.py`) – mitziehen: `js/map/ebenen.js`,
   `js/data/kommune.js`, `js/ui/kommune.js`, `main.js`,
   `tests/web/vertrag.spec.js` und die Fixture `tests/web/fixtures/datenlage.json` (die
