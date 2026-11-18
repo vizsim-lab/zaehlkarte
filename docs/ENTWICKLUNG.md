@@ -16,7 +16,8 @@ pipeline/            uv-Paket `zaehlkarte`: Rohdaten -> ein Zählungsschema -> K
                             Rad: mobidata_eco, muenster_rad, aachen_rad, berlin_rad,
                             muenchen_rad, ods_eco, dortmund_rad, essen_rad, bochum_rad,
                             bonn_rad, duesseldorf_rad, leipzig_rad, rostock_rad), eigener Bau
-public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage
+public/data/         die Kartendaten (erzeugt, im Git): manifest, index, details/NN, datenlage;
+                     dazu stroeme/<quelle>-<jahr> (Werte je Strom und Arm, für andere Werkzeuge)
 public/data/dauer/   Dauerzählstellen (erzeugt, NICHT im Git – Release-Asset, siehe unten)
 public/logo/         Logo, Signet und kleines Zeichen (SVG); Favicons und App-Icon in public/
 docs/                Quellen, was die Karte zeigt, Entwicklung, Logo; DATENLAGE.md (erzeugt)

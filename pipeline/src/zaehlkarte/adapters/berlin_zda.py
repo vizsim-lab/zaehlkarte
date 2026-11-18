@@ -21,6 +21,15 @@ Stundenwerte: Intervalle zählen zur Stunde ihres Beginns. Eine Stunde, die das 
 teilweise abdeckt (Fenster ab 6:30), ist None statt eines zu kleinen Werts. Eine Richtung, die
 für eine Gruppe durchweg -1 hat, wurde dafür nicht gezählt und fällt aus der Summe (Hinweis an
 der Zählung); fehlt sonst in einer Stunde ein Wert, ist die Stunde None.
+
+Ströme und Arme: Jede Richtung der Datei („; 1 -> 3“) ist ein Strom von Arm 1 nach Arm 3, mit
+denselben Stundenwerten je Gruppe wie in der Summe. Die Arme stehen im Kopf als
+`armN=Name,Winkel,Kennzeichen` („arm2=Tempelhofer Ufer (W),650,1011“). Der Winkel ist in
+Zehntelgrad gegen den Uhrzeigersinn ab Nord angegeben – nachgeprüft an den Armen mit
+Himmelsrichtung im Namen: 2019–2025 liegen 98 % von 17.485 höchstens 45° neben ihr (Median 10°),
+1990–2019 96 % von 10.280 (Median 15°); im Uhrzeigersinn gelesen wären es 40 %. In `arme` steht
+er im Uhrzeigersinn ab Nord, vom Knoten weg (650 -> 295°); 0 ist Nord. Arme ohne Namen kommen nur
+hinein, wenn ein Strom sie nennt; das Kennzeichen bleibt draußen (Bedeutung unbekannt).
 """
 
 from __future__ import annotations
@@ -89,43 +98,105 @@ def bemerkung(text: str) -> str | None:
     return s[:240] or None
 
 
-def stundenreihen(
-    z: zda.Zaehlung, sp: dict[str, list[int]]
-) -> tuple[int | None, dict[str, list[int | None]], dict[str, int]]:
-    """(h0, {Gruppe: Stundenwerte ab h0}, {Gruppe: Richtungen ohne Zählung})."""
+def _stunden(z: zda.Zaehlung) -> tuple[list[int], set[int]]:
+    """Beginn jedes Intervalls und die Stunden, die das Zählfenster ganz abdeckt."""
     beginne = z.intervall_beginne
     minuten: Counter = Counter()
     for b in beginne:
         minuten[b // 60] += z.intervall
-    voll = {h for h, m in minuten.items() if m >= 60}
+    return beginne, {h for h, m in minuten.items() if m >= 60}
+
+
+def _reihe(
+    zeilen: list[list[int | None]], idx: list[int], beginne: list[int], voll: set[int],
+    h0: int, h1: int,
+) -> list[int | None] | None:
+    """Stundenwerte einer Richtung für eine Gruppe (Spalten `idx`); None, wenn die Richtung die
+    Gruppe nicht gezählt hat. Fehlt in einer Stunde ein Wert, ist die Stunde None."""
+    if not zeilen or not any(zl[j] is not None for zl in zeilen for j in idx if j < len(zl)):
+        return None
+    summen: dict[int, int | None] = dict.fromkeys(voll, 0)
+    for i, b in enumerate(beginne):
+        h = b // 60
+        if summen.get(h) is None:
+            continue
+        zl = zeilen[i] if i < len(zeilen) else []
+        werte = [zl[j] if j < len(zl) else None for j in idx]
+        summen[h] = None if any(v is None for v in werte) else summen[h] + sum(werte)
+    return [summen.get(h) if h in voll else None for h in range(h0, h1 + 1)]
+
+
+def stromreihen(
+    z: zda.Zaehlung, sp: dict[str, list[int]]
+) -> tuple[int | None, dict[str, dict[str, list[int | None]]]]:
+    """(h0, {Richtung: {Gruppe: Stundenwerte ab h0}}) – je Richtung nur die Gruppen, die sie
+    gezählt hat."""
+    beginne, voll = _stunden(z)
     if not voll:
-        return None, {}, {}
+        return None, {}
     h0, h1 = min(voll), max(voll)
+    out: dict[str, dict[str, list[int | None]]] = {}
+    for richtung, zeilen in z.werte.items():
+        if not zeilen:
+            continue
+        reihen = {g: _reihe(zeilen, idx, beginne, voll, h0, h1) for g, idx in sp.items()}
+        out[richtung] = {g: r for g, r in reihen.items() if r is not None}
+    return h0, out
+
+
+def stundenreihen(
+    z: zda.Zaehlung, sp: dict[str, list[int]]
+) -> tuple[int | None, dict[str, list[int | None]], dict[str, int]]:
+    """(h0, {Gruppe: Stundenwerte ab h0}, {Gruppe: Richtungen ohne Zählung}): die Summe der
+    Ströme; eine Stunde ist None, wenn sie einem gezählten Strom fehlt."""
+    h0, je_richtung = stromreihen(z, sp)
+    if h0 is None:
+        return None, {}, {}
     out: dict[str, list[int | None]] = {}
     ohne: dict[str, int] = {}
-    for g, idx in sp.items():
-        summen: dict[int, int | None] = dict.fromkeys(voll, 0)
-        gezaehlt, n_ohne = False, 0
-        for zeilen in z.werte.values():
-            if not zeilen:
-                continue
-            if not any(zl[j] is not None for zl in zeilen for j in idx if j < len(zl)):
-                n_ohne += 1  # Richtung für diese Gruppe nicht gezählt
-                continue
-            gezaehlt = True
-            for i, b in enumerate(beginne):
-                h = b // 60
-                if summen.get(h) is None:
-                    continue
-                zl = zeilen[i] if i < len(zeilen) else []
-                werte = [zl[j] if j < len(zl) else None for j in idx]
-                summen[h] = None if any(v is None for v in werte) else summen[h] + sum(werte)
-        if gezaehlt:
-            reihe = [summen.get(h) if h in voll else None for h in range(h0, h1 + 1)]
-            if any(v is not None for v in reihe):
-                out[g] = reihe
-                ohne[g] = n_ohne
+    for g in sp:
+        reihen = [r[g] for r in je_richtung.values() if g in r]
+        if not reihen:
+            continue
+        summe = [None if any(r[k] is None for r in reihen) else sum(r[k] for r in reihen)
+                 for k in range(len(reihen[0]))]
+        if any(v is not None for v in summe):
+            out[g] = summe
+            ohne[g] = len(je_richtung) - len(reihen)
     return h0, out, ohne
+
+
+_ARM = re.compile(r"^(?P<name>.*?)(?:,\s*(?P<winkel>-?\d+)\s*,\s*\d+)?\s*$")
+_STROM = re.compile(r"^(\d+)->(\d+)$")
+
+
+def arme(kopf: dict[str, str], genannt: set[int] = frozenset()) -> list[dict]:
+    """arm1..arm8 -> [{"nr", "name", "winkel"}], Winkel in Grad im Uhrzeigersinn ab Nord (aus
+    Zehntelgrad gegen den Uhrzeigersinn); Arme ohne Namen nur, wenn ein Strom sie nennt."""
+    out = []
+    for nr in range(1, 9):
+        if f"arm{nr}" not in kopf:
+            continue
+        m = _ARM.match(kopf[f"arm{nr}"].strip())
+        name = re.sub(r"\s+", " ", m["name"]).strip() if m else ""
+        if not name and nr not in genannt:
+            continue
+        winkel = round((3600 - int(m["winkel"])) % 3600 / 10, 1) if m and m["winkel"] else None
+        out.append({"nr": nr, "name": name, "winkel": winkel})
+    return out
+
+
+def stroeme(je_richtung: dict[str, dict[str, list[int | None]]]) -> list[dict]:
+    """{"1->3": {Gruppe: Werte}} -> [{"von": 1, "nach": 3, "stunden": {…}}] in der Reihenfolge
+    von GRUPPEN; Richtungen ohne Arm-Nummern („; Nord“) und ohne Werte bleiben draußen."""
+    out = []
+    for richtung, reihen in je_richtung.items():
+        m = _STROM.match(richtung)
+        if not m or not reihen:
+            continue
+        out.append({"von": int(m[1]), "nach": int(m[2]),
+                    "stunden": {g: reihen[g] for g in GRUPPEN if g in reihen}})
+    return out
 
 
 def lade_geokodierung(pfad: Path) -> dict[str, tuple[float, float, str]]:
@@ -157,6 +228,8 @@ def _zaehlung(z: zda.Zaehlung, quelle: dict, lieferung: dict, geo: dict, links: 
     knoten = knoten_norm(z.kopf.get("knoten", ""))
     sp = kategorien.spalten(z.kategorien)
     h0, stunden, ohne = stundenreihen(z, sp)
+    _, je_richtung = stromreihen(z, sp)
+    stroeme_ = stroeme(je_richtung)
     lon, lat = parse_gps(z.kopf.get("gps", ""))
     lage = "gps" if lon is not None else None
     if lon is None and z.datei in geo:
@@ -196,6 +269,8 @@ def _zaehlung(z: zda.Zaehlung, quelle: dict, lieferung: dict, geo: dict, links: 
         lieferung=lieferung["code"],
         bemerkung=bemerkung(z.kopf.get("bemerk", "")),
         hinweise=hinweise + z.hinweise[:3],
+        arme=arme(z.kopf, {n for st in stroeme_ for n in (st["von"], st["nach"])}),
+        stroeme=stroeme_,
         zusatz={
             "datei": z.datei,
             "bez": bez,

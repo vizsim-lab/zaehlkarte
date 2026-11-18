@@ -8,7 +8,8 @@ from zaehlkarte.config import Pfade
 
 
 def zda_text(
-    knoten: str, datum: str, zeit: str, art: str, richtungen: list[list[str]], **kopf
+    knoten: str, datum: str, zeit: str, art: str, richtungen: list[list[str]],
+    marken: list[str] | None = None, **kopf
 ) -> str:
     zeilen = [
         f"knoten={knoten}",
@@ -21,7 +22,7 @@ def zda_text(
     zeilen += [f"{k}={v}" for k, v in kopf.items()]
     zeilen.append("data=")
     for i, werte in enumerate(richtungen, start=1):
-        zeilen.append(f"; {i} -> {i + 1}")
+        zeilen.append(f"; {marken[i - 1]}" if marken else f"; {i} -> {i + 1}")
         zeilen += werte
     return "\r\n".join(zeilen) + "\r\n"
 
@@ -153,3 +154,42 @@ def test_geokodier_liste_und_ergaenzung(tmp_path):
     q["geokodierung_ergaenzung"] = {"datei": "geokodierung/erg.csv"}
     (z,) = berlin_zda.lese(q, pfade)
     assert (z.lon, z.lat, z.lage) == (13.39, 52.53, "geokodiert")
+
+
+def test_arme_und_stroeme(tmp_path):
+    """Je Richtung ein Strom von Arm nach Arm; die Winkel der Arme im Uhrzeigersinn ab Nord."""
+    nord_ost = ["10 1 0 0 2"] * 8  # Kfz 11 je Viertelstunde (Pkw, Lkw), Rad 2
+    ost_nord = ["5 0 0 0 -1"] * 8  # Rad nicht gezählt
+    nord_sued = ["3 0 0 0 0"] * 4 + ["-1 0 0 0 0"] + ["3 0 0 0 0"] * 3  # 8 Uhr: Kfz fehlt
+    text = zda_text(
+        "K 0000005", "05.09.2019", "0700,0900", KFZ_RAD, [nord_ost, ost_nord, nord_sued],
+        marken=["1 -> 2", "2 -> 1", "1 -> 3"],
+        arm1="Nordstraße (N),0,1000", arm2="Oststraße (O),2700,0100",
+        arm3="Südstraße (S),1800,0010", arm4=",0,0000",
+    )
+    (z,), _ = lies(tmp_path, {"K0000005_20190905.zda": text})
+    assert z.arme == [
+        {"nr": 1, "name": "Nordstraße (N)", "winkel": 0.0},
+        {"nr": 2, "name": "Oststraße (O)", "winkel": 90.0},  # 270° gegen den Uhrzeigersinn
+        {"nr": 3, "name": "Südstraße (S)", "winkel": 180.0},
+    ]
+    assert [(s["von"], s["nach"]) for s in z.stroeme] == [(1, 2), (2, 1), (1, 3)]
+    assert z.stroeme[0]["stunden"] == {"kfz": [44, 44], "sv": [4, 4], "rad": [8, 8]}
+    assert z.stroeme[1]["stunden"] == {"kfz": [20, 20], "sv": [0, 0]}  # ohne Rad
+    assert z.stroeme[2]["stunden"]["kfz"] == [12, None]
+    # zusammen die Summe der Zählung, die fehlende Stunde bleibt offen
+    assert z.stunden["kfz"] == [76, None]
+    assert z.stunden["rad"] == [8, 8]
+
+
+def test_arme_ohne_winkel_und_ohne_namen(tmp_path):
+    text = zda_text(
+        "Q 0000006", "06.09.2019", "0700,0800", KFZ_RAD, [["1 0 0 0 1"] * 4] * 2,
+        marken=["1 -> 2", "2 -> 1"], arm1="Musterstraße (W)", arm2=",1350,0001",
+    )
+    (z,), _ = lies(tmp_path, {"Q0000006_20190906.zda": text})
+    # ohne Zahlen kein Winkel; ohne Namen nur, weil ein Strom ihn nennt (135° gegen = 225°)
+    assert z.arme == [{"nr": 1, "name": "Musterstraße (W)", "winkel": None},
+                      {"nr": 2, "name": "", "winkel": 225.0}]
+    assert berlin_zda.arme({"arm1": "Tempelhofer Ufer (W),650,1011"}) == [
+        {"nr": 1, "name": "Tempelhofer Ufer (W)", "winkel": 295.0}]

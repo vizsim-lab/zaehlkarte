@@ -89,3 +89,38 @@ def test_bericht_nennt_zaehlungen_ohne_ferienkalender(monkeypatch, tmp_path):
     gebaut = build.baue(Pfade())
     assert gebaut.berichte["berlin"][-1] == (
         "ohne Ferienkalender (NW, Tag unbekannt): 2 Zählungen in den Schuljahren 1994/1995")
+
+
+def test_stroeme_je_quelle_und_jahr(monkeypatch, tmp_path):
+    """stroeme/{quelle}-{jahr}.json: nur Zählungen mit Strömen, je Quelle und Jahr eine Datei."""
+    import json
+
+    from zaehlkarte import site
+    from zaehlkarte.build import Gebaut, Stelle
+    from zaehlkarte.config import Pfade
+
+    a = z("K1_20190505", "K1", 13.4, 52.5, jahr=2019)
+    a.arme = [{"nr": 1, "name": "Nordstraße (N)", "winkel": 0.0},
+              {"nr": 2, "name": "Südstraße (S)", "winkel": 180.0}]
+    a.stroeme = [{"von": 1, "nach": 2, "stunden": {"kfz": [6] * 12}},
+                 {"von": 2, "nach": 1, "stunden": {"kfz": [4] * 12}}]
+    a.lieferung = "neu"
+    b = z("K1_20200505", "K1", 13.4, 52.5)  # ohne Ströme
+    stelle = Stelle("berlin:K1", "berlin", "A-Str. / B-Str.", "K", 13.4, 52.5, "geokodiert", [a, b])
+    pfade = Pfade(pipeline=tmp_path / "p", repo=tmp_path)
+    monkeypatch.setattr(site, "quellen", lambda pfade: {
+        "berlin": {"code": "berlin", "name": "Berlin", "land": "BE", "lizenz": "dl-de/by-2-0"}})
+    monkeypatch.setattr(site.datenlage_, "schreibe", lambda *a: [tmp_path / "datenlage.json"])
+    alt = pfade.karte / "stroeme" / "berlin-1999.json"
+    alt.parent.mkdir(parents=True)
+    alt.write_text("{}")
+    site.schreibe(Gebaut([stelle], [], {}), pfade, date(2026, 11, 18))
+    manifest = json.loads((pfade.karte / "manifest.json").read_text())
+    assert manifest["dateien"]["stroeme"] == "stroeme/{quelle}-{jahr}.json"
+    assert manifest["stroeme"] == {"berlin": [2019]}
+    assert sorted(p.name for p in (pfade.karte / "stroeme").iterdir()) == ["berlin-2019.json"]
+    inhalt = json.loads((pfade.karte / "stroeme" / "berlin-2019.json").read_text())
+    assert inhalt["version"] == site.STROEME_VERSION and inhalt["quelle"] == "berlin"
+    assert inhalt["zaehlungen"] == {"K1_20190505": {
+        "stelle": "berlin:K1", "datum": "2019-05-05", "tag": None, "fenster": "7–19",
+        "intervall": 15, "lieferung": "neu", "h0": 7, "arme": a.arme, "stroeme": a.stroeme}}

@@ -15,6 +15,19 @@ Vertrag mit dem Frontend (js/data/laden.js, js/data/modell.js): Feldnamen in `in
   einer Datei (`stellen.chunk`), geladen erst beim Klick. Ohne Stundenreihe gibt es dort
   `spitzen` ([{von, bis, name, nach, werte}], Minuten ab Mitternacht) und `fenstersummen`
   (Summe je Gruppe über das ganze Zählfenster).
+- stroeme/{quelle}-{jahr}.json: die Werte je Strom, für Werkzeuge außerhalb der Karte (etwa die
+  Zuordnung zu den Links eines Verkehrsmodells); die Karte liest sie nicht. Nur für Quellen, die
+  je Richtung zählen und ihre Arme nennen; welche Jahre es gibt, steht in `manifest.stroeme`
+  ({quelle: [jahr, …]}). Je Quelle und Jahr eine Datei, damit sie sich nur ändert, wenn sich
+  die Zählungen ändern. Version `STROEME_VERSION`, Aufbau:
+  {"version", "quelle", "zaehlungen": {kennung: {"stelle" (ID in index.json), "datum", "tag",
+  "fenster", "intervall", "lieferung", "h0", "arme": [{"nr", "name", "winkel"}],
+  "stroeme": [{"von", "nach", "stunden": {gruppe: [werte ab h0]}}]}}}.
+  `winkel`: Grad im Uhrzeigersinn ab Nord, vom Knoten weg (null, wo die Quelle keinen nennt).
+  Ein Strom fährt auf dem Arm `von` zum Knoten hin (winkel + 180°) und auf dem Arm `nach` vom
+  Knoten weg (winkel); bei einem Querschnitt mit zwei Armen fährt er Richtung Arm `nach`.
+  Zusammen ergeben die Ströme einer Gruppe die Stundenwerte der Zählung; null = nicht gezählt.
+  Die Lizenz ist die der Lieferung (`lieferung`, manifest.quellen[].lizenzen).
 """
 
 from __future__ import annotations
@@ -33,6 +46,7 @@ from zaehlkarte.lizenz import ohne_lizenz
 from zaehlkarte.modell import GRUPPEN, Zaehlung
 
 VERSION = 1
+STROEME_VERSION = 1
 TAG = {"schule": "s", "ferien": "f", "feiertag": "h", "wochenende": "w"}
 LAGEN = ["gps", "quelle", "geokodiert", "uebertragen"]
 CHUNK_BYTES = 350_000
@@ -94,6 +108,21 @@ def detail(z: Zaehlung) -> dict:
         "hinweise": z.hinweise,
     }
     return {k: v for k, v in d.items() if v not in (None, "", [], {})}
+
+
+def strom(z: Zaehlung, stelle: str) -> dict:
+    """Der Eintrag einer Zählung in stroeme/{quelle}-{jahr}.json."""
+    return {
+        "stelle": stelle,
+        "datum": z.datum.isoformat() if z.datum else None,
+        "tag": TAG.get(z.tagtyp or ""),
+        "fenster": fenster_text(z.fenster),
+        "intervall": z.intervall,
+        "lieferung": z.lieferung,
+        "h0": z.h0,
+        "arme": z.arme,
+        "stroeme": z.stroeme,
+    }
 
 
 def _abruf(q: dict, pfade: Pfade) -> str | None:
@@ -160,6 +189,7 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
     pfade = pfade or Pfade()
     ziel = pfade.karte
     (ziel / "details").mkdir(parents=True, exist_ok=True)
+    (ziel / "stroeme").mkdir(parents=True, exist_ok=True)
     live = quellen(pfade)
     codes = list(live)
     stellen = sorted(gebaut.stellen, key=lambda s: (codes.index(s.quelle), s.id))
@@ -172,6 +202,7 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
     lieferungen = [f"{c}:{lf['code']}" for c, q in live.items() for lf in q.get("lieferungen", [])]
     stellen_werte, zaehlungen_werte = [], []
     chunks: list[dict[str, dict]] = [{} for _ in range(n_chunks)]
+    stroeme: dict[tuple[str, int], dict[str, dict]] = {}
     for i, s in enumerate(stellen):
         chunk = i % n_chunks
         stellen_werte.append(
@@ -179,6 +210,8 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
         )
         for z, d in zip(s.zaehlungen, roh[i], strict=True):
             chunks[chunk][str(len(zaehlungen_werte))] = d
+            if z.stroeme and z.datum:
+                stroeme.setdefault((z.quelle, z.datum.year), {})[z.kennung] = strom(z, s.id)
             k = kennwerte(z)
             lf = f"{z.quelle}:{z.lieferung}"
             k["l"] = lieferungen.index(lf) if lf in lieferungen else None
@@ -201,8 +234,11 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
             "index": "index.json",
             "details": "details/{n}.json",
             "datenlage": "datenlage.json",
+            "stroeme": "stroeme/{quelle}-{jahr}.json",
         },
         "details_anzahl": n_chunks,
+        "stroeme": {c: sorted(j for q, j in stroeme if q == c) for c in codes
+                    if any(q == c for q, _ in stroeme)},
         "gruppen": [{"id": g, "name": GRUPPEN_NAMEN[g]} for g in GRUPPEN],
         "quellen": [
             {
@@ -226,7 +262,11 @@ def schreibe(gebaut: Gebaut, pfade: Pfade | None = None, erzeugt: date | None = 
     }
     for n, inhalt in enumerate(chunks):
         dateien[ziel / "details" / f"{n}.json"] = {"zaehlungen": inhalt}
-    for alt in (ziel / "details").glob("*.json"):
+    for (c, jahr), inhalt in sorted(stroeme.items()):
+        dateien[ziel / "stroeme" / f"{c}-{jahr}.json"] = {
+            "version": STROEME_VERSION, "quelle": c, "zaehlungen": dict(sorted(inhalt.items())),
+        }
+    for alt in [*(ziel / "details").glob("*.json"), *(ziel / "stroeme").glob("*.json")]:
         if alt not in dateien:
             alt.unlink()
     for pfad, inhalt in dateien.items():

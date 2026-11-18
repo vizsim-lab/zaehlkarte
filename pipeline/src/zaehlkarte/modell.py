@@ -1,10 +1,12 @@
 """Das gemeinsame Zählungsschema: jeder Adapter liefert `Zaehlung`-Objekte.
 
 Eine Zählung ist ein Zähltag an einer Stelle. Werte stehen je Gruppe als Stundenreihe ab
-`h0` (Summe über alle Richtungen); `None` heißt „nicht gezählt“, nie 0. Hat eine Quelle nur
-Tagessummen (MobiData-BW-Übersicht), stehen sie in `summen` und `stunden` bleibt leer. Nennt
-sie nur Spitzenstunden, die nicht auf vollen Stunden liegen, und die Summe der gezählten
-Stunden (Potsdam), stehen sie in `spitzen` und `fenstersummen`.
+`h0` (Summe über alle Richtungen); `None` heißt „nicht gezählt“, nie 0. Wo die Quelle je Richtung
+zählt und ihre Arme nennt (Berlin), stehen die Werte zusätzlich je Strom in `stroeme` (von Arm,
+nach Arm, Stundenreihen ab `h0` wie gezählt) und die Arme mit ihrem Winkel in `arme`. Hat eine
+Quelle nur Tagessummen (MobiData-BW-Übersicht), stehen sie in `summen` und `stunden` bleibt
+leer. Nennt sie nur Spitzenstunden, die nicht auf vollen Stunden liegen, und die Summe der
+gezählten Stunden (Potsdam), stehen sie in `spitzen` und `fenstersummen`.
 
 Gruppen:
 - kfz   Kraftfahrzeuge (Kfz-Summe der Quelle oder Summe der Fahrzeugarten)
@@ -54,6 +56,13 @@ class Zaehlung:
     hinweise: list[str] = field(default_factory=list)
     tagtyp: str | None = None  # schule | ferien | feiertag | wochenende | None (unbekannt)
     tagname: str | None = None  # „Sommerferien“, „Pfingstmontag“, „Samstag“
+    # Arme der Zählstelle: [{"nr", "name", "winkel"}], winkel in Grad im Uhrzeigersinn ab Nord,
+    # vom Knoten weg (None, wo die Quelle keinen nennt). Ein Querschnitt hat zwei Arme.
+    arme: list[dict] = field(default_factory=list)
+    # Ströme: [{"von", "nach" (Nummern der Arme), "stunden": {Gruppe: Werte ab h0}}], wie
+    # gezählt; zusammen ergeben sie `stunden`. Ein Strom fehlt für eine Gruppe, wenn die Quelle
+    # sie dort nicht gezählt hat.
+    stroeme: list[dict] = field(default_factory=list)
     zusatz: dict = field(default_factory=dict)  # Rohangaben des Adapters (nicht in der Karte)
 
     def gruppen(self) -> list[str]:
